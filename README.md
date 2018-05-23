@@ -12,14 +12,14 @@ We use ESLint in collaboration with Prettier to keep code clean and free of pote
 
 ESLint is built in to the project so once you've `yarn` you'll have the linter enabled. However, Prettier will need to be downloaded using your preferred code editor.
 
-##### Install/Configure using Atom
+#### Install/Configure using Atom
 
 [INSERT INSTRUCTIONS FOR INSTALLING/CONFIGURING PRETTIER IN ATOM]
 
-##### Install/Configure using VS Code
+#### Install/Configure using VS Code
 
 [INSERT INSTRUCTIONS FOR INSTALLING/CONFIGURING PRETTIER IN VS CODE]
 
-##### Install/Configure using Sublime
+#### Install/Configure using Sublime
 
 [INSERT INSTRUCTIONS FOR INSTALLING/CONFIGURING PRETTIER IN SUBLIME]
