@@ -8,9 +8,9 @@ Below you will find the tools and rules we use when developing within the Apollo
 
 ### ESLint
 
-We use ESLint in collaboration with Prettier to keep code clean and free of potential errors.
+We use ESLint in collaboration with Prettier to keep code clean and free of potential errors. Our ESLint configuation is dependant on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) package.
 
-ESLint is built in to the project so once you've `yarn` you'll have the linter enabled. However, Prettier will need to be downloaded using your preferred code editor.
+ESLint is built-in the project so once you've `yarn`, you'll have the linter enabled. However, Prettier will need to be downloaded using your preferred code editor.
 
 #### Install/Configure using Atom
 
