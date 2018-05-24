@@ -1,6 +1,6 @@
 ## Acceptance Criteria
 
-- [ ] It should [SPEC_DETAIL]
+* [ ] It should [SPEC_DETAIL]
 
 ## Context
 
