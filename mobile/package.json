@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.2",
@@ -20,7 +23,9 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "test": "jest",
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "fixlint": "./node_modules/.bin/eslint . --fix"
   },
   "jest": {
     "preset": "react-native"
