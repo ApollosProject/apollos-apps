@@ -4,10 +4,35 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "./node_modules/.bin/nodemon ./index.js --exec babel-node",
+    "test": "jest"
+  },
+  "engines": {
+    "node": "8.11.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testMatch": [
+      "<rootDir>/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node"
   },
   "dependencies": {
     "apollo-server": "^2.0.0-beta.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "dataloader": "^1.4.0",
+    "fetch": "^1.1.0",
     "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "jest": "^23.0.0",
+    "jest-fetch-mock": "^1.6.2",
+    "nodemon": "^1.17.5"
   }
 }
