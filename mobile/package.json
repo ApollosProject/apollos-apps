@@ -23,7 +23,7 @@
     "ios": "react-native run-ios",
     "test": "jest",
     "storybook":
-      "rnstl --searchDir ./storybook --pattern \"**/*.stories.js\" && storybook start -p 7007"
+      "rnstl --searchDir ./storybook ./ui --pattern \"**/*.stories.js\" && storybook start -p 7007"
   },
   "jest": {
     "preset": "react-native"
