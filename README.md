@@ -8,18 +8,35 @@ Below you will find the tools and rules we use when developing within the Apollo
 
 ### ESLint
 
-We use ESLint in collaboration with Prettier to keep code clean and free of potential errors. Our ESLint configuation is dependant on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) package.
+We use ESLint in collaboration with Prettier to keep code clean and free of potential errors. Our ESLint configuration is dependent on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) package.
 
-ESLint is built-in the project so once you've `yarn`, you'll have the linter enabled. However, Prettier will need to be downloaded using your preferred code editor.
+ESLint and all required packages are built-in so once you `yarn`, you'll have the linter enabled. However, Prettier will need to be downloaded using your preferred code editor.
 
 #### Install/Configure using Atom
 
-[INSERT INSTRUCTIONS FOR INSTALLING/CONFIGURING PRETTIER IN ATOM]
+* Prettier is a package you can download by going to Preferences > Install > search "Prettier"
+* Download the package, "prettier-atom"
+* In the settings menu for the package, make sure `ESLint Integration` is checked.
 
 #### Install/Configure using VS Code
 
-[INSERT INSTRUCTIONS FOR INSTALLING/CONFIGURING PRETTIER IN VS CODE]
+* You actually don't need the Prettier extension on VS code, just the ESLint extension
+* Download the ESLint extension by clicking the `Extension` icon and searching for `ESLINT`
+* Open up your `USER_SETTINGS` by going to Preferences > Settings
+* Make sure your settings have the following:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true
+}
+```
 
 #### Install/Configure using Sublime
 
-[INSERT INSTRUCTIONS FOR INSTALLING/CONFIGURING PRETTIER IN SUBLIME]
+* You will need to install the [sublime-prettier](https://github.com/danreeves/sublime-prettier) plugins
+* Make sure you go through the above links instructions to correctly install this plugin.
