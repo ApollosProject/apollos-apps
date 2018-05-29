@@ -1,21 +1,55 @@
-const { ApolloServer, gql } = require('apollo-server');
+import {
+  ApolloServer,
+} from 'apollo-server';
 
-// Construct a schema, using GraphQL schema language
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
+import {
+  resolvers,
+  schema,
+  models,
+} from './data';
 
-// Provide resolver functions for your schema fields
-const resolvers = {
-  Query: {
-    hello: () => "world"
+import RockConnector from './connectors/rock';
+
+// Construct a context object for each request
+const context = ({
+  req
+}) => {
+  // todo: load user
+  const user = null;
+
+  // initialize connectors for every request so API fetches
+  // are deduplicated per-request only.
+  const connectors = {
+    Rock: new RockConnector(),
   }
+
+  const initiatedModels = {};
+
+  const context = {
+    user,
+    models: initiatedModels,
+    connectors,
+  };
+
+  Object.keys(models).forEach((modelName) => {
+    initiatedModels[modelName] = new models[modelName](context);
+  });
+
+  return context;
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  typeDefs: schema,
+  resolvers,
+  context,
+  formatError: error => {
+    console.error(error.extensions.exception.stacktrace.join('\n'));
+    return error;
+  },
+});
 
-server.listen().then(({ url }) => {
+server.listen().then(({
+  url
+}) => {
   console.log(`🚀 Server ready at ${url}`)
 });

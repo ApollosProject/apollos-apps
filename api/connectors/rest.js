@@ -1,6 +1,9 @@
-import fetch from 'fetch';
+import fetch from 'isomorphic-fetch';
 import DataLoader from 'dataloader';
 import url from 'url';
+import {
+  merge
+} from 'lodash';
 
 export const eTagCache = {};
 
@@ -23,12 +26,20 @@ export default class RestConnector {
   constructor({
     baseUrl = '',
     batch = false,
+    defaultRequestOptions = {},
   } = {}) {
     this.baseUrl = baseUrl;
 
     this.loader = new DataLoader(this.fetchWithCacheForDataLoader, {
       batch,
     });
+
+    this.defaultRequestOptions = merge({
+      headers: {
+        'user-agent': 'Apollos',
+        'Content-Type': 'application/json',
+      },
+    }, defaultRequestOptions);
   }
 
   // Used with DataLoader to fetch resources with eTag support
@@ -37,10 +48,7 @@ export default class RestConnector {
     if (!Array.isArray(urls)) urls = [urls];
 
     const options = {
-      headers: {
-        'user-agent': 'Apollos',
-        'Content-Type': 'application/json',
-      },
+      ...this.defaultRequestOptions
     };
 
     return Promise.all(urls.map((url) => {
@@ -55,7 +63,6 @@ export default class RestConnector {
             if (response.status === 304) {
               resolve(cachedRes.result);
             }
-
             const body = response.json();
             const etag = response.headers.get('etag');
             if (etag) {
@@ -72,5 +79,5 @@ export default class RestConnector {
     }));
   }
 
-  get = path => this.loader.load(url.resolve(this.baseUrl, path));
+  get = path => this.loader.load(url.resolve(`${this.baseUrl}/${path}`, ''));
 }

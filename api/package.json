@@ -25,9 +25,12 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
+    "casual": "^1.5.19",
+    "crypto": "^1.0.1",
     "dataloader": "^1.4.0",
-    "fetch": "^1.1.0",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,7 +1,7 @@
 import RestConnector, {
   eTagCache
 } from './rest';
-import fetch from 'fetch';
+import fetch from 'isomorphic-fetch';
 
 const data = 'it worked!';
 const baseUrl = 'https://google.com';
