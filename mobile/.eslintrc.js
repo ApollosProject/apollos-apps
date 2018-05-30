@@ -1,14 +1,19 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:prettier/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'prettier/react',
+  ],
   parser: 'babel-eslint',
-  plugins: ['import', 'jsx-a11y', 'babel', 'prettier', 'jest'],
+  plugins: ['import', 'jsx-a11y', 'babel', 'prettier', 'jest', 'react'],
   rules: {
     'prettier/prettier': [
       'error',
-      { singleQuote: true, trailingComma: 'es5', arrowParens: 'always' },
+      {singleQuote: true, trailingComma: 'es5', arrowParens: 'always'},
     ],
     'react/jsx-filename-extension': 0,
-    'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
+    'react/prefer-stateless-function': [2, {ignorePureComponents: true}],
     'import/no-extraneous-dependencies': 0,
     'react/jsx-curly-brace-presence': 0,
     'react/require-default-props': 0,
@@ -33,4 +38,4 @@ module.exports = {
     node: true,
     'jest/globals': true,
   },
-};
+}
