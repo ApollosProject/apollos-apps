@@ -1,8 +1,11 @@
 import fetch from 'isomorphic-fetch';
 import DataLoader from 'dataloader';
-import url from 'url';
+import urlJoin from 'url-join';
 import {
-  merge
+  merge,
+  mapKeys,
+  mapValues,
+  camelCase,
 } from 'lodash';
 
 export const eTagCache = {};
@@ -42,6 +45,15 @@ export default class RestConnector {
     }, defaultRequestOptions);
   }
 
+  // Normalize a data response from the rest endpoint.
+  // By default, just makes sure all keys are camelCased
+  normalize = (data) => {
+    if (Array.isArray(data)) return data.map(this.normalize);
+    if (typeof data !== 'object') return data;
+    const normalizedValues = mapValues(data, this.normalize);
+    return mapKeys(normalizedValues, (v, key) => camelCase(key));
+  }
+
   // Used with DataLoader to fetch resources with eTag support
   fetchWithCacheForDataLoader = (urlInput = []) => {
     let urls = urlInput;
@@ -51,49 +63,44 @@ export default class RestConnector {
       ...this.defaultRequestOptions
     };
 
-    return Promise.all(urls.map((url) => {
+    return Promise.all(urls.map(async (url) => {
       const cachedRes = eTagCache[url];
       if (cachedRes && cachedRes.etag) {
         options.headers['If-None-Match'] = cachedRes.etag;
       }
 
-      return new Promise((resolve, reject) => {
-        fetch(url, options)
-          .then((response) => {
-            const {
-              status,
-              statusText,
-            } = response;
+      const response = await fetch(url, options);
 
-            if (status === 304) {
-              return resolve(cachedRes.result);
-            }
+      const {
+        status,
+        statusText,
+      } = response;
 
-            if (status === 204) {
-              return resolve(null); // todo: how best to handle?
-            }
+      if (status === 304) {
+        return cachedRes.result;
+      }
 
-            if (status >= 400) {
-              const err = new Error(statusText);
-              err.code = status;
-              return reject(err);
-            }
+      if (status === 204) {
+        return null; // todo: how best to handle?
+      }
 
-            const body = response.json();
-            const etag = response.headers.get('etag');
-            if (etag) {
-              eTagCache[url] = {
-                result: body,
-                etag,
-              };
-            }
-            resolve(body);
-          }).catch((err) => {
-            reject(err);
-          });
-      });
+      if (status >= 400) {
+        const err = new Error(statusText);
+        err.code = status;
+        throw err;
+      }
+
+      const body = this.normalize(await response.json());
+      const etag = response.headers.get('etag');
+      if (etag) {
+        eTagCache[url] = {
+          result: body,
+          etag,
+        };
+      }
+      return body;
     }));
   }
 
-  get = path => this.loader.load(url.resolve(`${this.baseUrl}/${path}`, ''));
+  get = path => this.loader.load(urlJoin(this.baseUrl, path));
 }

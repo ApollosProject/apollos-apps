@@ -14,8 +14,8 @@ from './model';
 export const schema = gql `
   type ContentChannel implements Node {
     id: ID!
-    # name: String!
-    # description: String
+    name: String!
+    description: String
   }
 `;
 

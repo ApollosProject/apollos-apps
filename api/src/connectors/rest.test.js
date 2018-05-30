@@ -16,6 +16,31 @@ describe('RestConnector', () => {
     expect(new RestConnector()).toBeTruthy();
   });
 
+  describe('normalize function', () => {
+    const testJson = {
+      'some-key': 'Yo yo',
+      'AnotherKey': 'yo-yo',
+      'Recursive-yo': [{
+          'yes': false
+        },
+        {
+          'NoWay': true
+        },
+        [{
+          'throw for a loop': 'huh?'
+        }, ],
+      ],
+    };
+
+    it('parses json objects to be consistent with our naming standards', () => {
+      const connector = new RestConnector({
+        baseUrl
+      });
+      const tree = connector.normalize(testJson);
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
   describe('fetchWithCacheForDataLoader function', () => {
     it('fetches a single url', () => {
       const connector = new RestConnector({
@@ -128,14 +153,37 @@ describe('RestConnector', () => {
     });
   });
 
+  it('handles 204 responses', async () => {
+    const connector = new RestConnector({
+      baseUrl
+    });
+
+    fetch.mockResponseOnce('', {
+      status: 204,
+    });
+
+    const result = await connector.get('/endpoint');
+    expect(result).toEqual(null);
+  });
+
+  it('handles 400 errors', async () => {
+    const connector = new RestConnector({
+      baseUrl
+    });
+
+    fetch.mockResponseOnce('', {
+      status: 400,
+    });
+
+    expect(connector.get('/endpoint')).rejects;
+  });
+
   it('throws errors', () => {
     const connector = new RestConnector({
       baseUrl
     });
-    const error = 'error message';
-    fetch.mockReject(new Error(error));
-    expect(connector.get('/endpoint')).rejects.toEqual({
-      error,
-    });
+    const error = new Error('error message');
+    fetch.mockReject(error);
+    expect(connector.get('/endpoint')).rejects.toEqual(error);
   });
 });

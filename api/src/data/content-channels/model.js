@@ -4,5 +4,6 @@ export default class ContentChannel {
   }
 
   all = () => this.context.connectors.Rock.get('ContentChannels');
+
   getFromId = (id) => this.context.connectors.Rock.get(`ContentChannels/${id}`);
 }

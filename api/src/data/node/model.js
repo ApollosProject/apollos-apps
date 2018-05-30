@@ -18,14 +18,9 @@ export default class Node {
       return Promise.reject(`No model found using ${__type}`);
     }
 
-    try {
-      const data = await (this.models[__type].getFromId(id, encodedId));
-      if (!data) return null;
-      data.__type = __type;
-      return data;
-    } catch (e) {
-      return Promise.reject(e.message);
-    }
+    const data = await (this.models[__type].getFromId(id, encodedId));
+    if (data) data.__type = __type;
+    return data;
   }
 
 }

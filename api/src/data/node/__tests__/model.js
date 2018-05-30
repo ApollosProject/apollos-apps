@@ -3,6 +3,9 @@ import Node, {
   createGlobalId,
   parseGlobalId
 } from '../model';
+import {
+  create
+} from 'handlebars';
 
 describe('Node', () => {
   it('`createGlobalId` should take two arguments and return a string', () => {
@@ -34,6 +37,10 @@ describe('Node', () => {
     });
   });
 
+  it('`parseGlobalId` should throw an error if ID is invalid', () => {
+    expect(() => parseGlobalId('blah-blah')).toThrow();
+  });
+
 
   it('Node class should parse an encoded id to get the type to resolve', async () => {
     const id = casual.word;
@@ -53,6 +60,35 @@ describe('Node', () => {
 
     const node = new Node(context);
     node.get(globalId);
+  });
+
+  it('Node class should throw error if it can\'t find a matching model', async () => {
+    const id = casual.word;
+    const __type = 'NoModel';
+    const globalId = createGlobalId(id, __type);
+
+    const node = new Node({});
+    expect(node.get(globalId)).rejects;
+  });
+
+  it('Node class doesn\'t assign __type if model returns falsey', async () => {
+    const id = casual.word;
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+
+    const context = {
+      models: {
+        Test: {
+          getFromId(_id) {
+            return '';
+          },
+        },
+      },
+    };
+
+    const node = new Node(context);
+    const record = node.get(globalId);
+    expect(record).not.toHaveProperty('__type');
   });
 
   it('Node class should return data from the models `getFromId` method', async () => {
