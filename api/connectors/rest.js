@@ -60,9 +60,25 @@ export default class RestConnector {
       return new Promise((resolve, reject) => {
         fetch(url, options)
           .then((response) => {
-            if (response.status === 304) {
-              resolve(cachedRes.result);
+            const {
+              status,
+              statusText,
+            } = response;
+
+            if (status === 304) {
+              return resolve(cachedRes.result);
             }
+
+            if (status === 204) {
+              return resolve(null); // todo: how best to handle?
+            }
+
+            if (status >= 400) {
+              const err = new Error(statusText);
+              err.code = status;
+              return reject(err);
+            }
+
             const body = response.json();
             const etag = response.headers.get('etag');
             if (etag) {
@@ -73,7 +89,7 @@ export default class RestConnector {
             }
             resolve(body);
           }).catch((err) => {
-            eject(err);
+            reject(err);
           });
       });
     }));
