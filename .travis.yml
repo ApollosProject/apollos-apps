@@ -8,4 +8,4 @@ jobs:
   include:
     - stage: lint
       script:
-        - yarn run lint
+        - bash ./scripts/global-npm-script.sh lint
