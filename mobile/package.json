@@ -27,6 +27,8 @@
   },
   "jest": {
     "preset": "react-native"
+    "preset": "react-native",
+    "testMatch": ["<rootDir>/**/?(*.)(test|tests).{js,jsx,mjs}"]
   },
   "dependencies": {
     "react": "16.3.1",
