@@ -20,7 +20,7 @@ module.exports = {
       },
     ],
     'react/jsx-filename-extension': 0,
-    'react/prefer-stateless-function': [2, {ignorePureComponents: true}],
+    'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
     'import/no-extraneous-dependencies': 0,
     'react/jsx-curly-brace-presence': 0,
     'react/require-default-props': 0,
@@ -32,6 +32,7 @@ module.exports = {
     'jsx-a11y/media-has-caption': 0,
     'react-native/no-unused-styles': 0,
     'global-require': 0,
+    'no-underscore-dangle': 0,
   },
   parserOptions: {
     ecmaVersion: 7,
@@ -45,4 +46,4 @@ module.exports = {
     node: true,
     'jest/globals': true,
   },
-}
+};
