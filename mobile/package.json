@@ -42,6 +42,7 @@
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
     "testMatch": ["<rootDir>//**/?(*.)(test|tests).{js,jsx,mjs}"],
     "modulePaths": ["<rootDir>//"]
   },
