@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import RestConnector from './rest';
+import RestConnector from '../rest';
 
 const data = 'it worked!';
 const baseUrl = 'https://google.com';
