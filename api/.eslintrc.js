@@ -10,7 +10,14 @@ module.exports = {
   rules: {
     'prettier/prettier': [
       'error',
-      {singleQuote: true, trailingComma: 'es5', arrowParens: 'always'},
+      {
+        singleQuote: true,
+        trailingComma: 'es5',
+        arrowParens: 'always',
+        bracketSpacing: true,
+        printWidth: 80,
+        simi: true,
+      },
     ],
     'react/jsx-filename-extension': 0,
     'react/prefer-stateless-function': [2, {ignorePureComponents: true}],
@@ -25,7 +32,6 @@ module.exports = {
     'jsx-a11y/media-has-caption': 0,
     'react-native/no-unused-styles': 0,
     'global-require': 0,
-    'no-underscore-dangle': 0,
   },
   parserOptions: {
     ecmaVersion: 7,
