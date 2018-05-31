@@ -16,7 +16,7 @@ module.exports = {
         arrowParens: 'always',
         bracketSpacing: true,
         printWidth: 80,
-        simi: true,
+        semi: true,
       },
     ],
     'react/jsx-filename-extension': 0,
