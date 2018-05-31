@@ -1,11 +1,5 @@
 import casual from 'casual';
-import Node, {
-  createGlobalId,
-  parseGlobalId
-} from '../model';
-import {
-  create
-} from 'handlebars';
+import Node, { createGlobalId, parseGlobalId } from '../model';
 
 describe('Node', () => {
   it('`createGlobalId` should take two arguments and return a string', () => {
@@ -22,7 +16,7 @@ describe('Node', () => {
 
     expect(parseGlobalId(globalId)).toEqual({
       __type,
-      id
+      id,
     });
   });
 
@@ -33,14 +27,13 @@ describe('Node', () => {
 
     expect(parseGlobalId(globalId)).toEqual({
       __type,
-      id
+      id,
     });
   });
 
   it('`parseGlobalId` should throw an error if ID is invalid', () => {
     expect(() => parseGlobalId('blah-blah')).toThrow();
   });
-
 
   it('Node class should parse an encoded id to get the type to resolve', async () => {
     const id = casual.word;
@@ -62,16 +55,16 @@ describe('Node', () => {
     node.get(globalId);
   });
 
-  it('Node class should throw error if it can\'t find a matching model', async () => {
+  it("Node class should throw error if it can't find a matching model", async () => {
     const id = casual.word;
     const __type = 'NoModel';
     const globalId = createGlobalId(id, __type);
 
     const node = new Node({});
-    expect(node.get(globalId)).rejects;
+    expect(node.get(globalId)).rejects.toBeDefined();
   });
 
-  it('Node class doesn\'t assign __type if model returns falsey', async () => {
+  it("Node class doesn't assign __type if model returns falsey", async () => {
     const id = casual.word;
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);
@@ -79,7 +72,7 @@ describe('Node', () => {
     const context = {
       models: {
         Test: {
-          getFromId(_id) {
+          getFromId() {
             return '';
           },
         },
@@ -96,13 +89,13 @@ describe('Node', () => {
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);
     const data = {
-      test: casual.word
+      test: casual.word,
     };
 
     const context = {
       models: {
         Test: {
-          getFromId(_id) {
+          getFromId() {
             return Promise.resolve(data);
           },
         },
@@ -120,13 +113,13 @@ describe('Node', () => {
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);
     const data = {
-      test: casual.word
+      test: casual.word,
     };
 
     const context = {
       models: {
         Test: {
-          getFromId(_id) {
+          getFromId() {
             return Promise.resolve(data);
           },
         },

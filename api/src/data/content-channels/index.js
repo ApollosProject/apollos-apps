@@ -1,17 +1,10 @@
-import {
-  gql
-} from 'apollo-server';
+import { gql } from 'apollo-server';
 
-import {
-  createGlobalId
-} from '../node';
+import { createGlobalId } from '../node';
 
-export {
-  default as model
-}
-from './model';
+export { default as model } from './model';
 
-export const schema = gql `
+export const schema = gql`
   type ContentChannel implements Node {
     id: ID!
     name: String!
@@ -21,13 +14,10 @@ export const schema = gql `
 
 export const resolver = {
   Query: {
-    contentChannels: (root, args, context) => context.models.ContentChannel.all(),
+    contentChannels: (root, args, context) =>
+      context.models.ContentChannel.all(),
   },
   ContentChannel: {
-    id: ({
-      id
-    }, _, $, {
-      parentType
-    }) => createGlobalId(id, parentType.name),
-  }
+    id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
+  },
 };

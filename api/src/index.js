@@ -1,19 +1,11 @@
-import {
-  ApolloServer,
-} from 'apollo-server';
+import { ApolloServer } from 'apollo-server';
 
-import {
-  resolvers,
-  schema,
-  models,
-} from './data';
+import { resolvers, schema, models } from './data';
 
 import RockConnector from './connectors/rock';
 
 // Construct a context object for each request
-const context = ({
-  req
-}) => {
+const getContext = () => {
   // todo: load user
   const user = null;
 
@@ -21,7 +13,7 @@ const context = ({
   // are deduplicated per-request only.
   const connectors = {
     Rock: new RockConnector(),
-  }
+  };
 
   const initiatedModels = {};
 
@@ -41,8 +33,8 @@ const context = ({
 export default new ApolloServer({
   typeDefs: schema,
   resolvers,
-  context,
-  formatError: error => {
+  context: getContext,
+  formatError: (error) => {
     console.error(error.extensions.exception.stacktrace.join('\n'));
     return error;
   },

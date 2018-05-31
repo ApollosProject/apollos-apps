@@ -7,9 +7,7 @@ const sampleData = {
 };
 
 it('Node should only have a __resolveType on the resolver', () => {
-  const {
-    Node
-  } = Resolver;
+  const { Node } = Resolver;
 
   expect(Node.__resolveType).toBeTruthy();
   expect(Object.keys(Node).length).toEqual(1);
@@ -17,9 +15,7 @@ it('Node should only have a __resolveType on the resolver', () => {
 });
 
 it('Node should return the type from the data passed to it', () => {
-  const {
-    Node
-  } = Resolver;
+  const { Node } = Resolver;
 
   const schema = {
     getType(type) {
@@ -29,15 +25,13 @@ it('Node should return the type from the data passed to it', () => {
   };
 
   const __type = Node.__resolveType(sampleData, null, {
-    schema
+    schema,
   });
   expect(__type).toEqual(sampleData.__type);
 });
 
 it('Query node should return the data via the `Node` class', () => {
-  const {
-    Query
-  } = Resolver;
+  const { Query } = Resolver;
 
   const fakeId = casual.word;
   const models = {
@@ -49,10 +43,14 @@ it('Query node should return the data via the `Node` class', () => {
     },
   };
 
-  const data = Query.node(null, {
-    id: fakeId
-  }, {
-    models
-  });
+  const data = Query.node(
+    null,
+    {
+      id: fakeId,
+    },
+    {
+      models,
+    }
+  );
   expect(data).toEqual(sampleData);
 });
