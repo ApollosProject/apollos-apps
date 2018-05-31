@@ -49,7 +49,7 @@ export default class RestConnector {
     if (Array.isArray(data)) return data.map(this.normalize);
     if (typeof data !== 'object') return data;
     const normalizedValues = mapValues(data, this.normalize);
-    return mapKeys(normalizedValues, (v, key) => camelCase(key));
+    return mapKeys(normalizedValues, (value, key) => camelCase(key));
   };
 
   // Used with DataLoader to fetch resources with eTag support
