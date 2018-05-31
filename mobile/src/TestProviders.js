@@ -1,4 +1,4 @@
-import { nest, withProps } from 'recompose';
-import { ThemeProvider } from 'src/ui/theme';
+import { nest } from 'recompose';
+import { ThemeProvider } from 'ui/theme';
 
 export default nest(ThemeProvider);
