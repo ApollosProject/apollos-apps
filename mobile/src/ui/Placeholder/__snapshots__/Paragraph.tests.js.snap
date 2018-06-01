@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Paragraph placeholder accepts custom line styles 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
     style={
       Object {
@@ -91,9 +89,7 @@ exports[`The Paragraph placeholder accepts custom styles 1`] = `
 `;
 
 exports[`The Paragraph placeholder has varying width lines 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
     style={
       Object {
@@ -134,9 +130,7 @@ exports[`The Paragraph placeholder has varying width lines 1`] = `
 `;
 
 exports[`The Paragraph placeholder renders correctly 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
     style={
       Object {
@@ -177,9 +171,7 @@ exports[`The Paragraph placeholder renders correctly 1`] = `
 `;
 
 exports[`The Paragraph placeholder renders multiple lines 1`] = `
-<View
-  style={undefined}
->
+<View>
   <View
     style={
       Object {
