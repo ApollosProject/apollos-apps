@@ -12,11 +12,11 @@ const data = {
 };
 
 export const schema = gql`
+  ${values(data).map((datum) => datum.schema)}
   type Query {
     node(id: ID!): Node
     contentChannels: [ContentChannel]
   }
-  ${values(data).map((datum) => datum.schema)}
 `;
 
 export const resolvers = merge(...values(data).map((datum) => datum.resolver));
