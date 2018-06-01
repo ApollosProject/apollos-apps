@@ -20,13 +20,23 @@ export default class RockRequestBuilder {
     return path;
   }
 
+  /**
+   * Sends the request to the server, resolves with results
+   * @returns promise
+   */
   get = () => this.connector.get(this.path);
 
+  /**
+   * Find a single resource by ID
+   */
   find = (id) => {
     this.resourceId = id;
     return this;
   };
 
+  /**
+   * Filter resources by an odata string
+   */
   filter = (filter) => {
     const key = '$filter';
     if (this.query[key]) {
@@ -37,16 +47,29 @@ export default class RockRequestBuilder {
     return this;
   };
 
+  /**
+   * Order resources by a given attribute and direction
+   * @param {string} name The name of the attribute to order by
+   * @param {string} direction The direction to order results by. Defaults to 'asc'
+   */
   orderBy = (name, direction = 'asc') => {
     this.query.$orderby = `${name} ${direction}`;
     return this;
   };
 
+  /**
+   * Only return the top N results. Used for pagination
+   * @param {number} top
+   */
   top = (top) => {
     this.query.$top = top;
     return this;
   };
 
+  /**
+   * Skip the first N results. Used for pagination
+   * @param {number} skip
+   */
   skip = (skip) => {
     this.query.$skip = skip;
     return this;
