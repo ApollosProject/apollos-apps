@@ -61,7 +61,6 @@ export default class RockModel {
         skip = parsed.position + 1;
       }
     }
-
     const getItems = cursor.top(first).skip(skip);
 
     const edges = getItems.get().then((items) =>

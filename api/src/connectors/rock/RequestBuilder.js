@@ -1,4 +1,6 @@
 import withQuery from 'with-query';
+import { transformSchema } from 'graphql-tools';
+import { runInDebugContext } from 'vm';
 
 // Simple request builder for querying the Rock API.
 // Would probably work against most OData APIs, but built to just
@@ -10,13 +12,13 @@ export default class RockRequestBuilder {
   }
 
   query = {};
+  transforms = [];
 
   get path() {
     let path = [this.resource];
     if (this.resourceId) path.push(this.resourceId);
     path = path.join('/');
     path = withQuery(path, this.query);
-    console.log({ path });
     return path;
   }
 
@@ -24,7 +26,15 @@ export default class RockRequestBuilder {
    * Sends the request to the server, resolves with results
    * @returns promise
    */
-  get = () => this.connector.get(this.path);
+  get = () =>
+    this.connector.get(this.path).then((results) => {
+      if (this.transforms.length)
+        return this.transforms.reduce(
+          (current, transformer) => transformer(current),
+          results
+        );
+      return results;
+    });
 
   /**
    * Find a single resource by ID
@@ -44,6 +54,21 @@ export default class RockRequestBuilder {
     } else {
       this.query[key] = filter;
     }
+    return this;
+  };
+
+  /**
+   * Expands resources inline
+   */
+  expand = (expand) => {
+    let { $expand } = this.query;
+    if (!$expand) {
+      $expand = [];
+    } else {
+      $expand = $expand.split(',');
+    }
+    $expand.push(expand);
+    this.query.$expand = $expand.join(',');
     return this;
   };
 
@@ -72,6 +97,16 @@ export default class RockRequestBuilder {
    */
   skip = (skip) => {
     this.query.$skip = skip;
+    return this;
+  };
+
+  /**
+   * Transform the shape of the results.
+   * This is ran _after_ data is requested and not
+   * affected by other methods that are chained to the request
+   */
+  transform = (func) => {
+    this.transforms.push(func);
     return this;
   };
 }

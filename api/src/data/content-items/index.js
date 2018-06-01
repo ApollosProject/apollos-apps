@@ -26,9 +26,9 @@ export const schema = gql`
 export const resolver = {
   ContentItem: {
     id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
-    childrenContentItems: async ({ id }, input, { models }) =>
+    childrenContentItems: ({ id }, input, { models }) =>
       models.ContentItem.paginate({
-        cursor: await models.ContentItem.getCursorByParentContentItemId(id),
+        cursor: models.ContentItem.byParentContentItemId(id),
         input,
       }),
   },
