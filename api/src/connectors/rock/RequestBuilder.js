@@ -1,6 +1,4 @@
 import withQuery from 'with-query';
-import { transformSchema } from 'graphql-tools';
-import { runInDebugContext } from 'vm';
 
 // Simple request builder for querying the Rock API.
 // Would probably work against most OData APIs, but built to just

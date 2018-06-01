@@ -53,22 +53,27 @@ export default class RockModel {
    * @param {number} param.input.first
    * @returns {object}
    */
-  paginate = async ({ cursor, input: { after, first = 20 } }) => {
+  paginate = async ({ cursor, input: { after, first = 20 } = {} }) => {
     let skip = 0;
     if (after) {
       const parsed = parseCursor(after);
       if (parsed && Object.hasOwnProperty.call(parsed, 'position')) {
         skip = parsed.position + 1;
+      } else {
+        throw new Error(`An invalid 'after' cursor was provided: ${after}`);
       }
     }
-    const getItems = cursor.top(first).skip(skip);
 
-    const edges = getItems.get().then((items) =>
-      items.map((node, i) => ({
-        node,
-        cursor: createCursor({ position: i + skip }),
-      }))
-    );
+    const edges = cursor
+      .top(first)
+      .skip(skip)
+      .transform((result) =>
+        result.map((node, i) => ({
+          node,
+          cursor: createCursor({ position: i + skip }),
+        }))
+      )
+      .get();
 
     return {
       edges,
