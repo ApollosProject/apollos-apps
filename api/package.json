@@ -23,6 +23,7 @@
   "dependencies": {
     "apollo-server": "^2.0.0-beta.2",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -43,8 +44,8 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.10",
     "prettier": "1.12.1",
-    "babel-eslint": "^8.2.3",
-    "url-join": "^4.0.0"
+    "url-join": "^4.0.0",
+    "with-query": "^1.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

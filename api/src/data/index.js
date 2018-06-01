@@ -3,10 +3,12 @@ import { mapValues, values, merge } from 'lodash';
 
 import * as Node from './node';
 import * as ContentChannel from './content-channels';
+import * as ContentItem from './content-items';
 
 const data = {
   Node,
   ContentChannel,
+  ContentItem,
 };
 
 export const schema = gql`

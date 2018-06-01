@@ -3,7 +3,12 @@ export default class ContentChannel {
     this.context = context;
   }
 
-  all = () => this.context.connectors.Rock.get('ContentChannels');
+  request = () => this.context.connectors.Rock.request('ContentChannels');
 
-  getFromId = (id) => this.context.connectors.Rock.get(`ContentChannels/${id}`);
+  all = () => this.request().get();
+
+  getFromId = (id) =>
+    this.request()
+      .find(id)
+      .get();
 }

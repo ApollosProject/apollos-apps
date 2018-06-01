@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server';
-
 import { createGlobalId } from '../node';
 
 export { default as model } from './model';
@@ -9,6 +8,8 @@ export const schema = gql`
     id: ID!
     name: String!
     description: String
+
+    childrenContentItems(first: Int, after: String): ContentItemsConnection
   }
 `;
 
@@ -19,5 +20,9 @@ export const resolver = {
   },
   ContentChannel: {
     id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
+    childrenContentItems: ({ id }, pagination, { models }) => ({
+      cursor: models.ContentItem.byContentChannelId(id),
+      pagination,
+    }),
   },
 };
