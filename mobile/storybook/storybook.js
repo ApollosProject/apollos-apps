@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure } from '@storybook/react-native';
+import {
+  getStorybookUI,
+  configure,
+  addDecorator,
+} from '@storybook/react-native';
+
 import { loadStories } from './storyLoader';
+import AppContext from './decorators/AppContext';
+
+addDecorator(AppContext);
 
 // import stories
 configure(() => {

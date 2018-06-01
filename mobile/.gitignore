@@ -6,6 +6,9 @@
 # dependencies
 /node_modules
 
+# storybook
+storyLoader.js
+
 # misc
 .env.local
 .env.development.local
