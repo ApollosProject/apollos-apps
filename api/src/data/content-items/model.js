@@ -1,9 +1,7 @@
-export default class ContentItem {
-  constructor(context) {
-    this.context = context;
-  }
+import { RockModel } from '../../connectors/rock';
 
-  request = () => this.context.connectors.Rock.request('ContentChannelItems');
+export default class ContentItem extends RockModel {
+  resource = 'ContentChannelItems';
 
   getCursorByParentContentItemId = async (id) => {
     const associations = await this.context.connectors.Rock.request(

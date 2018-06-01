@@ -1,9 +1,7 @@
-export default class ContentChannel {
-  constructor(context) {
-    this.context = context;
-  }
+import { RockModel } from '../../connectors/rock';
 
-  request = () => this.context.connectors.Rock.request('ContentChannels');
+export default class ContentChannel extends RockModel {
+  resource = 'ContentChannels';
 
   all = () => this.request().get();
 

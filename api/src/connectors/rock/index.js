@@ -1,6 +1,8 @@
 import RestConnector from '../rest';
 import RequestBuilder from './RequestBuilder';
 
+export { default as RockModel } from './Model';
+
 const {
   ROCK_API = 'https://apollosrock.newspring.cc/api',
   ROCK_TOKEN,
