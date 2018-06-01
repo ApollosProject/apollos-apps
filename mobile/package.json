@@ -42,6 +42,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
+    ],
     "testMatch": ["<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"],
     "modulePaths": ["<rootDir>/src/"]
   },
@@ -52,5 +55,6 @@
     "react-native": "~0.55.2",
     "react-navigation": "^2.0.4",
     "recompose": "^0.27.1"
+    "rn-placeholder": "^1.2.0"
   }
 }
