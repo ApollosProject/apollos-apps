@@ -9,7 +9,7 @@ describe('Node', () => {
   });
 
   it('`createCursor` should be decodeable by `parseCursor`', () => {
-    const id = casual.word;
+    const id = 'molestiae';
     const cursor = createCursor({ id });
 
     expect(parseCursor(cursor)).toMatchSnapshot();
