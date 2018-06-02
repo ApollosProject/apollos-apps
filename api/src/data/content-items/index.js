@@ -1,4 +1,5 @@
 import { gql } from 'apollo-server';
+import sanitizeHtml from '../../utils/sanitize-html';
 import { createGlobalId } from '../node';
 
 export { default as model } from './model';
@@ -12,6 +13,8 @@ export const schema = gql`
       first: Int
       after: String
     ): ContentItemsConnection
+
+    htmlContent: String
   }
 
   type ContentItemsConnection {
@@ -29,6 +32,7 @@ export const schema = gql`
 export const resolver = {
   ContentItem: {
     id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
+    htmlContent: ({ content }) => sanitizeHtml(content),
     childContentItemsConnection: ({ id }, input, { models }) =>
       models.ContentItem.paginate({
         cursor: models.ContentItem.byParentContentItemId(id),
