@@ -9,7 +9,11 @@ export const schema = gql`
     name: String!
     description: String
 
-    childrenContentItems(first: Int, after: String): ContentItemsConnection
+    childContentChannels: [ContentChannel]
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
   }
 `;
 
@@ -20,7 +24,7 @@ export const resolver = {
   },
   ContentChannel: {
     id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
-    childrenContentItems: ({ id }, input, { models }) =>
+    childContentItemsConnection: ({ id }, input, { models }) =>
       models.ContentItem.paginate({
         cursor: models.ContentItem.byContentChannelId(id),
         input,
