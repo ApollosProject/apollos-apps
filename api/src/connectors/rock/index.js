@@ -1,12 +1,11 @@
 import RestConnector from '../rest';
 import RequestBuilder from './RequestBuilder';
+import * as Constants from './constants';
 
 export { default as RockModel } from './Model';
+export { Constants };
 
-const {
-  ROCK_API = 'https://apollosrock.newspring.cc/api',
-  ROCK_TOKEN,
-} = process.env;
+const { ROCK_API, ROCK_TOKEN } = Constants;
 
 export default class RockConnector extends RestConnector {
   constructor() {

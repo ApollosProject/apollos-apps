@@ -24,11 +24,11 @@ export default class RockModel {
    *
    * @returns {object} Instance of RockRequest
    */
-  request = () => {
+  request() {
     if (!this.resource)
       throw new Error('Please set a resource string on your RockModel');
     return this.context.connectors.Rock.request(this.resource);
-  };
+  }
 
   /**
    * paginate a rock request.
