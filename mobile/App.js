@@ -48,7 +48,6 @@ HomeScreen.propTypes = {
 export const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
-    Article,
   },
   {
     initialRouteName: 'Home',
@@ -64,13 +63,24 @@ export const HomeStack = createStackNavigator(
   }
 );
 
-export const RootStack = createBottomTabNavigator({
+export const TabStack = createBottomTabNavigator({
   Home: HomeStack,
   Sections: SectionsStack,
   Connect: ConnectStack,
   Search: SearchStack,
   Profile: ProfileStack,
 });
+
+export const RootStack = createStackNavigator(
+  {
+    Tab: TabStack,
+    Article,
+  },
+  {
+    initialRouteName: 'Tab',
+    headerMode: 'none',
+  }
+);
 
 /* eslint-disable */
 export default class App extends React.Component {
