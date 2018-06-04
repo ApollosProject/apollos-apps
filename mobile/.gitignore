@@ -9,6 +9,16 @@
 # storybook
 storyLoader.js
 
+# Android studio
+*.apk
+*.ap_
+build/
+.idea
+.gradle
+keystore.properties
+local.properties
+*.iml
+
 # misc
 .env.local
 .env.development.local
