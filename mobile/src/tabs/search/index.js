@@ -30,6 +30,15 @@ export const SearchStack = createStackNavigator(
   },
   {
     initialRouteName: 'Search',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
   }
 );
 

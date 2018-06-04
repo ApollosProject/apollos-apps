@@ -30,6 +30,15 @@ export const ProfileStack = createStackNavigator(
   },
   {
     initialRouteName: 'Profile',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
   }
 );
 

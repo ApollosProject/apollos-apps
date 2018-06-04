@@ -52,19 +52,6 @@ export const HomeStack = createStackNavigator(
   },
   {
     initialRouteName: 'Home',
-  }
-);
-
-export const RootStack = createBottomTabNavigator(
-  {
-    Home: HomeStack,
-    Sections: SectionsStack,
-    Connect: ConnectStack,
-    Search: SearchStack,
-    Profile: ProfileStack,
-  },
-  {
-    initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#f4511e',
@@ -76,6 +63,14 @@ export const RootStack = createBottomTabNavigator(
     },
   }
 );
+
+export const RootStack = createBottomTabNavigator({
+  Home: HomeStack,
+  Sections: SectionsStack,
+  Connect: ConnectStack,
+  Search: SearchStack,
+  Profile: ProfileStack,
+});
 
 /* eslint-disable */
 export default class App extends React.Component {

@@ -30,6 +30,15 @@ export const SectionsStack = createStackNavigator(
   },
   {
     initialRouteName: 'Sections',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
   }
 );
 
