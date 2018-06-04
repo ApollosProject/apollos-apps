@@ -22,6 +22,7 @@ jobs:
         - bash ./scripts/global-npm-script.sh test
     - stage: heroku deploy
       script:
+        - npm install -g heroku
         - (
             echo "$HEROKU_CREDENTIALS_EMAIL"
             echo "$HEROKU_CREDENTIALS_PASSWORD"
