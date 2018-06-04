@@ -6,7 +6,8 @@ import {
   addDecorator,
 } from '@storybook/react-native';
 
-import { loadStories } from './storyLoader';
+// storyLoader.js is generated on storybook start. next line disabled for CI test.
+import { loadStories } from './storyLoader'; // eslint-disable-line
 import AppContext from './decorators/AppContext';
 
 addDecorator(AppContext);
