@@ -1,3 +1,4 @@
+import dotenv from 'dotenv/config';
 import { ApolloServer } from 'apollo-server';
 
 import { resolvers, schema, models } from './data';
