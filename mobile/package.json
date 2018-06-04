@@ -42,6 +42,7 @@
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
     ],
@@ -59,5 +60,8 @@
     "react-native": "~0.55.2",
     "recompose": "^0.27.1",
     "rn-placeholder": "^1.2.0"
+  },
+  "rnpm": {
+    "assets": ["assets/fonts"]
   }
 }
