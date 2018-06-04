@@ -23,6 +23,14 @@ describe('the H6 component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <H6 isLoading>Default H6 text</H6>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should accept additional props', () => {
     const tree = renderer.create(
       <Providers>
