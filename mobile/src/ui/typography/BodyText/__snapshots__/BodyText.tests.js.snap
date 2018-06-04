@@ -10,11 +10,9 @@ exports[`the BodyText component should accept additional props 1`] = `
   style={
     Object {
       "color": "#303030",
-      "fontFamily": "DroidSerif-Regular",
+      "fontFamily": "DroidSerif",
       "fontSize": 20.02,
       "lineHeight": 33.11,
-      "paddingBottom": 2.25,
-      "paddingTop": 1.8,
     }
   }
 >
@@ -32,11 +30,9 @@ exports[`the BodyText component should accept and render passed in styles 1`] = 
   style={
     Object {
       "color": "salmon",
-      "fontFamily": "DroidSerif-Regular",
+      "fontFamily": "DroidSerif",
       "fontSize": 20.02,
       "lineHeight": 33.11,
-      "paddingBottom": 2.25,
-      "paddingTop": 1.8,
     }
   }
 >
@@ -57,8 +53,6 @@ exports[`the BodyText component should render as bold 1`] = `
       "fontFamily": "DroidSerif-Bold",
       "fontSize": 20.02,
       "lineHeight": 33.11,
-      "paddingBottom": 2.25,
-      "paddingTop": 1.8,
     }
   }
 >
@@ -79,8 +73,6 @@ exports[`the BodyText component should render as bold italic 1`] = `
       "fontFamily": "DroidSerif-BoldItalic",
       "fontSize": 20.02,
       "lineHeight": 33.11,
-      "paddingBottom": 2.25,
-      "paddingTop": 1.8,
     }
   }
 >
@@ -98,11 +90,9 @@ exports[`the BodyText component should render as italic 1`] = `
   style={
     Object {
       "color": "#303030",
-      "fontFamily": "DroidSerif-RegularItalic",
+      "fontFamily": "DroidSerif-Italic",
       "fontSize": 20.02,
       "lineHeight": 33.11,
-      "paddingBottom": 2.25,
-      "paddingTop": 1.8,
     }
   }
 >
@@ -120,11 +110,9 @@ exports[`the BodyText component should render correctly 1`] = `
   style={
     Object {
       "color": "#303030",
-      "fontFamily": "DroidSerif-Regular",
+      "fontFamily": "DroidSerif",
       "fontSize": 20.02,
       "lineHeight": 33.11,
-      "paddingBottom": 2.25,
-      "paddingTop": 1.8,
     }
   }
 >
