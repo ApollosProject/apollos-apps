@@ -8,8 +8,8 @@ import { withPlaceholder, Typography } from 'ui/Placeholder';
 const styles = styled(
   ({ theme }) => ({
     fontSize: theme.helpers.rem(1.112),
-    fontFamily: theme.typography.sans.bold.default,
     lineHeight: theme.helpers.verticalRhythm(1.112, 1.13889),
+    fontFamily: theme.typography.sans.bold.default,
     color: theme.colors.text.primary,
   }),
   'H5'
