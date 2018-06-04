@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { createBottomTabNavigator } from 'react-navigation';
-import SectionsScreen from './Sections';
-import ConnectScreen from './Connect';
-import SearchScreen from './Search';
-import ProfileScreen from './Profile';
+import SectionsScreen from './src/sections/';
+import ConnectScreen from './src/connect';
+import SearchScreen from './src/search';
+import ProfileScreen from './src/profile';
 
 const styles = StyleSheet.create({
   container: {
