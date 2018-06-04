@@ -22,5 +22,9 @@ jobs:
         - bash ./scripts/global-npm-script.sh test
     - stage: heroku deploy
       script:
+        - (
+            echo "$HEROKU_CREDENTIALS_EMAIL"
+            echo "$HEROKU_CREDENTIALS_PASSWORD"
+          ) | heroku login
         - git remote add heroku https://git.heroku.com/theapollosproject.git
         - git subtree push --prefix api heroku master
