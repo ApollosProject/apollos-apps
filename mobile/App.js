@@ -1,11 +1,17 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { createBottomTabNavigator } from 'react-navigation';
-import SectionsScreen from './src/sections/';
-import ConnectScreen from './src/connect';
-import SearchScreen from './src/search';
-import ProfileScreen from './src/profile';
+import {
+  createBottomTabNavigator,
+  createStackNavigator,
+} from 'react-navigation';
+import {
+  ConnectScreen,
+  ProfileScreen,
+  SearchScreen,
+  SectionsScreen,
+} from './src/tabs';
+import Article from './src/article';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,8 +31,8 @@ export class HomeScreen extends React.Component {
       <View style={styles.container}>
         <Text>This is the home screen</Text>
         <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('Details')}
+          title="Go to Article"
+          onPress={() => this.props.navigation.navigate('Article')}
         />
       </View>
     );
@@ -39,9 +45,19 @@ HomeScreen.propTypes = {
   }),
 };
 
-export const RootStack = createBottomTabNavigator(
+export const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
+    Article,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+export const RootStack = createBottomTabNavigator(
+  {
+    Home: HomeStack,
     Sections: SectionsScreen,
     Connect: ConnectScreen,
     Search: SearchScreen,
