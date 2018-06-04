@@ -1,5 +1,5 @@
 const fontStack = {
-  Sans: {
+  sans: {
     light: {
       default: 'OpenSans-Light',
       italic: 'OpenSans-LightItalic',

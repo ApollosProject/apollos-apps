@@ -1,5 +1,5 @@
 const fontStack = {
-  Sans: {
+  sans: {
     light: {
       default: 'OpenSans-Light',
       italic: 'OpenSans-LightItalic',
@@ -23,7 +23,7 @@ const fontStack = {
   },
   serif: {
     regular: {
-      default: 'DroidSerif',
+      default: 'DroidSerif-Regular',
       italic: 'DroidSerif-Italic',
     },
     bold: {
