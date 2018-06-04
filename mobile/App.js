@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { createStackNavigator } from 'react-navigation';
-import DetailsScreen from './Details';
+import { createBottomTabNavigator } from 'react-navigation';
+import SectionsScreen from './Sections';
+import ConnectScreen from './Connect';
+import SearchScreen from './Search';
+import ProfileScreen from './Profile';
 
 const styles = StyleSheet.create({
   container: {
@@ -36,10 +39,13 @@ HomeScreen.propTypes = {
   }),
 };
 
-export const RootStack = createStackNavigator(
+export const RootStack = createBottomTabNavigator(
   {
     Home: HomeScreen,
-    Details: DetailsScreen,
+    Sections: SectionsScreen,
+    Connect: ConnectScreen,
+    Search: SearchScreen,
+    Profile: ProfileScreen,
   },
   {
     initialRouteName: 'Home',
@@ -58,7 +64,7 @@ export const RootStack = createStackNavigator(
 /* eslint-disable */
 export default class App extends React.Component {
   render() {
-    return <RootStack />
+    return <RootStack />;
   }
 }
 /* eslint-enable */
