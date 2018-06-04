@@ -6,10 +6,10 @@ import {
   createStackNavigator,
 } from 'react-navigation';
 import {
-  ConnectScreen,
-  ProfileScreen,
-  SearchScreen,
-  SectionsScreen,
+  ConnectStack,
+  ProfileStack,
+  SearchStack,
+  SectionsStack,
 } from './src/tabs';
 import Article from './src/article';
 
@@ -58,10 +58,10 @@ export const HomeStack = createStackNavigator(
 export const RootStack = createBottomTabNavigator(
   {
     Home: HomeStack,
-    Sections: SectionsScreen,
-    Connect: ConnectScreen,
-    Search: SearchScreen,
-    Profile: ProfileScreen,
+    Sections: SectionsStack,
+    Connect: ConnectStack,
+    Search: SearchStack,
+    Profile: ProfileStack,
   },
   {
     initialRouteName: 'Home',
