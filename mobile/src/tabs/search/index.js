@@ -11,11 +11,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const SearchScreen = () => (
-  <View style={styles.container}>
-    <Text>Search Screen</Text>
-  </View>
-);
+export class SearchScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Search',
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Search Screen</Text>
+      </View>
+    );
+  }
+}
 
 export const SearchStack = createStackNavigator(
   {

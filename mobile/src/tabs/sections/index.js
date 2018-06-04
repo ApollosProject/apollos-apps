@@ -11,11 +11,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const SectionsScreen = () => (
-  <View style={styles.container}>
-    <Text>Sections Screen</Text>
-  </View>
-);
+export class SectionsScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Sections',
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Sections Screen</Text>
+      </View>
+    );
+  }
+}
 
 export const SectionsStack = createStackNavigator(
   {

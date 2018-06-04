@@ -11,11 +11,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const ProfileScreen = () => (
-  <View style={styles.container}>
-    <Text>Profile Screen</Text>
-  </View>
-);
+export class ProfileScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Profile',
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Profile Screen</Text>
+      </View>
+    );
+  }
+}
 
 export const ProfileStack = createStackNavigator(
   {

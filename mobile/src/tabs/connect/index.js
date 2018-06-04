@@ -11,11 +11,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const ConnectScreen = () => (
-  <View style={styles.container}>
-    <Text>Connect Screen</Text>
-  </View>
-);
+export class ConnectScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Connect',
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Connect Screen</Text>
+      </View>
+    );
+  }
+}
 
 export const ConnectStack = createStackNavigator(
   {
