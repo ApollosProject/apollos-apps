@@ -1,7 +1,6 @@
 import RestConnector from './rest';
 
-const ROCK_API = process.env.ROCK_API;
-const ROCK_TOKEN = process.env.ROCK_TOKEN;
+const { ROCK_API, ROCK_TOKEN } = process.env;
 
 export default class RockConnector extends RestConnector {
   constructor() {
