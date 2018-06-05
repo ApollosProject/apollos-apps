@@ -24,7 +24,6 @@ export { default as Like } from './Like';
 export { default as LikeSolid } from './LikeSolid';
 export { default as Locate } from './Locate';
 export { default as Lock } from './Lock';
-export { default as Logo } from './Logo';
 export { default as Pause } from './Pause';
 export { default as Pin } from './Pin';
 export { default as Play } from './Play';
