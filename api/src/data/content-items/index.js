@@ -1,8 +1,15 @@
 import { gql } from 'apollo-server';
 import { get } from 'lodash';
+import flow from 'lodash/fp/flow';
+import omitBy from 'lodash/fp/omitBy';
+import pickBy from 'lodash/fp/pickBy';
+import mapValues from 'lodash/fp/mapValues';
+import values from 'lodash/fp/values';
 import sanitizeHtml from '../../utils/sanitize-html';
 import { Constants } from '../../connectors/rock';
 import { createGlobalId } from '../node';
+
+const mapValuesWithKey = mapValues.convert({ cap: false });
 
 export { default as model } from './model';
 
@@ -16,11 +23,23 @@ export const schema = gql`
       after: String
     ): ContentItemsConnection
 
+    parentChannel: ContentChannel
+    # parentContent: ContentItem
+
     images: [ImageMedia]
     video: [VideoMedia]
     audio: [AudioMedia]
 
     htmlContent: String
+
+    terms(match: String): [Term]
+
+    # theme: TODO
+  }
+
+  type Term {
+    key: String
+    value: String
   }
 
   type ContentItemsConnection {
@@ -35,6 +54,23 @@ export const schema = gql`
   }
 `;
 
+const isImage = ({ key, attributeValues, attributes }) =>
+  attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
+  (key.toLowerCase().includes('image') &&
+    attributeValues[key].value.startsWith('http')); // looks like an image url
+
+const isVideo = ({ key, attributeValues, attributes }) =>
+  attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_FILE ||
+  attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_URL ||
+  (key.toLowerCase().includes('video') &&
+    attributeValues[key].value.startsWith('http')); // looks like a video url
+
+const isAudio = ({ key, attributeValues, attributes }) =>
+  attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_FILE ||
+  attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_URL ||
+  (key.toLowerCase().includes('audio') &&
+    attributeValues[key].value.startsWith('http')); // looks like an audio url
+
 export const resolver = {
   ContentItem: {
     id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
@@ -45,12 +81,27 @@ export const resolver = {
         input,
       }),
 
+    terms: ({ attributeValues, attributes }, { match }) =>
+      flow([
+        omitBy((value, key) => isImage({ key, attributes, attributeValues })),
+        omitBy((value, key) => isVideo({ key, attributes, attributeValues })),
+        omitBy((value, key) => isAudio({ key, attributes, attributeValues })),
+        omitBy((value, key) => key === 'videoEmbed'),
+        pickBy((value, key) => (match ? key.match(match) : true)),
+        mapValuesWithKey(({ value }, key) => ({
+          key,
+          value,
+        })),
+        values,
+      ])(attributeValues),
+
     images: ({ attributeValues, attributes }) => {
-      const imageKeys = Object.keys(attributes).filter(
-        (key) =>
-          attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
-          (key.toLowerCase().includes('image') &&
-            attributeValues[key].value.startsWith('http')) // looks like an image
+      const imageKeys = Object.keys(attributes).filter((key) =>
+        isImage({
+          key,
+          attributeValues,
+          attributes,
+        })
       );
       return imageKeys.map((key) => ({
         key,
@@ -60,12 +111,12 @@ export const resolver = {
     },
 
     video: ({ attributeValues, attributes }) => {
-      const videoKeys = Object.keys(attributes).filter(
-        (key) =>
-          attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_FILE ||
-          attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_URL ||
-          (key.toLowerCase().includes('video') &&
-            attributeValues[key].value.startsWith('http')) // looks like an image
+      const videoKeys = Object.keys(attributes).filter((key) =>
+        isVideo({
+          key,
+          attributeValues,
+          attributes,
+        })
       );
       return videoKeys.map((key) => ({
         key,
@@ -76,12 +127,12 @@ export const resolver = {
     },
 
     audio: ({ attributeValues, attributes }) => {
-      const audioKeys = Object.keys(attributes).filter(
-        (key) =>
-          attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_FILE ||
-          attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_URL ||
-          (key.toLowerCase().includes('audio') &&
-            attributeValues[key].value.startsWith('http')) // looks like an image
+      const audioKeys = Object.keys(attributes).filter((key) =>
+        isAudio({
+          key,
+          attributeValues,
+          attributes,
+        })
       );
       return audioKeys.map((key) => ({
         key,
