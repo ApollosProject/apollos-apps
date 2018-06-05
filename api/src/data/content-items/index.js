@@ -14,27 +14,34 @@ const mapValuesWithKey = mapValues.convert({ cap: false });
 export { default as model } from './model';
 
 export const schema = gql`
-  type ContentItem implements Node {
+  interface ContentItem {
     id: ID!
     title: String
-
+    images: [ImageMedia]
+    video: [VideoMedia]
+    audio: [AudioMedia]
+    htmlContent: String
     childContentItemsConnection(
       first: Int
       after: String
     ): ContentItemsConnection
-
     parentChannel: ContentChannel
-    # parentContent: ContentItem
+    # TODO theme: Theme
+  }
 
+  type UniversalContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
     images: [ImageMedia]
     video: [VideoMedia]
     audio: [AudioMedia]
-
     htmlContent: String
-
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
     terms(match: String): [Term]
-
-    # theme: TODO
   }
 
   type Term {
@@ -44,8 +51,8 @@ export const schema = gql`
 
   type ContentItemsConnection {
     edges: [ContentItemsConnectionEdge]
-    # totalCount: Int
-    # pageInfo: Pagination
+    # TODO totalCount: Int
+    # TODO pageInfo: PaginationInfo
   }
 
   type ContentItemsConnectionEdge {
@@ -71,16 +78,68 @@ const isAudio = ({ key, attributeValues, attributes }) =>
   (key.toLowerCase().includes('audio') &&
     attributeValues[key].value.startsWith('http')); // looks like an audio url
 
-export const resolver = {
-  ContentItem: {
-    id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
-    htmlContent: ({ content }) => sanitizeHtml(content),
-    childContentItemsConnection: async ({ id }, input, { models }) =>
-      models.ContentItem.paginate({
-        cursor: await models.ContentItem.getCursorByParentContentItemId(id),
-        input,
-      }),
+export const defaultContentItemResolvers = {
+  id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
+  htmlContent: ({ content }) => sanitizeHtml(content),
+  childContentItemsConnection: async ({ id }, input, { models }) =>
+    models.ContentItem.paginate({
+      cursor: await models.ContentItem.getCursorByParentContentItemId(id),
+      input,
+    }),
 
+  parentChannel: ({ contentChannelId }, input, { models }) =>
+    models.ContentChannel.getFromId(contentChannelId),
+
+  images: ({ attributeValues, attributes }) => {
+    const imageKeys = Object.keys(attributes).filter((key) =>
+      isImage({
+        key,
+        attributeValues,
+        attributes,
+      })
+    );
+    return imageKeys.map((key) => ({
+      key,
+      name: attributes[key].name,
+      sources: [{ uri: attributeValues[key].value }],
+    }));
+  },
+
+  video: ({ attributeValues, attributes }) => {
+    const videoKeys = Object.keys(attributes).filter((key) =>
+      isVideo({
+        key,
+        attributeValues,
+        attributes,
+      })
+    );
+    return videoKeys.map((key) => ({
+      key,
+      name: attributes[key].name,
+      embedHtml: get(attributeValues, 'videoEmbed.value', null), // TODO: this assumes that the key `VideoEmebed` is always used on Rock
+      sources: [{ uri: attributeValues[key].value }],
+    }));
+  },
+
+  audio: ({ attributeValues, attributes }) => {
+    const audioKeys = Object.keys(attributes).filter((key) =>
+      isAudio({
+        key,
+        attributeValues,
+        attributes,
+      })
+    );
+    return audioKeys.map((key) => ({
+      key,
+      name: attributes[key].name,
+      sources: [{ uri: attributeValues[key].value }],
+    }));
+  },
+};
+
+export const resolver = {
+  UniversalContentItem: {
+    ...defaultContentItemResolvers,
     terms: ({ attributeValues, attributes }, { match }) =>
       flow([
         omitBy((value, key) => isImage({ key, attributes, attributeValues })),
@@ -94,51 +153,9 @@ export const resolver = {
         })),
         values,
       ])(attributeValues),
-
-    images: ({ attributeValues, attributes }) => {
-      const imageKeys = Object.keys(attributes).filter((key) =>
-        isImage({
-          key,
-          attributeValues,
-          attributes,
-        })
-      );
-      return imageKeys.map((key) => ({
-        key,
-        name: attributes[key].name,
-        sources: [{ uri: attributeValues[key].value }],
-      }));
-    },
-
-    video: ({ attributeValues, attributes }) => {
-      const videoKeys = Object.keys(attributes).filter((key) =>
-        isVideo({
-          key,
-          attributeValues,
-          attributes,
-        })
-      );
-      return videoKeys.map((key) => ({
-        key,
-        name: attributes[key].name,
-        embedHtml: get(attributeValues, 'videoEmbed.value', null), // TODO: this assumes that the key `VideoEmebed` is always used on Rock
-        sources: [{ uri: attributeValues[key].value }],
-      }));
-    },
-
-    audio: ({ attributeValues, attributes }) => {
-      const audioKeys = Object.keys(attributes).filter((key) =>
-        isAudio({
-          key,
-          attributeValues,
-          attributes,
-        })
-      );
-      return audioKeys.map((key) => ({
-        key,
-        name: attributes[key].name,
-        sources: [{ uri: attributeValues[key].value }],
-      }));
-    },
+  },
+  ContentItem: {
+    ...defaultContentItemResolvers,
+    __resolveType: () => 'UniversalContentItem', // todo: for now, everything is of the same type
   },
 };

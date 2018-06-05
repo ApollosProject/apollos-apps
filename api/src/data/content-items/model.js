@@ -24,6 +24,21 @@ export default class ContentItem extends RockModel {
     return request.orderBy('Order');
   };
 
+  getCursorByChildContentItemId = async (id) => {
+    const associations = await this.context.connectors.Rock.request(
+      'ContentChannelItemAssociations'
+    )
+      .filter(`ChildContentChannelItemId eq ${id}`)
+      .get();
+
+    const request = this.request();
+    associations.forEach(({ contentChannelItemId }) => {
+      request.filter(`Id eq ${contentChannelItemId}`);
+    });
+
+    return request.orderBy('Order');
+  };
+
   byContentChannelId = (id) =>
     this.request().filter(`ContentChannelId eq ${id}`);
 
