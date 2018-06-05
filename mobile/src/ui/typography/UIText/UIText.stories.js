@@ -48,7 +48,7 @@ storiesOf('typography/UIText', module)
         <UIText style={border}>Body Text</UIText>
         <UIText style={border}>
           {
-            '"True faith means holding nothing\nback. It means putting every\nhope in God\'s fidelity to His Promises." ― Francis Chan'
+            '"You are the only Bible some unbelievers will ever read." – John MacArthur'
           }
         </UIText>
       </View>
