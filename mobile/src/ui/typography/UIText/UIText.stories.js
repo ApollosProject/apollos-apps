@@ -45,7 +45,7 @@ storiesOf('typography/UIText', module)
 
     return (
       <View>
-        <UIText style={border}>Body Text</UIText>
+        <UIText style={border}>UI Text</UIText>
         <UIText style={border}>
           {
             '"You are the only Bible some unbelievers will ever read." – John MacArthur'
