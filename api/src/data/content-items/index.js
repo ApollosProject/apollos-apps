@@ -18,8 +18,8 @@ export const schema = gql`
     id: ID!
     title: String
     images: [ImageMedia]
-    video: [VideoMedia]
-    audio: [AudioMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
     htmlContent: String
     childContentItemsConnection(
       first: Int
@@ -33,8 +33,8 @@ export const schema = gql`
     id: ID!
     title: String
     images: [ImageMedia]
-    video: [VideoMedia]
-    audio: [AudioMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
     htmlContent: String
     childContentItemsConnection(
       first: Int
@@ -105,7 +105,7 @@ export const defaultContentItemResolvers = {
     }));
   },
 
-  video: ({ attributeValues, attributes }) => {
+  videos: ({ attributeValues, attributes }) => {
     const videoKeys = Object.keys(attributes).filter((key) =>
       isVideo({
         key,
@@ -121,7 +121,7 @@ export const defaultContentItemResolvers = {
     }));
   },
 
-  audio: ({ attributeValues, attributes }) => {
+  audios: ({ attributeValues, attributes }) => {
     const audioKeys = Object.keys(attributes).filter((key) =>
       isAudio({
         key,
