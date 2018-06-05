@@ -62,7 +62,7 @@ describe('the UIText component', () => {
       <Providers>
         <UIText accessible={false}>
           {
-            '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+            '"You are the only Bible some unbelievers will ever read." – John MacArthur'
           }
         </UIText>
       </Providers>

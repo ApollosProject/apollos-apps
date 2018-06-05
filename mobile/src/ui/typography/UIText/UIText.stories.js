@@ -8,35 +8,35 @@ storiesOf('typography/UIText', module)
   .add('Normal', () => (
     <UIText>
       {
-        '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+        '"You are the only Bible some unbelievers will ever read." – John MacArthur'
       }
     </UIText>
   ))
   .add('Bold', () => (
     <UIText bold>
       {
-        '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+        '"You are the only Bible some unbelievers will ever read." – John MacArthur'
       }
     </UIText>
   ))
   .add('Italic', () => (
     <UIText italic>
       {
-        '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+        '"You are the only Bible some unbelievers will ever read." – John MacArthur'
       }
     </UIText>
   ))
   .add('Bold Italic', () => (
     <UIText bold italic>
       {
-        '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+        '"You are the only Bible some unbelievers will ever read." – John MacArthur'
       }
     </UIText>
   ))
   .add('isLoading', () => (
     <UIText isLoading>
       {
-        '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+        '"You are the only Bible some unbelievers will ever read." – John MacArthur'
       }
     </UIText>
   ))
