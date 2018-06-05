@@ -8,10 +8,9 @@ exports[`the H1 component should accept additional props 1`] = `
   style={
     Object {
       "color": "#303030",
-      "fontFamily": "Colfax-Bold",
+      "fontFamily": "OpenSans-Bold",
       "fontSize": 52.2,
       "lineHeight": 54.81,
-      "paddingTop": 11.7,
     }
   }
 >
@@ -27,15 +26,29 @@ exports[`the H1 component should accept and render passed in styles 1`] = `
   style={
     Object {
       "color": "salmon",
-      "fontFamily": "Colfax-Bold",
+      "fontFamily": "OpenSans-Bold",
       "fontSize": 52.2,
       "lineHeight": 54.81,
-      "paddingTop": 11.7,
     }
   }
 >
   Salmon text
 </Text>
+`;
+
+exports[`the H1 component should render a loading state 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#dddddd",
+      "borderRadius": 6,
+      "height": 52.2,
+      "marginVertical": 1.3049999999999997,
+      "width": "100%",
+    }
+  }
+/>
 `;
 
 exports[`the H1 component should render correctly 1`] = `
@@ -46,10 +59,9 @@ exports[`the H1 component should render correctly 1`] = `
   style={
     Object {
       "color": "#303030",
-      "fontFamily": "Colfax-Bold",
+      "fontFamily": "OpenSans-Bold",
       "fontSize": 52.2,
       "lineHeight": 54.81,
-      "paddingTop": 11.7,
     }
   }
 >
