@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Svg, { Path } from 'react-native-svg';
+import Svg, { Path, Polygon } from 'react-native-svg';
 
 import makeIcon from './makeIcon';
 
 const Icon = makeIcon(({ size = 32, fill, ...otherProps } = {}) => (
   <Svg width={size} height={size} viewBox="0 0 60 61" {...otherProps}>
-    <Svg.Polygon
+    <Polygon
       fill={fill}
       points="25.9570657 39.7210789 26.6666667 40.4357125 27.3762676 39.7210789 40.709601 26.293183 41.4092427 25.5885792 40.709601 24.8839754 38.0429343 22.1983962 37.3333333 21.4837626 36.6237324 22.1983962 25.9570657 32.940713 27.3762676 32.940713 23.3762676 28.9123442 22.6666667 28.1977106 21.9570657 28.9123442 19.290399 31.5979234 18.5907573 32.3025272 19.290399 33.007131"
     />
