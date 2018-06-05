@@ -11,6 +11,4 @@ Object.keys(icons).forEach((iconName) => {
   stories.add(iconName, () => <Icon name={kebabCase(iconName)} />);
 });
 
-stories.add('isLoading', () => (
-  <Icon name={'umbrella'} isLoading={this.state.isLoading} />
-));
+stories.add('isLoading', () => <Icon name={'umbrella'} isLoading />);
