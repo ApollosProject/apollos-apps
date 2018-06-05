@@ -2,7 +2,7 @@ import url from 'url';
 
 export const {
   ROCK_API = 'https://apollosrock.newspring.cc/api',
-  ROCK_TOKEN,
+  ROCK_TOKEN = 'some-rock-token',
 } = process.env;
 
 export const GET_IMAGE = url.resolve(ROCK_API, 'GetImage.ashx');
