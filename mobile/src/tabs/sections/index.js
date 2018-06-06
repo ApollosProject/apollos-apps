@@ -2,9 +2,9 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
-import Articles from '../../../src/articles';
-import Devotionals from '../../../src/devotionals';
-import News from '../../../src/news';
+import Articles from 'articles';
+import Devotionals from 'devotionals';
+import News from 'news';
 
 const styles = StyleSheet.create({
   container: {
