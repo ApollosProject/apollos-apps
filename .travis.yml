@@ -24,13 +24,6 @@ jobs:
 before_deploy: npm install now --no-save
 deploy:
   - provider: script
-    script: cd api && now --token --public $NOW_TOKEN
-    skip_cleanup: true
-    on:
-      all_branches: true
-      condition: $TRAVIS_PULL_REQUEST != false
-      master: false
-  - provider: script
     script: cd api && now --token --public $NOW_TOKEN && now alias --token $NOW_TOKEN
     skip_cleanup: true
     on:
