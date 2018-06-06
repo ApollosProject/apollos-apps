@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { TestProviders } from 'TestProviders';
+import TestProviders from 'TestProviders';
 
 import ConnectedImage, { getCachedSources, updateCache } from './';
 

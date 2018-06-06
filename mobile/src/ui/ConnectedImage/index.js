@@ -18,9 +18,9 @@ const ImageSourceType = PropTypes.oneOfType([
   PropTypes.string,
 ]);
 
-export const sizeCache = {};
+const sizeCache = {};
 
-export const getCacheKey = (source) => {
+const getCacheKey = (source) => {
   if (source.size && source.fileLabel)
     return `${source.size}-${source.fileLabel}`;
   if (source.url) return source.url;
@@ -28,7 +28,7 @@ export const getCacheKey = (source) => {
   return undefined;
 };
 
-export const getCachedSources = (_sources = []) => {
+const getCachedSources = (_sources = []) => {
   let sources = _sources;
   if (!Array.isArray(sources)) sources = [sources];
   sources = sources.map((source) => {
@@ -43,7 +43,7 @@ export const getCachedSources = (_sources = []) => {
   }));
 };
 
-export const updateCache = (sources) =>
+const updateCache = (sources) =>
   Promise.all(
     getCachedSources(sources).map((source) => {
       const key = getCacheKey(source);
@@ -218,5 +218,13 @@ class ConnectedImage extends PureComponent {
 }
 
 const enhanced = withBackgroundColor(ConnectedImage);
+
 enhanced.propTypes = ConnectedImage.propTypes;
-export default enhanced;
+
+export {
+  sizeCache,
+  getCacheKey,
+  getCachedSources,
+  updateCache,
+  enhanced as default,
+};
