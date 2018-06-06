@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Animated, Platform, Image } from 'react-native';
+import { Animated, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { every } from 'lodash';
 
@@ -120,12 +120,7 @@ class ConnectedImage extends PureComponent {
     if (this.props.maintainAspectRatio) {
       const firstSource = this.state.source[0];
       if (firstSource && firstSource.width && firstSource.height) {
-        if (Platform.OS === 'web') {
-          style.height = 0;
-          style.paddingTop = `${style.aspectRatio * 100}%`;
-        } else {
-          style.aspectRatio = firstSource.width / firstSource.height;
-        }
+        style.aspectRatio = firstSource.width / firstSource.height;
       }
     }
     return style;
@@ -190,11 +185,6 @@ class ConnectedImage extends PureComponent {
   render() {
     let { source } = this.state;
     if (!Array.isArray(source)) source = [source];
-
-    // react-native-web currently doesn't support array-based Image sources
-    if (Platform.OS === 'web' && Array.isArray(source)) {
-      [source] = source;
-    }
 
     const {
       ImageComponent = Animated.Image,
