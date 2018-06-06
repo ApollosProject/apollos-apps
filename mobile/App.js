@@ -1,24 +1,7 @@
 import React from 'react';
-import {
-  createBottomTabNavigator,
-  createStackNavigator,
-} from 'react-navigation';
-import {
-  ConnectStack,
-  HomeStack,
-  ProfileStack,
-  SearchStack,
-  SectionsStack,
-} from './src/tabs';
+import { createStackNavigator } from 'react-navigation';
+import { TabStack } from './src/tabs';
 import Article from './src/article';
-
-export const TabStack = createBottomTabNavigator({
-  Home: HomeStack,
-  Sections: SectionsStack,
-  Connect: ConnectStack,
-  Search: SearchStack,
-  Profile: ProfileStack,
-});
 
 export const RootStack = createStackNavigator(
   {
