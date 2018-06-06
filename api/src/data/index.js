@@ -3,13 +3,13 @@ import { mapValues, values, merge } from 'lodash';
 
 import * as Node from './node';
 import * as ContentChannel from './content-channels';
-import * as UniversalContentItem from './content-items';
+import * as ContentItem from './content-items';
 import * as Media from './media';
 
 const data = {
   Node,
   ContentChannel,
-  UniversalContentItem,
+  ContentItem,
   Media,
 };
 
@@ -23,4 +23,7 @@ export const schema = gql`
 
 export const resolvers = merge(...values(data).map((datum) => datum.resolver));
 
-export const models = mapValues(data, (datum) => datum.model);
+export const models = {
+  ...mapValues(data, (datum) => datum.model),
+  UniversalContentItem: ContentItem.model, // alias
+};
