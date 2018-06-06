@@ -5,7 +5,7 @@ import { ThemeProvider } from 'ui/theme';
 import { H3, H7, BodyText, Paragraph } from 'ui/typography';
 import Button, { ButtonLink } from 'ui/Button';
 
-import Card, { CardImage, CardContent, CardActions } from './';
+import { Card, CardImage, CardContent, CardActions } from './';
 
 describe('the Card component', () => {
   it('should render', () => {
