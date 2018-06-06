@@ -1,12 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
-import { TabStack } from './src/tabs';
-import Article from './src/article';
+import ArticleSingle from 'articles/Single';
+import { TabStack } from 'tabs';
 
 export const RootStack = createStackNavigator(
   {
     Tab: TabStack,
-    Article,
+    ArticleSingle,
   },
   {
     initialRouteName: 'Tab',

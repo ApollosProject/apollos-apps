@@ -22,7 +22,7 @@ export class HomeScreen extends React.Component {
         <Text>This is the home screen</Text>
         <Button
           title="Go to Article"
-          onPress={() => this.props.navigation.navigate('Article')}
+          onPress={() => this.props.navigation.navigate('ArticleSingle')}
         />
       </View>
     );
