@@ -1,11 +1,3 @@
-export { default as H1 } from './H1';
-export { default as H2 } from './H2';
-export { default as H3 } from './H3';
-export { default as H4 } from './H4';
-export { default as H5 } from './H5';
-export { default as H6 } from './H6';
-export { default as H7 } from './H7';
-export { default as BodyText } from './BodyText';
 export H1 from './H1';
 export H2 from './H2';
 export H3 from './H3';
@@ -15,3 +7,4 @@ export H6 from './H6';
 export H7 from './H7';
 export BodyText from './BodyText';
 export BlockQuote from './BlockQuote';
+export BulletListItem from './BulletListItem';
