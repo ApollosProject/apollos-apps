@@ -1,18 +1,11 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
-import { compose, pure, setPropTypes } from 'recompose';
+import { compose, pure } from 'recompose';
 import PropTypes from 'prop-types';
 
 import styled from 'ui/styled';
 
-const enhance = compose(
-  pure,
-  setPropTypes({
-    backgroundColor: PropTypes.string,
-    children: PropTypes.node,
-    style: PropTypes.any, // eslint-disable-line
-  })
-);
+const enhance = compose(pure);
 
 const StyledCard = styled(({ theme, cardColor }) => ({
   backgroundColor: cardColor || theme.colors.background.paper,
@@ -34,5 +27,11 @@ const CardWrapper = enhance(({ children, isLoading, ...otherProps }) => (
     <OverflowFix>{children}</OverflowFix>
   </StyledCard>
 ));
+
+CardWrapper.propTypes = {
+  backgroundColor: PropTypes.string,
+  children: PropTypes.node,
+  style: PropTypes.any, // eslint-disable-line
+};
 
 export default CardWrapper;
