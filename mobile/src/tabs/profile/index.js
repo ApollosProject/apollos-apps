@@ -42,4 +42,4 @@ export const ProfileStack = createStackNavigator(
   }
 );
 
-export default ProfileScreen;
+export default ProfileStack;

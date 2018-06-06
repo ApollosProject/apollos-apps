@@ -42,4 +42,4 @@ export const ConnectStack = createStackNavigator(
   }
 );
 
-export default ConnectScreen;
+export default ConnectStack;

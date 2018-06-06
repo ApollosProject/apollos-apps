@@ -67,4 +67,4 @@ export const SectionsStack = createStackNavigator(
   }
 );
 
-export default SectionsScreen;
+export default SectionsStack;

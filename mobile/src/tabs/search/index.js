@@ -42,4 +42,4 @@ export const SearchStack = createStackNavigator(
   }
 );
 
-export default SearchScreen;
+export default SearchStack;

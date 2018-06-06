@@ -53,4 +53,4 @@ export const HomeStack = createStackNavigator(
   }
 );
 
-export default HomeScreen;
+export default HomeStack;
