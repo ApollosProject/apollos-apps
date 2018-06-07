@@ -20,7 +20,7 @@ jobs:
         - bash ./scripts/global-npm-script.sh lint
     - stage: test
       script:
-        - bash ./scripts/global-npm-script.sh test
+        - travis_wait bash ./scripts/global-npm-script.sh test "travis"
 before_deploy: npm install now --no-save
 deploy:
   - provider: script
