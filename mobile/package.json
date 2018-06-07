@@ -57,6 +57,8 @@
   },
   "dependencies": {
     "color": "^3.0.0",
+    "entities": "^1.1.1",
+    "htmlparser2": "^3.9.2",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "react": "16.3.1",

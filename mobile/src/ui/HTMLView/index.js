@@ -1,8 +1,9 @@
 import React, { PureComponent, cloneElement, Children } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View, Text, Linking } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
 import { decodeHTML } from 'entities';
+
 import {
   BodyText,
   H1,
@@ -18,7 +19,6 @@ import {
 } from 'ui/typography';
 import { ButtonLink } from 'ui/Button';
 import ConnectedImage from 'ui/ConnectedImage';
-import WebBrowser from 'ui/WebBrowser';
 
 const LINE_BREAK = '\n';
 
@@ -93,7 +93,7 @@ export const defaultRenderer = (node, { children }) => {
         // we can't currently handle non web-links, so just return regular text instead:
         return children;
       }
-      const onPress = () => WebBrowser.openBrowserAsync(url);
+      const onPress = () => Linking.openURL(url);
       if (url) {
         return <ButtonLink onPress={onPress}>{children}</ButtonLink>;
       }
