@@ -40,7 +40,7 @@
     "lint": "./node_modules/.bin/eslint . --ext .js",
     "fixlint": "./node_modules/.bin/eslint . --fix",
     "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007",
-    "coveralls": "./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "jest": {
     "preset": "react-native",

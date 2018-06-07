@@ -8,7 +8,7 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint ./src --ext .js",
     "fixlint": "./node_modules/.bin/eslint ./src --ext .js --fix",
-    "coveralls": "./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "engines": {
     "node": "8.11.2"

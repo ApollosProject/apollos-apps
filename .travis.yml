@@ -13,4 +13,5 @@ jobs:
     - stage: test
       script:
         - bash ./scripts/global-npm-script.sh lint
+      script:
         - bash ./scripts/global-npm-script.sh test && bash ./scripts/global-npm-script.sh coveralls
