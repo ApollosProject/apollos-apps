@@ -9,8 +9,8 @@ API_DIR="$DIR/api"
 MOBILE_DIR="$DIR/mobile"
 
 if [ $ACTION ]; then
-  if [ -z "$2" ]; then
-    ACTION="$ACTION $CI"
+  if [ -n "$2" ]; then
+    ACTION+=$CI
   fi
   cd $API_DIR && yarn run $ACTION
 
