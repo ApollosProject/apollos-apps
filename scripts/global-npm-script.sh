@@ -10,7 +10,7 @@ MOBILE_DIR="$DIR/mobile"
 
 if [ $ACTION ]; then
   if [ -z "$2" ]; then
-    ACTION+=$CI
+    ACTION="$ACTION $CI"
   fi
   cd $API_DIR && yarn run $ACTION
 
