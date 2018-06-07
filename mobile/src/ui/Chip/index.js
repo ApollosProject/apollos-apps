@@ -1,9 +1,9 @@
-// Chippy!
 import React from 'react';
 import { compose, mapProps } from 'recompose';
-
-// touchable native feedback currently is having flex layout issues
-// on react-native android, so we fall back to TouchableOpacity
+import PropTypes from 'prop-types';
+/* touchable native feedback currently is having flex layout issues on react-native android, so we
+ * fall back to TouchableOpacity
+ */
 import { TouchableOpacity } from 'react-native';
 
 import { H6 } from 'ui/typography';
@@ -37,6 +37,9 @@ const StyledButton = styled(
     paddingHorizontal: theme.sizing.baseUnit / 4,
     paddingVertical: theme.sizing.baseUnit / 4,
     height: theme.sizing.baseUnit * 2,
+    /* these margins are only used when a chip is in a list.
+     * TODO: consider removing or making conditional for use outside of lists
+     */
     marginRight: theme.sizing.baseUnit / 2,
     marginBottom: theme.sizing.baseUnit / 2,
   }),
@@ -64,5 +67,14 @@ const Chip = enhance(
     </StyledButton>
   )
 );
+
+Chip.propTypes = {
+  icon: PropTypes.string,
+  iconStyles: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  iconSize: PropTypes.number,
+  selected: PropTypes.bool,
+  title: PropTypes.string,
+  pill: PropTypes.bool,
+};
 
 export default Chip;
