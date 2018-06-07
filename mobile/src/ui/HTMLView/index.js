@@ -98,10 +98,10 @@ export const defaultRenderer = (node, { children }) => {
         return <ButtonLink onPress={onPress}>{children}</ButtonLink>;
       }
     }
-    // ignoring fallthrough on the next line because of the conditional return above,
-    // so we handle the edge-case of an <a> tag used w/o a href
+    /* ignoring fallthrough on the next line because of the conditional return above,
+     * so we handle the edge-case of an <a> tag used w/o a href
+     */
     case 'img': {
-      // eslint-disable-line no-fallthrough
       const source = {
         url: node.attribs.src,
       };
@@ -125,7 +125,7 @@ export const defaultRenderer = (node, { children }) => {
 export default class HTMLView extends PureComponent {
   static propTypes = {
     children: PropTypes.string,
-    renderer: PropTypes.func.isRequired,
+    renderer: PropTypes.func,
   };
 
   static defaultProps = {
