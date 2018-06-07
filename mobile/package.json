@@ -36,7 +36,7 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
-    "test": "yarn run lint && jest",
+    "test": "bash ../scripts/test-script.sh",
     "lint": "./node_modules/.bin/eslint . --ext .js",
     "fixlint": "./node_modules/.bin/eslint . --fix",
     "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007",
@@ -60,6 +60,7 @@
     "lodash": "^4.17.10",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-navigation": "^2.0.4",
     "react-native-svg": "^6.3.1",
     "recompose": "^0.27.1",
     "rn-placeholder": "^1.2.0"
