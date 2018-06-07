@@ -12,7 +12,7 @@
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "babel-runtime": "^6.26.0",
-    "coveralls": "^3.0.1",
+    "codecov": "^3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -40,7 +40,7 @@
     "lint": "./node_modules/.bin/eslint . --ext .js",
     "fixlint": "./node_modules/.bin/eslint . --fix",
     "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "codecov": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov"
   },
   "jest": {
     "preset": "react-native",
