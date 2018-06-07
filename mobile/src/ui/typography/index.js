@@ -6,5 +6,6 @@ export H5 from './H5';
 export H6 from './H6';
 export H7 from './H7';
 export BodyText from './BodyText';
+export Paragraph from './Paragraph';
 export BlockQuote from './BlockQuote';
 export BulletListItem from './BulletListItem';
