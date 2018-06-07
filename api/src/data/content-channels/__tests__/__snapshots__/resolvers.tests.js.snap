@@ -32,14 +32,7 @@ Object {
   "data": Object {
     "node": Object {
       "__typename": "ContentChannel",
-      "childContentChannels": Array [
-        Object {
-          "__typename": "ContentChannel",
-          "description": "Some description",
-          "id": "2c83ae5edf3ecb8557bf3e77677296854a403a0b0ee37b818de3f6ff1442cb3c",
-          "name": "My super cool content channel",
-        },
-      ],
+      "childContentChannels": null,
       "childContentItemsConnection": Object {
         "edges": Array [
           Object {
@@ -52,7 +45,7 @@ Object {
         ],
       },
       "description": "Some description",
-      "id": "ddb4bdb68a33c6dbd5d6320bfd3a7a130edadc710f1ce9b6bb55a4d51e8561a4",
+      "id": "2c83ae5edf3ecb8557bf3e77677296854a403a0b0ee37b818de3f6ff1442cb3c",
       "name": "My super cool content channel",
     },
   },

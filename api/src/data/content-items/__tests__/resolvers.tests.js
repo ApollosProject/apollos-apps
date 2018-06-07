@@ -1,258 +1,98 @@
-export const exampleRockContentItemShape = {
-  ContentChannelId: 1,
-  ContentChannelTypeId: 1,
-  Title: 'SAMPLE: Easter',
-  Content:
-    '<p>\r\n\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>\r\n<p>\r\n\tSuspendisse vel nibh odio. Pellentesque porta sapien ligula, in laoreet diam tempus sed. Morbi nunc erat, mattis eu pulvinar blandit, adipiscing quis magna. Ut quis dui lobortis velit suscipit consectetur. Nulla iaculis fermentum egestas. Aenean venenatis sagittis mauris, sed rhoncus purus accumsan ac. Suspendisse potenti. Sed sed tempor turpis. Duis sit amet nisi nec purus fringilla condimentum. Phasellus non lacus arcu. Donec scelerisque, erat sed tempor elementum, nulla risus scelerisque ante, ac imperdiet velit magna ut quam. Nam tristique orci auctor consequat laoreet. Quisque malesuada metus sed sodales eleifend. Aenean rhoncus, mi sit amet ullamcorper tincidunt, sem sem rutrum felis, in semper enim massa ut sem.</p>\r\n<p>\r\n\tVivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>\r\n',
-  Priority: 100,
-  Status: 2,
-  ApprovedByPersonAliasId: 10,
-  ApprovedDateTime: '2013-08-01T00:00:00',
-  StartDateTime: '2013-08-01T00:00:00',
-  ExpireDateTime: '2020-08-02T00:00:00',
-  Permalink: null,
-  Order: 0,
-  ContentChannel: null,
-  ContentChannelType: null,
-  CreatedDateTime: null,
-  ModifiedDateTime: null,
-  CreatedByPersonAliasId: null,
-  ModifiedByPersonAliasId: null,
-  ModifiedAuditValuesAlreadyUpdated: false,
-  Attributes: {
-    SummaryText: {
-      IsSystem: false,
-      FieldTypeId: 21,
-      EntityTypeId: 208,
-      EntityTypeQualifierColumn: 'ContentChannelTypeId',
-      EntityTypeQualifierValue: '1',
-      Key: 'SummaryText',
-      Name: 'Summary Text',
-      Description: 'Short description',
-      Order: 0,
-      IsGridColumn: false,
-      DefaultValue: '',
-      IsMultiValue: false,
-      IsRequired: false,
-      AllowSearch: false,
-      IsIndexEnabled: false,
-      IsAnalytic: false,
-      IsAnalyticHistory: false,
-      QualifierValues: {
-        allowhtml: {
-          Name: null,
-          Description: null,
-          Value: 'True',
-        },
-      },
-      CategoryIds: [],
-      TypeId: 49,
-      TypeName: 'Rock.Model.Attribute',
-      AttributeValues: {},
-      Id: 1265,
-      Guid: '35993d3b-57d3-4f41-88a5-a83ee380d2dd',
-    },
-    Image: {
-      IsSystem: false,
-      FieldTypeId: 10,
-      EntityTypeId: 208,
-      EntityTypeQualifierColumn: 'ContentChannelTypeId',
-      EntityTypeQualifierValue: '1',
-      Key: 'Image',
-      Name: 'Image',
-      Description: '',
-      Order: 1,
-      IsGridColumn: false,
-      DefaultValue: '',
-      IsMultiValue: false,
-      IsRequired: false,
-      AllowSearch: false,
-      IsIndexEnabled: false,
-      IsAnalytic: false,
-      IsAnalyticHistory: false,
-      QualifierValues: {
-        binaryFileType: {
-          Name: null,
-          Description: null,
-          Value: '8DBF874C-F3C2-4848-8137-C963C431EB0B',
-        },
-      },
-      CategoryIds: [],
-      TypeId: 49,
-      TypeName: 'Rock.Model.Attribute',
-      AttributeValues: {},
-      Id: 1266,
-      Guid: 'ffdf621c-ecff-4199-ab90-d678c36dce38',
-    },
-    DetailImage: {
-      IsSystem: false,
-      FieldTypeId: 10,
-      EntityTypeId: 208,
-      EntityTypeQualifierColumn: 'ContentChannelTypeId',
-      EntityTypeQualifierValue: '1',
-      Key: 'DetailImage',
-      Name: 'Detail Image',
-      Description: '',
-      Order: 2,
-      IsGridColumn: false,
-      DefaultValue: '',
-      IsMultiValue: false,
-      IsRequired: false,
-      AllowSearch: false,
-      IsIndexEnabled: false,
-      IsAnalytic: false,
-      IsAnalyticHistory: false,
-      QualifierValues: {
-        binaryFileType: {
-          Name: null,
-          Description: null,
-          Value: '8DBF874C-F3C2-4848-8137-C963C431EB0B',
-        },
-      },
-      CategoryIds: [],
-      TypeId: 49,
-      TypeName: 'Rock.Model.Attribute',
-      AttributeValues: {},
-      Id: 1267,
-      Guid: '43758fc4-906e-46cd-a6fb-8f21176c1cc5',
-    },
-    Campuses: {
-      IsSystem: false,
-      FieldTypeId: 26,
-      EntityTypeId: 208,
-      EntityTypeQualifierColumn: 'ContentChannelTypeId',
-      EntityTypeQualifierValue: '1',
-      Key: 'Campuses',
-      Name: 'Campuses',
-      Description: 'The campus or campuses that the item is associated with',
-      Order: 3,
-      IsGridColumn: false,
-      DefaultValue: '',
-      IsMultiValue: false,
-      IsRequired: false,
-      AllowSearch: false,
-      IsIndexEnabled: false,
-      IsAnalytic: false,
-      IsAnalyticHistory: false,
-      QualifierValues: {},
-      CategoryIds: [],
-      TypeId: 49,
-      TypeName: 'Rock.Model.Attribute',
-      AttributeValues: {},
-      Id: 1268,
-      Guid: 'fd8df8ac-0af2-4738-8dda-3b1030c3e0ce',
-    },
-    PrimaryAudience: {
-      IsSystem: false,
-      FieldTypeId: 16,
-      EntityTypeId: 208,
-      EntityTypeQualifierColumn: 'ContentChannelTypeId',
-      EntityTypeQualifierValue: '1',
-      Key: 'PrimaryAudience',
-      Name: 'Primary Audience',
-      Description: 'The primary audience that the item is targeted towards.',
-      Order: 4,
-      IsGridColumn: false,
-      DefaultValue: '',
-      IsMultiValue: false,
-      IsRequired: false,
-      AllowSearch: false,
-      IsIndexEnabled: false,
-      IsAnalytic: false,
-      IsAnalyticHistory: false,
-      QualifierValues: {
-        allowmultiple: {
-          Name: null,
-          Description: null,
-          Value: 'False',
-        },
-        definedtype: {
-          Name: null,
-          Description: null,
-          Value: '16',
-        },
-      },
-      CategoryIds: [],
-      TypeId: 49,
-      TypeName: 'Rock.Model.Attribute',
-      AttributeValues: {},
-      Id: 1269,
-      Guid: 'ca97aadd-9795-434a-b924-250cc15cd7a5',
-    },
-    SecondaryAudiences: {
-      IsSystem: false,
-      FieldTypeId: 16,
-      EntityTypeId: 208,
-      EntityTypeQualifierColumn: 'ContentChannelTypeId',
-      EntityTypeQualifierValue: '1',
-      Key: 'SecondaryAudiences',
-      Name: 'Secondary Audiences',
-      Description: 'Any secondary audiences that the item is targeted towards.',
-      Order: 5,
-      IsGridColumn: false,
-      DefaultValue: '',
-      IsMultiValue: false,
-      IsRequired: false,
-      AllowSearch: false,
-      IsIndexEnabled: false,
-      IsAnalytic: false,
-      IsAnalyticHistory: false,
-      QualifierValues: {
-        allowmultiple: {
-          Name: null,
-          Description: null,
-          Value: 'True',
-        },
-        definedtype: {
-          Name: null,
-          Description: null,
-          Value: '16',
-        },
-      },
-      CategoryIds: [],
-      TypeId: 49,
-      TypeName: 'Rock.Model.Attribute',
-      AttributeValues: {},
-      Id: 1270,
-      Guid: '95e68a40-c987-4b53-8d9a-0c5605284e4c',
-    },
-  },
-  AttributeValues: {
-    SummaryText: {
-      AttributeId: 1265,
-      EntityId: 1,
-      Value:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a.',
-    },
-    Image: {
-      AttributeId: 1266,
-      EntityId: 1,
-      Value: '0241ED2F-B527-424C-917C-1142A398711F',
-    },
-    DetailImage: {
-      AttributeId: 1267,
-      EntityId: 1,
-      Value: '3DA90982-118A-4BFE-9A32-58D9F610090A',
-    },
-    Campuses: {
-      AttributeId: 1268,
-      EntityId: null,
-      Value: '',
-    },
-    PrimaryAudience: {
-      AttributeId: 1269,
-      EntityId: 1,
-      Value: 'B364CDEE-F000-4965-AE67-0C80DDA365DC',
-    },
-    SecondaryAudiences: {
-      AttributeId: 1270,
-      EntityId: null,
-      Value: '',
-    },
-  },
-  Id: 1,
-  Guid: '3b8e1859-e42f-4f01-9007-d3e04429f17d',
-  ForeignId: null,
-  ForeignGuid: null,
-  ForeignKey: null,
-};
+import { graphql } from 'graphql';
+import fetch from 'isomorphic-fetch';
+import { makeExecutableSchema, gql } from 'apollo-server';
+
+import { createGlobalId } from '../../node/model';
+import { getContext } from '../../../';
+// we import the root-level schema and resolver so we test the entire integration:
+import { schema as typeDefs, resolvers } from '../../';
+
+const contentItemFragment = gql`
+  fragment ContentItemFragment on UniversalContentItem {
+    id
+    __typename
+    title
+    images {
+      name
+      key
+      sources {
+        uri
+      }
+    }
+    videos {
+      name
+      key
+      sources {
+        uri
+      }
+      embedHtml
+    }
+    audios {
+      name
+      key
+      sources {
+        uri
+      }
+    }
+    htmlContent
+    childContentItemsConnection {
+      edges {
+        node {
+          id
+          __typename
+        }
+        cursor
+      }
+    }
+    parentChannel {
+      id
+      __typename
+    }
+    terms {
+      key
+      value
+    }
+  }
+`;
+
+describe('UniversalContentItem', () => {
+  let schema;
+  let context;
+  beforeEach(() => {
+    fetch.resetMocks();
+    fetch.mockRockAPI();
+    schema = makeExecutableSchema({ typeDefs, resolvers });
+    context = getContext();
+  });
+
+  it('gets a content item', async () => {
+    const query = gql`
+      query {
+        node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+          ...ContentItemFragment
+        }
+      }
+      ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('filters terms by a match string', async () => {
+    const query = gql`
+    query {
+      node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+        ...on UniversalContentItem {
+          terms(match: "speaker") {
+            value
+          }
+        }
+      }
+    }
+  `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+});
