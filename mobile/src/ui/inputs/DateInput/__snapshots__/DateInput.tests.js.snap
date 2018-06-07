@@ -10,19 +10,13 @@ exports[`The DateInput component should render 1`] = `
 >
   <View
     accessibilityComponentType="button"
-    accessibilityLabel={undefined}
     accessibilityTraits={
       Array [
         "button",
       ]
     }
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -34,8 +28,6 @@ exports[`The DateInput component should render 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       bordered={false}
@@ -66,20 +58,15 @@ exports[`The DateInput component should render 1`] = `
   <Modal
     animationType="none"
     hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
     onModalHide={[Function]}
     onRequestClose={[Function]}
+    swipeThreshold={100}
     transparent={true}
     visible={false}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -99,10 +86,9 @@ exports[`The DateInput component should render 1`] = `
           "width": 750,
         }
       }
-      testID={undefined}
     />
     <View
-      collapsable={undefined}
+      hideModalContentWhileAnimating={false}
       onModalHide={[Function]}
       pointerEvents="box-none"
       style={
@@ -117,6 +103,7 @@ exports[`The DateInput component should render 1`] = `
           ],
         }
       }
+      swipeThreshold={100}
     >
       <View
         style={
@@ -162,15 +149,10 @@ exports[`The DateInput component should render 1`] = `
         <View
           onStartShouldSetResponderCapture={[Function]}
         >
-          <View
-            style={undefined}
-          >
+          <View>
             <RCTDatePicker
               date={1420070400000}
-              locale={undefined}
-              maximumDate={undefined}
-              minimumDate={undefined}
-              minuteInterval={undefined}
+              minuteInterval={1}
               mode="date"
               onChange={[Function]}
               onResponderTerminationRequest={[Function]}
@@ -180,20 +162,12 @@ exports[`The DateInput component should render 1`] = `
                   "height": 216,
                 }
               }
-              timeZoneOffsetInMinutes={undefined}
             />
           </View>
         </View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -209,8 +183,6 @@ exports[`The DateInput component should render 1`] = `
               "justifyContent": "center",
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -234,15 +206,8 @@ exports[`The DateInput component should render 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -255,10 +220,9 @@ exports[`The DateInput component should render 1`] = `
             "borderRadius": 13,
             "height": 57,
             "justifyContent": "center",
+            "marginBottom": 0,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -296,19 +260,13 @@ exports[`The DateInput component should render with a displayValue 1`] = `
 >
   <View
     accessibilityComponentType="button"
-    accessibilityLabel={undefined}
     accessibilityTraits={
       Array [
         "button",
       ]
     }
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -320,8 +278,6 @@ exports[`The DateInput component should render with a displayValue 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       bordered={false}
@@ -356,17 +312,14 @@ exports[`The DateInput component should render with a displayValue 1`] = `
           Object {
             "alignItems": "center",
             "color": "#303030",
-            "fontFamily": "Colfax-Bold",
+            "fontFamily": "OpenSans-Bold",
             "fontSize": 15.75,
             "justifyContent": "center",
             "lineHeight": 17.75,
-            "paddingBottom": 1.8,
             "paddingHorizontal": 6,
-            "paddingTop": 4.5,
             "textAlign": "center",
           }
         }
-        withIcon={undefined}
       >
         2015/01/01
       </Text>
@@ -375,20 +328,15 @@ exports[`The DateInput component should render with a displayValue 1`] = `
   <Modal
     animationType="none"
     hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
     onModalHide={[Function]}
     onRequestClose={[Function]}
+    swipeThreshold={100}
     transparent={true}
     visible={false}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -408,10 +356,9 @@ exports[`The DateInput component should render with a displayValue 1`] = `
           "width": 750,
         }
       }
-      testID={undefined}
     />
     <View
-      collapsable={undefined}
+      hideModalContentWhileAnimating={false}
       onModalHide={[Function]}
       pointerEvents="box-none"
       style={
@@ -426,6 +373,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
           ],
         }
       }
+      swipeThreshold={100}
     >
       <View
         style={
@@ -471,15 +419,10 @@ exports[`The DateInput component should render with a displayValue 1`] = `
         <View
           onStartShouldSetResponderCapture={[Function]}
         >
-          <View
-            style={undefined}
-          >
+          <View>
             <RCTDatePicker
               date={1420070400000}
-              locale={undefined}
-              maximumDate={undefined}
-              minimumDate={undefined}
-              minuteInterval={undefined}
+              minuteInterval={1}
               mode="date"
               onChange={[Function]}
               onResponderTerminationRequest={[Function]}
@@ -489,20 +432,12 @@ exports[`The DateInput component should render with a displayValue 1`] = `
                   "height": 216,
                 }
               }
-              timeZoneOffsetInMinutes={undefined}
             />
           </View>
         </View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -518,8 +453,6 @@ exports[`The DateInput component should render with a displayValue 1`] = `
               "justifyContent": "center",
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -543,15 +476,8 @@ exports[`The DateInput component should render with a displayValue 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -564,10 +490,9 @@ exports[`The DateInput component should render with a displayValue 1`] = `
             "borderRadius": 13,
             "height": 57,
             "justifyContent": "center",
+            "marginBottom": 0,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -593,7 +518,6 @@ exports[`The DateInput component should render with a displayValue 1`] = `
     </View>
   </Modal>
   <View
-    collapsable={undefined}
     onLayout={[Function]}
     pointerEvents="none"
     style={
@@ -625,11 +549,9 @@ exports[`The DateInput component should render with a displayValue 1`] = `
         Object {
           "backgroundColor": "transparent",
           "color": "#505050",
-          "fontFamily": "Colfax-Bold",
+          "fontFamily": "OpenSans-Bold",
           "fontSize": 15.75,
           "lineHeight": 17.75,
-          "paddingBottom": 1.8,
-          "paddingTop": 4.5,
           "paddingVertical": 5,
         }
       }
@@ -648,19 +570,13 @@ exports[`The DateInput component should render with a label 1`] = `
 >
   <View
     accessibilityComponentType="button"
-    accessibilityLabel={undefined}
     accessibilityTraits={
       Array [
         "button",
       ]
     }
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -672,8 +588,6 @@ exports[`The DateInput component should render with a label 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       bordered={false}
@@ -708,17 +622,14 @@ exports[`The DateInput component should render with a label 1`] = `
           Object {
             "alignItems": "center",
             "color": "#303030",
-            "fontFamily": "Colfax-Bold",
+            "fontFamily": "OpenSans-Bold",
             "fontSize": 15.75,
             "justifyContent": "center",
             "lineHeight": 17.75,
-            "paddingBottom": 1.8,
             "paddingHorizontal": 6,
-            "paddingTop": 4.5,
             "textAlign": "center",
           }
         }
-        withIcon={undefined}
       >
         2015/01/01
       </Text>
@@ -727,20 +638,15 @@ exports[`The DateInput component should render with a label 1`] = `
   <Modal
     animationType="none"
     hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
     onModalHide={[Function]}
     onRequestClose={[Function]}
+    swipeThreshold={100}
     transparent={true}
     visible={false}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -760,10 +666,9 @@ exports[`The DateInput component should render with a label 1`] = `
           "width": 750,
         }
       }
-      testID={undefined}
     />
     <View
-      collapsable={undefined}
+      hideModalContentWhileAnimating={false}
       onModalHide={[Function]}
       pointerEvents="box-none"
       style={
@@ -778,6 +683,7 @@ exports[`The DateInput component should render with a label 1`] = `
           ],
         }
       }
+      swipeThreshold={100}
     >
       <View
         style={
@@ -823,15 +729,10 @@ exports[`The DateInput component should render with a label 1`] = `
         <View
           onStartShouldSetResponderCapture={[Function]}
         >
-          <View
-            style={undefined}
-          >
+          <View>
             <RCTDatePicker
               date={1420070400000}
-              locale={undefined}
-              maximumDate={undefined}
-              minimumDate={undefined}
-              minuteInterval={undefined}
+              minuteInterval={1}
               mode="date"
               onChange={[Function]}
               onResponderTerminationRequest={[Function]}
@@ -841,20 +742,12 @@ exports[`The DateInput component should render with a label 1`] = `
                   "height": 216,
                 }
               }
-              timeZoneOffsetInMinutes={undefined}
             />
           </View>
         </View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -870,8 +763,6 @@ exports[`The DateInput component should render with a label 1`] = `
               "justifyContent": "center",
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -895,15 +786,8 @@ exports[`The DateInput component should render with a label 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -916,10 +800,9 @@ exports[`The DateInput component should render with a label 1`] = `
             "borderRadius": 13,
             "height": 57,
             "justifyContent": "center",
+            "marginBottom": 0,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -945,7 +828,6 @@ exports[`The DateInput component should render with a label 1`] = `
     </View>
   </Modal>
   <View
-    collapsable={undefined}
     onLayout={[Function]}
     pointerEvents="none"
     style={
@@ -977,11 +859,9 @@ exports[`The DateInput component should render with a label 1`] = `
         Object {
           "backgroundColor": "transparent",
           "color": "#505050",
-          "fontFamily": "Colfax-Bold",
+          "fontFamily": "OpenSans-Bold",
           "fontSize": 15.75,
           "lineHeight": 17.75,
-          "paddingBottom": 1.8,
-          "paddingTop": 4.5,
           "paddingVertical": 5,
         }
       }
@@ -1002,19 +882,13 @@ exports[`The DateInput component should render with a placeholder 1`] = `
 >
   <View
     accessibilityComponentType="button"
-    accessibilityLabel={undefined}
     accessibilityTraits={
       Array [
         "button",
       ]
     }
     accessible={true}
-    collapsable={undefined}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -1026,8 +900,6 @@ exports[`The DateInput component should render with a placeholder 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       bordered={false}
@@ -1062,17 +934,14 @@ exports[`The DateInput component should render with a placeholder 1`] = `
           Object {
             "alignItems": "center",
             "color": "#303030",
-            "fontFamily": "Colfax-Bold",
+            "fontFamily": "OpenSans-Bold",
             "fontSize": 15.75,
             "justifyContent": "center",
             "lineHeight": 17.75,
-            "paddingBottom": 1.8,
             "paddingHorizontal": 6,
-            "paddingTop": 4.5,
             "textAlign": "center",
           }
         }
-        withIcon={undefined}
       >
         mm/dd/yyyy
       </Text>
@@ -1081,20 +950,15 @@ exports[`The DateInput component should render with a placeholder 1`] = `
   <Modal
     animationType="none"
     hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
     onModalHide={[Function]}
     onRequestClose={[Function]}
+    swipeThreshold={100}
     transparent={true}
     visible={false}
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1114,10 +978,9 @@ exports[`The DateInput component should render with a placeholder 1`] = `
           "width": 750,
         }
       }
-      testID={undefined}
     />
     <View
-      collapsable={undefined}
+      hideModalContentWhileAnimating={false}
       onModalHide={[Function]}
       pointerEvents="box-none"
       style={
@@ -1132,6 +995,7 @@ exports[`The DateInput component should render with a placeholder 1`] = `
           ],
         }
       }
+      swipeThreshold={100}
     >
       <View
         style={
@@ -1177,15 +1041,10 @@ exports[`The DateInput component should render with a placeholder 1`] = `
         <View
           onStartShouldSetResponderCapture={[Function]}
         >
-          <View
-            style={undefined}
-          >
+          <View>
             <RCTDatePicker
               date={1420070400000}
-              locale={undefined}
-              maximumDate={undefined}
-              minimumDate={undefined}
-              minuteInterval={undefined}
+              minuteInterval={1}
               mode="date"
               onChange={[Function]}
               onResponderTerminationRequest={[Function]}
@@ -1195,20 +1054,12 @@ exports[`The DateInput component should render with a placeholder 1`] = `
                   "height": 216,
                 }
               }
-              timeZoneOffsetInMinutes={undefined}
             />
           </View>
         </View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1224,8 +1075,6 @@ exports[`The DateInput component should render with a placeholder 1`] = `
               "justifyContent": "center",
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -1249,15 +1098,8 @@ exports[`The DateInput component should render with a placeholder 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1270,10 +1112,9 @@ exports[`The DateInput component should render with a placeholder 1`] = `
             "borderRadius": 13,
             "height": 57,
             "justifyContent": "center",
+            "marginBottom": 0,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -1299,7 +1140,6 @@ exports[`The DateInput component should render with a placeholder 1`] = `
     </View>
   </Modal>
   <View
-    collapsable={undefined}
     onLayout={[Function]}
     pointerEvents="none"
     style={
@@ -1331,11 +1171,9 @@ exports[`The DateInput component should render with a placeholder 1`] = `
         Object {
           "backgroundColor": "transparent",
           "color": "#505050",
-          "fontFamily": "Colfax-Bold",
+          "fontFamily": "OpenSans-Bold",
           "fontSize": 15.75,
           "lineHeight": 17.75,
-          "paddingBottom": 1.8,
-          "paddingTop": 4.5,
           "paddingVertical": 5,
         }
       }

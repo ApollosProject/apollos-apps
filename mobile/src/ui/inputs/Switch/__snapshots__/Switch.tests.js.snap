@@ -41,16 +41,8 @@ exports[`The Picker Input component should render correctly 1`] = `
         }
       >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -62,8 +54,6 @@ exports[`The Picker Input component should render correctly 1`] = `
               "opacity": 1,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -73,11 +63,9 @@ exports[`The Picker Input component should render correctly 1`] = `
               Object {
                 "backgroundColor": "transparent",
                 "color": "#505050",
-                "fontFamily": "Colfax-Bold",
+                "fontFamily": "OpenSans-Bold",
                 "fontSize": 15.75,
                 "lineHeight": 17.75,
-                "paddingBottom": 1.8,
-                "paddingTop": 4.5,
                 "paddingVertical": 5,
               }
             }
@@ -102,7 +90,6 @@ exports[`The Picker Input component should render correctly 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           onTintColor="#6bac43"
-          onValueChange={undefined}
           style={
             Array [
               Object {
