@@ -17,6 +17,7 @@ export const schema = gql`
   ${values(data).map((datum) => datum.schema)}
   type Query {
     node(id: ID!): Node
+    userFeed(first: Int, after: String): ContentItemsConnection
     contentChannels: [ContentChannel]
   }
 `;

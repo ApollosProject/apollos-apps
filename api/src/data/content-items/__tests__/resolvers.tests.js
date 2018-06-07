@@ -12,6 +12,13 @@ const contentItemFragment = gql`
     id
     __typename
     title
+    coverImage {
+      name
+      key
+      sources {
+        uri
+      }
+    }
     images {
       name
       key
@@ -63,6 +70,24 @@ describe('UniversalContentItem', () => {
     fetch.mockRockAPI();
     schema = makeExecutableSchema({ typeDefs, resolvers });
     context = getContext();
+  });
+
+  it('gets a user feed', async () => {
+    const query = gql`
+      query {
+        userFeed {
+          edges {
+            node {
+              ...ContentItemFragment
+            }
+          }
+        }
+      }
+      ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
   });
 
   it('gets a content item', async () => {

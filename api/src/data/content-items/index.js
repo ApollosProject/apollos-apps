@@ -17,6 +17,7 @@ export const schema = gql`
   interface ContentItem {
     id: ID!
     title: String
+    coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
     audios: [AudioMedia]
@@ -32,6 +33,7 @@ export const schema = gql`
   type UniversalContentItem implements ContentItem & Node {
     id: ID!
     title: String
+    coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
     audios: [AudioMedia]
@@ -47,6 +49,11 @@ export const schema = gql`
   type Term {
     key: String
     value: String
+  }
+
+  input ContentItemsConnectionInput {
+    first: Int
+    after: String
   }
 
   type ContentItemsConnection {
@@ -135,9 +142,37 @@ export const defaultContentItemResolvers = {
       sources: [{ uri: attributeValues[key].value }],
     }));
   },
+
+  coverImage: async (node, input, { models }) => {
+    const defaultImages = defaultContentItemResolvers.images(node);
+    // return top image by defalt. TODO: probably better logic to default to.
+    if (defaultImages.length) return defaultImages[0];
+
+    // If no image, check parent for image:
+    const parentItems = await (await models.ContentItem.getCursorByChildContentItemId(
+      node.id
+    )).get();
+
+    if (parentItems.length) {
+      const parentImages = parentItems
+        .map(defaultContentItemResolvers.images)
+        .find((images) => images.length);
+
+      if (parentImages && parentImages.length) return parentImages[0];
+    }
+
+    return null;
+  },
 };
 
 export const resolver = {
+  Query: {
+    userFeed: (_, input, { models }) =>
+      models.ContentItem.paginate({
+        cursor: models.ContentItem.byUserFeed(),
+        input,
+      }),
+  },
   UniversalContentItem: {
     ...defaultContentItemResolvers,
     terms: ({ attributeValues, attributes }, { match }) =>

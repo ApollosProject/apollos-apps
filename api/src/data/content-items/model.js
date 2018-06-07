@@ -39,6 +39,15 @@ export default class ContentItem extends RockModel {
     return request.orderBy('Order');
   };
 
+  byUserFeed = () =>
+    this.request() // TODO: load these IDs dynamically
+      .filter(`ContentChannelId eq 2`)
+      .filter(`ContentChannelId eq 3`)
+      .filter(`ContentChannelId eq 4`)
+      .filter(`ContentChannelId eq 5`)
+      .filter(`ContentChannelId eq 6`)
+      .orderBy('StartDateTime', 'desc');
+
   byContentChannelId = (id) =>
     this.request().filter(`ContentChannelId eq ${id}`);
 
