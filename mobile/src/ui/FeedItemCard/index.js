@@ -4,7 +4,7 @@ import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
 
 import { withThemeMixin, withTheme } from 'ui/theme';
-// import Icon from 'ui/Icon';
+import Icon from 'ui/Icon';
 import ChannelLabel from 'ui/ChannelLabel';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
 import Card, { CardContent, CardActions } from 'ui/Card';
@@ -12,7 +12,7 @@ import { H4 } from 'ui/typography';
 import styled from 'ui/styled';
 import ProgressiveImage from 'ui/ProgressiveImage';
 
-// import LikeButton from './LikeButton'; // #TO-DO: Bring this over
+import LikeButton from './LikeButton';
 
 const StyledCardContent = styled({ paddingBottom: 0 })(CardContent);
 
@@ -54,14 +54,14 @@ const FeedItemCard = enhance(
           isLoading={isLoading}
           withFlex
         />
-        {/* <LikeButton id={id}>
+        <LikeButton id={id}>
           <Icon
             name={isLiked ? 'like-solid' : 'like'}
             size={theme.helpers.rem(1.2)}
             fill={theme.colors.text.primary}
             isLoading={isLoading}
           />
-        </LikeButton> */}
+        </LikeButton>
       </CardActions>
     </Card>
   )
