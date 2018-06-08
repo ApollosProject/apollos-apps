@@ -24,4 +24,5 @@ deploy:
     script: cd api && now --token --public $NOW_TOKEN && now alias --token $NOW_TOKEN
     skip_cleanup: true
     on:
-      master: true
+      all_branches: true
+      master: false
