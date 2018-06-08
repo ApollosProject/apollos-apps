@@ -1,6 +1,628 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the HTMLView component renders HTML to React 1`] = `
+exports[`the HTMLView component should render a block quote 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#858585",
+        "borderTopWidth": 0.5,
+        "marginVertical": 40,
+        "paddingHorizontal": 20,
+        "paddingVertical": 30,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render a line break (br) 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    
+
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render a link 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#6bac43",
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Google
+        </Text>
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render a list 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "paddingRight": 9,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        bold={false}
+        ellipsizeMode="tail"
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 20.02,
+            "lineHeight": 33.11,
+          }
+        }
+      >
+        •
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        bold={false}
+        ellipsizeMode="tail"
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 20.02,
+            "lineHeight": 33.11,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Testings
+        </Text>
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "paddingRight": 9,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        bold={false}
+        ellipsizeMode="tail"
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 20.02,
+            "lineHeight": 33.11,
+          }
+        }
+      >
+        •
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexShrink": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        bold={false}
+        ellipsizeMode="tail"
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 20.02,
+            "lineHeight": 33.11,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Testings
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render a paragraph 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render an H1 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 52.2,
+        "lineHeight": 54.81,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an H2 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 42.3,
+        "lineHeight": 53.58,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an H3 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 32.4,
+        "lineHeight": 41.04,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an H4 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 25.2,
+        "lineHeight": 31.28,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an H5 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 20.02,
+        "lineHeight": 25.33,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an H6 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 15.75,
+        "lineHeight": 17.75,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an H7 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "OpenSans-Regular",
+        "fontSize": 14,
+        "lineHeight": 15.78,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`the HTMLView component should render an image 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#dddddd",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`the HTMLView component should render bold text 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        bold={true}
+        ellipsizeMode="tail"
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif-Bold",
+            "fontSize": 20.02,
+            "lineHeight": 33.11,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Testings
+        </Text>
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render example HTML 1`] = `
 <View>
   <View
     style={
@@ -1100,7 +1722,115 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
       >
-        Take pictures, but don’t let the only memory be a digital one. The positive outcome of interactions should be more than Instagram likes. Unplug from social media, choose to be present, and you will be surprised at the good it does for your heart and the hearts of those around you. 
+        Take pictures, but don’t let the only memory be a digital one. The positive outcome of interactions should be more than Instagram likes. Unplug from social media, choose to be present, and you will be surprised at the good it does for your heart and the hearts of those around you.
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render handle relative links 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Testings 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#6bac43",
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Google
+        </Text>
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render italic text 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      bold={false}
+      ellipsizeMode="tail"
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "DroidSerif",
+          "fontSize": 20.02,
+          "lineHeight": 33.11,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        bold={false}
+        ellipsizeMode="tail"
+        italic={true}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif-Italic",
+            "fontSize": 20.02,
+            "lineHeight": 33.11,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Testings
+        </Text>
       </Text>
     </Text>
   </View>
