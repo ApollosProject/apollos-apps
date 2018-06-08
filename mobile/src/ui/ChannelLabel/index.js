@@ -29,29 +29,31 @@ const StyledH7 = styled(({ theme }) => ({
 }))(H7);
 
 // TODO: Get icon name from content channel
-const CategoryLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
+const ChannelLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
   <Wrapper flexed={withFlex}>
-    <Icon
-      name={icon || 'audio'}
-      size={theme.helpers.rem(1.2)}
-      fill={theme.colors.text.secondary}
-      isLoading={isLoading}
-    />
+    {!icon ? (
+      <Icon
+        name={icon || 'audio'}
+        size={theme.helpers.rem(1.2)}
+        fill={theme.colors.text.secondary}
+        isLoading={isLoading}
+      />
+    ) : null}
     <PlaceholderWrapper>
       <StyledH7>{label}</StyledH7>
     </PlaceholderWrapper>
   </Wrapper>
 ));
 
-CategoryLabel.propTypes = {
+ChannelLabel.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)),
   isLoading: PropTypes.bool,
   withFlex: PropTypes.bool,
 };
 
-CategoryLabel.defaultProps = {
+ChannelLabel.defaultProps = {
   withFlex: false,
 };
 
-export default CategoryLabel;
+export default ChannelLabel;

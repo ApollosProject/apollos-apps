@@ -2,9 +2,9 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
-import CategoryLabel from './';
+import ChannelLabel from './';
 
-storiesOf('CategoryLabel', module)
+storiesOf('ChannelLabel', module)
   .add('Default', () => {
     const centered = {
       justifyContent: 'center',
@@ -14,7 +14,7 @@ storiesOf('CategoryLabel', module)
 
     return (
       <View style={centered}>
-        <CategoryLabel label={'Default'} />
+        <ChannelLabel label={'Default'} />
       </View>
     );
   })
@@ -27,7 +27,7 @@ storiesOf('CategoryLabel', module)
 
     return (
       <View style={centered}>
-        <CategoryLabel label={'Default'} isLoading />
+        <ChannelLabel label={'Default'} isLoading />
       </View>
     );
   })
@@ -40,7 +40,7 @@ storiesOf('CategoryLabel', module)
 
     return (
       <View style={centered}>
-        <CategoryLabel label={'Series'} />
+        <ChannelLabel label={'Series'} />
       </View>
     );
   })
@@ -53,7 +53,7 @@ storiesOf('CategoryLabel', module)
 
     return (
       <View style={centered}>
-        <CategoryLabel label={'Albums'} />
+        <ChannelLabel label={'Albums'} />
       </View>
     );
   })
@@ -66,7 +66,7 @@ storiesOf('CategoryLabel', module)
 
     return (
       <View style={centered}>
-        <CategoryLabel label={'Albums'} icon={'like-solid'} />
+        <ChannelLabel label={'Albums'} icon={'like-solid'} />
       </View>
     );
   })
@@ -77,7 +77,7 @@ storiesOf('CategoryLabel', module)
 
     return (
       <View style={centered}>
-        <CategoryLabel label={'Albums'} icon={'arrow-back'} withFlex />
+        <ChannelLabel label={'Albums'} icon={'arrow-back'} withFlex />
         <View style={{ flex: 3, backgroundColor: 'salmon' }} />
       </View>
     );

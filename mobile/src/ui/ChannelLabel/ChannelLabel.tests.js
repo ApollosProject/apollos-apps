@@ -2,13 +2,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
-import CategoryLabel from './';
+import ChannelLabel from './';
 
-describe('the FeedItemCard CategoryLabel component', () => {
+describe('the FeedItemCard ChannelLabel component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <CategoryLabel label={'Default'} />
+        <ChannelLabel label={'Default'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -16,7 +16,7 @@ describe('the FeedItemCard CategoryLabel component', () => {
   it('should render a custom icon', () => {
     const tree = renderer.create(
       <Providers>
-        <CategoryLabel label={'Default'} icon={'like'} />
+        <ChannelLabel label={'Default'} icon={'like'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe('the FeedItemCard CategoryLabel component', () => {
   it('should render a skeleton view', () => {
     const tree = renderer.create(
       <Providers>
-        <CategoryLabel label={'Default'} isLoading />
+        <ChannelLabel label={'Default'} isLoading />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
