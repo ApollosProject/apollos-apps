@@ -781,7 +781,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 7TM8C6252Z;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1346,8 +1346,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 7TM8C6252Z;
@@ -1364,8 +1364,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.apolloschurchapp;
 				PRODUCT_NAME = apolloschurchapp;
-				PROVISIONING_PROFILE = "53b77ce0-b4e0-4115-8571-9326448d7408";
-				PROVISIONING_PROFILE_SPECIFIER = "Apollos Church";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1374,8 +1374,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7TM8C6252Z;
 				HEADER_SEARCH_PATHS = (
@@ -1391,8 +1391,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.apolloschurchapp;
 				PRODUCT_NAME = apolloschurchapp;
-				PROVISIONING_PROFILE = "53b77ce0-b4e0-4115-8571-9326448d7408";
-				PROVISIONING_PROFILE_SPECIFIER = "Apollos Church";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
