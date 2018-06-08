@@ -5,7 +5,7 @@ import { startCase, toLower } from 'lodash';
 
 import { withThemeMixin, withTheme } from 'ui/theme';
 import Icon from 'ui/Icon';
-// import CategoryLabel from 'ui/CategoryLabel'; // #TO-DO: Bring this over
+import CategoryLabel from 'ui/CategoryLabel';
 // import GradientOverlayImage from 'ui/GradientOverlayImage'; // #TO-DO: Bring this over
 import Card, { CardContent, CardActions } from 'ui/Card';
 import { H4 } from 'ui/typography';
