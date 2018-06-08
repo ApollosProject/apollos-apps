@@ -178,4 +178,14 @@ describe('the HTMLView component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should accept an alternative render', () => {
+    const testRenderer = jest.fn();
+    renderer.create(
+      <Providers>
+        <HTMLView renderer={testRenderer}>{'<p>Testings</p>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(testRenderer).toBeCalled();
+  });
 });
