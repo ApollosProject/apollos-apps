@@ -11,6 +11,7 @@ install:
 stages:
   - name: test
     if: (type IN (pull_request)) OR (type IN (push) AND branch = master)
+  - name: deploy api
 jobs:
   include:
     - stage: test
@@ -18,10 +19,12 @@ jobs:
         - bash ./scripts/global-npm-script.sh lint
     - script:
         - travis_wait bash ./scripts/global-npm-script.sh test "travis" && bash ./scripts/global-npm-script.sh codecov
-before_deploy: npm install now --no-save
-deploy:
-  - provider: script
-    script: cd api && now --token --public $NOW_TOKEN && now alias --token $NOW_TOKEN
-    skip_cleanup: true
-    on:
-      master: true
+    - stage: deploy api
+      script: skip
+      before_deploy: npm install -g now
+      deploy:
+        - provider: script
+          script: cd api && now --token --public $NOW_TOKEN && now alias --token $NOW_TOKEN
+          skip_cleanup: true
+          all_branches: true
+          master: false
