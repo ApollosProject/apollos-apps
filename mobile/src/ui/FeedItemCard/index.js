@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { compose, pure, setPropTypes, defaultProps } from 'recompose';
+import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
 
 import { withThemeMixin, withTheme } from 'ui/theme';
@@ -16,37 +16,12 @@ import ProgressiveImage from 'ui/ProgressiveImage';
 
 const StyledCardContent = styled({ paddingBottom: 0 })(CardContent);
 
-const sourcePropType = PropTypes.oneOfType([
-  PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      value: PropTypes.string,
-      description: PropTypes.string,
-    })
-  ),
-  PropTypes.string,
-]);
-
 const enhance = compose(
   pure,
-  defaultProps({
-    isLight: true,
-  }),
   withThemeMixin(({ isLight }) => ({
     type: isLight ? 'light' : 'dark',
   })),
-  withTheme(),
-  setPropTypes({
-    title: PropTypes.string.isRequired,
-    images: sourcePropType,
-    thumbnail: sourcePropType,
-    category: PropTypes.string.isRequired,
-    isLoading: PropTypes.bool,
-    isLiked: PropTypes.bool,
-    isLight: PropTypes.bool,
-    backgroundColor: PropTypes.string,
-    style: PropTypes.any, // eslint-disable-line
-  })
+  withTheme()
 );
 
 const FeedItemCard = enhance(
@@ -91,5 +66,32 @@ const FeedItemCard = enhance(
     </Card>
   )
 );
+
+const sourcePropType = PropTypes.oneOfType([
+  PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      value: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ),
+  PropTypes.string,
+]);
+
+FeedItemCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  images: sourcePropType,
+  thumbnail: sourcePropType,
+  category: PropTypes.string.isRequired,
+  isLoading: PropTypes.bool,
+  isLiked: PropTypes.bool,
+  isLight: PropTypes.bool,
+  backgroundColor: PropTypes.string,
+  style: PropTypes.any, // eslint-disable-line
+};
+
+FeedItemCard.defaultProps = {
+  isLight: true,
+};
 
 export default FeedItemCard;
