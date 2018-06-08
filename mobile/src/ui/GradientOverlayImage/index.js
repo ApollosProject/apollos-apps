@@ -53,8 +53,6 @@ const Container = styled({
   aspectRatio: 1,
 })(View);
 
-const WebPositioningFix = styled(StyleSheet.absoluteFill)(View);
-
 const DefaultImageComponent = styled({
   width: '100%',
   height: '100%',
@@ -71,17 +69,15 @@ const GradientOverlayImage = enhance(
     const Component = ComponentProp || DefaultImageComponent;
     return (
       <Container>
-        <WebPositioningFix>
-          <Component source={imageSource} {...otherProps} />
-          {overlayColor ? (
-            <Overlay
-              colors={getGradientValues(overlayColor).colors}
-              start={getGradientValues(overlayColor).start}
-              end={getGradientValues(overlayColor).end}
-              locations={getGradientValues(overlayColor).locations}
-            />
-          ) : null}
-        </WebPositioningFix>
+        <Component source={imageSource} {...otherProps} />
+        {overlayColor ? (
+          <Overlay
+            colors={getGradientValues(overlayColor).colors}
+            start={getGradientValues(overlayColor).start}
+            end={getGradientValues(overlayColor).end}
+            locations={getGradientValues(overlayColor).locations}
+          />
+        ) : null}
       </Container>
     );
   }
