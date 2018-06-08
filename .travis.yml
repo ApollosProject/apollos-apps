@@ -24,7 +24,6 @@ jobs:
       before_deploy: npm install -g now
       deploy:
         - provider: script
-          script: cd api && now --token --public $NOW_TOKEN && now alias --token $NOW_TOKEN
+          script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
           skip_cleanup: true
-          all_branches: true
-          master: false
+          master: true
