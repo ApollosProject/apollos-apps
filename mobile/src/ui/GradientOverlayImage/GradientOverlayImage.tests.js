@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Providers from '@ui/TestProviders';
+import Providers from 'TestProviders';
 import GradientOverlayImage from './';
 
 describe('the GradientOverlayImage component', () => {

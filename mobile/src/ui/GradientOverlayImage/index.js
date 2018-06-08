@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Platform, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
 import { compose, pure, setPropTypes } from 'recompose';
@@ -40,8 +40,8 @@ const getGradientValues = (overlayColor) => {
         .string()}`,
       overlayColor,
     ],
-    start: [0, 0],
-    end: [0, 1],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
     locations: [0.3, 1],
   };
 
