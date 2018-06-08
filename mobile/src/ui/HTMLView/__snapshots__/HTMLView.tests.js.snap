@@ -18,11 +18,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -78,11 +76,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -111,11 +107,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -144,11 +138,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -190,11 +182,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-RegularItalic",
+            "fontFamily": "DroidSerif-Italic",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
             "textAlign": "center",
           }
         }
@@ -225,11 +215,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -249,11 +237,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
     style={
       Object {
         "color": "#303030",
-        "fontFamily": "Colfax-Bold",
+        "fontFamily": "OpenSans-Bold",
         "fontSize": 32.4,
         "lineHeight": 41.04,
-        "paddingBottom": 2.7,
-        "paddingTop": 5.4,
       }
     }
   >
@@ -287,11 +273,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -347,11 +331,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -380,11 +362,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -426,11 +406,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-RegularItalic",
+            "fontFamily": "DroidSerif-Italic",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
             "textAlign": "center",
           }
         }
@@ -461,11 +439,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -501,11 +477,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -528,11 +502,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -569,11 +541,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -596,11 +566,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -637,11 +605,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -664,11 +630,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -698,11 +662,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -731,11 +693,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -755,11 +715,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
     style={
       Object {
         "color": "#303030",
-        "fontFamily": "Colfax-Bold",
+        "fontFamily": "OpenSans-Bold",
         "fontSize": 32.4,
         "lineHeight": 41.04,
-        "paddingBottom": 2.7,
-        "paddingTop": 5.4,
       }
     }
   >
@@ -793,11 +751,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -853,11 +809,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -880,11 +834,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -921,11 +873,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -948,11 +898,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -989,11 +937,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -1016,11 +962,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -1057,11 +1001,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -1084,11 +1026,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "DroidSerif-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 20.02,
             "lineHeight": 33.11,
-            "paddingBottom": 2.25,
-            "paddingTop": 1.8,
           }
         }
       >
@@ -1118,11 +1058,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -1151,11 +1089,9 @@ exports[`the HTMLView component renders HTML to React 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
@@ -1189,11 +1125,9 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "DroidSerif-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 20.02,
           "lineHeight": 33.11,
-          "paddingBottom": 2.25,
-          "paddingTop": 1.8,
         }
       }
     >
