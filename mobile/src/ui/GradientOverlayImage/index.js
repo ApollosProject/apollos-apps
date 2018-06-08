@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
-import { compose, pure, setPropTypes } from 'recompose';
+import { pure } from 'recompose';
 import Color from 'color';
 
 import styled from 'ui/styled';
@@ -19,16 +19,6 @@ const source = PropTypes.oneOfType([
   ),
   PropTypes.string,
 ]);
-
-const enhance = compose(
-  pure,
-  setPropTypes({
-    source,
-    thumbnail: source,
-    overlayColor: PropTypes.string,
-    ImageComponent: PropTypes.func,
-  })
-);
 
 const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
 
@@ -59,7 +49,7 @@ const DefaultImageComponent = styled({
   resizeMode: 'cover',
 })(ConnectedImage);
 
-const GradientOverlayImage = enhance(
+const GradientOverlayImage = pure(
   ({
     source: imageSource,
     overlayColor,
@@ -82,5 +72,24 @@ const GradientOverlayImage = enhance(
     );
   }
 );
+
+const source = PropTypes.oneOfType([
+  PropTypes.arrayOf(
+    PropTypes.shape({
+      uri: PropTypes.string,
+      label: PropTypes.string,
+      width: PropTypes.number,
+      height: PropTypes.number,
+    })
+  ),
+  PropTypes.string,
+]);
+
+GradientOverlayImage.propTypes = {
+  source,
+  thumbnail: source,
+  overlayColor: PropTypes.string,
+  ImageComponent: PropTypes.func,
+};
 
 export default GradientOverlayImage;
