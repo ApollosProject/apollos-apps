@@ -92,20 +92,4 @@ storiesOf('CategoryLabel', module)
         <CategoryLabel label={'Albums'} icon={'arrow-back'} />
       </View>
     );
-  })
-  .add('With children', () => {
-    const centered = {
-      justifyContent: 'center',
-      alignItems: 'center',
-      flex: 1,
-    };
-
-    return (
-      <View style={centered}>
-        <CategoryLabel label={'Albums'}>
-          <Text>Boom</Text>
-          <Icon name={'like-solid'} />
-        </CategoryLabel>
-      </View>
-    );
   });
