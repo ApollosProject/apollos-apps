@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure, setPropTypes, defaultProps } from 'recompose';
+import { compose, pure } from 'recompose';
 import { kebabCase } from 'lodash';
 
 import { withIsLoading } from 'ui/isLoading';
@@ -11,20 +11,7 @@ import { H7 } from 'ui/typography';
 import Icon from 'ui/Icon';
 import * as Icons from 'ui/Icon/icons';
 
-const enhance = compose(
-  withIsLoading,
-  pure,
-  withTheme(),
-  setPropTypes({
-    label: PropTypes.string.isRequired,
-    icon: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)),
-    isLoading: PropTypes.bool,
-    withFlex: PropTypes.bool,
-  }),
-  defaultProps({
-    withFlex: false,
-  })
-);
+const enhance = compose(withIsLoading, pure, withTheme());
 
 const Wrapper = styled(({ flexed }) => ({
   flex: flexed ? 1 : null,
@@ -55,5 +42,16 @@ const CategoryLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
     </PlaceholderWrapper>
   </Wrapper>
 ));
+
+CategoryLabel.propTypes = {
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)),
+  isLoading: PropTypes.bool,
+  withFlex: PropTypes.bool,
+};
+
+CategoryLabel.defaultProps = {
+  withFlex: false,
+};
 
 export default CategoryLabel;
