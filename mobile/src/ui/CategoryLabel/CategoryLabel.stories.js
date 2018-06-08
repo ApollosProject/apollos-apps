@@ -78,17 +78,7 @@ storiesOf('CategoryLabel', module)
     return (
       <View style={centered}>
         <CategoryLabel label={'Albums'} icon={'arrow-back'} withFlex />
-      </View>
-    );
-  })
-  .add('Not Flexed', () => {
-    const centered = {
-      height: '100%',
-    };
-
-    return (
-      <View style={centered}>
-        <CategoryLabel label={'Albums'} icon={'arrow-back'} />
+        <View style={{ flex: 3, backgroundColor: 'salmon' }} />
       </View>
     );
   });
