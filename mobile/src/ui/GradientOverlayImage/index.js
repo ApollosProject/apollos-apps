@@ -8,18 +8,6 @@ import Color from 'color';
 import styled from 'ui/styled';
 import ConnectedImage from 'ui/ConnectedImage';
 
-const source = PropTypes.oneOfType([
-  PropTypes.arrayOf(
-    PropTypes.shape({
-      uri: PropTypes.string,
-      label: PropTypes.string,
-      width: PropTypes.number,
-      height: PropTypes.number,
-    })
-  ),
-  PropTypes.string,
-]);
-
 const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
 
 const getGradientValues = (overlayColor) => {
