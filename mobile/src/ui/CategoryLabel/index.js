@@ -18,7 +18,6 @@ const enhance = compose(
   setPropTypes({
     label: PropTypes.string.isRequired,
     icon: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)),
-    color: PropTypes.string,
     isLoading: PropTypes.bool,
     withFlex: PropTypes.bool,
   }),

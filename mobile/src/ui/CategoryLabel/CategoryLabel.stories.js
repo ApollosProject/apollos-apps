@@ -71,17 +71,28 @@ storiesOf('CategoryLabel', module)
       </View>
     );
   })
-  .add('Flexed', () => (
-    // const centered = {
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   flex: 1,
-    // };
+  .add('Flexed', () => {
+    const centered = {
+      height: '100%',
+    };
 
-    <View>
-      <CategoryLabel label={'Albums'} icon={'arrow-back'} withFlex />
-    </View>
-  ))
+    return (
+      <View style={centered}>
+        <CategoryLabel label={'Albums'} icon={'arrow-back'} withFlex />
+      </View>
+    );
+  })
+  .add('Not Flexed', () => {
+    const centered = {
+      height: '100%',
+    };
+
+    return (
+      <View style={centered}>
+        <CategoryLabel label={'Albums'} icon={'arrow-back'} />
+      </View>
+    );
+  })
   .add('With children', () => {
     const centered = {
       justifyContent: 'center',
