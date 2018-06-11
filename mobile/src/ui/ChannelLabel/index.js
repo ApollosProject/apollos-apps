@@ -31,9 +31,9 @@ const StyledH7 = styled(({ theme }) => ({
 // TODO: Get icon name from content channel
 const ChannelLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
   <Wrapper flexed={withFlex}>
-    {!icon ? (
+    {icon ? (
       <Icon
-        name={icon || 'audio'}
+        name={icon}
         size={theme.helpers.rem(1.2)}
         fill={theme.colors.text.secondary}
         isLoading={isLoading}

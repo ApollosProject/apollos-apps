@@ -18,7 +18,7 @@ storiesOf('ChannelLabel', module)
       </View>
     );
   })
-  .add('Skeleton', () => {
+  .add('isLoading', () => {
     const centered = {
       justifyContent: 'center',
       alignItems: 'center',
@@ -31,33 +31,7 @@ storiesOf('ChannelLabel', module)
       </View>
     );
   })
-  .add('Series', () => {
-    const centered = {
-      justifyContent: 'center',
-      alignItems: 'center',
-      flex: 1,
-    };
-
-    return (
-      <View style={centered}>
-        <ChannelLabel label={'Series'} />
-      </View>
-    );
-  })
-  .add('Albums', () => {
-    const centered = {
-      justifyContent: 'center',
-      alignItems: 'center',
-      flex: 1,
-    };
-
-    return (
-      <View style={centered}>
-        <ChannelLabel label={'Albums'} />
-      </View>
-    );
-  })
-  .add('Custom', () => {
+  .add('With Icon', () => {
     const centered = {
       justifyContent: 'center',
       alignItems: 'center',
@@ -67,6 +41,19 @@ storiesOf('ChannelLabel', module)
     return (
       <View style={centered}>
         <ChannelLabel label={'Albums'} icon={'like-solid'} />
+      </View>
+    );
+  })
+  .add('isLoading With Icon', () => {
+    const centered = {
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: 1,
+    };
+
+    return (
+      <View style={centered}>
+        <ChannelLabel label={'Albums'} icon={'like-solid'} isLoading />
       </View>
     );
   })

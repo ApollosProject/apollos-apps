@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import Providers from 'TestProviders';
 import ChannelLabel from './';
 
-describe('the FeedItemCard ChannelLabel component', () => {
+describe('the ChannelLabel component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
@@ -13,7 +13,15 @@ describe('the FeedItemCard ChannelLabel component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a custom icon', () => {
+  it('should render a skeleton view', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ChannelLabel label={'Default'} isLoading />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with an icon', () => {
     const tree = renderer.create(
       <Providers>
         <ChannelLabel label={'Default'} icon={'like'} />
@@ -21,10 +29,18 @@ describe('the FeedItemCard ChannelLabel component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a skeleton view', () => {
+  it('should render a skeleton view that supports an icon', () => {
     const tree = renderer.create(
       <Providers>
-        <ChannelLabel label={'Default'} isLoading />
+        <ChannelLabel label={'Default'} icon={'like'} isLoading />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render flexed', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ChannelLabel label={'Default'} withFlex />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
