@@ -14,6 +14,9 @@ const GET_USER_FEED = gql`
               uri
             }
           }
+          parentChannel {
+            name
+          }
         }
       }
     }
