@@ -4,15 +4,15 @@ import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
 
 import { withThemeMixin, withTheme } from 'ui/theme';
-import Icon from 'ui/Icon';
+// import Icon from 'ui/Icon';
 import ChannelLabel from 'ui/ChannelLabel';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
-import Card, { CardContent, CardActions } from 'ui/Card';
+import { Card, CardContent, CardActions } from 'ui/Card';
 import { H4 } from 'ui/typography';
 import styled from 'ui/styled';
 import ProgressiveImage from 'ui/ProgressiveImage';
 
-import LikeButton from './LikeButton';
+// import LikeButton from './LikeButton';
 
 const StyledCardContent = styled({ paddingBottom: 0 })(CardContent);
 
@@ -29,7 +29,8 @@ const FeedItemCard = enhance(
     images,
     thumbnail,
     title,
-    category,
+    channelType,
+    channelTypeIcon,
     isLoading,
     isLight,
     isLiked,
@@ -50,18 +51,19 @@ const FeedItemCard = enhance(
       </StyledCardContent>
       <CardActions>
         <ChannelLabel
-          label={startCase(toLower(category))}
+          label={startCase(toLower(channelType))}
+          icon={channelTypeIcon || null}
           isLoading={isLoading}
           withFlex
         />
-        <LikeButton id={id}>
+        {/* <LikeButton id={id}>
           <Icon
             name={isLiked ? 'like-solid' : 'like'}
             size={theme.helpers.rem(1.2)}
             fill={theme.colors.text.primary}
             isLoading={isLoading}
           />
-        </LikeButton>
+        </LikeButton> */}
       </CardActions>
     </Card>
   )
@@ -82,7 +84,8 @@ FeedItemCard.propTypes = {
   title: PropTypes.string.isRequired,
   images: sourcePropType,
   thumbnail: sourcePropType,
-  category: PropTypes.string.isRequired,
+  channelType: PropTypes.string.isRequired,
+  channelTypeIcon: PropTypes.string,
   isLoading: PropTypes.bool,
   isLiked: PropTypes.bool,
   isLight: PropTypes.bool,

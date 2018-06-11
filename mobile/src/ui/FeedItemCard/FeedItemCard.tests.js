@@ -9,7 +9,26 @@ describe('the FeedItemCard component', () => {
       <Providers>
         <FeedItemCard
           title={'Boom'}
-          category={'What'}
+          channelType={'What'}
+          images={[
+            {
+              uri: 'https://picsum.photos/600/400/?random',
+              width: 600,
+              height: 400,
+            },
+          ]}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with an icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeedItemCard
+          title={'Boom'}
+          channelType={'What'}
+          channelTypeIcon={'play'}
           images={[
             {
               uri: 'https://picsum.photos/600/400/?random',
@@ -27,7 +46,7 @@ describe('the FeedItemCard component', () => {
       <Providers>
         <FeedItemCard
           title={'Boom'}
-          category={'What'}
+          channelType={'What'}
           images={[
             {
               uri: 'https://picsum.photos/600/400/?random',
@@ -46,7 +65,7 @@ describe('the FeedItemCard component', () => {
       <Providers>
         <FeedItemCard
           title={'Boom'}
-          category={'What'}
+          channelType={'What'}
           images={[
             {
               uri: 'https://picsum.photos/600/400/?random',
@@ -65,7 +84,7 @@ describe('the FeedItemCard component', () => {
       <Providers>
         <FeedItemCard
           title={'Boom'}
-          category={'What'}
+          channelType={'What'}
           images={[
             {
               uri: 'https://picsum.photos/600/400/?random',
@@ -79,25 +98,25 @@ describe('the FeedItemCard component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render as liked', () => {
-    const tree = renderer.create(
-      <Providers>
-        <FeedItemCard
-          title={'Boom'}
-          category={'What'}
-          images={[
-            {
-              uri: 'https://picsum.photos/600/400/?random',
-              width: 600,
-              height: 400,
-            },
-          ]}
-          isLiked
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
+  // it('should render as liked', () => {
+  //   const tree = renderer.create(
+  //     <Providers>
+  //       <FeedItemCard
+  //         title={'Boom'}
+  //         category={'What'}
+  //         images={[
+  //           {
+  //             uri: 'https://picsum.photos/600/400/?random',
+  //             width: 600,
+  //             height: 400,
+  //           },
+  //         ]}
+  //         isLiked
+  //       />
+  //     </Providers>
+  //   );
+  //   expect(tree).toMatchSnapshot();
+  // });
   it('should accept and render passed in styles', () => {
     const cardDimensions = {
       height: 400,
@@ -108,7 +127,7 @@ describe('the FeedItemCard component', () => {
       <Providers>
         <FeedItemCard
           title={'Boom'}
-          category={'What'}
+          channelType={'What'}
           images={[
             {
               uri: 'https://picsum.photos/600/400/?random',
