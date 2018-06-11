@@ -86,15 +86,16 @@ const isAudio = ({ key, attributeValues, attributes }) =>
     attributeValues[key].value.startsWith('http')); // looks like an audio url
 
 export const defaultContentItemResolvers = {
-  id: ({ id }, _, $, { parentType }) => createGlobalId(id, parentType.name),
+  id: ({ id }, args, context, { parentType }) =>
+    createGlobalId(id, parentType.name),
   htmlContent: ({ content }) => sanitizeHtml(content),
-  childContentItemsConnection: async ({ id }, input, { models }) =>
+  childContentItemsConnection: async ({ id }, args, { models }) =>
     models.ContentItem.paginate({
       cursor: await models.ContentItem.getCursorByParentContentItemId(id),
       input,
     }),
 
-  parentChannel: ({ contentChannelId }, input, { models }) =>
+  parentChannel: ({ contentChannelId }, args, { models }) =>
     models.ContentChannel.getFromId(contentChannelId),
 
   images: ({ attributeValues, attributes }) => {
@@ -143,7 +144,7 @@ export const defaultContentItemResolvers = {
     }));
   },
 
-  coverImage: async (node, input, { models }) => {
+  coverImage: async (root, args, { models }) => {
     const defaultImages = defaultContentItemResolvers.images(node);
     // return top image by defalt. TODO: probably better logic to default to.
     if (defaultImages.length) return defaultImages[0];
@@ -167,7 +168,7 @@ export const defaultContentItemResolvers = {
 
 export const resolver = {
   Query: {
-    userFeed: (_, input, { models }) =>
+    userFeed: (root, args, { models }) =>
       models.ContentItem.paginate({
         cursor: models.ContentItem.byUserFeed(),
         input,
