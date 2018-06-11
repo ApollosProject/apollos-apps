@@ -95,20 +95,7 @@ const FeedView = enhance(
     return (
       <FeedList
         {...otherProps}
-        renderItem={
-          <LinkComponent to={item.link} component={TouchableWithoutFeedback}>
-            <CardComponent
-              id={item.id}
-              title={item.title || item.name || ' '}
-              category={item.category}
-              images={item.coverImage}
-              backgroundColor={item.theme.colors.background.paper}
-              isLight={item.theme.isLight}
-              isLoading={item.isLoading}
-              isLiked={item.isLiked || get(item, 'content.isLiked', false)}
-            />
-          </LinkComponent>
-        }
+        renderItem={itemRenderer}
         refreshing={isLoading}
         onRefresh={refetchHandler({ isLoading, refetch })}
         onEndReached={fetchMoreHandler({ fetchMore, error, isLoading })}
