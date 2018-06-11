@@ -19,9 +19,11 @@ const Wrapper = styled(({ flexed }) => ({
   alignItems: 'center',
 }))(View);
 
-const PlaceholderWrapper = styled(({ theme }) => ({
+const PlaceholderWrapper = styled(({ theme, withIcon }) => ({
   flex: 1,
-  paddingHorizontal: theme.sizing.baseUnit / 2,
+  ...(withIcon
+    ? { paddingHorizontal: theme.sizing.baseUnit / 2 }
+    : { paddingRight: theme.sizing.baseUnit / 2 }),
 }))(View);
 
 const StyledH7 = styled(({ theme }) => ({
@@ -39,7 +41,7 @@ const ChannelLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
         isLoading={isLoading}
       />
     ) : null}
-    <PlaceholderWrapper>
+    <PlaceholderWrapper withIcon={icon}>
       <StyledH7>{label}</StyledH7>
     </PlaceholderWrapper>
   </Wrapper>
