@@ -154,9 +154,10 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 10,
+              "paddingRight": 10,
             }
           }
+          withIcon={null}
         >
           <Text
             accessible={true}
@@ -300,9 +301,10 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 10,
+              "paddingRight": 10,
             }
           }
+          withIcon={null}
         >
           <Text
             accessible={true}
@@ -444,9 +446,10 @@ exports[`the FeedItemCard component should render 1`] = `
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 10,
+              "paddingRight": 10,
             }
           }
+          withIcon={null}
         >
           <Text
             accessible={true}
@@ -588,9 +591,10 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 10,
+              "paddingRight": 10,
             }
           }
+          withIcon={null}
         >
           <Text
             accessible={true}
@@ -807,6 +811,7 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
               "paddingHorizontal": 10,
             }
           }
+          withIcon="play"
         >
           <Text
             accessible={true}
@@ -948,9 +953,10 @@ exports[`the FeedItemCard component should render with inverted (light) font col
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 10,
+              "paddingRight": 10,
             }
           }
+          withIcon={null}
         >
           <Text
             accessible={true}

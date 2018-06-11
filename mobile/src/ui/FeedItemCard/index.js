@@ -52,7 +52,7 @@ const FeedItemCard = enhance(
       <CardActions>
         <ChannelLabel
           label={startCase(toLower(channelType))}
-          icon={channelTypeIcon || null}
+          icon={channelTypeIcon}
           isLoading={isLoading}
           withFlex
         />
@@ -95,6 +95,7 @@ FeedItemCard.propTypes = {
 
 FeedItemCard.defaultProps = {
   isLight: true,
+  channelTypeIcon: null,
 };
 
 export default FeedItemCard;

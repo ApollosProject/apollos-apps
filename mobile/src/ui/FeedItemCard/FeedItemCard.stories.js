@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
@@ -22,7 +22,7 @@ storiesOf('FeedItemCard', module)
       </View>
     );
   })
-  .add('Skeleton', () => {
+  .add('isLoading', () => {
     const centered = {
       justifyContent: 'center',
       flex: 1,
@@ -40,41 +40,6 @@ storiesOf('FeedItemCard', module)
       </View>
     );
   })
-  .add('isLoading', () =>
-    React.createElement(
-      class CardImageLoading extends Component {
-        constructor() {
-          super();
-          this.state = { isLoading: true };
-        }
-
-        componentDidMount() {
-          setTimeout(() => {
-            this.setState({ isLoading: false });
-          }, 4000);
-        }
-
-        render() {
-          const centered = {
-            justifyContent: 'center',
-            flex: 1,
-            backgroundColor: '#f7f7f7',
-          };
-
-          return (
-            <View style={centered}>
-              <FeedItemCard
-                title={'Promised Land'}
-                channelType={'Series'}
-                images={'https://picsum.photos/600/400/?random'}
-                isLoading={this.state.isLoading}
-              />
-            </View>
-          );
-        }
-      }
-    )
-  )
   .add('With icon', () => {
     const centered = {
       justifyContent: 'center',
