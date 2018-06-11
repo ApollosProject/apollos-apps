@@ -4,14 +4,6 @@ import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
 
-import {
-  getLinkPath,
-  getItemBgColor,
-  getItemImages,
-  getItemIsLight,
-  getItemThumbnail,
-} from '@utils/content';
-
 import FeedItemCard from 'ui/FeedItemCard';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
 import { ErrorCard } from 'ui/Card';
@@ -24,15 +16,14 @@ const defaultFeedItemRenderer = (
 ) => ({ item }) => {
   if (!item) return null;
   return (
-    <LinkComponent to={getLinkPath(item)} component={TouchableWithoutFeedback}>
+    <LinkComponent to={item.link} component={TouchableWithoutFeedback}>
       <CardComponent
         id={item.id}
         title={item.title || item.name || ' '}
         category={item.category}
-        images={getItemImages(item)}
-        thumbnail={getItemThumbnail(item)}
-        backgroundColor={getItemBgColor(item)}
-        isLight={getItemIsLight(item)}
+        images={item.coverImage}
+        backgroundColor={item.theme.colors.background.paper}
+        isLight={item.theme.isLight}
         isLoading={item.isLoading}
         isLiked={item.isLiked || get(item, 'content.isLiked', false)}
       />
@@ -44,11 +35,8 @@ const generateLoadingStateData = (numberOfItems = 1) => {
   const itemData = () => ({
     title: '',
     category: '',
-    content: {
-      images: [],
-      backgroundColor: null,
-      isLight: null,
-    },
+    coverImage: [],
+    theme: {},
     isLoading: true,
     id: 'fakeId0',
   });
@@ -107,7 +95,20 @@ const FeedView = enhance(
     return (
       <FeedList
         {...otherProps}
-        renderItem={itemRenderer}
+        renderItem={
+          <LinkComponent to={item.link} component={TouchableWithoutFeedback}>
+            <CardComponent
+              id={item.id}
+              title={item.title || item.name || ' '}
+              category={item.category}
+              images={item.coverImage}
+              backgroundColor={item.theme.colors.background.paper}
+              isLight={item.theme.isLight}
+              isLoading={item.isLoading}
+              isLiked={item.isLiked || get(item, 'content.isLiked', false)}
+            />
+          </LinkComponent>
+        }
         refreshing={isLoading}
         onRefresh={refetchHandler({ isLoading, refetch })}
         onEndReached={fetchMoreHandler({ fetchMore, error, isLoading })}

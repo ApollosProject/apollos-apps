@@ -10,7 +10,8 @@ import GradientOverlayImage from 'ui/GradientOverlayImage';
 import { Card, CardContent, CardActions } from 'ui/Card';
 import { H4 } from 'ui/typography';
 import styled from 'ui/styled';
-import ProgressiveImage from 'ui/ProgressiveImage';
+import ConnectedImage from 'ui/ConnectedImage';
+// import ProgressiveImage from 'ui/ProgressiveImage';
 
 // import LikeButton from './LikeButton';
 
@@ -27,7 +28,6 @@ const enhance = compose(
 const FeedItemCard = enhance(
   ({
     images,
-    thumbnail,
     title,
     channelType,
     channelTypeIcon,
@@ -41,9 +41,8 @@ const FeedItemCard = enhance(
   }) => (
     <Card isLoading={isLoading} cardColor={backgroundColor} {...otherProps}>
       <GradientOverlayImage
-        ImageComponent={ProgressiveImage}
+        ImageComponent={ConnectedImage}
         source={images}
-        thumbnail={thumbnail}
         overlayColor={backgroundColor}
       />
       <StyledCardContent>
@@ -83,7 +82,6 @@ const sourcePropType = PropTypes.oneOfType([
 FeedItemCard.propTypes = {
   title: PropTypes.string.isRequired,
   images: sourcePropType,
-  thumbnail: sourcePropType,
   channelType: PropTypes.string.isRequired,
   channelTypeIcon: PropTypes.string,
   isLoading: PropTypes.bool,

@@ -75,7 +75,6 @@ const source = PropTypes.oneOfType([
 
 GradientOverlayImage.propTypes = {
   source,
-  thumbnail: source,
   overlayColor: PropTypes.string,
   ImageComponent: PropTypes.func,
 };
