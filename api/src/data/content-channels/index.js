@@ -14,6 +14,8 @@ export const schema = gql`
       first: Int
       after: String
     ): ContentItemsConnection
+
+    iconName: String
   }
 `;
 
@@ -29,5 +31,6 @@ export const resolver = {
         cursor: models.ContentItem.byContentChannelId(id),
         input,
       }),
+    iconName: () => 'text', // TODO
   },
 };
