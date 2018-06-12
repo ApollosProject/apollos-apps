@@ -11,12 +11,9 @@ export class HomeScreen extends React.Component {
   render() {
     return (
       <Query query={GET_USER_FEED}>
-        {({ loading, error, data }) => {
-          if (loading) return null;
-          if (error) return `Error!: ${error}`;
-
-          return <FeedView content={data} />;
-        }}
+        {({ loading, error, data }) => (
+          <FeedView content={data} isLoading={loading} error={error} />
+        )}
       </Query>
     );
   }
