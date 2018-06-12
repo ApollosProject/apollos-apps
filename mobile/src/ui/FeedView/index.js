@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableWithoutFeedback, Link, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 
@@ -16,25 +16,25 @@ const StyledFlatList = styled(({ theme }) => ({
 const defaultFeedItemRenderer = ({ item }) => {
   if (!item) return null;
   return (
-    <Link to={item.link} component={TouchableWithoutFeedback}>
-      <FeedItemCard
-        id={item.id}
-        title={item.title || item.name || ' '}
-        category={item.category}
-        images={item.coverImage}
-        backgroundColor={item.theme.colors.background.paper}
-        isLight={item.theme.isLight}
-        isLoading={item.isLoading}
-        isLiked={item.isLiked}
-      />
-    </Link>
+    // <Link to={item.link} component={TouchableWithoutFeedback}>
+    <FeedItemCard
+      id={item.id}
+      title={item.title || item.name || ' '}
+      channelType={item.channelType}
+      images={item.coverImage}
+      backgroundColor={item.theme.colors.background.paper}
+      isLight={item.theme.isLight}
+      isLoading={item.isLoading}
+      isLiked={item.isLiked}
+    />
+    // </Link>
   );
 };
 
 const generateLoadingStateData = (numberOfItems = 1) => {
   const itemData = () => ({
     title: '',
-    category: '',
+    channelType: '',
     coverImage: [],
     theme: {
       isLight: '',
