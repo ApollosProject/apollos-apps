@@ -1,17 +1,8 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
-import PropTypes from 'prop-types';
 import FeedView from 'ui/FeedView';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import GET_USER_FEED from './query';
 
 export class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -19,23 +10,17 @@ export class HomeScreen extends React.Component {
   };
   render() {
     return (
-      <View style={styles.container}>
-        <Text>This is the home screen</Text>
-        <Button
-          title="Go to Article"
-          onPress={() => this.props.navigation.navigate('ArticleSingle')}
-        />
-        <FeedView />
-      </View>
+      <Query query={GET_USER_FEED}>
+        {({ loading, error, data }) => {
+          if (loading) return null;
+          if (error) return `Error!: ${error}`;
+
+          return <FeedView content={data} />;
+        }}
+      </Query>
     );
   }
 }
-
-HomeScreen.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }),
-};
 
 export const HomeStack = createStackNavigator(
   {
