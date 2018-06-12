@@ -82,7 +82,7 @@ const refetchHandler = ({ isLoading, refetch }) =>
 const fetchMoreHandler = ({ fetchMore, error, isLoading }) =>
   fetchMore && ((...args) => !isLoading && !error && fetchMore(...args));
 
-const FeedView = enhance(
+const FeedViewWithoutData = enhance(
   ({
     isLoading,
     refetch,
@@ -113,7 +113,7 @@ const FeedView = enhance(
   )
 );
 
-FeedView.defaultProps = {
+FeedViewWithoutData.defaultProps = {
   isLoading: false,
   renderItem: defaultFeedItemRenderer(),
   onEndReachedThreshold: 0.7,
@@ -123,7 +123,7 @@ FeedView.defaultProps = {
   fetchMore: undefined,
 };
 
-FeedView.propTypes = {
+FeedViewWithoutData.propTypes = {
   isLoading: PropTypes.bool,
   content: PropTypes.array, // eslint-disable-line
   refetch: PropTypes.func,
@@ -133,4 +133,4 @@ FeedView.propTypes = {
   numColumns: PropTypes.number,
 };
 
-export { FeedView as default, defaultFeedItemRenderer };
+export { FeedViewWithoutData as default, defaultFeedItemRenderer };
