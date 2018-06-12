@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
+
 import FeedView from './';
 
 describe('The FeedView component', () => {
@@ -13,7 +14,7 @@ describe('The FeedView component', () => {
             {
               id: '1',
               title: 'hi',
-              category: 'bob',
+              channelType: 'bob',
               coverImage: [
                 {
                   uri: 'https://picsum.photos/600/400/?random',
@@ -33,7 +34,7 @@ describe('The FeedView component', () => {
             {
               id: '2',
               title: 'hi 2',
-              category: 'bob 2',
+              channelType: 'bob 2',
               coverImage: [
                 {
                   uri: 'https://picsum.photos/600/400/?random',

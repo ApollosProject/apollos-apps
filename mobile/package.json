@@ -56,6 +56,10 @@
     ]
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.2.2",
+    "apollo-client": "^2.3.2",
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
     "color": "^3.0.0",
     "entities": "^1.1.1",
     "graphql": "^0.13.2",
