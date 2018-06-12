@@ -58,10 +58,8 @@ describe('Person', () => {
         }
       }
     `;
-    console.log('QUERY: ', query);
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
-    console.log('RESULT: ', result);
     expect(result).toMatchSnapshot();
   });
 });
