@@ -28,7 +28,7 @@ export const resolver = {
     childContentItemsConnection: ({ id }, args, { models }) =>
       models.ContentItem.paginate({
         cursor: models.ContentItem.byContentChannelId(id),
-        input,
+        args,
       }),
   },
 };
