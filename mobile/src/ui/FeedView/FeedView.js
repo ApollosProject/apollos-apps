@@ -1,22 +1,23 @@
 import React from 'react';
-import { TouchableWithoutFeedback, Link } from 'react-native';
+import { TouchableWithoutFeedback, Link, FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 
+import styled from 'ui/styled';
 import FeedItemCard from 'ui/FeedItemCard';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
 import { ErrorCard } from 'ui/Card';
-import FeedList from './FeedList';
 
-const defaultFeedItemRenderer = (
-  CardComponent = FeedItemCard,
-  LinkComponent = Link
-  // eslint-disable-next-line
-) => ({ item }) => {
+const StyledFlatList = styled(({ theme }) => ({
+  paddingVertical: theme.sizing.baseUnit / 4,
+}))(FlatList);
+
+// eslint-disable-next-line
+const defaultFeedItemRenderer = ({ item }) => {
   if (!item) return null;
   return (
-    <LinkComponent to={item.link} component={TouchableWithoutFeedback}>
-      <CardComponent
+    <Link to={item.link} component={TouchableWithoutFeedback}>
+      <FeedItemCard
         id={item.id}
         title={item.title || item.name || ' '}
         category={item.category}
@@ -26,7 +27,7 @@ const defaultFeedItemRenderer = (
         isLoading={item.isLoading}
         isLiked={item.isLiked}
       />
-    </LinkComponent>
+    </Link>
   );
 };
 
@@ -90,43 +91,36 @@ const FeedView = enhance(
     fetchMore,
     numColumns,
     renderItem,
-    ItemComponent,
     ListEmptyComponent,
     ...otherProps
-  }) => {
-    let itemRenderer = renderItem;
-    if (!itemRenderer) {
-      itemRenderer = defaultFeedItemRenderer(ItemComponent);
-    }
-    return (
-      <FeedList
-        {...otherProps}
-        renderItem={itemRenderer}
-        refreshing={isLoading}
-        onRefresh={refetchHandler({ isLoading, refetch })}
-        onEndReached={fetchMoreHandler({ fetchMore, error, isLoading })}
-        numColumns={numColumns}
-        data={content}
-        ListEmptyComponent={
-          error && !isLoading && (!content || !content.length) ? (
-            <ErrorCard error={error} />
-          ) : (
-            ListEmptyComponent
-          )
-        }
-      />
-    );
-  }
+  }) => (
+    <StyledFlatList
+      {...otherProps}
+      renderItem={renderItem}
+      refreshing={isLoading}
+      onRefresh={refetchHandler({ isLoading, refetch })}
+      onEndReached={fetchMoreHandler({ fetchMore, error, isLoading })}
+      numColumns={numColumns}
+      data={content}
+      ListEmptyComponent={
+        error && !isLoading && (!content || !content.length) ? (
+          <ErrorCard error={error} />
+        ) : (
+          ListEmptyComponent
+        )
+      }
+    />
+  )
 );
 
 FeedView.defaultProps = {
   isLoading: false,
+  renderItem: defaultFeedItemRenderer(),
   onEndReachedThreshold: 0.7,
   keyExtractor: (item) => item && (item.id || item.entryId),
   content: [],
   refetch: undefined,
   fetchMore: undefined,
-  ItemComponent: FeedItemCard,
 };
 
 FeedView.propTypes = {
@@ -137,7 +131,6 @@ FeedView.propTypes = {
   renderItem: PropTypes.func,
   renderEmptyState: PropTypes.func,
   numColumns: PropTypes.number,
-  ItemComponent: PropTypes.any, // eslint-disable-line
 };
 
 export { FeedView as default, defaultFeedItemRenderer };
