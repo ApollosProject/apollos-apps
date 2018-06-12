@@ -1,29 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import View, { TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
+import { UIText } from 'ui/typography';
+import styled from 'ui/styled';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingHorizontal: 1,
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-  },
-});
+const Container = styled(({ theme }) => ({
+  flex: 1,
+  justifyContent: 'center',
+  paddingHorizontal: theme.sizing.baseUnit / 2,
+}))(View);
+
+const Button = styled(({ theme }) => ({
+  backgroundColor: theme.colors.primary,
+}))(TouchableOpacity);
 
 const LiveNowButton = (props) => (
-  <View style={styles.container}>
-    <TouchableOpacity
-      style={styles.button}
-      onPress={() => props.navigation.navigate('LiveNowModal')}
-    >
-      <Text> Live Now! </Text>
-    </TouchableOpacity>
-  </View>
+  <Container>
+    <Button onPress={() => props.navigation.navigate('LiveNowModal')}>
+      <UIText> Live Now! </UIText>
+    </Button>
+  </Container>
 );
 
 LiveNowButton.propTypes = {

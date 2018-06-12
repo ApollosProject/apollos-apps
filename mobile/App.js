@@ -26,11 +26,9 @@ export const RootStack = createStackNavigator(
 export default class App extends React.Component {
   render() {
     return (
-      <ApolloProvider client={client}>
-        <ThemeProvider>
-          <RootStack />
-        </ThemeProvider>
-      </ApolloProvider>
+      <ThemeProvider>
+        <RootStack />
+      </ThemeProvider>
     );
   }
 }

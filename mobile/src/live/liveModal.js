@@ -1,22 +1,15 @@
 import React from 'react';
-import { StyleSheet, WebView } from 'react-native';
+import { WebView } from 'react-native';
+import styled from 'ui/styled';
 
-const styles = StyleSheet.create({
-  iframe: {
-    width: '100%',
-    height: '100%',
-    borderWidth: 0,
-  },
-  noScroll: {
-    overflow: 'hidden',
-  },
-});
+const FullScreenWebView = styled({
+  width: '100%',
+  height: '100%',
+  flex: 1,
+})(WebView);
 
-const ModalScreen = () => (
-  <WebView
-    source={{ uri: 'https://apollos.churchonline.org/' }}
-    style={{ styles }}
-  />
+const LiveModalScreen = () => (
+  <FullScreenWebView source={{ uri: 'https://apollos.churchonline.org/' }} />
 );
 
-export default ModalScreen;
+export default LiveModalScreen;
