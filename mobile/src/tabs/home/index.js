@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
+import FeedView from 'ui/FeedView';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,6 +25,7 @@ export class HomeScreen extends React.Component {
           title="Go to Article"
           onPress={() => this.props.navigation.navigate('ArticleSingle')}
         />
+        <FeedView />
       </View>
     );
   }

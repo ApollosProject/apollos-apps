@@ -1,7 +1,9 @@
 import React from 'react';
+import { ApolloProvider } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 import ArticleSingle from 'articles/Single';
 import { TabStack } from 'tabs';
+import client from 'client';
 
 export const RootStack = createStackNavigator(
   {
@@ -17,7 +19,11 @@ export const RootStack = createStackNavigator(
 /* eslint-disable */
 export default class App extends React.Component {
   render() {
-    return <RootStack />;
+    return (
+      <ApolloProvider client={client}>
+        <RootStack />
+      </ApolloProvider>
+    );
   }
 }
 /* eslint-enable */
