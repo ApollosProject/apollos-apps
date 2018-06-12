@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
+import LiveNowButton from '../../live';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,6 +20,7 @@ export class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <LiveNowButton navigation={this.props.navigation} />
         <Text>This is the home screen</Text>
         <Button
           title="Go to Article"
@@ -28,7 +30,6 @@ export class HomeScreen extends React.Component {
     );
   }
 }
-
 HomeScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
