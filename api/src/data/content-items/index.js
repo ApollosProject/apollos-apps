@@ -108,7 +108,9 @@ export const defaultContentItemResolvers = {
     return imageKeys.map((key) => ({
       key,
       name: attributes[key].name,
-      sources: [{ uri: attributeValues[key].value }],
+      sources: attributeValues[key].value
+        ? [{ uri: attributeValues[key].value }]
+        : [],
     }));
   },
 
@@ -124,7 +126,9 @@ export const defaultContentItemResolvers = {
       key,
       name: attributes[key].name,
       embedHtml: get(attributeValues, 'videoEmbed.value', null), // TODO: this assumes that the key `VideoEmebed` is always used on Rock
-      sources: [{ uri: attributeValues[key].value }],
+      sources: attributeValues[key].value
+        ? [{ uri: attributeValues[key].value }]
+        : [],
     }));
   },
 
@@ -139,12 +143,16 @@ export const defaultContentItemResolvers = {
     return audioKeys.map((key) => ({
       key,
       name: attributes[key].name,
-      sources: [{ uri: attributeValues[key].value }],
+      sources: attributeValues[key].value
+        ? [{ uri: attributeValues[key].value }]
+        : [],
     }));
   },
 
   coverImage: async (node, input, { models }) => {
-    const defaultImages = defaultContentItemResolvers.images(node);
+    let defaultImages = defaultContentItemResolvers.images(node) || [];
+    defaultImages = defaultImages.filter((image) => image.sources.length); // filter images w/o URLs
+
     // return top image by defalt. TODO: probably better logic to default to.
     if (defaultImages.length) return defaultImages[0];
 
@@ -156,7 +164,8 @@ export const defaultContentItemResolvers = {
     if (parentItems.length) {
       const parentImages = parentItems
         .map(defaultContentItemResolvers.images)
-        .find((images) => images.length);
+        .find((images) => images.length)
+        .filter((image) => image.sources.length); // filter images w/o URLs
 
       if (parentImages && parentImages.length) return parentImages[0];
     }
