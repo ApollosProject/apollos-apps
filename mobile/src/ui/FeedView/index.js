@@ -2,7 +2,6 @@ import React from 'react';
 import { TouchableWithoutFeedback, Link } from 'react-native';
 import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
-import { get } from 'lodash';
 
 import FeedItemCard from 'ui/FeedItemCard';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
@@ -25,7 +24,7 @@ const defaultFeedItemRenderer = (
         backgroundColor={item.theme.colors.background.paper}
         isLight={item.theme.isLight}
         isLoading={item.isLoading}
-        isLiked={item.isLiked || get(item, 'content.isLiked', false)}
+        isLiked={item.isLiked}
       />
     </LinkComponent>
   );
@@ -36,7 +35,14 @@ const generateLoadingStateData = (numberOfItems = 1) => {
     title: '',
     category: '',
     coverImage: [],
-    theme: {},
+    theme: {
+      isLight: '',
+      colors: {
+        background: {
+          paper: '',
+        },
+      },
+    },
     isLoading: true,
     id: 'fakeId0',
   });
