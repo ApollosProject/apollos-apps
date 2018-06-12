@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
+
 import FeedView from './';
 
 describe('The FeedView component', () => {
