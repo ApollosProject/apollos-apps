@@ -8,7 +8,7 @@ const GET_USER_FEED = gql`
           id
           __typename
           title
-          images {
+          coverImage {
             name
             sources {
               uri
