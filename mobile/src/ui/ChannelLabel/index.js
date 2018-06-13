@@ -30,7 +30,6 @@ const StyledH7 = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
 }))(H7);
 
-// TODO: Get icon name from content channel
 const ChannelLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
   <Wrapper flexed={withFlex}>
     {icon ? (
