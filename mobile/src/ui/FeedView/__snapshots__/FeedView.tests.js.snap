@@ -130,7 +130,10 @@ exports[`The FeedView component renders correctly 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -328,7 +331,10 @@ exports[`The FeedView component renders correctly 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -776,7 +782,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -902,7 +911,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1028,7 +1040,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1154,7 +1169,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1280,7 +1298,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1406,7 +1427,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1532,7 +1556,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1658,7 +1685,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1784,7 +1814,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />
@@ -1910,7 +1943,10 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "backgroundColor": "#dddddd",
+                  "height": "100%",
                   "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             />

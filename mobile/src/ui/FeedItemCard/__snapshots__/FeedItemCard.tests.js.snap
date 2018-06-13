@@ -49,7 +49,10 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
         style={
           Object {
             "backgroundColor": "#dddddd",
+            "height": "100%",
             "opacity": 0,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
       />
@@ -218,7 +221,10 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
         style={
           Object {
             "backgroundColor": "#dddddd",
+            "height": "100%",
             "opacity": 0,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
       />
@@ -350,7 +356,10 @@ exports[`the FeedItemCard component should render 1`] = `
         style={
           Object {
             "backgroundColor": "#dddddd",
+            "height": "100%",
             "opacity": 0,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
       />
@@ -482,7 +491,10 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
         style={
           Object {
             "backgroundColor": "#dddddd",
+            "height": "100%",
             "opacity": 0,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
       />
@@ -614,7 +626,10 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
         style={
           Object {
             "backgroundColor": "#dddddd",
+            "height": "100%",
             "opacity": 0,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
       />
@@ -818,7 +833,10 @@ exports[`the FeedItemCard component should render with inverted (light) font col
         style={
           Object {
             "backgroundColor": "#858585",
+            "height": "100%",
             "opacity": 0,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
       />
