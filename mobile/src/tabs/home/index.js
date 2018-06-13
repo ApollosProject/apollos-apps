@@ -1,6 +1,7 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
+import { get } from 'lodash';
 import FeedView from 'ui/FeedView';
 import PropTypes from 'prop-types';
 import FlexedView from 'ui/FlexedView';
@@ -23,16 +24,13 @@ export class HomeScreen extends React.Component {
       <FlexedView>
         <LiveNowButton navigation={this.props.navigation} />
         <Query query={GET_USER_FEED}>
-          {({ loading, error, data }) => {
-            if (loading) return null;
-            return (
-              <FeedView
-                content={data.userFeed.edges}
-                isLoading={loading}
-                error={error}
-              />
-            );
-          }}
+          {({ loading, error, data }) => (
+            <FeedView
+              content={get(data, 'userFeed.edges', [])}
+              isLoading={loading}
+              error={error}
+            />
+          )}
         </Query>
       </FlexedView>
     );
