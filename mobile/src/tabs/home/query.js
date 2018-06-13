@@ -15,7 +15,9 @@ const GET_USER_FEED = gql`
             }
           }
           parentChannel {
+            id
             name
+            iconName
           }
         }
       }
