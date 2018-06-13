@@ -71,18 +71,21 @@ export const schema = gql`
 const isImage = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
   (key.toLowerCase().includes('image') &&
+    typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an image url
 
 const isVideo = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_FILE ||
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_URL ||
   (key.toLowerCase().includes('video') &&
+    typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like a video url
 
 const isAudio = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_FILE ||
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_URL ||
   (key.toLowerCase().includes('audio') &&
+    typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an audio url
 
 export const defaultContentItemResolvers = {
