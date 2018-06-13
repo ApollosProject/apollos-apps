@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
+import FlexedView from 'ui/FlexedView';
 import LiveNowButton from '../../live';
 
 const styles = StyleSheet.create({
@@ -19,10 +20,12 @@ export class ConnectScreen extends React.Component {
   };
   render() {
     return (
-      <View style={styles.container}>
+      <FlexedView>
         <LiveNowButton navigation={this.props.navigation} />
-        <Text>Connect Screen</Text>
-      </View>
+        <View style={styles.container}>
+          <Text>Connect Screen</Text>
+        </View>
+      </FlexedView>
     );
   }
 }

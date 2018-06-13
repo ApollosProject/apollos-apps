@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
+import FlexedView from 'ui/FlexedView';
 import LiveNowButton from '../../live';
 
 const styles = StyleSheet.create({
@@ -19,14 +20,16 @@ export class HomeScreen extends React.Component {
   };
   render() {
     return (
-      <View style={styles.container}>
+      <FlexedView>
         <LiveNowButton navigation={this.props.navigation} />
-        <Text>This is the home screen</Text>
-        <Button
-          title="Go to Article"
-          onPress={() => this.props.navigation.navigate('ArticleSingle')}
-        />
-      </View>
+        <View style={styles.container}>
+          <Text>This is the home screen</Text>
+          <Button
+            title="Go to Article"
+            onPress={() => this.props.navigation.navigate('ArticleSingle')}
+          />
+        </View>
+      </FlexedView>
     );
   }
 }
