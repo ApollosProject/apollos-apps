@@ -10,7 +10,6 @@ export default {
     firstName: ({ firstName }) => firstName,
     lastName: ({ lastName }) => lastName,
     nickName: ({ nickName }) => nickName,
-    birthDate: ({ birthDate }) => birthDate,
     birthDay: ({ birthDay }) => birthDay,
     birthMonth: ({ birthMonth }) => birthMonth,
     birthYear: ({ birthYear }) => birthYear,

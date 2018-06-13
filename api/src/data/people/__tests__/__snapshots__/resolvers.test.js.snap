@@ -4,7 +4,6 @@ exports[`Person gets a single person when querying by root node 1`] = `
 Object {
   "data": Object {
     "node": Object {
-      "birthDate": "1987-11-06T00:00:00",
       "birthDay": 6,
       "birthMonth": 11,
       "birthYear": 1987,
@@ -23,7 +22,6 @@ Object {
   "data": Object {
     "people": Array [
       Object {
-        "birthDate": "1987-11-06T00:00:00",
         "birthDay": 6,
         "birthMonth": 11,
         "birthYear": 1987,

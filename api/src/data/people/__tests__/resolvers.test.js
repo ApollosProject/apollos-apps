@@ -25,7 +25,6 @@ describe('Person', () => {
           firstName
           lastName
           nickName
-          birthDate
           birthDay
           birthMonth
           birthYear
@@ -49,7 +48,6 @@ describe('Person', () => {
             firstName
             lastName
             nickName
-            birthDate
             birthDay
             birthMonth
             birthYear
