@@ -15,4 +15,28 @@ describe('the Card component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render with an error message inside an object', () => {
+    const errorObject = {
+      message: 'You have discovered an error message. Do you open it?',
+    };
+    const tree = renderer.create(
+      <TestProviders>
+        <ErrorCard error={errorObject} />
+      </TestProviders>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with an error inside an object', () => {
+    const errorObject = {
+      error: 'Errors, errors, and more errors',
+    };
+    const tree = renderer.create(
+      <TestProviders>
+        <ErrorCard error={errorObject} />
+      </TestProviders>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });
