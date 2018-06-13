@@ -25,10 +25,11 @@ const defaultFeedItemRenderer = ({ item }) => {
     // isLight={item.theme.isLight}
     // isLiked={item.isLiked}
     <FeedItemCard
-      id={item.id}
-      title={item.title || item.name || ' '}
-      channelType={item.channelType}
-      images={item.coverImage}
+      id={item.node.id}
+      title={item.node.title || item.node.name || ' '}
+      channelType={item.node.parentChannel.name}
+      channelTypeIcon={item.node.parentChannel.iconName}
+      images={item.node.coverImage.sources}
       isLoading={item.isLoading}
     />
     // </Link>
@@ -121,7 +122,7 @@ FeedView.defaultProps = {
   isLoading: false,
   renderItem: defaultFeedItemRenderer,
   onEndReachedThreshold: 0.7,
-  keyExtractor: (item) => item && (item.id || item.entryId),
+  keyExtractor: (item) => item && (item.node.id || item.entryId),
   content: [],
   refetch: undefined,
   fetchMore: undefined,

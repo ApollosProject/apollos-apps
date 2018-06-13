@@ -12,10 +12,10 @@ export class HomeScreen extends React.Component {
     return (
       <Query query={GET_USER_FEED}>
         {({ loading, error, data }) => {
-          console.log('data.userFeed.edges = ', data.userFeed.edges);
+          if (loading) return null;
           return (
             <FeedView
-              content={data.userFeed}
+              content={data.userFeed.edges}
               isLoading={loading}
               error={error}
             />
