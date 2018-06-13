@@ -40,9 +40,13 @@ const FeedItemCard = enhance(
     ...otherProps
   }) => (
     <Card isLoading={isLoading} cardColor={backgroundColor} {...otherProps}>
-      <GradientOverlayImage source={images} overlayColor={backgroundColor} />
+      <GradientOverlayImage
+        isLoading={isLoading}
+        source={images}
+        overlayColor={backgroundColor}
+      />
       <StyledCardContent>
-        <H4>{title}</H4>
+        <H4 isLoading={isLoading}>{title}</H4>
       </StyledCardContent>
       <CardActions>
         <ChannelLabel

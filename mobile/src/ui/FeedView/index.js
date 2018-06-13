@@ -30,7 +30,7 @@ const defaultFeedItemRenderer = ({ item }) => {
       channelType={item.node.parentChannel.name}
       channelTypeIcon={item.node.parentChannel.iconName}
       images={item.node.coverImage.sources}
-      isLoading={item.isLoading}
+      isLoading={item.node.isLoading}
     />
     // </Link>
   );
