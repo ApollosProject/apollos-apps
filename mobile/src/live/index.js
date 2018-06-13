@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 10,
+    paddingHorizontal: 1,
   },
   button: {
     alignItems: 'center',
@@ -19,7 +19,7 @@ const LiveNowButton = (props) => (
   <View style={styles.container}>
     <TouchableOpacity
       style={styles.button}
-      onPress={() => props.navigation.navigate('MyModal')}
+      onPress={() => props.navigation.navigate('LiveNowModal')}
     >
       <Text> Live Now! </Text>
     </TouchableOpacity>

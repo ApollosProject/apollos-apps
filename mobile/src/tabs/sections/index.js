@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Articles from 'articles';
 import Devotionals from 'devotionals';
 import News from 'news';
+import LiveNowButton from '../../live';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +23,7 @@ export class SectionsScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <LiveNowButton navigation={this.props.navigation} />
         <Text>Sections Screen</Text>
         <Button
           title="Articles"
