@@ -10,7 +10,7 @@ import GradientOverlayImage from 'ui/GradientOverlayImage';
 import { Card, CardContent, CardActions } from 'ui/Card';
 import { H4 } from 'ui/typography';
 import styled from 'ui/styled';
-import ConnectedImage from 'ui/ConnectedImage';
+// import ConnectedImage from 'ui/ConnectedImage';
 // import ProgressiveImage from 'ui/ProgressiveImage';
 
 // import LikeButton from './LikeButton';
@@ -40,11 +40,7 @@ const FeedItemCard = enhance(
     ...otherProps
   }) => (
     <Card isLoading={isLoading} cardColor={backgroundColor} {...otherProps}>
-      <GradientOverlayImage
-        ImageComponent={ConnectedImage}
-        source={images}
-        overlayColor={backgroundColor}
-      />
+      <GradientOverlayImage source={images} overlayColor={backgroundColor} />
       <StyledCardContent>
         <H4>{title}</H4>
       </StyledCardContent>
