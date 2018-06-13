@@ -11,9 +11,16 @@ export class HomeScreen extends React.Component {
   render() {
     return (
       <Query query={GET_USER_FEED}>
-        {({ loading, error, data }) => (
-          <FeedView content={data} isLoading={loading} error={error} />
-        )}
+        {({ loading, error, data }) => {
+          console.log('data.userFeed.edges = ', data.userFeed.edges);
+          return (
+            <FeedView
+              content={data.userFeed}
+              isLoading={loading}
+              error={error}
+            />
+          );
+        }}
       </Query>
     );
   }
