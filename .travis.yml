@@ -9,20 +9,20 @@ before_install:
 install:
   - bash ./scripts/install-yarn-dependencies.sh
 stages:
-  - name: test
+  - name: Test
     if: (type IN (pull_request)) OR (type IN (push) AND branch = master)
-  - name: deploy api
-    if: (type IN (push) AND branch = master) OR (tag =~ /^v.*$/)
-  - name: deploy mobile
-    if: (type IN (push) AND branch = master) OR (tag =~ /^v.*$/)
+  - name: Deploy Api
+    if: (type IN (push) AND branch = master)
+  - name: Release Api
+    if: tag =~ /^v.*$/
 jobs:
   include:
-    - stage: test
+    - stage: Test
       script:
         - bash ./scripts/global-npm-script.sh lint
     - script:
         - travis_wait bash ./scripts/global-npm-script.sh test "travis" && bash ./scripts/global-npm-script.sh codecov
-    - stage: deploy api
+    - stage: Deploy Api
       script: skip
       before_deploy: npm install -g now
       deploy:
@@ -31,11 +31,12 @@ jobs:
           skip_cleanup: true
           on:
             tags: true
-    - stage: deploy mobile
+    - stage: Release Api
       script: skip
+      before_deploy: npm install -g now
       deploy:
         - provider: script
-          script: bash ./scripts/create-mobile-release.sh
+          script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
           skip_cleanup: true
           on:
             tags: true
