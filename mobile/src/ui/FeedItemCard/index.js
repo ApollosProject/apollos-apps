@@ -82,7 +82,7 @@ const sourcePropType = PropTypes.oneOfType([
 FeedItemCard.propTypes = {
   title: PropTypes.string.isRequired,
   images: sourcePropType,
-  channelType: PropTypes.string.isRequired,
+  channelType: PropTypes.string,
   channelTypeIcon: PropTypes.string,
   isLoading: PropTypes.bool,
   isLiked: PropTypes.bool,
