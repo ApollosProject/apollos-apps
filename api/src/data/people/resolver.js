@@ -7,9 +7,5 @@ export default {
   Person: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    firstName: ({ firstName }) => firstName,
-    lastName: ({ lastName }) => lastName,
-    nickName: ({ nickName }) => nickName,
-    email: ({ email }) => email,
   },
 };
