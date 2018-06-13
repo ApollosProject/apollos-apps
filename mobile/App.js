@@ -5,15 +5,17 @@ import ArticleSingle from 'articles/Single';
 import { ThemeProvider } from 'ui/theme';
 import { TabStack } from 'tabs';
 import client from 'client';
+import LiveNowModal from 'live/liveModal';
 
 export const RootStack = createStackNavigator(
   {
     Tab: TabStack,
     ArticleSingle,
+    LiveNowModal,
   },
   {
+    mode: 'modal',
     initialRouteName: 'Tab',
-    headerMode: 'none',
   }
 );
 

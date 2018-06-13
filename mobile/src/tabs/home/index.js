@@ -2,26 +2,39 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 import FeedView from 'ui/FeedView';
+import PropTypes from 'prop-types';
+import FlexedView from 'ui/FlexedView';
 import GET_USER_FEED from './query';
+import LiveNowButton from '../../live';
 
 export class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
   };
+
+  static propTypes = {
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func,
+    }),
+  };
+
   render() {
     return (
-      <Query query={GET_USER_FEED}>
-        {({ loading, error, data }) => {
-          if (loading) return null;
-          return (
-            <FeedView
-              content={data.userFeed.edges}
-              isLoading={loading}
-              error={error}
-            />
-          );
-        }}
-      </Query>
+      <FlexedView>
+        <LiveNowButton navigation={this.props.navigation} />
+        <Query query={GET_USER_FEED}>
+          {({ loading, error, data }) => {
+            if (loading) return null;
+            return (
+              <FeedView
+                content={data.userFeed.edges}
+                isLoading={loading}
+                error={error}
+              />
+            );
+          }}
+        </Query>
+      </FlexedView>
     );
   }
 }
