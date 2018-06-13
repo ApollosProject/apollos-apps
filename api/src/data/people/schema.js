@@ -6,9 +6,6 @@ export default gql`
     firstName: String!
     lastName: String!
     nickName: String
-    birthDay: Int
-    birthMonth: Int
-    birthYear: Int
     email: String
   }
 `;

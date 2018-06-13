@@ -25,9 +25,6 @@ describe('Person', () => {
           firstName
           lastName
           nickName
-          birthDay
-          birthMonth
-          birthYear
           email
         }
       }
@@ -48,9 +45,6 @@ describe('Person', () => {
             firstName
             lastName
             nickName
-            birthDay
-            birthMonth
-            birthYear
             email
           }
         }
