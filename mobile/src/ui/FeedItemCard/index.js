@@ -67,9 +67,7 @@ const FeedItemCard = enhance(
 const sourcePropType = PropTypes.oneOfType([
   PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      value: PropTypes.string,
-      description: PropTypes.string,
+      uri: PropTypes.string,
     })
   ),
   PropTypes.string,
