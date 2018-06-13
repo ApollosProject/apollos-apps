@@ -17,15 +17,19 @@ const defaultFeedItemRenderer = ({ item }) => {
   if (!item) return null;
   return (
     // <Link to={item.link} component={TouchableWithoutFeedback}>
+
+    // These are all props of FeedItemCard but they do not have data coming
+    // back yet. So I moved them here for safe keeping. TODO: Move them back
+    // when the data is ready.
+    // backgroundColor={item.theme.colors.background.paper}
+    // isLight={item.theme.isLight}
+    // isLiked={item.isLiked}
     <FeedItemCard
       id={item.id}
       title={item.title || item.name || ' '}
       channelType={item.channelType}
       images={item.coverImage}
-      backgroundColor={item.theme.colors.background.paper}
-      isLight={item.theme.isLight}
       isLoading={item.isLoading}
-      isLiked={item.isLiked}
     />
     // </Link>
   );
