@@ -38,26 +38,32 @@ const defaultFeedItemRenderer = ({ item }) => {
 
 const generateLoadingStateData = (numberOfItems = 1) => {
   const itemData = () => ({
-    title: '',
-    channelType: '',
-    coverImage: [],
-    theme: {
-      isLight: '',
-      colors: {
-        background: {
-          paper: '',
+    node: {
+      id: 'fakeId0',
+      isLoading: true,
+      title: '',
+      channelType: '',
+      coverImage: [],
+      theme: {
+        isLight: '',
+        colors: {
+          background: {
+            paper: '',
+          },
         },
       },
+      parentChannel: {
+        id: '',
+        name: '',
+      },
     },
-    isLoading: true,
-    id: 'fakeId0',
   });
 
   const loadingStateData = [itemData()];
 
   while (loadingStateData.length < numberOfItems) {
     const newData = itemData();
-    newData.id = `fakeId${loadingStateData.length}`;
+    newData.node.id = `fakeId${loadingStateData.length}`;
     loadingStateData.push(newData);
   }
 
@@ -122,7 +128,7 @@ FeedView.defaultProps = {
   isLoading: false,
   renderItem: defaultFeedItemRenderer,
   onEndReachedThreshold: 0.7,
-  keyExtractor: (item) => item && (item.node.id || item.entryId),
+  keyExtractor: (item) => item && item.node.id,
   content: [],
   refetch: undefined,
   fetchMore: undefined,

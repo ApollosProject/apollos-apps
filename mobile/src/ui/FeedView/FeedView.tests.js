@@ -12,42 +12,54 @@ describe('The FeedView component', () => {
         <FeedView
           content={[
             {
-              id: '1',
-              title: 'hi',
-              channelType: 'bob',
-              coverImage: [
-                {
-                  uri: 'https://picsum.photos/600/400/?random',
-                  width: 600,
-                  height: 400,
-                },
-              ],
-              theme: {
-                isLight: true,
-                colors: {
-                  background: {
-                    paper: '#fa8072',
+              node: {
+                id: '1',
+                title: "Will I get to shake Jesus' hand?",
+                coverImage: [
+                  {
+                    uri: 'https://picsum.photos/600/400/?random',
+                    width: 600,
+                    height: 400,
                   },
+                ],
+                theme: {
+                  isLight: true,
+                  colors: {
+                    background: {
+                      paper: '#fa8072',
+                    },
+                  },
+                },
+                parentChannel: {
+                  id: '01',
+                  name: 'eschatology',
+                  iconName: 'like',
                 },
               },
             },
             {
-              id: '2',
-              title: 'hi 2',
-              channelType: 'bob 2',
-              coverImage: [
-                {
-                  uri: 'https://picsum.photos/600/400/?random',
-                  width: 600,
-                  height: 400,
-                },
-              ],
-              theme: {
-                isLight: true,
-                colors: {
-                  background: {
-                    paper: '#e9967a',
+              node: {
+                id: '2',
+                title: 'Where is the new Jerusalem anyways?',
+                coverImage: [
+                  {
+                    uri: 'https://picsum.photos/600/400/?random',
+                    width: 600,
+                    height: 400,
                   },
+                ],
+                theme: {
+                  isLight: true,
+                  colors: {
+                    background: {
+                      paper: '#e9967a',
+                    },
+                  },
+                },
+                parentChannel: {
+                  id: '02',
+                  name: 'eschatology',
+                  iconName: 'like',
                 },
               },
             },
