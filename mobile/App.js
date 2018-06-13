@@ -3,22 +3,17 @@ import { createStackNavigator } from 'react-navigation';
 import ArticleSingle from 'articles/Single';
 import { ThemeProvider } from 'ui/theme';
 import { TabStack } from 'tabs';
-import LiveNowModalScreen from 'live/liveModal';
+import LiveNowModal from 'live/liveModal';
 
 export const RootStack = createStackNavigator(
   {
     Tab: TabStack,
     ArticleSingle,
-    LiveNowModal: {
-      screen: LiveNowModalScreen,
-    },
+    LiveNowModal,
   },
   {
     mode: 'modal',
-  },
-  {
     initialRouteName: 'Tab',
-    headerMode: 'none',
   }
 );
 
