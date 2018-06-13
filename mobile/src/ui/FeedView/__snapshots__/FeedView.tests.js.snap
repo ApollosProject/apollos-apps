@@ -776,15 +776,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -799,21 +795,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -847,21 +840,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -905,15 +895,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -928,21 +914,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -976,21 +959,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1034,15 +1014,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1057,21 +1033,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1105,21 +1078,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1163,15 +1133,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1186,21 +1152,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1234,21 +1197,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1292,15 +1252,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1315,21 +1271,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1363,21 +1316,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1421,15 +1371,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1444,21 +1390,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1492,21 +1435,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1550,15 +1490,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1573,21 +1509,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1621,21 +1554,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1679,15 +1609,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1702,21 +1628,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1750,21 +1673,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1808,15 +1728,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1831,21 +1747,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -1879,21 +1792,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
@@ -1937,15 +1847,11 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
+            <View
               style={
                 Object {
+                  "aspectRatio": 1,
                   "backgroundColor": "#dddddd",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }
@@ -1960,21 +1866,18 @@ exports[`The FeedView component renders empty state 1`] = `
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#dddddd",
+                  "borderRadius": 6,
+                  "height": 25.2,
+                  "marginVertical": 3.040000000000001,
+                  "width": "80%",
                 }
               }
-            >
-               
-            </Text>
+            />
           </View>
           <View
             style={
@@ -2008,21 +1911,18 @@ exports[`The FeedView component renders empty state 1`] = `
                 }
                 withIcon={null}
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#dddddd",
+                      "borderRadius": 6,
+                      "height": 14,
+                      "marginVertical": 0.8899999999999997,
+                      "width": "40%",
                     }
                   }
-                >
-                  
-                </Text>
+                />
               </View>
             </View>
           </View>
