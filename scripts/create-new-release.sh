@@ -18,12 +18,6 @@ if [ "${saved_branch}" != "master" ]; then
    git checkout "master"
 fi
 
-# Merge master into mobile-release branch
-git pull origin master
-git checkout mobile-release
-git merge "master"
-git push origin mobile-release
-
 # Create Tag and Push
 git tag -a $TAG -m "${MSG}"
 git push --tags
