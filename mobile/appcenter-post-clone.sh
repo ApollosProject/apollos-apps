@@ -2,11 +2,11 @@
 set -e
 
 echo $(pwd)
-touch $APPCENTER_SOURCE_DIRECTORY/.env
+touch .env
 
 echo "Is it working?"
 echo $APPCENTER_SOURCE_DIRECTORY
 
-echo "APP_DATA_URL=apollos-church-api.now.sh" > $APPCENTER_SOURCE_DIRECTORY/.env
+echo "APP_DATA_URL=apollos-church-api.now.sh" > .env
 
-echo $APPCENTER_SOURCE_DIRECTORY/.env
+cat .env
