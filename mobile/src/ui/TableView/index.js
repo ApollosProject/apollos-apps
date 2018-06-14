@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, renderComponent, setPropTypes } from 'recompose';
+import { compose, renderComponent } from 'recompose';
 import styled from 'ui/styled';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
 import Card from 'ui/Card';
@@ -12,9 +12,6 @@ export { default as Divider } from './Divider';
 export { default as FormFields } from './FormFields';
 
 const TableView = compose(
-  setPropTypes({
-    responsive: PropTypes.bool,
-  }),
   styled(
     ({ theme }) => ({
       marginBottom: theme.sizing.baseUnit,
@@ -32,5 +29,9 @@ const TableView = compose(
     renderComponent(Card)
   )
 )(View);
+
+TableView.proptypes = {
+  responsive: PropTypes.bool,
+};
 
 export default TableView;

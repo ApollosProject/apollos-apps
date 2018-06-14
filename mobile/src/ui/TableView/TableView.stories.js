@@ -10,7 +10,7 @@ storiesOf('TableView', module).add('default', () => (
   <FlexedView>
     <TableView>
       <Cell>
-        <Icon name="leaf-outline" />
+        <Icon name="arrow-back" />
         <CellText>Line Item</CellText>
       </Cell>
       <Divider />
