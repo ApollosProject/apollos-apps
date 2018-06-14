@@ -19,6 +19,8 @@ export class HomeScreen extends React.Component {
     }),
   };
 
+  onPress = () => this.props.navigation.navigate('ArticleSingle');
+
   render() {
     return (
       <FlexedView>
@@ -29,6 +31,7 @@ export class HomeScreen extends React.Component {
               content={get(data, 'userFeed.edges', [])}
               isLoading={loading}
               error={error}
+              onPressItem={this.onPress}
             />
           )}
         </Query>
