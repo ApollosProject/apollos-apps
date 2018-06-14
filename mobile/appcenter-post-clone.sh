@@ -1,4 +1,5 @@
 #!/usr/bin
+set -e
 
 touch $APPCENTER_SOURCE_DIRECTORY/mobile/.env
 
