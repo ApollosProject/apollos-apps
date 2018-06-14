@@ -27,5 +27,4 @@ jobs:
         - provider: script
           script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
           skip_cleanup: true
-          on:
-            tags: true
+          master: true
