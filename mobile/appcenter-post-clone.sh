@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+echo $(pwd)
 touch $APPCENTER_SOURCE_DIRECTORY/.env
 
-echo $(pwd)
 echo "Is it working?"
 echo $APPCENTER_SOURCE_DIRECTORY
 
