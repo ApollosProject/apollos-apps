@@ -56,7 +56,7 @@ export class FeedView extends React.Component {
       // isLight={item.theme.isLight}
       // isLiked={item.isLiked}
       <TouchableWithoutFeedback
-        onPress={() => this.props.onPressItem({ item })}
+        onPress={() => this.props.onPressItem({ ...item })}
       >
         <FeedItemCard
           id={item.node.id}

@@ -9,7 +9,7 @@ import { H3 } from 'ui/typography';
 class ContentSingle extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const item = navigation.getParam('item', []);
-    const itemTitle = item.item.node.parentChannel.name;
+    const itemTitle = item.node.parentChannel.name;
     return {
       title: itemTitle || 'Content Channel Title Here',
       headerStyle: {
@@ -33,10 +33,10 @@ class ContentSingle extends React.Component {
     const item = navigation.getParam('item', []);
     return (
       <ScrollView>
-        <GradientOverlayImage source={item.item.node.coverImage.sources} />
+        <GradientOverlayImage source={item.node.coverImage.sources} />
         <PaddedView>
-          <H3>{item.item.node.title}</H3>
-          <HTMLView>{item.item.node.htmlContent}</HTMLView>
+          <H3>{item.node.title}</H3>
+          <HTMLView>{item.node.htmlContent}</HTMLView>
         </PaddedView>
       </ScrollView>
     );
