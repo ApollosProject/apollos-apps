@@ -25,13 +25,28 @@ export class ConnectScreen extends React.Component {
         <LiveNowButton navigation={this.props.navigation} />
         <TableView>
           <Cell>
-            <CellIcon name="group" />
-            <CellText> Find a small group!</CellText>
+            <CellIcon name="check" />
+            <CellText> Find a serving opportunity</CellText>
           </Cell>
           <Divider />
           <Cell>
-            <CellIcon name="baptism" />
-            <CellText> Sign up baptism!</CellText>
+            <CellIcon name="groups" />
+            <CellText> Join a small group</CellText>
+          </Cell>
+          <Divider />
+          <Cell>
+            <CellIcon name="share" />
+            <CellText> I need prayer</CellText>
+          </Cell>
+          <Divider />
+          <Cell>
+            <CellIcon name="download" />
+            <CellText> I would like to give</CellText>
+          </Cell>
+          <Divider />
+          <Cell>
+            <CellIcon name="building" />
+            <CellText> Find Service Times & Locations</CellText>
           </Cell>
         </TableView>
       </FlexedView>
