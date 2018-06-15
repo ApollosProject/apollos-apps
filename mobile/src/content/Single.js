@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 import PaddedView from 'ui/PaddedView';
 
 class ContentSingle extends React.Component {
-  static navigationOptions = {
-    title: 'Hello',
+  static navigationOptions = ({ navigation }) => {
+    const item = navigation.getParam('item', []);
+    const itemTitle = item.item.node.parentChannel.name;
+    return {
+      title: itemTitle || 'Some Default Title',
+    };
   };
 
   static propTypes = {
