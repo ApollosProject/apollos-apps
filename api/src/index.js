@@ -1,5 +1,6 @@
 import dotenv from 'dotenv/config'; // eslint-disable-line
 import { ApolloServer } from 'apollo-server';
+import { get } from 'lodash';
 import { resolvers, schema, models } from './data';
 
 import RockConnector from './connectors/rock';
@@ -23,7 +24,7 @@ export const getContext = ({ req = {} } = {}) => {
     initiatedModels[modelName] = new models[modelName](context);
   });
 
-  if (req.headers.authorization) {
+  if (get(req, 'headers.authorization')) {
     initiatedModels.Auth.registerToken(req.headers.authorization);
   }
 
