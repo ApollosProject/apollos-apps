@@ -29,8 +29,6 @@ class ContentSingle extends React.Component {
         <ImageHeader images={item.item.node.coverImage.sources} />
         <PaddedView>
           <H3>{item.item.node.title}</H3>
-        </PaddedView>
-        <PaddedView>
           <HTMLView>{item.item.node.htmlContent}</HTMLView>
         </PaddedView>
       </ScrollView>
