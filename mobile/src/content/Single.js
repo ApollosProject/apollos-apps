@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+import ImageHeader from 'ui/ImageHeader';
 import PaddedView from 'ui/PaddedView';
 
 class ContentSingle extends React.Component {
@@ -8,7 +9,7 @@ class ContentSingle extends React.Component {
     const item = navigation.getParam('item', []);
     const itemTitle = item.item.node.parentChannel.name;
     return {
-      title: itemTitle || 'Some Default Title',
+      title: itemTitle || 'Content Channel Title Here',
     };
   };
 
@@ -21,11 +22,19 @@ class ContentSingle extends React.Component {
   render() {
     const { navigation } = this.props;
     const item = navigation.getParam('item', []);
-    console.log('item.item.node.title = ', item.item.node.title);
+    console.log(
+      'item.item.node.coverImage.sources[0].uri = ',
+      item.item.node.coverImage.sources[0].uri
+    );
+    // isLoading={isLoading}
+    // overlayColor={backgroundColor}
     return (
-      <PaddedView>
-        <Text>{item.item.node.title}</Text>
-      </PaddedView>
+      <View>
+        <ImageHeader images={item.item.node.coverImage.sources} />
+        <PaddedView>
+          <Text>{item.item.node.title}</Text>
+        </PaddedView>
+      </View>
     );
   }
 }
