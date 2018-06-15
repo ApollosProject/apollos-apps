@@ -5,7 +5,7 @@ import { resolvers, schema, models } from './data';
 import RockConnector from './connectors/rock';
 
 // Construct a context object for each request
-export const getContext = ({ req }) => {
+export const getContext = ({ req = {} } = {}) => {
   // initialize connectors for every request so API fetches
   // are deduplicated per-request only.
   const connectors = {
