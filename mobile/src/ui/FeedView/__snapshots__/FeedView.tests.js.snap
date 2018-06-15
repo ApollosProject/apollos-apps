@@ -92,6 +92,13 @@ exports[`The FeedView component renders correctly 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -293,6 +300,13 @@ exports[`The FeedView component renders correctly 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -718,7 +732,7 @@ exports[`The FeedView component renders empty state 1`] = `
   maxToRenderPerBatch={10}
   numColumns={1}
   onContentSizeChange={[Function]}
-  onEndReached={false}
+  onEndReached={[Function]}
   onEndReachedThreshold={0.7}
   onLayout={[Function]}
   onMomentumScrollEnd={[Function]}
@@ -744,6 +758,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -863,6 +884,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -982,6 +1010,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1101,6 +1136,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1220,6 +1262,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1339,6 +1388,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1458,6 +1514,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1577,6 +1640,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1696,6 +1766,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",
@@ -1815,6 +1892,13 @@ exports[`The FeedView component renders empty state 1`] = `
       style={null}
     >
       <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
             "backgroundColor": "#ffffff",

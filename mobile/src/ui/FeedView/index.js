@@ -100,6 +100,7 @@ export class FeedView extends React.Component {
         }
         numColumns={numColumns}
         onEndReached={this.fetchMoreHandler({ fetchMore, error, isLoading })}
+        onEndReachedThreshold={onEndReachedThreshold}
         onRefresh={this.refetchHandler({ isLoading, refetch })}
         refreshing={isLoading}
         renderItem={this.renderItem}
