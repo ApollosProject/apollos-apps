@@ -6,7 +6,6 @@ import FlexedView from 'ui/FlexedView';
 import Articles from 'articles';
 import Devotionals from 'devotionals';
 import News from 'news';
-import LiveNowButton from '../../live';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +23,6 @@ export class SectionsScreen extends React.Component {
   render() {
     return (
       <FlexedView>
-        <LiveNowButton navigation={this.props.navigation} />
         <View style={styles.container}>
           <Text>Sections Screen</Text>
           <Button
@@ -60,15 +58,6 @@ export const SectionsStack = createStackNavigator(
   },
   {
     initialRouteName: 'Sections',
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: '#f4511e',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    },
   }
 );
 
