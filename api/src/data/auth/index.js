@@ -1,4 +1,4 @@
-import { AuthenticationError, gql } from 'apollo-server';
+import { gql } from 'apollo-server';
 import { createGlobalId } from '../node';
 
 export { default as model } from './model';
@@ -17,10 +17,7 @@ export const schema = gql`
 
 export const resolver = {
   Query: {
-    currentUser: (root, args, { user }) => {
-      if (user) return user;
-      throw new AuthenticationError();
-    },
+    currentUser: (root, args, { models }) => models.Auth.getCurrentPerson(),
   },
   AuthenticatedUser: {
     id: ({ id }, args, context, { parentType }) =>
