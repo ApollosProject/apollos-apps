@@ -7,3 +7,4 @@ v0.1: June 15, 2018
 - Imported numerous reusable components
 - Designed initial project deployment and release processes
 - Added a version tool for quickly updating iOS and Android version numbers
+- Added the ability to tap on a home feed item and see it's content details
