@@ -19,7 +19,10 @@ export class HomeScreen extends React.Component {
     }),
   };
 
-  onPress = () => this.props.navigation.navigate('ContentSingle');
+  onPress = (item) =>
+    this.props.navigation.navigate('ContentSingle', {
+      item,
+    });
 
   render() {
     return (
