@@ -14,8 +14,12 @@ export default class AuthModel extends RockModel {
   parseToken = (token) => jwt.verify(token, secret);
 
   registerToken = (token) => {
-    const { cookie } = this.parseToken(token);
-    this.context.connectors.Rock.defaultRequestOptions.headers.cookie = cookie;
+    try {
+      const { cookie } = this.parseToken(token);
+      this.context.connectors.Rock.defaultRequestOptions.headers.cookie = cookie;
+    } catch (e) {
+      throw new AuthenticationError('Invalid token');
+    }
   };
 
   getCurrentPerson = () => this.request('People/GetCurrentPerson').get();
