@@ -7,9 +7,15 @@ import FlexedView from 'ui/FlexedView';
 import GET_USER_FEED from './query';
 import LiveNowButton from '../../live';
 
-export class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Apollos Church',
+    // TODO: for the life of me, I can't figure out how to get these colors
+    // to be dynamic from theme or props.
+    headerStyle: {
+      backgroundColor: '#17B582',
+    },
+    headerTintColor: '#ffffff',
   };
 
   render() {
