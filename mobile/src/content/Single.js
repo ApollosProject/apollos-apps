@@ -12,6 +12,13 @@ class ContentSingle extends React.Component {
     const itemTitle = item.item.node.parentChannel.name;
     return {
       title: itemTitle || 'Content Channel Title Here',
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
     };
   };
 
