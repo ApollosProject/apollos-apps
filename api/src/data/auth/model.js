@@ -13,7 +13,7 @@ export default class AuthModel extends RockModel {
 
   parseToken = (token) => jwt.verify(token, secret);
 
-  registerToken = async (token) => {
+  registerToken = (token) => {
     const { cookie } = this.parseToken(token);
     this.context.connectors.Rock.defaultRequestOptions.headers.cookie = cookie;
   };
@@ -29,6 +29,7 @@ export default class AuthModel extends RockModel {
           Password,
         }),
       });
+
       const cookie = response.headers.get('set-cookie');
       return cookie;
     } catch (err) {
@@ -40,7 +41,7 @@ export default class AuthModel extends RockModel {
     try {
       const cookie = await this.fetchUserCookie(identity, password);
       const token = this.generateToken({ cookie });
-      await this.registerToken(token);
+      this.registerToken(token);
       return { token };
     } catch (e) {
       throw e;
