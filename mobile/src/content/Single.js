@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import ImageHeader from 'ui/ImageHeader';
 import PaddedView from 'ui/PaddedView';
+import { H3 } from 'ui/typography';
 
 class ContentSingle extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -32,7 +33,7 @@ class ContentSingle extends React.Component {
       <View>
         <ImageHeader images={item.item.node.coverImage.sources} />
         <PaddedView>
-          <Text>{item.item.node.title}</Text>
+          <H3>{item.item.node.title}</H3>
         </PaddedView>
       </View>
     );
