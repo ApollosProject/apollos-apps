@@ -127,7 +127,7 @@ export default class RestConnector {
   };
 
   put = async (path, data, config) => {
-    const response = await fetch(path, {
+    const response = await this.fetch(path, {
       method: 'PUT',
       body: JSON.stringify(data),
       ...config,
@@ -136,7 +136,7 @@ export default class RestConnector {
   };
 
   patch = async (path, data, config) => {
-    const response = await fetch(path, {
+    const response = await this.fetch(path, {
       method: 'PATCH',
       body: JSON.stringify(data),
       ...config,
