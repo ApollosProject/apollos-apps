@@ -22,11 +22,12 @@ class HomeScreen extends React.Component {
     return (
       <FlexedView>
         <Query query={GET_USER_FEED}>
-          {({ loading, error, data }) => (
+          {({ loading, error, data, refetch }) => (
             <FeedView
               content={get(data, 'userFeed.edges', [])}
               isLoading={loading}
               error={error}
+              refetch={refetch}
               ListHeaderComponent={LiveNowButton}
             />
           )}
