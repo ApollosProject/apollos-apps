@@ -5,20 +5,21 @@ const GET_USER_FEED = gql`
     userFeed {
       edges {
         node {
-          id
           __typename
-          title
+          id
           coverImage {
             name
             sources {
               uri
             }
           }
+          htmlContent
           parentChannel {
             id
             name
             iconName
           }
+          title
         }
       }
     }
