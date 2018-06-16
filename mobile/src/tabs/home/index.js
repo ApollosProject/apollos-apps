@@ -5,6 +5,7 @@ import { get } from 'lodash';
 import FeedView from 'ui/FeedView';
 import FlexedView from 'ui/FlexedView';
 import GET_USER_FEED from './query';
+import tabBarIcon from '../tabBarIcon';
 import LiveNowButton from '../../live';
 
 class HomeScreen extends React.Component {
@@ -45,5 +46,9 @@ export const HomeStack = createStackNavigator(
     initialRouteName: 'Home',
   }
 );
+
+HomeStack.navigationOptions = {
+  tabBarIcon: tabBarIcon('home'),
+};
 
 export default HomeStack;

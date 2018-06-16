@@ -6,6 +6,7 @@ import FlexedView from 'ui/FlexedView';
 import Articles from 'articles';
 import Devotionals from 'devotionals';
 import News from 'news';
+import tabBarIcon from '../tabBarIcon';
 
 const styles = StyleSheet.create({
   container: {
@@ -60,5 +61,9 @@ export const SectionsStack = createStackNavigator(
     initialRouteName: 'Sections',
   }
 );
+
+SectionsStack.navigationOptions = {
+  tabBarIcon: tabBarIcon('sections'),
+};
 
 export default SectionsStack;

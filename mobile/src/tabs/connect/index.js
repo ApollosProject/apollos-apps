@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import FlexedView from 'ui/FlexedView';
+import tabBarIcon from '../tabBarIcon';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,5 +36,9 @@ const ConnectStack = createStackNavigator(
     initialRouteName: 'Connect',
   }
 );
+
+ConnectStack.navigationOptions = {
+  tabBarIcon: tabBarIcon('profile'),
+};
 
 export default ConnectStack;
