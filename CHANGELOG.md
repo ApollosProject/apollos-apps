@@ -6,3 +6,6 @@ v0.1: June 15, 2018
 - Created a live bar button that redirects to a web view displaying a Church Online stream
 - Imported numerous reusable components
 - Designed initial project deployment and release processes
+- Clean up tab headings to be more consistent
+- Tweak styles on live now button
+- add pull-to-refresh support on the home screen
