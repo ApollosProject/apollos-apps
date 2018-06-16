@@ -94,11 +94,11 @@ exports[`The FeedView component renders correctly 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -129,7 +129,7 @@ exports[`The FeedView component renders correctly 1`] = `
               source={Array []}
               style={
                 Object {
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "height": "100%",
                   "opacity": 0,
                   "resizeMode": "cover",
@@ -295,11 +295,11 @@ exports[`The FeedView component renders correctly 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -330,7 +330,7 @@ exports[`The FeedView component renders correctly 1`] = `
               source={Array []}
               style={
                 Object {
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "height": "100%",
                   "opacity": 0,
                   "resizeMode": "cover",
@@ -746,11 +746,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -780,7 +780,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -799,7 +799,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -844,7 +844,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -865,11 +865,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -899,7 +899,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -918,7 +918,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -963,7 +963,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -984,11 +984,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1018,7 +1018,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1037,7 +1037,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1082,7 +1082,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1103,11 +1103,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1137,7 +1137,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1156,7 +1156,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1201,7 +1201,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1222,11 +1222,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1256,7 +1256,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1275,7 +1275,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1320,7 +1320,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1341,11 +1341,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1375,7 +1375,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1394,7 +1394,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1439,7 +1439,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1460,11 +1460,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1494,7 +1494,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1513,7 +1513,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1558,7 +1558,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1579,11 +1579,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1613,7 +1613,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1632,7 +1632,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1677,7 +1677,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1698,11 +1698,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1732,7 +1732,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1751,7 +1751,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1796,7 +1796,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
@@ -1817,11 +1817,11 @@ exports[`The FeedView component renders empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#ffffff",
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 6,
             "marginHorizontal": 10,
             "marginVertical": 5,
-            "shadowColor": "rgba(133, 133, 133, 0.30000000000000004)",
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
               "width": 0,
@@ -1851,7 +1851,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "width": "100%",
                 }
               }
@@ -1870,7 +1870,7 @@ exports[`The FeedView component renders empty state 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#dddddd",
+                  "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
                   "height": 25.2,
                   "marginVertical": 3.040000000000001,
@@ -1915,7 +1915,7 @@ exports[`The FeedView component renders empty state 1`] = `
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#dddddd",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
                       "height": 14,
                       "marginVertical": 0.8899999999999997,
