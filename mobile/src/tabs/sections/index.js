@@ -10,12 +10,11 @@ import tabBarIcon from '../tabBarIcon';
 
 export class SectionsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Sections',
+    title: 'Discover',
   };
   render() {
     return (
       <BackgroundView>
-        <Text>Sections Screen</Text>
         <Button
           title="Articles"
           onPress={() => this.props.navigation.navigate('Articles')}
