@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 import { get } from 'lodash';
 import FeedView from 'ui/FeedView';
-import FlexedView from 'ui/FlexedView';
+import BackgroundView from 'ui/BackgroundView';
 import GET_USER_FEED from './query';
 import tabBarIcon from '../tabBarIcon';
 import LiveNowButton from '../../live';
@@ -21,7 +21,7 @@ class HomeScreen extends React.Component {
 
   render() {
     return (
-      <FlexedView>
+      <BackgroundView>
         <Query query={GET_USER_FEED}>
           {({ loading, error, data, refetch }) => (
             <FeedView
@@ -33,7 +33,7 @@ class HomeScreen extends React.Component {
             />
           )}
         </Query>
-      </FlexedView>
+      </BackgroundView>
     );
   }
 }
