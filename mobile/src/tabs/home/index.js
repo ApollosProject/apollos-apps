@@ -13,17 +13,15 @@ import tabBarIcon from '../tabBarIcon';
 import LiveNowButton from '../../live';
 
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: ({ state }) => ({
-      title: 'Apollos Church',
-      // TODO: for the life of me, I can't figure out how to get these colors
-      // to be dynamic from theme or props.
-      headerStyle: {
-        backgroundColor: state.params.backgroundColor,
-      },
-      headerTintColor: state.params.tintColor,
-    }),
-  };
+  static navigationOptions = ({ navigation }) => ({
+    title: 'Apollos Church',
+    // TODO: for the life of me, I can't figure out how to get these colors
+    // to be dynamic from theme or props.
+    headerStyle: {
+      backgroundColor: navigation.getParam('backgroundColor', 'white'),
+    },
+    headerTintColor: navigation.getParam('tintColor', 'black'),
+  });
 
   constructor(props) {
     super(props);
@@ -56,7 +54,7 @@ class HomeScreen extends React.Component {
 
 export const HomeStack = createStackNavigator(
   {
-    Home: compose(withTheme())(HomeScreen),
+    Home: withTheme()(HomeScreen),
   },
   {
     initialRouteName: 'Home',
