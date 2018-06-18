@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 import { get } from 'lodash';
-import { compose } from 'recompose';
+import PropTypes from 'prop-types';
 
 import { withTheme } from 'ui/theme';
 import FeedView from 'ui/FeedView';
@@ -12,24 +12,36 @@ import GET_USER_FEED from './query';
 import tabBarIcon from '../tabBarIcon';
 import LiveNowButton from '../../live';
 
+// TODO: what are our thoughts around using this @-syntax for HOCs?
+@withTheme(({ theme, ...otherProps }) => ({
+  headerBackgroundColor: theme.colors.background.primary,
+  headerTintColor: theme.colors.background.paper,
+  ...otherProps,
+}))
 class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     title: 'Apollos Church',
-    // TODO: for the life of me, I can't figure out how to get these colors
-    // to be dynamic from theme or props.
     headerStyle: {
-      backgroundColor: navigation.getParam('backgroundColor', 'white'),
+      backgroundColor: navigation.getParam('backgroundColor'),
     },
-    headerTintColor: navigation.getParam('tintColor', 'black'),
+    headerTintColor: navigation.getParam('tintColor'),
   });
+
+  static propTypes = {
+    navigation: PropTypes.shape({
+      getParam: PropTypes.func,
+      setParams: PropTypes.func,
+    }),
+    headerBackgroundColor: PropTypes.string,
+    headerTintColor: PropTypes.string,
+  };
 
   constructor(props) {
     super(props);
 
-    // eslint-disable-next-line
     props.navigation.setParams({
-      backgroundColor: props.theme.colors.background.primary, // eslint-disable-line
-      tintColor: props.theme.colors.background.paper, // eslint-disable-line
+      backgroundColor: props.headerBackgroundColor,
+      tintColor: props.headerTintColor,
     });
   }
 
@@ -54,7 +66,7 @@ class HomeScreen extends React.Component {
 
 export const HomeStack = createStackNavigator(
   {
-    Home: withTheme()(HomeScreen),
+    Home: HomeScreen,
   },
   {
     initialRouteName: 'Home',
