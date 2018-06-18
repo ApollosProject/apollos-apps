@@ -22,8 +22,8 @@ jobs:
         - travis_wait bash ./scripts/global-npm-script.sh test "travis" && bash ./scripts/global-npm-script.sh codecov
     - stage: Deploy Api
       script: skip
-      before_deploy: npm install -g now
-      after_deploy: now scale https://apollos-church-api.now.sh 0 --token $NOW_TOKEN && now scale https://apollos-church-api.now.sh 1 --token $NOW_TOKEN
+      before_deploy: npm install -g now && now scale https://apollos-church-api.now.sh 0 --token $NOW_TOKEN
+      after_deploy: now scale https://apollos-church-api.now.sh 1 --token $NOW_TOKEN
       deploy:
         - provider: script
           script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
