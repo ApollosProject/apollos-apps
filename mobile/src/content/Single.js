@@ -2,6 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
+import { ErrorCard } from 'ui/Card';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
@@ -32,7 +33,7 @@ class ContentSingle extends React.Component {
       <Query query={GET_CONTENT} variables={{ itemId }}>
         {({ loading, error, data }) => {
           if (loading) return null;
-          if (error) return `Error!: ${error}`;
+          if (error) return <ErrorCard error={error} />;
 
           return (
             <ScrollView>
