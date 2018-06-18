@@ -39,7 +39,7 @@ export default class AuthModel extends RockModel {
           Password,
         }),
       });
-
+      if (response.status >= 400) throw new AuthenticationError();
       const cookie = response.headers.get('set-cookie');
       return cookie;
     } catch (err) {
