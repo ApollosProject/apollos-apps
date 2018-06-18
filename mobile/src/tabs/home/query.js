@@ -13,7 +13,6 @@ const GET_USER_FEED = gql`
               uri
             }
           }
-          htmlContent
           parentChannel {
             id
             name
