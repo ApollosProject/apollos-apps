@@ -23,6 +23,7 @@ jobs:
     - stage: Deploy Api
       script: skip
       before_deploy: npm install -g now
+      after_deploy: now scale https://apollos-church-api.now.sh 0 --token $NOW_TOKEN && now scale https://apollos-church-api.now.sh 1 --token $NOW_TOKEN
       deploy:
         - provider: script
           script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
