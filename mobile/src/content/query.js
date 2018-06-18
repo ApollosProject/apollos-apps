@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 const GET_CONTENT = gql`
-  query someQuery($itemId: ID!) {
+  query getContentItem($itemId: ID!) {
     node(id: $itemId) {
       ... on ContentItem {
         id
