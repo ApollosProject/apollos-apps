@@ -11,10 +11,7 @@ import GET_CONTENT from './query';
 
 class ContentSingle extends React.Component {
   static navigationOptions = ({ navigation }) => {
-    const itemTitle = navigation.getParam(
-      'itemTitle',
-      'Content Channel Title Here'
-    );
+    const itemTitle = navigation.getParam('itemTitle', 'Content');
     return {
       title: itemTitle,
     };
