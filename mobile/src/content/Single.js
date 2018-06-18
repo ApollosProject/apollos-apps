@@ -1,6 +1,6 @@
 import React from 'react';
 import { Query } from 'react-apollo';
-import { ScrollView, View } from 'react-native';
+import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
 import HTMLView from 'ui/HTMLView';
@@ -30,24 +30,22 @@ class ContentSingle extends React.Component {
     const { navigation } = this.props;
     const itemId = navigation.getParam('itemId', []);
     return (
-      <ScrollView>
-        <Query query={GET_CONTENT} variables={{ itemId }}>
-          {({ loading, error, data }) => {
-            if (loading) return null;
-            if (error) return `Error!: ${error}`;
+      <Query query={GET_CONTENT} variables={{ itemId }}>
+        {({ loading, error, data }) => {
+          if (loading) return null;
+          if (error) return `Error!: ${error}`;
 
-            return (
-              <View>
-                <GradientOverlayImage source={data.node.coverImage.sources} />
-                <PaddedView>
-                  <H3>{data.node.title}</H3>
-                  <HTMLView>{data.node.htmlContent}</HTMLView>
-                </PaddedView>
-              </View>
-            );
-          }}
-        </Query>
-      </ScrollView>
+          return (
+            <ScrollView>
+              <GradientOverlayImage source={data.node.coverImage.sources} />
+              <PaddedView>
+                <H3>{data.node.title}</H3>
+                <HTMLView>{data.node.htmlContent}</HTMLView>
+              </PaddedView>
+            </ScrollView>
+          );
+        }}
+      </Query>
     );
   }
 }
