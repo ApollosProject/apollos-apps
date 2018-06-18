@@ -12,3 +12,4 @@ v0.1: June 15, 2018
 * Tweak styles on live now button
 * add pull-to-refresh support on the home screen
 * add material bottom tab bar
+* Added the ability to tap on a home feed item and see it's content details

@@ -31,6 +31,7 @@ class HomeScreen extends React.Component {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
       setParams: PropTypes.func,
+      navigate: PropTypes.func,
     }),
     headerBackgroundColor: PropTypes.string,
     headerTintColor: PropTypes.string,
@@ -45,6 +46,12 @@ class HomeScreen extends React.Component {
     });
   }
 
+  onPress = (item) =>
+    this.props.navigation.navigate('ContentSingle', {
+      itemId: item.node.id,
+      itemTitle: item.node.title,
+    });
+
   render() {
     return (
       <BackgroundView>
@@ -56,6 +63,7 @@ class HomeScreen extends React.Component {
               error={error}
               refetch={refetch}
               ListHeaderComponent={LiveNowButton}
+              onPressItem={this.onPress}
             />
           )}
         </Query>
