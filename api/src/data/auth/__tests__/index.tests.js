@@ -51,7 +51,7 @@ describe('Auth', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('queries currentUser', async () => {
+  describe('currentUser query', () => {
     const query = gql`
       query {
         currentUser {
@@ -62,10 +62,21 @@ describe('Auth', () => {
         }
       }
     `;
-    const rootValue = {};
+    it('requires you to be logged in', async () => {
+      const rootValue = {};
 
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('queries current user when logged in', async () => {
+      const rootValue = {};
+      context.models.Auth.registerToken(
+        context.models.Auth.generateToken({ cookie: 'some-cookie' })
+      );
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+    });
   });
 
   it('registers an auth token and passes the cookie on requests to rock', async () => {
