@@ -14,7 +14,6 @@ class ContentSingle extends React.Component {
       'itemTitle',
       'Content Channel Title Here'
     );
-    // const itemTitle = item.node.parentChannel.name;
     return {
       title: itemTitle,
     };
