@@ -1,24 +1,22 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { Query } from 'react-apollo';
+import { ScrollView, View } from 'react-native';
 import PropTypes from 'prop-types';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
 import { H3 } from 'ui/typography';
+import GET_CONTENT from './query';
 
 class ContentSingle extends React.Component {
   static navigationOptions = ({ navigation }) => {
-    const item = navigation.getParam('item', []);
-    const itemTitle = item.node.parentChannel.name;
+    const itemTitle = navigation.getParam(
+      'itemTitle',
+      'Content Channel Title Here'
+    );
+    // const itemTitle = item.node.parentChannel.name;
     return {
-      title: itemTitle || 'Content Channel Title Here',
-      headerStyle: {
-        backgroundColor: '#f4511e',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      title: itemTitle,
     };
   };
 
@@ -30,14 +28,25 @@ class ContentSingle extends React.Component {
 
   render() {
     const { navigation } = this.props;
-    const item = navigation.getParam('item', []);
+    const itemId = navigation.getParam('itemId', []);
     return (
       <ScrollView>
-        <GradientOverlayImage source={item.node.coverImage.sources} />
-        <PaddedView>
-          <H3>{item.node.title}</H3>
-          <HTMLView>{item.node.htmlContent}</HTMLView>
-        </PaddedView>
+        <Query query={GET_CONTENT} variables={{ itemId }}>
+          {({ loading, error, data }) => {
+            if (loading) return null;
+            if (error) return `Error!: ${error}`;
+
+            return (
+              <View>
+                <GradientOverlayImage source={data.node.coverImage.sources} />
+                <PaddedView>
+                  <H3>{data.node.title}</H3>
+                  <HTMLView>{data.node.htmlContent}</HTMLView>
+                </PaddedView>
+              </View>
+            );
+          }}
+        </Query>
       </ScrollView>
     );
   }
