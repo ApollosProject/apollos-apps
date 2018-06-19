@@ -22,10 +22,9 @@ jobs:
         - travis_wait bash ./scripts/global-npm-script.sh test "travis" && bash ./scripts/global-npm-script.sh codecov
     - stage: Deploy Api
       script: skip
-      before_deploy: npm install -g now && now scale https://apollos-church-api.now.sh 0 --token $NOW_TOKEN
-      after_deploy: now scale https://apollos-church-api.now.sh 1 --token $NOW_TOKEN
+      before_deploy: npm install -g now
       deploy:
         - provider: script
-          script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+          script: cd api && now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN && now rm apollos-church-api --safe --yes --token $NOW_TOKEN
           skip_cleanup: true
           master: true
