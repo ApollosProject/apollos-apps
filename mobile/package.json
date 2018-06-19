@@ -41,7 +41,7 @@
     "lint": "./node_modules/.bin/eslint . --ext .js",
     "postversion":
       "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
-    "start": "react-native start",
+    "start": "node ./scripts/get-introspection-data.js && react-native start",
     "storybook":
       "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007",
     "test": "bash ../scripts/test-script.sh"
