@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import BackgroundView from 'ui/BackgroundView';
 import TableView, { Cell, CellIcon, CellText, Divider } from 'ui/TableView';
 import tabBarIcon from '../tabBarIcon';
 
-export class ConnectScreen extends React.Component {
+class Connect extends PureComponent {
   static navigationOptions = {
     title: 'Connect',
   };
@@ -45,17 +45,17 @@ export class ConnectScreen extends React.Component {
   }
 }
 
-const ConnectStack = createStackNavigator(
+const ConnectNavigator = createStackNavigator(
   {
-    Connect: ConnectScreen,
+    Connect,
   },
   {
     initialRouteName: 'Connect',
   }
 );
 
-ConnectStack.navigationOptions = {
+ConnectNavigator.navigationOptions = {
   tabBarIcon: tabBarIcon('profile'),
 };
 
-export default ConnectStack;
+export default ConnectNavigator;

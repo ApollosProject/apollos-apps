@@ -8,9 +8,9 @@
       "module-resolver",
       {
         "root": ["./src"],
-        "extensions": [".android.js", ".ios.js", ".js"]
+        "extensions": [".android.js", ".ios.js", ".js", ".graphql"]
       }
-    ]
+    ], "import-graphql"
   ],
   "env": {
     "development": {

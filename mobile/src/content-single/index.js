@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import { ScrollView } from 'react-native';
 import { get } from 'lodash';
@@ -8,9 +8,9 @@ import GradientOverlayImage from 'ui/GradientOverlayImage';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
 import { H3 } from 'ui/typography';
-import GET_CONTENT from './query';
+import getContentItem from './getContentItem.graphql';
 
-class ContentSingle extends React.Component {
+class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const itemTitle = navigation.getParam('itemTitle', 'Content');
     return {
@@ -28,9 +28,8 @@ class ContentSingle extends React.Component {
     const { navigation } = this.props;
     const itemId = navigation.getParam('itemId', []);
     return (
-      <Query query={GET_CONTENT} variables={{ itemId }}>
+      <Query query={getContentItem} variables={{ itemId }}>
         {({ loading, error, data }) => {
-          // if (loading) return null;
           if (error) return <ErrorCard error={error} />;
 
           return (

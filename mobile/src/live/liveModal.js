@@ -8,8 +8,8 @@ const FullScreenWebView = styled({
   flex: 1,
 })(WebView);
 
-const LiveModalScreen = () => (
+const LiveModal = () => (
   <FullScreenWebView source={{ uri: 'https://apollos.churchonline.org/' }} />
 );
 
-export default LiveModalScreen;
+export default LiveModal;

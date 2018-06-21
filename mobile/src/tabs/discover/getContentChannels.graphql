@@ -1,0 +1,6 @@
+query getContentChannels {
+  contentChannels {
+    id
+    name
+  }
+}

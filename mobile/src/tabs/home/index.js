@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 import { get } from 'lodash';
@@ -8,9 +8,9 @@ import { withTheme } from 'ui/theme';
 import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
 
-import GET_USER_FEED from './query';
+import getUserFeed from './getUserFeed.graphql';
 import tabBarIcon from '../tabBarIcon';
-import LiveNowButton from '../../live';
+import { LiveButton } from '../../live';
 
 // TODO: what are our thoughts around using this @-syntax for HOCs?
 @withTheme(({ theme, ...otherProps }) => ({
@@ -18,7 +18,7 @@ import LiveNowButton from '../../live';
   headerTintColor: theme.colors.background.paper,
   ...otherProps,
 }))
-class HomeScreen extends React.Component {
+class Home extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: 'Apollos Church',
     headerStyle: {
@@ -55,14 +55,14 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <BackgroundView>
-        <Query query={GET_USER_FEED}>
+        <Query query={getUserFeed}>
           {({ loading, error, data, refetch }) => (
             <FeedView
               content={get(data, 'userFeed.edges', [])}
               isLoading={loading}
               error={error}
               refetch={refetch}
-              ListHeaderComponent={LiveNowButton}
+              ListHeaderComponent={LiveButton}
               onPressItem={this.onPress}
             />
           )}
@@ -72,17 +72,17 @@ class HomeScreen extends React.Component {
   }
 }
 
-export const HomeStack = createStackNavigator(
+export const HomeNavigator = createStackNavigator(
   {
-    Home: HomeScreen,
+    Home,
   },
   {
     initialRouteName: 'Home',
   }
 );
 
-HomeStack.navigationOptions = {
+HomeNavigator.navigationOptions = {
   tabBarIcon: tabBarIcon('home'),
 };
 
-export default HomeStack;
+export default HomeNavigator;

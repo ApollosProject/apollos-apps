@@ -1,36 +1,29 @@
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
-import ArticleSingle from 'articles/Single';
-import ContentSingle from 'content/Single';
+import ContentSingle from 'content-single';
 import { ThemeProvider } from 'ui/theme';
-import { TabStack } from 'tabs';
+import Tabs from 'tabs';
 import client from 'client';
-import LiveNowModal from 'live/liveModal';
+import Live from 'live';
 
-export const RootStack = createStackNavigator(
+export const AppNavigator = createStackNavigator(
   {
-    Tab: TabStack,
-    ArticleSingle,
+    Tabs,
     ContentSingle,
-    LiveNowModal,
+    Live,
   },
   {
-    mode: 'modal',
-    initialRouteName: 'Tab',
+    initialRouteName: 'Tabs',
   }
 );
 
-/* eslint-disable */
-export default class App extends React.Component {
-  render() {
-    return (
-      <ApolloProvider client={client}>
-        <ThemeProvider>
-          <RootStack />
-        </ThemeProvider>
-      </ApolloProvider>
-    );
-  }
-}
-/* eslint-enable */
+const App = () => (
+  <ApolloProvider client={client}>
+    <ThemeProvider>
+      <AppNavigator />
+    </ThemeProvider>
+  </ApolloProvider>
+);
+
+export default App;
