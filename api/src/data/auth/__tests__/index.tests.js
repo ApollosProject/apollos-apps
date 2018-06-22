@@ -97,4 +97,53 @@ describe('Auth', () => {
     await graphql(schema, query, rootValue, secondContext);
     expect(fetch.mock.calls[0][1]).toMatchSnapshot();
   });
+
+  describe('User Registration', () => {
+    const query = gql`
+      mutation {
+        registerPerson(email: "hello.world@earth.org", password: "good") {
+          user {
+            id
+            profile {
+              id
+              email
+            }
+          }
+        }
+      }
+    `;
+
+    it('checks if user is already registered', async () => {
+      const result = await context.models.Auth.personExists({
+        identity: 'isaac.hardy@newspring.cc',
+      });
+
+      expect(result).toEqual(true);
+    });
+
+    it('creates user profile', async () => {
+      const result = await context.models.Auth.createUserProfile({
+        email: 'isaac.hardy@newspring.cc',
+      });
+
+      expect(result).toEqual({ personId: 35 });
+    });
+
+    it('creates user login', async () => {
+      const result = await context.models.Auth.createUserLogin({
+        email: 'isaac.hardy@newspring.cc',
+        password: 'password',
+        personId: 35,
+      });
+
+      expect(result).toEqual({ id: 21 });
+    });
+
+    it('creates new registration', async () => {
+      const rootValue = {};
+
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+    });
+  });
 });

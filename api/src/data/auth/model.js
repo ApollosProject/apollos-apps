@@ -1,4 +1,5 @@
 import { AuthenticationError } from 'apollo-server';
+import moment from 'moment';
 import jwt from 'jsonwebtoken';
 
 import { RockModel } from '../../connectors/rock';
@@ -53,6 +54,77 @@ export default class AuthModel extends RockModel {
       const token = this.generateToken({ cookie });
       this.registerToken(token);
       return { token };
+    } catch (e) {
+      throw e;
+    }
+  };
+
+  makeNewGuid = () => {
+    const s4 = () =>
+      Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+
+    const guid = `${s4()}${s4()}-${s4()}-${s4()}-${s4()}-${s4()}${s4()}${s4()}`;
+    return guid.toUpperCase();
+  };
+
+  personExists = async ({ identity }) => {
+    try {
+      const hasUserName = await this.request(
+        `/UserLogins?$filter=UserName eq '${identity}'`
+      ).get();
+      return hasUserName.length > 0;
+    } catch (err) {
+      return false;
+    }
+  };
+
+  createUserProfile = async (props = {}) => {
+    try {
+      const { email } = props;
+
+      return await this.context.connectors.Rock.post('/People', {
+        Email: email,
+        IsSystem: false,
+        Gender: 0,
+      });
+    } catch (err) {
+      throw new Error('Unable to create profile!');
+    }
+  };
+
+  createUserLogin = async (props = {}) => {
+    try {
+      const { email, password, personId } = props;
+
+      return await this.context.connectors.Rock.post('/UserLogins', {
+        PersonId: personId,
+        EntityTypeId: 27,
+        UserName: email,
+        PlainTextPassword: password,
+        LastLoginDateTime: `${moment().toISOString()}`,
+      });
+    } catch (err) {
+      throw new Error('Unable to create user login!');
+    }
+  };
+
+  registerPerson = async ({ email, password }) => {
+    try {
+      const personExists = await this.personExists({ identity: email });
+      if (personExists) throw new Error('User already exists!');
+
+      const personId = await this.createUserProfile({ email });
+
+      await this.createUserLogin({
+        email,
+        password,
+        personId,
+      });
+
+      const token = await this.authenticate({ identity: email, password });
+      return token;
     } catch (e) {
       throw e;
     }
