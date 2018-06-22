@@ -113,12 +113,28 @@ describe('Auth', () => {
       }
     `;
 
+    it('can make a new guid', async () => {
+      const result = await context.models.Auth.makeNewGuid();
+
+      expect(result).toBeTruthy();
+    });
+
     it('checks if user is already registered', async () => {
       const result = await context.models.Auth.personExists({
         identity: 'isaac.hardy@newspring.cc',
       });
 
       expect(result).toEqual(true);
+    });
+
+    it('throws error in personExists', async () => {
+      try {
+        await context.models.Auth.personExists();
+      } catch (e) {
+        expect(e.message).toEqual(
+          "Cannot read property 'identity' of undefined"
+        );
+      }
     });
 
     it('creates user profile', async () => {
@@ -129,6 +145,16 @@ describe('Auth', () => {
       expect(result).toEqual({ personId: 35 });
     });
 
+    it('throws error in createUserProfile', async () => {
+      try {
+        await context.models.Auth.createUserProfile({
+          email: '',
+        });
+      } catch (e) {
+        expect(e.message).toEqual('Unable to create profile!');
+      }
+    });
+
     it('creates user login', async () => {
       const result = await context.models.Auth.createUserLogin({
         email: 'isaac.hardy@newspring.cc',
@@ -137,6 +163,18 @@ describe('Auth', () => {
       });
 
       expect(result).toEqual({ id: 21 });
+    });
+
+    it('throws error in createUserLogin', async () => {
+      try {
+        await context.models.Auth.createUserLogin({
+          email: '',
+          password: 'password',
+          personId: 35,
+        });
+      } catch (e) {
+        expect(e.message).toEqual('Unable to create user login!');
+      }
     });
 
     it('creates new registration', async () => {

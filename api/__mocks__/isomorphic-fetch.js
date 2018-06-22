@@ -60,6 +60,12 @@ fetch.mockRockAPI = () => {
 
     if (url.match('api/People')) {
       if (options.method === 'POST') {
+        const { Email } = JSON.parse(options.body);
+        if (!Email) {
+          const response = new fetch.Response('');
+          response.status = 400;
+          return Promise.reject(response);
+        }
         return resolveWith({ personId: 35 });
       }
       return resolveWith([rockMocks.people()]);
@@ -67,10 +73,24 @@ fetch.mockRockAPI = () => {
 
     if (url.match('api/UserLogins')) {
       if (options.method === 'POST') {
+        const { UserName } = JSON.parse(options.body);
+        if (!UserName) {
+          const response = new fetch.Response('');
+          response.status = 400;
+          return Promise.reject(response);
+        }
         return resolveWith({ id: 21 });
       }
-      const identity = url.split('eq').pop();
-      if (identity.trim(' ') === `'isaac.hardy@newspring.cc'`)
+      const identity = url
+        .split('eq')
+        .pop()
+        .trim(' ');
+      if (!identity) {
+        const response = new fetch.Response('');
+        response.status = 400;
+        return Promise.reject(response);
+      }
+      if (identity === `'isaac.hardy@newspring.cc'`)
         return resolveWith([rockMocks.userLogins()]);
 
       return resolveWith([]);
