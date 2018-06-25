@@ -30,10 +30,13 @@ export class DiscoverScreen extends React.Component {
     keyExtractor: (item) => item && item.id,
   };
 
-  onPress = (item) =>
+  onPress = ({ item }) => {
+    console.log('item = ', item);
     this.props.navigation.navigate('ContentFeed', {
       itemId: item.id,
+      itemTitle: item.title,
     });
+  };
 
   render() {
     const { ListEmptyComponent, keyExtractor } = this.props;
@@ -55,7 +58,15 @@ export class DiscoverScreen extends React.Component {
                   )
                 }
                 renderItem={({ item }) => (
-                  <Button title={item.name} onPress={this.onPress} />
+                  <Button
+                    title={item.name}
+                    onPress={() => {
+                      this.props.navigation.navigate('ContentFeed', {
+                        itemId: item.id,
+                        itemTitle: item.title,
+                      });
+                    }}
+                  />
                 )}
               />
             );
