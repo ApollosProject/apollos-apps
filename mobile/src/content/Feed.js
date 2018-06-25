@@ -31,7 +31,6 @@ export class ContentFeed extends React.Component {
   render() {
     const { navigation } = this.props;
     const itemId = navigation.getParam('itemId', []);
-    console.log('itemId = ', itemId);
     return (
       <BackgroundView>
         <Query query={GET_CONTENT_FEED} variables={{ itemId }}>
