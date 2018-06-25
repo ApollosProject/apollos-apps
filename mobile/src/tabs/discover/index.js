@@ -70,7 +70,7 @@ export class DiscoverScreen extends React.Component {
                     onPress={() => {
                       this.props.navigation.navigate('ContentFeed', {
                         itemId: item.id,
-                        itemTitle: item.title,
+                        itemTitle: item.name,
                       });
                     }}
                   />

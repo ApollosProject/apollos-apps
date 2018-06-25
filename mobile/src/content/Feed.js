@@ -9,7 +9,7 @@ import GET_CONTENT_FEED from './feedQuery';
 
 export class ContentFeed extends React.Component {
   static navigationOptions = ({ navigation }) => {
-    const itemTitle = navigation.getParam('itemTitle', 'Content');
+    const itemTitle = navigation.getParam('itemTitle', 'Content Channel');
     return {
       title: itemTitle,
     };
