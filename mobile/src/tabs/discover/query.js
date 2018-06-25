@@ -2,11 +2,9 @@ import gql from 'graphql-tag';
 
 const GET_DISCOVER_ITEMS = gql`
   {
-    query {
-      contentChannels {
-        id
-        name
-      }
+    contentChannels {
+      id
+      name
     }
   }
 `;
