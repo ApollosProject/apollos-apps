@@ -8,7 +8,7 @@ import Devotionals from 'devotionals';
 import News from 'news';
 import tabBarIcon from '../tabBarIcon';
 
-export class SectionsScreen extends React.Component {
+export class DiscoverScreen extends React.Component {
   static navigationOptions = {
     title: 'Discover',
   };
@@ -32,26 +32,26 @@ export class SectionsScreen extends React.Component {
   }
 }
 
-SectionsScreen.propTypes = {
+DiscoverScreen.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }),
 };
 
-export const SectionsStack = createStackNavigator(
+export const DiscoverStack = createStackNavigator(
   {
-    Sections: SectionsScreen,
+    Discover: DiscoverScreen,
     Articles,
     Devotionals,
     News,
   },
   {
-    initialRouteName: 'Sections',
+    initialRouteName: 'Discover',
   }
 );
 
-SectionsStack.navigationOptions = {
+DiscoverStack.navigationOptions = {
   tabBarIcon: tabBarIcon('sections'),
 };
 
-export default SectionsStack;
+export default DiscoverStack;
