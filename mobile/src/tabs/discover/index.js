@@ -1,42 +1,70 @@
 import React from 'react';
-import { Button } from 'react-native';
+import { Query } from 'react-apollo';
+import { Button, FlatList } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
+
 import BackgroundView from 'ui/BackgroundView';
+import { ErrorCard } from 'ui/Card';
 import Articles from 'articles';
 import Devotionals from 'devotionals';
 import News from 'news';
 import tabBarIcon from '../tabBarIcon';
+import GET_DISCOVER_ITEMS from './query';
 
 export class DiscoverScreen extends React.Component {
   static navigationOptions = {
     title: 'Discover',
   };
+
+  static propTypes = {
+    keyExtractor: PropTypes.func,
+    ListEmptyComponent: PropTypes.func,
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func,
+    }),
+  };
+
+  static defaultProps = {
+    keyExtractor: (item) => item && item.id,
+  };
+
+  onPress = (item) =>
+    this.props.navigation.navigate('ContentFeed', {
+      itemId: item.id,
+    });
+
   render() {
+    const { ListEmptyComponent, keyExtractor } = this.props;
     return (
       <BackgroundView>
-        <Button
-          title="Articles"
-          onPress={() => this.props.navigation.navigate('Articles')}
-        />
-        <Button
-          title="Devotionals"
-          onPress={() => this.props.navigation.navigate('Devotionals')}
-        />
-        <Button
-          title="News"
-          onPress={() => this.props.navigation.navigate('News')}
-        />
+        <Query query={GET_DISCOVER_ITEMS}>
+          {({ loading, error, data }) => {
+            if (loading) return 'Loading...';
+
+            return (
+              <FlatList
+                data={get(data, 'contentChannels', [])}
+                keyExtractor={keyExtractor}
+                ListEmptyComponent={
+                  error && !loading && (!data || !data.length) ? (
+                    <ErrorCard error={error} />
+                  ) : (
+                    ListEmptyComponent
+                  )
+                }
+                renderItem={({ item }) => (
+                  <Button title={item.name} onPress={this.onPress} />
+                )}
+              />
+            );
+          }}
+        </Query>
       </BackgroundView>
     );
   }
 }
-
-DiscoverScreen.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }),
-};
 
 export const DiscoverStack = createStackNavigator(
   {
