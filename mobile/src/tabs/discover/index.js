@@ -19,23 +19,38 @@ export class DiscoverScreen extends React.Component {
   };
 
   static propTypes = {
+    fetchMore: PropTypes.func,
     keyExtractor: PropTypes.func,
     ListEmptyComponent: PropTypes.func,
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
     }),
+    onEndReachedThreshold: PropTypes.number,
   };
 
   static defaultProps = {
+    fetchMore: undefined,
     keyExtractor: (item) => item && item.id,
+    onEndReachedThreshold: 0.7,
   };
 
+  refetchHandler = ({ isLoading, refetch }) =>
+    refetch && ((...args) => !isLoading && refetch(...args));
+
+  fetchMoreHandler = ({ fetchMore, error, isLoading }) =>
+    fetchMore && ((...args) => !isLoading && !error && fetchMore(...args));
+
   render() {
-    const { ListEmptyComponent, keyExtractor } = this.props;
+    const {
+      fetchMore,
+      keyExtractor,
+      ListEmptyComponent,
+      onEndReachedThreshold,
+    } = this.props;
     return (
       <BackgroundView>
         <Query query={GET_DISCOVER_ITEMS}>
-          {({ loading, error, data }) => {
+          {({ loading, error, data, refetch }) => {
             if (loading) return 'Loading...';
 
             return (
@@ -60,6 +75,14 @@ export class DiscoverScreen extends React.Component {
                     }}
                   />
                 )}
+                onEndReached={this.fetchMoreHandler({
+                  fetchMore,
+                  error,
+                  loading,
+                })}
+                onEndReachedThreshold={onEndReachedThreshold}
+                onRefresh={this.refetchHandler({ loading, refetch })}
+                refreshing={loading}
               />
             );
           }}
