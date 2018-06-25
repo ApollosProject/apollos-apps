@@ -1,20 +1,20 @@
 const fontStack = {
   sans: {
     regular: {
-      default: 'Inter-UI-Regular',
-      italic: 'Inter-UI-Italic',
+      default: 'InterUI-Regular',
+      italic: 'InterUI-Italic',
     },
     semiBold: {
-      default: 'Inter-UI-Medium',
-      italic: 'Inter-UI-MediumItalic',
+      default: 'InterUI-Medium',
+      italic: 'InterUI-MediumItalic',
     },
     bold: {
-      default: 'Inter-UI-Bold',
-      italic: 'Inter-UI-BoldItalic',
+      default: 'InterUI-Bold',
+      italic: 'InterUI-BoldItalic',
     },
     black: {
-      default: 'Inter-UI-Black',
-      italic: 'Inter-UI-BlackItalic',
+      default: 'InterUI-Black',
+      italic: 'InterUI-BlackItalic',
     },
   },
   serif: {
