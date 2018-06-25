@@ -77,6 +77,16 @@ describe('Auth', () => {
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();
     });
+
+    it('queries current user when logged in', async () => {
+      const rootValue = {};
+      try {
+        context.models.Auth.registerToken('asdfasdfasdf');
+        await graphql(schema, query, rootValue, context);
+      } catch (e) {
+        expect(e.message).toEqual('Invalid token');
+      }
+    });
   });
 
   it('registers an auth token and passes the cookie on requests to rock', async () => {
@@ -99,26 +109,6 @@ describe('Auth', () => {
   });
 
   describe('User Registration', () => {
-    const query = gql`
-      mutation {
-        registerPerson(email: "hello.world@earth.org", password: "good") {
-          user {
-            id
-            profile {
-              id
-              email
-            }
-          }
-        }
-      }
-    `;
-
-    it('can make a new guid', async () => {
-      const result = await context.models.Auth.makeNewGuid();
-
-      expect(result).toBeTruthy();
-    });
-
     it('checks if user is already registered', async () => {
       const result = await context.models.Auth.personExists({
         identity: 'isaac.hardy@newspring.cc',
@@ -128,13 +118,11 @@ describe('Auth', () => {
     });
 
     it('throws error in personExists', async () => {
-      try {
-        await context.models.Auth.personExists();
-      } catch (e) {
-        expect(e.message).toEqual(
-          "Cannot read property 'identity' of undefined"
-        );
-      }
+      const result = await context.models.Auth.personExists({
+        identity: 'fake',
+      });
+
+      expect(result).toEqual(false);
     });
 
     it('creates user profile', async () => {
@@ -178,6 +166,40 @@ describe('Auth', () => {
     });
 
     it('creates new registration', async () => {
+      const query = gql`
+        mutation {
+          registerPerson(email: "hello.world@earth.org", password: "good") {
+            user {
+              id
+              profile {
+                id
+                email
+              }
+            }
+          }
+        }
+      `;
+
+      const rootValue = {};
+
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('create new registration throws error', async () => {
+      const query = gql`
+        mutation {
+          registerPerson(email: "fake.world@earth.org", password: "good") {
+            user {
+              id
+              profile {
+                id
+                email
+              }
+            }
+          }
+        }
+      `;
       const rootValue = {};
 
       const result = await graphql(schema, query, rootValue, context);

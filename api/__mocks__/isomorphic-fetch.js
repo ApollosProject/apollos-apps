@@ -68,6 +68,7 @@ fetch.mockRockAPI = () => {
         }
         return resolveWith({ personId: 35 });
       }
+
       return resolveWith([rockMocks.people()]);
     }
 

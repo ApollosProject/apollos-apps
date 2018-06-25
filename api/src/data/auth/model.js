@@ -59,25 +59,15 @@ export default class AuthModel extends RockModel {
     }
   };
 
-  makeNewGuid = () => {
-    const s4 = () =>
-      Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(1);
-
-    const guid = `${s4()}${s4()}-${s4()}-${s4()}-${s4()}-${s4()}${s4()}${s4()}`;
-    return guid.toUpperCase();
-  };
-
   personExists = async ({ identity }) => {
-    try {
-      const hasUserName = await this.request(
-        `/UserLogins?$filter=UserName eq '${identity}'`
-      ).get();
-      return hasUserName.length > 0;
-    } catch (err) {
-      return false;
+    const hasUserName = await this.request(
+      `/UserLogins?$filter=UserName eq '${identity}'`
+    ).get();
+
+    if (hasUserName.length > 0) {
+      return true;
     }
+    return false;
   };
 
   createUserProfile = async (props = {}) => {
