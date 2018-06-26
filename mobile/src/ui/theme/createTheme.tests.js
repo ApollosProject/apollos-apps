@@ -28,6 +28,9 @@ describe('createTheme', () => {
     const custom = { myFunc: () => () => 'yay!' };
     const theme = createTheme({ helpers: custom });
     expect(theme.helpers.rem(1)).toEqual(defaultTheme.typography.baseFontSize);
+    expect(theme.helpers.verticalRhythm(1)).toEqual(
+      defaultTheme.typography.baseLineHeight
+    );
     expect(theme.helpers.myFunc()).toEqual('yay!');
   });
 
