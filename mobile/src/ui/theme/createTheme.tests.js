@@ -54,6 +54,10 @@ describe('createTheme', () => {
       })
     );
   });
+  it('throws an error for an unsupported theme type', () => {
+    const theme = () => createTheme({ type: 'Boom' });
+    expect(theme).toThrowErrorMatchingSnapshot();
+  });
 
   describe('getDynamicThemePart', () => {
     it('parses types in theme object', () => {
