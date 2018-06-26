@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // import styled from 'ui/styled';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
-import { TextInput } from 'ui/inputs';
+import { Text as TextInput } from 'ui/inputs';
 import { Button } from 'ui/Button';
 
 const Form = ({ values, touched, errors, handleSubmit }) => (
