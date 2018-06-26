@@ -163,11 +163,33 @@ helpers.rem = (theme) => (units) => {
 * and multiplies it by either a custom ratio or a derrived ratio from the themes `baseLineHeight`
 * devided by the `baseFontSize`.
 */
-helpers.verticalRhythm = (theme) => (units, customRatio) => {
-  const verticalRatio =
-    customRatio ||
+helpers.verticalRhythm = (theme) => (remUnits, customRatio) => {
+  const defaultRatio =
     theme.typography.baseLineHeight / theme.typography.baseFontSize;
-  return helpers.rem(theme)(verticalRatio * units);
+  let rhythm = theme.helpers.rem(remUnits) * defaultRatio;
+
+  /*
+   * The equation below allows the use to a custom ratio where necessary while keeping it responsive
+   * to what is effectively the themes "base" typographic rythem defined by the ratio of
+   * baseFontSize to baseLineHeight. The equation is somewhat confusing and is made worse by the use
+   * of rem units. A simplified equation is below for understanding.
+   *
+   * verticalRhythm(1, 1.5) = 16 * 1.5 = 24
+   *
+   * or
+   *
+   * ((1.5 + 1.44) * 16) - (16 * 1.44) = 24
+   *
+   * Where 16 above is rem(1) or simply the baseFontSize and 1.44 is the ratio of the baseFontSize
+   * to the baseLineHeight change either of those theme values and your custom ratio with respond to
+   * the change in the themes vertical rhythm.
+   */
+  if (customRatio) {
+    rhythm =
+      (customRatio + defaultRatio) * theme.helpers.rem(remUnits) -
+      theme.helpers.rem(remUnits) * defaultRatio;
+  }
+  return +rhythm.toFixed(2);
 };
 
 // Overrides allow you to override the styles of any component styled using the `styled` HOC.
