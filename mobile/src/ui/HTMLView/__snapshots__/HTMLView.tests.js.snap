@@ -5,7 +5,7 @@ exports[`the HTMLView component should render a block quote 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -68,7 +68,7 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -112,7 +112,7 @@ exports[`the HTMLView component should render a link 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -301,7 +301,7 @@ exports[`the HTMLView component should render a paragraph 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -543,7 +543,7 @@ exports[`the HTMLView component should render bold text 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -595,7 +595,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -653,7 +653,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -684,7 +684,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -715,7 +715,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -759,7 +759,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingVertical": 8,
+          "paddingVertical": 11.52,
         }
       }
     >
@@ -792,7 +792,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -850,7 +850,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -908,7 +908,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -939,7 +939,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -983,7 +983,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingVertical": 8,
+          "paddingVertical": 11.52,
         }
       }
     >
@@ -1016,7 +1016,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1239,7 +1239,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1270,7 +1270,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1328,7 +1328,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1635,7 +1635,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1666,7 +1666,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1702,7 +1702,7 @@ exports[`the HTMLView component should render handle relative links 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1758,7 +1758,7 @@ exports[`the HTMLView component should render italic text 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
@@ -1810,7 +1810,7 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
   <View
     style={
       Object {
-        "paddingVertical": 8,
+        "paddingVertical": 11.52,
       }
     }
   >
