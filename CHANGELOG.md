@@ -1,6 +1,7 @@
 v0.2.0: July 3, 2018
 
 - Created script to automate introspection fragment for client-side cache
+- Added a static login form component with validation
 
 v0.1.0: June 19, 2018
 
