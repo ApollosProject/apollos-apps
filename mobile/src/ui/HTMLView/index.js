@@ -12,7 +12,6 @@ import {
   H4,
   H5,
   H6,
-  H6,
   Paragraph,
   BlockQuote,
   BulletListItem,
@@ -75,8 +74,6 @@ export const defaultRenderer = (node, { children }) => {
     case 'h5':
       return <H5>{wrapTextChildren(children, Text)}</H5>;
     case 'h6':
-      return <H6>{wrapTextChildren(children, Text)}</H6>;
-    case 'H6':
       return <H6>{wrapTextChildren(children, Text)}</H6>;
     case 'ul':
       return children; // todo
