@@ -28,7 +28,7 @@ const fontStack = {
     },
   },
   ui: {
-    normal: 'System',
+    regular: 'System',
   },
 };
 

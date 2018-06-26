@@ -28,7 +28,7 @@ const fontStack = {
     },
   },
   ui: {
-    normal: 'sans-serif',
+    regular: 'sans-serif',
   },
 };
 
