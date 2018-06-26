@@ -27,7 +27,7 @@ describe('createTheme', () => {
   it('has helper functions and allows for custom helper functions', () => {
     const custom = { myFunc: () => () => 'yay!' };
     const theme = createTheme({ helpers: custom });
-    expect(theme.helpers.rem(1)).toEqual(18);
+    expect(theme.helpers.rem(1)).toEqual(theme.typography.baseFontSize);
     expect(theme.helpers.myFunc()).toEqual('yay!');
   });
 
