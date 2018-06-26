@@ -4,7 +4,7 @@ const fontStack = {
       default: 'InterUI-Regular',
       italic: 'InterUI-Italic',
     },
-    semiBold: {
+    medium: {
       default: 'InterUI-Medium',
       italic: 'InterUI-MediumItalic',
     },
