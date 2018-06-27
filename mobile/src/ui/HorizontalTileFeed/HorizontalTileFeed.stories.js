@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
 import HorizontalTileFeed from './';
@@ -26,8 +27,21 @@ const tileData = [
   },
 ];
 
+const containerStyles = {
+  height: 300,
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#f7f7f7',
+};
+
 storiesOf('HorizontalTileFeed', module)
-  .add('Default', () => <HorizontalTileFeed content={tileData} />)
+  .add('Default', () => (
+    <View style={containerStyles}>
+      <HorizontalTileFeed content={tileData} />
+    </View>
+  ))
   .add('with Details', () => (
-    <HorizontalTileFeed content={tileData} showTileMeta />
+    <View style={containerStyles}>
+      <HorizontalTileFeed content={tileData} showTileMeta />
+    </View>
   ));
