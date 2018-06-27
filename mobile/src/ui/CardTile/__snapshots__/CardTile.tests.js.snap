@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the Card component number box should grow elegantly with larger numbers 1`] = `
+exports[`the CardTile component number box should grow elegantly with larger numbers 1`] = `
 <View
   collapsable={false}
   style={
@@ -109,7 +109,7 @@ exports[`the Card component number box should grow elegantly with larger numbers
 </View>
 `;
 
-exports[`the Card component should render 1`] = `
+exports[`the CardTile component should render 1`] = `
 <View
   collapsable={false}
   style={
@@ -183,7 +183,7 @@ exports[`the Card component should render 1`] = `
 </View>
 `;
 
-exports[`the Card component should render a loading skeleton 1`] = `
+exports[`the CardTile component should render a loading skeleton 1`] = `
 <View
   collapsable={false}
   style={
@@ -254,7 +254,7 @@ exports[`the Card component should render a loading skeleton 1`] = `
 </View>
 `;
 
-exports[`the Card component should render a loading skeleton for all available props 1`] = `
+exports[`the CardTile component should render a loading skeleton for all available props 1`] = `
 <View
   collapsable={false}
   style={
@@ -422,7 +422,7 @@ exports[`the Card component should render a loading skeleton for all available p
 </View>
 `;
 
-exports[`the Card component should render a number box 1`] = `
+exports[`the CardTile component should render a number box 1`] = `
 <View
   collapsable={false}
   style={
@@ -531,7 +531,7 @@ exports[`the Card component should render a number box 1`] = `
 </View>
 `;
 
-exports[`the Card component should render card details 1`] = `
+exports[`the CardTile component should render card details 1`] = `
 <View
   collapsable={false}
   style={
@@ -762,7 +762,7 @@ exports[`the Card component should render card details 1`] = `
 </View>
 `;
 
-exports[`the Card component should render card details with date 1`] = `
+exports[`the CardTile component should render card details with date 1`] = `
 <View
   collapsable={false}
   style={
@@ -1008,7 +1008,7 @@ exports[`the Card component should render card details with date 1`] = `
 </View>
 `;
 
-exports[`the Card component should render children 1`] = `
+exports[`the CardTile component should render children 1`] = `
 <View
   collapsable={false}
   style={
