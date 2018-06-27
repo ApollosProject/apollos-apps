@@ -1,5 +1,5 @@
 import React from 'react';
-import { compose, pure } from 'recompose';
+import { compose, setDisplayName, pure } from 'recompose';
 import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 
@@ -8,6 +8,7 @@ import { withThemeMixin } from 'ui/theme';
 import { BodyText } from 'ui/typography';
 
 const Block = compose(
+  setDisplayName('BlockQuote'),
   styled(({ theme }) => ({
     alignSelf: 'stretch',
     marginVertical: theme.helpers.verticalRhythm(2),

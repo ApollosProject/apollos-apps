@@ -1,4 +1,4 @@
-import { compose } from 'recompose';
+import { compose, setDisplayName } from 'recompose';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
@@ -9,6 +9,7 @@ import {
 import styled from 'ui/styled';
 
 const Paragraph = compose(
+  setDisplayName('Paragraph'),
   styled(({ theme }) => ({
     paddingVertical: theme.helpers.verticalRhythm(0.5),
   })),

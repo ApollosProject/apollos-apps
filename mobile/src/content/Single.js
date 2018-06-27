@@ -7,7 +7,7 @@ import { ErrorCard } from 'ui/Card';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
-import { H3 } from 'ui/typography';
+import { H2 } from 'ui/typography';
 import GET_CONTENT from './query';
 
 class ContentSingle extends React.Component {
@@ -33,6 +33,7 @@ class ContentSingle extends React.Component {
           // if (loading) return null;
           if (error) return <ErrorCard error={error} />;
 
+          // console.log(get(data, 'node.htmlContent', ''));
           return (
             <ScrollView>
               <GradientOverlayImage
@@ -40,7 +41,7 @@ class ContentSingle extends React.Component {
                 isLoading={loading}
               />
               <PaddedView>
-                <H3 isLoading={loading}>{get(data, 'node.title', '')}</H3>
+                <H2 isLoading={loading}>{get(data, 'node.title', '')}</H2>
                 <HTMLView isLoading={loading}>
                   {get(data, 'node.htmlContent', '')}
                 </HTMLView>

@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure } from 'recompose';
+import { compose, setDisplayName, pure } from 'recompose';
 
 import styled from 'ui/styled';
 import { withPlaceholder, Typography } from 'ui/Placeholder';
@@ -15,9 +15,12 @@ const styles = styled(
   'H6'
 );
 
-const H6 = compose(styles, withPlaceholder(Typography, { width: '50%' }), pure)(
-  Text
-);
+const H6 = compose(
+  setDisplayName('H6'),
+  styles,
+  withPlaceholder(Typography, { width: '50%' }),
+  pure
+)(Text);
 
 H6.propTypes = {
   isLoading: PropTypes.bool, // display loading placeholder

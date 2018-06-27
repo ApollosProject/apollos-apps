@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure } from 'recompose';
+import { compose, pure, setDisplayName } from 'recompose';
 
 import styled from 'ui/styled';
 import { withPlaceholder, Typography } from 'ui/Placeholder';
@@ -24,7 +24,12 @@ const styles = styled(({ theme, bold, italic }) => {
   };
 }, 'BodyText');
 
-const BodyText = compose(styles, withPlaceholder(Typography), pure)(Text);
+const BodyText = compose(
+  setDisplayName('BodyText'),
+  styles,
+  withPlaceholder(Typography),
+  pure
+)(Text);
 
 BodyText.propTypes = {
   bold: PropTypes.bool,

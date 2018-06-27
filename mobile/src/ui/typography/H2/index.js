@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure } from 'recompose';
+import { compose, setDisplayName, pure } from 'recompose';
 
 import styled from 'ui/styled';
 import { withPlaceholder, Typography } from 'ui/Placeholder';
@@ -16,6 +16,7 @@ const styles = styled(
 );
 
 const H2 = compose(
+  setDisplayName('H2'),
   styles,
   withPlaceholder(Typography, { width: '100%' }),
   pure
