@@ -49,7 +49,7 @@ export class HorizontalTileFeed extends React.Component {
     const { content, isLoading, showTileMeta, ...otherProps } = this.props;
     return (
       <TileFeed
-        renderItem={this.renderItem}
+        renderItem={this.props.renderItem || this.renderItem}
         data={content}
         horizontal
         initialScrollIndex={0}
