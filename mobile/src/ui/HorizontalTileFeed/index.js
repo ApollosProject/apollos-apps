@@ -13,7 +13,6 @@ export class HorizontalTileFeed extends React.Component {
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
     onPressItem: PropTypes.func,
-    refetch: PropTypes.func,
     renderItem: PropTypes.func,
     showTileMeta: PropTypes.bool,
   };
@@ -49,7 +48,10 @@ export class HorizontalTileFeed extends React.Component {
     const { content, isLoading, showTileMeta, ...otherProps } = this.props;
     return (
       <TileFeed
-        renderItem={this.props.renderItem || this.renderItem}
+        renderItem={(renderItemProps) =>
+          this.props.renderItem ||
+          this.renderItem({ ...renderItemProps, showTileMeta })
+        }
         data={content}
         horizontal
         initialScrollIndex={0}
