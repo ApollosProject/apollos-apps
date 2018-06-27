@@ -7,9 +7,6 @@ import { get } from 'lodash';
 
 import BackgroundView from 'ui/BackgroundView';
 import { ErrorCard } from 'ui/Card';
-import Articles from 'articles';
-import Devotionals from 'devotionals';
-import News from 'news';
 import tabBarIcon from '../tabBarIcon';
 import GET_DISCOVER_ITEMS from './query';
 
@@ -95,9 +92,6 @@ export class DiscoverScreen extends React.Component {
 export const DiscoverStack = createStackNavigator(
   {
     Discover: DiscoverScreen,
-    Articles,
-    Devotionals,
-    News,
   },
   {
     initialRouteName: 'Discover',
