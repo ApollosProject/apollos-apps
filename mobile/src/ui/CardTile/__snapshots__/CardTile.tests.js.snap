@@ -10,6 +10,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
   }
 >
   <View
+    showDetails={false}
     style={
       Object {
         "aspectRatio": 1,
@@ -107,6 +108,7 @@ exports[`the CardTile component should render 1`] = `
   }
 >
   <View
+    showDetails={false}
     style={
       Object {
         "aspectRatio": 1,
@@ -169,6 +171,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
   }
 >
   <View
+    showDetails={false}
     style={
       Object {
         "aspectRatio": 1,
@@ -228,6 +231,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
   }
 >
   <View
+    showDetails={true}
     style={
       Object {
         "aspectRatio": 1,
@@ -384,6 +388,7 @@ exports[`the CardTile component should render a number box 1`] = `
   }
 >
   <View
+    showDetails={false}
     style={
       Object {
         "aspectRatio": 1,
@@ -481,6 +486,7 @@ exports[`the CardTile component should render card details 1`] = `
   }
 >
   <View
+    showDetails={true}
     style={
       Object {
         "aspectRatio": 1,
@@ -700,6 +706,7 @@ exports[`the CardTile component should render card details with date 1`] = `
   }
 >
   <View
+    showDetails={true}
     style={
       Object {
         "aspectRatio": 1,
@@ -934,6 +941,7 @@ exports[`the CardTile component should render children 1`] = `
   }
 >
   <View
+    showDetails={false}
     style={
       Object {
         "aspectRatio": 1,
