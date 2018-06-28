@@ -2,7 +2,7 @@ import dotenv from 'dotenv/config'; // eslint-disable-line
 import { ApolloServer } from 'apollo-server';
 import { get } from 'lodash';
 import { resolvers, schema, models } from './data';
-
+// Testing new NOW github integration
 import RockConnector from './connectors/rock';
 
 // Construct a context object for each request
