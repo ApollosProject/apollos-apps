@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
 import Providers from 'TestProviders';
+
 import CardTile from './';
 
 describe('the CardTile component', () => {
