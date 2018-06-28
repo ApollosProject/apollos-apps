@@ -3,6 +3,7 @@ import { Platform, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, pure, defaultProps } from 'recompose';
 import { startCase, toLower } from 'lodash';
+import moment from 'moment';
 
 import Placeholder from 'ui/Placeholder';
 import { withIsLoading } from 'ui/isLoading';
@@ -11,7 +12,6 @@ import styled from 'ui/styled';
 import { H4, H6, H7 } from 'ui/typography';
 import { CardContent, CardActions } from 'ui/Card';
 import ChannelLabel from 'ui/ChannelLabel';
-import relativeTime from 'utils/relativeTime';
 
 const enhance = compose(
   defaultProps({
@@ -74,6 +74,31 @@ const TileNumber = styled(({ theme, size }) => ({
   borderBottomRightRadius: theme.sizing.borderRadius,
   backgroundColor: theme.colors.white,
 }))(View);
+
+const relativeTime = (date) => {
+  if (moment.updateLocale) {
+    moment.updateLocale('en', {
+      relativeTime: {
+        future: 'in %s',
+        past: '%s ago',
+        s: 's',
+        m: 'm',
+        mm: '%dm',
+        h: '1h',
+        hh: '%dh',
+        d: '1d',
+        dd: '%dd',
+        M: '1mo',
+        MM: '%dmo',
+        y: '1y',
+        yy: '%dy',
+      },
+    });
+  }
+
+  const time = moment(new Date(date));
+  return time.fromNow(true); // true omits 'ago'
+};
 
 export const CardTile = enhance(
   ({
