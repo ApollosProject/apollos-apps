@@ -3,13 +3,13 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import SquareTile from './';
+import TileImage from './';
 
-describe('the SquareTile component', () => {
+describe('the TileImage component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <SquareTile
+        <TileImage
           image={'https://picsum.photos/600/400/?random'}
           link={'https://github.com'}
           text={'So cool!'}
@@ -21,7 +21,7 @@ describe('the SquareTile component', () => {
   it('should render without text', () => {
     const tree = renderer.create(
       <Providers>
-        <SquareTile
+        <TileImage
           image={'https://picsum.photos/600/400/?random'}
           link={'https://github.com'}
         />
@@ -32,7 +32,7 @@ describe('the SquareTile component', () => {
   it('passes an onPressItem prop', () => {
     const tree = renderer.create(
       <Providers>
-        <SquareTile
+        <TileImage
           image={'https://picsum.photos/600/400/?random'}
           link={'https://github.com'}
           onPressItem={jest.fn}

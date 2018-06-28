@@ -1,18 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import SquareTile from './';
+import TileImage from './';
 
 storiesOf('TileImage', module)
   .add('Default', () => (
-    <SquareTile
+    <TileImage
       image={'https://picsum.photos/600/400/?random'}
       link={'https://github.com'}
       text={'So cool!'}
     />
   ))
   .add('without text', () => (
-    <SquareTile
+    <TileImage
       image={'https://picsum.photos/600/400/?random'}
       link={'https://github.com'}
     />
