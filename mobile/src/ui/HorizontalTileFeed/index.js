@@ -15,14 +15,12 @@ export class HorizontalTileFeed extends PureComponent {
     keyExtractor: PropTypes.func,
     onPressItem: PropTypes.func,
     renderItem: PropTypes.func.isRequired,
-    showTileMeta: PropTypes.bool,
     theme: PropTypes.shape({}),
   };
 
   static defaultProps = {
     keyExtractor: (item) => item.id,
     content: [],
-    showTileMeta: false,
     isLoading: false,
   };
 
@@ -32,14 +30,7 @@ export class HorizontalTileFeed extends PureComponent {
   };
 
   render() {
-    const {
-      content,
-      isLoading,
-      renderItem,
-      showTileMeta,
-      theme,
-      ...otherProps
-    } = this.props;
+    const { content, isLoading, renderItem, theme, ...otherProps } = this.props;
     return (
       <TileFeed
         data={content}
