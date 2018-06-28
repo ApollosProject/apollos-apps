@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import SquareTile from './';
 
-storiesOf('SquareTile', module)
+storiesOf('TileImage', module)
   .add('Default', () => (
     <SquareTile
       image={'https://picsum.photos/600/400/?random'}

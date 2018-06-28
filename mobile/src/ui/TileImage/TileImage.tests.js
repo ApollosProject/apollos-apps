@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import Providers from 'TestProviders';
+
 import SquareTile from './';
 
 describe('the SquareTile component', () => {
