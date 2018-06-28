@@ -45,13 +45,4 @@ describe('The TileFeed component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('passes an onPressItem prop', () => {
-    const onPress = () => {};
-    const tree = renderer.create(
-      <Providers>
-        <TileFeed isLoading content={[]} onPressItem={onPress} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
 });
