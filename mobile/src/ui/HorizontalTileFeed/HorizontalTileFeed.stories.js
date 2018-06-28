@@ -1,6 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
+import { TouchableWithoutFeedback, View } from 'react-native';
+import { get } from 'lodash';
 import { storiesOf } from '@storybook/react-native';
+
+import CardTile from 'ui/CardTile';
 
 import HorizontalTileFeed from './';
 
@@ -34,14 +37,20 @@ const containerStyles = {
   backgroundColor: '#f7f7f7',
 };
 
-storiesOf('HorizontalTileFeed', module)
-  .add('Default', () => (
-    <View style={containerStyles}>
-      <HorizontalTileFeed content={tileData} />
-    </View>
-  ))
-  .add('with Details', () => (
-    <View style={containerStyles}>
-      <HorizontalTileFeed content={tileData} showTileMeta />
-    </View>
-  ));
+const renderCardTile = (
+  { item, index } //eslint-disable-line
+) => (
+  <TouchableWithoutFeedback onPress={() => this.props.onPressItem({ ...item })}>
+    <CardTile
+      number={index + 1}
+      title={item.title}
+      isLoading={item.isLoading}
+    />
+  </TouchableWithoutFeedback>
+);
+
+storiesOf('HorizontalTileFeed', module).add('Default', () => (
+  <View style={containerStyles}>
+    <HorizontalTileFeed content={tileData} renderItem={renderCardTile} />
+  </View>
+));
