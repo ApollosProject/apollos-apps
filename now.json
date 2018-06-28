@@ -4,5 +4,6 @@
   "env": {
     "ROCK_API": "@rock_api",
     "ROCK_TOKEN": "@rock_token"
-  }
+  },
+  "files": ["api"]
 }
