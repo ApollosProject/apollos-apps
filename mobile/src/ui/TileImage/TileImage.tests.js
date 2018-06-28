@@ -30,13 +30,12 @@ describe('the SquareTile component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('passes an onPressItem prop', () => {
-    const onPress = () => {};
     const tree = renderer.create(
       <Providers>
         <SquareTile
           image={'https://picsum.photos/600/400/?random'}
           link={'https://github.com'}
-          onPressItem={onPress}
+          onPressItem={jest.fn}
         />
       </Providers>
     );
