@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure, defaultProps } from 'recompose';
-import { startCase, toLower } from 'lodash';
+import { compose, pure } from 'recompose';
 import moment from 'moment';
 
 import Placeholder from 'ui/Placeholder';
@@ -14,9 +13,6 @@ import { CardContent, CardActions } from 'ui/Card';
 import ChannelLabel from 'ui/ChannelLabel';
 
 const enhance = compose(
-  defaultProps({
-    showDetails: false,
-  }),
   withIsLoading,
   withThemeMixin(({ theme }) => ({
     type: 'light',
@@ -129,7 +125,7 @@ export const CardTile = enhance(
           {showDetails ? (
             <CardActions>
               <ChannelLabel
-                label={startCase(toLower(byLine))}
+                label={byLine}
                 icon={'video'}
                 isLoading={isLoading}
                 withFlex
@@ -155,6 +151,10 @@ CardTile.propTypes = {
   date: PropTypes.string,
   style: PropTypes.any, // eslint-disable-line
   isLoading: PropTypes.bool,
+};
+
+CardTile.defaultProps = {
+  showDetails: false,
 };
 
 export default CardTile;

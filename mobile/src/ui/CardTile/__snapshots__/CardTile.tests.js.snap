@@ -680,7 +680,7 @@ exports[`the CardTile component should render card details 1`] = `
                 }
               }
             >
-              Marty Mcfly
+              Marty McFly
             </Text>
           </View>
         </View>
@@ -899,7 +899,7 @@ exports[`the CardTile component should render card details with date 1`] = `
                 }
               }
             >
-              Marty Mcfly
+              Marty McFly
             </Text>
           </View>
         </View>

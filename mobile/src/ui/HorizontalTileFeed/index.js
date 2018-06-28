@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { compose, pure, branch, withProps } from 'recompose';
 
 import CardTile from 'ui/CardTile';
+
 import TileFeed from './TileFeed';
 
 export class HorizontalTileFeed extends React.Component {
