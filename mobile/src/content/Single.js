@@ -5,6 +5,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { ErrorCard } from 'ui/Card';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
+import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
 import { H3 } from 'ui/typography';
@@ -45,6 +46,15 @@ class ContentSingle extends React.Component {
                   {get(data, 'node.htmlContent', '')}
                 </HTMLView>
               </PaddedView>
+              <HorizontalTileFeed
+                content={get(
+                  data,
+                  'node.childContentItemsConnection.edges',
+                  []
+                )}
+                isLoading={loading}
+                showTileMeta
+              />
             </ScrollView>
           );
         }}
