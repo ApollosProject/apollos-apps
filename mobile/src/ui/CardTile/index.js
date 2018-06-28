@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, pure, defaultProps } from 'recompose';
 import { startCase, toLower } from 'lodash';
