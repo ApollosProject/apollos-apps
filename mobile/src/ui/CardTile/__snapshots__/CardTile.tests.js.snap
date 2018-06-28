@@ -24,6 +24,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -33,60 +34,23 @@ exports[`the CardTile component number box should grow elegantly with larger num
       }
     >
       <View
+        size={4}
         style={
           Object {
-            "bottom": 0,
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderBottomRightRadius": 6,
+            "borderTopLeftRadius": 6,
+            "height": 72,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
-            "right": 0,
             "top": 0,
+            "width": 72,
           }
         }
       >
-        <View
-          size={4}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderBottomRightRadius": 6,
-              "borderTopLeftRadius": 6,
-              "height": 72,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 72,
-            }
-          }
-        >
-          <View>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 15.75,
-                  "lineHeight": 17.75,
-                }
-              }
-            >
-              7777
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
-            }
-          }
-        >
+        <View>
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -95,14 +59,38 @@ exports[`the CardTile component number box should grow elegantly with larger num
               Object {
                 "color": "#303030",
                 "fontFamily": "OpenSans-Bold",
-                "fontSize": 25.2,
-                "lineHeight": 31.28,
+                "fontSize": 15.75,
+                "lineHeight": 17.75,
               }
             }
           >
-            Why Jesus Is Timeless
+            7777
           </Text>
         </View>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "OpenSans-Bold",
+              "fontSize": 25.2,
+              "lineHeight": 31.28,
+            }
+          }
+        >
+          Why Jesus is Timeless
+        </Text>
       </View>
     </View>
   </View>
@@ -133,6 +121,7 @@ exports[`the CardTile component should render 1`] = `
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -144,39 +133,26 @@ exports[`the CardTile component should render 1`] = `
       <View
         style={
           Object {
-            "bottom": 0,
-            "justifyContent": "center",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
           }
         }
       >
-        <View
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
+              "color": "#303030",
+              "fontFamily": "OpenSans-Bold",
+              "fontSize": 25.2,
+              "lineHeight": 31.28,
             }
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "OpenSans-Bold",
-                "fontSize": 25.2,
-                "lineHeight": 31.28,
-              }
-            }
-          >
-            Why Jesus Is Timeless
-          </Text>
-        </View>
+          Why Jesus is Timeless
+        </Text>
       </View>
     </View>
   </View>
@@ -207,6 +183,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -218,36 +195,23 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
       <View
         style={
           Object {
-            "bottom": 0,
-            "justifyContent": "center",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
           }
         }
       >
         <View
           style={
             Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
+              "alignSelf": "stretch",
+              "backgroundColor": "#DBDBD9",
+              "borderRadius": 6,
+              "height": 25.2,
+              "marginVertical": 3.040000000000001,
+              "width": "80%",
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#DBDBD9",
-                "borderRadius": 6,
-                "height": 25.2,
-                "marginVertical": 3.040000000000001,
-                "width": "80%",
-              }
-            }
-          />
-        </View>
+        />
       </View>
     </View>
   </View>
@@ -278,6 +242,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -287,135 +252,122 @@ exports[`the CardTile component should render a loading skeleton for all availab
       }
     >
       <View
+        size={1}
         style={
           Object {
-            "bottom": 0,
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderBottomRightRadius": 6,
+            "borderTopLeftRadius": 6,
+            "height": 36,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
-            "right": 0,
             "top": 0,
+            "width": 36,
           }
         }
       >
         <View
-          size={1}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderBottomRightRadius": 6,
-              "borderTopLeftRadius": 6,
-              "height": 36,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 36,
+              "backgroundColor": "#DBDBD9",
+              "borderRadius": 6,
+              "height": 45,
+              "width": 45,
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#DBDBD9",
-                "borderRadius": 6,
-                "height": 45,
-                "width": 45,
-              }
-            }
-          />
-        </View>
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+          }
+        }
+      >
         <View
           style={
             Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
+              "alignSelf": "stretch",
+              "backgroundColor": "#DBDBD9",
+              "borderRadius": 6,
+              "height": 25.2,
+              "marginVertical": 3.040000000000001,
+              "width": "80%",
             }
           }
-        >
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#DBDBD9",
-                "borderRadius": 6,
-                "height": 25.2,
-                "marginVertical": 3.040000000000001,
-                "width": "80%",
-              }
-            }
-          />
-        </View>
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 20,
+            "paddingTop": 5,
+            "paddingVertical": 20,
+          }
+        }
+      >
         <View
+          flexed={true}
           style={
             Object {
               "alignItems": "center",
+              "flex": 1,
               "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "space-between",
-              "paddingHorizontal": 20,
-              "paddingTop": 5,
-              "paddingVertical": 20,
             }
           }
         >
           <View
-            flexed={true}
             style={
               Object {
-                "alignItems": "center",
-                "flex": 1,
-                "flexDirection": "row",
+                "backgroundColor": "#DBDBD9",
+                "borderRadius": 6,
+                "height": 21.6,
+                "width": 21.6,
               }
             }
+          />
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "paddingHorizontal": 10,
+              }
+            }
+            withIcon="video"
           >
             <View
               style={
                 Object {
+                  "alignSelf": "stretch",
                   "backgroundColor": "#DBDBD9",
                   "borderRadius": 6,
-                  "height": 21.6,
-                  "width": 21.6,
+                  "height": 14,
+                  "marginVertical": 0.8899999999999997,
+                  "width": "40%",
                 }
               }
             />
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 10,
-                }
-              }
-              withIcon="video"
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#DBDBD9",
-                    "borderRadius": 6,
-                    "height": 14,
-                    "marginVertical": 0.8899999999999997,
-                    "width": "40%",
-                  }
-                }
-              />
-            </View>
           </View>
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#DBDBD9",
-                "borderRadius": 6,
-                "height": 14,
-                "marginVertical": 0.8899999999999997,
-                "width": "40%",
-              }
-            }
-          />
         </View>
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#DBDBD9",
+              "borderRadius": 6,
+              "height": 14,
+              "marginVertical": 0.8899999999999997,
+              "width": "40%",
+            }
+          }
+        />
       </View>
     </View>
   </View>
@@ -446,6 +398,7 @@ exports[`the CardTile component should render a number box 1`] = `
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -455,60 +408,23 @@ exports[`the CardTile component should render a number box 1`] = `
       }
     >
       <View
+        size={1}
         style={
           Object {
-            "bottom": 0,
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderBottomRightRadius": 6,
+            "borderTopLeftRadius": 6,
+            "height": 36,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
-            "right": 0,
             "top": 0,
+            "width": 36,
           }
         }
       >
-        <View
-          size={1}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderBottomRightRadius": 6,
-              "borderTopLeftRadius": 6,
-              "height": 36,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 36,
-            }
-          }
-        >
-          <View>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 15.75,
-                  "lineHeight": 17.75,
-                }
-              }
-            >
-              7
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
-            }
-          }
-        >
+        <View>
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -517,14 +433,38 @@ exports[`the CardTile component should render a number box 1`] = `
               Object {
                 "color": "#303030",
                 "fontFamily": "OpenSans-Bold",
-                "fontSize": 25.2,
-                "lineHeight": 31.28,
+                "fontSize": 15.75,
+                "lineHeight": 17.75,
               }
             }
           >
-            Why Jesus Is Timeless
+            7
           </Text>
         </View>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "OpenSans-Bold",
+              "fontSize": 25.2,
+              "lineHeight": 31.28,
+            }
+          }
+        >
+          Why Jesus is Timeless
+        </Text>
       </View>
     </View>
   </View>
@@ -555,6 +495,7 @@ exports[`the CardTile component should render card details 1`] = `
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -564,60 +505,23 @@ exports[`the CardTile component should render card details 1`] = `
       }
     >
       <View
+        size={1}
         style={
           Object {
-            "bottom": 0,
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderBottomRightRadius": 6,
+            "borderTopLeftRadius": 6,
+            "height": 36,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
-            "right": 0,
             "top": 0,
+            "width": 36,
           }
         }
       >
-        <View
-          size={1}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderBottomRightRadius": 6,
-              "borderTopLeftRadius": 6,
-              "height": 36,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 36,
-            }
-          }
-        >
-          <View>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 15.75,
-                  "lineHeight": 17.75,
-                }
-              }
-            >
-              7
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
-            }
-          }
-        >
+        <View>
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -626,134 +530,158 @@ exports[`the CardTile component should render card details 1`] = `
               Object {
                 "color": "#303030",
                 "fontFamily": "OpenSans-Bold",
-                "fontSize": 25.2,
-                "lineHeight": 31.28,
+                "fontSize": 15.75,
+                "lineHeight": 17.75,
               }
             }
           >
-            Why Jesus Is Timeless
+            7
           </Text>
         </View>
-        <View
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "space-between",
-              "paddingHorizontal": 20,
-              "paddingTop": 5,
-              "paddingVertical": 20,
+              "color": "#303030",
+              "fontFamily": "OpenSans-Bold",
+              "fontSize": 25.2,
+              "lineHeight": 31.28,
             }
           }
         >
-          <View
-            flexed={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "flexDirection": "row",
-              }
+          Why Jesus is Timeless
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 20,
+            "paddingTop": 5,
+            "paddingVertical": 20,
+          }
+        }
+      >
+        <View
+          flexed={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
             }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight="21.6"
+            bbWidth="21.6"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 21.6,
+                  "width": 21.6,
+                },
+              ]
+            }
+            vbHeight={24}
+            vbWidth={24}
           >
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight="21.6"
-              bbWidth="21.6"
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
+            <RNSVGPath
+              d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+              fill={
                 Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  undefined,
-                  false,
-                  Object {
-                    "flex": 0,
-                    "height": 21.6,
-                    "width": 21.6,
-                  },
+                  0,
+                  0.3137254901960784,
+                  0.3137254901960784,
+                  0.3137254901960784,
+                  1,
                 ]
               }
-              vbHeight={24}
-              vbWidth={24}
-            >
-              <RNSVGPath
-                d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
-                fill={
-                  Array [
-                    0,
-                    0.3137254901960784,
-                    0.3137254901960784,
-                    0.3137254901960784,
-                    1,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth="1"
-                x={0}
-                y={0}
-              />
-            </RNSVGSvgView>
-            <View
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth="1"
+              x={0}
+              y={0}
+            />
+          </RNSVGSvgView>
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "paddingHorizontal": 10,
+              }
+            }
+            withIcon="video"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
               style={
                 Object {
-                  "flex": 1,
-                  "paddingHorizontal": 10,
+                  "color": "#505050",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 15.78,
                 }
               }
-              withIcon="video"
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#505050",
-                    "fontFamily": "OpenSans-Regular",
-                    "fontSize": 14,
-                    "lineHeight": 15.78,
-                  }
-                }
-              >
-                Marty Mcfly
-              </Text>
-            </View>
+              Marty Mcfly
+            </Text>
           </View>
         </View>
       </View>
@@ -786,6 +714,7 @@ exports[`the CardTile component should render card details with date 1`] = `
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -795,60 +724,23 @@ exports[`the CardTile component should render card details with date 1`] = `
       }
     >
       <View
+        size={1}
         style={
           Object {
-            "bottom": 0,
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderBottomRightRadius": 6,
+            "borderTopLeftRadius": 6,
+            "height": 36,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
-            "right": 0,
             "top": 0,
+            "width": 36,
           }
         }
       >
-        <View
-          size={1}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderBottomRightRadius": 6,
-              "borderTopLeftRadius": 6,
-              "height": 36,
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 36,
-            }
-          }
-        >
-          <View>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 15.75,
-                  "lineHeight": 17.75,
-                }
-              }
-            >
-              7
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 20,
-              "paddingVertical": 15,
-            }
-          }
-        >
+        <View>
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -857,151 +749,175 @@ exports[`the CardTile component should render card details with date 1`] = `
               Object {
                 "color": "#303030",
                 "fontFamily": "OpenSans-Bold",
-                "fontSize": 25.2,
-                "lineHeight": 31.28,
+                "fontSize": 15.75,
+                "lineHeight": 17.75,
               }
             }
           >
-            Why Jesus Is Timeless
+            7
           </Text>
         </View>
-        <View
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "space-between",
-              "paddingHorizontal": 20,
-              "paddingTop": 5,
-              "paddingVertical": 20,
+              "color": "#303030",
+              "fontFamily": "OpenSans-Bold",
+              "fontSize": 25.2,
+              "lineHeight": 31.28,
             }
           }
         >
-          <View
-            flexed={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "flexDirection": "row",
-              }
+          Why Jesus is Timeless
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 20,
+            "paddingTop": 5,
+            "paddingVertical": 20,
+          }
+        }
+      >
+        <View
+          flexed={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
             }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight="21.6"
+            bbWidth="21.6"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 21.6,
+                  "width": 21.6,
+                },
+              ]
+            }
+            vbHeight={24}
+            vbWidth={24}
           >
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight="21.6"
-              bbWidth="21.6"
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
+            <RNSVGPath
+              d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+              fill={
                 Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  undefined,
-                  false,
-                  Object {
-                    "flex": 0,
-                    "height": 21.6,
-                    "width": 21.6,
-                  },
+                  0,
+                  0.3137254901960784,
+                  0.3137254901960784,
+                  0.3137254901960784,
+                  1,
                 ]
               }
-              vbHeight={24}
-              vbWidth={24}
-            >
-              <RNSVGPath
-                d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
-                fill={
-                  Array [
-                    0,
-                    0.3137254901960784,
-                    0.3137254901960784,
-                    0.3137254901960784,
-                    1,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth="1"
-                x={0}
-                y={0}
-              />
-            </RNSVGSvgView>
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                  "paddingHorizontal": 10,
-                }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
               }
-              withIcon="video"
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "#505050",
-                    "fontFamily": "OpenSans-Regular",
-                    "fontSize": 14,
-                    "lineHeight": 15.78,
-                  }
-                }
-              >
-                Marty Mcfly
-              </Text>
-            </View>
-          </View>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth="1"
+              x={0}
+              y={0}
+            />
+          </RNSVGSvgView>
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "OpenSans-Regular",
-                "fontSize": 14,
-                "lineHeight": 15.78,
+                "flex": 1,
+                "paddingHorizontal": 10,
               }
             }
+            withIcon="video"
           >
-            33y
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 15.78,
+                }
+              }
+            >
+              Marty Mcfly
+            </Text>
+          </View>
         </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "OpenSans-Regular",
+              "fontSize": 14,
+              "lineHeight": 15.78,
+            }
+          }
+        >
+          33y
+        </Text>
       </View>
     </View>
   </View>
@@ -1032,6 +948,7 @@ exports[`the CardTile component should render children 1`] = `
         Object {
           "borderRadius": 6,
           "bottom": 0,
+          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
@@ -1040,26 +957,13 @@ exports[`the CardTile component should render children 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "bottom": 0,
-            "justifyContent": "center",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          Biff Tannen was here
-        </Text>
-      </View>
+        Biff Tannen was here
+      </Text>
     </View>
   </View>
 </View>

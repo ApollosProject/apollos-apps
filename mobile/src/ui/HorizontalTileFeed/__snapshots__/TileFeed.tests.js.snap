@@ -141,6 +141,7 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -150,66 +151,53 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -256,6 +244,7 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -265,66 +254,53 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -371,6 +347,7 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -380,66 +357,53 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -486,6 +450,7 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -495,66 +460,53 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -601,6 +553,7 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -610,66 +563,53 @@ exports[`The TileFeed component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -783,6 +723,7 @@ exports[`The TileFeed component renders correctly 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -792,60 +733,23 @@ exports[`The TileFeed component renders correctly 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
-              <View
-                size={1}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
-                  }
-                }
-              >
-                <View>
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "#303030",
-                        "fontFamily": "OpenSans-Bold",
-                        "fontSize": 15.75,
-                        "lineHeight": 17.75,
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
-                  }
-                }
-              >
+              <View>
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -854,14 +758,38 @@ exports[`The TileFeed component renders correctly 1`] = `
                     Object {
                       "color": "#303030",
                       "fontFamily": "OpenSans-Bold",
-                      "fontSize": 25.2,
-                      "lineHeight": 31.28,
+                      "fontSize": 15.75,
+                      "lineHeight": 17.75,
                     }
                   }
                 >
-                  Why Jesus Is Timeless
+                  1
                 </Text>
               </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#303030",
+                    "fontFamily": "OpenSans-Bold",
+                    "fontSize": 25.2,
+                    "lineHeight": 31.28,
+                  }
+                }
+              >
+                Why Jesus is Timeless
+              </Text>
             </View>
           </View>
         </View>
@@ -908,6 +836,7 @@ exports[`The TileFeed component renders correctly 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -917,60 +846,23 @@ exports[`The TileFeed component renders correctly 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
-              <View
-                size={1}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
-                  }
-                }
-              >
-                <View>
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "#303030",
-                        "fontFamily": "OpenSans-Bold",
-                        "fontSize": 15.75,
-                        "lineHeight": 17.75,
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
-                  }
-                }
-              >
+              <View>
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -979,14 +871,38 @@ exports[`The TileFeed component renders correctly 1`] = `
                     Object {
                       "color": "#303030",
                       "fontFamily": "OpenSans-Bold",
-                      "fontSize": 25.2,
-                      "lineHeight": 31.28,
+                      "fontSize": 15.75,
+                      "lineHeight": 17.75,
                     }
                   }
                 >
-                  Why Jesus Is Timeless
+                  2
                 </Text>
               </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#303030",
+                    "fontFamily": "OpenSans-Bold",
+                    "fontSize": 25.2,
+                    "lineHeight": 31.28,
+                  }
+                }
+              >
+                Why Jesus is Timeless
+              </Text>
             </View>
           </View>
         </View>
@@ -1136,6 +1052,7 @@ exports[`The TileFeed component renders empty state 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -1145,66 +1062,53 @@ exports[`The TileFeed component renders empty state 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -1251,6 +1155,7 @@ exports[`The TileFeed component renders empty state 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -1260,66 +1165,53 @@ exports[`The TileFeed component renders empty state 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -1366,6 +1258,7 @@ exports[`The TileFeed component renders empty state 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -1375,66 +1268,53 @@ exports[`The TileFeed component renders empty state 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -1481,6 +1361,7 @@ exports[`The TileFeed component renders empty state 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -1490,66 +1371,53 @@ exports[`The TileFeed component renders empty state 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>
@@ -1596,6 +1464,7 @@ exports[`The TileFeed component renders empty state 1`] = `
               Object {
                 "borderRadius": 6,
                 "bottom": 0,
+                "justifyContent": "center",
                 "left": 0,
                 "overflow": "hidden",
                 "position": "absolute",
@@ -1605,66 +1474,53 @@ exports[`The TileFeed component renders empty state 1`] = `
             }
           >
             <View
+              size={1}
               style={
                 Object {
-                  "bottom": 0,
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomRightRadius": 6,
+                  "borderTopLeftRadius": 6,
+                  "height": 36,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
-                  "right": 0,
                   "top": 0,
+                  "width": 36,
                 }
               }
             >
               <View
-                size={1}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#FFFFFF",
-                    "borderBottomRightRadius": 6,
-                    "borderTopLeftRadius": 6,
-                    "height": 36,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "width": 36,
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 45,
-                      "width": 45,
-                    }
-                  }
-                />
-              </View>
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 15,
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
                   }
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#DBDBD9",
-                      "borderRadius": 6,
-                      "height": 25.2,
-                      "marginVertical": 3.040000000000001,
-                      "width": "80%",
-                    }
-                  }
-                />
-              </View>
+              />
             </View>
           </View>
         </View>

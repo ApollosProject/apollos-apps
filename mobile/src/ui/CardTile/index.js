@@ -39,28 +39,14 @@ const Tile = styled(({ theme }) => ({
   aspectRatio: 1,
   borderRadius: theme.sizing.borderRadius,
   backgroundColor: theme.colors.lightTertiary,
-  ...Platform.select({
-    web: {
-      position: 'relative',
-      width: '25vw',
-      minWidth: '250px',
-      maxWidth: '320px',
-      height: '0',
-      paddingTop: '100%',
-    },
-  }),
 }))(View);
 
-const OverflowFix = styled(({ theme }) => ({
+const PlaceholderOverflowFix = styled(({ theme }) => ({
   ...StyleSheet.absoluteFillObject,
+  justifyContent: 'center',
   borderRadius: theme.sizing.borderRadius,
   overflow: 'hidden',
 }))(View);
-
-const WebAspectRatioFix = styled({
-  justifyContent: 'center',
-  ...StyleSheet.absoluteFillObject,
-})(View);
 
 const TileNumber = styled(({ theme, size }) => ({
   position: 'absolute',
@@ -115,49 +101,47 @@ export const CardTile = enhance(
   }) => (
     <TileSpacer collapsable={false}>
       <Tile style={styleProp} {...otherProps}>
-        <OverflowFix>
-          <WebAspectRatioFix>
-            {typeof number === 'undefined' ? null : (
-              <TileNumber size={number.toString().length}>
-                <Placeholder.Media
-                  size={theme.helpers.rem(
-                    1.25 *
-                      (number.toString().length < 2
-                        ? 2
-                        : number.toString().length)
-                  )}
-                  onReady={!isLoading}
-                >
-                  <View>
-                    <H6>{number}</H6>
-                  </View>
-                </Placeholder.Media>
-              </TileNumber>
-            )}
-
-            {typeof title === 'undefined' ? null : (
-              <CardContent>
-                <H4>{startCase(toLower(title))}</H4>
-              </CardContent>
-            )}
-
-            {showDetails ? (
-              <CardActions>
-                <ChannelLabel
-                  label={startCase(toLower(byLine))}
-                  icon={'video'}
-                  isLoading={isLoading}
-                  withFlex
-                />
-                {typeof date === 'undefined' ? null : (
-                  <H7>{relativeTime(date)}</H7>
+        <PlaceholderOverflowFix>
+          {typeof number === 'undefined' ? null : (
+            <TileNumber size={number.toString().length}>
+              <Placeholder.Media
+                size={theme.helpers.rem(
+                  1.25 *
+                    (number.toString().length < 2
+                      ? 2
+                      : number.toString().length)
                 )}
-              </CardActions>
-            ) : null}
+                onReady={!isLoading}
+              >
+                <View>
+                  <H6>{number}</H6>
+                </View>
+              </Placeholder.Media>
+            </TileNumber>
+          )}
 
-            {children}
-          </WebAspectRatioFix>
-        </OverflowFix>
+          {typeof title === 'undefined' ? null : (
+            <CardContent>
+              <H4>{title}</H4>
+            </CardContent>
+          )}
+
+          {showDetails ? (
+            <CardActions>
+              <ChannelLabel
+                label={startCase(toLower(byLine))}
+                icon={'video'}
+                isLoading={isLoading}
+                withFlex
+              />
+              {typeof date === 'undefined' ? null : (
+                <H7>{relativeTime(date)}</H7>
+              )}
+            </CardActions>
+          ) : null}
+
+          {children}
+        </PlaceholderOverflowFix>
       </Tile>
     </TileSpacer>
   )
