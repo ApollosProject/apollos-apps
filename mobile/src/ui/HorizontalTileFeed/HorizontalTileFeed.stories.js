@@ -7,29 +7,6 @@ import TileImage from 'ui/TileImage';
 
 import HorizontalTileFeed from './';
 
-const tileData = [
-  {
-    id: 'fakeId0',
-    title: 'Why Jesus is Timeless',
-    meta: {
-      date: 'Sat Oct 26 1985 01:24:00 GMT+0008 (UTC)', // this snapshot will expire in a year
-    },
-    content: {
-      speaker: 'Marty McFly',
-    },
-  },
-  {
-    id: 'fakeId1',
-    title: 'Tall Hat Tales',
-    meta: {
-      date: 'Sat Oct 26 1985 01:24:00 GMT+0008 (UTC)', // this snapshot will expire in a year
-    },
-    content: {
-      speaker: 'A-bro-ham Lincoln',
-    },
-  },
-];
-
 const loadingStateObject = {
   id: 'fakeId0',
   title: '',
@@ -56,15 +33,40 @@ const renderCardTile = (
 );
 
 storiesOf('HorizontalTileFeed', module)
-  .add('With CardTile', () => (
-    <View style={containerStyles}>
-      <HorizontalTileFeed
-        content={tileData}
-        renderItem={renderCardTile}
-        loadingStateObject={loadingStateObject}
-      />
-    </View>
-  ))
+  .add('With CardTile', () => {
+    const CardTileData = [
+      {
+        id: 'fakeId0',
+        title: 'Why Jesus is Timeless',
+        meta: {
+          date: 'Sat Oct 26 1985 01:24:00 GMT+0008 (UTC)', // this snapshot will expire in a year
+        },
+        content: {
+          speaker: 'Marty McFly',
+        },
+      },
+      {
+        id: 'fakeId1',
+        title: 'Tall Hat Tales',
+        meta: {
+          date: 'Sat Oct 26 1985 01:24:00 GMT+0008 (UTC)', // this snapshot will expire in a year
+        },
+        content: {
+          speaker: 'A-bro-ham Lincoln',
+        },
+      },
+    ];
+
+    return (
+      <View style={containerStyles}>
+        <HorizontalTileFeed
+          content={CardTileData}
+          renderItem={renderCardTile}
+          loadingStateObject={loadingStateObject}
+        />
+      </View>
+    );
+  })
   .add('CardTile Skeleton', () => (
     <View style={containerStyles}>
       <HorizontalTileFeed
@@ -107,7 +109,11 @@ storiesOf('HorizontalTileFeed', module)
         <HorizontalTileFeed
           content={imageData}
           renderItem={renderTileImage}
-          loadingStateObject={imageData}
+          loadingStateObject={{
+            id: 'fakeId1',
+            source: '',
+            link: '',
+          }}
         />
       </View>
     );
