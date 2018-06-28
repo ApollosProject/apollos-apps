@@ -1,4 +1,5 @@
 import { FlatList } from 'react-native';
+
 import styled from 'ui/styled';
 
 const TileFeed = styled(({ theme, tileHeight }) => ({
