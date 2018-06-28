@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
-import { TouchableWithoutFeedback, Dimensions } from 'react-native';
+import { Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, branch, withProps } from 'recompose';
 
-import CardTile from 'ui/CardTile';
 import { withTheme } from 'ui/theme';
 
 import TileFeed from './TileFeed';
