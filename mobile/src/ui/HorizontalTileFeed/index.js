@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { TouchableWithoutFeedback, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure, branch, withProps } from 'recompose';
+import { compose, branch, withProps } from 'recompose';
 
 import CardTile from 'ui/CardTile';
+import { withTheme } from 'ui/theme';
 
 import TileFeed from './TileFeed';
 
-export class HorizontalTileFeed extends React.Component {
+export class HorizontalTileFeed extends PureComponent {
   static propTypes = {
     content: PropTypes.array, // eslint-disable-line
     fetchMore: PropTypes.func,
@@ -16,6 +17,7 @@ export class HorizontalTileFeed extends React.Component {
     onPressItem: PropTypes.func,
     renderItem: PropTypes.func,
     showTileMeta: PropTypes.bool,
+    theme: PropTypes.shape({}),
   };
 
   static defaultProps = {
@@ -46,7 +48,13 @@ export class HorizontalTileFeed extends React.Component {
   );
 
   render() {
-    const { content, isLoading, showTileMeta, ...otherProps } = this.props;
+    const {
+      content,
+      isLoading,
+      showTileMeta,
+      theme,
+      ...otherProps
+    } = this.props;
     return (
       <TileFeed
         renderItem={(renderItemProps) =>
@@ -64,7 +72,7 @@ export class HorizontalTileFeed extends React.Component {
          * to fix a shadow clipping bug on Android. `snapToInterval` below is adjusted to account for
          * that padding on each swipe. TODO: find better shadow clipping fix that simplifies this math.
          */
-        snapToInterval={this.getTileWidth() - 10} // passed down to rendered ScrollView.
+        snapToInterval={this.getTileWidth() - theme.baseUnit / 2} // passed down to rendered ScrollView.
         snapToAlignment={'start'} // passed down to rendered ScrollView
         decelerationRate={'fast'} // passed down to rendered ScrollView
         {...otherProps}
@@ -105,7 +113,9 @@ const enhance = compose(
       fetchMore: () => {},
     })
   ),
-  pure
+  withTheme(({ theme: { sizing: { baseUnit } = {} } = {} } = {}) => ({
+    theme: { baseUnit },
+  }))
 );
 
 export default enhance(HorizontalTileFeed);
