@@ -1,10 +1,12 @@
 import React from 'react';
 import { Query } from 'react-apollo';
-import { Button, FlatList } from 'react-native';
+import { Button, FlatList, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
+import { get, filter } from 'lodash';
 
+import { H5 } from 'ui/typography';
+import PaddedView from 'ui/PaddedView';
 import BackgroundView from 'ui/BackgroundView';
 import { ErrorCard } from 'ui/Card';
 import tabBarIcon from '../tabBarIcon';
@@ -50,37 +52,154 @@ export class DiscoverScreen extends React.Component {
           {({ loading, error, data, refetch }) => {
             if (loading) return 'Loading...';
 
+            const filteredData = get(data, 'contentChannels', [])
+              .filter(
+                (channel) =>
+                  channel.name === 'Devotion Series' ||
+                  channel.name === 'Sermon Series' ||
+                  channel.name === 'Editorial'
+              )
+              .map((filteredChannel) => ({
+                id: filteredChannel.id,
+                name: filteredChannel.name,
+                content: filteredChannel.childContentItemsConnection.edges,
+              }));
             return (
-              <FlatList
-                data={get(data, 'contentChannels', [])}
-                keyExtractor={keyExtractor}
-                ListEmptyComponent={
-                  error && !loading && (!data || !data.length) ? (
-                    <ErrorCard error={error} />
-                  ) : (
-                    ListEmptyComponent
-                  )
-                }
-                renderItem={({ item }) => (
+              <PaddedView
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}
+                >
+                  <H5>Sermons</H5>
                   <Button
-                    title={item.name}
+                    title={'View All'}
                     onPress={() => {
                       this.props.navigation.navigate('ContentFeed', {
-                        itemId: item.id,
-                        itemTitle: item.name,
+                        itemId: filter(filteredData, {
+                          name: 'Sermon Series',
+                        })[0].id,
+                        itemTitle: filter(filteredData, {
+                          name: 'Sermon Series',
+                        })[0].name,
                       });
                     }}
                   />
-                )}
-                onEndReached={this.fetchMoreHandler({
-                  fetchMore,
-                  error,
-                  loading,
-                })}
-                onEndReachedThreshold={onEndReachedThreshold}
-                onRefresh={this.refetchHandler({ loading, refetch })}
-                refreshing={loading}
-              />
+                </View>
+                <FlatList
+                  data={filteredData}
+                  keyExtractor={keyExtractor}
+                  ListEmptyComponent={
+                    error && !loading && (!data || !data.length) ? (
+                      <ErrorCard error={error} />
+                    ) : (
+                      ListEmptyComponent
+                    )
+                  }
+                  renderItem={() => <H5>hi</H5>}
+                  onEndReached={this.fetchMoreHandler({
+                    fetchMore,
+                    error,
+                    loading,
+                  })}
+                  onEndReachedThreshold={onEndReachedThreshold}
+                  onRefresh={this.refetchHandler({ loading, refetch })}
+                  refreshing={loading}
+                />
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}
+                >
+                  <H5>Devotionals</H5>
+                  <Button
+                    title={'View All'}
+                    onPress={() => {
+                      this.props.navigation.navigate('ContentFeed', {
+                        itemId: filter(filteredData, {
+                          name: 'Devotion Series',
+                        })[0].id,
+                        itemTitle: filter(filteredData, {
+                          name: 'Devotion Series',
+                        })[0].name,
+                      });
+                    }}
+                  />
+                </View>
+                <FlatList
+                  data={filteredData}
+                  keyExtractor={keyExtractor}
+                  ListEmptyComponent={
+                    error && !loading && (!data || !data.length) ? (
+                      <ErrorCard error={error} />
+                    ) : (
+                      ListEmptyComponent
+                    )
+                  }
+                  renderItem={() => <H5>hi</H5>}
+                  onEndReached={this.fetchMoreHandler({
+                    fetchMore,
+                    error,
+                    loading,
+                  })}
+                  onEndReachedThreshold={onEndReachedThreshold}
+                  onRefresh={this.refetchHandler({ loading, refetch })}
+                  refreshing={loading}
+                />
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}
+                >
+                  <H5>Stories</H5>
+                  <Button
+                    title={'View All'}
+                    onPress={() => {
+                      this.props.navigation.navigate('ContentFeed', {
+                        itemId: filter(filteredData, { name: 'Editorial' })[0]
+                          .id,
+                        itemTitle: filter(filteredData, {
+                          name: 'Editorial',
+                        })[0].name,
+                      });
+                    }}
+                  />
+                </View>
+                <FlatList
+                  data={filteredData}
+                  keyExtractor={keyExtractor}
+                  ListEmptyComponent={
+                    error && !loading && (!data || !data.length) ? (
+                      <ErrorCard error={error} />
+                    ) : (
+                      ListEmptyComponent
+                    )
+                  }
+                  renderItem={() => <H5>hi</H5>}
+                  onEndReached={this.fetchMoreHandler({
+                    fetchMore,
+                    error,
+                    loading,
+                  })}
+                  onEndReachedThreshold={onEndReachedThreshold}
+                  onRefresh={this.refetchHandler({ loading, refetch })}
+                  refreshing={loading}
+                />
+              </PaddedView>
             );
           }}
         </Query>
