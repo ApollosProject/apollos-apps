@@ -21,7 +21,7 @@ const Title = styled(
     position: 'absolute',
     bottom: theme.sizing.baseUnit,
     left: theme.sizing.baseUnit,
-    backgroundColor: 'transparent',
+    backgroundColor: theme.colors.transparent,
     color: theme.colors.lightPrimary,
   }),
   'TileImage.Text'

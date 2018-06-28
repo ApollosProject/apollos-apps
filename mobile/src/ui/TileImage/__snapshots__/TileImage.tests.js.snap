@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the SquareTile component passes an onPressItem prop 1`] = `
+exports[`the TileImage component passes an onPressItem prop 1`] = `
 <View
   accessible={true}
   onResponderGrant={[Function]}
@@ -37,7 +37,7 @@ exports[`the SquareTile component passes an onPressItem prop 1`] = `
 </View>
 `;
 
-exports[`the SquareTile component should render 1`] = `
+exports[`the TileImage component should render 1`] = `
 <View
   accessible={true}
   onResponderGrant={[Function]}
@@ -128,7 +128,7 @@ exports[`the SquareTile component should render 1`] = `
 </View>
 `;
 
-exports[`the SquareTile component should render without text 1`] = `
+exports[`the TileImage component should render without text 1`] = `
 <View
   accessible={true}
   onResponderGrant={[Function]}
