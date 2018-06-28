@@ -1,0 +1,8 @@
+{
+  "name": "apollos-church-api",
+  "alias": "apollos-church-api.now.sh",
+  "env": {
+    "ROCK_API": "@rock_api",
+    "ROCK_TOKEN": "@rock_token"
+  }
+}

@@ -58,13 +58,5 @@
     "jest": "^23.0.0",
     "jest-fetch-mock": "^1.6.2",
     "nodemon": "^1.17.5"
-  },
-  "now": {
-    "name": "apollos-church-api",
-    "alias": "apollos-church-api.now.sh",
-    "env": {
-      "ROCK_API": "@rock_api",
-      "ROCK_TOKEN": "@rock_token"
-    }
   }
 }
