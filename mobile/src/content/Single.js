@@ -37,7 +37,7 @@ class ContentSingle extends React.Component {
           return (
             <ScrollView>
               <GradientOverlayImage
-                source={get(data, 'node.coverImage.sources', {})}
+                source={get(data, 'node.coverImage.sources', [])}
                 isLoading={loading}
               />
               <PaddedView>
