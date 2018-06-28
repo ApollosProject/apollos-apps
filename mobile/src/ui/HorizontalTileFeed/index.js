@@ -15,7 +15,7 @@ export class HorizontalTileFeed extends PureComponent {
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
     onPressItem: PropTypes.func,
-    renderItem: PropTypes.func,
+    renderItem: PropTypes.func.isRequired,
     showTileMeta: PropTypes.bool,
     theme: PropTypes.shape({}),
   };
@@ -32,39 +32,22 @@ export class HorizontalTileFeed extends PureComponent {
     return width * 0.8; // 80% of width
   };
 
-  renderItem = ({ item, showTileMeta, index }) => (
-    <TouchableWithoutFeedback
-      onPress={() => this.props.onPressItem({ ...item })}
-    >
-      <CardTile
-        number={index + 1}
-        title={item.title}
-        showDetails={showTileMeta}
-        byLine={item.content.speaker}
-        date={item.meta.date}
-        isLoading={item.isLoading}
-      />
-    </TouchableWithoutFeedback>
-  );
-
   render() {
     const {
       content,
       isLoading,
+      renderItem,
       showTileMeta,
       theme,
       ...otherProps
     } = this.props;
     return (
       <TileFeed
-        renderItem={(renderItemProps) =>
-          this.props.renderItem ||
-          this.renderItem({ ...renderItemProps, showTileMeta })
-        }
         data={content}
         horizontal
         initialScrollIndex={0}
         refreshing={isLoading}
+        renderItem={renderItem}
         showsHorizontalScrollIndicator={false}
         tileHeight={this.getTileWidth()} // passed into TileFeed styles. Height is equal to 80% of width
         /*
