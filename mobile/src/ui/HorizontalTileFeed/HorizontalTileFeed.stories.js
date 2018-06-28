@@ -1,9 +1,9 @@
 import React from 'react';
-import { TouchableWithoutFeedback, View } from 'react-native';
-import { get } from 'lodash';
+import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
 import CardTile from 'ui/CardTile';
+import TileImage from 'ui/TileImage';
 
 import HorizontalTileFeed from './';
 
@@ -43,9 +43,9 @@ const loadingStateObject = {
 };
 
 const containerStyles = {
-  height: 300,
-  justifyContent: 'center',
-  alignItems: 'center',
+  // height: 300,
+  // justifyContent: 'center',
+  // alignItems: 'center',
   backgroundColor: '#f7f7f7',
 };
 
@@ -56,7 +56,7 @@ const renderCardTile = (
 );
 
 storiesOf('HorizontalTileFeed', module)
-  .add('Default', () => (
+  .add('With CardTile', () => (
     <View style={containerStyles}>
       <HorizontalTileFeed
         content={tileData}
@@ -65,13 +65,50 @@ storiesOf('HorizontalTileFeed', module)
       />
     </View>
   ))
-  .add('Skeleton', () => (
+  .add('CardTile Skeleton', () => (
     <View style={containerStyles}>
       <HorizontalTileFeed
-        content={{}}
+        content={[]}
         renderItem={renderCardTile}
         loadingStateObject={loadingStateObject}
         isLoading
       />
     </View>
-  ));
+  ))
+  .add('With TileImage', () => {
+    const imageData = [
+      {
+        id: 'fakeId0',
+        source: 'https://picsum.photos/300/300/?random',
+        link: 'https://github.com',
+      },
+      {
+        id: 'fakeId1',
+        source: 'https://picsum.photos/300/300/?random',
+        link: 'https://github.com',
+      },
+      {
+        id: 'fakeId2',
+        source: 'https://picsum.photos/300/300/?random',
+        link: 'https://github.com',
+      },
+    ];
+
+    const renderTileImage = (
+      { item, index } //eslint-disable-line
+    ) => (
+      <View style={{ flex: 1, paddingHorizontal: 10 }}>
+        <TileImage image={item.source} link={item.link} />
+      </View>
+    );
+
+    return (
+      <View style={containerStyles}>
+        <HorizontalTileFeed
+          content={imageData}
+          renderItem={renderTileImage}
+          loadingStateObject={imageData}
+        />
+      </View>
+    );
+  });

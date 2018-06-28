@@ -10,12 +10,11 @@ import TileFeed from './TileFeed';
 export class HorizontalTileFeed extends PureComponent {
   static propTypes = {
     content: PropTypes.array, // eslint-disable-line
+    loadingStateObject: PropTypes.shape({}).isRequired,
+    renderItem: PropTypes.func.isRequired,
     fetchMore: PropTypes.func,
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
-    loadingStateObject: PropTypes.shape({}).isRequired,
-    onPressItem: PropTypes.func,
-    renderItem: PropTypes.func.isRequired,
     theme: PropTypes.shape({}),
   };
 
@@ -25,6 +24,12 @@ export class HorizontalTileFeed extends PureComponent {
     isLoading: false,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.snapToInterval = this.getTileWidth() - this.props.theme.baseUnit / 2; //eslint-disable-line
+  }
+
   getTileWidth = () => {
     const { width } = Dimensions.get('window');
     return width * 0.8; // 80% of width
@@ -32,6 +37,7 @@ export class HorizontalTileFeed extends PureComponent {
 
   render() {
     const { content, isLoading, renderItem, theme, ...otherProps } = this.props;
+
     return (
       <TileFeed
         data={content}
@@ -46,7 +52,7 @@ export class HorizontalTileFeed extends PureComponent {
          * to fix a shadow clipping bug on Android. `snapToInterval` below is adjusted to account for
          * that padding on each swipe. TODO: find better shadow clipping fix that simplifies this math.
          */
-        snapToInterval={this.getTileWidth() - theme.baseUnit / 2} // passed down to rendered ScrollView.
+        snapToInterval={this.snapToInterval} // passed down to rendered ScrollView.
         snapToAlignment={'start'} // passed down to rendered ScrollView
         decelerationRate={'fast'} // passed down to rendered ScrollView
         {...otherProps}
