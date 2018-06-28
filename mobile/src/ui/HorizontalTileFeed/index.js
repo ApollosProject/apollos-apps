@@ -13,6 +13,7 @@ export class HorizontalTileFeed extends PureComponent {
     fetchMore: PropTypes.func,
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
+    loadingStateObject: PropTypes.shape({}).isRequired,
     onPressItem: PropTypes.func,
     renderItem: PropTypes.func.isRequired,
     theme: PropTypes.shape({}),
@@ -54,23 +55,11 @@ export class HorizontalTileFeed extends PureComponent {
   }
 }
 
-const generateLoadingStateData = (numberOfItems = 1) => {
-  const itemData = () => ({
-    id: 'fakeId0',
-    title: '',
-    meta: {
-      date: '',
-    },
-    content: {
-      speaker: '',
-    },
-    isLoading: true,
-  });
-
-  const loadingStateData = [itemData()];
+const generateLoadingStateData = (loadingStateObject, numberOfItems) => {
+  const loadingStateData = [loadingStateObject];
 
   while (loadingStateData.length < numberOfItems) {
-    const newData = itemData();
+    const newData = () => loadingStateObject;
     newData.id = `fakeId${loadingStateData.length}`;
     loadingStateData.push(newData);
   }
@@ -81,10 +70,10 @@ const generateLoadingStateData = (numberOfItems = 1) => {
 const enhance = compose(
   branch(
     ({ isLoading, content }) => isLoading && !content.length,
-    withProps({
-      content: generateLoadingStateData(5),
+    withProps(({ loadingStateObject } = {}) => ({
+      content: generateLoadingStateData(loadingStateObject, 5),
       fetchMore: () => {},
-    })
+    }))
   ),
   withTheme(({ theme: { sizing: { baseUnit } = {} } = {} } = {}) => ({
     theme: { baseUnit },

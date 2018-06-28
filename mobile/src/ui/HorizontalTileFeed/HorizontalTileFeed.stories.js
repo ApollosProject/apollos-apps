@@ -30,6 +30,18 @@ const tileData = [
   },
 ];
 
+const loadingStateObject = {
+  id: 'fakeId0',
+  title: '',
+  meta: {
+    date: '',
+  },
+  content: {
+    speaker: '',
+  },
+  isLoading: true,
+};
+
 const containerStyles = {
   height: 300,
   justifyContent: 'center',
@@ -40,17 +52,26 @@ const containerStyles = {
 const renderCardTile = (
   { item, index } //eslint-disable-line
 ) => (
-  <TouchableWithoutFeedback onPress={() => this.props.onPressItem({ ...item })}>
-    <CardTile
-      number={index + 1}
-      title={item.title}
-      isLoading={item.isLoading}
-    />
-  </TouchableWithoutFeedback>
+  <CardTile number={index + 1} title={item.title} isLoading={item.isLoading} />
 );
 
-storiesOf('HorizontalTileFeed', module).add('Default', () => (
-  <View style={containerStyles}>
-    <HorizontalTileFeed content={tileData} renderItem={renderCardTile} />
-  </View>
-));
+storiesOf('HorizontalTileFeed', module)
+  .add('Default', () => (
+    <View style={containerStyles}>
+      <HorizontalTileFeed
+        content={tileData}
+        renderItem={renderCardTile}
+        loadingStateObject={loadingStateObject}
+      />
+    </View>
+  ))
+  .add('Skeleton', () => (
+    <View style={containerStyles}>
+      <HorizontalTileFeed
+        content={{}}
+        renderItem={renderCardTile}
+        loadingStateObject={loadingStateObject}
+        isLoading
+      />
+    </View>
+  ));
