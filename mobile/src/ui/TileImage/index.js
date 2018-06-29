@@ -46,7 +46,7 @@ const TileImage = enhance(({ image, link, onPressItem, text, theme }) => (
 
 TileImage.propTypes = {
   image: GradientOverlayImage.propTypes.source,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   onPressItem: PropTypes.func,
   text: PropTypes.string,
 };
