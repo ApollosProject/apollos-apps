@@ -1,14 +1,19 @@
 import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import TileImage from 'ui/TileImage';
+import ThumbnailCard from 'ui/ThumbnailCard';
 
-const TileImageItem = ({
+const ThumbnailCardItem = ({
   item: { node: { id, title, coverImage: { sources } = {} } = {} } = {},
   navigation,
 }) => (
-  <View style={{ flex: 1, padding: 10 }}>
-    <TileImage
+  <View
+    style={{
+      flex: 1,
+      justifyContent: 'center',
+    }}
+  >
+    <ThumbnailCard
       onPressItem={() =>
         navigation.navigate('ContentSingle', {
           itemId: id,
@@ -16,17 +21,18 @@ const TileImageItem = ({
         })
       }
       key={id}
-      text={title}
-      image={sources[0].uri}
+      title={title}
+      category={'Story'}
+      images={sources[0].uri}
     />
   </View>
 );
 
-TileImageItem.propTypes = {
+ThumbnailCardItem.propTypes = {
   item: PropTypes.shape({}),
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }),
 };
 
-export default TileImageItem;
+export default ThumbnailCardItem;

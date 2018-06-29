@@ -2,22 +2,23 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 
 import PaddedView from 'ui/PaddedView';
-import IndividualContentFeed from './individualContentFeed';
+import TileContentFeed from './tileContentFeed';
+import ThumbnailContentFeed from './thumbnailContentFeed';
 
 const DiscoverContentFeed = ({ ...props }) => (
   <ScrollView>
     <PaddedView>
-      <IndividualContentFeed
+      <TileContentFeed
         contentName={'Sermon Series'}
         displayName={'Sermons'}
         {...props}
       />
-      <IndividualContentFeed
+      <TileContentFeed
         contentName={'Devotion Series'}
         displayName={'Devotionals'}
         {...props}
       />
-      <IndividualContentFeed
+      <ThumbnailContentFeed
         contentName={'Editorial'}
         displayName={'Stories'}
         {...props}

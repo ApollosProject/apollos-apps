@@ -6,7 +6,7 @@ import { H5 } from 'ui/typography';
 import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import TileImageItem from './tileImageItem';
 
-const IndividualContentFeed = ({
+const TileContentFeed = ({
   loading,
   data,
   onRefresh,
@@ -30,7 +30,7 @@ const IndividualContentFeed = ({
       content: childContentItemsConnection.edges,
     }));
 
-  const getIndividualContentFor = () =>
+  const getIndividualContentByName = () =>
     filter(filteredData, {
       name: contentName,
     })[0];
@@ -50,14 +50,14 @@ const IndividualContentFeed = ({
           title={'View All'}
           onPress={() => {
             navigation.navigate('ContentFeed', {
-              itemId: getIndividualContentFor().id,
-              itemTitle: getIndividualContentFor().name,
+              itemId: getIndividualContentByName().id,
+              itemTitle: getIndividualContentByName().name,
             });
           }}
         />
       </View>
       <HorizontalTileFeed
-        content={getIndividualContentFor().content}
+        content={getIndividualContentByName().content}
         keyExtractor={keyExtractor}
         renderItem={({ item }) => (
           <TileImageItem item={item} navigation={navigation} />
@@ -76,7 +76,7 @@ const IndividualContentFeed = ({
   );
 };
 
-IndividualContentFeed.propTypes = {
+TileContentFeed.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }),
@@ -90,4 +90,4 @@ IndividualContentFeed.propTypes = {
   onEndReachedThreshold: PropTypes.number,
 };
 
-export default IndividualContentFeed;
+export default TileContentFeed;
