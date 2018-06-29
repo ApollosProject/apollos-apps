@@ -53,7 +53,6 @@ class ContentSingle extends React.Component {
                   []
                 )}
                 isLoading={loading}
-                showTileMeta
               />
             </ScrollView>
           );
