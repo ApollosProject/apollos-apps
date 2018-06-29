@@ -62,12 +62,12 @@ export class HorizontalTileFeed extends PureComponent {
 }
 
 const generateLoadingStateData = (loadingStateObject, numberOfItems) => {
-  const someFunction = () => loadingStateObject;
+  const itemData = () => JSON.parse(JSON.stringify(loadingStateObject));
 
-  const loadingStateData = [someFunction()];
+  const loadingStateData = [itemData()];
 
   while (loadingStateData.length < numberOfItems) {
-    const newData = someFunction();
+    const newData = itemData();
     newData.node.id = `fakeId${loadingStateData.length}`;
     loadingStateData.push(newData);
   }
