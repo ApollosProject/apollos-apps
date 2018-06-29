@@ -37,8 +37,8 @@ describe('The HorizontalTileFeed component', () => {
           renderItem={({ item, index }) => (
             <CardTile
               number={index + 1}
-              title={item.title}
-              isLoading={item.isLoading}
+              title={item.node.title}
+              isLoading={item.node.isLoading}
             />
           )}
           loadingStateObject={loadingStateObject}
@@ -56,8 +56,8 @@ describe('The HorizontalTileFeed component', () => {
           renderItem={({ item, index }) => (
             <CardTile
               number={index + 1}
-              title={item.title}
-              isLoading={item.isLoading}
+              title={item.node.title}
+              isLoading={item.node.isLoading}
             />
           )}
           loadingStateObject={loadingStateObject}

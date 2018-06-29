@@ -142,6 +142,30 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                 </Text>
               </View>
             </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#303030",
+                    "fontFamily": "OpenSans-Bold",
+                    "fontSize": 25.2,
+                    "lineHeight": 31.28,
+                  }
+                }
+              >
+                Why Jesus is Timeless
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -223,6 +247,30 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   2
                 </Text>
               </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#303030",
+                    "fontFamily": "OpenSans-Bold",
+                    "fontSize": 25.2,
+                    "lineHeight": 31.28,
+                  }
+                }
+              >
+                Why Jesus is Timeless
+              </Text>
             </View>
           </View>
         </View>
@@ -380,23 +428,37 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                 }
               }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                    }
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
-                >
-                  1
-                </Text>
-              </View>
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
+                  }
+                }
+              />
             </View>
           </View>
         </View>
@@ -462,23 +524,37 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                 }
               }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                    }
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
-                >
-                  2
-                </Text>
-              </View>
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
+                  }
+                }
+              />
             </View>
           </View>
         </View>
@@ -544,23 +620,37 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                 }
               }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                    }
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
-                >
-                  3
-                </Text>
-              </View>
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
+                  }
+                }
+              />
             </View>
           </View>
         </View>
@@ -626,23 +716,37 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                 }
               }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                    }
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
-                >
-                  4
-                </Text>
-              </View>
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
+                  }
+                }
+              />
             </View>
           </View>
         </View>
@@ -708,23 +812,37 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                 }
               }
             >
-              <View>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                    }
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 45,
+                    "width": 45,
                   }
-                >
-                  5
-                </Text>
-              </View>
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 20,
+                  "paddingVertical": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 6,
+                    "height": 25.2,
+                    "marginVertical": 3.040000000000001,
+                    "width": "80%",
+                  }
+                }
+              />
             </View>
           </View>
         </View>
