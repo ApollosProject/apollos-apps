@@ -19,7 +19,7 @@ export class HorizontalTileFeed extends PureComponent {
   };
 
   static defaultProps = {
-    keyExtractor: (item) => item.id,
+    keyExtractor: (item) => item && item.node.id,
     content: [],
     isLoading: false,
   };
