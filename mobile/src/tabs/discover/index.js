@@ -1,6 +1,6 @@
 import React from 'react';
 import { Query } from 'react-apollo';
-import { Button, FlatList, View } from 'react-native';
+import { Button, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { get, filter } from 'lodash';
@@ -8,7 +8,7 @@ import { get, filter } from 'lodash';
 import { H5 } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
 import BackgroundView from 'ui/BackgroundView';
-import { ErrorCard } from 'ui/Card';
+import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import tabBarIcon from '../tabBarIcon';
 import GET_DISCOVER_ITEMS from './query';
 
@@ -20,7 +20,6 @@ export class DiscoverScreen extends React.Component {
   static propTypes = {
     fetchMore: PropTypes.func,
     keyExtractor: PropTypes.func,
-    ListEmptyComponent: PropTypes.func,
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
     }),
@@ -40,19 +39,14 @@ export class DiscoverScreen extends React.Component {
     fetchMore && ((...args) => !isLoading && !error && fetchMore(...args));
 
   render() {
-    const {
-      fetchMore,
-      keyExtractor,
-      ListEmptyComponent,
-      onEndReachedThreshold,
-    } = this.props;
+    const { fetchMore, keyExtractor, onEndReachedThreshold } = this.props;
     return (
       <BackgroundView>
         <Query query={GET_DISCOVER_ITEMS}>
-          {({ loading, error, data, refetch }) => {
+          {({ loading, error, content, refetch }) => {
             if (loading) return 'Loading...';
 
-            const filteredData = get(data, 'contentChannels', [])
+            const filteredData = get(content, 'contentChannels', [])
               .filter(
                 (channel) =>
                   channel.name === 'Devotion Series' ||
@@ -94,16 +88,9 @@ export class DiscoverScreen extends React.Component {
                     }}
                   />
                 </View>
-                <FlatList
-                  data={filteredData}
+                <HorizontalTileFeed
+                  content={filteredData}
                   keyExtractor={keyExtractor}
-                  ListEmptyComponent={
-                    error && !loading && (!data || !data.length) ? (
-                      <ErrorCard error={error} />
-                    ) : (
-                      ListEmptyComponent
-                    )
-                  }
                   renderItem={() => <H5>hi</H5>}
                   onEndReached={this.fetchMoreHandler({
                     fetchMore,
@@ -137,16 +124,9 @@ export class DiscoverScreen extends React.Component {
                     }}
                   />
                 </View>
-                <FlatList
-                  data={filteredData}
+                <HorizontalTileFeed
+                  content={filteredData}
                   keyExtractor={keyExtractor}
-                  ListEmptyComponent={
-                    error && !loading && (!data || !data.length) ? (
-                      <ErrorCard error={error} />
-                    ) : (
-                      ListEmptyComponent
-                    )
-                  }
                   renderItem={() => <H5>hi</H5>}
                   onEndReached={this.fetchMoreHandler({
                     fetchMore,
@@ -179,16 +159,9 @@ export class DiscoverScreen extends React.Component {
                     }}
                   />
                 </View>
-                <FlatList
-                  data={filteredData}
+                <HorizontalTileFeed
+                  content={filteredData}
                   keyExtractor={keyExtractor}
-                  ListEmptyComponent={
-                    error && !loading && (!data || !data.length) ? (
-                      <ErrorCard error={error} />
-                    ) : (
-                      ListEmptyComponent
-                    )
-                  }
                   renderItem={() => <H5>hi</H5>}
                   onEndReached={this.fetchMoreHandler({
                     fetchMore,
