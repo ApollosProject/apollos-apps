@@ -22,9 +22,10 @@ describe('The TileFeed component', () => {
               title: 'Why Jesus is Timeless',
             },
           ]}
-          loadingStateObject={{
+          loadingStateData={{
             id: 'fakeId0',
             title: '',
+            isLoading: false,
           }}
           renderItem={({ item, index }) => (
             <CardTile
@@ -47,6 +48,7 @@ describe('The TileFeed component', () => {
           loadingStateObject={{
             id: 'fakeId0',
             title: '',
+            isLoading: true,
           }}
           renderItem={({ item, index }) => (
             <CardTile

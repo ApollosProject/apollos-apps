@@ -22,9 +22,10 @@ exports[`The TileFeed component renders correctly 1`] = `
   initialNumToRender={10}
   initialScrollIndex={0}
   keyExtractor={[Function]}
-  loadingStateObject={
+  loadingStateData={
     Object {
       "id": "fakeId0",
+      "isLoading": false,
       "title": "",
     }
   }
@@ -287,6 +288,7 @@ exports[`The TileFeed component renders empty state 1`] = `
   loadingStateObject={
     Object {
       "id": "fakeId0",
+      "isLoading": true,
       "title": "",
     }
   }
