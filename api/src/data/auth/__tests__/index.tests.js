@@ -185,25 +185,5 @@ describe('Auth', () => {
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();
     });
-
-    it('create new registration throws error', async () => {
-      const query = gql`
-        mutation {
-          registerPerson(email: "fake.world@earth.org", password: "good") {
-            user {
-              id
-              profile {
-                id
-                email
-              }
-            }
-          }
-        }
-      `;
-      const rootValue = {};
-
-      const result = await graphql(schema, query, rootValue, context);
-      expect(result).toMatchSnapshot();
-    });
   });
 });

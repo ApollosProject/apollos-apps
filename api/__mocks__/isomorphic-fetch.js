@@ -85,7 +85,7 @@ fetch.mockRockAPI = () => {
       const identity = url
         .split('eq')
         .pop()
-        .trim(' ');
+        .trim(' '); // EXAMPLE URL: /api/UserLogins?$filter=UserName eq 'isaac.hardy@newspring.cc'
       if (!identity) {
         const response = new fetch.Response('');
         response.status = 400;

@@ -64,7 +64,7 @@ export default class AuthModel extends RockModel {
       `/UserLogins?$filter=UserName eq '${identity}'`
     ).get();
 
-    if (hasUserName.length > 0) {
+    if (hasUserName.length) {
       return true;
     }
     return false;
@@ -76,8 +76,8 @@ export default class AuthModel extends RockModel {
 
       return await this.context.connectors.Rock.post('/People', {
         Email: email,
-        IsSystem: false,
-        Gender: 0,
+        IsSystem: false, // Required by Rock
+        Gender: 0, // Required by Rock
       });
     } catch (err) {
       throw new Error('Unable to create profile!');
@@ -90,7 +90,7 @@ export default class AuthModel extends RockModel {
 
       return await this.context.connectors.Rock.post('/UserLogins', {
         PersonId: personId,
-        EntityTypeId: 27,
+        EntityTypeId: 27, // A default setting we use in Rock-person-creation-flow
         UserName: email,
         PlainTextPassword: password,
         LastLoginDateTime: `${moment().toISOString()}`,
@@ -101,22 +101,18 @@ export default class AuthModel extends RockModel {
   };
 
   registerPerson = async ({ email, password }) => {
-    try {
-      const personExists = await this.personExists({ identity: email });
-      if (personExists) throw new Error('User already exists!');
+    const personExists = await this.personExists({ identity: email });
+    if (personExists) throw new Error('User already exists!');
 
-      const personId = await this.createUserProfile({ email });
+    const personId = await this.createUserProfile({ email });
 
-      await this.createUserLogin({
-        email,
-        password,
-        personId,
-      });
+    await this.createUserLogin({
+      email,
+      password,
+      personId,
+    });
 
-      const token = await this.authenticate({ identity: email, password });
-      return token;
-    } catch (e) {
-      throw e;
-    }
+    const token = await this.authenticate({ identity: email, password });
+    return token;
   };
 }
