@@ -1,2 +1,2 @@
-export Button from './Button';
+export default from './Button';
 export ButtonLink from './ButtonLink';

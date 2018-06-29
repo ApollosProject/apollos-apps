@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native';
 
 import { H6 } from 'ui/typography';
-import { Button } from 'ui/Button';
+import Button from 'ui/Button';
 import Icon from 'ui/Icon';
 import { withTheme } from 'ui/theme';
 import styled from 'ui/styled';
