@@ -82,7 +82,7 @@ fetch.mockRockAPI = () => {
         }
         return resolveWith({ id: 21 });
       }
-      const identity = url
+      const identity = url // identity = UserName
         .split('eq')
         .pop()
         .trim(' '); // EXAMPLE URL: /api/UserLogins?$filter=UserName eq 'isaac.hardy@newspring.cc'
