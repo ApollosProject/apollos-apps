@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Query } from 'react-apollo';
-import { Button, View } from 'react-native';
+import { Button, View, ScrollView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { get, filter } from 'lodash';
 
 import { H5 } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
+import TileImage from 'ui/TileImage';
 import BackgroundView from 'ui/BackgroundView';
 import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import tabBarIcon from '../tabBarIcon';
 import GET_DISCOVER_ITEMS from './query';
 
-export class DiscoverScreen extends React.Component {
+export class DiscoverScreen extends Component {
   static navigationOptions = {
     title: 'Discover',
   };
@@ -43,136 +44,148 @@ export class DiscoverScreen extends React.Component {
     return (
       <BackgroundView>
         <Query query={GET_DISCOVER_ITEMS}>
-          {({ loading, error, content, refetch }) => {
+          {({ loading, error, data, refetch }) => {
             if (loading) return 'Loading...';
 
-            const filteredData = get(content, 'contentChannels', [])
+            const filteredData = get(data, 'contentChannels', [])
               .filter(
-                (channel) =>
-                  channel.name === 'Devotion Series' ||
-                  channel.name === 'Sermon Series' ||
-                  channel.name === 'Editorial'
+                ({ name }) =>
+                  name === 'Devotion Series' ||
+                  name === 'Sermon Series' ||
+                  name === 'Editorial'
               )
-              .map((filteredChannel) => ({
-                id: filteredChannel.id,
-                name: filteredChannel.name,
-                content: filteredChannel.childContentItemsConnection.edges,
+              .map(({ id, name, childContentItemsConnection }) => ({
+                id,
+                name,
+                content: childContentItemsConnection.edges,
               }));
+
+            const getIndividualContentFor = (contentName) =>
+              filter(filteredData, {
+                name: contentName,
+              })[0];
+
+            const renderTileImage = ({
+              item: {
+                node: { id, title, coverImage: { sources } = {} } = {},
+              } = {},
+            }) => (
+              <TileImage
+                onPressItem={() => console.log('Hi')}
+                key={id}
+                text={title}
+                image={sources[0].uri}
+              />
+            );
+
             return (
-              <PaddedView
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                <View
+              <ScrollView>
+                <PaddedView
                   style={{
                     display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
+                    flexDirection: 'column',
                   }}
                 >
-                  <H5>Sermons</H5>
-                  <Button
-                    title={'View All'}
-                    onPress={() => {
-                      this.props.navigation.navigate('ContentFeed', {
-                        itemId: filter(filteredData, {
-                          name: 'Sermon Series',
-                        })[0].id,
-                        itemTitle: filter(filteredData, {
-                          name: 'Sermon Series',
-                        })[0].name,
-                      });
+                  <View
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
                     }}
+                  >
+                    <H5>Sermons</H5>
+                    <Button
+                      title={'View All'}
+                      onPress={() => {
+                        this.props.navigation.navigate('ContentFeed', {
+                          itemId: getIndividualContentFor('Sermon Series').id,
+                          itemTitle: getIndividualContentFor('Sermon Series')
+                            .name,
+                        });
+                      }}
+                    />
+                  </View>
+                  <HorizontalTileFeed
+                    content={getIndividualContentFor('Sermon Series').content}
+                    keyExtractor={keyExtractor}
+                    renderItem={renderTileImage}
+                    onEndReached={this.fetchMoreHandler({
+                      fetchMore,
+                      error,
+                      loading,
+                    })}
+                    onEndReachedThreshold={onEndReachedThreshold}
+                    onRefresh={this.refetchHandler({ loading, refetch })}
+                    refreshing={loading}
                   />
-                </View>
-                <HorizontalTileFeed
-                  content={filteredData}
-                  keyExtractor={keyExtractor}
-                  renderItem={() => <H5>hi</H5>}
-                  onEndReached={this.fetchMoreHandler({
-                    fetchMore,
-                    error,
-                    loading,
-                  })}
-                  onEndReachedThreshold={onEndReachedThreshold}
-                  onRefresh={this.refetchHandler({ loading, refetch })}
-                  refreshing={loading}
-                />
-                <View
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
-                  <H5>Devotionals</H5>
-                  <Button
-                    title={'View All'}
-                    onPress={() => {
-                      this.props.navigation.navigate('ContentFeed', {
-                        itemId: filter(filteredData, {
-                          name: 'Devotion Series',
-                        })[0].id,
-                        itemTitle: filter(filteredData, {
-                          name: 'Devotion Series',
-                        })[0].name,
-                      });
+                  <View
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
                     }}
+                  >
+                    <H5>Devotionals</H5>
+                    <Button
+                      title={'View All'}
+                      onPress={() => {
+                        this.props.navigation.navigate('ContentFeed', {
+                          itemId: getIndividualContentFor('Devotion Series').id,
+                          itemTitle: getIndividualContentFor('Devotion Series')
+                            .name,
+                        });
+                      }}
+                    />
+                  </View>
+                  <HorizontalTileFeed
+                    content={getIndividualContentFor('Devotion Series').content}
+                    keyExtractor={keyExtractor}
+                    renderItem={renderTileImage}
+                    onEndReached={this.fetchMoreHandler({
+                      fetchMore,
+                      error,
+                      loading,
+                    })}
+                    onEndReachedThreshold={onEndReachedThreshold}
+                    onRefresh={this.refetchHandler({ loading, refetch })}
+                    refreshing={loading}
                   />
-                </View>
-                <HorizontalTileFeed
-                  content={filteredData}
-                  keyExtractor={keyExtractor}
-                  renderItem={() => <H5>hi</H5>}
-                  onEndReached={this.fetchMoreHandler({
-                    fetchMore,
-                    error,
-                    loading,
-                  })}
-                  onEndReachedThreshold={onEndReachedThreshold}
-                  onRefresh={this.refetchHandler({ loading, refetch })}
-                  refreshing={loading}
-                />
-                <View
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
-                  <H5>Stories</H5>
-                  <Button
-                    title={'View All'}
-                    onPress={() => {
-                      this.props.navigation.navigate('ContentFeed', {
-                        itemId: filter(filteredData, { name: 'Editorial' })[0]
-                          .id,
-                        itemTitle: filter(filteredData, {
-                          name: 'Editorial',
-                        })[0].name,
-                      });
+                  <View
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
                     }}
+                  >
+                    <H5>Stories</H5>
+                    <Button
+                      title={'View All'}
+                      onPress={() => {
+                        this.props.navigation.navigate('ContentFeed', {
+                          itemId: getIndividualContentFor('Editorial').id,
+                          itemTitle: getIndividualContentFor('Editorial').name,
+                        });
+                      }}
+                    />
+                  </View>
+                  <HorizontalTileFeed
+                    content={getIndividualContentFor('Editorial').content}
+                    keyExtractor={keyExtractor}
+                    renderItem={renderTileImage}
+                    onEndReached={this.fetchMoreHandler({
+                      fetchMore,
+                      error,
+                      loading,
+                    })}
+                    onEndReachedThreshold={onEndReachedThreshold}
+                    onRefresh={this.refetchHandler({ loading, refetch })}
+                    refreshing={loading}
                   />
-                </View>
-                <HorizontalTileFeed
-                  content={filteredData}
-                  keyExtractor={keyExtractor}
-                  renderItem={() => <H5>hi</H5>}
-                  onEndReached={this.fetchMoreHandler({
-                    fetchMore,
-                    error,
-                    loading,
-                  })}
-                  onEndReachedThreshold={onEndReachedThreshold}
-                  onRefresh={this.refetchHandler({ loading, refetch })}
-                  refreshing={loading}
-                />
-              </PaddedView>
+                </PaddedView>
+              </ScrollView>
             );
           }}
         </Query>
