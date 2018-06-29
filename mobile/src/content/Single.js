@@ -37,9 +37,11 @@ class ContentSingle extends React.Component {
     const { navigation } = this.props;
     const itemId = navigation.getParam('itemId', []);
     const loadingStateObject = {
-      id: 'fakeId0',
-      title: '',
-      isLoading: true,
+      node: {
+        id: 'fakeId0',
+        title: '',
+        isLoading: true,
+      },
     };
     return (
       <Query query={GET_CONTENT} variables={{ itemId }}>
