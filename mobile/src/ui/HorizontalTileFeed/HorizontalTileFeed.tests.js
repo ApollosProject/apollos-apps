@@ -8,9 +8,11 @@ import CardTile from 'ui/CardTile';
 import HorizontalTileFeed from './';
 
 const loadingStateObject = {
-  id: 'fakeId0',
-  title: '',
-  isLoading: true,
+  node: {
+    id: 'fakeId0',
+    title: '',
+    isLoading: true,
+  },
 };
 
 describe('The HorizontalTileFeed component', () => {
@@ -20,12 +22,16 @@ describe('The HorizontalTileFeed component', () => {
         <HorizontalTileFeed
           content={[
             {
-              id: 'fakeId0',
-              title: 'Why Jesus is Timeless',
+              node: {
+                id: 'fakeId0',
+                title: 'Why Jesus is Timeless',
+              },
             },
             {
-              id: 'fakeId1',
-              title: 'Why Jesus is Timeless',
+              node: {
+                id: 'fakeId1',
+                title: 'Why Jesus is Timeless',
+              },
             },
           ]}
           renderItem={({ item, index }) => (
