@@ -22,6 +22,12 @@ exports[`The TileFeed component renders correctly 1`] = `
   initialNumToRender={10}
   initialScrollIndex={0}
   keyExtractor={[Function]}
+  loadingStateObject={
+    Object {
+      "id": "fakeId0",
+      "title": "",
+    }
+  }
   maxToRenderPerBatch={10}
   numColumns={1}
   onContentSizeChange={[Function]}
@@ -278,6 +284,12 @@ exports[`The TileFeed component renders empty state 1`] = `
   initialNumToRender={10}
   initialScrollIndex={0}
   keyExtractor={[Function]}
+  loadingStateObject={
+    Object {
+      "id": "fakeId0",
+      "title": "",
+    }
+  }
   maxToRenderPerBatch={10}
   numColumns={1}
   onContentSizeChange={[Function]}

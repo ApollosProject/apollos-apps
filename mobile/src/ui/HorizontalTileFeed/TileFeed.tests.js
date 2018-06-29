@@ -22,6 +22,10 @@ describe('The TileFeed component', () => {
               title: 'Why Jesus is Timeless',
             },
           ]}
+          loadingStateObject={{
+            id: 'fakeId0',
+            title: '',
+          }}
           renderItem={({ item, index }) => (
             <CardTile
               number={index + 1}
@@ -40,6 +44,10 @@ describe('The TileFeed component', () => {
         <TileFeed
           refreshing
           content={[]}
+          loadingStateObject={{
+            id: 'fakeId0',
+            title: '',
+          }}
           renderItem={({ item, index }) => (
             <CardTile
               number={index + 1}
