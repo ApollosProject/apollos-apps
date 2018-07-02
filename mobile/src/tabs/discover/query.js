@@ -5,7 +5,7 @@ const GET_DISCOVER_ITEMS = gql`
     contentChannels {
       id
       name
-      childContentItemsConnection {
+      childContentItemsConnection(first: 3) {
         edges {
           node {
             id
