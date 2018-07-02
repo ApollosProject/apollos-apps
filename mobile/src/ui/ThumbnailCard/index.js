@@ -12,7 +12,7 @@ import FlexedView from 'ui/FlexedView';
 import { H5, BodyText } from 'ui/typography';
 import Paragraph from 'ui/Paragraph';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
-import CategoryLabel from 'ui/CategoryLabel';
+import ChannelLabel from 'ui/ChannelLabel';
 
 import Thumbnail from './Thumbnail';
 
@@ -73,7 +73,7 @@ const ThumbnailCard = enhance(
               </Paragraph>
             ) : null}
             {typeof category !== 'undefined' ? (
-              <CategoryLabel
+              <ChannelLabel
                 label={startCase(toLower(category))}
                 isLoading={isLoading}
               />
