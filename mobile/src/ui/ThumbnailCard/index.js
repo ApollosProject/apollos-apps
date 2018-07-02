@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TouchableWithoutFeedback } from 'react-native';
 import { compose, pure, setPropTypes } from 'recompose';
 import { startCase, toLower } from 'lodash';
 
@@ -58,31 +59,34 @@ const ThumbnailCard = enhance(
     thumbnailImage,
     category,
     isLoading,
+    onPressItem,
     ...otherProps
   }) => (
-    <Card isLoading={isLoading} {...otherProps}>
-      <HorizontalLayout>
-        <LeftColumn>
-          <H5>{title}</H5>
-          {description ? (
-            <Paragraph>
-              <BodyText>{description}</BodyText>
-            </Paragraph>
+    <TouchableWithoutFeedback onPress={() => onPressItem()}>
+      <Card isLoading={isLoading} {...otherProps}>
+        <HorizontalLayout>
+          <LeftColumn>
+            <H5>{title}</H5>
+            {description ? (
+              <Paragraph>
+                <BodyText>{description}</BodyText>
+              </Paragraph>
+            ) : null}
+            {typeof category !== 'undefined' ? (
+              <CategoryLabel
+                label={startCase(toLower(category))}
+                isLoading={isLoading}
+              />
+            ) : null}
+          </LeftColumn>
+          {images ? (
+            <RightColumn>
+              <Thumbnail source={images} thumbnail={thumbnailImage} />
+            </RightColumn>
           ) : null}
-          {typeof category !== 'undefined' ? (
-            <CategoryLabel
-              label={startCase(toLower(category))}
-              isLoading={isLoading}
-            />
-          ) : null}
-        </LeftColumn>
-        {images ? (
-          <RightColumn>
-            <Thumbnail source={images} thumbnail={thumbnailImage} />
-          </RightColumn>
-        ) : null}
-      </HorizontalLayout>
-    </Card>
+        </HorizontalLayout>
+      </Card>
+    </TouchableWithoutFeedback>
   )
 );
 

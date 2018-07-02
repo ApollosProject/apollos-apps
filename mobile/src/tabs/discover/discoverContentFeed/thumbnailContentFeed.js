@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { Button, View, FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 import { get, filter } from 'lodash';
 import { H5 } from 'ui/typography';
-import HorizontalTileFeed from 'ui/HorizontalTileFeed';
+// import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import ThumbnailCardItem from './thumbnailCardItem';
 
 const TileContentFeed = ({
@@ -56,17 +56,12 @@ const TileContentFeed = ({
           }}
         />
       </View>
-      <HorizontalTileFeed
-        content={getIndividualContentFor().content}
+      <FlatList
+        data={getIndividualContentFor().content}
         keyExtractor={keyExtractor}
         renderItem={({ item }) => (
           <ThumbnailCardItem item={item} navigation={navigation} />
         )}
-        loadingStateObject={{
-          id: 'fake_id',
-          title: '',
-          sources: [],
-        }}
         onEndReached={onEndReached}
         onEndReachedThreshold={onEndReachedThreshold}
         onRefresh={onRefresh}
