@@ -65,8 +65,10 @@ const generateLoadingStateData = (loadingStateObject, numberOfItems) => {
   const loadingStateData = [loadingStateObject];
 
   while (loadingStateData.length < numberOfItems) {
-    const newData = () => loadingStateObject;
-    newData.id = `fakeId${loadingStateData.length}`;
+    const newData = {
+      ...loadingStateObject,
+      id: `fakeId${loadingStateData.length}`,
+    };
     loadingStateData.push(newData);
   }
 
@@ -74,12 +76,14 @@ const generateLoadingStateData = (loadingStateObject, numberOfItems) => {
 };
 
 const enhance = compose(
-  branch(
-    ({ isLoading, content }) => isLoading && !content.length,
-    withProps(({ loadingStateObject } = {}) => ({
-      content: generateLoadingStateData(loadingStateObject, 5),
-      fetchMore: () => {},
-    }))
+  withProps(
+    ({ isLoading, content, loadingStateObject } = {}) =>
+      isLoading && (!content || !content.length)
+        ? {
+            content: generateLoadingStateData(loadingStateObject, 5),
+            fetchMore: () => {},
+          }
+        : {}
   ),
   withTheme(({ theme: { sizing: { baseUnit } = {} } = {} } = {}) => ({
     theme: { baseUnit },

@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import TileImage from 'ui/TileImage';
 
 const TileImageItem = ({
-  item: { node: { id, title, coverImage: { sources } = {} } = {} } = {},
+  item: { id, title, coverImage: { sources = [] } = {} } = {},
+  isLoading,
   navigation,
 }) => (
   <View style={{ flex: 1, padding: 10 }}>
@@ -15,9 +16,10 @@ const TileImageItem = ({
           itemTitle: title,
         })
       }
+      isLoading={isLoading}
       key={id}
       text={title}
-      image={sources[0].uri}
+      image={sources}
     />
   </View>
 );
@@ -27,6 +29,7 @@ TileImageItem.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }),
+  isLoading: PropTypes.bool,
 };
 
 export default TileImageItem;

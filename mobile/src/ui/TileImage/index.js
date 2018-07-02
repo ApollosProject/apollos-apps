@@ -32,23 +32,29 @@ const enhance = compose(
   pure
 );
 
-const TileImage = enhance(({ image, link, onPressItem, text, theme }) => (
-  <TouchableWithoutFeedback onPress={() => onPressItem({ ...link })}>
-    <CardView>
-      <GradientOverlayImage
-        source={image}
-        overlayColor={text ? theme.colors.black : null}
-      />
-      {text ? <Title>{text}</Title> : null}
-    </CardView>
-  </TouchableWithoutFeedback>
-));
+const TileImage = enhance(
+  ({ image, link, onPressItem, text, theme, isLoading }) => (
+    <TouchableWithoutFeedback
+      onPress={() => !isLoading && onPressItem({ ...link })}
+    >
+      <CardView>
+        <GradientOverlayImage
+          source={image}
+          isLoading={isLoading}
+          overlayColor={text ? theme.colors.black : null}
+        />
+        <Title isLoading={isLoading}>{text || ''}</Title>
+      </CardView>
+    </TouchableWithoutFeedback>
+  )
+);
 
 TileImage.propTypes = {
   image: GradientOverlayImage.propTypes.source,
   link: PropTypes.string,
   onPressItem: PropTypes.func,
   text: PropTypes.string,
+  isLoading: PropTypes.bool,
 };
 
 export default TileImage;

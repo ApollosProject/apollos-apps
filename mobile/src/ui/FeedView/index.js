@@ -32,7 +32,7 @@ export class FeedView extends React.Component {
     isLoading: false,
     // renderItem: this.defaultFeedItemRenderer,
     onEndReachedThreshold: 0.7,
-    keyExtractor: (item) => item && item.node.id,
+    keyExtractor: (item) => (item && item.id) || (item && item.node.id),
     content: [],
     refetch: undefined,
     fetchMore: undefined,
