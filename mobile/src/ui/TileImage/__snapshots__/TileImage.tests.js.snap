@@ -34,6 +34,25 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
       }
     />
   </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 20,
+        "color": "#F8F7F4",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 15.75,
+        "left": 20,
+        "lineHeight": 17.75,
+        "position": "absolute",
+      }
+    }
+  >
+    
+  </Text>
 </View>
 `;
 
@@ -162,5 +181,24 @@ exports[`the TileImage component should render without text 1`] = `
       }
     />
   </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 20,
+        "color": "#F8F7F4",
+        "fontFamily": "OpenSans-Bold",
+        "fontSize": 15.75,
+        "left": 20,
+        "lineHeight": 17.75,
+        "position": "absolute",
+      }
+    }
+  >
+    
+  </Text>
 </View>
 `;
