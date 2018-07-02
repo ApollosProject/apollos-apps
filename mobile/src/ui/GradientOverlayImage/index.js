@@ -47,7 +47,9 @@ const GradientOverlayImage = pure(
     const Component = ComponentProp || DefaultImageComponent;
     return (
       <Container>
-        <Component source={imageSource} {...otherProps} />
+        {imageSource ? (
+          <Component source={imageSource} {...otherProps} />
+        ) : null}
         {overlayColor ? (
           <Overlay
             colors={getGradientValues(overlayColor).colors}

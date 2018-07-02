@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, branch, withProps } from 'recompose';
+import { compose, withProps } from 'recompose';
 
 import { withTheme } from 'ui/theme';
 
@@ -19,7 +19,7 @@ export class HorizontalTileFeed extends PureComponent {
   };
 
   static defaultProps = {
-    keyExtractor: (item) => item.id,
+    keyExtractor: (item) => item && (item.id || item.node.id),
     content: [],
     isLoading: false,
   };
@@ -62,13 +62,13 @@ export class HorizontalTileFeed extends PureComponent {
 }
 
 const generateLoadingStateData = (loadingStateObject, numberOfItems) => {
-  const loadingStateData = [loadingStateObject];
+  const itemData = () => JSON.parse(JSON.stringify(loadingStateObject));
+
+  const loadingStateData = [itemData()];
 
   while (loadingStateData.length < numberOfItems) {
-    const newData = {
-      ...loadingStateObject,
-      id: `fakeId${loadingStateData.length}`,
-    };
+    const newData = itemData();
+    newData.id = `fakeId${loadingStateData.length}`;
     loadingStateData.push(newData);
   }
 

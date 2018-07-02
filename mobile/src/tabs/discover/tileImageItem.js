@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import TileImage from 'ui/TileImage';
 
 const TileImageItem = ({
-  item: { id, title, coverImage: { sources = [] } = {} } = {},
+  item: { id, title, coverImage = {} } = {},
   isLoading,
   navigation,
 }) => (
@@ -19,7 +19,7 @@ const TileImageItem = ({
       isLoading={isLoading}
       key={id}
       text={title}
-      image={sources}
+      image={coverImage && coverImage.sources}
     />
   </View>
 );

@@ -15,13 +15,7 @@ const RowHeader = styled({
   paddingVertical: 0,
 })(PaddedView);
 
-const TileContentFeed = ({
-  isLoading,
-  id,
-  name,
-  navigation,
-  childContentItemsConnection = { edges: [] },
-}) => (
+const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
     <RowHeader>
       <H5 isLoading={isLoading}>{name}</H5>
@@ -38,7 +32,7 @@ const TileContentFeed = ({
       ) : null}
     </RowHeader>
     <HorizontalTileFeed
-      content={childContentItemsConnection.edges.map((item) => item.node)}
+      content={content}
       renderItem={({ item }) => (
         <TileImageItem
           item={item}
@@ -64,13 +58,9 @@ TileContentFeed.propTypes = {
   isLoading: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
-  childContentItemsConnection: PropTypes.shape({
-    edges: PropTypes.arrayOf(
-      PropTypes.shape({
-        node: PropTypes.any, // this component doesn't care about the shape of `node`, just that it exists
-      })
-    ),
-  }),
+  content: PropTypes.arrayOf(
+    PropTypes.any // this component doesn't care about the shape of `node`, just that it exists
+  ),
 };
 
 export default withNavigation(TileContentFeed);
