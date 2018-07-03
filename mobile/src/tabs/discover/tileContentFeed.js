@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 import PaddedView from 'ui/PaddedView';
-import { H5 } from 'ui/typography';
+import { H4 } from 'ui/typography';
 import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import styled from 'ui/styled';
+import { ButtonLink } from 'ui/Button';
 import TileImageItem from './tileImageItem';
 
 const RowHeader = styled({
@@ -18,17 +18,18 @@ const RowHeader = styled({
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
     <RowHeader>
-      <H5 isLoading={isLoading}>{name}</H5>
+      <H4 isLoading={isLoading}>{name}</H4>
       {!isLoading ? (
-        <Button
-          title={'View All'}
+        <ButtonLink
           onPress={() => {
             navigation.navigate('ContentFeed', {
               itemId: id,
               itemTitle: name,
             });
           }}
-        />
+        >
+          View All
+        </ButtonLink>
       ) : null}
     </RowHeader>
     <HorizontalTileFeed
