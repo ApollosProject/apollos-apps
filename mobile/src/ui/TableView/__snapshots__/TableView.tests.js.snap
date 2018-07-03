@@ -114,12 +114,12 @@ exports[`the TableView Component should render 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#505050",
+            "color": "#303030",
             "flexGrow": 1,
             "flexShrink": 1,
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 20.16,
             "paddingLeft": 10,
             "paddingRight": 10,
           }
@@ -231,12 +231,12 @@ exports[`the TableView Component should render 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#505050",
+            "color": "#303030",
             "flexGrow": 1,
             "flexShrink": 1,
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 20.16,
             "paddingLeft": 10,
             "paddingRight": 10,
           }
@@ -378,12 +378,12 @@ exports[`the TableView Component should render 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#505050",
+            "color": "#303030",
             "flexGrow": 1,
             "flexShrink": 1,
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 20.16,
             "paddingLeft": 0,
             "paddingRight": 10,
           }
@@ -421,12 +421,12 @@ exports[`the TableView Component should render 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "#505050",
+            "color": "#303030",
             "flexGrow": 1,
             "flexShrink": 1,
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 20.16,
             "paddingLeft": 0,
             "paddingRight": 10,
           }
