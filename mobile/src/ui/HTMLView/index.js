@@ -51,7 +51,15 @@ export const wrapTextChildren = (children, Component = BodyText) => {
 
 export const defaultRenderer = (node, { children }) => {
   if (node.type === 'text' && node.data && node.data.trim()) {
-    return <Text>{decodeHTML(node.data)}</Text>;
+    const text = decodeHTML(node.data);
+    if (!node.parent) {
+      return (
+        <Paragraph>
+          <BodyText>{text}</BodyText>
+        </Paragraph>
+      );
+    }
+    return <Text>{text}</Text>;
   }
 
   switch (node.name) {
@@ -113,7 +121,7 @@ export const defaultRenderer = (node, { children }) => {
       );
     }
     case 'br':
-      return <Text>{LINE_BREAK}</Text>;
+      return <BodyText>{LINE_BREAK}</BodyText>;
     default:
       return children;
   }
