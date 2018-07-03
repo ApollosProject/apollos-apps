@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, TouchableWithoutFeedback } from 'react-native';
 import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
+import { get } from 'lodash';
 
 import styled from 'ui/styled';
 import FeedItemCard from 'ui/FeedItemCard';
@@ -59,12 +60,12 @@ export class FeedView extends React.Component {
         onPress={() => this.props.onPressItem({ ...item })}
       >
         <FeedItemCard
-          id={item.node.id}
-          title={item.node.title || item.node.name || ' '}
-          channelType={item.node.parentChannel.name}
-          channelTypeIcon={item.node.parentChannel.iconName}
-          images={item.node.coverImage.sources}
-          isLoading={item.node.isLoading}
+          id={get(item, 'node.id')}
+          title={get(item, 'node.title') || get(item, 'node.name') || ' '}
+          channelType={get(item, 'node.parentChannel.name')}
+          channelTypeIcon={get(item, 'node.parentChannel.iconName')}
+          images={get(item, 'node.coverImage.sources')}
+          isLoading={get(item, 'node.isLoading')}
         />
       </TouchableWithoutFeedback>
     );

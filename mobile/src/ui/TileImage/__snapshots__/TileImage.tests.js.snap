@@ -11,8 +11,11 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "aspectRatio": 1,
       "borderRadius": 6,
+      "height": "100%",
       "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
@@ -20,6 +23,7 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
         "width": "100%",
       }
     }
@@ -48,6 +52,7 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
         "left": 20,
         "lineHeight": 17.75,
         "position": "absolute",
+        "right": 20,
       }
     }
   >
@@ -67,8 +72,11 @@ exports[`the TileImage component should render 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "aspectRatio": 1,
       "borderRadius": 6,
+      "height": "100%",
       "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
@@ -76,6 +84,7 @@ exports[`the TileImage component should render 1`] = `
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
         "width": "100%",
       }
     }
@@ -139,6 +148,7 @@ exports[`the TileImage component should render 1`] = `
         "left": 20,
         "lineHeight": 17.75,
         "position": "absolute",
+        "right": 20,
       }
     }
   >
@@ -158,8 +168,11 @@ exports[`the TileImage component should render without text 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "aspectRatio": 1,
       "borderRadius": 6,
+      "height": "100%",
       "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
@@ -167,6 +180,7 @@ exports[`the TileImage component should render without text 1`] = `
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
         "width": "100%",
       }
     }
@@ -195,6 +209,7 @@ exports[`the TileImage component should render without text 1`] = `
         "left": 20,
         "lineHeight": 17.75,
         "position": "absolute",
+        "right": 20,
       }
     }
   >

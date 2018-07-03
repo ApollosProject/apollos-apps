@@ -12,6 +12,9 @@ const CardView = styled(
   ({ theme }) => ({
     borderRadius: theme.sizing.borderRadius,
     overflow: 'hidden',
+    width: '100%',
+    height: '100%',
+    aspectRatio: 1,
   }),
   'TileImage'
 )(View);
@@ -21,6 +24,7 @@ const Title = styled(
     position: 'absolute',
     bottom: theme.sizing.baseUnit,
     left: theme.sizing.baseUnit,
+    right: theme.sizing.baseUnit,
     backgroundColor: theme.colors.transparent,
     color: theme.colors.lightPrimary,
   }),

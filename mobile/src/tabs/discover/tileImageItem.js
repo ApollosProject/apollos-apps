@@ -2,13 +2,19 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import TileImage from 'ui/TileImage';
+import styled from 'ui/styled';
+
+const Container = styled(({ theme }) => ({
+  flex: 1,
+  padding: theme.sizing.baseUnit / 2,
+}))(View);
 
 const TileImageItem = ({
   item: { id, title, coverImage = {} } = {},
   isLoading,
   navigation,
 }) => (
-  <View style={{ flex: 1, padding: 10 }}>
+  <Container>
     <TileImage
       onPressItem={() =>
         navigation.navigate('ContentSingle', {
@@ -21,7 +27,7 @@ const TileImageItem = ({
       text={title}
       image={coverImage && coverImage.sources}
     />
-  </View>
+  </Container>
 );
 
 TileImageItem.propTypes = {
