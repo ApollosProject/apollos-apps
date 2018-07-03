@@ -122,9 +122,9 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
                 }
               }
             >
@@ -156,8 +156,8 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="21.6"
-                bbWidth="21.6"
+                bbHeight="19.2"
+                bbWidth="19.2"
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -170,8 +170,8 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                     false,
                     Object {
                       "flex": 0,
-                      "height": 21.6,
-                      "width": 21.6,
+                      "height": 19.2,
+                      "width": 19.2,
                     },
                   ]
                 }
@@ -242,9 +242,9 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                   style={
                     Object {
                       "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                     }
                   }
                 >
@@ -567,9 +567,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -612,9 +612,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -684,9 +684,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -729,9 +729,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -801,9 +801,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -846,9 +846,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -918,9 +918,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -963,9 +963,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1035,9 +1035,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1080,9 +1080,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1152,9 +1152,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1197,9 +1197,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1269,9 +1269,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1314,9 +1314,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1386,9 +1386,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1431,9 +1431,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1503,9 +1503,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1548,9 +1548,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1620,9 +1620,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1665,9 +1665,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1829,9 +1829,9 @@ exports[`The FeedView component renders correctly 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
                 }
               }
             >
@@ -1863,8 +1863,8 @@ exports[`The FeedView component renders correctly 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="21.6"
-                bbWidth="21.6"
+                bbHeight="19.2"
+                bbWidth="19.2"
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -1877,8 +1877,8 @@ exports[`The FeedView component renders correctly 1`] = `
                     false,
                     Object {
                       "flex": 0,
-                      "height": 21.6,
-                      "width": 21.6,
+                      "height": 19.2,
+                      "width": 19.2,
                     },
                   ]
                 }
@@ -1949,9 +1949,9 @@ exports[`The FeedView component renders correctly 1`] = `
                   style={
                     Object {
                       "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                     }
                   }
                 >
@@ -2024,9 +2024,9 @@ exports[`The FeedView component renders correctly 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
                 }
               }
             >
@@ -2058,8 +2058,8 @@ exports[`The FeedView component renders correctly 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="21.6"
-                bbWidth="21.6"
+                bbHeight="19.2"
+                bbWidth="19.2"
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -2072,8 +2072,8 @@ exports[`The FeedView component renders correctly 1`] = `
                     false,
                     Object {
                       "flex": 0,
-                      "height": 21.6,
-                      "width": 21.6,
+                      "height": 19.2,
+                      "width": 19.2,
                     },
                   ]
                 }
@@ -2144,9 +2144,9 @@ exports[`The FeedView component renders correctly 1`] = `
                   style={
                     Object {
                       "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                     }
                   }
                 >
@@ -2468,9 +2468,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2513,9 +2513,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2585,9 +2585,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2630,9 +2630,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2702,9 +2702,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2747,9 +2747,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2819,9 +2819,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2864,9 +2864,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2936,9 +2936,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2981,9 +2981,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3053,9 +3053,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3098,9 +3098,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3170,9 +3170,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3215,9 +3215,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3287,9 +3287,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3332,9 +3332,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3404,9 +3404,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3449,9 +3449,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3521,9 +3521,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3566,9 +3566,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />

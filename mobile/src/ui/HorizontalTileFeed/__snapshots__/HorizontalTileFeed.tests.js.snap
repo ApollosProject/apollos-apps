@@ -115,12 +115,12 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -132,9 +132,9 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   style={
                     Object {
                       "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 20.16,
                     }
                   }
                 >
@@ -157,9 +157,9 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "OpenSans-Bold",
-                    "fontSize": 25.2,
-                    "lineHeight": 31.28,
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -221,12 +221,12 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -238,9 +238,9 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   style={
                     Object {
                       "color": "#303030",
-                      "fontFamily": "OpenSans-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 20.16,
                     }
                   }
                 >
@@ -263,9 +263,9 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "OpenSans-Bold",
-                    "fontSize": 25.2,
-                    "lineHeight": 31.28,
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -423,12 +423,12 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -437,8 +437,8 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   Object {
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 45,
-                    "width": 45,
+                    "height": 40,
+                    "width": 40,
                   }
                 }
               />
@@ -457,9 +457,9 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     "alignSelf": "stretch",
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 25.2,
-                    "marginVertical": 3.040000000000001,
-                    "width": "80%",
+                    "height": 24,
+                    "marginVertical": 1.8000000000000007,
+                    "width": "100%",
                   }
                 }
               />
@@ -519,12 +519,12 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -533,8 +533,8 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   Object {
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 45,
-                    "width": 45,
+                    "height": 40,
+                    "width": 40,
                   }
                 }
               />
@@ -553,9 +553,9 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     "alignSelf": "stretch",
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 25.2,
-                    "marginVertical": 3.040000000000001,
-                    "width": "80%",
+                    "height": 24,
+                    "marginVertical": 1.8000000000000007,
+                    "width": "100%",
                   }
                 }
               />
@@ -615,12 +615,12 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -629,8 +629,8 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   Object {
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 45,
-                    "width": 45,
+                    "height": 40,
+                    "width": 40,
                   }
                 }
               />
@@ -649,9 +649,9 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     "alignSelf": "stretch",
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 25.2,
-                    "marginVertical": 3.040000000000001,
-                    "width": "80%",
+                    "height": 24,
+                    "marginVertical": 1.8000000000000007,
+                    "width": "100%",
                   }
                 }
               />
@@ -711,12 +711,12 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -725,8 +725,8 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   Object {
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 45,
-                    "width": 45,
+                    "height": 40,
+                    "width": 40,
                   }
                 }
               />
@@ -745,9 +745,9 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     "alignSelf": "stretch",
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 25.2,
-                    "marginVertical": 3.040000000000001,
-                    "width": "80%",
+                    "height": 24,
+                    "marginVertical": 1.8000000000000007,
+                    "width": "100%",
                   }
                 }
               />
@@ -807,12 +807,12 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "backgroundColor": "#FFFFFF",
                   "borderBottomRightRadius": 6,
                   "borderTopLeftRadius": 6,
-                  "height": 36,
+                  "height": 32,
                   "justifyContent": "center",
                   "left": 0,
                   "position": "absolute",
                   "top": 0,
-                  "width": 36,
+                  "width": 32,
                 }
               }
             >
@@ -821,8 +821,8 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   Object {
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 45,
-                    "width": 45,
+                    "height": 40,
+                    "width": 40,
                   }
                 }
               />
@@ -841,9 +841,9 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     "alignSelf": "stretch",
                     "backgroundColor": "#DBDBD9",
                     "borderRadius": 6,
-                    "height": 25.2,
-                    "marginVertical": 3.040000000000001,
-                    "width": "80%",
+                    "height": 24,
+                    "marginVertical": 1.8000000000000007,
+                    "width": "100%",
                   }
                 }
               />
