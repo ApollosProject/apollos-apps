@@ -60,9 +60,9 @@ exports[`the ThumbnailCard component should render 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "OpenSans-Bold",
-              "fontSize": 20.02,
-              "lineHeight": 25.33,
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
             }
           }
         >
@@ -134,9 +134,9 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "OpenSans-Bold",
-              "fontSize": 20.02,
-              "lineHeight": 25.33,
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
             }
           }
         >
@@ -166,9 +166,9 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 14,
-                  "marginVertical": 0.8899999999999997,
-                  "width": "40%",
+                  "height": 12,
+                  "marginVertical": 2.6400000000000006,
+                  "width": "50%",
                 }
               }
             />
@@ -277,9 +277,9 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "OpenSans-Bold",
-              "fontSize": 20.02,
-              "lineHeight": 25.33,
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
             }
           }
         >
@@ -310,9 +310,9 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
               style={
                 Object {
                   "color": "#505050",
-                  "fontFamily": "OpenSans-Regular",
-                  "fontSize": 14,
-                  "lineHeight": 15.78,
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
                 }
               }
             >
@@ -386,9 +386,9 @@ exports[`the ThumbnailCard component should render with a category and images 1`
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "OpenSans-Bold",
-              "fontSize": 20.02,
-              "lineHeight": 25.33,
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
             }
           }
         >
@@ -419,9 +419,9 @@ exports[`the ThumbnailCard component should render with a category and images 1`
               style={
                 Object {
                   "color": "#505050",
-                  "fontFamily": "OpenSans-Regular",
-                  "fontSize": 14,
-                  "lineHeight": 15.78,
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
                 }
               }
             >
@@ -532,9 +532,9 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "OpenSans-Bold",
-              "fontSize": 20.02,
-              "lineHeight": 25.33,
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
             }
           }
         >
@@ -556,9 +556,9 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "DroidSerif",
-                "fontSize": 20.02,
-                "lineHeight": 33.11,
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
@@ -631,9 +631,9 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "OpenSans-Bold",
-              "fontSize": 20.02,
-              "lineHeight": 25.33,
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
             }
           }
         >
