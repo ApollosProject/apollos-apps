@@ -47,7 +47,6 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
         coverImage: [],
       }}
       isLoading={isLoading}
-      refreshing={isLoading}
     />
   </PaddedView>
 );

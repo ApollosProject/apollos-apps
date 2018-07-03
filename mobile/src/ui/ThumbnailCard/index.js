@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableWithoutFeedback } from 'react-native';
-import { compose, pure, setPropTypes } from 'recompose';
+import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
 
 import { withIsLoading } from 'ui/isLoading';
@@ -16,17 +16,7 @@ import ChannelLabel from 'ui/ChannelLabel';
 
 import Thumbnail from './Thumbnail';
 
-const enhance = compose(
-  setPropTypes({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-    images: Thumbnail.propTypes.source,
-    category: PropTypes.string,
-    isLoading: PropTypes.bool,
-  }),
-  withIsLoading,
-  pure
-);
+const enhance = compose(withIsLoading, pure);
 
 const HorizontalLayout = styled({
   alignItems: 'center',
@@ -89,5 +79,13 @@ const ThumbnailCard = enhance(
     </TouchableWithoutFeedback>
   )
 );
+
+ThumbnailCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  images: Thumbnail.propTypes.source,
+  category: PropTypes.string,
+  isLoading: PropTypes.bool,
+};
 
 export default ThumbnailCard;

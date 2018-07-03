@@ -1,22 +1,29 @@
 import React from 'react';
-import { FlatList } from 'react-native';
 import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 
+import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
 import TileContentFeed from './tileContentFeed';
 import tabBarIcon from '../tabBarIcon';
 import GET_DISCOVER_ITEMS from './query';
 
+const childContentItemLoadingObject = {
+  node: {
+    isLoading: true,
+  },
+};
+
 const DiscoverScreen = () => (
   <BackgroundView>
     <Query query={GET_DISCOVER_ITEMS}>
-      {({ loading, data: { contentChannels = [] } = {}, refetch }) => (
-        <FlatList
-          data={contentChannels}
+      {({ error, loading, data: { contentChannels = [] } = {}, refetch }) => (
+        <FeedView
+          error={error}
+          content={contentChannels}
           keyExtractor={(item) => item.id}
-          refreshing={loading}
-          onRefresh={refetch}
+          isLoading={loading}
+          refetch={refetch}
           renderItem={({ item }) => (
             <TileContentFeed
               id={item.id}
@@ -26,6 +33,16 @@ const DiscoverScreen = () => (
               )}
             />
           )}
+          loadingStateObject={{
+            name: '',
+            childContentItemsConnection: {
+              edges: [
+                childContentItemLoadingObject,
+                childContentItemLoadingObject,
+                childContentItemLoadingObject,
+              ],
+            },
+          }}
         />
       )}
     </Query>

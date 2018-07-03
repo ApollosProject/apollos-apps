@@ -19,7 +19,7 @@ export class HorizontalTileFeed extends PureComponent {
   };
 
   static defaultProps = {
-    keyExtractor: (item) => item && (item.id || item.node.id),
+    keyExtractor: (item) => item && item.id,
     content: [],
     isLoading: false,
   };
@@ -64,7 +64,7 @@ export class HorizontalTileFeed extends PureComponent {
 const generateLoadingStateData = (loadingStateObject, numberOfItems) => {
   const itemData = () => JSON.parse(JSON.stringify(loadingStateObject));
 
-  const loadingStateData = [itemData()];
+  const loadingStateData = [];
 
   while (loadingStateData.length < numberOfItems) {
     const newData = itemData();
