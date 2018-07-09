@@ -10,7 +10,8 @@
         "root": ["./src"],
         "extensions": [".android.js", ".ios.js", ".js", ".graphql"]
       }
-    ], "import-graphql"
+    ],
+    ["import-graphql"]
   ],
   "env": {
     "development": {
