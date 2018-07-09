@@ -24,8 +24,8 @@ export class ContentFeed extends React.Component {
 
   onPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
-      itemId: item.node.id,
-      itemTitle: item.node.title,
+      itemId: item.id,
+      itemTitle: item.title,
     });
 
   render() {
