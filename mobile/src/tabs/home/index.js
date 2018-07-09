@@ -48,8 +48,8 @@ class Home extends PureComponent {
 
   onPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
-      itemId: item.node.id,
-      itemTitle: item.node.title,
+      itemId: item.id,
+      itemTitle: item.title,
     });
 
   render() {
@@ -58,7 +58,7 @@ class Home extends PureComponent {
         <Query query={getUserFeed}>
           {({ loading, error, data, refetch }) => (
             <FeedView
-              content={get(data, 'userFeed.edges', [])}
+              content={get(data, 'userFeed.edges', []).map((edge) => edge.node)}
               isLoading={loading}
               error={error}
               refetch={refetch}

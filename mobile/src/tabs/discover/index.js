@@ -1,51 +1,62 @@
-import React, { PureComponent } from 'react';
-import { Button } from 'react-native';
+import React from 'react';
 import { Query } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
-import PropTypes from 'prop-types';
+import { get } from 'lodash';
+
+import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
-import ActivityIndicator from 'ui/ActivityIndicator';
-import ContentFeed from 'content-feed';
+import TileContentFeed from './tileContentFeed';
 import getContentChannels from './getContentChannels.graphql';
 import tabBarIcon from '../tabBarIcon';
 
-class Discover extends PureComponent {
-  static navigationOptions = {
-    title: 'Discover',
-  };
+const childContentItemLoadingObject = {
+  node: {
+    isLoading: true,
+  },
+};
 
-  static propTypes = {
-    navigation: PropTypes.shape({
-      navigate: PropTypes.func,
-    }),
-  };
-
-  render() {
-    return (
-      <BackgroundView>
-        <Query query={getContentChannels}>
-          {({ loading, data: { contentChannels = [] } = {} }) => {
-            if (loading) return <ActivityIndicator />;
-            return contentChannels.map(({ id, name }) => (
-              <Button
-                key={id}
-                onPress={() =>
-                  this.props.navigation.navigate('ContentFeed', { id })
-                }
-                title={name}
-              />
-            ));
+const Discover = () => (
+  <BackgroundView>
+    <Query query={getContentChannels}>
+      {({ error, loading, data: { contentChannels = [] } = {}, refetch }) => (
+        <FeedView
+          error={error}
+          content={contentChannels}
+          keyExtractor={(item) => item.id}
+          isLoading={loading}
+          refetch={refetch}
+          renderItem={({ item }) => (
+            <TileContentFeed
+              id={item.id}
+              name={item.name}
+              content={get(item, 'childContentItemsConnection.edges', []).map(
+                (edge) => edge.node
+              )}
+            />
+          )}
+          loadingStateObject={{
+            name: '',
+            childContentItemsConnection: {
+              edges: [
+                childContentItemLoadingObject,
+                childContentItemLoadingObject,
+                childContentItemLoadingObject,
+              ],
+            },
           }}
-        </Query>
-      </BackgroundView>
-    );
-  }
-}
+        />
+      )}
+    </Query>
+  </BackgroundView>
+);
 
-const DiscoverNavigator = createStackNavigator(
+Discover.navigationOptions = {
+  title: 'Discover',
+};
+
+export const DiscoverNavigator = createStackNavigator(
   {
     Discover,
-    ContentFeed,
   },
   {
     initialRouteName: 'Discover',

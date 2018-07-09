@@ -101,24 +101,11 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -135,9 +122,9 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
                 }
               }
             >
@@ -169,8 +156,8 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="21.6"
-                bbWidth="21.6"
+                bbHeight="19.2"
+                bbWidth="19.2"
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -183,8 +170,8 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                     false,
                     Object {
                       "flex": 0,
-                      "height": 21.6,
-                      "width": 21.6,
+                      "height": 19.2,
+                      "width": 19.2,
                     },
                   ]
                 }
@@ -255,9 +242,9 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                   style={
                     Object {
                       "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                     }
                   }
                 >
@@ -278,214 +265,194 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
   data={
     Array [
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId0",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId0",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId1",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId1",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId2",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId2",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId3",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId3",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId4",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId4",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId5",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId5",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId6",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId6",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId7",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId7",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId8",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId8",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId9",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId9",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
     ]
   }
@@ -560,20 +527,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -589,9 +547,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -634,9 +592,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -686,20 +644,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -715,9 +664,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -760,9 +709,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -812,20 +761,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -841,9 +781,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -886,9 +826,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -938,20 +878,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -967,9 +898,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1012,9 +943,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1064,20 +995,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1093,9 +1015,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1138,9 +1060,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1190,20 +1112,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1219,9 +1132,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1264,9 +1177,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1316,20 +1229,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1345,9 +1249,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1390,9 +1294,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1442,20 +1346,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1471,9 +1366,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1516,9 +1411,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1568,20 +1463,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1597,9 +1483,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1642,9 +1528,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1694,20 +1580,11 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1723,9 +1600,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -1768,9 +1645,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -1911,24 +1788,11 @@ exports[`The FeedView component renders correctly 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1945,13 +1809,13 @@ exports[`The FeedView component renders correctly 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
                 }
               }
             >
-              Will I get to shake Jesus' hand?
+               
             </Text>
           </View>
           <View
@@ -1977,86 +1841,14 @@ exports[`The FeedView component renders correctly 1`] = `
                 }
               }
             >
-              <RNSVGSvgView
-                align="xMidYMid"
-                bbHeight="21.6"
-                bbWidth="21.6"
-                meetOrSlice={0}
-                minX={0}
-                minY={0}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    undefined,
-                    false,
-                    Object {
-                      "flex": 0,
-                      "height": 21.6,
-                      "width": 21.6,
-                    },
-                  ]
-                }
-                vbHeight={24}
-                vbWidth={24}
-              >
-                <RNSVGPath
-                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                  fill={
-                    Array [
-                      0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      1,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth="1"
-                  x={0}
-                  y={0}
-                />
-              </RNSVGSvgView>
               <View
                 style={
                   Object {
                     "flex": 1,
-                    "paddingHorizontal": 10,
+                    "paddingRight": 10,
                   }
                 }
-                withIcon="like"
+                withIcon={null}
               >
                 <Text
                   accessible={true}
@@ -2065,13 +1857,13 @@ exports[`The FeedView component renders correctly 1`] = `
                   style={
                     Object {
                       "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                     }
                   }
                 >
-                  Eschatology
+                  
                 </Text>
               </View>
             </View>
@@ -2119,24 +1911,11 @@ exports[`The FeedView component renders correctly 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={Array []}
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "height": "100%",
-                  "opacity": 0,
-                  "resizeMode": "cover",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -2153,13 +1932,13 @@ exports[`The FeedView component renders correctly 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "OpenSans-Bold",
-                  "fontSize": 25.2,
-                  "lineHeight": 31.28,
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 24,
+                  "lineHeight": 27.6,
                 }
               }
             >
-              Where is the new Jerusalem anyways?
+               
             </Text>
           </View>
           <View
@@ -2185,86 +1964,14 @@ exports[`The FeedView component renders correctly 1`] = `
                 }
               }
             >
-              <RNSVGSvgView
-                align="xMidYMid"
-                bbHeight="21.6"
-                bbWidth="21.6"
-                meetOrSlice={0}
-                minX={0}
-                minY={0}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    undefined,
-                    false,
-                    Object {
-                      "flex": 0,
-                      "height": 21.6,
-                      "width": 21.6,
-                    },
-                  ]
-                }
-                vbHeight={24}
-                vbWidth={24}
-              >
-                <RNSVGPath
-                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                  fill={
-                    Array [
-                      0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      1,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth="1"
-                  x={0}
-                  y={0}
-                />
-              </RNSVGSvgView>
               <View
                 style={
                   Object {
                     "flex": 1,
-                    "paddingHorizontal": 10,
+                    "paddingRight": 10,
                   }
                 }
-                withIcon="like"
+                withIcon={null}
               >
                 <Text
                   accessible={true}
@@ -2273,13 +1980,13 @@ exports[`The FeedView component renders correctly 1`] = `
                   style={
                     Object {
                       "color": "#505050",
-                      "fontFamily": "OpenSans-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 15.78,
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                     }
                   }
                 >
-                  Eschatology
+                  
                 </Text>
               </View>
             </View>
@@ -2296,214 +2003,194 @@ exports[`The FeedView component renders empty state 1`] = `
   data={
     Array [
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId0",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId0",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId1",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId1",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId2",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId2",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId3",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId3",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId4",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId4",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId5",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId5",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId6",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId6",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId7",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId7",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId8",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId8",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
       Object {
-        "node": Object {
-          "channelType": "",
-          "coverImage": Array [],
-          "id": "fakeId9",
-          "isLoading": true,
-          "parentChannel": Object {
-            "id": "",
-            "name": "",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "",
-              },
-            },
-            "isLight": "",
-          },
-          "title": "",
+        "channelType": "",
+        "coverImage": Array [],
+        "id": "fakeId9",
+        "isLoading": true,
+        "parentChannel": Object {
+          "id": "",
+          "name": "",
         },
+        "theme": Object {
+          "colors": Object {
+            "background": Object {
+              "paper": "",
+            },
+          },
+          "isLight": "",
+        },
+        "title": "",
       },
     ]
   }
@@ -2577,20 +2264,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -2606,9 +2284,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2651,9 +2329,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2703,20 +2381,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -2732,9 +2401,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2777,9 +2446,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2829,20 +2498,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -2858,9 +2518,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -2903,9 +2563,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -2955,20 +2615,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -2984,9 +2635,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3029,9 +2680,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3081,20 +2732,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -3110,9 +2752,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3155,9 +2797,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3207,20 +2849,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -3236,9 +2869,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3281,9 +2914,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3333,20 +2966,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -3362,9 +2986,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3407,9 +3031,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3459,20 +3083,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -3488,9 +3103,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3533,9 +3148,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3585,20 +3200,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -3614,9 +3220,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3659,9 +3265,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />
@@ -3711,20 +3317,11 @@ exports[`The FeedView component renders empty state 1`] = `
             style={
               Object {
                 "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
                 "width": "100%",
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -3740,9 +3337,9 @@ exports[`The FeedView component renders empty state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 6,
-                  "height": 25.2,
-                  "marginVertical": 3.040000000000001,
-                  "width": "80%",
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
             />
@@ -3785,9 +3382,9 @@ exports[`The FeedView component renders empty state 1`] = `
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 6,
-                      "height": 14,
-                      "marginVertical": 0.8899999999999997,
-                      "width": "40%",
+                      "height": 12,
+                      "marginVertical": 2.6400000000000006,
+                      "width": "50%",
                     }
                   }
                 />

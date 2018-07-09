@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import LoginForm from 'login';
 import BackgroundView from 'ui/BackgroundView';
 import TableView, { Cell, CellIcon, CellText, Divider } from 'ui/TableView';
 import tabBarIcon from '../tabBarIcon';
@@ -38,6 +39,7 @@ class Connect extends PureComponent {
               <CellIcon name="building" />
               <CellText>Find Service Times & Locations</CellText>
             </Cell>
+            <LoginForm />
           </TableView>
         </ScrollView>
       </BackgroundView>
