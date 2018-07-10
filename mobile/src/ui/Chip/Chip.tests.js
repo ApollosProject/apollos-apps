@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import Chip from './';
+import Chip from '.';
 
 describe('The Chip component', () => {
   it('should render correctly', () => {

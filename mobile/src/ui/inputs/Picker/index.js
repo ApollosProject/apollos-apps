@@ -48,14 +48,16 @@ class Picker extends PureComponent {
   };
 
   toggle = () => {
-    const focused = !this.state.focused;
-    this.setState({ focused }, () => {
-      if (focused) {
-        this.props.onFocus();
-      } else {
-        this.props.onBlur();
+    this.setState(
+      (previousState) => ({ focused: !previousState.focused }),
+      () => {
+        if (this.state.focused) {
+          this.props.onFocus();
+        } else {
+          this.props.onBlur();
+        }
       }
-    });
+    );
   };
 
   render() {

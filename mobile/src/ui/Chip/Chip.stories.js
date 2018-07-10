@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import Chip from './';
+import Chip from '.';
 import ChipList from './List';
 
 storiesOf('Chip', module)

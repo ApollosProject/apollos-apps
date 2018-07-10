@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import Paragraph from './';
+import Paragraph from '.';
 
 describe('the UIText component', () => {
   it('should render correctly', () => {

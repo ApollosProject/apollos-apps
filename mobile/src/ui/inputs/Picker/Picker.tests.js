@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import Picker, { Item } from './';
+import Picker, { Item } from '.';
 
 describe('The Picker Input component', () => {
   it('should render correctly', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
-import ChannelLabel from './';
+import ChannelLabel from '.';
 
 describe('the ChannelLabel component', () => {
   it('should render', () => {

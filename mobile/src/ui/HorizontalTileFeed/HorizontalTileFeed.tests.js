@@ -5,7 +5,7 @@ import Providers from 'TestProviders';
 
 import CardTile from 'ui/CardTile';
 
-import HorizontalTileFeed from './';
+import HorizontalTileFeed from '.';
 
 const loadingStateObject = {
   node: {

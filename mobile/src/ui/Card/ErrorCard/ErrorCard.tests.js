@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import TestProviders from 'TestProviders';
 
-import ErrorCard from './';
+import ErrorCard from '.';
 
 describe('the Card component', () => {
   it('should render', () => {

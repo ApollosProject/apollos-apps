@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import TestProviders from 'TestProviders';
 import Icon from 'ui/Icon';
 import { Switch } from 'ui/inputs';
-import TableView, { Cell, CellText, Divider } from './';
+import TableView, { Cell, CellText, Divider } from '.';
 
 describe('the TableView Component', () => {
   it('should render', () => {

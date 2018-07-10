@@ -14,6 +14,7 @@ class News extends React.Component {
   static navigationOptions = {
     title: 'News',
   };
+
   render() {
     return (
       <View style={styles.container}>

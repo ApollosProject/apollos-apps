@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import H3 from './';
+import H3 from '.';
 
 describe('the H3 component', () => {
   it('should render correctly', () => {

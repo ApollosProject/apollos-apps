@@ -4,8 +4,6 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
 
-import ActivityIndicator from 'ui/ActivityIndicator';
-
 import httpLink from './httpLink';
 import clientStateLink from './clientStateLink';
 import authLink from './authLink'; // eslint-disable-line

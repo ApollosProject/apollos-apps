@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
-import ChannelLabel from './';
+import ChannelLabel from '.';
 
 storiesOf('ChannelLabel', module)
   .add('Default', () => {

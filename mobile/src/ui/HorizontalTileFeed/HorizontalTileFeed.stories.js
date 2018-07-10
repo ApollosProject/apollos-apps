@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react-native';
 import CardTile from 'ui/CardTile';
 import TileImage from 'ui/TileImage';
 
-import HorizontalTileFeed from './';
+import HorizontalTileFeed from '.';
 
 const loadingStateObject = {
   node: {

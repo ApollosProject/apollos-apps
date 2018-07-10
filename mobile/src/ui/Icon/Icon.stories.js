@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import { kebabCase } from 'lodash';
 
-import Icon from './';
+import Icon from '.';
 import * as icons from './icons';
 
 const stories = storiesOf('Icon', module);

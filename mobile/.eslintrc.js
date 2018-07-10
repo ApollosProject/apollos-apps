@@ -33,6 +33,7 @@ module.exports = {
     'react-native/no-unused-styles': 0,
     'react/destructuring-assignment': 0,
     'global-require': 0,
+    'import/no-cycle': 0,
   },
   parserOptions: {
     ecmaVersion: 7,

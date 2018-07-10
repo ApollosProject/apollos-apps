@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import TileImage from './';
+import TileImage from '.';
 
 describe('the TileImage component', () => {
   it('should render', () => {

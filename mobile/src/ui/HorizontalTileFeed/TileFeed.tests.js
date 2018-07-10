@@ -5,7 +5,7 @@ import Providers from 'TestProviders';
 
 import CardTile from 'ui/CardTile';
 
-import TileFeed from './';
+import TileFeed from '.';
 
 describe('The TileFeed component', () => {
   it('renders correctly', () => {

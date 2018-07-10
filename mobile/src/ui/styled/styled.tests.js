@@ -4,7 +4,7 @@ import { compose } from 'recompose';
 import { View } from 'react-native';
 
 import Providers from 'TestProviders';
-import styled from './';
+import styled from '.';
 
 describe('the styled HOC', () => {
   it('passes style literal to the base component', () => {

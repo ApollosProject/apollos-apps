@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import TileImage from './';
+import TileImage from '.';
 
 storiesOf('TileImage', module)
   .add('Default', () => (

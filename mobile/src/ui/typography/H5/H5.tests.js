@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'TestProviders';
 
-import H5 from './';
+import H5 from '.';
 
 describe('the H5 component', () => {
   it('should render correctly', () => {

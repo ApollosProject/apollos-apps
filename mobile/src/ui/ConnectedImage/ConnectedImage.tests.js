@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import TestProviders from 'TestProviders';
 
-import ConnectedImage, { getCachedSources, updateCache } from './';
+import ConnectedImage, { getCachedSources, updateCache } from '.';
 
 describe('the ConnectedImage component', () => {
   it('should render immediately with a network image with a known width and height', () => {

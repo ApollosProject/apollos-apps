@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import Providers from 'TestProviders';
 
-import DateInput from './';
+import DateInput from '.';
 
 describe('The DateInput component', () => {
   it('should render', () => {

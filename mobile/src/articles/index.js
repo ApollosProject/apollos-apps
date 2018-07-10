@@ -14,6 +14,7 @@ class Articles extends React.Component {
   static navigationOptions = {
     title: 'Articles',
   };
+
   render() {
     return (
       <View style={styles.container}>

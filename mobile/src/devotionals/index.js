@@ -14,6 +14,7 @@ class Devotionals extends React.Component {
   static navigationOptions = {
     title: 'Devotionals',
   };
+
   render() {
     return (
       <View style={styles.container}>
