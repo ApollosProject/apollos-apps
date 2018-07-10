@@ -2,35 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
+import styled from 'ui/styled';
 import CardTile from 'ui/CardTile';
 import TileImage from 'ui/TileImage';
 
 import HorizontalTileFeed from './';
-
-const loadingStateObject = {
-  node: {
-    id: 'fakeId0',
-    title: '',
-    isLoading: true,
-  },
-};
-
-const containerStyles = {
-  // height: 300,
-  // justifyContent: 'center',
-  // alignItems: 'center',
-  backgroundColor: '#f7f7f7',
-};
-
-const renderCardTile = (
-  { item, index } //eslint-disable-line
-) => (
-  <CardTile
-    number={index + 1}
-    title={item.node.title}
-    isLoading={item.node.isLoading}
-  />
-);
 
 storiesOf('HorizontalTileFeed', module)
   .add('With CardTile', () => {
@@ -49,8 +25,26 @@ storiesOf('HorizontalTileFeed', module)
       },
     ];
 
+    const loadingStateObject = {
+      node: {
+        id: 'fakeId0',
+        title: '',
+        isLoading: true,
+      },
+    };
+
+    const renderCardTile = (
+      { item, index } //eslint-disable-line
+    ) => (
+      <CardTile
+        number={index + 1}
+        title={item.node.title}
+        isLoading={item.node.isLoading}
+      />
+    );
+
     return (
-      <View style={containerStyles}>
+      <View>
         <HorizontalTileFeed
           content={CardTileData}
           renderItem={renderCardTile}
@@ -59,16 +53,36 @@ storiesOf('HorizontalTileFeed', module)
       </View>
     );
   })
-  .add('CardTile Skeleton', () => (
-    <View style={containerStyles}>
-      <HorizontalTileFeed
-        content={[]}
-        renderItem={renderCardTile}
-        loadingStateObject={loadingStateObject}
-        isLoading
+  .add('CardTile Skeleton', () => {
+    const loadingStateObject = {
+      node: {
+        id: 'fakeId0',
+        title: '',
+        isLoading: true,
+      },
+    };
+
+    const renderCardTile = (
+      { item, index } //eslint-disable-line
+    ) => (
+      <CardTile
+        number={index + 1}
+        title={item.node.title}
+        isLoading={item.node.isLoading}
       />
-    </View>
-  ))
+    );
+
+    return (
+      <View>
+        <HorizontalTileFeed
+          content={[]}
+          renderItem={renderCardTile}
+          loadingStateObject={loadingStateObject}
+          isLoading
+        />
+      </View>
+    );
+  })
   .add('With TileImage', () => {
     const imageData = [
       {
@@ -102,16 +116,21 @@ storiesOf('HorizontalTileFeed', module)
       },
     };
 
+    const Spacer = styled({
+      flex: 1,
+      paddingHorizontal: 10,
+    })(View);
+
     const renderTileImage = (
       { item, index } //eslint-disable-line
     ) => (
-      <View style={{ flex: 1, paddingHorizontal: 10 }}>
+      <Spacer>
         <TileImage image={item.node.source} link={item.node.link} />
-      </View>
+      </Spacer>
     );
 
     return (
-      <View style={containerStyles}>
+      <View>
         <HorizontalTileFeed
           content={imageData}
           renderItem={renderTileImage}

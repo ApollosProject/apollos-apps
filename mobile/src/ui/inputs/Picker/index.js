@@ -73,11 +73,14 @@ class Picker extends PureComponent {
       outputRange: ['0deg', '180deg'],
     });
     const labelAnimation = value ? new Animated.Value(1) : focusAnimation;
+
+    const animatedStyle = { opacity: labelAnimation, flex: 1 };
+
     return (
       <InputWrapper style={wrapperStyle}>
         <TouchableOpacity onPress={this.handleOnPress}>
           <AddonRow>
-            <Animated.View style={{ opacity: labelAnimation, flex: 1 }}>
+            <Animated.View style={animatedStyle}>
               <StyledH6 style={style}>
                 {displayValue || <Placeholder>{placeholder}</Placeholder>}
               </StyledH6>
