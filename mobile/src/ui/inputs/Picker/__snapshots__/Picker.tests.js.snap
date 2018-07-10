@@ -203,7 +203,6 @@ exports[`The Picker Input component should render correctly 1`] = `
           style={
             Object {
               "color": "#17B582",
-              "textDecorationLine": "underline",
             }
           }
         >

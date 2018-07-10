@@ -1,15 +1,17 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import LoginForm from 'login';
 import BackgroundView from 'ui/BackgroundView';
 import TableView, { Cell, CellIcon, CellText, Divider } from 'ui/TableView';
+import { LoginButton } from 'auth';
 import tabBarIcon from '../tabBarIcon';
 
 export class ConnectScreen extends React.Component {
-  static navigationOptions = {
+  static navigationOptions = () => ({
     title: 'Connect',
-  };
+    headerRight: <LoginButton />,
+  });
+
   render() {
     return (
       <BackgroundView>
@@ -39,7 +41,6 @@ export class ConnectScreen extends React.Component {
               <CellIcon name="building" />
               <CellText>Find Service Times & Locations</CellText>
             </Cell>
-            <LoginForm />
           </TableView>
         </ScrollView>
       </BackgroundView>

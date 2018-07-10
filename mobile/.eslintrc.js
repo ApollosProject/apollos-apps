@@ -31,6 +31,7 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/media-has-caption': 0,
     'react-native/no-unused-styles': 0,
+    'react/destructuring-assignment': 0,
     'global-require': 0,
   },
   parserOptions: {

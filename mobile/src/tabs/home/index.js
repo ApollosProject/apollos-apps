@@ -55,7 +55,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <BackgroundView>
-        <Query query={GET_USER_FEED}>
+        <Query query={GET_USER_FEED} fetchPolicy="cache-and-network">
           {({ loading, error, data, refetch }) => (
             <FeedView
               content={get(data, 'userFeed.edges', []).map((edge) => edge.node)}
