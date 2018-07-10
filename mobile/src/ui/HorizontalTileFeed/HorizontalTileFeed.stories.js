@@ -88,21 +88,21 @@ storiesOf('HorizontalTileFeed', module)
       {
         node: {
           id: 'fakeId0',
-          source: 'https://picsum.photos/300/300/?random',
+          source: 'https://picsum.photos/900/900/?random',
           link: 'https://github.com',
         },
       },
       {
         node: {
           id: 'fakeId1',
-          source: 'https://picsum.photos/300/300/?random',
+          source: 'https://picsum.photos/900/900/?random',
           link: 'https://github.com',
         },
       },
       {
         node: {
           id: 'fakeId2',
-          source: 'https://picsum.photos/300/300/?random',
+          source: 'https://picsum.photos/900/900/?random',
           link: 'https://github.com',
         },
       },
