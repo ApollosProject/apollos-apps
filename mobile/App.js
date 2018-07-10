@@ -9,7 +9,7 @@ import Tabs from 'tabs';
 import client from 'client';
 import Live from 'live';
 
-export const AppNavigator = createStackNavigator(
+const AppNavigator = createStackNavigator(
   {
     Tabs,
     ContentFeed,
