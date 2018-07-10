@@ -4,6 +4,7 @@ import { compose } from 'recompose';
 import { View } from 'react-native';
 
 import Providers from 'TestProviders';
+
 import styled from './';
 
 describe('the styled HOC', () => {

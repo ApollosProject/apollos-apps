@@ -1,5 +1,6 @@
 import React from 'react';
 import { WebView } from 'react-native';
+
 import styled from 'ui/styled';
 
 const FullScreenWebView = styled({

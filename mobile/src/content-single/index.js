@@ -11,6 +11,7 @@ import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
 import { H2 } from 'ui/typography';
+
 import getContentItem from './getContentItem.graphql';
 
 class ContentSingle extends PureComponent {

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import BackgroundView from 'ui/BackgroundView';
 import FeedView from 'ui/FeedView';
+
 import getContentFeed from './getContentFeed.graphql';
 
 export class ContentFeed extends React.Component {

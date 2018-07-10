@@ -5,9 +5,11 @@ import { get } from 'lodash';
 
 import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
+
+import tabBarIcon from '../tabBarIcon';
+
 import TileContentFeed from './tileContentFeed';
 import getContentChannels from './getContentChannels.graphql';
-import tabBarIcon from '../tabBarIcon';
 
 const childContentItemLoadingObject = {
   node: {

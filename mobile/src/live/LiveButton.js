@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
+
 import { UIText } from 'ui/typography';
 import Card, { CardContent } from 'ui/Card';
 import Touchable from 'ui/Touchable';

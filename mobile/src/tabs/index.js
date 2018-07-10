@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from 'react-navigation';
+
 import Connect from './connect';
 import Home from './home';
 import Discover from './discover';

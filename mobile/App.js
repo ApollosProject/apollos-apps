@@ -4,7 +4,6 @@ import { createStackNavigator } from 'react-navigation';
 
 import ContentFeed from 'content-feed';
 import ContentSingle from 'content-single';
-
 import { ThemeProvider } from 'ui/theme';
 import Tabs from 'tabs';
 import client from 'client';

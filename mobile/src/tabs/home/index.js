@@ -8,9 +8,10 @@ import { withTheme } from 'ui/theme';
 import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
 
-import getUserFeed from './getUserFeed.graphql';
 import tabBarIcon from '../tabBarIcon';
 import { LiveButton } from '../../live';
+
+import getUserFeed from './getUserFeed.graphql';
 
 // TODO: what are our thoughts around using this @-syntax for HOCs?
 @withTheme(({ theme, ...otherProps }) => ({

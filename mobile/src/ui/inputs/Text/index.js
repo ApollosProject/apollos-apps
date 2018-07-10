@@ -11,7 +11,6 @@ import FloatingLabel from '../FloatingLabel';
 import InputUnderline from '../InputUnderline';
 import InputWrapper from '../InputWrapper';
 import ErrorText from '../ErrorText';
-
 import withFocusAnimation from '../withFocusAnimation';
 import InputAddon, { AddonRow } from '../InputAddon';
 import withInputControlStyles from '../withInputControlStyles';

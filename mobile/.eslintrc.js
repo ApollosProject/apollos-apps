@@ -21,17 +21,31 @@ module.exports = {
     ],
     'react/jsx-filename-extension': 0,
     'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
-    'import/no-extraneous-dependencies': 0,
     'react/jsx-curly-brace-presence': 0,
     'react/require-default-props': 0,
-    'function-paren-newline': 0,
+    'react-native/no-unused-styles': 0,
+    'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default': 0,
     'import/no-named-as-default-member': 0,
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+      },
+    ],
     'import/prefer-default-export': 0,
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/media-has-caption': 0,
-    'react-native/no-unused-styles': 0,
     'global-require': 0,
+    'function-paren-newline': 0,
   },
   parserOptions: {
     ecmaVersion: 7,
@@ -50,4 +64,4 @@ module.exports = {
     node: true,
     'jest/globals': true,
   },
-}
+};
