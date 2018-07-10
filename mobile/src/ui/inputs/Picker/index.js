@@ -46,7 +46,7 @@ class Picker extends PureComponent {
     focused: false,
   };
 
-  toggle = () => {
+  handleOnPress = () => {
     const focused = !this.state.focused;
     this.setState({ focused }, () => {
       if (focused) {
@@ -75,7 +75,7 @@ class Picker extends PureComponent {
     const labelAnimation = value ? new Animated.Value(1) : focusAnimation;
     return (
       <InputWrapper style={wrapperStyle}>
-        <TouchableOpacity onPress={this.toggle}>
+        <TouchableOpacity onPress={this.handleOnPress}>
           <AddonRow>
             <Animated.View style={{ opacity: labelAnimation, flex: 1 }}>
               <StyledH6 style={style}>
@@ -94,7 +94,7 @@ class Picker extends PureComponent {
           {...pickerProps}
           value={value}
           focused={this.state.focused}
-          onRequestClose={this.toggle}
+          onRequestClose={this.handleOnPress}
         />
 
         <FloatingLabel animation={labelAnimation}>{label}</FloatingLabel>

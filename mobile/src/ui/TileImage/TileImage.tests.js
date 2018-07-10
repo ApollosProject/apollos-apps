@@ -30,12 +30,13 @@ describe('the TileImage component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('passes an onPressItem prop', () => {
+    const handleOnPressItem = jest.fn;
     const tree = renderer.create(
       <Providers>
         <TileImage
           image={'https://picsum.photos/600/400/?random'}
           link={'https://github.com'}
-          onPressItem={jest.fn}
+          onPressItem={handleOnPressItem}
         />
       </Providers>
     );

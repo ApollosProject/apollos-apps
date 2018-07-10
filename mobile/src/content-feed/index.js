@@ -23,7 +23,7 @@ export class ContentFeed extends React.Component {
     }),
   };
 
-  onPress = (item) =>
+  handleOnPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
       itemTitle: item.title,
@@ -45,7 +45,7 @@ export class ContentFeed extends React.Component {
               isLoading={loading}
               error={error}
               refetch={refetch}
-              onPressItem={this.onPress}
+              onPressItem={this.handleOnPress}
             />
           )}
         </Query>

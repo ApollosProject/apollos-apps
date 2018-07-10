@@ -94,6 +94,14 @@ storiesOf('HorizontalTileFeed', module)
       },
     ];
 
+    const loadingStateImageObject = {
+      node: {
+        id: 'fakeId1',
+        source: '',
+        link: '',
+      },
+    };
+
     const renderTileImage = (
       { item, index } //eslint-disable-line
     ) => (
@@ -107,13 +115,7 @@ storiesOf('HorizontalTileFeed', module)
         <HorizontalTileFeed
           content={imageData}
           renderItem={renderTileImage}
-          loadingStateObject={{
-            node: {
-              id: 'fakeId1',
-              source: '',
-              link: '',
-            },
-          }}
+          loadingStateObject={loadingStateImageObject}
         />
       </View>
     );

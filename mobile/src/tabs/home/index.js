@@ -47,7 +47,7 @@ class Home extends PureComponent {
     });
   }
 
-  onPress = (item) =>
+  handleOnPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
       itemTitle: item.title,
@@ -64,7 +64,7 @@ class Home extends PureComponent {
               error={error}
               refetch={refetch}
               ListHeaderComponent={LiveButton}
-              onPressItem={this.onPress}
+              onPressItem={this.handleOnPress}
             />
           )}
         </Query>
