@@ -2,6 +2,7 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import { createStackNavigator } from 'react-navigation';
 import { Sentry } from 'react-native-sentry';
+
 import ContentFeed from 'content-feed';
 import ContentSingle from 'content-single';
 import { ThemeProvider } from 'ui/theme';
