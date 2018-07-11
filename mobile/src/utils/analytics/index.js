@@ -1,7 +1,8 @@
-import { Platform } from 'react-native';
-import Settings from '@utils/Settings';
-import instance from './instance';
-import sentry from '../sentry';
+// import Settings from '@utils/Settings';
+
+import { Sentry } from 'react-native-sentry';
+
+// import instance from './instance';
 
 // Events
 const AppBecameInactive = 'AppBecameInactive';
@@ -36,38 +37,39 @@ export const events = {
   AudioPaused,
 };
 
-const nativeOnlyEvents = {
-  AppBecameInactive,
-  AppBecameActive,
-  AppBecameBackgrounded,
-};
+// const nativeOnlyEvents = {
+//   AppBecameInactive,
+//   AppBecameActive,
+//   AppBecameBackgrounded,
+// };
 
 // thin wrappers over our client events so we have a consistent API
 // if we want to move away from Amplitude in the future:
-export const track = (eventName, properties) => {
-  if (Settings.NODE_ENV === 'development' || Settings.NODE_ENV === 'testing')
-    return;
-  if (Platform.OS === 'web' && nativeOnlyEvents[eventName]) return;
-  if (properties) {
-    instance.logEventWithProperties(eventName, properties);
-  } else {
-    instance.logEvent(eventName);
-  }
-};
+// export const track = (eventName, properties) => {
+//   if (Settings.NODE_ENV === 'development' || Settings.NODE_ENV === 'testing')
+//     return;
+//   if (Platform.OS === 'web' && nativeOnlyEvents[eventName]) return;
+//   if (properties) {
+//     instance.logEventWithProperties(eventName, properties);
+//   } else {
+//     instance.logEvent(eventName);
+//   }
+// };
 
-export const identify = (userId, userProperties) => {
-  if (Settings.NODE_ENV === 'development' || Settings.NODE_ENV === 'testing')
-    return;
-  instance.setUserId(userId);
-  if (userProperties) instance.setUserProperties(userProperties);
-};
+// export const identify = (userId, userProperties) => {
+//   if (Settings.NODE_ENV === 'development' || Settings.NODE_ENV === 'testing')
+//     return;
+//   instance.setUserId(userId);
+//   if (userProperties) instance.setUserProperties(userProperties);
+// };
 
-export const trackScreen = (screenName, screenProperties) => {
-  track(events.ScreenView, {
-    screen: screenName,
-    ...screenProperties,
-  });
-  sentry.captureBreadcrumb({
+// export const trackScreen = (screenName, screenProperties) => {
+export const trackScreen = (screenName) => {
+  // track(events.ScreenView, {
+  //   screen: screenName,
+  //   ...screenProperties,
+  // });
+  Sentry.captureBreadcrumb({
     message: 'ScreenView',
     data: { screenName },
     level: 'info',
@@ -75,9 +77,9 @@ export const trackScreen = (screenName, screenProperties) => {
 };
 
 const Analytics = {
-  track,
+  // track,
   trackScreen,
-  identify,
+  // identify,
 };
 
 export default Analytics;
