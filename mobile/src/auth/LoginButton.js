@@ -3,9 +3,12 @@ import { withNavigation } from 'react-navigation';
 import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 import PropTypes from 'prop-types';
+
 import { ButtonLink } from 'ui/Button';
 import styled from 'ui/styled';
 import ActivityIndicator from 'ui/ActivityIndicator';
+
+import logout from './logout.graphql';
 
 const Button = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
@@ -14,12 +17,6 @@ const Button = styled(({ theme }) => ({
 const getLoginState = gql`
   query {
     isLoggedIn: authToken @client
-  }
-`;
-
-const logout = gql`
-  mutation {
-    logout @client
   }
 `;
 

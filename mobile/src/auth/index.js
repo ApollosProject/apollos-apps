@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
 import PaddedView from 'ui/PaddedView';
+
 import LoginForm from './login';
 
 export LoginButton from './LoginButton';

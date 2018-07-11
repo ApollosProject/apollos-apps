@@ -2,6 +2,7 @@ import { setContext } from 'apollo-link-context';
 import gql from 'graphql-tag';
 
 import { ensureCacheHydration } from './cache';
+
 import { client } from './'; // eslint-disable-line
 
 export default setContext(async (request, { headers }) => {
@@ -17,7 +18,6 @@ export default setContext(async (request, { headers }) => {
         }
       `,
     });
-    console.log('auth', { authToken });
     if (!authToken) return {};
 
     // return the headers to the context so httpLink can read them

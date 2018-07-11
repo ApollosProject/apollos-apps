@@ -1,25 +1,12 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
+import authenticateMutation from './authenticate.graphql';
+import getAuthToken from './getAuthToken.graphql';
 import LoginForm from './Form';
-
-const authenticateMutation = gql`
-  mutation authenticate($email: String!, $password: String!) {
-    authenticate(identity: $email, password: $password) {
-      token
-    }
-  }
-`;
-
-const getAuthToken = gql`
-  query authToken {
-    authToken @client
-  }
-`;
 
 const Login = ({ onLogin }) => (
   <Mutation
@@ -42,6 +29,7 @@ const Login = ({ onLogin }) => (
         onSubmit={async (variables, { setSubmitting, setFieldError }) => {
           try {
             await authenticate({ variables });
+            if (onLogin) onLogin();
           } catch ({ graphQLErrors = [], ...e }) {
             if (
               graphQLErrors.length &&
@@ -59,7 +47,6 @@ const Login = ({ onLogin }) => (
             }
           }
           setSubmitting(false);
-          if (onLogin) onLogin();
         }}
       >
         {(formikBag) => <LoginForm {...formikBag} />}
