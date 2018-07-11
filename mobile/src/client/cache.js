@@ -2,7 +2,6 @@ import {
   InMemoryCache,
   IntrospectionFragmentMatcher,
 } from 'apollo-cache-inmemory';
-
 import { AsyncStorage } from 'react-native';
 import { persistCache } from 'apollo-cache-persist';
 

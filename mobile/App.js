@@ -1,39 +1,33 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
-import ArticleSingle from 'articles/Single';
-import ContentFeed from 'content/Feed';
-import ContentSingle from 'content/Single';
-import { ThemeProvider } from 'ui/theme';
-import { TabStack } from 'tabs';
-import ClientProvider from 'client';
-import LiveNowModal from 'live/liveModal';
-import Auth from 'auth';
 
-export const RootStack = createStackNavigator(
+import ContentFeed from 'content-feed';
+import ContentSingle from 'content-single';
+import { ThemeProvider } from 'ui/theme';
+import Tabs from 'tabs';
+import ClientProvider from 'client';
+import Auth from 'auth';
+import Live from 'live';
+
+const AppNavigator = createStackNavigator(
   {
-    Tab: TabStack,
-    ArticleSingle,
+    Tabs,
     ContentFeed,
     ContentSingle,
-    LiveNowModal,
     Auth,
+    Live,
   },
   {
-    mode: 'modal',
-    initialRouteName: 'Tab',
+    initialRouteName: 'Tabs',
   }
 );
 
-/* eslint-disable */
-export default class App extends React.Component {
-  render() {
-    return (
-      <ClientProvider>
-        <ThemeProvider>
-          <RootStack />
-        </ThemeProvider>
-      </ClientProvider>
-    );
-  }
-}
-/* eslint-enable */
+const App = () => (
+  <ClientProvider>
+    <ThemeProvider>
+      <AppNavigator />
+    </ThemeProvider>
+  </ClientProvider>
+);
+
+export default App;
