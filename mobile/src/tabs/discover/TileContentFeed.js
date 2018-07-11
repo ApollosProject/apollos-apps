@@ -8,7 +8,7 @@ import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import styled from 'ui/styled';
 import { ButtonLink } from 'ui/Button';
 
-import TileImageItem from './tileImageItem';
+import TileImageItem from './TileImageItem';
 
 const RowHeader = styled({
   flexDirection: 'row',

@@ -5,7 +5,7 @@ import { get } from 'lodash';
 import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
 
-import TileContentFeed from './tileContentFeed';
+import TileContentFeed from './TileContentFeed';
 import getContentChannels from './getContentChannels.graphql';
 
 const childContentItemLoadingState = {
