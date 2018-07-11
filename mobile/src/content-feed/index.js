@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -8,7 +8,7 @@ import FeedView from 'ui/FeedView';
 
 import getContentFeed from './getContentFeed.graphql';
 
-export class ContentFeed extends React.Component {
+class ContentFeed extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const itemTitle = navigation.getParam('itemTitle', 'Content Channel');
     return {
