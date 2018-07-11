@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import styled from '../../../src/ui/styled';
+import styled from 'ui/styled';
 
 // import style from './style';
 
