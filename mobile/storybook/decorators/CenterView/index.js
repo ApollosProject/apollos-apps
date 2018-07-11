@@ -3,8 +3,6 @@ import { View } from 'react-native';
 
 import styled from 'ui/styled';
 
-// import style from './style';
-
 const CenterView = styled(({ theme }) => ({
   flex: 1,
   justifyContent: 'center',
