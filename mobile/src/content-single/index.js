@@ -29,24 +29,47 @@ class ContentSingle extends PureComponent {
     }),
   };
 
-  onPressItem = (item) =>
-    this.props.navigation.push('ContentSingle', {
-      itemId: item.node.id,
-      itemTitle: item.node.title,
-    });
+  constructor(props) {
+    super(props);
 
-  render() {
-    const { navigation } = this.props;
-    const itemId = navigation.getParam('itemId', []);
-    const loadingStateObject = {
+    this.itemId = { itemId: props.navigation.getParam('itemId', []) };
+    this.loadingStateObject = {
       node: {
         id: 'fakeId0',
         title: '',
         isLoading: true,
       },
     };
+  }
+
+  handleOnPressItem(item) {
+    this.props.navigation.push('ContentSingle', {
+      itemId: item.node.id,
+      itemTitle: item.node.title,
+    });
+  }
+
+  renderItem(item, index) {
     return (
-      <Query query={getContentItem} variables={{ itemId }}>
+      <TouchableWithoutFeedback onPress={() => this.handleOnPressItem(item)}>
+        <CardTile
+          number={index + 1}
+          title={get(item, 'node.title', '')}
+          /*
+          * These are props that are not yet being passed in the data.
+          * We will need to make sure they get added back when that data is available.
+          * byLine={item.content.speaker}
+          * date={item.meta.date}
+          */
+          isLoading={item.isLoading}
+        />
+      </TouchableWithoutFeedback>
+    );
+  }
+
+  render() {
+    return (
+      <Query query={getContentItem} variables={this.itemId}>
         {({ loading, error, data }) => {
           if (error) return <ErrorCard error={error} />;
 
@@ -69,24 +92,8 @@ class ContentSingle extends PureComponent {
                   []
                 )}
                 isLoading={loading}
-                loadingStateObject={loadingStateObject}
-                renderItem={({ item, index }) => (
-                  <TouchableWithoutFeedback
-                    onPress={() => this.onPressItem({ ...item })}
-                  >
-                    <CardTile
-                      number={index + 1}
-                      title={get(item, 'node.title', '')}
-                      /*
-                      * These are props that are not yet being passed in the data.
-                      * We will need to make sure they get added back when that data is available.
-                      * byLine={item.content.speaker}
-                      * date={item.meta.date}
-                      */
-                      isLoading={item.isLoading}
-                    />
-                  </TouchableWithoutFeedback>
-                )}
+                loadingStateObject={this.loadingStateObject}
+                renderItem={this.renderItem}
               />
             </ScrollView>
           );
