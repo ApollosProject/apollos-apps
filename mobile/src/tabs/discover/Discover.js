@@ -8,30 +8,17 @@ import BackgroundView from 'ui/BackgroundView';
 import TileContentFeed from './tileContentFeed';
 import getContentChannels from './getContentChannels.graphql';
 
-const childContentItemLoadingObject = {
-  node: {
-    isLoading: true,
-  },
+const childContentItemLoadingState = {
+  title: '',
+  isLoading: true,
+};
+
+const feedItemLoadingState = {
+  name: '',
+  isLoading: true,
 };
 
 class Discover extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.loadingStateObject = {
-      name: '',
-      childContentItemsConnection: {
-        edges: [
-          childContentItemLoadingObject,
-          childContentItemLoadingObject,
-          childContentItemLoadingObject,
-        ],
-      },
-    };
-  }
-
-  keyExtractor = (item) => item.id;
-
   renderItem = ({ item }) => (
     <TileContentFeed
       id={item.id}
@@ -39,6 +26,8 @@ class Discover extends PureComponent {
       content={get(item, 'childContentItemsConnection.edges', []).map(
         (edge) => edge.node
       )}
+      isLoading={item.isLoading}
+      loadingStateObject={childContentItemLoadingState}
     />
   );
 
@@ -55,11 +44,10 @@ class Discover extends PureComponent {
             <FeedView
               error={error}
               content={contentChannels}
-              keyExtractor={this.keyExtractor}
               isLoading={loading}
               refetch={refetch}
               renderItem={this.renderItem}
-              loadingStateObject={this.loadingStateObject}
+              loadingStateObject={feedItemLoadingState}
             />
           )}
         </Query>
