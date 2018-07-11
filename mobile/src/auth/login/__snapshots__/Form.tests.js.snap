@@ -52,8 +52,7 @@ exports[`The LoginForm component should render 1`] = `
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 14,
                 "height": 40,
-                "lineHeight": 30,
-                "paddingVertical": 5,
+                "paddingVertical": 0,
               }
             }
             type="email"
@@ -208,8 +207,7 @@ exports[`The LoginForm component should render 1`] = `
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 14,
                 "height": 40,
-                "lineHeight": 30,
-                "paddingVertical": 5,
+                "paddingVertical": 0,
               }
             }
             type="password"

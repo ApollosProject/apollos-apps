@@ -49,8 +49,8 @@ exports[`The Picker Input component should render correctly 1`] = `
               "fontFamily": "InterUI-Bold",
               "fontSize": 14,
               "height": 40,
-              "lineHeight": 30,
-              "paddingVertical": 5,
+              "lineHeight": 17.28,
+              "paddingVertical": 0,
             }
           }
         >
