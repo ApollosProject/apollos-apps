@@ -10,6 +10,25 @@ query getContentItem($itemId: ID!) {
           uri
         }
       }
+      childContentItemsConnection {
+        edges {
+          node {
+            id
+            coverImage {
+              name
+              sources {
+                uri
+              }
+            }
+            parentChannel {
+              id
+              name
+              iconName
+            }
+            title
+          }
+        }
+      }
     }
   }
 }
