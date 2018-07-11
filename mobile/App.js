@@ -8,11 +8,11 @@ import { ThemeProvider } from 'ui/theme';
 import { TabStack } from 'tabs';
 import client from 'client';
 import LiveNowModal from 'live/liveModal';
-
 import { Sentry } from 'react-native-sentry';
 
-Sentry.config('https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658').install();
-
+Sentry.config(
+  'https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658'
+).install();
 
 export const RootStack = createStackNavigator(
   {
