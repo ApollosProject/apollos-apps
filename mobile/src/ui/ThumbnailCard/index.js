@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TouchableWithoutFeedback } from 'react-native';
 import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
+
 import { withIsLoading } from 'ui/isLoading';
 import styled from 'ui/styled';
 import Card, { CardContent } from 'ui/Card';

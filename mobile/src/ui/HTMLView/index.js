@@ -2,6 +2,7 @@ import React, { PureComponent, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
+
 import { Paragraph as ParagraphPlaceholder } from 'ui/Placeholder';
 
 import defaultRenderer from './defaultRenderer';
