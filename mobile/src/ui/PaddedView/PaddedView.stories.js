@@ -5,7 +5,7 @@ import { H1 } from 'ui/typography';
 
 import PaddedView from '.';
 
-storiesOf('PaddedView', module).add('Default', () => (
+storiesOf('PaddedView', module).add('Example', () => (
   <PaddedView>
     <H1>This text is in a PaddedView</H1>
   </PaddedView>

@@ -6,7 +6,7 @@ import styled from 'ui/styled';
 
 import FlexedView from '.';
 
-storiesOf('FlexedView', module).add('Default', () => {
+storiesOf('FlexedView', module).add('Example', () => {
   const FlexedSalmonView = styled({
     backgroundColor: 'salmon',
   })(FlexedView);

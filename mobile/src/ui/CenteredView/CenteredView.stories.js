@@ -5,7 +5,7 @@ import { H1 } from 'ui/typography';
 
 import CenteredView from '.';
 
-storiesOf('CenteredView', module).add('Default', () => (
+storiesOf('CenteredView', module).add('Example', () => (
   <CenteredView>
     <H1>This text is in a CenteredView</H1>
   </CenteredView>
