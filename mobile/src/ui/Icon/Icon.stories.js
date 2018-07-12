@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import { kebabCase } from 'lodash';
 
-import CenterView from 'storybook/decorators/CenterView';
+import CenterView from 'ui/CenterView';
 
 import * as icons from './icons';
 
