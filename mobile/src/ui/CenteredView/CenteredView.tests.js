@@ -4,7 +4,7 @@ import Providers from 'Providers';
 
 import CenteredView from '.';
 
-describe('the CardTile component', () => {
+describe('the CenteredView component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>

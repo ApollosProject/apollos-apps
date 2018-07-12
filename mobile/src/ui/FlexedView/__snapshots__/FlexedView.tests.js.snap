@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the CardTile component should render 1`] = `
+exports[`the FlexedView component should render 1`] = `
 <View
   style={
     Object {

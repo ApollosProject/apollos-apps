@@ -4,7 +4,7 @@ import Providers from 'Providers';
 
 import FlexedView from '.';
 
-describe('the CardTile component', () => {
+describe('the FlexedView component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
