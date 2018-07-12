@@ -1,4 +1,5 @@
 // Provider API for WebBrowser that injects theme values and defaults to the web browser:
+import { Platform } from 'react-native';
 import { createContext } from 'react';
 
 import { withTheme } from 'ui/theme';
@@ -10,8 +11,16 @@ const { Provider: BaseProvider, Consumer } = createContext(Browser.openURL);
 const Provider = withTheme(({ theme }) => ({
   value: (url, options = {}) =>
     Browser.openURL(url, {
-      tintColor: theme.colors.primary,
-      barTintColor: theme.colors.background.paper,
+      ...Platform.select({
+        ios: {
+          tintColor: theme.colors.primary,
+          barTintColor: theme.colors.background.paper,
+        },
+        android: {
+          toolbarColor: theme.colors.background.paper,
+          enableDefaultShare: true,
+        },
+      }),
       ...options,
     }),
 }))(BaseProvider);
