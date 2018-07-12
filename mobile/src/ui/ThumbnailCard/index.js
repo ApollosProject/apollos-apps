@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import { TouchableWithoutFeedback } from 'react-native';
 import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
-
 import { withIsLoading } from 'ui/isLoading';
 import styled from 'ui/styled';
 import Card, { CardContent } from 'ui/Card';
 import SideBySideView from 'ui/SideBySideView';
 import FlexedView from 'ui/FlexedView';
-import { H5, BodyText } from 'ui/typography';
-import Paragraph from 'ui/Paragraph';
+import { H5, BodyText, Paragraph } from 'ui/typography';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
 import ChannelLabel from 'ui/ChannelLabel';
 

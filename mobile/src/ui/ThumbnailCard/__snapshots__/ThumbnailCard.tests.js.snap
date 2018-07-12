@@ -543,7 +543,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
         <View
           style={
             Object {
-              "paddingVertical": 10,
+              "paddingVertical": 11.52,
             }
           }
         >
