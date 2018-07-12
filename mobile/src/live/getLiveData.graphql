@@ -1,0 +1,5 @@
+query getLiveData {
+  live {
+    live
+  }
+}
