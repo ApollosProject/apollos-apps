@@ -2,19 +2,15 @@ import React, { PureComponent, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
-
-import {
-  withPlaceholder,
-  Paragraph as ParagraphPlaceholder,
-} from 'ui/Placeholder';
+import { Paragraph as ParagraphPlaceholder } from 'ui/Placeholder';
 
 import defaultRenderer from './defaultRenderer';
 
-@withPlaceholder(ParagraphPlaceholder, { lineNumber: 8 })
 class HTMLView extends PureComponent {
   static propTypes = {
     children: PropTypes.string,
     renderer: PropTypes.func,
+    isLoading: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -67,7 +63,11 @@ class HTMLView extends PureComponent {
   }
 
   render() {
-    return <View>{this.parsed}</View>;
+    return (
+      <ParagraphPlaceholder lineNumber={8} onReady={!this.props.isLoading}>
+        <View>{this.parsed}</View>
+      </ParagraphPlaceholder>
+    );
   }
 }
 

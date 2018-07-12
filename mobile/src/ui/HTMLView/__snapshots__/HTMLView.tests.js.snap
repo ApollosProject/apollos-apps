@@ -306,6 +306,107 @@ exports[`the HTMLView component should render a list 1`] = `
 </View>
 `;
 
+exports[`the HTMLView component should render a loading state 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "85%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 6,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "75%",
+      }
+    }
+  />
+</View>
+`;
+
 exports[`the HTMLView component should render a paragraph 1`] = `
 <View>
   <View

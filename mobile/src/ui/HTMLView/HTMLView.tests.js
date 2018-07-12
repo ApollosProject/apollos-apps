@@ -1,9 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
 import Providers from 'Providers';
 
-import HTMLView from './';
+import HTMLView from '.';
 
 describe('the HTMLView component', () => {
   it('should render an H1', () => {
@@ -152,6 +151,15 @@ describe('the HTMLView component', () => {
     const tree = renderer.create(
       <Providers>
         <HTMLView>{'<p>Testings</p><br>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView isLoading />
       </Providers>
     );
 
