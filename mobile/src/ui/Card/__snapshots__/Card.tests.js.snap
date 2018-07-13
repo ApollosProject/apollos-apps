@@ -186,6 +186,9 @@ exports[`the Card component should render 1`] = `
       }
     >
       <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
         style={
           Object {
             "aspectRatio": 1,
@@ -193,7 +196,28 @@ exports[`the Card component should render 1`] = `
             "width": "100%",
           }
         }
-      />
+      >
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "uri": "https://picsum.photos/600/400/?image=63",
+                "url": "https://picsum.photos/600/400/?image=63",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "height": "100%",
+              "opacity": 0,
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
