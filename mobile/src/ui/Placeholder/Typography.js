@@ -1,6 +1,7 @@
 import { compose, mapProps } from 'recompose';
 import { StyleSheet } from 'react-native';
 import Placeholder from 'rn-placeholder';
+
 import styled from 'ui/styled';
 
 import { Line } from './Line';

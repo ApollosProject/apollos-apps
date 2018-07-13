@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
+
 import { BodyText } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
 

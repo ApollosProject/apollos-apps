@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
-import { pure, compose, withProps } from 'recompose';
+import { pure } from 'recompose';
 import Color from 'color';
 
 import styled from 'ui/styled';
