@@ -31,13 +31,16 @@ const Container = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.inactive,
 }))(View);
 
-const DefaultImageComponent = compose(
-  styled({
-    width: '100%',
-    resizeMode: 'cover',
-  }),
-  withProps({ maintainAspectRatio: true })
-)(ConnectedImage);
+const DefaultImageComponent = styled({
+  width: '100%',
+  resizeMode: 'cover',
+})(ConnectedImage);
+
+const NoImagePlaceholder = styled(({ theme }) => ({
+  width: '100%',
+  aspectRatio: 1,
+  backgroundColor: theme.colors.background.inactive,
+}))(View);
 
 const GradientOverlayImage = pure(
   ({
@@ -56,7 +59,9 @@ const GradientOverlayImage = pure(
             isLoading={isLoading}
             {...otherProps}
           />
-        ) : null}
+        ) : (
+          <NoImagePlaceholder />
+        )}
         {overlayColor ? (
           <Overlay
             colors={getGradientValues(overlayColor).colors}
@@ -86,6 +91,11 @@ GradientOverlayImage.propTypes = {
   source,
   overlayColor: PropTypes.string,
   ImageComponent: PropTypes.func,
+  maintainAspectRatio: PropTypes.bool,
+};
+
+GradientOverlayImage.defaultProps = {
+  maintainAspectRatio: true,
 };
 
 export default GradientOverlayImage;
