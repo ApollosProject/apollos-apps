@@ -4,7 +4,8 @@ import wait from 'waait';
 
 import Providers from 'Providers';
 
-import LoginButton, { getLoginState } from './LoginButton';
+import LoginButton from './LoginButton';
+import getLoginState from './getLoginState.graphql';
 
 describe('LoginButton component', () => {
   it('renders a LoginButton when logged out', async () => {

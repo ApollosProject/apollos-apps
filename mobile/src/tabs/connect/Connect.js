@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 
-import { LoginButton } from 'auth';
+import { ProtectedAction, LoginButton } from 'auth';
 import BackgroundView from 'ui/BackgroundView';
 import TableView, { Cell, CellIcon, CellText, Divider } from 'ui/TableView';
 import { WebBrowserConsumer } from 'ui/WebBrowser';
@@ -31,16 +31,20 @@ class Connect extends PureComponent {
                   </Cell>
                 </Touchable>
                 <Divider />
-                <Touchable
-                  onPress={() =>
-                    openUrl('https://apollosrock.newspring.cc/page/236')
-                  }
-                >
-                  <Cell>
-                    <CellIcon name="groups" />
-                    <CellText>Join a small group</CellText>
-                  </Cell>
-                </Touchable>
+                <ProtectedAction>
+                  {(protect) => (
+                    <Touchable
+                      onPress={protect(() =>
+                        openUrl('https://apollosrock.newspring.cc/page/236')
+                      )}
+                    >
+                      <Cell>
+                        <CellIcon name="groups" />
+                        <CellText>Join a small group</CellText>
+                      </Cell>
+                    </Touchable>
+                  )}
+                </ProtectedAction>
                 <Divider />
                 <Touchable
                   onPress={() =>
