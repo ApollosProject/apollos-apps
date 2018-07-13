@@ -11,6 +11,7 @@ import HorizontalTileFeed from 'ui/HorizontalTileFeed';
 import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
 import { H2 } from 'ui/typography';
+import BackgroundView from 'ui/BackgroundView';
 
 import getContentItem from './getContentItem.graphql';
 import getContentItemMinimalState from './getContentItemMinimalState.graphql';
@@ -94,22 +95,25 @@ class ContentSingle extends PureComponent {
                   <GradientOverlayImage
                     source={get(content, 'coverImage.sources', [])}
                   />
-                  <PaddedView>
-                    <H2 isLoading={!content.title && loading}>
-                      {content.title}
-                    </H2>
-                    <HTMLView isLoading={!content.htmlContent && loading}>
-                      {content.htmlContent}
-                    </HTMLView>
-                  </PaddedView>
-                  {(childContent && childContent.length) || loading ? (
-                    <HorizontalTileFeed
-                      content={childContent}
-                      isLoading={loading}
-                      loadingStateObject={this.loadingStateObject}
-                      renderItem={this.renderItem}
-                    />
-                  ) : null}
+                  <BackgroundView>
+                    <PaddedView>
+                      <H2 isLoading={!content.title && loading}>
+                        {content.title}
+                      </H2>
+                      <HTMLView isLoading={!content.htmlContent && loading}>
+                        {content.htmlContent}
+                      </HTMLView>
+                    </PaddedView>
+
+                    {(childContent && childContent.length) || loading ? (
+                      <HorizontalTileFeed
+                        content={childContent}
+                        isLoading={loading}
+                        loadingStateObject={this.loadingStateObject}
+                        renderItem={this.renderItem}
+                      />
+                    ) : null}
+                  </BackgroundView>
                 </ScrollView>
               );
             }}
