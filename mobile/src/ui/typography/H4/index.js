@@ -12,7 +12,12 @@ const H4 = compose(
       lineHeight: theme.helpers.verticalRhythm(1),
       fontFamily: theme.typography.sans.bold.default,
       color: theme.colors.text.primary,
-      ...(padded ? { paddingTop: theme.helpers.verticalRhythm(1) } : {}),
+      ...(padded
+        ? {
+            paddingTop: theme.helpers.verticalRhythm(1.5),
+            paddingBottom: theme.helpers.verticalRhythm(0.25),
+          }
+        : {}),
     }),
     'H4'
   ),

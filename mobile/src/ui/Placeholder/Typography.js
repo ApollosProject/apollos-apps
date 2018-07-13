@@ -12,7 +12,13 @@ export const Typography = compose(
   })),
   styled(
     ({
-      flattenedStyles: { fontSize, lineHeight, paddingTop, paddingBottom } = {},
+      flattenedStyles: {
+        fontSize,
+        lineHeight,
+        paddingTop,
+        paddingBottom,
+        paddingVertical,
+      } = {},
     }) => {
       const styles = {};
       if (fontSize && lineHeight) {
@@ -24,6 +30,9 @@ export const Typography = compose(
       }
       if (paddingBottom) {
         styles.marginBottom = paddingBottom;
+      }
+      if (paddingVertical) {
+        styles.marginVertical = paddingVertical;
       }
       return styles;
     },
