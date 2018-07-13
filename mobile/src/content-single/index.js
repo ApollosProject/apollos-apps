@@ -43,7 +43,8 @@ class ContentSingle extends PureComponent {
   }
 
   handleOnPressItem(item) {
-    this.props.navigation.push('ContentSingle', {
+    const { navigation } = this.props;
+    navigation.push('ContentSingle', {
       itemId: item.id,
       itemTitle: item.title,
     });
