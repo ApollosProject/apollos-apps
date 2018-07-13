@@ -1,16 +1,18 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 
-import LoginForm from 'login';
+import { ProtectedAction, LoginButton } from 'auth';
 import BackgroundView from 'ui/BackgroundView';
 import TableView, { Cell, CellIcon, CellText, Divider } from 'ui/TableView';
 import { WebBrowserConsumer } from 'ui/WebBrowser';
 import Touchable from 'ui/Touchable';
 
 class Connect extends PureComponent {
-  static navigationOptions = {
+  static navigationOptions = () => ({
     title: 'Connect',
-  };
+    headerRight: <LoginButton />,
+  });
+
   render() {
     return (
       <WebBrowserConsumer>
@@ -29,16 +31,20 @@ class Connect extends PureComponent {
                   </Cell>
                 </Touchable>
                 <Divider />
-                <Touchable
-                  onPress={() =>
-                    openUrl('https://apollosrock.newspring.cc/page/236')
-                  }
-                >
-                  <Cell>
-                    <CellIcon name="groups" />
-                    <CellText>Join a small group</CellText>
-                  </Cell>
-                </Touchable>
+                <ProtectedAction>
+                  {(protect) => (
+                    <Touchable
+                      onPress={protect(() =>
+                        openUrl('https://apollosrock.newspring.cc/page/236')
+                      )}
+                    >
+                      <Cell>
+                        <CellIcon name="groups" />
+                        <CellText>Join a small group</CellText>
+                      </Cell>
+                    </Touchable>
+                  )}
+                </ProtectedAction>
                 <Divider />
                 <Touchable
                   onPress={() =>
@@ -61,7 +67,6 @@ class Connect extends PureComponent {
                     <CellText>I would like to give</CellText>
                   </Cell>
                 </Touchable>
-                <LoginForm />
               </TableView>
             </ScrollView>
           </BackgroundView>
