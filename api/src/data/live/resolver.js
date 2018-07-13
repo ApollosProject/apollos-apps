@@ -1,7 +1,7 @@
 export default {
   Query: {
-    live: () => ({
-      isLiveNow: false,
+    liveStream: () => ({
+      isLiveNow: true,
     }),
   },
 };

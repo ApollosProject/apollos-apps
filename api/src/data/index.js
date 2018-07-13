@@ -7,7 +7,7 @@ import * as ContentItem from './content-items';
 import * as Person from './people';
 import * as Media from './media';
 import * as Auth from './auth';
-import * as LiveFeed from './live';
+import * as LiveStream from './live';
 
 const data = {
   Node,
@@ -16,7 +16,7 @@ const data = {
   Person,
   Media,
   Auth,
-  LiveFeed,
+  LiveStream,
 };
 
 export const schema = gql`
@@ -28,7 +28,7 @@ export const schema = gql`
     userFeed(first: Int, after: String): ContentItemsConnection
     contentChannels: [ContentChannel]
     currentUser: AuthenticatedUser
-    live: LiveFeed
+    liveStream: LiveStream
   }
 
   type Mutation {

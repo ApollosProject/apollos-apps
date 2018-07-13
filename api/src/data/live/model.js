@@ -1,5 +1,5 @@
 import { RockModel } from '../../connectors/rock';
 
-export default class LiveFeed extends RockModel {
-  resource = 'LiveFeed';
+export default class LiveStream extends RockModel {
+  resource = 'LiveStream';
 }
