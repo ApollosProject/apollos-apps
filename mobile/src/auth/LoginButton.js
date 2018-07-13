@@ -14,7 +14,7 @@ const Button = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
 }))(ButtonLink);
 
-const getLoginState = gql`
+export const getLoginState = gql`
   query {
     isLoggedIn: authToken @client
   }
