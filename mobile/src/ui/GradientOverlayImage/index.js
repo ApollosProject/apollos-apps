@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
-import { pure } from 'recompose';
+import { pure, compose, withProps } from 'recompose';
 import Color from 'color';
 
 import styled from 'ui/styled';
@@ -28,28 +28,34 @@ const getGradientValues = (overlayColor) => {
 
 const Container = styled(({ theme }) => ({
   width: '100%',
-  aspectRatio: 1,
   backgroundColor: theme.colors.background.inactive,
 }))(View);
 
-const DefaultImageComponent = styled({
-  width: '100%',
-  height: '100%',
-  resizeMode: 'cover',
-})(ConnectedImage);
+const DefaultImageComponent = compose(
+  styled({
+    width: '100%',
+    resizeMode: 'cover',
+  }),
+  withProps({ maintainAspectRatio: true })
+)(ConnectedImage);
 
 const GradientOverlayImage = pure(
   ({
     source: imageSource,
     overlayColor,
     ImageComponent: ComponentProp,
+    isLoading,
     ...otherProps
   }) => {
     const Component = ComponentProp || DefaultImageComponent;
     return (
       <Container>
-        {imageSource ? (
-          <Component source={imageSource} {...otherProps} />
+        {imageSource || isLoading ? (
+          <Component
+            source={imageSource}
+            isLoading={isLoading}
+            {...otherProps}
+          />
         ) : null}
         {overlayColor ? (
           <Overlay
