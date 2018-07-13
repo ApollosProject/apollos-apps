@@ -3,13 +3,10 @@ import Placeholder from 'rn-placeholder';
 
 import styled from 'ui/styled';
 
-const SkeletonImage = styled(
-  ({ theme }) =>
-    console.log('skeletonImage') || {
-      width: '100%',
-      aspectRatio: 1,
-      backgroundColor: theme.colors.background.inactive,
-    }
-)(View);
+const SkeletonImage = styled(({ theme }) => ({
+  width: '100%',
+  aspectRatio: 1,
+  backgroundColor: theme.colors.background.inactive,
+}))(View);
 
 export default Placeholder.connect(SkeletonImage);
