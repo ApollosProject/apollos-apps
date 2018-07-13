@@ -71,6 +71,12 @@ class ContentSingle extends PureComponent {
       <Query query={getContentItem} variables={this.itemId}>
         {({ loading, error, data }) => {
           if (error) return <ErrorCard error={error} />;
+          const childContent = get(
+            data,
+            'node.childContentItemsConnection.edges',
+            []
+          ).map((edge) => edge.node);
+
           return (
             <ScrollView>
               <GradientOverlayImage
@@ -83,16 +89,14 @@ class ContentSingle extends PureComponent {
                   {get(data, 'node.htmlContent', '')}
                 </HTMLView>
               </PaddedView>
-              <HorizontalTileFeed
-                content={get(
-                  data,
-                  'node.childContentItemsConnection.edges',
-                  []
-                ).map((edge) => edge.node)}
-                isLoading={loading}
-                loadingStateObject={this.loadingStateObject}
-                renderItem={this.renderItem}
-              />
+              {(childContent && childContent.length) || loading ? (
+                <HorizontalTileFeed
+                  content={childContent}
+                  isLoading={loading}
+                  loadingStateObject={this.loadingStateObject}
+                  renderItem={this.renderItem}
+                />
+              ) : null}
             </ScrollView>
           );
         }}
