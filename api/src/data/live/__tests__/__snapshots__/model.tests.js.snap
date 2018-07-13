@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiveStream returns the LiveStream resource 1`] = `"LiveStream"`;
