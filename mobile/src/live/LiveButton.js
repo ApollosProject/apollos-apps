@@ -8,17 +8,17 @@ import styled from 'ui/styled';
 import ChannelLabel from 'ui/ChannelLabel';
 import { WebBrowserConsumer } from 'ui/WebBrowser';
 
-import getLiveData from './getLiveData.graphql';
+import getLiveStream from './getLiveStream.graphql';
 
 const LiveCard = styled(({ theme }) => ({
   backgroundColor: theme.colors.lightSecondary,
 }))(Card);
 
 const LiveNowButton = () => (
-  <Query query={getLiveData}>
+  <Query query={getLiveStream}>
     {({ loading, error, data }) => {
       if (error) return <ErrorCard error={error} />;
-      const isLive = get(data, 'live.isLiveNow', false);
+      const isLive = get(data, 'liveStream.isLiveNow', false);
       return (
         <WebBrowserConsumer>
           {(openUrl) => (
