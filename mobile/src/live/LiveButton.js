@@ -1,7 +1,6 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-
 import { UIText } from 'ui/typography';
 import Card, { CardContent, ErrorCard } from 'ui/Card';
 import Touchable from 'ui/Touchable';
@@ -17,8 +16,7 @@ const LiveCard = styled(({ theme }) => ({
 
 const LiveNowButton = () => (
   <Query query={getLiveStream}>
-    {({ loading, error, data }) => {
-      if (error) return <ErrorCard error={error} />;
+    {({ loading, data }) => {
       const isLive = get(data, 'liveStream.isLiveNow', false);
       return (
         <WebBrowserConsumer>
