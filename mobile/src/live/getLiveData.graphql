@@ -1,5 +1,5 @@
 query getLiveData {
   live {
-    live
+    isLiveNow
   }
 }

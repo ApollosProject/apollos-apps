@@ -18,7 +18,7 @@ const LiveNowButton = () => (
   <Query query={getLiveData}>
     {({ loading, error, data }) => {
       if (error) return <ErrorCard error={error} />;
-      const isLive = get(data, 'live.live', false);
+      const isLive = get(data, 'live.isLiveNow', false);
       return (
         <WebBrowserConsumer>
           {(openUrl) => (
