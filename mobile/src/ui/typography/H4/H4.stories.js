@@ -1,8 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
+import { BodyText, Paragraph } from 'ui/typography';
 
-import H4 from './';
+import H4 from '.';
 
 storiesOf('typography/H4', module)
   .add('Default', () => (
@@ -11,6 +12,25 @@ storiesOf('typography/H4', module)
         '"What you are is God\'s gift to you, what you become is your gift to God." ― Hans Urs von Balthasar'
       }
     </H4>
+  ))
+  .add('padded', () => (
+    <View>
+      <Paragraph>
+        <BodyText>
+          {
+            "\"What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. \""
+          }
+        </BodyText>
+      </Paragraph>
+      <H4 padded>Hans Urs von Balthasar</H4>
+      <Paragraph>
+        <BodyText>
+          {
+            "\"What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. What you are is God's gift to you, what you become is your gift to God. \""
+          }
+        </BodyText>
+      </Paragraph>
+    </View>
   ))
   .add('isLoading', () => (
     <H4 isLoading>
