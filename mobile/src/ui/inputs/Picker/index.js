@@ -27,7 +27,7 @@ const Placeholder = styled(
   'Inputs.Picker.Placeholder'
 )(H6);
 
-class Picker extends PureComponent {
+export class Picker extends PureComponent {
   static propTypes = {
     placeholder: PropTypes.string,
     displayValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
