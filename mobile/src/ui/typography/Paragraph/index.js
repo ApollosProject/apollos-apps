@@ -1,6 +1,7 @@
 import { compose, setDisplayName } from 'recompose';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
+
 import {
   withPlaceholder,
   Paragraph as ParagraphPlaceholder,

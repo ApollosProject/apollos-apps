@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
+
 import { Paragraph, H2, BodyText } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
 
