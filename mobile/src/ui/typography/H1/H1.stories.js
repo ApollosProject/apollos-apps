@@ -2,10 +2,14 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
+<<<<<<< HEAD
 import { Paragraph, H2, BodyText } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
 
 import H1 from './';
+=======
+import H1 from '.';
+>>>>>>> master
 
 storiesOf('typography/H1', module)
   .add('Default', () => (

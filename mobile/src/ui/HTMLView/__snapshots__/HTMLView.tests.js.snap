@@ -156,7 +156,6 @@ exports[`the HTMLView component should render a link 1`] = `
         style={
           Object {
             "color": "#17B582",
-            "textDecorationLine": "underline",
           }
         }
       >
@@ -789,7 +788,6 @@ exports[`the HTMLView component should render example HTML 1`] = `
         style={
           Object {
             "color": "#17B582",
-            "textDecorationLine": "underline",
           }
         }
       >
@@ -1047,7 +1045,6 @@ exports[`the HTMLView component should render example HTML 1`] = `
         style={
           Object {
             "color": "#17B582",
-            "textDecorationLine": "underline",
           }
         }
       >
@@ -1532,7 +1529,6 @@ exports[`the HTMLView component should render example HTML 1`] = `
         style={
           Object {
             "color": "#17B582",
-            "textDecorationLine": "underline",
           }
         }
       >
@@ -1917,7 +1913,6 @@ exports[`the HTMLView component should render handle relative links 1`] = `
         style={
           Object {
             "color": "#17B582",
-            "textDecorationLine": "underline",
           }
         }
       >
