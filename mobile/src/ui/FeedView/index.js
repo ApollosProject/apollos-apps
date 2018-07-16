@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
 
-import styled from 'ui/styled';
 import FeedItemCard from 'ui/FeedItemCard';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
+import { withTheme } from 'ui/theme';
 import { ErrorCard } from 'ui/Card';
 
-const StyledFlatList = styled(({ theme }) => ({
-  paddingVertical: theme.sizing.baseUnit / 4,
-}))(FlatList);
+const StyledFlatList = compose(
+  withTheme(({ theme: { helpers: { verticalRhythm } } } = {}) => ({
+    contentContainerStyle: { paddingVertical: verticalRhythm(0.3125) },
+  }))
+)(FlatList);
 
 export class FeedView extends React.Component {
   static propTypes = {
@@ -105,6 +107,7 @@ export class FeedView extends React.Component {
         onRefresh={this.refetchHandler({ isLoading, refetch })}
         refreshing={isLoading}
         renderItem={this.renderItem}
+        contentContainerStyle={{ paddingVertical: 5 }}
       />
     );
   }
