@@ -107,7 +107,6 @@ export class FeedView extends React.Component {
         onRefresh={this.refetchHandler({ isLoading, refetch })}
         refreshing={isLoading}
         renderItem={this.renderItem}
-        contentContainerStyle={{ paddingVertical: 5 }}
       />
     );
   }
