@@ -21,7 +21,7 @@ const FeedContainer = styled({
   paddingHorizontal: 0,
 })(PaddedView);
 
-const ContentContainer = styled({ paddingBottom: 0 })(PaddedView);
+const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
 
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
