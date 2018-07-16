@@ -63,7 +63,7 @@ exports[`the Card component it should render a placeholder 1`] = `
       <View
         style={
           Object {
-            "paddingVertical": 11.52,
+            "paddingBottom": 17.28,
           }
         }
       >
@@ -260,7 +260,7 @@ exports[`the Card component should render 1`] = `
       <View
         style={
           Object {
-            "paddingVertical": 11.52,
+            "paddingBottom": 17.28,
           }
         }
       >

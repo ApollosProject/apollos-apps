@@ -1,7 +1,6 @@
 import { compose, setDisplayName } from 'recompose';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
-
 import {
   withPlaceholder,
   Paragraph as ParagraphPlaceholder,
@@ -11,7 +10,7 @@ import styled from 'ui/styled';
 const Paragraph = compose(
   setDisplayName('Paragraph'),
   styled(({ theme }) => ({
-    paddingVertical: theme.helpers.verticalRhythm(0.5),
+    paddingBottom: theme.helpers.verticalRhythm(0.75),
   })),
   withPlaceholder(ParagraphPlaceholder)
 )(View);
