@@ -118,7 +118,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -570,7 +569,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -713,7 +711,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -856,7 +853,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -999,7 +995,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -1142,7 +1137,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -1285,7 +1279,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -1428,7 +1421,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -1571,7 +1563,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -1714,7 +1705,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -1857,7 +1847,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -2074,7 +2063,6 @@ exports[`The FeedView component renders correctly 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -2206,7 +2194,6 @@ exports[`The FeedView component renders correctly 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -2585,7 +2572,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -2728,7 +2714,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -2871,7 +2856,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3014,7 +2998,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3157,7 +3140,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3300,7 +3282,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3443,7 +3424,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3586,7 +3566,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3729,7 +3708,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }
@@ -3872,7 +3850,6 @@ exports[`The FeedView component renders empty state 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 0,
                 "paddingHorizontal": 20,
                 "paddingVertical": 15,
               }

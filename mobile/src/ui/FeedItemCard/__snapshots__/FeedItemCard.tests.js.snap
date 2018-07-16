@@ -95,7 +95,6 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
     <View
       style={
         Object {
-          "paddingBottom": 0,
           "paddingHorizontal": 20,
           "paddingVertical": 15,
         }
@@ -232,7 +231,6 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
     <View
       style={
         Object {
-          "paddingBottom": 0,
           "paddingHorizontal": 20,
           "paddingVertical": 15,
         }
@@ -367,7 +365,6 @@ exports[`the FeedItemCard component should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 0,
           "paddingHorizontal": 20,
           "paddingVertical": 15,
         }
@@ -502,7 +499,6 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
     <View
       style={
         Object {
-          "paddingBottom": 0,
           "paddingHorizontal": 20,
           "paddingVertical": 15,
         }
@@ -637,7 +633,6 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 0,
           "paddingHorizontal": 20,
           "paddingVertical": 15,
         }
@@ -844,7 +839,6 @@ exports[`the FeedItemCard component should render with inverted (light) font col
     <View
       style={
         Object {
-          "paddingBottom": 0,
           "paddingHorizontal": 20,
           "paddingVertical": 15,
         }
