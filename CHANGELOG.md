@@ -1,3 +1,8 @@
+v0.3.0: July 17, 2018
+
+- Upgraded typography components to use vertical rhythm for optional padded prop.
+- Visual clean up of content styling.
+
 v0.2.0: July 3, 2018
 
 - Created script to automate introspection fragment for client-side cache
