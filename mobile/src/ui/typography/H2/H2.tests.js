@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
 import Providers from 'Providers';
 
 import H2 from './';
@@ -23,10 +22,28 @@ describe('the H2 component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with correct padding', () => {
+    const tree = renderer.create(
+      <Providers>
+        <H2 padded>Padded H2 text</H2>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
         <H2 isLoading>Default H2 text</H2>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state with correct positioning (margins)', () => {
+    const tree = renderer.create(
+      <Providers>
+        <H2 padded isLoading>
+          Padded H2 text
+        </H2>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
