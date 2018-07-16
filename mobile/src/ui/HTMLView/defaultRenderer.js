@@ -82,7 +82,7 @@ const defaultRenderer = (node, { children }) => {
     case 'h6':
       return <H6 padded>{wrapTextChildren(children, Text)}</H6>;
     case 'ul':
-      return children; // todo
+      return <Paragraph>{children}</Paragraph>;
     case 'li':
       return <BulletListItem>{wrapTextChildren(children)}</BulletListItem>;
     case 'a': {

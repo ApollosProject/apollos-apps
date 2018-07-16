@@ -178,129 +178,139 @@ exports[`the HTMLView component should render a list 1`] = `
   <View
     style={
       Object {
-        "flexDirection": "row",
+        "paddingBottom": 17.28,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingRight": 8,
+          "flexDirection": "row",
+          "paddingBottom": 8.64,
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
-          }
-        }
-      >
-        •
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexShrink": 1,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "paddingRight": 8,
           }
         }
       >
         <Text
           accessible={true}
           allowFontScaling={true}
+          bold={false}
           ellipsizeMode="tail"
-        >
-          Testings
-        </Text>
-      </Text>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "paddingRight": 8,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
           }
-        }
-      >
-        •
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexShrink": 1,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
+        >
+          •
+        </Text>
+      </View>
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "flexShrink": 1,
           }
         }
       >
         <Text
           accessible={true}
           allowFontScaling={true}
+          bold={false}
           ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
         >
-          Testings
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Testings
+          </Text>
         </Text>
-      </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 8.64,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingRight": 8,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          •
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Testings
+          </Text>
+        </Text>
+      </View>
     </View>
   </View>
 </View>
@@ -1200,193 +1210,204 @@ exports[`the HTMLView component should render example HTML 1`] = `
   <View
     style={
       Object {
-        "flexDirection": "row",
+        "paddingBottom": 17.28,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingRight": 8,
+          "flexDirection": "row",
+          "paddingBottom": 8.64,
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
-          }
-        }
-      >
-        •
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexShrink": 1,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "paddingRight": 8,
           }
         }
       >
         <Text
           accessible={true}
           allowFontScaling={true}
+          bold={false}
           ellipsizeMode="tail"
-        >
-          Am I putting others before myself right now?
-        </Text>
-      </Text>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "paddingRight": 8,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
           }
-        }
-      >
-        •
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "flexShrink": 1,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
+        >
+          •
+        </Text>
+      </View>
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "flexShrink": 1,
           }
         }
       >
         <Text
           accessible={true}
           allowFontScaling={true}
+          bold={false}
           ellipsizeMode="tail"
-        >
-          How can I love the people around me if I’m not even paying attention to them?
-        </Text>
-      </Text>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "paddingRight": 8,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
           }
-        }
-      >
-        •
-      </Text>
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Am I putting others before myself right now?
+          </Text>
+        </Text>
+      </View>
     </View>
     <View
       style={
         Object {
-          "flexShrink": 1,
+          "flexDirection": "row",
+          "paddingBottom": 8.64,
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "paddingRight": 8,
           }
         }
       >
         <Text
           accessible={true}
           allowFontScaling={true}
+          bold={false}
           ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
         >
-          What if Jesus wants to speak through me, but I’ve got my nose stuck in my phone? 
+          •
         </Text>
-      </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            How can I love the people around me if I’m not even paying attention to them?
+          </Text>
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 8.64,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingRight": 8,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          •
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            What if Jesus wants to speak through me, but I’ve got my nose stuck in my phone? 
+          </Text>
+        </Text>
+      </View>
     </View>
   </View>
   <View
@@ -1536,6 +1557,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     style={
       Object {
         "flexDirection": "row",
+        "paddingBottom": 8.64,
       }
     }
   >
@@ -1600,6 +1622,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     style={
       Object {
         "flexDirection": "row",
+        "paddingBottom": 8.64,
       }
     }
   >
@@ -1664,6 +1687,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     style={
       Object {
         "flexDirection": "row",
+        "paddingBottom": 8.64,
       }
     }
   >
@@ -1728,6 +1752,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     style={
       Object {
         "flexDirection": "row",
+        "paddingBottom": 8.64,
       }
     }
   >
