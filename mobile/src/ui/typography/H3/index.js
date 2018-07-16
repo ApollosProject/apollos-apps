@@ -1,7 +1,6 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, setDisplayName, pure } from 'recompose';
-
 import styled from 'ui/styled';
 import { withPlaceholder, Typography } from 'ui/Placeholder';
 
@@ -13,8 +12,8 @@ const styles = styled(
     color: theme.colors.text.primary,
     ...(padded
       ? {
-          paddingTop: theme.helpers.verticalRhythm(1.5),
-          paddingBottom: theme.helpers.verticalRhythm(0.375),
+          paddingTop: theme.helpers.verticalRhythm(1.125),
+          paddingBottom: theme.helpers.verticalRhythm(0.75),
         }
       : {}),
   }),

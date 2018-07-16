@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
 import Providers from 'Providers';
 
 import H3 from '.';
@@ -26,7 +25,7 @@ describe('the H3 component', () => {
   it('should render with correct padding', () => {
     const tree = renderer.create(
       <Providers>
-        <H3 padded>Padded H4 text</H3>
+        <H3 padded>Padded H3 text</H3>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
