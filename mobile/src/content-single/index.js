@@ -12,9 +12,16 @@ import HTMLView from 'ui/HTMLView';
 import PaddedView from 'ui/PaddedView';
 import { H2 } from 'ui/typography';
 import BackgroundView from 'ui/BackgroundView';
+import styled from 'ui/styled';
 
 import getContentItem from './getContentItem.graphql';
 import getContentItemMinimalState from './getContentItemMinimalState.graphql';
+
+const FeedContainer = styled({
+  paddingHorizontal: 0,
+})(PaddedView);
+
+const ContentContainer = styled({ paddingBottom: 0 })(PaddedView);
 
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
@@ -96,24 +103,25 @@ class ContentSingle extends PureComponent {
                     source={get(content, 'coverImage.sources', [])}
                   />
                   <BackgroundView>
-                    <PaddedView>
+                    <ContentContainer>
                       <H2 isLoading={!content.title && loading}>
                         {content.title}
                       </H2>
                       <HTMLView isLoading={!content.htmlContent && loading}>
                         {content.htmlContent}
                       </HTMLView>
-                    </PaddedView>
-
-                    {(childContent && childContent.length) || loading ? (
+                    </ContentContainer>
+                  </BackgroundView>
+                  {(childContent && childContent.length) || loading ? (
+                    <FeedContainer>
                       <HorizontalTileFeed
                         content={childContent}
                         isLoading={loading}
                         loadingStateObject={this.loadingStateObject}
                         renderItem={this.renderItem}
                       />
-                    ) : null}
-                  </BackgroundView>
+                    </FeedContainer>
+                  ) : null}
                 </ScrollView>
               );
             }}
