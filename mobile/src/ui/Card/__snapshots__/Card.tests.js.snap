@@ -51,12 +51,14 @@ exports[`the Card component it should render a placeholder 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        padded={true}
         style={
           Object {
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 17.28,
+            "paddingBottom": 8.64,
           }
         }
       />
@@ -246,12 +248,14 @@ exports[`the Card component should render 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        padded={true}
         style={
           Object {
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 17.28,
+            "paddingBottom": 8.64,
           }
         }
       >

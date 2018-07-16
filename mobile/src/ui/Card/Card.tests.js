@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
 import Providers from 'Providers';
 import { H3, H6, BodyText, Paragraph } from 'ui/typography';
 import Button, { ButtonLink } from 'ui/Button';
@@ -15,7 +14,7 @@ describe('the Card component', () => {
           <CardImage source={'https://picsum.photos/600/400/?image=63'} />
           <CardContent>
             <H3>Coffee</H3>
-            <H6>noun</H6>
+            <H6 padded>noun</H6>
             <Paragraph>
               <BodyText>
                 {
@@ -39,7 +38,7 @@ describe('the Card component', () => {
         <Card isLoading>
           <CardContent>
             <H3 />
-            <H6 />
+            <H6 padded />
             <Paragraph>
               <BodyText />
             </Paragraph>
