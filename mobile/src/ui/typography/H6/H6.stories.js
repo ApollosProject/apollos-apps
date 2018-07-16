@@ -2,14 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
-<<<<<<< HEAD
 import { Paragraph, BodyText } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
 
-import H6 from './';
-=======
 import H6 from '.';
->>>>>>> master
 
 storiesOf('typography/H6', module)
   .add('Default', () => (
