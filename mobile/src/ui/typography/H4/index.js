@@ -1,7 +1,6 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, setDisplayName, pure } from 'recompose';
-
 import styled from 'ui/styled';
 import { withPlaceholder, Typography } from 'ui/Placeholder';
 
@@ -15,8 +14,8 @@ const H4 = compose(
       color: theme.colors.text.primary,
       ...(padded
         ? {
-            paddingTop: theme.helpers.verticalRhythm(1.5),
-            paddingBottom: theme.helpers.verticalRhythm(0.25),
+            paddingTop: theme.helpers.verticalRhythm(0.66),
+            paddingBottom: theme.helpers.verticalRhythm(0.5),
           }
         : {}),
     }),

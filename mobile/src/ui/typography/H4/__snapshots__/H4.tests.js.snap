@@ -59,8 +59,8 @@ exports[`the H4 component should render a loading state with correct positioning
       "backgroundColor": "#A5A5A5",
       "borderRadius": 6,
       "height": 16,
-      "marginBottom": 5.76,
-      "marginTop": 34.56,
+      "marginBottom": 11.52,
+      "marginTop": 15.21,
       "marginVertical": 3.5199999999999996,
       "width": "80%",
     }
@@ -98,8 +98,8 @@ exports[`the H4 component should render with correct padding 1`] = `
       "fontFamily": "InterUI-Bold",
       "fontSize": 16,
       "lineHeight": 23.04,
-      "paddingBottom": 5.76,
-      "paddingTop": 34.56,
+      "paddingBottom": 11.52,
+      "paddingTop": 15.21,
     }
   }
 >
