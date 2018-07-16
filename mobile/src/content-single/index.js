@@ -97,7 +97,7 @@ class ContentSingle extends PureComponent {
                   />
                   <BackgroundView>
                     <PaddedView>
-                      <H2 isLoading={!content.title && loading}>
+                      <H2 padded isLoading={!content.title && loading}>
                         {content.title}
                       </H2>
                       <HTMLView isLoading={!content.htmlContent && loading}>
