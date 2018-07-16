@@ -1,16 +1,21 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, setDisplayName, pure } from 'recompose';
-
 import styled from 'ui/styled';
 import { withPlaceholder, Typography } from 'ui/Placeholder';
 
 const styles = styled(
-  ({ theme }) => ({
+  ({ theme, padded }) => ({
     fontSize: theme.helpers.rem(0.75),
     lineHeight: theme.helpers.verticalRhythm(0.75),
     fontFamily: theme.typography.sans.bold.default,
     color: theme.colors.text.secondary,
+    ...(padded
+      ? {
+          // paddingTop: theme.helpers.verticalRhythm(0.495),
+          paddingBottom: theme.helpers.verticalRhythm(0.375),
+        }
+      : {}),
   }),
   'H6'
 );
@@ -23,6 +28,7 @@ const H6 = compose(
 )(Text);
 
 H6.propTypes = {
+  padded: PropTypes.bool,
   isLoading: PropTypes.bool, // display loading placeholder
   ...Text.propTypes,
 };
