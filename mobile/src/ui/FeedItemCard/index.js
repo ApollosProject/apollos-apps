@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
+
 import { withThemeMixin, withTheme } from 'ui/theme';
 // import Icon from 'ui/Icon';
 import ChannelLabel from 'ui/ChannelLabel';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
 import Card, { CardContent, CardActions } from 'ui/Card';
 import { H3 } from 'ui/typography';
-import styled from 'ui/styled';
 // import ConnectedImage from 'ui/ConnectedImage';
 // import ProgressiveImage from 'ui/ProgressiveImage';
 

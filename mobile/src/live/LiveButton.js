@@ -1,6 +1,7 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+
 import { UIText } from 'ui/typography';
 import Card, { CardContent } from 'ui/Card';
 import Touchable from 'ui/Touchable';
