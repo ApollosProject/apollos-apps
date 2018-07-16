@@ -70,17 +70,17 @@ const defaultRenderer = (node, { children }) => {
     case 'blockquote':
       return <BlockQuote>{wrapTextChildren(children, Text)}</BlockQuote>;
     case 'h1':
-      return <H1>{wrapTextChildren(children, Text)}</H1>;
+      return <H1 padded>{wrapTextChildren(children, Text)}</H1>;
     case 'h2':
-      return <H2>{wrapTextChildren(children, Text)}</H2>;
+      return <H2 padded>{wrapTextChildren(children, Text)}</H2>;
     case 'h3':
-      return <H3>{wrapTextChildren(children, Text)}</H3>;
+      return <H3 padded>{wrapTextChildren(children, Text)}</H3>;
     case 'h4':
-      return <H4>{wrapTextChildren(children, Text)}</H4>;
+      return <H4 padded>{wrapTextChildren(children, Text)}</H4>;
     case 'h5':
-      return <H5>{wrapTextChildren(children, Text)}</H5>;
+      return <H5 padded>{wrapTextChildren(children, Text)}</H5>;
     case 'h6':
-      return <H6>{wrapTextChildren(children, Text)}</H6>;
+      return <H6 padded>{wrapTextChildren(children, Text)}</H6>;
     case 'ul':
       return children; // todo
     case 'li':
