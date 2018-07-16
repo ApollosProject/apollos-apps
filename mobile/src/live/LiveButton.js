@@ -1,7 +1,6 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-
 import { UIText } from 'ui/typography';
 import Card, { CardContent } from 'ui/Card';
 import Touchable from 'ui/Touchable';
@@ -19,31 +18,30 @@ const LiveNowButton = () => (
   <Query query={getLiveStream}>
     {({ loading, data }) => {
       const isLive = get(data, 'liveStream.isLiveNow', false);
-      return (
+
+      return isLive ? (
         <WebBrowserConsumer>
           {(openUrl) => (
             <Touchable
               onPress={() => openUrl('https://apollos.churchonline.org/')}
             >
-              {isLive ? (
-                <LiveCard isLoading={loading}>
-                  <CardContent>
-                    <ChannelLabel
-                      icon="video"
-                      label={
-                        <UIText>
-                          <UIText bold>{`We're live. `}</UIText>
-                          Watch now!
-                        </UIText>
-                      }
-                    />
-                  </CardContent>
-                </LiveCard>
-              ) : null}
+              <LiveCard isLoading={loading}>
+                <CardContent>
+                  <ChannelLabel
+                    icon="video"
+                    label={
+                      <UIText>
+                        <UIText bold>{`We're live. `}</UIText>
+                        Watch now!
+                      </UIText>
+                    }
+                  />
+                </CardContent>
+              </LiveCard>
             </Touchable>
           )}
         </WebBrowserConsumer>
-      );
+      ) : null;
     }}
   </Query>
 );
