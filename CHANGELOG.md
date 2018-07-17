@@ -1,9 +1,4 @@
-v0.3.0: July 17, 2018
-
-- Upgraded typography components to use vertical rhythm for optional padded prop.
-- Visual clean up of content styling.
-
-v0.2.0: July 3, 2018
+v0.2.0: July 17, 2018
 
 - Created script to automate introspection fragment for client-side cache
 - Added a static login form component with validation
@@ -14,6 +9,9 @@ v0.2.0: July 3, 2018
 - Added content children to the individual content pages
 - Added the ability to log errors to Sentry
 - Added a stubbed out liveSteam query to determine when we are or not going to show the live bar
+- Updated iPhone X splash screen size
+- Upgraded typography components to use vertical rhythm for optional padded prop.
+- Visual clean up of content styling.
 
 v0.1.0: June 19, 2018
 
