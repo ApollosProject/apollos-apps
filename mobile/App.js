@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { Sentry } from 'react-native-sentry';
-
+import SplashScreen from 'react-native-splash-screen';
 import Providers from 'Providers';
 import ContentFeed from 'content-feed';
 import ContentSingle from 'content-single';
@@ -24,10 +24,18 @@ const AppNavigator = createStackNavigator(
   }
 );
 
-const App = () => (
-  <Providers>
-    <AppNavigator />
-  </Providers>
-);
+class App extends Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+
+  render() {
+    return (
+      <Providers>
+        <AppNavigator />
+      </Providers>
+    );
+  }
+}
 
 export default App;
