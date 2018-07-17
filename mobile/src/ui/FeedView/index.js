@@ -11,7 +11,7 @@ import { ErrorCard } from 'ui/Card';
 
 const StyledFlatList = compose(
   withTheme(({ theme: { helpers: { verticalRhythm } } } = {}) => ({
-    contentContainerStyle: { paddingVertical: verticalRhythm(0.3125) },
+    contentContainerStyle: { paddingVertical: verticalRhythm(0.3125) }, // Android padding fix 😩
   }))
 )(FlatList);
 
