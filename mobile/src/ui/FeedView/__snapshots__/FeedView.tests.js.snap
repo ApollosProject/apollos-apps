@@ -4214,123 +4214,13 @@ ShallowWrapper {
 `;
 
 exports[`The FeedView component renders using shallow from enzyme 3`] = `
-ShouldUpdate {
-  "context": Object {},
-  "props": Object {
-    "content": Array [
-      Object {
-        "node": Object {
-          "coverImage": Array [
-            Object {
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ],
-          "id": "1",
-          "parentChannel": Object {
-            "iconName": "like",
-            "id": "01",
-            "name": "eschatology",
-          },
-          "theme": Object {
-            "colors": Object {
-              "background": Object {
-                "paper": "#fa8072",
-              },
-            },
-            "isLight": true,
-          },
-          "title": "Will I get to shake Jesus' hand?",
-        },
-      },
-    ],
-    "onPressItem": [Function],
-  },
-  "refs": Object {},
-  "state": null,
-  "updater": Updater {
-    "_callbacks": Array [],
-    "_renderer": ReactShallowRenderer {
-      "_context": Object {},
-      "_element": <pure(branch(getContext(mapProps(WithWindow))))
-        content={
-          Array [
-            Object {
-              "node": Object {
-                "coverImage": Array [
-                  Object {
-                    "height": 400,
-                    "uri": "https://picsum.photos/600/400/?random",
-                    "width": 600,
-                  },
-                ],
-                "id": "1",
-                "parentChannel": Object {
-                  "iconName": "like",
-                  "id": "01",
-                  "name": "eschatology",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "#fa8072",
-                    },
-                  },
-                  "isLight": true,
-                },
-                "title": "Will I get to shake Jesus' hand?",
-              },
-            },
-          ]
-        }
-        onPressItem={[Function]}
-      />,
-      "_forcedUpdate": false,
-      "_instance": [Circular],
-      "_newState": null,
-      "_rendered": <branch(getContext(mapProps(WithWindow)))
-        content={
-          Array [
-            Object {
-              "node": Object {
-                "coverImage": Array [
-                  Object {
-                    "height": 400,
-                    "uri": "https://picsum.photos/600/400/?random",
-                    "width": 600,
-                  },
-                ],
-                "id": "1",
-                "parentChannel": Object {
-                  "iconName": "like",
-                  "id": "01",
-                  "name": "eschatology",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "#fa8072",
-                    },
-                  },
-                  "isLight": true,
-                },
-                "title": "Will I get to shake Jesus' hand?",
-              },
-            },
-          ]
-        }
-        onPressItem={[Function]}
-      />,
-      "_rendering": false,
-      "_updater": [Circular],
-    },
-  },
-}
-`;
-
-exports[`The FeedView component renders using shallow from enzyme 4`] = `
-Array [
-  Array [],
-]
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <pure(mapProps(getContext(mapProps(withContext(mapProps(getContext(mapProps(Component))))))))
+    channelTypeIcon={null}
+    isLight={true}
+    title=" "
+  />
+</TouchableWithoutFeedback>
 `;

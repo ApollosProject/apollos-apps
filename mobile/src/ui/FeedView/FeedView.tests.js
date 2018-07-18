@@ -195,10 +195,8 @@ describe('The FeedView component', () => {
     });
     expect(onPressSpy.calledOnce).toBe(true);
     expect(render).toMatchSnapshot();
-    const thisThing = wrapper.instance();
-    expect(thisThing).toMatchSnapshot();
-    const renderThing = render.props();
-    renderThing.renderItem(content);
-    expect(onPressSpy.args).toMatchSnapshot();
+    const renderProps = render.props();
+    renderProps.renderItem(content);
+    expect(renderProps.renderItem(content)).toMatchSnapshot();
   });
 });
