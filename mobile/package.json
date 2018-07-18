@@ -29,6 +29,7 @@
     "formik": "^0.11.11",
     "jest": "^23.0.0",
     "jest-react-native": "^18.0.0",
+    "jest-serializer-enzyme": "^1.0.0",
     "nodemon": "^1.17.5",
     "prettier": "1.12.1",
     "prop-types": "^15.6.1",
@@ -67,6 +68,9 @@
     ],
     "setupFiles": [
       "./jest.setup.js"
+    ],
+    "snapshotSerializers": [
+      "./node_modules/jest-serializer-enzyme"
     ]
   },
   "dependencies": {
