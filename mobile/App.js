@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { Sentry } from 'react-native-sentry';
 import SplashScreen from 'react-native-splash-screen';
+
 import Providers from 'Providers';
 import ContentFeed from 'content-feed';
 import ContentSingle from 'content-single';
@@ -24,7 +25,7 @@ const AppNavigator = createStackNavigator(
   }
 );
 
-class App extends Component {
+class App extends PureComponent {
   componentDidMount() {
     SplashScreen.hide();
   }
