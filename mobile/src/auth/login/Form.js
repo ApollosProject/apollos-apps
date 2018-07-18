@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import { Text as TextInput } from 'ui/inputs';
 import Button from 'ui/Button';
+import { H6 } from 'ui/typography';
+import { WebBrowserConsumer } from 'ui/WebBrowser';
+import Touchable from 'ui/Touchable';
 
 const Form = ({
   values,
@@ -29,6 +32,15 @@ const Form = ({
       error={touched.password && errors.password}
       onChangeText={(text) => setFieldValue('password', text)}
     />
+    <WebBrowserConsumer>
+      {(openUrl) => (
+        <Touchable
+          onPress={() => openUrl('https://apollosrock.newspring.cc/page/56/')}
+        >
+          <H6>Forgot your password?</H6>
+        </Touchable>
+      )}
+    </WebBrowserConsumer>
     <Button
       onPress={handleSubmit}
       title="Submit"
