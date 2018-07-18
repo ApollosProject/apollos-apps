@@ -2,8 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
+
 import Providers from 'Providers';
 import FeedItemCard from 'ui/FeedItemCard';
 
