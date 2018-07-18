@@ -11,8 +11,8 @@
         <item name="android:statusBarColor">@color/deep_water</item>
     </style>
 
-    <style name="SplashScreen_SplashTheme" parent="SplashScreen_SplashTheme">
-        <item name="colorPrimaryDark">@color/deep_water</item>
+    <style name="SplashScreenTheme" parent="SplashScreen_SplashTheme">
+        <item name="android:statusBarColor">@color/deep_water</item>
     </style>
 
 </resources>

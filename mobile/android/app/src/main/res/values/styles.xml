@@ -10,7 +10,7 @@
     </style>
 
     <style name="SplashScreenTheme" parent="SplashScreen_SplashTheme">
-        <item name="colorPrimaryDark">@color/deep_water</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
 </resources>

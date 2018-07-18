@@ -9,6 +9,7 @@
 
         android:layout_width="95.28dp"
         android:layout_height="100dp"
+        android:layout_marginTop="-24dp"
         android:src="@mipmap/splash_icon"
     />
 </LinearLayout>
