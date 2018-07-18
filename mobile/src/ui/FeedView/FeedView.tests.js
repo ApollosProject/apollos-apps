@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import { shallow, mount } from 'enzyme';
+import sinon from 'sinon';
 import Providers from 'Providers';
 import FeedItemCard from 'ui/FeedItemCard';
 
@@ -145,47 +146,67 @@ describe('The FeedView component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('renders using shallow from enzyme', () => {
-    const onPress = () => console.log('hello');
-    const wrapper = mount(
-      <Providers>
-        <FeedView
-          content={[
-            {
-              node: {
-                id: '1',
-                title: "Will I get to shake Jesus' hand?",
-                coverImage: [
-                  {
-                    uri: 'https://picsum.photos/600/400/?random',
-                    width: 600,
-                    height: 400,
-                  },
-                ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#fa8072',
-                    },
-                  },
+    const onPress = sinon.spy();
+    const wrapper = shallow(
+      <FeedView
+        content={[
+          {
+            node: {
+              id: '1',
+              title: "Will I get to shake Jesus' hand?",
+              coverImage: [
+                {
+                  uri: 'https://picsum.photos/600/400/?random',
+                  width: 600,
+                  height: 400,
                 },
-                parentChannel: {
-                  id: '01',
-                  name: 'eschatology',
-                  iconName: 'like',
+              ],
+              theme: {
+                isLight: true,
+                colors: {
+                  background: {
+                    paper: '#fa8072',
+                  },
                 },
               },
+              parentChannel: {
+                id: '01',
+                name: 'eschatology',
+                iconName: 'like',
+              },
             },
-          ]}
-          onPressItem={onPress}
-        />
-      </Providers>
+          },
+        ]}
+        onPressItem={onPress}
+      />
     );
-    wrapper
-      .find(FeedView)
-      .first()
-      .props()
-      .onPressItem();
     expect(wrapper).toMatchSnapshot();
+    // const thisThing = wrapper
+    //   .dive()
+    //   .dive()
+    //   .dive()
+    //   .dive()
+    //   .dive()
+    //   .dive()
+    //   .dive();
+    // expect(thisThing.find('FeedView')).toMatchSnapshot();
+    // expect(thisThing.find('FeedView')).toHaveLength(1);
+    // thisThing.find('FeedView').forEach((child) => {
+    //   child.simulate('pressItem');
+    // });
+    const render = wrapper
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive();
+    render.forEach((child) => {
+      child.simulate('pressItem');
+    });
+    expect(onPress.calledOnce).toBe(true);
   });
 });
