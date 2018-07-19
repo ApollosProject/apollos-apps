@@ -312,18 +312,14 @@ exports[`The LoginForm component should render 1`] = `
       </View>
     </View>
   </View>
-  <View
+  <Text
     accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
-        "opacity": 1,
+        "color": "#17B582",
       }
     }
   >
@@ -342,7 +338,7 @@ exports[`The LoginForm component should render 1`] = `
     >
       Forgot your password?
     </Text>
-  </View>
+  </Text>
   <View
     bordered={false}
     disabled={true}
