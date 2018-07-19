@@ -78,7 +78,7 @@ const UserAvatarView = enhance(
   }) => {
     const ImageContainer = Touchable;
     // todo: handle file select stuff
-
+    /* eslint-disable react-native/no-inline-styles */
     return (
       <Container {...viewProps}>
         <Content>
@@ -100,6 +100,7 @@ const UserAvatarView = enhance(
         </Content>
       </Container>
     );
+    /* eslint-enable react-native/no-inline-styles */
   }
 );
 
