@@ -323,21 +323,7 @@ exports[`The LoginForm component should render 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      Forgot your password?
-    </Text>
+    Forgot your password?
   </Text>
   <View
     bordered={false}

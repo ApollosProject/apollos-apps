@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import { Text as TextInput } from 'ui/inputs';
 import Button, { ButtonLink } from 'ui/Button';
-import { H6 } from 'ui/typography';
 import { WebBrowserConsumer } from 'ui/WebBrowser';
 
 const Form = ({
@@ -36,7 +35,7 @@ const Form = ({
         <ButtonLink
           onPress={() => openUrl('https://apollosrock.newspring.cc/page/56/')}
         >
-          <H6>Forgot your password?</H6>
+          Forgot your password?
         </ButtonLink>
       )}
     </WebBrowserConsumer>
