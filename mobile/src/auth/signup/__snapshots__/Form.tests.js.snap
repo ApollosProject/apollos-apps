@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The LoginForm component should render 1`] = `
+exports[`The SignupForm component should render 1`] = `
 <View
   style={
     Object {
@@ -418,7 +418,7 @@ exports[`The LoginForm component should render 1`] = `
             }
           }
         >
-          Sign in
+          Register
         </Text>
       </View>
     </View>

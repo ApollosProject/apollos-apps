@@ -2,12 +2,7 @@
 
 exports[`TabView Component renders 1`] = `
 <View
-  loaded={
-    Array [
-      0,
-    ]
-  }
-  onLayout={[Function]}
+  collapsable={false}
   style={
     Array [
       Object {
@@ -21,10 +16,9 @@ exports[`TabView Component renders 1`] = `
   }
 >
   <View
-    collapsable={undefined}
     style={
       Object {
-        "backgroundColor": "#6bac43",
+        "backgroundColor": "#FFFFFF",
         "elevation": 4,
         "shadowColor": "black",
         "shadowOffset": Object {
@@ -37,7 +31,6 @@ exports[`TabView Component renders 1`] = `
     }
   >
     <View
-      collapsable={undefined}
       pointerEvents="none"
       style={
         Object {
@@ -50,10 +43,9 @@ exports[`TabView Component renders 1`] = `
       }
     >
       <View
-        collapsable={undefined}
         style={
           Object {
-            "backgroundColor": "rgb(181, 214, 161)",
+            "backgroundColor": "#6EC5B8",
             "bottom": 0,
             "height": 3,
             "left": 0,
@@ -78,8 +70,6 @@ exports[`TabView Component renders 1`] = `
       <RCTScrollView
         alwaysBounceHorizontal={false}
         automaticallyAdjustContentInsets={false}
-        bounces={false}
-        collapsable={undefined}
         contentContainerStyle={
           Array [
             Object {
@@ -91,7 +81,6 @@ exports[`TabView Component renders 1`] = `
             },
           ]
         }
-        contentOffset={undefined}
         horizontal={true}
         keyboardShouldPersistTaps="handled"
         onMomentumScrollBegin={[Function]}
@@ -100,23 +89,22 @@ exports[`TabView Component renders 1`] = `
         onScrollBeginDrag={[Function]}
         onScrollEndDrag={[Function]}
         overScrollMode="never"
-        scrollEnabled={undefined}
         scrollEventThrottle={1}
         scrollsToTop={false}
         showsHorizontalScrollIndicator={false}
       >
         <View>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel="First"
-            accessibilityTraits="button"
+            accessibilityComponentType="button"
+            accessibilityLabel="FIRST"
+            accessibilityTraits={
+              Array [
+                "button",
+                "selected",
+              ]
+            }
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -129,8 +117,6 @@ exports[`TabView Component renders 1`] = `
                 "opacity": 1,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               pointerEvents="none"
@@ -141,7 +127,6 @@ exports[`TabView Component renders 1`] = `
               }
             >
               <View
-                collapsable={undefined}
                 style={
                   Object {
                     "alignItems": "center",
@@ -156,14 +141,15 @@ exports[`TabView Component renders 1`] = `
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
+                  padded={true}
                   style={
                     Object {
-                      "color": "#ffffff",
-                      "fontFamily": "Colfax-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                      "paddingBottom": 1.8,
-                      "paddingTop": 4.5,
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                      "paddingBottom": 11.52,
+                      "paddingTop": 15.21,
                     }
                   }
                 >
@@ -173,16 +159,11 @@ exports[`TabView Component renders 1`] = `
             </View>
           </View>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel="Second"
+            accessibilityComponentType="button"
+            accessibilityLabel="SECOND"
             accessibilityTraits="button"
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -195,8 +176,6 @@ exports[`TabView Component renders 1`] = `
                 "opacity": 1,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               pointerEvents="none"
@@ -207,7 +186,6 @@ exports[`TabView Component renders 1`] = `
               }
             >
               <View
-                collapsable={undefined}
                 style={
                   Object {
                     "alignItems": "center",
@@ -222,14 +200,15 @@ exports[`TabView Component renders 1`] = `
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
+                  padded={true}
                   style={
                     Object {
-                      "color": "#ffffff",
-                      "fontFamily": "Colfax-Bold",
-                      "fontSize": 15.75,
-                      "lineHeight": 17.75,
-                      "paddingBottom": 1.8,
-                      "paddingTop": 4.5,
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                      "paddingBottom": 11.52,
+                      "paddingTop": 15.21,
                     }
                   }
                 >
@@ -243,71 +222,87 @@ exports[`TabView Component renders 1`] = `
     </View>
   </View>
   <View
-    collapsable={undefined}
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
+    onLayout={[Function]}
     style={
       Object {
-        "alignItems": "stretch",
         "flex": 1,
-        "flexDirection": "row",
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-        "width": 1500,
       }
     }
   >
-    <View
-      style={
+    <RCTScrollView
+      alwaysBounceHorizontal={false}
+      automaticallyAdjustContentInsets={false}
+      bounces={false}
+      contentContainerStyle={null}
+      contentOffset={
         Object {
-          "width": 750,
+          "x": 0,
+          "y": 0,
         }
       }
-      testID={undefined}
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "backgroundColor": "#ff4081",
-              "flex": 1,
-            },
-          ]
-        }
-      />
-    </View>
-    <View
+      directionalLockEnabled={true}
+      horizontal={true}
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="always"
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      overScrollMode="never"
+      pagingEnabled={true}
+      scrollEnabled={true}
+      scrollEventThrottle={1}
+      scrollsToTop={false}
+      showsHorizontalScrollIndicator={false}
       style={
         Object {
-          "width": 750,
+          "flex": 1,
         }
       }
-      testID={undefined}
     >
-      <View
-        style={
-          Array [
+      <View>
+        <View
+          accessibilityElementsHidden={false}
+          importantForAccessibility="auto"
+          style={
             Object {
-              "backgroundColor": "#673ab7",
-              "flex": 1,
-            },
-          ]
-        }
-      />
-    </View>
+              "overflow": "hidden",
+              "width": 750,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#ff4081",
+                  "flex": 1,
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          style={
+            Object {
+              "overflow": "hidden",
+              "width": 750,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#673ab7",
+                  "flex": 1,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
   </View>
 </View>
 `;

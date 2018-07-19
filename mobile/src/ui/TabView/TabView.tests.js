@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 import renderer from 'react-test-renderer';
-import { TabViewPagerPan } from 'react-native-tab-view';
 
 import Providers from 'Providers';
 
@@ -29,7 +28,6 @@ describe('TabView Component', () => {
             first: FirstRoute,
             second: SecondRoute,
           })}
-          renderPager={(props) => <TabViewPagerPan {...props} />}
         />
       </Providers>
     );

@@ -74,7 +74,7 @@ class Form extends PureComponent {
           <PaddedView vertical={false}>
             <Button
               onPress={handleSubmit}
-              title="Sign in"
+              title="Register"
               disabled={!isValid}
               loading={isSubmitting}
             />
