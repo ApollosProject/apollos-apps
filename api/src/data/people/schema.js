@@ -7,5 +7,10 @@ export default gql`
     lastName: String!
     nickName: String
     email: String
+    photo: Photo
+  }
+
+  type Photo {
+    url: String
   }
 `;

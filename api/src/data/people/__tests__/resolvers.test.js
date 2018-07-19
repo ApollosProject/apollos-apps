@@ -26,6 +26,9 @@ describe('Person', () => {
           lastName
           nickName
           email
+          photo {
+            url
+          }
         }
       }
     `;
@@ -47,6 +50,9 @@ describe('Person', () => {
             lastName
             nickName
             email
+            photo {
+              url
+            }
           }
         }
       }
