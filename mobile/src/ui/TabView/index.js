@@ -1,11 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Dimensions, Platform } from 'react-native';
-import { TabViewAnimated, SceneMap } from 'react-native-tab-view';
+import { TabView as RNTabView, SceneMap } from 'react-native-tab-view';
 import { branch, compose, withProps, withState } from 'recompose';
 import isFunction from 'lodash/isFunction';
 
-import { withThemeMixin, withTheme } from 'ui/theme';
 import styled from 'ui/styled';
 
 import TabBar from './TabBar';
@@ -16,23 +14,6 @@ const initialLayout = {
 };
 
 const withStyles = styled({ flex: 1 }, 'TabView');
-
-const defaultHeaderRenderer = () =>
-  compose(
-    withThemeMixin(({ theme }) => ({
-      colors: {
-        text: {
-          primary: theme.colors.darkPrimary,
-        },
-        background: {
-          primary: theme.colors.background.primary,
-        },
-      },
-    })),
-    withTheme(({ theme, mobile }) => ({
-      indicatorColor: mobile ? undefined : theme.colors.primary,
-    }))
-  )((props) => <TabBar {...props} />);
 
 const TabView = compose(
   withStyles,
@@ -58,13 +39,11 @@ const TabView = compose(
         })),
       },
       initialLayout,
-      renderHeader: props.renderHeader
-        ? props.renderHeader
-        : defaultHeaderRenderer(props),
+      renderTabBar: props.renderTabBar ? props.renderTabBar : TabBar,
       onIndexChange,
     };
   })
-)(TabViewAnimated);
+)(RNTabView);
 
 TabView.propTypes = {
   initialIndex: PropTypes.number,
@@ -75,7 +54,7 @@ TabView.propTypes = {
     })
   ).isRequired,
   renderScene: PropTypes.func.isRequired,
-  renderHeader: PropTypes.func,
+  renderTabBar: PropTypes.func,
   swipeEnabled: PropTypes.bool,
   autoHeightEnabled: PropTypes.bool,
 };

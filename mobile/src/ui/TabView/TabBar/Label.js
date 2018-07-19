@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { H6 } from 'ui/typography';
+import { H4 } from 'ui/typography';
 
 const Label = ({ route }) => {
   const labelText = route.title;
-  return <H6>{labelText}</H6>;
+  return <H4 padded>{labelText}</H4>;
 };
 
 Label.propTypes = { route: PropTypes.shape({ title: PropTypes.string }) };

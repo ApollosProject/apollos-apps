@@ -1,5 +1,4 @@
 import { TabBar } from 'react-native-tab-view';
-import Color from 'color';
 import { compose, withProps } from 'recompose';
 
 import styled from 'ui/styled';
@@ -11,17 +10,12 @@ import Indicator from './Indicator';
 const withStyles = compose(
   styled(
     ({ theme }) => ({
-      backgroundColor: theme.colors.background.primary,
+      backgroundColor: theme.colors.background.paper,
     }),
     'TabBar'
   ),
   withTheme(({ theme, indicatorColor }) => ({
-    indicatorColor:
-      indicatorColor ||
-      Color(theme.colors.text.primary)
-        .mix(Color(theme.colors.background.primary))
-        .rgb()
-        .string(),
+    indicatorColor: indicatorColor || theme.colors.tertiary,
   }))
 );
 
