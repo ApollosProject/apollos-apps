@@ -3,10 +3,9 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { Text as TextInput } from 'ui/inputs';
-import Button from 'ui/Button';
+import Button, { ButtonLink } from 'ui/Button';
 import { H6 } from 'ui/typography';
 import { WebBrowserConsumer } from 'ui/WebBrowser';
-import Touchable from 'ui/Touchable';
 
 const Form = ({
   values,
@@ -34,11 +33,11 @@ const Form = ({
     />
     <WebBrowserConsumer>
       {(openUrl) => (
-        <Touchable
+        <ButtonLink
           onPress={() => openUrl('https://apollosrock.newspring.cc/page/56/')}
         >
           <H6>Forgot your password?</H6>
-        </Touchable>
+        </ButtonLink>
       )}
     </WebBrowserConsumer>
     <Button
