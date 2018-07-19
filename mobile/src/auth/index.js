@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { View, SafeAreaView } from 'react-native';
 
 import { withTheme } from 'ui/theme';
-import PaddedView from 'ui/PaddedView';
 import FlexedView from 'ui/FlexedView';
 import TabView, { SceneMap } from 'ui/TabView';
 import { H1, H5 } from 'ui/typography';
