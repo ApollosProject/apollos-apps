@@ -146,7 +146,7 @@ describe('The FeedView component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders using shallow from enzyme', () => {
+  it('tests onPressItem and onPress', () => {
     const onPressItemSpy = sinon.spy();
     const content = [
       {
@@ -186,6 +186,9 @@ describe('The FeedView component', () => {
 
     // This digs down into the component to get to the level where the
     // 'onPressItem' function can be reached.
+    // FWIW, I feel like this is NOT maintainable long term in
+    // it's current state.
+    // Maybe this would get better after https://github.com/airbnb/enzyme/issues/1436
     const render = wrapper
       .dive()
       .dive()
@@ -216,8 +219,8 @@ describe('The FeedView component', () => {
     // snapshot of what the "renderItem" function returns.
     expect(renderProps.renderItem(content)).toMatchSnapshot();
 
-    // Testing things here
-    const thisThing = shallow(renderProps.renderItem(content));
-    expect(thisThing.instance().props.onPress()).toMatchSnapshot();
+    // Testing the onPress function of the TouchableWithoutFeedback
+    const touchable = shallow(renderProps.renderItem(content));
+    expect(touchable.instance().props.onPress()).toMatchSnapshot();
   });
 });
