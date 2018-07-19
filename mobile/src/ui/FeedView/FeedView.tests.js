@@ -4,6 +4,7 @@ import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
+
 import Providers from 'Providers';
 import FeedItemCard from 'ui/FeedItemCard';
 
