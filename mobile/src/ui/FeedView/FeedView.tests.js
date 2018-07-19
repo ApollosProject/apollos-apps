@@ -4,7 +4,6 @@ import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-
 import Providers from 'Providers';
 import FeedItemCard from 'ui/FeedItemCard';
 
@@ -147,7 +146,7 @@ describe('The FeedView component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('renders using shallow from enzyme', () => {
-    const onPressSpy = sinon.spy();
+    const onPressItemSpy = sinon.spy();
     const content = [
       {
         node: {
@@ -178,7 +177,7 @@ describe('The FeedView component', () => {
     ];
 
     const wrapper = shallow(
-      <FeedView content={content} onPressItem={onPressSpy} />
+      <FeedView content={content} onPressItem={onPressItemSpy} />
     );
 
     // This is a snapshot of the component at it's highest level.
@@ -206,7 +205,7 @@ describe('The FeedView component', () => {
     });
 
     // This tests whether or not the onPressItem function was called.
-    expect(onPressSpy.calledOnce).toBe(true);
+    expect(onPressItemSpy.calledOnce).toBe(true);
 
     // This gets the props off of the component at this level (where
     // "onPressItem" resides).
@@ -215,5 +214,9 @@ describe('The FeedView component', () => {
     // This actually runs the "renderItem" function and then creates a
     // snapshot of what the "renderItem" function returns.
     expect(renderProps.renderItem(content)).toMatchSnapshot();
+
+    // Testing things here
+    const thisThing = shallow(renderProps.renderItem(content));
+    expect(thisThing.instance().props.onPress()).toMatchSnapshot();
   });
 });

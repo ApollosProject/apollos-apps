@@ -4010,3 +4010,5 @@ exports[`The FeedView component renders using shallow from enzyme 3`] = `
   />
 </TouchableWithoutFeedback>
 `;
+
+exports[`The FeedView component renders using shallow from enzyme 4`] = `undefined`;
