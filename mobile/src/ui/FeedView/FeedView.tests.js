@@ -176,10 +176,16 @@ describe('The FeedView component', () => {
         },
       },
     ];
+
     const wrapper = shallow(
       <FeedView content={content} onPressItem={onPressSpy} />
     );
+
+    // This is a snapshot of the component at it's highest level.
     expect(wrapper).toMatchSnapshot();
+
+    // This digs down into the component to get to the level where the
+    // 'onPressItem' function can be reached.
     const render = wrapper
       .dive()
       .dive()
@@ -190,13 +196,24 @@ describe('The FeedView component', () => {
       .dive()
       .dive()
       .dive();
+
+    // This is a snapshot of the component at this deep level.
+    expect(render).toMatchSnapshot();
+
+    // This simulates the press on the Touchable.
     render.forEach((child) => {
       child.simulate('pressItem');
     });
+
+    // This tests whether or not the onPressItem function was called.
     expect(onPressSpy.calledOnce).toBe(true);
-    expect(render).toMatchSnapshot();
+
+    // This gets the props off of the component at this level (where
+    // "onPressItem" resides).
     const renderProps = render.props();
-    renderProps.renderItem(content);
+
+    // This actually runs the "renderItem" function and then creates a
+    // snapshot of what the "renderItem" function returns.
     expect(renderProps.renderItem(content)).toMatchSnapshot();
   });
 });
