@@ -100,7 +100,6 @@ const UserAvatarView = enhance(
         </Content>
       </Container>
     );
-    /* eslint-enable react-native/no-inline-styles */
   }
 );
 
