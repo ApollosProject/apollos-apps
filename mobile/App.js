@@ -1,9 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { Sentry } from 'react-native-sentry';
-
 import Providers from 'Providers';
-import ContentFeed from 'content-feed';
 import ContentSingle from 'content-single';
 import Tabs from 'tabs';
 import Auth from 'auth';
@@ -15,7 +13,6 @@ Sentry.config(
 const AppNavigator = createStackNavigator(
   {
     Tabs,
-    ContentFeed,
     ContentSingle,
     Auth,
   },
