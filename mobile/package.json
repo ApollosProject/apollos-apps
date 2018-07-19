@@ -16,6 +16,7 @@
     "codecov": "^3.0.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -29,7 +30,6 @@
     "formik": "^0.11.11",
     "jest": "^23.0.0",
     "jest-react-native": "^18.0.0",
-    "jest-serializer-enzyme": "^1.0.0",
     "nodemon": "^1.17.5",
     "prettier": "1.12.1",
     "prop-types": "^15.6.1",
@@ -63,18 +63,10 @@
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
     ],
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
-    ],
-    "modulePaths": [
-      "<rootDir>/src/"
-    ],
-    "setupFiles": [
-      "./jest.setup.js"
-    ],
-    "snapshotSerializers": [
-      "./node_modules/jest-serializer-enzyme"
-    ]
+    "testMatch": ["<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"],
+    "modulePaths": ["<rootDir>/src/"],
+    "setupFiles": ["./jest.setup.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.2.2",
