@@ -7,5 +7,9 @@ export default {
   Person: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
+    photo: ({ photo: { url } }) => {
+      if (url) return { uri: url };
+      return { uri: '' };
+    },
   },
 };

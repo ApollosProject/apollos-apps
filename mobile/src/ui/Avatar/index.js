@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { get } from 'lodash';
-import { compose, pure, setPropTypes } from 'recompose';
+import { compose, pure } from 'recompose';
 
 import ConnectedImage from 'ui/ConnectedImage';
 import styled from 'ui/styled';
@@ -13,11 +13,6 @@ export { default as AvatarList } from './List';
 
 const enhance = compose(
   pure,
-  setPropTypes({
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
-    containerStyle: PropTypes.any, // eslint-disable-line
-    ...ConnectedImage.propTypes,
-  }),
   withTheme(({ theme, size }) => ({
     themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
   }))
@@ -69,5 +64,11 @@ const Avatar = enhance(
     </Container>
   )
 );
+
+Avatar.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  containerStyle: PropTypes.any, // eslint-disable-line
+  ...ConnectedImage.propTypes,
+};
 
 export default Avatar;

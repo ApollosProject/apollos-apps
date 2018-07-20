@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, View } from 'react-native';
-import { compose, pure, setPropTypes, withState } from 'recompose';
+import { View } from 'react-native';
 
 import Avatar from 'ui/Avatar';
-import { withTheme, withThemeMixin } from 'ui/theme';
+import { withTheme } from 'ui/theme';
 import { H4, BodyText } from 'ui/typography';
 import PaddedView from 'ui/PaddedView';
 import ConnectedImage from 'ui/ConnectedImage';
@@ -32,75 +31,54 @@ const StyledAvatar = withTheme(({ theme }) => ({
   containerStyle: {
     marginRight: 0,
     marginBottom: theme.sizing.baseUnit / 2,
-    ...Platform.select({
-      web: {
-        // make more responsive on web
-        width: '20vw',
-        height: 0,
-        paddingTop: '100%',
-        borderRadius: '50%',
-      },
-    }),
   },
 }))(Avatar);
 
-const enhance = compose(
-  pure,
-  setPropTypes({
-    user: PropTypes.shape({
-      photo: ConnectedImage.propTypes.source,
-      firstName: PropTypes.string,
-      lastName: PropTypes.string,
-      home: PropTypes.shape({
-        city: PropTypes.string,
-      }),
-    }),
-    isLoading: PropTypes.bool,
-    refetch: PropTypes.func,
-    onPhotoPress: PropTypes.func,
-    blurIntensity: PropTypes.number,
-    allowProfileImageChange: PropTypes.bool,
-    ...View.propTypes,
-  }),
-  withThemeMixin({ type: 'dark' }),
-  withState('isUploadingFile', 'setIsUploadingFile', false)
-);
+const UserAvatarView = ({
+  user: { photo, firstName, lastName, home = {} } = {},
+  isLoading,
+  refetch,
+  onPhotoPress,
+  setIsUploadingFile,
+  isUploadingFile,
+  ...viewProps
+}) => {
+  const ImageContainer = Touchable;
+  // todo: handle file select stuff
+  return (
+    <Container {...viewProps}>
+      <Content>
+        <ImageContainer>
+          <StyledAvatar
+            source={photo}
+            size="large"
+            isLoading={isUploadingFile}
+          />
+        </ImageContainer>
+        <Name>
+          {firstName} {lastName}
+        </Name>
+        {home ? <City>{home.city}</City> : null}
+      </Content>
+    </Container>
+  );
+};
 
-const UserAvatarView = enhance(
-  ({
-    user: { photo, firstName, lastName, home = {} } = {},
-    isLoading,
-    refetch,
-    onPhotoPress,
-    setIsUploadingFile,
-    isUploadingFile,
-    ...viewProps
-  }) => {
-    const ImageContainer = Touchable;
-    // todo: handle file select stuff
-    /* eslint-disable react-native/no-inline-styles */
-    return (
-      <Container {...viewProps}>
-        <Content>
-          <ImageContainer
-            webWrapperStyle={{ alignItems: 'center' }}
-            onUploadStarted={() => setIsUploadingFile(true)}
-            onUploadEnded={() => setIsUploadingFile(false)}
-          >
-            <StyledAvatar
-              source={photo}
-              size="large"
-              isLoading={isUploadingFile}
-            />
-          </ImageContainer>
-          <Name>
-            {firstName} {lastName}
-          </Name>
-          {home ? <City>{home.city}</City> : null}
-        </Content>
-      </Container>
-    );
-  }
-);
+UserAvatarView.propTypes = {
+  user: PropTypes.shape({
+    photo: ConnectedImage.propTypes.source,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    home: PropTypes.shape({
+      city: PropTypes.string,
+    }),
+  }),
+  isLoading: PropTypes.bool,
+  refetch: PropTypes.func,
+  onPhotoPress: PropTypes.func,
+  blurIntensity: PropTypes.number,
+  allowProfileImageChange: PropTypes.bool,
+  ...View.propTypes,
+};
 
 export default UserAvatarView;
