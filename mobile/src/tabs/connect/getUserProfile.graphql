@@ -6,7 +6,7 @@ query {
       lastName
       email
       photo {
-        url
+        uri
       }
     }
   }
