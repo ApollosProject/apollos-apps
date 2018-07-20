@@ -1,4 +1,5 @@
 import { createStackNavigator } from 'react-navigation';
+
 import ContentFeed from 'content-feed';
 
 import tabBarIcon from '../tabBarIcon';

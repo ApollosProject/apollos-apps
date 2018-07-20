@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+
 import FeedView from 'ui/FeedView';
 import BackgroundView from 'ui/BackgroundView';
 
