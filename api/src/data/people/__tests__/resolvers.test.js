@@ -27,7 +27,7 @@ describe('Person', () => {
           nickName
           email
           photo {
-            url
+            uri
           }
         }
       }
@@ -51,7 +51,7 @@ describe('Person', () => {
             nickName
             email
             photo {
-              url
+              uri
             }
           }
         }
