@@ -34,7 +34,6 @@ exports[`The Avatar component should render large 1`] = `
         Array [
           Object {
             "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-            "url": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
           },
         ]
       }
@@ -92,7 +91,6 @@ exports[`The Avatar component should render medium 1`] = `
         Array [
           Object {
             "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-            "url": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
           },
         ]
       }
@@ -150,7 +148,6 @@ exports[`The Avatar component should render small 1`] = `
         Array [
           Object {
             "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-            "url": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
           },
         ]
       }
