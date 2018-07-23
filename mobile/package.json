@@ -97,8 +97,8 @@
     "react-native-safari-view": "^2.1.0",
     "react-native-sentry": "^0.38.1",
     "react-native-svg": "^6.3.1",
+    "react-navigation": "^2.7.0",
     "react-native-tab-view": "^1.0.2",
-    "react-navigation": "^2.3.1",
     "recompose": "^0.27.1",
     "rn-placeholder": "^1.2.0",
     "stream": "^0.0.2"
