@@ -53,7 +53,7 @@ const Avatar = enhance(
   ({ themeSize, containerStyle, source, isLoading, ...imageProps }) => (
     <Container style={containerStyle} themeSize={themeSize}>
       {isLoading ? <LoadingIcon /> : null}
-      {source ? (
+      {source && source.uri ? (
         <Image
           source={source}
           {...imageProps}

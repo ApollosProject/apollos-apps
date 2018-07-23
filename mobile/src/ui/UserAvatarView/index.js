@@ -20,10 +20,12 @@ const Content = styled({ alignItems: 'center', justifyContent: 'center' })(
   PaddedView
 );
 
-const copyStyles = styled({
+const copyStyles = styled(({ theme }) => ({
   backgroundColor: 'transparent',
   textAlign: 'center',
-});
+  color: theme.colors.lightSecondary,
+}));
+
 const Name = copyStyles(H4);
 const City = copyStyles(BodyText);
 
