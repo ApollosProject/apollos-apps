@@ -21,34 +21,33 @@ class Connect extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <Query query={getLoginState}>
-          {({ data: { isLoggedIn = null } }) => {
-            if (isLoggedIn)
-              return (
-                <Query query={getUserProfile}>
-                  {({
-                    data: {
-                      currentUser: {
-                        profile: { photo, firstName, lastName } = {},
-                      } = {},
-                    } = {},
-                  }) => (
-                    <UserAvatarView
-                      firstName={firstName}
-                      lastName={lastName}
-                      photo={photo}
-                    />
-                  )}
-                </Query>
-              );
-            return '';
-          }}
-        </Query>
-
         <WebBrowserConsumer>
           {(openUrl) => (
             <BackgroundView>
               <ScrollView>
+                <Query query={getLoginState}>
+                  {({ data: { isLoggedIn = null } }) => {
+                    if (isLoggedIn)
+                      return (
+                        <Query query={getUserProfile}>
+                          {({
+                            data: {
+                              currentUser: {
+                                profile: { photo, firstName, lastName } = {},
+                              } = {},
+                            } = {},
+                          }) => (
+                            <UserAvatarView
+                              firstName={firstName}
+                              lastName={lastName}
+                              photo={photo}
+                            />
+                          )}
+                        </Query>
+                      );
+                    return '';
+                  }}
+                </Query>
                 <TableView>
                   <Touchable
                     onPress={() =>
