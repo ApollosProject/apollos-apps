@@ -16,7 +16,7 @@ storiesOf('UserAvatarView', module).add('default', () => (
       photo={photo}
       firstName="John"
       lastName="Doe"
-      city="Hometown"
+      home={{ city: 'Hometown' }}
     />
   </FlexedView>
 ));

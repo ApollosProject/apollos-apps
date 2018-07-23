@@ -26,8 +26,18 @@ class Connect extends PureComponent {
             if (isLoggedIn)
               return (
                 <Query query={getUserProfile}>
-                  {({ data: { currentUser: { profile } = {} } = {} }) => (
-                    <UserAvatarView user={profile} />
+                  {({
+                    data: {
+                      currentUser: {
+                        profile: { photo, firstName, lastName } = {},
+                      } = {},
+                    } = {},
+                  }) => (
+                    <UserAvatarView
+                      firstName={firstName}
+                      lastName={lastName}
+                      photo={photo}
+                    />
                   )}
                 </Query>
               );

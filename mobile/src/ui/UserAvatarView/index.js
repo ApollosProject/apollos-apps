@@ -35,7 +35,10 @@ const StyledAvatar = withTheme(({ theme }) => ({
 }))(Avatar);
 
 const UserAvatarView = ({
-  user: { photo, firstName, lastName, home = {} } = {},
+  photo,
+  firstName,
+  lastName,
+  home,
   isLoading,
   refetch,
   onPhotoPress,
@@ -65,13 +68,11 @@ const UserAvatarView = ({
 };
 
 UserAvatarView.propTypes = {
-  user: PropTypes.shape({
-    photo: ConnectedImage.propTypes.source,
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
-    home: PropTypes.shape({
-      city: PropTypes.string,
-    }),
+  photo: ConnectedImage.propTypes.source,
+  firstName: PropTypes.string,
+  lastName: PropTypes.string,
+  home: PropTypes.shape({
+    city: PropTypes.string,
   }),
   isLoading: PropTypes.bool,
   refetch: PropTypes.func,
