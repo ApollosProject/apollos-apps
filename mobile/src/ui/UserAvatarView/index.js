@@ -10,12 +10,12 @@ import ConnectedImage from 'ui/ConnectedImage';
 import Touchable from 'ui/Touchable';
 import styled from 'ui/styled';
 
-const Container = styled(({ theme }) => ({
+const Container = styled({
   alignItems: 'center',
   justifyContent: 'center',
   overflow: 'hidden',
-  backgroundColor: theme.colors.darkSecondary,
-}))(View);
+})(View);
+
 const Content = styled({ alignItems: 'center', justifyContent: 'center' })(
   PaddedView
 );
