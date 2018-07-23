@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
 
 import Providers from 'Providers';
 import FeedItemCard from 'ui/FeedItemCard';
@@ -143,5 +145,82 @@ describe('The FeedView component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
+  });
+  it('tests onPressItem and onPress', () => {
+    const onPressItemSpy = sinon.spy();
+    const content = [
+      {
+        node: {
+          id: '1',
+          title: "Will I get to shake Jesus' hand?",
+          coverImage: [
+            {
+              uri: 'https://picsum.photos/600/400/?random',
+              width: 600,
+              height: 400,
+            },
+          ],
+          theme: {
+            isLight: true,
+            colors: {
+              background: {
+                paper: '#fa8072',
+              },
+            },
+          },
+          parentChannel: {
+            id: '01',
+            name: 'eschatology',
+            iconName: 'like',
+          },
+        },
+      },
+    ];
+
+    const wrapper = shallow(
+      <FeedView content={content} onPressItem={onPressItemSpy} />
+    );
+
+    // This is a snapshot of the component at it's highest level.
+    expect(wrapper).toMatchSnapshot();
+
+    // This digs down into the component to get to the level where the
+    // 'onPressItem' function can be reached.
+    // FWIW, I feel like this is NOT maintainable long term in
+    // it's current state.
+    // Maybe this would get better after https://github.com/airbnb/enzyme/issues/1436
+    const render = wrapper
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive()
+      .dive();
+
+    // This is a snapshot of the component at this deep level.
+    expect(render).toMatchSnapshot();
+
+    // This simulates the press on the Touchable.
+    render.forEach((child) => {
+      child.simulate('pressItem');
+    });
+
+    // This tests whether or not the onPressItem function was called.
+    expect(onPressItemSpy.calledOnce).toBe(true);
+
+    // This gets the props off of the component at this level (where
+    // "onPressItem" resides).
+    const renderProps = render.props();
+
+    // This actually runs the "renderItem" function and then creates a
+    // snapshot of what the "renderItem" function returns.
+    expect(renderProps.renderItem(content)).toMatchSnapshot();
+
+    // Testing the onPress function of the TouchableWithoutFeedback
+    const touchable = shallow(renderProps.renderItem(content));
+    expect(touchable.instance().props.onPress()).toMatchSnapshot();
   });
 });

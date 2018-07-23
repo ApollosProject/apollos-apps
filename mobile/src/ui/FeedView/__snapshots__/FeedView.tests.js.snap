@@ -3921,3 +3921,94 @@ exports[`The FeedView component renders empty state 1`] = `
   </View>
 </RCTScrollView>
 `;
+
+exports[`The FeedView component tests onPressItem and onPress 1`] = `
+<branch(getContext(mapProps(WithWindow)))
+  content={
+    Array [
+      Object {
+        "node": Object {
+          "coverImage": Array [
+            Object {
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ],
+          "id": "1",
+          "parentChannel": Object {
+            "iconName": "like",
+            "id": "01",
+            "name": "eschatology",
+          },
+          "theme": Object {
+            "colors": Object {
+              "background": Object {
+                "paper": "#fa8072",
+              },
+            },
+            "isLight": true,
+          },
+          "title": "Will I get to shake Jesus' hand?",
+        },
+      },
+    ]
+  }
+  onPressItem={[Function]}
+/>
+`;
+
+exports[`The FeedView component tests onPressItem and onPress 2`] = `
+<mapProps(FlatList)
+  data={
+    Array [
+      Object {
+        "node": Object {
+          "coverImage": Array [
+            Object {
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ],
+          "id": "1",
+          "parentChannel": Object {
+            "iconName": "like",
+            "id": "01",
+            "name": "eschatology",
+          },
+          "theme": Object {
+            "colors": Object {
+              "background": Object {
+                "paper": "#fa8072",
+              },
+            },
+            "isLight": true,
+          },
+          "title": "Will I get to shake Jesus' hand?",
+        },
+      },
+    ]
+  }
+  keyExtractor={[Function]}
+  numColumns={2}
+  onEndReachedThreshold={0.7}
+  onPressItem={[Function]}
+  refreshing={false}
+  renderItem={[Function]}
+/>
+`;
+
+exports[`The FeedView component tests onPressItem and onPress 3`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <pure(mapProps(getContext(mapProps(withContext(mapProps(getContext(mapProps(Component))))))))
+    channelTypeIcon={null}
+    isLight={true}
+    title=" "
+  />
+</TouchableWithoutFeedback>
+`;
+
+exports[`The FeedView component tests onPressItem and onPress 4`] = `undefined`;
