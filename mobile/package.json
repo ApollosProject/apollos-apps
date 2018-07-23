@@ -1,6 +1,6 @@
 {
   "name": "apollos-church-app",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.5",
@@ -87,12 +87,18 @@
     "react-apollo": "^2.1.4",
     "react-native": "~0.55.2",
     "react-native-custom-tabs": "^0.1.7",
+    "react-native-keyboard-aware-scroll-view": "^0.6.0",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-modal-datetime-picker": "^5.1.0",
     "react-native-safari-view": "^2.1.0",
     "react-native-sentry": "^0.38.1",
     "react-native-svg": "^6.3.1",
+<<<<<<< HEAD
     "react-navigation": "^2.7.0",
+=======
+    "react-native-tab-view": "^1.0.2",
+    "react-navigation": "^2.3.1",
+>>>>>>> 29bfb85ebb4be0d8256f155b079bfd55ba89ec14
     "recompose": "^0.27.1",
     "rn-placeholder": "^1.2.0",
     "stream": "^0.0.2"
