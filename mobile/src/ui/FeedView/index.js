@@ -3,6 +3,7 @@ import { FlatList, TouchableWithoutFeedback } from 'react-native';
 import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
+
 import FeedItemCard from 'ui/FeedItemCard';
 import { enhancer as mediaQuery } from 'ui/MediaQuery';
 import { withTheme } from 'ui/theme';
