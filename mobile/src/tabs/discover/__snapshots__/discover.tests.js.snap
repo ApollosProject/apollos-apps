@@ -5780,9 +5780,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
               >
                 <Text
                   accessibilityTraits="header"
-                  accessible={true}
                   allowFontScaling={true}
-                  ellipsizeMode="tail"
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
