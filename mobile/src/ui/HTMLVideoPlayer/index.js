@@ -76,7 +76,7 @@ const HTMLVideoPlayer = ({ source }) => {
     ${source}
     ${videoReset}
   `;
-  return <PlayerView source={{ html }} />;
+  return <PlayerView originWhitelist={['*']} source={{ html }} />;
 };
 
 HTMLVideoPlayer.propTypes = {
