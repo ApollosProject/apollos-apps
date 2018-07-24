@@ -23,9 +23,10 @@ const mocks = [
 ];
 
 it('renders without error', () => {
-  renderer.create(
+  const tree = renderer.create(
     <Providers mocks={mocks} addTypename={false}>
       <LiveNowButton isLiveNow />
     </Providers>
   );
+  expect(tree).toMatchSnapshot();
 });
