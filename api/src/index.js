@@ -1,7 +1,7 @@
 import dotenv from 'dotenv/config'; // eslint-disable-line
 import { ApolloServer } from 'apollo-server';
 import { get } from 'lodash';
-import { resolvers, schema, models } from './data';
+import { resolvers, schema, models, dataSources } from './data';
 
 import RockConnector from './connectors/rock';
 
@@ -34,6 +34,7 @@ export const getContext = ({ req = {} } = {}) => {
 export default new ApolloServer({
   typeDefs: schema,
   resolvers,
+  dataSources: () => ({ liveStream: new dataSources.LiveStream() }),
   context: getContext,
   formatError: (error) => {
     console.error(error.extensions.exception.stacktrace.join('\n'));

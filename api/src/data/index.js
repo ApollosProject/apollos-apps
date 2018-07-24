@@ -19,25 +19,28 @@ const data = {
   LiveStream,
 };
 
-export const schema = gql`
-  ${values(data).map((datum) => datum.schema)}
+export const schema = [
+  ...values(data).map((datum) => datum.schema),
+  gql`
+    type Query {
+      node(id: ID!): Node
+      people(email: String!): [Person]
+      userFeed(first: Int, after: String): ContentItemsConnection
+      contentChannels: [ContentChannel]
+      currentUser: AuthenticatedUser
+      liveStream: LiveStream
+    }
 
-  type Query {
-    node(id: ID!): Node
-    people(email: String!): [Person]
-    userFeed(first: Int, after: String): ContentItemsConnection
-    contentChannels: [ContentChannel]
-    currentUser: AuthenticatedUser
-    liveStream: LiveStream
-  }
-
-  type Mutation {
-    authenticate(identity: String!, password: String!): Authentication
-    registerPerson(email: String!, password: String!): Authentication
-  }
-`;
+    type Mutation {
+      authenticate(identity: String!, password: String!): Authentication
+      registerPerson(email: String!, password: String!): Authentication
+    }
+  `,
+];
 
 export const resolvers = merge(...values(data).map((datum) => datum.resolver));
+
+export const dataSources = mapValues(data, (datum) => datum.dataSource);
 
 export const models = {
   ...mapValues(data, (datum) => datum.model),
