@@ -4,11 +4,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
 <View
   onLayout={[Function]}
   style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-    ]
+    Object {
+      "flex": 1,
+    }
   }
 >
   <View
