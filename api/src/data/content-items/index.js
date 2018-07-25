@@ -27,7 +27,8 @@ export const schema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-    # TODO theme: Theme
+
+    theme: Theme
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -44,6 +45,8 @@ export const schema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
     terms(match: String): [Term]
+
+    theme: Theme
   }
 
   type Term {
@@ -186,6 +189,11 @@ export const defaultContentItemResolvers = {
     }
 
     return null;
+  },
+
+  theme: (root) => {
+    if (![6, 1, 5, 4].includes(root.contentChannelId)) return null; // todo
+    return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
   },
 };
 

@@ -8,6 +8,7 @@ import * as Person from './people';
 import * as Media from './media';
 import * as Auth from './auth';
 import * as LiveStream from './live';
+import * as Theme from './theme';
 
 const data = {
   Node,
@@ -17,6 +18,7 @@ const data = {
   Media,
   Auth,
   LiveStream,
+  Theme,
 };
 
 export const schema = gql`
