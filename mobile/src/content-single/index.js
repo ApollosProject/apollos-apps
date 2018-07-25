@@ -13,6 +13,7 @@ import PaddedView from 'ui/PaddedView';
 import { H2 } from 'ui/typography';
 import BackgroundView from 'ui/BackgroundView';
 import styled from 'ui/styled';
+import { ThemeMixin } from 'ui/theme';
 
 import getContentItem from './getContentItem.graphql';
 import getContentItemMinimalState from './getContentItemMinimalState.graphql';
@@ -97,31 +98,63 @@ class ContentSingle extends PureComponent {
               ).map((edge) => edge.node);
 
               return (
-                <ScrollView>
-                  <GradientOverlayImage
-                    source={get(content, 'coverImage.sources', [])}
-                  />
-                  <BackgroundView>
-                    <ContentContainer>
-                      <H2 padded isLoading={!content.title && loading}>
-                        {content.title}
-                      </H2>
-                      <HTMLView isLoading={!content.htmlContent && loading}>
-                        {content.htmlContent}
-                      </HTMLView>
-                    </ContentContainer>
-                  </BackgroundView>
-                  {(childContent && childContent.length) || loading ? (
-                    <FeedContainer>
-                      <HorizontalTileFeed
-                        content={childContent}
-                        isLoading={loading}
-                        loadingStateObject={this.loadingStateObject}
-                        renderItem={this.renderItem}
-                      />
-                    </FeedContainer>
-                  ) : null}
-                </ScrollView>
+                <ThemeMixin
+                  mixin={{
+                    type: get(content, 'theme.type', 'light').toLowerCase(),
+                    colors: {
+                      primary: get(content, 'theme.colors.primary'),
+                      secondary: get(content, 'theme.colors.secondary'),
+                      darkPrimary: get(content, 'theme.colors.paper'),
+                      darkSecondary: get(content, 'theme.colors.screen'),
+                    },
+                  }}
+                >
+                  <ScrollView>
+                    <GradientOverlayImage
+                      source={get(content, 'coverImage.sources', [])}
+                    />
+                    <BackgroundView>
+                      <ContentContainer>
+                        <H2 padded isLoading={!content.title && loading}>
+                          {content.title}
+                        </H2>
+                        <HTMLView isLoading={!content.htmlContent && loading}>
+                          {content.htmlContent}
+                        </HTMLView>
+                      </ContentContainer>
+                    </BackgroundView>
+                    {(childContent && childContent.length) || loading ? (
+                      <FeedContainer>
+                        <HorizontalTileFeed
+                          content={childContent}
+                          isLoading={loading}
+                          loadingStateObject={this.loadingStateObject}
+                          renderItem={this.renderItem}
+                        />
+                      </FeedContainer>
+                    ) : null}
+                    <BackgroundView>
+                      <ContentContainer>
+                        <H2 padded isLoading={!content.title && loading}>
+                          {content.title}
+                        </H2>
+                        <HTMLView isLoading={!content.htmlContent && loading}>
+                          {content.htmlContent}
+                        </HTMLView>
+                      </ContentContainer>
+                    </BackgroundView>
+                    {(childContent && childContent.length) || loading ? (
+                      <FeedContainer>
+                        <HorizontalTileFeed
+                          content={childContent}
+                          isLoading={loading}
+                          loadingStateObject={this.loadingStateObject}
+                          renderItem={this.renderItem}
+                        />
+                      </FeedContainer>
+                    ) : null}
+                  </ScrollView>
+                </ThemeMixin>
               );
             }}
           </Query>
