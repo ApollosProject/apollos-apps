@@ -3,7 +3,6 @@ import { Query } from 'react-apollo';
 import { ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
-
 import { ErrorCard } from 'ui/Card';
 import CardTile from 'ui/CardTile';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
@@ -113,26 +112,6 @@ class ContentSingle extends PureComponent {
                     <GradientOverlayImage
                       source={get(content, 'coverImage.sources', [])}
                     />
-                    <BackgroundView>
-                      <ContentContainer>
-                        <H2 padded isLoading={!content.title && loading}>
-                          {content.title}
-                        </H2>
-                        <HTMLView isLoading={!content.htmlContent && loading}>
-                          {content.htmlContent}
-                        </HTMLView>
-                      </ContentContainer>
-                    </BackgroundView>
-                    {(childContent && childContent.length) || loading ? (
-                      <FeedContainer>
-                        <HorizontalTileFeed
-                          content={childContent}
-                          isLoading={loading}
-                          loadingStateObject={this.loadingStateObject}
-                          renderItem={this.renderItem}
-                        />
-                      </FeedContainer>
-                    ) : null}
                     <BackgroundView>
                       <ContentContainer>
                         <H2 padded isLoading={!content.title && loading}>
