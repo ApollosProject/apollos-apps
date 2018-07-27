@@ -2,7 +2,7 @@ import { graphql } from 'graphql';
 import fetch from 'isomorphic-fetch';
 import { makeExecutableSchema, gql } from 'apollo-server';
 
-import { getContext } from '../../../';
+import getContext from '../../../getContext';
 // we import the root-level schema and resolver so we test the entire integration:
 import { schema as typeDefs, resolvers } from '../../';
 
@@ -17,10 +17,10 @@ describe('LiveStream', () => {
   });
 
   it('returns', async () => {
-    const query = gql`
+    const query = `
       query {
         liveStream {
-          isLiveNow
+          isLive
         }
       }
     `;
