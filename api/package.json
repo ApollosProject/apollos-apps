@@ -1,6 +1,6 @@
 {
   "name": "apollos-church-api",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "codecov": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov"
   },
   "engines": {
-    "node": "8.11.2"
+    "node": "^8.11.x"
   },
   "jest": {
     "collectCoverage": true,
