@@ -13,6 +13,7 @@ import PaddedView from 'ui/PaddedView';
 import { H2 } from 'ui/typography';
 import BackgroundView from 'ui/BackgroundView';
 import styled from 'ui/styled';
+import HTMLVideoPlayer from 'ui/HTMLVideoPlayer';
 
 import getContentItem from './getContentItem.graphql';
 import getContentItemMinimalState from './getContentItemMinimalState.graphql';
@@ -82,7 +83,11 @@ class ContentSingle extends PureComponent {
         fetchPolicy="cache-only"
       >
         {({ data: cachedData }) => (
-          <Query query={getContentItem} variables={this.itemId}>
+          <Query
+            query={getContentItem}
+            variables={this.itemId}
+            fetchPolicy="cache-and-network"
+          >
             {({ loading, error, data }) => {
               const content = {
                 ...(cachedData.node || {}),
@@ -96,11 +101,17 @@ class ContentSingle extends PureComponent {
                 []
               ).map((edge) => edge.node);
 
+              const videoHtml = get(content, 'videos[0].embedHtml', null);
+
               return (
                 <ScrollView>
-                  <GradientOverlayImage
-                    source={get(content, 'coverImage.sources', [])}
-                  />
+                  {videoHtml ? (
+                    <HTMLVideoPlayer source={videoHtml} />
+                  ) : (
+                    <GradientOverlayImage
+                      source={get(content, 'coverImage.sources', [])}
+                    />
+                  )}
                   <BackgroundView>
                     <ContentContainer>
                       <H2 padded isLoading={!content.title && loading}>

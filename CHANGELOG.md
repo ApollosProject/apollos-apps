@@ -4,6 +4,7 @@ v0.3.0:
 - Added the ability to create an account from within the app
 - User can now see their profile name and image from the connect screen
 - User can now reset their password from the login screen
+- Add an HTML-based video player component
 
 v0.2.0: July 17, 2018
 
