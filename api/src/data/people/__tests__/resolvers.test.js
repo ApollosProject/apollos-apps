@@ -1,6 +1,6 @@
 import { graphql } from 'graphql';
 import fetch from 'isomorphic-fetch';
-import { makeExecutableSchema, gql } from 'apollo-server';
+import { makeExecutableSchema } from 'apollo-server';
 
 import { createGlobalId } from '../../node/model';
 import getContext from '../../../getContext';
