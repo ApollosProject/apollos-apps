@@ -14,6 +14,7 @@ import LoginForm from './login';
 import SignUpForm from './signup';
 
 export LoginButton from './LoginButton';
+export ProtectedAction from './ProtectedAction';
 
 const Title = styled(({ theme }) => ({ color: theme.colors.secondary }))(H1);
 
