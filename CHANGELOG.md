@@ -1,4 +1,8 @@
-v0.3.0:
+v0.4.0: August 14, 2018
+
+-
+
+v0.3.0: July 31, 2018
 
 - New look and feel for the authentication modal
 - Added the ability to create an account from within the app
