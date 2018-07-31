@@ -6,6 +6,7 @@ import PaddedView from 'ui/PaddedView';
 import LoginForm from './login';
 
 export LoginButton from './LoginButton';
+export ProtectedAction from './ProtectedAction';
 
 class Auth extends PureComponent {
   static navigationOptions = {

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { withNavigation } from 'react-navigation';
-import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 import PropTypes from 'prop-types';
 
@@ -9,16 +8,11 @@ import styled from 'ui/styled';
 import ActivityIndicator from 'ui/ActivityIndicator';
 
 import logout from './logout.graphql';
+import getLoginState from './getLoginState.graphql';
 
 const Button = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
 }))(ButtonLink);
-
-export const getLoginState = gql`
-  query {
-    isLoggedIn: authToken @client
-  }
-`;
 
 @withNavigation
 class LoginButton extends PureComponent {
