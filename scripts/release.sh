@@ -10,12 +10,15 @@ mobileDIR=$dir/mobile
 androidDIR=$dir/mobile/android
 iosDIR=$dir/mobile/ios
 
-# sed -i ".backup" "s/versionName "${currentVersion}"/versionName "${version}"/g" $androidDIR/app/build.gradle
+sed -i "" -e "s/versionName "$currentVersion"/versionName "$version"/g" $androidDIR/app/build.gradle
 
 cd $iosDIR && xcrun agvtool new-marketing-version $1
 
 cd $mobileDIR && yarn run release
 
-# cd $dir
+cd $dir
 
-# git push --follow-tags origin master
+git add .
+git commit -m "updated android and ios to ${version}"
+
+git push --follow-tags origin master
