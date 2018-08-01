@@ -60,7 +60,7 @@
     "test": "bash ../scripts/test-script.sh",
     "watch-graphql":
       "./node_modules/.bin/nodemon --exec \"rm -rf\" ./node_modules/.cache/babel-loader --watch src -e .graphql -q",
-    "release": "standard-version"
+    "release": "standard-version --release-as minor"
   },
   "jest": {
     "preset": "react-native",
