@@ -36,7 +36,7 @@ export const schema = [
       registerPerson(email: String!, password: String!): Authentication
     }
 
-    ${process.env.NODE_ENV === 'test' ? `scalar Upload` : ``}
+    ${process.env.NODE_ENV === 'test' ? `` : ``}
   `,
 ];
 

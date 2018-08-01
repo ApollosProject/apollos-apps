@@ -18,10 +18,11 @@
   "plugins": [
     [
       "module-resolver", {
-        "root": ["./src"],
+        "root": ["../api/src"],
+        "cwd": "packagejson",
         "extensions": [".android.js", ".ios.js", ".js", ".graphql"],
         "alias": {
-          "/app": "./src"
+          "/app": "../api/src"
         }
       }
     ]

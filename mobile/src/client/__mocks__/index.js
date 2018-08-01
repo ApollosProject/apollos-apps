@@ -4,7 +4,9 @@ import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
 import { SchemaLink } from 'apollo-link-schema';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-import { schema as typeDefs } from '../../../../api/src/data';
+// App refers to '../../../../api/src'
+// See config in .babelrc
+import { schema as typeDefs } from '/app/data';
 
 export default MockedProvider;
 
