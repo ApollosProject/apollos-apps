@@ -20,6 +20,7 @@ keystore.properties
 apolloskeystoreupload.keystore
 local.properties
 *.iml
+build.gradle.backup
 
 # Xcode
 build/
