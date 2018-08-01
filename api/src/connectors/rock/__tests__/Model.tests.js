@@ -1,6 +1,6 @@
+import { createCursor } from '/app/utils/cursor';
 import RestModel from '../Model';
 import RequestBuilder from '../RequestBuilder';
-import { createCursor } from '../../../utils/cursor';
 
 describe('RestModel', () => {
   it('constructs', () => {

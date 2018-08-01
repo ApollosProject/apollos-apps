@@ -14,5 +14,16 @@
     "development": {
       "sourceMaps": "inline"
     }
-  }
+  },
+  "plugins": [
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "extensions": [".android.js", ".ios.js", ".js", ".graphql"],
+        "alias": {
+          "/app": "./src"
+        }
+      }
+    ]
+  ]
 }

@@ -1,4 +1,4 @@
-import { createCursor, parseCursor } from '../../utils/cursor';
+import { createCursor, parseCursor } from '/app/utils/cursor';
 
 export default class RockModel {
   constructor(context) {

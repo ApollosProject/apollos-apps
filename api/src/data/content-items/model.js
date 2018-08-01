@@ -1,4 +1,4 @@
-import { RockModel } from '../../connectors/rock';
+import { RockModel } from '/app/connectors/rock';
 
 export default class ContentItem extends RockModel {
   resource = 'ContentChannelItems';

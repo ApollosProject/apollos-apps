@@ -2,10 +2,10 @@ import { graphql } from 'graphql';
 import fetch from 'isomorphic-fetch';
 import { makeExecutableSchema } from 'apollo-server';
 
-import { createGlobalId } from '../../node/model';
-import getContext from '../../../getContext';
+import { createGlobalId } from '/app/data/node/model';
+import getContext from '/app/getContext';
 // we import the root-level schema and resolver so we test the entire integration:
-import { schema as typeDefs, resolvers } from '../../';
+import { schema as typeDefs, resolvers } from '/app/data';
 
 describe('Person', () => {
   let schema;
