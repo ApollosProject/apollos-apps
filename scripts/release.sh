@@ -21,4 +21,4 @@ cd $dir
 git add .
 git commit -m "updated android and ios to ${version}"
 
-git push --follow-tags origin master
+git push --tags origin master
