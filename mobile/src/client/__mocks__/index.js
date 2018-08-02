@@ -6,6 +6,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // App refers to '../../../../api/src'
 // See config in .babelrc
+// eslint-disable-next-line import/no-absolute-path
 import { schema as typeDefs } from '/app/data';
 
 export default MockedProvider;
