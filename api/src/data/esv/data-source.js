@@ -12,7 +12,7 @@ export default class ESVScripture extends RESTDataSource {
     request.headers.set('Authorization', `token ${this.token}`);
   }
 
-  async get(query) {
+  async getScripture(query) {
     return this.get(`passage/html/?q=${query}`);
   }
 }

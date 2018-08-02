@@ -1,7 +1,7 @@
 export default {
   Query: {
     scripture: (root, { query }, { dataSources }) =>
-      dataSources.scripture.get(query),
+      dataSources.scripture.getScripture(query),
   },
   ESVScripture: {
     html: (data) => data,

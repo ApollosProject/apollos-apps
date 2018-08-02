@@ -4,7 +4,6 @@ import { resolvers, schema, dataSources } from './data';
 
 import getContext from './getContext';
 
-console.log(getContext());
 export default new ApolloServer({
   typeDefs: schema,
   resolvers,
