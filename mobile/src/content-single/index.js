@@ -106,6 +106,7 @@ class ContentSingle extends PureComponent {
                 >
                   <ScrollView>
                     <GradientOverlayImage
+                      overlayColor={get(content, 'theme.colors.paper')}
                       source={get(content, 'coverImage.sources', [])}
                     />
                     <BackgroundView>
