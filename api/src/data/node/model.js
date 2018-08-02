@@ -8,6 +8,7 @@ export function createGlobalId(id, type) {
   let encrypted = cipher.update(`${id}`, 'utf8', 'hex');
   encrypted += cipher.final('hex');
 
+  console.log(id, encrypted, type);
   return `${type}:${encrypted}`;
 }
 
