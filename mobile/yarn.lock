@@ -5984,6 +5984,10 @@ keycode@^2.1.9:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/keycode/-/keycode-2.2.0.tgz#3d0af56dc7b8b8e5cba8d0a97f107204eec22b04"
 
+keymirror@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/keymirror/-/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
+
 kind-of@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-1.1.0.tgz#140a3d2d41a36d2efcfa9377b62c24f8495a5c44"
@@ -8106,6 +8110,13 @@ react-native-version@^2.6.2:
     plist "^2.1.0"
     resolve-from "^4.0.0"
     semver "^5.5.0"
+
+react-native-video@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-3.1.0.tgz#684f4436eff38e50869530cf6c14e5d08afdc7e4"
+  dependencies:
+    keymirror "0.1.1"
+    prop-types "^15.5.10"
 
 react-native@~0.56.0:
   version "0.56.0"
