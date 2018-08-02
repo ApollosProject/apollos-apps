@@ -16,7 +16,7 @@ const TableView = compose(
   styled(
     ({ theme }) => ({
       marginBottom: theme.sizing.baseUnit,
-      backgroundColor: theme.colors.background.paper,
+      backgroundColor: theme.colors.paper,
       borderColor: theme.colors.shadows.default,
       borderTopWidth: StyleSheet.hairlineWidth,
       borderBottomWidth: StyleSheet.hairlineWidth,

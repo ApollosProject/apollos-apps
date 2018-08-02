@@ -25,7 +25,7 @@ const BrandIcon = withTheme(({ theme }) => ({
 }))(Icon);
 
 const HeaderContainer = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
+  backgroundColor: theme.colors.paper,
 }))(SafeAreaView);
 
 const Header = styled(({ theme }) => ({

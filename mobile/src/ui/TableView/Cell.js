@@ -13,7 +13,7 @@ const Container = styled(
   ({ theme }) => ({
     padding: theme.sizing.baseUnit / 2,
     paddingLeft: theme.sizing.baseUnit / 1.5,
-    backgroundColor: theme.colors.background.paper,
+    backgroundColor: theme.colors.paper,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',

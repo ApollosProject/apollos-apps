@@ -55,7 +55,7 @@ class FeedView extends Component {
       // These are all props of FeedItemCard but they do not have data coming
       // back yet. So I moved them here for safe keeping.
       // TODO: Move them back when the data is ready.
-      // backgroundColor={item.theme.colors.background.paper}
+      // backgroundColor={item.theme.colors.paper}
       // isLight={item.theme.isLight}
       // isLiked={item.isLiked}
       <TouchableWithoutFeedback

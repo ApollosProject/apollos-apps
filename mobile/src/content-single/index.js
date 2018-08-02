@@ -3,6 +3,7 @@ import { Query } from 'react-apollo';
 import { ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
+
 import { ErrorCard } from 'ui/Card';
 import CardTile from 'ui/CardTile';
 import GradientOverlayImage from 'ui/GradientOverlayImage';
@@ -100,12 +101,7 @@ class ContentSingle extends PureComponent {
                 <ThemeMixin
                   mixin={{
                     type: get(content, 'theme.type', 'light').toLowerCase(),
-                    colors: {
-                      primary: get(content, 'theme.colors.primary'),
-                      secondary: get(content, 'theme.colors.secondary'),
-                      darkPrimary: get(content, 'theme.colors.paper'),
-                      darkSecondary: get(content, 'theme.colors.screen'),
-                    },
+                    colors: get(content, 'theme.colors'),
                   }}
                 >
                   <ScrollView>

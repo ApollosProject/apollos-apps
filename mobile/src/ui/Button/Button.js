@@ -28,8 +28,8 @@ const ButtonStyles = styled(
           borderColor: theme.colors.primary,
         }
       : {
-          backgroundColor: theme.colors.background.default,
-          borderColor: theme.colors.background.default,
+          backgroundColor: theme.colors.screen,
+          borderColor: theme.colors.screen,
           elevation: 2,
         }),
   }),

@@ -14,7 +14,7 @@ import getUserFeed from './getUserFeed.graphql';
 // TODO: what are our thoughts around using this @-syntax for HOCs?
 @withTheme(({ theme, ...otherProps }) => ({
   headerBackgroundColor: theme.colors.primary,
-  headerTintColor: theme.colors.background.paper,
+  headerTintColor: theme.colors.paper,
   ...otherProps,
 }))
 class Home extends PureComponent {
