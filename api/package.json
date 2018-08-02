@@ -8,7 +8,8 @@
     "test": "bash ../scripts/test-script.sh",
     "lint": "./node_modules/.bin/eslint ./src --ext .js",
     "fixlint": "./node_modules/.bin/eslint ./src --ext .js --fix",
-    "codecov": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov"
+    "codecov": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov",
+    "release": "standard-version --release-as minor"
   },
   "engines": {
     "node": "^8.11.x"
@@ -58,7 +59,8 @@
     "coveralls": "^3.0.1",
     "jest": "^23.0.0",
     "jest-fetch-mock": "^1.6.2",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "standard-version": "^4.4.0"
   },
   "now": {
     "name": "apollos-church-api",
