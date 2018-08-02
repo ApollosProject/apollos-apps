@@ -53,13 +53,21 @@ const enhance = compose(
     accent: get(theme, `buttons.${type}.accent`, theme.colors.text.primary),
   })),
   // makes non-text children inherit button styles by default :-D
-  withThemeMixin(({ fill, accent, bordered }) => ({
-    colors: {
-      primary: bordered ? fill : accent,
-      text: { primary: bordered ? fill : accent },
-      background: { default: fill, screen: fill },
-    },
-  }))
+  withThemeMixin(({ fill, accent, bordered }) => {
+    const textColor = bordered ? fill : accent;
+    return {
+      colors: {
+        primary: bordered ? fill : accent,
+        text: {
+          primary: textColor,
+          secondary: textColor,
+          tertiary: textColor,
+        },
+        screen: fill,
+      },
+    };
+  }),
+  withTheme()
 );
 
 // API-Compatible to React-Native's base <Button> component,
@@ -78,6 +86,7 @@ const Button = enhance(
     accent,
     pill,
     TouchableComponent = Touchable,
+    theme,
     ...touchableProps
   }) => {
     const accessibilityTraits = ['button'];
