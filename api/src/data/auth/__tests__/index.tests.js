@@ -2,8 +2,8 @@ import { graphql } from 'graphql';
 import fetch from 'isomorphic-fetch';
 import { makeExecutableSchema } from 'apollo-server';
 
-import { schema as typeDefs, resolvers } from '/app/data';
-import getContext from '/app/getContext';
+import { schema as typeDefs, resolvers } from '/api/data';
+import getContext from '/api/getContext';
 // we import the root-level schema and resolver so we test the entire integration:
 
 describe('Auth', () => {

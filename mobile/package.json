@@ -71,7 +71,7 @@
     "modulePaths": ["<rootDir>/src/"],
     "setupFiles": ["./jest.setup.js"],
     "moduleNameMapper": {
-        "^\/app(.*)": "<rootDir>/../api/src$1"
+        "^\/api(.*)": "<rootDir>/../api/src$1"
     },
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"

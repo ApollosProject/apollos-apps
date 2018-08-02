@@ -1,4 +1,4 @@
-import { createCursor } from '/app/utils/cursor';
+import { createCursor } from '/api/utils/cursor';
 import RestModel from '../Model';
 import RequestBuilder from '../RequestBuilder';
 

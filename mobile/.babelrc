@@ -6,10 +6,10 @@
     [
       "module-resolver",
       {
-        "root": ["./src"],
         "extensions": [".android.js", ".ios.js", ".js", ".graphql"],
         "alias": {
-          "/app": "../api/src"
+          "/api": "../api/src",
+          "/mobile": "../mobile/src"
         }
       }
     ],
