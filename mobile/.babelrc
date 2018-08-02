@@ -6,10 +6,12 @@
     [
       "module-resolver",
       {
+        "root": ["./src"],
+        "cwd": "babelrc",
         "extensions": [".android.js", ".ios.js", ".js", ".graphql"],
         "alias": {
           "/api": "../api/src",
-          "/mobile": "../mobile/src"
+          "/mobile": "./src"
         }
       }
     ],
