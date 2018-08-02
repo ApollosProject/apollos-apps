@@ -29,6 +29,20 @@ module.exports = {
     'import/no-named-as-default': 0,
     'import/no-named-as-default-member': 0,
     'import/prefer-default-export': 0,
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'ignore', // off until https://github.com/benmosher/eslint-plugin-import/issues/512 is fixed
+      },
+    ],    
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/media-has-caption': 0,
     'react-native/no-unused-styles': 0,
