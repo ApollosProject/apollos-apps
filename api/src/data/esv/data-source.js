@@ -5,7 +5,7 @@ export default class ESVScripture extends RESTDataSource {
     super();
     this.resource = 'ESVScripture';
     this.baseURL = 'https://api.esv.org/v3/';
-    this.token = 'f35be45bf85323278db2b9b5799d96f275745233';
+    this.token = process.env.ESV_KEY;
   }
 
   willSendRequest(request) {
