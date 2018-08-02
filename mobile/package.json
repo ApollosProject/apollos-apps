@@ -109,6 +109,11 @@
     "rn-placeholder": "^1.2.0",
     "stream": "^0.0.2"
   },
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  },
   "rnpm": {
     "assets": ["assets/fonts"]
   }
