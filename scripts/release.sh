@@ -11,7 +11,7 @@ apiDIR=$dir/api
 androidDIR=$dir/mobile/android
 iosDIR=$dir/mobile/ios
 
-sed -i "" -e 's/versionName "$currentVersion"/versionName "$version"/g' $androidDIR/app/build.gradle
+sed -i "" -e "s/versionName \"$currentVersion\"/versionName \"$version\"/g" $androidDIR/app/build.gradle
 
 cd $iosDIR && xcrun agvtool new-marketing-version $1
 
