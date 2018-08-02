@@ -11,7 +11,7 @@ apiDIR=$dir/api
 androidDIR=$dir/mobile/android
 iosDIR=$dir/mobile/ios
 
-sed -i "" -e "s/versionName "$currentVersion"/versionName "$version"/g" $androidDIR/app/build.gradle
+sed -i "" -e 's/versionName "$currentVersion"/versionName "$version"/g' $androidDIR/app/build.gradle
 
 cd $iosDIR && xcrun agvtool new-marketing-version $1
 
@@ -20,7 +20,7 @@ cd $apiDIR && yarn run release
 
 cd $dir
 
-git add .
-git commit -m "updated android and ios to ${version}"
+# git add .
+# git commit -m "updated android and ios to ${version}"
 
-git push origin master
+# git push origin master
