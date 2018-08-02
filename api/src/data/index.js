@@ -38,8 +38,6 @@ export const schema = [
       authenticate(identity: String!, password: String!): Authentication
       registerPerson(email: String!, password: String!): Authentication
     }
-
-    ${process.env.NODE_ENV === 'test' ? `scalar Upload` : ``}
   `,
 ];
 
