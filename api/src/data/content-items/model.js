@@ -51,6 +51,7 @@ export default class ContentItem extends RockModel {
       .filter(`ContentChannelId eq 4`)
       .filter(`ContentChannelId eq 5`)
       .filter(`ContentChannelId eq 6`)
+      .filter(`ContentChannelId eq 8`)
       .orderBy('StartDateTime', 'desc');
 
   byContentChannelId = (id) =>
