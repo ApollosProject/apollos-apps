@@ -20,7 +20,5 @@ cd $apiDIR && yarn run release
 
 cd $dir
 
-# git add .
-# git commit -m "updated android and ios to ${version}"
-
-# git push origin master
+git add .
+git commit -m "updated api, android, and ios to v${version}"
