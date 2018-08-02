@@ -192,7 +192,7 @@ export const defaultContentItemResolvers = {
   },
 
   theme: (root) => {
-    if (![6, 1, 5, 4].includes(root.contentChannelId)) return null; // todo
+    if (![6, 5, 4].includes(root.contentChannelId)) return null; // todo
     return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
   },
 };

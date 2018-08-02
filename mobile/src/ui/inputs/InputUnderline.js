@@ -9,7 +9,7 @@ const FocusedUnderline = styled(
     height: StyleSheet.hairlineWidth,
     backgroundColor: hasError
       ? theme.colors.alert
-      : theme.colors.background.primary,
+      : theme.colors.primary,
     bottom: 0,
   }),
   'InputUnderline.focused'

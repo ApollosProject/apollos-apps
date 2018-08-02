@@ -21,7 +21,7 @@ export const schema = gql`
     secondary: Color
     screen: Color
     paper: Color
-    danger: Color
+    alert: Color
   }
 `;
 
@@ -43,7 +43,7 @@ export const resolver = {
           hue: baseColors[1],
           luminosity: 'dark',
         }),
-        danger: randomColor({
+        alert: randomColor({
           seed,
           hue: 'red',
         }),
