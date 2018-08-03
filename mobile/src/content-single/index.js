@@ -13,6 +13,7 @@ import PaddedView from '/mobile/ui/PaddedView';
 import { H2 } from '/mobile/ui/typography';
 import BackgroundView from '/mobile/ui/BackgroundView';
 import styled from '/mobile/ui/styled';
+import Share from '/mobile/ui/Share';
 
 import getContentItem from './getContentItem.graphql';
 import getContentItemMinimalState from './getContentItemMinimalState.graphql';
@@ -26,8 +27,14 @@ const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const itemTitle = navigation.getParam('itemTitle', 'Content');
+    const shareObject = {
+      title: 'Share Title',
+      url: 'Share Url',
+      message: 'Share Message',
+    };
     return {
       title: itemTitle,
+      headerRight: <Share content={shareObject} />,
     };
   };
 
