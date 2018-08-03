@@ -66,7 +66,8 @@
   },
   "standard-version": {
     "skip": {
-      "tag": true
+      "tag": true,
+      "commit": true
     }
   },
   "now": {
