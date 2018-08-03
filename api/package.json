@@ -61,8 +61,7 @@
     "coveralls": "^3.0.1",
     "jest": "^23.0.0",
     "jest-fetch-mock": "^1.6.2",
-    "nodemon": "^1.17.5",
-    "standard-version": "^4.4.0"
+    "nodemon": "^1.17.5"
   },
   "standard-version": {
     "skip": {

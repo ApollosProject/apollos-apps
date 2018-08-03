@@ -19,18 +19,8 @@ sed -i "" -e "s/versionName \"$currentVersion\"/versionName \"$version\"/g" $and
 # Update ios to new version
 cd $iosDIR && xcrun agvtool new-marketing-version $1
 
-# Mobile and API package.json update with changelog generation
-cd $mobileDIR && yarn run release
-cd $apiDIR && yarn run release
-
 cd $dir
-
-# Merge Mobile and API changelogs into one
-awk '{if (!a[$0]++) print}' $mobileDIR/CHANGELOG.md $apiDIR/CHANGELOG.md > CHANGELOG.md
-
-# Remove Mobile and API changelogs
-rm -f $mobileDIR/CHANGELOG.md $apiDIR/CHANGELOG.md
 
 # Commit
 git add .
-git commit -m "feat: updated api, mobile, android, and ios to v${version}"
+git commit -m "updated android and ios to v${version}"

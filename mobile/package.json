@@ -40,7 +40,6 @@
     "react-native-storybook-loader": "^1.8.0",
     "react-native-version": "^2.6.2",
     "react-test-renderer": "^16.4.1",
-    "standard-version": "^4.4.0",
     "waait": "^1.0.2",
     "yup": "^0.25.1"
   },
