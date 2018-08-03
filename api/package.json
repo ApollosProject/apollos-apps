@@ -63,12 +63,6 @@
     "jest-fetch-mock": "^1.6.2",
     "nodemon": "^1.17.5"
   },
-  "standard-version": {
-    "skip": {
-      "tag": true,
-      "commit": true
-    }
-  },
   "now": {
     "name": "apollos-church-api",
     "alias": "apollos-church-api.now.sh",
