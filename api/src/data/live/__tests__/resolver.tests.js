@@ -22,6 +22,7 @@ describe('LiveStream', () => {
       query {
         liveStream {
           isLive
+          eventStartTime
         }
       }
     `;
