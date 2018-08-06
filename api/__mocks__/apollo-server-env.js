@@ -2,12 +2,11 @@ import fetch from 'jest-fetch-mock';
 
 import * as apolloDatasourceMocks from './apollo-datasource-mocks';
 
-const apollo_server_env = require.requireActual('apollo-server-env');
-const nodeFetch = require.requireActual('node-fetch');
+const apolloServerEnv = require.requireActual('apollo-server-env');
 
 const resolveWith = (data, url) =>
   Promise.resolve(
-    new apollo_server_env.Response(JSON.stringify(data), {
+    new apolloServerEnv.Response(JSON.stringify(data), {
       url,
       status: 200,
       statusText: 'OK',
@@ -26,9 +25,9 @@ fetch.mockDataSourceApis = () => {
   });
 };
 
-const apollo_server_env_mocked = {
-  ...apollo_server_env,
+const apolloServerEnvMocked = {
+  ...apolloServerEnv,
   fetch,
 };
 
-module.exports = apollo_server_env_mocked;
+module.exports = apolloServerEnvMocked;
