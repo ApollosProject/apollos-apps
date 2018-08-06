@@ -10,7 +10,7 @@ const resolveWith = (data, url) =>
       url,
       status: 200,
       statusText: 'OK',
-      headers: new apolloServerEnvMocked.Headers({
+      headers: new apolloServerEnv.Headers({
         'Content-Type': 'application/json',
       }),
     })
