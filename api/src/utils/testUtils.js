@@ -13,6 +13,5 @@ export function getTestContext() {
     }
   });
   context.dataSources = dataSources;
-  console.log({ context });
   return context;
 }
