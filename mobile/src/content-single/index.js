@@ -28,9 +28,9 @@ class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const itemTitle = navigation.getParam('itemTitle', 'Content');
     const shareObject = {
-      title: 'Share Title',
-      url: 'Share Url',
-      message: 'Share Message',
+      title: itemTitle,
+      url: 'https://github.com/ApollosProject/apollos-prototype',
+      message: 'Share this with all your friends and family',
     };
     return {
       title: itemTitle,
