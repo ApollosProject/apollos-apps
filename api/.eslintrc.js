@@ -42,7 +42,7 @@ module.exports = {
         ],
         'newlines-between': 'ignore', // off until https://github.com/benmosher/eslint-plugin-import/issues/512 is fixed
       },
-    ],    
+    ],
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/media-has-caption': 0,
     'react-native/no-unused-styles': 0,
