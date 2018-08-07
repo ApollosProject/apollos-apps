@@ -2,6 +2,7 @@ import { gql } from 'apollo-server';
 import { createGlobalId } from '../node';
 
 export { default as model } from './model';
+export dataSource from './data-source';
 
 export const schema = gql`
   type ContentChannel implements Node {
@@ -22,7 +23,7 @@ export const schema = gql`
 export const resolver = {
   Query: {
     contentChannels: (root, args, context) =>
-      context.models.ContentChannel.getRootChannels(),
+      context.dataSources.contentChannel.getRootChannels(),
   },
   ContentChannel: {
     id: ({ id }, args, context, { parentType }) =>

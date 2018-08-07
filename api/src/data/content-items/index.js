@@ -98,8 +98,8 @@ export const defaultContentItemResolvers = {
       args,
     }),
 
-  parentChannel: ({ contentChannelId }, args, { models }) =>
-    models.ContentChannel.getFromId(contentChannelId),
+  parentChannel: ({ contentChannelId }, args, { dataSources }) =>
+    dataSources.contentChannel.getFromId(contentChannelId),
 
   images: ({ attributeValues, attributes }) => {
     const imageKeys = Object.keys(attributes).filter((key) =>
