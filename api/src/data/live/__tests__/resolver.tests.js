@@ -30,6 +30,5 @@ describe('LiveStream', () => {
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
-    expect(true).toBeTruthy();
   });
 });
