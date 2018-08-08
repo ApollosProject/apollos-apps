@@ -5,14 +5,23 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { ErrorCard } from '/mobile/ui/Card';
+
 import CardTile from '/mobile/ui/CardTile';
+
 import GradientOverlayImage from '/mobile/ui/GradientOverlayImage';
+
 import HorizontalTileFeed from '/mobile/ui/HorizontalTileFeed';
+
 import HTMLView from '/mobile/ui/HTMLView';
+
 import PaddedView from '/mobile/ui/PaddedView';
+
 import { H2 } from '/mobile/ui/typography';
+
 import BackgroundView from '/mobile/ui/BackgroundView';
+
 import styled from '/mobile/ui/styled';
+import Share from '/mobile/ui/Share';
 
 import getContentItem from './getContentItem.graphql';
 import getContentItemMinimalState from './getContentItemMinimalState.graphql';
@@ -26,8 +35,14 @@ const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const itemTitle = navigation.getParam('itemTitle', 'Content');
+    const shareObject = {
+      title: itemTitle,
+      url: 'https://github.com/ApollosProject/apollos-prototype',
+      message: 'Share this with all your friends and family',
+    };
     return {
       title: itemTitle,
+      headerRight: <Share content={shareObject} />,
     };
   };
 
@@ -82,19 +97,34 @@ class ContentSingle extends PureComponent {
         fetchPolicy="cache-only"
       >
         {({ data: cachedData }) => (
-          <Query query={getContentItem} variables={this.itemId}>
+          <Query
+            query={getContentItem}
+            variables={this.itemId}
+            fetchPolicy="cache-and-network"
+          >
             {({ loading, error, data }) => {
+              if (error) return <ErrorCard error={error} />;
+
               const content = {
-                ...(cachedData.node || {}),
-                ...(data.node || {}),
+                ...((cachedData && cachedData.node) || {}),
+                ...((data && data.node) || {}),
               };
 
-              if (error) return <ErrorCard error={error} />;
               const childContent = get(
                 data,
                 'node.childContentItemsConnection.edges',
                 []
               ).map((edge) => edge.node);
+
+              const siblingContent = get(
+                data,
+                'node.siblingContentItemsConnection.edges',
+                []
+              ).map((edge) => edge.node);
+
+              const horizontalContent = siblingContent.length
+                ? siblingContent
+                : childContent;
 
               return (
                 <ScrollView>
@@ -111,10 +141,11 @@ class ContentSingle extends PureComponent {
                       </HTMLView>
                     </ContentContainer>
                   </BackgroundView>
-                  {(childContent && childContent.length) || loading ? (
+                  {(horizontalContent && horizontalContent.length) ||
+                  loading ? (
                     <FeedContainer>
                       <HorizontalTileFeed
-                        content={childContent}
+                        content={horizontalContent}
                         isLoading={loading}
                         loadingStateObject={this.loadingStateObject}
                         renderItem={this.renderItem}
