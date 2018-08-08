@@ -12,6 +12,7 @@ import { createGlobalId } from '../node';
 const mapValuesWithKey = mapValues.convert({ cap: false });
 
 export { default as model } from './model';
+export { default as dataSource } from './data-source';
 
 export const schema = gql`
   interface ContentItem {
@@ -23,6 +24,10 @@ export const schema = gql`
     audios: [AudioMedia]
     htmlContent: String
     childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
       first: Int
       after: String
     ): ContentItemsConnection
@@ -39,6 +44,10 @@ export const schema = gql`
     audios: [AudioMedia]
     htmlContent: String
     childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
       first: Int
       after: String
     ): ContentItemsConnection
@@ -92,14 +101,20 @@ export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
     createGlobalId(id, parentType.name),
   htmlContent: ({ content }) => sanitizeHtml(content),
-  childContentItemsConnection: async ({ id }, args, { models }) =>
-    models.ContentItem.paginate({
-      cursor: await models.ContentItem.getCursorByParentContentItemId(id),
+  childContentItemsConnection: async ({ id }, args, { dataSources }) =>
+    dataSources.ContentItem.paginate({
+      cursor: await dataSources.ContentItem.getCursorByParentContentItemId(id),
       args,
     }),
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
-    dataSources.contentChannel.getFromId(contentChannelId),
+    dataSources.ContentChannel.getFromId(contentChannelId),
+
+  siblingContentItemsConnection: async ({ id }, args, { dataSources }) =>
+    dataSources.ContentItem.paginate({
+      cursor: await dataSources.ContentItem.getCursorBySiblingContentItemId(id),
+      args,
+    }),
 
   images: ({ attributeValues, attributes }) => {
     const imageKeys = Object.keys(attributes).filter((key) =>
@@ -153,7 +168,7 @@ export const defaultContentItemResolvers = {
     }));
   },
 
-  coverImage: async (root, args, { models }) => {
+  coverImage: async (root, args, { dataSources }) => {
     const pickBestImage = (images) => {
       // TODO: there's probably a _much_ more explicit and better way to handle this
       const squareImage = images.find((image) =>
@@ -168,7 +183,7 @@ export const defaultContentItemResolvers = {
     if (defaultImages.length) return pickBestImage(defaultImages);
 
     // If no image, check parent for image:
-    const parentItemsCursor = await models.ContentItem.getCursorByChildContentItemId(
+    const parentItemsCursor = await dataSources.ContentItem.getCursorByChildContentItemId(
       root.id
     );
     if (!parentItemsCursor) return null;
@@ -191,9 +206,9 @@ export const defaultContentItemResolvers = {
 
 export const resolver = {
   Query: {
-    userFeed: (root, args, { models }) =>
-      models.ContentItem.paginate({
-        cursor: models.ContentItem.byUserFeed(),
+    userFeed: (root, args, { dataSources }) =>
+      dataSources.contentItem.paginate({
+        cursor: dataSources.contentItem.byUserFeed(),
         args,
       }),
   },

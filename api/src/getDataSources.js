@@ -1,6 +1,8 @@
 import { dataSources } from './data';
 
 export default () => ({
-  liveStream: new dataSources.LiveStream(),
-  contentChannel: new dataSources.ContentChannel(),
+  LiveStream: new dataSources.LiveStream(),
+  ContentChannel: new dataSources.ContentChannel(),
+  ContentItem: new dataSources.ContentItem(),
+  Person: new dataSources.Person(),
 });

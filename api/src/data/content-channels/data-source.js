@@ -1,5 +1,4 @@
 import RockApolloDataSource from '/api/connectors/rock/ApolloDataSource';
-import withQuery from 'with-query';
 
 export default class ContentChannel extends RockApolloDataSource {
   resource = 'ContentChannels';

@@ -23,14 +23,14 @@ export const schema = gql`
 export const resolver = {
   Query: {
     contentChannels: (root, args, context) =>
-      context.dataSources.contentChannel.getRootChannels(),
+      context.dataSources.ContentChannel.getRootChannels(),
   },
   ContentChannel: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    childContentItemsConnection: ({ id }, args, { models }) =>
-      models.ContentItem.paginate({
-        cursor: models.ContentItem.byContentChannelId(id),
+    childContentItemsConnection: ({ id }, args, { dataSources }) =>
+      dataSources.ContentItem.paginate({
+        cursor: dataSources.ContentItem.byContentChannelId(id),
         args,
       }),
     iconName: () => 'text', // TODO
