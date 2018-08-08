@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Modal } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import Video from 'react-native-video';
+import { default as Video } from 'react-native-video-controls'; // eslint-disable-line import/no-named-default
 
 import styled from '/mobile/ui/styled';
 import Touchable from '/mobile/ui/Touchable';
 import { withTheme } from '/mobile/ui/theme';
 import Icon from '/mobile/ui/Icon';
+import ProgressiveImage from '/mobile/ui/ProgressiveImage';
 
 const VideoWrapper = styled({
   position: 'relative',
@@ -49,21 +50,14 @@ class VideoPlayer extends PureComponent {
     this.state = { paused: true };
   }
 
-  setPlayerRef = (element) => {
-    this.player = element;
-  };
-
   handleOnPress = () => {
-    this.player.presentFullscreenPlayer();
+    this.setState({ paused: false });
   };
 
-  handleOnFullscreenPlayerDidPresent = () => this.setState({ paused: false });
-
-  handleOnFullscreenPlayerDidDismiss = () => this.setState({ paused: true });
+  handleOnRequestClose = () => this.setState({ paused: true });
 
   render() {
     const { source, ...otherProps } = this.props;
-
     return (
       <VideoWrapper>
         <PlayButton onPress={this.handleOnPress}>
@@ -71,17 +65,22 @@ class VideoPlayer extends PureComponent {
             <StyledIcon />
           </AndroidPositioningFix>
         </PlayButton>
-        <Video
-          ref={this.setPlayerRef}
-          source={source}
-          onFullscreenPlayerDidPresent={this.handleOnFullscreenPlayerDidPresent}
-          onFullscreenPlayerDidDismiss={this.handleOnFullscreenPlayerDidDismiss}
-          // TODO: remove when styled supports passing refs
-          style={{ width: '100%' }} // eslint-disable-line react-native/no-inline-styles
-          aspectRatio={16 / 9}
-          paused={this.state.paused}
-          {...otherProps}
+        <ProgressiveImage
+          source={'https://picsum.photos/600/400/'}
+          style={{ aspectRatio: 16 / 9 }}
         />
+        <Modal
+          visible={!this.state.paused}
+          onRequestClose={this.handleOnRequestClose}
+          animationType={'fade'}
+        >
+          <Video
+            source={source}
+            onBack={this.handleOnRequestClose}
+            disableFullscreen
+            {...otherProps}
+          />
+        </Modal>
       </VideoWrapper>
     );
   }
