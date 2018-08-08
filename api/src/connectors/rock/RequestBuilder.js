@@ -24,8 +24,8 @@ export default class RockRequestBuilder {
    * Sends a GET request to the server, resolves with results
    * @returns promise
    */
-  get = () =>
-    this.connector.get(this.path).then((results) => {
+  get = ({ options = {}, body = {} } = {}) =>
+    this.connector.get(this.path, body, options).then((results) => {
       if (this.transforms.length)
         return this.transforms.reduce(
           (current, transformer) => transformer(current),

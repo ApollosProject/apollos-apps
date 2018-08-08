@@ -5,4 +5,5 @@ export default () => ({
   ContentChannel: new dataSources.ContentChannel(),
   ContentItem: new dataSources.ContentItem(),
   Person: new dataSources.Person(),
+  Auth: new dataSources.Auth(),
 });
