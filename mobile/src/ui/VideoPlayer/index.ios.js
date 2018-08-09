@@ -1,42 +1,17 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose } from 'recompose';
 import Video from 'react-native-video';
 
-import styled from '/mobile/ui/styled';
-import Touchable from '/mobile/ui/Touchable';
-import { withTheme } from '/mobile/ui/theme';
-import Icon from '/mobile/ui/Icon';
+import ProgressiveImage from '/mobile/ui/ProgressiveImage';
 
-const VideoWrapper = styled({
-  position: 'relative',
-})(View);
-
-const PlayButton = styled({
-  ...StyleSheet.absoluteFillObject,
-  justifyContent: 'center',
-  alignItems: 'center',
-  zIndex: 2,
-})(Touchable);
-
-const StyledIcon = compose(
-  withTheme(({ theme: { colors: { lightPrimary } = {} } = {} }) => ({
-    name: 'play',
-    size: 50,
-    fill: lightPrimary,
-  }))
-)(Icon);
-
-// TODO: update to use when styled supports forwarding refs.
-// const StyledVideo = styled({
-//   width: '100%',
-// })(Video);
+import { VideoWrapper, PlayButton, PlayIcon } from './styles';
 
 class VideoPlayer extends PureComponent {
   static propTypes = {
-    source: PropTypes.shape({}),
-    isLoading: PropTypes.bool,
+    source: PropTypes.shape({
+      uri: PropTypes.string.isRequired,
+    }).isRequired,
+    thumbnail: PropTypes.string.isRequired,
   };
 
   constructor() {
@@ -45,35 +20,44 @@ class VideoPlayer extends PureComponent {
     this.state = { paused: true };
   }
 
-  setPlayerRef = (element) => {
-    this.player = element;
+  setVideoRef = (element) => {
+    this.video = element;
   };
 
   handleOnPress = () => {
-    this.player.presentFullscreenPlayer();
+    this.video.presentFullscreenPlayer();
   };
 
-  handleOnFullscreenPlayerDidPresent = () => this.setState({ paused: false });
+  handleTogglePaused = () => {
+    this.setState((prevState) => ({ paused: !prevState.paused }));
+  };
 
-  handleOnFullscreenPlayerDidDismiss = () => this.setState({ paused: true });
+  handleOnEnd = () => {
+    this.handleTogglePaused();
+    this.video.dismissFullscreenPlayer();
+  };
 
   render() {
-    const { source, ...otherProps } = this.props;
+    const { source, thumbnail, ...otherProps } = this.props;
 
     return (
       <VideoWrapper>
         <PlayButton onPress={this.handleOnPress}>
-          <StyledIcon />
+          <PlayIcon />
         </PlayButton>
+        {/* TODO: decide what to do about Image styling */}
+        <ProgressiveImage source={thumbnail} style={{ aspectRatio: 16 / 9 }} />
         <Video
-          ref={this.setPlayerRef}
+          ref={this.setVideoRef}
           source={source}
-          onFullscreenPlayerDidPresent={this.handleOnFullscreenPlayerDidPresent}
-          onFullscreenPlayerDidDismiss={this.handleOnFullscreenPlayerDidDismiss}
-          // TODO: remove when styled supports forwarding refs.
-          style={{ width: '100%' }} // eslint-disable-line react-native/no-inline-styles
-          aspectRatio={16 / 9}
           paused={this.state.paused}
+          onFullscreenPlayerDidPresent={this.handleTogglePaused}
+          onFullscreenPlayerDidDismiss={this.handleTogglePaused}
+          onEnd={this.handleOnEnd}
+          onAudioBecomingNoisy={this.handleTogglePaused}
+          ignoreSilentSwitch={'ignore'}
+          playInBackground
+          playWhenInactive
           {...otherProps}
         />
       </VideoWrapper>

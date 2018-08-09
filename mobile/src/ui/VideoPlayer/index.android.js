@@ -1,83 +1,60 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet, Modal } from 'react-native';
+import { Modal } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose } from 'recompose';
 import { default as Video } from 'react-native-video-controls'; // eslint-disable-line import/no-named-default
 
-import styled from '/mobile/ui/styled';
-import Touchable from '/mobile/ui/Touchable';
-import { withTheme } from '/mobile/ui/theme';
-import Icon from '/mobile/ui/Icon';
 import ProgressiveImage from '/mobile/ui/ProgressiveImage';
 
-const VideoWrapper = styled({
-  position: 'relative',
-})(View);
-
-const PlayButton = styled({
-  ...StyleSheet.absoluteFillObject,
-  zIndex: 2,
-})(Touchable);
-
-const AndroidPositioningFix = styled({
-  ...StyleSheet.absoluteFillObject,
-  justifyContent: 'center',
-  alignItems: 'center',
-  zIndex: 1,
-})(View);
-
-const StyledIcon = compose(
-  withTheme(({ theme: { colors: { lightPrimary } = {} } = {} }) => ({
-    name: 'play',
-    size: 50,
-    fill: lightPrimary,
-  }))
-)(Icon);
-
-// const StyledVideo = styled({
-//   width: '100%',
-// })(Video);
+import {
+  VideoWrapper,
+  PlayButton,
+  AndroidPositioningFix,
+  PlayIcon,
+} from './styles';
 
 class VideoPlayer extends PureComponent {
   static propTypes = {
-    source: PropTypes.shape({}),
-    isLoading: PropTypes.bool,
+    source: PropTypes.shape({
+      uri: PropTypes.string.isRequired,
+    }).isRequired,
+    thumbnail: PropTypes.string.isRequired,
   };
 
   constructor() {
     super();
 
-    this.state = { paused: true };
+    this.state = { modalVisible: false };
   }
 
   handleOnPress = () => {
-    this.setState({ paused: false });
+    this.setState({ modalVisible: true });
   };
 
-  handleOnRequestClose = () => this.setState({ paused: true });
+  handleOnRequestClose = () => this.setState({ modalVisible: false });
 
   render() {
-    const { source, ...otherProps } = this.props;
+    const { source, thumbnail, ...otherProps } = this.props;
     return (
       <VideoWrapper>
         <PlayButton onPress={this.handleOnPress}>
           <AndroidPositioningFix>
-            <StyledIcon />
+            <PlayIcon />
           </AndroidPositioningFix>
         </PlayButton>
-        <ProgressiveImage
-          source={'https://picsum.photos/600/400/'}
-          style={{ aspectRatio: 16 / 9 }}
-        />
+        {/* TODO: decide what to do about Image styling */}
+        <ProgressiveImage source={thumbnail} style={{ aspectRatio: 16 / 9 }} />
         <Modal
-          visible={!this.state.paused}
+          visible={this.state.modalVisible}
           onRequestClose={this.handleOnRequestClose}
           animationType={'fade'}
         >
           <Video
             source={source}
+            onEnd={this.handleOnRequestClose}
             onBack={this.handleOnRequestClose}
-            disableFullscreen
+            onAudioBecomingNoisy={this.handleOnRequestClose}
+            playInBackground
+            disableFullscreen // hides unused fullscreen player button
             {...otherProps}
           />
         </Modal>
