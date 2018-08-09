@@ -1,15 +1,15 @@
 import { createCursor } from '/api/utils/cursor';
-import RestModel from '../Model';
+import RestDataSource from '../data-source';
 import RequestBuilder from '../RequestBuilder';
 
-describe('RestModel', () => {
+describe('RestDataSource', () => {
   it('constructs', () => {
-    expect(new RestModel()).toBeTruthy();
+    expect(new RestDataSource()).toBeTruthy();
   });
 
   describe('the request method', () => {
     it("throws an error if you don't set a resource", () => {
-      const model = new RestModel();
+      const model = new RestDataSource();
       expect(() => model.request()).toThrow();
     });
 
@@ -22,7 +22,7 @@ describe('RestModel', () => {
         },
       };
       context.connectors.Rock.request.mockReturnValue('request response');
-      const model = new RestModel(context);
+      const model = new RestDataSource();
       model.resource = 'TestResource';
       const request = model.request();
       expect(request).toBe('request response');
@@ -54,7 +54,7 @@ describe('RestModel', () => {
     });
 
     it('paginates a cursor', () => {
-      const model = new RestModel(context);
+      const model = new RestDataSource(context);
       const cursor = context.connectors.Rock.request('TestResource');
       const result = model.paginate({ cursor });
       expect(result).toBeTruthy();
@@ -62,7 +62,7 @@ describe('RestModel', () => {
     });
 
     it('skips pages', () => {
-      const model = new RestModel(context);
+      const model = new RestDataSource(context);
       const cursor = context.connectors.Rock.request('TestResource');
       const after = createCursor({ position: 25 });
       const result = model.paginate({ cursor, args: { after } });
@@ -71,7 +71,7 @@ describe('RestModel', () => {
     });
 
     it('throws on an invalid `after` cursor', () => {
-      const model = new RestModel(context);
+      const model = new RestDataSource(context);
       const cursor = context.connectors.Rock.request('TestResource');
       const after = createCursor({ bad: 'brah!' });
       const result = model.paginate({ cursor, args: { after } });
@@ -79,7 +79,7 @@ describe('RestModel', () => {
     });
 
     it('sets page size', () => {
-      const model = new RestModel(context);
+      const model = new RestDataSource(context);
       const cursor = context.connectors.Rock.request('TestResource');
       const result = model.paginate({ cursor, args: { first: 2 } });
       expect(result).toBeTruthy();

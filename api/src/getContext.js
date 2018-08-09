@@ -4,15 +4,12 @@ import { get } from 'lodash';
 import { registerToken } from '/api/data/auth/token';
 
 import { models } from './data';
-import RockConnector from './connectors/rock';
 
 // Construct a context object for each request
 export default ({ req = {} } = {}) => {
   // initialize connectors for every request so API fetches
   // are deduplicated per-request only.
-  const connectors = {
-    Rock: new RockConnector(),
-  };
+  const connectors = {};
 
   const initiatedModels = {};
 
