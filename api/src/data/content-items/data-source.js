@@ -5,12 +5,11 @@ export default class ContentItem extends RockApolloDataSource {
   expanded = true;
 
   getCursorByParentContentItemId = async (id) => {
-    const associations = this.request('ContentChannelItemAssociations')
+    const associations = await this.request('ContentChannelItemAssociations')
       .filter(`ContentChannelItemId eq ${id}`)
       .get();
 
     if (!associations || !associations.length) return null;
-
     const request = this.request();
     associations.forEach(({ childContentChannelItemId }) => {
       request.filter(`Id eq ${childContentChannelItemId}`);
@@ -25,7 +24,6 @@ export default class ContentItem extends RockApolloDataSource {
       .get();
 
     if (!associations || !associations.length) return null;
-
     const request = this.request();
     associations.forEach(({ contentChannelItemId }) => {
       request.filter(`Id eq ${contentChannelItemId}`);
