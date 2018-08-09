@@ -8,6 +8,8 @@ import { ROCK_API, ROCK_TOKEN } from './constants';
 import RequestBuilder from './RequestBuilder';
 
 export default class RockApolloDataSource extends RESTDataSource {
+  expanded = false;
+
   get baseURL() {
     return ROCK_API;
   }
@@ -36,6 +38,7 @@ export default class RockApolloDataSource extends RESTDataSource {
     new RequestBuilder({
       resource,
       connector: this,
+      defaultOptions: this.expanded ? { loadAttributes: 'expanded' } : null,
     });
 
   paginate = async ({ cursor, args: { after, first = 20 } = {} }) => {

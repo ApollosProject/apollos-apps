@@ -207,8 +207,8 @@ export const defaultContentItemResolvers = {
 export const resolver = {
   Query: {
     userFeed: (root, args, { dataSources }) =>
-      dataSources.contentItem.paginate({
-        cursor: dataSources.contentItem.byUserFeed(),
+      dataSources.ContentItem.paginate({
+        cursor: dataSources.ContentItem.byUserFeed(),
         args,
       }),
   },

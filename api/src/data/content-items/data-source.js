@@ -1,13 +1,8 @@
 import RockApolloDataSource from '/api/connectors/rock/ApolloDataSource';
 
-export default class ContentItem extends RockApolloDataSource {
+export default class ContentItemDataSource extends RockApolloDataSource {
   resource = 'ContentChannelItems';
-
-  request() {
-    const request = super.request.call(this);
-    request.query.loadAttributes = 'expanded';
-    return request;
-  }
+  expanded = true;
 
   getCursorByParentContentItemId = async (id) => {
     const associations = this.request('ContentChannelItemAssociations')

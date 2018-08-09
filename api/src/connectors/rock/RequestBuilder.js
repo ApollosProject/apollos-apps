@@ -4,9 +4,12 @@ import withQuery from 'with-query';
 // Would probably work against most OData APIs, but built to just
 // tackle the specific needs of Apollos on top of Rock.
 export default class RockRequestBuilder {
-  constructor({ connector, resource }) {
+  constructor({ connector, resource, defaultOptions = null }) {
     this.connector = connector;
     this.resource = resource;
+    if (defaultOptions) {
+      this.query = defaultOptions;
+    }
   }
 
   query = {};

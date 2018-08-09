@@ -26,7 +26,6 @@ export default class AuthModel extends RockModel {
 
   getCurrentPerson = async () => {
     if (this.rockCookie) {
-      this.context.connectors.Rock.defaultRequestOptions.headers.cookie = this.rockCookie;
       const request = this.request('People/GetCurrentPerson').get();
       await request;
       delete this.context.connectors.Rock.defaultRequestOptions.headers.cookie;

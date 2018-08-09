@@ -36,12 +36,9 @@ export default class AuthModel extends RockApolloDataSource {
 
   fetchUserCookie = async (Username, Password) => {
     try {
-      const response = await this.request('Auth/Login', {
-        options: { method: 'POST' },
-        body: {
-          Username,
-          Password,
-        },
+      const response = await this.post('Auth/Login', {
+        Username,
+        Password,
       });
       if (response.status >= 400) throw new AuthenticationError();
       const cookie = response.headers.get('set-cookie');
