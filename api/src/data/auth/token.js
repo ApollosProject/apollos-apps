@@ -8,6 +8,7 @@ export const parseToken = (token) => jwt.verify(token, secret);
 export const registerToken = (token) => {
   try {
     const { cookie } = parseToken(token);
+
     return {
       userToken: token,
       rockCookie: cookie,

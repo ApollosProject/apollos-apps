@@ -2,8 +2,8 @@ import getContext from '/api/getContext';
 import getDataSources from '/api/getDataSources';
 import { KeyValueCache } from 'apollo-server-caching';
 
-export function getTestContext() {
-  const context = getContext();
+export function getTestContext(req) {
+  const context = getContext(req);
 
   const dataSources = getDataSources();
   // Apollo Server does this internally.

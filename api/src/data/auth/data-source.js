@@ -11,7 +11,6 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   getCurrentPerson = async () => {
     const { rockCookie } = this.context;
-    console.log(this.context);
     if (rockCookie) {
       const request = await this.request('People/GetCurrentPerson').get({
         options: { headers: { cookie: rockCookie } },
@@ -31,6 +30,7 @@ export default class AuthDataSource extends RockApolloDataSource {
       const cookie = response.headers.get('set-cookie');
       return cookie;
     } catch (err) {
+      console.log(err);
       throw new AuthenticationError('Invalid Credentials');
     }
   };
@@ -68,7 +68,7 @@ export default class AuthDataSource extends RockApolloDataSource {
         IsSystem: false, // Required by Rock
         Gender: 0, // Required by Rock
       });
-      return response.text();
+      return response.json();
     } catch (err) {
       throw new Error('Unable to create profile!');
     }
@@ -78,13 +78,14 @@ export default class AuthDataSource extends RockApolloDataSource {
     try {
       const { email, password, personId } = props;
 
-      return await this.post('/UserLogins', {
+      const result = await this.post('/UserLogins', {
         PersonId: personId,
         EntityTypeId: 27, // A default setting we use in Rock-person-creation-flow
         UserName: email,
         PlainTextPassword: password,
         LastLoginDateTime: `${moment().toISOString()}`,
       });
+      return result.json();
     } catch (err) {
       throw new Error('Unable to create user login!');
     }
@@ -94,7 +95,7 @@ export default class AuthDataSource extends RockApolloDataSource {
     const personExists = await this.personExists({ identity: email });
     if (personExists) throw new Error('User already exists!');
 
-    const personId = await this.createUserProfile({ email });
+    const { personId } = await this.createUserProfile({ email });
 
     await this.createUserLogin({
       email,
