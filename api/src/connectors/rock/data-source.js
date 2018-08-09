@@ -40,14 +40,15 @@ export default class RockApolloDataSource extends RESTDataSource {
     return mapKeys(normalizedValues, (value, key) => camelCase(key));
   };
 
-  request = (resource = this.resource) =>
-    new RequestBuilder({
+  request(resource = this.resource) {
+    return new RequestBuilder({
       resource,
       connector: this,
       defaultOptions: this.expanded ? { loadAttributes: 'expanded' } : null,
     });
+  }
 
-  paginate = async ({ cursor, args: { after, first = 20 } = {} }) => {
+  async paginate({ cursor, args: { after, first = 20 } = {} }) {
     let skip = 0;
     if (after) {
       const parsed = parseCursor(after);
@@ -74,5 +75,5 @@ export default class RockApolloDataSource extends RESTDataSource {
     return {
       edges,
     };
-  };
+  }
 }
