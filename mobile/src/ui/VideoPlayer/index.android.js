@@ -47,12 +47,14 @@ class VideoPlayer extends PureComponent {
           visible={this.state.modalVisible}
           onRequestClose={this.handleOnRequestClose}
           animationType={'fade'}
+          hardwareAccelerated
         >
           <Video
             source={source}
             onEnd={this.handleOnRequestClose}
             onBack={this.handleOnRequestClose}
             onAudioBecomingNoisy={this.handleOnRequestClose}
+            onError={this.handleOnRequestClose} // set state to paused and exit native player TODO: consider retrying
             playInBackground
             disableFullscreen // hides unused fullscreen player button
             {...otherProps}

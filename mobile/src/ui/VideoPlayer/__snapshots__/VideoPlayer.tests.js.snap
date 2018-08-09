@@ -151,6 +151,7 @@ exports[`the VideoPlayer component should render 1`] = `
     ignoreSilentSwitch="ignore"
     onAudioBecomingNoisy={[Function]}
     onEnd={[Function]}
+    onError={[Function]}
     onFullscreenPlayerDidDismiss={[Function]}
     onFullscreenPlayerDidPresent={[Function]}
     paused={true}

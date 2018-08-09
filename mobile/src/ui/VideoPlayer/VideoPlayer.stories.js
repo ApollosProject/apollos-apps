@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import VideoPlayer from '.';
 
-storiesOf('Video', module).add('Example', () => (
+storiesOf('VideoPlayer', module).add('Example', () => (
   <VideoPlayer
     source={{
       uri:

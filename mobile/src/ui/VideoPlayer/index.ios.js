@@ -53,8 +53,9 @@ class VideoPlayer extends PureComponent {
           paused={this.state.paused}
           onFullscreenPlayerDidPresent={this.handleTogglePaused}
           onFullscreenPlayerDidDismiss={this.handleTogglePaused}
-          onEnd={this.handleOnEnd}
           onAudioBecomingNoisy={this.handleTogglePaused}
+          onEnd={this.handleOnEnd}
+          onError={this.handleOnEnd} // set state to paused and exit native player TODO: consider retrying
           ignoreSilentSwitch={'ignore'}
           playInBackground
           playWhenInactive
