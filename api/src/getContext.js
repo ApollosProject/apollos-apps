@@ -1,7 +1,9 @@
 import dotenv from 'dotenv/config'; // eslint-disable-line
 import { get } from 'lodash';
-import { models } from './data';
 
+import { registerToken } from '/api/data/auth/token';
+
+import { models } from './data';
 import RockConnector from './connectors/rock';
 
 // Construct a context object for each request
@@ -20,11 +22,15 @@ export default ({ req = {} } = {}) => {
   };
 
   Object.keys(models).forEach((modelName) => {
-    initiatedModels[modelName] = new models[modelName](context);
+    if (models[modelName]) {
+      initiatedModels[modelName] = new models[modelName](context);
+    }
   });
 
   if (get(req, 'headers.authorization')) {
-    initiatedModels.Auth.registerToken(req.headers.authorization);
+    const { userToken, rockCookie } = registerToken(req.headers.authorization);
+    context.userToken = userToken;
+    context.rockCookie = rockCookie;
   }
 
   return context;

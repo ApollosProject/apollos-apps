@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server';
 import { createGlobalId } from '../node';
 
-export { default as model } from './model';
+// export { default as model } from './model';
 export { default as dataSource } from './data-source';
 
 export const schema = gql`

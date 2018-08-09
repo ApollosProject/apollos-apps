@@ -1,6 +1,6 @@
 import RockApolloDataSource from '/api/connectors/rock/ApolloDataSource';
 
-export default class ContentItemDataSource extends RockApolloDataSource {
+export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
   expanded = true;
 

@@ -1,33 +1,20 @@
 import { AuthenticationError } from 'apollo-server';
 import moment from 'moment';
-import jwt from 'jsonwebtoken';
 
 import RockApolloDataSource from '/api/connectors/rock/ApolloDataSource';
+import { generateToken, registerToken } from './token';
 
-const secret = process.env.SECRET || 'ASea$2gadj#asd0';
-
-export default class AuthModel extends RockApolloDataSource {
+export default class AuthDataSource extends RockApolloDataSource {
   resource = 'Auth';
-
-  generateToken = (params) =>
-    jwt.sign({ ...params }, secret, { expiresIn: '60d' });
-
-  parseToken = (token) => jwt.verify(token, secret);
-
-  registerToken = (token) => {
-    try {
-      const { cookie } = this.parseToken(token);
-      this.userToken = token;
-      this.rockCookie = cookie;
-    } catch (e) {
-      throw new AuthenticationError('Invalid token');
-    }
-  };
+  rockCookie = null;
+  userToken = null;
 
   getCurrentPerson = async () => {
-    if (this.rockCookie) {
+    const { rockCookie } = this.context;
+    console.log(this.context);
+    if (rockCookie) {
       const request = await this.request('People/GetCurrentPerson').get({
-        options: { headers: { cookie: this.rockCookie } },
+        options: { headers: { cookie: rockCookie } },
       });
       return request;
     }
@@ -51,8 +38,10 @@ export default class AuthModel extends RockApolloDataSource {
   authenticate = async ({ identity, password }) => {
     try {
       const cookie = await this.fetchUserCookie(identity, password);
-      const token = this.generateToken({ cookie });
-      this.registerToken(token);
+      const token = generateToken({ cookie });
+      const { userToken, rockCookie } = registerToken(token);
+      this.context.userToken = userToken;
+      this.context.rockCookie = rockCookie;
       return { token };
     } catch (e) {
       throw e;
@@ -74,11 +63,12 @@ export default class AuthModel extends RockApolloDataSource {
     try {
       const { email } = props;
 
-      return await this.post('/People', {
+      const response = await this.post('/People', {
         Email: email,
         IsSystem: false, // Required by Rock
         Gender: 0, // Required by Rock
       });
+      return response.text();
     } catch (err) {
       throw new Error('Unable to create profile!');
     }

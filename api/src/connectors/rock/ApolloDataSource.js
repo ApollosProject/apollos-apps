@@ -8,6 +8,7 @@ import { ROCK_API, ROCK_TOKEN } from './constants';
 import RequestBuilder from './RequestBuilder';
 
 export default class RockApolloDataSource extends RESTDataSource {
+  // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
 
   get baseURL() {
@@ -16,9 +17,14 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
-    return super
-      .didReceiveResponse(response, request)
-      .then((parsedResponse) => this.normalize(parsedResponse));
+    if (request.method === 'GET') {
+      return super
+        .didReceiveResponse(response, request)
+        .then((parsedResponse) => this.normalize(parsedResponse));
+    }
+    // Shortcut the parsing, we need the headers.
+    // Should be a better, cleaner way to do this...
+    return response;
   }
 
   willSendRequest(request) {

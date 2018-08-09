@@ -11,7 +11,7 @@ import { createGlobalId } from '../node';
 
 const mapValuesWithKey = mapValues.convert({ cap: false });
 
-export { default as model } from './model';
+// export { default as model } from './model';
 export { default as dataSource } from './data-source';
 
 export const schema = gql`
