@@ -42,8 +42,6 @@ InMemoryCache {
       "$ROOT_QUERY.mediaPlayer": Object {
         "__typename": "MediaPlayerState",
         "isPlaying": false,
-        "isRepeating": false,
-        "isShuffling": false,
         "nowPlayingIndex": 0,
         "queue": Object {
           "json": Array [],

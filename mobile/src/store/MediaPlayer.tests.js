@@ -9,8 +9,6 @@ const query = gql`
       nowPlayingIndex
       queue
       isPlaying
-      isShuffling
-      isRepeating
     }
   }
 `;
@@ -38,12 +36,6 @@ describe('MediaPlayer Store', () => {
     resolvers.Mutation.mediaPlayerUpdatePlayer(
       {},
       { isPlaying: true },
-      { cache: client.cache }
-    );
-    expect(client.query({ query })).resolves.toMatchSnapshot();
-    resolvers.Mutation.mediaPlayerUpdatePlayer(
-      {},
-      { isShuffling: true, isRepeating: true },
       { cache: client.cache }
     );
     expect(client.query({ query })).resolves.toMatchSnapshot();

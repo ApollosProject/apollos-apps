@@ -12,7 +12,7 @@ export const schema = `
 
   type Mutation {
     logout
-    mediaPlayerUpdatePlayer(isPlaying: Bool, isShuffling: Bool, isRepeating: Bool)
+    mediaPlayerUpdatePlayer(isPlaying: Bool)
     mediaPlayerNext(skip: Int)
     mediaPlayerEnqueue(name: String)
   }
@@ -22,8 +22,6 @@ export const schema = `
     nowPlayingIndex: Int
     queue: [MediaPlayerTrack]
     isPlaying: Bool
-    isShuffling: Bool
-    isRepeating: Bool
   }
 
   type MediaPlayerTrack {
@@ -39,8 +37,6 @@ export const defaults = {
     nowPlayingIndex: 0,
     queue: [],
     isPlaying: false,
-    isShuffling: false,
-    isRepeating: false,
   },
 };
 
@@ -99,15 +95,13 @@ export const resolvers = {
     },
     mediaPlayerUpdatePlayer: (
       root,
-      { isPlaying, isShuffling, isRepeating },
+      { isPlaying },
       { cache }
     ) => {
       const query = gql`
         query {
           mediaPlayer @client {
             isPlaying
-            isShuffling
-            isRepeating
           }
         }
       `;
@@ -117,8 +111,6 @@ export const resolvers = {
         data: {
           mediaPlayer: merge(mediaPlayer, {
             isPlaying,
-            isShuffling,
-            isRepeating,
             __typename: 'MediaPlayerState',
           }),
         },

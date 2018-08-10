@@ -6,8 +6,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": false,
-      "isRepeating": false,
-      "isShuffling": false,
       "nowPlayingIndex": 0,
       "queue": Array [
         Object {
@@ -30,8 +28,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": false,
-      "isRepeating": false,
-      "isShuffling": false,
       "nowPlayingIndex": 0,
       "queue": Array [
         Object {
@@ -57,8 +53,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": false,
-      "isRepeating": false,
-      "isShuffling": false,
       "nowPlayingIndex": 1,
       "queue": Array [
         Object {
@@ -84,8 +78,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": false,
-      "isRepeating": false,
-      "isShuffling": false,
       "nowPlayingIndex": 0,
       "queue": Array [
         Object {
@@ -111,8 +103,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": false,
-      "isRepeating": false,
-      "isShuffling": false,
       "nowPlayingIndex": 1,
       "queue": Array [
         Object {
@@ -138,8 +128,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": false,
-      "isRepeating": false,
-      "isShuffling": false,
       "nowPlayingIndex": 0,
       "queue": Array [
         Object {
@@ -162,32 +150,6 @@ Object {
     "mediaPlayer": Object {
       "__typename": "MediaPlayerState",
       "isPlaying": true,
-      "isRepeating": false,
-      "isShuffling": false,
-      "nowPlayingIndex": 0,
-      "queue": Array [
-        Object {
-          "name": "some cool track!",
-        },
-      ],
-      Symbol(id): "$ROOT_QUERY.mediaPlayer",
-    },
-    Symbol(id): "ROOT_QUERY",
-  },
-  "loading": false,
-  "networkStatus": 7,
-  "stale": false,
-}
-`;
-
-exports[`MediaPlayer Store updates player state 3`] = `
-Object {
-  "data": Object {
-    "mediaPlayer": Object {
-      "__typename": "MediaPlayerState",
-      "isPlaying": true,
-      "isRepeating": true,
-      "isShuffling": true,
       "nowPlayingIndex": 0,
       "queue": Array [
         Object {
