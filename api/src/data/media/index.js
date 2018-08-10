@@ -1,9 +1,15 @@
 import { gql } from 'apollo-server';
 import { Constants } from '/api/connectors/rock';
+import { get } from 'lodash';
 
 export { default as model } from './model';
 
 export const schema = gql`
+  enum VIDEO_FORMATS {
+    IOS
+    ANDROID
+  }
+
   interface Media {
     name: String
     key: String
@@ -26,6 +32,7 @@ export const schema = gql`
     sources: [VideoMediaSource]
     # duration: Float
     embedHtml: String
+    videoUri(format: VIDEO_FORMATS): String
   }
 
   type AudioMedia implements Media {
@@ -73,5 +80,10 @@ export const resolver = {
 
       return uri;
     },
+  },
+  VideoMedia: {
+    videoUri: (root, args, context) =>
+      // in the future, we can extend to support additional platforms via args.format
+      get(root, 'sources[0].uri'),
   },
 };

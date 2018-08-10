@@ -33,6 +33,7 @@ const contentItemFragment = `
         uri
       }
       embedHtml
+      videoUri(format: IOS)
     }
     audios {
       name
