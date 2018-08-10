@@ -107,7 +107,7 @@ exports[`the VideoPlayer component should render 1`] = `
   <View
     style={
       Object {
-        "aspectRatio": 1.7777777777777777,
+        "aspectRatio": 1.78,
         "backgroundColor": "#A5A5A5",
         "width": "100%",
       }

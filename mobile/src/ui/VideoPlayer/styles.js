@@ -4,6 +4,7 @@ import styled from '/mobile/ui/styled';
 import Touchable from '/mobile/ui/Touchable';
 import { withTheme } from '/mobile/ui/theme';
 import Icon from '/mobile/ui/Icon';
+import ProgressiveImage from '/mobile/ui/ProgressiveImage';
 
 const VideoWrapper = styled({
   position: 'relative',
@@ -35,4 +36,8 @@ const AndroidPositioningFix = styled({
   zIndex: 1,
 })(View);
 
-export { VideoWrapper, PlayButton, PlayIcon, AndroidPositioningFix };
+const Thumbnail = styled({
+  aspectRatio: 1.78, // 16/9
+})(ProgressiveImage);
+
+export { VideoWrapper, PlayButton, PlayIcon, AndroidPositioningFix, Thumbnail };

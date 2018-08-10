@@ -3,13 +3,12 @@ import { Modal } from 'react-native';
 import PropTypes from 'prop-types';
 import { default as Video } from 'react-native-video-controls'; // eslint-disable-line import/no-named-default
 
-import ProgressiveImage from '/mobile/ui/ProgressiveImage';
-
 import {
   VideoWrapper,
   PlayButton,
   AndroidPositioningFix,
   PlayIcon,
+  Thumbnail,
 } from './styles';
 
 class VideoPlayer extends PureComponent {
@@ -41,8 +40,7 @@ class VideoPlayer extends PureComponent {
             <PlayIcon />
           </AndroidPositioningFix>
         </PlayButton>
-        {/* TODO: decide what to do about Image styling */}
-        <ProgressiveImage source={thumbnail} style={{ aspectRatio: 16 / 9 }} />
+        <Thumbnail source={thumbnail} />
         <Modal
           visible={this.state.modalVisible}
           onRequestClose={this.handleOnRequestClose}

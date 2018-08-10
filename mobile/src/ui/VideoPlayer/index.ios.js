@@ -2,16 +2,22 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Video from 'react-native-video';
 
-import ProgressiveImage from '/mobile/ui/ProgressiveImage';
-
-import { VideoWrapper, PlayButton, PlayIcon } from './styles';
+import { VideoWrapper, PlayButton, PlayIcon, Thumbnail } from './styles';
 
 class VideoPlayer extends PureComponent {
   static propTypes = {
     source: PropTypes.shape({
       uri: PropTypes.string.isRequired,
     }).isRequired,
-    thumbnail: PropTypes.string.isRequired,
+    thumbnail: PropTypes.oneOfType([
+      PropTypes.shape({
+        uri: PropTypes.string,
+        label: PropTypes.string,
+        width: PropTypes.number,
+        height: PropTypes.number,
+      }),
+      PropTypes.string,
+    ]),
   };
 
   constructor() {
@@ -45,8 +51,7 @@ class VideoPlayer extends PureComponent {
         <PlayButton onPress={this.handleOnPress}>
           <PlayIcon />
         </PlayButton>
-        {/* TODO: decide what to do about Image styling */}
-        <ProgressiveImage source={thumbnail} style={{ aspectRatio: 16 / 9 }} />
+        <Thumbnail source={thumbnail} />
         <Video
           ref={this.setVideoRef}
           source={source}
