@@ -30,7 +30,6 @@ export default class AuthDataSource extends RockApolloDataSource {
       const cookie = response.headers.get('set-cookie');
       return cookie;
     } catch (err) {
-      console.log(err);
       throw new AuthenticationError('Invalid Credentials');
     }
   };

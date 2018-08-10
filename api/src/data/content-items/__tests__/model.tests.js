@@ -1,88 +1,93 @@
 import { fetch } from 'apollo-server-env';
+import { buildGetMock } from '/api/utils/testUtils';
+
 import ContentItemsDataSource from '../data-source';
 
 describe('ContentItemsModel', () => {
-  let context;
   beforeEach(() => {
     fetch.resetMocks();
-    const context = {};
   });
   it('constructs', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
   it('filters by content channel id', () => {
-    fetch.mockResponse(JSON.stringify([{ Id: 1 }, { Id: 2 }]));
-    const model = new ContentItemsDataSource(context);
-    const result = model.byContentChannelId(1).get();
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
+    const result = dataSource.byContentChannelId(1).get();
     expect(result).resolves.toMatchSnapshot();
-    console.log(fetch.mock);
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('gets by id', () => {
-    fetch.mockResponse(JSON.stringify({ Id: 1 }));
-    const model = new ContentItemsModel(context);
-    const result = model.getFromId(1);
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock({ Id: 1 }, dataSource);
+    const result = dataSource.getFromId(1);
     expect(result).resolves.toMatchSnapshot();
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('gets a cursor finding child content items of a provided parent', async () => {
-    fetch.mockResponseOnce(
-      JSON.stringify([
-        { ChildContentChannelItemId: 101 },
-        { ChildContentChannelItemId: 201 },
-      ])
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock(
+      [
+        [
+          { ChildContentChannelItemId: 101 },
+          { ChildContentChannelItemId: 201 },
+        ],
+        [{ Id: 1 }, { Id: 2 }],
+      ],
+      dataSource
     );
-    fetch.mockResponseOnce(JSON.stringify([{ Id: 1 }, { Id: 2 }]));
-    const model = new ContentItemsModel(context);
-    const cursor = await model.getCursorByParentContentItemId(1);
+    const cursor = await dataSource.getCursorByParentContentItemId(1);
     expect(cursor.get()).resolves.toMatchSnapshot();
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('returns null when there are no child content items', async () => {
-    fetch.mockResponseOnce(JSON.stringify([]));
-    const model = new ContentItemsModel(context);
-    const cursor = await model.getCursorByParentContentItemId(1);
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([], dataSource);
+    const cursor = await dataSource.getCursorByParentContentItemId(1);
     expect(cursor).toBe(null);
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('gets a cursor finding parent content items of a provided child', async () => {
-    fetch.mockResponseOnce(
-      JSON.stringify([
-        { ContentChannelItemId: 101 },
-        { ContentChannelItemId: 201 },
-      ])
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock(
+      [
+        [{ ContentChannelItemId: 101 }, { ContentChannelItemId: 201 }],
+        [{ Id: 1 }, { Id: 2 }],
+      ],
+      dataSource
     );
-    fetch.mockResponseOnce(JSON.stringify([{ Id: 1 }, { Id: 2 }]));
-    const model = new ContentItemsModel(context);
-    const cursor = await model.getCursorByChildContentItemId(1);
+    const cursor = await dataSource.getCursorByChildContentItemId(1);
     expect(cursor.get()).resolves.toMatchSnapshot();
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('gets a cursor finding sibling content items of a provided item', async () => {
-    fetch.mockResponseOnce(JSON.stringify([{ ContentChannelItemId: 101 }]));
-    fetch.mockResponseOnce(
-      JSON.stringify([
-        { ContentChannelId: 201, ChildContentChannelItemId: 1 },
-        { ContentChannelId: 202, ChildContentChannelItemId: 2 },
-      ])
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock(
+      [
+        [{ ContentChannelItemId: 101 }],
+        [
+          { ContentChannelId: 201, ChildContentChannelItemId: 1 },
+          { ContentChannelId: 202, ChildContentChannelItemId: 2 },
+        ],
+        [{ Id: 1 }, { Id: 2 }],
+      ],
+      dataSource
     );
-    fetch.mockResponseOnce(JSON.stringify([{ Id: 1 }, { Id: 2 }]));
-    const model = new ContentItemsModel(context);
-    const cursor = await model.getCursorBySiblingContentItemId(1);
+    const cursor = await dataSource.getCursorBySiblingContentItemId(1);
     expect(cursor.get()).resolves.toMatchSnapshot();
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('returns null when there are no parent content items', async () => {
-    fetch.mockResponseOnce(JSON.stringify([]));
-    const model = new ContentItemsModel(context);
-    const cursor = await model.getCursorByChildContentItemId(1);
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([], dataSource);
+    const cursor = await dataSource.getCursorByChildContentItemId(1);
     expect(cursor).toBe(null);
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 });

@@ -1,33 +1,26 @@
-import fetch from 'isomorphic-fetch';
-import RockConnector from '/api/connectors/rock';
-import Person from '../model';
+import { buildGetMock } from '/api/utils/testUtils';
+import Person from '../data-source';
 
 describe('Person', () => {
-  let context;
-  beforeEach(() => {
-    fetch.resetMocks();
-    context = {
-      connectors: {
-        Rock: new RockConnector(),
-      },
-    };
-  });
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
   });
   it('gets person from email', () => {
-    fetch.mockResponse(JSON.stringify({ Email: 'isaac.hardy@newspring.cc' }));
-    const model = new Person(context);
-    const result = model.getFromEmail('isaac.hardy@newspring.cc');
+    const dataSource = new Person();
+    dataSource.get = buildGetMock(
+      { Email: 'isaac.hardy@newspring.cc' },
+      dataSource
+    );
+    const result = dataSource.getFromEmail('isaac.hardy@newspring.cc');
     expect(result).resolves.toMatchSnapshot();
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
   it('gets person from id', () => {
-    fetch.mockResponse(JSON.stringify({ Id: 51 }));
-    const model = new Person(context);
-    const result = model.getFromId(51);
+    const dataSource = new Person();
+    dataSource.get = buildGetMock({ Id: 51 }, dataSource);
+    const result = dataSource.getFromId(51);
     expect(result).resolves.toMatchSnapshot();
-    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 });
