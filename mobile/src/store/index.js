@@ -76,7 +76,6 @@ export const resolvers = {
         }
       `;
       const { mediaPlayer } = cache.readQuery({ query });
-      console.log({ mediaPlayer });
 
       let nowPlayingIndex = mediaPlayer.nowPlayingIndex + skip;
       if (nowPlayingIndex < 0) nowPlayingIndex = mediaPlayer.queue.length - 1;
@@ -93,11 +92,7 @@ export const resolvers = {
         },
       });
     },
-    mediaPlayerUpdatePlayer: (
-      root,
-      { isPlaying },
-      { cache }
-    ) => {
+    mediaPlayerUpdatePlayer: (root, { isPlaying }, { cache }) => {
       const query = gql`
         query {
           mediaPlayer @client {
