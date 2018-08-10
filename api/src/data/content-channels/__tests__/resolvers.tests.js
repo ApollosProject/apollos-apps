@@ -19,6 +19,7 @@ const contentChannelFragment = `
       name
       description
     }
+    iconName
     childContentItemsConnection {
       edges {
         cursor
