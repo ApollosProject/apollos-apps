@@ -33,7 +33,7 @@ class VideoPlayer extends PureComponent {
   handleOnRequestClose = () => this.setState({ modalVisible: false });
 
   render() {
-    const { source, thumbnail, ...otherProps } = this.props;
+    const { source, thumbnail, gradientColor, ...otherProps } = this.props;
     return (
       <VideoWrapper>
         <Thumbnail source={thumbnail} colors={gradientColor} />

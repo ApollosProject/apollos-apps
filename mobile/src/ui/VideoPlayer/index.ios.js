@@ -45,7 +45,7 @@ class VideoPlayer extends PureComponent {
   };
 
   render() {
-    const { source, thumbnail, gradientColors, ...otherProps } = this.props;
+    const { source, thumbnail, gradientColor, ...otherProps } = this.props;
 
     return (
       <VideoWrapper>
