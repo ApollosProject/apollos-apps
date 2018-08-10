@@ -127,6 +127,7 @@ fetch.mockRockDataSourceAPI = () => {
 
 const apolloServerEnvMocked = {
   ...apolloServerEnv,
+  Response: fetch.Response,
   fetch,
 };
 

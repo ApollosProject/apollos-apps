@@ -1,25 +1,21 @@
-import fetch from 'isomorphic-fetch';
-import RockConnector from '/api/connectors/rock';
-import ContentItemsModel from '../model';
+import { fetch } from 'apollo-server-env';
+import ContentItemsDataSource from '../data-source';
 
 describe('ContentItemsModel', () => {
   let context;
   beforeEach(() => {
     fetch.resetMocks();
-    context = {
-      connectors: {
-        Rock: new RockConnector(),
-      },
-    };
+    const context = {};
   });
   it('constructs', () => {
-    expect(new ContentItemsModel()).toBeTruthy();
+    expect(new ContentItemsDataSource()).toBeTruthy();
   });
   it('filters by content channel id', () => {
     fetch.mockResponse(JSON.stringify([{ Id: 1 }, { Id: 2 }]));
-    const model = new ContentItemsModel(context);
+    const model = new ContentItemsDataSource(context);
     const result = model.byContentChannelId(1).get();
     expect(result).resolves.toMatchSnapshot();
+    console.log(fetch.mock);
     expect(fetch.mock.calls).toMatchSnapshot();
   });
 
