@@ -1,4 +1,5 @@
 import { AuthenticationError } from 'apollo-server';
+import { fetch } from 'apollo-server-env';
 import moment from 'moment';
 
 import RockApolloDataSource from '/api/connectors/rock/data-source';
@@ -22,10 +23,20 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   fetchUserCookie = async (Username, Password) => {
     try {
-      const response = await this.post('Auth/Login', {
-        Username,
-        Password,
-      });
+      // We use `new Response` rather than string/options b/c if conforms more closely with ApolloRESTDataSource
+      // (makes mocking in tests WAY easier to use `new Request` as an input in both places)
+      const response = await fetch(
+        new Request(`${this.baseURL}/Auth/Login`, {
+          method: 'POST',
+          body: JSON.stringify({
+            Username,
+            Password,
+          }),
+          headers: {
+            'Content-Type': 'Application/Json',
+          },
+        })
+      );
       if (response.status >= 400) throw new AuthenticationError();
       const cookie = response.headers.get('set-cookie');
       return cookie;
@@ -62,12 +73,11 @@ export default class AuthDataSource extends RockApolloDataSource {
     try {
       const { email } = props;
 
-      const response = await this.post('/People', {
+      return await this.post('/People', {
         Email: email,
         IsSystem: false, // Required by Rock
         Gender: 0, // Required by Rock
       });
-      return response.json();
     } catch (err) {
       throw new Error('Unable to create profile!');
     }
@@ -77,14 +87,13 @@ export default class AuthDataSource extends RockApolloDataSource {
     try {
       const { email, password, personId } = props;
 
-      const result = await this.post('/UserLogins', {
+      return await this.post('/UserLogins', {
         PersonId: personId,
         EntityTypeId: 27, // A default setting we use in Rock-person-creation-flow
         UserName: email,
         PlainTextPassword: password,
         LastLoginDateTime: `${moment().toISOString()}`,
       });
-      return result.json();
     } catch (err) {
       throw new Error('Unable to create user login!');
     }

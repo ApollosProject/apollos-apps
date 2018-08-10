@@ -17,14 +17,9 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
-    if (request.method === 'GET') {
-      return super
-        .didReceiveResponse(response, request)
-        .then((parsedResponse) => this.normalize(parsedResponse));
-    }
-    // Shortcut the parsing, we need the headers.
-    // Should be a better, cleaner way to do this...
-    return response;
+    return super
+      .didReceiveResponse(response, request)
+      .then((parsedResponse) => this.normalize(parsedResponse));
   }
 
   willSendRequest(request) {
