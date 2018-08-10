@@ -18,6 +18,7 @@ class VideoPlayer extends PureComponent {
       }),
       PropTypes.string,
     ]),
+    gradientColor: PropTypes.string,
   };
 
   constructor() {
@@ -44,11 +45,11 @@ class VideoPlayer extends PureComponent {
   };
 
   render() {
-    const { source, thumbnail, ...otherProps } = this.props;
+    const { source, thumbnail, gradientColors, ...otherProps } = this.props;
 
     return (
       <VideoWrapper>
-        <Thumbnail source={thumbnail} />
+        <Thumbnail source={thumbnail} colors={gradientColor} />
         {source
           ? [
               <PlayButton

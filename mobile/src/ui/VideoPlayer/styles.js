@@ -4,7 +4,7 @@ import styled from '/mobile/ui/styled';
 import Touchable from '/mobile/ui/Touchable';
 import { withTheme } from '/mobile/ui/theme';
 import Icon from '/mobile/ui/Icon';
-import ProgressiveImage from '/mobile/ui/ProgressiveImage';
+import GradientOverlayImage from '/mobile/ui/GradientOverlayImage';
 
 const VideoWrapper = styled({
   position: 'relative',
@@ -38,6 +38,6 @@ const AndroidPositioningFix = styled({
 
 const Thumbnail = styled({
   aspectRatio: 1.78, // 16/9
-})(ProgressiveImage);
+})(GradientOverlayImage);
 
 export { VideoWrapper, PlayButton, PlayIcon, AndroidPositioningFix, Thumbnail };
