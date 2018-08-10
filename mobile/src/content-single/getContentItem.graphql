@@ -10,6 +10,9 @@ query getContentItem($itemId: ID!) {
           uri
         }
       }
+      videos {
+        sources
+      }
       childContentItemsConnection {
         edges {
           node {

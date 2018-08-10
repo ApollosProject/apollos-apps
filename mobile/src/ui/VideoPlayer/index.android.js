@@ -35,29 +35,37 @@ class VideoPlayer extends PureComponent {
     const { source, thumbnail, ...otherProps } = this.props;
     return (
       <VideoWrapper>
-        <PlayButton onPress={this.handleOnPress}>
-          <AndroidPositioningFix>
-            <PlayIcon />
-          </AndroidPositioningFix>
-        </PlayButton>
         <Thumbnail source={thumbnail} />
-        <Modal
-          visible={this.state.modalVisible}
-          onRequestClose={this.handleOnRequestClose}
-          animationType={'fade'}
-          hardwareAccelerated
-        >
-          <Video
-            source={source}
-            onEnd={this.handleOnRequestClose}
-            onBack={this.handleOnRequestClose}
-            onAudioBecomingNoisy={this.handleOnRequestClose}
-            onError={this.handleOnRequestClose} // set state to paused and exit native player TODO: consider retrying
-            playInBackground
-            disableFullscreen // hides unused fullscreen player button
-            {...otherProps}
-          />
-        </Modal>
+        {source
+          ? [
+              <PlayButton
+                onPress={this.handleOnPress}
+                key={'VideoPlayerPlaybutton'}
+              >
+                <AndroidPositioningFix>
+                  <PlayIcon />
+                </AndroidPositioningFix>
+              </PlayButton>,
+              <Modal
+                visible={this.state.modalVisible}
+                onRequestClose={this.handleOnRequestClose}
+                animationType={'fade'}
+                key={'VideoPlayerModal'}
+                hardwareAccelerated
+              >
+                <Video
+                  source={source}
+                  onEnd={this.handleOnRequestClose}
+                  onBack={this.handleOnRequestClose}
+                  onAudioBecomingNoisy={this.handleOnRequestClose}
+                  onError={this.handleOnRequestClose} // set state to paused and exit native player TODO: consider retrying
+                  playInBackground
+                  disableFullscreen // hides unused fullscreen player button
+                  {...otherProps}
+                />
+              </Modal>,
+            ]
+          : null}
       </VideoWrapper>
     );
   }

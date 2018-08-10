@@ -48,24 +48,32 @@ class VideoPlayer extends PureComponent {
 
     return (
       <VideoWrapper>
-        <PlayButton onPress={this.handleOnPress}>
-          <PlayIcon />
-        </PlayButton>
         <Thumbnail source={thumbnail} />
-        <Video
-          ref={this.setVideoRef}
-          source={source}
-          paused={this.state.paused}
-          onFullscreenPlayerDidPresent={this.handleTogglePaused}
-          onFullscreenPlayerDidDismiss={this.handleTogglePaused}
-          onAudioBecomingNoisy={this.handleTogglePaused}
-          onEnd={this.handleOnEnd}
-          onError={this.handleOnEnd} // set state to paused and exit native player TODO: consider retrying
-          ignoreSilentSwitch={'ignore'}
-          playInBackground
-          playWhenInactive
-          {...otherProps}
-        />
+        {source
+          ? [
+              <PlayButton
+                onPress={this.handleOnPress}
+                key={'VideoPlayerPlaybutton'}
+              >
+                <PlayIcon />
+              </PlayButton>,
+              <Video
+                ref={this.setVideoRef}
+                source={source}
+                paused={this.state.paused}
+                onFullscreenPlayerDidPresent={this.handleTogglePaused}
+                onFullscreenPlayerDidDismiss={this.handleTogglePaused}
+                onAudioBecomingNoisy={this.handleTogglePaused}
+                onEnd={this.handleOnEnd}
+                onError={this.handleOnEnd} // set state to paused and exit native player TODO: consider retrying
+                ignoreSilentSwitch={'ignore'}
+                playInBackground
+                playWhenInactive
+                key={'VideoPlayerObject'}
+                {...otherProps}
+              />,
+            ]
+          : null}
       </VideoWrapper>
     );
   }
