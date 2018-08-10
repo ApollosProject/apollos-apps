@@ -7,6 +7,7 @@ export default () => {
     ContentItem: new dataSources.ContentItem(),
     Person: new dataSources.Person(),
     Auth: new dataSources.Auth(),
+    Scripture: new dataSources.ESVScripture(),
   };
 
   return {
