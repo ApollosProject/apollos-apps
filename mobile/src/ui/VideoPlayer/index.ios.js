@@ -2,22 +2,26 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Video from 'react-native-video';
 
-import { VideoWrapper, PlayButton, PlayIcon, Thumbnail } from './styles';
+import GradientOverlayImage from '/mobile/ui/GradientOverlayImage';
+
+import { VideoWrapper, PlayButton, PlayIcon } from './styles';
 
 class VideoPlayer extends PureComponent {
   static propTypes = {
+    thumbnail: PropTypes.oneOfType([
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          uri: PropTypes.string,
+          label: PropTypes.string,
+          width: PropTypes.number,
+          height: PropTypes.number,
+        })
+      ),
+      PropTypes.string,
+    ]).isRequired,
     source: PropTypes.shape({
       uri: PropTypes.string.isRequired,
-    }).isRequired,
-    thumbnail: PropTypes.oneOfType([
-      PropTypes.shape({
-        uri: PropTypes.string,
-        label: PropTypes.string,
-        width: PropTypes.number,
-        height: PropTypes.number,
-      }),
-      PropTypes.string,
-    ]),
+    }),
     gradientColor: PropTypes.string,
   };
 
@@ -49,8 +53,8 @@ class VideoPlayer extends PureComponent {
 
     return (
       <VideoWrapper>
-        <Thumbnail source={thumbnail} colors={gradientColor} />
-        {source
+        <GradientOverlayImage source={thumbnail} colors={gradientColor} />
+        {source && source.uri
           ? [
               <PlayButton
                 onPress={this.handleOnPress}

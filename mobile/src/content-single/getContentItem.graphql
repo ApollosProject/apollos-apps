@@ -11,7 +11,9 @@ query getContentItem($itemId: ID!) {
         }
       }
       videos {
-        sources
+        sources {
+          uri
+        }
       }
       childContentItemsConnection {
         edges {

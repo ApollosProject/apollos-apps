@@ -3,20 +3,31 @@ import { Modal } from 'react-native';
 import PropTypes from 'prop-types';
 import { default as Video } from 'react-native-video-controls'; // eslint-disable-line import/no-named-default
 
+import GradientOverlayImage from '/mobile/ui/GradientOverlayImage';
+
 import {
   VideoWrapper,
   PlayButton,
   AndroidPositioningFix,
   PlayIcon,
-  Thumbnail,
 } from './styles';
 
 class VideoPlayer extends PureComponent {
   static propTypes = {
+    thumbnail: PropTypes.oneOfType([
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          uri: PropTypes.string,
+          label: PropTypes.string,
+          width: PropTypes.number,
+          height: PropTypes.number,
+        })
+      ),
+      PropTypes.string,
+    ]).isRequired,
     source: PropTypes.shape({
       uri: PropTypes.string.isRequired,
-    }).isRequired,
-    thumbnail: PropTypes.string.isRequired,
+    }),
     gradientColor: PropTypes.string,
   };
 
@@ -36,8 +47,8 @@ class VideoPlayer extends PureComponent {
     const { source, thumbnail, gradientColor, ...otherProps } = this.props;
     return (
       <VideoWrapper>
-        <Thumbnail source={thumbnail} colors={gradientColor} />
-        {source
+        <GradientOverlayImage source={thumbnail} colors={gradientColor} />
+        {source && source.uri
           ? [
               <PlayButton
                 onPress={this.handleOnPress}

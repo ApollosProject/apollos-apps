@@ -129,7 +129,7 @@ class ContentSingle extends PureComponent {
               return (
                 <ScrollView>
                   <VideoPlayer
-                    source={get(content, 'videos.sources[0]', [])}
+                    source={get(content, 'videos[0].sources[0]', null)}
                     thumbnail={get(content, 'coverImage.sources', [])}
                   />
                   <BackgroundView>
