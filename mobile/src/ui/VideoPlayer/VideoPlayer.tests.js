@@ -6,7 +6,7 @@ import Providers from '/mobile/Providers';
 import VideoPlayer from '.';
 
 describe('the VideoPlayer component', () => {
-  it('should render', () => {
+  it('should render with a video', () => {
     const tree = renderer.create(
       <Providers>
         <VideoPlayer
@@ -16,6 +16,14 @@ describe('the VideoPlayer component', () => {
           }}
           thumbnail={'https://picsum.photos/600/400/'}
         />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render just a thumbnail', () => {
+    const tree = renderer.create(
+      <Providers>
+        <VideoPlayer thumbnail={'https://picsum.photos/600/400/'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
