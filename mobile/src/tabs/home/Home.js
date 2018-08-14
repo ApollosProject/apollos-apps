@@ -3,9 +3,9 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { withTheme } from 'ui/theme';
-import FeedView from 'ui/FeedView';
-import BackgroundView from 'ui/BackgroundView';
+import { withTheme } from '/mobile/ui/theme';
+import FeedView from '/mobile/ui/FeedView';
+import BackgroundView from '/mobile/ui/BackgroundView';
 
 import { LiveButton } from '../../live';
 
@@ -54,7 +54,7 @@ class Home extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <Query query={getUserFeed}>
+        <Query query={getUserFeed} fetchPolicy="cache-and-network">
           {({ loading, error, data, refetch }) => (
             <FeedView
               content={get(data, 'userFeed.edges', []).map((edge) => edge.node)}

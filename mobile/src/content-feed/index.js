@@ -3,8 +3,8 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import BackgroundView from 'ui/BackgroundView';
-import FeedView from 'ui/FeedView';
+import BackgroundView from '/mobile/ui/BackgroundView';
+import FeedView from '/mobile/ui/FeedView';
 
 import getContentFeed from './getContentFeed.graphql';
 
@@ -34,7 +34,11 @@ class ContentFeed extends PureComponent {
     const itemId = navigation.getParam('itemId', []);
     return (
       <BackgroundView>
-        <Query query={getContentFeed} variables={{ itemId }}>
+        <Query
+          query={getContentFeed}
+          variables={{ itemId }}
+          fetchPolicy="cache-and-network"
+        >
           {({ loading, error, data, refetch }) => (
             <FeedView
               content={get(
