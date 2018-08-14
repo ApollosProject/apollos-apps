@@ -128,7 +128,10 @@ class ContentSingle extends PureComponent {
                 >
                   <ScrollView>
                     <GradientOverlayImage
-                      overlayColor={get(content, 'theme.colors.background.paper')}
+                      overlayColor={get(
+                        content,
+                        'theme.colors.background.paper'
+                      )}
                       source={get(content, 'coverImage.sources', [])}
                     />
                     <BackgroundView>
@@ -141,7 +144,8 @@ class ContentSingle extends PureComponent {
                         </HTMLView>
                       </ContentContainer>
                     </BackgroundView>
-                    {(horizontalContent && horizontalContent.length) || loading ? (
+                    {(horizontalContent && horizontalContent.length) ||
+                    loading ? (
                       <FeedContainer>
                         <HorizontalTileFeed
                           content={horizontalContent}
