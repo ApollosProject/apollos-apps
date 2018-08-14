@@ -53,7 +53,11 @@ class VideoPlayer extends PureComponent {
 
     return (
       <VideoWrapper>
-        <GradientOverlayImage source={thumbnail} colors={gradientColor} />
+        <GradientOverlayImage
+          source={thumbnail}
+          colors={gradientColor}
+          isLoading={!thumbnail}
+        />
         {source && source.uri
           ? [
               <PlayButton

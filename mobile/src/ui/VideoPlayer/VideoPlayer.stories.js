@@ -15,4 +15,5 @@ storiesOf('VideoPlayer', module)
   ))
   .add('Thumbnail Only', () => (
     <VideoPlayer thumbnail={'https://picsum.photos/600/400/'} />
-  ));
+  ))
+  .add('isLoading', () => <VideoPlayer thumbnail={''} />);

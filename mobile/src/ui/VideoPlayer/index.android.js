@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Modal } from 'react-native';
 import PropTypes from 'prop-types';
-import { default as Video } from 'react-native-video-controls'; // eslint-disable-line import/no-named-default
+import Video from 'react-native-video-controls';
 
 import GradientOverlayImage from '/mobile/ui/GradientOverlayImage';
 
@@ -47,7 +47,11 @@ class VideoPlayer extends PureComponent {
     const { source, thumbnail, gradientColor, ...otherProps } = this.props;
     return (
       <VideoWrapper>
-        <GradientOverlayImage source={thumbnail} colors={gradientColor} />
+        <GradientOverlayImage
+          source={thumbnail}
+          colors={gradientColor}
+          isLoading={!thumbnail}
+        />
         {source && source.uri
           ? [
               <PlayButton

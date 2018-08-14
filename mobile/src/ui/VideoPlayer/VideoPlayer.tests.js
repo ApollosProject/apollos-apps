@@ -28,4 +28,12 @@ describe('the VideoPlayer component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <VideoPlayer thumbnail={''} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
