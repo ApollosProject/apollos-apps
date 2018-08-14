@@ -4,7 +4,8 @@ exports[`LiveStream returns 1`] = `
 Object {
   "data": Object {
     "liveStream": Object {
-      "isLiveNow": true,
+      "eventStartTime": "2018-08-06T17:00:00Z",
+      "isLive": true,
     },
   },
 }

@@ -1,13 +1,13 @@
 import { graphql } from 'graphql';
-import fetch from 'isomorphic-fetch';
-import { makeExecutableSchema, gql } from 'apollo-server';
-
-import { createGlobalId } from '../../node/model';
-import { getContext } from '../../../';
+import { fetch } from 'apollo-server-env';
+import { makeExecutableSchema } from 'apollo-server';
+import { getTestContext } from '/api/utils/testUtils';
 // we import the root-level schema and resolver so we test the entire integration:
-import { schema as typeDefs, resolvers } from '../../';
+import { schema as typeDefs, resolvers } from '/api/data';
 
-const contentChannelFragment = gql`
+import { createGlobalId } from '/api/data/node/model';
+
+const contentChannelFragment = `
   fragment ContentChannelFragment on ContentChannel {
     id
     __typename
@@ -19,6 +19,7 @@ const contentChannelFragment = gql`
       name
       description
     }
+    iconName
     childContentItemsConnection {
       edges {
         cursor
@@ -36,13 +37,13 @@ describe('ContentChannel', () => {
   let context;
   beforeEach(() => {
     fetch.resetMocks();
-    fetch.mockRockAPI();
+    fetch.mockRockDataSourceAPI();
     schema = makeExecutableSchema({ typeDefs, resolvers });
-    context = getContext();
+    context = getTestContext();
   });
 
   it('gets a list of content channels', async () => {
-    const query = gql`
+    const query = `
       query {
         contentChannels {
           ...ContentChannelFragment
@@ -56,7 +57,7 @@ describe('ContentChannel', () => {
   });
 
   it('gets a single content channel when querying by root node', async () => {
-    const query = gql`
+    const query = `
       query {
         node(
           id: "${createGlobalId(1, 'ContentChannel')}"

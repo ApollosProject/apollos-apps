@@ -1,26 +1,28 @@
-import { graphql } from 'graphql';
-import fetch from 'isomorphic-fetch';
-import { makeExecutableSchema, gql } from 'apollo-server';
+import { fetch } from 'apollo-server-env';
 
-import { getContext } from '../../../';
+import { graphql } from 'graphql';
+import { makeExecutableSchema } from 'apollo-server';
+import { getTestContext } from '/api/utils/testUtils';
 // we import the root-level schema and resolver so we test the entire integration:
-import { schema as typeDefs, resolvers } from '../../';
+import { schema as typeDefs, resolvers } from '/api/data';
 
 describe('LiveStream', () => {
   let schema;
   let context;
   beforeEach(() => {
-    fetch.resetMocks();
-    fetch.mockRockAPI();
     schema = makeExecutableSchema({ typeDefs, resolvers });
-    context = getContext();
+    context = getTestContext();
+
+    fetch.resetMocks();
+    fetch.mockLiveDataSourceApis();
   });
 
   it('returns', async () => {
-    const query = gql`
+    const query = `
       query {
         liveStream {
-          isLiveNow
+          isLive
+          eventStartTime
         }
       }
     `;
