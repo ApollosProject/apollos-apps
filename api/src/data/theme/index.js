@@ -28,7 +28,8 @@ export const schema = gql`
 export const resolver = {
   Theme: {
     type: () => 'DARK', // todo: infer theme type from data
-    colors: (seed) => { // todo: don't generate a random theme :)
+    colors: (seed) => {
+      // todo: don't generate a random theme :)
       const baseColors = randomColor({ seed, count: 2, luminosity: 'bright' });
       return {
         primary: baseColors[0],
