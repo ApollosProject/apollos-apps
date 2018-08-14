@@ -4,16 +4,16 @@ import { ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { ErrorCard } from '/mobile/Card';
-import CardTile from '/mobile/CardTile';
-import GradientOverlayImage from '/mobile/GradientOverlayImage';
-import HorizontalTileFeed from '/mobile/HorizontalTileFeed';
-import HTMLView from '/mobile/HTMLView';
-import PaddedView from '/mobile/PaddedView';
-import { H2 } from '/mobile/typography';
-import BackgroundView from '/mobile/BackgroundView';
-import styled from '/mobile/styled';
-import { ThemeMixin } from '/mobile/theme';
+import { ErrorCard } from '/mobile/ui/Card';
+import CardTile from '/mobile/ui/CardTile';
+import VideoPlayer from '/mobile/ui/VideoPlayer';
+import HorizontalTileFeed from '/mobile/ui/HorizontalTileFeed';
+import HTMLView from '/mobile/ui/HTMLView';
+import PaddedView from '/mobile/ui/PaddedView';
+import { H2 } from '/mobile/ui/typography';
+import BackgroundView from '/mobile/ui/BackgroundView';
+import styled from '/mobile/ui/styled';
+import { ThemeMixin } from '/mobile/ui/theme';
 import Share from '/mobile/ui/Share';
 
 import getContentItem from './getContentItem.graphql';
@@ -127,12 +127,10 @@ class ContentSingle extends PureComponent {
                   }}
                 >
                   <ScrollView>
-                    <GradientOverlayImage
-                      overlayColor={get(
-                        content,
-                        'theme.colors.background.paper'
-                      )}
-                      source={get(content, 'coverImage.sources', [])}
+                    <VideoPlayer
+                      source={get(content, 'videos[0].sources[0]', null)}
+                      thumbnail={get(content, 'coverImage.sources', [])}
+                      overlayColor={get(content, 'theme.colors.paper')}
                     />
                     <BackgroundView>
                       <ContentContainer>

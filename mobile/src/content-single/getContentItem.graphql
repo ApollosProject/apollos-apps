@@ -19,6 +19,11 @@ query getContentItem($itemId: ID!) {
           paper
         }
       }
+      videos {
+        sources {
+          uri
+        }
+      }
       childContentItemsConnection {
         edges {
           node {
