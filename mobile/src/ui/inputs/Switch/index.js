@@ -23,9 +23,9 @@ const enhance = compose(
     activeTrackColor: theme.colors.primary,
     trackColor: theme.colors.background.inactive,
     tintColor: theme.colors.background.inactive,
-    activeThumbColor: theme.colors.paper,
+    activeThumbColor: theme.colors.background.paper,
     ...Platform.select({
-      android: { thumbTintColor: theme.colors.paper },
+      android: { thumbTintColor: theme.colors.background.paper },
     }),
   }))
 );

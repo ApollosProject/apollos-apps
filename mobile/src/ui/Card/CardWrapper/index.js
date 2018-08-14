@@ -11,7 +11,7 @@ const StyledCard = compose(
   withIsLoading,
   styled(({ theme, cardColor }) => ({
     // card styles
-    backgroundColor: cardColor || theme.colors.paper,
+    backgroundColor: cardColor || theme.colors.background.paper,
     borderRadius: theme.sizing.borderRadius,
     ...Platform.select(theme.shadows.default),
   })),

@@ -7,7 +7,7 @@ const CenteredView = styled(({ theme }) => ({
   flex: 1,
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: theme.colors.screen,
+  backgroundColor: theme.colors.background.screen,
 }))(View);
 
 CenteredView.defaultProps = {

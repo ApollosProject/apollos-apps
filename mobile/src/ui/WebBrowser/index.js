@@ -14,10 +14,10 @@ const Provider = withTheme(({ theme }) => ({
       ...Platform.select({
         ios: {
           tintColor: theme.colors.primary,
-          barTintColor: theme.colors.paper,
+          barTintColor: theme.colors.background.paper,
         },
         android: {
-          toolbarColor: theme.colors.paper,
+          toolbarColor: theme.colors.background.paper,
           enableDefaultShare: true,
         },
       }),

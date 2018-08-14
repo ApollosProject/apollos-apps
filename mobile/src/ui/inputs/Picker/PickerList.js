@@ -15,7 +15,7 @@ const StyledPicker = styled(
 
 const PickerKeyboardView = styled(
   ({ theme }) => ({
-    backgroundColor: theme.colors.paper,
+    backgroundColor: theme.colors.background.paper,
     position: 'absolute',
     bottom: 0,
     left: 0,

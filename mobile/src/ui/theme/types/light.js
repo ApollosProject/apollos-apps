@@ -9,6 +9,8 @@ const light = ({ colors, alpha }) => ({
       link: colors.secondary,
     },
     background: {
+      screen: colors.screen,
+      paper: colors.paper,
       accent: Color(colors.lightTertiary)
         .fade(alpha.high)
         .string(),

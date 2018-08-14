@@ -10,7 +10,7 @@ import Indicator from './Indicator';
 const withStyles = compose(
   styled(
     ({ theme }) => ({
-      backgroundColor: theme.colors.paper,
+      backgroundColor: theme.colors.background.paper,
     }),
     'TabBar'
   ),
