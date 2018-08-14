@@ -1,3 +1,20 @@
+
+v0.4.0: August 14, 2018
+
+- Add ability to style content with colors from API (#173) (aca66fe)
+- Added Inline Documentation (#220) (8c63f27)
+- 189 react-native-video (#198) (5e722a0)
+- add media player client-side state (#202) (b4ed305)
+- Convert Rock Data Source to ApolloDataSourceREST (#214) (70fb407)
+- fix the `getLiveStream` query so that the LiveButton shows back up (#215) (9c45394)
+- Designed GraphQL schema for pulling ESV scripture html (#196) (8464db5)
+- Remove dependency of API on parent folder structure (#210) (a02a601)
+- Add fetch policies to improve data loading from server (#209) (96c952e)
+- added documentation for release creation (#204) (8ed145b)
+- Add the ability to share individual pieces of content (#207) (a793c4a)
+- updated content-item to be able to display sibling content items (#205) (303ad1e)
+- Sibling Content api (#199) (0c43321)
+
 v0.3.0:
 
 - New look and feel for the authentication modal
