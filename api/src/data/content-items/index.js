@@ -34,6 +34,7 @@ export const schema = gql`
     parentChannel: ContentChannel
 
     theme: Theme
+    interactions: [Interaction]
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -56,6 +57,7 @@ export const schema = gql`
     terms(match: String): [Term]
 
     theme: Theme
+    interactions: [Interaction]
   }
 
   type Term {
@@ -211,6 +213,9 @@ export const defaultContentItemResolvers = {
     if (![6, 5, 4].includes(root.contentChannelId)) return null; // todo: don't generate a theme for these content channel ids
     return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
   },
+
+  interactions: (root, args, { dataSources }) =>
+    dataSources.Interactions.getForContentItem({ contentItemId: root.id }),
 };
 
 export const resolver = {
