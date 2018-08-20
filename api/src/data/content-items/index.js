@@ -34,7 +34,7 @@ export const schema = gql`
     parentChannel: ContentChannel
 
     theme: Theme
-    interactions: [Interaction]
+    isLiked: Boolean
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -57,7 +57,7 @@ export const schema = gql`
     terms(match: String): [Term]
 
     theme: Theme
-    interactions: [Interaction]
+    isLiked: Boolean
   }
 
   type Term {
@@ -213,9 +213,15 @@ export const defaultContentItemResolvers = {
     if (![6, 5, 4].includes(root.contentChannelId)) return null; // todo: don't generate a theme for these content channel ids
     return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
   },
-
-  interactions: (root, args, { dataSources }) =>
-    dataSources.Interactions.getForContentItem({ contentItemId: root.id }),
+  isLiked: async ({ id }, args, { dataSources }) => {
+    const interactions = await dataSources.Interactions.getForContentItem({
+      contentItemId: id,
+    });
+    const likes = interactions.filter((i) => i.operation === 'Like').length;
+    const unlike = interactions.filter((i) => i.operation === 'Unlike').length;
+    // If likes / unlikes equal we have either unliked the content or haven't liked it yet (both are 0)
+    return likes > unlike;
+  },
 };
 
 export const resolver = {

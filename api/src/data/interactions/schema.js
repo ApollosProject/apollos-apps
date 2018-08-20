@@ -13,10 +13,11 @@ export default gql`
 
   enum INTERACTION_OPERATION {
     Like
+    Unlike
   }
 
   input CreateInteractionInput {
-    contentId: String!
+    nodeId: String!
     sessionId: String!
     operation: INTERACTION_OPERATION!
   }

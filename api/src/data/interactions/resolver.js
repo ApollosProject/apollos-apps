@@ -4,11 +4,11 @@ export default {
       dataSources.Interactions.createSession(),
     createInteraction: async (
       root,
-      { input: { contentId, sessionId, operation } },
+      { input: { nodeId, sessionId, operation } },
       { dataSources }
     ) =>
       dataSources.Interactions.createInteraction({
-        contentId,
+        nodeId,
         sessionId,
         operationName: operation,
       }),
