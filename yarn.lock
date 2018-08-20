@@ -502,13 +502,6 @@
     "@babel/helper-replace-supers" "7.0.0-rc.1"
     "@babel/plugin-syntax-class-properties" "7.0.0-rc.1"
 
-"@babel/plugin-proposal-decorators@^7.0.0-rc.1":
-  version "7.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.0.0-rc.1.tgz#2cb2a8f8707280b41865fcebd48792cc24f83b9e"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-rc.1"
-    "@babel/plugin-syntax-decorators" "7.0.0-rc.1"
-
 "@babel/plugin-proposal-do-expressions@^7.0.0-rc.1":
   version "7.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-do-expressions/-/plugin-proposal-do-expressions-7.0.0-rc.1.tgz#e1f2bee714084186e5cd9336f1001ecc9e5ec95a"
@@ -645,12 +638,6 @@
 "@babel/plugin-syntax-class-properties@7.0.0-rc.1":
   version "7.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-rc.1.tgz#155343e256c84d127496e46675a3049636d311ff"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-rc.1"
-
-"@babel/plugin-syntax-decorators@7.0.0-rc.1":
-  version "7.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.0.0-rc.1.tgz#f5b2c04547c1e780ffd5ed943757f810858870e2"
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-rc.1"
 
@@ -3517,7 +3504,6 @@ babel-plugin-transform-undefined-to-void@^6.9.0:
   version "0.1.0"
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.0.0-rc.1"
-    "@babel/plugin-proposal-decorators" "^7.0.0-rc.1"
     "@babel/plugin-proposal-do-expressions" "^7.0.0-rc.1"
     "@babel/plugin-proposal-export-default-from" "^7.0.0-rc.1"
     "@babel/plugin-proposal-export-namespace-from" "^7.0.0-rc.1"
