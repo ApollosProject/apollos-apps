@@ -7,9 +7,6 @@ export const {
 
 export const GET_IMAGE = url.resolve(ROCK_API, 'GetImage.ashx');
 
-export const APP_INTERACTION_CHANNEL = 9;
-export const CONTENT_ITEM_TYPE_ID = 208;
-
 export const FIELD_TYPES = {
   TEXT: 1,
   MULTI_SELECT: 2,
