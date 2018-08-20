@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import RockApolloDataSource from '/api/connectors/rock/data-source';
+import RockApolloDataSource from 'apollos-church-api/src/connectors/rock/data-source';
 
 const mapApollosNameToRockName = (name) => {
   switch (name) {
