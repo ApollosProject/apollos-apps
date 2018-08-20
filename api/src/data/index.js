@@ -10,7 +10,7 @@ import * as Media from './media';
 import * as Auth from './auth';
 import * as LiveStream from './live';
 import * as Theme from './theme';
-import * as ESVScripture from './esv';
+import * as Scripture from './esv';
 import * as Interactions from './interactions';
 
 const data = {
@@ -22,7 +22,7 @@ const data = {
   Auth,
   LiveStream,
   Theme,
-  ESVScripture,
+  Scripture,
   Interactions,
   RockConstants: { dataSource: RockConstants },
 };

@@ -11,7 +11,6 @@ const mapApollosNameToRockName = (name) => {
   }
 };
 
-const RockConstantCache = new Map();
 export default class RockConstants extends RockApolloDataSource {
   async findOrCreate({ model, objectAttributes }) {
     // Turns {ChannelId: 7, Name: 'Something'} into '(ChannelId eq 7) and (Name eq 'Something')'
@@ -26,6 +25,7 @@ export default class RockConstants extends RockApolloDataSource {
 
     const objects = await this.request(model)
       .filter(filter)
+      .cache({ ttl: 86400 })
       .get();
     if (objects.length) {
       console.log('Found', objects[0]);
@@ -52,42 +52,27 @@ export default class RockConstants extends RockApolloDataSource {
   }
 
   async interactionChannel() {
-    if (RockConstantCache.has('interactionChannel')) {
-      return RockConstantCache.get('interactionChannel');
-    }
-    const channel = await this.createOrFindInteractionChannel({
+    return this.createOrFindInteractionChannel({
       channelName: 'Apollos App',
     });
-    RockConstantCache.set('InteractionChannel', channel);
-    return channel;
   }
 
   async interactionComponent() {
-    if (RockConstantCache.has('InteractionComponent')) {
-      return RockConstantCache.get('InteractionComponent');
-    }
     const channel = await this.interactionChannel();
-    const component = await this.createOrFindInteractionComponent({
+    return this.createOrFindInteractionComponent({
       componentName: 'Apollos Content Item',
       channelId: channel.id,
     });
-    RockConstantCache.set('InteractionComponent', component);
-    return component;
   }
 
   async modelTypeId(nameInput) {
     const name = mapApollosNameToRockName(nameInput);
-    const cacheKey = `type:${name}`;
 
-    if (RockConstantCache.has(cacheKey)) {
-      return RockConstantCache.get(cacheKey);
-    }
     const types = await this.request('EntityTypes')
       .filter(`Name eq 'Rock.Model.${name}'`)
+      .cache({ ttl: 86400 })
       .get();
     if (types.length) {
-      // eslint-disable-next-line prefer-destructuring
-      RockConstantCache.set(cacheKey, types[0]);
       return types[0];
     }
 
