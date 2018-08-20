@@ -33,13 +33,6 @@ module.exports = () => ({
       },
     ],
     '@babel/plugin-proposal-do-expressions',
-
-    [
-      '@babel/plugin-proposal-decorators',
-      {
-        legacy: true,
-      },
-    ],
     '@babel/plugin-proposal-function-sent',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-numeric-separator',
