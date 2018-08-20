@@ -4,7 +4,10 @@ import { parseGlobalId } from '/api/data/node';
 
 export default class Interactions extends RockApolloDataSource {
   async createSession() {
-    const interactionId = await this.post('/InteractionSessions', {});
+    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    const interactionId = await this.post('/InteractionSessions', {
+      PersonAliasId: currentUser.primaryAliasId,
+    });
     return this.get(`/InteractionSessions/${interactionId}`);
   }
 
