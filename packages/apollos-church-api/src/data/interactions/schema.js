@@ -17,8 +17,8 @@ export default gql`
   }
 
   input CreateInteractionInput {
-    nodeId: String!
-    sessionId: String!
+    nodeId: ID!
+    sessionId: ID!
     operation: INTERACTION_OPERATION!
   }
 

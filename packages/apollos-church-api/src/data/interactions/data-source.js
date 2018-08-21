@@ -1,8 +1,10 @@
-import { AuthenticationError } from 'apollo-server';
 import RockApolloDataSource from 'apollos-church-api/src/connectors/rock/data-source';
 import { parseGlobalId } from 'apollos-church-api/src/data/node';
+import { AuthenticationError } from 'apollo-server';
 
 export default class Interactions extends RockApolloDataSource {
+  resource = 'Interactions';
+
   async createSession() {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
     const interactionId = await this.post('/InteractionSessions', {
