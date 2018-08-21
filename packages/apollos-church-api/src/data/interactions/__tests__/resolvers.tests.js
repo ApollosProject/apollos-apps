@@ -5,10 +5,7 @@ import { makeExecutableSchema } from 'apollo-server';
 import { schema as typeDefs, resolvers } from 'apollos-church-api/src/data';
 import { getTestContext } from 'apollos-church-api/src/utils/testUtils';
 import { createGlobalId } from 'apollos-church-api/src/data/node/model';
-import {
-  generateToken,
-  registerToken,
-} from 'apollos-church-api/src/data/auth/token';
+import { generateToken } from 'apollos-church-api/src/data/auth/token';
 
 describe('Interactions', () => {
   let schema;
