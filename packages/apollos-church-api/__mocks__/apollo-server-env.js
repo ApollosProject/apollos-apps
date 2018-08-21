@@ -131,7 +131,7 @@ fetch.mockRockDataSourceAPI = () => {
       return resolveWith([rockMocks.people()]);
     }
 
-    if (url.match('api/Interactions')) {
+    if (url.match('api/Interactions/\\d')) {
       return resolveWith(rockMocks.interaction());
     }
 
