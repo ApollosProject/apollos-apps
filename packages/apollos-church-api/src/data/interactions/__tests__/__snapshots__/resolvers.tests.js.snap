@@ -4,7 +4,7 @@ exports[`Interactions creates a session 1`] = `
 Object {
   "data": Object {
     "createSession": Object {
-      "id": "123",
+      "id": "InteractionSession:2cc8f539e345e8f479a55e2fdc9743c0",
     },
   },
 }
@@ -14,7 +14,7 @@ exports[`Interactions creates an interaction 1`] = `
 Object {
   "data": Object {
     "createInteraction": Object {
-      "id": "456",
+      "id": "Interaction:fb344cb78f7b3f41416ffcbdc457e30c",
       "interactionDateTime": "2018-08-21T14:55:01.000Z",
       "operation": "Like",
     },

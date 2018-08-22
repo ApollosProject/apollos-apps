@@ -16,6 +16,7 @@ export default class Interactions extends RockApolloDataSource {
   async createInteraction({ nodeId, operationName, sessionId }) {
     const { dataSources } = this.context;
     const { id, __type } = parseGlobalId(nodeId);
+    const parsedSessionId = parseGlobalId(sessionId).id;
     const contentItemType = await dataSources.RockConstants.modelTypeId(__type);
     const interactionComponent = await this.context.dataSources.RockConstants.interactionComponent();
     const currentUser = await dataSources.Auth.getCurrentPerson();
@@ -25,7 +26,7 @@ export default class Interactions extends RockApolloDataSource {
       RelatedEntityTypeId: contentItemType.id,
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
-      InteractionSessionId: sessionId,
+      InteractionSessionId: parsedSessionId,
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
     });

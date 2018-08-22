@@ -40,7 +40,7 @@ describe('Interactions', () => {
         createInteraction(
           input: {
             nodeId: "${createGlobalId(1, 'UniversalContentItem')}"
-            sessionId: "123"
+            sessionId: "${createGlobalId(123, 'Session')}"
             operation: Like
           }
         ) {
