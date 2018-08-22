@@ -109,6 +109,11 @@ Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
       },
+      "sharing": Object {
+        "message": "",
+        "title": "SAMPLE: Easter",
+        "url": "https://apollosrock.newspring.cc/",
+      },
       "terms": Array [
         Object {
           "key": "summaryText",
@@ -246,6 +251,11 @@ Object {
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
+            },
+            "sharing": Object {
+              "message": "",
+              "title": "SAMPLE: Easter",
+              "url": "https://apollosrock.newspring.cc/",
             },
             "siblingContentItemsConnection": Object {
               "edges": Array [
@@ -399,6 +409,11 @@ Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
             },
+            "sharing": Object {
+              "message": "",
+              "title": "SAMPLE: Easter",
+              "url": "https://apollosrock.newspring.cc/",
+            },
             "terms": Array [
               Object {
                 "key": "summaryText",
@@ -480,6 +495,11 @@ Object {
       "parentChannel": Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
+      },
+      "sharing": Object {
+        "message": "",
+        "title": "SAMPLE: Easter",
+        "url": "https://apollosrock.newspring.cc/",
       },
       "terms": Array [],
       "title": "SAMPLE: Easter",

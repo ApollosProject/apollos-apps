@@ -59,6 +59,11 @@ const contentItemFragment = `
       key
       value
     }
+    sharing {
+      url
+      title
+      message
+    }
   }
 `;
 
