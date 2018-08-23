@@ -2,11 +2,13 @@ import React from 'react';
 import { withProps } from 'recompose';
 import { Platform, Text, View } from 'react-native';
 
-import HTMLView from 'ui/HTMLView';
-import defaultRenderer, { wrapTextChildren } from 'ui/HTMLView/defaultRenderer';
-import Paragraph from 'ui/Paragraph';
-import { H7, BodyText } from 'ui/typography';
-import styled from 'ui/styled';
+import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
+import defaultRenderer, {
+  wrapTextChildren,
+} from 'apolloschurchapp/src/ui/HTMLView/defaultRenderer';
+import Paragraph from 'apolloschurchapp/src/ui/Paragraph';
+import { H7, BodyText } from 'apolloschurchapp/src/ui/typography';
+import styled from 'apolloschurchapp/src/ui/styled';
 
 const BlockIndent = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit / 2,

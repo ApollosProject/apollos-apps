@@ -5,7 +5,7 @@ import { compose, setPropTypes } from 'recompose';
 import Placeholder from 'rn-placeholder';
 
 import withScripture from '@data/withScripture';
-import { H4, H7 } from 'ui/typography';
+import { H4, H7 } from 'apolloschurchapp/src/ui/typography';
 
 import ScriptureHTMLView from './ScriptureHTMLView';
 

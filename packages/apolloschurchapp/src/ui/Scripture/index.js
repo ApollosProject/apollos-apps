@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { compose, setPropTypes } from 'recompose';
-import HTMLView from 'ui/HTMLView';
-import Spacer from 'ui/Spacer';
+import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
+import Spacer from 'apolloschurchapp/src/ui/Spacer';
 
 import Item from './Item';
 

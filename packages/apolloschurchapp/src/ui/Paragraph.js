@@ -4,8 +4,8 @@ import { View } from 'react-native';
 import {
   withPlaceholder,
   Paragraph as ParagraphPlaceholder,
-} from 'ui/Placeholder';
-import styled from 'ui/styled';
+} from 'apolloschurchapp/src/ui/Placeholder';
+import styled from 'apolloschurchapp/src/ui/styled';
 
 const Paragraph = compose(
   styled(({ theme }) => ({

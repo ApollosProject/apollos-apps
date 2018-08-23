@@ -1,8 +1,11 @@
 import { Platform, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, pure, setDisplayName } from 'recompose';
-import styled from 'ui/styled';
-import { withPlaceholder, Typography } from 'ui/Placeholder';
+import styled from 'apolloschurchapp/src/ui/styled';
+import {
+  withPlaceholder,
+  Typography,
+} from 'apolloschurchapp/src/ui/Placeholder';
 
 const styles = styled(
   ({ theme }) => ({

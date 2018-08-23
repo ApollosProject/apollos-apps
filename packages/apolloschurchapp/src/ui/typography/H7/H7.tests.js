@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Providers from 'Providers';
+import Providers from 'apolloschurchapp/src/Providers';
 import H7 from '.';
 
 describe('the H7 component', () => {
