@@ -10,6 +10,7 @@ import {
   H4,
   H5,
   H6,
+  H7,
   Paragraph,
   BlockQuote,
   BulletListItem,
@@ -81,6 +82,8 @@ const defaultRenderer = (node, { children }) => {
       return <H5 padded>{wrapTextChildren(children, Text)}</H5>;
     case 'h6':
       return <H6 padded>{wrapTextChildren(children, Text)}</H6>;
+    case 'h7':
+      return <H7 padded>{wrapTextChildren(children, Text)}</H7>;
     case 'ul':
       return <Paragraph>{children}</Paragraph>;
     case 'li':
