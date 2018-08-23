@@ -1,10 +1,29 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Video from 'react-native-video';
+import { Mutation } from 'react-apollo';
+import gql from 'graphql-tag';
 
 import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
 
 import { VideoWrapper, PlayButton, PlayIcon } from './styles';
+
+const playVideoMutation = gql`
+  mutation playVideo(
+    $mediaSource: String!
+    $posterSources: String
+    $title: String
+    $artist: String
+  ) {
+    mediaPlayerPlayNow(
+      mediaSource: $mediaSource
+      posterSources: $posterSources
+      title: $title
+      artist: $artist
+      isVideo: true
+    ) @client
+  }
+`;
 
 class VideoPlayer extends PureComponent {
   static propTypes = {
@@ -36,7 +55,7 @@ class VideoPlayer extends PureComponent {
   };
 
   handleOnPress = () => {
-    this.video.presentFullscreenPlayer();
+    // this.video.presentFullscreenPlayer();
   };
 
   handleTogglePaused = () => {
@@ -60,12 +79,29 @@ class VideoPlayer extends PureComponent {
         />
         {source && source.uri
           ? [
-              <PlayButton
-                onPress={this.handleOnPress}
+              <Mutation
                 key={'VideoPlayerPlaybutton'}
+                mutation={playVideoMutation}
               >
-                <PlayIcon />
-              </PlayButton>,
+                {(play) =>
+                  console.log({ thumbnail, source }) || (
+                    <PlayButton
+                      onPress={() =>
+                        play({
+                          variables: {
+                            mediaSource: source,
+                            posterSources: thumbnail,
+                            title: 'This is some title',
+                            artist: 'this.is.artist yo',
+                          },
+                        })
+                      }
+                    >
+                      <PlayIcon />
+                    </PlayButton>
+                  )
+                }
+              </Mutation>,
               <Video
                 ref={this.setVideoRef}
                 source={source}

@@ -10,4 +10,6 @@ jest.mock('react-native-safari-view', () => ({
   show: jest.fn(),
 }));
 
+jest.mock('react-native-device-info');
+
 jest.mock('react-native-video', () => 'Video');

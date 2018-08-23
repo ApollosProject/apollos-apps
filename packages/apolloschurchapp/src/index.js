@@ -2,6 +2,8 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 // import { Sentry } from 'react-native-sentry';
 
+import MediaPlayer from './ui/MediaPlayer';
+
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
@@ -35,7 +37,9 @@ const AppModalNavigator = createStackNavigator(
 
 const App = () => (
   <Providers>
-    <AppModalNavigator />
+    <MediaPlayer>
+      <AppModalNavigator />
+    </MediaPlayer>
   </Providers>
 );
 

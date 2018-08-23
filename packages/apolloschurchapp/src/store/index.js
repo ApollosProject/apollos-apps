@@ -12,21 +12,32 @@ export const schema = `
 
   type Mutation {
     logout
-    mediaPlayerUpdatePlayer(isPlaying: Bool)
-    mediaPlayerNext(skip: Int)
-    mediaPlayerEnqueue(name: String)
+    mediaPlayerUpdateState(isPlaying: Boolean, isFullscreen: Boolean, isVisible: Boolean): Boolean
+    mediaPlayerPlayNow(
+      parentId: ID,
+      mediaSource: VideoMediaSource!,
+      posterSources: [ImageMediaSource],
+      isVideo: Boolean
+      title: String,
+      artist: String
+    ): Boolean
   }
 
   type MediaPlayerState {
-    nowPlaying: MediaPlayerTrack
-    nowPlayingIndex: Int
-    queue: [MediaPlayerTrack]
-    isPlaying: Bool
+    currentTrack: MediaPlayerTrack
+    isPlaying: Boolean
+    isFullscreen: Boolean
+    isVisible: Boolean
   }
 
   type MediaPlayerTrack {
-    # TODO: what data do we _need_ to store client side for tracks?
-    name: String
+    id: ID!
+    parentId: ID
+    mediaSource: VideoMediaSource!
+    posterSources: [ImageMediaSource]
+    title: String
+    artist: String
+    isVideo: Boolean
   }
 `;
 
@@ -34,11 +45,14 @@ export const defaults = {
   authToken: null,
   mediaPlayer: {
     __typename: 'MediaPlayerState',
-    nowPlayingIndex: 0,
-    queue: [],
+    currentTrack: null,
     isPlaying: false,
+    isFullscreen: false,
+    isVisible: false,
   },
 };
+
+let trackId = 0;
 
 export const resolvers = {
   Mutation: {
@@ -47,56 +61,56 @@ export const resolvers = {
       cache.writeData({ data: { authToken: null } });
       return null;
     },
-    mediaPlayerEnqueue: (root, { name }, { cache }) => {
+    mediaPlayerPlayNow: (root, trackInfo, { cache }) => {
       const query = gql`
         query {
-          mediaPlayer @client {
-            queue
+          mediaPlayer {
+            isFullscreen
           }
         }
       `;
+      const track = merge(
+        {
+          id: trackId,
+          __typename: 'MediaPlayerTrack',
+          parentId: null,
+          mediaSource: null,
+          posterSources: null,
+          title: null,
+          artist: null,
+          isVideo: false,
+        },
+        trackInfo
+      );
+      trackId += 1;
+
       const { mediaPlayer } = cache.readQuery({ query });
-      cache.writeQuery({
+
+      cache.writeData({
         query,
         data: {
           mediaPlayer: {
             __typename: 'MediaPlayerState',
-            queue: [...mediaPlayer.queue, { name }],
+            isPlaying: true,
+            isVisible: true,
+            isFullscreen: (mediaPlayer && mediaPlayer.isFullscreen) || false,
+            currentTrack: track,
           },
         },
       });
+      return null;
     },
-    mediaPlayerNext: (root, { skip = 1 }, { cache }) => {
-      const query = gql`
-        query {
-          mediaPlayer @client {
-            nowPlayingIndex
-            queue
-          }
-        }
-      `;
-      const { mediaPlayer } = cache.readQuery({ query });
-
-      let nowPlayingIndex = mediaPlayer.nowPlayingIndex + skip;
-      if (nowPlayingIndex < 0) nowPlayingIndex = mediaPlayer.queue.length - 1;
-      if (nowPlayingIndex >= mediaPlayer.queue.length) nowPlayingIndex = 0;
-
-      cache.writeQuery({
-        query,
-        data: {
-          mediaPlayer: {
-            __typename: 'MediaPlayerState',
-            nowPlayingIndex,
-            queue: query.queue,
-          },
-        },
-      });
-    },
-    mediaPlayerUpdatePlayer: (root, { isPlaying }, { cache }) => {
+    mediaPlayerUpdateState: (
+      root,
+      { isPlaying, isFullscreen, isVisible },
+      { cache }
+    ) => {
       const query = gql`
         query {
           mediaPlayer @client {
             isPlaying
+            isFullscreen
+            isVisible
           }
         }
       `;
@@ -106,10 +120,13 @@ export const resolvers = {
         data: {
           mediaPlayer: merge(mediaPlayer, {
             isPlaying,
+            isFullscreen,
+            isVisible,
             __typename: 'MediaPlayerState',
           }),
         },
       });
+      return null;
     },
   },
 };
