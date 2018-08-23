@@ -4,7 +4,6 @@ import { View } from 'react-native';
 import { compose, setPropTypes } from 'recompose';
 import Placeholder from 'rn-placeholder';
 
-import withScripture from '@data/withScripture';
 import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 
 import ScriptureHTMLView from './ScriptureHTMLView';
@@ -32,7 +31,6 @@ export const ItemWithoutData = enhance(
 );
 
 const withData = compose(
-  withScripture,
   setPropTypes({
     // provided by withScripture HOC
     content: PropTypes.shape({ html: PropTypes.string }),
