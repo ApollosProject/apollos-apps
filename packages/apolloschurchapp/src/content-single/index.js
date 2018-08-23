@@ -1,20 +1,28 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
-import { ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { Query, Mutation } from 'react-apollo';
+import gql from 'graphql-tag';
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
 import CardTile from 'apolloschurchapp/src/ui/CardTile';
-import VideoPlayer from 'apolloschurchapp/src/ui/VideoPlayer';
+import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { H2 } from 'apolloschurchapp/src/ui/typography';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import styled from 'apolloschurchapp/src/ui/styled';
-import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
+import { ThemeMixin, withTheme } from 'apolloschurchapp/src/ui/theme';
 import Share from 'apolloschurchapp/src/ui/Share';
+import Icon from 'apolloschurchapp/src/ui/Icon';
+import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
 import getContentItem from './getContentItem';
 import getContentItemMinimalState from './getContentItemMinimalState';
@@ -23,7 +31,39 @@ const FeedContainer = styled({
   paddingHorizontal: 0,
 })(PaddedView);
 
+const MediaButtonsContainer = styled({
+  ...StyleSheet.absoluteFillObject,
+  justifyContent: 'center',
+  alignItems: 'center',
+})(PaddedView);
+
+const MediaIcon = withTheme(
+  ({ theme: { colors: { lightPrimary } = {} } = {} }) => ({
+    size: 50, // TODO: should this be set in a typographic unit?
+    fill: lightPrimary, // TODO: should this reference a text color?
+  })
+)(Icon);
+
+const MediaHeader = styled({ width: '100%' })(View);
+
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
+
+const playVideoMutation = gql`
+  mutation playVideo(
+    $mediaSource: String!
+    $posterSources: String
+    $title: String
+    $artist: String
+  ) {
+    mediaPlayerPlayNow(
+      mediaSource: $mediaSource
+      posterSources: $posterSources
+      title: $title
+      artist: $artist
+      isVideo: true
+    ) @client
+  }
+`;
 
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
@@ -119,6 +159,9 @@ class ContentSingle extends PureComponent {
                 ? siblingContent
                 : childContent;
 
+              const videoSource = get(content, 'videos[0].sources[0]', null);
+              const coverImageSources = get(content, 'coverImage.sources', []);
+
               return (
                 <ThemeMixin
                   mixin={{
@@ -127,11 +170,37 @@ class ContentSingle extends PureComponent {
                   }}
                 >
                   <ScrollView>
-                    <VideoPlayer
-                      source={get(content, 'videos[0].sources[0]', null)}
-                      thumbnail={get(content, 'coverImage.sources', [])}
-                      overlayColor={get(content, 'theme.colors.paper')}
-                    />
+                    <MediaHeader>
+                      <GradientOverlayImage
+                        source={coverImageSources}
+                        overlayColor={get(content, 'theme.colors.paper')}
+                      />
+                      <MediaButtonsContainer>
+                        {videoSource ? (
+                          <Mutation
+                            key={'VideoPlayerPlaybutton'}
+                            mutation={playVideoMutation}
+                          >
+                            {(play) => (
+                              <Touchable
+                                onPress={() =>
+                                  play({
+                                    variables: {
+                                      mediaSource: videoSource,
+                                      posterSources: coverImageSources,
+                                      title: content.title,
+                                      artist: 'subtitle (todo)',
+                                    },
+                                  })
+                                }
+                              >
+                                <MediaIcon name="play" />
+                              </Touchable>
+                            )}
+                          </Mutation>
+                        ) : null}
+                      </MediaButtonsContainer>
+                    </MediaHeader>
                     <BackgroundView>
                       <ContentContainer>
                         <H2 padded isLoading={!content.title && loading}>

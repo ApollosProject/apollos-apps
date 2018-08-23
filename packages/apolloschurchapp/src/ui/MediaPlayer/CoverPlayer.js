@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import { Animated, View, StyleSheet, Dimensions } from 'react-native';
+import {
+  Animated,
+  View,
+  StyleSheet,
+  Dimensions,
+  PanResponder,
+} from 'react-native';
+import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { Query, withApollo } from 'react-apollo';
 
 // we use a JS-only version of SafeAreaView as we can force bottom inset, which improves render efficiency
 import SafeAreaView from 'react-native-safe-area-view';
@@ -28,12 +35,32 @@ const getVisibilityState = gql`
   }
 `;
 
+const exitFullscreen = gql`
+  mutation {
+    mediaPlayerUpdateState(isFullscreen: false) @client
+  }
+`;
+
+const goFullscreen = gql`
+  mutation {
+    mediaPlayerUpdateState(isFullscreen: true) @client
+  }
+`;
+
 class CoverPlayer extends Component {
+  static propTypes = {
+    client: PropTypes.shape({ mutate: PropTypes.func }),
+  };
+
   fullscreen = new Animated.Value(0);
 
   miniControlHeight = new Animated.Value(MINI_PLAYER_HEIGHT);
 
   coverHeight = new Animated.Value(Dimensions.get('window').height);
+
+  dragOffset = new Animated.Value(0);
+
+  fullScreenWithOffset = Animated.add(this.fullscreen, this.dragOffset);
 
   coverTranslateY = (() => {
     const translateYWhenCollapsed = Animated.subtract(
@@ -43,7 +70,7 @@ class CoverPlayer extends Component {
 
     const translateYSlope = Animated.multiply(
       translateYWhenCollapsed,
-      Animated.multiply(this.fullscreen, -1)
+      Animated.multiply(this.fullScreenWithOffset, -1)
     );
 
     const translateY = Animated.add(translateYSlope, translateYWhenCollapsed);
@@ -57,7 +84,7 @@ class CoverPlayer extends Component {
     );
     const translateYSlope = Animated.multiply(
       translateYWhenExpanded,
-      Animated.multiply(this.fullscreen, -1)
+      Animated.multiply(this.fullScreenWithOffset, -1)
     );
     return translateYSlope;
   })();
@@ -68,8 +95,8 @@ class CoverPlayer extends Component {
   ];
 
   miniControlsAnimation = {
-    opacity: this.fullscreen.interpolate({
-      inputRange: [0, 0.5],
+    opacity: this.fullScreenWithOffset.interpolate({
+      inputRange: [0, 0.1],
       outputRange: [1, 0],
     }),
     transform: [{ translateY: this.miniControlsTranslateY }],
@@ -77,8 +104,48 @@ class CoverPlayer extends Component {
 
   fullscreenControlsAnimation = [
     StyleSheet.absoluteFill,
-    { opacity: this.fullscreen },
+    {
+      opacity: this.fullScreenWithOffset.interpolate({
+        inputRange: [0, 0.1],
+        outputRange: [0, 1],
+      }),
+    },
   ];
+
+  panResponder = PanResponder.create({
+    onMoveShouldSetPanResponder: (event, { dx, dy }) =>
+      Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 10,
+
+    onPanResponderMove: (event, { dy }) => {
+      this.dragOffset.setValue(
+        Math.min(0, -dy / Dimensions.get('window').height)
+      );
+    },
+
+    onPanResponderRelease: (event, { dy, vy }) => {
+      const { height } = Dimensions.get('window');
+      const gestureVelocity = vy;
+      const gestureDistance = Math.abs(dy);
+
+      let mutation = goFullscreen;
+
+      if (Math.abs(gestureVelocity > 0.5)) {
+        if (gestureVelocity > 0) {
+          mutation = exitFullscreen;
+        }
+      } else if (gestureDistance >= height / 2) {
+        mutation = exitFullscreen;
+      }
+
+      Animated.spring(this.dragOffset, {
+        toValue: 0,
+        overshootClamping: true,
+        useNativeDriver: true,
+      }).start();
+
+      this.props.client.mutate({ mutation });
+    },
+  });
 
   handleCoverLayout = Animated.event([
     { nativeEvent: { layout: { height: this.coverHeight } } },
@@ -106,6 +173,7 @@ class CoverPlayer extends Component {
         key="cover"
         onLayout={this.handleCoverLayout}
         style={this.coverStyle}
+        {...this.panResponder.panHandlers}
       >
         <VideoSizer isFullscreen={isFullscreen}>
           <VideoWindow />
@@ -138,4 +206,4 @@ class CoverPlayer extends Component {
   }
 }
 
-export default CoverPlayer;
+export default withApollo(CoverPlayer);
