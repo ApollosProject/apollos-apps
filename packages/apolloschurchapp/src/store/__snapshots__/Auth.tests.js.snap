@@ -41,10 +41,12 @@ InMemoryCache {
     "data": Object {
       "$ROOT_QUERY.mediaPlayer": Object {
         "__typename": "MediaPlayerState",
-        "currentTrack": null,
-        "isFullscreen": false,
         "isPlaying": false,
-        "isVisible": false,
+        "nowPlayingIndex": 0,
+        "queue": Object {
+          "json": Array [],
+          "type": "json",
+        },
       },
       "ROOT_QUERY": Object {
         "authToken": null,
@@ -59,7 +61,6 @@ InMemoryCache {
   },
   "optimistic": Array [],
   "silenceBroadcast": false,
-  "typenameDocumentCache": WeakMap {},
   "watches": Array [],
   "write": [Function],
 }
