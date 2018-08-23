@@ -1,41 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
-import { compose, setPropTypes } from 'recompose';
+import { compose } from 'recompose';
 import Placeholder from 'rn-placeholder';
 
 import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
+import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 import ScriptureHTMLView from './ScriptureHTMLView';
 
-const enhance = compose(setPropTypes({ query: PropTypes.string }));
+const enhance = compose(withIsLoading);
 
-export const ItemWithoutData = enhance(
-  ({ query, content: { html = '' } = {}, isLoading }) => (
-    <View>
-      <H4>
-        {' '}
-        {/* wrapping text element provides unified baseline */}
-        <H4>{query}</H4> <H6>ESV</H6>
-      </H4>
-      <Placeholder.Paragraph
-        lineNumber={5}
-        onReady={!isLoading}
-        lastLineWidth="60%"
-        firstLineWidth="40%"
-      >
-        <ScriptureHTMLView>{html}</ScriptureHTMLView>
-      </Placeholder.Paragraph>
-    </View>
-  )
-);
+const Item = enhance(({ reference, isLoading }) => (
+  <View>
+    <H4>
+      {' '}
+      {/* wrapping text element provides unified baseline */}
+      <H4>{reference.query}</H4> <H6>ESV</H6>
+    </H4>
+    <Placeholder.Paragraph
+      lineNumber={5}
+      onReady={!isLoading}
+      lastLineWidth="60%"
+      firstLineWidth="40%"
+    >
+      <ScriptureHTMLView>{reference.passage}</ScriptureHTMLView>
+    </Placeholder.Paragraph>
+  </View>
+));
 
-const withData = compose(
-  setPropTypes({
-    // provided by withScripture HOC
-    content: PropTypes.shape({ html: PropTypes.string }),
-    isLoading: PropTypes.bool,
-  })
-);
+Item.propTypes = {
+  reference: PropTypes.shape({
+    query: PropTypes.string,
+    passages: PropTypes.string,
+  }),
+};
 
-export default withData(ItemWithoutData);
+export default Item;
