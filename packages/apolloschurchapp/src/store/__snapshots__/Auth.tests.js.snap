@@ -59,7 +59,6 @@ InMemoryCache {
   },
   "optimistic": Array [],
   "silenceBroadcast": false,
-  "typenameDocumentCache": WeakMap {},
   "watches": Array [],
   "write": [Function],
 }

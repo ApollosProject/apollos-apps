@@ -29,6 +29,26 @@ const getVideoState = gql`
   }
 `;
 
+const updateProgress = gql`
+  mutation updateProgress(
+    $currentTime: Float
+    $playableDuration: Float
+    $seekableDuration: Float
+  ) {
+    mediaPlayerNotifyProgress(
+      currentTime: $currentTime
+      playableDuration: $playableDuration
+      seekableDuration: $seekableDuration
+    ) @client
+  }
+`;
+
+const updateDuration = gql`
+  mutation updateDuration($duration: Float) {
+    mediaPlayerNotifyProgress(duration: $duration) @client
+  }
+`;
+
 const pauseMutation = gql`
   mutation {
     mediaPlayerUpdateState(isPlaying: false) @client
@@ -48,13 +68,26 @@ class VideoWindow extends PureComponent {
     this.props.client.mutate({ mutation: pauseMutation });
   };
 
+  handleProgress = (progress) => {
+    this.props.client.mutate({
+      mutation: updateProgress,
+      variables: progress,
+    });
+  };
+
+  handleLoad = ({ duration }) => {
+    this.props.client.mutate({
+      mutation: updateDuration,
+      variables: { duration },
+    });
+  };
+
   setVideoRef = (element) => {
     this.video = element;
   };
 
   renderVideo = ({ data: { mediaPlayer = {} } = {} }) => {
     if (!get(mediaPlayer, 'currentTrack.mediaSource')) return null;
-
     return (
       <Video
         ref={this.setVideoRef}
@@ -70,6 +103,8 @@ class VideoWindow extends PureComponent {
         resizeMode={'contain'}
         poster={get(mediaPlayer, 'posterSources[0].uri')}
         posterResizeMode={'cover'}
+        onProgress={this.handleProgress}
+        onLoad={this.handleLoad}
         style={StyleSheet.absoluteFill}
         repeat
       />

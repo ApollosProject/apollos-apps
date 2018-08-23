@@ -2,9 +2,14 @@ import React, { PureComponent } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
-import BackgroundView from '../BackgroundView';
+import FlexedView from '../FlexedView';
+import styled from '../styled';
 
 import CoverPlayer from './CoverPlayer';
+
+const BackgroundView = styled(({ theme }) => ({
+  backgroundColor: theme.colors.lightPrimary,
+}))(FlexedView);
 
 const getMediaPlayerVisibility = gql`
   query mediaPlayer {

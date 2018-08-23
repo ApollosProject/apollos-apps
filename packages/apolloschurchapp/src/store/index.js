@@ -1,4 +1,4 @@
-import { merge } from 'lodash';
+import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import { client } from '../client'; // eslint-disable-line
 // TODO: this will require more organization...ie...not keeping everything in one file.
@@ -13,14 +13,16 @@ export const schema = `
   type Mutation {
     logout
     mediaPlayerUpdateState(isPlaying: Boolean, isFullscreen: Boolean, isVisible: Boolean): Boolean
+    mediaPlayerNotifyProgress(currentTime: Float, playableDuration: Float, seekableDuration: Float, duration: Float): Boolean
     mediaPlayerPlayNow(
       parentId: ID,
       mediaSource: VideoMediaSource!,
       posterSources: [ImageMediaSource],
-      isVideo: Boolean
       title: String,
-      artist: String
+      artist: String,
+      isVideo: Boolean,
     ): Boolean
+
   }
 
   type MediaPlayerState {
@@ -28,6 +30,14 @@ export const schema = `
     isPlaying: Boolean
     isFullscreen: Boolean
     isVisible: Boolean
+    progress: MediaPlayerProgress
+  }
+
+  type MediaPlayerProgress {
+    currentTime: Float
+    playableDuration: Float
+    seekableDuration: Float
+    duration: Float
   }
 
   type MediaPlayerTrack {
@@ -49,6 +59,7 @@ export const defaults = {
     isPlaying: false,
     isFullscreen: false,
     isVisible: false,
+    progress: null,
   },
 };
 
@@ -124,6 +135,48 @@ export const resolvers = {
             isVisible,
             __typename: 'MediaPlayerState',
           }),
+        },
+      });
+      return null;
+    },
+    mediaPlayerNotifyProgress: (
+      root,
+      { currentTime, playableDuration, seekableDuration, duration },
+      { cache }
+    ) => {
+      const query = gql`
+        query {
+          mediaPlayer @client {
+            progress {
+              currentTime
+              playableDuration
+              seekableDuration
+              duration
+            }
+          }
+        }
+      `;
+      const { mediaPlayer } = cache.readQuery({ query });
+      cache.writeQuery({
+        query,
+        data: {
+          mediaPlayer: {
+            __typename: 'MediaPlayerState',
+            progress: {
+              currentTime:
+                currentTime || get(mediaPlayer.progress, 'currentTime') || 0,
+              playableDuration:
+                playableDuration ||
+                get(mediaPlayer.progress, 'playableDuration') ||
+                0,
+              seekableDuration:
+                seekableDuration ||
+                get(mediaPlayer.progress, 'seekableDuration') ||
+                0,
+              duration: duration || get(mediaPlayer.progress, 'duration') || 0,
+              __typename: 'MediaPlayerProgress',
+            },
+          },
         },
       });
       return null;

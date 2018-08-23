@@ -75,6 +75,11 @@ class CoverPlayer extends Component {
     transform: [{ translateY: this.miniControlsTranslateY }],
   };
 
+  fullscreenControlsAnimation = [
+    StyleSheet.absoluteFill,
+    { opacity: this.fullscreen },
+  ];
+
   handleCoverLayout = Animated.event([
     { nativeEvent: { layout: { height: this.coverHeight } } },
   ]);
@@ -105,7 +110,9 @@ class CoverPlayer extends Component {
         <VideoSizer isFullscreen={isFullscreen}>
           <VideoWindow />
         </VideoSizer>
-        <FullscreenControls />
+        <Animated.View style={this.fullscreenControlsAnimation}>
+          <FullscreenControls />
+        </Animated.View>
       </Animated.View>,
     ];
 

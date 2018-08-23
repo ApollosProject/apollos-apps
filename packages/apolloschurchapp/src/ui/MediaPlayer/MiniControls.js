@@ -7,6 +7,9 @@ import Touchable from '../Touchable';
 import styled from '../styled';
 import { H5, H6 } from '../typography';
 import Icon from '../Icon';
+import { withTheme } from '../theme';
+
+import Seeker from './Seeker';
 
 export const MINI_PLAYER_HEIGHT = 50;
 
@@ -36,13 +39,12 @@ const TrackArtist = styled(({ theme }) => ({
   overflow: 'hidden',
 }))(H6);
 
-const Container = styled(({ theme }) => ({
+const Container = styled({
   overflow: 'hidden',
-  backgroundColor: theme.colors.background.default,
   height: MINI_PLAYER_HEIGHT,
   flexDirection: 'row',
   justifyContent: 'flex-start',
-}))(View);
+})(View);
 
 const VideoSpacer = styled({
   height: MINI_PLAYER_HEIGHT,
@@ -53,12 +55,23 @@ const Controls = styled(({ theme }) => ({
   position: 'absolute',
   right: 0,
   bottom: 0,
-  top: 0,
+  top: -1,
   paddingHorizontal: theme.sizing.baseUnit / 2,
   flexDirection: 'row',
   justifyContent: 'flex-end',
   alignItems: 'center',
 }))(Container);
+
+const MiniSeeker = styled({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+})(Seeker);
+
+const StyledIcon = withTheme(({ theme }) => ({
+  fill: theme.colors.darkTertiary,
+}))(Icon);
 
 const getControlState = gql`
   query {
@@ -133,7 +146,7 @@ class MiniControls extends Component {
                         { opacity: this.dismissAnimator },
                       ]}
                     >
-                      <Icon name="close" />
+                      <StyledIcon name="close" />
                     </Animated.View>
                   </VideoSpacer>
                 </Touchable>
@@ -150,7 +163,7 @@ class MiniControls extends Component {
                 <Mutation mutation={pauseMutation}>
                   {(pause) => (
                     <Touchable onPress={() => pause()}>
-                      <Icon name="pause" />
+                      <StyledIcon name="pause" />
                     </Touchable>
                   )}
                 </Mutation>
@@ -158,12 +171,13 @@ class MiniControls extends Component {
                 <Mutation mutation={playMutation}>
                   {(play) => (
                     <Touchable onPress={() => play()}>
-                      <Icon name="play" />
+                      <StyledIcon name="play" />
                     </Touchable>
                   )}
                 </Mutation>
               )}
             </Controls>
+            <MiniSeeker minimal />
           </Container>
         )}
       </Mutation>
