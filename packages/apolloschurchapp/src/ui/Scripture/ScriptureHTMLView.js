@@ -7,7 +7,7 @@ import defaultRenderer, {
   wrapTextChildren,
 } from 'apolloschurchapp/src/ui/HTMLView/defaultRenderer';
 import Paragraph from 'apolloschurchapp/src/ui/Paragraph';
-import { H7, BodyText } from 'apolloschurchapp/src/ui/typography';
+import { H6, BodyText } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 
 const BlockIndent = styled(({ theme }) => ({
@@ -27,7 +27,7 @@ const NumText = styled(({ theme }) => ({
       lineHeight: theme.helpers.verticalRhythm(1.112, 1.625),
     },
   }),
-}))(H7);
+}))(H6);
 
 const renderer = (node, { children, ...other }) => {
   // eslint-disable-line

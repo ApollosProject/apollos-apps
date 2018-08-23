@@ -5,7 +5,7 @@ import { compose, setPropTypes } from 'recompose';
 import Placeholder from 'rn-placeholder';
 
 import withScripture from '@data/withScripture';
-import { H4, H7 } from 'apolloschurchapp/src/ui/typography';
+import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 
 import ScriptureHTMLView from './ScriptureHTMLView';
 
@@ -17,7 +17,7 @@ export const ItemWithoutData = enhance(
       <H4>
         {' '}
         {/* wrapping text element provides unified baseline */}
-        <H4>{query}</H4> <H7>ESV</H7>
+        <H4>{query}</H4> <H6>ESV</H6>
       </H4>
       <Placeholder.Paragraph
         lineNumber={5}

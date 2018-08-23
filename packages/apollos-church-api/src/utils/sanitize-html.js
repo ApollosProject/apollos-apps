@@ -7,7 +7,6 @@ const allowedTags = [
   'h4',
   'h5',
   'h6',
-  'h7',
   'blockquote',
   'p',
   'a',
