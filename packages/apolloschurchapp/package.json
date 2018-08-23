@@ -38,7 +38,7 @@
     "android": "react-native run-android",
     "codecov": "cat ./coverage/lcov.info | codecov",
     "fixlint": "eslint ./src --fix",
-    "ios": "react-native run-ios --simulator=\"iPhone X\"",
+    "ios": "react-native run-ios --simulator=\"iPhone 7\"",
     "lint": "eslint ./src --ext .js",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "node ./scripts/get-introspection-data.js",
