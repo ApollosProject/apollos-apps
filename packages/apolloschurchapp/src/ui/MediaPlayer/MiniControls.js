@@ -24,13 +24,18 @@ const styles = StyleSheet.create({
   },
 });
 
+const TrackInfoTouchable = styled(({ theme }) => ({
+  backgroundColor: theme.colors.lightPrimary,
+  width: '100%',
+  height: '100%',
+}))(Touchable);
+
 const TrackInfo = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit / 2,
   height: '100%',
   justifyContent: 'center',
-  backgroundColor: theme.colors.lightPrimary,
   width: '100%',
-}))(Touchable);
+}))(View);
 
 const TrackName = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -161,10 +166,12 @@ class MiniControls extends Component {
                 </Touchable>
               )}
             </Mutation>
-            <TrackInfo onPress={() => goFullscreen()}>
-              <TrackName>{title}</TrackName>
-              <TrackArtist>{artist}</TrackArtist>
-            </TrackInfo>
+            <TrackInfoTouchable onPress={() => goFullscreen()}>
+              <TrackInfo>
+                <TrackName>{title}</TrackName>
+                <TrackArtist>{artist}</TrackArtist>
+              </TrackInfo>
+            </TrackInfoTouchable>
             <Controls>
               {isPlaying ? (
                 <Mutation mutation={pauseMutation}>

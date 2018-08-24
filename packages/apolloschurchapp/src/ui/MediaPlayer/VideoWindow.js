@@ -8,6 +8,13 @@ import { Animated, View, StyleSheet } from 'react-native';
 import styled from '../styled';
 import ActivityIndicator from '../ActivityIndicator';
 
+const styles = StyleSheet.create({
+  animatedPosterImage: {
+    ...StyleSheet.absoluteFillObject,
+    resizeMode: 'cover',
+  },
+});
+
 const Background = styled(({ theme }) => ({
   ...StyleSheet.absoluteFillObject,
   backgroundColor: theme.colors.black,
@@ -104,7 +111,7 @@ class VideoWindow extends PureComponent {
 
   renderVideo = ({ data: { mediaPlayer = {} } = {} }) => {
     if (!get(mediaPlayer, 'currentTrack.mediaSource')) return null;
-    return (
+    return [
       <Video
         ref={this.setVideoRef}
         source={mediaPlayer.currentTrack.mediaSource}
@@ -118,15 +125,24 @@ class VideoWindow extends PureComponent {
         onEnd={this.handlePause}
         onError={this.handlePause}
         resizeMode={'contain'}
-        poster={get(mediaPlayer.currentTrack, 'posterSources[0].uri')}
-        posterResizeMode={'cover'}
         onProgress={this.handleProgress}
         onLoadStart={this.handleLoadStart}
         onLoad={this.handleLoad}
         style={StyleSheet.absoluteFill}
         repeat
-      />
-    );
+        key="video"
+      />,
+      // there's currently a bug on android where react-native-video's poster doesn't ever go away
+      // So we use our own image copmonent...which is nicer cuz we can show a nice fading animation too!
+      <Animated.Image
+        key="poster"
+        style={[
+          styles.animatedPosterImage,
+          mediaPlayer.currentTrack.isVideo ? this.loadingStyle : {},
+        ]}
+        source={mediaPlayer.currentTrack.posterSources}
+      />,
+    ];
   };
 
   render() {

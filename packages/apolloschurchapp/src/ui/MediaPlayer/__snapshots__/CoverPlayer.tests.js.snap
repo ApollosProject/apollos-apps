@@ -966,37 +966,46 @@ Array [
           Object {
             "backgroundColor": "#F8F7F4",
             "height": "100%",
-            "justifyContent": "center",
             "opacity": 1,
-            "paddingHorizontal": 10,
             "width": "100%",
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "height": 20,
-              "lineHeight": 20.16,
-              "overflow": "hidden",
+              "height": "100%",
+              "justifyContent": "center",
+              "paddingHorizontal": 10,
+              "width": "100%",
             }
           }
-        />
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "height": 20,
-              "lineHeight": 17.28,
-              "overflow": "hidden",
+        >
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "height": 20,
+                "lineHeight": 20.16,
+                "overflow": "hidden",
+              }
             }
-          }
-        />
+          />
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "height": 20,
+                "lineHeight": 17.28,
+                "overflow": "hidden",
+              }
+            }
+          />
+        </View>
       </View>
       <View
         style={
@@ -2132,37 +2141,46 @@ Array [
           Object {
             "backgroundColor": "#F8F7F4",
             "height": "100%",
-            "justifyContent": "center",
             "opacity": 1,
-            "paddingHorizontal": 10,
             "width": "100%",
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "height": 20,
-              "lineHeight": 20.16,
-              "overflow": "hidden",
+              "height": "100%",
+              "justifyContent": "center",
+              "paddingHorizontal": 10,
+              "width": "100%",
             }
           }
-        />
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "height": 20,
-              "lineHeight": 17.28,
-              "overflow": "hidden",
+        >
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "height": 20,
+                "lineHeight": 20.16,
+                "overflow": "hidden",
+              }
             }
-          }
-        />
+          />
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "height": 20,
+                "lineHeight": 17.28,
+                "overflow": "hidden",
+              }
+            }
+          />
+        </View>
       </View>
       <View
         style={
@@ -3298,37 +3316,46 @@ Array [
           Object {
             "backgroundColor": "#F8F7F4",
             "height": "100%",
-            "justifyContent": "center",
             "opacity": 1,
-            "paddingHorizontal": 10,
             "width": "100%",
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "height": 20,
-              "lineHeight": 20.16,
-              "overflow": "hidden",
+              "height": "100%",
+              "justifyContent": "center",
+              "paddingHorizontal": 10,
+              "width": "100%",
             }
           }
-        />
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "height": 20,
-              "lineHeight": 17.28,
-              "overflow": "hidden",
+        >
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "height": 20,
+                "lineHeight": 20.16,
+                "overflow": "hidden",
+              }
             }
-          }
-        />
+          />
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "height": 20,
+                "lineHeight": 17.28,
+                "overflow": "hidden",
+              }
+            }
+          />
+        </View>
       </View>
       <View
         style={

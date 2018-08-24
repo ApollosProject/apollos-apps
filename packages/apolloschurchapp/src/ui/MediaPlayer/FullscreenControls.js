@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
-import { StyleSheet, Animated, TouchableWithoutFeedback } from 'react-native';
+import { BackHandler, StyleSheet, Animated, TouchableWithoutFeedback } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
 import SafeAreaView from 'react-native-safe-area-view';
@@ -135,7 +135,18 @@ class FullscreenControls extends PureComponent {
     });
   }
 
+  componentDidMount() {
+    this.backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (this.wasFullscreen) {
+        this.handleClose();
+        return true;
+      }
+      return false;
+    });
+  }
+
   componentWillUnmount() {
+    this.backHandler.remove();
     if (this.closeTimeout) clearTimeout(this.closeTimeout);
   }
 

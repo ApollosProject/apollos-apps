@@ -104,7 +104,9 @@ export const resolvers = {
             __typename: 'MediaPlayerState',
             isPlaying: true,
             isVisible: true,
-            isFullscreen: (mediaPlayer && mediaPlayer.isFullscreen) || false,
+            isFullscreen: track.isVideo
+              ? true
+              : (mediaPlayer && mediaPlayer.isFullscreen) || false,
             currentTrack: track,
           },
         },
