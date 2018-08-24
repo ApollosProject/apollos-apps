@@ -27,6 +27,15 @@ export default gql`
             uri
           }
         }
+        audios {
+          sources {
+            uri
+          }
+        }
+        parentChannel {
+          id
+          name
+        }
         childContentItemsConnection {
           edges {
             node {

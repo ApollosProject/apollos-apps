@@ -35,6 +35,7 @@ const MediaButtonsContainer = styled({
   ...StyleSheet.absoluteFillObject,
   justifyContent: 'center',
   alignItems: 'center',
+  flexDirection: 'row',
 })(PaddedView);
 
 const MediaIcon = withTheme(
@@ -54,13 +55,14 @@ const playVideoMutation = gql`
     $posterSources: String
     $title: String
     $artist: String
+    $isVideo: Boolean
   ) {
     mediaPlayerPlayNow(
       mediaSource: $mediaSource
       posterSources: $posterSources
       title: $title
       artist: $artist
-      isVideo: true
+      isVideo: $isVideo
     ) @client
   }
 `;
@@ -160,6 +162,7 @@ class ContentSingle extends PureComponent {
                 : childContent;
 
               const videoSource = get(content, 'videos[0].sources[0]', null);
+              const audioSource = get(content, 'audios[0].sources[0]', null);
               const coverImageSources = get(content, 'coverImage.sources', []);
 
               return (
@@ -175,13 +178,11 @@ class ContentSingle extends PureComponent {
                         source={coverImageSources}
                         overlayColor={get(content, 'theme.colors.paper')}
                       />
-                      <MediaButtonsContainer>
-                        {videoSource ? (
-                          <Mutation
-                            key={'VideoPlayerPlaybutton'}
-                            mutation={playVideoMutation}
-                          >
-                            {(play) => (
+
+                      <Mutation mutation={playVideoMutation}>
+                        {(play) => (
+                          <MediaButtonsContainer>
+                            {videoSource ? (
                               <Touchable
                                 onPress={() =>
                                   play({
@@ -189,17 +190,41 @@ class ContentSingle extends PureComponent {
                                       mediaSource: videoSource,
                                       posterSources: coverImageSources,
                                       title: content.title,
-                                      artist: 'subtitle (todo)',
+                                      isVideo: true,
+                                      artist: get(
+                                        content,
+                                        'parentChannel.name'
+                                      ),
                                     },
                                   })
                                 }
                               >
-                                <MediaIcon name="play" />
+                                <MediaIcon name="video" />
                               </Touchable>
-                            )}
-                          </Mutation>
-                        ) : null}
-                      </MediaButtonsContainer>
+                            ) : null}
+                            {audioSource ? (
+                              <Touchable
+                                onPress={() =>
+                                  play({
+                                    variables: {
+                                      mediaSource: audioSource,
+                                      posterSources: coverImageSources,
+                                      title: content.title,
+                                      isVideo: false,
+                                      artist: get(
+                                        content,
+                                        'parentChannel.name'
+                                      ),
+                                    },
+                                  })
+                                }
+                              >
+                                <MediaIcon name="audio" />
+                              </Touchable>
+                            ) : null}
+                          </MediaButtonsContainer>
+                        )}
+                      </Mutation>
                     </MediaHeader>
                     <BackgroundView>
                       <ContentContainer>

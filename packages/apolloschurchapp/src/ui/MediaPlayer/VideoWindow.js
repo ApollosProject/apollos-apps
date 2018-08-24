@@ -4,8 +4,9 @@ import gql from 'graphql-tag';
 import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
 import Video from 'react-native-video';
-import { View, StyleSheet } from 'react-native';
+import { Animated, View, StyleSheet } from 'react-native';
 import styled from '../styled';
+import ActivityIndicator from '../ActivityIndicator';
 
 const Background = styled(({ theme }) => ({
   ...StyleSheet.absoluteFillObject,
@@ -23,6 +24,7 @@ const getVideoState = gql`
           uri
         }
         id
+        isVideo
       }
       isPlaying
     }
@@ -62,7 +64,9 @@ class VideoWindow extends PureComponent {
     }),
   };
 
-  _needsSeekOnPlay = false;
+  loadingOverlay = new Animated.Value(1);
+
+  loadingStyle = [StyleSheet.absoluteFill, { opacity: this.loadingOverlay }];
 
   handlePause = () => {
     this.props.client.mutate({ mutation: pauseMutation });
@@ -76,9 +80,21 @@ class VideoWindow extends PureComponent {
   };
 
   handleLoad = ({ duration }) => {
+    Animated.spring(this.loadingOverlay, {
+      toValue: 0,
+      useNativeDriver: true,
+    }).start();
+
     this.props.client.mutate({
       mutation: updateDuration,
       variables: { duration },
+    });
+  };
+
+  handleLoadStart = () => {
+    Animated.spring(this.loadingOverlay, {
+      toValue: 1,
+      useNativeDriver: true,
     });
   };
 
@@ -93,6 +109,7 @@ class VideoWindow extends PureComponent {
         ref={this.setVideoRef}
         source={mediaPlayer.currentTrack.mediaSource}
         paused={!mediaPlayer.isPlaying}
+        audioOnly={!mediaPlayer.currentTrack.isVideo}
         ignoreSilentSwitch={'ignore'}
         allowsExternalPlayback
         playInBackground
@@ -101,9 +118,10 @@ class VideoWindow extends PureComponent {
         onEnd={this.handlePause}
         onError={this.handlePause}
         resizeMode={'contain'}
-        poster={get(mediaPlayer, 'posterSources[0].uri')}
+        poster={get(mediaPlayer.currentTrack, 'posterSources[0].uri')}
         posterResizeMode={'cover'}
         onProgress={this.handleProgress}
+        onLoadStart={this.handleLoadStart}
         onLoad={this.handleLoad}
         style={StyleSheet.absoluteFill}
         repeat
@@ -115,6 +133,9 @@ class VideoWindow extends PureComponent {
     return (
       <Background>
         <Query query={getVideoState}>{this.renderVideo}</Query>
+        <Animated.View style={this.loadingStyle}>
+          <ActivityIndicator />
+        </Animated.View>
       </Background>
     );
   }

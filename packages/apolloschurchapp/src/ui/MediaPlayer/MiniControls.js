@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { View, Animated, StyleSheet } from 'react-native';
+import SafeAreaView from 'react-native-safe-area-view';
 import { Mutation, Query } from 'react-apollo';
 
 import Touchable from '../Touchable';
@@ -27,7 +28,9 @@ const TrackInfo = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit / 2,
   height: '100%',
   justifyContent: 'center',
-}))(View);
+  backgroundColor: theme.colors.lightPrimary,
+  width: '100%',
+}))(Touchable);
 
 const TrackName = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -46,10 +49,10 @@ const Container = styled({
   justifyContent: 'flex-start',
 })(View);
 
-const VideoSpacer = styled({
+const VideoSpacer = styled(({ isVideo }) => ({
   height: MINI_PLAYER_HEIGHT,
-  aspectRatio: 16 / 9,
-})(View);
+  aspectRatio: isVideo ? 16 / 9 : 1,
+}))(View);
 
 const Controls = styled(({ theme }) => ({
   position: 'absolute',
@@ -60,7 +63,12 @@ const Controls = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'flex-end',
   alignItems: 'center',
+  backgroundColor: theme.colors.lightPrimary,
 }))(Container);
+
+const StyledSafeAreaView = styled(({ theme }) => ({
+  backgroundColor: theme.colors.lightPrimary,
+}))(SafeAreaView);
 
 const MiniSeeker = styled({
   position: 'absolute',
@@ -81,6 +89,7 @@ const getControlState = gql`
         id
         title
         artist
+        isVideo
       }
     }
   }
@@ -120,7 +129,7 @@ class MiniControls extends Component {
   renderMiniControls = ({
     data: {
       mediaPlayer: {
-        currentTrack: { title, artist } = {},
+        currentTrack: { title, artist, isVideo } = {},
         isPlaying = false,
       } = {},
     } = {},
@@ -130,8 +139,8 @@ class MiniControls extends Component {
       overshootClamping: true,
       useNativeDriver: true,
     }).start();
-    return (
-      <Mutation mutation={goFullscreenMutation}>
+    return [
+      <Mutation key="mutation" mutation={goFullscreenMutation}>
         {(goFullscreen) => (
           <Container>
             <Mutation mutation={dismissMutation}>
@@ -139,7 +148,7 @@ class MiniControls extends Component {
                 <Touchable
                   onPress={() => (isPlaying ? goFullscreen() : dismiss())}
                 >
-                  <VideoSpacer>
+                  <VideoSpacer isVideo={isVideo}>
                     <Animated.View
                       style={[
                         styles.animatedDismissContainer,
@@ -152,12 +161,10 @@ class MiniControls extends Component {
                 </Touchable>
               )}
             </Mutation>
-            <Touchable onPress={() => goFullscreen()}>
-              <TrackInfo>
-                <TrackName>{title}</TrackName>
-                <TrackArtist>{artist}</TrackArtist>
-              </TrackInfo>
-            </Touchable>
+            <TrackInfo onPress={() => goFullscreen()}>
+              <TrackName>{title}</TrackName>
+              <TrackArtist>{artist}</TrackArtist>
+            </TrackInfo>
             <Controls>
               {isPlaying ? (
                 <Mutation mutation={pauseMutation}>
@@ -180,8 +187,12 @@ class MiniControls extends Component {
             <MiniSeeker minimal />
           </Container>
         )}
-      </Mutation>
-    );
+      </Mutation>,
+      <StyledSafeAreaView
+        key="safearea"
+        forceInset={{ bottom: 'always', top: 'never' }}
+      />,
+    ];
   };
 
   render() {

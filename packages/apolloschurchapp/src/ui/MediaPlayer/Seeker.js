@@ -15,7 +15,6 @@ const getElapsedTime = gql`
     mediaPlayer @client {
       progress {
         currentTime
-        duration
       }
     }
   }
@@ -103,13 +102,13 @@ class Seeker extends PureComponent {
     return <ProgressBar progress={progress} />;
   };
 
-  renderElapsedTime = ({ data: { mediaPlayer } }) => (
+  renderElapsedTime = ({ data: { mediaPlayer } = {} }) => (
     <TimeText>
       {this.timestamp(get(mediaPlayer, 'progress.currentTime') || 0)}
     </TimeText>
   );
 
-  renderTotalTime = ({ data: { mediaPlayer } }) => (
+  renderTotalTime = ({ data: { mediaPlayer } = {} }) => (
     <TimeText>
       {this.timestamp(get(mediaPlayer, 'progress.duration') || 0)}
     </TimeText>

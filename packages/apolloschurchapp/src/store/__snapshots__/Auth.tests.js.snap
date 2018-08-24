@@ -45,6 +45,7 @@ InMemoryCache {
         "isFullscreen": false,
         "isPlaying": false,
         "isVisible": false,
+        "progress": null,
       },
       "ROOT_QUERY": Object {
         "authToken": null,

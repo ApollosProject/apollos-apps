@@ -9,9 +9,7 @@ import {
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { Query, withApollo } from 'react-apollo';
-
-// we use a JS-only version of SafeAreaView as we can force bottom inset, which improves render efficiency
-import SafeAreaView from 'react-native-safe-area-view';
+import { get } from 'lodash';
 
 import styled from '../styled';
 
@@ -20,15 +18,18 @@ import FullscreenControls from './FullscreenControls';
 import VideoWindow from './VideoWindow';
 
 const VideoSizer = styled(
-  ({ isFullscreen }) =>
+  ({ isFullscreen, isVideo }) =>
     isFullscreen
       ? StyleSheet.absoluteFill
-      : { height: MINI_PLAYER_HEIGHT, aspectRatio: 16 / 9 }
+      : { height: MINI_PLAYER_HEIGHT, aspectRatio: isVideo ? 16 / 9 : 1 }
 )(View);
 
 const getVisibilityState = gql`
-  query {
+  query getVisibilityState {
     mediaPlayer @client {
+      currentTrack {
+        isVideo
+      }
       isVisible
       isFullscreen
     }
@@ -117,9 +118,8 @@ class CoverPlayer extends Component {
       Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 10,
 
     onPanResponderMove: (event, { dy }) => {
-      this.dragOffset.setValue(
-        Math.min(0, -dy / Dimensions.get('window').height)
-      );
+      const dragOffset = Math.min(0, -dy / Dimensions.get('window').height);
+      this.dragOffset.setValue(dragOffset);
     },
 
     onPanResponderRelease: (event, { dy, vy }) => {
@@ -137,11 +137,17 @@ class CoverPlayer extends Component {
         mutation = exitFullscreen;
       }
 
-      Animated.spring(this.dragOffset, {
-        toValue: 0,
-        overshootClamping: true,
-        useNativeDriver: true,
-      }).start();
+      const dragOffset = Math.min(0, -dy / Dimensions.get('window').height);
+
+      if (mutation === goFullscreen) {
+        Animated.spring(this.dragOffset, {
+          toValue: 0,
+          useNativeDriver: true,
+        }).start();
+      } else {
+        this.dragOffset.setValue(0);
+        this.fullscreen.setValue(dragOffset);
+      }
 
       this.props.client.mutate({ mutation });
     },
@@ -175,7 +181,10 @@ class CoverPlayer extends Component {
         style={this.coverStyle}
         {...this.panResponder.panHandlers}
       >
-        <VideoSizer isFullscreen={isFullscreen}>
+        <VideoSizer
+          isFullscreen={isFullscreen}
+          isVideo={get(mediaPlayer, 'currentTrack.isVideo')}
+        >
           <VideoWindow />
         </VideoSizer>
         <Animated.View style={this.fullscreenControlsAnimation}>
@@ -191,9 +200,7 @@ class CoverPlayer extends Component {
           style={this.miniControlsAnimation}
           onLayout={this.handleMiniControlLayout}
         >
-          <SafeAreaView forceInset={{ bottom: 'always', top: 'never' }}>
-            <MiniControls />
-          </SafeAreaView>
+          <MiniControls />
         </Animated.View>
       );
     }
