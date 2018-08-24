@@ -69,14 +69,9 @@ const playVideoMutation = gql`
 
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
-    const itemTitle = navigation.getParam('itemTitle', 'Content');
-    const shareObject = {
-      title: itemTitle,
-      url: 'https://github.com/ApollosProject/apollos-prototype',
-      message: 'Share this with all your friends and family',
-    };
+    const shareObject = navigation.getParam('sharing', 'Content');
     return {
-      title: itemTitle,
+      title: shareObject.title,
       headerRight: <Share content={shareObject} />,
     };
   };
@@ -104,7 +99,7 @@ class ContentSingle extends PureComponent {
   handleOnPressItem(item) {
     this.props.navigation.push('ContentSingle', {
       itemId: item.id,
-      itemTitle: item.title,
+      sharing: item.sharing,
     });
   }
 

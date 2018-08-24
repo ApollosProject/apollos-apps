@@ -36,6 +36,11 @@ export default gql`
           id
           name
         }
+        sharing {
+          url
+          message
+          title
+        }
         childContentItemsConnection {
           edges {
             node {
@@ -52,6 +57,11 @@ export default gql`
                 iconName
               }
               title
+              sharing {
+                url
+                message
+                title
+              }
             }
           }
         }
@@ -71,6 +81,11 @@ export default gql`
                 iconName
               }
               title
+              sharing {
+                url
+                message
+                title
+              }
             }
           }
         }
