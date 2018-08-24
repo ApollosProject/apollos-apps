@@ -12,6 +12,7 @@ import * as LiveStream from './live';
 import * as Theme from './theme';
 import * as Scripture from './esv';
 import * as Interactions from './interactions';
+import * as Sharable from './sharable';
 
 const data = {
   Node,
@@ -25,6 +26,7 @@ const data = {
   Scripture,
   Interactions,
   RockConstants: { dataSource: RockConstants },
+  Sharable,
 };
 
 export const schema = [

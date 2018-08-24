@@ -15,6 +15,12 @@ const mapValuesWithKey = mapValues.convert({ cap: false });
 export { default as dataSource } from './data-source';
 
 export const schema = gql`
+  type SharableContentItem implements Sharable {
+    url: String
+    message: String
+    title: String
+  }
+
   interface ContentItem {
     id: ID!
     title: String
@@ -33,6 +39,7 @@ export const schema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
 
+    sharing: SharableContentItem
     theme: Theme
     isLiked: Boolean
   }
@@ -56,6 +63,7 @@ export const schema = gql`
     parentChannel: ContentChannel
     terms(match: String): [Term]
 
+    sharing: SharableContentItem
     theme: Theme
     isLiked: Boolean
   }
@@ -130,6 +138,7 @@ export const defaultContentItemResolvers = {
       })
     );
     return imageKeys.map((key) => ({
+      __typename: 'ImageMedia',
       key,
       name: attributes[key].name,
       sources: attributeValues[key].value
@@ -147,6 +156,7 @@ export const defaultContentItemResolvers = {
       })
     );
     return videoKeys.map((key) => ({
+      __typename: 'VideoMedia',
       key,
       name: attributes[key].name,
       embedHtml: get(attributeValues, 'videoEmbed.value', null), // TODO: this assumes that the key `VideoEmebed` is always used on Rock
@@ -165,6 +175,7 @@ export const defaultContentItemResolvers = {
       })
     );
     return audioKeys.map((key) => ({
+      __typename: 'AudioMedia',
       key,
       name: attributes[key].name,
       sources: attributeValues[key].value
@@ -179,8 +190,8 @@ export const defaultContentItemResolvers = {
       const squareImage = images.find((image) =>
         image.key.toLowerCase().includes('square')
       );
-      if (squareImage) return squareImage;
-      return images[0];
+      if (squareImage) return { ...squareImage, __typename: 'ImageMedia' };
+      return { ...images[0], __typename: 'ImageMedia' };
     };
 
     let defaultImages = defaultContentItemResolvers.images(root) || [];
@@ -222,6 +233,7 @@ export const defaultContentItemResolvers = {
     // If likes / unlikes equal we have either unliked the content or haven't liked it yet (both are 0)
     return likes > unlike;
   },
+  sharing: (root) => ({ __type: 'SharableContentItem', ...root }),
 };
 
 export const resolver = {
@@ -251,5 +263,10 @@ export const resolver = {
   ContentItem: {
     ...defaultContentItemResolvers,
     __resolveType: () => 'UniversalContentItem', // todo: for now, everything is of the same type
+  },
+  SharableContentItem: {
+    url: () => 'https://apollosrock.newspring.cc/', // todo: return a dynamic url that links to the content item
+    title: ({ title }) => title,
+    message: () => '',
   },
 };
