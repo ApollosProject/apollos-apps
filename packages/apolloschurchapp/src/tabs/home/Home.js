@@ -9,7 +9,7 @@ import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 
 import { LiveButton } from '../../live';
 
-import getUserFeed from './getUserFeed.graphql';
+import getUserFeed from './getUserFeed';
 
 class Home extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
@@ -42,7 +42,7 @@ class Home extends PureComponent {
   handleOnPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
-      itemTitle: item.title,
+      sharing: item.sharing,
     });
 
   render() {
