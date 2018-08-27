@@ -49,16 +49,7 @@ class Home extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <Scripture
-          references={[
-            {
-              query: 'John 11:35-36',
-              passages: [
-                '<h2 class="extra_text">John 11:35–36 <small class="audio extra_text">(<a class="mp3link" href="https://audio.esv.org/hw/43011035-43011036.mp3" title="John 11:35–36" type="audio/mpeg">Listen</a>)</small></h2>\n<p id="p43011035_01-1" class="virtual"><b class="verse-num" id="v43011035-1">35&nbsp;</b>Jesus wept. <b class="verse-num" id="v43011036-1">36&nbsp;</b>So the Jews said, “See how he loved him!”</p>\n<p>(<a href="http://www.esv.org" class="copyright">ESV</a>)</p>',
-              ],
-            },
-          ]}
-        />
+        <Scripture references={['John 3:16', 'Genesis 1:1']} />
         <Query query={getUserFeed} fetchPolicy="cache-and-network">
           {({ loading, error, data, refetch }) => (
             <FeedView
