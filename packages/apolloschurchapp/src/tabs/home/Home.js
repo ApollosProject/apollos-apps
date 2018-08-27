@@ -49,7 +49,6 @@ class Home extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <Scripture references={['John 3:16']} />
         <Query query={getUserFeed} fetchPolicy="cache-and-network">
           {({ loading, error, data, refetch }) => (
             <FeedView
