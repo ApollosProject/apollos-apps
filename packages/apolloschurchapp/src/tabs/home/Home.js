@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import FeedView from 'apolloschurchapp/src/ui/FeedView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import Scripture from 'apolloschurchapp/src/ui/Scripture';
 
 import { LiveButton } from '../../live';
 
