@@ -12,6 +12,12 @@ export default class ESVScripture extends RESTDataSource {
   }
 
   async getScripture(query) {
-    return this.get(`passage/html/?q=${query}`);
+    let request = query;
+    request += '&include-headings=false';
+    request += '&include-passage-references=false';
+    request += '&include-footnotes=false';
+    request += '&include-audio-link=false';
+    request += '&include-short-copyright=false';
+    return this.get(`passage/html/?q=${request}`);
   }
 }

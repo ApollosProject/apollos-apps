@@ -4,6 +4,7 @@ export default {
       dataSources.Scripture.getScripture(query),
   },
   ESVScripture: {
+    query: ({ query }) => query,
     html: ({ passages }) => passages[0],
   },
 };
