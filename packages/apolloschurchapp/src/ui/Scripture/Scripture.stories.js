@@ -3,7 +3,6 @@ import { StyleSheet, ScrollView } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 
-import Item from './Item';
 import Scripture from '.';
 
 const references = [
@@ -34,9 +33,3 @@ const stories = storiesOf('Scripture', module);
 references.forEach((reference) =>
   stories.add(reference, () => <ScriptureStory reference={reference} />)
 );
-
-stories.add('Loading State', () => (
-  <PaddedView>
-    <Item query="Genesis 1:1-10" />
-  </PaddedView>
-));
