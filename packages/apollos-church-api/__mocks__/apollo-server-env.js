@@ -37,7 +37,12 @@ fetch.mockRockDataSourceAPI = () => {
   fetch.mockImplementation((request) => {
     let { url } = request;
     url = decodeURI(url);
-    if (!url.match(Constants.ROCK_API)) return Promise.reject();
+    if (!url.match(Constants.ROCK_API)) {
+      if (request.url.match('/passage/html')) {
+        return resolveWith(apolloDatasourceMocks.ESVScripture());
+      }
+      return Promise.reject();
+    }
 
     if (url.match('api/EntityTypes')) {
       return resolveWith(
@@ -85,6 +90,12 @@ fetch.mockRockDataSourceAPI = () => {
       mock.AttributeValues = {};
       mock.Attributes = {};
       return resolveWith(mock);
+    }
+
+    if (url.match('api/ContentChannelItems/123')) {
+      const contentItem = rockMocks.contentItem();
+      contentItem.AttributeValues.Scriptures = { Value: 'John 3:16' };
+      return resolveWith(contentItem);
     }
 
     if (url.match('api/ContentChannelItems/\\d')) {
