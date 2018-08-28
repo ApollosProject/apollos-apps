@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import Placeholder from 'rn-placeholder';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
@@ -30,34 +30,8 @@ const john = {
       '<p id="p43011035_01-1" class="virtual"><b class="verse-num" id="v43011035-1">35&nbsp;</b>Jesus wept. <b class="verse-num" id="v43011036-1">36&nbsp;</b>So the Jews said, “See how he loved him!”</p>\n',
   },
 };
-// const references = [
-//   'Psalm 1',
-//   'Matthew 4:13-17',
-//   'Matthew 11:15-19',
-//   'Matthew 13:14-15',
-//   'Matthew 21:4-5',
-//   'Psalm 119',
-//   'Proverbs 24:23-24',
-//   'Jeremiah 23:33-40',
-//   'Psalm 105:1-4',
-//   'Song of Solomon 1:1-4',
-// ];
-
-// const ScriptureStory = (
-//   { reference } // eslint-disable-line
-// ) => (
-//   <ScrollView style={StyleSheet.absoluteFill}>
-//     <PaddedView>
-//       <Scripture references={[reference]} />
-//     </PaddedView>
-//   </ScrollView>
-// );
 
 const stories = storiesOf('Scripture', module);
-
-// references.forEach((reference) =>
-//   stories.add(reference, () => <ScriptureStory reference={reference} />)
-// );
 
 stories.add('Psalm 119', () => (
   <ScrollView>
