@@ -6,6 +6,7 @@ import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 
 import ScriptureHTMLView from './ScriptureHTMLView';
+import Item from './Item';
 
 const psalm119 = {
   scripture: {
@@ -17,9 +18,9 @@ const psalm119 = {
 
 const songOfSolomon1 = {
   scripture: {
-    query: 'Song of Solomon 1',
+    query: 'Song of Solomon 1:1-4',
     html:
-      '<p id="p22001001_01-1" class="starts-chapter"><b class="chapter-num" id="v22001001-1">1:1&nbsp;</b>The Song of Songs, which is Solomon\'s.</p>\n<p class="block-indent"><h4 id="p22001001_06-1" class="speaker">She</h4>\n<span class="begin-line-group"></span>\n<span id="p22001002_06-1" class="line"><b class="verse-num inline" id="v22001002-1">2&nbsp;</b>&nbsp;&nbsp;Let him kiss me with the kisses of his mouth!</span><br /><span id="p22001002_06-1" class="line">&nbsp;&nbsp;For your love is better than wine;</span><br /><span id="p22001003_06-1" class="indent line"><b class="verse-num inline" id="v22001003-1">3&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;your anointing oils are fragrant;</span><br /><span id="p22001003_06-1" class="line">&nbsp;&nbsp;your name is oil poured out;</span><br /><span id="p22001003_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;therefore virgins love you.</span><br /><span id="p22001004_06-1" class="line"><b class="verse-num inline" id="v22001004-1">4&nbsp;</b>&nbsp;&nbsp;Draw me after you; let us run.</span><br /><span id="p22001004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;The king has brought me into his chambers.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001004_06-1" class="speaker">Others</h4>\n<span class="begin-line-group"></span>\n<span id="p22001004_06-1" class="line">&nbsp;&nbsp;We will exult and rejoice in you;</span><br /><span id="p22001004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;we will extol your love more than wine;</span><br /><span id="p22001004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;rightly do they love you.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001004_06-1" class="speaker">She</h4>\n<span class="begin-line-group"></span>\n<span id="p22001005_06-1" class="line"><b class="verse-num inline" id="v22001005-1">5&nbsp;</b>&nbsp;&nbsp;I am very dark, but lovely,</span><br /><span id="p22001005_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;O daughters of Jerusalem,</span><br /><span id="p22001005_06-1" class="line">&nbsp;&nbsp;like the tents of Kedar,</span><br /><span id="p22001005_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;like the curtains of Solomon.</span><br /><span id="p22001006_06-1" class="line"><b class="verse-num inline" id="v22001006-1">6&nbsp;</b>&nbsp;&nbsp;Do not gaze at me because I am dark,</span><br /><span id="p22001006_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;because the sun has looked upon me.</span><br /><span id="p22001006_06-1" class="line">&nbsp;&nbsp;My mother\'s sons were angry with me;</span><br /><span id="p22001006_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;they made me keeper of the vineyards,</span><br /><span id="p22001006_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;but my own vineyard I have not kept!</span><br /><span id="p22001007_06-1" class="line"><b class="verse-num inline" id="v22001007-1">7&nbsp;</b>&nbsp;&nbsp;Tell me, you whom my soul loves,</span><br /><span id="p22001007_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;where you pasture your flock,</span><br /><span id="p22001007_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;where you make it lie down at noon;</span><br /><span id="p22001007_06-1" class="line">&nbsp;&nbsp;for why should I be like one who veils herself</span><br /><span id="p22001007_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;beside the flocks of your companions?</span><br /><span class="end-line-group"></span>\n</p><p class="block-indent"><h4 id="p22001007_14-1" class="speaker">He</h4>\n<span class="begin-line-group"></span>\n<span id="p22001008_14-1" class="line"><b class="verse-num inline" id="v22001008-1">8&nbsp;</b>&nbsp;&nbsp;If you do not know,</span><br /><span id="p22001008_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;O most beautiful among women,</span><br /><span id="p22001008_14-1" class="line">&nbsp;&nbsp;follow in the tracks of the flock,</span><br /><span id="p22001008_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;and pasture your young goats</span><br /><span id="p22001008_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;beside the shepherds\' tents.</span><br /><span class="end-line-group"></span>\n<span class="begin-line-group"></span>\n<span id="p22001009_14-1" class="line"><b class="verse-num inline" id="v22001009-1">9&nbsp;</b>&nbsp;&nbsp;I compare you, my love,</span><br /><span id="p22001009_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;to a mare among Pharaoh\'s chariots.</span><br /><span id="p22001010_14-1" class="line"><b class="verse-num inline" id="v22001010-1">10&nbsp;</b>&nbsp;&nbsp;Your cheeks are lovely with ornaments,</span><br /><span id="p22001010_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;your neck with strings of jewels.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001010_14-1" class="speaker">Others</h4>\n<span class="begin-line-group"></span>\n<span id="p22001011_14-1" class="line"><b class="verse-num inline" id="v22001011-1">11&nbsp;</b>&nbsp;&nbsp;We will make for you ornaments of gold,</span><br /><span id="p22001011_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;studded with silver.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001011_14-1" class="speaker">She</h4>\n<span class="begin-line-group"></span>\n<span id="p22001012_14-1" class="line"><b class="verse-num inline" id="v22001012-1">12&nbsp;</b>&nbsp;&nbsp;While the king was on his couch,</span><br /><span id="p22001012_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;my nard gave forth its fragrance.</span><br /><span id="p22001013_14-1" class="line"><b class="verse-num inline" id="v22001013-1">13&nbsp;</b>&nbsp;&nbsp;My beloved is to me a sachet of myrrh</span><br /><span id="p22001013_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;that lies between my breasts.</span><br /><span id="p22001014_14-1" class="line"><b class="verse-num inline" id="v22001014-1">14&nbsp;</b>&nbsp;&nbsp;My beloved is to me a cluster of henna blossoms</span><br /><span id="p22001014_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;in the vineyards of Engedi.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001014_14-1" class="speaker">He</h4>\n<span class="begin-line-group"></span>\n<span id="p22001015_14-1" class="line"><b class="verse-num inline" id="v22001015-1">15&nbsp;</b>&nbsp;&nbsp;Behold, you are beautiful, my love;</span><br /><span id="p22001015_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;behold, you are beautiful;</span><br /><span id="p22001015_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;your eyes are doves.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001015_14-1" class="speaker">She</h4>\n<span class="begin-line-group"></span>\n<span id="p22001016_14-1" class="line"><b class="verse-num inline" id="v22001016-1">16&nbsp;</b>&nbsp;&nbsp;Behold, you are beautiful, my beloved, truly delightful.</span><br /><span id="p22001016_14-1" class="line">&nbsp;&nbsp;Our couch is green;</span><br /><span id="p22001017_14-1" class="indent line"><b class="verse-num inline" id="v22001017-1">17&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;the beams of our house are cedar;</span><br /><span id="p22001017_14-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;our rafters are pine.</span><br /></p><span class="end-line-group"></span>\n',
+      '<div id="v22001000-22001004" class="basic eng esv passage text" reference="Song of Solomon 1:1–4" start="22001000" end="22001004"><p id="p22001001_01-1" class="starts-chapter"><b class="chapter-num" id="v22001001-1">1:1&nbsp;</b>The Song of Songs, which is Solomon\'s.</p>\n<p class="block-indent"><h4 id="p22001001_06-1" class="speaker">She</h4>\n<span class="begin-line-group"></span>\n<span id="p22001002_06-1" class="line"><b class="verse-num inline" id="v22001002-1">2&nbsp;</b>&nbsp;&nbsp;Let him kiss me with the kisses of his mouth!</span><br /><span id="p22001002_06-1" class="line">&nbsp;&nbsp;For your love is better than wine;</span><br /><span id="p22001003_06-1" class="indent line"><b class="verse-num inline" id="v22001003-1">3&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;your anointing oils are fragrant;</span><br /><span id="p22001003_06-1" class="line">&nbsp;&nbsp;your name is oil poured out;</span><br /><span id="p22001003_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;therefore virgins love you.</span><br /><span id="p22001004_06-1" class="line"><b class="verse-num inline" id="v22001004-1">4&nbsp;</b>&nbsp;&nbsp;Draw me after you; let us run.</span><br /><span id="p22001004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;The king has brought me into his chambers.</span><br /><span class="end-line-group"></span>\n<h4 id="p22001004_06-1" class="speaker">Others</h4>\n<span class="begin-line-group"></span>\n<span id="p22001004_06-1" class="line">&nbsp;&nbsp;We will exult and rejoice in you;</span><br /><span id="p22001004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;we will extol your love more than wine;</span><br /><span id="p22001004_06-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;rightly do they love you.</span><br /></p><span class="end-line-group"></span>\n</div>',
   },
 };
 
@@ -36,39 +37,23 @@ const stories = storiesOf('Scripture', module);
 stories.add('Psalm 119', () => (
   <ScrollView>
     <PaddedView>
-      <H4>
-        {' '}
-        {/* wrapping text element provides unified baseline */}
-        <H4>{psalm119.scripture.query}</H4> <H6>ESV</H6>
-      </H4>
-      <Placeholder.Paragraph
-        lineNumber={5}
-        onReady
-        lastLineWidth="60%"
-        firstLineWidth="40%"
-      >
-        <ScriptureHTMLView>{psalm119.scripture.html}</ScriptureHTMLView>
-      </Placeholder.Paragraph>
+      <Item
+        query={psalm119.scripture.query}
+        html={psalm119.scripture.html}
+        isLoading={false}
+      />
     </PaddedView>
   </ScrollView>
 ));
 
-stories.add('Song of Solomon 1', () => (
+stories.add('Song of Solomon 1:1-4', () => (
   <ScrollView>
     <PaddedView>
-      <H4>
-        {' '}
-        {/* wrapping text element provides unified baseline */}
-        <H4>{songOfSolomon1.scripture.query}</H4> <H6>ESV</H6>
-      </H4>
-      <Placeholder.Paragraph
-        lineNumber={5}
-        onReady
-        lastLineWidth="60%"
-        firstLineWidth="40%"
-      >
-        <ScriptureHTMLView>{songOfSolomon1.scripture.html}</ScriptureHTMLView>
-      </Placeholder.Paragraph>
+      <Item
+        query={songOfSolomon1.scripture.query}
+        html={songOfSolomon1.scripture.html}
+        isLoading={false}
+      />
     </PaddedView>
   </ScrollView>
 ));
@@ -76,19 +61,11 @@ stories.add('Song of Solomon 1', () => (
 stories.add('John 11:35-36', () => (
   <ScrollView>
     <PaddedView>
-      <H4>
-        {' '}
-        {/* wrapping text element provides unified baseline */}
-        <H4>{john.scripture.query}</H4> <H6>ESV</H6>
-      </H4>
-      <Placeholder.Paragraph
-        lineNumber={5}
-        onReady
-        lastLineWidth="60%"
-        firstLineWidth="40%"
-      >
-        <ScriptureHTMLView>{john.scripture.html}</ScriptureHTMLView>
-      </Placeholder.Paragraph>
+      <Item
+        query={john.scripture.query}
+        html={john.scripture.html}
+        isLoading={false}
+      />
     </PaddedView>
   </ScrollView>
 ));
