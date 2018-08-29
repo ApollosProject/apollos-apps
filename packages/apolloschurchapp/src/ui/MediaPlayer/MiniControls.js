@@ -5,7 +5,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { Mutation, Query } from 'react-apollo';
 
 import Touchable from '../Touchable';
-import styled from '../styled';
+import styled from 'apolloschurchapp/src/ui/styled';
 import { H5, H6 } from '../typography';
 import Icon from '../Icon';
 import { withTheme } from '../theme';

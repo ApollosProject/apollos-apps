@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
 import FlexedView from '../FlexedView';
-import styled from '../styled';
+import styled from 'apolloschurchapp/src/ui/styled';
 
 import CoverPlayer from './CoverPlayer';
 

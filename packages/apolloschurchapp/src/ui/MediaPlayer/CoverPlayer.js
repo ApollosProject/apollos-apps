@@ -11,7 +11,7 @@ import gql from 'graphql-tag';
 import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
 
-import styled from '../styled';
+import styled from 'apolloschurchapp/src/ui/styled';
 
 import MiniControls, { MINI_PLAYER_HEIGHT } from './MiniControls';
 import FullscreenControls from './FullscreenControls';

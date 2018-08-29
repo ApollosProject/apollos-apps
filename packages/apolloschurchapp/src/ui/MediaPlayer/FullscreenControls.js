@@ -15,7 +15,7 @@ import { compose } from 'recompose';
 
 import PaddedView from '../PaddedView';
 import { withTheme, withThemeMixin } from '../theme';
-import styled from '../styled';
+import styled from 'apolloschurchapp/src/ui/styled';
 import { H4, H6 } from '../typography';
 import Icon from '../Icon';
 import Touchable from '../Touchable';

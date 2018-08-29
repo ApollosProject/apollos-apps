@@ -5,7 +5,7 @@ import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
 import Video from 'react-native-video';
 import { Animated, View, StyleSheet } from 'react-native';
-import styled from '../styled';
+import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from '../ActivityIndicator';
 
 const styles = StyleSheet.create({
