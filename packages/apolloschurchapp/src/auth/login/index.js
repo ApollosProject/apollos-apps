@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
 import getAuthToken from '../getAuthToken';
+import getSessionId from '../getSessionId';
 
 import authenticateMutation from './authenticate';
 import LoginForm from './Form';
@@ -12,10 +13,22 @@ import LoginForm from './Form';
 const Login = ({ onLogin }) => (
   <Mutation
     mutation={authenticateMutation}
-    update={(cache, { data: { authenticate } }) => {
+    update={(
+      cache,
+      {
+        data: {
+          authenticate,
+          createSession: { id },
+        },
+      }
+    ) => {
       cache.writeQuery({
         query: getAuthToken,
         data: { authToken: authenticate.token },
+      });
+      cache.writeQuery({
+        query: getSessionId,
+        data: { sessionId: id },
       });
     }}
   >

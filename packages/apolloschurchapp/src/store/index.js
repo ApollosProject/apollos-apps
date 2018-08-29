@@ -7,6 +7,7 @@ import { client } from '../client'; // eslint-disable-line
 export const schema = `
   type Query {
     authToken: String
+    sessionId: String
     mediaPlayer: MediaPlayerState
   }
 
@@ -32,6 +33,7 @@ export const schema = `
 
 export const defaults = {
   authToken: null,
+  sessionId: null,
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     nowPlayingIndex: 0,
@@ -44,7 +46,7 @@ export const resolvers = {
   Mutation: {
     logout: (root, variables, { cache }) => {
       client.resetStore();
-      cache.writeData({ data: { authToken: null } });
+      cache.writeData({ data: { authToken: null, sessionId: null } });
       return null;
     },
     mediaPlayerEnqueue: (root, { name }, { cache }) => {

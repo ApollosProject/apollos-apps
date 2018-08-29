@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
-import { ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { Query, Mutation } from 'react-apollo';
+import { ScrollView, TouchableWithoutFeedback, View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -15,22 +15,57 @@ import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
 import Share from 'apolloschurchapp/src/ui/Share';
+import Like from 'apolloschurchapp/src/ui/Like';
+
+import getSessionId from 'apolloschurchapp/src/auth/getSessionId';
 
 import getContentItem from './getContentItem';
 import getContentItemMinimalState from './getContentItemMinimalState';
+import createInteraction from './createInteraction';
 
 const FeedContainer = styled({
   paddingHorizontal: 0,
 })(PaddedView);
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
+const ActionContainer = ({ content, itemId }) => (
+  <View>
+    <Query query={getSessionId} fetchPolicy="cache-only">
+      {({ data: { sessionId } }) =>
+        console.log(sessionId) || sessionId ? (
+          <Mutation mutation={createInteraction}>
+            {({ createSession }) => (
+              <Like
+                toggleLike={async () => {
+                  try {
+                    await createSession({ itemId, sessionId });
+                  } catch (e) {
+                    console.log(e);
+                  }
+                }}
+              />
+            )}
+          </Mutation>
+        ) : null
+      }
+    </Query>
+    <Share content={content} />
+  </View>
+);
 
+ActionContainer.propTypes = {
+  content: PropTypes.shape({
+    id: PropTypes.number,
+  }),
+  itemId: PropTypes.string,
+};
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const shareObject = navigation.getParam('sharing', 'Content');
+    const itemId = navigation.getParam('itemId', []);
     return {
       title: shareObject.title,
-      headerRight: <Share content={shareObject} />,
+      headerRight: <ActionContainer itemId={itemId} content={shareObject} />,
     };
   };
 

@@ -5,5 +5,8 @@ export default gql`
     authenticate(identity: $email, password: $password) {
       token
     }
+    createSession {
+      id
+    }
   }
 `;
