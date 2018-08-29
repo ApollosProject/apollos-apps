@@ -6,7 +6,7 @@ import gql from 'graphql-tag';
 import { get } from 'lodash';
 
 import styled from 'apolloschurchapp/src/ui/styled';
-import { H6 } from '../typography';
+import { H6 } from 'apolloschurchapp/src/ui/typography';
 
 const TIME_TEXT_WIDTH = 50;
 
