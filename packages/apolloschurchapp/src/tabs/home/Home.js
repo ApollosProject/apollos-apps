@@ -50,20 +50,16 @@ class Home extends PureComponent {
     return (
       <BackgroundView>
         <Query query={getUserFeed} fetchPolicy="cache-and-network">
-          {({ loading, error, data, refetch }) =>
-            console.log(data) || (
-              <FeedView
-                content={get(data, 'userFeed.edges', []).map(
-                  (edge) => edge.node
-                )}
-                isLoading={loading}
-                error={error}
-                refetch={refetch}
-                ListHeaderComponent={LiveButton}
-                onPressItem={this.handleOnPress}
-              />
-            )
-          }
+          {({ loading, error, data, refetch }) => (
+            <FeedView
+              content={get(data, 'userFeed.edges', []).map((edge) => edge.node)}
+              isLoading={loading}
+              error={error}
+              refetch={refetch}
+              ListHeaderComponent={LiveButton}
+              onPressItem={this.handleOnPress}
+            />
+          )}
         </Query>
       </BackgroundView>
     );
