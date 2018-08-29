@@ -5,6 +5,17 @@ import { createGlobalId } from '../node';
 export { default as dataSource } from './data-source';
 
 export const schema = gql`
+  enum UPDATEABLE_PROFILE_FIELDS {
+    FirstName
+    LastName
+    PhotoId
+  }
+
+  input UpdateProfileInput {
+    field: UPDATEABLE_PROFILE_FIELDS!
+    value: String!
+  }
+
   type AuthenticatedUser {
     id: ID!
     profile: Person
@@ -13,6 +24,15 @@ export const schema = gql`
   type Authentication {
     user: AuthenticatedUser
     token: String
+  }
+
+  extend type Mutation {
+    authenticate(identity: String!, password: String!): Authentication
+    registerPerson(email: String!, password: String!): Authentication
+  }
+
+  extend type Query {
+    currentUser: AuthenticatedUser
   }
 `;
 

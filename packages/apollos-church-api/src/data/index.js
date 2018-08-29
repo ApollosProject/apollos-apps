@@ -33,17 +33,14 @@ export const schema = [
   gql`
     type Query {
       node(id: ID!): Node
-      people(email: String!): [Person]
       userFeed(first: Int, after: String): ContentItemsConnection
       contentChannels: [ContentChannel]
-      currentUser: AuthenticatedUser
       liveStream: LiveStream
       scripture(query: String!): ESVScripture
     }
 
     type Mutation {
-      authenticate(identity: String!, password: String!): Authentication
-      registerPerson(email: String!, password: String!): Authentication
+      _placeholder: Boolean # needed, empty schema defs aren't supported
     }
   `,
   ...compact(values(data).map((datum) => datum.schema)),

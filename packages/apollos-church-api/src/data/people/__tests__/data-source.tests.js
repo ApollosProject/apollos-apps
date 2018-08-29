@@ -23,4 +23,21 @@ describe('Person', () => {
     expect(result).resolves.toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
+
+  it("updates a user's profile attributes", () => {
+    const dataSource = new Person();
+    dataSource.context = { rockCookie: 'fakeCookie' };
+    dataSource.get = buildGetMock(
+      { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+      dataSource
+    );
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile({
+      field: 'FirstName',
+      value: 'Nick',
+    });
+    expect(result).resolves.toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
 });

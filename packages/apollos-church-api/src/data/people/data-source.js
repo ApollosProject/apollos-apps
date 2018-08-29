@@ -1,3 +1,5 @@
+import { AuthenticationError } from 'apollo-server';
+import { camelCase } from 'lodash';
 import RockApolloDataSource from 'apollos-church-api/src/connectors/rock/data-source';
 
 export default class Person extends RockApolloDataSource {
@@ -12,4 +14,23 @@ export default class Person extends RockApolloDataSource {
     this.request()
       .filter(`Email eq '${email}'`)
       .get();
+
+  updateProfile = async ({ field, value }) => {
+    const { rockCookie } = this.context;
+    if (!rockCookie) throw new AuthenticationError('Must be logged in');
+
+    const currentPerson = await this.request('People/GetCurrentPerson').get({
+      options: { headers: { cookie: rockCookie } },
+    });
+
+    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
+
+    await this.patch(`/People/${currentPerson.id}`, {
+      [field]: value,
+    });
+    return {
+      ...currentPerson,
+      [camelCase(field)]: value,
+    };
+  };
 }

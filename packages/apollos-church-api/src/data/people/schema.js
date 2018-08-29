@@ -9,4 +9,12 @@ export default gql`
     email: String
     photo: ImageMediaSource
   }
+
+  extend type Mutation {
+    updateProfile(input: UpdateProfileInput!): Person
+  }
+
+  extend type Query {
+    people(email: String!): [Person]
+  }
 `;

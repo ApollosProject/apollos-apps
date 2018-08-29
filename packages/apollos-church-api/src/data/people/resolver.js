@@ -5,6 +5,10 @@ export default {
     people: (root, { email }, { dataSources }) =>
       dataSources.Person.getFromEmail(email),
   },
+  Mutation: {
+    updateProfile: (root, { input: { field, value } }, { dataSources }) =>
+      dataSources.Person.updateProfile({ field, value }),
+  },
   Person: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
