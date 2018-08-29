@@ -1,11 +1,8 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
-import Placeholder from 'rn-placeholder';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 
-import ScriptureHTMLView from './ScriptureHTMLView';
 import Item from './Item';
 
 const psalm119 = {
