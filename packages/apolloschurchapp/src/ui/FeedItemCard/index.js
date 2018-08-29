@@ -35,32 +35,33 @@ const FeedItemCard = enhance(
     theme,
     id,
     ...otherProps
-  }) => (
-    <Card isLoading={isLoading} cardColor={backgroundColor} {...otherProps}>
-      <GradientOverlayImage
-        isLoading={isLoading}
-        source={images}
-        overlayColor={backgroundColor}
-      />
-      <CardContent>
-        <H3 isLoading={isLoading}>{title}</H3>
-      </CardContent>
-      <CardActions>
-        <ChannelLabel
-          label={startCase(toLower(channelType))}
-          icon={channelTypeIcon}
+  }) =>
+    console.log(isLiked) || (
+      <Card isLoading={isLoading} cardColor={backgroundColor} {...otherProps}>
+        <GradientOverlayImage
           isLoading={isLoading}
-          withFlex
+          source={images}
+          overlayColor={backgroundColor}
         />
-        <Icon
-          name={isLiked ? 'like-solid' : 'like'}
-          size={theme.helpers.rem(1.2)}
-          fill={theme.colors.text.primary}
-          isLoading={isLoading}
-        />
-      </CardActions>
-    </Card>
-  )
+        <CardContent>
+          <H3 isLoading={isLoading}>{title}</H3>
+        </CardContent>
+        <CardActions>
+          <ChannelLabel
+            label={startCase(toLower(channelType))}
+            icon={channelTypeIcon}
+            isLoading={isLoading}
+            withFlex
+          />
+          <Icon
+            name={isLiked ? 'like-solid' : 'like'}
+            size={theme.helpers.rem(1.2)}
+            fill={theme.colors.text.primary}
+            isLoading={isLoading}
+          />
+        </CardActions>
+      </Card>
+    )
 );
 
 const sourcePropType = PropTypes.oneOfType([

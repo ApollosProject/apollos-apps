@@ -28,17 +28,22 @@ const FeedContainer = styled({
 })(PaddedView);
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
-const ActionContainer = ({ content, itemId }) => (
+const ActionContainer = ({ content, itemId, isLiked, navigation }) => (
   <View>
     <Query query={getSessionId} fetchPolicy="cache-only">
       {({ data: { sessionId } }) =>
-        console.log(sessionId) || sessionId ? (
+        sessionId ? (
           <Mutation mutation={createInteraction}>
-            {({ createSession }) => (
+            {(createSession) => (
               <Like
-                toggleLike={async () => {
+                itemId={itemId}
+                sessionId={sessionId}
+                isLiked={isLiked}
+                operation={isLiked ? 'Unlike' : 'Like'}
+                toggleLike={async (variables) => {
                   try {
-                    await createSession({ itemId, sessionId });
+                    await createSession({ variables });
+                    await navigation.setParams({ isLiked: !isLiked });
                   } catch (e) {
                     console.log(e);
                   }
@@ -57,15 +62,25 @@ ActionContainer.propTypes = {
   content: PropTypes.shape({
     id: PropTypes.number,
   }),
+  isLiked: PropTypes.bool,
   itemId: PropTypes.string,
+  navigation: PropTypes.func,
 };
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const shareObject = navigation.getParam('sharing', 'Content');
     const itemId = navigation.getParam('itemId', []);
+    const isLiked = navigation.getParam('isLiked', false);
     return {
       title: shareObject.title,
-      headerRight: <ActionContainer itemId={itemId} content={shareObject} />,
+      headerRight: (
+        <ActionContainer
+          isLiked={isLiked}
+          itemId={itemId}
+          content={shareObject}
+          navigation={navigation}
+        />
+      ),
     };
   };
 

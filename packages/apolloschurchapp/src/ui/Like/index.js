@@ -7,17 +7,19 @@ import { withTheme } from 'apolloschurchapp/src/ui/theme';
 
 const enhance = compose(
   pure,
-  withTheme
+  withTheme()
 );
 
-const Like = enhance(({ isLiked, toggleLike, id, theme }) => (
-  <Touchable onPress={() => toggleLike(id)}>
-    <Icon
-      name={isLiked ? 'like-solid' : 'like'}
-      fill={theme.colors.secondary}
-    />
-  </Touchable>
-));
+const Like = enhance(
+  ({ isLiked, toggleLike, itemId, sessionId, operation, theme }) => (
+    <Touchable onPress={() => toggleLike({ itemId, sessionId, operation })}>
+      <Icon
+        name={isLiked ? 'like-solid' : 'like'}
+        fill={theme.colors.secondary}
+      />
+    </Touchable>
+  )
+);
 
 Like.propTypes = {
   id: PropTypes.string,
