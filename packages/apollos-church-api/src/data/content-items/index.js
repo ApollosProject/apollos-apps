@@ -278,6 +278,7 @@ export const resolver = {
       if (reference && reference != null) {
         return dataSources.Scripture.getScripture(reference);
       }
+      return null;
     },
   },
   UniversalContentItem: {
