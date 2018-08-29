@@ -11,7 +11,7 @@ import introspectionQueryResultData from './fragmentTypes.json';
 // We reset our apollo cache on every build:
 // TODO: this could be optimized by only reseting cache when our schema or client-side schema changes,
 // however there is risk for missing changes and breaking thins in production, so this is safer.
-const SCHEMA_VERSION = `${DeviceInfo.getVersion()}${DeviceInfo.getBuildNumber()}1`; // Must be a string.
+const SCHEMA_VERSION = `${DeviceInfo.getVersion()}${DeviceInfo.getBuildNumber()}`; // Must be a string.
 const SCHEMA_VERSION_KEY = 'apollo-schema-version';
 
 const cache = new InMemoryCache({
