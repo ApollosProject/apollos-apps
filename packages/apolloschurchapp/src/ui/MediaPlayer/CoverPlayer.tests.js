@@ -7,7 +7,7 @@ import Providers from 'apolloschurchapp/src/Providers';
 import CoverPlayer from './CoverPlayer';
 
 describe('the coverplayer component', () => {
-  it('should render video', async () => {
+  it('should render miniplayer with video', async () => {
     client.cache.writeData({
       data: {
         mediaPlayer: {
@@ -40,7 +40,7 @@ describe('the coverplayer component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render audio', async () => {
+  it('should render miniplayer with audio', async () => {
     client.cache.writeData({
       data: {
         mediaPlayer: {
