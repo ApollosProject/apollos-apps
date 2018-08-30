@@ -180,6 +180,13 @@ class ContentSingle extends PureComponent {
                             {videoSource ? (
                               <Touchable
                                 onPress={() =>
+                                  console.log({
+                                    mediaSource: videoSource,
+                                    posterSources: coverImageSources,
+                                    title: content.title,
+                                    isVideo: true,
+                                    artist: get(content, 'parentChannel.name'),
+                                  }) ||
                                   play({
                                     variables: {
                                       mediaSource: videoSource,
