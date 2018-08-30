@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { Query, Mutation } from 'react-apollo';
-import gql from 'graphql-tag';
 import {
   StyleSheet,
   View,
@@ -23,6 +22,8 @@ import { ThemeMixin, withTheme } from 'apolloschurchapp/src/ui/theme';
 import Share from 'apolloschurchapp/src/ui/Share';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
+
+import { playVideoMutation } from 'apolloschurchapp/src/ui/MediaPlayer/mutations';
 
 import getContentItem from './getContentItem';
 import getContentItemMinimalState from './getContentItemMinimalState';
@@ -48,24 +49,6 @@ const MediaIcon = withTheme(
 const MediaHeader = styled({ width: '100%' })(View);
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
-
-const playVideoMutation = gql`
-  mutation playVideo(
-    $mediaSource: String!
-    $posterSources: String
-    $title: String
-    $artist: String
-    $isVideo: Boolean
-  ) {
-    mediaPlayerPlayNow(
-      mediaSource: $mediaSource
-      posterSources: $posterSources
-      title: $title
-      artist: $artist
-      isVideo: $isVideo
-    ) @client
-  }
-`;
 
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {

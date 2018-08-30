@@ -1,5 +1,23 @@
 import gql from 'graphql-tag';
 
+const playVideoMutation = gql`
+  mutation playVideo(
+    $mediaSource: String!
+    $posterSources: String
+    $title: String
+    $artist: String
+    $isVideo: Boolean
+  ) {
+    mediaPlayerPlayNow(
+      mediaSource: $mediaSource
+      posterSources: $posterSources
+      title: $title
+      artist: $artist
+      isVideo: $isVideo
+    ) @client
+  }
+`;
+
 const goFullscreen = gql`
   mutation {
     mediaPlayerUpdateState(isFullscreen: true) @client
@@ -51,6 +69,7 @@ const updateDuration = gql`
 `;
 
 export {
+  playVideoMutation,
   goFullscreen,
   play,
   pause,
