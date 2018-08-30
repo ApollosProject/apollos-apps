@@ -126,6 +126,7 @@ class VideoWindow extends PureComponent {
         onError={this.handlePause}
         resizeMode={'contain'}
         onProgress={this.handleProgress}
+        progressUpdateInterval={1000}
         onLoadStart={this.handleLoadStart}
         onLoad={this.handleLoad}
         style={StyleSheet.absoluteFill}
