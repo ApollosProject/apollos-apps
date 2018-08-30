@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
@@ -8,17 +7,11 @@ import styled from 'apolloschurchapp/src/ui/styled';
 
 import CoverPlayer from './CoverPlayer';
 
+import { getMediaPlayerVisibility } from './queries';
+
 const BackgroundView = styled(({ theme }) => ({
   backgroundColor: theme.colors.lightPrimary,
 }))(FlexedView);
-
-const getMediaPlayerVisibility = gql`
-  query mediaPlayer {
-    mediaPlayer @client {
-      isVisible
-    }
-  }
-`;
 
 class MediaPlayer extends PureComponent {
   static propTypes = {

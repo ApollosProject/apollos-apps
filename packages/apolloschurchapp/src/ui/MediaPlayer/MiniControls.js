@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import gql from 'graphql-tag';
 import { View, Animated, StyleSheet } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { Mutation, Query } from 'react-apollo';
@@ -11,6 +10,15 @@ import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 
 import Seeker from './Seeker';
+
+import { getControlState } from './queries';
+
+import {
+  goFullscreen as goFullscreenMutation,
+  dismiss as dismissMutation,
+  play as playMutation,
+  pause as pauseMutation,
+} from './mutations';
 
 export const MINI_PLAYER_HEIGHT = 50;
 
@@ -85,44 +93,6 @@ const MiniSeeker = styled({
 const StyledIcon = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
 }))(Icon);
-
-const getControlState = gql`
-  query {
-    mediaPlayer @client {
-      isPlaying
-      currentTrack {
-        id
-        title
-        artist
-        isVideo
-      }
-    }
-  }
-`;
-
-const goFullscreenMutation = gql`
-  mutation {
-    mediaPlayerUpdateState(isFullscreen: true) @client
-  }
-`;
-
-const playMutation = gql`
-  mutation {
-    mediaPlayerUpdateState(isPlaying: true) @client
-  }
-`;
-
-const pauseMutation = gql`
-  mutation {
-    mediaPlayerUpdateState(isPlaying: false) @client
-  }
-`;
-
-const dismissMutation = gql`
-  mutation {
-    mediaPlayerUpdateState(isPlaying: false, isVisible: false) @client
-  }
-`;
 
 class MiniControls extends Component {
   dismissAnimator = new Animated.Value(0);

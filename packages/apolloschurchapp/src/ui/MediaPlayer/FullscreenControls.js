@@ -22,6 +22,8 @@ import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
 import Seeker from './Seeker';
 
+import { play, pause, exitFullscreen } from './mutations';
+
 const Background = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
   colors: [
@@ -76,39 +78,6 @@ const IconLg = withTheme(({ theme, disabled }) => ({
   size: theme.sizing.baseUnit * 2.5,
   opacity: disabled ? 0.5 : 1,
 }))(Icon);
-
-const getControlState = gql`
-  query {
-    mediaPlayer @client {
-      isFullscreen
-      isPlaying
-      currentTrack {
-        id
-        title
-        artist
-        isVideo
-      }
-    }
-  }
-`;
-
-const exitFullscreen = gql`
-  mutation {
-    mediaPlayerUpdateState(isFullscreen: false) @client
-  }
-`;
-
-const pause = gql`
-  mutation {
-    mediaPlayerUpdateState(isPlaying: false) @client
-  }
-`;
-
-const play = gql`
-  mutation {
-    mediaPlayerUpdateState(isPlaying: true) @client
-  }
-`;
 
 class FullscreenControls extends PureComponent {
   static propTypes = {
