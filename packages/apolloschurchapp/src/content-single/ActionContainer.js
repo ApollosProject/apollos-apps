@@ -66,9 +66,7 @@ const ActionContainer = ({ content, itemId }) => (
 );
 
 ActionContainer.propTypes = {
-  content: PropTypes.shape({
-    id: PropTypes.number,
-  }),
+  content: PropTypes.shape({}),
   itemId: PropTypes.string,
 };
 
