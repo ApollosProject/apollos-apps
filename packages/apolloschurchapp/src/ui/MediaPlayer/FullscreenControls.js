@@ -79,6 +79,9 @@ const IconLg = withTheme(({ theme, disabled }) => ({
   opacity: disabled ? 0.5 : 1,
 }))(Icon);
 
+/**
+ * FullscreenControls displays displays fading player controls
+ */
 class FullscreenControls extends PureComponent {
   static propTypes = {
     client: PropTypes.shape({

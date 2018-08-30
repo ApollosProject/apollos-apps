@@ -94,6 +94,10 @@ const StyledIcon = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
 }))(Icon);
 
+/**
+ * The MiniControls renders basic track info and a play/pause button.
+ * Also displays a close button to close the player when the track is paused.
+ */
 class MiniControls extends Component {
   dismissAnimator = new Animated.Value(0);
 

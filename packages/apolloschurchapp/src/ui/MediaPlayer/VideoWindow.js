@@ -9,6 +9,13 @@ import { Animated, View, StyleSheet } from 'react-native';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
 
+import { getVideoState } from './queries';
+import {
+  pause as pauseMutation,
+  updateProgress,
+  updateDuration,
+} from './mutations';
+
 const styles = StyleSheet.create({
   animatedPosterImage: {
     ...StyleSheet.absoluteFillObject,
@@ -21,50 +28,10 @@ const Background = styled(({ theme }) => ({
   backgroundColor: theme.colors.black,
 }))(View);
 
-const getVideoState = gql`
-  query mediaPlayer {
-    mediaPlayer @client {
-      currentTrack {
-        mediaSource {
-          uri
-        }
-        posterSources {
-          uri
-        }
-        id
-        isVideo
-      }
-      isPlaying
-    }
-  }
-`;
-
-const updateProgress = gql`
-  mutation updateProgress(
-    $currentTime: Float
-    $playableDuration: Float
-    $seekableDuration: Float
-  ) {
-    mediaPlayerNotifyProgress(
-      currentTime: $currentTime
-      playableDuration: $playableDuration
-      seekableDuration: $seekableDuration
-    ) @client
-  }
-`;
-
-const updateDuration = gql`
-  mutation updateDuration($duration: Float) {
-    mediaPlayerNotifyProgress(duration: $duration) @client
-  }
-`;
-
-const pauseMutation = gql`
-  mutation {
-    mediaPlayerUpdateState(isPlaying: false) @client
-  }
-`;
-
+/**
+ * The VideoWindow displays the actual react-native-video component.
+ * It's responsible for loading the video, and updating progress + duration in state.
+ */
 class VideoWindow extends PureComponent {
   static propTypes = {
     client: PropTypes.shape({

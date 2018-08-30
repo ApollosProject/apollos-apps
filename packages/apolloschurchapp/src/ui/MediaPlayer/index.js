@@ -13,6 +13,20 @@ const BackgroundView = styled(({ theme }) => ({
   backgroundColor: theme.colors.lightPrimary,
 }))(FlexedView);
 
+/**
+ * Renders a CoverPlayer fixed below children:
+ *  ____________________
+ * |                    |
+ * |                    |
+ * |                    |
+ * |     children       |
+ * |                    |
+ * |                    |
+ * |____________________|
+ * |                    |
+ * |    CoverPlayer     |
+ * |____________________|
+ */
 class MediaPlayer extends PureComponent {
   static propTypes = {
     children: PropTypes.node,

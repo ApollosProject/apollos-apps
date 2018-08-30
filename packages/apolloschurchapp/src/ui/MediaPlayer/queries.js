@@ -34,3 +34,21 @@ export const getControlState = gql`
     }
   }
 `;
+
+export const getVideoState = gql`
+  query mediaPlayer {
+    mediaPlayer @client {
+      currentTrack {
+        mediaSource {
+          uri
+        }
+        posterSources {
+          uri
+        }
+        id
+        isVideo
+      }
+      isPlaying
+    }
+  }
+`;

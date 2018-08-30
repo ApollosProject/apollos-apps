@@ -26,6 +26,12 @@ const VideoSizer = styled(
       : { height: MINI_PLAYER_HEIGHT, aspectRatio: isVideo ? 16 / 9 : 1 }
 )(View);
 
+/**
+ * CoverPlayer is a animating media player that transitions between
+ * a mini state and a full screen state.
+ * It is capable of playing any type of media that react-native-video supports.
+ * It reads from local graphql state, and so you must use graphql mutations to play tracks.
+ */
 class CoverPlayer extends Component {
   static propTypes = {
     client: PropTypes.shape({ mutate: PropTypes.func }),

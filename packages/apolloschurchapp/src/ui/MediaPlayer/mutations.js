@@ -29,3 +29,23 @@ export const exitFullscreen = gql`
     mediaPlayerUpdateState(isFullscreen: false) @client
   }
 `;
+
+export const updateProgress = gql`
+  mutation updateProgress(
+    $currentTime: Float
+    $playableDuration: Float
+    $seekableDuration: Float
+  ) {
+    mediaPlayerNotifyProgress(
+      currentTime: $currentTime
+      playableDuration: $playableDuration
+      seekableDuration: $seekableDuration
+    ) @client
+  }
+`;
+
+export const updateDuration = gql`
+  mutation updateDuration($duration: Float) {
+    mediaPlayerNotifyProgress(duration: $duration) @client
+  }
+`;
