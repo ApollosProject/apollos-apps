@@ -7,7 +7,6 @@ import {
   PanResponder,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import gql from 'graphql-tag';
 import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
 
@@ -17,36 +16,15 @@ import MiniControls, { MINI_PLAYER_HEIGHT } from './MiniControls';
 import FullscreenControls from './FullscreenControls';
 import VideoWindow from './VideoWindow';
 
+import { getFullVisibilityState } from './queries';
+import { exitFullscreen, goFullscreen } from './mutations';
+
 const VideoSizer = styled(
   ({ isFullscreen, isVideo }) =>
     isFullscreen
       ? StyleSheet.absoluteFill
       : { height: MINI_PLAYER_HEIGHT, aspectRatio: isVideo ? 16 / 9 : 1 }
 )(View);
-
-const getVisibilityState = gql`
-  query getVisibilityState {
-    mediaPlayer @client {
-      currentTrack {
-        isVideo
-      }
-      isVisible
-      isFullscreen
-    }
-  }
-`;
-
-const exitFullscreen = gql`
-  mutation {
-    mediaPlayerUpdateState(isFullscreen: false) @client
-  }
-`;
-
-const goFullscreen = gql`
-  mutation {
-    mediaPlayerUpdateState(isFullscreen: true) @client
-  }
-`;
 
 class CoverPlayer extends Component {
   static propTypes = {
@@ -209,7 +187,7 @@ class CoverPlayer extends Component {
   };
 
   render() {
-    return <Query query={getVisibilityState}>{this.renderCover}</Query>;
+    return <Query query={getFullVisibilityState}>{this.renderCover}</Query>;
   }
 }
 
