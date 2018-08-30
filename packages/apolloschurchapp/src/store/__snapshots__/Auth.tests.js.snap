@@ -31,7 +31,12 @@ InMemoryCache {
         "Node": Array [
           "Person",
           "ContentChannel",
+          "Interaction",
+          "Session",
           "UniversalContentItem",
+        ],
+        "Sharable": Array [
+          "SharableContentItem",
         ],
       },
     },
@@ -56,6 +61,7 @@ InMemoryCache {
           "type": "id",
           "typename": "MediaPlayerState",
         },
+        "sessionId": null,
       },
     },
   },
