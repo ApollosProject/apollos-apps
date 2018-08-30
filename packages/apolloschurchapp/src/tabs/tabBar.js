@@ -11,6 +11,7 @@ const mediaPlayerIsVisible = gql`
     }
   }
 `;
+
 const TabBar = (props) => (
   <Query query={mediaPlayerIsVisible}>
     {({ data = {} }) => {
