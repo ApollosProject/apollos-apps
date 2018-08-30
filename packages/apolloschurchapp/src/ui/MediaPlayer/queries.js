@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const getMediaPlayerVisibility = gql`
+const getMediaPlayerVisibility = gql`
   query mediaPlayerVisibility {
     mediaPlayer @client {
       isVisible
@@ -8,7 +8,7 @@ export const getMediaPlayerVisibility = gql`
   }
 `;
 
-export const getFullVisibilityState = gql`
+const getFullVisibilityState = gql`
   query fullVisibilityState {
     mediaPlayer @client {
       currentTrack {
@@ -20,7 +20,7 @@ export const getFullVisibilityState = gql`
   }
 `;
 
-export const getControlState = gql`
+const getControlState = gql`
   query {
     mediaPlayer @client {
       isFullscreen
@@ -35,7 +35,7 @@ export const getControlState = gql`
   }
 `;
 
-export const getVideoState = gql`
+const getVideoState = gql`
   query mediaPlayer {
     mediaPlayer @client {
       currentTrack {
@@ -52,3 +52,10 @@ export const getVideoState = gql`
     }
   }
 `;
+
+export {
+  getMediaPlayerVisibility,
+  getFullVisibilityState,
+  getControlState,
+  getVideoState,
+};
