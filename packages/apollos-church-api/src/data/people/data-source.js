@@ -1,4 +1,6 @@
+import { fetch } from 'apollo-server-env';
 import { AuthenticationError } from 'apollo-server';
+import FormData from 'form-data';
 import { camelCase } from 'lodash';
 import RockApolloDataSource from 'apollos-church-api/src/connectors/rock/data-source';
 
@@ -32,5 +34,27 @@ export default class Person extends RockApolloDataSource {
       ...currentPerson,
       [camelCase(field)]: value,
     };
+  };
+
+  uploadProfileImage = async (file, length) => {
+    const { stream, filename } = await file;
+    const data = new FormData();
+    data.append('file', stream, {
+      filename,
+      knownLength: length,
+    });
+    const response = await fetch(
+      `${this.baseURL}/BinaryFiles/Upload?binaryFileTypeId=5`,
+      {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Authorization-Token': this.rockToken,
+          ...data.getHeaders(),
+        },
+      }
+    );
+    const photoId = await response.text();
+    return this.updateProfile({ field: 'PhotoId', value: photoId });
   };
 }

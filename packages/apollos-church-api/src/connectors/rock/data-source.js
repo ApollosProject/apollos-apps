@@ -15,6 +15,8 @@ export default class RockApolloDataSource extends RESTDataSource {
     return ROCK_API;
   }
 
+  rockToken = ROCK_TOKEN;
+
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
     return super

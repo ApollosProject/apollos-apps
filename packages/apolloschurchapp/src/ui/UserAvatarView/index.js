@@ -9,6 +9,7 @@ import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import styled from 'apolloschurchapp/src/ui/styled';
+import uploadPhoto from './uploadPhoto';
 
 const Container = styled({
   alignItems: 'center',
@@ -48,11 +49,13 @@ const UserAvatarView = ({
     <Container {...viewProps}>
       <Content>
         <ImageContainer>
-          <StyledAvatar
-            source={photo}
-            size="large"
-            isLoading={isUploadingFile}
-          />
+          <Touchable onPress={() => uploadPhoto()}>
+            <StyledAvatar
+              source={photo}
+              size="large"
+              isLoading={isUploadingFile}
+            />
+          </Touchable>
         </ImageContainer>
         <Name>
           {firstName} {lastName}

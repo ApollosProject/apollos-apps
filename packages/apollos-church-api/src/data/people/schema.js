@@ -12,6 +12,7 @@ export default gql`
 
   extend type Mutation {
     updateProfile(input: UpdateProfileInput!): Person
+    uploadProfileImage(file: Upload!, size: Int!): Person
   }
 
   extend type Query {
