@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import gql from 'graphql-tag';
 import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
 import Video from 'react-native-video';

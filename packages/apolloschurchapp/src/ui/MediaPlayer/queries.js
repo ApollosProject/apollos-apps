@@ -53,9 +53,43 @@ const getVideoState = gql`
   }
 `;
 
+const getElapsedTime = gql`
+  query {
+    mediaPlayer @client {
+      progress {
+        currentTime
+      }
+    }
+  }
+`;
+
+const getProgress = gql`
+  query {
+    mediaPlayer @client {
+      progress {
+        currentTime
+        duration
+      }
+    }
+  }
+`;
+
+const getTotalTime = gql`
+  query {
+    mediaPlayer @client {
+      progress {
+        duration
+      }
+    }
+  }
+`;
+
 export {
   getMediaPlayerVisibility,
   getFullVisibilityState,
   getControlState,
   getVideoState,
+  getElapsedTime,
+  getProgress,
+  getTotalTime,
 };
