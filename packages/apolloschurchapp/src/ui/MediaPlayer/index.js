@@ -3,8 +3,8 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-import FlexedView from '../FlexedView';
-import styled from '../styled';
+import FlexedView from 'apolloschurchapp/src/ui/FlexedView';
+import styled from 'apolloschurchapp/src/ui/styled';
 
 import CoverPlayer from './CoverPlayer';
 

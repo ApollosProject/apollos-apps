@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { client } from 'apolloschurchapp/src/client';
 import Providers from 'apolloschurchapp/src/Providers';
 

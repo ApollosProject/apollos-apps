@@ -4,11 +4,11 @@ import { View, Animated, StyleSheet } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { Mutation, Query } from 'react-apollo';
 
-import Touchable from '../Touchable';
-import styled from '../styled';
-import { H5, H6 } from '../typography';
-import Icon from '../Icon';
-import { withTheme } from '../theme';
+import styled from 'apolloschurchapp/src/ui/styled';
+import Touchable from 'apolloschurchapp/src/ui/Touchable';
+import { H5, H6 } from 'apolloschurchapp/src/ui/typography';
+import Icon from 'apolloschurchapp/src/ui/Icon';
+import { withTheme } from 'apolloschurchapp/src/ui/theme';
 
 import Seeker from './Seeker';
 
