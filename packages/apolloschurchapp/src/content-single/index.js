@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Query, Mutation } from 'react-apollo';
-import { ScrollView, TouchableWithoutFeedback, View } from 'react-native';
+import { Query } from 'react-apollo';
+import { ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -14,73 +14,24 @@ import { H2 } from 'apolloschurchapp/src/ui/typography';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
-import Share from 'apolloschurchapp/src/ui/Share';
-import Like from 'apolloschurchapp/src/ui/Like';
-
-import getSessionId from 'apolloschurchapp/src/auth/getSessionId';
 
 import getContentItem from './getContentItem';
 import getContentItemMinimalState from './getContentItemMinimalState';
-import createInteraction from './createInteraction';
+import ActionContainer from './ActionContainer';
 
 const FeedContainer = styled({
   paddingHorizontal: 0,
 })(PaddedView);
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
-const ActionContainer = ({ content, itemId, isLiked, navigation }) => (
-  <View>
-    <Query query={getSessionId} fetchPolicy="cache-only">
-      {({ data: { sessionId } }) =>
-        sessionId ? (
-          <Mutation mutation={createInteraction}>
-            {(createSession) => (
-              <Like
-                itemId={itemId}
-                sessionId={sessionId}
-                isLiked={isLiked}
-                operation={isLiked ? 'Unlike' : 'Like'}
-                toggleLike={async (variables) => {
-                  try {
-                    await createSession({ variables });
-                    await navigation.setParams({ isLiked: !isLiked });
-                  } catch (e) {
-                    console.log(e);
-                  }
-                }}
-              />
-            )}
-          </Mutation>
-        ) : null
-      }
-    </Query>
-    <Share content={content} />
-  </View>
-);
 
-ActionContainer.propTypes = {
-  content: PropTypes.shape({
-    id: PropTypes.number,
-  }),
-  isLiked: PropTypes.bool,
-  itemId: PropTypes.string,
-  navigation: PropTypes.func,
-};
 class ContentSingle extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const shareObject = navigation.getParam('sharing', 'Content');
     const itemId = navigation.getParam('itemId', []);
-    const isLiked = navigation.getParam('isLiked', false);
     return {
       title: shareObject.title,
-      headerRight: (
-        <ActionContainer
-          isLiked={isLiked}
-          itemId={itemId}
-          content={shareObject}
-          navigation={navigation}
-        />
-      ),
+      headerRight: <ActionContainer itemId={itemId} content={shareObject} />,
     };
   };
 

@@ -38,7 +38,6 @@ class ContentFeed extends PureComponent {
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
       sharing: item.sharing,
-      isLiked: item.isLiked,
     });
 
   render() {
