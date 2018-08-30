@@ -6,7 +6,7 @@ import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import defaultRenderer, {
   wrapTextChildren,
 } from 'apolloschurchapp/src/ui/HTMLView/defaultRenderer';
-import Paragraph from 'apolloschurchapp/src/ui/Paragraph';
+import Paragraph from 'apolloschurchapp/src/ui/typography/Paragraph';
 import { H6, BodyText } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 
