@@ -82,7 +82,6 @@ export const resolvers = {
       `;
       const track = merge(
         {
-          id: trackId,
           __typename: 'MediaPlayerTrack',
           parentId: null,
           mediaSource: null,
@@ -93,22 +92,38 @@ export const resolvers = {
         },
         trackInfo
       );
-      trackId += 1;
 
       const { mediaPlayer } = cache.readQuery({ query });
 
+      const newMediaPlayerState = {
+        __typename: 'MediaPlayerState',
+        isPlaying: true,
+        isVisible: true,
+        isFullscreen: track.isVideo
+          ? true
+          : (mediaPlayer && mediaPlayer.isFullscreen) || false,
+        currentTrack: track,
+      };
+
+      if (
+        // if same track
+        mediaPlayer &&
+        mediaPlayer.currentTrack &&
+        mediaPlayer.currentTrack.mediaSource.uri === track.mediaSource.uri
+      ) {
+        // use the same Id
+        newMediaPlayerState.currentTrack.id = mediaPlayer.currentTrack.id;
+      } else {
+        // otherwise reset progress and use new Id
+        newMediaPlayerState.currentTrack.id = trackId;
+        newMediaPlayerState.progress = null;
+        trackId += 1;
+      }
+      console.log({ newMediaPlayerState });
       cache.writeData({
         query,
         data: {
-          mediaPlayer: {
-            __typename: 'MediaPlayerState',
-            isPlaying: true,
-            isVisible: true,
-            isFullscreen: track.isVideo
-              ? true
-              : (mediaPlayer && mediaPlayer.isFullscreen) || false,
-            currentTrack: track,
-          },
+          mediaPlayer: newMediaPlayerState,
         },
       });
       return null;
