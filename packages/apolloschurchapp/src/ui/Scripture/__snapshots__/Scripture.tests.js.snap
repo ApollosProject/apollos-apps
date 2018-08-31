@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the ScriptureItem component renders John 11:35-36 1`] = `
+exports[`the ScriptureItem component renders John 3:16-17 1`] = `
 <View>
   <Text
     style={
@@ -23,7 +23,7 @@ exports[`the ScriptureItem component renders John 11:35-36 1`] = `
         }
       }
     >
-      John 11:35-36
+      John 3:16-17
     </Text>
      
     <Text
@@ -36,7 +36,7 @@ exports[`the ScriptureItem component renders John 11:35-36 1`] = `
         }
       }
     >
-      ESV
+      WEB
     </Text>
   </Text>
   <View>
@@ -60,21 +60,6 @@ exports[`the ScriptureItem component renders John 11:35-36 1`] = `
         }
       >
         <Text
-          style={
-            Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 17.28,
-            }
-          }
-        >
-           
-          <Text>
-            35 
-          </Text>
-        </Text>
-        <Text
           bold={false}
           italic={false}
           style={
@@ -87,38 +72,16 @@ exports[`the ScriptureItem component renders John 11:35-36 1`] = `
           }
         >
           <Text>
-            Jesus wept. 
+            16
           </Text>
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 17.28,
-            }
-          }
-        >
-           
           <Text>
-            36 
+            For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life. 
           </Text>
-        </Text>
-        <Text
-          bold={false}
-          italic={false}
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Regular",
-              "fontSize": 16,
-              "lineHeight": 26,
-            }
-          }
-        >
           <Text>
-            So the Jews said, “See how he loved him!”
+            17
+          </Text>
+          <Text>
+            For God didn’t send his Son into the world to judge the world, but that the world should be saved through him. 
           </Text>
         </Text>
       </Text>
@@ -163,7 +126,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         }
       }
     >
-      ESV
+      WEB
     </Text>
   </Text>
   <View>
@@ -187,21 +150,6 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         }
       >
         <Text
-          style={
-            Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 17.28,
-            }
-          }
-        >
-           
-          <Text>
-            1:1 
-          </Text>
-        </Text>
-        <Text
           bold={false}
           italic={false}
           style={
@@ -214,342 +162,14 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           }
         >
           <Text>
-            The Song of Songs, which is Solomon's.
+            1
+          </Text>
+          <Text>
+            The Song of songs, which is Solomon’s.
           </Text>
         </Text>
       </Text>
     </View>
-    <View
-      style={
-        Object {
-          "paddingLeft": 10,
-          "paddingTop": 10,
-        }
-      }
-    />
-    <Text
-      padded={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 23.04,
-          "paddingBottom": 11.52,
-          "paddingTop": 15.21,
-        }
-      }
-    >
-      <Text>
-        <Text>
-          She
-        </Text>
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#A5A5A5",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-       
-      <Text>
-        2 
-      </Text>
-    </Text>
-    <Text>
-        Let him kiss me with the kisses of his mouth!
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-        For your love is better than wine;
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-           
-      <Text
-        style={
-          Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
-          }
-        }
-      >
-         
-        <Text>
-          3 
-        </Text>
-      </Text>
-      <Text>
-            your anointing oils are fragrant;
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-        your name is oil poured out;
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-           
-      <Text>
-            therefore virgins love you.
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#A5A5A5",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-       
-      <Text>
-        4 
-      </Text>
-    </Text>
-    <Text>
-        Draw me after you; let us run.
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-           
-      <Text>
-            The king has brought me into his chambers.
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text
-      padded={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 23.04,
-          "paddingBottom": 11.52,
-          "paddingTop": 15.21,
-        }
-      }
-    >
-      <Text>
-        <Text>
-          Others
-        </Text>
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-        We will exult and rejoice in you;
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-           
-      <Text>
-            we will extol your love more than wine;
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
-    <Text>
-           
-      <Text>
-            rightly do they love you.
-      </Text>
-    </Text>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
     <View
       style={
         Object {
@@ -568,23 +188,515 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
             "lineHeight": 26,
           }
         }
-      />
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Beloved
+          </Text>
+        </Text>
+      </Text>
     </View>
-    <Text
-      bold={false}
-      italic={false}
+    <View
       style={
         Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
+          "paddingBottom": 17.28,
         }
       }
     >
-      
-
-    </Text>
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            2
+          </Text>
+          <Text>
+            Let him kiss me with the kisses of his mouth;
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            for your love is better than wine.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            3
+          </Text>
+          <Text>
+            Your oils have a pleasing fragrance.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Your name is oil poured out,
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            therefore the virgins love you.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            4
+          </Text>
+          <Text>
+            Take me away with you.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Let’s hurry.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            The king has brought me into his rooms.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Friends
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            We will be glad and rejoice in you.
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            We will praise your love more than wine!
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Beloved
+          </Text>
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            They are right to love you.
+          </Text>
+        </Text>
+      </Text>
+    </View>
   </View>
 </View>
 `;
