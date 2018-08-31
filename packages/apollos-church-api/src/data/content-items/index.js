@@ -251,10 +251,7 @@ export const resolver = {
       const interactions = await dataSources.Interactions.getForContentItems();
 
       const likeCounts = {};
-      console.log(
-        'check982u3r982uy3o4iu9h2opi3uhp2u3ih4pt9u2hp9uhp',
-        interactions
-      );
+
       // Iterate over the interactions and determine which pieces of content
       // has more likes than unlikes
       interactions.forEach(({ operation, relatedEntityId }) => {
