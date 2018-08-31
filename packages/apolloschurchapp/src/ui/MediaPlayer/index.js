@@ -33,14 +33,23 @@ class MediaPlayer extends PureComponent {
   };
 
   renderPlayer = ({ data = {} }) => {
-    if (!data.mediaPlayer || !data.mediaPlayer.isVisible) return null;
-    return <CoverPlayer />;
+    const playerIsVisible = !(!data.mediaPlayer || !data.mediaPlayer.isVisible);
+    const { isFullscreen } = data && data.mediaPlayer;
+    return [
+      <BackgroundView
+        key="children"
+        removeClippedSubviews={isFullscreen}
+        renderToHardwareTextureAndroid={isFullscreen}
+      >
+        {this.props.children}
+      </BackgroundView>,
+      playerIsVisible ? <CoverPlayer key="cover" /> : null,
+    ];
   };
 
   render() {
     return (
       <BackgroundView>
-        {this.props.children}
         <Query query={getMediaPlayerVisibility}>{this.renderPlayer}</Query>
       </BackgroundView>
     );
