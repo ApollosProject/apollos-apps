@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server';
-import { get } from 'lodash';
+import { get, uniqBy, assign, map, find } from 'lodash';
 import flow from 'lodash/fp/flow';
 import omitBy from 'lodash/fp/omitBy';
 import pickBy from 'lodash/fp/pickBy';
@@ -243,6 +243,63 @@ export const resolver = {
         cursor: dataSources.ContentItem.byUserFeed(),
         args,
       }),
+    getAllLikedContent: async (root, args, { dataSources }) => {
+      // Get All Interactions from current user
+      const iteractions = await dataSources.Interactions.getForContentItems();
+
+      // Grab content related to user's interactions
+      const getUserContentFromInteractions = iteractions.map((item) => {
+        try {
+          return dataSources.ContentItem.getFromId(item.relatedEntityId);
+        } catch (e) {
+          throw e;
+        }
+      });
+
+      const resolveUserContentFromInteractions = await Promise.all(
+        getUserContentFromInteractions
+      );
+
+      // Determine the isLiked value on contentitems adn create an obj that we
+      // can merge with our main set of data later
+      const calculateIsLikedOnContentItems = uniqBy(
+        resolveUserContentFromInteractions,
+        'id'
+      ).map(async ({ id }) => {
+        try {
+          const interaction = await dataSources.Interactions.getForContentItem({
+            contentItemId: id,
+          });
+          const likes = await interaction.filter(
+            (item) => item.operation === 'Like'
+          ).length;
+          const unlike = await interaction.filter(
+            (item) => item.operation === 'Unlike'
+          ).length;
+
+          return { id, isLiked: likes > unlike };
+        } catch (e) {
+          throw e;
+        }
+      });
+      const resolveIsLikedCalculations = await Promise.all(
+        calculateIsLikedOnContentItems
+      );
+
+      // Join both arrays based on the id, and add the newly generated
+      // isLiked prop
+      const joinedContentArray = (arr1, arr2) =>
+        map(arr1, (obj) => assign(obj, find(arr2, { isLiked: true })));
+
+      // Remove duplicates.
+      return uniqBy(
+        joinedContentArray(
+          resolveUserContentFromInteractions,
+          resolveIsLikedCalculations
+        ),
+        'id'
+      );
+    },
   },
   UniversalContentItem: {
     ...defaultContentItemResolvers,
