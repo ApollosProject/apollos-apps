@@ -13,6 +13,7 @@
     "@storybook/addons": "4.0.0-alpha.2",
     "@storybook/react-native": "4.0.0-alpha.2",
     "apollos-church-api": "link:../apollos-church-api",
+    "babel-plugin-graphql-tag": "^1.6.0",
     "babel-preset-apollos": "link:../babel-preset-apollos",
     "babel-preset-react-native": "5",
     "codecov": "3.0.2",
