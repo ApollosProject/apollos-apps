@@ -4,6 +4,7 @@ import {
   View,
   StyleSheet,
   Dimensions,
+  Platform,
   PanResponder,
 } from 'react-native';
 import PropTypes from 'prop-types';
@@ -163,7 +164,7 @@ class CoverPlayer extends Component {
         key="cover"
         onLayout={this.handleCoverLayout}
         style={this.coverStyle}
-        {...this.panResponder.panHandlers}
+        {...(Platform.OS !== 'android' ? this.panResponder.panHandlers : {})}
       >
         <VideoSizer
           isFullscreen={isFullscreen}
