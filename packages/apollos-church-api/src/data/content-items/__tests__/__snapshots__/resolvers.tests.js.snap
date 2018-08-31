@@ -502,6 +502,14 @@ Object {
 }
 `;
 
+exports[`UniversalContentItem gets all user liked content 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Fragment "ContentItemFragment" is never used.],
+  ],
+}
+`;
+
 exports[`UniversalContentItem properly handles empty attribute values 1`] = `
 Object {
   "data": Object {

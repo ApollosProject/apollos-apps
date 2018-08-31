@@ -245,12 +245,35 @@ export const resolver = {
       }),
     getAllLikedContent: async (root, args, { dataSources }) => {
       // Get All Interactions from current user
-      const iteractions = await dataSources.Interactions.getForContentItems();
+      const interactions = await dataSources.Interactions.getForContentItems();
+
+      const likeCounts = {};
+
+      // Iterate over the interactions and determine which pieces of content
+      // has more likes than unlikes
+      interactions.forEach(({ operation, relatedEntityId }) => {
+        if (!likeCounts[relatedEntityId]) {
+          likeCounts[relatedEntityId] = 0;
+        }
+        if (operation === 'Like') {
+          likeCounts[relatedEntityId] += 1;
+        }
+        if (operation === 'Unlike') {
+          likeCounts[relatedEntityId] -= 1;
+        }
+      });
+
+      const itemIds = [];
+      Object.keys(likeCounts).forEach((relatedEntityId) => {
+        if (likeCounts[relatedEntityId] > 0) {
+          itemIds.push(relatedEntityId);
+        }
+      });
 
       // Grab content related to user's interactions
-      const getUserContentFromInteractions = iteractions.map((item) => {
+      const getUserContentFromInteractions = itemIds.map((id) => {
         try {
-          return dataSources.ContentItem.getFromId(item.relatedEntityId);
+          return dataSources.ContentItem.getFromId(id);
         } catch (e) {
           throw e;
         }
@@ -260,11 +283,11 @@ export const resolver = {
         getUserContentFromInteractions
       );
 
-      // Determine the isLiked value on contentitems adn create an obj that we
+      // Determine the isLiked value on contentitems and create an obj that we
       // can merge with our main set of data later
       const calculateIsLikedOnContentItems = uniqBy(
         resolveUserContentFromInteractions,
-        'id'
+        'relatedEntityId'
       ).map(async ({ id }) => {
         try {
           const interaction = await dataSources.Interactions.getForContentItem({
