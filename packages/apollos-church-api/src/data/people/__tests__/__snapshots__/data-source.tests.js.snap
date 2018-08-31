@@ -55,3 +55,58 @@ Object {
   "lastName": "Wilson",
 }
 `;
+
+exports[`Person uploads a user's profile picture 1`] = `
+Object {
+  "firstName": "Vincent",
+  "id": 51,
+  "lastName": "Wilson",
+}
+`;
+
+exports[`Person uploads a user's profile picture 2`] = `
+Array [
+  Array [
+    "https://apollosrock.newspring.cc/api/BinaryFiles/Upload?binaryFileTypeId=5",
+    Object {
+      "body": FormData {
+        "_boundary": "--------------------------240959477203958978447056",
+        "_currentStream": null,
+        "_overheadLength": 103,
+        "_released": false,
+        "_streams": Array [
+          "----------------------------240959477203958978447056
+Content-Disposition: form-data; name=\\"file\\"
+
+",
+          "123",
+          [Function],
+        ],
+        "_valueLength": 456,
+        "_valuesToMeasure": Array [],
+        "dataSize": 0,
+        "maxDataSize": 2097152,
+        "pauseStreams": true,
+        "readable": true,
+        "writable": false,
+      },
+      "headers": Object {
+        "Authorization-Token": "glsQTB0nBG0Vi6c2uIubKdJu",
+        "content-type": "multipart/form-data; boundary=--------------------------240959477203958978447056",
+      },
+      "method": "POST",
+    },
+  ],
+]
+`;
+
+exports[`Person uploads a user's profile picture 3`] = `
+Array [
+  Array [
+    Object {
+      "field": "PhotoId",
+      "value": "245",
+    },
+  ],
+]
+`;

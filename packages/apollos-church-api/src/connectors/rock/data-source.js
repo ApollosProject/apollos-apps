@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { RESTDataSource } from 'apollo-datasource-rest';
 import { mapKeys, mapValues, camelCase } from 'lodash';
+import { fetch } from 'apollo-server-env';
 
 import { createCursor, parseCursor } from 'apollos-church-api/src/utils/cursor';
 
@@ -11,11 +12,11 @@ export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
 
-  get baseURL() {
-    return ROCK_API;
-  }
+  baseURL = ROCK_API;
 
   rockToken = ROCK_TOKEN;
+
+  nodeFetch = fetch;
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword

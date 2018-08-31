@@ -5,17 +5,6 @@ import { createGlobalId } from '../node';
 export { default as dataSource } from './data-source';
 
 export const schema = gql`
-  enum UPDATEABLE_PROFILE_FIELDS {
-    FirstName
-    LastName
-    PhotoId
-  }
-
-  input UpdateProfileInput {
-    field: UPDATEABLE_PROFILE_FIELDS!
-    value: String!
-  }
-
   type AuthenticatedUser {
     id: ID!
     profile: Person

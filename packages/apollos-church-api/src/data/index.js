@@ -42,6 +42,8 @@ export const schema = [
     type Mutation {
       _placeholder: Boolean # needed, empty schema defs aren't supported
     }
+
+    ${process.env.NODE_ENV === 'test' ? `scalar Upload` : ``}
   `,
   ...compact(values(data).map((datum) => datum.schema)),
 ];

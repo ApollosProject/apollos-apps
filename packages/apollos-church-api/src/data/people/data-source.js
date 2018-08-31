@@ -43,7 +43,7 @@ export default class Person extends RockApolloDataSource {
       filename,
       knownLength: length,
     });
-    const response = await fetch(
+    const response = await this.nodeFetch(
       `${this.baseURL}/BinaryFiles/Upload?binaryFileTypeId=5`,
       {
         method: 'POST',

@@ -1,6 +1,16 @@
 import { gql } from 'apollo-server';
 
 export default gql`
+  enum UPDATEABLE_PROFILE_FIELDS {
+    FirstName
+    LastName
+  }
+
+  input UpdateProfileInput {
+    field: UPDATEABLE_PROFILE_FIELDS!
+    value: String!
+  }
+
   type Person implements Node {
     id: ID!
     firstName: String!

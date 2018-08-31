@@ -40,4 +40,19 @@ describe('Person', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
+
+  it("uploads a user's profile picture", async () => {
+    const dataSource = new Person();
+    dataSource.context = { rockCookie: 'fakeCookie' };
+    dataSource.updateProfile = buildGetMock(
+      { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+      dataSource
+    );
+    dataSource.nodeFetch = buildGetMock({ text: () => '245' }, dataSource);
+
+    const result = await dataSource.uploadProfileImage({ stream: '123' }, 456);
+    expect(result).toMatchSnapshot();
+    expect(dataSource.nodeFetch.mock.calls).toMatchSnapshot();
+    expect(dataSource.updateProfile.mock.calls).toMatchSnapshot();
+  });
 });
