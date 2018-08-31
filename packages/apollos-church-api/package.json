@@ -28,7 +28,6 @@
   "dependencies": {
     "apollo-datasource-rest": "0.1.1",
     "apollo-server": "^2.0.5",
-    "apollo-upload-server": "^7.0.0",
     "casual": "1.5.19",
     "color": "3.0.0",
     "crypto": "1.0.1",

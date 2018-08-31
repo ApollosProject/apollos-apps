@@ -70,12 +70,12 @@ Array [
     "https://apollosrock.newspring.cc/api/BinaryFiles/Upload?binaryFileTypeId=5",
     Object {
       "body": FormData {
-        "_boundary": "--------------------------240959477203958978447056",
+        "_boundary": "--------------------------",
         "_currentStream": null,
         "_overheadLength": 103,
         "_released": false,
         "_streams": Array [
-          "----------------------------240959477203958978447056
+          "----------------------------
 Content-Disposition: form-data; name=\\"file\\"
 
 ",
@@ -92,7 +92,7 @@ Content-Disposition: form-data; name=\\"file\\"
       },
       "headers": Object {
         "Authorization-Token": "glsQTB0nBG0Vi6c2uIubKdJu",
-        "content-type": "multipart/form-data; boundary=--------------------------240959477203958978447056",
+        "content-type": "multipart/form-data; boundary=--------------------------",
       },
       "method": "POST",
     },
@@ -101,12 +101,12 @@ Content-Disposition: form-data; name=\\"file\\"
 `;
 
 exports[`Person uploads a user's profile picture 3`] = `
-Array [
-  Array [
+Object {
+  "0": Array [
     Object {
       "field": "PhotoId",
       "value": "245",
     },
   ],
-]
+}
 `;
