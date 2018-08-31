@@ -25,14 +25,15 @@ function showImagePicker() {
   });
 }
 
-export default async () => {
+export default async ({ onUpload = () => ({}) }) => {
   const image = await showImagePicker();
   const file = new ReactNativeFile({
     uri: image.uri,
     name: image.fileName,
     type: 'image/jpeg',
   });
-  client.mutate({
+  onUpload();
+  return client.mutate({
     mutation: gql`
       mutation uploadProfileImage($file: Upload!, $size: Int!) {
         uploadProfileImage(file: $file, size: $size) {
