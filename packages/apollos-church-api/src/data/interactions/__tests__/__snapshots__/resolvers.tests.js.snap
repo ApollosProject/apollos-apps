@@ -36,6 +36,14 @@ Object {
 }
 `;
 
+exports[`Interactions returns an empty array for liked content without a user logged in 1`] = `
+Object {
+  "data": Object {
+    "getAllLikedContent": Array [],
+  },
+}
+`;
+
 exports[`Interactions uses interactions to track if a user liked content 1`] = `
 Object {
   "data": Object {
