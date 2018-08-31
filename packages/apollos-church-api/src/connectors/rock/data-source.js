@@ -14,7 +14,12 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   baseURL = ROCK_API;
 
-  rockToken = ROCK_TOKEN;
+  get rockToken() {
+    if (process.env.NODE_ENV === 'test') {
+      return 'some-rock-token';
+    }
+    return ROCK_TOKEN;
+  }
 
   nodeFetch = fetch;
 

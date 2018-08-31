@@ -91,7 +91,7 @@ Content-Disposition: form-data; name=\\"file\\"
         "writable": false,
       },
       "headers": Object {
-        "Authorization-Token": "glsQTB0nBG0Vi6c2uIubKdJu",
+        "Authorization-Token": "some-rock-token",
         "content-type": "multipart/form-data; boundary=--------------------------",
       },
       "method": "POST",
