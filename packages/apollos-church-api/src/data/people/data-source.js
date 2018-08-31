@@ -1,4 +1,3 @@
-import { fetch } from 'apollo-server-env';
 import { AuthenticationError } from 'apollo-server';
 import FormData from 'form-data';
 import { camelCase } from 'lodash';
