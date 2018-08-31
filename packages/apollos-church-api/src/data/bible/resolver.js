@@ -3,8 +3,8 @@ export default {
     scripture: (root, { query }, { dataSources }) =>
       dataSources.Scripture.getScripture(query),
   },
-  ESVScripture: {
-    query: ({ query }) => query,
-    html: ({ passages }) => passages[0],
+  Scripture: {
+    reference: ({ data: { reference } = {} }) => reference,
+    content: ({ data: { content } = {} }) => content,
   },
 };
