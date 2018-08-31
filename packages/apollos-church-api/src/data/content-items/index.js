@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server';
-import { get, uniqBy, assign, map, find } from 'lodash';
+import { get } from 'lodash';
 import flow from 'lodash/fp/flow';
 import omitBy from 'lodash/fp/omitBy';
 import pickBy from 'lodash/fp/pickBy';
@@ -224,10 +224,13 @@ export const defaultContentItemResolvers = {
     if (![6, 5, 4].includes(root.contentChannelId)) return null; // todo: don't generate a theme for these content channel ids
     return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
   },
-  isLiked: async ({ id }, args, { dataSources }) => {
+  isLiked: async ({ id, isLiked }, args, { dataSources }) => {
+    if (isLiked != null) return isLiked;
+
     const interactions = await dataSources.Interactions.getForContentItem({
       contentItemId: id,
     });
+
     const likes = interactions.filter((i) => i.operation === 'Like').length;
     const unlike = interactions.filter((i) => i.operation === 'Unlike').length;
     // If likes / unlikes equal we have either unliked the content or haven't liked it yet (both are 0)
@@ -248,7 +251,10 @@ export const resolver = {
       const interactions = await dataSources.Interactions.getForContentItems();
 
       const likeCounts = {};
-
+      console.log(
+        'check982u3r982uy3o4iu9h2opi3uhp2u3ih4pt9u2hp9uhp',
+        interactions
+      );
       // Iterate over the interactions and determine which pieces of content
       // has more likes than unlikes
       interactions.forEach(({ operation, relatedEntityId }) => {
@@ -271,13 +277,9 @@ export const resolver = {
       });
 
       // Grab content related to user's interactions
-      const getUserContentFromInteractions = itemIds.map((id) => {
-        try {
-          return dataSources.ContentItem.getFromId(id);
-        } catch (e) {
-          throw e;
-        }
-      });
+      const getUserContentFromInteractions = itemIds.map((id) =>
+        dataSources.ContentItem.getFromId(id)
+      );
 
       const resolveUserContentFromInteractions = await Promise.all(
         getUserContentFromInteractions
@@ -285,43 +287,11 @@ export const resolver = {
 
       // Determine the isLiked value on contentitems and create an obj that we
       // can merge with our main set of data later
-      const calculateIsLikedOnContentItems = uniqBy(
-        resolveUserContentFromInteractions,
-        'relatedEntityId'
-      ).map(async ({ id }) => {
-        try {
-          const interaction = await dataSources.Interactions.getForContentItem({
-            contentItemId: id,
-          });
-          const likes = await interaction.filter(
-            (item) => item.operation === 'Like'
-          ).length;
-          const unlike = await interaction.filter(
-            (item) => item.operation === 'Unlike'
-          ).length;
-
-          return { id, isLiked: likes > unlike };
-        } catch (e) {
-          throw e;
-        }
-      });
-      const resolveIsLikedCalculations = await Promise.all(
-        calculateIsLikedOnContentItems
+      const calculateIsLikedOnContentItems = resolveUserContentFromInteractions.map(
+        (item) => ({ ...item, isLiked: true })
       );
 
-      // Join both arrays based on the id, and add the newly generated
-      // isLiked prop
-      const joinedContentArray = (arr1, arr2) =>
-        map(arr1, (obj) => assign(obj, find(arr2, { isLiked: true })));
-
-      // Remove duplicates.
-      return uniqBy(
-        joinedContentArray(
-          resolveUserContentFromInteractions,
-          resolveIsLikedCalculations
-        ),
-        'id'
-      );
+      return calculateIsLikedOnContentItems;
     },
   },
   UniversalContentItem: {
