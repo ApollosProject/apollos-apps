@@ -19,8 +19,8 @@ const Scripture = ({ references = [] }) => (
       <Query query={getScripture} variables={{ ref }} key={ref}>
         {({ loading, data }) => (
           <Item
-            reference={get(data, 'reference', '')}
-            content={get(data, 'content', '')}
+            reference={get(data, 'scripture.reference', '')}
+            content={get(data, 'scripture.content', '')}
             isLoading={loading}
           />
         )}

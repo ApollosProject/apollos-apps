@@ -3,8 +3,8 @@ import gql from 'graphql-tag';
 export default gql`
   query GetScripture($query: String!) {
     scripture(query: $query) {
-      query
-      html
+      reference
+      content
     }
   }
 `;
