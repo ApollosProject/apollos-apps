@@ -502,14 +502,6 @@ Object {
 }
 `;
 
-exports[`UniversalContentItem gets all user liked content 1`] = `
-Object {
-  "data": Object {
-    "getAllLikedContent": Array [],
-  },
-}
-`;
-
 exports[`UniversalContentItem properly handles empty attribute values 1`] = `
 Object {
   "data": Object {

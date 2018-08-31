@@ -69,4 +69,19 @@ describe('Interactions', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
+
+  it('gets all user liked content', async () => {
+    const query = `
+      query {
+        getAllLikedContent {
+          id
+          title
+          isLiked
+        }
+      }
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
 });
