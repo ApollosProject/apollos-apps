@@ -9,11 +9,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
 
 import { getVideoState } from './queries';
-import {
-  pause as pauseMutation,
-  updateProgress,
-  updateDuration,
-} from './mutations';
+import { pause as pauseMutation } from './mutations';
 
 const styles = StyleSheet.create({
   animatedPosterImage: {
@@ -46,23 +42,11 @@ class VideoWindow extends PureComponent {
     this.props.client.mutate({ mutation: pauseMutation });
   };
 
-  handleProgress = (progress) => {
-    this.props.client.mutate({
-      mutation: updateProgress,
-      variables: progress,
-    });
-  };
-
-  handleLoad = ({ duration }) => {
+  handleLoad = () => {
     Animated.spring(this.loadingOverlay, {
       toValue: 0,
       useNativeDriver: true,
     }).start();
-
-    this.props.client.mutate({
-      mutation: updateDuration,
-      variables: { duration },
-    });
   };
 
   handleLoadStart = () => {
@@ -92,8 +76,6 @@ class VideoWindow extends PureComponent {
         onEnd={this.handlePause}
         onError={this.handlePause}
         resizeMode={'contain'}
-        onProgress={this.handleProgress}
-        progressUpdateInterval={1000}
         onLoadStart={this.handleLoadStart}
         onLoad={this.handleLoad}
         style={StyleSheet.absoluteFill}

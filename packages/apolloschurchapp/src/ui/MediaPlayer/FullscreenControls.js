@@ -19,8 +19,6 @@ import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 import Icon from 'apolloschurchapp/src/ui//Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
-import Seeker from './Seeker';
-
 import { getControlState } from './queries';
 import { play, pause, exitFullscreen } from './mutations';
 
@@ -53,8 +51,6 @@ const PlayControls = styled(({ theme }) => ({
   alignItems: 'center',
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(PaddedView);
-
-const PlayHead = styled({ paddingVertical: 0 })(PaddedView);
 
 const Titles = styled({
   alignItems: 'center',
@@ -200,9 +196,6 @@ class FullscreenControls extends PureComponent {
                 </UpperControl>
               </Touchable>
               <LowerControl>
-                <PlayHead>
-                  <Seeker />
-                </PlayHead>
                 <PlayControls>
                   <IconSm disabled name="shuffle" />
                   <IconMd disabled name="skip-previous" />
