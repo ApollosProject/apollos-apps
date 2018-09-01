@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View, Animated, StyleSheet } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
+import { Platform, View, Animated, StyleSheet } from 'react-native';
 import { Mutation, Query } from 'react-apollo';
 
 import styled from 'apolloschurchapp/src/ui/styled';
@@ -33,9 +32,8 @@ const styles = StyleSheet.create({
 });
 
 const TrackInfoTouchable = styled(({ theme }) => ({
-  backgroundColor: theme.colors.lightPrimary,
-  width: '100%',
-  height: '100%',
+  backgroundColor: theme.colors.white,
+  flex: 1,
 }))(Touchable);
 
 const TrackInfo = styled(({ theme }) => ({
@@ -52,15 +50,23 @@ const TrackName = styled(({ theme }) => ({
 
 const TrackArtist = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
+  marginTop: -2.5,
+  opacity: 0.7,
   overflow: 'hidden',
 }))(H6);
 
-const Container = styled({
-  overflow: 'hidden',
+const Container = styled(({ theme }) => ({
   height: MINI_PLAYER_HEIGHT,
   flexDirection: 'row',
   justifyContent: 'flex-start',
-})(View);
+  overflow: 'hidden',
+  borderRadius: theme.sizing.borderRadius,
+}))(View);
+
+const Shadow = styled(({ theme }) => ({
+  borderRadius: theme.sizing.borderRadius,
+  ...Platform.select(theme.shadows.default),
+}))(View);
 
 const VideoSpacer = styled(({ isVideo }) => ({
   height: MINI_PLAYER_HEIGHT,
@@ -76,22 +82,18 @@ const Controls = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  backgroundColor: theme.colors.lightPrimary,
-}))(Container);
-
-const StyledSafeAreaView = styled(({ theme }) => ({
-  backgroundColor: theme.colors.lightPrimary,
-}))(SafeAreaView);
+}))(View);
 
 const MiniSeeker = styled({
   position: 'absolute',
   left: 0,
   right: 0,
-  top: 0,
+  bottom: 0,
 })(Seeker);
 
 const StyledIcon = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
+  size: theme.sizing.baseUnit * 1.25,
 }))(Icon);
 
 /**
@@ -118,62 +120,60 @@ class MiniControls extends Component {
       overshootClamping: true,
       useNativeDriver: true,
     }).start();
-    return [
-      <Mutation key="mutation" mutation={goFullscreenMutation}>
+    return (
+      <Mutation mutation={goFullscreenMutation}>
         {(goFullscreen) => (
-          <Container>
-            <Mutation mutation={dismissMutation}>
-              {(dismiss) => (
-                <Touchable
-                  onPress={() => (isPlaying ? goFullscreen() : dismiss())}
-                >
-                  <VideoSpacer isVideo={isVideo}>
-                    <Animated.View
-                      style={[
-                        styles.animatedDismissContainer,
-                        { opacity: this.dismissAnimator },
-                      ]}
-                    >
-                      <StyledIcon name="close" />
-                    </Animated.View>
-                  </VideoSpacer>
-                </Touchable>
-              )}
-            </Mutation>
-            <TrackInfoTouchable onPress={() => goFullscreen()}>
-              <TrackInfo>
-                <TrackName>{title}</TrackName>
-                <TrackArtist>{artist}</TrackArtist>
-              </TrackInfo>
-            </TrackInfoTouchable>
-            <Controls>
-              {isPlaying ? (
-                <Mutation mutation={pauseMutation}>
-                  {(pause) => (
-                    <Touchable onPress={() => pause()}>
-                      <StyledIcon name="pause" />
-                    </Touchable>
-                  )}
-                </Mutation>
-              ) : (
-                <Mutation mutation={playMutation}>
-                  {(play) => (
-                    <Touchable onPress={() => play()}>
-                      <StyledIcon name="play" />
-                    </Touchable>
-                  )}
-                </Mutation>
-              )}
-            </Controls>
-            <MiniSeeker minimal />
-          </Container>
+          <Shadow>
+            <Container>
+              <Mutation mutation={dismissMutation}>
+                {(dismiss) => (
+                  <Touchable
+                    onPress={() => (isPlaying ? goFullscreen() : dismiss())}
+                  >
+                    <VideoSpacer isVideo={isVideo}>
+                      <Animated.View
+                        style={[
+                          styles.animatedDismissContainer,
+                          { opacity: this.dismissAnimator },
+                        ]}
+                      >
+                        <StyledIcon name="close" />
+                      </Animated.View>
+                    </VideoSpacer>
+                  </Touchable>
+                )}
+              </Mutation>
+              <TrackInfoTouchable onPress={() => goFullscreen()}>
+                <TrackInfo>
+                  <TrackName>{title}</TrackName>
+                  <TrackArtist>{artist}</TrackArtist>
+                </TrackInfo>
+              </TrackInfoTouchable>
+              <Controls>
+                {isPlaying ? (
+                  <Mutation mutation={pauseMutation}>
+                    {(pause) => (
+                      <Touchable onPress={() => pause()}>
+                        <StyledIcon name="pause" />
+                      </Touchable>
+                    )}
+                  </Mutation>
+                ) : (
+                  <Mutation mutation={playMutation}>
+                    {(play) => (
+                      <Touchable onPress={() => play()}>
+                        <StyledIcon name="play" />
+                      </Touchable>
+                    )}
+                  </Mutation>
+                )}
+              </Controls>
+              <MiniSeeker minimal />
+            </Container>
+          </Shadow>
         )}
-      </Mutation>,
-      <StyledSafeAreaView
-        key="safearea"
-        forceInset={{ bottom: 'always', top: 'never' }}
-      />,
-    ];
+      </Mutation>
+    );
   };
 
   render() {

@@ -26,9 +26,9 @@ const TimeText = styled({
 
 const Track = styled(({ theme, minimal }) => ({
   backgroundColor: minimal
-    ? theme.colors.darkTertiary
+    ? theme.colors.transparent
     : theme.colors.darkSecondary,
-  height: minimal ? StyleSheet.hairlineWidth : theme.sizing.borderRadius,
+  height: theme.sizing.borderRadius,
   borderRadius: minimal ? 0 : theme.sizing.borderRadius,
   overflow: 'hidden',
   position: 'absolute',

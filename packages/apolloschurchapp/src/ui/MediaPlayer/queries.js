@@ -4,7 +4,6 @@ const getMediaPlayerVisibility = gql`
   query mediaPlayerVisibility {
     mediaPlayer @client {
       isVisible
-      isFullscreen
     }
   }
 `;

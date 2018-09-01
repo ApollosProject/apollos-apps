@@ -21,10 +21,16 @@ import { getFullVisibilityState } from './queries';
 import { exitFullscreen, goFullscreen } from './mutations';
 
 const VideoSizer = styled(
-  ({ isFullscreen, isVideo }) =>
+  ({ isFullscreen, isVideo, theme }) =>
     isFullscreen
       ? StyleSheet.absoluteFill
-      : { height: MINI_PLAYER_HEIGHT, aspectRatio: isVideo ? 16 / 9 : 1 }
+      : {
+          height: MINI_PLAYER_HEIGHT,
+          borderTopLeftRadius: theme.sizing.borderRadius,
+          borderBottomLeftRadius: theme.sizing.borderRadius,
+          overflow: 'hidden',
+          aspectRatio: isVideo ? 16 / 9 : 1,
+        }
 )(View);
 
 /**
@@ -77,7 +83,9 @@ class CoverPlayer extends Component {
 
   coverStyle = [
     StyleSheet.absoluteFill,
-    { transform: [{ translateY: this.coverTranslateY }] },
+    {
+      transform: [{ translateY: this.coverTranslateY }],
+    },
   ];
 
   miniControlsAnimation = {
@@ -85,7 +93,6 @@ class CoverPlayer extends Component {
       inputRange: [0, 0.1],
       outputRange: [1, 0],
     }),
-    transform: [{ translateY: this.miniControlsTranslateY }],
   };
 
   fullscreenControlsAnimation = [
@@ -163,8 +170,10 @@ class CoverPlayer extends Component {
       <Animated.View
         key="cover"
         onLayout={this.handleCoverLayout}
-        style={this.coverStyle}
-        {...(Platform.OS !== 'android' ? this.panResponder.panHandlers : {})}
+        style={StyleSheet.absoluteFill}
+        {...(Platform.OS !== 'android' && isFullscreen
+          ? this.panResponder.panHandlers
+          : {})}
       >
         <VideoSizer
           isFullscreen={isFullscreen}
@@ -190,7 +199,13 @@ class CoverPlayer extends Component {
       );
     }
 
-    return coverFlow;
+    return (
+      <Animated.View
+        style={[this.coverStyle, { margin: isFullscreen ? 0 : 10 }]}
+      >
+        {coverFlow}
+      </Animated.View>
+    );
   };
 
   render() {
