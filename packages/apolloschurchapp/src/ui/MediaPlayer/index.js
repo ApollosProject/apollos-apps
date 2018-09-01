@@ -5,6 +5,8 @@ import CoverPlayer from './CoverPlayer';
 
 import { getMediaPlayerVisibility } from './queries';
 
+export { MINI_PLAYER_HEIGHT } from './MiniControls';
+
 /**
  * Selectively renders CoverPlayer component is MediaPlayer is visible
  */

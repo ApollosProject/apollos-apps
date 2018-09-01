@@ -10,6 +10,7 @@ import {
 import PropTypes from 'prop-types';
 import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
+import DeviceInfo from 'react-native-device-info';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 
@@ -32,6 +33,9 @@ const VideoSizer = styled(
           aspectRatio: isVideo ? 16 / 9 : 1,
         }
 )(View);
+
+const isPhoneX = DeviceInfo.getModel() === 'iPhone X';
+export const BOTTOM_OFFSET = isPhoneX ? 25 : 10;
 
 /**
  * CoverPlayer is a animating media player that transitions between
@@ -201,7 +205,13 @@ class CoverPlayer extends Component {
 
     return (
       <Animated.View
-        style={[this.coverStyle, { margin: isFullscreen ? 0 : 10 }]}
+        style={[
+          this.coverStyle,
+          {
+            margin: isFullscreen ? 0 : 10,
+            marginBottom: isFullscreen ? 0 : BOTTOM_OFFSET,
+          },
+        ]}
       >
         {coverFlow}
       </Animated.View>

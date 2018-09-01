@@ -14,14 +14,6 @@ const TabNavigator = createBottomTabNavigator(
   },
   {
     tabBarComponent: TabBar,
-    tabBarOptions: {
-      showLabel: false,
-      activeTintColor: '#17B582', // TODO: get from theme
-      inactiveTintColor: '#A5A5A5', // TODO: get from theme
-      style: {
-        backgroundColor: 'white',
-      },
-    },
   }
 );
 
