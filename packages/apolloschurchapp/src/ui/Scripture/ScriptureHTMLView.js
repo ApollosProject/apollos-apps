@@ -1,33 +1,38 @@
 import React from 'react';
 import { withProps } from 'recompose';
-import { Platform, Text, View } from 'react-native';
+import { Text } from 'react-native';
 
 import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import defaultRenderer, {
   wrapTextChildren,
 } from 'apolloschurchapp/src/ui/HTMLView/defaultRenderer';
 import Paragraph from 'apolloschurchapp/src/ui/typography/Paragraph';
-import { H6, BodyText } from 'apolloschurchapp/src/ui/typography';
+import { H4, H6, BodyText } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 
-const BlockIndent = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit / 2,
-  paddingLeft: theme.sizing.baseUnit / 2,
-}))(View);
-
+// const BlockIndent = styled(({ theme }) => ({
+//   paddingTop: theme.sizing.baseUnit / 2,
+//   paddingLeft: theme.sizing.baseUnit / 2,
+// }))(View);
+//
 const RedLetters = styled(({ theme }) => ({
   color: theme.colors.wordOfChrist,
 }))(Text);
 
 const NumText = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
-  ...Platform.select({
-    android: {
-      // taken from BodyText so NumText shares the same baseline.
-      lineHeight: theme.helpers.verticalRhythm(1.112, 1.625),
-    },
-  }),
+  lineHeight: theme.helpers.verticalRhythm(1, 1.625),
+  // ...Platform.select({
+  //   android: {
+  //     // taken from BodyText so NumText shares the same baseline.
+  //     lineHeight: theme.helpers.verticalRhythm(1.112, 1.625),
+  //   },
+  // }),
 }))(H6);
+
+const HeavyText = styled(({ theme }) => ({
+  lineHeight: theme.helpers.verticalRhythm(2),
+}))(H4);
 
 const renderer = (node, { children, ...other }) => {
   // eslint-disable-line
@@ -35,43 +40,60 @@ const renderer = (node, { children, ...other }) => {
   // this function only needs to handle the cases that are unique to scripture.
   const className = (node && node.attribs && node.attribs.class) || '';
 
-  if (className.includes('chapter-num') || className.includes('verse-num')) {
+  if (className.includes('v')) {
     /* TODO: a single space lives here to temporarily space verse numbers when they are not at the
      * beginning of a sentence or paragraph. It affects all instences (albeit less noticably in
      * somecases) so a more procise fix in the future is prefered.
      */
-    return <NumText> {children}</NumText>;
+    return <NumText> {children} </NumText>;
   }
 
-  if (className.includes('line-group')) {
+  if (className.includes('sp') || className.includes('d')) {
+    return <HeavyText>{children}</HeavyText>;
+  }
+
+  if (className.includes('q1')) {
+    return <BodyText>{children}</BodyText>;
+  }
+
+  if (className.includes('q2')) {
     return (
       <BodyText>
+        {'     '}
         {children}
-        {'\n'}
       </BodyText>
     );
   }
 
-  if (className.includes('block-indent')) {
-    // todo
-    return <BlockIndent>{children}</BlockIndent>;
-  }
-
-  if (className.includes('indent')) {
-    // todo
-    return (
-      <Text>
-        {'     '}
-        {children}
-      </Text>
-    );
-  }
-
-  if (className.includes('small-caps')) {
-    return <Text>{children[0].props.children.toUpperCase()}</Text>;
-  }
-
-  if (className.includes('woc')) {
+  // if (className.includes('line-group')) {
+  //   return (
+  //     <BodyText>
+  //       {children}
+  //       {'\n'}
+  //     </BodyText>
+  //   );
+  // }
+  //
+  // if (className.includes('block-indent')) {
+  //   // todo
+  //   return <BlockIndent>{children}</BlockIndent>;
+  // }
+  //
+  // if (className.includes('indent')) {
+  //   // todo
+  //   return (
+  //     <Text>
+  //       {'     '}
+  //       {children}
+  //     </Text>
+  //   );
+  // }
+  //
+  // if (className.includes('small-caps')) {
+  //   return <Text>{children[0].props.children.toUpperCase()}</Text>;
+  // }
+  //
+  if (className.includes('wj')) {
     return <RedLetters>{children}</RedLetters>;
   }
 

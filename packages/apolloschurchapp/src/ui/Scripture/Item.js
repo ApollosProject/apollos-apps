@@ -10,8 +10,6 @@ import ScriptureHTMLView from './ScriptureHTMLView';
 const Item = ({ reference, content, isLoading }) => (
   <View>
     <H4>
-      {' '}
-      {/* wrapping text element provides unified baseline */}
       <H4>{reference}</H4> <H6>WEB</H6>
     </H4>
     <Placeholder.Paragraph
