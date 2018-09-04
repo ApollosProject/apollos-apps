@@ -75,6 +75,14 @@ class VideoWindow extends PureComponent {
 
   renderVideo = ({ data: { mediaPlayer = {} } = {} }) => {
     if (!get(mediaPlayer, 'currentTrack.mediaSource')) return null;
+
+    const { currentTime } = mediaPlayer;
+    if (currentTime && currentTime !== this.lastCurrentTime && this.video) {
+      this.video.seek(currentTime);
+    }
+
+    this.lastCurrentTime = currentTime;
+
     return [
       <Video
         ref={this.setVideoRef}

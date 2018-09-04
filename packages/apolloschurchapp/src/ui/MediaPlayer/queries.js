@@ -8,6 +8,14 @@ const getMediaPlayerVisibility = gql`
   }
 `;
 
+const getMediaPlayerIsPlaying = gql`
+  query mediaPlayerVisibility {
+    mediaPlayer @client {
+      isPlaying
+    }
+  }
+`;
+
 const getFullVisibilityState = gql`
   query fullVisibilityState {
     mediaPlayer @client {
@@ -48,6 +56,7 @@ const getVideoState = gql`
         id
         isVideo
       }
+      currentTime
       isPlaying
     }
   }
@@ -85,6 +94,7 @@ const getTotalTime = gql`
 `;
 
 export {
+  getMediaPlayerIsPlaying,
   getMediaPlayerVisibility,
   getFullVisibilityState,
   getControlState,

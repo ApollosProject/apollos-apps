@@ -48,23 +48,9 @@ const exitFullscreen = gql`
   }
 `;
 
-const updateProgress = gql`
-  mutation updateProgress(
-    $currentTime: Float
-    $playableDuration: Float
-    $seekableDuration: Float
-  ) {
-    mediaPlayerNotifyProgress(
-      currentTime: $currentTime
-      playableDuration: $playableDuration
-      seekableDuration: $seekableDuration
-    ) @client
-  }
-`;
-
-const updateDuration = gql`
-  mutation updateDuration($duration: Float) {
-    mediaPlayerNotifyProgress(duration: $duration) @client
+const updatePlayhead = gql`
+  mutation mediaPlayerSetPlayhead($currentTime: Float) {
+    mediaPlayerSetPlayhead(currentTime: $currentTime) @client
   }
 `;
 
@@ -75,6 +61,5 @@ export {
   pause,
   dismiss,
   exitFullscreen,
-  updateProgress,
-  updateDuration,
+  updatePlayhead,
 };

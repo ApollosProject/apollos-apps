@@ -23,6 +23,8 @@ import Seeker from './Seeker';
 import { getControlState } from './queries';
 import { play, pause, exitFullscreen } from './mutations';
 
+import { ControlsConsumer } from './PlayheadState';
+
 const Background = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
   colors: [
@@ -164,6 +166,18 @@ class FullscreenControls extends PureComponent {
     this.closeTimeout = setTimeout(this.handleControlVisibility, 5000);
   };
 
+  renderSkipForward = ({ skip }) => (
+    <Touchable onPress={() => skip(30)}>
+      <IconMd name="skip-next" />
+    </Touchable>
+  );
+
+  renderSkipBack = ({ skip }) => (
+    <Touchable onPress={() => skip(-30)}>
+      <IconMd name="skip-previous" />
+    </Touchable>
+  );
+
   renderFullscreenControls = ({ data: { mediaPlayer = {} } = {} }) => {
     this.isVideo = get(mediaPlayer, 'currentTrack.isVideo');
     this.isPlaying = mediaPlayer.isPlaying;
@@ -204,7 +218,7 @@ class FullscreenControls extends PureComponent {
                 </PlayHead>
                 <PlayControls>
                   <IconSm disabled name="shuffle" />
-                  <IconMd disabled name="skip-previous" />
+                  <ControlsConsumer>{this.renderSkipBack}</ControlsConsumer>
                   {mediaPlayer.isPlaying ? (
                     <Touchable onPress={this.handlePause}>
                       <IconLg name="pause" />
@@ -214,7 +228,7 @@ class FullscreenControls extends PureComponent {
                       <IconLg name="play" />
                     </Touchable>
                   )}
-                  <IconMd disabled name="skip-next" />
+                  <ControlsConsumer>{this.renderSkipForward}</ControlsConsumer>
                   <IconSm disabled name="repeat" />
                 </PlayControls>
               </LowerControl>

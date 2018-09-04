@@ -13,7 +13,7 @@ export const schema = `
   type Mutation {
     logout
     mediaPlayerUpdateState(isPlaying: Boolean, isFullscreen: Boolean, isVisible: Boolean): Boolean
-    mediaPlayerNotifyProgress(currentTime: Float, playableDuration: Float, seekableDuration: Float, duration: Float): Boolean
+    mediaPlayerSetPlayhead(currentTime: Float): Boolean
     mediaPlayerPlayNow(
       parentId: ID,
       mediaSource: VideoMediaSource!,
@@ -30,7 +30,7 @@ export const schema = `
     isPlaying: Boolean
     isFullscreen: Boolean
     isVisible: Boolean
-    progress: MediaPlayerProgress
+    currentTime: Float
   }
 
   type MediaPlayerProgress {
@@ -59,7 +59,7 @@ export const defaults = {
     isPlaying: false,
     isFullscreen: false,
     isVisible: false,
-    progress: null,
+    currentTime: 0,
   },
 };
 
@@ -103,6 +103,7 @@ export const resolvers = {
           ? true
           : (mediaPlayer && mediaPlayer.isFullscreen) || false,
         currentTrack: track,
+        currentTime: 0,
       };
 
       if (
@@ -119,7 +120,7 @@ export const resolvers = {
         newMediaPlayerState.progress = null;
         trackId += 1;
       }
-      console.log({ newMediaPlayerState });
+
       cache.writeData({
         query,
         data: {
@@ -156,20 +157,11 @@ export const resolvers = {
       });
       return null;
     },
-    mediaPlayerNotifyProgress: (
-      root,
-      { currentTime, playableDuration, seekableDuration, duration },
-      { cache }
-    ) => {
+    mediaPlayerSetPlayhead: (root, { currentTime }, { cache }) => {
       const query = gql`
         query {
           mediaPlayer @client {
-            progress {
-              currentTime
-              playableDuration
-              seekableDuration
-              duration
-            }
+            currentTime
           }
         }
       `;
@@ -179,20 +171,8 @@ export const resolvers = {
         data: {
           mediaPlayer: {
             __typename: 'MediaPlayerState',
-            progress: {
-              currentTime:
-                currentTime || get(mediaPlayer.progress, 'currentTime') || 0,
-              playableDuration:
-                playableDuration ||
-                get(mediaPlayer.progress, 'playableDuration') ||
-                0,
-              seekableDuration:
-                seekableDuration ||
-                get(mediaPlayer.progress, 'seekableDuration') ||
-                0,
-              duration: duration || get(mediaPlayer.progress, 'duration') || 0,
-              __typename: 'MediaPlayerProgress',
-            },
+            currentTime:
+              currentTime || get(mediaPlayer.progress, 'currentTime') || 0,
           },
         },
       });

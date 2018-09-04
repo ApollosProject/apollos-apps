@@ -1,5 +1,10 @@
 import React, { createContext, Component } from 'react';
 import { Animated } from 'react-native';
+import { Query, withApollo } from 'react-apollo';
+import PropTypes from 'prop-types';
+
+import { getMediaPlayerIsPlaying } from './queries';
+import { updatePlayhead } from './mutations';
 
 const defaultState = {
   duration: new Animated.Value(1),
@@ -14,17 +19,25 @@ const PlayheadContext = createContext(defaultState);
 
 const PlayheadControls = createContext(controlState);
 
-export class Provider extends Component {
+class ProviderWithoutApollo extends Component {
+  static propTypes = {
+    client: PropTypes.shape({
+      mutate: PropTypes.func,
+    }),
+  };
+
   state = defaultState;
 
   get controlState() {
     return {
       onLoad: this.handleLoad,
       onProgress: this.handleProgress,
+      skip: this.skip,
     };
   }
 
   handleLoad = ({ duration }) => {
+    this.duration = duration;
     this.state.duration.setValue(duration);
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
@@ -32,19 +45,58 @@ export class Provider extends Component {
   };
 
   handleProgress = ({ currentTime, playableDuration, seekableDuration }) => {
+    this.lastCurrentTime = currentTime;
     this.state.currentTime.setValue(currentTime);
     this.state.playableDuration.setValue(playableDuration);
     this.state.seekableDuration.setValue(seekableDuration);
   };
 
-  render() {
+  handlePause = () => {
+    this.props.client.mutate({
+      mutation: updatePlayhead,
+      variables: {
+        currentTime: this.lastCurrentTime,
+      },
+    });
+  };
+
+  skip = (secondsToSkip) => {
+    const currentTime = Math.min(
+      Math.max(this.lastCurrentTime + secondsToSkip, 0),
+      this.duration
+    );
+
+    this.props.client.mutate({
+      mutation: updatePlayhead,
+      variables: {
+        currentTime,
+      },
+    });
+  };
+
+  renderProviders = ({
+    data: { mediaPlayer: { isPlaying = false } = {} } = {},
+  }) => {
+    if (!isPlaying && this.wasPlaying) {
+      this.handlePause();
+    }
+    this.wasPlaying = isPlaying;
+
     return (
       <PlayheadControls.Provider value={this.controlState}>
         <PlayheadContext.Provider value={this.state} {...this.props} />
       </PlayheadControls.Provider>
     );
+  };
+
+  render() {
+    return (
+      <Query query={getMediaPlayerIsPlaying}>{this.renderProviders}</Query>
+    );
   }
 }
+
+export const Provider = withApollo(ProviderWithoutApollo);
 
 export const { Consumer: PlayheadConsumer } = PlayheadContext;
 export const { Consumer: ControlsConsumer } = PlayheadControls;
