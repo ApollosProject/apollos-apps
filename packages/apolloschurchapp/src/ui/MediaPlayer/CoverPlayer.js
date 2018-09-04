@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Dimensions,
   PanResponder,
+  Platform,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query, withApollo } from 'react-apollo';
@@ -180,6 +181,9 @@ class CoverPlayer extends Component {
         key="cover"
         onLayout={this.handleCoverLayout}
         style={StyleSheet.absoluteFill}
+        {...(Platform.OS !== 'android' && isFullscreen
+          ? this.panResponder.panHandlers
+          : {})}
       >
         <VideoSizer
           isFullscreen={isFullscreen}
