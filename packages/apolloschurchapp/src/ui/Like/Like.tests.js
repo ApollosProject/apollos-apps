@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { ThemeProvider } from 'apolloschurchapp/src/ui/theme';
+import Providers from 'apolloschurchapp/src/Providers';
 
 import Like from '.';
 
 describe('the Share component', () => {
   it('should render a Like', () => {
     const tree = renderer.create(
-      <ThemeProvider>
+      <Providers>
         <Like
           itemId={'abc'}
           sessionId={'123'}
@@ -16,14 +16,14 @@ describe('the Share component', () => {
           operation={'Like'}
           toggleLike={(data) => data}
         />
-      </ThemeProvider>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
 
   it('should render a UnLike', () => {
     const tree = renderer.create(
-      <ThemeProvider>
+      <Providers>
         <Like
           itemId={'abc'}
           sessionId={'123'}
@@ -31,7 +31,7 @@ describe('the Share component', () => {
           operation={'Unlike'}
           toggleLike={(data) => data}
         />
-      </ThemeProvider>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
