@@ -32,6 +32,8 @@ class VideoWindow extends PureComponent {
     client: PropTypes.shape({
       mutate: PropTypes.func,
     }),
+    onProgress: PropTypes.func,
+    onLoad: PropTypes.func,
   };
 
   loadingOverlay = new Animated.Value(1);
@@ -42,11 +44,22 @@ class VideoWindow extends PureComponent {
     this.props.client.mutate({ mutation: pauseMutation });
   };
 
-  handleLoad = () => {
+  handleProgress = (progress) => {
+    if (this.props.onProgress) this.props.onProgress(progress);
+  };
+
+  handleError = (...args) => {
+    console.log('player error', args);
+    this.handlePause();
+  };
+
+  handleLoad = ({ duration }) => {
     Animated.spring(this.loadingOverlay, {
       toValue: 0,
       useNativeDriver: true,
     }).start();
+
+    if (this.props.onLoad) this.props.onLoad({ duration });
   };
 
   handleLoadStart = () => {
@@ -74,10 +87,11 @@ class VideoWindow extends PureComponent {
         playWhenInactive
         onAudioBecomingNoisy={this.handlePause}
         onEnd={this.handlePause}
-        onError={this.handlePause}
+        onError={this.handleError}
         resizeMode={'contain'}
         onLoadStart={this.handleLoadStart}
         onLoad={this.handleLoad}
+        onProgress={this.handleProgress}
         style={StyleSheet.absoluteFill}
         repeat
         key="video"

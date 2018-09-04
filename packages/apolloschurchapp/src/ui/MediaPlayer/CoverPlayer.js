@@ -4,7 +4,6 @@ import {
   View,
   StyleSheet,
   Dimensions,
-  Platform,
   PanResponder,
 } from 'react-native';
 import PropTypes from 'prop-types';
@@ -20,6 +19,7 @@ import VideoWindow from './VideoWindow';
 
 import { getFullVisibilityState } from './queries';
 import { exitFullscreen, goFullscreen } from './mutations';
+import { Provider, ControlsConsumer } from './PlayheadState';
 
 const VideoSizer = styled(
   ({ isFullscreen, isVideo, theme }) =>
@@ -164,6 +164,11 @@ class CoverPlayer extends Component {
   renderCover = ({ data: { mediaPlayer = {} } = {} }) => {
     const { isFullscreen = false } = mediaPlayer;
 
+    const fullscreenStyles = {
+      margin: isFullscreen ? 0 : 10,
+      marginBottom: isFullscreen ? 0 : BOTTOM_OFFSET,
+    };
+
     Animated.spring(this.fullscreen, {
       toValue: isFullscreen ? 1 : 0,
       useNativeDriver: true,
@@ -175,15 +180,14 @@ class CoverPlayer extends Component {
         key="cover"
         onLayout={this.handleCoverLayout}
         style={StyleSheet.absoluteFill}
-        {...(Platform.OS !== 'android' && isFullscreen
-          ? this.panResponder.panHandlers
-          : {})}
       >
         <VideoSizer
           isFullscreen={isFullscreen}
           isVideo={get(mediaPlayer, 'currentTrack.isVideo')}
         >
-          <VideoWindow />
+          <ControlsConsumer>
+            {(controlHandlers) => <VideoWindow {...controlHandlers} />}
+          </ControlsConsumer>
         </VideoSizer>
         <Animated.View style={this.fullscreenControlsAnimation}>
           <FullscreenControls />
@@ -204,22 +208,18 @@ class CoverPlayer extends Component {
     }
 
     return (
-      <Animated.View
-        style={[
-          this.coverStyle,
-          {
-            margin: isFullscreen ? 0 : 10,
-            marginBottom: isFullscreen ? 0 : BOTTOM_OFFSET,
-          },
-        ]}
-      >
+      <Animated.View style={[this.coverStyle, fullscreenStyles]}>
         {coverFlow}
       </Animated.View>
     );
   };
 
   render() {
-    return <Query query={getFullVisibilityState}>{this.renderCover}</Query>;
+    return (
+      <Provider>
+        <Query query={getFullVisibilityState}>{this.renderCover}</Query>
+      </Provider>
+    );
   }
 }
 
