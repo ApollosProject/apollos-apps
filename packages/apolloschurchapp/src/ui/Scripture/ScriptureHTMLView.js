@@ -10,11 +10,6 @@ import Paragraph from 'apolloschurchapp/src/ui/typography/Paragraph';
 import { H4, H6, BodyText } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 
-// const BlockIndent = styled(({ theme }) => ({
-//   paddingTop: theme.sizing.baseUnit / 2,
-//   paddingLeft: theme.sizing.baseUnit / 2,
-// }))(View);
-//
 const RedLetters = styled(({ theme }) => ({
   color: theme.colors.wordOfChrist,
 }))(Text);
@@ -22,12 +17,6 @@ const RedLetters = styled(({ theme }) => ({
 const NumText = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
   lineHeight: theme.helpers.verticalRhythm(1, 1.625),
-  // ...Platform.select({
-  //   android: {
-  //     // taken from BodyText so NumText shares the same baseline.
-  //     lineHeight: theme.helpers.verticalRhythm(1.112, 1.625),
-  //   },
-  // }),
 }))(H6);
 
 const HeavyText = styled(({ theme }) => ({
@@ -35,7 +24,6 @@ const HeavyText = styled(({ theme }) => ({
 }))(H4);
 
 const renderer = (node, { children, ...other }) => {
-  // eslint-disable-line
   // the defaultRenderer support several basic elements out of the box,
   // this function only needs to handle the cases that are unique to scripture.
   const className = (node && node.attribs && node.attribs.class) || '';
@@ -65,34 +53,6 @@ const renderer = (node, { children, ...other }) => {
     );
   }
 
-  // if (className.includes('line-group')) {
-  //   return (
-  //     <BodyText>
-  //       {children}
-  //       {'\n'}
-  //     </BodyText>
-  //   );
-  // }
-  //
-  // if (className.includes('block-indent')) {
-  //   // todo
-  //   return <BlockIndent>{children}</BlockIndent>;
-  // }
-  //
-  // if (className.includes('indent')) {
-  //   // todo
-  //   return (
-  //     <Text>
-  //       {'     '}
-  //       {children}
-  //     </Text>
-  //   );
-  // }
-  //
-  // if (className.includes('small-caps')) {
-  //   return <Text>{children[0].props.children.toUpperCase()}</Text>;
-  // }
-  //
   if (className.includes('wj')) {
     return <RedLetters>{children}</RedLetters>;
   }
