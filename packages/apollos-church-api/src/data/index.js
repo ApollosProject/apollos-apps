@@ -39,6 +39,7 @@ export const schema = [
       currentUser: AuthenticatedUser
       liveStream: LiveStream
       scripture(query: String!): Scripture
+      getAllLikedContent: [ContentItem]
     }
 
     type Mutation {
