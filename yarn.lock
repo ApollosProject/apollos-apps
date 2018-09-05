@@ -2430,6 +2430,7 @@ apollo-utilities@^1.0.0, apollo-utilities@^1.0.1, apollo-utilities@^1.0.13, apol
     prettier "1.12.1"
     randomcolor "0.5.3"
     sanitize-html "1.18.2"
+    universal-analytics "^0.4.17"
     url-join "4.0.0"
     with-query "1.0.2"
 
@@ -10416,6 +10417,10 @@ react-native-compat@^1.0.0:
 react-native-custom-tabs@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/react-native-custom-tabs/-/react-native-custom-tabs-0.1.7.tgz#2dfb4028b0a443610d94792b2019810f68dde525"
+
+react-native-device-info@^0.22.5:
+  version "0.22.5"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-0.22.5.tgz#9b1882cbb030f2926cff77336e7cd2e87edf52bf"
 
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"

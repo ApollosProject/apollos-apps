@@ -10,8 +10,13 @@ const mockCurrentPerson = jest.fn().mockImplementation(() => ({
   lastName: 'Hampton',
 }));
 
-const mockNoPerson = () => throw new AuthenticationError();
-const mockOtherError = () => throw new Error("Some other error");
+const mockNoPerson = () => {
+  throw new AuthenticationError();
+};
+const mockOtherError = () => {
+  throw new Error('Some other error');
+};
+
 const clearMocks = () => {
   [mockUA, mockSend, mockEvent, Analytics, mockTrack, mockIdentify].forEach(
     (mock) => {
@@ -48,42 +53,42 @@ describe('Analytics Data Source', () => {
     process.env = OLD_ENV;
   });
 
-    it('must accept arbitrary interfaces', async () => {
-      const track = jest.fn();
-      const identify = jest.fn();
-      const fakeClient = {
-        track,
-        identify,
-        shouldTrack: true,
-        shouldIdentify: true,
-      }
-      const dataSource = new DataSource([
-        fakeClient
-      ]);
-      dataSource.initialize({ context: { dataSources: { Auth: AuthWithUser } } });
+  it('must accept arbitrary interfaces', async () => {
+    const track = jest.fn();
+    const identify = jest.fn();
+    const fakeClient = {
+      track,
+      identify,
+      shouldTrack: true,
+      shouldIdentify: true,
+    };
+    const dataSource = new DataSource([fakeClient]);
+    dataSource.initialize({ context: { dataSources: { Auth: AuthWithUser } } });
 
-      const resultTrack = await dataSource.track({
-         anonymousId: 'deviceId5', eventName: 'View Content',
-      })
-
-      const resultIdentify = await dataSource.identify({
-        anonymousId: 'deviceId5'
-      })
-
-      expect(resultTrack).toMatchSnapshot();
-      expect(track).toHaveBeenCalledTimes(1);
-      expect(track).toMatchSnapshot();
-
-      expect(resultIdentify).toMatchSnapshot();
-      expect(identify).toHaveBeenCalledTimes(1);
-      expect(identify).toMatchSnapshot();
+    const resultTrack = await dataSource.track({
+      anonymousId: 'deviceId5',
+      eventName: 'View Content',
     });
+
+    const resultIdentify = await dataSource.identify({
+      anonymousId: 'deviceId5',
+    });
+
+    expect(resultTrack).toMatchSnapshot();
+    expect(track).toHaveBeenCalledTimes(1);
+    expect(track).toMatchSnapshot();
+
+    expect(resultIdentify).toMatchSnapshot();
+    expect(identify).toHaveBeenCalledTimes(1);
+    expect(identify).toMatchSnapshot();
+  });
 
   describe('track', () => {
     it('must track an event with a name and no properties', async () => {
       const analytics = buildDataSource();
       const result = await analytics.track({
-        eventName: 'View Content', anonymousId: 'deviceId5',
+        eventName: 'View Content',
+        anonymousId: 'deviceId5',
       });
       expect(result).toMatchSnapshot();
       expect(mockTrack).toHaveBeenCalledTimes(1);
@@ -98,7 +103,7 @@ describe('Analytics Data Source', () => {
       delete process.env.APOLLOS_SEGMENT_KEY;
       const analytics = buildDataSource();
       const result = await analytics.track({
-        eventName: 'View Content'
+        eventName: 'View Content',
       });
       expect(result).toMatchSnapshot();
       expect(mockTrack).toHaveBeenCalledTimes(0);
@@ -112,7 +117,7 @@ describe('Analytics Data Source', () => {
       delete process.env.APOLLOS_GA_KEY;
       const analytics = buildDataSource();
       const result = await analytics.track({
-        eventName: 'View Content'
+        eventName: 'View Content',
       });
       expect(result).toMatchSnapshot();
       expect(mockTrack).toHaveBeenCalledTimes(1);
@@ -124,9 +129,9 @@ describe('Analytics Data Source', () => {
     it('must track an event with a name and properties', async () => {
       const analytics = buildDataSource();
       const result = await analytics.track({
-          eventName: 'View Content',
-          anonymousId: 'deviceId5',
-          properties: [{ field: 'ContentId', value: 7 }],
+        eventName: 'View Content',
+        anonymousId: 'deviceId5',
+        properties: [{ field: 'ContentId', value: 7 }],
       });
       expect(result).toMatchSnapshot();
       expect(mockTrack).toHaveBeenCalledTimes(1);
@@ -140,7 +145,7 @@ describe('Analytics Data Source', () => {
     it('must track without a user', async () => {
       const analytics = buildDataSource(AuthWithoutUser);
       const result = await analytics.track({
-        eventName: 'View Content'
+        eventName: 'View Content',
       });
       expect(result).toMatchSnapshot();
       expect(mockTrack).toHaveBeenCalledTimes(1);
@@ -154,20 +159,20 @@ describe('Analytics Data Source', () => {
     it('must reraise a non-auth Error', () => {
       const analytics = buildDataSource({ getCurrentPerson: mockOtherError });
       const result = analytics.track({
-        eventName: 'View Content'
+        eventName: 'View Content',
       });
       expect(result).rejects.toThrow();
 
       expect(mockSend).toHaveBeenCalledTimes(0);
       expect(mockTrack).toHaveBeenCalledTimes(0);
-    })
+    });
   });
 
   describe('identify', () => {
     it('must identify a user without traits', async () => {
       const analytics = buildDataSource();
       const result = await analytics.identify({
-        anonymousId: 'deviceId5'
+        anonymousId: 'deviceId5',
       });
       expect(result).toMatchSnapshot();
       expect(mockIdentify).toHaveBeenCalledTimes(1);
