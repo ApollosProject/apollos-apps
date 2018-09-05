@@ -10,7 +10,7 @@ export default class GoogleAnalytics {
   shouldTrack = true;
 
   identify({ anonymousId, userId, traits, context }) {
-    this.client.track({
+    this.client.identify({
       anonymousId,
       userId,
       traits,

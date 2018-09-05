@@ -1,11 +1,13 @@
 import { gql } from 'apollo-server';
 
 export default gql`
-  union AnalyticsValue = String | Float | Boolean | Integer
+  # Not supported right now...
+  # union AnalyticsValue = String | Float | Boolean | Int
+  scalar AnalyticsValue
 
   input AnalyticsMetaField {
     field: String!
-    value: AnalyticsValue!
+    value: AnalyticsValue
   }
 
   enum AnalyticsPlatform {
@@ -23,7 +25,7 @@ export default gql`
 
   input AnalyticsIdentifyInput {
     traits: [AnalyticsMetaField]
-    anonymousId: String
+    anonymousId: String!
     deviceInfo: AnalyticsDeviceInfo
   }
 

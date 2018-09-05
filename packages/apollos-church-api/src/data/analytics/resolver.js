@@ -1,8 +1,8 @@
 export default {
   Mutation: {
     identifySelf: (root, { input }, { dataSources: { Analytics } }) =>
-      Analytics.identify({ input }),
+      Analytics.identify({ ...input }),
     trackEvent: (root, { input }, { dataSources: { Analytics } }) =>
-      Analytics.track({ input }),
+      Analytics.track({ ...input }),
   },
 };
