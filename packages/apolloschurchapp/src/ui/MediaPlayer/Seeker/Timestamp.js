@@ -15,27 +15,52 @@ const TimeText = styled({
 
 export default class Timestamp extends PureComponent {
   static propTypes = {
-    time: PropTypes.instanceOf(Animated.Value),
+    time: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.instanceOf(Animated.Value),
+    ]),
+    offset: PropTypes.instanceOf(Animated.Value),
   };
 
   state = {
     time: 0,
+    offset: 0,
   };
 
   constructor(props) {
     super(props);
-    this.listen(props);
+    if (typeof props.time === 'number') {
+      this.state.time = props.time;
+    } else {
+      this.listen(props);
+    }
   }
 
   componentWillUpdate(newProps) {
     this.listen(newProps);
   }
 
-  listen = ({ time }) => {
+  listen = ({ time = 0, offset = 0 }) => {
     if (this.listener) this.props.time.removeListener(this.listener);
-    this.listener = time.addListener(({ value }) =>
-      this.setState({ time: value })
-    );
+    if (this.offsetListener) {
+      this.props.offset.removeListener(this.offsetListener);
+    }
+
+    if (!time.addListener) {
+      this.setState({ time });
+    } else {
+      this.listener = time.addListener(({ value }) =>
+        this.setState({ time: value })
+      );
+    }
+
+    if (!offset.addListener) {
+      this.setState({ offset });
+    } else if (offset) {
+      this.offsetListener = offset.addListener(({ value }) =>
+        this.setState({ offset: value })
+      );
+    }
   };
 
   timestamp = (time) => {
@@ -56,6 +81,8 @@ export default class Timestamp extends PureComponent {
   };
 
   render() {
-    return <TimeText>{this.timestamp(this.state.time)}</TimeText>;
+    return (
+      <TimeText>{this.timestamp(this.state.time + this.state.offset)}</TimeText>
+    );
   }
 }

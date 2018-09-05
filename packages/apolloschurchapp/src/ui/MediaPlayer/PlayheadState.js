@@ -7,7 +7,7 @@ import { getMediaPlayerIsPlaying } from './queries';
 import { updatePlayhead } from './mutations';
 
 const defaultState = {
-  duration: new Animated.Value(1),
+  duration: 1,
   currentTime: new Animated.Value(0),
   playableDuration: new Animated.Value(1),
   seekableDuration: new Animated.Value(1),
@@ -37,8 +37,7 @@ class ProviderWithoutApollo extends Component {
   }
 
   handleLoad = ({ duration }) => {
-    this.duration = duration;
-    this.state.duration.setValue(duration);
+    this.setState({ duration });
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
     this.state.seekableDuration.setValue(0);
@@ -63,10 +62,10 @@ class ProviderWithoutApollo extends Component {
   skip = (secondsToSkip) => {
     const currentTime = Math.min(
       Math.max(this.lastCurrentTime + secondsToSkip, 0),
-      this.duration
+      this.state.duration
     );
 
-    this.props.client.mutate({
+    return this.props.client.mutate({
       mutation: updatePlayhead,
       variables: {
         currentTime,

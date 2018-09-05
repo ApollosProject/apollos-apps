@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Animated, View, StyleSheet } from 'react-native';
+import { PanResponder, Animated, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 
-import { PlayheadConsumer } from '../PlayheadState';
+import { PlayheadConsumer, ControlsConsumer } from '../PlayheadState';
 import AnimatedTime, { TIME_TEXT_WIDTH } from './Timestamp';
 
 const Container = styled({
@@ -61,13 +61,33 @@ class Seeker extends PureComponent {
     style: PropTypes.any, // eslint-disable-line
   };
 
-  width = new Animated.Value(0);
+  state = {
+    width: 0,
+  };
 
-  offsetDriver = new Animated.Value(0); // todo: for scrubbing eventually
+  offsetDriver = new Animated.Value(0);
 
-  handleTrackContainerLayout = Animated.event([
-    { nativeEvent: { layout: { width: this.width } } },
-  ]);
+  offsetTimeDriver = new Animated.Value(0);
+
+  panResponder = PanResponder.create({
+    onStartShouldSetPanResponder: () => true,
+    onPanResponderMove: (e, { dx }) => {
+      this.offsetDriver.setValue(dx);
+      const moveAmount = dx / this.state.width;
+      const moveAmountInTime = moveAmount * this.props.duration;
+      this.offsetTimeDriver.setValue(moveAmountInTime);
+    },
+    onPanResponderRelease: async (e, { dx }) => {
+      const moveAmount = dx / this.state.width;
+      const moveAmountInTime = moveAmount * this.props.duration;
+      await this.props.skip(moveAmountInTime);
+
+      setTimeout(() => {
+        this.offsetDriver.setValue(0);
+        this.offsetTimeDriver.setValue(0);
+      }, 0);
+    },
+  });
 
   get trackBarOffset() {
     const progress = Animated.divide(
@@ -76,7 +96,7 @@ class Seeker extends PureComponent {
     );
 
     const progressInvert = Animated.subtract(1, progress);
-    const widthInvert = Animated.multiply(-1, this.width);
+    const widthInvert = Animated.multiply(-1, this.state.width);
     const position = Animated.multiply(progressInvert, widthInvert);
     return Animated.add(position, this.offsetDriver);
   }
@@ -100,6 +120,14 @@ class Seeker extends PureComponent {
     ];
   }
 
+  handleTrackContainerLayout = ({
+    nativeEvent: {
+      layout: { width, x },
+    },
+  }) => {
+    this.setState({ width, x });
+  };
+
   renderProgress = () => (
     <Animated.View
       style={[
@@ -117,7 +145,10 @@ class Seeker extends PureComponent {
     return (
       <Container style={this.props.style}>
         {!this.props.minimal ? (
-          <AnimatedTime time={this.props.currentTime} />
+          <AnimatedTime
+            time={this.props.currentTime}
+            offset={this.offsetTimeDriver}
+          />
         ) : null}
         <TrackContainer minimal={this.props.minimal}>
           <Track
@@ -127,7 +158,10 @@ class Seeker extends PureComponent {
             {this.renderProgress()}
           </Track>
           <Animated.View style={this.knobStyles}>
-            <Knob minimal={this.props.minimal} />
+            <Knob
+              minimal={this.props.minimal}
+              {...this.panResponder.panHandlers}
+            />
           </Animated.View>
         </TrackContainer>
         {!this.props.minimal ? (
@@ -139,9 +173,13 @@ class Seeker extends PureComponent {
 }
 
 const SeekerWithState = (props) => (
-  <PlayheadConsumer>
-    {(playhead) => <Seeker {...props} {...playhead} />}
-  </PlayheadConsumer>
+  <ControlsConsumer>
+    {(controls) => (
+      <PlayheadConsumer>
+        {(playhead) => <Seeker {...props} {...playhead} {...controls} />}
+      </PlayheadConsumer>
+    )}
+  </ControlsConsumer>
 );
 
 export default SeekerWithState;
