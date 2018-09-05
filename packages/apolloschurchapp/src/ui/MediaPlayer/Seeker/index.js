@@ -63,6 +63,8 @@ class Seeker extends PureComponent {
 
   state = {
     width: 0,
+    isSeeking: false,
+    timeAtSeekingStart: 0,
   };
 
   offsetDriver = new Animated.Value(0);
@@ -71,13 +73,33 @@ class Seeker extends PureComponent {
 
   panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
+    onPanResponderGrant: () => {
+      this.props.currentTime.stopAnimation((value) => {
+        this.setState({
+          isSeeking: true,
+          timeAtSeekingStart: value,
+        });
+      });
+    },
     onPanResponderMove: (e, { dx }) => {
-      this.offsetDriver.setValue(dx);
-      const moveAmount = dx / this.state.width;
+      let offset = dx;
+      const progressAtStart =
+        this.state.timeAtSeekingStart / this.props.duration;
+      const positionAtStart = progressAtStart * this.state.width;
+      offset = Math.min(this.state.width - positionAtStart, offset);
+      offset = Math.max(-positionAtStart, offset);
+
+      this.offsetDriver.setValue(offset);
+      const moveAmount = offset / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
       this.offsetTimeDriver.setValue(moveAmountInTime);
     },
     onPanResponderRelease: async (e, { dx }) => {
+      this.setState({
+        isSeeking: false,
+        timeAtSeekingStart: 0,
+      });
+
       const moveAmount = dx / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
       await this.props.skip(moveAmountInTime);
@@ -91,7 +113,9 @@ class Seeker extends PureComponent {
 
   get trackBarOffset() {
     const progress = Animated.divide(
-      this.props.currentTime,
+      this.state.isSeeking
+        ? this.state.timeAtSeekingStart
+        : this.props.currentTime,
       this.props.duration
     );
 
