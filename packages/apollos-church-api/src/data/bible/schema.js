@@ -7,6 +7,6 @@ export default gql`
   }
 
   extend type Query {
-    scripture(query: String!): ESVScripture
+    scripture(query: String!): Scripture
   }
 `;
