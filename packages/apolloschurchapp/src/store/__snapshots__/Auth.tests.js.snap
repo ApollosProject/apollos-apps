@@ -46,11 +46,11 @@ InMemoryCache {
     "data": Object {
       "$ROOT_QUERY.mediaPlayer": Object {
         "__typename": "MediaPlayerState",
+        "currentTime": 0,
         "currentTrack": null,
         "isFullscreen": false,
         "isPlaying": false,
         "isVisible": false,
-        "progress": null,
       },
       "ROOT_QUERY": Object {
         "authToken": null,
