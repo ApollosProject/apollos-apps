@@ -38,8 +38,8 @@ fetch.mockRockDataSourceAPI = () => {
     let { url } = request;
     url = decodeURI(url);
     if (!url.match(Constants.ROCK_API)) {
-      if (request.url.match('/passage/html')) {
-        return resolveWith(apolloDatasourceMocks.ESVScripture());
+      if (request.url.match('/api.scripture.api.bible/v1')) {
+        return resolveWith(apolloDatasourceMocks.Scripture());
       }
       return Promise.reject();
     }
