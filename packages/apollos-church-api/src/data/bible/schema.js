@@ -1,8 +1,9 @@
 import { gql } from 'apollo-server';
 
 export default gql`
-  type ESVScripture {
-    html: String
+  type Scripture {
+    reference: String
+    content: String
   }
 
   extend type Query {
