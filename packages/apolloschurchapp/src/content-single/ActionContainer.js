@@ -9,14 +9,14 @@ import getSessionId from 'apolloschurchapp/src/auth/getSessionId';
 import SideBySideView from 'apolloschurchapp/src/ui/SideBySideView';
 
 import createInteraction from './createInteraction';
-import getContentItem from './getContentItem';
+import getLikedContentItem from './getLikedContentItem';
 
 const ActionContainer = ({ content, itemId }) => (
   <SideBySideView>
     <Query query={getSessionId} fetchPolicy="cache-only">
       {({ data: { sessionId } }) =>
         sessionId ? (
-          <Query query={getContentItem} variables={{ itemId }}>
+          <Query query={getLikedContentItem} variables={{ itemId }}>
             {({
               data: {
                 node: { isLiked },
@@ -34,12 +34,12 @@ const ActionContainer = ({ content, itemId }) => (
                   }
                 ) => {
                   cache.writeQuery({
-                    query: getContentItem,
+                    query: getLikedContentItem,
                     data: { isLiked: operation === 'Like' },
                   });
                 }}
               >
-                {(createSession) => (
+                {(createNewInteraction) => (
                   <Like
                     itemId={itemId}
                     sessionId={sessionId}
@@ -47,7 +47,7 @@ const ActionContainer = ({ content, itemId }) => (
                     operation={isLiked ? 'Unlike' : 'Like'}
                     toggleLike={async (variables) => {
                       try {
-                        await createSession({ variables });
+                        await createNewInteraction({ variables });
                         await refetch();
                       } catch (e) {
                         console.log(e);
