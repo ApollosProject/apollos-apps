@@ -15,12 +15,12 @@ import getScripture from './getScripture';
 
 const Scripture = ({ references = [] }) => (
   <View>
-    {references.map((query) => (
+    {references.map((query) => console.log("query = ", query) || (
       <Query query={getScripture} variables={{ query }} key={query}>
         {({ loading, data }) => (
           <Item
             reference={get(data, 'scripture.reference', '')}
-            content={get(data, 'scripture.content', '')}
+            html={get(data, 'scripture.html', '')}
             isLoading={loading}
           />
         )}
