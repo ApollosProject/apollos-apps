@@ -5,6 +5,6 @@ export default {
   },
   Scripture: {
     reference: ({ data: { reference } = {} }) => reference,
-    content: ({ data: { content } = {} }) => content,
+    html: ({ data: { content } = {} }) => content,
   },
 };

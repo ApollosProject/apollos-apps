@@ -125,7 +125,7 @@ describe('UniversalContentItem', () => {
             id
             title
             scriptures {
-              content
+              html
             }
           }
         }
