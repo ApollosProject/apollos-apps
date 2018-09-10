@@ -89,7 +89,7 @@ export const schema = gql`
     sharing: SharableContentItem
     theme: Theme
     isLiked: Boolean
-    scriptures: ESVScripture
+    scriptures: Scripture
   }
 
   type Term {
