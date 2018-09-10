@@ -36,7 +36,7 @@ const VideoSizer = styled(
 )(View);
 
 const isPhoneX = DeviceInfo.getModel() === 'iPhone X';
-export const BOTTOM_OFFSET = isPhoneX ? 25 : 10;
+const BOTTOM_OFFSET = isPhoneX ? 25 : 10;
 
 /**
  * CoverPlayer is a animating media player that transitions between
@@ -228,4 +228,6 @@ class CoverPlayer extends Component {
   }
 }
 
-export default withApollo(CoverPlayer);
+const CoverPlayerWithData = withApollo(CoverPlayer);
+
+export { CoverPlayerWithData as default, BOTTOM_OFFSET };

@@ -19,7 +19,7 @@ import {
   pause as pauseMutation,
 } from './mutations';
 
-export const MINI_PLAYER_HEIGHT = 50;
+const MINI_PLAYER_HEIGHT = 50;
 
 const styles = StyleSheet.create({
   // eslint-disable-next-line react-native/no-color-literals
@@ -187,4 +187,4 @@ class MiniControls extends Component {
   }
 }
 
-export default MiniControls;
+export { MiniControls as default, MINI_PLAYER_HEIGHT };

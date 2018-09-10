@@ -95,7 +95,9 @@ class ProviderWithoutApollo extends Component {
   }
 }
 
-export const Provider = withApollo(ProviderWithoutApollo);
+const Provider = withApollo(ProviderWithoutApollo);
 
-export const { Consumer: PlayheadConsumer } = PlayheadContext;
-export const { Consumer: ControlsConsumer } = PlayheadControls;
+const { Consumer: PlayheadConsumer } = PlayheadContext;
+const { Consumer: ControlsConsumer } = PlayheadControls;
+
+export { Provider, PlayheadConsumer, ControlsConsumer };
