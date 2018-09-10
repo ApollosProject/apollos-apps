@@ -10,7 +10,7 @@ import * as Media from './media';
 import * as Auth from './auth';
 import * as LiveStream from './live';
 import * as Theme from './theme';
-import * as Scripture from './esv';
+import * as Scripture from './bible';
 import * as Interactions from './interactions';
 import * as Sharable from './sharable';
 
@@ -32,11 +32,7 @@ const data = {
 export const schema = [
   gql`
     type Query {
-      node(id: ID!): Node
-      userFeed(first: Int, after: String): ContentItemsConnection
-      contentChannels: [ContentChannel]
-      liveStream: LiveStream
-      scripture(query: String!): ESVScripture
+      _placeholder: Boolean # needed, empty schema defs aren't supported
     }
 
     type Mutation {

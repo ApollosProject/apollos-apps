@@ -1,6 +1,12 @@
 import { buildGetMock } from 'apollos-church-api/src/utils/testUtils';
 import Person from '../data-source';
 
+const auth = (dataSource) => ({
+  getCurrentPerson: buildGetMock(
+    { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+    dataSource
+  ),
+});
 describe('Person', () => {
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
@@ -26,18 +32,18 @@ describe('Person', () => {
 
   it("updates a user's profile attributes", () => {
     const dataSource = new Person();
-    dataSource.context = { rockCookie: 'fakeCookie' };
-    dataSource.get = buildGetMock(
-      { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
-      dataSource
-    );
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSource: { Auth },
+    };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile({
       field: 'FirstName',
       value: 'Nick',
     });
     expect(result).resolves.toMatchSnapshot();
-    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 

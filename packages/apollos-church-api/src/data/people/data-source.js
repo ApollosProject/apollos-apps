@@ -17,12 +17,7 @@ export default class Person extends RockApolloDataSource {
       .get();
 
   updateProfile = async ({ field, value }) => {
-    const { rockCookie } = this.context;
-    if (!rockCookie) throw new AuthenticationError('Must be logged in');
-
-    const currentPerson = await this.request('People/GetCurrentPerson').get({
-      options: { headers: { cookie: rockCookie } },
-    });
+    const currentPerson = await this.context.dataSources.Auth.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
