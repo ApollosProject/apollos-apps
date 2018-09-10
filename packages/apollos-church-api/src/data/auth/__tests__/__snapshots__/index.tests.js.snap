@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth User Registration creates new registration 1`] = `
+Object {
+  "data": Object {
+    "registerPerson": Object {
+      "user": Object {
+        "id": "AuthenticatedUser:057b0758543270d1cb21784cac4d3f5c",
+        "profile": Object {
+          "email": "isaac.hardy@newspring.cc",
+          "id": "Person:057b0758543270d1cb21784cac4d3f5c",
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Auth currentUser query queries current user when logged in 1`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "id": "AuthenticatedUser:057b0758543270d1cb21784cac4d3f5c",
+      "profile": Object {
+        "id": "Person:057b0758543270d1cb21784cac4d3f5c",
+      },
+    },
+  },
+}
+`;
+
+exports[`Auth currentUser query requires you to be logged in 1`] = `
+Object {
+  "data": Object {
+    "currentUser": null,
+  },
+  "errors": Array [
+    [GraphQLError: Must be logged in],
+  ],
+}
+`;
+
+exports[`Auth logs in a user 1`] = `
+Object {
+  "data": Object {
+    "authenticate": Object {
+      "user": Object {
+        "id": "AuthenticatedUser:057b0758543270d1cb21784cac4d3f5c",
+        "profile": Object {
+          "id": "Person:057b0758543270d1cb21784cac4d3f5c",
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Auth registers an auth token and passes the cookie on requests to rock 1`] = `
+Headers {
+  Symbol(map): Object {
+    "Authorization-Token": Array [
+      "some-rock-token",
+    ],
+    "Content-Type": Array [
+      "application/json",
+    ],
+    "cookie": Array [
+      "some-cookie",
+    ],
+    "user-agent": Array [
+      "Apollos",
+    ],
+  },
+}
+`;
+
+exports[`Auth throws invalid credentials error on bad password 1`] = `
+Object {
+  "data": Object {
+    "authenticate": null,
+  },
+  "errors": Array [
+    [GraphQLError: Invalid Credentials],
+  ],
+}
+`;

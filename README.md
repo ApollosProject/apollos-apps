@@ -44,3 +44,71 @@ ESLint and all required packages are built-in so once you `yarn`, you'll have th
 
 - You will need to install the [sublime-prettier](https://github.com/danreeves/sublime-prettier) plugins
 - Make sure you go through the above links instructions to correctly install this plugin.
+
+## Creating a new release
+
+Creating a release within the Apollos Church application is pretty simple! After you have pulled down the master branch and made sure every PR has been merged, the process is short:
+
+#### Create the release
+
+```bash
+yarn release
+```
+
+After creating a release, changelog files will be updated. Make sure to read over the changelog messages, and make any edits necessary. If you make any edits, you'll want to amend the commit created by `yarn release`:
+
+```bash
+git commit --amend
+```
+
+Lastly, push up the new tag:
+
+```bash
+git push --tags
+```
+
+...And that is it! Create your new PR and set it for review.
+
+## Inline Documentation
+
+We're using the [JSDoc](http://usejsdoc.org/index.html) standard for comments in our code. Generally speaking, we just want to make
+sure that anyone coming into the code can understand what is happening in any particular component or function.
+
+#### A Few Standards
+
+- Add a comment just above your class/component definition describing what the component does:
+
+```javascript
+/**
+ * This is where the component description lives
+ * A FeedView wrapped in a query to pull content data.
+ */
+class ContentFeed extends PureComponent {
+```
+
+- Add a comment just ahead of any functions:
+
+```javascript
+/** Function that is called when a card in the feed is pressed.
+ * Takes the user to the ContentSingle
+ */
+handleOnPress = item =>
+  this.props.navigation.navigate("ContentSingle", {
+    itemId: item.id,
+    itemTitle: item.title,
+  })
+```
+
+- Add comments around your prop types:
+
+```javascript
+static propTypes = {
+  /** Functions passed down from React Navigation to use in navigating to/from
+   * items in the feed.
+   */
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func,
+    navigate: PropTypes.func,
+  }),
+};
+```

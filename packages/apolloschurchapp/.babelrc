@@ -1,0 +1,9 @@
+{
+  "presets": ["react-native", "module:react-native-dotenv"],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", {
+      "legacy": true
+    }],
+    ["@babel/plugin-proposal-export-default-from"]
+  ]
+}

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth Store logs a user out 1`] = `
+InMemoryCache {
+  "addTypename": true,
+  "config": Object {
+    "addTypename": true,
+    "cacheRedirects": Object {
+      "Query": Object {
+        "node": [Function],
+      },
+    },
+    "dataIdFromObject": [Function],
+    "fragmentMatcher": IntrospectionFragmentMatcher {
+      "isReady": true,
+      "match": [Function],
+      "possibleTypesMap": Object {
+        "ContentItem": Array [
+          "UniversalContentItem",
+        ],
+        "Media": Array [
+          "ImageMedia",
+          "VideoMedia",
+          "AudioMedia",
+        ],
+        "MediaSource": Array [
+          "ImageMediaSource",
+          "VideoMediaSource",
+          "AudioMediaSource",
+        ],
+        "Node": Array [
+          "Person",
+          "ContentChannel",
+          "Interaction",
+          "Session",
+          "UniversalContentItem",
+        ],
+        "Sharable": Array [
+          "SharableContentItem",
+        ],
+      },
+    },
+    "storeFactory": [Function],
+  },
+  "data": ObjectCache {
+    "data": Object {
+      "$ROOT_QUERY.mediaPlayer": Object {
+        "__typename": "MediaPlayerState",
+        "isPlaying": false,
+        "nowPlayingIndex": 0,
+        "queue": Object {
+          "json": Array [],
+          "type": "json",
+        },
+      },
+      "ROOT_QUERY": Object {
+        "authToken": null,
+        "mediaPlayer": Object {
+          "generated": true,
+          "id": "$ROOT_QUERY.mediaPlayer",
+          "type": "id",
+          "typename": "MediaPlayerState",
+        },
+      },
+    },
+  },
+  "optimistic": Array [],
+  "silenceBroadcast": false,
+  "watches": Array [],
+  "write": [Function],
+}
+`;

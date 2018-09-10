@@ -1,0 +1,38 @@
+import { gql } from 'apollo-server';
+import { createGlobalId } from '../node';
+
+// export { default as model } from './model';
+export { default as dataSource } from './data-source';
+
+export const schema = gql`
+  type AuthenticatedUser {
+    id: ID!
+    profile: Person
+  }
+
+  type Authentication {
+    user: AuthenticatedUser
+    token: String
+  }
+`;
+
+export const resolver = {
+  Query: {
+    currentUser: (root, args, { dataSources }) =>
+      dataSources.Auth.getCurrentPerson(),
+  },
+  AuthenticatedUser: {
+    id: ({ id }, args, context, { parentType }) =>
+      createGlobalId(id, parentType.name),
+    profile: (authUser) => authUser,
+  },
+  Authentication: {
+    user: (root, args, { dataSources }) => dataSources.Auth.getCurrentPerson(),
+  },
+  Mutation: {
+    authenticate: (root, { identity, password }, { dataSources }) =>
+      dataSources.Auth.authenticate({ identity, password }),
+    registerPerson: (root, args, { dataSources }) =>
+      dataSources.Auth.registerPerson(args),
+  },
+};
