@@ -59,6 +59,7 @@ class Seeker extends PureComponent {
     currentTime: PropTypes.any, // eslint-disable-line
     duration: PropTypes.any, // eslint-disable-line
     style: PropTypes.any, // eslint-disable-line
+    onScrubbing: PropTypes.func,
   };
 
   state = {
@@ -93,6 +94,8 @@ class Seeker extends PureComponent {
       const moveAmount = offset / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
       this.offsetTimeDriver.setValue(moveAmountInTime);
+
+      if (this.props.onScrubbing) this.props.onScrubbing({ isScrubbing: true });
     },
     onPanResponderRelease: async (e, { dx }) => {
       this.setState({
@@ -108,6 +111,9 @@ class Seeker extends PureComponent {
         this.offsetDriver.setValue(0);
         this.offsetTimeDriver.setValue(0);
       }, 0);
+
+      if (this.props.onScrubbing)
+        this.props.onScrubbing({ isScrubbing: false });
     },
   });
 

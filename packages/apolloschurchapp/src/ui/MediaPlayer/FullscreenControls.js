@@ -90,6 +90,8 @@ class FullscreenControls extends PureComponent {
     }),
   };
 
+  state = {};
+
   fader = new Animated.Value(1);
 
   controlsVisible = true;
@@ -128,6 +130,10 @@ class FullscreenControls extends PureComponent {
     if (this.closeTimeout) clearTimeout(this.closeTimeout);
   }
 
+  handleScrubbing = ({ isScrubbing }) => {
+    this.setState({ isScrubbing });
+  };
+
   handleClose = () => {
     this.props.client.mutate({ mutation: exitFullscreen });
   };
@@ -146,6 +152,7 @@ class FullscreenControls extends PureComponent {
     this.close.stop();
 
     if (
+      !this.state.isScrubbing &&
       this.isVideo &&
       this.isPlaying &&
       this.wasFullscreen &&
@@ -214,7 +221,7 @@ class FullscreenControls extends PureComponent {
               </Touchable>
               <LowerControl>
                 <PlayHead>
-                  <Seeker />
+                  <Seeker onScrubbing={this.handleScrubbing} />
                 </PlayHead>
                 <PlayControls>
                   <IconSm disabled name="shuffle" />
