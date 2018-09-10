@@ -13,6 +13,6 @@ export default class Scripture extends RESTDataSource {
 
   async getScripture(query) {
     const bibleId = process.env.BIBLE_ID;
-    return this.get(`${bibleId}/passages/${query}`);
+    return this.get(`${bibleId}/search?query=${query}`);
   }
 }
