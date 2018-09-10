@@ -5,7 +5,7 @@ import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import LoginButton from './LoginButton';
-import getLoginState from './getLoginState.graphql';
+import getLoginState from './getLoginState';
 
 describe('LoginButton component', () => {
   it('renders a LoginButton when logged out', async () => {
