@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Share from 'apolloschurchapp/src/ui/Share';
 import Like from 'apolloschurchapp/src/ui/Like';
-import getSessionId from 'apolloschurchapp/src/auth/getSessionId';
+import getSessionId from 'apolloschurchapp/src/store/getSessionId';
 import SideBySideView from 'apolloschurchapp/src/ui/SideBySideView';
 
 import createInteraction from './createInteraction';

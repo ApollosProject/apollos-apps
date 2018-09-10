@@ -5,8 +5,5 @@ export default gql`
     registerPerson(email: $email, password: $password) {
       token
     }
-    createSession {
-      id
-    }
   }
 `;
