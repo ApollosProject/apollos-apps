@@ -3,9 +3,8 @@ import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 
-import getLoginState from './getLoginState.graphql';
+import getLoginState from './getLoginState';
 
-@withNavigation
 class ProtectedAction extends PureComponent {
   queuedActionsToTriggerOnLogin = [];
 
@@ -64,4 +63,4 @@ const ProtectedActionWithQuery = (props) => (
   </Query>
 );
 
-export default ProtectedActionWithQuery;
+export default withNavigation(ProtectedActionWithQuery);
