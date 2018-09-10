@@ -62,6 +62,22 @@ const getVideoState = gql`
   }
 `;
 
+const getMusicControlState = gql`
+  query musicControlState {
+    mediaPlayer @client {
+      currentTrack {
+        posterSources {
+          uri
+        }
+        title
+        artist
+      }
+      currentTime
+      isPlaying
+    }
+  }
+`;
+
 const getElapsedTime = gql`
   query {
     mediaPlayer @client {
@@ -96,6 +112,7 @@ const getTotalTime = gql`
 export {
   getMediaPlayerIsPlaying,
   getMediaPlayerVisibility,
+  getMusicControlState,
   getFullVisibilityState,
   getControlState,
   getVideoState,

@@ -17,7 +17,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import MiniControls, { MINI_PLAYER_HEIGHT } from './MiniControls';
 import FullscreenControls from './FullscreenControls';
 import VideoWindow from './VideoWindow';
-
+import MusicControls from './MusicControls';
 import { getFullVisibilityState } from './queries';
 import { exitFullscreen, goFullscreen } from './mutations';
 import { Provider, ControlsConsumer } from './PlayheadState';
@@ -197,6 +197,7 @@ class CoverPlayer extends Component {
           <FullscreenControls />
         </Animated.View>
       </Animated.View>,
+      <MusicControls key="music-controls" />,
     ];
 
     if (!isFullscreen) {

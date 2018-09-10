@@ -10,6 +10,13 @@ jest.mock('react-native-safari-view', () => ({
   show: jest.fn(),
 }));
 
+jest.mock('react-native-music-control', () => ({
+  enableBackgroundMode: jest.fn(),
+  enableControl: jest.fn(),
+  on: jest.fn(),
+  setNowPlaying: jest.fn(),
+}));
+
 jest.mock('react-native-device-info');
 
 jest.mock('react-native-video', () => 'Video');
