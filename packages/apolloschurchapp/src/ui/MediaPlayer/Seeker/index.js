@@ -152,10 +152,10 @@ class Seeker extends PureComponent {
 
   handleTrackContainerLayout = ({
     nativeEvent: {
-      layout: { width, x },
+      layout: { width },
     },
   }) => {
-    this.setState({ width, x });
+    this.setState({ width });
   };
 
   renderProgress = () => (
