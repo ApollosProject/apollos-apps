@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import FeedView from 'apolloschurchapp/src/ui/FeedView';
 
+import Analytics from 'appcenter-analytics';
 import getContentFeed from './getContentFeed';
-
 /**
  * This is where the component description lives
  * A FeedView wrapped in a query to pull content data.
@@ -34,11 +34,14 @@ class ContentFeed extends PureComponent {
   /** Function that is called when a card in the feed is pressed.
    * Takes the user to the ContentSingle
    */
-  handleOnPress = (item) =>
+  handleOnPress = (item) => {
+    Analytics.trackEvent('Content Single', { itemId: item.id });
+
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
       sharing: item.sharing,
     });
+  };
 
   render() {
     const { navigation } = this.props;
