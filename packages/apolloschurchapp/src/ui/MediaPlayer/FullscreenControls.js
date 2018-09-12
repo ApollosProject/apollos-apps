@@ -81,7 +81,7 @@ const IconLg = withTheme(({ theme, disabled }) => ({
 }))(Icon);
 
 /**
- * FullscreenControls displays displays fading player controls
+ * FullscreenControls displays fading player controls
  */
 class FullscreenControls extends PureComponent {
   static propTypes = {
