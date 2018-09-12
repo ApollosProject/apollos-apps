@@ -8,11 +8,13 @@ export default class BaseAnalytics {
 
   // called when a user is identified.
   identify({ anonymousId, userId, traits, context }) {
+    /* istanbul ignore next */
     console.log({ anonymousId, userId, traits, context });
   }
 
   // called when an event is tracked
   track({ event, anonymousId, userId, properties, context }) {
+    /* istanbul ignore next */
     console.log({
       event,
       anonymousId,
