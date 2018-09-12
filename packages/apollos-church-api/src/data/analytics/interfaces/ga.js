@@ -1,13 +1,11 @@
 import ua from 'universal-analytics';
+import BaseAnalytics from './base';
 
-export default class GoogleAnalytics {
+export default class GoogleAnalytics extends BaseAnalytics {
   constructor(accountId) {
+    super();
     this.accountId = accountId;
   }
-
-  shouldIdentify = false;
-
-  shouldTrack = true;
 
   track({ event, anonymousId }) {
     const visitor = ua(this.accountId, anonymousId, { strictCidFormat: false });

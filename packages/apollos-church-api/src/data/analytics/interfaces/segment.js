@@ -1,13 +1,13 @@
 import Analytics from 'analytics-node';
+import BaseAnalytics from './base';
 
-export default class GoogleAnalytics {
+export default class GoogleAnalytics extends BaseAnalytics {
   constructor(writeKey) {
+    super();
     this.client = new Analytics(writeKey);
   }
 
   shouldIdentify = true;
-
-  shouldTrack = true;
 
   identify({ anonymousId, userId, traits, context }) {
     this.client.identify({

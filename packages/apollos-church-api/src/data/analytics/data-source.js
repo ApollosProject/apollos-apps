@@ -3,6 +3,7 @@ import { DataSource } from 'apollo-datasource';
 import GAInterface from './interfaces/ga';
 import SegmentInterface from './interfaces/segment';
 
+// Utility function to convert GQL array of key/values to Object.
 const mapArrayToObject = (array = []) =>
   array.reduce((accum, { field, value }) => {
     // eslint-disable-next-line no-param-reassign
@@ -10,6 +11,7 @@ const mapArrayToObject = (array = []) =>
     return accum;
   }, {});
 
+// Add interfaces to this function to get picked up automatically.
 export const getInterfaces = () => {
   const interfaces = [];
   if (process.env.APOLLOS_SEGMENT_KEY) {
@@ -22,6 +24,11 @@ export const getInterfaces = () => {
 };
 
 export default class Analytics extends DataSource {
+  // Interfaces should extend BaseInterface in the interfaces folder.
+  // They should extend BaseAnalytics and implement
+  // track({ event: String, anonymousId: String, userId: String, properties: Obj, context: Obj })
+  // and
+  // track({ event: String, anonymousId: String, userId: String, traits: Obj, context: Obj })
   constructor(interfaces = []) {
     super();
     this.interfaces = interfaces.length ? interfaces : getInterfaces();
@@ -40,6 +47,7 @@ export default class Analytics extends DataSource {
     return this.interfaces.filter((i) => i.shouldTrack);
   }
 
+  // Shorthand to get Auth module.
   get Auth() {
     return this.context.dataSources.Auth;
   }
@@ -56,6 +64,8 @@ export default class Analytics extends DataSource {
     return user;
   }
 
+  // Called via the `identify` mutation.
+  // traits is an array of objects matching the pattern [{ field: String, value: String}]
   async identify({ anonymousId, deviceInfo, traits }) {
     const currentUser = await this.getCurrentPerson();
     this.identifyInterfaces.forEach(async (iface) => {
@@ -75,6 +85,8 @@ export default class Analytics extends DataSource {
     return { success: true };
   }
 
+  // Called via the `track` mutation.
+  // properties is an array of objects matching the pattern [{ field: String, value: String}]
   async track({ anonymousId, deviceInfo, eventName, properties }) {
     const currentUser = await this.getCurrentPerson();
     this.trackInterfaces.forEach(async (iface) => {
