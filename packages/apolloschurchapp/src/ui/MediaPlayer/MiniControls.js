@@ -69,6 +69,8 @@ const Shadow = styled(({ theme }) => ({
   ...Platform.select(theme.shadows.default),
 }))(View);
 
+// ThumbnailSpacer is used to offset the text in MiniPlayer to make room for the video/music
+// thumbnail in a way that is dynamic to the MINI_PLAYER_HEIGHT
 const ThumbnailSpacer = styled(({ isVideo }) => ({
   height: MINI_PLAYER_HEIGHT,
   aspectRatio: isVideo ? 16 / 9 : 1,
