@@ -2,6 +2,7 @@ import { mockUA, mockSend, mockEvent } from 'universal-analytics';
 import Analytics, { mockTrack, mockIdentify } from 'analytics-node';
 import { AuthenticationError } from 'apollo-server';
 import DataSource from '../data-source';
+import RockAnalytics from '../interfaces/rock_interactions';
 
 const mockCurrentPerson = jest.fn().mockImplementation(() => ({
   id: 5,
@@ -86,6 +87,33 @@ describe('Analytics Data Source', () => {
   });
 
   describe('track', () => {
+    it('must track specific events using the Rock adapter', async () => {
+      const rockAnalytics = new RockAnalytics();
+      const dataSource = new DataSource([rockAnalytics]);
+      const mockCreateInteraction = jest.fn();
+      dataSource.initialize({
+        context: {
+          dataSources: {
+            Auth: AuthWithUser,
+            Interactions: {
+              createInteraction: mockCreateInteraction,
+            },
+          },
+        },
+      });
+
+      const result = await dataSource.track({
+        eventName: 'View Content',
+        properties: [
+          { field: 'ContentId', value: 'Content:123' },
+          { field: 'SessionId', value: 'Session:123' },
+        ],
+      });
+
+      expect(result).toMatchSnapshot();
+      expect(mockCreateInteraction).toHaveBeenCalledTimes(1);
+      expect(mockCreateInteraction.mock.calls).toMatchSnapshot();
+    });
     it('must track an event with a name and no properties', async () => {
       const analytics = buildDataSource();
       const result = await analytics.track({
