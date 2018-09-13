@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Platform } from 'react-native';
 import MusicControl from 'react-native-music-control';
 import { withApollo, Query } from 'react-apollo';
 import { throttle, get } from 'lodash';
@@ -22,7 +22,9 @@ class MusicControls extends Component {
 
   constructor(...args) {
     super(...args);
-    this.currentTimeSubscription();
+    // iOS is the only platform that displays currentTime and Android is notorious bad at handling
+    // the JS thread.
+    if (Platform.OS === 'ios') this.currentTimeSubscription();
   }
 
   componentDidUpdate(oldProps) {
@@ -30,9 +32,10 @@ class MusicControls extends Component {
       this.configureMusicControl();
     }
     if (this.props.currentTimeAnimated !== oldProps.currentTimeAnimated) {
-      if (this.listener)
+      if (this.listener) {
         oldProps.currentTimeAnimated.removeListener(this.listener);
-      this.currentTimeSubscription();
+      }
+      if (Platform.OS === 'ios') this.currentTimeSubscription();
     }
 
     if (
