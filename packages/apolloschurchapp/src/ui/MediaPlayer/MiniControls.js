@@ -69,7 +69,7 @@ const Shadow = styled(({ theme }) => ({
   ...Platform.select(theme.shadows.default),
 }))(View);
 
-const VideoSpacer = styled(({ isVideo }) => ({
+const ThumbnailSpacer = styled(({ isVideo }) => ({
   height: MINI_PLAYER_HEIGHT,
   aspectRatio: isVideo ? 16 / 9 : 1,
 }))(View);
@@ -131,7 +131,7 @@ class MiniControls extends Component {
                   <Touchable
                     onPress={() => (isPlaying ? goFullscreen() : dismiss())}
                   >
-                    <VideoSpacer isVideo={isVideo}>
+                    <ThumbnailSpacer isVideo={isVideo}>
                       <Animated.View
                         style={[
                           StyleSheet.absoluteFill,
@@ -142,7 +142,7 @@ class MiniControls extends Component {
                           <StyledIcon name="close" />
                         </DismissBackground>
                       </Animated.View>
-                    </VideoSpacer>
+                    </ThumbnailSpacer>
                   </Touchable>
                 )}
               </Mutation>
