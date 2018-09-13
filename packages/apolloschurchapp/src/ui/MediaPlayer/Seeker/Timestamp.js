@@ -40,7 +40,12 @@ class Timestamp extends PureComponent {
   }
 
   componentWillUpdate(newProps) {
-    this.listen(newProps);
+    if (
+      newProps.time !== this.props.time ||
+      newProps.offset !== this.props.offset
+    ) {
+      this.listen(newProps);
+    }
   }
 
   listen = ({ time = 0, offset = 0 }) => {
