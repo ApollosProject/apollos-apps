@@ -22,6 +22,7 @@ jest.mock('react-native-device-info', () => ({
   getSystemVersion: () => 'sys-version-123',
   getModel: () => 'ios',
   getVersion: () => 'version-123',
+  getBuildNumber: () => 0,
 }));
 
 jest.mock('react-native-video', () => 'Video');
