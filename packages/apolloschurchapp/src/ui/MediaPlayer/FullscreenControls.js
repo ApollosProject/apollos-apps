@@ -253,6 +253,7 @@ class FullscreenControls extends PureComponent {
   }
 }
 
-export default compose(withApollo, withThemeMixin({ type: 'dark' }))(
-  FullscreenControls
-);
+export default compose(
+  withApollo,
+  withThemeMixin({ type: 'dark' })
+)(FullscreenControls);
