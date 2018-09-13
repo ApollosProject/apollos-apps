@@ -44,8 +44,12 @@ class ProviderWithoutApollo extends Component {
   };
 
   handleProgress = ({ currentTime, playableDuration, seekableDuration }) => {
-    this.lastCurrentTime = currentTime;
-    this.state.currentTime.setValue(currentTime);
+    if (!this.seekingTo || Math.abs(this.seekingTo - currentTime) < 1) {
+      // when seeking, only update `currentTime` after the seek has finished
+      this.seekingTo = null;
+      this.lastCurrentTime = currentTime;
+      this.state.currentTime.setValue(currentTime);
+    }
     this.state.playableDuration.setValue(playableDuration);
     this.state.seekableDuration.setValue(seekableDuration);
   };
@@ -59,18 +63,21 @@ class ProviderWithoutApollo extends Component {
     });
   };
 
-  skip = (secondsToSkip) => {
+  skip = async (secondsToSkip) => {
     const currentTime = Math.min(
       Math.max(this.lastCurrentTime + secondsToSkip, 0),
       this.state.duration
     );
 
-    return this.props.client.mutate({
+    await this.props.client.mutate({
       mutation: updatePlayhead,
       variables: {
         currentTime,
       },
     });
+
+    this.seekingTo = currentTime;
+    this.state.currentTime.setValue(currentTime); // immediately set the playhead value so progress bar doesn't jump around
   };
 
   renderProviders = ({

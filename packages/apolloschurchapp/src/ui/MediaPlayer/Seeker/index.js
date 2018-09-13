@@ -98,19 +98,18 @@ class Seeker extends PureComponent {
       if (this.props.onScrubbing) this.props.onScrubbing({ isScrubbing: true });
     },
     onPanResponderRelease: async (e, { dx }) => {
+      const moveAmount = dx / this.state.width;
+      const moveAmountInTime = moveAmount * this.props.duration;
+
+      await this.props.skip(moveAmountInTime);
+
+      this.offsetDriver.setValue(0);
+      this.offsetTimeDriver.setValue(0);
+
       this.setState({
         isSeeking: false,
         timeAtSeekingStart: 0,
       });
-
-      const moveAmount = dx / this.state.width;
-      const moveAmountInTime = moveAmount * this.props.duration;
-      await this.props.skip(moveAmountInTime);
-
-      setTimeout(() => {
-        this.offsetDriver.setValue(0);
-        this.offsetTimeDriver.setValue(0);
-      }, 0);
 
       if (this.props.onScrubbing)
         this.props.onScrubbing({ isScrubbing: false });
