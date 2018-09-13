@@ -9,7 +9,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
 
 import { getVideoState } from './queries';
-import { pause as pauseMutation } from './mutations';
+import { pause as pauseMutation, updatePlayhead } from './mutations';
 
 const styles = StyleSheet.create({
   animatedPosterImage: {
@@ -40,6 +40,16 @@ class VideoWindow extends PureComponent {
 
   loadingStyle = [StyleSheet.absoluteFill, { opacity: this.loadingOverlay }];
 
+  handleEnd = async () => {
+    this.handlePause();
+    this.props.client.mutate({
+      mutation: updatePlayhead,
+      variables: {
+        currentTime: 0,
+      },
+    });
+  };
+
   handlePause = () => {
     this.props.client.mutate({ mutation: pauseMutation });
   };
@@ -49,7 +59,6 @@ class VideoWindow extends PureComponent {
   };
 
   handleError = (...args) => {
-    console.log('player error', args);
     this.handlePause();
   };
 
@@ -94,7 +103,7 @@ class VideoWindow extends PureComponent {
         playInBackground
         playWhenInactive
         onAudioBecomingNoisy={this.handlePause}
-        onEnd={this.handlePause}
+        onEnd={this.handleEnd}
         onError={this.handleError}
         resizeMode={'contain'}
         onLoadStart={this.handleLoadStart}
