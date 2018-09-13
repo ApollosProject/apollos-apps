@@ -30,20 +30,20 @@ class ProviderWithoutApollo extends Component {
 
   get controlState() {
     return {
-      onLoad: this.handleLoad,
-      onProgress: this.handleProgress,
+      onLoad: this.handleOnLoad,
+      onProgress: this.handleOnProgress,
       skip: this.skip,
     };
   }
 
-  handleLoad = ({ duration }) => {
+  handleOnLoad = ({ duration }) => {
     this.setState({ duration });
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
     this.state.seekableDuration.setValue(0);
   };
 
-  handleProgress = ({ currentTime, playableDuration, seekableDuration }) => {
+  handleOnProgress = ({ currentTime, playableDuration, seekableDuration }) => {
     if (!this.seekingTo || Math.abs(this.seekingTo - currentTime) < 1) {
       // when seeking, only update `currentTime` after the seek has finished
       this.seekingTo = null;

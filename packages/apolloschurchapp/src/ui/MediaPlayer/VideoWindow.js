@@ -40,7 +40,7 @@ class VideoWindow extends PureComponent {
 
   loadingStyle = [StyleSheet.absoluteFill, { opacity: this.loadingOverlay }];
 
-  handleEnd = async () => {
+  handleOnEnd = async () => {
     this.props.client.mutate({ mutation: pauseAndRestart });
   };
 
@@ -48,15 +48,15 @@ class VideoWindow extends PureComponent {
     this.props.client.mutate({ mutation: pauseMutation });
   };
 
-  handleProgress = (progress) => {
+  handleOnProgress = (progress) => {
     if (this.props.onProgress) this.props.onProgress(progress);
   };
 
-  handleError = () => {
+  handleOnError = () => {
     this.handlePause();
   };
 
-  handleLoad = ({ duration }) => {
+  handleOnLoad = ({ duration }) => {
     Animated.spring(this.loadingOverlay, {
       toValue: 0,
       useNativeDriver: true,
@@ -65,7 +65,7 @@ class VideoWindow extends PureComponent {
     if (this.props.onLoad) this.props.onLoad({ duration });
   };
 
-  handleLoadStart = () => {
+  handleOnLoadStart = () => {
     Animated.spring(this.loadingOverlay, {
       toValue: 1,
       useNativeDriver: true,
@@ -97,12 +97,12 @@ class VideoWindow extends PureComponent {
         playInBackground
         playWhenInactive
         onAudioBecomingNoisy={this.handlePause}
-        onEnd={this.handleEnd}
-        onError={this.handleError}
+        onEnd={this.handleOnEnd}
+        onError={this.handleOnError}
         resizeMode={'contain'}
-        onLoadStart={this.handleLoadStart}
-        onLoad={this.handleLoad}
-        onProgress={this.handleProgress}
+        onLoadStart={this.handleOnLoadStart}
+        onLoad={this.handleOnLoad}
+        onProgress={this.handleOnProgress}
         style={StyleSheet.absoluteFill}
         repeat
         key="video"

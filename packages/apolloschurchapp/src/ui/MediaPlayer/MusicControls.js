@@ -72,15 +72,13 @@ class MusicControls extends Component {
 
     // Play
     MusicControl.enableControl('play', true);
-    MusicControl.on('play', this.handlePlay);
+    MusicControl.on('play', this.handleOnPlay);
 
-    // Pause
+    // Pause/Stop
     MusicControl.enableControl('pause', true);
-    MusicControl.on('pause', this.handlePause);
-
-    // Stop
     MusicControl.enableControl('stop', false);
-    MusicControl.on('stop', this.handlePause);
+    MusicControl.on('pause', this.handleOnPause);
+    MusicControl.on('stop', this.handleOnPause);
 
     // Skip
     MusicControl.enableControl('previousTrack', false);
@@ -90,21 +88,21 @@ class MusicControls extends Component {
     if (this.props.skip) {
       MusicControl.enableControl('skipForward', true);
       MusicControl.enableControl('skipBackward', true);
-      MusicControl.on('skipForward', this.handleFastForward);
-      MusicControl.on('skipBackward', this.handleRewind);
+      MusicControl.on('skipForward', this.handleOnFastForward);
+      MusicControl.on('skipBackward', this.handleOnRewind);
     }
 
     // Scrubber
     MusicControl.enableControl('seek', true); // Android
     MusicControl.enableControl('changePlaybackPosition', true); // iOS
-    MusicControl.on('seek', this.handleSeek);
-    MusicControl.on('changePlaybackPosition', this.handleSeek);
+    MusicControl.on('seek', this.handleOnSeek);
+    MusicControl.on('changePlaybackPosition', this.handleOnSeek);
 
     // Remote (headphones) play/pause
     MusicControl.enableControl('togglePlayPause', true);
     MusicControl.on(
       'togglePlayPause',
-      () => (this.props.isPlaying ? this.handlePause() : this.handlePlay())
+      () => (this.props.isPlaying ? this.handleOnPause() : this.handleOnPlay())
     );
 
     // Remote (headphones) fast forward/rewind (iOS only) (disabled)
@@ -134,15 +132,15 @@ class MusicControls extends Component {
     });
   };
 
-  handlePlay = () => this.props.client.mutate({ mutation: play });
+  handleOnPlay = () => this.props.client.mutate({ mutation: play });
 
-  handlePause = () => this.props.client.mutate({ mutation: pause });
+  handleOnPause = () => this.props.client.mutate({ mutation: pause });
 
-  handleFastForward = () => this.props.skip(15);
+  handleOnFastForward = () => this.props.skip(15);
 
-  handleRewind = () => this.props.skip(-15);
+  handleOnRewind = () => this.props.skip(-15);
 
-  handleSeek = (seekTo) =>
+  handleOnSeek = (seekTo) =>
     this.props.client.mutate({
       mutation: updatePlayhead,
       variables: {

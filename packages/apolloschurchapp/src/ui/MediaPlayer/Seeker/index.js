@@ -160,7 +160,7 @@ class Seeker extends PureComponent {
     ];
   }
 
-  handleTrackContainerLayout = ({
+  handleOnLayout = ({
     nativeEvent: {
       layout: { width },
     },
@@ -191,10 +191,7 @@ class Seeker extends PureComponent {
           />
         ) : null}
         <TrackContainer minimal={this.props.minimal}>
-          <Track
-            onLayout={this.handleTrackContainerLayout}
-            minimal={this.props.minimal}
-          >
+          <Track onLayout={this.handleOnLayout} minimal={this.props.minimal}>
             {this.renderProgress()}
           </Track>
           <Animated.View style={this.knobStyles}>

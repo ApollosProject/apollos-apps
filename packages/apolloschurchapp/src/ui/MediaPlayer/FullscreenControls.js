@@ -130,7 +130,7 @@ class FullscreenControls extends PureComponent {
     if (this.closeTimeout) clearTimeout(this.closeTimeout);
   }
 
-  handleScrubbing = ({ isScrubbing }) => {
+  handleOnScrubbing = ({ isScrubbing }) => {
     this.setState({ isScrubbing });
   };
 
@@ -221,7 +221,7 @@ class FullscreenControls extends PureComponent {
               </Touchable>
               <LowerControl>
                 <PlayHead>
-                  <Seeker onScrubbing={this.handleScrubbing} />
+                  <Seeker onScrubbing={this.handleOnScrubbing} />
                 </PlayHead>
                 <PlayControls>
                   <IconSm disabled name="shuffle" />
