@@ -42,6 +42,13 @@ const dismiss = gql`
   }
 `;
 
+const pauseAndRestart = gql`
+  mutation pause {
+    mediaPlayerUpdateState(isPlaying: false) @client
+    mediaPlayerSetPlayhead(currentTime: 0) @client
+  }
+`;
+
 const exitFullscreen = gql`
   mutation {
     mediaPlayerUpdateState(isFullscreen: false) @client
@@ -55,6 +62,7 @@ const updatePlayhead = gql`
 `;
 
 export {
+  pauseAndRestart,
   playVideoMutation,
   goFullscreen,
   play,
