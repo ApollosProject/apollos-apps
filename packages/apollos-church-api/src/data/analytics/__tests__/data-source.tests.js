@@ -61,6 +61,8 @@ describe('Analytics Data Source', () => {
       identify,
       shouldTrack: true,
       shouldIdentify: true,
+      eventWhitelist: null,
+      initialize: () => ({}),
     };
     const dataSource = new DataSource([fakeClient]);
     dataSource.initialize({ context: { dataSources: { Auth: AuthWithUser } } });
