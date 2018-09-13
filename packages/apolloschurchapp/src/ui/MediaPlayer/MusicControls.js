@@ -27,7 +27,7 @@ class MusicControls extends Component {
 
   componentDidUpdate(oldProps) {
     if (this.props.duration > 1 && oldProps.duration !== this.props.duration) {
-      this.setup();
+      this.configureMusicControl();
     }
     if (this.props.currentTimeAnimated !== oldProps.currentTimeAnimated) {
       if (this.listener)
@@ -63,12 +63,9 @@ class MusicControls extends Component {
     );
   };
 
-  setup = () => {
+  configureMusicControl = () => {
+    // Initialize MusicControl settings
     MusicControl.enableBackgroundMode(true);
-
-    // Music Controls does not control audio by itself. It only updates the native UI and conversely
-    // fires events when the user takes actions in the native UI. It is up to the app to keep the UI
-    // up-to-date (via props) and to handle any action the user takes (via event callbacks).
 
     // Play
     MusicControl.enableControl('play', true);
@@ -78,15 +75,15 @@ class MusicControls extends Component {
     MusicControl.enableControl('pause', true);
     MusicControl.on('pause', this.handlePause);
 
-    // Stop. Runs when end of audio is reached.
+    // Stop
     MusicControl.enableControl('stop', false);
     MusicControl.on('stop', this.handlePause);
 
-    // Skip this track, go back a track. No queue, so disable.
+    // Skip
     MusicControl.enableControl('previousTrack', false);
     MusicControl.enableControl('nextTrack', false);
 
-    // Go forward/backward "seekInterval" seconds
+    // Seeking
     if (this.props.skip) {
       MusicControl.enableControl('skipForward', true);
       MusicControl.enableControl('skipBackward', true);
@@ -111,7 +108,7 @@ class MusicControls extends Component {
     MusicControl.enableControl('seekForward', false);
     MusicControl.enableControl('seekBackward', false);
 
-    // Swipe to dismiss native control, only when paused (Android only)
+    // Swipe to dismiss native control (Android only)
     MusicControl.enableControl('closeNotification', true, { when: 'paused' });
 
     // Configure the visuals
