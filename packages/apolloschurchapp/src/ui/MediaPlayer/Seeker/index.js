@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import styled from 'apolloschurchapp/src/ui/styled';
 
 import { PlayheadConsumer, ControlsConsumer } from '../PlayheadState';
-import AnimatedTime, { TIME_TEXT_WIDTH } from './Timestamp';
+import Timestamp, { TIME_TEXT_WIDTH } from './Timestamp';
 
 const Container = styled({
   width: '100%',
@@ -56,7 +56,7 @@ const ProgressBar = styled(({ theme }) => ({
 /**
  * Animated Seeker component.
  * Depends on `PlayheadState`, so you don't pass it any props directly,
- * but most be rendered within a `<MediaPlayer/>` component
+ * but must be rendered within a `<MediaPlayer/>` component
  */
 class Seeker extends PureComponent {
   static propTypes = {
@@ -185,7 +185,7 @@ class Seeker extends PureComponent {
     return (
       <Container style={this.props.style}>
         {!this.props.minimal ? (
-          <AnimatedTime
+          <Timestamp
             time={this.props.currentTime}
             offset={this.offsetTimeDriver}
           />
@@ -204,9 +204,7 @@ class Seeker extends PureComponent {
             />
           </Animated.View>
         </TrackContainer>
-        {!this.props.minimal ? (
-          <AnimatedTime time={this.props.duration} />
-        ) : null}
+        {!this.props.minimal ? <Timestamp time={this.props.duration} /> : null}
       </Container>
     );
   }
