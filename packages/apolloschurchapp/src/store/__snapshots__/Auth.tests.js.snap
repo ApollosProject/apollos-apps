@@ -60,6 +60,7 @@ InMemoryCache {
           "type": "id",
           "typename": "MediaPlayerState",
         },
+        "sessionId": null,
       },
     },
   },

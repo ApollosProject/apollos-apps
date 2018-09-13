@@ -17,6 +17,11 @@ jest.mock('react-native-music-control', () => ({
   setNowPlaying: jest.fn(),
 }));
 
-jest.mock('react-native-device-info');
+jest.mock('react-native-device-info', () => ({
+  getUniqueID: () => 'id-123',
+  getSystemVersion: () => 'sys-version-123',
+  getModel: () => 'ios',
+  getVersion: () => 'version-123',
+}));
 
 jest.mock('react-native-video', () => 'Video');
