@@ -4,9 +4,9 @@ import renderer from 'react-test-renderer';
 import { client } from 'apolloschurchapp/src/client';
 import Providers from 'apolloschurchapp/src/Providers';
 
-import CoverPlayer from './CoverPlayer';
+import FullscreenPlayer from './FullscreenPlayer';
 
-describe('the coverplayer component', () => {
+describe('the FullscreenPlayer component', () => {
   it('should render miniplayer with video', async () => {
     client.cache.writeData({
       data: {
@@ -34,7 +34,7 @@ describe('the coverplayer component', () => {
     });
     const tree = renderer.create(
       <Providers>
-        <CoverPlayer />
+        <FullscreenPlayer />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe('the coverplayer component', () => {
     });
     const tree = renderer.create(
       <Providers>
-        <CoverPlayer />
+        <FullscreenPlayer />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -100,7 +100,7 @@ describe('the coverplayer component', () => {
     });
     const tree = renderer.create(
       <Providers>
-        <CoverPlayer />
+        <FullscreenPlayer />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

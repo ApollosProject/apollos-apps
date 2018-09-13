@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 
-import CoverPlayer from './CoverPlayer';
+import FullscreenPlayer from './FullscreenPlayer';
 
 import { getMediaPlayerVisibility } from './queries';
 
 export { MINI_PLAYER_HEIGHT } from './MiniControls';
 
 /**
- * Selectively renders CoverPlayer component is MediaPlayer is visible
+ * Selectively renders FullscreenPlayer component is MediaPlayer is visible
  */
 class MediaPlayer extends Component {
   shouldComponentUpdate() {
@@ -17,7 +17,7 @@ class MediaPlayer extends Component {
 
   renderPlayer = ({ data = {} }) => {
     if (!data.mediaPlayer || !data.mediaPlayer.isVisible) return null;
-    return <CoverPlayer />;
+    return <FullscreenPlayer />;
   };
 
   render() {

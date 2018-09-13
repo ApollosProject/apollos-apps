@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the coverplayer component should render fullscreen 1`] = `
+exports[`the FullscreenPlayer component should render fullscreen 1`] = `
 <View
   style={
     Object {
@@ -1370,7 +1370,7 @@ exports[`the coverplayer component should render fullscreen 1`] = `
 </View>
 `;
 
-exports[`the coverplayer component should render miniplayer with audio 1`] = `
+exports[`the FullscreenPlayer component should render miniplayer with audio 1`] = `
 <View
   style={
     Object {
@@ -2740,7 +2740,7 @@ exports[`the coverplayer component should render miniplayer with audio 1`] = `
 </View>
 `;
 
-exports[`the coverplayer component should render miniplayer with video 1`] = `
+exports[`the FullscreenPlayer component should render miniplayer with video 1`] = `
 <View
   style={
     Object {

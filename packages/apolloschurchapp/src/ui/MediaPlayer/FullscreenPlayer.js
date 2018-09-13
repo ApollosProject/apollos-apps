@@ -39,12 +39,12 @@ const isPhoneX = DeviceInfo.getModel() === 'iPhone X';
 const BOTTOM_OFFSET = isPhoneX ? 25 : 10; // Some devices need more "spacing" at the bottom of the screen. This helps account for that
 
 /**
- * CoverPlayer is a animating media player that transitions between
+ * FullscreenPlayer is a animating media player that transitions between
  * a mini state and a full screen state.
  * It is capable of playing any type of media that react-native-video supports.
  * It reads from local graphql state, and so you must use graphql mutations to play tracks.
  */
-class CoverPlayer extends PureComponent {
+class FullscreenPlayer extends PureComponent {
   static propTypes = {
     client: PropTypes.shape({ mutate: PropTypes.func }),
   };
@@ -231,6 +231,6 @@ class CoverPlayer extends PureComponent {
   }
 }
 
-const CoverPlayerWithData = withApollo(CoverPlayer);
+const FullscreenPlayerWithData = withApollo(FullscreenPlayer);
 
-export { CoverPlayerWithData as default, BOTTOM_OFFSET };
+export { FullscreenPlayerWithData as default, BOTTOM_OFFSET };
