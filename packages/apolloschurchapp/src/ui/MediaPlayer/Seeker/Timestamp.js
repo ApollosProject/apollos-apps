@@ -13,6 +13,9 @@ const TimeText = styled({
   alignItems: 'center',
 })(H6);
 
+/**
+ * Displays a MM:SS formatted timestamp from either a number or Animate.Value in seconds
+ */
 class Timestamp extends PureComponent {
   static propTypes = {
     time: PropTypes.oneOfType([

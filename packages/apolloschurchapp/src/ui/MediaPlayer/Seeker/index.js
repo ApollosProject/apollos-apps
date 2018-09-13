@@ -53,9 +53,14 @@ const ProgressBar = styled(({ theme }) => ({
   ...StyleSheet.absoluteFillObject,
 }))(View);
 
+/**
+ * Animated Seeker component.
+ * Depends on `PlayheadState`, so you don't pass it any props directly,
+ * but most be rendered within a `<MediaPlayer/>` component
+ */
 class Seeker extends PureComponent {
   static propTypes = {
-    minimal: PropTypes.bool,
+    minimal: PropTypes.bool, // The only prop you need to pass - switches to a minimal version (line instead of bar)
     currentTime: PropTypes.any, // eslint-disable-line
     duration: PropTypes.any, // eslint-disable-line
     style: PropTypes.any, // eslint-disable-line
@@ -63,18 +68,19 @@ class Seeker extends PureComponent {
   };
 
   state = {
-    width: 0,
+    width: 0, // the width of the seeker bar
     isSeeking: false,
     timeAtSeekingStart: 0,
   };
 
-  offsetDriver = new Animated.Value(0);
+  offsetDriver = new Animated.Value(0); // Used to track pixel offset when seeking
 
-  offsetTimeDriver = new Animated.Value(0);
+  offsetTimeDriver = new Animated.Value(0); // Used to track time offset when seeking
 
   panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderGrant: () => {
+      // Using `stopAnimation` only to get the currentTime value
       this.props.currentTime.stopAnimation((value) => {
         this.setState({
           isSeeking: true,
@@ -83,14 +89,16 @@ class Seeker extends PureComponent {
       });
     },
     onPanResponderMove: (e, { dx }) => {
+      // Calculate the pixel offset and apply it to the offsetDriver
       let offset = dx;
       const progressAtStart =
         this.state.timeAtSeekingStart / this.props.duration;
       const positionAtStart = progressAtStart * this.state.width;
       offset = Math.min(this.state.width - positionAtStart, offset);
       offset = Math.max(-positionAtStart, offset);
-
       this.offsetDriver.setValue(offset);
+
+      // Calculate the time offset and apply it to the offsetTimeDriver
       const moveAmount = offset / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
       this.offsetTimeDriver.setValue(moveAmountInTime);
@@ -98,14 +106,14 @@ class Seeker extends PureComponent {
       if (this.props.onScrubbing) this.props.onScrubbing({ isScrubbing: true });
     },
     onPanResponderRelease: async (e, { dx }) => {
+      // Calculate the amount in time we've moved, and skip that duration
       const moveAmount = dx / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
-
       await this.props.skip(moveAmountInTime);
 
+      // Reset state
       this.offsetDriver.setValue(0);
       this.offsetTimeDriver.setValue(0);
-
       this.setState({
         isSeeking: false,
         timeAtSeekingStart: 0,
@@ -116,6 +124,8 @@ class Seeker extends PureComponent {
     },
   });
 
+  // Calculate the real offset position of the colored track bar
+  // To be able to useNativeDriver, the trackbar is always the full-width, and we animate its X position
   get trackBarOffset() {
     const progress = Animated.divide(
       this.state.isSeeking
@@ -130,6 +140,7 @@ class Seeker extends PureComponent {
     return Animated.add(position, this.offsetDriver);
   }
 
+  // the "knob" is on top of the trackbar, the piece of UI you can grab and move around
   get knobStyles() {
     return [
       StyleSheet.absoluteFill,

@@ -36,7 +36,7 @@ const VideoSizer = styled(
 )(View);
 
 const isPhoneX = DeviceInfo.getModel() === 'iPhone X';
-const BOTTOM_OFFSET = isPhoneX ? 25 : 10;
+const BOTTOM_OFFSET = isPhoneX ? 25 : 10; // Some devices need more "spacing" at the bottom of the screen. This helps account for that
 
 /**
  * CoverPlayer is a animating media player that transitions between
@@ -49,16 +49,21 @@ class CoverPlayer extends Component {
     client: PropTypes.shape({ mutate: PropTypes.func }),
   };
 
+  // Tracks the fullscreen animation
   fullscreen = new Animated.Value(0);
 
+  // Tracks the measured height of the minicontrols. Used in other derived styles
   miniControlHeight = new Animated.Value(MINI_PLAYER_HEIGHT);
 
+  // Tracks the measured height of the fullscreen cover. Used in other derived styles
   coverHeight = new Animated.Value(Dimensions.get('window').height);
 
+  // Tracks the amount you drag the window
   dragOffset = new Animated.Value(0);
 
   fullScreenWithOffset = Animated.add(this.fullscreen, this.dragOffset);
 
+  // Self-invoking function because we end up with just one massic derived animated value that can be stored
   coverTranslateY = (() => {
     const translateYWhenCollapsed = Animated.subtract(
       this.coverHeight,
@@ -112,9 +117,10 @@ class CoverPlayer extends Component {
 
   panResponder = PanResponder.create({
     onMoveShouldSetPanResponder: (event, { dx, dy }) =>
-      Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 10,
+      Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 10, // set pan responder only when we move enough in the Y-axis
 
     onPanResponderMove: (event, { dy }) => {
+      // Calculate the amount you've offsetted the cover
       const dragOffset = Math.min(0, -dy / Dimensions.get('window').height);
       this.dragOffset.setValue(dragOffset);
     },
@@ -124,8 +130,9 @@ class CoverPlayer extends Component {
       const gestureVelocity = vy;
       const gestureDistance = Math.abs(dy);
 
+      // Determine whether to continue the animation and exit fullscreen,
+      // or stay full screen and reset back up
       let mutation = goFullscreen;
-
       if (Math.abs(gestureVelocity > 0.5)) {
         if (gestureVelocity > 0) {
           mutation = exitFullscreen;

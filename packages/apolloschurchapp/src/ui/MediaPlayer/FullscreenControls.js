@@ -16,7 +16,7 @@ import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { withTheme, withThemeMixin } from 'apolloschurchapp/src/ui/theme';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
-import Icon from 'apolloschurchapp/src/ui//Icon';
+import Icon from 'apolloschurchapp/src/ui/Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
 import Seeker from './Seeker';

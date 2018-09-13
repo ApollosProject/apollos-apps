@@ -20,6 +20,8 @@ const mediaPlayerIsVisibleQuery = gql`
 `;
 
 const isPhoneX = DeviceInfo.getModel() === 'iPhone X';
+
+// Some devices need more "spacing" at the bottom of the screen. This helps account for that
 const DEVICE_OFFSET = isPhoneX ? 10 : 0;
 
 const TabBarWrapper = styled(({ theme, mediaPlayerIsVisible }) => ({

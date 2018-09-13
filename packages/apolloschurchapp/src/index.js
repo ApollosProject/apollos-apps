@@ -2,8 +2,8 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 // import { Sentry } from 'react-native-sentry';
 
-import BackgroundView from './ui/BackgroundView';
-import MediaPlayer from './ui/MediaPlayer';
+import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
+import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 
 import Providers from './Providers';
 import ContentSingle from './content-single';
