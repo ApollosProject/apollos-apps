@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   Animated,
   View,
@@ -44,7 +44,7 @@ const BOTTOM_OFFSET = isPhoneX ? 25 : 10; // Some devices need more "spacing" at
  * It is capable of playing any type of media that react-native-video supports.
  * It reads from local graphql state, and so you must use graphql mutations to play tracks.
  */
-class CoverPlayer extends Component {
+class CoverPlayer extends PureComponent {
   static propTypes = {
     client: PropTypes.shape({ mutate: PropTypes.func }),
   };
@@ -164,10 +164,6 @@ class CoverPlayer extends Component {
   handleMiniControlLayout = Animated.event([
     { nativeEvent: { layout: { height: this.miniControlHeight } } },
   ]);
-
-  shouldComponentUpdate() {
-    return false;
-  }
 
   renderCover = ({ data: { mediaPlayer = {} } = {} }) => {
     const { isFullscreen = false } = mediaPlayer;
