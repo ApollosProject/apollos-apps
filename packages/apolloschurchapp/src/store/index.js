@@ -77,9 +77,7 @@ export const resolvers = {
       cache.writeData({ data: { authToken: null, sessionId: null } });
       return null;
     },
-<<<<<<< HEAD
-    mediaPlayerPlayNow: (root, trackInfo, { cache }) => {
-=======
+
     handleLogin: async (root, { authToken }, { cache }) => {
       const createSessionMutation = gql`
         mutation {
@@ -109,8 +107,7 @@ export const resolvers = {
         console.log(e);
       }
     },
-    mediaPlayerEnqueue: (root, { name }, { cache }) => {
->>>>>>> master
+    mediaPlayerPlayNow: (root, trackInfo, { cache }) => {
       const query = gql`
         query {
           mediaPlayer {
