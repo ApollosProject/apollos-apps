@@ -981,10 +981,7 @@ exports[`the coverplayer component should render fullscreen 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "rgba(255,255,255,0.8)",
                   "bottom": 0,
-                  "justifyContent": "center",
                   "left": 0,
                   "opacity": 0,
                   "position": "absolute",
@@ -993,78 +990,93 @@ exports[`the coverplayer component should render fullscreen 1`] = `
                 }
               }
             >
-              <RNSVGSvgView
-                align="xMidYMid"
-                bbHeight="25"
-                bbWidth="25"
-                meetOrSlice={0}
-                minX={0}
-                minY={0}
+              <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    undefined,
-                    false,
-                    Object {
-                      "flex": 0,
-                      "height": 25,
-                      "width": 25,
-                    },
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFFFFF",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
-                vbHeight={24}
-                vbWidth={24}
               >
-                <RNSVGPath
-                  d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
-                  fill={
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight="25"
+                  bbWidth="25"
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
                     Array [
-                      0,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      1,
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      undefined,
+                      false,
+                      Object {
+                        "flex": 0,
+                        "height": 25,
+                        "width": 25,
+                      },
                     ]
                   }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth="1"
-                  x={0}
-                  y={0}
-                />
-              </RNSVGSvgView>
+                  vbHeight={24}
+                  vbWidth={24}
+                >
+                  <RNSVGPath
+                    d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    fill={
+                      Array [
+                        0,
+                        0.6470588235294118,
+                        0.6470588235294118,
+                        0.6470588235294118,
+                        1,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth="1"
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGSvgView>
+              </View>
             </View>
           </View>
         </View>
@@ -2339,10 +2351,7 @@ exports[`the coverplayer component should render miniplayer with audio 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "rgba(255,255,255,0.8)",
                   "bottom": 0,
-                  "justifyContent": "center",
                   "left": 0,
                   "opacity": 0,
                   "position": "absolute",
@@ -2351,78 +2360,93 @@ exports[`the coverplayer component should render miniplayer with audio 1`] = `
                 }
               }
             >
-              <RNSVGSvgView
-                align="xMidYMid"
-                bbHeight="25"
-                bbWidth="25"
-                meetOrSlice={0}
-                minX={0}
-                minY={0}
+              <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    undefined,
-                    false,
-                    Object {
-                      "flex": 0,
-                      "height": 25,
-                      "width": 25,
-                    },
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFFFFF",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
-                vbHeight={24}
-                vbWidth={24}
               >
-                <RNSVGPath
-                  d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
-                  fill={
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight="25"
+                  bbWidth="25"
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
                     Array [
-                      0,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      1,
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      undefined,
+                      false,
+                      Object {
+                        "flex": 0,
+                        "height": 25,
+                        "width": 25,
+                      },
                     ]
                   }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth="1"
-                  x={0}
-                  y={0}
-                />
-              </RNSVGSvgView>
+                  vbHeight={24}
+                  vbWidth={24}
+                >
+                  <RNSVGPath
+                    d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    fill={
+                      Array [
+                        0,
+                        0.6470588235294118,
+                        0.6470588235294118,
+                        0.6470588235294118,
+                        1,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth="1"
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGSvgView>
+              </View>
             </View>
           </View>
         </View>
@@ -3697,10 +3721,7 @@ exports[`the coverplayer component should render miniplayer with video 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "rgba(255,255,255,0.8)",
                   "bottom": 0,
-                  "justifyContent": "center",
                   "left": 0,
                   "opacity": 0,
                   "position": "absolute",
@@ -3709,78 +3730,93 @@ exports[`the coverplayer component should render miniplayer with video 1`] = `
                 }
               }
             >
-              <RNSVGSvgView
-                align="xMidYMid"
-                bbHeight="25"
-                bbWidth="25"
-                meetOrSlice={0}
-                minX={0}
-                minY={0}
+              <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                    },
-                    undefined,
-                    false,
-                    Object {
-                      "flex": 0,
-                      "height": 25,
-                      "width": 25,
-                    },
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFFFFF",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
-                vbHeight={24}
-                vbWidth={24}
               >
-                <RNSVGPath
-                  d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
-                  fill={
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight="25"
+                  bbWidth="25"
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
                     Array [
-                      0,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      1,
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      undefined,
+                      false,
+                      Object {
+                        "flex": 0,
+                        "height": 25,
+                        "width": 25,
+                      },
                     ]
                   }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth="1"
-                  x={0}
-                  y={0}
-                />
-              </RNSVGSvgView>
+                  vbHeight={24}
+                  vbWidth={24}
+                >
+                  <RNSVGPath
+                    d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    fill={
+                      Array [
+                        0,
+                        0.6470588235294118,
+                        0.6470588235294118,
+                        0.6470588235294118,
+                        1,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth="1"
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGSvgView>
+              </View>
             </View>
           </View>
         </View>
