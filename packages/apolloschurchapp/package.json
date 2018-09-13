@@ -91,6 +91,7 @@
     "react-native-keyboard-aware-scroll-view": "0.7.0",
     "react-native-linear-gradient": "2.4.0",
     "react-native-modal-datetime-picker": "6.0.0",
+    "react-native-onesignal": "^3.2.7",
     "react-native-safari-view": "2.1.0",
     "react-native-splash-screen": "3.1.1",
     "react-native-svg": "6.5.2",

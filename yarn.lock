@@ -10188,6 +10188,12 @@ react-native-modal@^6.2.0:
     prop-types "^15.6.1"
     react-native-animatable "^1.2.4"
 
+react-native-onesignal@^3.2.7:
+  version "3.2.7"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.2.7.tgz#8e3245b720af68af7d01ff572c56cbb3521b88f5"
+  dependencies:
+    invariant "^2.2.2"
+
 react-native-safari-view@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-native-safari-view/-/react-native-safari-view-2.1.0.tgz#1e0cd12c62bce79bc1759c7e281646b08b61c959"
