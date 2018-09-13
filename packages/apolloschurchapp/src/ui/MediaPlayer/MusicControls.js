@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Animated } from 'react-native';
 import MusicControl from 'react-native-music-control';
 import { withApollo, Query } from 'react-apollo';
-import { get } from 'lodash';
+import { throttle, get } from 'lodash';
 
 import { PlayheadConsumer, ControlsConsumer } from './PlayheadState';
 import { getMusicControlState } from './queries';
@@ -12,16 +13,28 @@ class MusicControls extends Component {
   static propTypes = {
     currentTrack: PropTypes.shape({}),
     currentTime: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    currentTimeAnimated: PropTypes.instanceOf(Animated.Value),
     isPlaying: PropTypes.bool,
     duration: PropTypes.number,
     skip: PropTypes.func,
     client: PropTypes.shape({ mutate: PropTypes.func }),
   };
 
+  constructor(...args) {
+    super(...args);
+    this.currentTimeSubscription();
+  }
+
   componentDidUpdate(oldProps) {
     if (this.props.duration > 1 && oldProps.duration !== this.props.duration) {
       this.setup();
     }
+    if (this.props.currentTimeAnimated !== oldProps.currentTimeAnimated) {
+      if (this.listener)
+        oldProps.currentTimeAnimated.removeListener(this.listener);
+      this.currentTimeSubscription();
+    }
+
     if (
       oldProps.currentTime !== this.props.currentTime ||
       oldProps.isPlaying !== this.props.isPlaying
@@ -33,7 +46,22 @@ class MusicControls extends Component {
   componentWillUnmount() {
     MusicControl.enableBackgroundMode(false);
     MusicControl.stopControl();
+    if (this.listener)
+      this.props.currentTimeAnimated.removeListener(this.listener);
   }
+
+  currentTimeSubscription = () => {
+    this.listener = this.props.currentTimeAnimated.addListener(
+      throttle(({ value }) => {
+        MusicControl.updatePlayback({
+          state: this.props.isPlaying
+            ? MusicControl.STATE_PLAYING
+            : MusicControl.STATE_PAUSED,
+          elapsedTime: value,
+        });
+      }, 1000)
+    );
+  };
 
   setup = () => {
     MusicControl.enableBackgroundMode(true);
@@ -131,11 +159,12 @@ const MusicControlsState = (props) => (
   <Query query={getMusicControlState}>
     {({ data: { mediaPlayer = {} } = {} }) => (
       <PlayheadConsumer>
-        {({ duration }) => (
+        {({ duration, currentTime }) => (
           <ControlsConsumer>
             {({ skip }) => (
               <MusicControls
                 {...props}
+                currentTimeAnimated={currentTime}
                 duration={duration}
                 skip={skip}
                 {...mediaPlayer}
