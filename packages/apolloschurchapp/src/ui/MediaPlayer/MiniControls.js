@@ -21,15 +21,12 @@ import {
 
 const MINI_PLAYER_HEIGHT = 50;
 
-const styles = StyleSheet.create({
-  // eslint-disable-next-line react-native/no-color-literals
-  animatedDismissContainer: {
-    ...StyleSheet.absoluteFillObject,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(255,255,255,0.8)',
-  },
-});
+const DismissBackground = styled(({ theme }) => ({
+  ...StyleSheet.absoluteFillObject,
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: theme.colors.white,
+}))(View);
 
 const TrackInfoTouchable = styled({
   flex: 1,
@@ -120,7 +117,7 @@ class MiniControls extends Component {
     } = {},
   }) => {
     Animated.spring(this.dismissAnimator, {
-      toValue: isPlaying ? 0 : 1,
+      toValue: isPlaying ? 0 : 0.8,
       overshootClamping: true,
       useNativeDriver: true,
     }).start();
@@ -137,11 +134,13 @@ class MiniControls extends Component {
                     <VideoSpacer isVideo={isVideo}>
                       <Animated.View
                         style={[
-                          styles.animatedDismissContainer,
+                          StyleSheet.absoluteFill,
                           { opacity: this.dismissAnimator },
                         ]}
                       >
-                        <StyledIcon name="close" />
+                        <DismissBackground>
+                          <StyledIcon name="close" />
+                        </DismissBackground>
                       </Animated.View>
                     </VideoSpacer>
                   </Touchable>
