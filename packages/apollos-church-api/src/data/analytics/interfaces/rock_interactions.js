@@ -1,10 +1,6 @@
 import BaseAnalytics from './base';
 
 export default class RockInteractionAnalytics extends BaseAnalytics {
-  constructor() {
-    super();
-  }
-
   eventWhitelist = ['View Content'];
 
   track({ event, userId, properties }) {
