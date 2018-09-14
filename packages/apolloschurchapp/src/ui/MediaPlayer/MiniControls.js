@@ -51,9 +51,9 @@ const TrackName = styled(({ theme }) => ({
 
 const TrackArtist = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
-  marginTop: -2.5,
-  opacity: 0.7,
-  overflow: 'hidden',
+  marginTop: theme.helpers.rem(-0.15625),
+  color: theme.colors.text.tertiary,
+  // overflow: 'hidden',
 }))(H6);
 
 const Container = styled(({ theme }) => ({

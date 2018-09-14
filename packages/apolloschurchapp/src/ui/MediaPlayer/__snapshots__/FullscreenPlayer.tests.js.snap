@@ -1129,14 +1129,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#505050",
+                    "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "height": 20,
                     "lineHeight": 17.28,
                     "marginTop": -2.5,
-                    "opacity": 0.7,
-                    "overflow": "hidden",
                   }
                 }
               />
@@ -2499,14 +2497,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               <Text
                 style={
                   Object {
-                    "color": "#505050",
+                    "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "height": 20,
                     "lineHeight": 17.28,
                     "marginTop": -2.5,
-                    "opacity": 0.7,
-                    "overflow": "hidden",
                   }
                 }
               />
@@ -3869,14 +3865,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               <Text
                 style={
                   Object {
-                    "color": "#505050",
+                    "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "height": 20,
                     "lineHeight": 17.28,
                     "marginTop": -2.5,
-                    "opacity": 0.7,
-                    "overflow": "hidden",
                   }
                 }
               />
