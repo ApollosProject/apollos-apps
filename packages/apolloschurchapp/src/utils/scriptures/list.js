@@ -1,6 +1,5 @@
 
 function scriptureList({ scripture, commas = true } = {}) {
-  console.log("scripture = ", scripture);
   if (!scripture && commas) return '';
   if (!scripture) return [];
 

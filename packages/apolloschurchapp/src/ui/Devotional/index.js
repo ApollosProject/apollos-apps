@@ -17,6 +17,7 @@ const Devotional = ({
 }) => {
   const hasScripture = isLoading || scripture.length;
   const tabRoutes = [{ title: 'Devotional', key: 'devotional' }];
+  console.log("hasScripture = ", hasScripture);
   if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
 
   return (
@@ -31,7 +32,9 @@ const Devotional = ({
             scripture,
             title,
           })(DevotionalTab),
-          scripture: ScriptureTab,
+          scripture: withProps({
+            scripture,
+          })(ScriptureTab),
         })}
       >
       </TabView>
