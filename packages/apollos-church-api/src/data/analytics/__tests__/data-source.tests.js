@@ -114,6 +114,47 @@ describe('Analytics Data Source', () => {
       expect(mockCreateInteraction).toHaveBeenCalledTimes(1);
       expect(mockCreateInteraction.mock.calls).toMatchSnapshot();
     });
+    it('must not track events using the Rock adapter without required attrs', async () => {
+      const rockAnalytics = new RockAnalytics();
+      const dataSource = new DataSource([rockAnalytics]);
+      const mockCreateInteraction = jest.fn();
+      dataSource.initialize({
+        context: {
+          dataSources: {
+            Auth: AuthWithUser,
+            Interactions: {
+              createInteraction: mockCreateInteraction,
+            },
+          },
+        },
+      });
+
+      await dataSource.track({
+        eventName: 'View Content',
+        properties: [{ field: 'SessionId', value: 'Session:123' }],
+      });
+
+      expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
+
+      await dataSource.track({
+        eventName: 'View Content',
+        properties: [{ field: 'SessionId', value: 'Session:123' }],
+      });
+
+      expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
+
+      rockAnalytics.eventWhitelist = ['Some Event'];
+
+      await dataSource.track({
+        eventName: 'Some Event',
+        properties: [
+          { field: 'ContentId', value: 'Content:123' },
+          { field: 'SessionId', value: 'Session:123' },
+        ],
+      });
+
+      expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
+    });
     it('must track an event with a name and no properties', async () => {
       const analytics = buildDataSource();
       const result = await analytics.track({
