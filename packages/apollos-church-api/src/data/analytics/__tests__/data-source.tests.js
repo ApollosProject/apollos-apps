@@ -129,6 +129,7 @@ describe('Analytics Data Source', () => {
         },
       });
 
+      // Without session id.
       await dataSource.track({
         eventName: 'View Content',
         properties: [{ field: 'SessionId', value: 'Session:123' }],
@@ -136,17 +137,32 @@ describe('Analytics Data Source', () => {
 
       expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
 
+      // Without content id.
       await dataSource.track({
         eventName: 'View Content',
-        properties: [{ field: 'SessionId', value: 'Session:123' }],
+        properties: [{ field: 'ContentId', value: 'Content:123' }],
       });
 
       expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
 
+      // With an unhandled event
       rockAnalytics.eventWhitelist = ['Some Event'];
 
       await dataSource.track({
         eventName: 'Some Event',
+        properties: [
+          { field: 'ContentId', value: 'Content:123' },
+          { field: 'SessionId', value: 'Session:123' },
+        ],
+      });
+
+      expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
+
+      // without a current user
+      dataSource.context.dataSources.Auth = AuthWithoutUser;
+
+      await dataSource.track({
+        eventName: 'View Content',
         properties: [
           { field: 'ContentId', value: 'Content:123' },
           { field: 'SessionId', value: 'Session:123' },
