@@ -1,6 +1,5 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { startCase, toLower } from 'lodash';
 import PropTypes from 'prop-types';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { H2, H4 } from 'apolloschurchapp/src/ui/typography';
@@ -9,8 +8,6 @@ import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import scriptures from 'apolloschurchapp/src/utils/scriptures';
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
-
-const titleCase = (text) => startCase(toLower(text));
 
 const ScriptureLink = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -29,7 +26,7 @@ const DevotionalTab = ({
   <ScrollView>
     {!isLoading ? (
       <ContentContainer>
-        <H2 padded>{titleCase(title)}</H2>
+        <H2 padded>{title}</H2>
         {scripture && scripture.length ? (
           <ScriptureLink padded onPress={() => jumpTo('scripture')}>
             {scriptures.list({ scripture })}

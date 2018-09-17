@@ -31,10 +31,10 @@ const body =
 // Needed to add our own ScriptureTab component here. This is because the real
 // one uses the Scripture component, which calls a query and we can't handle
 // that query in Storybook.
-const ScriptureTab = ({ scriptureObject }) => (
+const ScriptureTab = ({ scriptures }) => (
   <ScrollView>
     <PaddedView>
-      {scriptureObject.map((scripture) => (
+      {scriptures.map((scripture) => (
         <Item
           key={scripture.id}
           reference={scripture.reference}
@@ -47,7 +47,7 @@ const ScriptureTab = ({ scriptureObject }) => (
 );
 
 ScriptureTab.propTypes = {
-  scripture: PropTypes.arrayOf(
+  scriptures: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       reference: PropTypes.string,
@@ -71,7 +71,7 @@ stories.add('God is Our Banner', () => (
         title,
       })(DevotionalTab),
       scripture: withProps({
-        scriptureObject,
+        scriptures: scriptureObject,
       })(ScriptureTab),
     })}
   />
