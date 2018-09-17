@@ -25,12 +25,12 @@ const DevotionalTab = ({
   body,
   isLoading,
   route: { jumpTo },
-}) => console.log("scripture = ", scripture) || (
+}) => (
   <ScrollView>
     {!isLoading ? (
       <ContentContainer>
         <H2 padded>{titleCase(title)}</H2>
-        {scripture && scripture ? (
+        {scripture && scripture.length ? (
           <ScriptureLink padded onPress={() => jumpTo('scripture')}>
             {scriptures.list({ scripture })}
           </ScriptureLink>
