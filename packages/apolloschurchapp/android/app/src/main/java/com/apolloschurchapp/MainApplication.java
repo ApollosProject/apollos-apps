@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.imagepicker.ImagePickerPackage;
+import com.tanguyantoine.react.MusicControl;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.brentvatne.react.ReactVideoPackage;
 import com.horcrux.svg.SvgPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -30,6 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new ImagePickerPackage(),
+            new MusicControl(),
+            new RNDeviceInfo(),
             new ReactVideoPackage(),
             new SvgPackage(),
             new SplashScreenReactPackage(),
