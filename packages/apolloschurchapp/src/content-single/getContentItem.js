@@ -6,6 +6,7 @@ export default gql`
       ... on ContentItem {
         id
         title
+        isLiked
         htmlContent
         coverImage {
           name
@@ -26,6 +27,15 @@ export default gql`
           sources {
             uri
           }
+        }
+        audios {
+          sources {
+            uri
+          }
+        }
+        parentChannel {
+          id
+          name
         }
         sharing {
           url
