@@ -25,7 +25,7 @@ const DevotionalTab = ({
   body,
   isLoading,
   route: { jumpTo },
-}) => (
+}) => console.log("scripture = ", scripture) || (
   <ScrollView>
     {!isLoading ? (
       <ContentContainer>
