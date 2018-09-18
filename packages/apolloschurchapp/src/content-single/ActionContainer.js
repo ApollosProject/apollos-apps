@@ -5,12 +5,18 @@ import PropTypes from 'prop-types';
 import Share from 'apolloschurchapp/src/ui/Share';
 
 import SideBySideView from 'apolloschurchapp/src/ui/SideBySideView';
+import LikeButton from 'apolloschurchapp/src/ui/LikeButton';
 
-import Heart from './Heart';
+import updateLikeEntity from './updateLikeEntity';
+import getLikedContentItem from './getLikedContentItem';
 
 const ActionContainer = ({ content, itemId }) => (
   <SideBySideView>
-    <Heart itemId={itemId} />
+    <LikeButton
+      itemId={itemId}
+      updateLikeEntity={updateLikeEntity}
+      getLikedContentItem={getLikedContentItem}
+    />
     <Share content={content} />
   </SideBySideView>
 );

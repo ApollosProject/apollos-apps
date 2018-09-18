@@ -5,10 +5,8 @@ import PropTypes from 'prop-types';
 import Like from 'apolloschurchapp/src/ui/Like';
 import { Query, Mutation } from 'react-apollo';
 import getSessionId from 'apolloschurchapp/src/store/getSessionId';
-import updateLikeEntity from './updateLikeEntity';
-import getLikedContentItem from './getLikedContentItem';
 
-const Heart = ({ itemId }) => (
+const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
   <Query query={getSessionId} fetchPolicy="cache-only">
     {({ data: { sessionId } }) =>
       sessionId ? (
@@ -59,7 +57,7 @@ const Heart = ({ itemId }) => (
                       await createNewInteraction({ variables });
                       await refetch();
                     } catch (e) {
-                      console.log(e);
+                      throw e.message;
                     }
                   }}
                 />
@@ -72,8 +70,10 @@ const Heart = ({ itemId }) => (
   </Query>
 );
 
-Heart.propTypes = {
+LikeButton.propTypes = {
   itemId: PropTypes.string,
+  getLikedContentItem: PropTypes.shape({}),
+  updateLikeEntity: PropTypes.shape({}),
 };
 
-export default Heart;
+export default LikeButton;
