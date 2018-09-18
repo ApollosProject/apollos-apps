@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Like from 'apolloschurchapp/src/ui/Like';
 import { Query, Mutation } from 'react-apollo';
 import getSessionId from 'apolloschurchapp/src/store/getSessionId';
-import createInteraction from './createInteraction';
+import updateLikeEntity from './updateLikeEntity';
 import getLikedContentItem from './getLikedContentItem';
 
 const Heart = ({ itemId }) => (
@@ -15,23 +15,36 @@ const Heart = ({ itemId }) => (
         <Query query={getLikedContentItem} variables={{ itemId }}>
           {({
             data: {
-              node: { isLiked },
+              node: { isLiked, ...node },
             },
             refetch,
           }) => (
             <Mutation
-              mutation={createInteraction}
+              mutation={updateLikeEntity}
+              optimisticResponse={{
+                updateLikeEntity: {
+                  operation: isLiked ? 'Unlike' : 'Like',
+                  id: null, // unknown at this time
+                  interactionDateTime: new Date().toJSON(),
+                  __typename: 'Interaction',
+                },
+              }}
               update={(
                 cache,
                 {
                   data: {
-                    createInteraction: { operation },
+                    updateLikeEntity: { operation },
                   },
                 }
               ) => {
                 cache.writeQuery({
                   query: getLikedContentItem,
-                  data: { isLiked: operation === 'Like' },
+                  data: {
+                    node: {
+                      ...node,
+                      isLiked: operation === 'Like',
+                    },
+                  },
                 });
               }}
             >
@@ -46,7 +59,7 @@ const Heart = ({ itemId }) => (
                       await createNewInteraction({ variables });
                       await refetch();
                     } catch (e) {
-                      throw e;
+                      console.log(e);
                     }
                   }}
                 />
