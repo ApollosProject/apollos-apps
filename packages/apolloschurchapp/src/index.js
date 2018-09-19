@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
-import { OneSignal } from 'react-native-onesignal';
+import OneSignal from 'react-native-onesignal';
 // import { Sentry } from 'react-native-sentry';
 
 import Providers from './Providers';
@@ -65,6 +65,10 @@ class OneSignalInit extends Component {
 
   onIds(device) {
     console.log('Device info: ', device);
+  }
+
+  render() {
+    return null;
   }
 }
 
