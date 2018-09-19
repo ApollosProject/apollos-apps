@@ -6,11 +6,9 @@ import Scripture from 'apolloschurchapp/src/ui/Scripture';
 
 const ScriptureTab = ({ isLoading, scripture }) => (
   <ScrollView>
-    {!isLoading ? (
-      <PaddedView>
-        <Scripture references={scripture} />
-      </PaddedView>
-    ) : null}
+    <PaddedView>
+      <Scripture references={scripture} isLoading />
+    </PaddedView>
   </ScrollView>
 );
 
