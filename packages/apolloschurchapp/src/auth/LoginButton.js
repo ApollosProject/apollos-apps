@@ -3,6 +3,8 @@ import { withNavigation } from 'react-navigation';
 import { Query, Mutation } from 'react-apollo';
 import PropTypes from 'prop-types';
 
+import { track, events } from 'apolloschurchapp/src/analytics';
+
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
@@ -25,7 +27,16 @@ class LoginButton extends PureComponent {
 
   renderLogoutButton = () => (
     <Mutation mutation={logout}>
-      {(handleLogout) => <Button onPress={() => handleLogout()}>Logout</Button>}
+      {(handleLogout) => (
+        <Button
+          onPress={() => {
+            track({ eventName: events.UserLogout });
+            return handleLogout();
+          }}
+        >
+          Logout
+        </Button>
+      )}
     </Mutation>
   );
 

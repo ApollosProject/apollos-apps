@@ -2,11 +2,13 @@ import React from 'react';
 import { Query, Mutation } from 'react-apollo';
 
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import Share from 'apolloschurchapp/src/ui/Share';
 import Like from 'apolloschurchapp/src/ui/Like';
 import getSessionId from 'apolloschurchapp/src/store/getSessionId';
 import SideBySideView from 'apolloschurchapp/src/ui/SideBySideView';
+import { track, events } from 'apolloschurchapp/src/analytics';
 
 import updateLikeEntity from './updateLikeEntity';
 import getLikedContentItem from './getLikedContentItem';
@@ -60,6 +62,13 @@ const ActionContainer = ({ content, itemId }) => (
                     operation={isLiked ? 'Unlike' : 'Like'}
                     toggleLike={async (variables) => {
                       try {
+                        track({
+                          eventName: events.LikeContent,
+                          properties: {
+                            id: itemId,
+                            title: get(content, 'title'),
+                          },
+                        });
                         await createNewInteraction({ variables });
                         await refetch();
                       } catch (e) {
