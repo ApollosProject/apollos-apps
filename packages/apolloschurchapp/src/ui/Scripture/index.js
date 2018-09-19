@@ -10,14 +10,14 @@ import Item from './Item';
 import getScripture from './getScripture';
 
 export const ScriptureList = ({ scripture, commas = true }) => {
-    if (!scripture && commas) return '';
-    if (!scripture) return [];
+  if (!scripture && commas) return '';
+  if (!scripture) return [];
 
-    const combo = scripture.map(({ reference }) => `${reference}`);
+  const combo = scripture.map(({ reference }) => `${reference}`);
 
-    if (commas) return combo.join(', ');
-    return combo;
-}
+  if (commas) return combo.join(', ');
+  return combo;
+};
 
 const Scripture = ({ references = [] }) => (
   <View>
