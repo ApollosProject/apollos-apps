@@ -14,44 +14,40 @@ const Container = styled({
   alignItems: 'center',
 })(View);
 
+const TrackContainer = styled(({ theme, minimal }) => ({
+  height: theme.sizing.borderRadius,
+  flexGrow: 1,
+  justifyContent: 'center',
+  // paddingLeft: minimal ? 0 : 10,
+  paddingVertical: theme.sizing.borderRadius,
+}))(View);
+
 const Track = styled(({ theme, minimal }) => ({
+  height: theme.sizing.borderRadius,
+  overflow: 'hidden',
+  borderRadius: minimal ? 0 : theme.sizing.borderRadius,
   backgroundColor: minimal
     ? theme.colors.transparent
     : theme.colors.darkSecondary,
-  borderRadius: minimal ? 0 : theme.sizing.borderRadius,
-  overflow: 'hidden',
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
 }))(View);
 
-const TrackContainer = styled(({ theme, minimal }) => ({
-  position: 'absolute',
-  left: minimal ? 0 : TIME_TEXT_WIDTH,
-  right: minimal ? 0 : TIME_TEXT_WIDTH,
+const ProgressBar = styled(({ theme }) => ({
   height: theme.sizing.borderRadius,
+  backgroundColor: theme.colors.secondary,
 }))(View);
 
 const Knob = styled(({ theme, minimal }) => {
   const size = minimal ? 0 : theme.sizing.borderRadius * 2;
   return {
-    backgroundColor: theme.colors.text.primary,
-    borderRadius: size,
-    position: 'absolute',
-    top: -(size / 2) + theme.sizing.borderRadius / 2,
-    right: -(size / 2),
     height: size,
     width: size,
+    position: 'absolute',
+    right: 0,
     elevation: 2,
+    borderRadius: size,
+    backgroundColor: theme.colors.text.primary,
   };
 })(View);
-
-const ProgressBar = styled(({ theme }) => ({
-  backgroundColor: theme.colors.secondary,
-  ...StyleSheet.absoluteFillObject,
-}))(View);
 
 /**
  * Animated Seeker component.
@@ -142,16 +138,6 @@ class Seeker extends PureComponent {
 
   // the "knob" is on top of the trackbar, the piece of UI you can grab and move around
   get knobStyles() {
-    return [
-      StyleSheet.absoluteFill,
-      {
-        overflow: 'visible',
-        transform: [{ translateX: this.trackBarOffset }],
-      },
-    ];
-  }
-
-  get progressBarStyles() {
     return [
       StyleSheet.absoluteFill,
       {
