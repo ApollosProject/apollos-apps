@@ -1,7 +1,6 @@
 
-v0.4.0: September 19, 2018
+v0.5.0: September 19, 2018
 
-- v0.5.0 (1d95cc3)
 - Adds Server Side Analytics Support (#263) (de7391e)
 - Adds Rock as Analytics Interface (#292) (b132a39)
 - Adds a GraphQL API to update user profile attributes (#260) (6dea512)
