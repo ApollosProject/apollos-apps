@@ -175,13 +175,13 @@ class FullscreenControls extends PureComponent {
 
   renderSkipForward = ({ skip }) => (
     <Touchable onPress={() => skip(30)}>
-      <IconMd name="skip-next" />
+      <IconMd name="skip-forward-thirty" />
     </Touchable>
   );
 
   renderSkipBack = ({ skip }) => (
     <Touchable onPress={() => skip(-30)}>
-      <IconMd name="skip-previous" />
+      <IconMd name="skip-back-thirty" />
     </Touchable>
   );
 
