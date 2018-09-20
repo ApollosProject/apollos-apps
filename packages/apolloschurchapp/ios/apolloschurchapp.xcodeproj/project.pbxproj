@@ -1084,6 +1084,7 @@
 					ProductGroup = BF99316D2138673B0077FD20 /* Products */;
 					ProjectRef = 3BD7DCDF7B194D7BB9BE3C6C /* RNImagePicker.xcodeproj */;
         },
+        {
 					ProductGroup = 796F252E212CAD5D00C6935E /* Products */;
 					ProjectRef = 239ECFF08FA841B99DB1CAFA /* RNDeviceInfo.xcodeproj */;
 				},
@@ -1703,7 +1704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 7TM8C6252Z;
 				HEADER_SEARCH_PATHS = (
@@ -1734,7 +1735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7TM8C6252Z;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

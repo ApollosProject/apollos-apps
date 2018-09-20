@@ -8,57 +8,63 @@ import getSessionId from 'apolloschurchapp/src/store/getSessionId';
 
 const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
   <Query query={getSessionId} fetchPolicy="cache-only">
-    {({ data: { sessionId } }) => (
-      <Query query={getLikedContentItem} variables={{ itemId }}>
-        {({ data: { node: { isLiked, ...node } = {} } }) => (
-          <Mutation
-            mutation={updateLikeEntity}
-            optimisticResponse={{
-              updateLikeEntity: {
-                operation: isLiked ? 'Unlike' : 'Like',
-                id: null, // unknown at this time
-                interactionDateTime: new Date().toJSON(),
-                __typename: 'Interaction',
-              },
-            }}
-            update={(
-              cache,
-              {
-                data: {
-                  updateLikeEntity: { operation },
+    {({ data: { sessionId } }) =>
+      sessionId ? (
+        <Query query={getLikedContentItem} variables={{ itemId }}>
+          {({
+            data: {
+              node: { isLiked, ...node },
+            },
+          }) => (
+            <Mutation
+              mutation={updateLikeEntity}
+              optimisticResponse={{
+                updateLikeEntity: {
+                  operation: isLiked ? 'Unlike' : 'Like',
+                  id: null, // unknown at this time
+                  interactionDateTime: new Date().toJSON(),
+                  __typename: 'Interaction',
                 },
-              }
-            ) => {
-              cache.writeQuery({
-                query: getLikedContentItem,
-                data: {
-                  node: {
-                    ...node,
-                    isLiked: operation === 'Like',
+              }}
+              update={(
+                cache,
+                {
+                  data: {
+                    updateLikeEntity: { operation },
                   },
-                },
-              });
-            }}
-          >
-            {(createNewInteraction) => (
-              <Like
-                itemId={itemId}
-                sessionId={sessionId}
-                isLiked={isLiked}
-                operation={isLiked ? 'Unlike' : 'Like'}
-                toggleLike={async (variables) => {
-                  try {
-                    await createNewInteraction({ variables });
-                  } catch (e) {
-                    throw e.message;
-                  }
-                }}
-              />
-            )}
-          </Mutation>
-        )}
-      </Query>
-    )}
+                }
+              ) => {
+                cache.writeQuery({
+                  query: getLikedContentItem,
+                  data: {
+                    node: {
+                      ...node,
+                      isLiked: operation === 'Like',
+                    },
+                  },
+                });
+              }}
+            >
+              {(createNewInteraction) => (
+                <Like
+                  itemId={itemId}
+                  sessionId={sessionId}
+                  isLiked={isLiked}
+                  operation={isLiked ? 'Unlike' : 'Like'}
+                  toggleLike={async (variables) => {
+                    try {
+                      await createNewInteraction({ variables });
+                    } catch (e) {
+                      throw e.message;
+                    }
+                  }}
+                />
+              )}
+            </Mutation>
+          )}
+        </Query>
+      ) : null
+    }
   </Query>
 );
 
