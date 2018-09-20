@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
 import Share from 'apolloschurchapp/src/ui/Share';
 
