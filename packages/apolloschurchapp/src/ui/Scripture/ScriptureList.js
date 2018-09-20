@@ -14,7 +14,6 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
   if (!scripture) return [];
 
   let combo = scripture.map(({ reference }) => `${reference}`);
-  console.log('combo = ', combo);
 
   if (commas) {
     combo = combo.join(', ');
