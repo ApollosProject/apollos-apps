@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { H4 } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
@@ -27,6 +28,18 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
       </ButtonLink>
     </StyledH4>
   );
+};
+
+ScriptureList.propTypes = {
+  scripture: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      reference: PropTypes.string,
+      html: PropTypes.string,
+    })
+  ),
+  commas: PropTypes.bool,
+  jumpTo: PropTypes.func,
 };
 
 export default ScriptureList;

@@ -289,8 +289,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                   God is Our Banner
                 </Text>
                 <Text
-                  onPress={[Function]}
-                  padded={true}
                   style={
                     Object {
                       "color": "#00676D",
@@ -298,13 +296,22 @@ exports[`the Devotional component renders a devotional 1`] = `
                       "fontSize": 16,
                       "lineHeight": 23.04,
                       "paddingBottom": 30,
-                      "paddingTop": 15.21,
                       "textAlign": "center",
                       "textDecorationLine": "underline",
                     }
                   }
                 >
-                  1 Corinthians 15:57, Exodus 17:8-15
+                  <Text
+                    onPress={[Function]}
+                    padded={true}
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    1 Corinthians 15:57, Exodus 17:8-15
+                  </Text>
                 </Text>
                 <View>
                   <View
