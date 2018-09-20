@@ -10,11 +10,7 @@ const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
   <Query query={getSessionId} fetchPolicy="cache-only">
     {({ data: { sessionId } }) => (
       <Query query={getLikedContentItem} variables={{ itemId }}>
-        {({
-          data: {
-            node: { isLiked, ...node },
-          },
-        }) => (
+        {({ data: { node: { isLiked, ...node } = {} } }) => (
           <Mutation
             mutation={updateLikeEntity}
             optimisticResponse={{

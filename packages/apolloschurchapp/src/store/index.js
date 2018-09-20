@@ -2,7 +2,7 @@ import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import { client } from '../client'; // eslint-disable-line
 import getAuthToken from './getAuthToken';
-import getSessionId from './getSessionId';
+
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
 
@@ -11,6 +11,7 @@ export const schema = `
     authToken: String
     sessionId: String
     mediaPlayer: MediaPlayerState
+    isLoggedIn: Boolean
   }
 
   type Mutation {
@@ -56,6 +57,7 @@ export const schema = `
 `;
 
 export const defaults = {
+  __typename: 'ClientState',
   authToken: null,
   sessionId: null,
   mediaPlayer: {
@@ -71,10 +73,15 @@ export const defaults = {
 let trackId = 0;
 
 export const resolvers = {
+  Query: {
+    isLoggedIn: ({ authToken, sessionId }) => !!(authToken && sessionId),
+  },
   Mutation: {
     logout: (root, variables, { cache }) => {
       client.resetStore();
-      cache.writeData({ data: { authToken: null, sessionId: null } });
+      cache.writeData({
+        data: { authToken: null, sessionId: null, isLoggedIn: false },
+      });
       return null;
     },
 
@@ -99,14 +106,19 @@ export const resolvers = {
           mutation: createSessionMutation,
         });
 
-        await cache.writeQuery({
-          query: getSessionId,
-          data: { sessionId: createSession.id },
+        await cache.writeData({
+          data: {
+            sessionId: createSession.id,
+            isLoggedIn: true,
+          },
         });
       } catch (e) {
         console.log(e);
       }
+
+      return null;
     },
+
     mediaPlayerPlayNow: (root, trackInfo, { cache }) => {
       const query = gql`
         query {
