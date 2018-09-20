@@ -1,8 +1,9 @@
 import React from 'react';
 import { H4 } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
+import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 
-const ScriptureLink = styled(({ theme }) => ({
+const StyledH4 = styled(({ theme }) => ({
   color: theme.colors.primary,
   textAlign: 'center',
   textDecorationLine: 'underline',
@@ -20,9 +21,11 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
   }
 
   return (
-    <ScriptureLink padded onPress={() => jumpTo('scripture')}>
-      {combo}
-    </ScriptureLink>
+    <StyledH4>
+      <ButtonLink padded onPress={() => jumpTo('scripture')}>
+        {combo}
+      </ButtonLink>
+    </StyledH4>
   );
 };
 
