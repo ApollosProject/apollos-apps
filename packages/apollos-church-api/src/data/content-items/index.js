@@ -41,6 +41,7 @@ export const schema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    isLiked: Boolean
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -64,6 +65,31 @@ export const schema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    isLiked: Boolean
+  }
+
+  type DevotionalContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    isLiked: Boolean
+    scriptures: Scripture
   }
 
   type Term {
@@ -86,7 +112,15 @@ export const schema = gql`
     node: ContentItem
     cursor: String
   }
+
+  extend type Query {
+    userFeed(first: Int, after: String): ContentItemsConnection
+    getAllLikedContent: [ContentItem]
+  }
 `;
+
+const hasScripture = ({ attributeValues }) =>
+  get(attributeValues, 'scriptures.value') != null;
 
 const isImage = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
@@ -222,7 +256,18 @@ export const defaultContentItemResolvers = {
     if (![6, 5, 4].includes(root.contentChannelId)) return null; // todo: don't generate a theme for these content channel ids
     return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
   },
+  isLiked: async ({ id, isLiked }, args, { dataSources }) => {
+    if (isLiked != null) return isLiked;
 
+    const interactions = await dataSources.Interactions.getForContentItem({
+      contentItemId: id,
+    });
+
+    const likes = interactions.filter((i) => i.operation === 'Like').length;
+    const unlike = interactions.filter((i) => i.operation === 'Unlike').length;
+    // If likes / unlikes equal we have either unliked the content or haven't liked it yet (both are 0)
+    return likes > unlike;
+  },
   sharing: (root) => ({ __type: 'SharableContentItem', ...root }),
 };
 
@@ -233,6 +278,60 @@ export const resolver = {
         cursor: dataSources.ContentItem.byUserFeed(),
         args,
       }),
+    getAllLikedContent: async (root, args, { dataSources }) => {
+      // Get All Interactions from current user
+      const interactions = await dataSources.Interactions.getForContentItems();
+
+      const likeCounts = {};
+
+      // Iterate over the interactions and determine which pieces of content
+      // has more likes than unlikes
+      interactions.forEach(({ operation, relatedEntityId }) => {
+        if (!likeCounts[relatedEntityId]) {
+          likeCounts[relatedEntityId] = 0;
+        }
+        if (operation === 'Like') {
+          likeCounts[relatedEntityId] += 1;
+        }
+        if (operation === 'Unlike') {
+          likeCounts[relatedEntityId] -= 1;
+        }
+      });
+
+      const itemIds = [];
+      Object.keys(likeCounts).forEach((relatedEntityId) => {
+        if (likeCounts[relatedEntityId] > 0) {
+          itemIds.push(relatedEntityId);
+        }
+      });
+
+      // Grab content related to user's interactions
+      const getUserContentFromInteractions = itemIds.map((id) =>
+        dataSources.ContentItem.getFromId(id)
+      );
+
+      const resolveUserContentFromInteractions = await Promise.all(
+        getUserContentFromInteractions
+      );
+
+      // Determine the isLiked value on contentitems and create an obj that we
+      // can merge with our main set of data later
+      const calculateIsLikedOnContentItems = resolveUserContentFromInteractions.map(
+        (item) => ({ ...item, isLiked: true })
+      );
+
+      return calculateIsLikedOnContentItems;
+    },
+  },
+  DevotionalContentItem: {
+    ...defaultContentItemResolvers,
+    scriptures: ({ attributeValues }, args, { dataSources }) => {
+      const reference = get(attributeValues, 'scriptures.value');
+      if (reference && reference != null) {
+        return dataSources.Scripture.getScripture(reference);
+      }
+      return null;
+    },
   },
   UniversalContentItem: {
     ...defaultContentItemResolvers,
@@ -252,7 +351,12 @@ export const resolver = {
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: () => 'UniversalContentItem', // todo: for now, everything is of the same type
+    __resolveType: ({ attributeValues }) => {
+      if (hasScripture({ attributeValues })) {
+        return 'DevotionalContentItem';
+      }
+      return 'UniversalContentItem';
+    },
   },
   SharableContentItem: {
     url: () => 'https://apollosrock.newspring.cc/', // todo: return a dynamic url that links to the content item

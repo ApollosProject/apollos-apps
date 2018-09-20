@@ -1,10 +1,12 @@
 {
   "name": "apollos-church-api",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node",
+    "start": "if test \"$NOW_ENV\" = \"true\" ; then yarn start:now ; else yarn start:dev ; fi",
+    "start:dev": "nodemon ./index.js --exec babel-node",
+    "start:now": "babel-node ./index.js",
     "test": "jest",
     "test:watch": "jest --maxWorkers=2 --watch",
     "lint": "eslint ./src --ext .js",
@@ -24,13 +26,15 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "analytics-node": "^3.3.0",
     "apollo-datasource-rest": "0.1.1",
-    "apollo-server": "2.0.0",
+    "apollo-server": "^2.0.5",
     "casual": "1.5.19",
     "color": "3.0.0",
     "crypto": "1.0.1",
     "dataloader": "1.4.0",
     "dotenv": "6.0.0",
+    "form-data": "^2.3.2",
     "graphql": "0.13.2",
     "isomorphic-fetch": "2.2.1",
     "jsonwebtoken": "8.3.0",
@@ -38,6 +42,7 @@
     "prettier": "1.12.1",
     "randomcolor": "0.5.3",
     "sanitize-html": "1.18.2",
+    "universal-analytics": "^0.4.17",
     "url-join": "4.0.0",
     "with-query": "1.0.2"
   },
@@ -48,13 +53,5 @@
     "jest": "23.0.0",
     "jest-fetch-mock": "1.6.2",
     "nodemon": "1.17.5"
-  },
-  "now": {
-    "name": "apollos-church-api",
-    "alias": "apollos-church-api.now.sh",
-    "env": {
-      "ROCK_API": "@rock_api",
-      "ROCK_TOKEN": "@rock_token"
-    }
   }
 }

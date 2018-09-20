@@ -1,17 +1,16 @@
 import { dataSources } from './data';
 
 export default () => {
-  const sources = {
-    LiveStream: new dataSources.LiveStream(),
-    ContentChannel: new dataSources.ContentChannel(),
-    ContentItem: new dataSources.ContentItem(),
-    Person: new dataSources.Person(),
-    Auth: new dataSources.Auth(),
-    Scripture: new dataSources.ESVScripture(),
-  };
+  const sources = {};
+  Object.keys(dataSources).forEach((dataSourceName) => {
+    if (dataSources[dataSourceName]) {
+      sources[dataSourceName] = new dataSources[dataSourceName]();
+    }
+  });
 
   return {
     ...sources,
     UniversalContentItem: sources.ContentItem, // alias
+    DevotionalContentItem: sources.ContentItem, // alias
   };
 };

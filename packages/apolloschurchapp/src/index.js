@@ -3,6 +3,9 @@ import { createStackNavigator } from 'react-navigation';
 import OneSignal from 'react-native-onesignal';
 // import { Sentry } from 'react-native-sentry';
 
+import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
+import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
+
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
@@ -74,8 +77,11 @@ class OneSignalInit extends Component {
 
 const App = () => (
   <Providers>
-    <AppModalNavigator />
-    <OneSignalInit />
+    <BackgroundView>
+      <AppModalNavigator />
+      <OneSignalInit />
+      <MediaPlayer />
+    </BackgroundView>
   </Providers>
 );
 

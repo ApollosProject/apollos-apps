@@ -1,6 +1,7 @@
 import { gql } from 'apollo-server';
-import { mapValues, values, merge } from 'lodash';
+import { mapValues, values, merge, compact } from 'lodash';
 
+import RockConstants from 'apollos-church-api/src/connectors/rock/rock-constants';
 import * as Node from './node';
 import * as ContentChannel from './content-channels';
 import * as ContentItem from './content-items';
@@ -9,8 +10,10 @@ import * as Media from './media';
 import * as Auth from './auth';
 import * as LiveStream from './live';
 import * as Theme from './theme';
-import * as ESVScripture from './esv';
+import * as Scripture from './bible';
+import * as Interactions from './interactions';
 import * as Sharable from './sharable';
+import * as Analytics from './analytics';
 
 const data = {
   Node,
@@ -21,31 +24,29 @@ const data = {
   Auth,
   LiveStream,
   Theme,
-  ESVScripture,
+  Scripture,
+  Interactions,
+  RockConstants: { dataSource: RockConstants },
   Sharable,
+  Analytics,
 };
 
 export const schema = [
-  ...values(data).map((datum) => datum.schema),
   gql`
     type Query {
-      node(id: ID!): Node
-      people(email: String!): [Person]
-      userFeed(first: Int, after: String): ContentItemsConnection
-      contentChannels: [ContentChannel]
-      currentUser: AuthenticatedUser
-      liveStream: LiveStream
-      scripture(query: String!): ESVScripture
+      _placeholder: Boolean # needed, empty schema defs aren't supported
     }
 
     type Mutation {
-      authenticate(identity: String!, password: String!): Authentication
-      registerPerson(email: String!, password: String!): Authentication
+      _placeholder: Boolean # needed, empty schema defs aren't supported
     }
   `,
+  ...compact(values(data).map((datum) => datum.schema)),
 ];
 
-export const resolvers = merge(...values(data).map((datum) => datum.resolver));
+export const resolvers = merge(
+  ...compact(values(data).map((datum) => datum.resolver))
+);
 
 export const dataSources = mapValues(data, (datum) => datum.dataSource);
 
@@ -53,3 +54,11 @@ export const models = {
   ...mapValues(data, (datum) => datum.model),
   UniversalContentItem: ContentItem.model, // alias
 };
+
+// the upload Scalar is added
+export const testSchema = [
+  gql`
+    scalar Upload
+  `,
+  ...schema,
+];

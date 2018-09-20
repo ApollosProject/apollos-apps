@@ -1,6 +1,16 @@
 import { gql } from 'apollo-server';
 
 export default gql`
+  enum UPDATEABLE_PROFILE_FIELDS {
+    FirstName
+    LastName
+  }
+
+  input UpdateProfileInput {
+    field: UPDATEABLE_PROFILE_FIELDS!
+    value: String!
+  }
+
   type Person implements Node {
     id: ID!
     firstName: String!
@@ -8,5 +18,14 @@ export default gql`
     nickName: String
     email: String
     photo: ImageMediaSource
+  }
+
+  extend type Mutation {
+    updateProfile(input: UpdateProfileInput!): Person
+    uploadProfileImage(file: Upload!, size: Int!): Person
+  }
+
+  extend type Query {
+    people(email: String!): [Person]
   }
 `;

@@ -5,7 +5,7 @@ import { makeExecutableSchema } from 'apollo-server';
 import { createGlobalId } from 'apollos-church-api/src/data/node/model';
 import { getTestContext } from 'apollos-church-api/src/utils/testUtils';
 // we import the root-level schema and resolver so we test the entire integration:
-import { schema as typeDefs, resolvers } from '../..';
+import { testSchema as typeDefs, resolvers } from 'apollos-church-api/src/data';
 
 const contentItemFragment = `
   fragment ContentItemFragment on UniversalContentItem {
@@ -110,6 +110,26 @@ describe('UniversalContentItem', () => {
         }
       }
       ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('gets a devotional item', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(123, 'DevotionalContentItem')}") {
+          id
+          ... on DevotionalContentItem {
+            id
+            title
+            scriptures {
+              html
+            }
+          }
+        }
+      }
     `;
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
