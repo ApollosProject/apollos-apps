@@ -62,6 +62,7 @@ export const identify = () =>
 
 export const events = {
   LikeContent: 'Like Content',
+  UnlikeContent: 'Unlike Content',
   ViewContent: 'View Content',
   ShareContent: 'Share Content',
   UserLogin: 'User Login',
