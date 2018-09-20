@@ -15,7 +15,6 @@ const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
             data: {
               node: { isLiked, ...node },
             },
-            refetch,
           }) => (
             <Mutation
               mutation={updateLikeEntity}
@@ -55,7 +54,6 @@ const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
                   toggleLike={async (variables) => {
                     try {
                       await createNewInteraction({ variables });
-                      await refetch();
                     } catch (e) {
                       throw e.message;
                     }
