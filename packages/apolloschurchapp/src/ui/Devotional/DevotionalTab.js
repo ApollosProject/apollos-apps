@@ -9,13 +9,6 @@ import { ScriptureList } from 'apolloschurchapp/src/ui/Scripture';
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
 
-const ScriptureLink = styled(({ theme }) => ({
-  color: theme.colors.primary,
-  textAlign: 'center',
-  textDecorationLine: 'underline',
-  paddingBottom: theme.sizing.baseUnit * 1.5,
-}))(H4);
-
 const DevotionalTab = ({
   title,
   scripture,
@@ -28,9 +21,7 @@ const DevotionalTab = ({
       <ContentContainer>
         <H2 padded>{title}</H2>
         {scripture && scripture.length ? (
-          <ScriptureLink padded onPress={() => jumpTo('scripture')}>
-            <ScriptureList scripture={scripture} />
-          </ScriptureLink>
+          <ScriptureList scripture={scripture} jumpTo={jumpTo} />
         ) : null}
         <HTMLView>{body}</HTMLView>
       </ContentContainer>
