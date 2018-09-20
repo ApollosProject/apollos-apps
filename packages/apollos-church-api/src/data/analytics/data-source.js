@@ -93,7 +93,6 @@ export default class Analytics extends DataSource {
   async track({ anonymousId, deviceInfo, eventName, properties }) {
     const currentUser = await this.getCurrentPerson();
     const parsedProps = mapArrayToObject(properties);
-    console.log({ anonymousId, deviceInfo, eventName, parsedProps });
     this.trackInterfaces.forEach(async (iface) => {
       if (
         iface.eventWhitelist === null ||
