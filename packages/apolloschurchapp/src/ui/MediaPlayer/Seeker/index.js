@@ -6,7 +6,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 
 import { PlayheadConsumer, ControlsConsumer } from '../PlayheadState';
-import Timestamp, { TIME_TEXT_WIDTH } from './Timestamp';
+import Timestamp from './Timestamp';
 
 const Container = styled({
   width: '100%',
