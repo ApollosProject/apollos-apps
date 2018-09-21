@@ -8,7 +8,6 @@ import getAuthToken from './getAuthToken';
 export const schema = `
   type Query {
     authToken: String
-    sessionId: String
     mediaPlayer: MediaPlayerState
     isLoggedIn: Boolean
   }
@@ -58,7 +57,6 @@ export const schema = `
 export const defaults = {
   __typename: 'ClientState',
   authToken: null,
-  sessionId: null,
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     currentTrack: null,
@@ -73,13 +71,13 @@ let trackId = 0;
 
 export const resolvers = {
   Query: {
-    isLoggedIn: ({ authToken, sessionId }) => !!(authToken && sessionId),
+    isLoggedIn: ({ authToken }) => !!authToken,
   },
   Mutation: {
     logout: (root, variables, { cache }) => {
       client.resetStore();
       cache.writeData({
-        data: { authToken: null, sessionId: null, isLoggedIn: false },
+        data: { authToken: null, isLoggedIn: false },
       });
       return null;
     },
