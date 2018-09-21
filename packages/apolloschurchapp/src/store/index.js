@@ -10,6 +10,7 @@ export const schema = `
     authToken: String
     sessionId: String
     mediaPlayer: MediaPlayerState
+    isLoggedIn: Boolean
   }
 
   type Mutation {
@@ -55,6 +56,7 @@ export const schema = `
 `;
 
 export const defaults = {
+  __typename: 'ClientState',
   authToken: null,
   sessionId: null,
   mediaPlayer: {
@@ -70,10 +72,15 @@ export const defaults = {
 let trackId = 0;
 
 export const resolvers = {
+  Query: {
+    isLoggedIn: ({ authToken, sessionId }) => !!(authToken && sessionId),
+  },
   Mutation: {
     logout: (root, variables, { cache }) => {
       client.resetStore();
-      cache.writeData({ data: { authToken: null, sessionId: null } });
+      cache.writeData({
+        data: { authToken: null, sessionId: null, isLoggedIn: false },
+      });
       return null;
     },
 
@@ -84,9 +91,12 @@ export const resolvers = {
           data: { authToken },
         });
       } catch (e) {
-        console.log(e);
+        throw e.message;
       }
+
+      return null;
     },
+
     mediaPlayerPlayNow: (root, trackInfo, { cache }) => {
       const query = gql`
         query {
