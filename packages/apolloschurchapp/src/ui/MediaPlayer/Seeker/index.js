@@ -19,7 +19,8 @@ const TrackContainer = styled(({ theme, minimal }) => ({
   flexGrow: 1,
   justifyContent: 'center',
   // paddingLeft: minimal ? 0 : 10,
-  paddingVertical: theme.sizing.borderRadius,
+  paddingTop: minimal ? 20 : theme.sizing.borderRadius,
+  paddingBottom: minimal ? 0 : theme.sizing.borderRadius,
 }))(View);
 
 const Track = styled(({ theme, minimal }) => ({
