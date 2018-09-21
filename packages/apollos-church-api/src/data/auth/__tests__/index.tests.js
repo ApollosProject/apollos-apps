@@ -74,7 +74,7 @@ describe('Auth', () => {
     it('queries current user when logged in', async () => {
       const rootValue = {};
       const { userToken, rockCookie } = registerToken(
-        generateToken({ cookie: 'some-cookie' })
+        generateToken({ cookie: 'some-cookie', sessionId: 123 })
       );
       context.userToken = userToken;
       context.rockCookie = rockCookie;
@@ -98,7 +98,7 @@ describe('Auth', () => {
   });
 
   it('registers an auth token and passes the cookie on requests to rock', async () => {
-    const token = generateToken({ cookie: 'some-cookie' });
+    const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
     const secondContext = getTestContext({
       req: {
         headers: { authorization: token },

@@ -12,9 +12,9 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   userToken = null;
 
-  getCurrentPerson = async () => {
+  getCurrentPerson = async ({ cookie } = { cookie: null }) => {
     const { rockCookie } = this.context;
-    if (rockCookie) {
+    if (cookie || rockCookie) {
       const request = await this.request('People/GetCurrentPerson').get({
         options: { headers: { cookie: rockCookie } },
       });
@@ -47,13 +47,22 @@ export default class AuthDataSource extends RockApolloDataSource {
     }
   };
 
+  createSession = async ({ cookie }) => {
+    const currentUser = await this.getCurrentPerson({ cookie });
+    return this.post('/InteractionSessions', {
+      PersonAliasId: currentUser.primaryAliasId,
+    });
+  };
+
   authenticate = async ({ identity, password }) => {
     try {
       const cookie = await this.fetchUserCookie(identity, password);
+      const sessionId = await this.createSession({ cookie });
       const token = generateToken({ cookie });
       const { userToken, rockCookie } = registerToken(token);
-      this.context.userToken = userToken;
       this.context.rockCookie = rockCookie;
+      this.context.userToken = userToken;
+      this.context.sessionId = sessionId;
       return { token, rockCookie };
     } catch (e) {
       throw e;
