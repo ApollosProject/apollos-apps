@@ -2,7 +2,6 @@ import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import { client } from '../client'; // eslint-disable-line
 import getAuthToken from './getAuthToken';
-import getSessionId from './getSessionId';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
 
@@ -79,29 +78,10 @@ export const resolvers = {
     },
 
     handleLogin: async (root, { authToken }, { cache }) => {
-      const createSessionMutation = gql`
-        mutation {
-          createSession {
-            id
-          }
-        }
-      `;
-
       try {
         await cache.writeQuery({
           query: getAuthToken,
           data: { authToken },
-        });
-
-        const {
-          data: { createSession },
-        } = await client.mutate({
-          mutation: createSessionMutation,
-        });
-
-        await cache.writeQuery({
-          query: getSessionId,
-          data: { sessionId: createSession.id },
         });
       } catch (e) {
         console.log(e);
