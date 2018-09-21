@@ -1,5 +1,4 @@
 import React from 'react';
-import { withProps } from 'recompose';
 import PropTypes from 'prop-types';
 
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
@@ -21,17 +20,18 @@ const Devotional = ({
       <TabView
         routes={tabRoutes}
         renderScene={SceneMap({
-          devotional: withProps({
-            body,
-            isLoading,
-            otherContentProps,
-            scripture,
-            title,
-          })(DevotionalTab),
-          scripture: withProps({
-            isLoading,
-            scripture,
-          })(ScriptureTab),
+          devotional: (
+            <DevotionalTab
+              body={body}
+              isLoading={isLoading}
+              otherContentProps={otherContentProps}
+              scripture={scripture}
+              title={title}
+            />
+          ),
+          scripture: (
+            <ScriptureTab isLoading={isLoading} scripture={scripture} />
+          ),
         })}
       />
     </BackgroundView>
