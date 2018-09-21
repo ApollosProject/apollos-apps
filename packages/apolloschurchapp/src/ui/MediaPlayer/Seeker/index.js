@@ -19,7 +19,6 @@ const TrackContainer = styled(({ minimal, knobSize }) => ({
   height: knobSize / 2,
   flexGrow: 1,
   justifyContent: 'center',
-  // paddingLeft: minimal ? 0 : 10,
   paddingTop: minimal ? 20 : knobSize / 2,
   paddingBottom: minimal ? 0 : knobSize / 2,
 }))(View);
@@ -38,18 +37,15 @@ const ProgressBar = styled(({ theme }) => ({
   backgroundColor: theme.colors.secondary,
 }))(View);
 
-const Knob = styled(({ theme, minimal, knobSize }) => {
-  const size = minimal ? 0 : knobSize;
-  return {
-    height: size,
-    width: size,
-    position: 'absolute',
-    right: 0,
-    elevation: 2,
-    borderRadius: size,
-    backgroundColor: theme.colors.text.primary,
-  };
-})(View);
+const Knob = styled(({ theme, knobSize }) => ({
+  height: knobSize,
+  width: knobSize,
+  position: 'absolute',
+  right: 0,
+  elevation: 2,
+  borderRadius: knobSize,
+  backgroundColor: theme.colors.text.primary,
+}))(View);
 
 /**
  * Animated Seeker component.
@@ -153,7 +149,14 @@ class Seeker extends PureComponent {
     nativeEvent: {
       layout: { width },
     },
-  }) => this.setState({ width: width - this.props.knobSize });
+  }) =>
+    this.setState({
+      /*
+       * Adjust offset width to adjust for knobSize so Knob always appears on the track. Knob is
+       * hidden when in a minimal state (miniplayer) we only make this adjustment when necessary.
+       */
+      width: this.props.minimal ? width : width - this.props.knobSize,
+    });
 
   renderProgress = () => (
     <Animated.View
@@ -189,11 +192,12 @@ class Seeker extends PureComponent {
             {this.renderProgress()}
           </Track>
           <Animated.View style={this.knobStyles}>
-            <Knob
-              minimal={this.props.minimal}
-              knobSize={this.props.knobSize}
-              {...this.panResponder.panHandlers}
-            />
+            {!this.props.minimal ? (
+              <Knob
+                knobSize={this.props.knobSize}
+                {...this.panResponder.panHandlers}
+              />
+            ) : null}
           </Animated.View>
         </TrackContainer>
         {!this.props.minimal ? <Timestamp time={this.props.duration} /> : null}
