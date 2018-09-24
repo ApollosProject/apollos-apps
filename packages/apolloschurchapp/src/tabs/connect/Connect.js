@@ -19,7 +19,7 @@ import client from 'apolloschurchapp/src/client';
 import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
 
-const logout = () => client.mutate({ mutation: logout });
+const logoutUser = () => client.mutate({ mutation: logout });
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -42,16 +42,12 @@ class Connect extends PureComponent {
                           query={getUserProfile}
                           fetchPolicy="cache-and-network"
                         >
-                          {({
-                            data: {
-                              currentUser: {
-                                profile: { photo, firstName, lastName } = {},
-                              } = {},
-                            } = {},
-                            error,
-                            refetch,
-                          }) => {
-                            if (error) return logout();
+                          {({ data: { currentUser } = {}, error, refetch }) => {
+                            if (error || !currentUser) return logoutUser();
+                            const {
+                              profile: { photo, firstName, lastName } = {},
+                            } = currentUser;
+                            console.log(error, currentUser);
                             return (
                               <UserAvatarView
                                 firstName={firstName}
