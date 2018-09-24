@@ -33,6 +33,7 @@ class LoginButton extends PureComponent {
     return (
       <Query query={getLoginState}>
         {({ data: { isLoggedIn = false, loading } }) => {
+          console.log({ isLoggedIn });
           if (loading) return <ActivityIndicator />;
           if (isLoggedIn) return this.renderLogoutButton();
           return <Button onPress={this.handleLoginPress}>Login</Button>;
