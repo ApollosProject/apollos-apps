@@ -62,10 +62,12 @@ class Seeker extends PureComponent {
     knobSize: PropTypes.number, // defaults to theme.sizing.borderRadius * 2
   };
 
+  isSeeking = false;
+
+  timeAtSeekingStart = 0;
+
   state = {
     width: 0, // the width of the seeker bar
-    isSeeking: false,
-    timeAtSeekingStart: 0,
   };
 
   offsetDriver = new Animated.Value(0); // Used to track pixel offset when seeking
@@ -77,17 +79,14 @@ class Seeker extends PureComponent {
     onPanResponderGrant: () => {
       // Using `stopAnimation` only to get the currentTime value
       this.props.currentTime.stopAnimation((value) => {
-        this.setState({
-          isSeeking: true,
-          timeAtSeekingStart: value,
-        });
+        this.isSeeking = true;
+        this.timeAtSeekingStart = value;
       });
     },
     onPanResponderMove: (e, { dx }) => {
       // Calculate the pixel offset and apply it to the offsetDriver
       let offset = dx;
-      const progressAtStart =
-        this.state.timeAtSeekingStart / this.props.duration;
+      const progressAtStart = this.timeAtSeekingStart / this.props.duration;
       const positionAtStart = progressAtStart * this.state.width;
       offset = Math.min(this.state.width - positionAtStart, offset);
       offset = Math.max(-positionAtStart, offset);
@@ -109,10 +108,8 @@ class Seeker extends PureComponent {
       // Reset state
       this.offsetDriver.setValue(0);
       this.offsetTimeDriver.setValue(0);
-      this.setState({
-        isSeeking: false,
-        timeAtSeekingStart: 0,
-      });
+      this.isSeeking = false;
+      this.timeAtSeekingStart = 0;
 
       if (this.props.onScrubbing)
         this.props.onScrubbing({ isScrubbing: false });
@@ -123,9 +120,7 @@ class Seeker extends PureComponent {
   // To be able to useNativeDriver, the trackbar is always the full-width, and we animate its X position
   get trackBarOffset() {
     const progress = Animated.divide(
-      this.state.isSeeking
-        ? this.state.timeAtSeekingStart
-        : this.props.currentTime,
+      this.isSeeking ? this.timeAtSeekingStart : this.props.currentTime,
       this.props.duration
     );
 
