@@ -77,7 +77,7 @@ export const resolvers = {
     logout: (root, variables, { cache }) => {
       client.resetStore();
       cache.writeData({
-        data: { authToken: null, isLoggedIn: false },
+        data: { authToken: null },
       });
       return null;
     },
@@ -89,7 +89,7 @@ export const resolvers = {
           data: { authToken },
         });
         cache.writeData({
-          data: { authToken, isLoggedIn: true },
+          data: { authToken },
         });
       } catch (e) {
         throw e.message;
