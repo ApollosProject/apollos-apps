@@ -9,7 +9,7 @@ import { ScriptureList } from 'apolloschurchapp/src/ui/Scripture';
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
 
-const DevotionalTab = ({
+const ContentTab = ({
   title,
   scripture,
   body,
@@ -29,7 +29,7 @@ const DevotionalTab = ({
   </ScrollView>
 );
 
-DevotionalTab.propTypes = {
+ContentTab.propTypes = {
   title: PropTypes.string,
   scripture: PropTypes.arrayOf(
     PropTypes.shape({
@@ -45,4 +45,4 @@ DevotionalTab.propTypes = {
   }),
 };
 
-export default DevotionalTab;
+export default ContentTab;

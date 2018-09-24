@@ -7,7 +7,7 @@ import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 
 import Item from 'apolloschurchapp/src/ui/Scripture/Item';
-import DevotionalTab from './DevotionalTab';
+import ContentTab from './ContentTab';
 
 const title = 'God is Our Banner';
 const scriptureObject = [
@@ -56,23 +56,32 @@ ScriptureTab.propTypes = {
   ),
 };
 
+const route = {
+  jumpTo: () => {},
+};
+
+const ContentRoute = () => (
+  <ContentTab
+    body={body}
+    scripture={scriptureObject}
+    title={title}
+    route={route}
+    isLoading={false}
+  />
+);
+const ScriptureRoute = () => <ScriptureTab scriptures={scriptureObject} />;
+
 const stories = storiesOf('Devotional', module);
 
 stories.add('God is Our Banner', () => (
   <TabView
     routes={[
-      { key: 'devotional', title: 'Devotional' },
+      { key: 'content', title: 'Devotional' },
       { key: 'scripture', title: 'Scripture' },
     ]}
     renderScene={SceneMap({
-      devotional: withProps({
-        body,
-        scripture: scriptureObject,
-        title,
-      })(DevotionalTab),
-      scripture: withProps({
-        scriptures: scriptureObject,
-      })(ScriptureTab),
+      content: ContentRoute,
+      scripture: ScriptureRoute,
     })}
   />
 ));

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import DevotionalTab from 'apolloschurchapp/src/ui/Devotional/DevotionalTab';
+import ContentTab from 'apolloschurchapp/src/ui/Devotional/ContentTab';
 import ScriptureTab from 'apolloschurchapp/src/ui/Devotional/ScriptureTab';
 
 const Devotional = ({
@@ -12,7 +12,7 @@ const Devotional = ({
   scripture,
 }) => {
   const hasScripture = isLoading || scripture.length;
-  const tabRoutes = [{ title: 'Devotional', key: 'devotional' }];
+  const tabRoutes = [{ title: 'Devotional', key: 'content' }];
   if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
 
   return (
@@ -20,8 +20,8 @@ const Devotional = ({
       <TabView
         routes={tabRoutes}
         renderScene={SceneMap({
-          devotional: (
-            <DevotionalTab
+          content: (
+            <ContentTab
               body={body}
               isLoading={isLoading}
               otherContentProps={otherContentProps}
