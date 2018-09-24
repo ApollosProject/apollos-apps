@@ -76,6 +76,7 @@ export const resolvers = {
     logout: (root, variables, { cache }) => {
       client.resetStore();
       cache.writeData({ data: { authToken: null, sessionId: null } });
+      track({ eventName: events.UserLogout });
       return null;
     },
 
@@ -104,6 +105,8 @@ export const resolvers = {
           query: getSessionId,
           data: { sessionId: createSession.id },
         });
+
+        track({ eventName: events.UserLogin });
       } catch (e) {
         console.log(e);
       }

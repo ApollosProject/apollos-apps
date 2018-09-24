@@ -4,8 +4,6 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
-import { track, events } from 'apolloschurchapp/src/analytics';
-
 import handleLogin from '../handleLogin';
 import { client } from '../../client'; //eslint-disable-line
 import authenticateMutation from './authenticate';
@@ -34,7 +32,6 @@ const Login = ({ onLogin }) => (
         onSubmit={async (variables, { setSubmitting, setFieldError }) => {
           try {
             await authenticate({ variables });
-            track({ eventName: events.UserLogin });
             if (onLogin) onLogin();
           } catch (e) {
             console.log(e);

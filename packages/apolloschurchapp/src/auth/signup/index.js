@@ -34,7 +34,7 @@ const Signup = ({ onSignup }) => (
         onSubmit={async (variables, { setSubmitting, setFieldError }) => {
           try {
             await authenticate({ variables });
-            track({ eventName: events.UserSignup });
+            track({ eventName: events.UserSignup }); // TODO: Move signup logic to store/index and move tracking logic there also.
             if (onSignup) onSignup();
           } catch ({ graphQLErrors = [], ...e }) {
             if (
