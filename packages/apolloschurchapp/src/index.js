@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { createStackNavigator } from 'react-navigation';
-import OneSignal from 'react-native-onesignal';
 // import { Sentry } from 'react-native-sentry';
 
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 
 import Providers from './Providers';
+import NotificationsInit from './Notifications';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
 import Auth from './auth';
@@ -37,49 +37,11 @@ const AppModalNavigator = createStackNavigator(
   }
 );
 
-// OneSignal Key below should eventually be in the the env.
-
-class OneSignalInit extends Component {
-  componentWillMount() {
-    OneSignal.init('b6e75a77-003f-4466-95ca-82cc5cdc407b', {
-      kOSSettingsKeyAutoPrompt: true,
-    });
-    OneSignal.addEventListener('received', this.onReceived);
-    OneSignal.addEventListener('opened', this.onOpened);
-    OneSignal.addEventListener('ids', this.onIds);
-  }
-
-  componentWillUnmount() {
-    OneSignal.removeEventListener('received', this.onReceived);
-    OneSignal.removeEventListener('opened', this.onOpened);
-    OneSignal.removeEventListener('ids', this.onIds);
-  }
-
-  onReceived = (notification) => {
-    console.log('Notification received: ', notification);
-  };
-
-  onOpened = (openResult) => {
-    console.log('Message: ', openResult.notification.payload.body);
-    console.log('Data: ', openResult.notification.payload.additionalData);
-    console.log('isActive: ', openResult.notification.isAppInFocus);
-    console.log('openResult: ', openResult);
-  };
-
-  onIds = (device) => {
-    console.log('Device info: ', device);
-  };
-
-  render() {
-    return null;
-  }
-}
-
 const App = () => (
   <Providers>
     <BackgroundView>
       <AppModalNavigator />
-      <OneSignalInit />
+      <NotificationsInit />
       <MediaPlayer />
     </BackgroundView>
   </Providers>
