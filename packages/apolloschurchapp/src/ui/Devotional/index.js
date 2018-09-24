@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
@@ -6,44 +6,46 @@ import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import ContentTab from 'apolloschurchapp/src/ui/Devotional/ContentTab';
 import ScriptureTab from 'apolloschurchapp/src/ui/Devotional/ScriptureTab';
 
-const Devotional = ({
-  content: { body, title, ...otherContentProps },
-  isLoading,
-  scripture,
-}) => {
-  const hasScripture = isLoading || scripture.length;
-  const tabRoutes = [{ title: 'Devotional', key: 'content' }];
-  if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
+class Devotional extends PureComponent {
+  static propTypes = {
+    content: PropTypes.shape({
+      body: PropTypes.string,
+      title: PropTypes.string,
+      otherContentProps: PropTypes.any,
+    }),
+    isLoading: PropTypes.bool,
+    scripture: PropTypes.arrayOf(PropTypes.string),
+  };
 
-  return (
-    <BackgroundView>
-      <TabView
-        routes={tabRoutes}
-        renderScene={SceneMap({
-          content: (
-            <ContentTab
-              body={body}
-              isLoading={isLoading}
-              otherContentProps={otherContentProps}
-              scripture={scripture}
-              title={title}
-            />
-          ),
-          scripture: <ScriptureTab scripture={scripture} />,
-        })}
-      />
-    </BackgroundView>
+  contentRoute = () => (
+    <ContentTab
+      body={this.props.content.body}
+      isLoading={this.props.isLoading}
+      otherContentProps={this.props.content.otherContentProps}
+      scripture={this.props.scripture}
+      title={this.props.content.title}
+    />
   );
-};
 
-Devotional.propTypes = {
-  content: PropTypes.shape({
-    body: PropTypes.string,
-    title: PropTypes.string,
-    otherContentProps: PropTypes.any,
-  }),
-  isLoading: PropTypes.bool,
-  scripture: PropTypes.arrayOf(PropTypes.string),
-};
+  scriptureRoute = () => <ScriptureTab scripture={this.props.scripture} />;
+
+  render() {
+    const hasScripture = this.props.isLoading || this.props.scripture.length;
+    const tabRoutes = [{ title: 'Devotional', key: 'content' }];
+    if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
+
+    return (
+      <BackgroundView>
+        <TabView
+          routes={tabRoutes}
+          renderScene={SceneMap({
+            content: this.contentRoute,
+            scripture: this.scriptureRoute,
+          })}
+        />
+      </BackgroundView>
+    );
+  }
+}
 
 export default Devotional;
