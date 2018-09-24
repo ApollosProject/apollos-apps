@@ -73,11 +73,26 @@ describe('Auth', () => {
 
     it('queries current user when logged in', async () => {
       const rootValue = {};
-      const { userToken, rockCookie } = registerToken(
-        generateToken({ cookie: 'some-cookie', sessionId: 123 })
-      );
-      context.userToken = userToken;
-      context.rockCookie = rockCookie;
+      const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
+
+      context = getTestContext({
+        req: {
+          headers: { authorization: token },
+        },
+      });
+
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('logs a user out without a sessionId', async () => {
+      const rootValue = {};
+      const token = generateToken({ cookie: 'some-cookie' });
+      context = getTestContext({
+        req: {
+          headers: { authorization: token },
+        },
+      });
 
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();
