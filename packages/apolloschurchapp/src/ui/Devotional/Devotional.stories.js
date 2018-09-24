@@ -1,6 +1,5 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { withProps } from 'recompose';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react-native';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';

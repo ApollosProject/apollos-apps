@@ -1,13 +1,12 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import renderer from 'react-test-renderer';
-import { withProps } from 'recompose';
 import PropTypes from 'prop-types';
 import Providers from 'apolloschurchapp/src/Providers';
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import Item from 'apolloschurchapp/src/ui/Scripture/Item';
-import DevotionalTab from './DevotionalTab';
+import ContentTab from './ContentTab';
 
 const title = 'God is Our Banner';
 
@@ -57,6 +56,21 @@ ScriptureTab.propTypes = {
   ),
 };
 
+const route = {
+  jumpTo: () => {},
+};
+
+const ContentRoute = () => (
+  <ContentTab
+    body={body}
+    scripture={scriptureObject}
+    title={title}
+    route={route}
+    isLoading={false}
+  />
+);
+const ScriptureRoute = () => <ScriptureTab scriptures={scriptureObject} />;
+
 describe('the Devotional component', () => {
   it('renders a devotional', () => {
     const tree = renderer.create(
@@ -67,14 +81,8 @@ describe('the Devotional component', () => {
             { key: 'scripture', title: 'Scripture' },
           ]}
           renderScene={SceneMap({
-            devotional: withProps({
-              body,
-              scripture: scriptureObject,
-              title,
-            })(DevotionalTab),
-            scripture: withProps({
-              scriptures: scriptureObject,
-            })(ScriptureTab),
+            devotional: ContentRoute,
+            scripture: ScriptureRoute,
           })}
         />
       </Providers>
