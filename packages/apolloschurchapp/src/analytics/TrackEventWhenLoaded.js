@@ -15,9 +15,13 @@ export default class TrackEventWhenLoaded extends PureComponent {
     }
   }
 
+  get trackClient() {
+    return this.props.track || track;
+  }
+
   track() {
     const { eventName, properties } = this.props;
-    return track({ eventName, properties });
+    return this.trackClient({ eventName, properties });
   }
 
   render() {
@@ -30,4 +34,5 @@ TrackEventWhenLoaded.propTypes = {
   eventName: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   properties: PropTypes.any,
+  track: PropTypes.func,
 };
