@@ -55,20 +55,20 @@ class OneSignalInit extends Component {
     OneSignal.removeEventListener('ids', this.onIds);
   }
 
-  onReceived(notification) {
+  onReceived = (notification) => {
     console.log('Notification received: ', notification);
-  }
+  };
 
-  onOpened(openResult) {
+  onOpened = (openResult) => {
     console.log('Message: ', openResult.notification.payload.body);
     console.log('Data: ', openResult.notification.payload.additionalData);
     console.log('isActive: ', openResult.notification.isAppInFocus);
     console.log('openResult: ', openResult);
-  }
+  };
 
-  onIds(device) {
+  onIds = (device) => {
     console.log('Device info: ', device);
-  }
+  };
 
   render() {
     return null;
