@@ -88,6 +88,9 @@ export const resolvers = {
           query: getAuthToken,
           data: { authToken },
         });
+        cache.writeData({
+          data: { authToken, isLoggedIn: true },
+        });
       } catch (e) {
         throw e.message;
       }

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import { Query } from 'react-apollo';
+import { get } from 'lodash';
 
 import { LoginButton } from 'apolloschurchapp/src/auth';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
@@ -42,12 +43,17 @@ class Connect extends PureComponent {
                           query={getUserProfile}
                           fetchPolicy="cache-and-network"
                         >
-                          {({ data: { currentUser } = {}, error, refetch }) => {
-                            if (error || !currentUser) return logoutUser();
-                            const {
-                              profile: { photo, firstName, lastName } = {},
-                            } = currentUser;
-                            console.log(error, currentUser);
+                          {({
+                            data: { currentUser } = { currentUser: {} },
+                            error,
+                            refetch,
+                            loading,
+                          }) => {
+                            if (error || (!currentUser && !loading))
+                              return logoutUser();
+
+                            const profile = get(currentUser, 'profile', {});
+                            const { photo, firstName, lastName } = profile;
                             return (
                               <UserAvatarView
                                 firstName={firstName}

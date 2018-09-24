@@ -29,7 +29,6 @@ export default ({ req = {} } = {}) => {
       req.headers.authorization
     );
     if (sessionId) {
-      console.log('using session id');
       context.userToken = userToken;
       context.rockCookie = rockCookie;
       context.sessionId = sessionId;
