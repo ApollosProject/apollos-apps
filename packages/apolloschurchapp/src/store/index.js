@@ -84,6 +84,11 @@ export const resolvers = {
       cache.writeData({
         data: { authToken: null },
       });
+      await cache.writeQuery({
+        query: getLoginState,
+        data: { isLoggedIn: false },
+      });
+
       return null;
     },
 
