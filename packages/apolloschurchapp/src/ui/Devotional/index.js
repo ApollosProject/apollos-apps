@@ -29,9 +29,7 @@ const Devotional = ({
               title={title}
             />
           ),
-          scripture: (
-            <ScriptureTab isLoading={isLoading} scripture={scripture} />
-          ),
+          scripture: <ScriptureTab scripture={scripture} />,
         })}
       />
     </BackgroundView>
@@ -45,13 +43,7 @@ Devotional.propTypes = {
     otherContentProps: PropTypes.any,
   }),
   isLoading: PropTypes.bool,
-  scripture: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      reference: PropTypes.string,
-      html: PropTypes.string,
-    })
-  ),
+  scripture: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Devotional;

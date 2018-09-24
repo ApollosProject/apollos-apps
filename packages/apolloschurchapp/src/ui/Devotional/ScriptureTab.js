@@ -13,13 +13,7 @@ const ScriptureTab = ({ scripture }) => (
 );
 
 ScriptureTab.propTypes = {
-  scripture: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      reference: PropTypes.string,
-      html: PropTypes.string,
-    })
-  ),
+  scripture: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ScriptureTab;
