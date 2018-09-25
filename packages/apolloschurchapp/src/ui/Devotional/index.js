@@ -11,7 +11,9 @@ class Devotional extends PureComponent {
     content: PropTypes.shape({
       body: PropTypes.string,
       title: PropTypes.string,
-      otherContentProps: PropTypes.any,
+      route: PropTypes.shape({
+        jumpTo: PropTypes.func,
+      }),
     }),
     isLoading: PropTypes.bool,
     scripture: PropTypes.arrayOf(PropTypes.string),
@@ -21,7 +23,7 @@ class Devotional extends PureComponent {
     <ContentTab
       body={this.props.content.body}
       isLoading={this.props.isLoading}
-      otherContentProps={this.props.content.otherContentProps}
+      route={this.props.content.route}
       scripture={this.props.scripture}
       title={this.props.content.title}
     />

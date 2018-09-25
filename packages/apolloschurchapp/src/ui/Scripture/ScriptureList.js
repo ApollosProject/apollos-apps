@@ -21,6 +21,8 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
     combo = combo.join(', ');
   }
 
+  console.log('scripture = ', scripture);
+
   return (
     <StyledH4>
       <ButtonLink padded onPress={() => jumpTo('scripture')}>
@@ -31,13 +33,7 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
 };
 
 ScriptureList.propTypes = {
-  scripture: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      reference: PropTypes.string,
-      html: PropTypes.string,
-    })
-  ),
+  scripture: PropTypes.arrayOf(PropTypes.string),
   commas: PropTypes.bool,
   jumpTo: PropTypes.func,
 };
