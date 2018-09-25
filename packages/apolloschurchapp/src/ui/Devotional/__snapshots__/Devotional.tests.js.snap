@@ -784,15 +784,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                         </View>
                       </View>
                     </View>
-                    <View
-                      byHeight={true}
-                      style={
-                        Object {
-                          "height": 10,
-                          "width": null,
-                        }
-                      }
-                    />
                   </View>
                 </View>
               </View>
