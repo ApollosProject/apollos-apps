@@ -1,11 +1,12 @@
 import { Component } from 'react';
 import OneSignal from 'react-native-onesignal';
+import { ONE_SIGNAL_KEY } from 'react-native-dotenv';
 
 // OneSignal Key below should eventually be in the the env.
 
 export default class NotificationsInit extends Component {
   componentWillMount() {
-    OneSignal.init('b6e75a77-003f-4466-95ca-82cc5cdc407b', {
+    OneSignal.init(ONE_SIGNAL_KEY, {
       kOSSettingsKeyAutoPrompt: true,
     });
     OneSignal.addEventListener('received', this.onReceived);
