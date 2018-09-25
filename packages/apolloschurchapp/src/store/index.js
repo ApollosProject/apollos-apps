@@ -1,8 +1,8 @@
 import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
+import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 import { client } from '../client'; // eslint-disable-line
 import getAuthToken from './getAuthToken';
-import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
 
@@ -73,22 +73,22 @@ let trackId = 0;
 export const resolvers = {
   Query: {
     isLoggedIn: () => {
-      const { authToken } = client.readQuery({ query: getAuthToken });
-      console.log({ authToken });
-      return !!authToken;
-    }
+      // When logging out, this query returns an error.
+      // Rescue the error, and return false.
+      try {
+        const { authToken } = client.readQuery({ query: getAuthToken });
+        return !!authToken;
+      } catch (e) {
+        return false;
+      }
+    },
   },
   Mutation: {
     logout: (root, variables, { cache }) => {
       client.resetStore();
       cache.writeData({
-        data: { authToken: null },
+        data: defaults,
       });
-      await cache.writeQuery({
-        query: getLoginState,
-        data: { isLoggedIn: false },
-      });
-
       return null;
     },
 

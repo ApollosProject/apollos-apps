@@ -36,8 +36,8 @@ class Connect extends PureComponent {
             <BackgroundView>
               <ScrollView>
                 <Query query={getLoginState}>
-                  {({ data: { isLoggedIn = null } }) => {
-                    if (isLoggedIn)
+                  {({ data, error }) => {
+                    if (get(data, 'isLoggedIn', false))
                       return (
                         <Query
                           query={getUserProfile}
