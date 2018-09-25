@@ -4,8 +4,6 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import Spacer from 'apolloschurchapp/src/ui/Spacer';
-
 import Item from './Item';
 import getScripture from './getScripture';
 
@@ -22,7 +20,6 @@ const Scripture = ({ references = [] }) => (
         )}
       </Query>
     ))}
-    <Spacer byHeight />
   </View>
 );
 

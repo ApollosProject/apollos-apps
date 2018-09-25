@@ -21,8 +21,6 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
     combo = combo.join(', ');
   }
 
-  console.log('scripture = ', scripture);
-
   return (
     <StyledH4>
       <ButtonLink padded onPress={() => jumpTo('scripture')}>
