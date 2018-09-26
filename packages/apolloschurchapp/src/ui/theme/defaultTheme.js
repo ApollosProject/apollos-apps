@@ -74,7 +74,7 @@ export const sizing = {
   borderRadius: 6,
   avatar: {
     small: 40,
-    medium: 80,
+    medium: 100,
     large: 160,
   },
 };

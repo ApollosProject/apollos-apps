@@ -10,6 +10,7 @@ const ConnectNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Connect',
+    headerMode: 'screen',
   }
 );
 

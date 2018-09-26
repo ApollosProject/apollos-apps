@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import { Query } from 'react-apollo';
 
-import { LoginButton } from 'apolloschurchapp/src/auth';
+// import { LoginButton } from 'apolloschurchapp/src/auth';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import TableView, {
   Cell,
@@ -20,7 +20,7 @@ import getUserProfile from './getUserProfile';
 class Connect extends PureComponent {
   static navigationOptions = () => ({
     title: 'Connect',
-    headerRight: <LoginButton />,
+    header: null,
   });
 
   render() {

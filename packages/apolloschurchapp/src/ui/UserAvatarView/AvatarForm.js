@@ -34,7 +34,11 @@ export default class AvatarForm extends PureComponent {
 
     return (
       <Touchable onPress={this.handleUploadPhoto}>
-        <StyledAvatar source={photo} size="large" isLoading={isUploadingFile} />
+        <StyledAvatar
+          source={photo}
+          size="medium"
+          isLoading={isUploadingFile}
+        />
       </Touchable>
     );
   }
