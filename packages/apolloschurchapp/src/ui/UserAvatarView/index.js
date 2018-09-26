@@ -16,6 +16,7 @@ const Container = styled({
   alignItems: 'center',
   justifyContent: 'flex-start',
   paddingHorizontal: 20,
+  paddingVertical: 30,
   overflow: 'hidden',
   flexDirection: 'row',
 })(View);
