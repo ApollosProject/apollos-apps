@@ -31,6 +31,7 @@ export default class RockApolloDataSource extends RESTDataSource {
   }
 
   willSendRequest(request) {
+    console.log('willSendRequest', decodeURIComponent(request.path));
     request.headers.set('Authorization-Token', ROCK_TOKEN);
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
