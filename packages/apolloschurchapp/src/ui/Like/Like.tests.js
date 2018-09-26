@@ -9,12 +9,7 @@ describe('the Like component', () => {
   it('should render a Like', () => {
     const tree = renderer.create(
       <Providers>
-        <Like
-          itemId={'abc'}
-          isLiked={false}
-          operation={'Like'}
-          toggleLike={(data) => data}
-        />
+        <Like itemId={'abc'} isLiked={false} toggleLike={(data) => data} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -23,12 +18,7 @@ describe('the Like component', () => {
   it('should render a UnLike', () => {
     const tree = renderer.create(
       <Providers>
-        <Like
-          itemId={'abc'}
-          isLiked
-          operation={'Unlike'}
-          toggleLike={(data) => data}
-        />
+        <Like itemId={'abc'} isLiked toggleLike={(data) => data} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
