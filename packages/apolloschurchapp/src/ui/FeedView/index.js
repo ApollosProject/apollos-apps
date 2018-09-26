@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, TouchableWithoutFeedback } from 'react-native';
+import { FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
@@ -8,6 +8,7 @@ import FeedItemCard from 'apolloschurchapp/src/ui/FeedItemCard';
 import { enhancer as mediaQuery } from 'apolloschurchapp/src/ui/MediaQuery';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
+import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
 const StyledFlatList = compose(
   withTheme(({ theme: { helpers: { verticalRhythm } } } = {}) => ({
@@ -60,9 +61,7 @@ class FeedView extends Component {
       // backgroundColor={item.theme.colors.background.paper}
       // isLight={item.theme.isLight}
       // isLiked={item.isLiked}
-      <TouchableWithoutFeedback
-        onPress={() => this.props.onPressItem({ ...item })}
-      >
+      <TouchableScale onPress={() => this.props.onPressItem({ ...item })}>
         <FeedItemCard
           id={get(item, 'id')}
           title={get(item, 'title') || get(item, 'name') || ' '}
@@ -73,7 +72,7 @@ class FeedView extends Component {
           isLoading={get(item, 'isLoading')}
           inVerticalList
         />
-      </TouchableWithoutFeedback>
+      </TouchableScale>
     );
   };
 
