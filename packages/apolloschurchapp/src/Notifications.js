@@ -1,8 +1,6 @@
 import { Component } from 'react';
 import OneSignal from 'react-native-onesignal';
-import { ONE_SIGNAL_KEY } from 'react-native-dotenv';
-
-// OneSignal Key below should eventually be in the the env.
+import { ONE_SIGNAL_KEY } from './config';
 
 export default class NotificationsInit extends Component {
   componentWillMount() {

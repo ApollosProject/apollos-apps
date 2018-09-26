@@ -1,4 +1,7 @@
 jest.mock('./src/client/index');
+jest.mock('./src/config', () => ({
+  ONE_SIGNAL_KEY: 'doesntmatter',
+}));
 jest.mock('react-native-custom-tabs', () => ({
   CustomTabs: {
     openURL: jest.fn(),
@@ -16,10 +19,6 @@ jest.mock('react-native-music-control', () => ({
   enableControl: jest.fn(),
   on: jest.fn(),
   setNowPlaying: jest.fn(),
-}));
-
-jest.mock('react-native-dotenv', () => ({
-  ONE_SIGNAL_KEY: 'doesntmatter',
 }));
 
 jest.mock('react-native-device-info', () => ({
