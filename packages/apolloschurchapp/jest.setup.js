@@ -18,6 +18,10 @@ jest.mock('react-native-music-control', () => ({
   setNowPlaying: jest.fn(),
 }));
 
+jest.mock('react-native-dotenv', () => ({
+  ONE_SIGNAL_KEY: 'doesntmatter',
+}));
+
 jest.mock('react-native-device-info', () => ({
   getUniqueID: () => 'id-123',
   getSystemVersion: () => 'sys-version-123',
