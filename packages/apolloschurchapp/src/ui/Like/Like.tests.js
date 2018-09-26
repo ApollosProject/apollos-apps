@@ -3,13 +3,13 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import Like from '.';
+import { LikeIcon } from '.';
 
 describe('the Like component', () => {
   it('should render a Like', () => {
     const tree = renderer.create(
       <Providers>
-        <Like itemId={'abc'} isLiked={false} toggleLike={(data) => data} />
+        <LikeIcon itemId={'abc'} isLiked={false} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -18,7 +18,7 @@ describe('the Like component', () => {
   it('should render a UnLike', () => {
     const tree = renderer.create(
       <Providers>
-        <Like itemId={'abc'} isLiked toggleLike={(data) => data} />
+        <LikeIcon itemId={'abc'} isLiked />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

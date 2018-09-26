@@ -11,22 +11,27 @@ const enhance = compose(
   withTheme()
 );
 
-const Like = enhance(({ isLiked, toggleLike, itemId, theme }) => (
+export const LikeIcon = enhance(({ isLiked, theme }) => (
+  <Icon name={isLiked ? 'like-solid' : 'like'} fill={theme.colors.secondary} />
+));
+
+LikeIcon.propTypes = {
+  isLiked: PropTypes.bool,
+};
+
+const Like = ({ isLiked, toggleLike, itemId }) => (
   <ProtectedTouchable
     onPress={() =>
       toggleLike({ itemId, operation: isLiked ? 'Unlike' : 'Like' })
     }
   >
-    <Icon
-      name={isLiked ? 'like-solid' : 'like'}
-      fill={theme.colors.secondary}
-    />
+    <LikeIcon isLiked={isLiked} />
   </ProtectedTouchable>
-));
+);
 
 Like.propTypes = {
-  id: PropTypes.string,
-  isLike: PropTypes.bool,
+  itemId: PropTypes.string,
+  isLiked: PropTypes.bool,
   toggleLike: PropTypes.func,
 };
 
