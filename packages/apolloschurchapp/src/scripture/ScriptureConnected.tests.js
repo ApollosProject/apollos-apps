@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import wait from 'waait';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
@@ -23,10 +24,14 @@ const mocks = {
   },
 };
 
-it('renders without error', () => {
-  renderer.create(
-    <Providers mocks={mocks} addTypename={false}>
-      <ScriptureConnected references="[Genesis 1:1]" />
-    </Providers>
-  );
+describe('ScriptureConnected component', () => {
+  it('renders without errors', async () => {
+    const tree = renderer.create(
+      <Providers mocks={[mocks]} addTypename={false}>
+        <ScriptureConnected references={['Genesis 1:1']} />
+      </Providers>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+  });
 });

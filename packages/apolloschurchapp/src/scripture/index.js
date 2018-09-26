@@ -13,7 +13,7 @@ import getScripture from './getScripture';
 const ScriptureConnected = ({
   ScriptureComponent = ScriptureItem,
   references,
-}) => {
+}) =>
   references.map((query) => (
     <Query query={getScripture} variables={{ query }} key={query}>
       {({ loading, data }) => (
@@ -25,7 +25,6 @@ const ScriptureConnected = ({
       )}
     </Query>
   ));
-};
 
 /**
  * Props passed to this connected component:
