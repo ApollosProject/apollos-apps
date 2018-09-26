@@ -1,2 +1,2 @@
-export { default } from './Scripture';
+export { default } from './ScriptureItem';
 export ScriptureList from './ScriptureList';
