@@ -1,6 +1,7 @@
 import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
+import { track, events } from 'apolloschurchapp/src/analytics';
 import { client } from '../client'; // eslint-disable-line
 import getAuthToken from './getAuthToken';
 // TODO: this will require more organization...ie...not keeping everything in one file.
@@ -89,6 +90,7 @@ export const resolvers = {
       cache.writeData({
         data: defaults,
       });
+      track({ eventName: events.UserLogout });
       return null;
     },
 
@@ -105,6 +107,8 @@ export const resolvers = {
         await cache.writeData({
           data: { authToken },
         });
+
+        track({ eventName: events.UserLogin });
       } catch (e) {
         console.log(e);
         throw e.message;
@@ -121,7 +125,7 @@ export const resolvers = {
           }
         }
       `;
-      const track = merge(
+      const mediaTrack = merge(
         {
           __typename: 'MediaPlayerTrack',
           parentId: null,
@@ -140,10 +144,10 @@ export const resolvers = {
         __typename: 'MediaPlayerState',
         isPlaying: true,
         isVisible: true,
-        isFullscreen: track.isVideo
+        isFullscreen: mediaTrack.isVideo
           ? true
           : (mediaPlayer && mediaPlayer.isFullscreen) || false,
-        currentTrack: track,
+        currentTrack: mediaTrack,
         currentTime: 0,
       };
 
@@ -151,7 +155,7 @@ export const resolvers = {
         // if same track
         mediaPlayer &&
         mediaPlayer.currentTrack &&
-        mediaPlayer.currentTrack.mediaSource.uri === track.mediaSource.uri
+        mediaPlayer.currentTrack.mediaSource.uri === mediaTrack.mediaSource.uri
       ) {
         // use the same Id
         newMediaPlayerState.currentTrack.id = mediaPlayer.currentTrack.id;
@@ -166,6 +170,15 @@ export const resolvers = {
         query,
         data: {
           mediaPlayer: newMediaPlayerState,
+        },
+      });
+
+      track({
+        eventName: events.UserPlayedMedia,
+        properties: {
+          uri: mediaTrack.uri,
+          title: mediaTrack.title,
+          type: mediaTrack.isVideo ? 'Video' : 'Audio',
         },
       });
       return null;

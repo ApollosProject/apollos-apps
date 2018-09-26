@@ -2,8 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import Like from 'apolloschurchapp/src/ui/Like';
 import { Query, Mutation } from 'react-apollo';
+
+import Like from 'apolloschurchapp/src/ui/Like';
+import { track, events } from 'apolloschurchapp/src/analytics';
 
 const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
   <Query query={getLikedContentItem} variables={{ itemId }}>
@@ -47,6 +49,14 @@ const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
               toggleLike={async (variables) => {
                 try {
                   await createNewInteraction({ variables });
+                  track({
+                    eventName: isLiked
+                      ? events.UnlikeContent
+                      : events.LikeContent,
+                    properties: {
+                      id: itemId,
+                    },
+                  });
                 } catch (e) {
                   throw e.message;
                 }
