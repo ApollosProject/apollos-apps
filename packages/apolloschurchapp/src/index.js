@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 // import { Sentry } from 'react-native-sentry';
 
@@ -39,6 +40,7 @@ const AppModalNavigator = createStackNavigator(
 const App = () => (
   <Providers>
     <BackgroundView>
+      <StatusBar barStyle="dark-content" />
       <AppModalNavigator />
       <MediaPlayer />
     </BackgroundView>

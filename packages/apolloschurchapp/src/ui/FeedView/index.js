@@ -11,7 +11,9 @@ import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
 
 const StyledFlatList = compose(
   withTheme(({ theme: { helpers: { verticalRhythm } } } = {}) => ({
-    contentContainerStyle: { paddingVertical: verticalRhythm(0.3125) }, // Android padding fix 😩
+    contentContainerStyle: {
+      paddingVertical: verticalRhythm(0.3125),
+    }, // Android padding fix 😩
   }))
 )(FlatList);
 
@@ -69,6 +71,7 @@ class FeedView extends Component {
           channelTypeIcon={get(item, 'parentChannel.iconName')}
           images={get(item, 'coverImage.sources')}
           isLoading={get(item, 'isLoading')}
+          inVerticalList
         />
       </TouchableWithoutFeedback>
     );

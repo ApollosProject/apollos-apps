@@ -5,29 +5,33 @@ import PropTypes from 'prop-types';
 
 import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 import styled from 'apolloschurchapp/src/ui/styled';
-import { enhancer as mediaQuery } from 'apolloschurchapp/src/ui/MediaQuery';
 
 const StyledCard = compose(
   withIsLoading,
-  styled(({ theme, cardColor }) => ({
-    // card styles
-    backgroundColor: cardColor || theme.colors.background.paper,
-    borderRadius: theme.sizing.borderRadius,
-    ...Platform.select(theme.shadows.default),
-  })),
-  mediaQuery(
-    // responsive styles
-    ({ md }) => ({ maxWidth: md }),
-    styled(({ theme }) => ({
-      // mobile
-      marginHorizontal: theme.sizing.baseUnit / 2,
-      marginVertical: theme.sizing.baseUnit / 4,
-    })),
-    styled(({ theme }) => ({
-      // tablet
-      marginHorizontal: theme.sizing.baseUnit,
-      marginVertical: theme.sizing.baseUnit / 4,
-    }))
+  styled(
+    ({
+      theme,
+      cardColor,
+      inHorizontalList = false,
+      inVerticalList = false,
+    }) => ({
+      // card styles
+      backgroundColor: cardColor || theme.colors.background.paper,
+      borderRadius: theme.sizing.borderRadius,
+      ...(inHorizontalList
+        ? {
+            marginLeft: theme.sizing.baseUnit / 2,
+            marginRight: 0,
+          }
+        : {}),
+      ...(inVerticalList
+        ? {
+            marginHorizontal: theme.sizing.baseUnit,
+            marginVertical: theme.sizing.baseUnit / 2,
+          }
+        : {}),
+      ...Platform.select(theme.shadows.default),
+    })
   )
 )(View);
 
