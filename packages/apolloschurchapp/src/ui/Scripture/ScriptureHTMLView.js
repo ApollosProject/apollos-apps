@@ -28,6 +28,9 @@ const renderer = (node, { children, ...other }) => {
   // this function only needs to handle the cases that are unique to scripture.
   const className = (node && node.attribs && node.attribs.class) || '';
 
+  /* Verse numbers
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_chapters-verses.scss#L33
+   */
   if (className.includes('v')) {
     /* TODO: a single space lives here to temporarily space verse numbers when they are not at the
      * beginning of a sentence or paragraph. It affects all instences (albeit less noticably in
@@ -36,6 +39,9 @@ const renderer = (node, { children, ...other }) => {
     return <NumText> {children} </NumText>;
   }
 
+  /* Speaker Identification
+   * https://github.com/americanbible/api-bible-assets/blob/ccc3f22cfba7427655b684fc62ab71d0b488361f/scss/eb-scripture-style/modules/_titles-headings.scss#L120
+   */
   if (className.includes('sp') || className.includes('d')) {
     return <HeavyText>{children}</HeavyText>;
   }
