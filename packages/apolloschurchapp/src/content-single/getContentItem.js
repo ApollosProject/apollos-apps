@@ -4,6 +4,7 @@ export const contentItemFragment = gql`
   fragment contentItemFragment on ContentItem {
     id
     title
+    htmlContent
     isLiked
     coverImage {
       name
@@ -18,6 +19,20 @@ export const contentItemFragment = gql`
         secondary
         screen
         paper
+      }
+    }
+    parentChannel {
+      id
+      name
+    }
+    videos {
+      sources {
+        uri
+      }
+    }
+    audios {
+      sources {
+        uri
       }
     }
   }
