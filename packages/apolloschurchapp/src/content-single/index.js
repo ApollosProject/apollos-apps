@@ -56,6 +56,14 @@ class ContentSingle extends PureComponent {
           }}
         >
           <ModalView>
+            <TrackEventWhenLoaded
+              loaded={!!(!loading && content.title)}
+              eventName={events.ViewContent}
+              properties={{
+                title: content.title,
+                itemId: this.id,
+              }}
+            />
             <FlexedScrollView>
               <Transition shared={`content/${transitionKey}/image`}>
                 <GradientOverlayImage
