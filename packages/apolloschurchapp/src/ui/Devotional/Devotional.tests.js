@@ -36,4 +36,13 @@ describe('the Devotional component', () => {
     await wait(0); // wait for response
     expect(tree).toMatchSnapshot();
   });
+  it('renders a loading state', async () => {
+    const tree = renderer.create(
+      <Providers>
+        <Devotional content={content} isLoading scripture={scripture} />
+      </Providers>
+    );
+    await wait(0); // wait for response
+    expect(tree).toMatchSnapshot();
+  });
 });

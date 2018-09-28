@@ -1,9 +1,5 @@
 import React from 'react';
-// import { ScrollView } from 'react-native';
-// import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react-native';
-// import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-// import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 
 import Devotional from '.';
 
@@ -33,4 +29,8 @@ const stories = storiesOf('Devotional', module);
 
 stories.add('God is Our Banner', () => (
   <Devotional content={content} isLoading={false} scripture={scripture} />
+));
+
+stories.add('Loading State', () => (
+  <Devotional content={content} isLoading scripture={scripture} />
 ));
