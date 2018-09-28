@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  query getContentItem($contentId: ID!) {
+  query getContentMedia($contentId: ID!) {
     node(id: $contentId) {
       ... on ContentItem {
         id
