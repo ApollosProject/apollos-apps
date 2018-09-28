@@ -39,17 +39,23 @@ const renderer = (node, { children, ...other }) => {
     return <NumText> {children} </NumText>;
   }
 
-  /* Speaker Identification
-   * https://github.com/americanbible/api-bible-assets/blob/ccc3f22cfba7427655b684fc62ab71d0b488361f/scss/eb-scripture-style/modules/_titles-headings.scss#L120
+  /* Speaker identification and descriptive titles ("Hebrew subtitle")
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_titles-headings.scss#L109-L126
    */
   if (className.includes('sp') || className.includes('d')) {
     return <HeavyText>{children}</HeavyText>;
   }
 
+  /* Poetic line
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L2
+   */
   if (className.includes('q1')) {
     return <BodyText>{children}</BodyText>;
   }
 
+  /* Indented poetic line
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L7
+   */
   if (className.includes('q2')) {
     return (
       <BodyText>
