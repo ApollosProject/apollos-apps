@@ -547,6 +547,7 @@ exports[`the HTMLView component should render an image 1`] = `
       source={
         Array [
           Object {
+            "cache": "force-cache",
             "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
             "url": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
           },

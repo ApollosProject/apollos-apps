@@ -98,22 +98,39 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
-            />
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+            </View>
           </View>
           <View
             style={
@@ -598,38 +615,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -750,38 +784,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -902,38 +953,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1054,38 +1122,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1206,38 +1291,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1358,38 +1460,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1510,38 +1629,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1662,38 +1798,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1814,38 +1967,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -1966,38 +2136,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -2209,22 +2396,39 @@ exports[`The FeedView component renders correctly 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
-            />
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+            </View>
           </View>
           <View
             style={
@@ -2406,22 +2610,39 @@ exports[`The FeedView component renders correctly 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
-            />
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+            </View>
           </View>
           <View
             style={
@@ -2833,38 +3054,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -2985,38 +3223,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -3137,38 +3392,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -3289,38 +3561,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -3441,38 +3730,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -3593,38 +3899,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -3745,38 +4068,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -3897,38 +4237,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -4049,38 +4406,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View
@@ -4201,38 +4575,55 @@ exports[`The FeedView component renders empty state 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
+                "transform": Array [],
               }
             }
           >
             <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
               style={
                 Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "overflow": "hidden",
                 }
               }
             >
-              <Image
-                onLoad={[Function]}
-                source={Array []}
+              <View
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
-              />
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
           <View

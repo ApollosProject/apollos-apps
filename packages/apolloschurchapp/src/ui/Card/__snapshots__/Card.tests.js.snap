@@ -188,6 +188,7 @@ exports[`the Card component should render 1`] = `
           source={
             Array [
               Object {
+                "cache": "force-cache",
                 "uri": "https://picsum.photos/600/400/?image=63",
                 "url": "https://picsum.photos/600/400/?image=63",
               },
