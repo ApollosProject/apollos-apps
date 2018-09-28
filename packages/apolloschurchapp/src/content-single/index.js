@@ -5,6 +5,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { Transition } from 'react-navigation-fluid-transitions';
 
+import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { H2 } from 'apolloschurchapp/src/ui/typography';
@@ -74,15 +75,16 @@ class ContentSingle extends PureComponent {
                   overlayColor={get(theme, 'colors.paper')}
                 />
               </Transition>
-
-              <MediaControls contentId={id} />
-              <PaddedView vertical={false}>
-                <H2 padded isLoading={!title && loading}>
-                  {title}
-                </H2>
-                <HTMLContent contentId={id} />
-              </PaddedView>
-              <HorizontalContentFeed contentId={id} />
+              <BackgroundView>
+                <MediaControls contentId={id} />
+                <PaddedView vertical={false}>
+                  <H2 padded isLoading={!title && loading}>
+                    {title}
+                  </H2>
+                  <HTMLContent contentId={id} />
+                </PaddedView>
+                <HorizontalContentFeed contentId={id} />
+              </BackgroundView>
             </FlexedScrollView>
             <ActionContainer itemId={id} />
           </ModalView>
