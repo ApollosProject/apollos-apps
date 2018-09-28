@@ -21,7 +21,11 @@ const StyledFlatList = compose(
 class FeedView extends Component {
   static propTypes = {
     content: PropTypes.array, // eslint-disable-line
-    error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+    error: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.string,
+      PropTypes.object,
+    ]),
     fetchMore: PropTypes.func,
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
@@ -91,7 +95,6 @@ class FeedView extends Component {
       renderItem,
       ...otherProps
     } = this.props;
-
     return (
       <StyledFlatList
         {...otherProps}

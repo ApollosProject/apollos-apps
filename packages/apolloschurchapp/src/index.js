@@ -8,6 +8,7 @@ import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 
 import Providers from './Providers';
+import NotificationsInit from './Notifications';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
 import Auth from './auth';
@@ -48,6 +49,7 @@ const App = () => (
     <BackgroundView>
       <StatusBar barStyle="dark-content" />
       <AppModalNavigator />
+      <NotificationsInit />
       <MediaPlayer />
     </BackgroundView>
   </Providers>

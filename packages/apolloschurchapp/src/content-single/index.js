@@ -8,11 +8,13 @@ import { Transition } from 'react-navigation-fluid-transitions';
 import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { H2 } from 'apolloschurchapp/src/ui/typography';
-import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
 import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ModalView from 'apolloschurchapp/src/ui/ModalView';
+
+import { events } from 'apolloschurchapp/src/analytics';
+import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenLoaded';
 
 import ActionContainer from './ActionContainer';
 import HTMLContent from './HTMLContent';
@@ -22,9 +24,6 @@ import MediaControls from './MediaControls';
 import getContentItem from './getContentItem';
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);
-const FixedBackgroundView = styled({ height: '100%', flex: null })(
-  BackgroundView
-); // there's an issue with <Transition /> and using flex here
 
 class ContentSingle extends PureComponent {
   static propTypes = {
@@ -52,6 +51,14 @@ class ContentSingle extends PureComponent {
 
     return (
       <Transition anchor={`content/${transitionKey}/image`}>
+        <TrackEventWhenLoaded
+          loaded={!!(!loading && content.title)}
+          eventName={events.ViewContent}
+          properties={{
+            title: content.title,
+            itemId: this.itemId.itemId,
+          }}
+        />
         <ThemeMixin
           mixin={{
             type: get(theme, 'type', 'light').toLowerCase(),
