@@ -8,6 +8,7 @@ import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Providers from './Providers';
 import NotificationsInit from './Notifications';
 import ContentSingle from './content-single';
+import UserSettings from './UserSettings';
 import Tabs from './tabs';
 import Auth from './auth';
 
@@ -19,6 +20,7 @@ const AppStackNavigator = createStackNavigator(
   {
     Tabs,
     ContentSingle,
+    UserSettings,
   },
   {
     initialRouteName: 'Tabs',

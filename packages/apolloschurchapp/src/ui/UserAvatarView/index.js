@@ -12,28 +12,28 @@ import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import AvatarForm from './AvatarForm';
 
 const enhance = compose(withTheme());
+
 const Container = styled({
+  backgroundColor: 'white',
   alignItems: 'center',
   justifyContent: 'flex-start',
-  paddingHorizontal: 20,
-  paddingVertical: 30,
   overflow: 'hidden',
   flexDirection: 'row',
 })(View);
 
 const Content = styled({
-  alignItems: 'center',
+  alignItems: 'flex-start',
   justifyContent: 'flex-start',
-  paddingHorizontal: 10,
   paddingVertical: 10,
+  marginLeft: -10,
 })(PaddedView);
 
 const Name = styled(({ theme }) => ({
-  fontSize: theme.helpers.rem(1.2),
+  fontSize: theme.helpers.rem(1.1),
 }))(H3);
 
 const City = styled(({ theme }) => ({
-  fontSize: theme.helpers.rem(0.8),
+  fontSize: theme.helpers.rem(0.75),
   fontWeight: '800',
   color: theme.colors.text.tertiary,
   lineHeight: 0,
@@ -64,12 +64,10 @@ const UserAvatarView = enhance(
         <Name>
           {firstName} {lastName}
         </Name>
-        {home ? (
-          <Location>
-            <Icon name={'locate'} fill={theme.colors.text.tertiary} size={20} />
-            <City>{home.city}</City>
-          </Location>
-        ) : null}
+        <Location>
+          <Icon name={'pin'} fill={theme.colors.text.tertiary} size={16} />
+          {home ? <City>{home.city}</City> : <City>No Location Set</City>}
+        </Location>
       </Content>
     </Container>
   )

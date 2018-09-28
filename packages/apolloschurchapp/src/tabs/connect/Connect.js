@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import { Query } from 'react-apollo';
+import PropTypes from 'prop-types';
 
 // import { LoginButton } from 'apolloschurchapp/src/auth';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
@@ -22,6 +23,13 @@ class Connect extends PureComponent {
     title: 'Connect',
     header: null,
   });
+
+  static propTypes = {
+    navigation: PropTypes.shape({
+      getParam: PropTypes.func,
+      navigate: PropTypes.func,
+    }),
+  };
 
   render() {
     return (
@@ -51,6 +59,7 @@ class Connect extends PureComponent {
                               lastName={lastName}
                               photo={photo}
                               refetch={refetch}
+                              navigation={this.props.navigation}
                             />
                           )}
                         </Query>
