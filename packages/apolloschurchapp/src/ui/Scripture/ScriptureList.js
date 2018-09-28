@@ -31,7 +31,13 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
 };
 
 ScriptureList.propTypes = {
-  scripture: PropTypes.arrayOf(PropTypes.string),
+  scripture: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      reference: PropTypes.string,
+      html: PropTypes.string,
+    })
+  ),
   commas: PropTypes.bool,
   jumpTo: PropTypes.func,
 };

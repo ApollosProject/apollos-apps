@@ -16,7 +16,13 @@ class Devotional extends PureComponent {
       }),
     }),
     isLoading: PropTypes.bool,
-    scripture: PropTypes.arrayOf(PropTypes.string),
+    scripture: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        reference: PropTypes.string,
+        html: PropTypes.string,
+      })
+    ),
   };
 
   contentRoute = () => (
@@ -29,7 +35,12 @@ class Devotional extends PureComponent {
     />
   );
 
-  scriptureRoute = () => <ScriptureTab scripture={this.props.scripture} />;
+  scriptureRoute = () => (
+    <ScriptureTab
+      scripture={this.props.scripture}
+      isLoading={this.props.isLoading}
+    />
+  );
 
   render() {
     const hasScripture = this.props.isLoading || this.props.scripture.length;
