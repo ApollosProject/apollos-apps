@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, Animated, Easing } from 'react-native';
+import { StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { FluidNavigator } from 'react-navigation-fluid-transitions';
 // import { Sentry } from 'react-native-sentry';

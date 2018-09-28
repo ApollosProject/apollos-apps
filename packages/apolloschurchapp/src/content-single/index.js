@@ -51,14 +51,6 @@ class ContentSingle extends PureComponent {
 
     return (
       <Transition anchor={`content/${transitionKey}/image`}>
-        <TrackEventWhenLoaded
-          loaded={!!(!loading && content.title)}
-          eventName={events.ViewContent}
-          properties={{
-            title: content.title,
-            itemId: this.itemId.itemId,
-          }}
-        />
         <ThemeMixin
           mixin={{
             type: get(theme, 'type', 'light').toLowerCase(),
@@ -66,6 +58,14 @@ class ContentSingle extends PureComponent {
           }}
         >
           <ModalView>
+            <TrackEventWhenLoaded
+              loaded={!!(!loading && content.title)}
+              eventName={events.ViewContent}
+              properties={{
+                title: content.title,
+                itemId: this.id,
+              }}
+            />
             <FlexedScrollView>
               <Transition shared={`content/${transitionKey}/image`}>
                 <GradientOverlayImage
