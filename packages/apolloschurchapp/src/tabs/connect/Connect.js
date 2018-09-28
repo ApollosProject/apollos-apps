@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-// import { LoginButton } from 'apolloschurchapp/src/auth';
+import { LoginButton } from 'apolloschurchapp/src/auth';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import TableView, {
   Cell,
@@ -34,6 +34,7 @@ class Connect extends PureComponent {
   render() {
     return (
       <BackgroundView>
+        <LoginButton />
         <WebBrowserConsumer>
           {(openUrl) => (
             <BackgroundView>
