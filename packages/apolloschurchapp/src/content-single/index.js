@@ -68,13 +68,15 @@ class ContentSingle extends PureComponent {
               }}
             />
             <FlexedScrollView>
-              <Transition shared={`content/${transitionKey}/image`}>
-                <GradientOverlayImage
-                  isLoading={!coverImageSources.length && loading}
-                  source={coverImageSources}
-                  overlayColor={get(theme, 'colors.paper')}
-                />
-              </Transition>
+              {coverImageSources.length || loading ? (
+                <Transition shared={`content/${transitionKey}/image`}>
+                  <GradientOverlayImage
+                    isLoading={!coverImageSources.length && loading}
+                    source={coverImageSources}
+                    overlayColor={get(theme, 'colors.paper')}
+                  />
+                </Transition>
+              ) : null}
               <BackgroundView>
                 <MediaControls contentId={id} />
                 <PaddedView vertical={false}>

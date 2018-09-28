@@ -20,21 +20,14 @@ class MediaControls extends PureComponent {
     loading,
     error,
     data: {
-      node: {
-        id,
-        videos,
-        audios,
-        title,
-        parentChannel = {},
-        coverImage = {},
-      } = {},
+      node: { videos, audios, title, parentChannel = {}, coverImage = {} } = {},
     } = {},
   }) => {
     if (loading || error) return null;
 
     const videoSource = get(videos, '[0].sources[0]', null);
     const audioSource = get(audios, '[0].sources[0]', null);
-    const coverImageSources = coverImage.source || [];
+    const coverImageSources = (coverImage && coverImage.source) || [];
 
     return (
       <Mutation mutation={playVideoMutation}>
