@@ -5,7 +5,8 @@ import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import Avatar from 'apolloschurchapp/src/ui/Avatar';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
-
+import { H6 } from 'apolloschurchapp/src/ui/typography';
+import styled from 'apolloschurchapp/src/ui/styled';
 import uploadPhoto from './uploadPhoto';
 
 const StyledAvatar = withTheme(({ theme }) => ({
@@ -14,6 +15,15 @@ const StyledAvatar = withTheme(({ theme }) => ({
     marginBottom: theme.sizing.baseUnit / 2,
   },
 }))(Avatar);
+
+const StyledTouchable = styled({
+  justifyContent: 'center',
+  alignItems: 'center',
+})(Touchable);
+
+const StyledText = styled(({ theme }) => ({
+  color: theme.colors.secondary,
+}))(H6);
 
 export default class AvatarForm extends PureComponent {
   state = {
@@ -33,13 +43,17 @@ export default class AvatarForm extends PureComponent {
     const { isUploadingFile } = this.state;
 
     return (
-      <Touchable onPress={this.handleUploadPhoto}>
+      <StyledTouchable
+        disabled={this.props.disabled}
+        onPress={this.handleUploadPhoto}
+      >
         <StyledAvatar
           source={photo}
           size="medium"
           isLoading={isUploadingFile}
         />
-      </Touchable>
+        {this.props.text ? <StyledText>Change Photo</StyledText> : null}
+      </StyledTouchable>
     );
   }
 }
@@ -47,4 +61,6 @@ export default class AvatarForm extends PureComponent {
 AvatarForm.propTypes = {
   refetch: PropTypes.func.isRequired,
   photo: ConnectedImage.propTypes.source,
+  disabled: PropTypes.bool,
+  text: PropTypes.string,
 };

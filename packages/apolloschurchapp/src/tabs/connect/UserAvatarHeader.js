@@ -24,16 +24,17 @@ const SettingsButton = styled({
 })(Icon);
 
 const UserAvatarHeader = enhance(
-  ({ theme, firstName, lastName, photo, refetch, navigation }) => (
+  ({ theme, firstName, lastName, photo, refetch, navigation, disabled }) => (
     <Container>
       <UserAvatarView
         firstName={firstName}
         lastName={lastName}
         photo={photo}
         refetch={refetch}
+        disabled={disabled}
       />
       <TouchableWithoutFeedback
-        onPress={() => navigation.navigate('UserSettings')}
+        onPress={() => navigation.navigate('UserSettings', { photo, refetch })}
       >
         <SettingsButton
           name={'settings'}

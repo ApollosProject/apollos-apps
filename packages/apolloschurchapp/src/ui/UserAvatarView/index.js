@@ -55,11 +55,17 @@ const UserAvatarView = enhance(
     onPhotoPress,
     setIsUploadingFile,
     isUploadingFile,
+    disabled,
     ...viewProps
   }) => (
     // todo: handle file select stuff
     <Container {...viewProps}>
-      <AvatarForm photo={photo} refetch={refetch} />
+      <AvatarForm
+        text={false}
+        disabled={disabled}
+        photo={photo}
+        refetch={refetch}
+      />
       <Content>
         <Name>
           {firstName} {lastName}

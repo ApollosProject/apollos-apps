@@ -60,6 +60,7 @@ class Connect extends PureComponent {
                               photo={photo}
                               refetch={refetch}
                               navigation={this.props.navigation}
+                              disabled
                             />
                           )}
                         </Query>
