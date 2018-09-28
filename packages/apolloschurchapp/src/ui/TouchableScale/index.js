@@ -5,22 +5,29 @@ import { Animated, TouchableWithoutFeedback } from 'react-native';
 class TouchableScale extends Component {
   static propTypes = {
     minScale: PropTypes.number,
+    springConfig: PropTypes.shape({}),
   };
 
   static defaultProps = {
     minScale: 0.95,
+    springConfig: {
+      speed: 20,
+    },
   };
 
-  scale = new Animated.Value(1);
+  scale = new Animated.Value(this.props.active ? this.props.minScale : 1);
 
   animatedStyle = {
     transform: [{ scale: this.scale }],
   };
 
   handlePressIn = () => {
+    this.didPressIn = false;
     Animated.spring(this.scale, {
       toValue: this.props.minScale,
       useNativeDriver: true,
+      isInteraction: false,
+      ...this.props.springConfig,
     }).start();
   };
 
@@ -28,7 +35,18 @@ class TouchableScale extends Component {
     Animated.spring(this.scale, {
       toValue: 1,
       useNativeDriver: true,
-    }).start();
+      isInteraction: false,
+      ...this.props.springConfig,
+    }).start(() => {
+      if (this.handlePressOutCallback) this.handlePressOutCallback();
+      this.handlePressOutCallback = undefined;
+    });
+  };
+
+  handlePress = (...args) => {
+    if (this.props.onPress) {
+      this.handlePressOutCallback = () => this.props.onPress(args);
+    }
   };
 
   render() {
@@ -36,6 +54,7 @@ class TouchableScale extends Component {
     return (
       <TouchableWithoutFeedback
         {...touchableProps}
+        onPress={this.handlePress}
         onPressIn={this.handlePressIn}
         onPressOut={this.handlePressOut}
       >

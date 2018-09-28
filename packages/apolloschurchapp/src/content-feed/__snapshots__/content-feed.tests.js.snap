@@ -263,140 +263,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -415,140 +445,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -567,140 +627,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -719,140 +809,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -871,140 +991,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -1023,140 +1173,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -1175,140 +1355,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -1327,140 +1537,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -1479,140 +1719,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -1631,140 +1901,170 @@ exports[`content feed query component renders a feedview after successful query 
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 6,
-              "marginHorizontal": 10,
-              "marginVertical": 5,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "shadowOffset": Object {
-                "height": 1,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
             }
           }
         >
           <View
+            inVerticalList={true}
             style={
               Object {
-                "borderRadius": 6,
-                "overflow": "hidden",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "width": "100%",
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
+                collapsable={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
-                  }
-                }
-              >
-                <Image
-                  onLoad={[Function]}
-                  source={Array []}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 15,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 20,
-                  "paddingTop": 5,
-                  "paddingVertical": 20,
-                }
-              }
-            >
-              <View
-                flexed={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "flexDirection": "row",
+                    "transform": Array [],
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "flex": 1,
-                      "paddingRight": 10,
+                      "overflow": "hidden",
                     }
                   }
-                  withIcon={null}
                 >
                   <View
                     style={
                       Object {
-                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 6,
-                        "height": 12,
-                        "marginVertical": 2.6400000000000006,
-                        "width": "50%",
+                        "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
                 </View>
               </View>
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 6,
-                    "height": 19.2,
-                    "width": 19.2,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 12,
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 16,
+                    "paddingTop": 4,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  flexed={true}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8,
+                      }
+                    }
+                    withIcon={null}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 2.6400000000000006,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 19.2,
+                      "width": 19.2,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>

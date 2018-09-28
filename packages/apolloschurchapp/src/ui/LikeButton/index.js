@@ -9,7 +9,7 @@ import getSessionId from 'apolloschurchapp/src/store/getSessionId';
 const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
   <Query query={getSessionId} fetchPolicy="cache-only">
     {({ data: { sessionId } }) =>
-      console.log(sessionId) || sessionId ? (
+      sessionId ? (
         <Query query={getLikedContentItem} variables={{ itemId }}>
           {({
             data: {

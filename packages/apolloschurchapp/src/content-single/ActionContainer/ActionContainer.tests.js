@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import ActionContainer from './ActionContainer';
+import ActionContainer from '.';
 
 describe('action container', () => {
   it('renders the like and share buttons on successful load', () => {

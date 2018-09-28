@@ -58,9 +58,6 @@ class FeedView extends Component {
       // These are all props of FeedItemCard but they do not have data coming
       // back yet. So I moved them here for safe keeping.
       // TODO: Move them back when the data is ready.
-      // backgroundColor={item.theme.colors.background.paper}
-      // isLight={item.theme.isLight}
-      // isLiked={item.isLiked}
       <TouchableScale onPress={() => this.props.onPressItem({ ...item })}>
         <FeedItemCard
           id={get(item, 'id')}
@@ -70,6 +67,9 @@ class FeedView extends Component {
           channelTypeIcon={get(item, 'parentChannel.iconName')}
           images={get(item, 'coverImage.sources')}
           isLoading={get(item, 'isLoading')}
+          isLight={get(item, 'theme.type', '').toLowerCase() !== 'dark'}
+          backgroundColor={get(item, 'theme.colors.paper')}
+          transitionKey={get(item, 'transitionKey')}
           inVerticalList
         />
       </TouchableScale>

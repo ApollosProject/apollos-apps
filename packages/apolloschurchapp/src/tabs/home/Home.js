@@ -36,7 +36,7 @@ class Home extends PureComponent {
   handleOnPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
-      sharing: item.sharing,
+      transitionKey: item.transitionKey,
     });
 
   render() {
@@ -46,9 +46,10 @@ class Home extends PureComponent {
           <Query query={getUserFeed} fetchPolicy="cache-and-network">
             {({ loading, error, data, refetch }) => (
               <FeedView
-                content={get(data, 'userFeed.edges', []).map(
-                  (edge) => edge.node
-                )}
+                content={get(data, 'userFeed.edges', []).map((edge) => ({
+                  ...edge.node,
+                  transitionKey: `home-feed-${edge.node.id}`,
+                }))}
                 isLoading={loading}
                 error={error}
                 refetch={refetch}

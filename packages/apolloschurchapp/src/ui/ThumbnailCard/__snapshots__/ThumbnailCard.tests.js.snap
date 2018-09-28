@@ -12,23 +12,21 @@ exports[`the ThumbnailCard component should render 1`] = `
   style={
     Object {
       "backgroundColor": "#FFFFFF",
-      "borderRadius": 6,
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "borderRadius": 16,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 3,
+      "shadowRadius": 6,
     }
   }
 >
   <View
     style={
       Object {
-        "borderRadius": 6,
+        "borderRadius": 16,
         "overflow": "hidden",
       }
     }
@@ -48,8 +46,8 @@ exports[`the ThumbnailCard component should render 1`] = `
         style={
           Object {
             "flex": 1.66,
-            "paddingHorizontal": 20,
-            "paddingVertical": 15,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -83,23 +81,21 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
   style={
     Object {
       "backgroundColor": "#FFFFFF",
-      "borderRadius": 6,
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "borderRadius": 16,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 3,
+      "shadowRadius": 6,
     }
   }
 >
   <View
     style={
       Object {
-        "borderRadius": 6,
+        "borderRadius": 16,
         "overflow": "hidden",
       }
     }
@@ -119,8 +115,8 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
         style={
           Object {
             "flex": 1.66,
-            "paddingHorizontal": 20,
-            "paddingVertical": 15,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -150,7 +146,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
             style={
               Object {
                 "flex": 1,
-                "paddingRight": 10,
+                "paddingRight": 8,
               }
             }
           >
@@ -159,7 +155,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                 Object {
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
-                  "borderRadius": 6,
+                  "borderRadius": 16,
                   "height": 12,
                   "marginVertical": 2.6400000000000006,
                   "width": "50%",
@@ -212,6 +208,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
               source={
                 Array [
                   Object {
+                    "cache": "force-cache",
                     "uri": "https://picsum.photos/100/100/?random",
                     "url": "https://picsum.photos/100/100/?random",
                   },
@@ -247,23 +244,21 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
   style={
     Object {
       "backgroundColor": "#FFFFFF",
-      "borderRadius": 6,
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "borderRadius": 16,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 3,
+      "shadowRadius": 6,
     }
   }
 >
   <View
     style={
       Object {
-        "borderRadius": 6,
+        "borderRadius": 16,
         "overflow": "hidden",
       }
     }
@@ -283,8 +278,8 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
         style={
           Object {
             "flex": 1.66,
-            "paddingHorizontal": 20,
-            "paddingVertical": 15,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -314,7 +309,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
             style={
               Object {
                 "flex": 1,
-                "paddingRight": 10,
+                "paddingRight": 8,
               }
             }
           >
@@ -350,23 +345,21 @@ exports[`the ThumbnailCard component should render with a category and images 1`
   style={
     Object {
       "backgroundColor": "#FFFFFF",
-      "borderRadius": 6,
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "borderRadius": 16,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 3,
+      "shadowRadius": 6,
     }
   }
 >
   <View
     style={
       Object {
-        "borderRadius": 6,
+        "borderRadius": 16,
         "overflow": "hidden",
       }
     }
@@ -386,8 +379,8 @@ exports[`the ThumbnailCard component should render with a category and images 1`
         style={
           Object {
             "flex": 1.66,
-            "paddingHorizontal": 20,
-            "paddingVertical": 15,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -417,7 +410,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
             style={
               Object {
                 "flex": 1,
-                "paddingRight": 10,
+                "paddingRight": 8,
               }
             }
           >
@@ -479,6 +472,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
               source={
                 Array [
                   Object {
+                    "cache": "force-cache",
                     "uri": "https://picsum.photos/100/100/?random",
                     "url": "https://picsum.photos/100/100/?random",
                   },
@@ -514,23 +508,21 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
   style={
     Object {
       "backgroundColor": "#FFFFFF",
-      "borderRadius": 6,
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "borderRadius": 16,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 3,
+      "shadowRadius": 6,
     }
   }
 >
   <View
     style={
       Object {
-        "borderRadius": 6,
+        "borderRadius": 16,
         "overflow": "hidden",
       }
     }
@@ -550,8 +542,8 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
         style={
           Object {
             "flex": 1.66,
-            "paddingHorizontal": 20,
-            "paddingVertical": 15,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -607,23 +599,21 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
   style={
     Object {
       "backgroundColor": "#FFFFFF",
-      "borderRadius": 6,
-      "marginHorizontal": 10,
-      "marginVertical": 5,
+      "borderRadius": 16,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 3,
+      "shadowRadius": 6,
     }
   }
 >
   <View
     style={
       Object {
-        "borderRadius": 6,
+        "borderRadius": 16,
         "overflow": "hidden",
       }
     }
@@ -643,8 +633,8 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
         style={
           Object {
             "flex": 1.66,
-            "paddingHorizontal": 20,
-            "paddingVertical": 15,
+            "paddingHorizontal": 16,
+            "paddingVertical": 12,
           }
         }
       >
@@ -704,6 +694,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
               source={
                 Array [
                   Object {
+                    "cache": "force-cache",
                     "uri": "https://picsum.photos/100/100/?random",
                     "url": "https://picsum.photos/100/100/?random",
                   },
