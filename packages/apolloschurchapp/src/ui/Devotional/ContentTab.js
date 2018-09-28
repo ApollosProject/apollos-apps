@@ -9,19 +9,16 @@ import { ScriptureList } from 'apolloschurchapp/src/ui/Scripture';
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
 
-const ContentTab = ({
-  title,
-  scripture,
-  body,
-  isLoading,
-  route: { jumpTo },
-}) => (
+const ContentTab = ({ title, scripture, body, isLoading, navigationState }) => (
   <ScrollView>
     {!isLoading ? (
       <ContentContainer>
         <H2 padded>{title}</H2>
         {scripture && scripture.length ? (
-          <ScriptureList scripture={scripture} jumpTo={jumpTo} />
+          <ScriptureList
+            scripture={scripture}
+            jumpTo={navigationState.route.jumpTo}
+          />
         ) : null}
         <HTMLView>{body}</HTMLView>
       </ContentContainer>
@@ -40,9 +37,7 @@ ContentTab.propTypes = {
   ),
   body: PropTypes.string,
   isLoading: PropTypes.bool,
-  route: PropTypes.shape({
-    jumpTo: PropTypes.func,
-  }),
+  navigationState: PropTypes.shape({ routes: PropTypes.array }),
 };
 
 export default ContentTab;
