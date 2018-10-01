@@ -22,7 +22,6 @@ class TouchableScale extends Component {
   };
 
   handlePressIn = () => {
-    this.didPressIn = false;
     Animated.spring(this.scale, {
       toValue: this.props.minScale,
       useNativeDriver: true,
@@ -37,16 +36,7 @@ class TouchableScale extends Component {
       useNativeDriver: true,
       isInteraction: false,
       ...this.props.springConfig,
-    }).start(() => {
-      if (this.handlePressOutCallback) this.handlePressOutCallback();
-      this.handlePressOutCallback = undefined;
-    });
-  };
-
-  handlePress = (...args) => {
-    if (this.props.onPress) {
-      this.handlePressOutCallback = () => this.props.onPress(args);
-    }
+    }).start();
   };
 
   render() {
@@ -54,7 +44,6 @@ class TouchableScale extends Component {
     return (
       <TouchableWithoutFeedback
         {...touchableProps}
-        onPress={this.handlePress}
         onPressIn={this.handlePressIn}
         onPressOut={this.handlePressOut}
       >

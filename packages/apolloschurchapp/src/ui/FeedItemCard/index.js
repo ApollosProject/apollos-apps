@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
-import { Transition } from 'react-navigation-fluid-transitions';
 
 import { withThemeMixin, withTheme } from 'apolloschurchapp/src/ui/theme';
 import Icon from 'apolloschurchapp/src/ui/Icon';
@@ -39,13 +38,11 @@ const FeedItemCard = enhance(
     ...otherProps
   }) => (
     <Card isLoading={isLoading} cardColor={backgroundColor} {...otherProps}>
-      <Transition shared={`content/${transitionKey || id}/image`}>
-        <GradientOverlayImage
-          isLoading={isLoading}
-          source={images}
-          overlayColor={backgroundColor}
-        />
-      </Transition>
+      <GradientOverlayImage
+        isLoading={isLoading}
+        source={images}
+        overlayColor={backgroundColor}
+      />
       <CardContent>
         <H3 isLoading={isLoading}>{title}</H3>
       </CardContent>
