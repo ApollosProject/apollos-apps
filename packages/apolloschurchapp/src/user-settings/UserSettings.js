@@ -32,6 +32,7 @@ class UserSettings extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
+      navigate: PropTypes.func,
     }),
   };
 
@@ -56,9 +57,11 @@ class UserSettings extends PureComponent {
                   <BackgroundView>
                     <TableView>
                       <Touchable
-                        onPress={() =>
-                          openUrl('https://apollosrock.newspring.cc/page/236')
-                        }
+                        onPress={async () => {
+                          await this.props.navigation.navigate(
+                            'PersonalDetails'
+                          );
+                        }}
                       >
                         <Cell>
                           <CellText>Personal Details</CellText>
@@ -117,7 +120,12 @@ class UserSettings extends PureComponent {
                     <TableView>
                       <Mutation mutation={logout}>
                         {(handleLogout) => (
-                          <Touchable onPress={() => handleLogout()}>
+                          <Touchable
+                            onPress={async () => {
+                              await handleLogout();
+                              await this.props.navigation.navigate('Connect');
+                            }}
+                          >
                             <Cell>
                               <CellText>Logout</CellText>
                               <CellIcon name="arrow-next" />

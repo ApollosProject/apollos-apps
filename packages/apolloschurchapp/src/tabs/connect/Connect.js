@@ -34,7 +34,6 @@ class Connect extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <LoginButton />
         <WebBrowserConsumer>
           {(openUrl) => (
             <BackgroundView>
@@ -118,6 +117,7 @@ class Connect extends PureComponent {
             </BackgroundView>
           )}
         </WebBrowserConsumer>
+        <LoginButton />
       </BackgroundView>
     );
   }
