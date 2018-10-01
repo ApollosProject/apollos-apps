@@ -8,6 +8,7 @@ export default gql`
         firstName
         lastName
         email
+        nickName
         photo {
           uri
         }

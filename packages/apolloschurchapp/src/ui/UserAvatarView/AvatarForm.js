@@ -62,5 +62,5 @@ AvatarForm.propTypes = {
   refetch: PropTypes.func.isRequired,
   photo: ConnectedImage.propTypes.source,
   disabled: PropTypes.bool,
-  text: PropTypes.string,
+  text: PropTypes.bool,
 };

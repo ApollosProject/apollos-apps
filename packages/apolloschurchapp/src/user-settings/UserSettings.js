@@ -46,7 +46,6 @@ class UserSettings extends PureComponent {
             <BackgroundView>
               <AvatarView>
                 <AvatarForm
-                  disabled={false}
                   text
                   photo={this.props.navigation.getParam('photo', '')}
                   refetch={this.props.navigation.getParam('refetch', {})}
