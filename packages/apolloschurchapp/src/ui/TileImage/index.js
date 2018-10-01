@@ -11,7 +11,7 @@ import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
 const CardView = styled(
   ({ theme }) => ({
-    borderRadius: theme.sizing.borderRadius,
+    borderRadius: theme.sizing.baseUnit,
     overflow: 'hidden',
     width: '100%',
     height: '100%',

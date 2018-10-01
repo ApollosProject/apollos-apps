@@ -17,7 +17,7 @@ const StyledCard = compose(
     }) => ({
       // card styles
       backgroundColor: cardColor || theme.colors.background.paper,
-      borderRadius: theme.sizing.borderRadius,
+      borderRadius: theme.sizing.baseUnit,
       ...(inHorizontalList
         ? {
             marginLeft: theme.sizing.baseUnit / 2,
@@ -40,7 +40,7 @@ const StyledCard = compose(
  * live on a child wrapper. https://github.com/facebook/react-native/issues/449
  */
 const OverflowFix = styled(({ theme }) => ({
-  borderRadius: theme.sizing.borderRadius,
+  borderRadius: theme.sizing.baseUnit,
   overflow: 'hidden',
 }))(View);
 

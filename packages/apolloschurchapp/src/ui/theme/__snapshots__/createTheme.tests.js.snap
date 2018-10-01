@@ -110,7 +110,6 @@ Object {
       "small": 40,
     },
     "baseUnit": 16,
-    "borderRadius": 16,
   },
   "type": "light",
   "types": Object {
@@ -391,7 +390,6 @@ Object {
       "small": 40,
     },
     "baseUnit": 16,
-    "borderRadius": 16,
   },
   "type": "dark",
   "types": Object {
