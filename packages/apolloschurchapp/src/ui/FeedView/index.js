@@ -73,7 +73,6 @@ class FeedView extends Component {
           isLoading={get(item, 'isLoading')}
           isLight={get(item, 'theme.type', '').toLowerCase() !== 'dark'}
           backgroundColor={get(item, 'theme.colors.paper')}
-          transitionKey={get(item, 'transitionKey')}
           inVerticalList
         />
       </TouchableScale>

@@ -46,10 +46,7 @@ class Home extends PureComponent {
           <Query query={getUserFeed} fetchPolicy="cache-and-network">
             {({ loading, error, data, refetch }) => (
               <FeedView
-                content={get(data, 'userFeed.edges', []).map((edge) => ({
-                  ...edge.node,
-                  transitionKey: `home-feed-${edge.node.id}`,
-                }))}
+                content={get(data, 'userFeed.edges', [])}
                 isLoading={loading}
                 error={error}
                 refetch={refetch}
