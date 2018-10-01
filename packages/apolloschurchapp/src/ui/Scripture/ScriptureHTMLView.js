@@ -32,11 +32,17 @@ const renderer = (node, { children, ...other }) => {
    * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_chapters-verses.scss#L33
    */
   if (className.includes('v')) {
-    /* TODO: a single space lives here to temporarily space verse numbers when they are not at the
+    /* TODO: a single non-breaking space lives here to temporarily space verse numbers when they are not at the
      * beginning of a sentence or paragraph. It affects all instences (albeit less noticably in
      * somecases) so a more procise fix in the future is prefered.
      */
-    return <NumText> {children} </NumText>;
+    return (
+      <NumText>
+        {`\u00A0`}
+        {children}
+        {`\u00A0`}
+      </NumText>
+    );
   }
 
   /* Speaker identification and descriptive titles ("Hebrew subtitle")
