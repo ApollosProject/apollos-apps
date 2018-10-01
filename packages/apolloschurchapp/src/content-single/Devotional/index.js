@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import ContentTab from 'apolloschurchapp/src/ui/Devotional/ContentTab';
-import ScriptureTab from 'apolloschurchapp/src/ui/Devotional/ScriptureTab';
+import ContentTab from './ContentTab';
+import ScriptureTab from './ScriptureTab';
 
 /**
  * The devotional component.
