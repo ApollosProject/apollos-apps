@@ -21,6 +21,11 @@ export default gql`
                 name
                 iconName
               }
+              sharing {
+                title
+                message
+                url
+              }
               title
             }
           }
