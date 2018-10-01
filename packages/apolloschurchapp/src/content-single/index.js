@@ -3,7 +3,6 @@ import { ScrollView } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
-import { Transition } from 'react-navigation-fluid-transitions';
 
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
@@ -14,7 +13,9 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
 
 import ModalView from 'apolloschurchapp/src/ui/ModalView';
+import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenLoaded';
 
+import { events } from 'apolloschurchapp/src/analytics';
 import ActionContainer from './ActionContainer';
 import HTMLContent from './HTMLContent';
 import HorizontalContentFeed from './HorizontalContentFeed';
@@ -41,55 +42,48 @@ class ContentSingle extends PureComponent {
 
     const content = data.node || {};
 
-    const transitionKey =
-      this.props.navigation.getParam('transitionKey') || content.id;
-
     const coverImageSources = get(content, 'coverImage.sources', []);
 
     const { theme = {}, title, id } = content;
 
     return (
-      <Transition anchor={`content/${transitionKey}/image`}>
-        <ThemeMixin
-          mixin={{
-            type: get(theme, 'type', 'light').toLowerCase(),
-            colors: get(theme, 'colors'),
-          }}
-        >
-          <ModalView>
-            <TrackEventWhenLoaded
-              loaded={!!(!loading && content.title)}
-              eventName={events.ViewContent}
-              properties={{
-                title: content.title,
-                itemId: this.id,
-              }}
-            />
-            <FlexedScrollView>
-              {coverImageSources.length || loading ? (
-                <Transition shared={`content/${transitionKey}/image`}>
-                  <GradientOverlayImage
-                    isLoading={!coverImageSources.length && loading}
-                    source={coverImageSources}
-                    overlayColor={get(theme, 'colors.paper')}
-                  />
-                </Transition>
-              ) : null}
-              <BackgroundView>
-                <MediaControls contentId={id} />
-                <PaddedView vertical={false}>
-                  <H2 padded isLoading={!title && loading}>
-                    {title}
-                  </H2>
-                  <HTMLContent contentId={id} />
-                </PaddedView>
-                <HorizontalContentFeed contentId={id} />
-              </BackgroundView>
-            </FlexedScrollView>
-            <ActionContainer itemId={id} />
-          </ModalView>
-        </ThemeMixin>
-      </Transition>
+      <ThemeMixin
+        mixin={{
+          type: get(theme, 'type', 'light').toLowerCase(),
+          colors: get(theme, 'colors'),
+        }}
+      >
+        <ModalView>
+          <TrackEventWhenLoaded
+            loaded={!!(!loading && content.title)}
+            eventName={events.ViewContent}
+            properties={{
+              title: content.title,
+              itemId: this.id,
+            }}
+          />
+          <FlexedScrollView>
+            {coverImageSources.length || loading ? (
+              <GradientOverlayImage
+                isLoading={!coverImageSources.length && loading}
+                source={coverImageSources}
+                overlayColor={get(theme, 'colors.paper')}
+              />
+            ) : null}
+            <BackgroundView>
+              <MediaControls contentId={id} />
+              <PaddedView vertical={false}>
+                <H2 padded isLoading={!title && loading}>
+                  {title}
+                </H2>
+                <HTMLContent contentId={id} />
+              </PaddedView>
+              <HorizontalContentFeed contentId={id} />
+            </BackgroundView>
+          </FlexedScrollView>
+          <ActionContainer itemId={id} />
+        </ModalView>
+      </ThemeMixin>
     );
   };
 
