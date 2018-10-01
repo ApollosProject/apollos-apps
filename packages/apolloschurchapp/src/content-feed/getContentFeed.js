@@ -1,7 +1,5 @@
 import gql from 'graphql-tag';
 
-import { contentItemFragment } from '../content-single/getContentItem';
-
 export default gql`
   query getContentFeed($itemId: ID!) {
     node(id: $itemId) {
@@ -9,7 +7,6 @@ export default gql`
         childContentItemsConnection {
           edges {
             node {
-              ...contentItemFragment
               __typename
               id
               coverImage {
@@ -31,5 +28,4 @@ export default gql`
       }
     }
   }
-  ${contentItemFragment}
 `;

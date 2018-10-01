@@ -26,87 +26,70 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
     }
   >
     <View
-      collapsable={false}
       style={
         Object {
-          "transform": Array [],
+          "backgroundColor": "#A5A5A5",
+          "width": "100%",
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ]
+        }
         style={
           Object {
-            "overflow": "hidden",
+            "aspectRatio": 1.5,
+            "backgroundColor": "#A5A5A5",
+            "opacity": 1,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
+      />
+      <BVLinearGradient
+        colors={
+          Array [
+            16416882,
+            4294606962,
+          ]
+        }
+        endPoint={
+          Object {
+            "x": 0,
+            "y": 1,
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 400,
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "width": 600,
-                },
-              ]
-            }
-            style={
-              Object {
-                "aspectRatio": 1.5,
-                "backgroundColor": "#A5A5A5",
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-          <BVLinearGradient
-            colors={
-              Array [
-                16416882,
-                4294606962,
-              ]
-            }
-            endPoint={
-              Object {
-                "x": 0,
-                "y": 1,
-              }
-            }
-            locations={
-              Array [
-                0.3,
-                1,
-              ]
-            }
-            startPoint={
-              Object {
-                "x": 0,
-                "y": 0,
-              }
-            }
-            style={
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
-            }
-          />
-        </View>
-      </View>
+        }
+        locations={
+          Array [
+            0.3,
+            1,
+          ]
+        }
+        startPoint={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
     </View>
     <View
       style={
@@ -279,52 +262,35 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
     }
   >
     <View
-      collapsable={false}
       style={
         Object {
-          "transform": Array [],
+          "backgroundColor": "#A5A5A5",
+          "width": "100%",
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ]
+        }
         style={
           Object {
-            "overflow": "hidden",
+            "aspectRatio": 1.5,
+            "backgroundColor": "#A5A5A5",
+            "opacity": 1,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 400,
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "width": 600,
-                },
-              ]
-            }
-            style={
-              Object {
-                "aspectRatio": 1.5,
-                "backgroundColor": "#A5A5A5",
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-        </View>
-      </View>
+      />
     </View>
     <View
       style={
@@ -495,52 +461,35 @@ exports[`the FeedItemCard component should render 1`] = `
     }
   >
     <View
-      collapsable={false}
       style={
         Object {
-          "transform": Array [],
+          "backgroundColor": "#A5A5A5",
+          "width": "100%",
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ]
+        }
         style={
           Object {
-            "overflow": "hidden",
+            "aspectRatio": 1.5,
+            "backgroundColor": "#A5A5A5",
+            "opacity": 1,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 400,
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "width": 600,
-                },
-              ]
-            }
-            style={
-              Object {
-                "aspectRatio": 1.5,
-                "backgroundColor": "#A5A5A5",
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-        </View>
-      </View>
+      />
     </View>
     <View
       style={
@@ -711,52 +660,35 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
     }
   >
     <View
-      collapsable={false}
       style={
         Object {
-          "transform": Array [],
+          "backgroundColor": "#A5A5A5",
+          "width": "100%",
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ]
+        }
         style={
           Object {
-            "overflow": "hidden",
+            "aspectRatio": 1.5,
+            "backgroundColor": "#A5A5A5",
+            "opacity": 1,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 400,
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "width": 600,
-                },
-              ]
-            }
-            style={
-              Object {
-                "aspectRatio": 1.5,
-                "backgroundColor": "#A5A5A5",
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-        </View>
-      </View>
+      />
     </View>
     <View
       style={
@@ -927,52 +859,35 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
     }
   >
     <View
-      collapsable={false}
       style={
         Object {
-          "transform": Array [],
+          "backgroundColor": "#A5A5A5",
+          "width": "100%",
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ]
+        }
         style={
           Object {
-            "overflow": "hidden",
+            "aspectRatio": 1.5,
+            "backgroundColor": "#A5A5A5",
+            "opacity": 1,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 400,
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "width": 600,
-                },
-              ]
-            }
-            style={
-              Object {
-                "aspectRatio": 1.5,
-                "backgroundColor": "#A5A5A5",
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-        </View>
-      </View>
+      />
     </View>
     <View
       style={
@@ -1215,52 +1130,35 @@ exports[`the FeedItemCard component should render with inverted (light) font col
     }
   >
     <View
-      collapsable={false}
       style={
         Object {
-          "transform": Array [],
+          "backgroundColor": "#A5A5A5",
+          "width": "100%",
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 400,
+              "uri": "https://picsum.photos/600/400/?random",
+              "width": 600,
+            },
+          ]
+        }
         style={
           Object {
-            "overflow": "hidden",
+            "aspectRatio": 1.5,
+            "backgroundColor": "#A5A5A5",
+            "opacity": 1,
+            "resizeMode": "cover",
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 400,
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "width": 600,
-                },
-              ]
-            }
-            style={
-              Object {
-                "aspectRatio": 1.5,
-                "backgroundColor": "#A5A5A5",
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-        </View>
-      </View>
+      />
     </View>
     <View
       style={
