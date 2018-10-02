@@ -7,7 +7,7 @@ import defaultRenderer, {
   wrapTextChildren,
 } from 'apolloschurchapp/src/ui/HTMLView/defaultRenderer';
 import Paragraph from 'apolloschurchapp/src/ui/typography/Paragraph';
-import { H4, H6, BodyText } from 'apolloschurchapp/src/ui/typography';
+import { H4, SerifText } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 
 const RedLetters = styled(({ theme }) => ({
