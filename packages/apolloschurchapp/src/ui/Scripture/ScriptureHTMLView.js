@@ -50,24 +50,53 @@ const renderer = (node, { children, ...other }) => {
     return <H4 padded>{children}</H4>;
   }
 
-  /* Poetic line
+  /* Indented poetic line These are sometimes seen as a quote of the OT in the NT as well.
+   * This uses spaces as a less ideal fix because we are bound by the limits of rendering HTML.
    * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L2
    */
   if (className.includes('q1')) {
     return (
       <SerifText>
+        {'     '}
         {children}
       </SerifText>
     );
   }
 
-  /* Indented poetic line
+  /* Double indented poetic lines. These are sometimes seen as a quote of the OT in the NT as well.
+   * This uses spaces as a less ideal fix because we are bound by the limits of rendering HTML.
    * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L7
    */
   if (className.includes('q2')) {
     return (
-        {'     '}
       <SerifText>
+        {'          '}
+        {children}
+      </SerifText>
+    );
+  }
+
+  /* Triple indented poetic lines. These are sometimes seen as a quote of the OT in the NT as well.
+   * This uses spaces as a less ideal fix because we are bound by the limits of rendering HTML.
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L8
+   */
+  if (className.includes('q3')) {
+    return (
+      <SerifText>
+        {'               '}
+        {children}
+      </SerifText>
+    );
+  }
+
+  /* Quadruple indented poetic lines. These are sometimes seen as a quote of the OT in the NT as well.
+   * This uses spaces as a less ideal fix because we are bound by the limits of rendering HTML.
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L9
+   */
+  if (className.includes('q4')) {
+    return (
+      <SerifText>
+        {'                    '}
         {children}
       </SerifText>
     );
