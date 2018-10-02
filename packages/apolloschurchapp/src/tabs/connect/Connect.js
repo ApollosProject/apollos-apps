@@ -16,7 +16,7 @@ import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import UserAvatarView from 'apolloschurchapp/src/ui/UserAvatarView';
 
 import logout from 'apolloschurchapp/src/auth/logout';
-import client from 'apolloschurchapp/src/client';
+import { client } from 'apolloschurchapp/src/client';
 import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
 
