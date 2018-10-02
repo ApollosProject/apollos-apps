@@ -77,7 +77,10 @@ class Connect extends PureComponent {
                             query={getLikedContent}
                             fetchPolicy="cache-and-network"
                           >
-                            {({ loading, data: { getAllLikedContent } }) => {
+                            {({
+                              loading,
+                              data: { getAllLikedContent = [] } = {},
+                            }) => {
                               if (!getAllLikedContent.length) return null;
                               return (
                                 <LikedContentFeed

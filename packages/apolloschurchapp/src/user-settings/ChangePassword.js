@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-// import { Mutation } from 'react-apollo';
+import { Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -12,6 +12,9 @@ import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 import { H4 } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
+
+import getAuthToken from '../store/getAuthToken';
+import changePassword from './passwordChange';
 
 const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 1.75,
@@ -43,81 +46,96 @@ class ChangePassword extends PureComponent {
 
   render() {
     return (
-      // <Mutation mutation={getHelp}>
-      //   {(updatePassword) => (
-      <Formik
-        validationSchema={Yup.object().shape({
-          password: Yup.string()
-            .min(6, 'Password must be at least 6 characters')
-            .required('Password is required'),
-          confirmPassword: Yup.string()
-            .min(6, 'Password must be at least 6 characters')
-            .oneOf([Yup.ref('password')])
-            .required('Password confirm is required'),
-        })}
-        onSubmit={async (variables, { setSubmitting, setFieldError }) => {
-          try {
-            // await updatePassword({ variables });
-            await this.props.navigation.goBack();
-          } catch (e) {
-            const { graphQLErrors } = e;
-            if (graphQLErrors.length) {
-              setFieldError(
-                'confirmPassword',
-                'Unknown error. Please try again later.'
-              );
-            }
-          }
-          setSubmitting(false);
+      <Mutation
+        mutation={changePassword}
+        update={async (cache, { data: { authToken } }) => {
+          await cache.writeQuery({
+            query: getAuthToken,
+            data: { authToken },
+          });
+
+          await cache.writeData({
+            data: { authToken },
+          });
         }}
       >
-        {(props) => {
-          if (props.isSubmitting) return <ActivityIndicator />;
+        {(updatePassword) => (
+          <Formik
+            validationSchema={Yup.object().shape({
+              password: Yup.string()
+                .min(6, 'Password must be at least 6 characters')
+                .required('Password is required'),
+              confirmPassword: Yup.string()
+                .min(6, 'Password must be at least 6 characters')
+                .oneOf([Yup.ref('password')])
+                .required('Password confirm is required'),
+            })}
+            onSubmit={async (variables, { setSubmitting, setFieldError }) => {
+              try {
+                await updatePassword({ variables });
 
-          return (
-            <FlexedView>
-              <Header>
-                <SpaceHolder />
-                <H4>Change Password</H4>
-                {props.dirty ? (
-                  <DoneButton onPress={props.handleSubmit}>Done</DoneButton>
-                ) : (
-                  <DoneButton onPress={() => this.props.navigation.goBack()}>
-                    Back
-                  </DoneButton>
-                )}
-              </Header>
-              <BackgroundView>
-                <PaddedView>
-                  <TextInput
-                    label="New Password"
-                    type="password"
-                    value={props.values.password}
-                    error={props.touched.password && props.errors.password}
-                    onChangeText={(text) =>
-                      props.setFieldValue('password', text)
-                    }
-                  />
-                  <TextInput
-                    label="Confirm Password"
-                    type="password"
-                    value={props.values.confirmPassword}
-                    error={
-                      props.touched.confirmPassword &&
-                      props.errors.confirmPassword
-                    }
-                    onChangeText={(text) =>
-                      props.setFieldValue('confirmPassword', text)
-                    }
-                  />
-                </PaddedView>
-              </BackgroundView>
-            </FlexedView>
-          );
-        }}
-      </Formik>
-      //   )}
-      // </Mutation>
+                await this.props.navigation.goBack();
+              } catch (e) {
+                const { graphQLErrors } = e;
+                if (graphQLErrors.length) {
+                  setFieldError(
+                    'confirmPassword',
+                    'Unknown error. Please try again later.'
+                  );
+                }
+              }
+              setSubmitting(false);
+            }}
+          >
+            {(props) => {
+              if (props.isSubmitting) return <ActivityIndicator />;
+
+              return (
+                <FlexedView>
+                  <Header>
+                    <SpaceHolder />
+                    <H4>Change Password</H4>
+                    {props.dirty ? (
+                      <DoneButton onPress={props.handleSubmit}>Done</DoneButton>
+                    ) : (
+                      <DoneButton
+                        onPress={() => this.props.navigation.goBack()}
+                      >
+                        Back
+                      </DoneButton>
+                    )}
+                  </Header>
+                  <BackgroundView>
+                    <PaddedView>
+                      <TextInput
+                        label="New Password"
+                        type="password"
+                        value={props.values.password}
+                        error={props.touched.password && props.errors.password}
+                        onChangeText={(text) =>
+                          props.setFieldValue('password', text)
+                        }
+                      />
+                      <TextInput
+                        label="Confirm Password"
+                        type="password"
+                        value={props.values.confirmPassword}
+                        error={
+                          props.touched.confirmPassword &&
+                          props.errors.confirmPassword
+                        }
+                        onChangeText={(text) =>
+                          props.setFieldValue('confirmPassword', text)
+                        }
+                      />
+                    </PaddedView>
+                  </BackgroundView>
+                </FlexedView>
+              );
+            }}
+          </Formik>
+        )}
+      </Mutation>
     );
   }
 }

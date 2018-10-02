@@ -27,6 +27,7 @@ const LikeButton = ({ itemId, updateLikeEntity, getLikedContentItem }) => (
                   __typename: 'Interaction',
                 },
               }}
+              refetchQueries={['getAllLikedContent']}
               update={(
                 cache,
                 {

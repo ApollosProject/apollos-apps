@@ -47,142 +47,147 @@ class PersonalDetails extends PureComponent {
   render() {
     return (
       <Query query={getUserProfile} fetchPolicy="cache-and-network">
-        {({
-          data: {
-            currentUser: {
-              profile: { firstName, lastName, email, nickName } = {},
-            } = {},
-          } = {},
-        }) => (
-          <Mutation
-            mutation={updateCurrentUser}
-            update={async (cache, { data: { updateProfileFields } }) => {
-              await cache.writeQuery({
-                query: getUserProfile,
-                data: {
-                  firstName: updateProfileFields.firstName,
-                  lastName: updateProfileFields.lastName,
-                  email: updateProfileFields.email,
-                  nickName: updateProfileFields.nickName,
-                },
-              });
-            }}
-          >
-            {(updateDetails) => (
-              <Formik
-                initialValues={{ firstName, lastName, email, nickName }}
-                validationSchema={Yup.object().shape({
-                  firstName: Yup.string().required('First Name is required!'),
-                  lastName: Yup.string().required('Last Name is required!'),
-                  email: Yup.string()
-                    .email('Invalid email address')
-                    .required('Email is required!'),
-                  nickName: Yup.string().required('Nick Name is required!'),
-                })}
-                onSubmit={async (
-                  variables,
-                  { setSubmitting, setFieldError }
-                ) => {
-                  try {
-                    await updateDetails({ variables });
-                    await this.props.navigation.goBack();
-                  } catch (e) {
-                    const { graphQLErrors } = e;
-                    if (
-                      graphQLErrors.length &&
-                      graphQLErrors.find(({ message }) =>
-                        message.includes('User already exists')
-                      )
-                    ) {
-                      setFieldError(
-                        'email',
-                        'There is already a user with this email'
-                      );
-                    } else {
-                      setFieldError(
-                        'email',
-                        'Unknown error. Please try again later.'
-                      );
-                    }
-                  }
-                  setSubmitting(false);
-                }}
-              >
-                {(props) => {
-                  if (props.isSubmitting) return <ActivityIndicator />;
+        {({ data: { currentUser = { profile: {} } } = {} }) => {
+          const { firstName, lastName, email, nickName } = currentUser.profile;
 
-                  return (
-                    <FlexedView>
-                      <Header>
-                        <SpaceHolder />
-                        <H4>Personal Details</H4>
-                        {props.dirty ? (
-                          <DoneButton onPress={props.handleSubmit}>
-                            Done
-                          </DoneButton>
-                        ) : (
-                          <DoneButton
-                            onPress={() => this.props.navigation.goBack()}
-                          >
-                            Back
-                          </DoneButton>
-                        )}
-                      </Header>
-                      <BackgroundView>
-                        <PaddedView>
-                          <TextInput
-                            label="Nick Name"
-                            type="text"
-                            value={props.values.nickName}
-                            error={
-                              props.touched.nickName && props.errors.nickName
-                            }
-                            onChangeText={(text) =>
-                              props.setFieldValue('nickName', text)
-                            }
-                          />
-                          <TextInput
-                            label="First Name"
-                            type="text"
-                            value={props.values.firstName}
-                            error={
-                              props.touched.firstName && props.errors.firstName
-                            }
-                            onChangeText={(text) =>
-                              props.setFieldValue('firstName', text)
-                            }
-                          />
-                          <TextInput
-                            label="Last Name"
-                            type="text"
-                            value={props.values.lastName}
-                            error={
-                              props.touched.lastName && props.errors.lastName
-                            }
-                            onChangeText={(text) =>
-                              props.setFieldValue('lastName', text)
-                            }
-                          />
-                        </PaddedView>
-                        <PaddedView>
-                          <TextInput
-                            label="Email"
-                            type="email"
-                            value={props.values.email}
-                            error={props.touched.email && props.errors.email}
-                            onChangeText={(text) =>
-                              props.setFieldValue('email', text)
-                            }
-                          />
-                        </PaddedView>
-                      </BackgroundView>
-                    </FlexedView>
-                  );
-                }}
-              </Formik>
-            )}
-          </Mutation>
-        )}
+          return (
+            <Mutation
+              mutation={updateCurrentUser}
+              update={async (cache, { data: { updateProfileFields } }) => {
+                await cache.writeQuery({
+                  query: getUserProfile,
+                  data: {
+                    currentUser: {
+                      ...currentUser,
+                      profile: {
+                        ...currentUser.profile,
+                        firstName: updateProfileFields.firstName,
+                        lastName: updateProfileFields.lastName,
+                        email: updateProfileFields.email,
+                        nickName: updateProfileFields.nickName,
+                      },
+                    },
+                  },
+                });
+              }}
+            >
+              {(updateDetails) => (
+                <Formik
+                  initialValues={{ firstName, lastName, email, nickName }}
+                  validationSchema={Yup.object().shape({
+                    firstName: Yup.string().required('First Name is required!'),
+                    lastName: Yup.string().required('Last Name is required!'),
+                    email: Yup.string()
+                      .email('Invalid email address')
+                      .required('Email is required!'),
+                    nickName: Yup.string().required('Nick Name is required!'),
+                  })}
+                  onSubmit={async (
+                    variables,
+                    { setSubmitting, setFieldError }
+                  ) => {
+                    try {
+                      await updateDetails({ variables });
+                      await this.props.navigation.goBack();
+                    } catch (e) {
+                      const { graphQLErrors } = e;
+                      if (
+                        graphQLErrors.length &&
+                        graphQLErrors.find(({ message }) =>
+                          message.includes('User already exists')
+                        )
+                      ) {
+                        setFieldError(
+                          'email',
+                          'There is already a user with this email'
+                        );
+                      } else {
+                        setFieldError(
+                          'email',
+                          'Unknown error. Please try again later.'
+                        );
+                      }
+                    }
+                    setSubmitting(false);
+                  }}
+                >
+                  {(props) => {
+                    if (props.isSubmitting) return <ActivityIndicator />;
+
+                    return (
+                      <FlexedView>
+                        <Header>
+                          <SpaceHolder />
+                          <H4>Personal Details</H4>
+                          {props.dirty ? (
+                            <DoneButton onPress={props.handleSubmit}>
+                              Done
+                            </DoneButton>
+                          ) : (
+                            <DoneButton
+                              onPress={() => this.props.navigation.goBack()}
+                            >
+                              Back
+                            </DoneButton>
+                          )}
+                        </Header>
+                        <BackgroundView>
+                          <PaddedView>
+                            <TextInput
+                              label="Nick Name"
+                              type="text"
+                              value={props.values.nickName}
+                              error={
+                                props.touched.nickName && props.errors.nickName
+                              }
+                              onChangeText={(text) =>
+                                props.setFieldValue('nickName', text)
+                              }
+                            />
+                            <TextInput
+                              label="First Name"
+                              type="text"
+                              value={props.values.firstName}
+                              error={
+                                props.touched.firstName &&
+                                props.errors.firstName
+                              }
+                              onChangeText={(text) =>
+                                props.setFieldValue('firstName', text)
+                              }
+                            />
+                            <TextInput
+                              label="Last Name"
+                              type="text"
+                              value={props.values.lastName}
+                              error={
+                                props.touched.lastName && props.errors.lastName
+                              }
+                              onChangeText={(text) =>
+                                props.setFieldValue('lastName', text)
+                              }
+                            />
+                          </PaddedView>
+                          <PaddedView>
+                            <TextInput
+                              label="Email"
+                              type="email"
+                              value={props.values.email}
+                              error={props.touched.email && props.errors.email}
+                              onChangeText={(text) =>
+                                props.setFieldValue('email', text)
+                              }
+                            />
+                          </PaddedView>
+                        </BackgroundView>
+                      </FlexedView>
+                    );
+                  }}
+                </Formik>
+              )}
+            </Mutation>
+          );
+        }}
       </Query>
     );
   }
