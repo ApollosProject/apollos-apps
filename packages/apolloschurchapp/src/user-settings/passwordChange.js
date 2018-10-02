@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  mutation changePassword($newPassword: String!) {
-    changePassword(newPassword: $newPassword) {
+  mutation changePassword($password: String!) {
+    changePassword(password: $password) {
       token
     }
   }

@@ -48,14 +48,14 @@ class ChangePassword extends PureComponent {
     return (
       <Mutation
         mutation={changePassword}
-        update={async (cache, { data: { authToken } }) => {
+        update={async (cache, { data: { token } }) => {
           await cache.writeQuery({
             query: getAuthToken,
-            data: { authToken },
+            data: { authToken: token },
           });
 
           await cache.writeData({
-            data: { authToken },
+            data: { authToken: token },
           });
         }}
       >
