@@ -62,15 +62,15 @@ exports[`The Avatar component should render medium 1`] = `
   style={
     Object {
       "backgroundColor": "#A5A5A5",
-      "borderRadius": 40,
-      "height": 80,
-      "marginBottom": 20,
-      "marginRight": 20,
+      "borderRadius": 50,
+      "height": 100,
+      "marginBottom": 25,
+      "marginRight": 25,
       "overflow": "hidden",
-      "width": 80,
+      "width": 100,
     }
   }
-  themeSize={80}
+  themeSize={100}
 >
   <View
     animate={null}
@@ -97,7 +97,7 @@ exports[`The Avatar component should render medium 1`] = `
       style={
         Object {
           "backgroundColor": "#A5A5A5",
-          "borderRadius": 40,
+          "borderRadius": 50,
           "bottom": 0,
           "height": "100%",
           "left": 0,
@@ -108,7 +108,7 @@ exports[`The Avatar component should render medium 1`] = `
           "width": "100%",
         }
       }
-      themeSize={80}
+      themeSize={100}
     />
   </View>
 </View>

@@ -106,7 +106,7 @@ Object {
   "sizing": Object {
     "avatar": Object {
       "large": 160,
-      "medium": 80,
+      "medium": 100,
       "small": 40,
     },
     "baseUnit": 20,
@@ -387,7 +387,7 @@ Object {
   "sizing": Object {
     "avatar": Object {
       "large": 160,
-      "medium": 80,
+      "medium": 100,
       "small": 40,
     },
     "baseUnit": 20,

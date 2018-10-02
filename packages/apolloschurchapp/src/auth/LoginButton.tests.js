@@ -27,23 +27,4 @@ describe('LoginButton component', () => {
     await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders a LogoutButton when logged in', async () => {
-    const mock = {
-      request: {
-        query: getLoginState,
-      },
-      result: {
-        data: { isLoggedIn: 'some-auth-token' },
-      },
-    };
-    const navigation = { navigate: jest.fn() };
-    const tree = renderer.create(
-      <Providers mocks={[mock]}>
-        <LoginButton navigation={navigation} />
-      </Providers>
-    );
-    await wait(0); // wait for response from graphql
-    expect(tree).toMatchSnapshot();
-  });
 });
