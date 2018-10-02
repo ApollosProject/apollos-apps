@@ -110,7 +110,6 @@ export const resolvers = {
 
         track({ eventName: events.UserLogin });
       } catch (e) {
-        console.log(e);
         throw e.message;
       }
 
