@@ -52,7 +52,12 @@ class Connect extends PureComponent {
                             {({
                               data: {
                                 currentUser: {
-                                  profile: { photo, firstName, lastName } = {},
+                                  profile: {
+                                    photo,
+                                    firstName,
+                                    lastName,
+                                    location,
+                                  } = {},
                                 } = {},
                               } = {},
                               refetch,
@@ -60,6 +65,7 @@ class Connect extends PureComponent {
                               <UserAvatarHeader
                                 firstName={firstName}
                                 lastName={lastName}
+                                location={location}
                                 photo={photo}
                                 refetch={refetch}
                                 navigation={this.props.navigation}

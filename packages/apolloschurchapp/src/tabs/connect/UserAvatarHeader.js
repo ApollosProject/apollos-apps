@@ -24,11 +24,21 @@ const SettingsButton = styled({
 })(Icon);
 
 const UserAvatarHeader = enhance(
-  ({ theme, firstName, lastName, photo, refetch, navigation, disabled }) => (
+  ({
+    theme,
+    firstName,
+    lastName,
+    location,
+    photo,
+    refetch,
+    navigation,
+    disabled,
+  }) => (
     <Container>
       <UserAvatarView
         firstName={firstName}
         lastName={lastName}
+        location={location}
         photo={photo}
         refetch={refetch}
         disabled={disabled}
@@ -49,6 +59,7 @@ const UserAvatarHeader = enhance(
 UserAvatarHeader.propTypes = {
   firstName: PropTypes.string,
   lastName: PropTypes.string,
+  location: PropTypes.string,
   photo: ConnectedImage.propTypes.source,
   refetch: PropTypes.func,
 };

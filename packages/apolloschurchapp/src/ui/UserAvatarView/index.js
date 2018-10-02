@@ -32,7 +32,7 @@ const Name = styled(({ theme }) => ({
   fontSize: theme.helpers.rem(1.1),
 }))(H3);
 
-const City = styled(({ theme }) => ({
+const LocalText = styled(({ theme }) => ({
   fontSize: theme.helpers.rem(0.75),
   fontWeight: '800',
   color: theme.colors.text.tertiary,
@@ -49,7 +49,7 @@ const UserAvatarView = enhance(
     photo,
     firstName,
     lastName,
-    home,
+    location,
     isLoading,
     refetch,
     onPhotoPress,
@@ -72,7 +72,7 @@ const UserAvatarView = enhance(
         </Name>
         <Location>
           <Icon name={'pin'} fill={theme.colors.text.tertiary} size={16} />
-          {home ? <City>{home.city}</City> : <City>No Location Set</City>}
+          <LocalText>{location}</LocalText>
         </Location>
       </Content>
     </Container>
@@ -83,9 +83,7 @@ UserAvatarView.propTypes = {
   photo: ConnectedImage.propTypes.source,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
-  home: PropTypes.shape({
-    city: PropTypes.string,
-  }),
+  location: PropTypes.string,
   isLoading: PropTypes.bool,
   refetch: PropTypes.func,
   onPhotoPress: PropTypes.func,
