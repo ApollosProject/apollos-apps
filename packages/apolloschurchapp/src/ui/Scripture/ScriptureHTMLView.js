@@ -19,9 +19,6 @@ const NumText = styled(({ theme }) => ({
   lineHeight: theme.helpers.verticalRhythm(1, 1.625),
 }))(H6);
 
-const HeavyText = styled(({ theme }) => ({
-  lineHeight: theme.helpers.verticalRhythm(2),
-}))(H4);
 
 const renderer = (node, { children, ...other }) => {
   // the defaultRenderer support several basic elements out of the box,
@@ -50,7 +47,7 @@ const renderer = (node, { children, ...other }) => {
    * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_titles-headings.scss#L109-L126
    */
   if (className.includes('sp') || className.includes('d')) {
-    return <HeavyText>{children}</HeavyText>;
+    return <H4 padded>{children}</H4>;
   }
 
   /* Poetic line
