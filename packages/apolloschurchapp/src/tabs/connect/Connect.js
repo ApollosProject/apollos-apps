@@ -15,12 +15,8 @@ import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import UserAvatarView from 'apolloschurchapp/src/ui/UserAvatarView';
 
-import logout from 'apolloschurchapp/src/auth/logout';
-import { client } from 'apolloschurchapp/src/client';
 import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
-
-const logoutUser = () => client.mutate({ mutation: logout });
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -45,13 +41,8 @@ class Connect extends PureComponent {
                         >
                           {({
                             data: { currentUser } = { currentUser: {} },
-                            error,
                             refetch,
-                            loading,
                           }) => {
-                            if (error || (!currentUser && !loading))
-                              return logoutUser();
-
                             const profile = get(currentUser, 'profile', {});
                             const { photo, firstName, lastName } = profile;
                             return (
