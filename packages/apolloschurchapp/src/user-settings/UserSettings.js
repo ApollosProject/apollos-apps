@@ -69,9 +69,11 @@ class UserSettings extends PureComponent {
                       </Touchable>
                       <Divider />
                       <Touchable
-                        onPress={() =>
-                          openUrl('https://apollosrock.newspring.cc/')
-                        }
+                        onPress={async () => {
+                          await this.props.navigation.navigate(
+                            'ChangePassword'
+                          );
+                        }}
                       >
                         <Cell>
                           <CellText>Change Password</CellText>

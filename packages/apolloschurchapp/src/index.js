@@ -10,6 +10,7 @@ import NotificationsInit from './Notifications';
 import ContentSingle from './content-single';
 import UserSettings from './user-settings';
 import PersonalDetails from './user-settings/PersonalDetails';
+import ChangePassword from './user-settings/ChangePassword';
 import Tabs from './tabs';
 import Auth from './auth';
 
@@ -33,6 +34,7 @@ const AppModalNavigator = createStackNavigator(
     AppStackNavigator,
     Auth,
     PersonalDetails,
+    ChangePassword,
   },
   {
     initialRouteName: 'AppStackNavigator',
