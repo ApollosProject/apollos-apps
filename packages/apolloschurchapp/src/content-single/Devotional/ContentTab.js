@@ -29,7 +29,7 @@ const ContentTab = ({ title, scripture, body, isLoading, navigationState }) => (
           {scripture && scripture.length ? (
             <ScriptureList
               scripture={scripture}
-              jumpTo={navigationState.route.jumpTo}
+              onPress={navigationState.route.jumpTo} // eslint-disable-line react/jsx-handler-names
             />
           ) : null}
           <HTMLView>{body}</HTMLView>

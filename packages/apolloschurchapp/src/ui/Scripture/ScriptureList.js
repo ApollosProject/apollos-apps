@@ -11,7 +11,7 @@ const StyledH4 = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(H4);
 
-const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
+const ScriptureList = ({ scripture, onPress, commas = true }) => {
   if (!scripture && commas) return '';
   if (!scripture) return [];
 
@@ -21,9 +21,11 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
     combo = combo.join(', ');
   }
 
+  const handleOnPress = () => onPress('scripture');
+
   return (
     <StyledH4>
-      <ButtonLink padded onPress={() => jumpTo('scripture')}>
+      <ButtonLink padded onPress={handleOnPress}>
         {combo}
       </ButtonLink>
     </StyledH4>
@@ -31,6 +33,7 @@ const ScriptureList = ({ scripture, jumpTo, commas = true }) => {
 };
 
 ScriptureList.propTypes = {
+  onPress: PropTypes.func,
   scripture: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -39,7 +42,6 @@ ScriptureList.propTypes = {
     })
   ),
   commas: PropTypes.bool,
-  jumpTo: PropTypes.func,
 };
 
 export default ScriptureList;
