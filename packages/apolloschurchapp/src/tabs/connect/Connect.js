@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
@@ -13,10 +13,12 @@ import TableView, {
 } from 'apolloschurchapp/src/ui/TableView';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
+import LikedContentFeed from './LikedContentFeed';
 import UserAvatarHeader from './UserAvatarHeader';
 
 import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
+import getLikedContent from './getLikedContent';
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -42,28 +44,50 @@ class Connect extends PureComponent {
                   {({ data: { isLoggedIn = null } }) => {
                     if (isLoggedIn)
                       return (
-                        <Query
-                          query={getUserProfile}
-                          fetchPolicy="cache-and-network"
-                        >
-                          {({
-                            data: {
-                              currentUser: {
-                                profile: { photo, firstName, lastName } = {},
+                        <View>
+                          <Query
+                            query={getUserProfile}
+                            fetchPolicy="cache-and-network"
+                          >
+                            {({
+                              data: {
+                                currentUser: {
+                                  profile: { photo, firstName, lastName } = {},
+                                } = {},
                               } = {},
-                            } = {},
-                            refetch,
-                          }) => (
-                            <UserAvatarHeader
-                              firstName={firstName}
-                              lastName={lastName}
-                              photo={photo}
-                              refetch={refetch}
-                              navigation={this.props.navigation}
-                              disabled
-                            />
-                          )}
-                        </Query>
+                              refetch,
+                            }) => (
+                              <UserAvatarHeader
+                                firstName={firstName}
+                                lastName={lastName}
+                                photo={photo}
+                                refetch={refetch}
+                                navigation={this.props.navigation}
+                                disabled
+                              />
+                            )}
+                          </Query>
+                          <Query
+                            query={getLikedContent}
+                            fetchPolicy="cache-and-network"
+                          >
+                            {({ loading, data: { getAllLikedContent } }) => {
+                              if (!getAllLikedContent.length) return null;
+                              return (
+                                <LikedContentFeed
+                                  id={'liked'}
+                                  name={'Recently Like'}
+                                  content={getAllLikedContent}
+                                  isLoading={loading}
+                                  loadingStateObject={{
+                                    title: 'Recently Like',
+                                    isLoading: true,
+                                  }}
+                                />
+                              );
+                            }}
+                          </Query>
+                        </View>
                       );
                     return null;
                   }}
