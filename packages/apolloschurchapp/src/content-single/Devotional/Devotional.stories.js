@@ -27,10 +27,10 @@ const content = {
 
 const stories = storiesOf('Devotional', module);
 
-stories.add('God is Our Banner', () => (
+stories.add('Example', () => (
   <Devotional content={content} isLoading={false} scripture={scripture} />
 ));
 
-stories.add('Loading State', () => (
+stories.add('isLoading', () => (
   <Devotional content={content} isLoading scripture={scripture} />
 ));
