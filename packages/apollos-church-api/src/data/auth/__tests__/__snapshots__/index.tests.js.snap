@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Auth Change Password generates a new token 1`] = `
+Object {
+  "rockCookie": "some cookie",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb29raWUiOiJzb21lIGNvb2tpZSIsImlhdCI6MTUzODUwODczOSwiZXhwIjoxNTQzNjkyNzM5fQ.k6gq0pCki3yDx_I3ysWKqmBpuhsRVBVmty9iTTN0-I0",
+}
+`;
+
 exports[`Auth User Registration creates new registration 1`] = `
 Object {
   "data": Object {

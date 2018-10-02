@@ -97,7 +97,6 @@ export default class AuthDataSource extends RockApolloDataSource {
         LastLoginDateTime: `${moment().toISOString()}`,
       });
     } catch (err) {
-      console.log(props, err);
       throw new Error('Unable to create user login!');
     }
   };
