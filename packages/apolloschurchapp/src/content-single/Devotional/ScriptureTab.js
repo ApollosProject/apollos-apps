@@ -24,24 +24,20 @@ const ScriptureTab = ({ scripture, isLoading }) => (
   </ScrollView>
 );
 
-/**
- * Props passed to the ScriptureTab component:
- * scripture: An array of scripture verses containing:
- *   id: The ID of the verse (i.e. '1CO.15.57')
- *   reference: The scripture location (i.e. '1 Corinthians 15:57')
- *   html: The HTML of the verses to render.
- * isLoading: A self-explanatory prop letting the component know whether
- * or not it is still loading.
- */
 ScriptureTab.propTypes = {
+  /** Toggles placeholders */
+  isLoading: PropTypes.bool,
+  /** An array of scripture objects */
   scripture: PropTypes.arrayOf(
     PropTypes.shape({
+      /** The ID of the verse (i.e. '1CO.15.57') */
       id: PropTypes.string,
+      /** A human readable reference (i.e. '1 Corinthians 15:57') */
       reference: PropTypes.string,
+      /** The scripture source to render */
       html: PropTypes.string,
     })
   ),
-  isLoading: PropTypes.bool,
 };
 
 export default ScriptureTab;
