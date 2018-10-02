@@ -45,6 +45,14 @@ const songOfSolomon1 = {
   },
 };
 
+const mark1 = {
+  scripture: {
+    reference: 'Mark 1: 1-4',
+    html:
+      '<p class="p"><span data-number="1" class="v">1</span>The beginning of the Good News of Jesus Christ, the Son of God.</p><p class="p"><span data-number="2" class="v">2</span>As it is written in the prophets,</p><p class="q1">“Behold, I send my messenger before your face,</p><p class="q2">who will prepare your way before you:</p><p class="q1"><span data-number="3" class="v">3</span>the voice of one crying in the wilderness,</p><p class="q2">‘Make ready the way of the Lord!</p><p class="q2">Make his paths straight!’”</p><p class="p"><span data-number="4" class="v">4</span>John came baptizing in the wilderness and preaching the baptism of repentance for forgiveness of sins.',
+  },
+};
+
 const john3 = {
   scripture: {
     reference: 'John 3:16-17',
@@ -112,6 +120,17 @@ storiesOf('Scripture', module)
         <Item
           reference={songOfSolomon1.scripture.reference}
           html={songOfSolomon1.scripture.html}
+          isLoading={false}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Mark 1:1-4', () => (
+    <ScrollView>
+      <PaddedView>
+        <Item
+          reference={mark1.scripture.reference}
+          html={mark1.scripture.html}
           isLoading={false}
         />
       </PaddedView>
