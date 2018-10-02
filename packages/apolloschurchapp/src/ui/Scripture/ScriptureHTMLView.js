@@ -54,7 +54,11 @@ const renderer = (node, { children, ...other }) => {
    * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L2
    */
   if (className.includes('q1')) {
-    return <BodyText>{children}</BodyText>;
+    return (
+      <SerifText>
+        {children}
+      </SerifText>
+    );
   }
 
   /* Indented poetic line
@@ -62,10 +66,10 @@ const renderer = (node, { children, ...other }) => {
    */
   if (className.includes('q2')) {
     return (
-      <BodyText>
         {'     '}
+      <SerifText>
         {children}
-      </BodyText>
+      </SerifText>
     );
   }
 
@@ -76,7 +80,7 @@ const renderer = (node, { children, ...other }) => {
   if (node.name === 'p') {
     return (
       <Paragraph>
-        <BodyText>{wrapTextChildren(children)}</BodyText>
+        <SerifText>{wrapTextChildren(children, SerifText)}</SerifText>
       </Paragraph>
     );
   }
