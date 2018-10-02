@@ -14,7 +14,7 @@ const RedLetters = styled(({ theme }) => ({
   color: theme.colors.wordOfChrist,
 }))(Text);
 
-const NumText = styled(({ theme }) => ({
+const VerseNumber = styled(({ theme }) => ({
   fontSize: theme.helpers.rem(0.6),
   color: theme.colors.text.secondary,
 }))(SerifText);
@@ -35,11 +35,11 @@ const renderer = (node, { children, ...other }) => {
      * fix in the future is prefered.
      */
     return (
-      <NumText>
+      <VerseNumber>
         {' '}
         {children}
         {`\u00A0`}
-      </NumText>
+      </VerseNumber>
     );
   }
 
