@@ -212,7 +212,7 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
             }
           }
         >
-          No Location Set
+          Anderson, SC
         </Text>
       </View>
     </View>

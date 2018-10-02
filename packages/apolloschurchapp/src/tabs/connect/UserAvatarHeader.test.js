@@ -16,6 +16,7 @@ describe('user avatar header', () => {
       },
       firstName: 'Isaac',
       lastName: 'Hardy',
+      location: 'Anderson, SC',
       photo: {
         uri: 'google.com',
       },
