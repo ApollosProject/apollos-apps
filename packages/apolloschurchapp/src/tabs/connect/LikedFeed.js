@@ -38,7 +38,7 @@ class ContentFeed extends PureComponent {
     return (
       <BackgroundView>
         <Query query={getLikedContent} fetchPolicy="cache-and-network">
-          {({ loading, error, data: { getAllLikedContent }, refetch }) => (
+          {({ loading, error, data: { getAllLikedContent = [] }, refetch }) => (
             <FeedView
               content={getAllLikedContent}
               isLoading={loading}
