@@ -32,9 +32,9 @@ const renderer = (node, { children, ...other }) => {
    * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_chapters-verses.scss#L33
    */
   if (className.includes('v')) {
-    /* TODO: a single space before and importantly a non-breaking space after wraps the number to
+    /* TODO: a single space before and importantly a non-breaking space (`\u00A0`) after wraps the number to
      * temporarily space verse numbers when they are not at the beginning of a sentence or
-     * paragraph. It affects all instences (albeit less noticably in somecases) so a more procise
+     * paragraph. It affects all instences (albeit less noticably in some cases) so a more procise
      * fix in the future is prefered.
      */
     return (
