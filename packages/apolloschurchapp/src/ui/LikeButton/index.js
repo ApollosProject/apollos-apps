@@ -59,14 +59,18 @@ const UpdateLikeStatus = ({ itemId, item, isLiked, children }) => (
         itemId,
         toggleLike: async (variables) => {
           try {
+            console.log(variables);
             await createNewInteraction({ variables });
+            console.log('pre-track');
             track({
               eventName: isLiked ? events.UnlikeContent : events.LikeContent,
               properties: {
                 id: itemId,
               },
             });
+            console.log('post-track');
           } catch (e) {
+            console.log(e);
             throw e.message;
           }
         },
@@ -82,7 +86,7 @@ UpdateLikeStatus.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     __typename: PropTypes.string,
-    isLiked: PropTypes.string,
+    isLiked: PropTypes.bool,
   }),
 };
 
