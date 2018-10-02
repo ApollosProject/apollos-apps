@@ -8,30 +8,26 @@ import ScriptureTab from './ScriptureTab';
 
 /**
  * The devotional component.
- * Displays a TabView with two tabs: Content and Scripture.
+ * Displays a TabView with two tabs: ContentTab and ScriptureTab.
  */
 class Devotional extends PureComponent {
-  /**
-   * Props passed to the devotional component:
-   * content: An object containing:
-   *   body: body text of the devotional.
-   *   title: title of the devotional.
-   * isLoading: Boolean prop that shows placeholders while the data is loading.
-   * scripture: An array of scripture verses containing:
-   *   id: The ID of the verse (i.e. '1CO.15.57')
-   *   reference: The scripture location (i.e. '1 Corinthians 15:57')
-   *   html: The HTML of the verses to render.
-   */
   static propTypes = {
     content: PropTypes.shape({
+      /** The devotional text */
       body: PropTypes.string,
+      /** The devotional title */
       title: PropTypes.string,
     }),
+    /** Toggles placeholders */
     isLoading: PropTypes.bool,
+    /** An array of scripture objects */
     scripture: PropTypes.arrayOf(
       PropTypes.shape({
+        /** The ID of the verse (i.e. '1CO.15.57') */
         id: PropTypes.string,
+        /** A human readable reference (i.e. '1 Corinthians 15:57') */
         reference: PropTypes.string,
+        /** The scripture source to render */
         html: PropTypes.string,
       })
     ),
