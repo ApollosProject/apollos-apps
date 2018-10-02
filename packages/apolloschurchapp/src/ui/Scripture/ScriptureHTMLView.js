@@ -15,9 +15,9 @@ const RedLetters = styled(({ theme }) => ({
 }))(Text);
 
 const NumText = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-  lineHeight: theme.helpers.verticalRhythm(1, 1.625),
-}))(H6);
+  fontSize: theme.helpers.rem(0.6),
+  color: theme.colors.text.secondary,
+}))(SerifText);
 
 
 const renderer = (node, { children, ...other }) => {
