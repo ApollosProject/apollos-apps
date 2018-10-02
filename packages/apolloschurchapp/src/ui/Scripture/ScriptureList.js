@@ -33,15 +33,21 @@ const ScriptureList = ({ scripture, onPress, commas = true }) => {
 };
 
 ScriptureList.propTypes = {
+  /** Toggles comma formating */
+  commas: PropTypes.bool,
+  /** The ButtonLink handler */
   onPress: PropTypes.func,
+  /** An array of scripture objects */
   scripture: PropTypes.arrayOf(
     PropTypes.shape({
+      /** The ID of the verse (i.e. '1CO.15.57') */
       id: PropTypes.string,
+      /** A human readable reference (i.e. '1 Corinthians 15:57') */
       reference: PropTypes.string,
+      /** The scripture source to render */
       html: PropTypes.string,
     })
   ),
-  commas: PropTypes.bool,
 };
 
 export default ScriptureList;
