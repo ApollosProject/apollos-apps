@@ -1,6 +1,6 @@
 import React from 'react';
 import { withProps } from 'recompose';
-import { Text } from 'react-native';
+import { Text, Platform } from 'react-native';
 
 import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import defaultRenderer, {
@@ -19,6 +19,9 @@ const VerseNumber = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
 }))(SerifText);
 
+const PoeticPause = styled({
+  textAlign: 'right',
+})(SerifText);
 
 const renderer = (node, { children, ...other }) => {
   // the defaultRenderer support several basic elements out of the box,
@@ -104,6 +107,23 @@ const renderer = (node, { children, ...other }) => {
 
   if (className.includes('wj')) {
     return <RedLetters>{children}</RedLetters>;
+  }
+
+  /* Poetic pause ("Selah"). Highly conditional rendering due to Android not supporting nested text
+   * alignment (https://github.com/facebook/react-native/issues/18790) and needing to keep it
+   * somewhat attractive. TODO: revisit conditional code when issue is resolved or if we refactor
+   * the parser
+   *
+   * https://github.com/americanbible/api-bible-assets/blob/master/scss/eb-scripture-style/modules/_poetry.scss#L22
+   */
+  if (className.includes('qs')) {
+    return (
+      <PoeticPause>
+        {Platform.OS === 'ios' ? `\n` : null}
+        {children}
+        {Platform.OS === 'ios' ? `\n` : `\n\n`}
+      </PoeticPause>
+    );
   }
 
   if (node.name === 'p') {
