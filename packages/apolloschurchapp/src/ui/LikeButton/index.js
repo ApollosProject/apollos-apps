@@ -82,7 +82,7 @@ UpdateLikeStatus.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     __typename: PropTypes.string,
-    isLiked: PropTypes.string,
+    isLiked: PropTypes.bool,
   }),
 };
 
