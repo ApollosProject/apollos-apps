@@ -3,15 +3,15 @@ import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
+import Button from 'apolloschurchapp/src/ui/Button';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
 
 import getLoginState from './getLoginState';
 
-const Button = styled(({ theme }) => ({
+const Login = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
-}))(ButtonLink);
+}))(Button);
 
 class LoginButton extends PureComponent {
   static propTypes = {
@@ -29,7 +29,9 @@ class LoginButton extends PureComponent {
           const { isLoggedIn, loading } = data;
           if (loading) return <ActivityIndicator />;
           if (isLoggedIn) return null;
-          return <Button onPress={this.handleLoginPress}>Login</Button>;
+          return (
+            <Login onPress={this.handleLoginPress} title="Get Connected" />
+          );
         }}
       </Query>
     );

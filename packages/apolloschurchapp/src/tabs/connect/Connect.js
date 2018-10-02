@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, View, SafeAreaView } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -14,12 +14,44 @@ import TableView, {
 } from 'apolloschurchapp/src/ui/TableView';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
+import { withTheme } from 'apolloschurchapp/src/ui/theme';
+import { H1, H5 } from 'apolloschurchapp/src/ui/typography';
+import styled from 'apolloschurchapp/src/ui/styled';
+import Icon from 'apolloschurchapp/src/ui/Icon';
+
 import LikedContentFeed from './LikedContentFeed';
 import UserAvatarHeader from './UserAvatarHeader';
-
 import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
 import getLikedContent from './getLikedContent';
+
+const Title = styled(({ theme }) => ({ color: theme.colors.primary }))(H1);
+
+const BrandIcon = withTheme(({ theme }) => ({
+  name: 'brand-icon',
+  size: theme.sizing.baseUnit * 2.25,
+  marginVertical: theme.sizing.baseUnit,
+  fill: theme.colors.primary,
+}))(Icon);
+
+const HeaderContainer = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.paper,
+}))(SafeAreaView);
+
+const Header = styled(({ theme }) => ({
+  paddingHorizontal: theme.sizing.baseUnit,
+  paddingBottom: theme.sizing.baseUnit * 1.5,
+}))(View);
+
+const Space = styled(({ theme }) => ({
+  alignSelf: 'flex-end',
+  marginTop: theme.sizing.baseUnit * 0.75,
+  marginRight: theme.sizing.baseUnit,
+}))(View);
+
+const ConnectText = styled(({ theme }) => ({
+  paddingVertical: theme.sizing.baseUnit,
+}))(H5);
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -99,7 +131,25 @@ class Connect extends PureComponent {
                           </Query>
                         </View>
                       );
-                    return null;
+                    return (
+                      <HeaderContainer>
+                        <Space />
+                        <Header>
+                          <BrandIcon />
+                          <Title>Connect!</Title>
+                          <H5>
+                            Our mission is to help you connect to others as well
+                            as help you in your walk with Christ.
+                          </H5>
+                          <ConnectText>
+                            By joining this community, you will unlock amazing
+                            features like; curated content and devotionals,
+                            simple event registration, and easy online giving!
+                          </ConnectText>
+                          <LoginButton />
+                        </Header>
+                      </HeaderContainer>
+                    );
                   }}
                 </Query>
                 <TableView>
@@ -151,7 +201,6 @@ class Connect extends PureComponent {
             </BackgroundView>
           )}
         </WebBrowserConsumer>
-        <LoginButton />
       </BackgroundView>
     );
   }
