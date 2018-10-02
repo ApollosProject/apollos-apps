@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView, View } from 'react-native';
 import { Query } from 'react-apollo';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { LoginButton } from 'apolloschurchapp/src/auth';
@@ -41,8 +42,8 @@ class Connect extends PureComponent {
             <BackgroundView>
               <ScrollView>
                 <Query query={getLoginState}>
-                  {({ data: { isLoggedIn = null } }) => {
-                    if (isLoggedIn)
+                  {({ data }) => {
+                    if (get(data, 'isLoggedIn', false))
                       return (
                         <View>
                           <Query
