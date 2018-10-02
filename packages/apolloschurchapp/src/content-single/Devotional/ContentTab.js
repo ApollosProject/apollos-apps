@@ -39,30 +39,29 @@ const ContentTab = ({ title, scripture, body, isLoading, navigationState }) => (
   </ScrollView>
 );
 
-/**
- * Props passed to the ContentTab component:
- * body: body text of the devotional.
- * isLoading: prop used to display a placeholder while data is loading.
- * navigationState: state of the TabView component (of which the ContentTab
- * is one child component). Mostly used for the ScriptureList component to be
- * able to jump to the ScriptureTab when the scripture reference link is tapped.
- * scripture: An array of scripture verses containing:
- *   id: The ID of the verse (i.e. '1CO.15.57')
- *   reference: The scripture location (i.e. '1 Corinthians 15:57')
- *   html: The HTML of the verses to render.
- * title: The title of the devotional.
- */
 ContentTab.propTypes = {
+  /** The devotional text */
   body: PropTypes.string,
+  /** Toggles placeholders */
   isLoading: PropTypes.bool,
+  /**
+   * The state of the TabView component (of which the ContentTab is one child component). Mostly used
+   * for the ScriptureList component to be able to jump to the ScriptureTab when the scripture
+   * reference link is tapped.
+   */
   navigationState: PropTypes.shape({ routes: PropTypes.array }),
+  /** An array of scripture objects */
   scripture: PropTypes.arrayOf(
     PropTypes.shape({
+      /** The ID of the verse (i.e. '1CO.15.57') */
       id: PropTypes.string,
+      /** A human readable reference (i.e. '1 Corinthians 15:57') */
       reference: PropTypes.string,
+      /** The scripture source to render */
       html: PropTypes.string,
     })
   ),
+  /** The devotional title */
   title: PropTypes.string,
 };
 
