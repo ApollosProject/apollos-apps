@@ -71,7 +71,7 @@ class ContentSingle extends PureComponent {
             ) : null}
             <BackgroundView>
               <MediaControls contentId={id} />
-              <PaddedView vertical={false}>
+              <PaddedView>
                 <H2 padded isLoading={!title && loading}>
                   {title}
                 </H2>

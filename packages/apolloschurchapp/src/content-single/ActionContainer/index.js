@@ -10,8 +10,6 @@ import LikeButton from 'apolloschurchapp/src/ui/LikeButton';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { MediaPlayerSpacer } from 'apolloschurchapp/src/ui/MediaPlayer';
 
-import updateLikeEntity from './updateLikeEntity';
-import getLikedContentItem from './getLikedContentItem';
 import getShareContent from './getShareContent';
 
 const PositioningView = styled(({ theme }) => ({
@@ -28,11 +26,7 @@ const Container = styled(({ theme }) => ({
 const ActionContainer = ({ itemId }) => (
   <Container>
     <PositioningView>
-      <LikeButton
-        itemId={itemId}
-        updateLikeEntity={updateLikeEntity}
-        getLikedContentItem={getLikedContentItem}
-      />
+      <LikeButton itemId={itemId} />
       <Query query={getShareContent} variables={{ itemId }}>
         {({ data: { node: { sharing = {} } = {} } = {}, error, loading }) =>
           loading || error ? null : <Share content={sharing} />

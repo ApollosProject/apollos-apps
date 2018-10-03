@@ -73,11 +73,26 @@ describe('Auth', () => {
 
     it('queries current user when logged in', async () => {
       const rootValue = {};
-      const { userToken, rockCookie } = registerToken(
-        generateToken({ cookie: 'some-cookie' })
-      );
-      context.userToken = userToken;
-      context.rockCookie = rockCookie;
+      const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
+
+      context = getTestContext({
+        req: {
+          headers: { authorization: token },
+        },
+      });
+
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('logs a user out without a sessionId', async () => {
+      const rootValue = {};
+      const token = generateToken({ cookie: 'some-cookie' });
+      context = getTestContext({
+        req: {
+          headers: { authorization: token },
+        },
+      });
 
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();
@@ -98,7 +113,7 @@ describe('Auth', () => {
   });
 
   it('registers an auth token and passes the cookie on requests to rock', async () => {
-    const token = generateToken({ cookie: 'some-cookie' });
+    const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
     const secondContext = getTestContext({
       req: {
         headers: { authorization: token },
@@ -114,6 +129,34 @@ describe('Auth', () => {
     const rootValue = {};
     await graphql(schema, query, rootValue, secondContext);
     expect(fetch.mock.calls[0][0].headers).toMatchSnapshot();
+  });
+
+  describe('Change Password', () => {
+    it('throws error without a current user', async () => {
+      try {
+        await context.dataSources.Auth.changePassword({
+          password: 'newPassword',
+        });
+      } catch (e) {
+        expect(e.message).toEqual('Must be logged in');
+      }
+    });
+
+    it('generates a new token', async () => {
+      const { userToken, rockCookie } = registerToken(
+        generateToken({ cookie: 'some-cookie' })
+      );
+      context.userToken = userToken;
+      context.rockCookie = rockCookie;
+      const {
+        rockCookie: newCookie,
+        token: newToken,
+      } = await context.dataSources.Auth.changePassword({
+        password: 'good',
+      });
+      expect(newCookie).toEqual('some cookie');
+      expect(typeof newToken).toEqual('string');
+    });
   });
 
   describe('User Registration', () => {
