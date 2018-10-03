@@ -12,11 +12,12 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   userToken = null;
 
-  getCurrentPerson = async () => {
+  getCurrentPerson = async ({ cookie } = { cookie: null }) => {
     const { rockCookie } = this.context;
-    if (rockCookie) {
+    const userCookie = cookie || rockCookie;
+    if (userCookie) {
       const request = await this.request('People/GetCurrentPerson').get({
-        options: { headers: { cookie: rockCookie } },
+        options: { headers: { cookie: userCookie } },
       });
       return request;
     }
@@ -47,13 +48,22 @@ export default class AuthDataSource extends RockApolloDataSource {
     }
   };
 
+  createSession = async ({ cookie }) => {
+    const currentUser = await this.getCurrentPerson({ cookie });
+    return this.post('/InteractionSessions', {
+      PersonAliasId: currentUser.primaryAliasId,
+    });
+  };
+
   authenticate = async ({ identity, password }) => {
     try {
       const cookie = await this.fetchUserCookie(identity, password);
-      const token = generateToken({ cookie });
+      const sessionId = await this.createSession({ cookie });
+      const token = generateToken({ cookie, sessionId });
       const { userToken, rockCookie } = registerToken(token);
-      this.context.userToken = userToken;
       this.context.rockCookie = rockCookie;
+      this.context.userToken = userToken;
+      this.context.sessionId = sessionId;
       return { token, rockCookie };
     } catch (e) {
       throw e;
@@ -99,6 +109,27 @@ export default class AuthDataSource extends RockApolloDataSource {
     } catch (err) {
       throw new Error('Unable to create user login!');
     }
+  };
+
+  changePassword = async ({ password }) => {
+    const currentUser = await this.getCurrentPerson();
+    const { email, id } = currentUser;
+    const logins = await this.request('/UserLogins')
+      .filter(`UserName eq '${email}'`)
+      .get();
+
+    if (logins.length > 0) {
+      await this.delete(`/UserLogins/${logins[0].id}`);
+    }
+    await this.createUserLogin({
+      personId: id,
+      email,
+      password,
+    });
+    return this.authenticate({
+      identity: email,
+      password,
+    });
   };
 
   registerPerson = async ({ email, password }) => {
