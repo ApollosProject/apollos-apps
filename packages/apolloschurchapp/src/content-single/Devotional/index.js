@@ -31,10 +31,16 @@ class Devotional extends PureComponent {
     ),
   };
 
+  /**
+   * Function to get the scripture references from the larger scripture object.
+   * Props: full scripture array of objects
+   * Returns: an array of scripture references.
+   */
   getScriptureReferences = (scripture) => scripture.map((ref) => ref.reference);
 
   /**
-   * The route that TabView uses to render the ContentTab
+   * The route that TabView uses to render the ContentTab.
+   * Note: navigationState gets passed down automatically from the TabView.
    */
   contentRoute = (navigationState) => (
     <ContentTab
