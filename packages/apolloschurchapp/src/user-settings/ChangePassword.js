@@ -67,7 +67,7 @@ class ChangePassword extends PureComponent {
                 .required('Password is required'),
               confirmPassword: Yup.string()
                 .min(6, 'Password must be at least 6 characters')
-                .oneOf([Yup.ref('password')])
+                .oneOf([Yup.ref('password')], 'Passwords must match.')
                 .required('Password confirm is required'),
             })}
             onSubmit={async (variables, { setSubmitting, setFieldError }) => {
