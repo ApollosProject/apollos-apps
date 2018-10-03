@@ -59,76 +59,70 @@ const revelation22Loading = {
   },
 };
 
-const stories = storiesOf('Scripture', module);
-
-stories.add('Genesis 1:1-5', () => (
-  <ScrollView>
-    <PaddedView>
-      <ScriptureItem
-        reference={genesis1.scripture.reference}
-        html={genesis1.scripture.html}
-        isLoading={genesis1.scripture.isLoading}
-      />
-    </PaddedView>
-  </ScrollView>
-));
-
-stories.add('Psalm 23', () => (
-  <ScrollView>
-    <PaddedView>
-      <ScriptureItem
-        reference={psalm23.scripture.reference}
-        html={psalm23.scripture.html}
-        isLoading={psalm23.scripture.isLoading}
-      />
-    </PaddedView>
-  </ScrollView>
-));
-
-stories.add('Song of Solomon 1:1-4', () => (
-  <ScrollView>
-    <PaddedView>
-      <ScriptureItem
-        reference={songOfSolomon1.scripture.reference}
-        html={songOfSolomon1.scripture.html}
-        isLoading={songOfSolomon1.scripture.isLoading}
-      />
-    </PaddedView>
-  </ScrollView>
-));
-
-stories.add('John 3:16-17', () => (
-  <ScrollView>
-    <PaddedView>
-      <ScriptureItem
-        reference={john3.scripture.reference}
-        html={john3.scripture.html}
-        isLoading={john3.scripture.isLoading}
-      />
-    </PaddedView>
-  </ScrollView>
-));
-
-stories.add('Revelation 22:20-21', () => (
-  <ScrollView>
-    <PaddedView>
-      <ScriptureItem
-        reference={revelation22.scripture.reference}
-        html={revelation22.scripture.html}
-        isLoading={revelation22.scripture.isLoading}
-      />
-    </PaddedView>
-  </ScrollView>
-));
-
-stories.add('Loading State', () => (
-  <ScrollView>
-    <PaddedView>
-      <ScriptureItem
-        reference={revelation22Loading.scripture.reference}
-        html={revelation22Loading.scripture.html}
-        isLoading={revelation22Loading.scripture.isLoading}
-      />
-    </PaddedView>
-  </ScrollView>
-));
+storiesOf('Scripture', module)
+  .add('Genesis 1:1-5', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={genesis1.scripture.reference}
+          html={genesis1.scripture.html}
+          isLoading={genesis1.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Psalm 23', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={psalm23.scripture.reference}
+          html={psalm23.scripture.html}
+          isLoading={psalm23.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Song of Solomon 1:1-4', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={songOfSolomon1.scripture.reference}
+          html={songOfSolomon1.scripture.html}
+          isLoading={songOfSolomon1.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('John 3:16-17', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={john3.scripture.reference}
+          html={john3.scripture.html}
+          isLoading={john3.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Revelation 22:20-21', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={revelation22.scripture.reference}
+          html={revelation22.scripture.html}
+          isLoading={revelation22.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Loading State', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={revelation22Loading.scripture.reference}
+          html={revelation22Loading.scripture.html}
+          isLoading={revelation22Loading.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ));
