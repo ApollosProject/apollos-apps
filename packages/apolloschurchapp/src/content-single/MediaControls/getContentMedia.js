@@ -20,11 +20,6 @@ export default gql`
             uri
           }
         }
-        audios {
-          sources {
-            uri
-          }
-        }
       }
     }
   }

@@ -66,6 +66,8 @@ export const defaults = {
     isFullscreen: false,
     isVisible: false,
     currentTime: 0,
+    showVideo: true,
+    muted: false,
   },
 };
 
@@ -143,6 +145,8 @@ export const resolvers = {
           : (mediaPlayer && mediaPlayer.isFullscreen) || false,
         currentTrack: mediaTrack,
         currentTime: 0,
+        showVideo: mediaTrack.isVideo,
+        muted: false,
       };
 
       if (
@@ -179,7 +183,7 @@ export const resolvers = {
     },
     mediaPlayerUpdateState: (
       root,
-      { isPlaying, isFullscreen, isVisible },
+      { isPlaying, isFullscreen, isVisible, showVideo, muted },
       { cache }
     ) => {
       const query = gql`
@@ -188,6 +192,8 @@ export const resolvers = {
             isPlaying
             isFullscreen
             isVisible
+            showVideo
+            muted
           }
         }
       `;
@@ -199,6 +205,8 @@ export const resolvers = {
             isPlaying,
             isFullscreen,
             isVisible,
+            showVideo,
+            muted,
             __typename: 'MediaPlayerState',
           }),
         },

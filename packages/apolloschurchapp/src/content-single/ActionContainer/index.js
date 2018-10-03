@@ -8,6 +8,7 @@ import Share from 'apolloschurchapp/src/ui/Share';
 import SideBySideView from 'apolloschurchapp/src/ui/SideBySideView';
 import LikeButton from 'apolloschurchapp/src/ui/LikeButton';
 import styled from 'apolloschurchapp/src/ui/styled';
+import { MediaPlayerSpacer } from 'apolloschurchapp/src/ui/MediaPlayer';
 
 import updateLikeEntity from './updateLikeEntity';
 import getLikedContentItem from './getLikedContentItem';
@@ -38,6 +39,7 @@ const ActionContainer = ({ itemId }) => (
         }
       </Query>
     </PositioningView>
+    <MediaPlayerSpacer />
   </Container>
 );
 

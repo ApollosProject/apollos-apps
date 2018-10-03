@@ -15,7 +15,7 @@ const Like = enhance(
     <Touchable onPress={() => toggleLike({ itemId, sessionId, operation })}>
       <Icon
         name={isLiked ? 'like-solid' : 'like'}
-        fill={theme.colors.secondary}
+        fill={theme.colors.primary}
       />
     </Touchable>
   )

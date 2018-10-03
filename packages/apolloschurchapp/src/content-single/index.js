@@ -67,7 +67,6 @@ class ContentSingle extends PureComponent {
               <GradientOverlayImage
                 isLoading={!coverImageSources.length && loading}
                 source={coverImageSources}
-                overlayColor={get(theme, 'colors.paper')}
               />
             ) : null}
             <BackgroundView>
