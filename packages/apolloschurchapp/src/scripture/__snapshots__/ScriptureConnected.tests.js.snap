@@ -52,18 +52,20 @@ exports[`ScriptureConnected component renders without errors 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -72,7 +74,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           <Text>
             1
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -80,7 +82,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }

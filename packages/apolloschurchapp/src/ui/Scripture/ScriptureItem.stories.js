@@ -106,6 +106,28 @@ storiesOf('Scripture', module)
       </PaddedView>
     </ScrollView>
   ))
+  .add('Psalm 32', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={psalm32.scripture.reference}
+          html={psalm32.scripture.html}
+          isLoading={psalm32.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Psalm 119:129 - 144', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={psalm119.scripture.reference}
+          html={psalm119.scripture.html}
+          isLoading={psalm119.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
   .add('Song of Solomon 1:1-4', () => (
     <ScrollView>
       <PaddedView>
@@ -113,6 +135,17 @@ storiesOf('Scripture', module)
           reference={songOfSolomon1.scripture.reference}
           html={songOfSolomon1.scripture.html}
           isLoading={songOfSolomon1.scripture.isLoading}
+        />
+      </PaddedView>
+    </ScrollView>
+  ))
+  .add('Mark 1: 1-4', () => (
+    <ScrollView>
+      <PaddedView>
+        <ScriptureItem
+          reference={mark1.scripture.reference}
+          html={mark1.scripture.html}
+          isLoading={mark1.scripture.isLoading}
         />
       </PaddedView>
     </ScrollView>

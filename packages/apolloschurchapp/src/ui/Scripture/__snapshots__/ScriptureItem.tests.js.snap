@@ -52,18 +52,20 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -72,7 +74,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <Text>
             1
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -80,7 +82,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -91,11 +93,13 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           </Text>
         </Text>
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -104,7 +108,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <Text>
             2
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -112,7 +116,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -137,18 +141,20 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -157,7 +163,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <Text>
             3
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -165,7 +171,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -176,11 +182,13 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           </Text>
         </Text>
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -189,7 +197,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <Text>
             4
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -197,7 +205,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -208,11 +216,13 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           </Text>
         </Text>
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -221,7 +231,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <Text>
             5
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -229,7 +239,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -297,18 +307,20 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -317,7 +329,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
           <Text>
             16
           </Text>
-           
+           
         </Text>
         <Text
           style={
@@ -331,11 +343,13 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
           </Text>
         </Text>
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -344,7 +358,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
           <Text>
             17
           </Text>
-           
+           
         </Text>
         <Text
           style={
@@ -415,18 +429,20 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -435,7 +451,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <Text>
             1
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -443,7 +459,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -468,18 +484,20 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -488,7 +506,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <Text>
             2
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -496,7 +514,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -514,12 +532,13 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text>
         “Behold, I send my messenger before your face,
       </Text>
@@ -530,13 +549,13 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         who will prepare your way before you:
       </Text>
@@ -547,18 +566,21 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -567,7 +589,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
         <Text>
           3
         </Text>
-         
+         
       </Text>
       <Text>
         the voice of one crying in the wilderness,
@@ -579,13 +601,13 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         ‘Make ready the way of the Lord!
       </Text>
@@ -596,13 +618,13 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Make his paths straight!’”
       </Text>
@@ -620,18 +642,20 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -640,7 +664,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <Text>
             4
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -648,7 +672,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -704,12 +728,15 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
   </Text>
   <View>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -723,18 +750,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -743,7 +773,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         <Text>
           1
         </Text>
-         
+         
       </Text>
       <Text>
         Yahweh is my shepherd:
@@ -755,13 +785,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         I shall lack nothing.
       </Text>
@@ -772,18 +802,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -792,7 +825,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         <Text>
           2
         </Text>
-         
+         
       </Text>
       <Text>
         He makes me lie down in green pastures.
@@ -804,13 +837,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         He leads me beside still waters.
       </Text>
@@ -821,18 +854,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -841,7 +877,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         <Text>
           3
         </Text>
-         
+         
       </Text>
       <Text>
         He restores my soul.
@@ -853,13 +889,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         He guides me in the paths of righteousness for his name’s sake.
       </Text>
@@ -870,18 +906,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -890,7 +929,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         <Text>
           4
         </Text>
-         
+         
       </Text>
       <Text>
         Even though I walk through the valley of the shadow of death,
@@ -902,13 +941,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         I will fear no evil, for you are with me.
       </Text>
@@ -919,12 +958,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text>
         Your rod and your staff,
       </Text>
@@ -935,13 +975,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         they comfort me.
       </Text>
@@ -952,18 +992,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -972,7 +1015,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         <Text>
           5
         </Text>
-         
+         
       </Text>
       <Text>
         You prepare a table before me
@@ -984,13 +1027,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         in the presence of my enemies.
       </Text>
@@ -1001,12 +1044,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text>
         You anoint my head with oil.
       </Text>
@@ -1017,13 +1061,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         My cup runs over.
       </Text>
@@ -1034,18 +1078,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1054,7 +1101,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         <Text>
           6
         </Text>
-         
+         
       </Text>
       <Text>
         Surely goodness and loving kindness shall follow me all the days of my life,
@@ -1066,13 +1113,13 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         and I will dwell in Yahweh’s house forever.
       </Text>
@@ -1121,12 +1168,15 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
   </Text>
   <View>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -1140,18 +1190,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1160,7 +1213,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           1
         </Text>
-         
+         
       </Text>
       <Text>
         Blessed is he whose disobedience is forgiven,
@@ -1172,13 +1225,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         whose sin is covered.
       </Text>
@@ -1189,18 +1242,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1209,7 +1265,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           2
         </Text>
-         
+         
       </Text>
       <Text>
         Blessed is the man to whom Yahweh doesn’t impute iniquity,
@@ -1221,13 +1277,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         in whose spirit there is no deceit.
       </Text>
@@ -1238,18 +1294,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1258,7 +1317,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           3
         </Text>
-         
+         
       </Text>
       <Text>
         When I kept silence, my bones wasted away through my groaning all day long.
@@ -1270,18 +1329,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1290,7 +1352,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           4
         </Text>
-         
+         
       </Text>
       <Text>
         For day and night your hand was heavy on me.
@@ -1302,18 +1364,36 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         My strength was sapped in the heat of summer. 
       </Text>
-      <Text>
-        Selah.
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 16,
+            "lineHeight": 26,
+            "textAlign": "right",
+          }
+        }
+      >
+        
+
+        <Text>
+          Selah.
+        </Text>
+        
+
       </Text>
     </Text>
     <Text
@@ -1322,18 +1402,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1342,7 +1425,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           5
         </Text>
-         
+         
       </Text>
       <Text>
         I acknowledged my sin to you.
@@ -1354,13 +1437,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         I didn’t hide my iniquity.
       </Text>
@@ -1371,12 +1454,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text>
         I said, I will confess my transgressions to Yahweh,
       </Text>
@@ -1387,18 +1471,36 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         and you forgave the iniquity of my sin. 
       </Text>
-      <Text>
-        Selah.
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 16,
+            "lineHeight": 26,
+            "textAlign": "right",
+          }
+        }
+      >
+        
+
+        <Text>
+          Selah.
+        </Text>
+        
+
       </Text>
     </Text>
     <Text
@@ -1407,18 +1509,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1427,7 +1532,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           6
         </Text>
-         
+         
       </Text>
       <Text>
         For this, let everyone who is godly pray to you in a time when you may be found.
@@ -1439,13 +1544,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Surely when the great waters overflow, they shall not reach to him.
       </Text>
@@ -1456,18 +1561,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1476,7 +1584,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           7
         </Text>
-         
+         
       </Text>
       <Text>
         You are my hiding place.
@@ -1488,13 +1596,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         You will preserve me from trouble.
       </Text>
@@ -1505,18 +1613,36 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         You will surround me with songs of deliverance. 
       </Text>
-      <Text>
-        Selah.
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "DroidSerif",
+            "fontSize": 16,
+            "lineHeight": 26,
+            "textAlign": "right",
+          }
+        }
+      >
+        
+
+        <Text>
+          Selah.
+        </Text>
+        
+
       </Text>
     </Text>
     <Text
@@ -1525,18 +1651,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1545,7 +1674,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           8
         </Text>
-         
+         
       </Text>
       <Text>
         I will instruct you and teach you in the way which you shall go.
@@ -1557,13 +1686,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         I will counsel you with my eye on you.
       </Text>
@@ -1574,18 +1703,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1594,7 +1726,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           9
         </Text>
-         
+         
       </Text>
       <Text>
         Don’t be like the horse, or like the mule, which have no understanding,
@@ -1606,13 +1738,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         who are controlled by bit and bridle, or else they will not come near to you.
       </Text>
@@ -1623,18 +1755,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1643,7 +1778,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           10
         </Text>
-         
+         
       </Text>
       <Text>
         Many sorrows come to the wicked,
@@ -1655,13 +1790,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         but loving kindness shall surround him who trusts in Yahweh.
       </Text>
@@ -1672,18 +1807,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1692,7 +1830,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         <Text>
           11
         </Text>
-         
+         
       </Text>
       <Text>
         Be glad in Yahweh, and rejoice, you righteous!
@@ -1704,13 +1842,13 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Shout for joy, all you who are upright in heart!
       </Text>
@@ -1759,12 +1897,15 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
   </Text>
   <View>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -1778,18 +1919,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1798,7 +1942,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           129
         </Text>
-         
+         
       </Text>
       <Text>
         Your testimonies are wonderful,
@@ -1810,13 +1954,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         therefore my soul keeps them.
       </Text>
@@ -1827,18 +1971,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1847,7 +1994,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           130
         </Text>
-         
+         
       </Text>
       <Text>
         The entrance of your words gives light.
@@ -1859,13 +2006,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         It gives understanding to the simple.
       </Text>
@@ -1876,18 +2023,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1896,7 +2046,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           131
         </Text>
-         
+         
       </Text>
       <Text>
         I opened my mouth wide and panted,
@@ -1908,13 +2058,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         for I longed for your commandments.
       </Text>
@@ -1925,18 +2075,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1945,7 +2098,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           132
         </Text>
-         
+         
       </Text>
       <Text>
         Turn to me, and have mercy on me,
@@ -1957,13 +2110,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         as you always do to those who love your name.
       </Text>
@@ -1974,18 +2127,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -1994,7 +2150,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           133
         </Text>
-         
+         
       </Text>
       <Text>
         Establish my footsteps in your word.
@@ -2006,13 +2162,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Don’t let any iniquity have dominion over me.
       </Text>
@@ -2023,18 +2179,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2043,7 +2202,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           134
         </Text>
-         
+         
       </Text>
       <Text>
         Redeem me from the oppression of man,
@@ -2055,13 +2214,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         so I will observe your precepts.
       </Text>
@@ -2072,18 +2231,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2092,7 +2254,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           135
         </Text>
-         
+         
       </Text>
       <Text>
         Make your face shine on your servant.
@@ -2104,13 +2266,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Teach me your statutes.
       </Text>
@@ -2121,18 +2283,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2141,7 +2306,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           136
         </Text>
-         
+         
       </Text>
       <Text>
         Streams of tears run down my eyes,
@@ -2153,24 +2318,27 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         because they don’t observe your law.
       </Text>
     </Text>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -2184,18 +2352,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2204,7 +2375,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           137
         </Text>
-         
+         
       </Text>
       <Text>
         You are righteous, Yahweh.
@@ -2216,13 +2387,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Your judgments are upright.
       </Text>
@@ -2233,18 +2404,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2253,7 +2427,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           138
         </Text>
-         
+         
       </Text>
       <Text>
         You have commanded your statutes in righteousness.
@@ -2265,13 +2439,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         They are fully trustworthy.
       </Text>
@@ -2282,18 +2456,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2302,7 +2479,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           139
         </Text>
-         
+         
       </Text>
       <Text>
         My zeal wears me out,
@@ -2314,13 +2491,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         because my enemies ignore your words.
       </Text>
@@ -2331,18 +2508,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2351,7 +2531,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           140
         </Text>
-         
+         
       </Text>
       <Text>
         Your promises have been thoroughly tested,
@@ -2363,13 +2543,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         and your servant loves them.
       </Text>
@@ -2380,18 +2560,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2400,7 +2583,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           141
         </Text>
-         
+         
       </Text>
       <Text>
         I am small and despised.
@@ -2412,13 +2595,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         I don’t forget your precepts.
       </Text>
@@ -2429,18 +2612,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2449,7 +2635,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           142
         </Text>
-         
+         
       </Text>
       <Text>
         Your righteousness is an everlasting righteousness.
@@ -2461,13 +2647,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Your law is truth.
       </Text>
@@ -2478,18 +2664,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2498,7 +2687,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           143
         </Text>
-         
+         
       </Text>
       <Text>
         Trouble and anguish have taken hold of me.
@@ -2510,13 +2699,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Your commandments are my delight.
       </Text>
@@ -2527,18 +2716,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2547,7 +2739,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         <Text>
           144
         </Text>
-         
+         
       </Text>
       <Text>
         Your testimonies are righteous forever.
@@ -2559,13 +2751,13 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Give me understanding, that I may live.
       </Text>
@@ -2626,18 +2818,20 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -2646,7 +2840,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <Text>
             20
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -2654,7 +2848,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -2690,7 +2884,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
@@ -2702,7 +2896,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -2727,18 +2921,20 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -2747,7 +2943,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <Text>
             21
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -2755,7 +2951,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -2823,18 +3019,20 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         style={
           Object {
             "color": "#303030",
-            "fontFamily": "InterUI-Regular",
+            "fontFamily": "DroidSerif",
             "fontSize": 16,
             "lineHeight": 26,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
+              "color": "#505050",
+              "fontFamily": "DroidSerif",
+              "fontSize": 9.6,
               "lineHeight": 26,
             }
           }
@@ -2843,7 +3041,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           <Text>
             1
           </Text>
-           
+           
         </Text>
         <Text
           bold={false}
@@ -2851,7 +3049,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Regular",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
               "lineHeight": 26,
             }
@@ -2864,12 +3062,15 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       </Text>
     </View>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -2883,18 +3084,21 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2903,7 +3107,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         <Text>
           2
         </Text>
-         
+         
       </Text>
       <Text>
         Let him kiss me with the kisses of his mouth;
@@ -2915,13 +3119,13 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         for your love is better than wine.
       </Text>
@@ -2932,18 +3136,21 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -2952,7 +3159,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         <Text>
           3
         </Text>
-         
+         
       </Text>
       <Text>
         Your oils have a pleasing fragrance.
@@ -2964,13 +3171,13 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Your name is oil poured out,
       </Text>
@@ -2981,13 +3188,13 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         therefore the virgins love you.
       </Text>
@@ -2998,18 +3205,21 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text
+        bold={false}
+        italic={false}
         style={
           Object {
-            "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
+            "color": "#505050",
+            "fontFamily": "DroidSerif",
+            "fontSize": 9.6,
             "lineHeight": 26,
           }
         }
@@ -3018,7 +3228,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         <Text>
           4
         </Text>
-         
+         
       </Text>
       <Text>
         Take me away with you.
@@ -3030,13 +3240,13 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         Let’s hurry.
       </Text>
@@ -3047,24 +3257,27 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         The king has brought me into his rooms.
       </Text>
     </Text>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -3078,12 +3291,13 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text>
         We will be glad and rejoice in you.
       </Text>
@@ -3094,24 +3308,27 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
-           
+                
       <Text>
         We will praise your love more than wine!
       </Text>
     </Text>
     <Text
+      padded={true}
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 46.08,
+          "lineHeight": 23.04,
+          "paddingBottom": 11.52,
+          "paddingTop": 15.21,
         }
       }
     >
@@ -3125,12 +3342,13 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       style={
         Object {
           "color": "#303030",
-          "fontFamily": "InterUI-Regular",
+          "fontFamily": "DroidSerif",
           "fontSize": 16,
           "lineHeight": 26,
         }
       }
     >
+           
       <Text>
         They are right to love you.
       </Text>

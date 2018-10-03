@@ -743,18 +743,20 @@ exports[`the Devotional component renders a devotional 1`] = `
                           style={
                             Object {
                               "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
+                              "fontFamily": "DroidSerif",
                               "fontSize": 16,
                               "lineHeight": 26,
                             }
                           }
                         >
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -763,7 +765,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               57
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -771,7 +773,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -836,18 +838,20 @@ exports[`the Devotional component renders a devotional 1`] = `
                           style={
                             Object {
                               "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
+                              "fontFamily": "DroidSerif",
                               "fontSize": 16,
                               "lineHeight": 26,
                             }
                           }
                         >
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -856,7 +860,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               8
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -864,7 +868,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -875,11 +879,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -888,7 +894,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               9
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -896,7 +902,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -907,11 +913,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -920,7 +928,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               10
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -928,7 +936,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -939,11 +947,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -952,7 +962,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               11
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -960,7 +970,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -971,11 +981,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -984,7 +996,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               12
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -992,7 +1004,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -1003,11 +1015,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -1016,7 +1030,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               13
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -1024,7 +1038,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -1035,11 +1049,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -1048,7 +1064,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               14
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -1056,7 +1072,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
@@ -1067,11 +1083,13 @@ exports[`the Devotional component renders a devotional 1`] = `
                             </Text>
                           </Text>
                           <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "color": "#A5A5A5",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 12,
+                                "color": "#505050",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 9.6,
                                 "lineHeight": 26,
                               }
                             }
@@ -1080,7 +1098,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             <Text>
                               15
                             </Text>
-                             
+                             
                           </Text>
                           <Text
                             bold={false}
@@ -1088,7 +1106,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Regular",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
