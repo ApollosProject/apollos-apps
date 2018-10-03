@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import ScriptureText from '.';
 
-storiesOf('typography/ScriptureText', module)
+storiesOf('Scripture/typography/ScriptureText', module)
   .add('Regular', () => (
     <ScriptureText>
       {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
