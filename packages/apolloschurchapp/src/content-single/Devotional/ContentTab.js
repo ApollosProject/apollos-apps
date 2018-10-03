@@ -36,6 +36,7 @@ const ContentTab = ({
             <ScriptureList
               references={references}
               onPress={navigationState.route.jumpTo} // eslint-disable-line react/jsx-handler-names
+              tabDestination={'scripture'}
             />
           ) : null}
           <HTMLView>{body}</HTMLView>
@@ -56,7 +57,7 @@ ContentTab.propTypes = {
    * reference link is tapped.
    */
   navigationState: PropTypes.shape({ routes: PropTypes.array }),
-  /** A human readable reference (i.e. '1 Corinthians 15:57') */
+  /** An array of human readable references (i.e. '1 Corinthians 15:57') */
   references: PropTypes.arrayOf(PropTypes.string),
   /** The devotional title */
   title: PropTypes.string,
