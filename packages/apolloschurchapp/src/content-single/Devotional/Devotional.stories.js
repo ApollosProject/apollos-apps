@@ -28,9 +28,19 @@ const content = {
 const stories = storiesOf('Devotional', module);
 
 stories.add('Example', () => (
-  <Devotional content={content} isLoading={false} scripture={scripture} />
+  <Devotional
+    body={content.body}
+    title={content.title}
+    isLoading={false}
+    scripture={scripture}
+  />
 ));
 
 stories.add('isLoading', () => (
-  <Devotional content={content} isLoading scripture={scripture} />
+  <Devotional
+    body={content.body}
+    title={content.title}
+    isLoading
+    scripture={scripture}
+  />
 ));

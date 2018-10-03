@@ -12,12 +12,10 @@ import ScriptureTab from './ScriptureTab';
  */
 class Devotional extends PureComponent {
   static propTypes = {
-    content: PropTypes.shape({
-      /** The devotional text */
-      body: PropTypes.string,
-      /** The devotional title */
-      title: PropTypes.string,
-    }),
+    /** The devotional text */
+    body: PropTypes.string,
+    /** The devotional title */
+    title: PropTypes.string,
     /** Toggles placeholders */
     isLoading: PropTypes.bool,
     /** An array of scripture objects */
@@ -38,10 +36,10 @@ class Devotional extends PureComponent {
    */
   contentRoute = (navigationState) => (
     <ContentTab
-      body={this.props.content.body}
+      body={this.props.body}
       isLoading={this.props.isLoading}
       scripture={this.props.scripture}
-      title={this.props.content.title}
+      title={this.props.title}
       navigationState={navigationState}
     />
   );

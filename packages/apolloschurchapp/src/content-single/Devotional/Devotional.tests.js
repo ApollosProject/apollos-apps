@@ -30,7 +30,12 @@ describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = renderer.create(
       <Providers>
-        <Devotional content={content} isLoading={false} scripture={scripture} />
+        <Devotional
+          body={content.body}
+          title={content.title}
+          isLoading={false}
+          scripture={scripture}
+        />
       </Providers>
     );
     await wait(0); // wait for response
@@ -39,7 +44,12 @@ describe('the Devotional component', () => {
   it('renders a loading state', async () => {
     const tree = renderer.create(
       <Providers>
-        <Devotional content={content} isLoading scripture={scripture} />
+        <Devotional
+          body={content.body}
+          title={content.title}
+          isLoading
+          scripture={scripture}
+        />
       </Providers>
     );
     await wait(0); // wait for response
