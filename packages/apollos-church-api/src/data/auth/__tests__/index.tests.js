@@ -148,10 +148,14 @@ describe('Auth', () => {
       );
       context.userToken = userToken;
       context.rockCookie = rockCookie;
-      const result = await context.dataSources.Auth.changePassword({
+      const {
+        rockCookie: newCookie,
+        token: newToken,
+      } = await context.dataSources.Auth.changePassword({
         password: 'good',
       });
-      expect(result).toMatchSnapshot();
+      expect(newCookie).toEqual('some cookie');
+      expect(typeof newToken).toEqual('string');
     });
   });
 

@@ -59,6 +59,7 @@ export default class AuthDataSource extends RockApolloDataSource {
     try {
       const cookie = await this.fetchUserCookie(identity, password);
       const sessionId = await this.createSession({ cookie });
+      console.log({ cookie, sessionId });
       const token = generateToken({ cookie, sessionId });
       const { userToken, rockCookie } = registerToken(token);
       this.context.rockCookie = rockCookie;

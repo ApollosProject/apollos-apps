@@ -3,7 +3,7 @@
 exports[`Auth Change Password generates a new token 1`] = `
 Object {
   "rockCookie": "some cookie",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb29raWUiOiJzb21lIGNvb2tpZSIsImlhdCI6MTUzODUwODczOSwiZXhwIjoxNTQzNjkyNzM5fQ.k6gq0pCki3yDx_I3ysWKqmBpuhsRVBVmty9iTTN0-I0",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb29raWUiOiJzb21lIGNvb2tpZSIsInNlc3Npb25JZCI6MTIzLCJpYXQiOjE1Mzg1Nzc4MjAsImV4cCI6MTU0Mzc2MTgyMH0.U1ceMeWJg8qsTEhckVqHG4nNJqaGfjfdNsGbyIi3sNA",
 }
 `;
 
