@@ -31,6 +31,8 @@ class Devotional extends PureComponent {
     ),
   };
 
+  getScriptureReferences = (scripture) => scripture.map((ref) => ref.reference);
+
   /**
    * The route that TabView uses to render the ContentTab
    */
@@ -38,7 +40,7 @@ class Devotional extends PureComponent {
     <ContentTab
       body={this.props.body}
       isLoading={this.props.isLoading}
-      scripture={this.props.scripture}
+      references={this.getScriptureReferences(this.props.scripture)}
       title={this.props.title}
       navigationState={navigationState}
     />

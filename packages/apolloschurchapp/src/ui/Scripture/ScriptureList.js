@@ -11,11 +11,11 @@ const StyledH4 = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(H4);
 
-const ScriptureList = ({ scripture, onPress, commas = true }) => {
-  if (!scripture && commas) return '';
-  if (!scripture) return [];
+const ScriptureList = ({ references, onPress, commas = true }) => {
+  if (!references && commas) return '';
+  if (!references) return [];
 
-  let combo = scripture.map(({ reference }) => `${reference}`);
+  let combo = references.map((reference) => `${reference}`);
 
   if (commas) {
     combo = combo.join(', ');
@@ -37,17 +37,8 @@ ScriptureList.propTypes = {
   commas: PropTypes.bool,
   /** The ButtonLink handler */
   onPress: PropTypes.func,
-  /** An array of scripture objects */
-  scripture: PropTypes.arrayOf(
-    PropTypes.shape({
-      /** The ID of the verse (i.e. '1CO.15.57') */
-      id: PropTypes.string,
-      /** A human readable reference (i.e. '1 Corinthians 15:57') */
-      reference: PropTypes.string,
-      /** The scripture source to render */
-      html: PropTypes.string,
-    })
-  ),
+  /** A human readable reference (i.e. '1 Corinthians 15:57') */
+  references: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ScriptureList;

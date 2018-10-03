@@ -15,7 +15,13 @@ const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
  * Displays a header, scripture list (using the ScriptureList component),
  * and the body text of the devo.
  */
-const ContentTab = ({ title, scripture, body, isLoading, navigationState }) => (
+const ContentTab = ({
+  title,
+  references,
+  body,
+  isLoading,
+  navigationState,
+}) => (
   <ScrollView>
     <ContentContainer>
       <Placeholder.Paragraph
@@ -26,9 +32,9 @@ const ContentTab = ({ title, scripture, body, isLoading, navigationState }) => (
       >
         <View>
           <H2 padded>{title}</H2>
-          {scripture && scripture.length ? (
+          {references && references.length ? (
             <ScriptureList
-              scripture={scripture}
+              references={references}
               onPress={navigationState.route.jumpTo} // eslint-disable-line react/jsx-handler-names
             />
           ) : null}
@@ -50,17 +56,8 @@ ContentTab.propTypes = {
    * reference link is tapped.
    */
   navigationState: PropTypes.shape({ routes: PropTypes.array }),
-  /** An array of scripture objects */
-  scripture: PropTypes.arrayOf(
-    PropTypes.shape({
-      /** The ID of the verse (i.e. '1CO.15.57') */
-      id: PropTypes.string,
-      /** A human readable reference (i.e. '1 Corinthians 15:57') */
-      reference: PropTypes.string,
-      /** The scripture source to render */
-      html: PropTypes.string,
-    })
-  ),
+  /** A human readable reference (i.e. '1 Corinthians 15:57') */
+  references: PropTypes.arrayOf(PropTypes.string),
   /** The devotional title */
   title: PropTypes.string,
 };
