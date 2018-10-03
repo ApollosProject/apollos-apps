@@ -3,13 +3,13 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import SerifText from '.';
+import ScriptureText from '.';
 
-describe('the SerifText component', () => {
+describe('the ScriptureText component', () => {
   it('should render correctly', () => {
     const tree = renderer.create(
       <Providers>
-        <SerifText>Default SerifText text</SerifText>
+        <ScriptureText>Default ScriptureText text</ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe('the SerifText component', () => {
   it('should render as bold', () => {
     const tree = renderer.create(
       <Providers>
-        <SerifText bold>Bold SerifText text</SerifText>
+        <ScriptureText bold>Bold ScriptureText text</ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe('the SerifText component', () => {
   it('should render as italic', () => {
     const tree = renderer.create(
       <Providers>
-        <SerifText italic>Italic SerifText text</SerifText>
+        <ScriptureText italic>Italic ScriptureText text</ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -33,9 +33,9 @@ describe('the SerifText component', () => {
   it('should render as bold italic', () => {
     const tree = renderer.create(
       <Providers>
-        <SerifText bold italic>
-          Bold italic SerifText text
-        </SerifText>
+        <ScriptureText bold italic>
+          Bold italic ScriptureText text
+        </ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe('the SerifText component', () => {
     const salmon = { color: 'salmon' };
     const tree = renderer.create(
       <Providers>
-        <SerifText style={salmon}>Salmon text</SerifText>
+        <ScriptureText style={salmon}>Salmon text</ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe('the SerifText component', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <SerifText isLoading>Default SerifText text</SerifText>
+        <ScriptureText isLoading>Default ScriptureText text</ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -60,11 +60,11 @@ describe('the SerifText component', () => {
   it('should accept additional props', () => {
     const tree = renderer.create(
       <Providers>
-        <SerifText accessible={false}>
+        <ScriptureText accessible={false}>
           {
             '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
           }
-        </SerifText>
+        </ScriptureText>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

@@ -25,25 +25,25 @@ const styles = styled(({ theme, bold, italic }) => {
     fontFamily: fontStack,
     color: theme.colors.text.primary,
   };
-}, 'SerifText');
+}, 'ScriptureText');
 
-const SerifText = compose(
-  setDisplayName('SerifText'),
+const ScriptureText = compose(
+  setDisplayName('ScriptureText'),
   styles,
   withPlaceholder(Typography),
   pure
 )(Text);
 
-SerifText.propTypes = {
+ScriptureText.propTypes = {
   bold: PropTypes.bool,
   italic: PropTypes.bool,
   isLoading: PropTypes.bool, // display loading placeholder
   ...Text.propTypes,
 };
 
-SerifText.defaultProps = {
+ScriptureText.defaultProps = {
   bold: false,
   italic: false,
 };
 
-export default SerifText;
+export default ScriptureText;

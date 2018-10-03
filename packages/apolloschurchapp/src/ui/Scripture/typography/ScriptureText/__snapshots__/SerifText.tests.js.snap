@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the SerifText component should accept additional props 1`] = `
+exports[`the ScriptureText component should accept additional props 1`] = `
 <Text
   accessible={false}
   bold={false}
@@ -18,7 +18,7 @@ exports[`the SerifText component should accept additional props 1`] = `
 </Text>
 `;
 
-exports[`the SerifText component should accept and render passed in styles 1`] = `
+exports[`the ScriptureText component should accept and render passed in styles 1`] = `
 <Text
   bold={false}
   italic={false}
@@ -35,7 +35,7 @@ exports[`the SerifText component should accept and render passed in styles 1`] =
 </Text>
 `;
 
-exports[`the SerifText component should render a loading state 1`] = `
+exports[`the ScriptureText component should render a loading state 1`] = `
 <View
   style={
     Object {
@@ -50,7 +50,7 @@ exports[`the SerifText component should render a loading state 1`] = `
 />
 `;
 
-exports[`the SerifText component should render as bold 1`] = `
+exports[`the ScriptureText component should render as bold 1`] = `
 <Text
   bold={true}
   italic={false}
@@ -63,11 +63,11 @@ exports[`the SerifText component should render as bold 1`] = `
     }
   }
 >
-  Bold SerifText text
+  Bold ScriptureText text
 </Text>
 `;
 
-exports[`the SerifText component should render as bold italic 1`] = `
+exports[`the ScriptureText component should render as bold italic 1`] = `
 <Text
   bold={true}
   italic={true}
@@ -80,11 +80,11 @@ exports[`the SerifText component should render as bold italic 1`] = `
     }
   }
 >
-  Bold italic SerifText text
+  Bold italic ScriptureText text
 </Text>
 `;
 
-exports[`the SerifText component should render as italic 1`] = `
+exports[`the ScriptureText component should render as italic 1`] = `
 <Text
   bold={false}
   italic={true}
@@ -97,11 +97,11 @@ exports[`the SerifText component should render as italic 1`] = `
     }
   }
 >
-  Italic SerifText text
+  Italic ScriptureText text
 </Text>
 `;
 
-exports[`the SerifText component should render correctly 1`] = `
+exports[`the ScriptureText component should render correctly 1`] = `
 <Text
   bold={false}
   italic={false}
@@ -114,6 +114,6 @@ exports[`the SerifText component should render correctly 1`] = `
     }
   }
 >
-  Default SerifText text
+  Default ScriptureText text
 </Text>
 `;

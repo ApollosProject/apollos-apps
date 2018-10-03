@@ -2,43 +2,43 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
-import SerifText from '.';
+import ScriptureText from '.';
 
-storiesOf('typography/SerifText', module)
+storiesOf('typography/ScriptureText', module)
   .add('Regular', () => (
-    <SerifText>
+    <ScriptureText>
       {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
-    </SerifText>
+    </ScriptureText>
   ))
   .add('Bold', () => (
-    <SerifText bold>
+    <ScriptureText bold>
       {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
-    </SerifText>
+    </ScriptureText>
   ))
   .add('Italic', () => (
-    <SerifText italic>
+    <ScriptureText italic>
       {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
-    </SerifText>
+    </ScriptureText>
   ))
   .add('Bold Italic', () => (
-    <SerifText bold italic>
+    <ScriptureText bold italic>
       {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
-    </SerifText>
+    </ScriptureText>
   ))
   .add('isLoading', () => (
-    <SerifText isLoading>
+    <ScriptureText isLoading>
       {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
-    </SerifText>
+    </ScriptureText>
   ))
   .add('Border Box – platform testing', () => {
     const border = { borderWidth: 1, borderStyle: 'solid' };
 
     return (
       <View>
-        <SerifText style={border}>Body Text</SerifText>
-        <SerifText style={border}>
+        <ScriptureText style={border}>Body Text</ScriptureText>
+        <ScriptureText style={border}>
           {`"God's commands are designed to guide you to life's very best. You will not obey Him, if you do not believe Him and trust Him. You cannot believe Him if you do not love Him. You cannot love Him unless you know Him." ― Henry Blackaby`}
-        </SerifText>
+        </ScriptureText>
       </View>
     );
   });
