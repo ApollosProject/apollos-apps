@@ -1,15 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginButton component renders a LoginButton when logged out 1`] = `
-<Text
-  onPress={[Function]}
+<View
+  accessibilityComponentType="button"
+  accessibilityTraits={
+    Array [
+      "button",
+    ]
+  }
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "color": "#17B582",
-      "paddingHorizontal": 20,
+      "opacity": 1,
     }
   }
 >
-  Login
-</Text>
+  <View
+    bordered={false}
+    disabled={false}
+    pill={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 60,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "center",
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 23.04,
+        }
+      }
+    >
+      Get Connected
+    </Text>
+  </View>
+</View>
 `;
