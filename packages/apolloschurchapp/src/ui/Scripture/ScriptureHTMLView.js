@@ -1,27 +1,20 @@
 import React from 'react';
 import { withProps } from 'recompose';
-import { Text, Platform } from 'react-native';
+import { Platform } from 'react-native';
 
+import Paragraph from 'apolloschurchapp/src/ui/typography/Paragraph';
+import { H4 } from 'apolloschurchapp/src/ui/typography';
 import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import defaultRenderer, {
   wrapTextChildren,
 } from 'apolloschurchapp/src/ui/HTMLView/defaultRenderer';
-import Paragraph from 'apolloschurchapp/src/ui/typography/Paragraph';
-import { H4, SerifText } from 'apolloschurchapp/src/ui/typography';
-import styled from 'apolloschurchapp/src/ui/styled';
 
-const RedLetters = styled(({ theme }) => ({
-  color: theme.colors.wordOfChrist,
-}))(Text);
-
-const VerseNumber = styled(({ theme }) => ({
-  fontSize: theme.helpers.rem(0.6),
-  color: theme.colors.text.secondary,
-}))(SerifText);
-
-const PoeticPause = styled({
-  textAlign: 'right',
-})(SerifText);
+import {
+  ScriptureText,
+  VerseNumber,
+  RedLetters,
+  PoeticPause,
+} from './typography';
 
 const renderer = (node, { children, ...other }) => {
   // the defaultRenderer support several basic elements out of the box,
@@ -59,10 +52,10 @@ const renderer = (node, { children, ...other }) => {
    */
   if (className.includes('q1')) {
     return (
-      <SerifText>
+      <ScriptureText>
         {'     '}
         {children}
-      </SerifText>
+      </ScriptureText>
     );
   }
 
@@ -72,10 +65,10 @@ const renderer = (node, { children, ...other }) => {
    */
   if (className.includes('q2')) {
     return (
-      <SerifText>
+      <ScriptureText>
         {'          '}
         {children}
-      </SerifText>
+      </ScriptureText>
     );
   }
 
@@ -85,10 +78,10 @@ const renderer = (node, { children, ...other }) => {
    */
   if (className.includes('q3')) {
     return (
-      <SerifText>
+      <ScriptureText>
         {'               '}
         {children}
-      </SerifText>
+      </ScriptureText>
     );
   }
 
@@ -98,10 +91,10 @@ const renderer = (node, { children, ...other }) => {
    */
   if (className.includes('q4')) {
     return (
-      <SerifText>
+      <ScriptureText>
         {'                    '}
         {children}
-      </SerifText>
+      </ScriptureText>
     );
   }
 
@@ -129,7 +122,9 @@ const renderer = (node, { children, ...other }) => {
   if (node.name === 'p') {
     return (
       <Paragraph>
-        <SerifText>{wrapTextChildren(children, SerifText)}</SerifText>
+        <ScriptureText>
+          {wrapTextChildren(children, ScriptureText)}
+        </ScriptureText>
       </Paragraph>
     );
   }
