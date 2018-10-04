@@ -29,7 +29,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
   >
     <RCTScrollView
       ListHeaderComponent={
-        <Component>
+        <React.Fragment>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(Image)))))
             source={
               Object {
@@ -38,7 +38,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             }
           />
           <LiveNowButton />
-        </Component>
+        </React.Fragment>
       }
       contentContainerStyle={
         Object {
@@ -277,23 +277,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
           onLayout={[Function]}
           style={null}
         >
-          <View>
-            <Image
-              source={
-                Object {
-                  "testUri": "../../../src/tabs/home/wordmark.png",
-                }
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/tabs/home/wordmark.png",
               }
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "height": 16,
-                  "margin": 16,
-                  "resizeMode": "contain",
-                }
+            }
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": 16,
+                "margin": 16,
+                "resizeMode": "contain",
               }
-            />
-          </View>
+            }
+          />
         </View>
         <View
           onLayout={[Function]}
