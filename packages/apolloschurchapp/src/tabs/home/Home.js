@@ -53,10 +53,10 @@ class Home extends PureComponent {
                 error={error}
                 refetch={refetch}
                 ListHeaderComponent={
-                  <View>
+                  <>
                     <LogoTitle source={require('./wordmark.png')} />
                     <LiveButton />
-                  </View>
+                  </>
                 }
                 onPressItem={this.handleOnPress}
               />
