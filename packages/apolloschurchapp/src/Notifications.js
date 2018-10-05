@@ -50,7 +50,7 @@ export default class NotificationsInit extends Component {
   navigate = (url) => {
     const { navigate } = this.props.navigation;
     const route = url.replace(/.*?:\/\//g, '');
-    const id = route.match(/\/([^\/]+)\/?$/)[1];
+    const id = route.match(/\/([^]+)\/?$/)[1];
     const routeName = route.split('/')[0];
 
     if (routeName === 'ContentSingle') {
