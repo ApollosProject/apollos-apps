@@ -59,7 +59,7 @@ class Seeker extends PureComponent {
     duration: PropTypes.any, // eslint-disable-line
     style: PropTypes.any, // eslint-disable-line
     onScrubbing: PropTypes.func,
-    knobSize: PropTypes.number, // defaults to theme.sizing.baseUnit / 2
+    knobSize: PropTypes.number, // defaults to theme.sizing.baseUnit / 1.5  (12px)
   };
 
   isSeeking = false;
@@ -202,7 +202,7 @@ class Seeker extends PureComponent {
 }
 
 const SeekerWithState = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
-  knobSize: baseUnit / 2,
+  knobSize: Math.floor(baseUnit / 1.33),
 }))((props) => (
   <ControlsConsumer>
     {(controls) => (

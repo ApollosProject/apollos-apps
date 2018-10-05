@@ -607,25 +607,25 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     0:00
                   </Text>
                   <View
-                    knobSize={8}
+                    knobSize={12}
                     style={
                       Object {
                         "flexGrow": 1,
-                        "height": 4,
+                        "height": 6,
                         "justifyContent": "center",
-                        "paddingBottom": 4,
-                        "paddingTop": 4,
+                        "paddingBottom": 6,
+                        "paddingTop": 6,
                       }
                     }
                   >
                     <View
-                      knobSize={8}
+                      knobSize={12}
                       onLayout={[Function]}
                       style={
                         Object {
                           "backgroundColor": "#505050",
-                          "borderRadius": 4,
-                          "height": 4,
+                          "borderRadius": 6,
+                          "height": 6,
                           "overflow": "hidden",
                         }
                       }
@@ -673,7 +673,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       }
                     >
                       <View
-                        knobSize={8}
+                        knobSize={12}
                         onMoveShouldSetResponder={[Function]}
                         onMoveShouldSetResponderCapture={[Function]}
                         onResponderEnd={[Function]}
@@ -689,12 +689,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         style={
                           Object {
                             "backgroundColor": "#F8F7F4",
-                            "borderRadius": 8,
+                            "borderRadius": 12,
                             "elevation": 2,
-                            "height": 8,
+                            "height": 12,
                             "position": "absolute",
                             "right": 0,
-                            "width": 8,
+                            "width": 12,
                           }
                         }
                       />
@@ -1398,12 +1398,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
           }
         >
           <View
-            knobSize={8}
+            knobSize={12}
             minimal={true}
             style={
               Object {
                 "flexGrow": 1,
-                "height": 4,
+                "height": 6,
                 "justifyContent": "center",
                 "paddingBottom": 0,
                 "paddingTop": 20,
@@ -1411,14 +1411,14 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
             }
           >
             <View
-              knobSize={8}
+              knobSize={12}
               minimal={true}
               onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "transparent",
                   "borderRadius": 0,
-                  "height": 4,
+                  "height": 6,
                   "overflow": "hidden",
                 }
               }
@@ -2080,25 +2080,25 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     0:00
                   </Text>
                   <View
-                    knobSize={8}
+                    knobSize={12}
                     style={
                       Object {
                         "flexGrow": 1,
-                        "height": 4,
+                        "height": 6,
                         "justifyContent": "center",
-                        "paddingBottom": 4,
-                        "paddingTop": 4,
+                        "paddingBottom": 6,
+                        "paddingTop": 6,
                       }
                     }
                   >
                     <View
-                      knobSize={8}
+                      knobSize={12}
                       onLayout={[Function]}
                       style={
                         Object {
                           "backgroundColor": "#505050",
-                          "borderRadius": 4,
-                          "height": 4,
+                          "borderRadius": 6,
+                          "height": 6,
                           "overflow": "hidden",
                         }
                       }
@@ -2146,7 +2146,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       }
                     >
                       <View
-                        knobSize={8}
+                        knobSize={12}
                         onMoveShouldSetResponder={[Function]}
                         onMoveShouldSetResponderCapture={[Function]}
                         onResponderEnd={[Function]}
@@ -2162,12 +2162,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         style={
                           Object {
                             "backgroundColor": "#F8F7F4",
-                            "borderRadius": 8,
+                            "borderRadius": 12,
                             "elevation": 2,
-                            "height": 8,
+                            "height": 12,
                             "position": "absolute",
                             "right": 0,
-                            "width": 8,
+                            "width": 12,
                           }
                         }
                       />
@@ -2871,12 +2871,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
           }
         >
           <View
-            knobSize={8}
+            knobSize={12}
             minimal={true}
             style={
               Object {
                 "flexGrow": 1,
-                "height": 4,
+                "height": 6,
                 "justifyContent": "center",
                 "paddingBottom": 0,
                 "paddingTop": 20,
@@ -2884,14 +2884,14 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
             }
           >
             <View
-              knobSize={8}
+              knobSize={12}
               minimal={true}
               onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "transparent",
                   "borderRadius": 0,
-                  "height": 4,
+                  "height": 6,
                   "overflow": "hidden",
                 }
               }
@@ -3553,25 +3553,25 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     0:00
                   </Text>
                   <View
-                    knobSize={8}
+                    knobSize={12}
                     style={
                       Object {
                         "flexGrow": 1,
-                        "height": 4,
+                        "height": 6,
                         "justifyContent": "center",
-                        "paddingBottom": 4,
-                        "paddingTop": 4,
+                        "paddingBottom": 6,
+                        "paddingTop": 6,
                       }
                     }
                   >
                     <View
-                      knobSize={8}
+                      knobSize={12}
                       onLayout={[Function]}
                       style={
                         Object {
                           "backgroundColor": "#505050",
-                          "borderRadius": 4,
-                          "height": 4,
+                          "borderRadius": 6,
+                          "height": 6,
                           "overflow": "hidden",
                         }
                       }
@@ -3619,7 +3619,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       }
                     >
                       <View
-                        knobSize={8}
+                        knobSize={12}
                         onMoveShouldSetResponder={[Function]}
                         onMoveShouldSetResponderCapture={[Function]}
                         onResponderEnd={[Function]}
@@ -3635,12 +3635,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         style={
                           Object {
                             "backgroundColor": "#F8F7F4",
-                            "borderRadius": 8,
+                            "borderRadius": 12,
                             "elevation": 2,
-                            "height": 8,
+                            "height": 12,
                             "position": "absolute",
                             "right": 0,
-                            "width": 8,
+                            "width": 12,
                           }
                         }
                       />
@@ -4344,12 +4344,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
           }
         >
           <View
-            knobSize={8}
+            knobSize={12}
             minimal={true}
             style={
               Object {
                 "flexGrow": 1,
-                "height": 4,
+                "height": 6,
                 "justifyContent": "center",
                 "paddingBottom": 0,
                 "paddingTop": 20,
@@ -4357,14 +4357,14 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
             }
           >
             <View
-              knobSize={8}
+              knobSize={12}
               minimal={true}
               onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "transparent",
                   "borderRadius": 0,
-                  "height": 4,
+                  "height": 6,
                   "overflow": "hidden",
                 }
               }
