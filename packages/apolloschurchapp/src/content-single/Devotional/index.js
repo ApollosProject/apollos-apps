@@ -36,7 +36,12 @@ class Devotional extends PureComponent {
    * Props: full scripture array of objects
    * Returns: an array of scripture references.
    */
-  getScriptureReferences = (scripture) => scripture.map((ref) => ref.reference);
+  getScriptureReferences = (scripture) => {
+    if (scripture && scripture.length) {
+      return scripture.map((ref) => ref.reference);
+    }
+    return null;
+  };
 
   /**
    * The route that TabView uses to render the ContentTab.
@@ -65,7 +70,7 @@ class Devotional extends PureComponent {
   render() {
     console.log('this.props = ', this.props);
     const hasScripture = !this.props.isLoading && this.props.scripture.length;
-    console.log({ hasScripture });
+    console.log('hasScripture = ', hasScripture);
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
 
