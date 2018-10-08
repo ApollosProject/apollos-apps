@@ -20,7 +20,7 @@ const GetLikeData = ({ itemId, children }) => (
 );
 
 GetLikeData.propTypes = {
-  itemId: PropTypes.string.isRequired,
+  itemId: PropTypes.string,
   children: PropTypes.func.isRequired,
 };
 
