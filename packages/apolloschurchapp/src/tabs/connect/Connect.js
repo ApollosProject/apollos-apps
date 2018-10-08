@@ -34,14 +34,11 @@ const BrandIcon = withTheme(({ theme }) => ({
   fill: theme.colors.primary,
 }))(Icon);
 
-const HeaderContainer = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
-}))(SafeAreaView);
-
 const Header = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
   paddingTop: theme.sizing.baseUnit * 0.75,
   paddingBottom: theme.sizing.baseUnit * 1.5,
+  backgroundColor: theme.colors.background.paper,
 }))(View);
 
 
@@ -128,7 +125,7 @@ class Connect extends PureComponent {
                         </View>
                       );
                     return (
-                      <HeaderContainer>
+                      <SafeAreaView>
                         <Header>
                           <BrandIcon />
                           <Title>Connect!</Title>
@@ -143,7 +140,7 @@ class Connect extends PureComponent {
                           </ConnectText>
                           <LoginButton />
                         </Header>
-                      </HeaderContainer>
+                      </SafeAreaView>
                     );
                   }}
                 </Query>
