@@ -126,7 +126,6 @@ class ContentSingle extends PureComponent {
                 ...((cachedData && cachedData.node) || {}),
                 ...((data && data.node) || {}),
               };
-              console.log('data = ', data);
 
               const childContent = get(
                 data,
