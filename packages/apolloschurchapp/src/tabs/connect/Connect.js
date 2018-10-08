@@ -45,6 +45,9 @@ const Header = styled(({ theme }) => ({
 const ConnectText = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit,
 }))(H5);
+const StyledLoginButton = styled(({ theme }) => ({
+  marginVertical: theme.sizing.baseUnit,
+}))(LoginButton);
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -139,6 +142,7 @@ class Connect extends PureComponent {
                             simple event registration, and easy online giving!
                           </ConnectText>
                           <LoginButton />
+                          <StyledLoginButton />
                         </Header>
                       </SafeAreaView>
                     );
