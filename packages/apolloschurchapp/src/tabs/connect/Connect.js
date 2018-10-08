@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, View, SafeAreaView } from 'react-native';
+import { ScrollView, View, SafeAreaView, Platform } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -25,20 +25,30 @@ import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
 import getLikedContent from './getLikedContent';
 
-const Title = styled(({ theme }) => ({ color: theme.colors.primary }))(H1);
+const Title = styled(({ theme }) => ({
+  color: theme.colors.primary,
+  paddingBottom: theme.helpers.verticalRhythm(1.5),
+}))(H1);
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 2.25,
-  marginVertical: theme.sizing.baseUnit,
+  marginBottom: theme.sizing.baseUnit,
   fill: theme.colors.primary,
 }))(Icon);
 
 const Header = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
-  paddingTop: theme.sizing.baseUnit * 0.75,
   paddingBottom: theme.sizing.baseUnit * 1.5,
   backgroundColor: theme.colors.background.paper,
+  ...Platform.select({
+    ios: {
+      paddingTop: theme.sizing.baseUnit * 4.75,
+    },
+    android: {
+      paddingTop: theme.sizing.baseUnit * 3.75,
+    },
+  }),
 }))(View);
 
 const StyledLoginButton = styled(({ theme }) => ({
