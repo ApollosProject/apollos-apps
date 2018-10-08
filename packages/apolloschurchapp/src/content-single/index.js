@@ -162,7 +162,9 @@ class ContentSingle extends PureComponent {
                       itemId: this.itemId.itemId,
                     }}
                   />
-                  {content.__typename === 'DevotionalContentItem' ? (
+                  {content.__typename === 'DevotionalContentItem' &&
+                  content.scriptures &&
+                  content.scriptures.length ? (
                     <Devotional
                       body={content.htmlContent}
                       title={content.title}
