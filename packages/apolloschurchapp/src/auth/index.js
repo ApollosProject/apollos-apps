@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View, SafeAreaView, Platform } from 'react-native';
+import { View, SafeAreaView } from 'react-native';
 
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import FlexedView from 'apolloschurchapp/src/ui/FlexedView';
