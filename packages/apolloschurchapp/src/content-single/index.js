@@ -29,6 +29,7 @@ import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenL
 import getContentItem from './getContentItem';
 import getContentItemMinimalState from './getContentItemMinimalState';
 import ActionContainer from './ActionContainer';
+import Devotional from './Devotional';
 
 const FeedContainer = styled({
   paddingHorizontal: 0,
@@ -125,6 +126,7 @@ class ContentSingle extends PureComponent {
                 ...((cachedData && cachedData.node) || {}),
                 ...((data && data.node) || {}),
               };
+              console.log('data = ', data);
 
               const childContent = get(
                 data,
@@ -216,14 +218,23 @@ class ContentSingle extends PureComponent {
                       </Mutation>
                     </MediaHeader>
                     <BackgroundView>
-                      <ContentContainer>
-                        <H2 padded isLoading={!content.title && loading}>
-                          {content.title}
-                        </H2>
-                        <HTMLView isLoading={!content.htmlContent && loading}>
-                          {content.htmlContent}
-                        </HTMLView>
-                      </ContentContainer>
+                      {content.__typename === 'DevotionalContentItem' ? (
+                        <Devotional
+                          body={content.htmlContent}
+                          title={content.title}
+                          isLoading={loading}
+                          scripture={content.scriptures}
+                        />
+                      ) : (
+                        <ContentContainer>
+                          <H2 padded isLoading={!content.title && loading}>
+                            {content.title}
+                          </H2>
+                          <HTMLView isLoading={!content.htmlContent && loading}>
+                            {content.htmlContent}
+                          </HTMLView>
+                        </ContentContainer>
+                      )}
                     </BackgroundView>
                     {(horizontalContent && horizontalContent.length) ||
                     loading ? (

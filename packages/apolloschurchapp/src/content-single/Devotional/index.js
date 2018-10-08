@@ -63,6 +63,7 @@ class Devotional extends PureComponent {
   );
 
   render() {
+    console.log('this.props = ', this.props);
     const hasScripture = this.props.isLoading || this.props.scripture.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
