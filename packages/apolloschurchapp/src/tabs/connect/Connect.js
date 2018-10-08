@@ -15,7 +15,7 @@ import TableView, {
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
-import { H1, H5 } from 'apolloschurchapp/src/ui/typography';
+import { H1, BodyText, Paragraph } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 
@@ -41,10 +41,6 @@ const Header = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
 }))(View);
 
-
-const ConnectText = styled(({ theme }) => ({
-  paddingVertical: theme.sizing.baseUnit,
-}))(H5);
 const StyledLoginButton = styled(({ theme }) => ({
   marginVertical: theme.sizing.baseUnit,
 }))(LoginButton);
@@ -132,16 +128,19 @@ class Connect extends PureComponent {
                         <Header>
                           <BrandIcon />
                           <Title>Connect!</Title>
-                          <H5>
-                            Our mission is to help you connect to others as well
-                            as help you in your walk with Christ.
-                          </H5>
-                          <ConnectText>
-                            By joining this community, you will unlock amazing
-                            features like; curated content and devotionals,
-                            simple event registration, and easy online giving!
-                          </ConnectText>
-                          <LoginButton />
+                          <Paragraph>
+                            <BodyText>
+                              Our mission is to help you connect to others as
+                              well as help you in your walk with Christ.
+                            </BodyText>
+                          </Paragraph>
+                          <Paragraph>
+                            <BodyText>
+                              By joining this community, you will unlock amazing
+                              features like; curated content and devotionals,
+                              simple event registration, and easy online giving!
+                            </BodyText>
+                          </Paragraph>
                           <StyledLoginButton />
                         </Header>
                       </SafeAreaView>
