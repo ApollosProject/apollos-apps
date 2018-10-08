@@ -30,7 +30,7 @@ const LiveNowButton = () => (
             <TouchableScale
               onPress={() => openUrl('https://apollos.churchonline.org/')}
             >
-              <LiveCard inVerticalList isLoading={loading}>
+              <LiveCard isLoading={loading}>
                 <CardContent>
                   <ChannelLabel
                     icon="video"

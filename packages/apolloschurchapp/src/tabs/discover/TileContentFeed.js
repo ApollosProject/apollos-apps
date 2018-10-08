@@ -3,7 +3,7 @@ import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { H5 } from 'apolloschurchapp/src/ui/typography';
+import { H4 } from 'apolloschurchapp/src/ui/typography';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
@@ -20,7 +20,7 @@ const RowHeader = styled({
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
     <RowHeader>
-      <H5 isLoading={isLoading}>{name}</H5>
+      <H4 isLoading={isLoading}>{name}</H4>
       {!isLoading ? (
         <ButtonLink
           onPress={() => {

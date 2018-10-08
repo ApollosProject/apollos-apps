@@ -61,7 +61,7 @@ const Container = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'flex-start',
   overflow: 'hidden',
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseUnit / 2,
 }))(View);
 
 const Shadow = styled(({ theme }) => ({

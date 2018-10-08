@@ -8,31 +8,21 @@ import styled from 'apolloschurchapp/src/ui/styled';
 
 const StyledCard = compose(
   withIsLoading,
-  styled(
-    ({
-      theme,
-      cardColor,
-      inHorizontalList = false,
-      inVerticalList = false,
-    }) => ({
-      // card styles
-      backgroundColor: cardColor || theme.colors.background.paper,
-      borderRadius: theme.sizing.baseUnit,
-      ...(inHorizontalList
-        ? {
-            marginLeft: theme.sizing.baseUnit / 2,
-            marginRight: 0,
-          }
-        : {}),
-      ...(inVerticalList
-        ? {
-            marginHorizontal: theme.sizing.baseUnit,
-            marginVertical: theme.sizing.baseUnit / 2,
-          }
-        : {}),
-      ...Platform.select(theme.shadows.default),
-    })
-  )
+  styled(({ theme, cardColor, inHorizontalList = false }) => ({
+    // card styles
+    backgroundColor: cardColor || theme.colors.background.paper,
+    borderRadius: theme.sizing.baseUnit,
+    ...(inHorizontalList
+      ? {
+          marginLeft: theme.sizing.baseUnit / 2,
+          marginRight: 0,
+        }
+      : {
+          marginHorizontal: theme.sizing.baseUnit,
+          marginVertical: theme.sizing.baseUnit / 2,
+        }),
+    ...Platform.select(theme.shadows.default),
+  }))
 )(View);
 
 /*
