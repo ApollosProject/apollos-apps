@@ -1,9 +1,10 @@
 import { Component } from 'react';
 import { Linking, Platform } from 'react-native';
 import OneSignal from 'react-native-onesignal';
+import { withNavigation } from 'react-navigation';
 import { ONE_SIGNAL_KEY } from './config';
 
-export default class NotificationsInit extends Component {
+class NotificationsInit extends Component {
   static navigationOptions = {};
 
   componentWillMount() {
@@ -32,6 +33,27 @@ export default class NotificationsInit extends Component {
     OneSignal.removeEventListener('ids', this.onIds);
   }
 
+  handleOpenURL = (event) => {
+    this.navigate(event.url);
+  };
+
+  navigate = (url) => {
+    const { navigate } = this.props.navigation;
+    const route = url.replace(/.*?:\/\//g, '');
+    const id = route.match(/\/([^]+)\/?$/)[1];
+    const routeName = route.split('/')[0];
+
+    if (routeName === 'AppStackNavigator') {
+      navigate('AppStackNavigator', { id });
+    } else if (routeName === 'Tabs') {
+      navigate('Tabs');
+    } else if (routeName === 'ContentSingle') {
+      navigate('ContentSingle', { id });
+    } else if (routeName === 'Connect') {
+      navigate('Connect');
+    }
+  };
+
   onReceived = (notification) => {
     console.log('Notification received: ', notification);
   };
@@ -47,24 +69,9 @@ export default class NotificationsInit extends Component {
     console.log('Device info: ', device);
   };
 
-  navigate = (url) => {
-    const { navigate } = this.props.navigation;
-    const route = url.replace(/.*?:\/\//g, '');
-    const id = route.match(/\/([^]+)\/?$/)[1];
-    const routeName = route.split('/')[0];
-
-    if (routeName === 'ContentSingle') {
-      navigate('ContentSingle', { id });
-    } else if (routeName === 'Connect') {
-      navigate('Connect');
-    }
-  };
-
-  handleOpenURl(event) {
-    this.navigate(event.url);
-  }
-
   render() {
     return null;
   }
 }
+
+export default withNavigation(NotificationsInit);

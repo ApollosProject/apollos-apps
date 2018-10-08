@@ -9,8 +9,6 @@
 			<array>
 				<string>apolloschurchapp</string>
 			</array>
-			<key>CFBundleURLName</key>
-			<string></string>
 		</dict>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
