@@ -23,6 +23,7 @@ class LoginButton extends PureComponent {
   handleLoginPress = () => this.props.navigation.push('Auth');
 
   render() {
+    const { navigation, ...otherProps } = this.props;
     return (
       <Query query={getLoginState}>
         {({ data }) => {
@@ -30,7 +31,11 @@ class LoginButton extends PureComponent {
           if (loading) return <ActivityIndicator />;
           if (isLoggedIn) return null;
           return (
-            <Login onPress={this.handleLoginPress} title="Get Connected" />
+            <Login
+              onPress={this.handleLoginPress}
+              title={'Get Connected'}
+              {...otherProps}
+            />
           );
         }}
       </Query>
