@@ -223,7 +223,7 @@ class ContentSingle extends PureComponent {
                           body={content.htmlContent}
                           title={content.title}
                           isLoading={loading}
-                          scripture={content.scriptures}
+                          scripture={content.scriptures || []}
                         />
                       ) : (
                         <ContentContainer>

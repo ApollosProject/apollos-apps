@@ -89,7 +89,7 @@ export const schema = gql`
     sharing: SharableContentItem
     theme: Theme
     isLiked: Boolean
-    scriptures: Scripture
+    scriptures: [Scripture]
   }
 
   type Term {
@@ -328,7 +328,7 @@ export const resolver = {
     scriptures: ({ attributeValues }, args, { dataSources }) => {
       const reference = get(attributeValues, 'scriptures.value');
       if (reference && reference != null) {
-        return dataSources.Scripture.getScripture(reference);
+        return dataSources.Scripture.getScriptures(reference);
       }
       return null;
     },
