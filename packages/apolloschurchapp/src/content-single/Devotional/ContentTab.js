@@ -7,8 +7,13 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import HTMLView from 'apolloschurchapp/src/ui/HTMLView';
 import { ScriptureList } from 'apolloschurchapp/src/ui/Scripture';
 import Placeholder from 'apolloschurchapp/src/ui/Placeholder';
+import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 
 const ContentContainer = styled({ paddingVertical: 0 })(PaddedView);
+
+const FeedContainer = styled({
+  paddingHorizontal: 0,
+})(PaddedView);
 
 /**
  * This is the Content side of the Devotional tabbed component.
@@ -21,6 +26,9 @@ const ContentTab = ({
   body,
   isLoading,
   navigationState,
+  horizontalContent,
+  loadingStateObject,
+  renderItem,
 }) => (
   <ScrollView>
     <ContentContainer>
@@ -43,6 +51,16 @@ const ContentTab = ({
         </View>
       </Placeholder.Paragraph>
     </ContentContainer>
+    {(horizontalContent && horizontalContent.length) || isLoading ? (
+      <FeedContainer>
+        <HorizontalTileFeed
+          content={horizontalContent}
+          isLoading={isLoading}
+          loadingStateObject={loadingStateObject}
+          renderItem={renderItem}
+        />
+      </FeedContainer>
+    ) : null}
   </ScrollView>
 );
 
@@ -61,6 +79,12 @@ ContentTab.propTypes = {
   references: PropTypes.arrayOf(PropTypes.string),
   /** The devotional title */
   title: PropTypes.string,
+  /** An array of parent/sibling content to display under the tabs */
+  horizontalContent: PropTypes.array, // eslint-disable-line
+  /** An object with fake data to display while the data is loading. */
+  loadingStateObject: PropTypes.shape({}).isRequired,
+  /** A function that holds the components to display the horizontal content */
+  renderItem: PropTypes.func.isRequired,
 };
 
 export default ContentTab;
