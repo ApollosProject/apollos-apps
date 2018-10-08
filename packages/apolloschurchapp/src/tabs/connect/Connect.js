@@ -40,14 +40,10 @@ const HeaderContainer = styled(({ theme }) => ({
 
 const Header = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
+  paddingTop: theme.sizing.baseUnit * 0.75,
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(View);
 
-const Space = styled(({ theme }) => ({
-  alignSelf: 'flex-end',
-  marginTop: theme.sizing.baseUnit * 0.75,
-  marginRight: theme.sizing.baseUnit,
-}))(View);
 
 const ConnectText = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit,
@@ -133,7 +129,6 @@ class Connect extends PureComponent {
                       );
                     return (
                       <HeaderContainer>
-                        <Space />
                         <Header>
                           <BrandIcon />
                           <Title>Connect!</Title>
