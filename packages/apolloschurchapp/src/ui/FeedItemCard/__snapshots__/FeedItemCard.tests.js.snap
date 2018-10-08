@@ -7,6 +7,8 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
     Object {
       "backgroundColor": "salmon",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -242,6 +244,8 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
       "height": 400,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -442,6 +446,8 @@ exports[`the FeedItemCard component should render 1`] = `
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -641,6 +647,8 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -840,6 +848,8 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -1111,6 +1121,8 @@ exports[`the FeedItemCard component should render with inverted (light) font col
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,

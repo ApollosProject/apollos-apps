@@ -6,6 +6,8 @@ exports[`the Card component should render 1`] = `
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -69,6 +71,8 @@ exports[`the Card component should render with an error inside an object 1`] = `
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,
@@ -132,6 +136,8 @@ exports[`the Card component should render with an error message inside an object
     Object {
       "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 8,
       "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
       "shadowOffset": Object {
         "height": 1,

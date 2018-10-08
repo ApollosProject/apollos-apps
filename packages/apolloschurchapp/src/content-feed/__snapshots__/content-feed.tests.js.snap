@@ -272,7 +272,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -437,7 +436,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -602,7 +600,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -767,7 +764,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -932,7 +928,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -1097,7 +1092,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -1262,7 +1256,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -1427,7 +1420,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -1592,7 +1584,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
@@ -1757,7 +1748,6 @@ exports[`content feed query component renders a feedview after successful query 
           }
         >
           <View
-            inVerticalList={true}
             style={
               Object {
                 "backgroundColor": "#FFFFFF",

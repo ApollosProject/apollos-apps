@@ -77,6 +77,8 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
           Object {
             "backgroundColor": "#FFFFFF",
             "borderRadius": 16,
+            "marginHorizontal": 16,
+            "marginVertical": 8,
             "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
@@ -582,7 +584,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -747,7 +748,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -912,7 +912,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1077,7 +1076,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1242,7 +1240,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1407,7 +1404,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1572,7 +1568,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1737,7 +1732,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1902,7 +1896,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -2067,7 +2060,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -2323,7 +2315,6 @@ exports[`The FeedView component renders correctly 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -2533,7 +2524,6 @@ exports[`The FeedView component renders correctly 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -2973,7 +2963,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -3138,7 +3127,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -3303,7 +3291,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -3468,7 +3455,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -3633,7 +3619,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -3798,7 +3783,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -3963,7 +3947,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -4128,7 +4111,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -4293,7 +4275,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -4458,7 +4439,6 @@ exports[`The FeedView component renders empty state 1`] = `
         }
       >
         <View
-          inVerticalList={true}
           style={
             Object {
               "backgroundColor": "#FFFFFF",

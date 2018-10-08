@@ -36,8 +36,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
       style={
         Object {
           "aspectRatio": 1,
-          "borderBottomLeftRadius": 16,
-          "borderTopLeftRadius": 16,
+          "borderBottomLeftRadius": 8,
+          "borderTopLeftRadius": 8,
           "height": 50,
           "overflow": "hidden",
         }
@@ -1072,7 +1072,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
     <View
       style={
         Object {
-          "borderRadius": 16,
+          "borderRadius": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -1086,7 +1086,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
       <View
         style={
           Object {
-            "borderRadius": 16,
+            "borderRadius": 8,
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "flex-start",
@@ -1509,8 +1509,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
       style={
         Object {
           "aspectRatio": 1,
-          "borderBottomLeftRadius": 16,
-          "borderTopLeftRadius": 16,
+          "borderBottomLeftRadius": 8,
+          "borderTopLeftRadius": 8,
           "height": 50,
           "overflow": "hidden",
         }
@@ -2545,7 +2545,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
     <View
       style={
         Object {
-          "borderRadius": 16,
+          "borderRadius": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -2559,7 +2559,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
       <View
         style={
           Object {
-            "borderRadius": 16,
+            "borderRadius": 8,
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "flex-start",
@@ -2982,8 +2982,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
       style={
         Object {
           "aspectRatio": 1,
-          "borderBottomLeftRadius": 16,
-          "borderTopLeftRadius": 16,
+          "borderBottomLeftRadius": 8,
+          "borderTopLeftRadius": 8,
           "height": 50,
           "overflow": "hidden",
         }
@@ -4018,7 +4018,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
     <View
       style={
         Object {
-          "borderRadius": 16,
+          "borderRadius": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -4032,7 +4032,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
       <View
         style={
           Object {
-            "borderRadius": 16,
+            "borderRadius": 8,
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "flex-start",
