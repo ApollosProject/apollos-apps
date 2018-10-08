@@ -65,7 +65,7 @@ const Container = styled(({ theme }) => ({
 }))(View);
 
 const Shadow = styled(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseUnit / 2,
   ...Platform.select(theme.shadows.default),
 }))(View);
 

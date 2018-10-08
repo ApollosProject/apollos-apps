@@ -28,8 +28,8 @@ const VideoSizer = styled(
       ? StyleSheet.absoluteFill
       : {
           height: MINI_PLAYER_HEIGHT,
-          borderTopLeftRadius: theme.sizing.baseUnit,
-          borderBottomLeftRadius: theme.sizing.baseUnit,
+          borderTopLeftRadius: theme.sizing.baseUnit / 2,
+          borderBottomLeftRadius: theme.sizing.baseUnit / 2,
           overflow: 'hidden',
           aspectRatio: isVideo ? 16 / 9 : 1,
         }
