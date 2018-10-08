@@ -1200,7 +1200,7 @@ exports[`the Devotional component renders a loading state 1`] = `
                   "translateX": 0,
                 },
               ],
-              "width": 375,
+              "width": 750,
             }
           }
         />
@@ -1296,62 +1296,6 @@ exports[`the Devotional component renders a loading state 1`] = `
                     }
                   >
                     Devotional
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <View
-              accessibilityComponentType="button"
-              accessibilityLabel="SCRIPTURE"
-              accessibilityTraits="button"
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "flex": 1,
-                  "opacity": 1,
-                }
-              }
-            >
-              <View
-                pointerEvents="none"
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "justifyContent": "center",
-                      "opacity": 0.7,
-                      "padding": 8,
-                    }
-                  }
-                >
-                  <Text
-                    padded={true}
-                    style={
-                      Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 23.04,
-                        "paddingBottom": 11.52,
-                        "paddingTop": 15.21,
-                      }
-                    }
-                  >
-                    Scripture
                   </Text>
                 </View>
               </View>
@@ -1601,153 +1545,163 @@ exports[`the Devotional component renders a loading state 1`] = `
                     />
                   </View>
                 </View>
-              </View>
-            </RCTScrollView>
-          </View>
-          <View
-            accessibilityElementsHidden={true}
-            importantForAccessibility="no-hide-descendants"
-            style={
-              Object {
-                "overflow": "hidden",
-                "width": 750,
-              }
-            }
-          >
-            <RCTScrollView>
-              <View>
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 20,
+                      "paddingHorizontal": 0,
                       "paddingVertical": 20,
                     }
                   }
                 >
-                  <View>
-                    <View
-                      style={
+                  <RCTScrollView
+                    data={
+                      Array [
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "40%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
+                          "id": "fakeId0",
+                          "node": Object {
+                            "id": "fakeId0",
+                            "isLoading": true,
+                            "title": "",
+                          },
+                        },
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
+                          "id": "fakeId1",
+                          "node": Object {
+                            "id": "fakeId0",
+                            "isLoading": true,
+                            "title": "",
+                          },
+                        },
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
+                          "id": "fakeId2",
+                          "node": Object {
+                            "id": "fakeId0",
+                            "isLoading": true,
+                            "title": "",
+                          },
+                        },
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
+                          "id": "fakeId3",
+                          "node": Object {
+                            "id": "fakeId0",
+                            "isLoading": true,
+                            "title": "",
+                          },
+                        },
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "60%",
-                        }
+                          "id": "fakeId4",
+                          "node": Object {
+                            "id": "fakeId0",
+                            "isLoading": true,
+                            "title": "",
+                          },
+                        },
+                      ]
+                    }
+                    decelerationRate="fast"
+                    disableVirtualization={false}
+                    fetchMore={[Function]}
+                    getItem={[Function]}
+                    getItemCount={[Function]}
+                    horizontal={true}
+                    initialNumToRender={10}
+                    initialScrollIndex={0}
+                    keyExtractor={[Function]}
+                    loadingStateObject={
+                      Object {
+                        "node": Object {
+                          "id": "fakeId0",
+                          "isLoading": true,
+                          "title": "",
+                        },
                       }
-                    />
-                  </View>
-                  <View>
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "40%",
-                        }
+                    }
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onContentSizeChange={[Function]}
+                    onEndReachedThreshold={2}
+                    onLayout={[Function]}
+                    onMomentumScrollEnd={[Function]}
+                    onScroll={[Function]}
+                    onScrollBeginDrag={[Function]}
+                    onScrollEndDrag={[Function]}
+                    refreshing={true}
+                    renderItem={[Function]}
+                    scrollEventThrottle={50}
+                    showsHorizontalScrollIndicator={false}
+                    snapToAlignment="start"
+                    snapToInterval={590}
+                    stickyHeaderIndices={Array []}
+                    style={
+                      Object {
+                        "height": 600,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": 10,
                       }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
+                    }
+                    tileHeight={600}
+                    updateCellsBatchingPeriod={50}
+                    viewabilityConfigCallbackPairs={Array []}
+                    windowSize={21}
+                  >
+                    <View>
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
                         }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
+                      />
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
                         }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
+                      />
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
                         }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 6,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "60%",
+                      />
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
                         }
-                      }
-                    />
-                  </View>
+                      />
+                      <View
+                        onLayout={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      />
+                    </View>
+                  </RCTScrollView>
                 </View>
               </View>
             </RCTScrollView>
