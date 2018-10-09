@@ -49,6 +49,10 @@ export default class NotificationsInit extends Component {
     console.log('Data: ', openResult.notification.payload.additionalData);
     console.log('isActive: ', openResult.notification.isAppInFocus);
     console.log('openResult: ', openResult);
+    const url = openResult.notification.payload.additionalData.url;
+    if (url) {
+      this.navigate(url);
+    }
   };
 
   onIds = (device) => {
