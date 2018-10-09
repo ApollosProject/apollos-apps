@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import { Linking, Platform } from 'react-native';
 import OneSignal from 'react-native-onesignal';
-import { withNavigation } from 'react-navigation';
+import NavigationService from './NavigationService';
 import { ONE_SIGNAL_KEY } from './config';
 
-class NotificationsInit extends Component {
+export default class NotificationsInit extends Component {
   static navigationOptions = {};
 
   componentWillMount() {
@@ -34,7 +34,7 @@ class NotificationsInit extends Component {
   }
 
   handleOpenURL = (event) => {
-    this.navigate(event.url);
+    NavigationService.navigate(event.url);
   };
 
   navigate = (url) => {
@@ -73,5 +73,3 @@ class NotificationsInit extends Component {
     return null;
   }
 }
-
-export default withNavigation(NotificationsInit);
