@@ -59,6 +59,8 @@ UserAvatarHeader.propTypes = {
   location: PropTypes.string,
   photo: ConnectedImage.propTypes.source,
   refetch: PropTypes.func,
+  navigation: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 export default UserAvatarHeader;

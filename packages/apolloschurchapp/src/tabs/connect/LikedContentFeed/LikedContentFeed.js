@@ -8,7 +8,7 @@ import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 
-import TileImageItem from '../discover/TileImageItem';
+import TileImageItem from '../../discover/TileImageItem';
 
 const RowHeader = styled({
   flexDirection: 'row',
