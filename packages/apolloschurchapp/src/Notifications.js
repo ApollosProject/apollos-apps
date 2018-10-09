@@ -1,5 +1,7 @@
+import querystring from 'querystring';
+import URL from 'url';
 import { Component } from 'react';
-import { Linking, Platform } from 'react-native';
+import { Linking } from 'react-native';
 import OneSignal from 'react-native-onesignal';
 import NavigationService from './NavigationService';
 import { ONE_SIGNAL_KEY } from './config';
@@ -17,41 +19,25 @@ export default class NotificationsInit extends Component {
   }
 
   componentDidMount() {
-    if (Platform.OS === 'android') {
-      Linking.getInitialURL().then((url) => {
-        this.navigate(url);
-      });
-    } else {
-      Linking.addEventListener('url', this.handleOpenURL);
-    }
+    Linking.getInitialURL().then((url) => {
+      this.navigate(url);
+    });
+    Linking.addEventListener('url', ({ url }) => this.navigate(url));
   }
 
   componentWillUnmount() {
-    Linking.removeEventListener('url', this.handleOpenURL);
-    OneSignal.removeEventListener('received', this.onReceived);
-    OneSignal.removeEventListener('opened', this.onOpened);
-    OneSignal.removeEventListener('ids', this.onIds);
+    Linking.removeEventListener('url');
+    OneSignal.removeEventListener('received');
+    OneSignal.removeEventListener('opened');
+    OneSignal.removeEventListener('ids');
   }
 
-  handleOpenURL = (event) => {
-    NavigationService.navigate(event.url);
-  };
-
-  navigate = (url) => {
-    const { navigate } = this.props.navigation;
-    const route = url.replace(/.*?:\/\//g, '');
-    const id = route.match(/\/([^]+)\/?$/)[1];
-    const routeName = route.split('/')[0];
-
-    if (routeName === 'AppStackNavigator') {
-      navigate('AppStackNavigator', { id });
-    } else if (routeName === 'Tabs') {
-      navigate('Tabs');
-    } else if (routeName === 'ContentSingle') {
-      navigate('ContentSingle', { id });
-    } else if (routeName === 'Connect') {
-      navigate('Connect');
-    }
+  navigate = (rawUrl) => {
+    if (!rawUrl) return;
+    const url = URL.parse(rawUrl);
+    const route = url.pathname.substring(1);
+    const args = querystring.parse(url.query);
+    NavigationService.navigate(route, args);
   };
 
   onReceived = (notification) => {
