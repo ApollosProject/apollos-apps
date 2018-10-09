@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, View, SafeAreaView } from 'react-native';
+import { ScrollView, View, SafeAreaView, Platform } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -15,7 +15,7 @@ import TableView, {
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
-import { H1, H5 } from 'apolloschurchapp/src/ui/typography';
+import { H1, BodyText, Paragraph } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 
@@ -25,33 +25,35 @@ import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
 import getLikedContent from './getLikedContent';
 
-const Title = styled(({ theme }) => ({ color: theme.colors.primary }))(H1);
+const Title = styled(({ theme }) => ({
+  color: theme.colors.primary,
+  paddingBottom: theme.helpers.verticalRhythm(1.5),
+}))(H1);
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 2.25,
-  marginVertical: theme.sizing.baseUnit,
+  marginBottom: theme.sizing.baseUnit,
   fill: theme.colors.primary,
 }))(Icon);
-
-const HeaderContainer = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
-}))(SafeAreaView);
 
 const Header = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
   paddingBottom: theme.sizing.baseUnit * 1.5,
+  backgroundColor: theme.colors.background.paper,
+  ...Platform.select({
+    ios: {
+      paddingTop: theme.sizing.baseUnit * 4.75,
+    },
+    android: {
+      paddingTop: theme.sizing.baseUnit * 3.75,
+    },
+  }),
 }))(View);
 
-const Space = styled(({ theme }) => ({
-  alignSelf: 'flex-end',
-  marginTop: theme.sizing.baseUnit * 0.75,
-  marginRight: theme.sizing.baseUnit,
-}))(View);
-
-const ConnectText = styled(({ theme }) => ({
-  paddingVertical: theme.sizing.baseUnit,
-}))(H5);
+const StyledLoginButton = styled(({ theme }) => ({
+  marginVertical: theme.sizing.baseUnit,
+}))(LoginButton);
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -132,23 +134,26 @@ class Connect extends PureComponent {
                         </View>
                       );
                     return (
-                      <HeaderContainer>
-                        <Space />
+                      <SafeAreaView>
                         <Header>
                           <BrandIcon />
                           <Title>Connect!</Title>
-                          <H5>
-                            Our mission is to help you connect to others as well
-                            as help you in your walk with Christ.
-                          </H5>
-                          <ConnectText>
-                            By joining this community, you will unlock amazing
-                            features like; curated content and devotionals,
-                            simple event registration, and easy online giving!
-                          </ConnectText>
-                          <LoginButton />
+                          <Paragraph>
+                            <BodyText>
+                              Our mission is to help you connect to others as
+                              well as help you in your walk with Christ.
+                            </BodyText>
+                          </Paragraph>
+                          <Paragraph>
+                            <BodyText>
+                              By joining this community, you will unlock amazing
+                              features like; curated content and devotionals,
+                              simple event registration, and easy online giving!
+                            </BodyText>
+                          </Paragraph>
+                          <StyledLoginButton />
                         </Header>
-                      </HeaderContainer>
+                      </SafeAreaView>
                     );
                   }}
                 </Query>

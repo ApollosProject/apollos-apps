@@ -9,8 +9,6 @@ import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import styled from 'apolloschurchapp/src/ui/styled';
 
-const enhance = compose(withTheme());
-
 const Container = styled({
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -19,41 +17,40 @@ const Container = styled({
   marginLeft: 15,
 })(View);
 
-const SettingsButton = styled({
-  marginRight: 10,
-})(Icon);
+const SettingsButton = compose(
+  withTheme(({ theme }) => ({
+    name: 'settings',
+    fill: theme.colors.text.tertiary,
+  })),
+  styled({
+    marginRight: 10,
+  })
+)(Icon);
 
-const UserAvatarHeader = enhance(
-  ({
-    theme,
-    firstName,
-    lastName,
-    location,
-    photo,
-    refetch,
-    navigation,
-    disabled,
-  }) => (
-    <Container>
-      <UserAvatarView
-        firstName={firstName}
-        lastName={lastName}
-        location={location}
-        photo={photo}
-        refetch={refetch}
-        disabled={disabled}
-      />
-      <TouchableWithoutFeedback
-        onPress={() => navigation.navigate('UserSettings', { photo, refetch })}
-      >
-        <SettingsButton
-          name={'settings'}
-          fill={theme.colors.text.tertiary}
-          size={32}
-        />
-      </TouchableWithoutFeedback>
-    </Container>
-  )
+const UserAvatarHeader = ({
+  firstName,
+  lastName,
+  location,
+  photo,
+  refetch,
+  navigation,
+  disabled,
+}) => (
+  <Container>
+    <UserAvatarView
+      firstName={firstName}
+      lastName={lastName}
+      location={location}
+      photo={photo}
+      refetch={refetch}
+      disabled={disabled}
+    />
+    <TouchableWithoutFeedback
+      onPress={() => navigation.navigate('UserSettings', { photo, refetch })}
+    >
+      <SettingsButton />
+    </TouchableWithoutFeedback>
+  </Container>
 );
 
 UserAvatarHeader.propTypes = {

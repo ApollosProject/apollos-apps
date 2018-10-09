@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
@@ -16,10 +17,10 @@ const StyledAvatar = withTheme(({ theme }) => ({
   },
 }))(Avatar);
 
-const StyledTouchable = styled({
+const Wrapper = styled({
   justifyContent: 'center',
   alignItems: 'center',
-})(Touchable);
+})(View);
 
 const StyledText = styled(({ theme }) => ({
   color: theme.colors.secondary,
@@ -43,17 +44,19 @@ export default class AvatarForm extends PureComponent {
     const { isUploadingFile } = this.state;
 
     return (
-      <StyledTouchable
-        disabled={this.props.disabled}
-        onPress={this.handleUploadPhoto}
-      >
-        <StyledAvatar
-          source={photo}
-          size="medium"
-          isLoading={isUploadingFile}
-        />
+      <Wrapper>
+        <Touchable
+          disabled={this.props.disabled}
+          onPress={this.handleUploadPhoto}
+        >
+          <StyledAvatar
+            source={photo}
+            size="medium"
+            isLoading={isUploadingFile}
+          />
+        </Touchable>
         {this.props.text ? <StyledText>Change Photo</StyledText> : null}
-      </StyledTouchable>
+      </Wrapper>
     );
   }
 }

@@ -5,10 +5,7 @@ import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import FeedView from 'apolloschurchapp/src/ui/FeedView';
 
 import getLikedContent from './getLikedContent';
-/**
- * This is where the component description lives
- * A FeedView wrapped in a query to pull content data.
- */
+/** A FeedView wrapped in a query to pull content data. */
 class ContentFeed extends PureComponent {
   /** Function for React Navigation to set information in the header. */
   static navigationOptions = () => ({
