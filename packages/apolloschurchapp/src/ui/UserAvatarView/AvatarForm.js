@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
@@ -47,12 +48,14 @@ export default class AvatarForm extends PureComponent {
         disabled={this.props.disabled}
         onPress={this.handleUploadPhoto}
       >
-        <StyledAvatar
-          source={photo}
-          size="medium"
-          isLoading={isUploadingFile}
-        />
-        {this.props.text ? <StyledText>Change Photo</StyledText> : null}
+        <>
+          <StyledAvatar
+            source={photo}
+            size="medium"
+            isLoading={isUploadingFile}
+          />
+          {this.props.text ? <StyledText>Change Photo</StyledText> : null}
+        </>
       </StyledTouchable>
     );
   }
