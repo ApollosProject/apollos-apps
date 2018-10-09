@@ -200,7 +200,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
@@ -321,7 +321,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
@@ -774,8 +774,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="24"
-                    bbWidth="24"
+                    bbHeight="30"
+                    bbWidth="30"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -790,8 +790,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         },
                         Object {
                           "flex": 0,
-                          "height": 24,
-                          "width": 24,
+                          "height": 30,
+                          "width": 30,
                         },
                       ]
                     }
@@ -864,8 +864,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="40"
-                    bbWidth="40"
+                    bbHeight="50"
+                    bbWidth="50"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -880,8 +880,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         },
                         Object {
                           "flex": 0,
-                          "height": 40,
-                          "width": 40,
+                          "height": 50,
+                          "width": 50,
                         },
                       ]
                     }
@@ -954,8 +954,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="24"
-                    bbWidth="24"
+                    bbHeight="30"
+                    bbWidth="30"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -970,8 +970,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         },
                         Object {
                           "flex": 0,
-                          "height": 24,
-                          "width": 24,
+                          "height": 30,
+                          "width": 30,
                         },
                       ]
                     }
@@ -1042,7 +1042,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
@@ -1673,7 +1673,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
@@ -1794,7 +1794,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
@@ -2247,8 +2247,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="24"
-                    bbWidth="24"
+                    bbHeight="30"
+                    bbWidth="30"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -2263,8 +2263,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         },
                         Object {
                           "flex": 0,
-                          "height": 24,
-                          "width": 24,
+                          "height": 30,
+                          "width": 30,
                         },
                       ]
                     }
@@ -2337,8 +2337,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="40"
-                    bbWidth="40"
+                    bbHeight="50"
+                    bbWidth="50"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -2353,8 +2353,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         },
                         Object {
                           "flex": 0,
-                          "height": 40,
-                          "width": 40,
+                          "height": 50,
+                          "width": 50,
                         },
                       ]
                     }
@@ -2427,8 +2427,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="24"
-                    bbWidth="24"
+                    bbHeight="30"
+                    bbWidth="30"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -2443,8 +2443,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         },
                         Object {
                           "flex": 0,
-                          "height": 24,
-                          "width": 24,
+                          "height": 30,
+                          "width": 30,
                         },
                       ]
                     }
@@ -2515,7 +2515,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
@@ -3146,7 +3146,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
@@ -3267,7 +3267,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
@@ -3720,8 +3720,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="24"
-                    bbWidth="24"
+                    bbHeight="30"
+                    bbWidth="30"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -3736,8 +3736,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         },
                         Object {
                           "flex": 0,
-                          "height": 24,
-                          "width": 24,
+                          "height": 30,
+                          "width": 30,
                         },
                       ]
                     }
@@ -3810,8 +3810,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="40"
-                    bbWidth="40"
+                    bbHeight="50"
+                    bbWidth="50"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -3826,8 +3826,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         },
                         Object {
                           "flex": 0,
-                          "height": 40,
-                          "width": 40,
+                          "height": 50,
+                          "width": 50,
                         },
                       ]
                     }
@@ -3900,8 +3900,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="24"
-                    bbWidth="24"
+                    bbHeight="30"
+                    bbWidth="30"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -3916,8 +3916,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         },
                         Object {
                           "flex": 0,
-                          "height": 24,
-                          "width": 24,
+                          "height": 30,
+                          "width": 30,
                         },
                       ]
                     }
@@ -3988,7 +3988,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
