@@ -53,6 +53,22 @@ describe('the Devotional component', () => {
     await wait(0); // wait for response
     expect(tree).toMatchSnapshot();
   });
+  it('renders even with empty scripture array', async () => {
+    const tree = renderer.create(
+      <Providers>
+        <Devotional
+          body={content.body}
+          title={content.title}
+          isLoading
+          scripture={[]}
+          renderItem={renderItem}
+          loadingStateObject={loadingStateObject}
+        />
+      </Providers>
+    );
+    await wait(0); // wait for response
+    expect(tree).toMatchSnapshot();
+  });
   it('renders a loading state', async () => {
     const tree = renderer.create(
       <Providers>
