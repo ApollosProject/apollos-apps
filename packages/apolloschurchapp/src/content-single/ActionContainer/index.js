@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform, SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
+import { get } from 'lodash';
 
 import Share from 'apolloschurchapp/src/ui/Share';
 
@@ -28,9 +29,12 @@ const ActionContainer = ({ itemId }) => (
     <PositioningView>
       <LikeButton itemId={itemId} />
       <Query query={getShareContent} variables={{ itemId }}>
-        {({ data: { node: { sharing = {} } = {} } = {}, error, loading }) =>
-          loading || error ? null : <Share content={sharing} />
-        }
+        {({ data: { node } = {}, error, loading }) => {
+          const sharing = get(node, 'sharing');
+          return loading || error || !sharing ? null : (
+            <Share content={sharing} />
+          );
+        }}
       </Query>
     </PositioningView>
     <MediaPlayerSpacer />

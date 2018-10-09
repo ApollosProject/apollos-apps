@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-
+import { get } from 'lodash';
 import { Query, Mutation } from 'react-apollo';
 
 import Like from 'apolloschurchapp/src/ui/Like';
@@ -13,7 +13,7 @@ import getLikedContentItem from './getLikedContentItem';
 const GetLikeData = ({ itemId, children }) => (
   <Query query={getLikedContentItem} variables={{ itemId }}>
     {({ data: { node = {} } = {}, loading }) => {
-      const isLiked = loading ? false : node.isLiked || false;
+      const isLiked = loading ? false : get(node, 'isLiked') || false;
       return children({ isLiked, item: node });
     }}
   </Query>
