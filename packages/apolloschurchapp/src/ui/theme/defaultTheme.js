@@ -70,8 +70,8 @@ export const breakpoints = {
 // Base sizing units. These are used to scale
 // space, and size components relatively to one another.
 export const sizing = {
-  baseUnit: 20,
-  borderRadius: 6,
+  baseUnit: 16,
+  borderRadius: 16,
   avatar: {
     small: 40,
     medium: 80,

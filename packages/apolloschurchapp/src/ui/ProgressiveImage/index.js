@@ -4,8 +4,14 @@ import { View, StyleSheet } from 'react-native';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
+import { getIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 const Wrapper = styled(({ theme }) => ({
+  width: '100%',
+  backgroundColor: theme.colors.background.inactive,
+}))(View);
+
+const NoImagePlaceholder = styled(({ theme }) => ({
   width: '100%',
   aspectRatio: 1,
   backgroundColor: theme.colors.background.inactive,
@@ -14,7 +20,6 @@ const Wrapper = styled(({ theme }) => ({
 const styles = StyleSheet.create({
   imageStyles: {
     width: '100%',
-    height: '100%',
     resizeMode: 'cover',
   },
 });
@@ -43,10 +48,12 @@ class ProgressiveImage extends PureComponent {
       onLoadImage,
       imageStyle,
       style,
+      isLoading,
       ...imageProps
     } = this.props;
     return (
       <Wrapper style={style}>
+        {!source && !thumbnail && isLoading ? <NoImagePlaceholder /> : null}
         {thumbnail ? (
           <ConnectedImage
             {...imageProps}
@@ -55,14 +62,20 @@ class ProgressiveImage extends PureComponent {
             source={thumbnail}
           />
         ) : null}
-        <ConnectedImage
-          {...imageProps}
-          style={[styles.imageStyles, imageStyle]}
-          source={source}
-        />
+        {source || isLoading ? (
+          <ConnectedImage
+            {...imageProps}
+            isLoading={isLoading}
+            style={[styles.imageStyles, imageStyle]}
+            source={source}
+          />
+        ) : null}
       </Wrapper>
     );
   }
 }
 
-export default ProgressiveImage;
+const ProgressiveImageWithLoadingState = getIsLoading(ProgressiveImage);
+ProgressiveImageWithLoadingState.propTypes = ProgressiveImage.propTypes;
+
+export default ProgressiveImageWithLoadingState;

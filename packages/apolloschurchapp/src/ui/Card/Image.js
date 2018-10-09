@@ -2,14 +2,13 @@ import { Platform } from 'react-native';
 import { compose } from 'recompose';
 
 import styled from 'apolloschurchapp/src/ui/styled';
-import ProgressiveImage from 'apolloschurchapp/src/ui/ProgressiveImage';
+import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
 import { getIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 const Image = compose(
   getIsLoading,
   styled(
     ({ theme }) => ({
-      aspectRatio: 1,
       width: '100%',
       ...Platform.select({
         android: {
@@ -21,8 +20,8 @@ const Image = compose(
     }),
     'Card.Image'
   )
-)(ProgressiveImage);
+)(GradientOverlayImage);
 
-Image.propTypes = ProgressiveImage.propTypes;
+Image.propTypes = GradientOverlayImage.propTypes;
 
 export default Image;

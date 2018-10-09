@@ -24,10 +24,9 @@ const Wrapper = styled(({ flexed }) => ({
 }))(View);
 
 const PlaceholderWrapper = styled(({ theme, withIcon }) => ({
-  flex: 1,
   ...(withIcon
-    ? { paddingHorizontal: theme.sizing.baseUnit / 2 }
-    : { paddingRight: theme.sizing.baseUnit / 2 }),
+    ? { paddingHorizontal: theme.sizing.baseUnit / 4 }
+    : { paddingRight: theme.sizing.baseUnit / 4 }),
 }))(View);
 
 const StyledH6 = styled(({ theme }) => ({
