@@ -9,10 +9,11 @@ import { enhancer as mediaQuery } from 'apolloschurchapp/src/ui/MediaQuery';
 
 const StyledCard = compose(
   withIsLoading,
-  styled(({ theme, cardColor }) => ({
+  styled(({ theme, cardColor, forceRatio }) => ({
     // card styles
     backgroundColor: cardColor || theme.colors.background.paper,
     borderRadius: theme.sizing.borderRadius,
+    aspectRatio: forceRatio,
     ...Platform.select(theme.shadows.default),
   })),
   mediaQuery(
@@ -35,20 +36,22 @@ const StyledCard = compose(
  * Overflow on iOS, when declared on the same element as a shadow, clips the shadow so overflow must
  * live on a child wrapper. https://github.com/facebook/react-native/issues/449
  */
-const OverflowFix = styled(({ theme }) => ({
+const OverflowFix = styled(({ theme, forceRatio }) => ({
   borderRadius: theme.sizing.borderRadius,
   overflow: 'hidden',
+  aspectRatio: forceRatio,
 }))(View);
 
-const Card = pure(({ children, isLoading, ...otherProps }) => (
-  <StyledCard {...otherProps}>
-    <OverflowFix>{children}</OverflowFix>
+const Card = pure(({ children, isLoading, forceRatio, ...otherProps }) => (
+  <StyledCard forceRatio={forceRatio} {...otherProps}>
+    <OverflowFix forceRatio={forceRatio}>{children}</OverflowFix>
   </StyledCard>
 ));
 
 Card.propTypes = {
   backgroundColor: PropTypes.string,
   children: PropTypes.node,
+  forceRatio: PropTypes.number,
   style: PropTypes.any, // eslint-disable-line
 };
 

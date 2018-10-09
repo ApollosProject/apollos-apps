@@ -28,6 +28,7 @@ const getGradientValues = (overlayColor) => {
 
 const Container = styled(({ theme }) => ({
   width: '100%',
+  overflow: 'hidden',
   backgroundColor: theme.colors.background.inactive,
 }))(View);
 
@@ -63,7 +64,7 @@ const GradientOverlayImage = pure(
             {...otherProps}
           />
         ) : (
-          <NoImagePlaceholder />
+          <NoImagePlaceholder style={imageStyle} />
         )}
         {overlayColor ? (
           <Overlay

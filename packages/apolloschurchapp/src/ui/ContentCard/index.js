@@ -1,17 +1,27 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
+import { Dimensions } from 'react-native';
 
 import Card from 'apolloschurchapp/src/ui/Card';
 import { ImageSourceType } from 'apolloschurchapp/src/ui/ConnectedImage';
 import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
 import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
+import styled from 'apolloschurchapp/src/ui/styled';
 
 import ImageHeader from './ImageHeader';
 import TextHeader from './TextHeader';
 import ContentText from './ContentText';
 import Metrics from './Metrics';
 import CardFooter from './CardFooter';
+
+const ContentCardWrapper = styled(({ tile }) => {
+  if (!tile) return {};
+  const size = Dimensions.get('window').width * (248 / 375);
+  return {
+    width: size,
+  };
+})(Card);
 
 class ContentCard extends PureComponent {
   static propTypes = {
@@ -29,6 +39,7 @@ class ContentCard extends PureComponent {
       })
     ),
     theme: PropTypes.shape({}),
+    tile: PropTypes.bool,
   };
 
   renderCardHeader() {
@@ -36,7 +47,7 @@ class ContentCard extends PureComponent {
       return (
         <ImageHeader
           coverImage={this.props.coverImage}
-          forceRatio={!this.props.isLoading && !this.props.title}
+          forceRatio={!this.props.isLoading && !this.props.title ? 1 : 2}
           showOverlayColor={!this.props.isLoading && !this.props.title}
         />
       );
@@ -48,6 +59,7 @@ class ContentCard extends PureComponent {
     if (!this.props.title && !this.props.isLoading) return null;
     return (
       <ContentText
+        tile={this.props.tile}
         isLoading={this.props.isLoading}
         title={this.props.coverImage ? this.props.title : undefined}
         summary={this.props.summary}
@@ -61,7 +73,7 @@ class ContentCard extends PureComponent {
       !this.props.isLoading && this.props.coverImage && !this.props.title;
 
     const footer = (
-      <CardFooter floating={floating}>
+      <CardFooter floating={this.props.tile || floating}>
         <Metrics
           isLoading={this.props.isLoading}
           metrics={this.props.metrics}
@@ -92,11 +104,15 @@ class ContentCard extends PureComponent {
           colors: get(this.props, 'theme.colors'),
         }}
       >
-        <Card>
+        <ContentCardWrapper
+          forceRatio={this.props.tile ? 1 : undefined}
+          tile={this.props.tile}
+          isLoading={this.props.isLoading}
+        >
           {this.renderCardHeader()}
           {this.renderCardContent()}
           {this.renderCardFooter()}
-        </Card>
+        </ContentCardWrapper>
       </ThemeMixin>
     );
   }
