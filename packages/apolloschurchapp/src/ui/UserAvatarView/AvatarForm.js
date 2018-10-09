@@ -17,10 +17,10 @@ const StyledAvatar = withTheme(({ theme }) => ({
   },
 }))(Avatar);
 
-const StyledTouchable = styled({
+const Wrapper = styled({
   justifyContent: 'center',
   alignItems: 'center',
-})(Touchable);
+})(View);
 
 const StyledText = styled(({ theme }) => ({
   color: theme.colors.secondary,
@@ -44,19 +44,19 @@ export default class AvatarForm extends PureComponent {
     const { isUploadingFile } = this.state;
 
     return (
-      <StyledTouchable
-        disabled={this.props.disabled}
-        onPress={this.handleUploadPhoto}
-      >
-        <>
+      <Wrapper>
+        <Touchable
+          disabled={this.props.disabled}
+          onPress={this.handleUploadPhoto}
+        >
           <StyledAvatar
             source={photo}
             size="medium"
             isLoading={isUploadingFile}
           />
-          {this.props.text ? <StyledText>Change Photo</StyledText> : null}
-        </>
-      </StyledTouchable>
+        </Touchable>
+        {this.props.text ? <StyledText>Change Photo</StyledText> : null}
+      </Wrapper>
     );
   }
 }
