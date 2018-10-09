@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LoginButton component renders a LoginButton that is loading 1`] = `
+<View
+  accessibilityComponentType="button"
+  accessibilityTraits={
+    Array [
+      "button",
+      "disabled",
+    ]
+  }
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    bordered={false}
+    disabled={false}
+    pill={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 60,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "center",
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#FFFFFF"
+      hidesWhenStopped={true}
+      size="small"
+    />
+  </View>
+</View>
+`;
+
 exports[`LoginButton component renders a LoginButton when logged out 1`] = `
 <View
   accessibilityComponentType="button"
@@ -58,3 +112,5 @@ exports[`LoginButton component renders a LoginButton when logged out 1`] = `
   </View>
 </View>
 `;
+
+exports[`LoginButton component renders nothing when logged in 1`] = `null`;

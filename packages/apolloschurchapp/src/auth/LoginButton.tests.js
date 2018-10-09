@@ -8,6 +8,26 @@ import LoginButton from './LoginButton';
 import getLoginState from './getLoginState';
 
 describe('LoginButton component', () => {
+  it('renders nothing when logged in', async () => {
+    const mock = {
+      request: {
+        query: getLoginState,
+      },
+      result: {
+        data: { isLoggedIn: true },
+      },
+    };
+
+    const navigation = { navigate: jest.fn() };
+    const tree = renderer.create(
+      <Providers mocks={[mock]}>
+        <LoginButton navigation={navigation} />
+      </Providers>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+  });
+
   it('renders a LoginButton when logged out', async () => {
     const mock = {
       request: {
@@ -22,6 +42,26 @@ describe('LoginButton component', () => {
     const tree = renderer.create(
       <Providers mocks={[mock]}>
         <LoginButton navigation={navigation} />
+      </Providers>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders a LoginButton that is loading', async () => {
+    const mock = {
+      request: {
+        query: getLoginState,
+      },
+      result: {
+        data: { isLoggedIn: null },
+      },
+    };
+
+    const navigation = { navigate: jest.fn() };
+    const tree = renderer.create(
+      <Providers mocks={[mock]}>
+        <LoginButton navigation={navigation} loading />
       </Providers>
     );
     await wait(0); // wait for response from graphql
