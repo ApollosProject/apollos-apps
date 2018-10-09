@@ -49,7 +49,11 @@ export default class NotificationsInit extends Component {
     console.log('Data: ', openResult.notification.payload.additionalData);
     console.log('isActive: ', openResult.notification.isAppInFocus);
     console.log('openResult: ', openResult);
-    const url = openResult.notification.payload.additionalData.url;
+    // URL looks like this
+    // apolloschurchapp://AppStackNavigator/Connect
+    // apolloschurchapp://SomethingElse/Connect
+    // apolloschurchapp://SomethingElse/ContentSingle?itemId=SomeItemId:blablalba
+    const { url } = openResult.notification.payload.additionalData;
     if (url) {
       this.navigate(url);
     }
