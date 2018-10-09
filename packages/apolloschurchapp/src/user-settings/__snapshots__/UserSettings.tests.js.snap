@@ -26,36 +26,43 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
     }
   >
     <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "opacity": 1,
         }
       }
     >
       <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 50,
-            "height": 100,
-            "marginBottom": 10,
-            "marginRight": 0,
-            "overflow": "hidden",
-            "width": 100,
+            "opacity": 1,
           }
         }
-        themeSize={100}
-      />
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 50,
+              "height": 100,
+              "marginBottom": 10,
+              "marginRight": 0,
+              "overflow": "hidden",
+              "width": 100,
+            }
+          }
+          themeSize={100}
+        />
+      </View>
       <Text
         style={
           Object {
