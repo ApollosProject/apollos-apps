@@ -19,7 +19,7 @@ import { H1, BodyText, Paragraph } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 
-import LikedContentFeed from './LikedContentFeed';
+import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
 import UserAvatarHeader from './UserAvatarHeader';
 import getLoginState from './getLoginState';
 import getUserProfile from './getUserProfile';
@@ -118,7 +118,7 @@ class Connect extends PureComponent {
                             }) => {
                               if (!getAllLikedContent.length) return null;
                               return (
-                                <LikedContentFeed
+                                <RecentlyLikedTileFeed
                                   id={'liked'}
                                   name={'Recently Like'}
                                   content={getAllLikedContent}
