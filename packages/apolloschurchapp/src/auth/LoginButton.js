@@ -4,14 +4,9 @@ import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
 import Button from 'apolloschurchapp/src/ui/Button';
-import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
 
 import getLoginState from './getLoginState';
-
-const Login = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit,
-}))(Button);
 
 class LoginButton extends PureComponent {
   static propTypes = {
@@ -30,7 +25,7 @@ class LoginButton extends PureComponent {
           if (loading) return <ActivityIndicator />;
           if (isLoggedIn) return null;
           return (
-            <Login onPress={this.handleLoginPress} title="Get Connected" />
+            <Button onPress={this.handleLoginPress} title="Get Connected" />
           );
         }}
       </Query>
