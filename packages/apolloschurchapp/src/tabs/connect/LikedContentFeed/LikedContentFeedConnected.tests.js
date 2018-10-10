@@ -4,11 +4,11 @@ import wait from 'waait';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import getLikedContent from '../getUserProfile';
+import getLikedContent from '../getLikedContent';
 import LikedContentFeedConnected from './LikedContentFeedConnected';
 
-describe('user avatar header connect', () => {
-  it('renders user avatar header if logged in', async () => {
+describe('liked content feed connect', () => {
+  it('renders a liked content feed', async () => {
     const mock = {
       request: {
         query: getLikedContent,
@@ -71,9 +71,31 @@ describe('user avatar header connect', () => {
         },
       },
     };
+    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
-        <LikedContentFeedConnected />
+        <LikedContentFeedConnected navigation={navigation} />
+      </Providers>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders nothing if no liked content', async () => {
+    const mock = {
+      request: {
+        query: getLikedContent,
+      },
+      result: {
+        data: {
+          getAllLikedContent: [],
+        },
+      },
+    };
+    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const tree = renderer.create(
+      <Providers mocks={[mock]}>
+        <LikedContentFeedConnected navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response from graphql

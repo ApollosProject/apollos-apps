@@ -81,7 +81,9 @@ class Connect extends PureComponent {
                           <UserAvatarHeaderConnected
                             navigation={this.props.navigation}
                           />
-                          <LikedContentFeedConnected />
+                          <LikedContentFeedConnected
+                            navigation={this.props.navigation}
+                          />
                         </View>
                       );
                     return (
