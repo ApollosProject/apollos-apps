@@ -90,10 +90,14 @@ UpdateLikeStatus.propTypes = {
 
 const LikeButton = ({ itemId }) => (
   <GetLikeData itemId={itemId}>
-    {({ isLiked: preLike, item }) => (
-      <UpdateLikeStatus itemId={itemId} item={item} isLiked={preLike}>
-        {({ toggleLike, isLiked }) => (
-          <Like itemId={itemId} isLiked={isLiked} toggleLike={toggleLike} />
+    {({ isLiked, item }) => (
+      <UpdateLikeStatus itemId={itemId} item={item} isLiked={isLiked}>
+        {({ toggleLike, isLiked: newLikeValue }) => (
+          <Like
+            itemId={itemId}
+            isLiked={newLikeValue}
+            toggleLike={toggleLike}
+          />
         )}
       </UpdateLikeStatus>
     )}
