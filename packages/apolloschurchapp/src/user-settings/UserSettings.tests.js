@@ -5,7 +5,7 @@ import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import getLoginState from '../tabs/connect/getLoginState';
-import UserSettings from './UserSettings';
+import UserSettings from '.';
 
 describe('UserSettings component', () => {
   it('renders UserSettings when logged in', async () => {

@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { ScrollView } from 'react-native';
 import { Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import { Text as TextInput } from 'apolloschurchapp/src/ui/inputs';
-import FlexedView from 'apolloschurchapp/src/ui/FlexedView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
@@ -18,14 +18,13 @@ import changePassword from './passwordChange';
 
 const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 1.75,
-  paddingRight: theme.sizing.baseUnit,
   flexDirection: 'row',
   alignItems: 'flex-end',
   justifyContent: 'space-between',
   backgroundColor: theme.colors.background.paper,
 }))(PaddedView);
 
-const SpaceHolder = styled(() => ({}))(PaddedView);
+const SpaceHolder = PaddedView;
 
 const DoneButton = styled(() => ({
   fontWeight: '800',
@@ -91,7 +90,7 @@ class ChangePassword extends PureComponent {
               if (props.isSubmitting) return <ActivityIndicator />;
 
               return (
-                <FlexedView>
+                <ScrollView>
                   <Header>
                     <SpaceHolder />
                     <H4>Change Password</H4>
@@ -130,7 +129,7 @@ class ChangePassword extends PureComponent {
                       />
                     </PaddedView>
                   </BackgroundView>
-                </FlexedView>
+                </ScrollView>
               );
             }}
           </Formik>

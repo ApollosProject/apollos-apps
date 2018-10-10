@@ -359,16 +359,6 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
           </RNSVGSvgView>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
-            "height": 0.5,
-            "marginLeft": 13.333333333333334,
-            "width": "100%",
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -761,16 +751,6 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
           </RNSVGSvgView>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
-            "height": 0.5,
-            "marginLeft": 13.333333333333334,
-            "width": "100%",
-          }
-        }
-      />
     </View>
     <View
       style={

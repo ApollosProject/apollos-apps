@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { ScrollView } from 'react-native';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import { Text as TextInput } from 'apolloschurchapp/src/ui/inputs';
-import FlexedView from 'apolloschurchapp/src/ui/FlexedView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
@@ -115,7 +115,7 @@ class PersonalDetails extends PureComponent {
                     if (props.isSubmitting) return <ActivityIndicator />;
 
                     return (
-                      <FlexedView>
+                      <ScrollView>
                         <Header>
                           <SpaceHolder />
                           <H4>Personal Details</H4>
@@ -180,7 +180,7 @@ class PersonalDetails extends PureComponent {
                             />
                           </PaddedView>
                         </BackgroundView>
-                      </FlexedView>
+                      </ScrollView>
                     );
                   }}
                 </Formik>
