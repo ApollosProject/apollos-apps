@@ -29,7 +29,7 @@ const RecentlyLikedTileFeed = ({
       {!isLoading ? (
         <ButtonLink
           onPress={() => {
-            navigation.navigate('LikedFeed');
+            navigation.navigate('LikedContentList');
           }}
         >
           View All
