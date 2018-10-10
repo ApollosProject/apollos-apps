@@ -5,7 +5,7 @@ import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import getLikedContent from '../getLikedContent';
-import LikedFeed from './LikedFeed';
+import LikedFeed from '.';
 
 describe('LikedFeed component', () => {
   it('renders LikedFeed', async () => {
