@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`liked content feed connect renders a liked content feed 1`] = `
+exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected 1`] = `
 <View
   horizontal={false}
   style={
@@ -17,7 +17,7 @@ exports[`liked content feed connect renders a liked content feed 1`] = `
         "flexDirection": "row",
         "justifyContent": "space-between",
         "paddingHorizontal": 20,
-        "paddingVertical": 0,
+        "paddingVertical": 20,
       }
     }
   >
@@ -560,4 +560,4 @@ exports[`liked content feed connect renders a liked content feed 1`] = `
 </View>
 `;
 
-exports[`liked content feed connect renders nothing if no liked content 1`] = `null`;
+exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] = `null`;

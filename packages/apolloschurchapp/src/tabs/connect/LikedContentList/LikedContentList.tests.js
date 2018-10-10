@@ -5,10 +5,10 @@ import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import getLikedContent from '../getLikedContent';
-import LikedFeed from '.';
+import LikedContentList from '.';
 
-describe('LikedFeed component', () => {
-  it('renders LikedFeed', async () => {
+describe('LikedContentList component', () => {
+  it('renders LikedContentList', async () => {
     const mock = {
       request: {
         query: getLikedContent,
@@ -57,7 +57,7 @@ describe('LikedFeed component', () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
-        <LikedFeed navigation={navigation} />
+        <LikedContentList navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response from graphql

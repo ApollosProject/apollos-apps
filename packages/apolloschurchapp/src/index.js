@@ -11,7 +11,7 @@ import ContentSingle from './content-single';
 import UserSettings from './user-settings';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
-import LikedFeed from './tabs/connect/LikedFeed';
+import LikedContentList from './tabs/connect/LikedContentList';
 import Tabs from './tabs';
 import Auth from './auth';
 
@@ -24,7 +24,7 @@ const AppStackNavigator = createStackNavigator(
     Tabs,
     ContentSingle,
     UserSettings,
-    LikedFeed,
+    LikedContentList,
   },
   {
     initialRouteName: 'Tabs',

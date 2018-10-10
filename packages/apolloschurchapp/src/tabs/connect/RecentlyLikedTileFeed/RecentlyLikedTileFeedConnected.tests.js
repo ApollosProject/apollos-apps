@@ -5,10 +5,10 @@ import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import getLikedContent from '../getLikedContent';
-import LikedContentFeedConnected from './LikedContentFeedConnected';
+import RecentlyLikedTileFeedConnected from './RecentlyLikedTileFeedConnected';
 
-describe('liked content feed connect', () => {
-  it('renders a liked content feed', async () => {
+describe('RecentlyLikedTileFeedConnected', () => {
+  it('renders a RecentlyLikedTileFeedConnected', async () => {
     const mock = {
       request: {
         query: getLikedContent,
@@ -74,7 +74,7 @@ describe('liked content feed connect', () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
-        <LikedContentFeedConnected navigation={navigation} />
+        <RecentlyLikedTileFeedConnected navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response from graphql
@@ -95,7 +95,7 @@ describe('liked content feed connect', () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
-        <LikedContentFeedConnected navigation={navigation} />
+        <RecentlyLikedTileFeedConnected navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response from graphql

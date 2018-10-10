@@ -10,14 +10,19 @@ import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 
 import TileImageItem from '../../discover/TileImageItem';
 
-const RowHeader = styled({
+const RowHeader = styled(({ theme, vertical = true }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingVertical: 0,
-})(PaddedView);
+  paddingVertical: vertical ? theme.sizing.baseUnit : 0,
+}))(PaddedView);
 
-const LikedContentFeed = ({ isLoading, name, navigation, content = [] }) => (
+const RecentlyLikedTileFeed = ({
+  isLoading,
+  name,
+  navigation,
+  content = [],
+}) => (
   <PaddedView horizontal={false}>
     <RowHeader>
       <H4 isLoading={isLoading}>{name}</H4>
@@ -50,7 +55,7 @@ const LikedContentFeed = ({ isLoading, name, navigation, content = [] }) => (
   </PaddedView>
 );
 
-LikedContentFeed.propTypes = {
+RecentlyLikedTileFeed.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }),
@@ -61,4 +66,4 @@ LikedContentFeed.propTypes = {
   ),
 };
 
-export default withNavigation(LikedContentFeed);
+export default withNavigation(RecentlyLikedTileFeed);

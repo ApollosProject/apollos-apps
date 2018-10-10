@@ -3,14 +3,14 @@ import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
 import getLikedContent from '../getLikedContent';
-import LikedContentFeed from './LikedContentFeed';
+import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
 
-const LikedContentFeedConnected = ({ navigation }) => (
+const RecentlyLikedTileFeedConnected = ({ navigation }) => (
   <Query query={getLikedContent} fetchPolicy="cache-and-network">
     {({ loading, data: { getAllLikedContent = [] } = {} }) => {
       if (!getAllLikedContent.length) return null;
       return (
-        <LikedContentFeed
+        <RecentlyLikedTileFeed
           id={'liked'}
           name={'Recently Like'}
           content={getAllLikedContent}
@@ -26,11 +26,11 @@ const LikedContentFeedConnected = ({ navigation }) => (
   </Query>
 );
 
-LikedContentFeedConnected.propTypes = {
+RecentlyLikedTileFeedConnected.propTypes = {
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     navigate: PropTypes.func,
   }),
 };
 
-export default LikedContentFeedConnected;
+export default RecentlyLikedTileFeedConnected;

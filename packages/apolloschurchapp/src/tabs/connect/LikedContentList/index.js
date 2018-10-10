@@ -6,7 +6,7 @@ import FeedView from 'apolloschurchapp/src/ui/FeedView';
 
 import getLikedContent from '../getLikedContent';
 /** A FeedView wrapped in a query to pull content data. */
-class LikedFeed extends PureComponent {
+class LikedContentList extends PureComponent {
   /** Function for React Navigation to set information in the header. */
   static navigationOptions = () => ({
     title: 'Liked Content',
@@ -50,4 +50,4 @@ class LikedFeed extends PureComponent {
   }
 }
 
-export default LikedFeed;
+export default LikedContentList;

@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
-import LikedContentFeed from './LikedContentFeed';
+import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
 
-describe('liked content feed', () => {
-  it('renders a liked content feed', () => {
+describe('RecentlyLikedTileFeed', () => {
+  it('renders a RecentlyLikedTileFeed', () => {
     const props = {
       content: [
         {
@@ -50,7 +50,7 @@ describe('liked content feed', () => {
 
     const tree = renderer.create(
       <Providers>
-        <LikedContentFeed {...props} />
+        <RecentlyLikedTileFeed {...props} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

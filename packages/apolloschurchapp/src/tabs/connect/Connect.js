@@ -20,7 +20,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 
 import { UserAvatarHeaderConnected } from './UserAvatarHeader';
-import { LikedContentFeedConnected } from './LikedContentFeed';
+import { RecentlyLikedTileFeedConnected } from './RecentlyLikedTileFeed';
 import getLoginState from './getLoginState';
 
 const Title = styled(({ theme }) => ({
@@ -81,7 +81,7 @@ class Connect extends PureComponent {
                           <UserAvatarHeaderConnected
                             navigation={this.props.navigation}
                           />
-                          <LikedContentFeedConnected
+                          <RecentlyLikedTileFeedConnected
                             navigation={this.props.navigation}
                           />
                         </View>
