@@ -66,8 +66,7 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
       style={
         Object {
           "alignItems": "flex-start",
-          "justifyContent": "flex-start",
-          "marginLeft": -10,
+          "justifyContent": "center",
           "paddingHorizontal": 20,
           "paddingVertical": 10,
         }
@@ -78,7 +77,7 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
           Object {
             "color": "#303030",
             "fontFamily": "InterUI-Black",
-            "fontSize": 17.6,
+            "fontSize": 24,
             "lineHeight": 27.6,
           }
         }
@@ -86,16 +85,19 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
          
       </Text>
       <View
+        flexed={false}
         style={
           Object {
+            "alignItems": "center",
+            "flex": null,
             "flexDirection": "row",
           }
         }
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="16"
-          bbWidth="16"
+          bbHeight="19.2"
+          bbWidth="19.2"
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -108,8 +110,8 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
               false,
               Object {
                 "flex": 0,
-                "height": 16,
-                "width": 16,
+                "height": 19.2,
+                "width": 19.2,
               },
             ]
           }
@@ -121,9 +123,9 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
             fill={
               Array [
                 0,
-                0.6470588235294118,
-                0.6470588235294118,
-                0.6470588235294118,
+                0.3137254901960784,
+                0.3137254901960784,
+                0.3137254901960784,
                 1,
               ]
             }
@@ -164,19 +166,26 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
             y={0}
           />
         </RNSVGSvgView>
-        <Text
-          bold={false}
-          italic={false}
+        <View
           style={
             Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Regular",
-              "fontSize": 12,
-              "fontWeight": "800",
-              "lineHeight": 0,
+              "flex": 1,
+              "paddingHorizontal": 10,
             }
           }
-        />
+          withIcon="pin"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+              }
+            }
+          />
+        </View>
       </View>
     </View>
   </View>

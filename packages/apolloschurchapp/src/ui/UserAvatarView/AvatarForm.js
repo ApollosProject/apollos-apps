@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
+import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 import Avatar from 'apolloschurchapp/src/ui/Avatar';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
-import { H6 } from 'apolloschurchapp/src/ui/typography';
+import { H5 } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import uploadPhoto from './uploadPhoto';
 
@@ -21,10 +22,6 @@ const Wrapper = styled({
   justifyContent: 'center',
   alignItems: 'center',
 })(View);
-
-const StyledText = styled(({ theme }) => ({
-  color: theme.colors.secondary,
-}))(H6);
 
 export default class AvatarForm extends PureComponent {
   state = {
@@ -55,7 +52,13 @@ export default class AvatarForm extends PureComponent {
             isLoading={isUploadingFile}
           />
         </Touchable>
-        {this.props.text ? <StyledText>Change Photo</StyledText> : null}
+        {this.props.text ? (
+          <H5>
+            <ButtonLink onPress={this.handleUploadPhoto}>
+              Change Photo
+            </ButtonLink>
+          </H5>
+        ) : null}
       </Wrapper>
     );
   }

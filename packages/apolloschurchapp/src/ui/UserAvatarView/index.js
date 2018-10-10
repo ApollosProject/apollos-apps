@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { compose } from 'recompose';
 
-import { H3, BodyText } from 'apolloschurchapp/src/ui/typography';
+import { H3 } from 'apolloschurchapp/src/ui/typography';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import styled from 'apolloschurchapp/src/ui/styled';
-import Icon from 'apolloschurchapp/src/ui/Icon';
+import ChannelLabel from 'apolloschurchapp/src/ui/ChannelLabel';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import AvatarForm from './AvatarForm';
 
@@ -21,27 +21,11 @@ const Container = styled({
   flexDirection: 'row',
 })(View);
 
-const Content = styled({
+const Content = styled(({ theme }) => ({
   alignItems: 'flex-start',
-  justifyContent: 'flex-start',
-  paddingVertical: 10,
-  marginLeft: -10,
-})(PaddedView);
-
-const Name = styled(({ theme }) => ({
-  fontSize: theme.helpers.rem(1.1),
-}))(H3);
-
-const LocalText = styled(({ theme }) => ({
-  fontSize: theme.helpers.rem(0.75),
-  fontWeight: '800',
-  color: theme.colors.text.tertiary,
-  lineHeight: 0,
-}))(BodyText);
-
-const Location = styled({
-  flexDirection: 'row',
-})(View);
+  justifyContent: 'center',
+  paddingVertical: theme.sizing.baseUnit * 0.5,
+}))(PaddedView);
 
 const UserAvatarView = enhance(
   ({
@@ -61,19 +45,17 @@ const UserAvatarView = enhance(
     // todo: handle file select stuff
     <Container {...viewProps}>
       <AvatarForm
+        isLoading={isLoading}
         text={false}
         disabled={disabled}
         photo={photo}
         refetch={refetch}
       />
       <Content>
-        <Name>
+        <H3>
           {firstName} {lastName}
-        </Name>
-        <Location>
-          <Icon name={'pin'} fill={theme.colors.text.tertiary} size={16} />
-          <LocalText>{location}</LocalText>
-        </Location>
+        </H3>
+        <ChannelLabel isLoading={isLoading} icon="pin" label={location} />
       </Content>
     </Container>
   )

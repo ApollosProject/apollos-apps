@@ -66,14 +66,23 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
       <Text
         style={
           Object {
-            "color": "#17B582",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
+            "color": "#303030",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 20.16,
           }
         }
       >
-        Change Photo
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#17B582",
+            }
+          }
+        >
+          Change Photo
+        </Text>
       </Text>
     </View>
   </View>
