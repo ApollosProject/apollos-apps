@@ -21,28 +21,57 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
       }
     }
   >
-    <Text
+    <View
       style={
         Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 23.04,
+          "flexGrow": 1,
         }
       }
     >
-      Recently Like
-    </Text>
-    <Text
-      onPress={[Function]}
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 23.04,
+          }
+        }
+      >
+        Recently Like
+      </Text>
+    </View>
+    <View
       style={
         Object {
-          "color": "#17B582",
+          "flexDirection": "row-reverse",
         }
       }
     >
-      View All
-    </Text>
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": null,
+            "fontWeight": null,
+            "lineHeight": 20.16,
+          }
+        }
+      >
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#17B582",
+            }
+          }
+        >
+          View All
+        </Text>
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     data={
@@ -114,7 +143,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
     getItem={[Function]}
     getItemCount={[Function]}
     horizontal={true}
-    initialNumToRender={10}
+    initialNumToRender={5}
     initialScrollIndex={0}
     keyExtractor={[Function]}
     loadingStateObject={

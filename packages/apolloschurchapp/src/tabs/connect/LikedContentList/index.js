@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
+
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import FeedView from 'apolloschurchapp/src/ui/FeedView';
 
@@ -37,6 +38,7 @@ class LikedContentList extends PureComponent {
         <Query query={getLikedContent} fetchPolicy="cache-and-network">
           {({ loading, error, data: { getAllLikedContent = [] }, refetch }) => (
             <FeedView
+              initialNumToRender={5}
               content={getAllLikedContent}
               isLoading={loading}
               error={error}

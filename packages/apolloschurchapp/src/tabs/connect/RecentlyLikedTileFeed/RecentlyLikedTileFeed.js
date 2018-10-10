@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { View } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { H4 } from 'apolloschurchapp/src/ui/typography';
+import { H4, UIText } from 'apolloschurchapp/src/ui/typography';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
@@ -11,66 +12,78 @@ import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 import TileImageItem from '../../discover/TileImageItem';
 
-const RowHeader = styled(({ theme, vertical = true }) => ({
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  paddingVertical: vertical ? theme.sizing.baseUnit : 0,
-}))(PaddedView);
+class RecentlyLikedTileFeed extends Component {
+  static propTypes = {
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func,
+    }),
+    isLoading: PropTypes.bool,
+    name: PropTypes.string,
+    content: PropTypes.arrayOf(
+      PropTypes.any // this component doesn't care about the shape of `node`, just that it exists
+    ),
+  };
 
-const TileImage = ({ item, isLoading, navigation }) => (
-  <TileImageItem item={item} isLoading={isLoading} navigation={navigation} />
-);
+  loadingStateObject = {
+    id: 'fake_id',
+    title: '',
+    coverImage: [],
+  };
 
-TileImage.propTypes = {
-  item: PropTypes.shape({}),
-  isLoading: PropTypes.bool,
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }),
-};
-
-const RecentlyLikedTileFeed = ({
-  isLoading,
-  name,
-  navigation,
-  content = [],
-}) => (
-  <PaddedView horizontal={false}>
-    <RowHeader>
-      <H4 isLoading={isLoading}>{name}</H4>
-      {!isLoading ? (
-        <ButtonLink
-          onPress={() => {
-            navigation.navigate('LikedContentList');
-          }}
-        >
-          View All
-        </ButtonLink>
-      ) : null}
-    </RowHeader>
-    <HorizontalTileFeed
-      content={content}
-      renderItem={TileImage}
-      loadingStateObject={{
-        id: 'fake_id',
-        title: '',
-        coverImage: [],
-      }}
-      isLoading={isLoading}
+  titleImageItem = ({ item }) => (
+    <TileImageItem
+      item={item}
+      isLoading={this.props.isLoading}
+      navigation={this.props.navigation}
     />
-  </PaddedView>
-);
+  );
 
-RecentlyLikedTileFeed.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }),
-  isLoading: PropTypes.bool,
-  name: PropTypes.string,
-  content: PropTypes.arrayOf(
-    PropTypes.any // this component doesn't care about the shape of `node`, just that it exists
-  ),
-};
+  render() {
+    const { isLoading, name, navigation, content = [] } = this.props;
+
+    const RowHeader = styled(({ theme, vertical = true }) => ({
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingVertical: vertical ? theme.sizing.baseUnit : 0,
+    }))(PaddedView);
+
+    const Name = styled({
+      flexGrow: 1,
+    })(View);
+
+    const LikedContentLink = styled({
+      flexDirection: 'row-reverse',
+    })(View);
+
+    return (
+      <PaddedView horizontal={false}>
+        <RowHeader>
+          <Name>
+            <H4 isLoading={isLoading}>{name}</H4>
+          </Name>
+          <LikedContentLink>
+            <UIText isLoading={isLoading}>
+              <ButtonLink
+                onPress={() => {
+                  navigation.navigate('LikedContentList');
+                }}
+              >
+                View All
+              </ButtonLink>
+            </UIText>
+          </LikedContentLink>
+        </RowHeader>
+        <HorizontalTileFeed
+          initialNumToRender={5}
+          content={content}
+          renderItem={this.titleImageItem}
+          loadingStateObject={this.loadingStateObject}
+          isLoading={isLoading}
+        />
+      </PaddedView>
+    );
+  }
+}
 
 export default withNavigation(withIsLoading(RecentlyLikedTileFeed));

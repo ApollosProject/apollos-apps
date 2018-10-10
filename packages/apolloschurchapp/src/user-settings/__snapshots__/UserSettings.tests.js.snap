@@ -52,15 +52,15 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
           style={
             Object {
               "backgroundColor": "#A5A5A5",
-              "borderRadius": 50,
-              "height": 100,
+              "borderRadius": 40,
+              "height": 80,
               "marginBottom": 10,
               "marginRight": 0,
               "overflow": "hidden",
-              "width": 100,
+              "width": 80,
             }
           }
-          themeSize={100}
+          themeSize={80}
         />
       </View>
       <Text

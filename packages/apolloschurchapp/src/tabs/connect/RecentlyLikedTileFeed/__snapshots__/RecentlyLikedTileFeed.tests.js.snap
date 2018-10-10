@@ -21,28 +21,57 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
       }
     }
   >
-    <Text
+    <View
       style={
         Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 23.04,
+          "flexGrow": 1,
         }
       }
     >
-      Liked Content
-    </Text>
-    <Text
-      onPress={[Function]}
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 23.04,
+          }
+        }
+      >
+        Liked Content
+      </Text>
+    </View>
+    <View
       style={
         Object {
-          "color": "#17B582",
+          "flexDirection": "row-reverse",
         }
       }
     >
-      View All
-    </Text>
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": null,
+            "fontWeight": null,
+            "lineHeight": 20.16,
+          }
+        }
+      >
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#17B582",
+            }
+          }
+        >
+          View All
+        </Text>
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     data={
@@ -86,7 +115,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
     getItem={[Function]}
     getItemCount={[Function]}
     horizontal={true}
-    initialNumToRender={10}
+    initialNumToRender={5}
     initialScrollIndex={0}
     keyExtractor={[Function]}
     loadingStateObject={
@@ -420,15 +449,43 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
     <View
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 6,
-          "height": 16,
-          "marginVertical": 3.5199999999999996,
-          "width": "80%",
+          "flexGrow": 1,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 6,
+            "height": 16,
+            "marginVertical": 3.5199999999999996,
+            "width": "80%",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row-reverse",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 6,
+            "height": 14,
+            "marginVertical": 3.08,
+            "width": "40%",
+          }
+        }
+      />
+    </View>
   </View>
   <RCTScrollView
     data={
@@ -472,7 +529,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
     getItem={[Function]}
     getItemCount={[Function]}
     horizontal={true}
-    initialNumToRender={10}
+    initialNumToRender={5}
     initialScrollIndex={0}
     keyExtractor={[Function]}
     loadingStateObject={
@@ -624,23 +681,18 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 }
               />
             </View>
-            <Text
+            <View
               style={
                 Object {
-                  "backgroundColor": "transparent",
-                  "bottom": 20,
-                  "color": "#F8F7F4",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "left": 20,
-                  "lineHeight": 23.04,
-                  "position": "absolute",
-                  "right": 20,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 6,
+                  "height": 16,
+                  "marginVertical": 3.5199999999999996,
+                  "width": "80%",
                 }
               }
-            >
-              Making Prayer a Spiritual Habit
-            </Text>
+            />
           </View>
         </View>
       </View>
@@ -757,23 +809,18 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 }
               />
             </View>
-            <Text
+            <View
               style={
                 Object {
-                  "backgroundColor": "transparent",
-                  "bottom": 20,
-                  "color": "#F8F7F4",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "left": 20,
-                  "lineHeight": 23.04,
-                  "position": "absolute",
-                  "right": 20,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 6,
+                  "height": 16,
+                  "marginVertical": 3.5199999999999996,
+                  "width": "80%",
                 }
               }
-            >
-              Vacations and Your Budget
-            </Text>
+            />
           </View>
         </View>
       </View>

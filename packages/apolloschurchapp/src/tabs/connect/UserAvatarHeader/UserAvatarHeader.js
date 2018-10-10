@@ -1,30 +1,33 @@
 import React from 'react';
-import { View, TouchableWithoutFeedback } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
+import { withNavigation } from 'react-navigation';
 
+import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
+import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import UserAvatarView from 'apolloschurchapp/src/ui/UserAvatarView';
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import styled from 'apolloschurchapp/src/ui/styled';
 
-const Container = styled({
+const Container = styled(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   flexDirection: 'row',
-  paddingTop: 60,
-  marginLeft: 15,
-})(View);
+  paddingTop: theme.sizing.baseUnit * 3,
+  marginLeft: theme.sizing.baseUnit * 0.75,
+}))(View);
 
-const SettingsButton = compose(
+const SettingsIcon = compose(
   withTheme(({ theme }) => ({
     name: 'settings',
     fill: theme.colors.text.tertiary,
   })),
-  styled({
-    marginRight: 10,
-  })
+  styled(({ theme }) => ({
+    marginRight: theme.sizing.baseUnit * 0.5,
+  }))
 )(Icon);
 
 const UserAvatarHeader = ({
@@ -35,9 +38,11 @@ const UserAvatarHeader = ({
   refetch,
   navigation,
   disabled,
+  isLoading,
 }) => (
   <Container>
     <UserAvatarView
+      isLoading={isLoading}
       firstName={firstName}
       lastName={lastName}
       location={location}
@@ -45,11 +50,11 @@ const UserAvatarHeader = ({
       refetch={refetch}
       disabled={disabled}
     />
-    <TouchableWithoutFeedback
+    <Touchable
       onPress={() => navigation.navigate('UserSettings', { photo, refetch })}
     >
-      <SettingsButton />
-    </TouchableWithoutFeedback>
+      <SettingsIcon />
+    </Touchable>
   </Container>
 );
 
@@ -64,6 +69,7 @@ UserAvatarHeader.propTypes = {
     navigate: PropTypes.func,
   }),
   disabled: PropTypes.bool,
+  isLoading: PropTypes.bool,
 };
 
-export default UserAvatarHeader;
+export default withNavigation(withIsLoading(UserAvatarHeader));
