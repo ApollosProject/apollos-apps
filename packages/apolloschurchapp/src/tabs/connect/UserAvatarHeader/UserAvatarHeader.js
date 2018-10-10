@@ -59,7 +59,10 @@ UserAvatarHeader.propTypes = {
   location: PropTypes.string,
   photo: ConnectedImage.propTypes.source,
   refetch: PropTypes.func,
-  navigation: PropTypes.func,
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func,
+    navigate: PropTypes.func,
+  }),
   disabled: PropTypes.bool,
 };
 

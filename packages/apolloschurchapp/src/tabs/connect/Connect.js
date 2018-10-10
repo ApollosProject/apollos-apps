@@ -19,11 +19,9 @@ import { H1, BodyText, Paragraph } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 
-import LikedContentFeed from './LikedContentFeed';
-import UserAvatarHeader from './UserAvatarHeader';
+import { UserAvatarHeaderConnected } from './UserAvatarHeader';
+import { LikedContentFeedConnected } from './LikedContentFeed';
 import getLoginState from './getLoginState';
-import getUserProfile from './getUserProfile';
-import getLikedContent from './getLikedContent';
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -80,57 +78,10 @@ class Connect extends PureComponent {
                     if (get(data, 'isLoggedIn', false))
                       return (
                         <View>
-                          <Query
-                            query={getUserProfile}
-                            fetchPolicy="cache-and-network"
-                          >
-                            {({
-                              data: {
-                                currentUser: {
-                                  profile: {
-                                    photo,
-                                    firstName,
-                                    lastName,
-                                    location,
-                                  } = {},
-                                } = {},
-                              } = {},
-                              refetch,
-                            }) => (
-                              <UserAvatarHeader
-                                firstName={firstName}
-                                lastName={lastName}
-                                location={location}
-                                photo={photo}
-                                refetch={refetch}
-                                navigation={this.props.navigation}
-                                disabled
-                              />
-                            )}
-                          </Query>
-                          <Query
-                            query={getLikedContent}
-                            fetchPolicy="cache-and-network"
-                          >
-                            {({
-                              loading,
-                              data: { getAllLikedContent = [] } = {},
-                            }) => {
-                              if (!getAllLikedContent.length) return null;
-                              return (
-                                <LikedContentFeed
-                                  id={'liked'}
-                                  name={'Recently Like'}
-                                  content={getAllLikedContent}
-                                  isLoading={loading}
-                                  loadingStateObject={{
-                                    title: 'Recently Like',
-                                    isLoading: true,
-                                  }}
-                                />
-                              );
-                            }}
-                          </Query>
+                          <UserAvatarHeaderConnected
+                            navigation={this.props.navigation}
+                          />
+                          <LikedContentFeedConnected />
                         </View>
                       );
                     return (
