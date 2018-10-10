@@ -78,12 +78,8 @@ class Connect extends PureComponent {
                     if (get(data, 'isLoggedIn', false))
                       return (
                         <View>
-                          <UserAvatarHeaderConnected
-                            navigation={this.props.navigation}
-                          />
-                          <RecentlyLikedTileFeedConnected
-                            navigation={this.props.navigation}
-                          />
+                          <UserAvatarHeaderConnected />
+                          <RecentlyLikedTileFeedConnected />
                         </View>
                       );
                     return (

@@ -7,6 +7,7 @@ import { H4 } from 'apolloschurchapp/src/ui/typography';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
+import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 import TileImageItem from '../../discover/TileImageItem';
 
@@ -16,6 +17,18 @@ const RowHeader = styled(({ theme, vertical = true }) => ({
   alignItems: 'center',
   paddingVertical: vertical ? theme.sizing.baseUnit : 0,
 }))(PaddedView);
+
+const TileImage = ({ item, isLoading, navigation }) => (
+  <TileImageItem item={item} isLoading={isLoading} navigation={navigation} />
+);
+
+TileImage.propTypes = {
+  item: PropTypes.shape({}),
+  isLoading: PropTypes.bool,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }),
+};
 
 const RecentlyLikedTileFeed = ({
   isLoading,
@@ -38,13 +51,7 @@ const RecentlyLikedTileFeed = ({
     </RowHeader>
     <HorizontalTileFeed
       content={content}
-      renderItem={({ item }) => (
-        <TileImageItem
-          item={item}
-          isLoading={isLoading}
-          navigation={navigation}
-        />
-      )}
+      renderItem={TileImage}
       loadingStateObject={{
         id: 'fake_id',
         title: '',
@@ -66,4 +73,4 @@ RecentlyLikedTileFeed.propTypes = {
   ),
 };
 
-export default withNavigation(RecentlyLikedTileFeed);
+export default withNavigation(withIsLoading(RecentlyLikedTileFeed));
