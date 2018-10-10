@@ -113,7 +113,7 @@ export const shadows = ({ colors: themeColors }) => ({
       shadowRadius: 6,
     },
     android: {
-      elevation: 3,
+      elevation: 5,
     },
   },
 });

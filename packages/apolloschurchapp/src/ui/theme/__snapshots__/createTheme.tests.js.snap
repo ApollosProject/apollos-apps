@@ -90,7 +90,7 @@ Object {
   "shadows": Object {
     "default": Object {
       "android": Object {
-        "elevation": 3,
+        "elevation": 5,
       },
       "ios": Object {
         "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
@@ -370,7 +370,7 @@ Object {
   "shadows": Object {
     "default": Object {
       "android": Object {
-        "elevation": 3,
+        "elevation": 5,
       },
       "ios": Object {
         "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
