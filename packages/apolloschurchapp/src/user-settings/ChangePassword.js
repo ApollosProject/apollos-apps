@@ -94,7 +94,9 @@ class ChangePassword extends PureComponent {
                   <Header>
                     <SpaceHolder />
                     <H4>Change Password</H4>
-                    {props.dirty ? (
+                    {props.dirty &&
+                    props.values.password &&
+                    props.values.confirmPassword ? (
                       <DoneButton onPress={props.handleSubmit}>Done</DoneButton>
                     ) : (
                       <DoneButton
