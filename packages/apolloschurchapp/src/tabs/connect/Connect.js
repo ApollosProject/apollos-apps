@@ -76,12 +76,10 @@ class Connect extends PureComponent {
                 <Query query={getLoginState}>
                   {({ data }) => {
                     if (get(data, 'isLoggedIn', false))
-                      return (
-                        <View>
-                          <UserAvatarHeaderConnected />
-                          <RecentlyLikedTileFeedConnected />
-                        </View>
-                      );
+                      return [
+                        <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />,
+                        <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />,
+                      ];
                     return (
                       <SafeAreaView>
                         <Header>
