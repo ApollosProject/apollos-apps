@@ -14,7 +14,7 @@ const StyledCard = compose(
     borderRadius: theme.sizing.baseUnit,
     ...(inHorizontalList
       ? {
-          marginLeft: theme.sizing.baseUnit * 0.05,
+          marginLeft: theme.sizing.baseUnit * 0.5,
           marginRight: 0,
         }
       : {
