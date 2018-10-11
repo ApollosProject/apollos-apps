@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Button from 'apolloschurchapp/src/ui/Button';
 
-import getLoginState from './getLoginState';
+import getLoginState from '../getLoginState';
 
 class LoginButton extends PureComponent {
   static propTypes = {

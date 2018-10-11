@@ -4,8 +4,9 @@ import wait from 'waait';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import LoginButton from './LoginButton';
-import getLoginState from './getLoginState';
+import getLoginState from '../getLoginState';
+
+import LoginButton from '.';
 
 describe('LoginButton component', () => {
   it('renders nothing when logged in', async () => {
