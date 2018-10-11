@@ -44,7 +44,7 @@ const Header = styled(({ theme }) => ({
       paddingTop: theme.sizing.baseUnit * 4.75,
     },
     android: {
-      paddingTop: theme.sizing.baseUnit * 3.75,
+      paddingTop: theme.sizing.baseUnit * 4,
     },
   }),
 }))(View);
