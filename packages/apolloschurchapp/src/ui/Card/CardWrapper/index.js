@@ -14,12 +14,12 @@ const StyledCard = compose(
     borderRadius: theme.sizing.baseUnit,
     ...(inHorizontalList
       ? {
-          marginLeft: theme.sizing.baseUnit / 2,
+          marginLeft: theme.sizing.baseUnit * 0.05,
           marginRight: 0,
         }
       : {
           marginHorizontal: theme.sizing.baseUnit,
-          marginVertical: theme.sizing.baseUnit / 2,
+          marginVertical: theme.sizing.baseUnit * 0.75,
         }),
     ...Platform.select(theme.shadows.default),
   }))
