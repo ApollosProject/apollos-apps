@@ -1,32 +1,11 @@
 import React, { PureComponent } from 'react';
-import PropType from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-import Touchable from 'apolloschurchapp/src/ui/Touchable';
-import TableView, {
-  Cell,
-  CellIcon,
-  CellText,
-  Divider,
-} from 'apolloschurchapp/src/ui/TableView';
+import TableView, { Divider } from 'apolloschurchapp/src/ui/TableView';
 
 import getLiveStream from 'apolloschurchapp/src/live/getLiveStream';
+import TouchableCell from './TouchableCell';
 import changeLivestream from './changeLivestream';
-
-const TouchableCell = ({ iconName, cellText, handlePress }) => (
-  <Touchable onPress={handlePress}>
-    <Cell>
-      <CellIcon name={iconName} />
-      <CellText>{cellText}</CellText>
-    </Cell>
-  </Touchable>
-);
-
-TouchableCell.propTypes = {
-  iconName: PropType.string.isRequired,
-  cellText: PropType.string.isRequired,
-  handlePress: PropType.func.isRequired,
-};
 
 const ChangeLivestream = () => (
   <Query query={getLiveStream}>
