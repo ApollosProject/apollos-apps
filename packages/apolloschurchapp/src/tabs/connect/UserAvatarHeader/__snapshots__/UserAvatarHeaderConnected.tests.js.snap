@@ -7,8 +7,8 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
       "alignItems": "center",
       "flexDirection": "row",
       "justifyContent": "space-between",
-      "marginLeft": 15,
-      "paddingTop": 60,
+      "marginLeft": 12,
+      "paddingTop": 48,
     }
   }
 >
@@ -52,7 +52,7 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
               "backgroundColor": "#A5A5A5",
               "borderRadius": 40,
               "height": 80,
-              "marginBottom": 10,
+              "marginBottom": 8,
               "marginRight": 0,
               "overflow": "hidden",
               "width": 80,
@@ -67,8 +67,8 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
         Object {
           "alignItems": "flex-start",
           "justifyContent": "center",
-          "paddingHorizontal": 20,
-          "paddingVertical": 10,
+          "paddingHorizontal": 16,
+          "paddingVertical": 8,
         }
       }
     >
@@ -170,7 +170,7 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 10,
+              "paddingHorizontal": 8,
             }
           }
           withIcon="pin"
@@ -217,7 +217,7 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
             "backgroundColor": "transparent",
           },
           Object {
-            "marginRight": 10,
+            "marginRight": 8,
           },
           false,
           Object {

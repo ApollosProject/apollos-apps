@@ -10,18 +10,18 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           "backgroundColor": "#FFFFFF",
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "paddingHorizontal": 20,
-          "paddingRight": 20,
-          "paddingTop": 35,
-          "paddingVertical": 20,
+          "paddingHorizontal": 16,
+          "paddingRight": 16,
+          "paddingTop": 28,
+          "paddingVertical": 16,
         }
       }
     >
       <View
         style={
           Object {
-            "paddingHorizontal": 20,
-            "paddingVertical": 20,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       />
@@ -66,8 +66,8 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
       <View
         style={
           Object {
-            "paddingHorizontal": 20,
-            "paddingVertical": 20,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
@@ -75,7 +75,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           disabled={false}
           style={
             Object {
-              "marginVertical": 20,
+              "marginVertical": 16,
             }
           }
         >
@@ -117,7 +117,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 14,
-                      "height": 40,
+                      "height": 38,
                       "paddingVertical": 0,
                     }
                   }
@@ -167,7 +167,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 17.28,
-                    "paddingVertical": 5,
+                    "paddingVertical": 4,
                   }
                 }
               >
@@ -224,7 +224,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           disabled={false}
           style={
             Object {
-              "marginVertical": 20,
+              "marginVertical": 16,
             }
           }
         >
@@ -266,7 +266,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 14,
-                      "height": 40,
+                      "height": 38,
                       "paddingVertical": 0,
                     }
                   }
@@ -316,7 +316,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 17.28,
-                    "paddingVertical": 5,
+                    "paddingVertical": 4,
                   }
                 }
               >
@@ -373,7 +373,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           disabled={false}
           style={
             Object {
-              "marginVertical": 20,
+              "marginVertical": 16,
             }
           }
         >
@@ -415,7 +415,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 14,
-                      "height": 40,
+                      "height": 38,
                       "paddingVertical": 0,
                     }
                   }
@@ -465,7 +465,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 17.28,
-                    "paddingVertical": 5,
+                    "paddingVertical": 4,
                   }
                 }
               >
@@ -522,8 +522,8 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
       <View
         style={
           Object {
-            "paddingHorizontal": 20,
-            "paddingVertical": 20,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
@@ -531,7 +531,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           disabled={false}
           style={
             Object {
-              "marginVertical": 20,
+              "marginVertical": 16,
             }
           }
         >
@@ -576,7 +576,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 14,
-                      "height": 40,
+                      "height": 38,
                       "paddingVertical": 0,
                     }
                   }
@@ -626,7 +626,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 17.28,
-                    "paddingVertical": 5,
+                    "paddingVertical": 4,
                   }
                 }
               >

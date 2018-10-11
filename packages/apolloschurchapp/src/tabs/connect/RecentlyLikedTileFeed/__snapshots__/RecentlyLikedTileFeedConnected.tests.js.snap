@@ -6,7 +6,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
   style={
     Object {
       "paddingHorizontal": 0,
-      "paddingVertical": 20,
+      "paddingVertical": 16,
     }
   }
 >
@@ -16,8 +16,8 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "paddingHorizontal": 20,
-        "paddingVertical": 20,
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
       }
     }
   >
@@ -167,13 +167,12 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
     scrollEventThrottle={50}
     showsHorizontalScrollIndicator={false}
     snapToAlignment="start"
-    snapToInterval={590}
+    snapToInterval={592}
     stickyHeaderIndices={Array []}
     style={
       Object {
         "height": 600,
-        "paddingBottom": 10,
-        "paddingHorizontal": 10,
+        "paddingBottom": 8,
       }
     }
     tileHeight={600}
@@ -197,7 +196,9 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
           style={
             Object {
               "flex": 1,
-              "padding": 10,
+              "padding": 8,
+              "paddingLeft": 16,
+              "paddingRight": 0,
             }
           }
         >
@@ -211,108 +212,121 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "aspectRatio": 1,
-                "borderRadius": 6,
-                "height": "100%",
-                "overflow": "hidden",
-                "width": "100%",
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "aspectRatio": 1,
+                  "borderRadius": 16,
+                  "height": "100%",
+                  "overflow": "hidden",
                   "width": "100%",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
               >
-                <Image
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=58c037fa-cc7f-4d72-9571-a0cc0558e346",
-                        Symbol(id): "$ROOT_QUERY.getAllLikedContent.0.coverImage.sources.0",
-                      },
-                    ]
-                  }
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
                       "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=58c037fa-cc7f-4d72-9571-a0cc0558e346",
+                          Symbol(id): "$ROOT_QUERY.getAllLikedContent.0.coverImage.sources.0",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0.3,
+                      1,
+                    ]
+                  }
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
-              <BVLinearGradient
-                colors={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0.3,
-                    1,
-                  ]
-                }
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
+              <Text
                 style={
                   Object {
-                    "bottom": 0,
-                    "left": 0,
+                    "backgroundColor": "transparent",
+                    "bottom": 16,
+                    "color": "#F8F7F4",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "left": 16,
+                    "lineHeight": 23.04,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 16,
                   }
                 }
-              />
+              >
+                Guys Night!
+              </Text>
             </View>
-            <Text
-              style={
-                Object {
-                  "backgroundColor": "transparent",
-                  "bottom": 20,
-                  "color": "#F8F7F4",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "left": 20,
-                  "lineHeight": 23.04,
-                  "position": "absolute",
-                  "right": 20,
-                }
-              }
-            >
-              Guys Night!
-            </Text>
           </View>
         </View>
       </View>
@@ -331,7 +345,9 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
           style={
             Object {
               "flex": 1,
-              "padding": 10,
+              "padding": 8,
+              "paddingLeft": 16,
+              "paddingRight": 0,
             }
           }
         >
@@ -345,108 +361,121 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "aspectRatio": 1,
-                "borderRadius": 6,
-                "height": "100%",
-                "overflow": "hidden",
-                "width": "100%",
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "aspectRatio": 1,
+                  "borderRadius": 16,
+                  "height": "100%",
+                  "overflow": "hidden",
                   "width": "100%",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
               >
-                <Image
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=f54b0db0-95f5-44ad-b8f2-8bcd1b23cfdb",
-                        Symbol(id): "$ROOT_QUERY.getAllLikedContent.1.coverImage.sources.0",
-                      },
-                    ]
-                  }
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
                       "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=f54b0db0-95f5-44ad-b8f2-8bcd1b23cfdb",
+                          Symbol(id): "$ROOT_QUERY.getAllLikedContent.1.coverImage.sources.0",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0.3,
+                      1,
+                    ]
+                  }
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
-              <BVLinearGradient
-                colors={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0.3,
-                    1,
-                  ]
-                }
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
+              <Text
                 style={
                   Object {
-                    "bottom": 0,
-                    "left": 0,
+                    "backgroundColor": "transparent",
+                    "bottom": 16,
+                    "color": "#F8F7F4",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "left": 16,
+                    "lineHeight": 23.04,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 16,
                   }
                 }
-              />
+              >
+                This August at NewSpring
+              </Text>
             </View>
-            <Text
-              style={
-                Object {
-                  "backgroundColor": "transparent",
-                  "bottom": 20,
-                  "color": "#F8F7F4",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "left": 20,
-                  "lineHeight": 23.04,
-                  "position": "absolute",
-                  "right": 20,
-                }
-              }
-            >
-              This August at NewSpring
-            </Text>
           </View>
         </View>
       </View>
@@ -465,7 +494,9 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
           style={
             Object {
               "flex": 1,
-              "padding": 10,
+              "padding": 8,
+              "paddingLeft": 16,
+              "paddingRight": 0,
             }
           }
         >
@@ -479,108 +510,121 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "aspectRatio": 1,
-                "borderRadius": 6,
-                "height": "100%",
-                "overflow": "hidden",
-                "width": "100%",
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
               }
             }
           >
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "aspectRatio": 1,
+                  "borderRadius": 16,
+                  "height": "100%",
+                  "overflow": "hidden",
                   "width": "100%",
                 }
               }
             >
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
               >
-                <Image
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a65bc45d-f961-4b7e-a899-63eb1f9b8da9",
-                        Symbol(id): "$ROOT_QUERY.getAllLikedContent.2.coverImage.sources.0",
-                      },
-                    ]
-                  }
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
-                      "resizeMode": "cover",
                       "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a65bc45d-f961-4b7e-a899-63eb1f9b8da9",
+                          Symbol(id): "$ROOT_QUERY.getAllLikedContent.2.coverImage.sources.0",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0.3,
+                      1,
+                    ]
+                  }
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
-              <BVLinearGradient
-                colors={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0.3,
-                    1,
-                  ]
-                }
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
+              <Text
                 style={
                   Object {
-                    "bottom": 0,
-                    "left": 0,
+                    "backgroundColor": "transparent",
+                    "bottom": 16,
+                    "color": "#F8F7F4",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "left": 16,
+                    "lineHeight": 23.04,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 16,
                   }
                 }
-              />
+              >
+                A Place to Worship Free of Fear
+              </Text>
             </View>
-            <Text
-              style={
-                Object {
-                  "backgroundColor": "transparent",
-                  "bottom": 20,
-                  "color": "#F8F7F4",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "left": 20,
-                  "lineHeight": 23.04,
-                  "position": "absolute",
-                  "right": 20,
-                }
-              }
-            >
-              A Place to Worship Free of Fear
-            </Text>
           </View>
         </View>
       </View>
