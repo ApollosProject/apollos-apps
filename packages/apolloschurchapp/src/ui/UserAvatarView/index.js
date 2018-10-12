@@ -24,38 +24,36 @@ const Content = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 0.5,
 }))(PaddedView);
 
-const UserAvatarView = enhance(
-  ({
-    theme,
-    photo,
-    firstName,
-    lastName,
-    location,
-    isLoading,
-    refetch,
-    onPhotoPress,
-    setIsUploadingFile,
-    isUploadingFile,
-    disabled,
-    ...viewProps
-  }) => (
-    // todo: handle file select stuff
-    <Container {...viewProps}>
-      <AvatarForm
-        isLoading={isLoading}
-        text={false}
-        disabled={disabled}
-        photo={photo}
-        refetch={refetch}
-      />
-      <Content>
-        <H3>
-          {firstName} {lastName}
-        </H3>
-        <ChannelLabel isLoading={isLoading} icon="pin" label={location} />
-      </Content>
-    </Container>
-  )
+const UserAvatarView = ({
+  theme,
+  photo,
+  firstName,
+  lastName,
+  location,
+  isLoading,
+  refetch,
+  onPhotoPress,
+  setIsUploadingFile,
+  isUploadingFile,
+  disabled,
+  ...viewProps
+}) => (
+  // todo: handle file select stuff
+  <Container {...viewProps}>
+    <AvatarForm
+      isLoading={isLoading}
+      text={false}
+      disabled={disabled}
+      photo={photo}
+      refetch={refetch}
+    />
+    <Content>
+      <UserName>
+        {firstName} {lastName}
+      </UserName>
+      <ChannelLabel icon="pin" label={location || ''} />
+    </Content>
+  </Container>
 );
 
 UserAvatarView.propTypes = {
