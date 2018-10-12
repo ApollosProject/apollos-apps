@@ -23,6 +23,7 @@ describe('Scripture', () => {
           id
           html
           reference
+          copyright
         }
       }
     `;
