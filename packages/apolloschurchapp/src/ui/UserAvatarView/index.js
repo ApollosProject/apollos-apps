@@ -7,53 +7,53 @@ import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ChannelLabel from 'apolloschurchapp/src/ui/ChannelLabel';
-import AvatarForm from './AvatarForm';
+import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
+import AvatarForm from './AvatarForm';
 
 const Container = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  overflow: 'hidden',
   flexDirection: 'row',
 }))(View);
 
 const Content = styled(({ theme }) => ({
-  alignItems: 'flex-start',
+  flex: 1,
   justifyContent: 'center',
   paddingVertical: theme.sizing.baseUnit * 0.5,
 }))(PaddedView);
 
-const UserAvatarView = ({
-  theme,
-  photo,
-  firstName,
-  lastName,
-  location,
-  isLoading,
-  refetch,
-  onPhotoPress,
-  setIsUploadingFile,
-  isUploadingFile,
-  disabled,
-  ...viewProps
-}) => (
-  // todo: handle file select stuff
-  <Container {...viewProps}>
-    <AvatarForm
-      isLoading={isLoading}
-      text={false}
-      disabled={disabled}
-      photo={photo}
-      refetch={refetch}
-    />
-    <Content>
-      <UserName>
-        {firstName} {lastName}
-      </UserName>
-      <ChannelLabel icon="pin" label={location || ''} />
-    </Content>
-  </Container>
+const UserAvatarView = withIsLoading(
+  ({
+    theme,
+    photo,
+    firstName,
+    lastName,
+    location,
+    isLoading,
+    refetch,
+    onPhotoPress,
+    setIsUploadingFile,
+    isUploadingFile,
+    disabled,
+    ...viewProps
+  }) => (
+    // todo: handle file select stuff
+    <Container {...viewProps}>
+      <AvatarForm
+        isLoading={isLoading}
+        text={false}
+        disabled={disabled}
+        photo={photo}
+        refetch={refetch}
+      />
+      <Content>
+        <H3>
+          {firstName} {lastName}
+        </H3>
+        <ChannelLabel icon="pin" label={location || ''} isLoading={isLoading} />
+      </Content>
+    </Container>
+  )
 );
 
 UserAvatarView.propTypes = {
