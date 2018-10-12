@@ -12,6 +12,21 @@ import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 import TileImageItem from '../../discover/TileImageItem';
 
+const RowHeader = styled(({ theme, vertical = true }) => ({
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  paddingVertical: vertical ? theme.sizing.baseUnit : 0,
+}))(PaddedView);
+
+const Name = styled({
+  flexGrow: 1,
+})(View);
+
+const LikedContentLink = styled({
+  flexDirection: 'row-reverse',
+})(View);
+
 class RecentlyLikedTileFeed extends Component {
   static propTypes = {
     navigation: PropTypes.shape({
@@ -40,21 +55,6 @@ class RecentlyLikedTileFeed extends Component {
 
   render() {
     const { isLoading, name, navigation, content = [] } = this.props;
-
-    const RowHeader = styled(({ theme, vertical = true }) => ({
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      paddingVertical: vertical ? theme.sizing.baseUnit : 0,
-    }))(PaddedView);
-
-    const Name = styled({
-      flexGrow: 1,
-    })(View);
-
-    const LikedContentLink = styled({
-      flexDirection: 'row-reverse',
-    })(View);
 
     return (
       <PaddedView horizontal={false}>
