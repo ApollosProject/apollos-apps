@@ -286,55 +286,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -455,55 +438,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -624,55 +590,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -793,55 +742,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -962,55 +894,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -1131,55 +1046,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -1300,55 +1198,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -1469,55 +1350,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -1638,55 +1502,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
@@ -1807,55 +1654,38 @@ exports[`content feed query component renders a feedview after successful query 
             }
           >
             <View
-              collapsable={false}
               style={
                 Object {
-                  "transform": Array [],
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
                 }
               }
             >
               <View
+                animate={null}
+                customAnimate={null}
+                onReady={false}
                 style={
                   Object {
-                    "overflow": "hidden",
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={Array []}
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 0,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
             <View
