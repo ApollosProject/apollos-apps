@@ -10,13 +10,13 @@ import ChannelLabel from 'apolloschurchapp/src/ui/ChannelLabel';
 import AvatarForm from './AvatarForm';
 
 
-const Container = styled({
-  backgroundColor: 'white',
+const Container = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.paper,
   alignItems: 'center',
   justifyContent: 'flex-start',
   overflow: 'hidden',
   flexDirection: 'row',
-})(View);
+}))(View);
 
 const Content = styled(({ theme }) => ({
   alignItems: 'flex-start',
