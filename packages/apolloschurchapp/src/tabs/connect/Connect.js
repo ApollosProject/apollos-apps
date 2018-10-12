@@ -39,6 +39,8 @@ const Header = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
   paddingBottom: theme.sizing.baseUnit * 1.5,
   backgroundColor: theme.colors.background.paper,
+  // These conditional paddings are due to inconsistencies with SafeAreaView.
+  // TODO: revisit and update/remove these values after next RN upgrade.
   ...Platform.select({
     ios: {
       paddingTop: theme.sizing.baseUnit * 4.75,
