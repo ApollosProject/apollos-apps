@@ -19,6 +19,7 @@ import { H1, BodyText, Paragraph } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
+import NavigationActions from 'apolloschurchapp/src/NavigationService';
 
 import { UserAvatarHeaderConnected } from './UserAvatarHeader';
 import { RecentlyLikedTileFeedConnected } from './RecentlyLikedTileFeed';
@@ -146,6 +147,16 @@ class Connect extends PureComponent {
                     <Cell>
                       <CellIcon name="download" />
                       <CellText>I would like to give</CellText>
+                    </Cell>
+                  </Touchable>
+                  <Touchable
+                    onPress={() =>
+                      NavigationActions.navigate('TestingControlPanel')
+                    }
+                  >
+                    <Cell>
+                      <CellIcon name="download" />
+                      <CellText>I would like to test the app</CellText>
                     </Cell>
                   </Touchable>
                 </TableView>
