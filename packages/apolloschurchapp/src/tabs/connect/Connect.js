@@ -18,6 +18,7 @@ import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import { H1, BodyText, Paragraph } from 'apolloschurchapp/src/ui/typography';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
+import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 
 import { UserAvatarHeaderConnected } from './UserAvatarHeader';
 import { RecentlyLikedTileFeedConnected } from './RecentlyLikedTileFeed';
@@ -36,20 +37,19 @@ const BrandIcon = withTheme(({ theme }) => ({
 }))(Icon);
 
 const Header = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit,
   paddingBottom: theme.sizing.baseUnit * 1.5,
   backgroundColor: theme.colors.background.paper,
   // These conditional paddings are due to inconsistencies with SafeAreaView.
   // TODO: revisit and update/remove these values after next RN upgrade.
   ...Platform.select({
     ios: {
-      paddingTop: theme.sizing.baseUnit * 4.75,
+      paddingTop: theme.sizing.baseUnit * 5,
     },
     android: {
       paddingTop: theme.sizing.baseUnit * 4,
     },
   }),
-}))(View);
+}))(PaddedView);
 
 const StyledLoginButton = styled(({ theme }) => ({
   marginVertical: theme.sizing.baseUnit,
@@ -73,8 +73,8 @@ class Connect extends PureComponent {
       <BackgroundView>
         <WebBrowserConsumer>
           {(openUrl) => (
-            <BackgroundView>
-              <ScrollView>
+            <ScrollView>
+              <SafeAreaView>
                 <Query query={getLoginState}>
                   {({ data }) => {
                     if (get(data, 'isLoggedIn', false))
@@ -83,26 +83,24 @@ class Connect extends PureComponent {
                         <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />,
                       ];
                     return (
-                      <SafeAreaView>
-                        <Header>
-                          <BrandIcon />
-                          <Title>Connect!</Title>
-                          <Paragraph>
-                            <BodyText>
-                              Our mission is to help you connect to others as
-                              well as help you in your walk with Christ.
-                            </BodyText>
-                          </Paragraph>
-                          <Paragraph>
-                            <BodyText>
-                              By joining this community, you will unlock amazing
-                              features like; curated content and devotionals,
-                              simple event registration, and easy online giving!
-                            </BodyText>
-                          </Paragraph>
-                          <StyledLoginButton />
-                        </Header>
-                      </SafeAreaView>
+                      <Header>
+                        <BrandIcon />
+                        <Title>Connect!</Title>
+                        <Paragraph>
+                          <BodyText>
+                            Our mission is to help you connect to others as well
+                            as help you in your walk with Christ.
+                          </BodyText>
+                        </Paragraph>
+                        <Paragraph>
+                          <BodyText>
+                            By joining this community, you will unlock amazing
+                            features like; curated content and devotionals,
+                            simple event registration, and easy online giving!
+                          </BodyText>
+                        </Paragraph>
+                        <StyledLoginButton />
+                      </Header>
                     );
                   }}
                 </Query>
@@ -151,8 +149,8 @@ class Connect extends PureComponent {
                     </Cell>
                   </Touchable>
                 </TableView>
-              </ScrollView>
-            </BackgroundView>
+              </SafeAreaView>
+            </ScrollView>
           )}
         </WebBrowserConsumer>
       </BackgroundView>
