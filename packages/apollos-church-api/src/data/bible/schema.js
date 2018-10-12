@@ -5,6 +5,7 @@ export default gql`
     id: String
     html: String
     reference: String
+    copyright: String
   }
 
   extend type Query {

@@ -3,13 +3,25 @@ import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import ScriptureItem from 'apolloschurchapp/src/ui/Scripture';
+import styled from 'apolloschurchapp/src/ui/styled';
+import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
+
+const FeedContainer = styled({
+  paddingHorizontal: 0,
+})(PaddedView);
 
 /**
  * This is the Scripture side of the Devotional tabbed component.
  * Maps over an array of scripture references and renders them
  * using the ScriptureItem component.
  */
-const ScriptureTab = ({ scripture, isLoading }) => (
+const ScriptureTab = ({
+  scripture,
+  isLoading,
+  horizontalContent,
+  loadingStateObject,
+  renderItem,
+}) => (
   <ScrollView>
     <PaddedView>
       {scripture.map((ref) => (
@@ -21,6 +33,16 @@ const ScriptureTab = ({ scripture, isLoading }) => (
         />
       ))}
     </PaddedView>
+    {(horizontalContent && horizontalContent.length) || isLoading ? (
+      <FeedContainer>
+        <HorizontalTileFeed
+          content={horizontalContent}
+          isLoading={isLoading}
+          loadingStateObject={loadingStateObject}
+          renderItem={renderItem}
+        />
+      </FeedContainer>
+    ) : null}
   </ScrollView>
 );
 
@@ -38,6 +60,12 @@ ScriptureTab.propTypes = {
       html: PropTypes.string,
     })
   ),
+  /** An array of parent/sibling content to display under the tabs */
+  horizontalContent: PropTypes.array, // eslint-disable-line
+  /** An object with fake data to display while the data is loading. */
+  loadingStateObject: PropTypes.shape({}).isRequired,
+  /** A function that holds the components to display the horizontal content */
+  renderItem: PropTypes.func.isRequired,
 };
 
 export default ScriptureTab;

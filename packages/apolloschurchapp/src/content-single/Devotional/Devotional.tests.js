@@ -26,6 +26,16 @@ const scripture = [
   },
 ];
 
+const renderItem = jest.fn();
+
+const loadingStateObject = {
+  node: {
+    id: 'fakeId0',
+    title: '',
+    isLoading: true,
+  },
+};
+
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = renderer.create(
@@ -35,6 +45,24 @@ describe('the Devotional component', () => {
           title={content.title}
           isLoading={false}
           scripture={scripture}
+          renderItem={renderItem}
+          loadingStateObject={loadingStateObject}
+        />
+      </Providers>
+    );
+    await wait(0); // wait for response
+    expect(tree).toMatchSnapshot();
+  });
+  it('renders even with empty scripture array', async () => {
+    const tree = renderer.create(
+      <Providers>
+        <Devotional
+          body={content.body}
+          title={content.title}
+          isLoading
+          scripture={[]}
+          renderItem={renderItem}
+          loadingStateObject={loadingStateObject}
         />
       </Providers>
     );
@@ -49,6 +77,8 @@ describe('the Devotional component', () => {
           title={content.title}
           isLoading
           scripture={scripture}
+          renderItem={renderItem}
+          loadingStateObject={loadingStateObject}
         />
       </Providers>
     );

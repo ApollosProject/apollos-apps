@@ -126,7 +126,6 @@ class ContentSingle extends PureComponent {
                 ...((cachedData && cachedData.node) || {}),
                 ...((data && data.node) || {}),
               };
-              console.log('data = ', data);
 
               const childContent = get(
                 data,
@@ -163,91 +162,100 @@ class ContentSingle extends PureComponent {
                       itemId: this.itemId.itemId,
                     }}
                   />
-                  <ScrollView>
-                    <MediaHeader>
-                      <GradientOverlayImage
-                        source={coverImageSources}
-                        overlayColor={get(content, 'theme.colors.paper')}
-                      />
+                  {content.__typename === 'DevotionalContentItem' &&
+                  content.scriptures &&
+                  content.scriptures.length ? (
+                    <Devotional
+                      body={content.htmlContent}
+                      title={content.title}
+                      isLoading={loading}
+                      scripture={content.scriptures || []}
+                      horizontalContent={horizontalContent}
+                      loadingStateObject={this.loadingStateObject}
+                      renderItem={this.renderItem}
+                    />
+                  ) : (
+                    <ScrollView>
+                      <View>
+                        <MediaHeader>
+                          <GradientOverlayImage
+                            source={coverImageSources}
+                            overlayColor={get(content, 'theme.colors.paper')}
+                          />
 
-                      <Mutation mutation={playVideoMutation}>
-                        {(play) => (
-                          <MediaButtonsContainer>
-                            {videoSource ? (
-                              <Touchable
-                                onPress={() =>
-                                  play({
-                                    variables: {
-                                      mediaSource: videoSource,
-                                      posterSources: coverImageSources,
-                                      title: content.title,
-                                      isVideo: true,
-                                      artist: get(
-                                        content,
-                                        'parentChannel.name'
-                                      ),
-                                    },
-                                  })
-                                }
-                              >
-                                <MediaIcon name="video" />
-                              </Touchable>
-                            ) : null}
-                            {audioSource ? (
-                              <Touchable
-                                onPress={() =>
-                                  play({
-                                    variables: {
-                                      mediaSource: audioSource,
-                                      posterSources: coverImageSources,
-                                      title: content.title,
-                                      isVideo: false,
-                                      artist: get(
-                                        content,
-                                        'parentChannel.name'
-                                      ),
-                                    },
-                                  })
-                                }
-                              >
-                                <MediaIcon name="audio" />
-                              </Touchable>
-                            ) : null}
-                          </MediaButtonsContainer>
-                        )}
-                      </Mutation>
-                    </MediaHeader>
-                    <BackgroundView>
-                      {content.__typename === 'DevotionalContentItem' ? (
-                        <Devotional
-                          body={content.htmlContent}
-                          title={content.title}
-                          isLoading={loading}
-                          scripture={content.scriptures || []}
-                        />
-                      ) : (
-                        <ContentContainer>
-                          <H2 padded isLoading={!content.title && loading}>
-                            {content.title}
-                          </H2>
-                          <HTMLView isLoading={!content.htmlContent && loading}>
-                            {content.htmlContent}
-                          </HTMLView>
-                        </ContentContainer>
-                      )}
-                    </BackgroundView>
-                    {(horizontalContent && horizontalContent.length) ||
-                    loading ? (
-                      <FeedContainer>
-                        <HorizontalTileFeed
-                          content={horizontalContent}
-                          isLoading={loading}
-                          loadingStateObject={this.loadingStateObject}
-                          renderItem={this.renderItem}
-                        />
-                      </FeedContainer>
-                    ) : null}
-                  </ScrollView>
+                          <Mutation mutation={playVideoMutation}>
+                            {(play) => (
+                              <MediaButtonsContainer>
+                                {videoSource ? (
+                                  <Touchable
+                                    onPress={() =>
+                                      play({
+                                        variables: {
+                                          mediaSource: videoSource,
+                                          posterSources: coverImageSources,
+                                          title: content.title,
+                                          isVideo: true,
+                                          artist: get(
+                                            content,
+                                            'parentChannel.name'
+                                          ),
+                                        },
+                                      })
+                                    }
+                                  >
+                                    <MediaIcon name="video" />
+                                  </Touchable>
+                                ) : null}
+                                {audioSource ? (
+                                  <Touchable
+                                    onPress={() =>
+                                      play({
+                                        variables: {
+                                          mediaSource: audioSource,
+                                          posterSources: coverImageSources,
+                                          title: content.title,
+                                          isVideo: false,
+                                          artist: get(
+                                            content,
+                                            'parentChannel.name'
+                                          ),
+                                        },
+                                      })
+                                    }
+                                  >
+                                    <MediaIcon name="audio" />
+                                  </Touchable>
+                                ) : null}
+                              </MediaButtonsContainer>
+                            )}
+                          </Mutation>
+                        </MediaHeader>
+                        <BackgroundView>
+                          <ContentContainer>
+                            <H2 padded isLoading={!content.title && loading}>
+                              {content.title}
+                            </H2>
+                            <HTMLView
+                              isLoading={!content.htmlContent && loading}
+                            >
+                              {content.htmlContent}
+                            </HTMLView>
+                          </ContentContainer>
+                        </BackgroundView>
+                        {(horizontalContent && horizontalContent.length) ||
+                        loading ? (
+                          <FeedContainer>
+                            <HorizontalTileFeed
+                              content={horizontalContent}
+                              isLoading={loading}
+                              loadingStateObject={this.loadingStateObject}
+                              renderItem={this.renderItem}
+                            />
+                          </FeedContainer>
+                        ) : null}
+                      </View>
+                    </ScrollView>
+                  )}
                 </ThemeMixin>
               );
             }}

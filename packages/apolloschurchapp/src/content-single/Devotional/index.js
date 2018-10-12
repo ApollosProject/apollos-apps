@@ -29,6 +29,12 @@ class Devotional extends PureComponent {
         html: PropTypes.string,
       })
     ),
+    /** An array of parent/sibling content to display under the tabs */
+    horizontalContent: PropTypes.array, // eslint-disable-line
+    /** An object with fake data to display while the data is loading. */
+    loadingStateObject: PropTypes.shape({}).isRequired,
+    /** A function that holds the components to display the horizontal content */
+    renderItem: PropTypes.func.isRequired,
   };
 
   /**
@@ -36,7 +42,12 @@ class Devotional extends PureComponent {
    * Props: full scripture array of objects
    * Returns: an array of scripture references.
    */
-  getScriptureReferences = (scripture) => scripture.map((ref) => ref.reference);
+  getScriptureReferences = (scripture) => {
+    if (scripture && scripture.length) {
+      return scripture.map((ref) => ref.reference);
+    }
+    return null;
+  };
 
   /**
    * The route that TabView uses to render the ContentTab.
@@ -48,6 +59,9 @@ class Devotional extends PureComponent {
       isLoading={this.props.isLoading}
       references={this.getScriptureReferences(this.props.scripture)}
       title={this.props.title}
+      horizontalContent={this.props.horizontalContent}
+      loadingStateObject={this.props.loadingStateObject}
+      renderItem={this.props.renderItem}
       navigationState={navigationState}
     />
   );
@@ -59,13 +73,14 @@ class Devotional extends PureComponent {
     <ScriptureTab
       scripture={this.props.scripture}
       isLoading={this.props.isLoading}
+      horizontalContent={this.props.horizontalContent}
+      loadingStateObject={this.props.loadingStateObject}
+      renderItem={this.props.renderItem}
     />
   );
 
   render() {
-    console.log('this.props = ', this.props);
     const hasScripture = !this.props.isLoading && this.props.scripture.length;
-    console.log({ hasScripture });
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
 
