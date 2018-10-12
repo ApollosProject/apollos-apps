@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { withNavigation } from 'react-navigation';
@@ -11,22 +10,22 @@ import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import styled from 'apolloschurchapp/src/ui/styled';
+import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
+import FlexedView from 'apolloschurchapp/src/ui/FlexedView';
 
 const Container = styled(({ theme }) => ({
   alignItems: 'center',
-  justifyContent: 'space-between',
   flexDirection: 'row',
+  /* This padding shouldn't be needed or at least not at such a high value but SafeAreaView doesn't
+   * appear to work so here it is 🤷‍♂️
+   * TODO: revisit and update/remove these values after next RN upgrade. */
   paddingTop: theme.sizing.baseUnit * 3,
-  marginLeft: theme.sizing.baseUnit * 0.75,
-}))(View);
+}))(PaddedView);
 
 const SettingsIcon = compose(
   withTheme(({ theme }) => ({
     name: 'settings',
     fill: theme.colors.text.tertiary,
-  })),
-  styled(({ theme }) => ({
-    marginRight: theme.sizing.baseUnit * 0.5,
   }))
 )(Icon);
 
@@ -41,15 +40,17 @@ const UserAvatarHeader = ({
   isLoading,
 }) => (
   <Container>
-    <UserAvatarView
-      isLoading={isLoading}
-      firstName={firstName}
-      lastName={lastName}
-      location={location}
-      photo={photo}
-      refetch={refetch}
-      disabled={disabled}
-    />
+    <FlexedView>
+      <UserAvatarView
+        firstName={firstName}
+        lastName={lastName}
+        location={location}
+        photo={photo}
+        refetch={refetch}
+        disabled={disabled}
+        isLoading={isLoading}
+      />
+    </FlexedView>
     <Touchable
       onPress={() => navigation.navigate('UserSettings', { photo, refetch })}
     >

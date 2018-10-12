@@ -6,166 +6,171 @@ exports[`user avatar header renders placeholder when loading 1`] = `
     Object {
       "alignItems": "center",
       "flexDirection": "row",
-      "justifyContent": "space-between",
-      "marginLeft": 12,
+      "paddingHorizontal": 16,
       "paddingTop": 48,
+      "paddingVertical": 16,
     }
   }
 >
   <View
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "white",
-        "flexDirection": "row",
-        "justifyContent": "flex-start",
-        "overflow": "hidden",
+        "flex": 1,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "justifyContent": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
         }
       }
     >
       <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "opacity": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 40,
-              "height": 80,
-              "marginBottom": 8,
-              "marginRight": 0,
-              "overflow": "hidden",
-              "width": 80,
-            }
-          }
-          themeSize={80}
-        >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
-            style={
-              Object {
-                "aspectRatio": 1,
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
-              }
-            }
-          >
-            <Image
-              onLoad={[Function]}
-              size="medium"
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "google.com",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 40,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={80}
-            />
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "justifyContent": "center",
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 24,
-            "marginVertical": 1.8000000000000007,
-            "width": "100%",
-          }
-        }
-      />
-      <View
-        flexed={false}
         style={
           Object {
             "alignItems": "center",
-            "flex": null,
-            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 40,
+                "height": 80,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "overflow": "hidden",
+                "width": 80,
+              }
+            }
+            themeSize={80}
+          >
+            <View
+              animate={null}
+              customAnimate={null}
+              onReady={false}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
+                }
+              }
+            >
+              <Image
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "google.com",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 40,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                themeSize={80}
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
           }
         }
       >
         <View
           style={
             Object {
+              "alignSelf": "stretch",
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
-              "height": 19.2,
-              "width": 19.2,
+              "height": 24,
+              "marginVertical": 1.8000000000000007,
+              "width": "100%",
             }
           }
         />
         <View
+          flexed={false}
           style={
             Object {
-              "flex": 1,
-              "paddingHorizontal": 8,
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
             }
           }
-          withIcon="pin"
         >
           <View
             style={
               Object {
-                "alignSelf": "stretch",
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
-                "height": 12,
-                "marginVertical": 2.6400000000000006,
-                "width": "50%",
+                "height": 19.2,
+                "width": 19.2,
               }
             }
           />
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "paddingHorizontal": 8,
+              }
+            }
+            withIcon="pin"
+          >
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 2.6400000000000006,
+                  "width": "50%",
+                }
+              }
+            />
+          </View>
         </View>
       </View>
     </View>
@@ -197,9 +202,7 @@ exports[`user avatar header renders placeholder when loading 1`] = `
           Object {
             "backgroundColor": "transparent",
           },
-          Object {
-            "marginRight": 8,
-          },
+          undefined,
           false,
           Object {
             "flex": 0,
@@ -269,230 +272,235 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
     Object {
       "alignItems": "center",
       "flexDirection": "row",
-      "justifyContent": "space-between",
-      "marginLeft": 12,
+      "paddingHorizontal": 16,
       "paddingTop": 48,
+      "paddingVertical": 16,
     }
   }
 >
   <View
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "white",
-        "flexDirection": "row",
-        "justifyContent": "flex-start",
-        "overflow": "hidden",
+        "flex": 1,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "justifyContent": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
         }
       }
     >
       <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "opacity": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 40,
-              "height": 80,
-              "marginBottom": 8,
-              "marginRight": 0,
-              "overflow": "hidden",
-              "width": 80,
-            }
-          }
-          themeSize={80}
-        >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
-            style={
-              Object {
-                "aspectRatio": 1,
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
-              }
-            }
-          >
-            <Image
-              onLoad={[Function]}
-              size="medium"
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "google.com",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 40,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={80}
-            />
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "flex-start",
-          "justifyContent": "center",
-          "paddingHorizontal": 16,
-          "paddingVertical": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
-      >
-        Isaac
-         
-        Hardy
-      </Text>
-      <View
-        flexed={false}
         style={
           Object {
             "alignItems": "center",
-            "flex": null,
-            "flexDirection": "row",
+            "justifyContent": "center",
           }
         }
       >
-        <RNSVGSvgView
-          align="xMidYMid"
-          bbHeight="19.2"
-          bbWidth="19.2"
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-              },
-              undefined,
-              false,
-              Object {
-                "flex": 0,
-                "height": 19.2,
-                "width": 19.2,
-              },
-            ]
-          }
-          vbHeight={24}
-          vbWidth={24}
-        >
-          <RNSVGPath
-            d="M11.83 2C8 2 4 4.96 4 9.83c0 4.6 6.96 11.65 7.22 11.9.17.18.35.27.6.27.27 0 .44-.1.6-.26.28-.26 7.23-7.3 7.23-11.9 0-4.88-4-7.84-7.82-7.84zm0 10.43c-1.48 0-2.6-1.13-2.6-2.6 0-1.48 1.12-2.6 2.6-2.6 1.47 0 2.6 1.12 2.6 2.6 0 1.47-1.13 2.6-2.6 2.6z"
-            fill={
-              Array [
-                0,
-                0.3137254901960784,
-                0.3137254901960784,
-                0.3137254901960784,
-                1,
-              ]
-            }
-            fillOpacity={1}
-            fillRule={1}
-            matrix={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-            opacity={1}
-            originX={0}
-            originY={0}
-            propList={
-              Array [
-                "fill",
-              ]
-            }
-            rotation={0}
-            scaleX={1}
-            scaleY={1}
-            skewX={0}
-            skewY={0}
-            stroke={null}
-            strokeDasharray={null}
-            strokeDashoffset={null}
-            strokeLinecap={0}
-            strokeLinejoin={0}
-            strokeMiterlimit={4}
-            strokeOpacity={1}
-            strokeWidth="1"
-            x={0}
-            y={0}
-          />
-        </RNSVGSvgView>
         <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "flex": 1,
-              "paddingHorizontal": 8,
+              "opacity": 1,
             }
           }
-          withIcon="pin"
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 40,
+                "height": 80,
+                "marginBottom": 8,
+                "marginRight": 0,
+                "overflow": "hidden",
+                "width": 80,
               }
             }
+            themeSize={80}
           >
-            Anderson, SC
-          </Text>
+            <View
+              animate={null}
+              customAnimate={null}
+              onReady={false}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#A5A5A5",
+                  "width": "100%",
+                }
+              }
+            >
+              <Image
+                onLoad={[Function]}
+                size="medium"
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "google.com",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 40,
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                themeSize={80}
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          Isaac
+           
+          Hardy
+        </Text>
+        <View
+          flexed={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight="19.2"
+            bbWidth="19.2"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 19.2,
+                  "width": 19.2,
+                },
+              ]
+            }
+            vbHeight={24}
+            vbWidth={24}
+          >
+            <RNSVGPath
+              d="M11.83 2C8 2 4 4.96 4 9.83c0 4.6 6.96 11.65 7.22 11.9.17.18.35.27.6.27.27 0 .44-.1.6-.26.28-.26 7.23-7.3 7.23-11.9 0-4.88-4-7.84-7.82-7.84zm0 10.43c-1.48 0-2.6-1.13-2.6-2.6 0-1.48 1.12-2.6 2.6-2.6 1.47 0 2.6 1.12 2.6 2.6 0 1.47-1.13 2.6-2.6 2.6z"
+              fill={
+                Array [
+                  0,
+                  0.3137254901960784,
+                  0.3137254901960784,
+                  0.3137254901960784,
+                  1,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth="1"
+              x={0}
+              y={0}
+            />
+          </RNSVGSvgView>
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "paddingHorizontal": 8,
+              }
+            }
+            withIcon="pin"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
+                }
+              }
+            >
+              Anderson, SC
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -524,9 +532,7 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
           Object {
             "backgroundColor": "transparent",
           },
-          Object {
-            "marginRight": 8,
-          },
+          undefined,
           false,
           Object {
             "flex": 0,
