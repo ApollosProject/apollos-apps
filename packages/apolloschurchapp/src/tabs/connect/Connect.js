@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, View, SafeAreaView, Platform } from 'react-native';
+import { ScrollView, SafeAreaView, Platform } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
