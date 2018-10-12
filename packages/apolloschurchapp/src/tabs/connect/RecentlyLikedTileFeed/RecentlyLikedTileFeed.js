@@ -12,11 +12,11 @@ import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 
 import TileImageItem from '../../discover/TileImageItem';
 
-const RowHeader = styled(({ theme, vertical = true }) => ({
+const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingVertical: vertical ? theme.sizing.baseUnit : 0,
+  paddingVertical: theme.sizing.baseUnit,
 }))(PaddedView);
 
 const Name = styled({
