@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
-import { compose } from 'recompose';
 
 import { H3 } from 'apolloschurchapp/src/ui/typography';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ChannelLabel from 'apolloschurchapp/src/ui/ChannelLabel';
-import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import AvatarForm from './AvatarForm';
 
-const enhance = compose(withTheme());
 
 const Container = styled({
   backgroundColor: 'white',
