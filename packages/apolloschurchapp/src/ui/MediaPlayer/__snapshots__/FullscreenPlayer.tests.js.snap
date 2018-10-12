@@ -36,8 +36,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
       style={
         Object {
           "aspectRatio": 1,
-          "borderBottomLeftRadius": 6,
-          "borderTopLeftRadius": 6,
+          "borderBottomLeftRadius": 8,
+          "borderTopLeftRadius": 8,
           "height": 50,
           "overflow": "hidden",
         }
@@ -181,15 +181,15 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "space-between",
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="20"
-                  bbWidth="20"
+                  bbHeight="16"
+                  bbWidth="16"
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -200,12 +200,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
-                        "height": 20,
-                        "width": 20,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
@@ -264,7 +264,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "paddingHorizontal": 20,
+                      "paddingHorizontal": 16,
                       "paddingVertical": 0,
                     }
                   }
@@ -294,8 +294,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 </View>
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="20"
-                  bbWidth="20"
+                  bbHeight="16"
+                  bbWidth="16"
                   fill="#F8F7F4"
                   meetOrSlice={0}
                   minX={0}
@@ -307,12 +307,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
-                        "height": 20,
-                        "width": 20,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
@@ -326,8 +326,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 Object {
                   "bottom": 0,
                   "left": 0,
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 20,
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 16,
                   "position": "absolute",
                   "right": 0,
                 }
@@ -336,7 +336,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 0,
                   }
                 }
@@ -410,7 +410,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           style={
                             Object {
                               "backgroundColor": "#17B582",
-                              "height": 6,
+                              "height": 16,
                             }
                           }
                         />
@@ -483,9 +483,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "space-around",
-                    "paddingBottom": 30,
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -506,8 +506,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="20"
-                    bbWidth="20"
+                    bbHeight="16"
+                    bbWidth="16"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -518,12 +518,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
-                          "height": 20,
-                          "width": 20,
+                          "height": 16,
+                          "width": 16,
                         },
                       ]
                     }
@@ -1043,8 +1043,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="20"
-                    bbWidth="20"
+                    bbHeight="16"
+                    bbWidth="16"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -1055,12 +1055,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
-                          "height": 20,
-                          "width": 20,
+                          "height": 16,
+                          "width": 16,
                         },
                       ]
                     }
@@ -1181,21 +1181,21 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
     <View
       style={
         Object {
-          "borderRadius": 6,
+          "borderRadius": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
             "width": 0,
           },
           "shadowOpacity": 1,
-          "shadowRadius": 3,
+          "shadowRadius": 6,
         }
       }
     >
       <View
         style={
           Object {
-            "borderRadius": 6,
+            "borderRadius": 8,
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "flex-start",
@@ -1254,8 +1254,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="25"
-                  bbWidth="25"
+                  bbHeight="20"
+                  bbWidth="20"
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -1268,8 +1268,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       false,
                       Object {
                         "flex": 0,
-                        "height": 25,
-                        "width": 25,
+                        "height": 20,
+                        "width": 20,
                       },
                     ]
                   }
@@ -1357,7 +1357,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 Object {
                   "height": "100%",
                   "justifyContent": "center",
-                  "paddingHorizontal": 10,
+                  "paddingHorizontal": 8,
                   "width": "100%",
                 }
               }
@@ -1368,7 +1368,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     "color": "#303030",
                     "fontFamily": "InterUI-Medium",
                     "fontSize": 14,
-                    "height": 20,
+                    "height": 16,
                     "lineHeight": 20.16,
                     "overflow": "hidden",
                   }
@@ -1380,7 +1380,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "height": 20,
+                    "height": 16,
                     "lineHeight": 17.28,
                     "marginTop": -2.5,
                   }
@@ -1396,7 +1396,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               "bottom": 0,
               "flexDirection": "row",
               "justifyContent": "flex-end",
-              "paddingHorizontal": 10,
+              "paddingHorizontal": 8,
               "position": "absolute",
               "right": 0,
               "top": -1,
@@ -1420,8 +1420,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight="25"
-              bbWidth="25"
+              bbHeight="20"
+              bbWidth="20"
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -1434,8 +1434,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                   false,
                   Object {
                     "flex": 0,
-                    "height": 25,
-                    "width": 25,
+                    "height": 20,
+                    "width": 20,
                   },
                 ]
               }
@@ -1552,7 +1552,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#17B582",
-                      "height": 6,
+                      "height": 16,
                     }
                   }
                 />
@@ -1618,8 +1618,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
       style={
         Object {
           "aspectRatio": 1,
-          "borderBottomLeftRadius": 6,
-          "borderTopLeftRadius": 6,
+          "borderBottomLeftRadius": 8,
+          "borderTopLeftRadius": 8,
           "height": 50,
           "overflow": "hidden",
         }
@@ -1763,15 +1763,15 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "space-between",
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="20"
-                  bbWidth="20"
+                  bbHeight="16"
+                  bbWidth="16"
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -1782,12 +1782,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
-                        "height": 20,
-                        "width": 20,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
@@ -1846,7 +1846,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                   style={
                     Object {
                       "alignItems": "center",
-                      "paddingHorizontal": 20,
+                      "paddingHorizontal": 16,
                       "paddingVertical": 0,
                     }
                   }
@@ -1876,8 +1876,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 </View>
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="20"
-                  bbWidth="20"
+                  bbHeight="16"
+                  bbWidth="16"
                   fill="#F8F7F4"
                   meetOrSlice={0}
                   minX={0}
@@ -1889,12 +1889,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
-                        "height": 20,
-                        "width": 20,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
@@ -1908,8 +1908,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 Object {
                   "bottom": 0,
                   "left": 0,
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 20,
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 16,
                   "position": "absolute",
                   "right": 0,
                 }
@@ -1918,7 +1918,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 0,
                   }
                 }
@@ -1992,7 +1992,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           style={
                             Object {
                               "backgroundColor": "#17B582",
-                              "height": 6,
+                              "height": 16,
                             }
                           }
                         />
@@ -2065,9 +2065,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "space-around",
-                    "paddingBottom": 30,
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -2088,8 +2088,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="20"
-                    bbWidth="20"
+                    bbHeight="16"
+                    bbWidth="16"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -2100,12 +2100,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
-                          "height": 20,
-                          "width": 20,
+                          "height": 16,
+                          "width": 16,
                         },
                       ]
                     }
@@ -2625,8 +2625,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="20"
-                    bbWidth="20"
+                    bbHeight="16"
+                    bbWidth="16"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -2637,12 +2637,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
-                          "height": 20,
-                          "width": 20,
+                          "height": 16,
+                          "width": 16,
                         },
                       ]
                     }
@@ -2763,21 +2763,21 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
     <View
       style={
         Object {
-          "borderRadius": 6,
+          "borderRadius": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
             "width": 0,
           },
           "shadowOpacity": 1,
-          "shadowRadius": 3,
+          "shadowRadius": 6,
         }
       }
     >
       <View
         style={
           Object {
-            "borderRadius": 6,
+            "borderRadius": 8,
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "flex-start",
@@ -2836,8 +2836,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="25"
-                  bbWidth="25"
+                  bbHeight="20"
+                  bbWidth="20"
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -2850,8 +2850,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       false,
                       Object {
                         "flex": 0,
-                        "height": 25,
-                        "width": 25,
+                        "height": 20,
+                        "width": 20,
                       },
                     ]
                   }
@@ -2939,7 +2939,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 Object {
                   "height": "100%",
                   "justifyContent": "center",
-                  "paddingHorizontal": 10,
+                  "paddingHorizontal": 8,
                   "width": "100%",
                 }
               }
@@ -2950,7 +2950,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     "color": "#303030",
                     "fontFamily": "InterUI-Medium",
                     "fontSize": 14,
-                    "height": 20,
+                    "height": 16,
                     "lineHeight": 20.16,
                     "overflow": "hidden",
                   }
@@ -2962,7 +2962,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "height": 20,
+                    "height": 16,
                     "lineHeight": 17.28,
                     "marginTop": -2.5,
                   }
@@ -2978,7 +2978,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               "bottom": 0,
               "flexDirection": "row",
               "justifyContent": "flex-end",
-              "paddingHorizontal": 10,
+              "paddingHorizontal": 8,
               "position": "absolute",
               "right": 0,
               "top": -1,
@@ -3002,8 +3002,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight="25"
-              bbWidth="25"
+              bbHeight="20"
+              bbWidth="20"
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -3016,8 +3016,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                   false,
                   Object {
                     "flex": 0,
-                    "height": 25,
-                    "width": 25,
+                    "height": 20,
+                    "width": 20,
                   },
                 ]
               }
@@ -3134,7 +3134,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                   style={
                     Object {
                       "backgroundColor": "#17B582",
-                      "height": 6,
+                      "height": 16,
                     }
                   }
                 />
@@ -3200,8 +3200,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
       style={
         Object {
           "aspectRatio": 1,
-          "borderBottomLeftRadius": 6,
-          "borderTopLeftRadius": 6,
+          "borderBottomLeftRadius": 8,
+          "borderTopLeftRadius": 8,
           "height": 50,
           "overflow": "hidden",
         }
@@ -3345,15 +3345,15 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "space-between",
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="20"
-                  bbWidth="20"
+                  bbHeight="16"
+                  bbWidth="16"
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -3364,12 +3364,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
-                        "height": 20,
-                        "width": 20,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
@@ -3428,7 +3428,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                   style={
                     Object {
                       "alignItems": "center",
-                      "paddingHorizontal": 20,
+                      "paddingHorizontal": 16,
                       "paddingVertical": 0,
                     }
                   }
@@ -3458,8 +3458,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 </View>
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="20"
-                  bbWidth="20"
+                  bbHeight="16"
+                  bbWidth="16"
                   fill="#F8F7F4"
                   meetOrSlice={0}
                   minX={0}
@@ -3471,12 +3471,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       },
                       undefined,
                       Object {
-                        "opacity": 1,
+                        "opacity": 1.25,
                       },
                       Object {
                         "flex": 0,
-                        "height": 20,
-                        "width": 20,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
@@ -3490,8 +3490,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 Object {
                   "bottom": 0,
                   "left": 0,
-                  "paddingHorizontal": 20,
-                  "paddingVertical": 20,
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 16,
                   "position": "absolute",
                   "right": 0,
                 }
@@ -3500,7 +3500,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 20,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 0,
                   }
                 }
@@ -3574,7 +3574,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           style={
                             Object {
                               "backgroundColor": "#17B582",
-                              "height": 6,
+                              "height": 16,
                             }
                           }
                         />
@@ -3647,9 +3647,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     "alignItems": "center",
                     "flexDirection": "row",
                     "justifyContent": "space-around",
-                    "paddingBottom": 30,
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -3670,8 +3670,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="20"
-                    bbWidth="20"
+                    bbHeight="16"
+                    bbWidth="16"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -3682,12 +3682,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
-                          "height": 20,
-                          "width": 20,
+                          "height": 16,
+                          "width": 16,
                         },
                       ]
                     }
@@ -4207,8 +4207,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <RNSVGSvgView
                     align="xMidYMid"
-                    bbHeight="20"
-                    bbWidth="20"
+                    bbHeight="16"
+                    bbWidth="16"
                     meetOrSlice={0}
                     minX={0}
                     minY={0}
@@ -4219,12 +4219,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         },
                         undefined,
                         Object {
-                          "opacity": 1,
+                          "opacity": 1.25,
                         },
                         Object {
                           "flex": 0,
-                          "height": 20,
-                          "width": 20,
+                          "height": 16,
+                          "width": 16,
                         },
                       ]
                     }
@@ -4345,21 +4345,21 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
     <View
       style={
         Object {
-          "borderRadius": 6,
+          "borderRadius": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
             "width": 0,
           },
           "shadowOpacity": 1,
-          "shadowRadius": 3,
+          "shadowRadius": 6,
         }
       }
     >
       <View
         style={
           Object {
-            "borderRadius": 6,
+            "borderRadius": 8,
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "flex-start",
@@ -4418,8 +4418,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight="25"
-                  bbWidth="25"
+                  bbHeight="20"
+                  bbWidth="20"
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -4432,8 +4432,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       false,
                       Object {
                         "flex": 0,
-                        "height": 25,
-                        "width": 25,
+                        "height": 20,
+                        "width": 20,
                       },
                     ]
                   }
@@ -4521,7 +4521,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 Object {
                   "height": "100%",
                   "justifyContent": "center",
-                  "paddingHorizontal": 10,
+                  "paddingHorizontal": 8,
                   "width": "100%",
                 }
               }
@@ -4532,7 +4532,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     "color": "#303030",
                     "fontFamily": "InterUI-Medium",
                     "fontSize": 14,
-                    "height": 20,
+                    "height": 16,
                     "lineHeight": 20.16,
                     "overflow": "hidden",
                   }
@@ -4544,7 +4544,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "height": 20,
+                    "height": 16,
                     "lineHeight": 17.28,
                     "marginTop": -2.5,
                   }
@@ -4560,7 +4560,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               "bottom": 0,
               "flexDirection": "row",
               "justifyContent": "flex-end",
-              "paddingHorizontal": 10,
+              "paddingHorizontal": 8,
               "position": "absolute",
               "right": 0,
               "top": -1,
@@ -4584,8 +4584,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight="25"
-              bbWidth="25"
+              bbHeight="20"
+              bbWidth="20"
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -4598,8 +4598,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                   false,
                   Object {
                     "flex": 0,
-                    "height": 25,
-                    "width": 25,
+                    "height": 20,
+                    "width": 20,
                   },
                 ]
               }
@@ -4716,7 +4716,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                   style={
                     Object {
                       "backgroundColor": "#17B582",
-                      "height": 6,
+                      "height": 16,
                     }
                   }
                 />
