@@ -1,4 +1,2 @@
-import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
-import RecentlyLikedTileFeedConnected from './RecentlyLikedTileFeedConnected';
-
-export { RecentlyLikedTileFeed, RecentlyLikedTileFeedConnected };
+export RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
+export RecentlyLikedTileFeedConnected from './RecentlyLikedTileFeedConnected';
