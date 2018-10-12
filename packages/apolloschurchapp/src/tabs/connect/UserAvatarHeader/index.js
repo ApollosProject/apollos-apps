@@ -1,4 +1,2 @@
-import UserAvatarHeader from './UserAvatarHeader';
-import UserAvatarHeaderConnected from './UserAvatarHeaderConnected';
-
-export { UserAvatarHeader, UserAvatarHeaderConnected };
+export UserAvatarHeader from './UserAvatarHeader';
+export UserAvatarHeaderConnected from './UserAvatarHeaderConnected';
