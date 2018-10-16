@@ -5991,6 +5991,7 @@ exports[`The Video icon renders correctly 1`] = `
 </RCTSafeAreaView>
 `;
 
+<<<<<<< HEAD
 exports[`The VideoOff icon renders correctly 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
@@ -6146,6 +6147,8 @@ exports[`The VideoOff icon renders correctly 1`] = `
 </RCTSafeAreaView>
 `;
 
+=======
+>>>>>>> master
 exports[`The Volume icon renders correctly 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}

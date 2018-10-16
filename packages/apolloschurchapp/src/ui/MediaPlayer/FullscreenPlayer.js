@@ -13,6 +13,7 @@ import { get } from 'lodash';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 
+import { LayoutConsumer } from '../LayoutContext';
 import MiniControls, { MINI_PLAYER_HEIGHT } from './MiniControls';
 import FullscreenControls from './FullscreenControls';
 import VideoWindow from './VideoWindow';
