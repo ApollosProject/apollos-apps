@@ -33,40 +33,40 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
     }
   >
     <View
-      isFullscreen={false}
-      safeAreaInsets={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "right": 0,
-          "top": 0,
-        }
-      }
       style={
         Object {
           "bottom": 0,
           "left": 0,
-          "margin": 16,
-          "marginBottom": 16,
           "position": "absolute",
           "right": 0,
           "top": 0,
+          "transform": Array [
+            Object {
+              "translateY": 1284,
+            },
+          ],
         }
       }
     >
       <View
+        isFullscreen={false}
+        safeAreaInsets={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+          }
+        }
         style={
           Object {
             "bottom": 0,
             "left": 0,
+            "margin": 16,
+            "marginBottom": 16,
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
-                "translateY": 1284,
-              },
-            ],
           }
         }
       >
@@ -1669,40 +1669,40 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
     }
   >
     <View
-      isFullscreen={false}
-      safeAreaInsets={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "right": 0,
-          "top": 0,
-        }
-      }
       style={
         Object {
           "bottom": 0,
           "left": 0,
-          "margin": 16,
-          "marginBottom": 16,
           "position": "absolute",
           "right": 0,
           "top": 0,
+          "transform": Array [
+            Object {
+              "translateY": 1284,
+            },
+          ],
         }
       }
     >
       <View
+        isFullscreen={false}
+        safeAreaInsets={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+          }
+        }
         style={
           Object {
             "bottom": 0,
             "left": 0,
+            "margin": 16,
+            "marginBottom": 16,
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
-                "translateY": 1284,
-              },
-            ],
           }
         }
       >
@@ -3305,40 +3305,40 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
     }
   >
     <View
-      isFullscreen={false}
-      safeAreaInsets={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "right": 0,
-          "top": 0,
-        }
-      }
       style={
         Object {
           "bottom": 0,
           "left": 0,
-          "margin": 16,
-          "marginBottom": 16,
           "position": "absolute",
           "right": 0,
           "top": 0,
+          "transform": Array [
+            Object {
+              "translateY": 1284,
+            },
+          ],
         }
       }
     >
       <View
+        isFullscreen={false}
+        safeAreaInsets={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+          }
+        }
         style={
           Object {
             "bottom": 0,
             "left": 0,
+            "margin": 16,
+            "marginBottom": 16,
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
-                "translateY": 1284,
-              },
-            ],
           }
         }
       >
