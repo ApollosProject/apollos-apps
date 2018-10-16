@@ -1,7 +1,11 @@
 import server from './server';
 
-const PORT = process.env.PORT || 4000;
+export { testSchema } from './server'; // eslint-disable-line import/prefer-default-export
 
-server.listen({ port: PORT }).then(({ url }) => {
+// Use the port, if provided.
+const { PORT } = process.env;
+const options = PORT ? { port: PORT } : {};
+
+server.listen(options).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
