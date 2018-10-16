@@ -19,7 +19,7 @@
     "publish-schema": "./node_modules/.bin/apollo schema:publish --endpoint=\"apollos-church-api.now.sh\" --key=$ENGINE_API_KEY",
     "nuke": "yarn nuke:node && yarn cache clean && yarn && yarn nuke:cache",
     "nuke:node": "./scripts/boom.sh && ./node_modules/.bin/lerna exec -- rm -rf ./node_modules",
-    "nuke:cache": "watchman watch-del-all && yarn start:dev -- --reset-cache"
+    "nuke:cache": "watchman watch-del-all && ./node_modules/.bin/lerna run start --scope apolloschurchapp --stream -- --reset-cache"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.47",
