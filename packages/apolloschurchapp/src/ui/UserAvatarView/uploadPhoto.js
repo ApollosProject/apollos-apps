@@ -15,7 +15,7 @@ function showImagePicker() {
   return new Promise((resolve, reject) => {
     ImagePicker.showImagePicker(options, (response) => {
       if (response.didCancel) {
-        resolve({ cancelled: true });
+        reject(response.didCancel);
       } else if (response.error) {
         reject(response.error);
       } else {
@@ -26,22 +26,26 @@ function showImagePicker() {
 }
 
 export default async ({ onUpload = () => ({}) }) => {
-  const image = await showImagePicker();
-  const file = new ReactNativeFile({
-    uri: image.uri,
-    name: image.fileName,
-    type: 'image/jpeg',
-  });
-  onUpload();
-  return client.mutate({
-    mutation: gql`
-      mutation uploadProfileImage($file: Upload!, $size: Int!) {
-        uploadProfileImage(file: $file, size: $size) {
-          firstName
-          lastName
+  try {
+    const image = await showImagePicker();
+    const file = new ReactNativeFile({
+      uri: image.uri,
+      name: image.fileName,
+      type: 'image/jpeg',
+    });
+    onUpload();
+    return client.mutate({
+      mutation: gql`
+        mutation uploadProfileImage($file: Upload!, $size: Int!) {
+          uploadProfileImage(file: $file, size: $size) {
+            firstName
+            lastName
+          }
         }
-      }
-    `,
-    variables: { file, size: image.fileSize },
-  });
+      `,
+      variables: { file, size: image.fileSize },
+    });
+  } catch (e) {
+    return false;
+  }
 };
