@@ -1,0 +1,6 @@
+*
+!packages/apollos-church-api
+!packages/babel-preset-apollos
+packages/apollos-church-api/.env
+packages/apollos-church-api/node_modules
+packages/babel-preset-apollos/node_modules
