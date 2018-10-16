@@ -1,0 +1,17 @@
+{
+  "name": "apollos-rock-apollo-data-source",
+  "version": "0.5.0",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^0.1.5",
+    "apollos-rock-cursor": "file:../apollos-rock-cursor",
+    "babel-preset-apollos": "link:../babel-preset-apollos",
+    "lodash": "^4.17.11",
+    "with-query": "^1.1.2"
+  }
+}

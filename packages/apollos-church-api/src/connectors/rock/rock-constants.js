@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import RockApolloDataSource from './data-source';
+import RockApolloDataSource from 'apollos-rock-apollo-data-source';
 
 const mapApollosNameToRockName = (name) => {
   switch (name) {

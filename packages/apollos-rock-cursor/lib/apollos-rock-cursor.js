@@ -1,8 +1,8 @@
-import Crypto from 'crypto';
+const Crypto = require('crypto');
 
 const secret = process.env.SECRET || 'SEfjsvoSDFnvblaE';
 
-export function createCursor(obj) {
+function createCursor(obj) {
   const str = JSON.stringify(obj);
   const cipher = Crypto.createCipher('aes192', secret);
   let encrypted = cipher.update(str, 'utf8', 'hex');
@@ -11,7 +11,7 @@ export function createCursor(obj) {
   return encodeURI(encrypted);
 }
 
-export function parseCursor(str) {
+function parseCursor(str) {
   try {
     const decipher = Crypto.createDecipher('aes192', secret);
 
@@ -23,3 +23,8 @@ export function parseCursor(str) {
     throw new Error('Error parsing cursor');
   }
 }
+
+module.exports = {
+  createCursor,
+  parseCursor,
+};

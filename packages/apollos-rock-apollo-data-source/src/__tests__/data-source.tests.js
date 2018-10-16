@@ -1,6 +1,6 @@
-import { createCursor } from '../../../utils/cursor';
-import RestDataSource from '../data-source';
-import RequestBuilder from '../RequestBuilder';
+import { createCursor } from 'apollos-rock-cursor';
+import RestDataSource from '../index';
+import RequestBuilder from '../request-builder';
 
 describe('RestDataSource', () => {
   it('constructs', () => {

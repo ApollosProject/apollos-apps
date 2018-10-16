@@ -1,5 +1,5 @@
-import casual from 'casual';
-import { createCursor, parseCursor } from './cursor';
+const casual = require('casual');
+const { createCursor, parseCursor } = require('../apollos-rock-cursor');
 
 describe('Node', () => {
   it('`createCursor` should take a valid json shape and return a string', () => {
