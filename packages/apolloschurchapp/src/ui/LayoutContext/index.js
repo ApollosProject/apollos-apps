@@ -55,7 +55,7 @@ class LayoutProvider extends Component {
     };
 
     if (!isEqual(this.state.safeAreaInsets, safeAreaInsets)) {
-      this.setState({ safeAreaInsets }); // eslint-disable-line
+      this.setState({ safeAreaInsets });
     }
   };
 
