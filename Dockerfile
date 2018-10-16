@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:8-alpine
 RUN mkdir -p /usr/src/app
 RUN mkdir -p /usr/src/babel-preset-apollos
 WORKDIR /usr/src/app
