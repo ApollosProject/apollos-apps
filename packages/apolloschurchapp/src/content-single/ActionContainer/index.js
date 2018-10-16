@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, SafeAreaView } from 'react-native';
+import { Platform, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
@@ -22,22 +22,23 @@ const PositioningView = styled(({ theme }) => ({
 const Container = styled(({ theme }) => ({
   backgroundColor: theme.colors.paper,
   ...Platform.select(theme.shadows.default),
-}))(SafeAreaView);
+}))(View);
 
 const ActionContainer = ({ itemId }) => (
   <Container>
-    <PositioningView>
-      <LikeButton itemId={itemId} />
-      <Query query={getShareContent} variables={{ itemId }}>
-        {({ data: { node } = {}, error, loading }) => {
-          const sharing = get(node, 'sharing');
-          return loading || error || !sharing ? null : (
-            <Share content={sharing} />
-          );
-        }}
-      </Query>
-    </PositioningView>
-    <MediaPlayerSpacer />
+    <MediaPlayerSpacer>
+      <PositioningView>
+        <LikeButton itemId={itemId} />
+        <Query query={getShareContent} variables={{ itemId }}>
+          {({ data: { node } = {}, error, loading }) => {
+            const sharing = get(node, 'sharing');
+            return loading || error || !sharing ? null : (
+              <Share content={sharing} />
+            );
+          }}
+        </Query>
+      </PositioningView>
+    </MediaPlayerSpacer>
   </Container>
 );
 
