@@ -11,6 +11,10 @@ import Providers from './Providers';
 import NotificationsInit from './Notifications';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
+import UserSettings from './user-settings';
+import PersonalDetails from './user-settings/PersonalDetails';
+import ChangePassword from './user-settings/ChangePassword';
+import LikedContentList from './tabs/connect/LikedContentList';
 import Tabs from './tabs';
 import Auth from './auth';
 
@@ -28,6 +32,10 @@ const AppNavigator = createStackNavigator(
     Tabs,
     ContentSingle,
     Auth,
+    UserSettings,
+    LikedContentList,
+    PersonalDetails,
+    ChangePassword,
   },
   {
     initialRouteName: 'Tabs',
