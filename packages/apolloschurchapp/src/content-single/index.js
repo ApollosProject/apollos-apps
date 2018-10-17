@@ -67,13 +67,11 @@ class ContentSingle extends PureComponent {
           content.scriptures &&
           content.scriptures.length ? (
             <Devotional
+              id={content.id}
               body={content.htmlContent}
               title={content.title}
               isLoading={loading}
               scripture={content.scriptures || []}
-              horizontalContent={horizontalContent}
-              loadingStateObject={this.loadingStateObject}
-              renderItem={this.renderItem}
             />
           ) : (
             <FlexedScrollView>

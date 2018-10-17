@@ -12,6 +12,8 @@ import ScriptureTab from './ScriptureTab';
  */
 class Devotional extends PureComponent {
   static propTypes = {
+    /** The id of the devotional item */
+    id: PropTypes.string,
     /** The devotional text */
     body: PropTypes.string,
     /** The devotional title */
@@ -29,12 +31,6 @@ class Devotional extends PureComponent {
         html: PropTypes.string,
       })
     ),
-    /** An array of parent/sibling content to display under the tabs */
-    horizontalContent: PropTypes.array, // eslint-disable-line
-    /** An object with fake data to display while the data is loading. */
-    loadingStateObject: PropTypes.shape({}).isRequired,
-    /** A function that holds the components to display the horizontal content */
-    renderItem: PropTypes.func.isRequired,
   };
 
   /**
@@ -55,13 +51,11 @@ class Devotional extends PureComponent {
    */
   contentRoute = (navigationState) => (
     <ContentTab
+      id={this.props.id}
       body={this.props.body}
       isLoading={this.props.isLoading}
       references={this.getScriptureReferences(this.props.scripture)}
       title={this.props.title}
-      horizontalContent={this.props.horizontalContent}
-      loadingStateObject={this.props.loadingStateObject}
-      renderItem={this.props.renderItem}
       navigationState={navigationState}
     />
   );
@@ -71,11 +65,9 @@ class Devotional extends PureComponent {
    */
   scriptureRoute = () => (
     <ScriptureTab
+      id={this.props.id}
       scripture={this.props.scripture}
       isLoading={this.props.isLoading}
-      horizontalContent={this.props.horizontalContent}
-      loadingStateObject={this.props.loadingStateObject}
-      renderItem={this.props.renderItem}
     />
   );
 
