@@ -418,7 +418,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                
 
                               </Text>
                               <Text>
@@ -436,7 +436,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                
 
                               </Text>
                               <Text>
@@ -746,7 +746,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                           >
                             1 Corinthians 15:57
                           </Text>
-
+                           
                           <Text
                             style={
                               Object {
@@ -792,7 +792,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   57
                                 </Text>
@@ -811,7 +811,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  But thanks be to God, who gives us the victory through our Lord Jesus Christ.
+                                  But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
                                 </Text>
                               </Text>
                             </Text>
@@ -853,7 +853,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                           >
                             Exodus 17:8-15
                           </Text>
-
+                           
                           <Text
                             style={
                               Object {
@@ -899,7 +899,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   8
                                 </Text>
@@ -918,7 +918,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  Then Amalek came and fought with Israel in Rephidim.
+                                  Then Amalek came and fought with Israel in Rephidim. 
                                 </Text>
                               </Text>
                               <Text
@@ -933,7 +933,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   9
                                 </Text>
@@ -952,7 +952,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.”
+                                  Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
                                 </Text>
                               </Text>
                               <Text
@@ -967,7 +967,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   10
                                 </Text>
@@ -986,7 +986,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill.
+                                  So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
                                 </Text>
                               </Text>
                               <Text
@@ -1001,7 +1001,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   11
                                 </Text>
@@ -1020,7 +1020,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed.
+                                  When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
                                 </Text>
                               </Text>
                               <Text
@@ -1035,7 +1035,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   12
                                 </Text>
@@ -1054,7 +1054,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset.
+                                  But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
                                 </Text>
                               </Text>
                               <Text
@@ -1069,7 +1069,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   13
                                 </Text>
@@ -1088,7 +1088,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  Joshua defeated Amalek and his people with the edge of the sword.
+                                  Joshua defeated Amalek and his people with the edge of the sword. 
                                 </Text>
                               </Text>
                               <Text
@@ -1103,7 +1103,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   14
                                 </Text>
@@ -1122,7 +1122,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               >
                                 <Text>
-                                  Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.”
+                                  Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
                                 </Text>
                               </Text>
                               <Text
@@ -1137,7 +1137,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                   }
                                 }
                               >
-
+                                 
                                 <Text>
                                   15
                                 </Text>
@@ -1288,7 +1288,7 @@ exports[`the Devotional component renders a loading state 1`] = `
                       "translateX": 0,
                     },
                   ],
-                  "width": 375,
+                  "width": 750,
                 }
               }
             />
@@ -1388,220 +1388,6 @@ exports[`the Devotional component renders a loading state 1`] = `
                     </View>
                   </View>
                 </View>
-                <View
-                  accessibilityComponentType="button"
-                  accessibilityLabel="SCRIPTURE"
-                  accessibilityTraits="button"
-                  accessible={true}
-                  isTVSelectable={true}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "flex": 1,
-                      "opacity": 1,
-                    }
-                  }
-                >
-                  <View
-                    pointerEvents="none"
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "flex": 1,
-                          "justifyContent": "center",
-                          "opacity": 0.7,
-                          "padding": 8,
-                        }
-                      }
-                    >
-                      <Text
-                        padded={true}
-                        style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 16,
-                            "lineHeight": 23.04,
-                            "paddingBottom": 11.52,
-                            "paddingTop": 15.21,
-                          }
-                        }
-                      >
-                        Scripture
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingHorizontal": 0,
-                      "paddingVertical": 20,
-                    }
-                  }
-                >
-                  <RCTScrollView
-                    data={
-                      Array [
-                        Object {
-                          "id": "fakeId0",
-                          "node": Object {
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "title": "",
-                          },
-                        },
-                        Object {
-                          "id": "fakeId1",
-                          "node": Object {
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "title": "",
-                          },
-                        },
-                        Object {
-                          "id": "fakeId2",
-                          "node": Object {
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "title": "",
-                          },
-                        },
-                        Object {
-                          "id": "fakeId3",
-                          "node": Object {
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "title": "",
-                          },
-                        },
-                        Object {
-                          "id": "fakeId4",
-                          "node": Object {
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "title": "",
-                          },
-                        },
-                      ]
-                    }
-                    decelerationRate="fast"
-                    disableVirtualization={false}
-                    fetchMore={[Function]}
-                    getItem={[Function]}
-                    getItemCount={[Function]}
-                    horizontal={true}
-                    initialNumToRender={10}
-                    initialScrollIndex={0}
-                    keyExtractor={[Function]}
-                    loadingStateObject={
-                      Object {
-                        "node": Object {
-                          "id": "fakeId0",
-                          "isLoading": true,
-                          "title": "",
-                        },
-                      }
-                    }
-                    maxToRenderPerBatch={10}
-                    numColumns={1}
-                    onContentSizeChange={[Function]}
-                    onEndReachedThreshold={2}
-                    onLayout={[Function]}
-                    onMomentumScrollEnd={[Function]}
-                    onScroll={[Function]}
-                    onScrollBeginDrag={[Function]}
-                    onScrollEndDrag={[Function]}
-                    refreshing={true}
-                    renderItem={[Function]}
-                    scrollEventThrottle={50}
-                    showsHorizontalScrollIndicator={false}
-                    snapToAlignment="start"
-                    snapToInterval={590}
-                    stickyHeaderIndices={Array []}
-                    style={
-                      Object {
-                        "height": 600,
-                        "paddingBottom": 10,
-                        "paddingHorizontal": 10,
-                      }
-                    }
-                    tileHeight={600}
-                    updateCellsBatchingPeriod={50}
-                    viewabilityConfigCallbackPairs={Array []}
-                    windowSize={21}
-                  >
-                    <View>
-                      <View
-                        onLayout={[Function]}
-                        style={
-                          Array [
-                            Object {
-                              "flexDirection": "row",
-                            },
-                            null,
-                          ]
-                        }
-                      />
-                      <View
-                        onLayout={[Function]}
-                        style={
-                          Array [
-                            Object {
-                              "flexDirection": "row",
-                            },
-                            null,
-                          ]
-                        }
-                      />
-                      <View
-                        onLayout={[Function]}
-                        style={
-                          Array [
-                            Object {
-                              "flexDirection": "row",
-                            },
-                            null,
-                          ]
-                        }
-                      />
-                      <View
-                        onLayout={[Function]}
-                        style={
-                          Array [
-                            Object {
-                              "flexDirection": "row",
-                            },
-                            null,
-                          ]
-                        }
-                      />
-                      <View
-                        onLayout={[Function]}
-                        style={
-                          Array [
-                            Object {
-                              "flexDirection": "row",
-                            },
-                            null,
-                          ]
-                        }
-                      />
-                    </View>
-                  </RCTScrollView>
-                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -1643,17 +1429,6 @@ exports[`the Devotional component renders a loading state 1`] = `
               }
             }
           >
-<<<<<<< HEAD
-            <RCTScrollView>
-              <View>
-                <View
-                  style={
-                    Object {
-
-                      "paddingHorizontal": 16,
-                      "paddingVertical": 16,
-                    }
-=======
             <View>
               <View
                 accessibilityElementsHidden={false}
@@ -1662,7 +1437,6 @@ exports[`the Devotional component renders a loading state 1`] = `
                   Object {
                     "overflow": "hidden",
                     "width": 750,
->>>>>>> 1bb4fb90c49a817ac36700acb20cdc63fcc3f144
                   }
                 }
               >
@@ -1859,12 +1633,420 @@ exports[`the Devotional component renders a loading state 1`] = `
                         />
                       </View>
                     </View>
+                    <View
+                      style={
+                        Object {
+                          "paddingHorizontal": 0,
+                          "paddingVertical": 16,
+                        }
+                      }
+                    >
+                      <RCTScrollView
+                        data={
+                          Array [
+                            Object {
+                              "id": "fakeId0",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId1",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId2",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId3",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId4",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                          ]
+                        }
+                        decelerationRate="fast"
+                        disableVirtualization={false}
+                        fetchMore={[Function]}
+                        getItem={[Function]}
+                        getItemCount={[Function]}
+                        horizontal={true}
+                        initialNumToRender={10}
+                        initialScrollIndex={0}
+                        keyExtractor={[Function]}
+                        loadingStateObject={
+                          Object {
+                            "node": Object {
+                              "id": "fakeId0",
+                              "isLoading": true,
+                              "title": "",
+                            },
+                          }
+                        }
+                        maxToRenderPerBatch={10}
+                        numColumns={1}
+                        onContentSizeChange={[Function]}
+                        onEndReachedThreshold={2}
+                        onLayout={[Function]}
+                        onMomentumScrollEnd={[Function]}
+                        onScroll={[Function]}
+                        onScrollBeginDrag={[Function]}
+                        onScrollEndDrag={[Function]}
+                        refreshing={true}
+                        renderItem={[Function]}
+                        scrollEventThrottle={50}
+                        showsHorizontalScrollIndicator={false}
+                        snapToAlignment="start"
+                        snapToInterval={592}
+                        stickyHeaderIndices={Array []}
+                        style={
+                          Object {
+                            "height": 600,
+                            "paddingBottom": 8,
+                          }
+                        }
+                        tileHeight={600}
+                        updateCellsBatchingPeriod={50}
+                        viewabilityConfigCallbackPairs={Array []}
+                        windowSize={21}
+                      >
+                        <View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                        </View>
+                      </RCTScrollView>
+                    </View>
                   </View>
                 </RCTScrollView>
               </View>
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </BVLinearGradient>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`the Devotional component renders even with empty scripture array 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4294967295,
+          4294506484,
+        ]
+      }
+      locations={null}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        collapsable={false}
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "overflow": "hidden",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "elevation": 4,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": 0.5,
+              },
+              "shadowOpacity": 0.1,
+              "shadowRadius": 0.5,
+              "zIndex": 1,
+            }
+          }
+        >
+          <View
+            pointerEvents="none"
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#6EC5B8",
+                  "bottom": 0,
+                  "height": 3,
+                  "left": 0,
+                  "position": "absolute",
+                  "transform": Array [
+                    Object {
+                      "translateX": 0,
+                    },
+                  ],
+                  "width": 750,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "overflow": "scroll",
+              }
+            }
+          >
+            <RCTScrollView
+              alwaysBounceHorizontal={false}
+              automaticallyAdjustContentInsets={false}
+              contentContainerStyle={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                  },
+                  Object {
+                    "flex": 1,
+                  },
+                ]
+              }
+              horizontal={true}
+              keyboardShouldPersistTaps="handled"
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              overScrollMode="never"
+              scrollEventThrottle={1}
+              scrollsToTop={false}
+              showsHorizontalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  accessibilityComponentType="button"
+                  accessibilityLabel="DEVOTIONAL"
+                  accessibilityTraits={
+                    Array [
+                      "button",
+                      "selected",
+                    ]
+                  }
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "flex": 1,
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "flex": 1,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "padding": 8,
+                        }
+                      }
+                    >
+                      <Text
+                        padded={true}
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 16,
+                            "lineHeight": 23.04,
+                            "paddingBottom": 11.52,
+                            "paddingTop": 15.21,
+                          }
+                        }
+                      >
+                        Devotional
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <RCTScrollView
+            alwaysBounceHorizontal={false}
+            automaticallyAdjustContentInsets={false}
+            bounces={false}
+            contentContainerStyle={null}
+            contentOffset={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            directionalLockEnabled={true}
+            horizontal={true}
+            keyboardDismissMode="on-drag"
+            keyboardShouldPersistTaps="always"
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            overScrollMode="never"
+            pagingEnabled={true}
+            scrollEnabled={true}
+            scrollEventThrottle={1}
+            scrollsToTop={false}
+            showsHorizontalScrollIndicator={false}
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <View>
               <View
-                accessibilityElementsHidden={true}
-                importantForAccessibility="no-hide-descendants"
+                accessibilityElementsHidden={false}
+                importantForAccessibility="auto"
                 style={
                   Object {
                     "overflow": "hidden",
@@ -1878,7 +2060,7 @@ exports[`the Devotional component renders a loading state 1`] = `
                       style={
                         Object {
                           "paddingHorizontal": 16,
-                          "paddingVertical": 16,
+                          "paddingVertical": 0,
                         }
                       }
                     >
@@ -1939,73 +2121,288 @@ exports[`the Devotional component renders a loading state 1`] = `
                               "borderRadius": 16,
                               "height": 16,
                               "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 16,
+                              "marginVertical": 5,
                               "width": "60%",
                             }
                           }
                         />
                       </View>
-                      <View>
-                        <View
-                          style={
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "paddingHorizontal": 0,
+                          "paddingVertical": 16,
+                        }
+                      }
+                    >
+                      <RCTScrollView
+                        data={
+                          Array [
                             Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 16,
-                              "marginVertical": 5,
-                              "width": "40%",
-                            }
-                          }
-                        />
-                        <View
-                          style={
+                              "id": "fakeId0",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
                             Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 16,
-                              "marginVertical": 5,
-                              "width": "100%",
-                            }
-                          }
-                        />
-                        <View
-                          style={
+                              "id": "fakeId1",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
                             Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 16,
-                              "marginVertical": 5,
-                              "width": "100%",
-                            }
-                          }
-                        />
-                        <View
-                          style={
+                              "id": "fakeId2",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
                             Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 16,
-                              "marginVertical": 5,
-                              "width": "100%",
-                            }
-                          }
-                        />
-                        <View
-                          style={
+                              "id": "fakeId3",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
                             Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 16,
-                              "marginVertical": 5,
-                              "width": "60%",
-                            }
+                              "id": "fakeId4",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                          ]
+                        }
+                        decelerationRate="fast"
+                        disableVirtualization={false}
+                        fetchMore={[Function]}
+                        getItem={[Function]}
+                        getItemCount={[Function]}
+                        horizontal={true}
+                        initialNumToRender={10}
+                        initialScrollIndex={0}
+                        keyExtractor={[Function]}
+                        loadingStateObject={
+                          Object {
+                            "node": Object {
+                              "id": "fakeId0",
+                              "isLoading": true,
+                              "title": "",
+                            },
                           }
-                        />
-                      </View>
+                        }
+                        maxToRenderPerBatch={10}
+                        numColumns={1}
+                        onContentSizeChange={[Function]}
+                        onEndReachedThreshold={2}
+                        onLayout={[Function]}
+                        onMomentumScrollEnd={[Function]}
+                        onScroll={[Function]}
+                        onScrollBeginDrag={[Function]}
+                        onScrollEndDrag={[Function]}
+                        refreshing={true}
+                        renderItem={[Function]}
+                        scrollEventThrottle={50}
+                        showsHorizontalScrollIndicator={false}
+                        snapToAlignment="start"
+                        snapToInterval={592}
+                        stickyHeaderIndices={Array []}
+                        style={
+                          Object {
+                            "height": 600,
+                            "paddingBottom": 8,
+                          }
+                        }
+                        tileHeight={600}
+                        updateCellsBatchingPeriod={50}
+                        viewabilityConfigCallbackPairs={Array []}
+                        windowSize={21}
+                      >
+                        <View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          />
+                        </View>
+                      </RCTScrollView>
                     </View>
                   </View>
                 </RCTScrollView>

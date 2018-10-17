@@ -17,13 +17,10 @@ import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenL
 
 import { events } from 'apolloschurchapp/src/analytics';
 import ActionContainer from './ActionContainer';
-<<<<<<< HEAD
 import Devotional from './Devotional';
-=======
 import HTMLContent from './HTMLContent';
 import HorizontalContentFeed from './HorizontalContentFeed';
 import MediaControls from './MediaControls';
->>>>>>> 1bb4fb90c49a817ac36700acb20cdc63fcc3f144
 
 import getContentItem from './getContentItem';
 
@@ -79,24 +76,25 @@ class ContentSingle extends PureComponent {
               renderItem={this.renderItem}
             />
           ) : (
-          <FlexedScrollView>
-            {coverImageSources.length || loading ? (
-              <GradientOverlayImage
-                isLoading={!coverImageSources.length && loading}
-                source={coverImageSources}
-              />
-            ) : null}
-            <BackgroundView>
-              <MediaControls contentId={id} />
-              <PaddedView>
-                <H2 padded isLoading={!title && loading}>
-                  {title}
-                </H2>
-                <HTMLContent contentId={id} />
-              </PaddedView>
-              <HorizontalContentFeed contentId={id} />
-            </BackgroundView>
-          </FlexedScrollView>)}
+            <FlexedScrollView>
+              {coverImageSources.length || loading ? (
+                <GradientOverlayImage
+                  isLoading={!coverImageSources.length && loading}
+                  source={coverImageSources}
+                />
+              ) : null}
+              <BackgroundView>
+                <MediaControls contentId={id} />
+                <PaddedView>
+                  <H2 padded isLoading={!title && loading}>
+                    {title}
+                  </H2>
+                  <HTMLContent contentId={id} />
+                </PaddedView>
+                <HorizontalContentFeed contentId={id} />
+              </BackgroundView>
+            </FlexedScrollView>
+          )}
           <ActionContainer itemId={id} />
         </ModalView>
       </ThemeMixin>
