@@ -24,6 +24,10 @@ const AvatarView = styled({
   justifyContent: 'center',
 })(PaddedView);
 
+const BackgroundContainer = styled(({ theme }) => ({
+  paddingTop: theme.sizing.baseUnit * 1.75,
+}))(BackgroundView);
+
 class UserSettings extends PureComponent {
   static navigationOptions = () => ({
     title: 'Settings',
@@ -43,7 +47,7 @@ class UserSettings extends PureComponent {
           if (loading) return <ActivityIndicator />;
           if (!isLoggedIn) return null;
           return (
-            <BackgroundView>
+            <BackgroundContainer>
               <AvatarView>
                 <AvatarForm
                   text
@@ -136,7 +140,7 @@ class UserSettings extends PureComponent {
                   </BackgroundView>
                 )}
               </WebBrowserConsumer>
-            </BackgroundView>
+            </BackgroundContainer>
           );
         }}
       </Query>
