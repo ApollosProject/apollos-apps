@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, SafeAreaView, Platform } from 'react-native';
+import { ScrollView, SafeAreaView, Platform, Dimensions } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -44,6 +44,10 @@ const Header = styled(({ theme }) => ({
   }),
 }))(PaddedView);
 
+const Container = styled({
+  height: Dimensions.get('screen').height * 0.75,
+})(PaddedView);
+
 const StyledLoginButton = styled(({ theme }) => ({
   marginVertical: theme.sizing.baseUnit,
 }))(LoginButton);
@@ -68,7 +72,7 @@ class Connect extends PureComponent {
           {({ data }) => {
             if (get(data, 'isLoggedIn', false))
               return (
-                <PaddedView>
+                <Container>
                   <SafeAreaView>
                     <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />
                     <ScrollView>
@@ -76,10 +80,10 @@ class Connect extends PureComponent {
                       <ActionTable />
                     </ScrollView>
                   </SafeAreaView>
-                </PaddedView>
+                </Container>
               );
             return (
-              <PaddedView>
+              <Container>
                 <SafeAreaView>
                   <ScrollView>
                     <Header>
@@ -103,7 +107,7 @@ class Connect extends PureComponent {
                     <ActionTable />
                   </ScrollView>
                 </SafeAreaView>
-              </PaddedView>
+              </Container>
             );
           }}
         </Query>
