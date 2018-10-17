@@ -26,27 +26,16 @@ const scripture = [
   },
 ];
 
-const renderItem = jest.fn();
-
-const loadingStateObject = {
-  node: {
-    id: 'fakeId0',
-    title: '',
-    isLoading: true,
-  },
-};
-
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = renderer.create(
       <Providers>
         <Devotional
+          id="1"
           body={content.body}
           title={content.title}
           isLoading={false}
           scripture={scripture}
-          renderItem={renderItem}
-          loadingStateObject={loadingStateObject}
         />
       </Providers>
     );
@@ -57,12 +46,11 @@ describe('the Devotional component', () => {
     const tree = renderer.create(
       <Providers>
         <Devotional
+          id="1"
           body={content.body}
           title={content.title}
           isLoading
           scripture={[]}
-          renderItem={renderItem}
-          loadingStateObject={loadingStateObject}
         />
       </Providers>
     );
@@ -73,12 +61,11 @@ describe('the Devotional component', () => {
     const tree = renderer.create(
       <Providers>
         <Devotional
+          id="1"
           body={content.body}
           title={content.title}
           isLoading
           scripture={scripture}
-          renderItem={renderItem}
-          loadingStateObject={loadingStateObject}
         />
       </Providers>
     );
