@@ -44,6 +44,11 @@ const Header = styled(({ theme }) => ({
   }),
 }))(PaddedView);
 
+/*
+  I would like some Feedback on a better way of handling
+  dimensions for this view.
+  TODO: Find more constructive way of setting the ScrollView Height
+*/
 const Container = styled({
   height: Dimensions.get('screen').height * 0.75,
 })(PaddedView);
