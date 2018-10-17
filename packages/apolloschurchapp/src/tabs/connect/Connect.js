@@ -83,7 +83,7 @@ class Connect extends PureComponent {
                 </Container>
               );
             return (
-              <Container>
+              <ScrollView>
                 <SafeAreaView>
                   <ScrollView>
                     <Header>
@@ -107,7 +107,7 @@ class Connect extends PureComponent {
                     <ActionTable />
                   </ScrollView>
                 </SafeAreaView>
-              </Container>
+              </ScrollView>
             );
           }}
         </Query>
