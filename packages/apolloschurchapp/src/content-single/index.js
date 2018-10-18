@@ -64,8 +64,8 @@ class ContentSingle extends PureComponent {
             }}
           />
           {content.__typename === 'DevotionalContentItem' &&
-          content.scriptures &&
-          content.scriptures.length ? (
+          content.parentChannel &&
+          content.parentChannel.name === 'Devotional' ? (
             <Devotional
               id={content.id}
               body={content.htmlContent}
