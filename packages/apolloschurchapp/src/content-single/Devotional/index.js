@@ -1,10 +1,14 @@
 import React, { PureComponent } from 'react';
+import { SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
 
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
+import styled from 'apolloschurchapp/src/ui/styled';
 import ContentTab from './ContentTab';
 import ScriptureTab from './ScriptureTab';
+
+const FlexedSafeAreaView = styled({ flex: 1 })(SafeAreaView);
 
 /**
  * The devotional component.
@@ -81,13 +85,15 @@ class Devotional extends PureComponent {
 
     return (
       <BackgroundView>
-        <TabView
-          routes={tabRoutes}
-          renderScene={SceneMap({
-            content: this.contentRoute,
-            scripture: this.scriptureRoute,
-          })}
-        />
+        <FlexedSafeAreaView>
+          <TabView
+            routes={tabRoutes}
+            renderScene={SceneMap({
+              content: this.contentRoute,
+              scripture: this.scriptureRoute,
+            })}
+          />
+        </FlexedSafeAreaView>
       </BackgroundView>
     );
   }
