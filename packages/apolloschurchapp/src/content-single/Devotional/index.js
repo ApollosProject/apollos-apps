@@ -31,6 +31,7 @@ class Devotional extends PureComponent {
         html: PropTypes.string,
       })
     ),
+    navigation: PropTypes.shape({}),
   };
 
   /**
@@ -57,6 +58,7 @@ class Devotional extends PureComponent {
       references={this.getScriptureReferences(this.props.scripture)}
       title={this.props.title}
       navigationState={navigationState}
+      navigation={this.props.navigation}
     />
   );
 
@@ -68,6 +70,7 @@ class Devotional extends PureComponent {
       id={this.props.id}
       scripture={this.props.scripture}
       isLoading={this.props.isLoading}
+      navigation={this.props.navigation}
     />
   );
 

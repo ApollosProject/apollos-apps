@@ -23,6 +23,7 @@ const ContentTab = ({
   body,
   isLoading,
   navigationState,
+  navigation,
 }) => (
   <ScrollView>
     <ContentContainer>
@@ -45,7 +46,7 @@ const ContentTab = ({
         </View>
       </Placeholder.Paragraph>
     </ContentContainer>
-    <HorizontalContentFeed contentId={id} />
+    <HorizontalContentFeed contentId={id} navigation={navigation} />
   </ScrollView>
 );
 

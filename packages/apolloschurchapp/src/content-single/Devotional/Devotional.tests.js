@@ -26,6 +26,10 @@ const scripture = [
   },
 ];
 
+const navigation = {
+  push: jest.fn(),
+};
+
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = renderer.create(
@@ -36,6 +40,7 @@ describe('the Devotional component', () => {
           title={content.title}
           isLoading={false}
           scripture={scripture}
+          navigation={navigation}
         />
       </Providers>
     );
@@ -51,6 +56,7 @@ describe('the Devotional component', () => {
           title={content.title}
           isLoading
           scripture={[]}
+          navigation={navigation}
         />
       </Providers>
     );
@@ -66,6 +72,7 @@ describe('the Devotional component', () => {
           title={content.title}
           isLoading
           scripture={scripture}
+          navigation={navigation}
         />
       </Providers>
     );

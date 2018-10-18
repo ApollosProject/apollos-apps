@@ -10,7 +10,7 @@ import HorizontalContentFeed from '../HorizontalContentFeed';
  * Maps over an array of scripture references and renders them
  * using the ScriptureItem component.
  */
-const ScriptureTab = ({ id, scripture, isLoading }) => (
+const ScriptureTab = ({ id, scripture, isLoading, navigation }) => (
   <ScrollView>
     <PaddedView>
       {scripture.map((ref) => (
@@ -22,7 +22,7 @@ const ScriptureTab = ({ id, scripture, isLoading }) => (
         />
       ))}
     </PaddedView>
-    <HorizontalContentFeed contentId={id} />
+    <HorizontalContentFeed contentId={id} navigation={navigation} />
   </ScrollView>
 );
 
