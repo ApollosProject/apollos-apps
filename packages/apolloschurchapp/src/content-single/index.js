@@ -1,15 +1,9 @@
 import React, { PureComponent } from 'react';
-import { ScrollView } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
-import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { H2 } from 'apolloschurchapp/src/ui/typography';
 import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
-import styled from 'apolloschurchapp/src/ui/styled';
 import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
 
 import ModalView from 'apolloschurchapp/src/ui/ModalView';
@@ -17,14 +11,8 @@ import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenL
 
 import { events } from 'apolloschurchapp/src/analytics';
 import ActionContainer from './ActionContainer';
-import Devotional from './Devotional';
-import HTMLContent from './HTMLContent';
-import HorizontalContentFeed from './HorizontalContentFeed';
-import MediaControls from './MediaControls';
-
+import RenderContent from './RenderContent';
 import getContentItem from './getContentItem';
-
-const FlexedScrollView = styled({ flex: 1 })(ScrollView);
 
 class ContentSingle extends PureComponent {
   static propTypes = {
@@ -43,9 +31,7 @@ class ContentSingle extends PureComponent {
 
     const content = data.node || {};
 
-    const coverImageSources = get(content, 'coverImage.sources', []);
-
-    const { theme = {}, title, id } = content;
+    const { theme = {}, id } = content;
 
     return (
       <ThemeMixin
@@ -63,36 +49,7 @@ class ContentSingle extends PureComponent {
               itemId: this.id,
             }}
           />
-          {content.__typename === 'DevotionalContentItem' &&
-          content.parentChannel &&
-          content.parentChannel.name === 'Devotional' ? (
-            <Devotional
-              id={content.id}
-              body={content.htmlContent}
-              title={content.title}
-              isLoading={loading}
-              scripture={content.scriptures || []}
-            />
-          ) : (
-            <FlexedScrollView>
-              {coverImageSources.length || loading ? (
-                <GradientOverlayImage
-                  isLoading={!coverImageSources.length && loading}
-                  source={coverImageSources}
-                />
-              ) : null}
-              <BackgroundView>
-                <MediaControls contentId={id} />
-                <PaddedView>
-                  <H2 padded isLoading={!title && loading}>
-                    {title}
-                  </H2>
-                  <HTMLContent contentId={id} />
-                </PaddedView>
-                <HorizontalContentFeed contentId={id} />
-              </BackgroundView>
-            </FlexedScrollView>
-          )}
+          <RenderContent content={content} loading={loading} />
           <ActionContainer itemId={id} />
         </ModalView>
       </ThemeMixin>
