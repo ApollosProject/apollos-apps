@@ -13,6 +13,9 @@ export default function withCloudinary(url = '', options) {
   if (process.env.CLOUDINARY_URL) {
     return cloudinary.url(url, {
       type: 'fetch',
+      fetch_format: 'auto',
+      width: '1600px',
+      crop: 'limit',
       ...options,
     });
   }
