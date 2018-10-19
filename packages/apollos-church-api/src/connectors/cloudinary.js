@@ -16,6 +16,5 @@ export default function withCloudinary(url = '', options) {
       ...options,
     });
   }
-  // if we don't have an API key for cloudinary, default to the url.
   return url;
 }

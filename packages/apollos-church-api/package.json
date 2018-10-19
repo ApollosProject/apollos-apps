@@ -22,8 +22,8 @@
   "jest": {
     "collectCoverage": true,
     "testMatch": [
-      "<rootDir>/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node"
   },
