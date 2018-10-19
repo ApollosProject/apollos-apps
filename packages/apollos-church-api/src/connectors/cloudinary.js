@@ -14,7 +14,7 @@ export default function withCloudinary(url = '', options) {
     return cloudinary.url(url, {
       type: 'fetch',
       fetch_format: 'auto',
-      width: '1600px',
+      width: '1600',
       crop: 'limit',
       ...options,
     });
