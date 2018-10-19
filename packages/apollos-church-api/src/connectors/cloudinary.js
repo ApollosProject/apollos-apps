@@ -18,3 +18,5 @@ export default function withCloudinary(url = '', options) {
   }
   return url;
 }
+
+export { cloudinary };
