@@ -1,1 +1,1 @@
-console.log('Disable reading from `env` file in test env.');
+// console.log('Disable reading from `env` file in test env.');
