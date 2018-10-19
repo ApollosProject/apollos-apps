@@ -42,13 +42,6 @@ export default gql`
   query getContentItem($itemId: ID!) {
     node(id: $itemId) {
       __typename
-      ... on DevotionalContentItem {
-        scriptures {
-          id
-          html
-          reference
-        }
-      }
       ... on ContentItem {
         ...contentItemFragment
       }

@@ -7,30 +7,14 @@ import GradientOverlayImage from 'apolloschurchapp/src/ui/GradientOverlayImage';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { H2 } from 'apolloschurchapp/src/ui/typography';
-import Devotional from '../Devotional';
 import MediaControls from '../MediaControls';
 import HTMLContent from '../HTMLContent';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);
 
-const RenderContent = ({ content, loading }) => {
+const UniversalContentItem = ({ content, loading }) => {
   const coverImageSources = get(content, 'coverImage.sources', []);
-  if (
-    content.__typename === 'DevotionalContentItem' &&
-    content.parentChannel &&
-    content.parentChannel.name === 'Devotional'
-  ) {
-    return (
-      <Devotional
-        id={content.id}
-        body={content.htmlContent}
-        title={content.title}
-        isLoading={loading}
-        scripture={content.scriptures || []}
-      />
-    );
-  }
   return (
     <FlexedScrollView>
       {coverImageSources.length || loading ? (
@@ -53,7 +37,7 @@ const RenderContent = ({ content, loading }) => {
   );
 };
 
-RenderContent.propTypes = {
+UniversalContentItem.propTypes = {
   content: PropTypes.shape({
     __typename: PropTypes.string,
     parentChannel: PropTypes.shape({
@@ -76,4 +60,4 @@ RenderContent.propTypes = {
   loading: PropTypes.bool,
 };
 
-export default RenderContent;
+export default UniversalContentItem;

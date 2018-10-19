@@ -11,8 +11,10 @@ import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenL
 
 import { events } from 'apolloschurchapp/src/analytics';
 import ActionContainer from './ActionContainer';
-import RenderContent from './RenderContent';
 import getContentItem from './getContentItem';
+
+import DevotionalContentItem from './DevotionalContentItem';
+import UniversalContentItem from './UniversalContentItem';
 
 class ContentSingle extends PureComponent {
   static propTypes = {
@@ -22,9 +24,37 @@ class ContentSingle extends PureComponent {
     }),
   };
 
-  get queryVariables() {
-    return { itemId: this.props.navigation.getParam('itemId', []) };
+  get itemId() {
+    return this.props.navigation.getParam('itemId', []);
   }
+
+  get queryVariables() {
+    return { itemId: this.itemId };
+  }
+
+  renderContent = ({ content, loading, error }) => {
+    switch (content.__typename) {
+      case 'DevotionalContentItem':
+        return (
+          <DevotionalContentItem
+            id={this.itemId}
+            content={content}
+            loading={loading}
+            error={error}
+          />
+        );
+      case 'UniversalContentItem':
+      default:
+        return (
+          <UniversalContentItem
+            id={this.itemId}
+            content={content}
+            loading={loading}
+            error={error}
+          />
+        );
+    }
+  };
 
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
@@ -49,7 +79,7 @@ class ContentSingle extends PureComponent {
               itemId: this.id,
             }}
           />
-          <RenderContent content={content} loading={loading} />
+          {this.renderContent({ content, loading, error })}
           <ActionContainer itemId={id} />
         </ModalView>
       </ThemeMixin>

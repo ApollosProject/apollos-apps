@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
+import getScripture from './getScripture';
 import Devotional from '.';
 
 const content = {
@@ -11,7 +12,7 @@ const content = {
   title: 'God is Our Banner',
 };
 
-const scripture = [
+const scriptures = [
   {
     id: '1CO.15.57',
     reference: '1 Corinthians 15:57',
@@ -26,6 +27,15 @@ const scripture = [
   },
 ];
 
+const scriptureMock = {
+  request: {
+    query: getScripture,
+  },
+  result: {
+    data: { node: { scriptures, id: '1' } },
+  },
+};
+
 const navigation = {
   push: jest.fn(),
 };
@@ -33,13 +43,11 @@ const navigation = {
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers mocks={[scriptureMock]}>
         <Devotional
           id="1"
-          body={content.body}
-          title={content.title}
-          isLoading={false}
-          scripture={scripture}
+          content={content}
+          loading={false}
           navigation={navigation}
         />
       </Providers>
@@ -49,15 +57,8 @@ describe('the Devotional component', () => {
   });
   it('renders even with empty scripture array', async () => {
     const tree = renderer.create(
-      <Providers>
-        <Devotional
-          id="1"
-          body={content.body}
-          title={content.title}
-          isLoading
-          scripture={[]}
-          navigation={navigation}
-        />
+      <Providers mocks={[scriptureMock]}>
+        <Devotional id="1" content={content} loading navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response
@@ -65,15 +66,8 @@ describe('the Devotional component', () => {
   });
   it('renders a loading state', async () => {
     const tree = renderer.create(
-      <Providers>
-        <Devotional
-          id="1"
-          body={content.body}
-          title={content.title}
-          isLoading
-          scripture={scripture}
-          navigation={navigation}
-        />
+      <Providers mocks={[scriptureMock]}>
+        <Devotional id="1" content={content} loading navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response

@@ -1,12 +1,16 @@
 import React, { PureComponent } from 'react';
 import { SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
+import { Query } from 'react-apollo';
 
+import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
 import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
 import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ContentTab from './ContentTab';
 import ScriptureTab from './ScriptureTab';
+
+import getScripture from './getScripture';
 
 const FlexedSafeAreaView = styled({ flex: 1 })(SafeAreaView);
 
@@ -14,27 +18,16 @@ const FlexedSafeAreaView = styled({ flex: 1 })(SafeAreaView);
  * The devotional component.
  * Displays a TabView with two tabs: ContentTab and ScriptureTab.
  */
-class Devotional extends PureComponent {
+class DevotionalContentItem extends PureComponent {
   static propTypes = {
     /** The id of the devotional item */
-    id: PropTypes.string,
-    /** The devotional text */
-    body: PropTypes.string,
-    /** The devotional title */
-    title: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    content: PropTypes.shape({
+      /** The devotional title */
+      title: PropTypes.string,
+    }),
     /** Toggles placeholders */
-    isLoading: PropTypes.bool,
-    /** An array of scripture objects */
-    scripture: PropTypes.arrayOf(
-      PropTypes.shape({
-        /** The ID of the verse (i.e. '1CO.15.57') */
-        id: PropTypes.string,
-        /** A human readable reference (i.e. '1 Corinthians 15:57') */
-        reference: PropTypes.string,
-        /** The scripture source to render */
-        html: PropTypes.string,
-      })
-    ),
+    loading: PropTypes.bool,
     navigation: PropTypes.shape({}),
   };
 
@@ -54,49 +47,60 @@ class Devotional extends PureComponent {
    * The route that TabView uses to render the ContentTab.
    * Note: navigationState gets passed down automatically from the TabView.
    */
-  contentRoute = (navigationState) => (
+  contentRoute = ({ scriptures, loading }) => (navigationState) => (
     <ContentTab
       id={this.props.id}
-      body={this.props.body}
-      isLoading={this.props.isLoading}
-      references={this.getScriptureReferences(this.props.scripture)}
-      title={this.props.title}
+      references={this.getScriptureReferences(scriptures)}
+      title={this.props.content.title}
       navigationState={navigationState}
       navigation={this.props.navigation}
+      isLoading={this.props.loading || loading}
     />
   );
 
   /**
    * The route that TabView uses to render the ScriptureTab
    */
-  scriptureRoute = () => (
+  scriptureRoute = ({ scriptures, loading }) => () => (
     <ScriptureTab
       id={this.props.id}
-      scripture={this.props.scripture}
-      isLoading={this.props.isLoading}
+      scripture={scriptures}
       navigation={this.props.navigation}
+      isLoading={this.props.loading || loading}
     />
   );
 
-  render() {
-    const hasScripture = !this.props.isLoading && this.props.scripture.length;
+  renderTabs = ({
+    data: { node: { scriptures = [] } = {} } = {},
+    error,
+    loading,
+  }) => {
+    if (error) return <ErrorCard error={error} />;
+    const hasScripture = loading || scriptures.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
+    return (
+      <TabView
+        routes={tabRoutes}
+        renderScene={SceneMap({
+          content: this.contentRoute({ scriptures, loading }),
+          scripture: this.scriptureRoute({ scriptures, loading }),
+        })}
+      />
+    );
+  };
 
+  render() {
     return (
       <BackgroundView>
         <FlexedSafeAreaView>
-          <TabView
-            routes={tabRoutes}
-            renderScene={SceneMap({
-              content: this.contentRoute,
-              scripture: this.scriptureRoute,
-            })}
-          />
+          <Query query={getScripture} variables={{ itemId: this.props.id }}>
+            {this.renderTabs}
+          </Query>
         </FlexedSafeAreaView>
       </BackgroundView>
     );
   }
 }
 
-export default Devotional;
+export default DevotionalContentItem;
