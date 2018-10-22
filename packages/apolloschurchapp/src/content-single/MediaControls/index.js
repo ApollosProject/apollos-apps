@@ -17,7 +17,6 @@ const MediaButton = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * buttonSizeDifferential,
   height: theme.sizing.baseUnit * buttonSizeDifferential,
   borderRadius: theme.sizing.baseUnit * (buttonSizeDifferential / 2),
-  overflow: 'hidden',
   backgroundColor: theme.colors.secondary,
   justifyContent: 'center',
   alignItems: 'center',
