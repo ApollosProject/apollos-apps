@@ -33,7 +33,11 @@ class ContentSingle extends PureComponent {
   }
 
   renderContent = ({ content, loading, error }) => {
-    switch (content.__typename) {
+    let { __typename } = content;
+    if (!__typename && this.itemId) {
+      [__typename] = this.itemId.split(':');
+    }
+    switch (__typename) {
       case 'DevotionalContentItem':
         return (
           <DevotionalContentItem
@@ -76,7 +80,7 @@ class ContentSingle extends PureComponent {
             eventName={events.ViewContent}
             properties={{
               title: content.title,
-              itemId: this.id,
+              itemId: this.itemId,
             }}
           />
           {this.renderContent({ content, loading, error })}
