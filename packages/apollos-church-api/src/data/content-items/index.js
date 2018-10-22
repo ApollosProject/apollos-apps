@@ -119,8 +119,9 @@ export const schema = gql`
   }
 `;
 
+// Empty fields in rock default to `''`
 const hasScripture = ({ attributeValues }) =>
-  get(attributeValues, 'scriptures.value') != null;
+  get(attributeValues, 'scriptures.value', '') !== '';
 
 const isImage = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
@@ -348,8 +349,11 @@ export const resolver = {
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: ({ attributeValues }) => {
-      if (hasScripture({ attributeValues })) {
+    __resolveType: ({ attributeValues, contentChannelTypeId }) => {
+      if (
+        hasScripture({ attributeValues }) &&
+        contentChannelTypeId === Constants.DEVOTIONAL_TYPE_ID
+      ) {
         return 'DevotionalContentItem';
       }
       return 'UniversalContentItem';
