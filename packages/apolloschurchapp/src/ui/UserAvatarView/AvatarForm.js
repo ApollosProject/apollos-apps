@@ -31,13 +31,11 @@ export default class AvatarForm extends PureComponent {
   componentWillUnmount() {
     this.setState({ isUploadingFile: false });
   }
-  /* 
-  
-  */
+
   handleUploadPhoto = async () => {
     try {
       await uploadPhoto({
-        onUpload: () => this.setState({ isUploadingFile: true })
+        onUpload: () => this.setState({ isUploadingFile: true }),
       });
       await this.props.refetch();
       await this.setState({ isUploadingFile: false });
