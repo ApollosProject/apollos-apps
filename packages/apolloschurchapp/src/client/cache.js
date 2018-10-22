@@ -22,9 +22,6 @@ const cache = new InMemoryCache({
     introspectionQueryResultData,
   }),
   cacheRedirects: {
-    ClientState: {
-      node: nodeCacheRedirect,
-    },
     Query: {
       node: nodeCacheRedirect,
     },
