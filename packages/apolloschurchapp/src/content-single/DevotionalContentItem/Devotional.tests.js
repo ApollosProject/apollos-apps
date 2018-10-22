@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import Providers from 'apolloschurchapp/src/Providers';
+import getContentItemContent from '../HTMLContent/getContentItemContent';
 import getScripture from './getScripture';
 import Devotional from '.';
 
@@ -14,12 +15,14 @@ const content = {
 
 const scriptures = [
   {
+    __typename: 'Scripture',
     id: '1CO.15.57',
     reference: '1 Corinthians 15:57',
     html:
       '<p class="p"><span data-number="57" class="v">57</span>But thanks be to God, who gives us the victory through our Lord Jesus Christ. </p>',
   },
   {
+    __typename: 'Scripture',
     id: 'EXO.17.8-EXO.17.15',
     reference: 'Exodus 17:8-15',
     html:
@@ -30,11 +33,32 @@ const scriptures = [
 const scriptureMock = {
   request: {
     query: getScripture,
+    variables: { itemId: '1' },
   },
   result: {
-    data: { node: { scriptures, id: '1' } },
+    data: {
+      node: { scriptures, id: '1', __typename: 'DevotionalContentItem' },
+    },
   },
 };
+
+const contentItemHTMLMock = {
+  request: {
+    query: getContentItemContent,
+    variables: { contentId: '1' },
+  },
+  result: {
+    data: {
+      node: {
+        id: '1',
+        htmlContent: '<b>Some content!</b>',
+        __typename: 'DevotionalContentItem',
+      },
+    },
+  },
+};
+
+const mocks = [scriptureMock, contentItemHTMLMock];
 
 const navigation = {
   push: jest.fn(),
@@ -43,7 +67,7 @@ const navigation = {
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = renderer.create(
-      <Providers mocks={[scriptureMock]}>
+      <Providers mocks={mocks}>
         <Devotional
           id="1"
           content={content}
@@ -57,7 +81,7 @@ describe('the Devotional component', () => {
   });
   it('renders even with empty scripture array', async () => {
     const tree = renderer.create(
-      <Providers mocks={[scriptureMock]}>
+      <Providers mocks={mocks}>
         <Devotional id="1" content={content} loading navigation={navigation} />
       </Providers>
     );
@@ -66,7 +90,7 @@ describe('the Devotional component', () => {
   });
   it('renders a loading state', async () => {
     const tree = renderer.create(
-      <Providers mocks={[scriptureMock]}>
+      <Providers mocks={mocks}>
         <Devotional id="1" content={content} loading navigation={navigation} />
       </Providers>
     );
