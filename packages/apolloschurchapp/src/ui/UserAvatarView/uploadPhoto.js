@@ -34,7 +34,7 @@ export default async ({ onUpload = () => ({}) }) => {
       name: image.fileName,
       type: 'image/jpeg',
     });
-    await onUpload();
+    onUpload();
     return client.mutate({
       mutation: gql`
         mutation uploadProfileImage($file: Upload!, $size: Int!) {
