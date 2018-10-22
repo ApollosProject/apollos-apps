@@ -23,7 +23,6 @@ const MediaButton = styled(({ theme }) => ({
   alignItems: 'center',
   borderWidth: buttonSizeDifferential,
   borderColor: theme.colors.paper,
-  marginHorizontal: theme.sizing.baseUnit / 2,
 }))(Button);
 
 const Container = styled(({ theme }) => ({
