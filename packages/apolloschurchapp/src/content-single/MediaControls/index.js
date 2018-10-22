@@ -21,9 +21,18 @@ const MediaButton = styled(({ theme }) => ({
   backgroundColor: theme.colors.secondary,
   justifyContent: 'center',
   alignItems: 'center',
-  borderWidth: buttonSizeDifferential,
-  borderColor: theme.colors.paper,
+  borderWidth: 0, // remove default button border
 }))(Button);
+
+/** MediaButtton "border styles" live in a seperate component so that Android places it's elevation
+ * shadow in the right place. */
+const MediaButtonBorder = styled(({ theme }) => ({
+  borderRadius:
+    theme.sizing.baseUnit * (buttonSizeDifferential / 2) +
+    buttonSizeDifferential, // this is eqivalent to the MediaButton size above + the padding below
+  padding: buttonSizeDifferential, // padding + backgroundColor = MediaButton + "borderStyles"
+  backgroundColor: theme.colors.paper,
+}))(View);
 
 const Container = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -54,22 +63,25 @@ class MediaControls extends PureComponent {
         {(play) => (
           <Container>
             {videoSource ? (
-              <MediaButton
-                type="primary"
-                onPress={() =>
-                  play({
-                    variables: {
-                      mediaSource: videoSource,
-                      posterSources: coverImageSources,
-                      title,
-                      isVideo: true,
-                      artist: parentChannel.name,
-                    },
-                  })
-                }
-              >
-                <MediaIcon name="play" />
-              </MediaButton>
+              <MediaButtonBorder>
+                <MediaButton
+                  type="primary"
+                  onPress={() =>
+                    play({
+                      variables: {
+                        mediaSource: videoSource,
+                        posterSources: coverImageSources,
+                        title,
+                        isVideo: true,
+                        artist: parentChannel.name,
+                      },
+                    })
+                  }
+                  useForeground
+                >
+                  <MediaIcon name="play" />
+                </MediaButton>
+              </MediaButtonBorder>
             ) : null}
           </Container>
         )}
