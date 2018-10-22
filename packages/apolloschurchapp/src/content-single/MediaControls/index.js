@@ -6,11 +6,11 @@ import { get } from 'lodash';
 
 import { playVideoMutation } from 'apolloschurchapp/src/ui/MediaPlayer/mutations';
 import Icon from 'apolloschurchapp/src/ui/Icon';
-import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 import styled from 'apolloschurchapp/src/ui/styled';
+import Button from 'apolloschurchapp/src/ui/Button';
 import getContentMedia from './getContentMedia';
 
-const buttonSizeDifferential = 3.5;
+const buttonSizeDifferential = 4;
 
 const MediaIcon = Icon; // todo: add back styles
 const MediaButton = styled(({ theme }) => ({
@@ -18,13 +18,13 @@ const MediaButton = styled(({ theme }) => ({
   height: theme.sizing.baseUnit * buttonSizeDifferential,
   borderRadius: theme.sizing.baseUnit * (buttonSizeDifferential / 2),
   overflow: 'hidden',
-  backgroundColor: theme.colors.primary,
+  backgroundColor: theme.colors.secondary,
   justifyContent: 'center',
   alignItems: 'center',
   borderWidth: buttonSizeDifferential,
   borderColor: theme.colors.paper,
   marginHorizontal: theme.sizing.baseUnit / 2,
-}))(View);
+}))(Button);
 
 const Container = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -55,7 +55,8 @@ class MediaControls extends PureComponent {
         {(play) => (
           <Container>
             {videoSource ? (
-              <TouchableScale
+              <MediaButton
+                type="primary"
                 onPress={() =>
                   play({
                     variables: {
@@ -68,10 +69,8 @@ class MediaControls extends PureComponent {
                   })
                 }
               >
-                <MediaButton>
-                  <MediaIcon name="play" />
-                </MediaButton>
-              </TouchableScale>
+                <MediaIcon name="play" />
+              </MediaButton>
             ) : null}
           </Container>
         )}
