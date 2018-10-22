@@ -38,7 +38,9 @@ const Container = styled(({ theme }) => ({
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
-  marginTop: -theme.sizing.baseUnit * (buttonSizeDifferential / 2),
+  marginTop:
+    -theme.sizing.baseUnit * (buttonSizeDifferential / 2) -
+    buttonSizeDifferential, // MediaButton size / 2 + border
 }))(View);
 
 class MediaControls extends PureComponent {
