@@ -45,7 +45,6 @@ const Signup = ({ onSignup }) => (
             ) {
               setFieldError('email', 'There is already a user with this email');
             } else {
-              console.warn(graphQLErrors);
               setFieldError(
                 'password',
                 'Unknown error. Please try again later.'
