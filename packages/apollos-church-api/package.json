@@ -1,6 +1,6 @@
 {
   "name": "apollos-church-api",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "main": "src/index.js",
   "scripts": {
@@ -22,8 +22,8 @@
   "jest": {
     "collectCoverage": true,
     "testMatch": [
-      "<rootDir>/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node"
   },
@@ -34,6 +34,7 @@
     "apollos-rock-apollo-data-source": "file:../apollos-rock-apollo-data-source",
     "apollos-rock-cursor": "file:../apollos-rock-cursor",
     "casual": "1.5.19",
+    "cloudinary": "^1.11.0",
     "color": "3.0.0",
     "crypto": "1.0.1",
     "dataloader": "1.4.0",
