@@ -261,7 +261,7 @@ describe('Auth', () => {
       context.dataSources.Auth.createUserLogin = createUserLogin;
       context.dataSources.Auth.createUserProfile = createUserProfile;
 
-      const result = await graphql(schema, query, rootValue, context);
+      await graphql(schema, query, rootValue, context);
 
       expect(createUserProfile.mock.calls).toMatchSnapshot();
       expect(createUserLogin.mock.calls).toMatchSnapshot();
