@@ -1,12 +1,12 @@
 ## DESCRIPTION
 
-### What does this PR do, or why is it needed? (land the plane)**
+### What does this PR do, or why is it needed? (land the plane)
 
-### What design trade-offs/decisions were made? (entrepreneurial mindset)**
+### What design trade-offs/decisions were made? (entrepreneurial mindset)
 
-### How do I test this PR? (ego-free communication)**
+### How do I test this PR? (ego-free communication)
 
-### What automated tests did you write? (grit, less but better, do the right thing)**
+### What automated tests did you write? (grit, less but better, do the right thing)
 
 ## TODO:
 
