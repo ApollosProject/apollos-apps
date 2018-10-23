@@ -1,4 +1,4 @@
-const Crypto = require('crypto');
+import Crypto from 'crypto';
 
 const secret = process.env.SECRET || 'SEfjsvoSDFnvblaE';
 
@@ -24,7 +24,4 @@ function parseCursor(str) {
   }
 }
 
-module.exports = {
-  createCursor,
-  parseCursor,
-};
+export { createCursor, parseCursor };

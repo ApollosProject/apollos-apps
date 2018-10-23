@@ -1,4 +1,4 @@
-import { createCursor } from 'apollos-rock-cursor';
+import { createCursor } from '../cursor';
 import RestDataSource from '../index';
 import RequestBuilder from '../request-builder';
 
