@@ -16,8 +16,9 @@ import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import AvatarForm from 'apolloschurchapp/src/ui/UserAvatarView/AvatarForm';
 import styled from 'apolloschurchapp/src/ui/styled';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
-import logout from '../auth/logout';
+
 import getLoginState from '../auth/getLoginState';
+import logout from '../auth/logout';
 
 const AvatarView = styled({
   alignItems: 'center',
@@ -42,7 +43,7 @@ class UserSettings extends PureComponent {
 
   render() {
     return (
-      <Query query={getLoginState}>
+      <Query query={getLoginState} fetchPolicy="cache-and-network">
         {({ data: { isLoggedIn = false, loading } }) => {
           if (loading) return <ActivityIndicator />;
           if (!isLoggedIn) return null;

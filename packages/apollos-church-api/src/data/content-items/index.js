@@ -89,7 +89,7 @@ export const schema = gql`
     sharing: SharableContentItem
     theme: Theme
     isLiked: Boolean
-    scriptures: Scripture
+    scriptures: [Scripture]
   }
 
   type Term {
@@ -119,8 +119,9 @@ export const schema = gql`
   }
 `;
 
+// Empty fields in rock default to `''`
 const hasScripture = ({ attributeValues }) =>
-  get(attributeValues, 'scriptures.value') != null;
+  get(attributeValues, 'scriptures.value', '') !== '';
 
 const isImage = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
@@ -251,11 +252,8 @@ export const defaultContentItemResolvers = {
     return null;
   },
 
-  // This resolver function is temporary, and is just used to get a seed to generate a random theme from
-  theme: (root) => {
-    if (![6, 5, 4].includes(root.contentChannelId)) return null; // todo: don't generate a theme for these content channel ids
-    return root.guid; // todo: this `guid` is just being used as a seed to generate colors for now
-  },
+  theme: () => null, // todo: integrate themes from Rock
+
   isLiked: async ({ id, isLiked }, args, { dataSources }) => {
     if (isLiked != null) return isLiked;
 
@@ -328,7 +326,7 @@ export const resolver = {
     scriptures: ({ attributeValues }, args, { dataSources }) => {
       const reference = get(attributeValues, 'scriptures.value');
       if (reference && reference != null) {
-        return dataSources.Scripture.getScripture(reference);
+        return dataSources.Scripture.getScriptures(reference);
       }
       return null;
     },
@@ -351,8 +349,11 @@ export const resolver = {
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: ({ attributeValues }) => {
-      if (hasScripture({ attributeValues })) {
+    __resolveType: ({ attributeValues, contentChannelTypeId }) => {
+      if (
+        hasScripture({ attributeValues }) &&
+        contentChannelTypeId === Constants.DEVOTIONAL_TYPE_ID
+      ) {
         return 'DevotionalContentItem';
       }
       return 'UniversalContentItem';
