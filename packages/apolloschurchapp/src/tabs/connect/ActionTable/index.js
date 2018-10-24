@@ -70,12 +70,14 @@ const ActionTable = () => (
               <CellText>I would like to give</CellText>
             </Cell>
           </Touchable>
+        </TableView>
+        <TableView>
           <Touchable
             onPress={() => NavigationActions.navigate('TestingControlPanel')}
           >
             <Cell>
-              <CellIcon name="download" />
-              <CellText>I would like to test the app</CellText>
+              <CellIcon name="settings" />
+              <CellText>Open Testing Panel</CellText>
             </Cell>
           </Touchable>
         </TableView>
