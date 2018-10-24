@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server';
-import Config from '../../config';
+import { ROCK } from '../../config';
 import withCloudinary from '../../connectors/cloudinary';
 
 export { default as model } from './model';
@@ -90,7 +90,7 @@ export const resolver = {
 
       // Handle Rock GUID:
       if (uri.split('-').length === 5)
-        return withCloudinary(`${Config.ROCK.IMAGE_URL}?guid=${uri}`);
+        return withCloudinary(`${ROCK.IMAGE_URL}?guid=${uri}`);
 
       return uri;
     },
