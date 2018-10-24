@@ -12,8 +12,8 @@
 
 - [ ] PR has a relevant title that adheres to our patch-notes/change-log style
 - [ ] Closes [tag-issues-here]
-- [ ] No new warnings in tests or in-app
-- [ ] Upload [GIF(s)](https://www.getcloudapp.com/) of iOS and Android
+- [ ] No new warnings in tests, in storybook, and in-app
+- [ ] Upload GIF(s) of iOS and Android
 - [ ] Set a relevant reviewer
 
 ## REVIEW:
