@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
 import { compose } from 'recompose';
 import { withNavigation } from 'react-navigation';
 
@@ -11,17 +10,15 @@ import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import styled from 'apolloschurchapp/src/ui/styled';
-// import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
+import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import FlexedView from 'apolloschurchapp/src/ui/FlexedView';
 
 const Container = styled(({ theme }) => ({
   alignItems: 'center',
   flexDirection: 'row',
-  /* This padding shouldn't be needed or at least not at such a high value but SafeAreaView doesn't
-   * appear to work so here it is 🤷‍♂️
-   * TODO: revisit and update/remove these values after next RN upgrade. */
-  paddingTop: theme.sizing.baseUnit * 3,
-}))(View);
+  paddingTop: theme.sizing.baseUnit * 2,
+  paddingBottom: 0,
+}))(PaddedView);
 
 const SettingsIcon = compose(
   withTheme(({ theme }) => ({

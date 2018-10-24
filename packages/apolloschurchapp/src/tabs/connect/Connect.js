@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, SafeAreaView, Platform, Dimensions } from 'react-native';
+import { ScrollView, SafeAreaView } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -32,26 +32,8 @@ const BrandIcon = withTheme(({ theme }) => ({
 const Header = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
   backgroundColor: theme.colors.background.paper,
-  // These conditional paddings are due to inconsistencies with SafeAreaView.
-  // TODO: revisit and update/remove these values after next RN upgrade.
-  ...Platform.select({
-    ios: {
-      paddingTop: theme.sizing.baseUnit * 5,
-    },
-    android: {
-      paddingTop: theme.sizing.baseUnit * 4,
-    },
-  }),
+  paddingTop: theme.sizing.baseUnit * 4,
 }))(PaddedView);
-
-/*
-  I would like some Feedback on a better way of handling
-  dimensions for this view.
-  TODO: Find more constructive way of setting the ScrollView Height
-*/
-const Container = styled({
-  height: Dimensions.get('screen').height * 0.75,
-})(PaddedView);
 
 const StyledLoginButton = styled(({ theme }) => ({
   marginVertical: theme.sizing.baseUnit,
@@ -77,42 +59,38 @@ class Connect extends PureComponent {
           {({ data }) => {
             if (get(data, 'isLoggedIn', false))
               return (
-                <Container>
-                  <SafeAreaView>
-                    <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />
-                    <ScrollView>
-                      <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />
-                      <ActionTable />
-                    </ScrollView>
-                  </SafeAreaView>
-                </Container>
-              );
-            return (
-              <ScrollView>
                 <SafeAreaView>
                   <ScrollView>
-                    <Header>
-                      <BrandIcon />
-                      <Title>Connect!</Title>
-                      <Paragraph>
-                        <BodyText>
-                          Our mission is to help you connect to others as well
-                          as help you in your walk with Christ.
-                        </BodyText>
-                      </Paragraph>
-                      <Paragraph>
-                        <BodyText>
-                          By joining this community, you will unlock amazing
-                          features like; curated content and devotionals, simple
-                          event registration, and easy online giving!
-                        </BodyText>
-                      </Paragraph>
-                      <StyledLoginButton />
-                    </Header>
+                    <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />
+                    <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />
                     <ActionTable />
                   </ScrollView>
                 </SafeAreaView>
-              </ScrollView>
+              );
+            return (
+              <SafeAreaView>
+                <ScrollView>
+                  <Header>
+                    <BrandIcon />
+                    <Title>Connect!</Title>
+                    <Paragraph>
+                      <BodyText>
+                        Our mission is to help you connect to others as well as
+                        help you in your walk with Christ.
+                      </BodyText>
+                    </Paragraph>
+                    <Paragraph>
+                      <BodyText>
+                        By joining this community, you will unlock amazing
+                        features like; curated content and devotionals, simple
+                        event registration, and easy online giving!
+                      </BodyText>
+                    </Paragraph>
+                    <StyledLoginButton />
+                  </Header>
+                  <ActionTable />
+                </ScrollView>
+              </SafeAreaView>
             );
           }}
         </Query>
