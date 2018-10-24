@@ -1,12 +1,12 @@
 ## DESCRIPTION
 
-### What does this PR do, or why is it needed? (land the plane)
+### What does this PR do, or why is it needed?
 
-### What design trade-offs/decisions were made? (entrepreneurial mindset)
+### What design trade-offs/decisions were made?
 
-### How do I test this PR? (ego-free communication)
+### How do I test this PR?
 
-### What automated tests did you write? (grit, less but better, do the right thing)
+### What automated tests did you write?
 
 ## TODO:
 
@@ -23,7 +23,7 @@
 - [ ] Manual QA on iOS and ensure it looks/behaves as expected
 - [ ] Manual QA on Android and ensure it looks/behaves as expected
 
-**Code Review (ego-free communication, invest in people)**
+**Code Review**
 
 - [ ] Read through the "Files changed" tab _very carefully_
 - [ ] Edge cases: what assumptions are made about input?
