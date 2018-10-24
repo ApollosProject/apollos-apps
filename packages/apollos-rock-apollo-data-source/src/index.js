@@ -5,21 +5,23 @@ import { fetch } from 'apollo-server-env';
 
 import { createCursor, parseCursor } from './cursor';
 
-import { ROCK_API, ROCK_TOKEN } from './constants'; // eslint-disable-line import/named
 import RequestBuilder from './request-builder';
+
+let ROCK_URL;
+let ROCK_TOKEN;
+
+export function setRockVariables({ url, token }) {
+  ROCK_URL = url;
+  ROCK_TOKEN = token;
+}
 
 export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
 
-  baseURL = ROCK_API;
+  baseURL = ROCK_URL;
 
-  get rockToken() {
-    if (process.env.NODE_ENV === 'test') {
-      return 'some-rock-token';
-    }
-    return ROCK_TOKEN;
-  }
+  rockToken = ROCK_TOKEN;
 
   nodeFetch = fetch;
 
@@ -31,7 +33,8 @@ export default class RockApolloDataSource extends RESTDataSource {
   }
 
   willSendRequest(request) {
-    request.headers.set('Authorization-Token', ROCK_TOKEN);
+    console.log(this.baseURL, this.rockToken, 'these variables');
+    request.headers.set('Authorization-Token', this.rockToken);
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
   }

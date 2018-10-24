@@ -11,11 +11,12 @@
 ROCK:
   API_URL: https://apollosrock.newspring.cc/api
   API_TOKEN: ${ROCK_TOKEN}
-  IMAGE_URL: https://apollosrock.newspring.cc/api/GetImage.ashx
+  IMAGE_URL: https://apollosrock.newspring.cc/GetImage.ashx
 ANALYTICS:
   # Filling out these fields will automatically enable analytics tracking
   # on the accompanying service
-  SEGMENT_KEY: null
+  SEGMENT_KEY:
+  GA_ID:
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
   BIBLE_ID: "9879dbb7cfe39e4d-01"

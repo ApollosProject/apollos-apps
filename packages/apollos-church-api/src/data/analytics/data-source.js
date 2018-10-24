@@ -1,5 +1,6 @@
 import { AuthenticationError } from 'apollo-server';
 import { DataSource } from 'apollo-datasource';
+import { ANALYTICS } from '../../config';
 import GAInterface from './interfaces/ga';
 import SegmentInterface from './interfaces/segment';
 
@@ -14,11 +15,11 @@ const mapArrayToObject = (array = []) =>
 // Add interfaces to this function to get picked up automatically.
 export const getInterfaces = () => {
   const interfaces = [];
-  if (process.env.APOLLOS_SEGMENT_KEY) {
-    interfaces.push(new SegmentInterface(process.env.APOLLOS_SEGMENT_KEY));
+  if (ANALYTICS.SEGMENT_KEY) {
+    interfaces.push(new SegmentInterface(ANALYTICS.SEGMENT_KEY));
   }
-  if (process.env.APOLLOS_GA_KEY) {
-    interfaces.push(new GAInterface(process.env.APOLLOS_GA_KEY));
+  if (ANALYTICS.GA_ID) {
+    interfaces.push(new GAInterface(ANALYTICS.GA_ID));
   }
   return interfaces;
 };

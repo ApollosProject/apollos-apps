@@ -1,10 +1,17 @@
 import { createCursor } from '../cursor';
-import RestDataSource from '../index';
+import RestDataSource, { setRockVariables } from '../index';
 import RequestBuilder from '../request-builder';
 
 describe('RestDataSource', () => {
   it('constructs', () => {
     expect(new RestDataSource()).toBeTruthy();
+  });
+
+  it('has configurable url and token', () => {
+    setRockVariables({ url: 'http://example.com', token: 'some-token' });
+    const datasource = new RestDataSource();
+    expect(datasource.baseURL).toEqual('http://example.com');
+    expect(datasource.rockToken).toEqual('some-token');
   });
 
   describe('the paginate method', () => {

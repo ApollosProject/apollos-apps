@@ -17,7 +17,7 @@ function handleValue(value) {
   if (Array.isArray(value)) {
     return value.map(handleValue);
   }
-  if (typeof value === 'object') {
+  if (value != null && typeof value === 'object') {
     return deepObjectMap(value);
   }
   return value;
