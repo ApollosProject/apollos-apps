@@ -1,6 +1,6 @@
 import fetch from 'jest-fetch-mock';
 
-import { Constants } from '../src/connectors/rock';
+import Config from '../src/config';
 import * as apolloDatasourceMocks from './apollo-datasource-mocks';
 import * as rockMocks from './rock-api-mocks';
 
@@ -37,7 +37,7 @@ fetch.mockRockDataSourceAPI = () => {
   fetch.mockImplementation((request) => {
     let { url } = request;
     url = decodeURI(url);
-    if (!url.match(Constants.ROCK_API)) {
+    if (!url.match(Config.ROCK.API_URL)) {
       if (request.url.match('/api.scripture.api.bible/v1')) {
         return resolveWith(apolloDatasourceMocks.Scripture());
       }

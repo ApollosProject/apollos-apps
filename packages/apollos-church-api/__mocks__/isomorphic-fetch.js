@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 import fetch from 'jest-fetch-mock';
 
-import { Constants } from '../src/connectors/rock';
+import Config from '../src/config';
 
 import * as rockMocks from './rock-api-mocks';
 
@@ -10,7 +10,7 @@ const resolveWith = (data) =>
 
 fetch.mockRockAPI = () => {
   fetch.mockImplementation((url, options) => {
-    if (!url.match(Constants.ROCK_API)) return Promise.reject();
+    if (!url.match(Config.ROCK.API_URL)) return Promise.reject();
 
     if (url.match('api/ContentChannels/\\d')) {
       return resolveWith(rockMocks.contentChannel());

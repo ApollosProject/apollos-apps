@@ -6,7 +6,7 @@ import pickBy from 'lodash/fp/pickBy';
 import mapValues from 'lodash/fp/mapValues';
 import values from 'lodash/fp/values';
 import sanitizeHtml from '../../utils/sanitize-html';
-import { Constants } from '../../connectors/rock';
+import { ROCK_CONSTANTS, ROCK_MAPPINGS } from '../../config';
 import { createGlobalId } from '../node';
 
 const mapValuesWithKey = mapValues.convert({ cap: false });
@@ -124,21 +124,21 @@ const hasScripture = ({ attributeValues }) =>
   get(attributeValues, 'scriptures.value', '') !== '';
 
 const isImage = ({ key, attributeValues, attributes }) =>
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
   (key.toLowerCase().includes('image') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an image url
 
 const isVideo = ({ key, attributeValues, attributes }) =>
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_FILE ||
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_URL ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_FILE ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_URL ||
   (key.toLowerCase().includes('video') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like a video url
 
 const isAudio = ({ key, attributeValues, attributes }) =>
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_FILE ||
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_URL ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_FILE ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_URL ||
   (key.toLowerCase().includes('audio') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an audio url
@@ -352,7 +352,7 @@ export const resolver = {
     __resolveType: ({ attributeValues, contentChannelTypeId }) => {
       if (
         hasScripture({ attributeValues }) &&
-        contentChannelTypeId === Constants.DEVOTIONAL_TYPE_ID
+        ROCK_MAPPINGS.DEVOTIONAL_TYPE_IDS.includes(contentChannelTypeId)
       ) {
         return 'DevotionalContentItem';
       }
