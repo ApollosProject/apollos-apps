@@ -23,7 +23,7 @@
 - [ ] Manual QA on iOS and ensure it looks/behaves as expected
 - [ ] Manual QA on Android and ensure it looks/behaves as expected
 
-**Code Review**
+**Code Review: Questions to consider**
 
 - [ ] Read through the "Files changed" tab _very carefully_
 - [ ] Edge cases: what assumptions are made about input?
