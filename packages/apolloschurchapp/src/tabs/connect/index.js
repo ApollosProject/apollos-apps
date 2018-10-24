@@ -1,14 +1,16 @@
 import { createStackNavigator } from 'react-navigation';
 
-import tabBarIcon from '../tabBarIcon';
+import UserSettings from 'apolloschurchapp/src/user-settings';
 
 import TestingControlPanel from '../../testing-control-panel';
+import tabBarIcon from '../tabBarIcon';
 import Connect from './Connect';
 
 const ConnectNavigator = createStackNavigator(
   {
     Connect,
     TestingControlPanel,
+    UserSettings,
   },
   {
     initialRouteName: 'Connect',
