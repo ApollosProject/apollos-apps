@@ -4,8 +4,9 @@ export { testSchema } from './server'; // eslint-disable-line import/prefer-defa
 
 // Use the port, if provided.
 const { PORT } = process.env;
-const options = PORT ? { port: PORT } : {};
+// JsFoo to pass no args to `listen` if port is not provided
+const options = PORT ? [{ port: PORT }] : [];
 
-server.listen(options).then(({ url }) => {
+server.listen(...options).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
