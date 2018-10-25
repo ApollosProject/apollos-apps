@@ -44,10 +44,20 @@ class ContentCard extends PureComponent {
 
   renderCardHeader() {
     if (this.props.coverImage || this.props.isLoading) {
+      let forceRatio = null;
+      if (this.props.isLoading) forceRatio = 2;
+      if (this.props.tile) {
+        if (this.props.title) {
+          forceRatio = 2;
+        } else {
+          forceRatio = 1;
+        }
+      }
+
       return (
         <ImageHeader
           coverImage={this.props.coverImage}
-          forceRatio={!this.props.isLoading && !this.props.title ? 1 : 2}
+          forceRatio={forceRatio}
           showOverlayColor={!this.props.isLoading && !this.props.title}
         />
       );
@@ -97,6 +107,17 @@ class ContentCard extends PureComponent {
   }
 
   render() {
+    const {
+      isLoading,
+      title,
+      summary,
+      coverImage,
+      metrics,
+      theme,
+      tile,
+      ...cardProps
+    } = this.props;
+
     return (
       <ThemeMixin
         mixin={{
@@ -108,6 +129,7 @@ class ContentCard extends PureComponent {
           forceRatio={this.props.tile ? 1 : undefined}
           tile={this.props.tile}
           isLoading={this.props.isLoading}
+          {...cardProps}
         >
           {this.renderCardHeader()}
           {this.renderCardContent()}

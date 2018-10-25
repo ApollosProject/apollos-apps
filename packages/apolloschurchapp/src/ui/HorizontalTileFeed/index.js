@@ -27,12 +27,12 @@ export class HorizontalTileFeed extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.snapToInterval = this.getTileWidth() - this.props.theme.baseUnit / 2; //eslint-disable-line
+    this.snapToInterval = this.getTileWidth() + this.props.theme.baseUnit;
   }
 
   getTileWidth = () => {
     const { width } = Dimensions.get('window');
-    return width * 0.8; // 80% of width
+    return width * (248 / 375);
   };
 
   render() {
@@ -46,7 +46,6 @@ export class HorizontalTileFeed extends PureComponent {
         refreshing={isLoading}
         renderItem={renderItem}
         showsHorizontalScrollIndicator={false}
-        tileHeight={this.getTileWidth()} // passed into TileFeed styles. Height is equal to 80% of width
         /*
          * `(80% of width - baseUnit / 2)` which is used for padding on the tile. This padding was added
          * to fix a shadow clipping bug on Android. `snapToInterval` below is adjusted to account for

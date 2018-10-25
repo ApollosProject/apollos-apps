@@ -6,15 +6,9 @@ import { Query } from 'react-apollo';
 
 import CardTile from 'apolloschurchapp/src/ui/CardTile';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
-import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import styled from 'apolloschurchapp/src/ui/styled';
 import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
 import getHorizontalContent from './getHorizontalContent';
-
-const FeedContainer = styled({
-  paddingHorizontal: 0,
-})(PaddedView);
 
 const loadingStateObject = {
   node: {
@@ -71,14 +65,12 @@ class HorizontalContentFeed extends Component {
     const content = siblingContent.length ? siblingContent : childContent;
 
     return (content && content.length) || loading ? (
-      <FeedContainer>
-        <HorizontalTileFeed
-          content={content}
-          isLoading={loading}
-          loadingStateObject={loadingStateObject}
-          renderItem={this.renderItem}
-        />
-      </FeedContainer>
+      <HorizontalTileFeed
+        content={content}
+        isLoading={loading}
+        loadingStateObject={loadingStateObject}
+        renderItem={this.renderItem}
+      />
     ) : null;
   };
 

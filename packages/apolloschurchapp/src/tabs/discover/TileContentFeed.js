@@ -7,14 +7,14 @@ import { H4 } from 'apolloschurchapp/src/ui/typography';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
-
-import TileImageItem from './TileImageItem';
+import ContentCard from 'apolloschurchapp/src/ui/ConnectedContentCard';
+import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
 const RowHeader = styled({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingVertical: 0,
+  paddingBottom: 0,
 })(PaddedView);
 
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
@@ -37,11 +37,20 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
     <HorizontalTileFeed
       content={content}
       renderItem={({ item }) => (
-        <TileImageItem
-          item={item}
-          isLoading={isLoading}
-          navigation={navigation}
-        />
+        <TouchableScale
+          onPress={() => {
+            navigation.push('ContentSingle', {
+              itemId: item.id,
+            });
+          }}
+        >
+          <ContentCard
+            contentId={item.id}
+            isLoading={isLoading}
+            tile
+            inHorizontalList
+          />
+        </TouchableScale>
       )}
       loadingStateObject={{
         id: 'fake_id',

@@ -9,15 +9,16 @@ import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
+import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
-import TileImageItem from '../../discover/TileImageItem';
+import ContentCard from 'apolloschurchapp/src/ui/ConnectedContentCard';
 
-const RowHeader = styled(({ theme }) => ({
+const RowHeader = styled({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingVertical: theme.sizing.baseUnit,
-}))(PaddedView);
+  paddingVertical: 0,
+})(PaddedView);
 
 const Name = styled({
   flexGrow: 1,
@@ -46,11 +47,20 @@ class RecentlyLikedTileFeed extends Component {
   };
 
   titleImageItem = ({ item }) => (
-    <TileImageItem
-      item={item}
-      isLoading={this.props.isLoading}
-      navigation={this.props.navigation}
-    />
+    <TouchableScale
+      onPress={() => {
+        this.props.navigation.push('ContentSingle', {
+          itemId: item.id,
+        });
+      }}
+    >
+      <ContentCard
+        isLoading={item.isLoading}
+        tile
+        contentId={item.id}
+        inHorizontalList
+      />
+    </TouchableScale>
   );
 
   render() {

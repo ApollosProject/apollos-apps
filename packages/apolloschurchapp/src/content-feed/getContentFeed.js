@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 
+import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
 import { contentItemFragment } from '../content-single/getContentItem';
 
 export default gql`
@@ -10,21 +11,7 @@ export default gql`
           edges {
             node {
               ...contentItemFragment
-              __typename
-              id
-              coverImage {
-                name
-                sources {
-                  uri
-                }
-              }
-              isLiked
-              parentChannel {
-                id
-                name
-                iconName
-              }
-              title
+              ...contentCardFragment
             }
           }
         }
@@ -32,4 +19,5 @@ export default gql`
     }
   }
   ${contentItemFragment}
+  ${contentCardFragment}
 `;

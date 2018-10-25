@@ -5,6 +5,8 @@ import omitBy from 'lodash/fp/omitBy';
 import pickBy from 'lodash/fp/pickBy';
 import mapValues from 'lodash/fp/mapValues';
 import values from 'lodash/fp/values';
+import natural from 'natural';
+import sanitizeHtmlNode from 'sanitize-html';
 import sanitizeHtml from '../../utils/sanitize-html';
 import { Constants } from '../../connectors/rock';
 import { createGlobalId } from '../node';
@@ -29,6 +31,7 @@ export const schema = gql`
     videos: [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
+    summary: String
     childContentItemsConnection(
       first: Int
       after: String
@@ -41,7 +44,9 @@ export const schema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    likedCount: Int
     isLiked: Boolean
+    isCollection: Boolean
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -52,6 +57,7 @@ export const schema = gql`
     videos: [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
+    summary: String
     childContentItemsConnection(
       first: Int
       after: String
@@ -65,7 +71,9 @@ export const schema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    likedCount: Int
     isLiked: Boolean
+    isCollection: Boolean
   }
 
   type DevotionalContentItem implements ContentItem & Node {
@@ -76,6 +84,7 @@ export const schema = gql`
     videos: [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
+    summary: String
     childContentItemsConnection(
       first: Int
       after: String
@@ -88,8 +97,10 @@ export const schema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    likedCount: Int
     isLiked: Boolean
     scriptures: [Scripture]
+    isCollection: Boolean
   }
 
   type Term {
@@ -161,6 +172,17 @@ export const defaultContentItemResolvers = {
       cursor: await dataSources.ContentItem.getCursorBySiblingContentItemId(id),
       args,
     }),
+
+  summary: ({ summary, content }) => {
+    if (summary) return summary;
+    const tokenizer = new natural.SentenceTokenizer();
+    return tokenizer.tokenize(
+      sanitizeHtmlNode(content, {
+        allowedTags: [],
+        allowedAttributes: [],
+      })
+    )[0];
+  },
 
   images: ({ attributeValues, attributes }) => {
     const imageKeys = Object.keys(attributes).filter((key) =>
@@ -254,12 +276,20 @@ export const defaultContentItemResolvers = {
 
   theme: () => null, // todo: integrate themes from Rock
 
+  likedCount: ({ id }, args, { dataSources }) =>
+    dataSources.Interactions.getCountByOperationForContentItem({
+      contentItemId: id,
+      operation: 'Like',
+    }),
+
   isLiked: async ({ id, isLiked }, args, { dataSources }) => {
     if (isLiked != null) return isLiked;
 
-    const interactions = await dataSources.Interactions.getForContentItem({
-      contentItemId: id,
-    });
+    const interactions = await dataSources.Interactions.getByCurrentUserForContentItem(
+      {
+        contentItemId: id,
+      }
+    );
 
     const likes = interactions.filter((i) => i.operation === 'Like').length;
     const unlike = interactions.filter((i) => i.operation === 'Unlike').length;
@@ -267,6 +297,13 @@ export const defaultContentItemResolvers = {
     return likes > unlike;
   },
   sharing: (root) => ({ __type: 'SharableContentItem', ...root }),
+
+  isCollection: async ({ contentChannelId }, args, { dataSources }) => {
+    const parentChannel = await dataSources.ContentChannel.getFromId(
+      contentChannelId
+    );
+    return parentChannel.childContentChannels.length;
+  },
 };
 
 export const resolver = {
@@ -278,7 +315,7 @@ export const resolver = {
       }),
     getAllLikedContent: async (root, args, { dataSources }) => {
       // Get All Interactions from current user
-      const interactions = await dataSources.Interactions.getForContentItems();
+      const interactions = await dataSources.Interactions.getByCurrentUserForContentItems();
 
       const likeCounts = {};
 

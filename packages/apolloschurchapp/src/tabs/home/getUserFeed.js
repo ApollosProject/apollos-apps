@@ -1,6 +1,7 @@
 import gql from 'graphql-tag';
 
 import { contentItemFragment } from 'apolloschurchapp/src/content-single/getContentItem';
+import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
 
 export default gql`
   query getUserFeed {
@@ -8,33 +9,11 @@ export default gql`
       edges {
         node {
           ...contentItemFragment
-          __typename
-          id
-          coverImage {
-            name
-            sources {
-              uri
-            }
-          }
-          parentChannel {
-            id
-            name
-            iconName
-          }
-          theme {
-            type
-            colors {
-              primary
-              secondary
-              screen
-              paper
-            }
-          }
-          isLiked
-          title
+          ...contentCardFragment
         }
       }
     }
   }
   ${contentItemFragment}
+  ${contentCardFragment}
 `;

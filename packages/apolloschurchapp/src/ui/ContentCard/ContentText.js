@@ -6,6 +6,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 
 const StyledCardContent = styled(({ theme, tile }) => ({
   ...(tile ? { paddingTop: theme.sizing.baseUnit } : {}),
+  paddingTop: theme.sizing.baseUnit * (tile ? 1 : 1.5), // TODO: should this be vertical ryhthm??? maybe should be applied to `TitleText` ??
   paddingBottom: theme.sizing.baseUnit * 0.75, // this is reduced b/c this is always rendered above the stats section, which also has padding
 }))(CardContent);
 

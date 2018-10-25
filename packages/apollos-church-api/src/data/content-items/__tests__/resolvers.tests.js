@@ -71,6 +71,7 @@ const contentItemFragment = `
       title
       message
     }
+    isCollection
   }
 `;
 
