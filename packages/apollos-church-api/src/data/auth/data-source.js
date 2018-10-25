@@ -1,8 +1,8 @@
 import { AuthenticationError } from 'apollo-server';
 import { fetch, Request } from 'apollo-server-env';
 import moment from 'moment';
+import RockApolloDataSource from 'apollos-rock-apollo-data-source';
 
-import RockApolloDataSource from 'apollos-church-api/src/connectors/rock/data-source';
 import { generateToken, registerToken } from './token';
 
 export default class AuthDataSource extends RockApolloDataSource {
@@ -136,8 +136,7 @@ export default class AuthDataSource extends RockApolloDataSource {
     const personExists = await this.personExists({ identity: email });
     if (personExists) throw new Error('User already exists!');
 
-    const { personId } = await this.createUserProfile({ email });
-
+    const personId = await this.createUserProfile({ email });
     await this.createUserLogin({
       email,
       password,

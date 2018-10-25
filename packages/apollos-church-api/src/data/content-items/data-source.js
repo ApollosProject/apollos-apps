@@ -1,4 +1,4 @@
-import RockApolloDataSource from 'apollos-church-api/src/connectors/rock/data-source';
+import RockApolloDataSource from 'apollos-rock-apollo-data-source';
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';

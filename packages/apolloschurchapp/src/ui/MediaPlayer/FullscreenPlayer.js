@@ -10,7 +10,6 @@ import {
 import PropTypes from 'prop-types';
 import { Query, withApollo } from 'react-apollo';
 import { get } from 'lodash';
-import DeviceInfo from 'react-native-device-info';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 
@@ -21,6 +20,7 @@ import MusicControls from './MusicControls';
 import { getFullVisibilityState } from './queries';
 import { exitFullscreen, goFullscreen } from './mutations';
 import { Provider, ControlsConsumer } from './PlayheadState';
+import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
 
 const VideoSizer = styled(
   ({ isFullscreen, isVideo, theme }) =>
@@ -28,15 +28,17 @@ const VideoSizer = styled(
       ? StyleSheet.absoluteFill
       : {
           height: MINI_PLAYER_HEIGHT,
-          borderTopLeftRadius: theme.sizing.borderRadius,
-          borderBottomLeftRadius: theme.sizing.borderRadius,
+          borderTopLeftRadius: theme.sizing.baseUnit / 2,
+          borderBottomLeftRadius: theme.sizing.baseUnit / 2,
           overflow: 'hidden',
           aspectRatio: isVideo ? 16 / 9 : 1,
         }
 )(View);
 
-const isPhoneX = DeviceInfo.getModel() === 'iPhone X';
-const BOTTOM_OFFSET = isPhoneX ? 25 : 10; // Some devices need more "spacing" at the bottom of the screen. This helps account for that
+const FullscreenMediaPlayerSafeLayout = styled(({ isFullscreen, theme }) => ({
+  ...StyleSheet.absoluteFillObject,
+  margin: isFullscreen ? 0 : theme.sizing.baseUnit,
+}))(MediaPlayerSafeLayout);
 
 /**
  * FullscreenPlayer is a animating media player that transitions between
@@ -168,11 +170,6 @@ class FullscreenPlayer extends PureComponent {
   renderCover = ({ data: { mediaPlayer = {} } = {} }) => {
     const { isFullscreen = false } = mediaPlayer;
 
-    const fullscreenStyles = {
-      margin: isFullscreen ? 0 : 10,
-      marginBottom: isFullscreen ? 0 : BOTTOM_OFFSET,
-    };
-
     Animated.spring(this.fullscreen, {
       toValue: isFullscreen ? 1 : 0,
       useNativeDriver: true,
@@ -216,8 +213,10 @@ class FullscreenPlayer extends PureComponent {
     }
 
     return (
-      <Animated.View style={[this.coverStyle, fullscreenStyles]}>
-        {coverFlow}
+      <Animated.View style={this.coverStyle}>
+        <FullscreenMediaPlayerSafeLayout isFullscreen={isFullscreen}>
+          {coverFlow}
+        </FullscreenMediaPlayerSafeLayout>
       </Animated.View>
     );
   };
@@ -233,4 +232,4 @@ class FullscreenPlayer extends PureComponent {
 
 const FullscreenPlayerWithData = withApollo(FullscreenPlayer);
 
-export { FullscreenPlayerWithData as default, BOTTOM_OFFSET };
+export { FullscreenPlayerWithData as default };

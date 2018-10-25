@@ -1,9 +1,8 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
-import { getTestContext } from 'apollos-church-api/src/utils/testUtils';
-
-import { testSchema as typeDefs, resolvers } from 'apollos-church-api/src/data';
+import { testSchema as typeDefs, resolvers } from '../..';
+import { getTestContext } from '../../../utils/testUtils';
 
 describe('Scripture', () => {
   let schema;
@@ -20,7 +19,10 @@ describe('Scripture', () => {
     const query = `
       query {
         scripture (query: "SNG.1.1") {
+          id
           html
+          reference
+          copyright
         }
       }
     `;

@@ -1,3 +1,5 @@
+// TODO - eliminate this file through more robust configuration.
+
 import url from 'url';
 
 export const {
@@ -6,6 +8,9 @@ export const {
 } = process.env;
 
 export const GET_IMAGE = url.resolve(ROCK_API, 'GetImage.ashx');
+
+// TODO: Find a more structured way to store this
+export const DEVOTIONAL_TYPE_ID = 1;
 
 export const FIELD_TYPES = {
   TEXT: 1,
