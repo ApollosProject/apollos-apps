@@ -8,7 +8,12 @@ class Config {
     CLOUDINARY: {},
     ROCK: {},
     ROCK_CONSTANTS: {},
+    BIBLE_API: {},
   };
+
+  constructor() {
+    this.attachConfigToClass(this.config);
+  }
 
   loadYaml({ configPath }) {
     if (!configPath) {
@@ -26,14 +31,22 @@ class Config {
     return this;
   }
 
+  loadJs(data = {}) {
+    Object.keys(this.config).forEach((key) => {
+      if (data[key]) {
+        this.config[key] = Object.assign(this.config[key], data[key]);
+      }
+    });
+    this.attachConfigToClass(this.config);
+  }
+
   // Allows you to do Config.PROPERTY
-  // Also prevents Config.PROPERTY from being mutated (this may not be the correct behavior)
   attachConfigToClass(config) {
     Object.keys(config).forEach((key) => {
       Object.defineProperty(this, key, {
         enumerable: true,
-        configurable: false,
-        writable: false,
+        configurable: true,
+        writable: true,
         value: config[key],
       });
     });

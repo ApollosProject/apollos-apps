@@ -1,3 +1,4 @@
+import config from './config';
 import server from './server';
 
 export { testSchema } from './server'; // eslint-disable-line import/prefer-default-export

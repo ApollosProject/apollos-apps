@@ -2,6 +2,9 @@
 
 exports[`the yaml loader must load variables from a yaml 1`] = `
 Object {
+  "ANALYTICS": Object {},
+  "BIBLE_API": Object {},
+  "CLOUDINARY": Object {},
   "COMPOUND_ENV_VALUE": "this is a value and then this is another value",
   "CONTENT_IDS": Array [
     1,
@@ -13,5 +16,6 @@ Object {
     "API_URI": "https://apollosrock.newspring.cc/api",
     "NULL_VALUE": null,
   },
+  "ROCK_CONSTANTS": Object {},
 }
 `;

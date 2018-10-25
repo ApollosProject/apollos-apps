@@ -1,7 +1,7 @@
 import { mockUA, mockSend, mockEvent } from 'universal-analytics';
 import Analytics, { mockTrack, mockIdentify } from 'analytics-node';
 import { AuthenticationError } from 'apollo-server';
-import { setConfig } from '@apollos/config';
+import ApollosConfig from '@apolloschurch/config';
 import DataSource from '../data-source';
 import RockAnalytics from '../interfaces/rock_interactions';
 
@@ -45,10 +45,10 @@ describe('Analytics Data Source', () => {
   beforeEach(() => {
     clearMocks();
     const ANALYTICS = { SEGMENT_KEY: 'something', GA_ID: 'something-else' };
-    setConfig({ ANALYTICS });
+    ApollosConfig.loadJs({ ANALYTICS });
   });
   afterEach(() => {
-    setConfig({ ANALYTICS: { SEGMENT_KEY: null, GA_ID: null } });
+    ApollosConfig.loadJs({ ANALYTICS: { SEGMENT_KEY: null, GA_ID: null } });
   });
 
   it('must accept arbitrary interfaces', async () => {
@@ -185,7 +185,9 @@ describe('Analytics Data Source', () => {
     });
 
     it('must not track segment without a key', async () => {
-      setConfig({ ANALYTICS: { GA_ID: 'something-else', SEGMENT_KEY: null } });
+      ApollosConfig.loadJs({
+        ANALYTICS: { GA_ID: 'something-else', SEGMENT_KEY: null },
+      });
       const analytics = buildDataSource();
       const result = await analytics.track({
         eventName: 'View Content',
@@ -199,7 +201,9 @@ describe('Analytics Data Source', () => {
     });
 
     it('must not track google analytics without a key', async () => {
-      setConfig({ ANALYTICS: { SEGMENT_KEY: 'something', GA_ID: null } });
+      ApollosConfig.loadJs({
+        ANALYTICS: { SEGMENT_KEY: 'something', GA_ID: null },
+      });
       const analytics = buildDataSource();
       const result = await analytics.track({
         eventName: 'View Content',
