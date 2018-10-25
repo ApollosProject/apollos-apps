@@ -16,7 +16,6 @@ describe('ContentChannelModel', () => {
   });
   it('gets all', () => {
     const dataSource = new ContentChannelDataSource();
-    console.log(dataSource.baseURL, 'BASE URL');
     dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
     const result = dataSource.all();
     expect(result).resolves.toMatchSnapshot();
