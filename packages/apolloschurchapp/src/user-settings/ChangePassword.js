@@ -16,11 +16,12 @@ import getAuthToken from '../store/getAuthToken';
 import changePassword from './passwordChange';
 
 class ChangePassword extends PureComponent {
-  static navigationOptions = () => ({
+  static navigationOptions = ({ navigation }) => ({
     title: 'Change Password',
-    headerBackImage: (
+    headerLeft: null,
+    headerRight: (
       <PaddedView vertical={false}>
-        <ButtonLink>Cancel</ButtonLink>
+        <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
       </PaddedView>
     ),
   });

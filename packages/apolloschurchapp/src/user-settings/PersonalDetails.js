@@ -16,11 +16,12 @@ import getUserProfile from '../tabs/connect/getUserProfile';
 import updateCurrentUser from './updateCurrentUser';
 
 class PersonalDetails extends PureComponent {
-  static navigationOptions = () => ({
+  static navigationOptions = ({ navigation }) => ({
     title: 'Personal Details',
-    headerBackImage: (
+    headerLeft: null,
+    headerRight: (
       <PaddedView vertical={false}>
-        <ButtonLink>Cancel</ButtonLink>
+        <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
       </PaddedView>
     ),
   });
