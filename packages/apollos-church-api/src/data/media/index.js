@@ -1,6 +1,8 @@
 import { gql } from 'apollo-server';
-import { ROCK } from '../../config';
+import ApollosConfig from '@apolloschurch/config';
 import withCloudinary from '../../connectors/cloudinary';
+
+const { ROCK } = ApollosConfig;
 
 export { default as model } from './model';
 

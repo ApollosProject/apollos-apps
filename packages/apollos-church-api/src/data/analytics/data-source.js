@@ -1,9 +1,10 @@
 import { AuthenticationError } from 'apollo-server';
 import { DataSource } from 'apollo-datasource';
-import { ANALYTICS } from '../../config';
+import ApollosConfig from '@apolloschurch/config';
 import GAInterface from './interfaces/ga';
 import SegmentInterface from './interfaces/segment';
 
+const { ANALYTICS } = ApollosConfig;
 // Utility function to convert GQL array of key/values to Object.
 const mapArrayToObject = (array = []) =>
   array.reduce((accum, { field, value }) => {

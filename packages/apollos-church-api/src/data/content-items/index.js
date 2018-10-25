@@ -5,10 +5,11 @@ import omitBy from 'lodash/fp/omitBy';
 import pickBy from 'lodash/fp/pickBy';
 import mapValues from 'lodash/fp/mapValues';
 import values from 'lodash/fp/values';
+import ApollosConfig from '@apolloschurch/config';
 import sanitizeHtml from '../../utils/sanitize-html';
-import { ROCK_CONSTANTS, ROCK_MAPPINGS } from '../../config';
 import { createGlobalId } from '../node';
 
+const { ROCK_CONSTANTS, ROCK_MAPPINGS } = ApollosConfig;
 const mapValuesWithKey = mapValues.convert({ cap: false });
 
 // export { default as model } from './model';

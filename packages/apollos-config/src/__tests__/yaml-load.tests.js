@@ -8,10 +8,10 @@ describe('the yaml loader', () => {
     process.env.ANOTHER_VALUE = 'this is another value';
     process.env.CONTENT_ID_FROM_ENV = 10;
 
-    const { config } = new ApollosConfig({
+    ApollosConfig.loadYaml({
       configPath: path.join(__dirname, 'test.yml'),
     });
-    expect(config.ROCK.API_TOKEN).toEqual(process.env.ROCK_TOKEN);
-    expect(config).toMatchSnapshot();
+    expect(ApollosConfig.ROCK.API_TOKEN).toEqual(process.env.ROCK_TOKEN);
+    expect(ApollosConfig.config).toMatchSnapshot();
   });
 });

@@ -1,27 +1,22 @@
 /* eslint-disable class-methods-use-this */
 import { RESTDataSource } from 'apollo-datasource-rest';
+import ApollosConfig from '@apolloschurch/config';
+
 import { mapKeys, mapValues, camelCase } from 'lodash';
 import { fetch } from 'apollo-server-env';
-
 import { createCursor, parseCursor } from './cursor';
 
 import RequestBuilder from './request-builder';
 
-let ROCK_URL;
-let ROCK_TOKEN;
-
-export function setRockVariables({ url, token }) {
-  ROCK_URL = url;
-  ROCK_TOKEN = token;
-}
+const { ROCK } = ApollosConfig;
 
 export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
 
-  baseURL = ROCK_URL;
+  baseURL = ROCK.API_URL;
 
-  rockToken = ROCK_TOKEN;
+  rockToken = ROCK.API_TOKEN;
 
   nodeFetch = fetch;
 

@@ -1,5 +1,7 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { BIBLE_API } from '../../config';
+import ApollosConfig from '@apolloschurch/config';
+
+const { BIBLE_API } = ApollosConfig;
 
 export default class Scripture extends RESTDataSource {
   resource = 'Scripture';
