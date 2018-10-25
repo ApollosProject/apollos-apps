@@ -105,7 +105,7 @@ export const schema = gql`
   type ContentItemsConnection {
     edges: [ContentItemsConnectionEdge]
     # TODO totalCount: Int
-    # TODO pageInfo: PaginationInfo
+    pageInfo: PaginationInfo
   }
 
   type ContentItemsConnectionEdge {
@@ -363,5 +363,8 @@ export const resolver = {
     url: () => 'https://apollosrock.newspring.cc/', // todo: return a dynamic url that links to the content item
     title: ({ title }) => title,
     message: () => '',
+  },
+  ContentItemsConnection: {
+    pageInfo: (root) => root,
   },
 };
