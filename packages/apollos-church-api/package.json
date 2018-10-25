@@ -2,7 +2,7 @@
   "name": "apollos-church-api",
   "version": "0.6.0",
   "private": true,
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "if test \"$NOW_ENV\" = \"true\" ; then yarn start:now ; else yarn start:dev ; fi",
     "start:dev": "nodemon ./src/index.js --exec babel-node",
