@@ -4,9 +4,11 @@ export { testSchema } from './server'; // eslint-disable-line import/prefer-defa
 
 // Use the port, if provided.
 const { PORT } = process.env;
-// JsFoo to pass no args to `listen` if port is not provided
-const options = PORT ? [{ port: PORT }] : [];
+if (!PORT)
+  console.warn(
+    'Add `ENV=4000` if you are having trouble connecting to the server. By default, PORT is random.'
+  );
 
-server.listen(...options).then(({ url }) => {
+server.listen({ port: PORT }).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
