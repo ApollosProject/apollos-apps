@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/prefer-default-export
 export const withEdgePagination = async ({ edges }) => {
   const result = await edges;
   const startCursor = result.length ? result[0].cursor : null;
