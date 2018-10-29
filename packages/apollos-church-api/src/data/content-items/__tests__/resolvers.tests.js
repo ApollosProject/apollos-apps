@@ -3,6 +3,7 @@ import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
 
 import { testSchema as typeDefs, resolvers } from '../..';
+import { resolver } from '..';
 import { getTestContext } from '../../../utils/testUtils';
 // we import the root-level schema and resolver so we test the entire integration:
 import { createGlobalId } from '../../node/model';
@@ -201,5 +202,32 @@ describe('UniversalContentItem', () => {
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+  });
+});
+
+const { ContentItemsConnection } = resolver;
+
+// handy function for creating items
+let i = 0;
+const ci = () => ({ cursor: `item-${i++}` });
+
+describe('ContentItemsConnection resolvee', () => {
+  it('builds a pageInfo object with items', async () => {
+    const edges = Promise.resolve([ci(), ci(), ci()]);
+    const pageInfo = ContentItemsConnection.pageInfo({ edges });
+    const startCursor = await pageInfo.startCursor();
+    const endCursor = await pageInfo.endCursor();
+
+    expect(startCursor).toEqual('item-0');
+    expect(endCursor).toEqual('item-2');
+  });
+  it('builds a pageInfo object without items', async () => {
+    const edges = [];
+    const pageInfo = ContentItemsConnection.pageInfo({ edges });
+    const startCursor = await pageInfo.startCursor();
+    const endCursor = await pageInfo.endCursor();
+
+    expect(startCursor).toEqual(null);
+    expect(endCursor).toEqual(null);
   });
 });
