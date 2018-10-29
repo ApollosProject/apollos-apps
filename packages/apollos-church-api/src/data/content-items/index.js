@@ -290,6 +290,7 @@ export const resolver = {
       const likeCounts = interactions.reduce(
         (agg, { operation, relatedEntityId, interactionDateTime }) => {
           if (!agg[relatedEntityId]) {
+            // eslint-disable-next-line no-param-reassign
             agg[relatedEntityId] = { count: 0, lastLiked: null };
           }
 
@@ -306,12 +307,14 @@ export const resolver = {
           if (operation === 'Unlike') {
             itemInteractions.count -= 1;
           }
+          return agg;
         },
         {}
       );
 
       // Get items with more likes than unlikes
-      const itemIds = Object.keys(likeCounts)
+      // Like counts can be undefined if you call [].reduce(func, {})
+      const itemIds = Object.keys(likeCounts || {})
         .map((relatedEntityId) => {
           if (likeCounts[relatedEntityId].count > 0) {
             return relatedEntityId;
