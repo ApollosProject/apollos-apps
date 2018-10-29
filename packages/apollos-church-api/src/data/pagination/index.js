@@ -9,13 +9,17 @@ export const schema = gql`
 
 export const resolver = {
   PaginationInfo: {
-    startCursor: async ({ edges }) => {
-      const result = await edges;
-      return result.length ? result[0].cursor : null;
+    startCursor: ({ startCursor }) => {
+      if (typeof startCursor === 'function') {
+        return startCursor();
+      }
+      return startCursor;
     },
-    endCursor: async ({ edges }) => {
-      const result = await edges;
-      return result.length ? result[result.length - 1].cursor : null;
+    endCursor: ({ endCursor }) => {
+      if (typeof endCursor === 'function') {
+        return endCursor();
+      }
+      return endCursor;
     },
   },
 };

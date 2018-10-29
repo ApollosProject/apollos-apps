@@ -56,6 +56,10 @@ const contentItemFragment = `
         }
         cursor
       }
+      pageInfo {
+        startCursor
+        endCursor
+      }
     }
     parentChannel {
       id

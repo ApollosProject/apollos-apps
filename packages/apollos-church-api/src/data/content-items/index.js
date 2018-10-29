@@ -365,6 +365,15 @@ export const resolver = {
     message: () => '',
   },
   ContentItemsConnection: {
-    pageInfo: (root) => root,
+    pageInfo: ({ edges }) => ({
+      startCursor: async () => {
+        const result = await edges;
+        return result.length ? result[0].cursor : null;
+      },
+      endCursor: async () => {
+        const result = await edges;
+        return result.length ? result[result.length - 1].cursor : null;
+      },
+    }),
   },
 };
