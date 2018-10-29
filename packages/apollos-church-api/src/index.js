@@ -1,4 +1,4 @@
-import config from './config'; // esling-disable-line
+import config from './config'; // eslint-disable-line
 import server from './server';
 
 export { testSchema } from './server'; // eslint-disable-line import/prefer-default-export
