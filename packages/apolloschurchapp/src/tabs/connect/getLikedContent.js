@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 
+import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
 import { contentItemFragment } from 'apolloschurchapp/src/content-single/getContentItem';
 
 export default gql`
@@ -7,23 +8,9 @@ export default gql`
     getAllLikedContent {
       ... on ContentItem {
         ...contentItemFragment
-        __typename
-        id
-        coverImage {
-          name
-          sources {
-            uri
-          }
-        }
-        isLiked
-        parentChannel {
-          id
-          name
-          iconName
-        }
-        title
-      }
+        ...contentCardFragment
     }
   }
   ${contentItemFragment}
+  ${contentCardFragment}
 `;
