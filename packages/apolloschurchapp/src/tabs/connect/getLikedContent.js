@@ -9,6 +9,7 @@ export default gql`
       ... on ContentItem {
         ...contentItemFragment
         ...contentCardFragment
+      }
     }
   }
   ${contentItemFragment}

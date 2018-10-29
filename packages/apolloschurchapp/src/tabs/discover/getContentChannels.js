@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
-import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
 import { contentItemFragment } from 'apolloschurchapp/src/content-single/getContentItem';
+import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
 
 export default gql`
   query getContentChannels {
