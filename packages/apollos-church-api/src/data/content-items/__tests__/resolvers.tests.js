@@ -207,13 +207,13 @@ describe('UniversalContentItem', () => {
 
 const { ContentItemsConnection } = resolver;
 
-// handy function for creating items
-let i = 0;
-const ci = () => ({ cursor: `item-${i++}` });
-
 describe('ContentItemsConnection resolvee', () => {
   it('builds a pageInfo object with items', async () => {
-    const edges = Promise.resolve([ci(), ci(), ci()]);
+    const edges = Promise.resolve([
+      { cursor: `item-0` },
+      { cursor: `item-1` },
+      { cursor: `item-2` },
+    ]);
     const pageInfo = ContentItemsConnection.pageInfo({ edges });
     const startCursor = await pageInfo.startCursor();
     const endCursor = await pageInfo.endCursor();
