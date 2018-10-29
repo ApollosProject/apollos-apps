@@ -8,6 +8,7 @@ import values from 'lodash/fp/values';
 import sanitizeHtml from '../../utils/sanitize-html';
 import { Constants } from '../../connectors/rock';
 import { createGlobalId } from '../node';
+import { withEdgePagination } from '../pagination/utils';
 
 const mapValuesWithKey = mapValues.convert({ cap: false });
 
@@ -365,15 +366,6 @@ export const resolver = {
     message: () => '',
   },
   ContentItemsConnection: {
-    pageInfo: ({ edges }) => ({
-      startCursor: async () => {
-        const result = await edges;
-        return result.length ? result[0].cursor : null;
-      },
-      endCursor: async () => {
-        const result = await edges;
-        return result.length ? result[result.length - 1].cursor : null;
-      },
-    }),
+    pageInfo: withEdgePagination,
   },
 };

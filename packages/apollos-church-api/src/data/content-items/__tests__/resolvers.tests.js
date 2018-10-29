@@ -214,18 +214,18 @@ describe('ContentItemsConnection resolvee', () => {
       { cursor: `item-1` },
       { cursor: `item-2` },
     ]);
-    const pageInfo = ContentItemsConnection.pageInfo({ edges });
-    const startCursor = await pageInfo.startCursor();
-    const endCursor = await pageInfo.endCursor();
+    const { startCursor, endCursor } = await ContentItemsConnection.pageInfo({
+      edges,
+    });
 
     expect(startCursor).toEqual('item-0');
     expect(endCursor).toEqual('item-2');
   });
   it('builds a pageInfo object without items', async () => {
     const edges = [];
-    const pageInfo = ContentItemsConnection.pageInfo({ edges });
-    const startCursor = await pageInfo.startCursor();
-    const endCursor = await pageInfo.endCursor();
+    const { startCursor, endCursor } = await ContentItemsConnection.pageInfo({
+      edges,
+    });
 
     expect(startCursor).toEqual(null);
     expect(endCursor).toEqual(null);

@@ -8,18 +8,5 @@ export const schema = gql`
 `;
 
 export const resolver = {
-  PaginationInfo: {
-    startCursor: ({ startCursor }) => {
-      if (typeof startCursor === 'function') {
-        return startCursor();
-      }
-      return startCursor;
-    },
-    endCursor: ({ endCursor }) => {
-      if (typeof endCursor === 'function') {
-        return endCursor();
-      }
-      return endCursor;
-    },
-  },
+  PaginationInfo: {},
 };
