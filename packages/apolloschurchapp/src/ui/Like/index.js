@@ -6,14 +6,13 @@ import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import ProtectedTouchable from '../../auth/ProtectedTouchable';
 
-const enhance = compose(
+const LikeIcon = compose(
   pure,
-  withTheme()
-);
-
-export const LikeIcon = enhance(({ isLiked, theme }) => (
-  <Icon name={isLiked ? 'like-solid' : 'like'} fill={theme.colors.secondary} />
-));
+  withTheme(({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({
+    name: isLiked ? 'like-solid' : 'like',
+    fill: secondary,
+  }))
+)(Icon);
 
 LikeIcon.propTypes = {
   isLiked: PropTypes.bool,
@@ -35,4 +34,4 @@ Like.propTypes = {
   toggleLike: PropTypes.func,
 };
 
-export default Like;
+export { Like as default, LikeIcon };
