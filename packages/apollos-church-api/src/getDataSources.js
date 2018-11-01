@@ -12,5 +12,7 @@ export default () => {
     ...sources,
     UniversalContentItem: sources.ContentItem, // alias
     DevotionalContentItem: sources.ContentItem, // alias
+    MediaContentItem: sources.ContentItem,
+    ContentSeriesContentItem: sources.ContentItem,
   };
 };

@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
+import { largeCardFragment } from 'apolloschurchapp/src/ui/ContentCardConnected';
 import { contentItemFragment } from '../content-single/getContentItem';
 
 export default gql`
@@ -11,7 +11,7 @@ export default gql`
           edges {
             node {
               ...contentItemFragment
-              ...contentCardFragment
+              ...largeCardFragment
             }
           }
         }
@@ -19,5 +19,5 @@ export default gql`
     }
   }
   ${contentItemFragment}
-  ${contentCardFragment}
+  ${largeCardFragment}
 `;

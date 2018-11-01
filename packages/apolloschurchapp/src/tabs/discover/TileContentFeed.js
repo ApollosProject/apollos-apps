@@ -7,7 +7,7 @@ import { H4 } from 'apolloschurchapp/src/ui/typography';
 import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
-import ContentCard from 'apolloschurchapp/src/ui/ConnectedContentCard';
+import ContentCard from 'apolloschurchapp/src/ui/ContentCardConnected';
 import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
 const RowHeader = styled({

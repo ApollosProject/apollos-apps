@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
 
-import ConnectedContentCard from 'apolloschurchapp/src/ui/ConnectedContentCard';
+import ContentCardConnected from 'apolloschurchapp/src/ui/ContentCardConnected';
 import { enhancer as mediaQuery } from 'apolloschurchapp/src/ui/MediaQuery';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
@@ -42,7 +42,7 @@ class FeedView extends Component {
     isLoading: false,
     // renderItem: this.defaultFeedItemRenderer,
     onEndReachedThreshold: 0.7,
-    keyExtractor: (item) => item && item.id,
+    keyExtractor: (item) => console.log('key', { item }) || (item && item.id),
     content: [],
     refetch: undefined,
     fetchMore: undefined,
@@ -63,7 +63,7 @@ class FeedView extends Component {
       // back yet. So I moved them here for safe keeping.
       // TODO: Move them back when the data is ready.
       <TouchableScale onPress={() => this.props.onPressItem({ ...item })}>
-        <ConnectedContentCard
+        <ContentCardConnected
           contentId={item.isLoading ? null : get(item, 'id')}
           isLoading={item.isLoading}
         />

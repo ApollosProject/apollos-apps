@@ -1,18 +1,11 @@
 import { gql } from 'apollo-server';
 import { get } from 'lodash';
-import flow from 'lodash/fp/flow';
-import omitBy from 'lodash/fp/omitBy';
-import pickBy from 'lodash/fp/pickBy';
-import mapValues from 'lodash/fp/mapValues';
-import values from 'lodash/fp/values';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
 import sanitizeHtml from '../../utils/sanitize-html';
 import { Constants } from '../../connectors/rock';
 import { createGlobalId } from '../node';
 import { withEdgePagination } from '../pagination/utils';
-
-const mapValuesWithKey = mapValues.convert({ cap: false });
 
 // export { default as model } from './model';
 export { default as dataSource } from './data-source';
@@ -47,7 +40,6 @@ export const schema = gql`
     theme: Theme
     likedCount: Int
     isLiked: Boolean
-    isCollection: Boolean
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -68,13 +60,10 @@ export const schema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-    terms(match: String): [Term]
-
     sharing: SharableContentItem
     theme: Theme
     likedCount: Int
     isLiked: Boolean
-    isCollection: Boolean
   }
 
   type DevotionalContentItem implements ContentItem & Node {
@@ -101,12 +90,58 @@ export const schema = gql`
     likedCount: Int
     isLiked: Boolean
     scriptures: [Scripture]
-    isCollection: Boolean
   }
 
-  type Term {
-    key: String
-    value: String
+  type MediaContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
+  }
+
+  type ContentSeriesContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
   }
 
   input ContentItemsConnectionInput {
@@ -154,6 +189,22 @@ const isAudio = ({ key, attributeValues, attributes }) =>
   (key.toLowerCase().includes('audio') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an audio url
+
+const hasMedia = ({ attributeValues, attributes }) =>
+  Object.keys(attributes).filter((key) =>
+    isVideo({
+      key,
+      attributeValues,
+      attributes,
+    })
+  ).length ||
+  Object.keys(attributes).filter((key) =>
+    isAudio({
+      key,
+      attributeValues,
+      attributes,
+    })
+  ).length;
 
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
@@ -292,19 +343,14 @@ export const defaultContentItemResolvers = {
       }
     );
 
+    if (!interactions) return false;
+
     const likes = interactions.filter((i) => i.operation === 'Like').length;
     const unlike = interactions.filter((i) => i.operation === 'Unlike').length;
     // If likes / unlikes equal we have either unliked the content or haven't liked it yet (both are 0)
     return likes > unlike;
   },
   sharing: (root) => ({ __type: 'SharableContentItem', ...root }),
-
-  isCollection: async ({ contentChannelId }, args, { dataSources }) => {
-    const parentChannel = await dataSources.ContentChannel.getFromId(
-      contentChannelId
-    );
-    return parentChannel.childContentChannels.length;
-  },
 };
 
 export const resolver = {
@@ -371,29 +417,37 @@ export const resolver = {
   },
   UniversalContentItem: {
     ...defaultContentItemResolvers,
-    terms: ({ attributeValues, attributes }, { match }) =>
-      flow([
-        omitBy((value, key) => isImage({ key, attributes, attributeValues })),
-        omitBy((value, key) => isVideo({ key, attributes, attributeValues })),
-        omitBy((value, key) => isAudio({ key, attributes, attributeValues })),
-        omitBy((value, key) => key === 'videoEmbed'),
-        pickBy((value, key) => (match ? key.match(match) : true)),
-        mapValuesWithKey(({ value }, key) => ({
-          key,
-          value,
-        })),
-        values,
-      ])(attributeValues),
+  },
+  ContentSeriesContentItem: {
+    ...defaultContentItemResolvers,
+  },
+  MediaContentItem: {
+    ...defaultContentItemResolvers,
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: ({ attributeValues, contentChannelTypeId }) => {
+    __resolveType: async ({
+      attributeValues,
+      attributes,
+      contentChannelTypeId,
+    }) => {
       if (
         hasScripture({ attributeValues }) &&
         contentChannelTypeId === Constants.DEVOTIONAL_TYPE_ID
       ) {
         return 'DevotionalContentItem';
       }
+
+      if (
+        Constants.SERIES_CONTENT_CHANNEL_TYPE_IDS.includes(contentChannelTypeId)
+      ) {
+        return 'ContentSeriesContentItem';
+      }
+
+      if (hasMedia({ attributeValues, attributes })) {
+        return 'MediaContentItem';
+      }
+
       return 'UniversalContentItem';
     },
   },

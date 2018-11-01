@@ -12,6 +12,8 @@ export const GET_IMAGE = url.resolve(ROCK_API, 'GetImage.ashx');
 // TODO: Find a more structured way to store this
 export const DEVOTIONAL_TYPE_ID = 1;
 
+export const SERIES_CONTENT_CHANNEL_TYPE_IDS = [6, 7];
+
 export const FIELD_TYPES = {
   TEXT: 1,
   MULTI_SELECT: 2,

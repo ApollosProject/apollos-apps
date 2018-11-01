@@ -122,6 +122,34 @@ describe('UniversalContentItem', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('gets a MediaContentItem item', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(1, 'MediaContentItem')}") {
+          ...ContentItemFragment
+        }
+      }
+      ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('gets a ContentSeriesContentItem item', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(1, 'ContentSeriesContentItem')}") {
+          ...ContentItemFragment
+        }
+      }
+      ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
   it('gets a devotional item', async () => {
     const query = `
       query {
@@ -183,23 +211,6 @@ describe('UniversalContentItem', () => {
       }
       ${contentItemFragment}
     `;
-    const rootValue = {};
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
-
-  it('filters terms by a match string', async () => {
-    const query = `
-    query {
-      node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
-        ...on UniversalContentItem {
-          terms(match: "speaker") {
-            value
-          }
-        }
-      }
-    }
-  `;
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();

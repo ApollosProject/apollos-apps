@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-import { contentCardFragment } from 'apolloschurchapp/src/ui/ConnectedContentCard';
+import { largeCardFragment } from 'apolloschurchapp/src/ui/ContentCardConnected';
 import { contentItemFragment } from 'apolloschurchapp/src/content-single/getContentItem';
 
 export default gql`
@@ -8,10 +8,10 @@ export default gql`
     getAllLikedContent {
       ... on ContentItem {
         ...contentItemFragment
-        ...contentCardFragment
+        ...largeCardFragment
       }
     }
   }
   ${contentItemFragment}
-  ${contentCardFragment}
+  ${largeCardFragment}
 `;

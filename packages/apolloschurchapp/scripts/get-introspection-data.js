@@ -1,11 +1,11 @@
-const fs = require('fs');
-const Path = require('path');
-
-const fetch = require('node-fetch');
+import fs from 'fs';
+import Path from 'path';
+import { APP_DATA_URL } from 'react-native-dotenv';
+import fetch from 'node-fetch';
 
 (async () => {
   try {
-    const query = await fetch(`https://apollos-church-api.now.sh/graphql`, {
+    const query = await fetch(APP_DATA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

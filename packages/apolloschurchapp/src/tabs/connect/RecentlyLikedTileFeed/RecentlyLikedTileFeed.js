@@ -11,7 +11,7 @@ import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
 import { withIsLoading } from 'apolloschurchapp/src/ui/isLoading';
 import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
 
-import ContentCard from 'apolloschurchapp/src/ui/ConnectedContentCard';
+import ContentCard from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 const RowHeader = styled({
   flexDirection: 'row',
