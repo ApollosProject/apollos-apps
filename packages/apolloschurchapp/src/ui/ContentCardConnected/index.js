@@ -15,7 +15,8 @@ const ContentCardConnected = ({
   tile,
   ...otherProps
 }) => {
-  if (!contentId || isLoading) return <ContentCard {...otherProps} isLoading />;
+  if (!contentId || isLoading)
+    return <ContentCard {...otherProps} isLoading tile={tile} />;
 
   return (
     <Query query={getContentCard} variables={{ contentId, tile: !!tile }}>
