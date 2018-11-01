@@ -23,6 +23,9 @@
     "nuke:cache": "watchman watch-del-all && ./node_modules/.bin/lerna run start --scope apolloschurchapp --stream -- --reset-cache",
     "postinstall": "lerna run build"
   },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.47",
     "@babel/core": "7.0.0-beta.47",
@@ -30,7 +33,7 @@
     "@babel/parser": "7.0.0-rc.2",
     "@babel/runtime": "7.0.0-beta.47",
     "apollo": "^1.9.2",
-    "babel-core": "^7.0.0-0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "23.4.2",
     "eslint": "^4.19.1",
