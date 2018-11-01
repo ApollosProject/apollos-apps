@@ -70,7 +70,7 @@ export default class ContentItem extends RockApolloDataSource {
     this.request()
       .filter(
         ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
-          (channelId) => `(ContentChannelId eq ${id})`
+          (id) => `(ContentChannelId eq ${id})`
         ).join(' or ')
       )
       .orderBy('StartDateTime', 'desc');
