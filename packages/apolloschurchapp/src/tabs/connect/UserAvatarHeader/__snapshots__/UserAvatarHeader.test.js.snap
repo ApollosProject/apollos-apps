@@ -184,8 +184,7 @@ exports[`user avatar header renders placeholder when loading 1`] = `
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingHorizontal": 8,
+                    "paddingHorizontal": 4,
                   }
                 }
                 withIcon="pin"
@@ -548,8 +547,7 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingHorizontal": 8,
+                    "paddingHorizontal": 4,
                   }
                 }
                 withIcon="pin"

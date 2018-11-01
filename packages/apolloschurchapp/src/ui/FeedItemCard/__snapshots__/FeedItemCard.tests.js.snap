@@ -53,6 +53,7 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -62,6 +63,7 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
           style={
             Object {
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -103,7 +105,7 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
             }
             locations={
               Array [
-                0.3,
+                0.5,
                 1,
               ]
             }
@@ -128,7 +130,7 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -171,8 +173,7 @@ exports[`the FeedItemCard component should accept a different backgroundColor 1`
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "paddingRight": 8,
+                  "paddingRight": 4,
                 }
               }
               withIcon={null}
@@ -324,6 +325,7 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -333,6 +335,7 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
           style={
             Object {
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -364,7 +367,7 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -407,8 +410,7 @@ exports[`the FeedItemCard component should accept and render passed in styles 1`
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "paddingRight": 8,
+                  "paddingRight": 4,
                 }
               }
               withIcon={null}
@@ -558,6 +560,7 @@ exports[`the FeedItemCard component should render 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -567,6 +570,7 @@ exports[`the FeedItemCard component should render 1`] = `
           style={
             Object {
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -598,7 +602,7 @@ exports[`the FeedItemCard component should render 1`] = `
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -641,8 +645,7 @@ exports[`the FeedItemCard component should render 1`] = `
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "paddingRight": 8,
+                  "paddingRight": 4,
                 }
               }
               withIcon={null}
@@ -792,6 +795,7 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -801,6 +805,7 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
           style={
             Object {
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -832,7 +837,7 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -875,8 +880,7 @@ exports[`the FeedItemCard component should render text correctly with isLight 1`
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "paddingRight": 8,
+                  "paddingRight": 4,
                 }
               }
               withIcon={null}
@@ -1026,6 +1030,7 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -1035,6 +1040,7 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
           style={
             Object {
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -1066,7 +1072,7 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -1181,8 +1187,7 @@ exports[`the FeedItemCard component should render with an icon 1`] = `
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "paddingHorizontal": 8,
+                  "paddingHorizontal": 4,
                 }
               }
               withIcon="play"
@@ -1332,6 +1337,7 @@ exports[`the FeedItemCard component should render with inverted (light) font col
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -1341,6 +1347,7 @@ exports[`the FeedItemCard component should render with inverted (light) font col
           style={
             Object {
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -1372,7 +1379,7 @@ exports[`the FeedItemCard component should render with inverted (light) font col
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -1415,8 +1422,7 @@ exports[`the FeedItemCard component should render with inverted (light) font col
             <View
               style={
                 Object {
-                  "flex": 1,
-                  "paddingRight": 8,
+                  "paddingRight": 4,
                 }
               }
               withIcon={null}

@@ -45,7 +45,7 @@ exports[`the ThumbnailCard component should render 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 8,
+          "marginLeft": 16,
           "marginRight": 0,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
@@ -60,6 +60,7 @@ exports[`the ThumbnailCard component should render 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -150,7 +151,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 8,
+          "marginLeft": 16,
           "marginRight": 0,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
@@ -165,6 +166,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -215,8 +217,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingRight": 8,
+                    "paddingRight": 4,
                   }
                 }
               >
@@ -247,7 +248,6 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "bottom": 0,
                   "height": "100%",
@@ -287,7 +287,6 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#A5A5A5",
-                      "height": "100%",
                       "opacity": 0,
                       "resizeMode": "cover",
                       "width": "100%",
@@ -349,7 +348,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 8,
+          "marginLeft": 16,
           "marginRight": 0,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
@@ -364,6 +363,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -414,8 +414,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingRight": 8,
+                    "paddingRight": 4,
                   }
                 }
               >
@@ -486,7 +485,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 8,
+          "marginLeft": 16,
           "marginRight": 0,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
@@ -501,6 +500,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -551,8 +551,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingRight": 8,
+                    "paddingRight": 4,
                   }
                 }
               >
@@ -583,7 +582,6 @@ exports[`the ThumbnailCard component should render with a category and images 1`
               style={
                 Object {
                   "alignItems": "center",
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "bottom": 0,
                   "height": "100%",
@@ -623,7 +621,6 @@ exports[`the ThumbnailCard component should render with a category and images 1`
                   style={
                     Object {
                       "backgroundColor": "#A5A5A5",
-                      "height": "100%",
                       "opacity": 0,
                       "resizeMode": "cover",
                       "width": "100%",
@@ -685,7 +682,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 8,
+          "marginLeft": 16,
           "marginRight": 0,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
@@ -700,6 +697,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -812,7 +810,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 8,
+          "marginLeft": 16,
           "marginRight": 0,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
@@ -827,6 +825,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -877,7 +876,6 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "bottom": 0,
                   "height": "100%",
@@ -917,7 +915,6 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#A5A5A5",
-                      "height": "100%",
                       "opacity": 0,
                       "resizeMode": "cover",
                       "width": "100%",

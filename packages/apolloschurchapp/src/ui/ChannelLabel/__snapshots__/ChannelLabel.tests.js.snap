@@ -45,8 +45,7 @@ exports[`the ChannelLabel component should render 1`] = `
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingRight": 8,
+            "paddingRight": 4,
           }
         }
       >
@@ -113,8 +112,7 @@ exports[`the ChannelLabel component should render a skeleton view 1`] = `
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingRight": 8,
+            "paddingRight": 4,
           }
         }
       >
@@ -191,8 +189,7 @@ exports[`the ChannelLabel component should render a skeleton view that supports 
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 8,
+            "paddingHorizontal": 4,
           }
         }
         withIcon="like"
@@ -260,8 +257,7 @@ exports[`the ChannelLabel component should render flexed 1`] = `
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingRight": 8,
+            "paddingRight": 4,
           }
         }
       >
@@ -400,8 +396,7 @@ exports[`the ChannelLabel component should render with an icon 1`] = `
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 8,
+            "paddingHorizontal": 4,
           }
         }
         withIcon="like"

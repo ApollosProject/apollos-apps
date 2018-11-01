@@ -80,15 +80,14 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
       scrollEventThrottle={50}
       showsHorizontalScrollIndicator={false}
       snapToAlignment="start"
-      snapToInterval={592}
+      snapToInterval={512}
       stickyHeaderIndices={Array []}
       style={
         Object {
-          "height": 600,
           "paddingBottom": 8,
+          "paddingTop": 16,
         }
       }
-      tileHeight={600}
       updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
       windowSize={21}
@@ -119,7 +118,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -173,7 +172,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -219,7 +218,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -273,7 +272,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -409,15 +408,14 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
       scrollEventThrottle={50}
       showsHorizontalScrollIndicator={false}
       snapToAlignment="start"
-      snapToInterval={592}
+      snapToInterval={512}
       stickyHeaderIndices={Array []}
       style={
         Object {
-          "height": 600,
           "paddingBottom": 8,
+          "paddingTop": 16,
         }
       }
-      tileHeight={600}
       updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
       windowSize={21}
@@ -448,7 +446,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -498,7 +496,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -544,7 +542,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -594,7 +592,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -640,7 +638,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -690,7 +688,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -736,7 +734,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -786,7 +784,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -832,7 +830,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": "100%",
+                  "width": 496,
                 }
               }
             >
@@ -882,7 +880,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   style={
                     Object {
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >

@@ -46,7 +46,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -100,7 +100,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -170,7 +170,7 @@ exports[`the CardTile component should render 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -192,7 +192,7 @@ exports[`the CardTile component should render 1`] = `
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -262,7 +262,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -284,7 +284,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -355,7 +355,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -405,7 +405,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -458,8 +458,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingHorizontal": 8,
+                    "paddingHorizontal": 4,
                   }
                 }
                 withIcon="video"
@@ -544,7 +543,7 @@ exports[`the CardTile component should render a number box 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -598,7 +597,7 @@ exports[`the CardTile component should render a number box 1`] = `
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -669,7 +668,7 @@ exports[`the CardTile component should render card details 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -723,7 +722,7 @@ exports[`the CardTile component should render card details 1`] = `
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -838,8 +837,7 @@ exports[`the CardTile component should render card details 1`] = `
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingHorizontal": 8,
+                    "paddingHorizontal": 4,
                   }
                 }
                 withIcon="video"
@@ -913,7 +911,7 @@ exports[`the CardTile component should render card details with date 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
@@ -967,7 +965,7 @@ exports[`the CardTile component should render card details with date 1`] = `
             style={
               Object {
                 "paddingHorizontal": 16,
-                "paddingVertical": 12,
+                "paddingVertical": 16,
               }
             }
           >
@@ -1082,8 +1080,7 @@ exports[`the CardTile component should render card details with date 1`] = `
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingHorizontal": 8,
+                    "paddingHorizontal": 4,
                   }
                 }
                 withIcon="video"
@@ -1168,7 +1165,7 @@ exports[`the CardTile component should render children 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": "100%",
+            "width": 496,
           }
         }
       >
