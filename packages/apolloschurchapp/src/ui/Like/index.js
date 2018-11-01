@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { compose } from 'recompose';
 
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import ProtectedTouchable from '../../auth/ProtectedTouchable';
 
-const LikeIcon = compose(
-  withTheme(({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({
+const LikeIcon = withTheme(
+  ({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({
     name: isLiked ? 'like-solid' : 'like',
     fill: secondary,
-  }))
+  })
 )(Icon);
 
 LikeIcon.propTypes = {
