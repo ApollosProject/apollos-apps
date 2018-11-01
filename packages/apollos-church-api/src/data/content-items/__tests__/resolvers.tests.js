@@ -15,6 +15,9 @@ ApollosConfig.loadJs({
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
   },
+  ROCK_MAPPINGS: {
+    SERIES_CONTENT_CHANNEL_TYPE_IDS: [6, 7],
+  },
   ROCK_CONSTANTS: {
     IMAGE: 10,
     AUDIO_FILE: 77,
