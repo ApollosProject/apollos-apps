@@ -2,10 +2,12 @@ import { gql } from 'apollo-server';
 import { get } from 'lodash';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
+import ApollosConfig from '@apolloschurch/config';
 import sanitizeHtml from '../../utils/sanitize-html';
-import { Constants } from '../../connectors/rock';
 import { createGlobalId } from '../node';
 import { withEdgePagination } from '../pagination/utils';
+
+const { ROCK_CONSTANTS, ROCK_MAPPINGS } = ApollosConfig;
 
 // export { default as model } from './model';
 export { default as dataSource } from './data-source';
@@ -171,21 +173,21 @@ const hasScripture = ({ attributeValues }) =>
   get(attributeValues, 'scriptures.value', '') !== '';
 
 const isImage = ({ key, attributeValues, attributes }) =>
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.IMAGE ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
   (key.toLowerCase().includes('image') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an image url
 
 const isVideo = ({ key, attributeValues, attributes }) =>
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_FILE ||
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.VIDEO_URL ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_FILE ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_URL ||
   (key.toLowerCase().includes('video') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like a video url
 
 const isAudio = ({ key, attributeValues, attributes }) =>
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_FILE ||
-  attributes[key].fieldTypeId === Constants.FIELD_TYPES.AUDIO_URL ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_FILE ||
+  attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_URL ||
   (key.toLowerCase().includes('audio') &&
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an audio url
@@ -433,13 +435,15 @@ export const resolver = {
     }) => {
       if (
         hasScripture({ attributeValues }) &&
-        contentChannelTypeId === Constants.DEVOTIONAL_TYPE_ID
+        ROCK_MAPPINGS.DEVOTIONAL_TYPE_IDS.includes(contentChannelTypeId)
       ) {
         return 'DevotionalContentItem';
       }
 
       if (
-        Constants.SERIES_CONTENT_CHANNEL_TYPE_IDS.includes(contentChannelTypeId)
+        ROCK_MAPPINGS.SERIES_CONTENT_CHANNEL_TYPE_IDS.includes(
+          contentChannelTypeId
+        )
       ) {
         return 'ContentSeriesContentItem';
       }
