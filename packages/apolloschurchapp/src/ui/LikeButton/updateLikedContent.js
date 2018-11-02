@@ -1,4 +1,3 @@
-import gql from 'graphql-tag';
 import getAllLikedContent from 'apolloschurchapp/src/tabs/connect/getLikedContent';
 import { contentItemFragment } from 'apolloschurchapp/src/content-single/getContentItem';
 
