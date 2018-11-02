@@ -7,28 +7,7 @@ const addItemToLikedContentList = ({ cache, item }) => {
     const data = cache.readQuery({ query: getAllLikedContent });
     const fullItem = cache.readFragment({
       id: `${item.__typename}:${item.id}`,
-      fragmentName: 'LikedContentItemParts',
-      fragment: gql`
-        fragment LikedContentItemParts on ContentItem {
-          ...contentItemFragment
-          __typename
-          id
-          coverImage {
-            name
-            sources {
-              uri
-            }
-          }
-          isLiked
-          parentChannel {
-            id
-            name
-            iconName
-          }
-          title
-        }
-        ${contentItemFragment}
-      `,
+      fragment: contentItemFragment,
     });
     cache.writeQuery({
       query: getAllLikedContent,
