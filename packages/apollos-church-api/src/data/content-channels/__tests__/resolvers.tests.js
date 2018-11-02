@@ -15,6 +15,7 @@ ApollosConfig.loadJs({
   },
   ROCK_MAPPINGS: {
     SERIES_CONTENT_CHANNEL_TYPE_IDS: [6, 7],
+    DISCOVER_CONTENT_CHANNEL_IDS: [2, 3, 4, 6, 8],
   },
 });
 
