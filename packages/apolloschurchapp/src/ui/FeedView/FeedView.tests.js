@@ -4,7 +4,7 @@ import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 
 import Providers from 'apolloschurchapp/src/Providers';
-import FeedItemCard from 'apolloschurchapp/src/ui/FeedItemCard';
+import ContentCard from 'apolloschurchapp/src/ui/ContentCard';
 
 import FeedView from '.';
 
@@ -85,13 +85,10 @@ describe('The FeedView component', () => {
       const theItem = get(item, 'item', {});
       return (
         <TouchableWithoutFeedback>
-          <FeedItemCard
+          <ContentCard
             id={theItem.node.id}
-            title={theItem.node.title || theItem.node.name || ' '}
-            channelType={theItem.node.parentChannel.name}
-            channelTypeIcon={theItem.node.parentChannel.iconName}
-            images={theItem.node.coverImage.sources}
-            isLoading={theItem.node.isLoading}
+            title={theItem.node.title}
+            coverImage={theItem.node.coverImage}
           />
         </TouchableWithoutFeedback>
       );

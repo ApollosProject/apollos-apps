@@ -248,7 +248,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -258,7 +258,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     <View
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
@@ -500,7 +500,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -510,7 +510,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     <View
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
@@ -931,7 +931,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -941,7 +941,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     <View
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
@@ -1183,7 +1183,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -1193,7 +1193,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     <View
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }

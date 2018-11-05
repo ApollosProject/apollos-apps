@@ -4,7 +4,7 @@ import Providers from 'apolloschurchapp/src/Providers';
 
 import ContentCard from '.';
 
-const withSnapshotTest = (snapshot) => {
+const withSnapshotTest = (snapshot) => () => {
   const tree = renderer.create(<Providers>{snapshot}</Providers>);
   expect(tree).toMatchSnapshot();
 };
