@@ -27,10 +27,11 @@ ApollosConfig.loadJs({
 });
 
 const contentItemFragment = `
-  fragment ContentItemFragment on UniversalContentItem {
+  fragment ContentItemFragment on ContentItem {
     id
     __typename
     title
+    summary
     coverImage {
       name
       key
@@ -84,17 +85,12 @@ const contentItemFragment = `
       id
       __typename
     }
-    terms {
-      key
-      value
-    }
     sharing {
       __typename
       url
       title
       message
     }
-    isCollection
   }
 `;
 
