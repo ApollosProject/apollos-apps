@@ -40,13 +40,6 @@ class PersonalDetails extends PureComponent {
         <TableView>
           <PaddedView>
             <TextInput
-              label="Nick Name"
-              type="text"
-              value={props.values.nickName}
-              error={props.touched.nickName && props.errors.nickName}
-              onChangeText={(text) => props.setFieldValue('nickName', text)}
-            />
-            <TextInput
               label="First Name"
               type="text"
               value={props.values.firstName}
@@ -91,7 +84,7 @@ class PersonalDetails extends PureComponent {
     return (
       <Query query={getUserProfile} fetchPolicy="cache-and-network">
         {({ data: { currentUser = { profile: {} } } = {} }) => {
-          const { firstName, lastName, email, nickName } = currentUser.profile;
+          const { firstName, lastName, email } = currentUser.profile;
 
           return (
             <Mutation
@@ -107,7 +100,6 @@ class PersonalDetails extends PureComponent {
                         firstName: updateProfileFields.firstName,
                         lastName: updateProfileFields.lastName,
                         email: updateProfileFields.email,
-                        nickName: updateProfileFields.nickName,
                       },
                     },
                   },
@@ -116,14 +108,13 @@ class PersonalDetails extends PureComponent {
             >
               {(updateDetails) => (
                 <Formik
-                  initialValues={{ firstName, lastName, email, nickName }}
+                  initialValues={{ firstName, lastName, email }}
                   validationSchema={Yup.object().shape({
                     firstName: Yup.string().required('First Name is required!'),
                     lastName: Yup.string().required('Last Name is required!'),
                     email: Yup.string()
                       .email('Invalid email address')
                       .required('Email is required!'),
-                    nickName: Yup.string().required('Nick Name is required!'),
                   })}
                   onSubmit={async (
                     variables,
