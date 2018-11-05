@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
@@ -17,6 +18,12 @@ const StyledAvatar = withTheme(({ theme }) => ({
     marginBottom: theme.sizing.baseUnit / 2,
   },
 }))(Avatar);
+
+const TouchWrapper = withTheme(({ theme, size }) => ({
+  style: {
+    borderRadius: get(theme.sizing.avatar, size, theme.sizing.avatar.small) / 2,
+  },
+}))(View);
 
 const Wrapper = styled({
   justifyContent: 'center',
@@ -53,12 +60,15 @@ export default class AvatarForm extends PureComponent {
         <Touchable
           disabled={this.props.disabled}
           onPress={this.handleUploadPhoto}
+          useForeground
         >
-          <StyledAvatar
-            source={photo}
-            size="medium"
-            isLoading={isUploadingFile}
-          />
+          <TouchWrapper>
+            <StyledAvatar
+              source={photo}
+              size="medium"
+              isLoading={isUploadingFile}
+            />
+          </TouchWrapper>
         </Touchable>
         {this.props.text ? (
           <H5>

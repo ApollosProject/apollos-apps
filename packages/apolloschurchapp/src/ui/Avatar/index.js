@@ -2,30 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { get } from 'lodash';
-import { compose, pure } from 'recompose';
+import { compose } from 'recompose';
 
 import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 import ActivityIndicator from 'apolloschurchapp/src/ui/ActivityIndicator';
+import Icon from 'apolloschurchapp/src/ui/Icon';
 
 export { default as AvatarList } from './List';
 
-const enhance = compose(
-  pure,
-  withTheme(({ theme, size }) => ({
-    themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
-  }))
-);
+const enhance = withTheme(({ theme, size }) => ({
+  themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+}));
 
 const Container = styled(
   ({ theme, themeSize }) => ({
     width: themeSize,
     height: themeSize,
-    backgroundColor: theme.colors.background.inactive,
+    backgroundColor: theme.colors.white,
     borderRadius: themeSize / 2,
     marginRight: themeSize / 4,
     marginBottom: themeSize / 4,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
     overflow: 'hidden',
   }),
   'Avatar'
@@ -37,6 +37,12 @@ const LoadingIcon = compose(
     zIndex: 1,
   })
 )(ActivityIndicator);
+
+const PlaceholderIcon = compose(
+  withTheme(({ theme: { colors } = {} }) => ({
+    fill: colors.background.inactive,
+  }))
+)(Icon);
 
 const Image = styled(({ themeSize }) => ({
   width: '100%',
@@ -60,7 +66,9 @@ const Avatar = enhance(
           themeSize={themeSize}
           isLoading={isLoading}
         />
-      ) : null}
+      ) : (
+        <PlaceholderIcon name="avatar" size={themeSize} />
+      )}
     </Container>
   )
 );
