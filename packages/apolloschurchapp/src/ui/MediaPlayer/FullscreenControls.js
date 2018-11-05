@@ -19,7 +19,11 @@ import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
-import { AirPlayListener, AirPlayButton } from 'react-native-airplay-btn';
+import {
+  AirPlayListener,
+  AirPlayButton,
+  AirPlay,
+} from 'react-native-airplay-btn';
 import Seeker from './Seeker';
 import { getControlState } from './queries';
 import {
@@ -149,6 +153,9 @@ class FullscreenControls extends PureComponent {
       }
       return false;
     });
+
+    // start airplay scan
+    AirPlay.startScan();
   }
 
   componentWillUnmount() {
