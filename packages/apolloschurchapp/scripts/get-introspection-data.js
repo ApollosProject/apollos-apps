@@ -3,7 +3,11 @@ import Path from 'path';
 import { APP_DATA_URL } from 'react-native-dotenv';
 import fetch from 'node-fetch';
 
-(async () => {
+const attempts = 0;
+const maxAttempts = 3;
+const timeBetweenAttempts = 5 * 1000;
+
+const getIntrospectionData = async () => {
   try {
     const query = await fetch(APP_DATA_URL, {
       method: 'POST',
@@ -36,7 +40,20 @@ import fetch from 'node-fetch';
       Path.resolve(__dirname, '../src/client/fragmentTypes.json'),
       JSON.stringify(data)
     );
+
+    console.log('Successfully wrote fragmentTypes!');
   } catch (e) {
-    throw new Error('Error writing fragmentTypes file', e);
+    if (attempts < maxAttempts) {
+      console.log(
+        `Error writing fragmentTypes (-api probably hasn't started yet). Trying again after wait. Attempt: ${attempts +
+          1} of ${maxAttempts}`
+      );
+      await new Promise((resolve) => setTimeout(resolve, timeBetweenAttempts)); // try again after waiting
+      getIntrospectionData();
+    } else {
+      // throw new Error('Error writing fragmentTypes file', e);
+    }
   }
-})();
+};
+
+getIntrospectionData();
