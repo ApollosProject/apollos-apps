@@ -19,6 +19,7 @@ import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
+import { AirPlayListener, AirPlayButton } from 'react-native-airplay-btn';
 import Seeker from './Seeker';
 import { getControlState } from './queries';
 import {
@@ -121,6 +122,23 @@ class FullscreenControls extends PureComponent {
     this.fader.addListener(({ value }) => {
       this.controlsVisible = value > 0.05;
     });
+
+    // Airplay listeners
+    this.airPlayAvailable = AirPlayListener.addListener(
+      'airplayAvailable',
+      (devices) =>
+        this.setState({
+          airPlayAvailable: devices.available,
+        })
+    );
+
+    this.airPlayConnected = AirPlayListener.addListener(
+      'airplayConnected',
+      (devices) =>
+        this.setState({
+          airPlayConnected: devices.available,
+        })
+    );
   }
 
   componentDidMount() {
@@ -136,6 +154,13 @@ class FullscreenControls extends PureComponent {
   componentWillUnmount() {
     this.backHandler.remove();
     if (this.closeTimeout) clearTimeout(this.closeTimeout);
+
+    // remove airplay handlers
+    this.airPlayConnected.remove();
+    this.airPlayAvailable.remove();
+
+    // TODO: when should we disconnect?
+    // AirPlay.disconnect();
   }
 
   handleOnScrubbing = ({ isScrubbing }) => {
@@ -240,7 +265,8 @@ class FullscreenControls extends PureComponent {
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  <IconSm name="empty" />
+                  <AirPlayButton />
+                  {/* <IconSm name="empty" /> */}
                 </UpperControl>
               </Touchable>
               <LowerControl>

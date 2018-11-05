@@ -3134,7 +3134,7 @@ apollo@^1.9.2:
 "apollos-church-api@file:packages/apollos-church-api":
   version "0.6.0"
   dependencies:
-    "@apolloschurch/rock-apollo-data-source" "file:../../Library/Caches/Yarn/v2/apollos-rock-apollo-data-source"
+    "@apolloschurch/rock-apollo-data-source" "file:../../../Library/Caches/Yarn/v2/apollos-rock-apollo-data-source"
     analytics-node "^3.3.0"
     apollo-datasource-rest "0.1.1"
     apollo-server "^2.0.5"
@@ -13226,6 +13226,11 @@ react-modal@^3.3.2:
     prop-types "^15.5.10"
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
+
+react-native-airplay-btn@^1.0.5-beta-1.0:
+  version "1.0.5-beta-1.0"
+  resolved "https://registry.yarnpkg.com/react-native-airplay-btn/-/react-native-airplay-btn-1.0.5-beta-1.0.tgz#2fc4aaf1a56e1a464f9a04cda4af2d995a4df5d2"
+  integrity sha512-i1DfW/mP5RGEnSBllJp7gT6BBoMMRlGmbw75yMvToJOZL2hpPzH5wK1u+wd+Bjq8dGzPTt54JDejmXAZWJL/MQ==
 
 react-native-animatable@^1.2.4:
   version "1.3.0"
