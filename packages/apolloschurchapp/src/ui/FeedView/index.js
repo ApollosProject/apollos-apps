@@ -42,7 +42,7 @@ class FeedView extends Component {
     isLoading: false,
     // renderItem: this.defaultFeedItemRenderer,
     onEndReachedThreshold: 0.7,
-    keyExtractor: (item) => console.log('key', { item }) || (item && item.id),
+    keyExtractor: (item) => item && item.id,
     content: [],
     refetch: undefined,
     fetchMore: undefined,
