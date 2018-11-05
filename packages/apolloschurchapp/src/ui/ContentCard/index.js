@@ -45,8 +45,9 @@ class ContentCard extends PureComponent {
   renderCardHeader() {
     if (this.props.coverImage || this.props.isLoading) {
       let forceRatio = null;
-      if (this.props.isLoading) forceRatio = 2;
-      if (this.props.tile) {
+      if (this.props.isLoading) {
+        forceRatio = 2;
+      } else if (this.props.tile) {
         if (this.props.title) {
           forceRatio = 2;
         } else {
