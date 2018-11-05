@@ -71,4 +71,4 @@ const ModalView = ({ onClose, onBack }) => (
   </>
 );
 
-export default withNavigation(ModalView);
+export default ModalView;
