@@ -1,6 +1,5 @@
 import React from 'react';
 import { StatusBar, TouchableOpacity, View } from 'react-native';
-import { withNavigation } from 'react-navigation';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
