@@ -3,8 +3,8 @@ import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
 import ApollosConfig from '@apolloschurch/config';
 
+import { createGlobalId } from '@apolloschurch/core-api';
 import { getTestContext } from '../../../utils/testUtils';
-import { createGlobalId } from '../../node/model';
 import { generateToken } from '../../auth/token';
 import { testSchema as typeDefs, resolvers } from '../..';
 

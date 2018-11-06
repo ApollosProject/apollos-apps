@@ -1,4 +1,4 @@
-import { createGlobalId } from '../node';
+import { createGlobalId } from '@apolloschurch/core-api';
 
 export default {
   Query: {

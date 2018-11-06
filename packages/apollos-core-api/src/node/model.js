@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import Crypto from 'crypto';
 
 const secret = process.env.SECRET || 'LZEVhlgzFZKClu1r';

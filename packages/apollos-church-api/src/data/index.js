@@ -1,8 +1,16 @@
 import { gql } from 'apollo-server';
-import { mapValues, values, merge, compact } from 'lodash';
+import { get } from 'lodash';
+
+import {
+  createResolvers,
+  createSchema,
+  createContext,
+  createDataSources,
+} from '@apolloschurch/core-api';
 
 import RockConstants from '../connectors/rock/rock-constants';
-import * as Node from './node';
+import { registerToken } from './auth/token';
+
 import * as ContentChannel from './content-channels';
 import * as ContentItem from './content-items';
 import * as Person from './people';
@@ -18,7 +26,6 @@ import * as Family from './family';
 import * as Pagination from './pagination';
 
 const data = {
-  Node,
   ContentChannel,
   ContentItem,
   Person,
@@ -33,31 +40,36 @@ const data = {
   Analytics,
   Family,
   Pagination,
+  UniversalContentItem: {
+    model: ContentItem.model,
+    dataSource: ContentItem.dataSource,
+  }, // alias
+  DevotionalContentItem: {
+    model: ContentItem.model,
+    dataSource: ContentItem.dataSource,
+  }, // alias
 };
+// UniversalContentItem: ContentItem.model, // alias
 
-export const schema = [
-  gql`
-    type Query {
-      _placeholder: Boolean # needed, empty schema defs aren't supported
+export const dataSources = createDataSources(data);
+export const resolvers = createResolvers(data);
+export const schema = createSchema(data);
+export const context = createContext(data, ({ req, context: ctx }) => {
+  if (get(req, 'headers.authorization')) {
+    const { userToken, rockCookie, sessionId } = registerToken(
+      req.headers.authorization
+    );
+    if (sessionId) {
+      return {
+        ...ctx,
+        userToken,
+        rockCookie,
+        sessionId,
+      };
     }
-
-    type Mutation {
-      _placeholder: Boolean # needed, empty schema defs aren't supported
-    }
-  `,
-  ...compact(values(data).map((datum) => datum.schema)),
-];
-
-export const resolvers = merge(
-  ...compact(values(data).map((datum) => datum.resolver))
-);
-
-export const dataSources = mapValues(data, (datum) => datum.dataSource);
-
-export const models = {
-  ...mapValues(data, (datum) => datum.model),
-  UniversalContentItem: ContentItem.model, // alias
-};
+  }
+  return ctx;
+});
 
 // the upload Scalar is added
 export const testSchema = [

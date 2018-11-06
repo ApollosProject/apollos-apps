@@ -6,8 +6,8 @@ import pickBy from 'lodash/fp/pickBy';
 import mapValues from 'lodash/fp/mapValues';
 import values from 'lodash/fp/values';
 import ApollosConfig from '@apolloschurch/config';
+import { createGlobalId } from '@apolloschurch/core-api';
 import sanitizeHtml from '../../utils/sanitize-html';
-import { createGlobalId } from '../node';
 import { withEdgePagination } from '../pagination/utils';
 
 const { ROCK_CONSTANTS, ROCK_MAPPINGS } = ApollosConfig;

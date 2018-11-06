@@ -1,4 +1,4 @@
-import { createGlobalId } from '../node/model';
+import { createGlobalId } from '@apolloschurch/core-api';
 
 export default {
   Mutation: {
