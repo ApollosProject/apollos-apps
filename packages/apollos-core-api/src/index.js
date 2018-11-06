@@ -3,7 +3,10 @@ import gql from 'graphql-tag';
 import * as Node from './node';
 
 export { createGlobalId, parseGlobalId } from './node';
+
+// Types that all apollos-church servers will use.
 const builtInData = { Node };
+
 export const createSchema = (data) => [
   gql`
     type Query {
