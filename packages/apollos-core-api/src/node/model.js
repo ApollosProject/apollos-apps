@@ -30,6 +30,7 @@ export function parseGlobalId(encodedId) {
 }
 
 export default class Node {
+  // eslint-disable-next-line class-methods-use-this
   async get(encodedId, dataSources) {
     const { __type, id } = parseGlobalId(encodedId);
     if (
