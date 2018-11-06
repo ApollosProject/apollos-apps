@@ -364,7 +364,7 @@ export const resolver = {
       }),
     getAllLikedContent: async (root, args, { dataSources }) => {
       // Get All Interactions from current user
-      const interactions = await dataSources.Interactions.getForContentItems();
+      const interactions = await dataSources.Interactions.getByCurrentUserForContentItems();
       // Iterate over the interactions and determine which pieces of content
       // has more likes than unlikes
 
