@@ -2,9 +2,9 @@ import { gql } from 'apollo-server';
 import { get } from 'lodash';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
+import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 import sanitizeHtml from '../../utils/sanitize-html';
-import { createGlobalId } from '../node';
 import { withEdgePagination } from '../pagination/utils';
 
 const { ROCK_CONSTANTS, ROCK_MAPPINGS } = ApollosConfig;
