@@ -91,7 +91,7 @@ const contentItemFragment = `
       title
       message
     }
-    likeCount
+    likedCount
   }
 `;
 

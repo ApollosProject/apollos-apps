@@ -2,7 +2,7 @@ import { gql } from 'apollo-server';
 import { get } from 'lodash';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
-import ApollosConfig from '@apolloschurch/config';
+import ApollosConfig from '@apollosproject/config';
 import sanitizeHtml from '../../utils/sanitize-html';
 import { createGlobalId } from '../node';
 import { withEdgePagination } from '../pagination/utils';
