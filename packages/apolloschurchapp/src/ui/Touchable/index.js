@@ -9,15 +9,17 @@ import PropTypes from 'prop-types';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 
-const RoundWrapper = styled(({ size }) => ({
-  borderRadius: size,
+const RoundedWrapper = styled(({ borderRadius }) => ({
+  borderRadius: borderRadius || null,
   overflow: 'hidden',
   backgroundColor: 'salmon',
 }))(View);
 
-const RoundAndroidWrapper = ({ round, size, children }) =>
-  Platform.OS === 'android' && round ? (
-    <RoundWrapper size={size}>{children}</RoundWrapper>
+const AndroidWrapper = ({ borderRadius, children }) =>
+  Platform.OS === 'android' ? (
+    <RoundedWrapper borderRadius={borderRadius} round>
+      {children}
+    </RoundedWrapper>
   ) : (
     children
   );
@@ -25,15 +27,14 @@ const RoundAndroidWrapper = ({ round, size, children }) =>
 const PlatformTouchable =
   Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
-const Touchable = ({ round, children, size, ...otherProps }) => (
-  <RoundAndroidWrapper round={round} size={size}>
+const Touchable = ({ borderRadius, children, ...otherProps }) => (
+  <AndroidWrapper borderRadius={borderRadius}>
     <PlatformTouchable {...otherProps}>{children}</PlatformTouchable>
-  </RoundAndroidWrapper>
+  </AndroidWrapper>
 );
 
 Touchable.propTypes = {
-  round: PropTypes.bool,
-  size: PropTypes.number,
+  borderRadius: PropTypes.number,
   children: PropTypes.node,
 };
 
