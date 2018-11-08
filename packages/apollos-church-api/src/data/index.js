@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server';
-import { get } from 'lodash';
 
 import { createApolloServerConfig } from '@apollosproject/server-core';
 
