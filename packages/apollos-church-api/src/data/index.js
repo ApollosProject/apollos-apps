@@ -1,15 +1,9 @@
 import { gql } from 'apollo-server';
 import { get } from 'lodash';
 
-import {
-  createResolvers,
-  createSchema,
-  createContext,
-  createDataSources,
-} from '@apollosproject/server-core';
+import { createApolloServerConfig } from '@apollosproject/server-core';
 
 import RockConstants from '../connectors/rock/rock-constants';
-import { registerToken } from './auth/token';
 
 import * as ContentChannel from './content-channels';
 import * as ContentItem from './content-items';
@@ -41,35 +35,18 @@ const data = {
   Family,
   Pagination,
   UniversalContentItem: {
-    model: ContentItem.model,
     dataSource: ContentItem.dataSource,
   }, // alias
   DevotionalContentItem: {
-    model: ContentItem.model,
     dataSource: ContentItem.dataSource,
   }, // alias
 };
-// UniversalContentItem: ContentItem.model, // alias
 
-export const dataSources = createDataSources(data);
-export const resolvers = createResolvers(data);
-export const schema = createSchema(data);
-export const context = createContext(data, ({ req, context: ctx }) => {
-  if (get(req, 'headers.authorization')) {
-    const { userToken, rockCookie, sessionId } = registerToken(
-      req.headers.authorization
-    );
-    if (sessionId) {
-      return {
-        ...ctx,
-        userToken,
-        rockCookie,
-        sessionId,
-      };
-    }
-  }
-  return ctx;
-});
+const { dataSources, resolvers, schema, context } = createApolloServerConfig(
+  data
+);
+
+export { dataSources, resolvers, schema, context };
 
 // the upload Scalar is added
 export const testSchema = [

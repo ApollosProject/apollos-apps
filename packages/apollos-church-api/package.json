@@ -28,7 +28,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/rock-apollo-data-source": "file:../apollos-rock-apollo-data-source",
+    "@apollosproject/server-core": "file:../apollos-server-core",
     "@apollosproject/rock-apollo-data-source": "file:../apollos-rock-apollo-data-source",
     "@apollosproject/config": "file:../apollos-config",
     "analytics-node": "^3.3.0",

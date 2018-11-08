@@ -30,9 +30,13 @@ export const createResolvers = (data) =>
 const getDataSources = (data) =>
   mapValues({ ...builtInData, ...data }, (datum) => datum.dataSource);
 
-const getModels = (data) => ({
-  ...mapValues({ ...builtInData, ...data }, (datum) => datum.model),
-});
+const getModels = (data) =>
+  mapValues({ ...builtInData, ...data }, (datum) => datum.model);
+
+const getContextMiddlewares = (data) =>
+  compact(
+    values({ ...builtInData, ...data }).map((datum) => datum.contextMiddleware)
+  );
 
 export const createDataSources = (data) => {
   const dataSources = getDataSources(data);
@@ -47,12 +51,12 @@ export const createDataSources = (data) => {
   };
 };
 
-export const createContext = (data, middleware) => ({ req = {} } = {}) => {
+export const createContext = (data) => ({ req = {} } = {}) => {
   const initiatedModels = {};
 
+  // For all non-datasource connectors. Right now only `Node`.
   const models = getModels(data);
-
-  const context = {
+  let context = {
     models: initiatedModels,
   };
 
@@ -61,8 +65,18 @@ export const createContext = (data, middleware) => ({ req = {} } = {}) => {
       initiatedModels[modelName] = new models[modelName](context);
     }
   });
-  if (middleware && typeof middleware === 'function') {
-    return middleware({ req, context });
-  }
+
+  const contextMiddleware = getContextMiddlewares(data);
+  contextMiddleware.forEach((middleware) => {
+    context = middleware({ req, context });
+  });
   return context;
+};
+
+export const createApolloServerConfig = (data) => {
+  const context = createContext(data);
+  const dataSources = createDataSources(data);
+  const schema = createSchema(data);
+  const resolvers = createResolvers(data);
+  return { context, dataSources, schema, resolvers };
 };

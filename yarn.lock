@@ -28,6 +28,13 @@
     lodash "^4.17.11"
     with-query "^1.1.2"
 
+"@apollosproject/server-core@file:packages/apollos-server-core":
+  version "0.6.0"
+  dependencies:
+    crypto "^1.0.1"
+    graphql-tag "^2.10.0"
+    lodash "^4.17.11"
+
 "@babel/cli@7.0.0-beta.47":
   version "7.0.0-beta.47"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.0.0-beta.47.tgz#e00cc40ffd9084a5243c8fbded3f5049bc970e4c"
@@ -3141,6 +3148,7 @@ apollo@^1.9.2:
   dependencies:
     "@apollosproject/config" "file:../../Library/Caches/Yarn/v2/apollos-config"
     "@apollosproject/rock-apollo-data-source" "file:../../Library/Caches/Yarn/v2/apollos-rock-apollo-data-source"
+    "@apollosproject/server-core" "file:../../Library/Caches/Yarn/v2/apollos-server-core"
     analytics-node "^3.3.0"
     apollo-datasource-rest "0.1.1"
     apollo-server "^2.0.5"
