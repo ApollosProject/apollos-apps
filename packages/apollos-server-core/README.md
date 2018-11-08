@@ -1,4 +1,4 @@
-# `apollos-core-api`
+# `apollos-server-core`
 
 ## Usage
 

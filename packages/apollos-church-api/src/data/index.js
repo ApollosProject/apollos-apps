@@ -6,7 +6,7 @@ import {
   createSchema,
   createContext,
   createDataSources,
-} from '@apollosproject/core-api';
+} from '@apollosproject/server-core';
 
 import RockConstants from '../connectors/rock/rock-constants';
 import { registerToken } from './auth/token';

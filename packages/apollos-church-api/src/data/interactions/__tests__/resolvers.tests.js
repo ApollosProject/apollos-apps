@@ -2,7 +2,7 @@ import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
 import ApollosConfig from '@apollosproject/config';
-import { createGlobalId } from '@apollosproject/core-api';
+import { createGlobalId } from '@apollosproject/server-core';
 
 import { getTestContext } from '../../../utils/testUtils';
 import { generateToken } from '../../auth/token';
