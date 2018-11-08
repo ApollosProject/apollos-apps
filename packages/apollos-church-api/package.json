@@ -60,7 +60,6 @@
     "coveralls": "3.0.1",
     "jest": "23.0.0",
     "jest-fetch-mock": "1.6.2",
-    "kexec": "^3.0.0",
     "nodemon": "1.17.5"
   }
 }
