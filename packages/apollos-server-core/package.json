@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/config",
+  "name": "@apollosproject/server-core",
   "version": "0.6.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "license": "MIT",
@@ -18,10 +18,13 @@
     ],
     "testEnvironment": "node"
   },
-  "devDependencies": {
-    "babel-preset-apollos": "file:../babel-preset-apollos"
-  },
   "dependencies": {
-    "js-yaml": "^3.12.0"
+    "crypto": "^1.0.1",
+    "graphql-tag": "^2.10.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "babel-preset-apollos": "file:../babel-preset-apollos",
+    "casual": "^1.5.19"
   }
 }
