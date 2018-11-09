@@ -9,17 +9,16 @@ import PropTypes from 'prop-types';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 
-const RoundedWrapper = styled(({ borderRadius }) => ({
-  borderRadius: borderRadius || null,
+const AndroidRippleWrapper = styled(({ borderRadius }) => ({
+  borderRadius,
   overflow: 'hidden',
-  backgroundColor: 'salmon',
 }))(View);
 
 const AndroidWrapper = ({ borderRadius, children }) =>
   Platform.OS === 'android' ? (
-    <RoundedWrapper borderRadius={borderRadius} round>
+    <AndroidRippleWrapper borderRadius={borderRadius} round>
       {children}
-    </RoundedWrapper>
+    </AndroidRippleWrapper>
   ) : (
     children
   );
@@ -40,6 +39,7 @@ Touchable.propTypes = {
 
 Touchable.defaultProps = {
   activeOpacity: 0.5,
+  borderRadius: 0,
 };
 
 export default Touchable;
