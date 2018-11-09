@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import { withDefaultProps } from 'recompose';
+import { defaultProps } from 'recompose';
 
 import styled from 'apolloschurchapp/src/ui/styled';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
@@ -34,7 +34,7 @@ const PlatformTouchable =
 // Set some platform specific default props
 const PlatformTouchableWithDefaultProps =
   Platform.OS === 'ios'
-    ? withDefaultProps({ activeOpacity: 0.5 })(PlatformTouchable)
+    ? defaultProps({ activeOpacity: 0.5 })(PlatformTouchable)
     : withTheme(({ theme }) => ({
         borderRadius: 0,
         background: TouchableNativeFeedback.Ripple(
