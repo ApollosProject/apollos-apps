@@ -34,7 +34,7 @@ const Touchable = ({ borderRadius, children, ...otherProps }) => (
 
 Touchable.propTypes = {
   borderRadius: PropTypes.number,
-  children: PropTypes.node,
+  children: PropTypes.element,
 };
 
 Touchable.defaultProps = {
