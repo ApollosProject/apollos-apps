@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -9,6 +9,11 @@
     "lint": "eslint ./src --ext .js",
     "start": "rm -rf ./lib && mkdir -p lib && nodemon --exec \"babel ./src --watch -d ./lib\" --ignore lib/"
   },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,

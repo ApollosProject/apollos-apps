@@ -65,5 +65,8 @@ TabView.defaultProps = {
   autoHeightEnabled: false,
 };
 
+TabView.SceneMap = SceneMap;
+TabView.TabBar = TabBar;
+
 export { SceneMap, TabBar };
 export default TabView;

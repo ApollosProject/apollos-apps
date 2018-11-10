@@ -82,7 +82,7 @@ const relativeTime = (date) => {
   return time.fromNow(true); // true omits 'ago'
 };
 
-export const CardTile = enhance(
+const CardTile = enhance(
   ({
     number,
     title,

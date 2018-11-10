@@ -1,6 +1,5 @@
 import React from 'react';
 import { StatusBar, TouchableOpacity, View } from 'react-native';
-import { withNavigation } from 'react-navigation';
 import BackgroundView from '../BackgroundView';
 import styled from '../styled';
 import Icon from '../Icon';
@@ -53,4 +52,4 @@ const ModalView = ({ navigation, onBack, children, ...props }) => (
   </Container>
 );
 
-export default withNavigation(ModalView);
+export default ModalView;

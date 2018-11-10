@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { ThemeProvider } from 'apolloschurchapp/src/ui/theme';
+import { ThemeProvider } from '@apollosproject/ui-kit';
 
 import Share from '.';
 
