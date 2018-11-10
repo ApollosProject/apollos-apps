@@ -61,7 +61,7 @@ class ContentSingle extends PureComponent {
     }
   };
 
-  renderWithData = ({ loading, error, data, navigation }) => {
+  renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
     const content = data.node || {};
@@ -75,7 +75,7 @@ class ContentSingle extends PureComponent {
           colors: get(theme, 'colors'),
         }}
       >
-        <ModalView navigation={navigation}>
+        <ModalView navigation={this.props.navigation}>
           <TrackEventWhenLoaded
             loaded={!!(!loading && content.title)}
             eventName={events.ViewContent}
