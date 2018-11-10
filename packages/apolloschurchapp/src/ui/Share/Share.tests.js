@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { ThemeProvider } from '@apollosproject/ui-kit';
+import { Providers } from '@apollosproject/ui-kit';
 
 import Share from '.';
 
@@ -13,9 +13,9 @@ describe('the Share component', () => {
       message: 'Share this with all your friends and family',
     };
     const tree = renderer.create(
-      <ThemeProvider>
+      <Providers>
         <Share content={shareObject} />
-      </ThemeProvider>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
