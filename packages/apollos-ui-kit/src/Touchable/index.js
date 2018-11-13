@@ -8,8 +8,8 @@ import {
 import PropTypes from 'prop-types';
 import { defaultProps } from 'recompose';
 
-import styled from 'apolloschurchapp/src/ui/styled';
-import { withTheme } from 'apolloschurchapp/src/ui/theme';
+import { withTheme } from '../theme';
+import styled from '../styled';
 
 const AndroidRippleWrapper = styled(({ borderRadius }) => ({
   borderRadius,
