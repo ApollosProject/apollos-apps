@@ -54,6 +54,13 @@ const workspaces = getWorkspaces(path.resolve('.'));
 module.exports = {
   extraNodeModules: getNodeModulesForDirectory(path.resolve('.')),
   getBlacklistRE() {
+    console.log(
+      blacklist(
+        workspaces.map(
+          (workspacePath) => `${workspacePath}/node_modules/react-native/.*/`
+        )
+      )
+    );
     return blacklist(
       workspaces.map(
         (workspacePath) =>
