@@ -1,11 +1,11 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
-import ApollosConfig from '@apolloschurch/config';
+import ApollosConfig from '@apollosproject/config';
+import { createGlobalId } from '@apollosproject/server-core';
 
+import { generateToken } from '@apollosproject/data-connector-rock-auth';
 import { getTestContext } from '../../../utils/testUtils';
-import { createGlobalId } from '../../node/model';
-import { generateToken } from '../../auth/token';
 import { testSchema as typeDefs, resolvers } from '../..';
 
 ApollosConfig.loadJs({
