@@ -37,6 +37,7 @@
     "react-native-svg": "*"
   },
   "dependencies": {
+    "color": "^3.1.0",
     "lodash": "^4.17.11",
     "react-native-modal-datetime-picker": "6.0.0",
     "react-native-tab-view": "1.0.2",
@@ -44,6 +45,7 @@
     "rn-placeholder": "1.2.0"
   },
   "devDependencies": {
+    "@storybook/react-native": "^4.0.6",
     "babel-preset-apollos": "file:../babel-preset-apollos",
     "babel-preset-react-native": "5",
     "codecov": "3.1.0",
@@ -53,7 +55,6 @@
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-linear-gradient": "2.4.0",
-    "react-native-storybook-loader": "1.8.0",
     "react-native-svg": "6.5.2",
     "react-test-renderer": "16.4.1"
   }

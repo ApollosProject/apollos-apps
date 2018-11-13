@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from '../../Providers';
 import { withIsLoading } from '../../isLoading';
-import { H5 } from "..";
+import { H5 } from '..';
 
 import BulletListItem from '.';
 
