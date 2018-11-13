@@ -34,6 +34,7 @@ class VideoWindow extends PureComponent {
     }),
     onProgress: PropTypes.func,
     onLoad: PropTypes.func,
+    onBuffer: PropTypes.func,
   };
 
   loadingOverlay = new Animated.Value(1);
@@ -73,6 +74,10 @@ class VideoWindow extends PureComponent {
     });
   };
 
+  handleOnBuffer = ({ isBuffering }) => {
+    if (this.props.onBuffer) this.props.onBuffer({ isBuffering });
+  };
+
   setVideoRef = (element) => {
     this.video = element;
   };
@@ -103,6 +108,7 @@ class VideoWindow extends PureComponent {
         resizeMode={'contain'}
         onLoadStart={this.handleOnLoadStart}
         onLoad={this.handleOnLoad}
+        onBuffer={this.handleOnBuffer}
         onProgress={this.handleOnProgress}
         style={StyleSheet.absoluteFill}
         volume={mediaPlayer.muted ? 0 : 1}

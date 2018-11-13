@@ -33,6 +33,7 @@ class ProviderWithoutApollo extends Component {
     return {
       onLoad: this.handleOnLoad,
       onLoadStart: this.handleOnLoadStart,
+      onBuffer: this.handleOnBuffer,
       onProgress: this.handleOnProgress,
       skip: this.skip,
       isLoading: this.state.isLoading,
@@ -49,6 +50,11 @@ class ProviderWithoutApollo extends Component {
   handleOnLoadStart = () => {
     this.setState({ isLoading: true });
   };
+
+  handleOnBuffer = ({ isBuffering }) => {
+    this.setState({ isLoading: isBuffering });
+  };
+
   handleOnProgress = ({ currentTime, playableDuration, seekableDuration }) => {
     if (!this.seekingTo || Math.abs(this.seekingTo - currentTime) < 1) {
       // when seeking, only update `currentTime` after the seek has finished
