@@ -66,6 +66,7 @@ class VideoWindow extends PureComponent {
   };
 
   handleOnLoadStart = () => {
+    if (this.props.onLoadStart) this.props.onLoadStart();
     Animated.spring(this.loadingOverlay, {
       toValue: 1,
       useNativeDriver: true,

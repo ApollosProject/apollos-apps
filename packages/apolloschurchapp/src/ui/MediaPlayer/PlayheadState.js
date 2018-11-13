@@ -11,6 +11,7 @@ const defaultState = {
   currentTime: new Animated.Value(0),
   playableDuration: new Animated.Value(1),
   seekableDuration: new Animated.Value(1),
+  isLoading: true,
 };
 
 const controlState = () => {};
@@ -31,18 +32,23 @@ class ProviderWithoutApollo extends Component {
   get controlState() {
     return {
       onLoad: this.handleOnLoad,
+      onLoadStart: this.handleOnLoadStart,
       onProgress: this.handleOnProgress,
       skip: this.skip,
+      isLoading: this.state.isLoading,
     };
   }
 
   handleOnLoad = ({ duration }) => {
-    this.setState({ duration });
+    this.setState({ duration, isLoading: false });
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
     this.state.seekableDuration.setValue(0);
   };
 
+  handleOnLoadStart = () => {
+    this.setState({ isLoading: true });
+  };
   handleOnProgress = ({ currentTime, playableDuration, seekableDuration }) => {
     if (!this.seekingTo || Math.abs(this.seekingTo - currentTime) < 1) {
       // when seeking, only update `currentTime` after the seek has finished
