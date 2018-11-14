@@ -77,6 +77,7 @@ class ProviderWithoutApollo extends Component {
   };
 
   skip = async (secondsToSkip) => {
+    if (this.lastCurrentTime === undefined) return;
     const currentTime = Math.min(
       Math.max(this.lastCurrentTime + secondsToSkip, 0),
       this.state.duration
