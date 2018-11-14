@@ -251,7 +251,7 @@ class FullscreenControls extends PureComponent {
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  <IconSm name="empty" />
+                  <IconSm name="empty" disabled />
                 </UpperControl>
               </Touchable>
               <LowerControl>
