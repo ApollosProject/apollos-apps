@@ -16,7 +16,6 @@ import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
 import { withTheme, withThemeMixin } from 'apolloschurchapp/src/ui/theme';
 import styled from 'apolloschurchapp/src/ui/styled';
 import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
-import Icon from 'apolloschurchapp/src/ui/Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import { ButtonIcon } from 'apolloschurchapp/src/ui/Button';
 
@@ -74,20 +73,20 @@ const Titles = styled({
 const Title = styled({ textAlign: 'center' })(H4);
 const Artist = styled({ textAlign: 'center' })(H6);
 
-const IconSm = withTheme(({ theme, disabled }) => ({
-  size: theme.sizing.baseUnit,
-  opacity: disabled ? 0.5 : 1.25,
-}))(Icon);
+const IconSm = withTheme(({ theme }) => ({
+  size: theme.sizing.baseUnit * 1.25,
+  iconPadding: theme.sizing.baseUnit * 1.25,
+}))(ButtonIcon);
 
-const IconMd = withTheme(({ theme, disabled }) => ({
+const IconMd = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit * 1.875,
-  opacity: disabled ? 0.5 : 1,
-}))(Icon);
+  iconPadding: theme.sizing.baseUnit * 0.9375,
+}))(ButtonIcon);
 
-const IconLg = withTheme(({ theme, disabled }) => ({
+const IconLg = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit * 3.125,
-  opacity: disabled ? 0.5 : 1,
-}))(Icon);
+  iconPadding: theme.sizing.baseUnit * 0.3125,
+}))(ButtonIcon);
 
 /**
  * FullscreenControls displays fading player controls
@@ -211,12 +210,40 @@ class FullscreenControls extends PureComponent {
   );
 
   renderMuteButton = ({ isLoading }) => (
-    <ButtonIcon
+    <IconSm
       onPress={this.isMuted ? this.handleUnMute : this.handleMute}
       name={this.isMuted ? 'mute' : 'volume'}
-      size={20}
       disabled={isLoading}
     />
+  );
+
+  renderPlayerControls = ({ isLoading, skip }) => (
+    <PlayControls>
+      <IconSm
+        onPress={this.isMuted ? this.handleUnMute : this.handleMute}
+        name={this.isMuted ? 'mute' : 'volume'}
+        disabled={isLoading}
+      />
+      <IconMd
+        onPress={() => skip(30)}
+        name={'skip-forward-thirty'}
+        disabled={isLoading}
+      />
+      <IconLg
+        onPress={this.isPlaying ? this.handlePause : this.handlePlay}
+        name={this.isPlaying ? 'pause' : 'play'}
+      />
+      <IconMd
+        onPress={() => skip(-30)}
+        name={'skip-back-thirty'}
+        disabled={isLoading}
+      />
+      <IconSm
+        onPress={this.isVideo ? this.handleHideVideo : this.handleShowVideo}
+        name={this.isVideo ? 'video' : 'video-off'}
+        disabled={isLoading}
+      />
+    </PlayControls>
   );
 
   renderFullscreenControls = ({ data: { mediaPlayer = {} } = {} }) => {
@@ -258,29 +285,7 @@ class FullscreenControls extends PureComponent {
                 <PlayHead>
                   <Seeker onScrubbing={this.handleOnScrubbing} />
                 </PlayHead>
-                <PlayControls>
-                  <ControlsConsumer>{this.renderMuteButton}</ControlsConsumer>
-                  <ControlsConsumer>{this.renderSkipBack}</ControlsConsumer>
-                  {mediaPlayer.isPlaying ? (
-                    <Touchable onPress={this.handlePause}>
-                      <IconLg name="pause" />
-                    </Touchable>
-                  ) : (
-                    <Touchable onPress={this.handlePlay}>
-                      <IconLg name="play" />
-                    </Touchable>
-                  )}
-                  <ControlsConsumer>{this.renderSkipForward}</ControlsConsumer>
-                  {mediaPlayer.showVideo ? (
-                    <Touchable onPress={this.handleHideVideo}>
-                      <IconSm name="video" />
-                    </Touchable>
-                  ) : (
-                    <Touchable onPress={this.handleShowVideo}>
-                      <IconSm name="video-off" />
-                    </Touchable>
-                  )}
-                </PlayControls>
+                <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
               </LowerControl>
             </SafeAreaView>
           </Background>
