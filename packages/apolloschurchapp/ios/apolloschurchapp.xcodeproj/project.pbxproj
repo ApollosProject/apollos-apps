@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -443,6 +444,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 014A3B5C1C6CF33500B6D375;
 			remoteInfo = RNImagePicker;
+		};
+		DC127241219CA00900F118D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59AF37DEFAA847DBAB3A0526 /* RNScreens.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNScreens;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -942,6 +950,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DC12720E219CA00900F118D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC127242219CA00900F118D0 /* libRNScreens.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1137,6 +1153,10 @@
 				{
 					ProductGroup = BF99316D2138673B0077FD20 /* Products */;
 					ProjectRef = 3BD7DCDF7B194D7BB9BE3C6C /* RNImagePicker.xcodeproj */;
+				},
+				{
+					ProductGroup = DC12720E219CA00900F118D0 /* Products */;
+					ProjectRef = 59AF37DEFAA847DBAB3A0526 /* RNScreens.xcodeproj */;
 				},
 				{
 					ProductGroup = 791434702126017A006F13B7 /* Products */;
@@ -1524,6 +1544,13 @@
 			fileType = archive.ar;
 			path = libRNImagePicker.a;
 			remoteRef = BF9931702138673B0077FD20 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC127242219CA00900F118D0 /* libRNScreens.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNScreens.a;
+			remoteRef = DC127241219CA00900F118D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

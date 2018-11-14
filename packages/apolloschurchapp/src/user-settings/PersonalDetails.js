@@ -43,7 +43,7 @@ class PersonalDetails extends PureComponent {
         <TableView>
           <PaddedView>
             <TextInput
-              label="Nick Name"
+              label="Nickname"
               type="text"
               value={props.values.nickName}
               error={props.touched.nickName && props.errors.nickName}
