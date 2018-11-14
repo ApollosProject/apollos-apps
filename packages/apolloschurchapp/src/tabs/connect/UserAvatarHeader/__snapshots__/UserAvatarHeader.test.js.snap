@@ -82,21 +82,13 @@ exports[`user avatar header renders placeholder when loading 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "borderRadius": 20,
-                  }
-                }
-              >
+              <View>
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 40,
                       "height": 80,
-                      "justifyContent": "flex-end",
                       "marginBottom": 8,
                       "marginRight": 0,
                       "overflow": "hidden",
@@ -392,21 +384,13 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "borderRadius": 20,
-                  }
-                }
-              >
+              <View>
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#A5A5A5",
                       "borderRadius": 40,
                       "height": 80,
-                      "justifyContent": "flex-end",
                       "marginBottom": 8,
                       "marginRight": 0,
                       "overflow": "hidden",
