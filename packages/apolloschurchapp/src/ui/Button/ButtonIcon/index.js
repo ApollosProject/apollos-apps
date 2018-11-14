@@ -47,12 +47,19 @@ class ButtonIcon extends PureComponent {
         }
         {...otherProps}
       >
-        <ControlPadding iconPadding={this.props.iconPadding || this.props.size}>
+        <ControlPadding
+          iconPadding={
+            this.props.iconPadding >= 0
+              ? this.props.iconPadding
+              : this.props.size
+          }
+        >
           <Icon
             name={this.props.name}
             size={this.props.size}
             fill={this.props.fill}
             isLoading={this.props.isLoading}
+            // I'm also not sure why opacity works here but this is where we want it so... 🤷‍
             opacity={this.props.disabled ? 0.5 : 1}
           />
         </ControlPadding>
