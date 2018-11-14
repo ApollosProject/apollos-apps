@@ -57,5 +57,6 @@
     "react-native-linear-gradient": "2.4.0",
     "react-native-svg": "6.5.2",
     "react-test-renderer": "16.4.1"
-  }
+  },
+  "license" : "SEE LICENSE IN LICENSE.md"
 }

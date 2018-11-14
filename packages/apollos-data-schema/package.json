@@ -20,5 +20,6 @@
   },
   "devDependencies": {
     "babel-preset-apollos": "file:../babel-preset-apollos"
-  }
+  },
+  "license" : "SEE LICENSE IN LICENSE.md"
 }

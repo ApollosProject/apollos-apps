@@ -24,5 +24,6 @@
   "devDependencies": {
     "babel-preset-apollos": "file:../babel-preset-apollos",
     "casual": "^1.5.19"
-  }
+  },
+  "license" : "SEE LICENSE IN LICENSE.md"
 }
