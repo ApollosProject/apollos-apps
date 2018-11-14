@@ -197,26 +197,6 @@ class FullscreenControls extends PureComponent {
     this.closeTimeout = setTimeout(this.handleControlVisibility, 5000);
   };
 
-  renderSkipForward = ({ skip }) => (
-    <Touchable onPress={() => skip(30)}>
-      <IconMd name="skip-forward-thirty" />
-    </Touchable>
-  );
-
-  renderSkipBack = ({ skip }) => (
-    <Touchable onPress={() => skip(-30)}>
-      <IconMd name="skip-back-thirty" />
-    </Touchable>
-  );
-
-  renderMuteButton = ({ isLoading }) => (
-    <IconSm
-      onPress={this.isMuted ? this.handleUnMute : this.handleMute}
-      name={this.isMuted ? 'mute' : 'volume'}
-      disabled={isLoading}
-    />
-  );
-
   renderPlayerControls = ({ isLoading, skip }) => (
     <PlayControls>
       <IconSm
@@ -225,8 +205,8 @@ class FullscreenControls extends PureComponent {
         disabled={isLoading}
       />
       <IconMd
-        onPress={() => skip(30)}
-        name={'skip-forward-thirty'}
+        onPress={() => skip(-30)}
+        name={'skip-back-thirty'}
         disabled={isLoading}
       />
       <IconLg
@@ -234,8 +214,8 @@ class FullscreenControls extends PureComponent {
         name={this.isPlaying ? 'pause' : 'play'}
       />
       <IconMd
-        onPress={() => skip(-30)}
-        name={'skip-back-thirty'}
+        onPress={() => skip(30)}
+        name={'skip-forward-thirty'}
         disabled={isLoading}
       />
       <IconSm
