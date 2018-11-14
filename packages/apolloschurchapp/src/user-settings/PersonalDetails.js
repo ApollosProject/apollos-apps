@@ -126,7 +126,7 @@ class PersonalDetails extends PureComponent {
                     email: Yup.string()
                       .email('Invalid email address')
                       .required('Email is required!'),
-                    nickName: Yup.string().required('Nick Name is required!'),
+                    nickName: Yup.string().required('Nickname is required!'),
                   })}
                   onSubmit={async (
                     variables,
