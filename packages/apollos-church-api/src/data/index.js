@@ -6,7 +6,6 @@ import * as Auth from '@apollosproject/data-connector-rock-auth';
 import * as Analytics from '@apollosproject/data-connector-analytics';
 
 import RockConstants from '../connectors/rock/rock-constants';
-
 import * as ContentChannel from './content-channels';
 import * as ContentItem from './content-items';
 import * as Person from './people';
