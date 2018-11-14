@@ -18,6 +18,7 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
+import { ButtonIcon } from 'apolloschurchapp/src/ui/Button';
 
 import Seeker from './Seeker';
 import { getControlState } from './queries';
@@ -209,9 +210,19 @@ class FullscreenControls extends PureComponent {
     </Touchable>
   );
 
+  renderMuteButton = ({ isLoading }) => (
+    <ButtonIcon
+      onPress={this.isMuted ? this.handleUnMute : this.handleMute}
+      name={this.isMuted ? 'mute' : 'volume'}
+      size={20}
+      disabled={isLoading}
+    />
+  );
+
   renderFullscreenControls = ({ data: { mediaPlayer = {} } = {} }) => {
     this.isVideo = get(mediaPlayer, 'showVideo');
     this.isPlaying = mediaPlayer.isPlaying;
+    this.isMuted = mediaPlayer.muted;
 
     if (
       (mediaPlayer.isFullscreen && !this.wasFullscreen) ||
@@ -248,15 +259,7 @@ class FullscreenControls extends PureComponent {
                   <Seeker onScrubbing={this.handleOnScrubbing} />
                 </PlayHead>
                 <PlayControls>
-                  {get(mediaPlayer, 'muted') ? (
-                    <Touchable onPress={this.handleUnMute}>
-                      <IconSm name="mute" />
-                    </Touchable>
-                  ) : (
-                    <Touchable onPress={this.handleMute}>
-                      <IconSm name="volume" />
-                    </Touchable>
-                  )}
+                  <ControlsConsumer>{this.renderMuteButton}</ControlsConsumer>
                   <ControlsConsumer>{this.renderSkipBack}</ControlsConsumer>
                   {mediaPlayer.isPlaying ? (
                     <Touchable onPress={this.handlePause}>
