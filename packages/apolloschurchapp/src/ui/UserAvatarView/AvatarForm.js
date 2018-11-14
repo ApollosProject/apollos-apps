@@ -21,11 +21,9 @@ const StyledAvatar = withTheme(({ theme }) => ({
   },
 }))(Avatar);
 
-const TouchWrapper = withTheme(({ theme, size }) => ({
-  style: {
-    borderRadius: get(theme.sizing.avatar, size, theme.sizing.avatar.small) / 2,
-  },
-}))(View);
+const RoundTouchable = withTheme(({ theme, size }) => ({
+  borderRadius: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+}))(Touchable);
 
 const Wrapper = styled({
   justifyContent: 'center',
@@ -59,19 +57,19 @@ export default class AvatarForm extends PureComponent {
 
     return (
       <Wrapper>
-        <Touchable
+        <RoundTouchable
           disabled={this.props.disabled}
           onPress={this.handleUploadPhoto}
-          useForeground
+          size="medium"
         >
-          <TouchWrapper>
+          <View>
             <StyledAvatar
               source={photo}
               size="medium"
               isLoading={isUploadingFile}
             />
-          </TouchWrapper>
-        </Touchable>
+          </View>
+        </RoundTouchable>
         {this.props.text ? (
           <H5>
             <ButtonLink onPress={this.handleUploadPhoto}>
