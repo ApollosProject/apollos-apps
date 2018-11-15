@@ -211,6 +211,7 @@ class FullscreenControls extends PureComponent {
       <IconLg
         onPress={this.isPlaying ? this.handlePause : this.handlePlay}
         name={this.isPlaying ? 'pause' : 'play'}
+        disabled={isLoading}
       />
       <IconMd
         onPress={() => skip(30)}
