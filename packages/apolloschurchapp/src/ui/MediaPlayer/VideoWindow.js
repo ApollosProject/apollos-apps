@@ -34,6 +34,7 @@ class VideoWindow extends PureComponent {
     }),
     onProgress: PropTypes.func,
     onLoad: PropTypes.func,
+    onLoadStart: PropTypes.func,
     onBuffer: PropTypes.func,
   };
 
