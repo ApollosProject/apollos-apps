@@ -8,7 +8,6 @@ import Touchable from 'apolloschurchapp/src/ui/Touchable';
 
 const ControlPadding = styled(({ iconPadding }) => ({
   padding: iconPadding, // maximize vertical space for tappability.
-  backgroundColor: 'salmon',
 }))(View);
 
 class ButtonIcon extends PureComponent {
