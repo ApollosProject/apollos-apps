@@ -251,16 +251,16 @@ class FullscreenControls extends PureComponent {
               style={StyleSheet.absoluteFill}
               forceInset={{ top: 'always', bottom: 'always' }}
             >
-              <Touchable onPress={this.handleClose}>
+              <TouchableWithoutFeedback onPress={this.handleClose}>
                 <UpperControl>
-                  <IconSm name="arrow-down" />
+                  <IconSm name="arrow-down" onPress={this.handleClose} />
                   <Titles>
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
                   <IconSm name="empty" disabled />
                 </UpperControl>
-              </Touchable>
+              </TouchableWithoutFeedback>
               <LowerControl>
                 <PlayHead>
                   <Seeker onScrubbing={this.handleOnScrubbing} />
