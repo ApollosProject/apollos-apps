@@ -5,6 +5,7 @@ import { Mutation, Query } from 'react-apollo';
 import styled from 'apolloschurchapp/src/ui/styled';
 import Touchable from 'apolloschurchapp/src/ui/Touchable';
 import { H5, H6 } from 'apolloschurchapp/src/ui/typography';
+import { ButtonIcon } from 'apolloschurchapp/src/ui/Button';
 import Icon from 'apolloschurchapp/src/ui/Icon';
 import { withTheme } from 'apolloschurchapp/src/ui/theme';
 
@@ -94,10 +95,13 @@ const MiniSeeker = styled({
   bottom: 0,
 })(Seeker);
 
-const StyledIcon = withTheme(({ theme }) => ({
+const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
   size: theme.sizing.baseUnit * 1.25,
-}))(Icon);
+}));
+
+const StyledIcon = IconStyles(Icon);
+const StyledButtonIcon = IconStyles(ButtonIcon);
 
 /**
  * The MiniControls renders basic track info and a play/pause button.
@@ -160,17 +164,16 @@ class MiniControls extends Component {
                 {isPlaying ? (
                   <Mutation mutation={pauseMutation}>
                     {(pause) => (
-                      <Touchable onPress={() => pause()}>
-                        <StyledIcon name="pause" />
-                      </Touchable>
+                      <StyledButtonIcon
+                        name={'pause'}
+                        onPress={() => pause()}
+                      />
                     )}
                   </Mutation>
                 ) : (
                   <Mutation mutation={playMutation}>
                     {(play) => (
-                      <Touchable onPress={() => play()}>
-                        <StyledIcon name="play" />
-                      </Touchable>
+                      <StyledButtonIcon name={'play'} onPress={() => play()} />
                     )}
                   </Mutation>
                 )}
