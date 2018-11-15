@@ -47,7 +47,6 @@
   "devDependencies": {
     "babel-preset-apollos": "0.6.0",
     "codecov": "3.1.0",
-    "get-yarn-workspaces": "^1.0.2",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
