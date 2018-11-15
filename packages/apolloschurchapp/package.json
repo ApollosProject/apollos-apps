@@ -22,7 +22,7 @@
     "react-native-dotenv": "0.2.0",
     "react-native-storybook-loader": "1.8.0",
     "react-native-version": "2.6.2",
-    "react-test-renderer": "16.4.1",
+    "react-test-renderer": "16.6.1",
     "waait": "1.0.2"
   },
   "engines": {
@@ -89,9 +89,9 @@
     "moment": "2.22.2",
     "node-fetch": "2.2.0",
     "prettier": "1.14.2",
-    "react": "16.4.1",
+    "react": "16.6.1",
     "react-apollo": "2.2.4",
-    "react-native": "0.56.0",
+    "react-native": "0.57.5",
     "react-native-custom-tabs": "0.1.7",
     "react-native-device-info": "0.22.5",
     "react-native-image-picker": "0.26.10",

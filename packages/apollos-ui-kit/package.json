@@ -52,11 +52,11 @@
     "get-yarn-workspaces": "^1.0.2",
     "jest": "23.5.0",
     "jest-react-native": "18.0.0",
-    "react": "16.4.1",
-    "react-native": "0.56.0",
+    "react": "16.6.1",
+    "react-native": "0.57.5",
     "react-native-linear-gradient": "2.4.0",
     "react-native-svg": "6.5.2",
-    "react-test-renderer": "16.4.1"
+    "react-test-renderer": "16.6.1"
   },
   "license": "SEE LICENSE IN LICENSE.md"
 }
