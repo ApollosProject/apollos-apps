@@ -30,6 +30,7 @@
   "dependencies": {
     "@apollosproject/config": "file:../apollos-config",
     "@apollosproject/data-connector-analytics": "file:../apollos-data-connector-analytics",
+    "@apollosproject/data-connector-people": "file:../apollos-data-connector-people",
     "@apollosproject/data-connector-rock-auth": "file:../apollos-data-connector-rock-auth",
     "@apollosproject/rock-apollo-data-source": "file:../apollos-rock-apollo-data-source",
     "@apollosproject/server-core": "file:../apollos-server-core",
