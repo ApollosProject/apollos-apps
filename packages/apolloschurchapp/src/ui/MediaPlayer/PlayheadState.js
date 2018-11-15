@@ -33,11 +33,11 @@ class ProviderWithoutApollo extends Component {
     return {
       onLoad: this.handleOnLoad,
       onLoadStart: this.handleOnLoadStart,
-      onBuffer: this.handleOnBuffer,
+      // onBuffer: this.handleOnBuffer,
       onProgress: this.handleOnProgress,
       skip: this.skip,
       isLoading: this.state.isLoading,
-      isBuffering: this.state.isBuffering,
+      // isBuffering: this.state.isBuffering,
     };
   }
 
@@ -52,9 +52,9 @@ class ProviderWithoutApollo extends Component {
     this.setState({ isLoading: true });
   };
 
-  handleOnBuffer = ({ isBuffering }) => {
-    this.setState({ isBuffering }); // bool value https://github.com/react-native-community/react-native-video/blob/2c391f580702f9579a0ebd01c6e97415feda928b/ios/Video/RCTVideo.m#L636-L643
-  };
+  // handleOnBuffer = ({ isBuffering }) => {
+  //   this.setState({ isBuffering }); // bool value https://github.com/react-native-community/react-native-video/blob/2c391f580702f9579a0ebd01c6e97415feda928b/ios/Video/RCTVideo.m#L636-L643
+  // };
 
   handleOnProgress = ({ currentTime, playableDuration, seekableDuration }) => {
     if (!this.seekingTo || Math.abs(this.seekingTo - currentTime) < 1) {
