@@ -14,19 +14,16 @@ import styled from 'apolloschurchapp/src/ui/styled';
 import getUserProfile from '../../tabs/connect/getUserProfile';
 import uploadPhoto from './uploadPhoto';
 
-const GetPhotoData = ({ photo, children }) => (
-  <Query query={getUserProfile} variables={{ photo }}>
-    {({ data: { currentUser = {} } = {}, loading }) => {
-      const photoUpdated = loading
-        ? false
-        : get(currentUser, 'photoUpdated') || false;
-      return children({ photoUpdated, item: currentUser });
+const GetPhotoData = ({ children }) => (
+  <Query query={getUserProfile}>
+    {({ data: { currentUser = {} } = {} }) => {
+      const photoUpdated = get(currentUser, 'profile.photo');
+      return children({ photoUpdated });
     }}
   </Query>
 );
 
 GetPhotoData.propTypes = {
-  photo: ConnectedImage.propTypes.source,
   children: PropTypes.func.isRequired,
 };
 
@@ -73,11 +70,18 @@ export default class AvatarForm extends PureComponent {
           disabled={this.props.disabled}
           onPress={this.handleUploadPhoto}
         >
-          <StyledAvatar
-            source={<GetPhotoData photo={photo} />}
-            size="medium"
-            isLoading={isUploadingFile}
-          />
+          <GetPhotoData>
+            {({ photoUpdated }) => {
+              console.log(photoUpdated);
+              return (
+                <StyledAvatar
+                  source={photoUpdated || photo}
+                  size="medium"
+                  isLoading={isUploadingFile}
+                />
+              );
+            }}
+          </GetPhotoData>
         </Touchable>
         {this.props.text ? (
           <H5>
