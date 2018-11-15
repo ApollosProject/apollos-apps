@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
+import { Query } from 'react-apollo';
 
 import {
   ConnectedImage,
@@ -12,7 +13,21 @@ import {
   H5,
   styled,
 } from '@apollosproject/ui-kit';
+import getUserProfile from '../../tabs/connect/getUserProfile';
 import uploadPhoto from './uploadPhoto';
+
+const GetPhotoData = ({ children }) => (
+  <Query query={getUserProfile}>
+    {({ data: { currentUser = {} } = {} }) => {
+      const photoUpdated = get(currentUser, 'profile.photo');
+      return children({ photoUpdated });
+    }}
+  </Query>
+);
+
+GetPhotoData.propTypes = {
+  children: PropTypes.func.isRequired,
+};
 
 const StyledAvatar = withTheme(({ theme }) => ({
   containerStyle: {
@@ -62,13 +77,17 @@ export default class AvatarForm extends PureComponent {
           onPress={this.handleUploadPhoto}
           size="medium"
         >
-          <View>
-            <StyledAvatar
-              source={photo}
-              size="medium"
-              isLoading={isUploadingFile}
-            />
-          </View>
+          <GetPhotoData>
+            {({ photoUpdated }) => (
+              <View>
+                <StyledAvatar
+                  source={photoUpdated || photo}
+                  size="medium"
+                  isLoading={isUploadingFile}
+                />
+              </View>
+            )}
+          </GetPhotoData>
         </RoundTouchable>
         {this.props.text ? (
           <H5>
