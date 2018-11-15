@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@storybook/react-native": "^4.0.6",
-    "babel-preset-apollos": "file:../babel-preset-apollos",
+    "babel-preset-apollos": "0.6.0",
     "babel-preset-react-native": "5",
     "codecov": "3.1.0",
     "get-yarn-workspaces": "^1.0.2",
@@ -58,5 +58,5 @@
     "react-native-svg": "6.5.2",
     "react-test-renderer": "16.4.1"
   },
-  "license" : "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md"
 }

@@ -22,7 +22,7 @@
     "with-query": "^1.1.2"
   },
   "devDependencies": {
-    "babel-preset-apollos": "file:../babel-preset-apollos"
+    "babel-preset-apollos": "0.6.0"
   },
   "license": "SEE LICENSE IN LICENSE.md"
 }
