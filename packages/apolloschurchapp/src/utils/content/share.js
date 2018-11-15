@@ -1,12 +1,15 @@
-import { Share } from 'react-native';
+import { Platform, Share } from 'react-native';
 // import { get } from 'lodash';
 import { track, events } from 'apolloschurchapp/src/analytics';
 // import getSiteLink from './getSiteLink';
 
-const share = ({ title, message, url, id = '' }) => {
+const share = ({ title, url, id = '' }) => {
+  // message isn't used by our application
+  let formattedMessage = title;
+  if (Platform.OS === 'android') formattedMessage = `${title} ${url}`;
   Share.share({
     title,
-    message,
+    message: formattedMessage,
     url,
   });
 
