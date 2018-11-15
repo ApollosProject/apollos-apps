@@ -35,7 +35,7 @@ class VideoWindow extends PureComponent {
     onProgress: PropTypes.func,
     onLoad: PropTypes.func,
     onLoadStart: PropTypes.func,
-    onBuffer: PropTypes.func,
+    // onBuffer: PropTypes.func,
   };
 
   loadingOverlay = new Animated.Value(1);
@@ -59,29 +59,38 @@ class VideoWindow extends PureComponent {
   };
 
   handleOnLoad = ({ duration }) => {
-    Animated.spring(this.loadingOverlay, {
-      toValue: 0,
-      useNativeDriver: true,
-    }).start();
+    this.showLoadingIndicator(false);
 
     if (this.props.onLoad) this.props.onLoad({ duration });
   };
 
   handleOnLoadStart = () => {
     if (this.props.onLoadStart) this.props.onLoadStart();
-    Animated.spring(this.loadingOverlay, {
-      toValue: 1,
-      useNativeDriver: true,
-    });
+    this.showLoadingIndicator(true);
   };
 
   handleOnBuffer = ({ isBuffering }) => {
-    if (this.props.onBuffer) this.props.onBuffer({ isBuffering });
+    // if (this.props.onBuffer) this.props.onBuffer({ isBuffering });
+    this.showLoadingIndicator(!isBuffering);
   };
 
   setVideoRef = (element) => {
     this.video = element;
   };
+
+  showLoadingIndicator(isLoading) {
+    if (isLoading) {
+      Animated.spring(this.loadingOverlay, {
+        toValue: 1,
+        useNativeDriver: true,
+      });
+    } else {
+      Animated.spring(this.loadingOverlay, {
+        toValue: 0,
+        useNativeDriver: true,
+      }).start();
+    }
+  }
 
   renderVideo = ({ data: { mediaPlayer = {} } = {} }) => {
     if (!get(mediaPlayer, 'currentTrack.mediaSource')) return null;
@@ -109,7 +118,7 @@ class VideoWindow extends PureComponent {
         resizeMode={'contain'}
         onLoadStart={this.handleOnLoadStart}
         onLoad={this.handleOnLoad}
-        onBuffer={this.handleOnBuffer}
+        // onBuffer={this.handleOnBuffer}
         onProgress={this.handleOnProgress}
         style={StyleSheet.absoluteFill}
         volume={mediaPlayer.muted ? 0 : 1}
@@ -134,7 +143,7 @@ class VideoWindow extends PureComponent {
       <Background>
         <Query query={getVideoState}>{this.renderVideo}</Query>
         <Animated.View style={this.loadingStyle}>
-          <ActivityIndicator />
+          <ActivityIndicator size={'large'} />
         </Animated.View>
       </Background>
     );
