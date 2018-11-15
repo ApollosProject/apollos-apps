@@ -4,7 +4,6 @@ import { track, events } from 'apolloschurchapp/src/analytics';
 // import getSiteLink from './getSiteLink';
 
 const share = ({ title, url, id = '' }) => {
-  // message isn't used by our application
   let formattedMessage = title;
   if (Platform.OS === 'android') formattedMessage = `${title} ${url}`;
   Share.share({
