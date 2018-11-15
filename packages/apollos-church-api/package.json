@@ -55,12 +55,12 @@
 
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.47",
-    "@babel/core": "7.0.0-beta.47",
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.6",
     "babel-preset-apollos": "^0.6.0",
     "codecov": "3.0.2",
     "coveralls": "3.0.1",
-    "jest": "23.0.0",
+    "jest": "23.6.0",
     "jest-fetch-mock": "1.6.2",
     "nodemon": "1.17.5"
   }

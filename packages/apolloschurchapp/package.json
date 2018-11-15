@@ -3,22 +3,17 @@
   "version": "0.6.0",
   "private": true,
   "workspaces": {
-    "nohoist": ["*"]
+    "nohoist": ["**/**"]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "4.0.0-alpha.2",
-    "@storybook/addon-links": "4.0.0-alpha.2",
-    "@storybook/addons": "4.0.0-alpha.2",
-    "@storybook/react-native": "4.0.0-alpha.2",
     "apollos-church-api": "0.6.0",
-    "babel-preset-react-native": "5",
     "codecov": "3.0.2",
     "get-yarn-workspaces": "1.0.2",
-    "jest": "23.5.0",
+    "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "nodemon": "1.17.5",
     "prop-types": "15.6.1",
-    "react-dom": "16.3.1",
+    "react-dom": "16.6.3",
     "react-native-dotenv": "0.2.0",
     "react-native-storybook-loader": "1.8.0",
     "react-native-version": "2.6.2",
