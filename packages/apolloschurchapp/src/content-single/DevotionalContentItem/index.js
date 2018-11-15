@@ -40,9 +40,8 @@ class DevotionalContentItem extends PureComponent {
    * Returns: an array of scripture references.
    */
   getScriptureReferences = (scripture) => {
-    if (scripture && scripture.length) {
-      return scripture.map((ref) => ref.reference);
-    }
+    // only add refs to the array if not null
+    if (scripture) return scripture.filter((ref) => ref.reference != null);
     return null;
   };
 
@@ -79,7 +78,11 @@ class DevotionalContentItem extends PureComponent {
     loading,
   }) => {
     if (error) return <ErrorCard error={error} />;
-    const hasScripture = loading || scriptures.length;
+    // only include scriptures where the references are not null
+    const validScriptures = scriptures.filter(
+      (scripture) => scripture.reference != null
+    );
+    const hasScripture = loading || validScriptures.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
     return (
