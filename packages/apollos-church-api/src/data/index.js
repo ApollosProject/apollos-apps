@@ -4,7 +4,10 @@ import { createApolloServerConfig } from '@apollosproject/server-core';
 
 import * as Auth from '@apollosproject/data-connector-rock-auth';
 import * as Analytics from '@apollosproject/data-connector-analytics';
+<<<<<<< HEAD
 import * as Person from '@apollosproject/data-connector-people';
+=======
+>>>>>>> master
 
 import RockConstants from '../connectors/rock/rock-constants';
 import * as ContentChannel from './content-channels';
