@@ -42,6 +42,10 @@ fetch.mockRockDataSourceAPI = () => {
       return resolveWith(rockMocks.people());
     }
 
+    if (url.match('api/Groups/GetFamilies/\\d')) {
+      return resolveWith(rockMocks.families());
+    }
+
     if (url.match('api/People')) {
       if (request.method === 'POST') {
         const { Email } = JSON.parse(request.body);
