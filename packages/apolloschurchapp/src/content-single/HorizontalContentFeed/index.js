@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 
-import CardTile from 'apolloschurchapp/src/ui/CardTile';
-import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
-import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import styled from 'apolloschurchapp/src/ui/styled';
-import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
+import {
+  CardTile,
+  HorizontalTileFeed,
+  PaddedView,
+  styled,
+  TouchableScale,
+} from '@apollosproject/ui-kit';
 
 import getHorizontalContent from './getHorizontalContent';
 
@@ -44,11 +46,11 @@ class HorizontalContentFeed extends Component {
         number={index + 1}
         title={get(item, 'title', '')}
         /*
-            * These are props that are not yet being passed in the data.
-            * We will need to make sure they get added back when that data is available.
-            * byLine={item.content.speaker}
-            * date={item.meta.date}
-            */
+         * These are props that are not yet being passed in the data.
+         * We will need to make sure they get added back when that data is available.
+         * byLine={item.content.speaker}
+         * date={item.meta.date}
+         */
       />
     </TouchableScale>
   );
