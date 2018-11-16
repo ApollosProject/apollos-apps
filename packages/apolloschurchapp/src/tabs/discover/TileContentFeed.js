@@ -2,13 +2,15 @@ import React from 'react';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 
-import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { H4 } from 'apolloschurchapp/src/ui/typography';
-import HorizontalTileFeed from 'apolloschurchapp/src/ui/HorizontalTileFeed';
-import styled from 'apolloschurchapp/src/ui/styled';
-import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
-import ContentCard from 'apolloschurchapp/src/ui/ContentCardConnected';
-import TouchableScale from 'apolloschurchapp/src/ui/TouchableScale';
+import {
+  PaddedView,
+  H4,
+  HorizontalTileFeed,
+  styled,
+  ButtonLink,
+  TouchableScale,
+  ContentCard,
+} from '@apollosproject/ui-kit';
 
 const RowHeader = styled({
   flexDirection: 'row',

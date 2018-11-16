@@ -1,14 +1,17 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
-import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
-import Touchable from 'apolloschurchapp/src/ui/Touchable';
-import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
-import Avatar from 'apolloschurchapp/src/ui/Avatar';
-import { withTheme } from 'apolloschurchapp/src/ui/theme';
-import { H5 } from 'apolloschurchapp/src/ui/typography';
-import styled from 'apolloschurchapp/src/ui/styled';
+import {
+  ConnectedImage,
+  Touchable,
+  ButtonLink,
+  Avatar,
+  withTheme,
+  H5,
+  styled,
+} from '@apollosproject/ui-kit';
 import uploadPhoto from './uploadPhoto';
 
 const StyledAvatar = withTheme(({ theme }) => ({
@@ -17,6 +20,10 @@ const StyledAvatar = withTheme(({ theme }) => ({
     marginBottom: theme.sizing.baseUnit / 2,
   },
 }))(Avatar);
+
+const RoundTouchable = withTheme(({ theme, size }) => ({
+  borderRadius: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+}))(Touchable);
 
 const Wrapper = styled({
   justifyContent: 'center',
@@ -50,16 +57,19 @@ export default class AvatarForm extends PureComponent {
 
     return (
       <Wrapper>
-        <Touchable
+        <RoundTouchable
           disabled={this.props.disabled}
           onPress={this.handleUploadPhoto}
+          size="medium"
         >
-          <StyledAvatar
-            source={photo}
-            size="medium"
-            isLoading={isUploadingFile}
-          />
-        </Touchable>
+          <View>
+            <StyledAvatar
+              source={photo}
+              size="medium"
+              isLoading={isUploadingFile}
+            />
+          </View>
+        </RoundTouchable>
         {this.props.text ? (
           <H5>
             <ButtonLink onPress={this.handleUploadPhoto}>

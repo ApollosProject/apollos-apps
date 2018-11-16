@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
-import ContentCard from '../ContentCard';
-import { ErrorCard } from '../Card';
+import { ContentCard, ErrorCard } from '@apollosproject/ui-kit';
 import getContentCard from './query';
 
 export { tileCardFragment, largeCardFragment } from './query';

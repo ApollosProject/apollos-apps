@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
-import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import FeedView from 'apolloschurchapp/src/ui/FeedView';
+import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
+import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import getLikedContent from '../getLikedContent';
 /** A FeedView wrapped in a query to pull content data. */
@@ -38,6 +38,7 @@ class LikedContentList extends PureComponent {
         <Query query={getLikedContent} fetchPolicy="cache-and-network">
           {({ loading, error, data: { getAllLikedContent = [] }, refetch }) => (
             <FeedView
+              ListItemComponent={ContentCardConnected}
               initialNumToRender={5}
               content={getAllLikedContent}
               isLoading={loading}

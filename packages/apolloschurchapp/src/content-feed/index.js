@@ -3,8 +3,9 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import FeedView from 'apolloschurchapp/src/ui/FeedView';
+import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
+
+import ContentCardConnected from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 import getContentFeed from './getContentFeed';
 /**
@@ -51,6 +52,7 @@ class ContentFeed extends PureComponent {
         >
           {({ loading, error, data, refetch }) => (
             <FeedView
+              ListItemComponent={ContentCardConnected}
               content={get(
                 data,
                 'node.childContentItemsConnection.edges',
