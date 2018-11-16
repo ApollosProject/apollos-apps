@@ -38,7 +38,10 @@ class ContentCard extends PureComponent {
         value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       })
     ),
-    theme: PropTypes.shape({}),
+    theme: PropTypes.shape({
+      type: PropTypes.string,
+      colors: PropTypes.shape({}),
+    }),
     tile: PropTypes.bool,
   };
 
