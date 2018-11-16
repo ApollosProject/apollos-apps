@@ -66,6 +66,7 @@ class FeedView extends Component {
       // TODO: Move them back when the data is ready.
       <TouchableScale onPress={() => this.props.onPressItem({ ...item })}>
         <Component
+          {...item}
           contentId={item.isLoading ? null : get(item, 'id')}
           isLoading={item.isLoading}
         />

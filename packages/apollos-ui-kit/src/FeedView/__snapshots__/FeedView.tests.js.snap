@@ -33,6 +33,7 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
     }
   >
     <RCTScrollView
+      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -54,14 +55,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                 "iconName": "like",
                 "id": "01",
                 "name": "eschatology",
-              },
-              "theme": Object {
-                "colors": Object {
-                  "background": Object {
-                    "paper": "#fa8072",
-                  },
-                },
-                "isLight": true,
               },
               "title": "Will I get to shake Jesus' hand?",
             },
@@ -229,6 +222,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     }
   >
     <RCTScrollView
+      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -477,9 +471,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId0"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -512,11 +515,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -650,9 +657,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId1"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -685,11 +701,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -823,9 +843,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId2"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -858,11 +887,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -996,9 +1029,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId3"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -1031,11 +1073,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1169,9 +1215,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId4"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -1204,11 +1259,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1342,9 +1401,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId5"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -1377,11 +1445,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1515,9 +1587,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId6"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -1550,11 +1631,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1688,9 +1773,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId7"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -1723,11 +1817,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1861,9 +1959,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId8"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -1896,11 +2003,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -2034,9 +2145,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId9"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -2069,11 +2189,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -2223,6 +2347,7 @@ exports[`The FeedView component renders correctly 1`] = `
     }
   >
     <RCTScrollView
+      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -2245,14 +2370,6 @@ exports[`The FeedView component renders correctly 1`] = `
                 "id": "01",
                 "name": "eschatology",
               },
-              "theme": Object {
-                "colors": Object {
-                  "background": Object {
-                    "paper": "#fa8072",
-                  },
-                },
-                "isLight": true,
-              },
               "title": "Will I get to shake Jesus' hand?",
             },
           },
@@ -2270,14 +2387,6 @@ exports[`The FeedView component renders correctly 1`] = `
                 "iconName": "like",
                 "id": "02",
                 "name": "eschatology",
-              },
-              "theme": Object {
-                "colors": Object {
-                  "background": Object {
-                    "paper": "#e9967a",
-                  },
-                },
-                "isLight": true,
               },
               "title": "Where is the new Jerusalem anyways?",
             },
@@ -2331,6 +2440,24 @@ exports[`The FeedView component renders correctly 1`] = `
             }
           >
             <View
+              node={
+                Object {
+                  "coverImage": Array [
+                    Object {
+                      "height": 400,
+                      "uri": "https://picsum.photos/600/400/?random",
+                      "width": 600,
+                    },
+                  ],
+                  "id": "1",
+                  "parentChannel": Object {
+                    "iconName": "like",
+                    "id": "01",
+                    "name": "eschatology",
+                  },
+                  "title": "Will I get to shake Jesus' hand?",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -2359,123 +2486,24 @@ exports[`The FeedView component renders correctly 1`] = `
                 <View
                   style={
                     Object {
-                      "aspectRatio": 2,
-                      "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
-                      "width": "100%",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "aspectRatio": 2,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 12,
+                      "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
                       "paddingHorizontal": 16,
-                      "paddingTop": 24,
                       "paddingVertical": 16,
                     }
                   }
                 >
-                  <View
+                  <Text
+                    ellipsizeMode="tail"
+                    numberOfLines={3}
                     style={
                       Object {
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 24,
-                        "marginVertical": 1.8000000000000007,
-                        "width": "100%",
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 24,
+                        "lineHeight": 27.6,
                       }
                     }
                   />
-                  <View
-                    style={
-                      Object {
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 16,
-                        "marginVertical": 5,
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  floating={false}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "flexWrap": "wrap",
-                      "justifyContent": "space-between",
-                      "paddingHorizontal": 16,
-                      "paddingTop": 4,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "flexDirection": "column",
-                        "opacity": 0.4,
-                      }
-                    }
-                  >
-                    <View
-                      flexed={false}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "flex": null,
-                          "flexDirection": "row",
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "paddingHorizontal": 4,
-                          }
-                        }
-                        withIcon="empty"
-                      >
-                        <View
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 12,
-                              "marginVertical": 2.6400000000000006,
-                              "width": "50%",
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
                 </View>
               </View>
             </View>
@@ -2504,6 +2532,24 @@ exports[`The FeedView component renders correctly 1`] = `
             }
           >
             <View
+              node={
+                Object {
+                  "coverImage": Array [
+                    Object {
+                      "height": 400,
+                      "uri": "https://picsum.photos/600/400/?random",
+                      "width": 600,
+                    },
+                  ],
+                  "id": "2",
+                  "parentChannel": Object {
+                    "iconName": "like",
+                    "id": "02",
+                    "name": "eschatology",
+                  },
+                  "title": "Where is the new Jerusalem anyways?",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -2532,123 +2578,24 @@ exports[`The FeedView component renders correctly 1`] = `
                 <View
                   style={
                     Object {
-                      "aspectRatio": 2,
-                      "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
-                      "width": "100%",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "aspectRatio": 2,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingBottom": 12,
+                      "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
                       "paddingHorizontal": 16,
-                      "paddingTop": 24,
                       "paddingVertical": 16,
                     }
                   }
                 >
-                  <View
+                  <Text
+                    ellipsizeMode="tail"
+                    numberOfLines={3}
                     style={
                       Object {
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 24,
-                        "marginVertical": 1.8000000000000007,
-                        "width": "100%",
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 24,
+                        "lineHeight": 27.6,
                       }
                     }
                   />
-                  <View
-                    style={
-                      Object {
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 16,
-                        "marginVertical": 5,
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  floating={false}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "flexWrap": "wrap",
-                      "justifyContent": "space-between",
-                      "paddingHorizontal": 16,
-                      "paddingTop": 4,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "flexDirection": "column",
-                        "opacity": 0.4,
-                      }
-                    }
-                  >
-                    <View
-                      flexed={false}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "flex": null,
-                          "flexDirection": "row",
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "paddingHorizontal": 4,
-                          }
-                        }
-                        withIcon="empty"
-                      >
-                        <View
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 12,
-                              "marginVertical": 2.6400000000000006,
-                              "width": "50%",
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
                 </View>
               </View>
             </View>
@@ -2693,6 +2640,7 @@ exports[`The FeedView component renders empty state 1`] = `
     }
   >
     <RCTScrollView
+      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -2940,9 +2888,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId0"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -2975,11 +2932,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3113,9 +3074,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId1"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -3148,11 +3118,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3286,9 +3260,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId2"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -3321,11 +3304,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3459,9 +3446,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId3"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -3494,11 +3490,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3632,9 +3632,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId4"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -3667,11 +3676,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3805,9 +3818,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId5"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -3840,11 +3862,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3978,9 +4004,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId6"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -4013,11 +4048,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4151,9 +4190,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId7"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -4186,11 +4234,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4324,9 +4376,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId8"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -4359,11 +4420,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4497,9 +4562,18 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId9"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": undefined,
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
@@ -4532,11 +4606,15 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <View
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }

@@ -25,14 +25,6 @@ describe('The FeedView component', () => {
                     height: 400,
                   },
                 ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#fa8072',
-                    },
-                  },
-                },
                 parentChannel: {
                   id: '01',
                   name: 'eschatology',
@@ -51,14 +43,6 @@ describe('The FeedView component', () => {
                     height: 400,
                   },
                 ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#e9967a',
-                    },
-                  },
-                },
                 parentChannel: {
                   id: '02',
                   name: 'eschatology',
@@ -110,14 +94,6 @@ describe('The FeedView component', () => {
                     height: 400,
                   },
                 ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#fa8072',
-                    },
-                  },
-                },
                 parentChannel: {
                   id: '01',
                   name: 'eschatology',

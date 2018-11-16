@@ -10,7 +10,7 @@ const StyledCard = compose(
   withIsLoading,
   styled(({ theme, cardColor, inHorizontalList = false }) => ({
     // card styles
-    backgroundColor: cardColor || theme.colors.background.paper,
+    backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
     borderRadius: theme.sizing.baseUnit,
     ...(inHorizontalList
       ? {
