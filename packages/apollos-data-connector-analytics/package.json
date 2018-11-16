@@ -32,6 +32,9 @@
     "@apollosproject/rock-apollo-data-source": "^0.6.0"
   },
   "devDependencies": {
-    "babel-preset-apollos": "file:../babel-preset-apollos"
+    "@apollosproject/babel-preset-apollos": "^0.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
