@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
-import ContentCardConnected from '../../ui/ContentCardConnected';
+import ContentCardConnected from '../../../ui/ContentCardConnected';
 
 import getLikedContent from '../getLikedContent';
 /** A FeedView wrapped in a query to pull content data. */

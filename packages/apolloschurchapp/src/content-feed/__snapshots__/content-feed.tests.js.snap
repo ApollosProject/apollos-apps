@@ -47,6 +47,7 @@ exports[`content feed query component renders a feedview after successful query 
       }
     >
       <RCTScrollView
+        ListItemComponent={[Function]}
         contentContainerStyle={
           Object {
             "paddingVertical": 7.2,
@@ -303,9 +304,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId0"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -338,11 +347,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -476,9 +489,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId1"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -511,11 +532,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -649,9 +674,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId2"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -684,11 +717,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -822,9 +859,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId3"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -857,11 +902,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -995,9 +1044,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId4"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -1030,11 +1087,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1168,9 +1229,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId5"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -1203,11 +1272,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1341,9 +1414,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId6"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -1376,11 +1457,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1514,9 +1599,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId7"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -1549,11 +1642,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1687,9 +1784,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId8"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -1722,11 +1827,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1860,9 +1969,17 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
+                channelType=""
+                id="fakeId9"
+                parentChannel={
+                  Object {
+                    "id": "",
+                    "name": "",
+                  }
+                }
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
+                    "backgroundColor": undefined,
                     "borderRadius": 16,
                     "marginHorizontal": 16,
                     "marginVertical": 12,
@@ -1895,11 +2012,15 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "opacity": 1,
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
