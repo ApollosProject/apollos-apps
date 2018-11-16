@@ -1,4 +1,41 @@
 
+v0.6.0: November 16, 2018
+
+- Adds open source license, prepares for NPM releases, and upgrades React Native / fixes builds to do so (#431) (8793bb47)
+- Adds Data Connector Analytics (#423) (41dfb3a3)
+- Polishes Profile fields based on QA Feedback (#401) (ca57b9b0)
+- Fixed now deploys (#421) (73b1a5e5)
+- Move ui components to separate @apollosproject/ui-kit package (#418) (337c3673)
+- tweak nuke scripts to better remove `node_modules` folders (#419) (aa348d55)
+- Adds Auth Module (and sneak peak of Schema Module) (#417) (b3978f66)
+- Fixes native button ripple on Android (#416) (1ef5278c)
+- Adds `@apolloschurch/core-api` package (#414) (e22e5c90)
+- Remove kexec to fix docker builds (#413) (617951b8)
+- Rename @apolloschurch to @apollosproject (#415) (fdbb64fa)
+- Fixed Recently Liked Feed (#363) (bd5749f8)
+- Android Like Button Fix (#365) (920452ce)
+- fix icon shifting upward during app launch and spash screen. Icons now line up smoothly. (#389) (c16e1a2d)
+- Add Content Channels Support to Apollos Config (#380) (b9c5f22a)
+- Adds Apollos Config (#357) (bf1a23ff)
+- add `PaginationInfo` and `pageInfo` to our schema (#360) (1d5d8a96)
+- updated bundle id for android (#362) (42454c72)
+- Fixes Dockerfile, `yarn link`, and package naming (#361) (73041760)
+- Polish up the connect tab and user profile (#353) (fc697c95)
+- Clean up / polish navigation on the connect tab (#358) (e2c1637a)
+- Fixes new package data source package not included in docker build (#359) (5683ea06)
+- Move apollos rock data source (#355) (221348eb)
+- Implement new PR template to encourage better code reviews (#354) (4a72c771)
+- Fixes signup issue (#350) (45f455af)
+- Fixes profile image in Cloudinary (#349) (3f318bbc)
+- Fix MediaControls styles (used on content views) (#344) (034211c7)
+- Added Devotional to Content (#322) (54b6c5c9)
+- Fix cache redirects - makes content show quicker (#346) (afc4c8fb)
+- Polishes profile image uploading (#337) (1e958a1b)
+- Adds cloudinary (#342) (94896d76)
+- Disable themes on the api side (temporary) (#343) (c97d7d99)
+- Release v0.6.0 (#341) (e80499a3)
+
+
 v0.6.0: October 18, 2018
 
 - Adds Apollo engine setup (#333) (ede2801)

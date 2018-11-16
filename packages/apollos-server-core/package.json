@@ -28,5 +28,6 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
 }

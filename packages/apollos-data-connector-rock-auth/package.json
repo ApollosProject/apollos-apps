@@ -29,13 +29,14 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^0.6.0",
     "@apollosproject/config": "^0.6.0",
     "@apollosproject/rock-apollo-data-source": "^0.6.0",
-    "@apollosproject/babel-preset-apollos": "^0.6.0",
     "graphql": "0.13.2"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
 }
