@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ModalViewHeader } from 'apolloschurchapp/src/ui/ModalView';
+import { ModalViewHeader } from '@apollosproject/ui-kit';
 
 const NavigationHeader = ({ scene, navigation }) => {
   let onBack = null;

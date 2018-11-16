@@ -28,7 +28,7 @@ export MediaQuery, {
   enhancer as withMediaQuery,
   withWindow,
 } from './MediaQuery';
-export ModalView from './ModalView';
+export ModalView, { ModalViewHeader } from './ModalView';
 export PaddedView from './PaddedView';
 export Placeholder, { withPlaceholder } from './Placeholder';
 export ProgressieImage from './ProgressiveImage';
