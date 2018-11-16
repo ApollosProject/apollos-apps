@@ -19,7 +19,7 @@ import {
 } from '@apollosproject/data-schema';
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Person from '../index';
-import authMock from '../authMock';
+import authMock from '../../authMock';
 
 const Auth = { schema: authSchema, dataSource: authMock };
 const serverConfig = createApolloServerConfig({ Person, Auth });
