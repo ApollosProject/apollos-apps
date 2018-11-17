@@ -47,7 +47,6 @@ exports[`content feed query component renders a feedview after successful query 
       }
     >
       <RCTScrollView
-        ListItemComponent={[Function]}
         contentContainerStyle={
           Object {
             "paddingVertical": 7.2,

@@ -47,7 +47,6 @@ exports[`LikedContentList component renders LikedContentList 1`] = `
       }
     >
       <RCTScrollView
-        ListItemComponent={[Function]}
         contentContainerStyle={
           Object {
             "paddingVertical": 7.2,

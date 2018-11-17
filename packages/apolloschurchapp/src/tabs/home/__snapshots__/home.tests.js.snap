@@ -71,7 +71,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
               <LiveNowButton />
             </React.Fragment>
           }
-          ListItemComponent={[Function]}
           contentContainerStyle={
             Object {
               "paddingVertical": 7.2,

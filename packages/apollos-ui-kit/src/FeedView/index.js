@@ -59,13 +59,13 @@ class FeedView extends Component {
     if (this.props.renderItem) {
       return this.props.renderItem({ item });
     }
-    const Component = this.props.ListItemComponent;
+    const Item = this.props.ListItemComponent;
     return (
       // These are all props of FeedItemCard but they do not have data coming
       // back yet. So I moved them here for safe keeping.
       // TODO: Move them back when the data is ready.
       <TouchableScale onPress={() => this.props.onPressItem({ ...item })}>
-        <Component
+        <Item
           {...item}
           contentId={item.isLoading ? null : get(item, 'id')}
           isLoading={item.isLoading}
@@ -81,6 +81,7 @@ class FeedView extends Component {
       fetchMore,
       isLoading,
       keyExtractor,
+      ListItemComponent,
       ListEmptyComponent,
       numColumns,
       onEndReachedThreshold,

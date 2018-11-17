@@ -33,7 +33,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
     }
   >
     <RCTScrollView
-      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -222,7 +221,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     }
   >
     <RCTScrollView
-      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -2347,7 +2345,6 @@ exports[`The FeedView component renders correctly 1`] = `
     }
   >
     <RCTScrollView
-      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,
@@ -2640,7 +2637,6 @@ exports[`The FeedView component renders empty state 1`] = `
     }
   >
     <RCTScrollView
-      ListItemComponent={[Function]}
       contentContainerStyle={
         Object {
           "paddingVertical": 7.2,

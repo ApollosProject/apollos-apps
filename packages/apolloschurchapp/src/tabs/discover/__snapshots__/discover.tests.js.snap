@@ -117,7 +117,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
               }
             >
               <RCTScrollView
-                ListItemComponent={[Function]}
                 contentContainerStyle={
                   Object {
                     "paddingVertical": 7.2,
