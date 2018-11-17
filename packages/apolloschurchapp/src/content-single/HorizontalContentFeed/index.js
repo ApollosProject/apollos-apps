@@ -7,7 +7,6 @@ import { Query } from 'react-apollo';
 import {
   CardTile,
   HorizontalTileFeed,
-  styled,
   TouchableScale,
 } from '@apollosproject/ui-kit';
 
