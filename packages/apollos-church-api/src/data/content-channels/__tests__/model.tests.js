@@ -1,5 +1,14 @@
+import ApollosConfig from '@apollosproject/config';
 import { buildGetMock } from '../../../utils/testUtils';
 import ContentChannelDataSource from '../data-source';
+
+ApollosConfig.loadJs({
+  ROCK: {
+    API_URL: 'https://apollosrock.newspring.cc/api',
+    API_TOKEN: 'some-rock-token',
+    IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+  },
+});
 
 describe('ContentChannelModel', () => {
   it('constructs', () => {

@@ -1,10 +1,23 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
-import { createGlobalId } from '../../node/model';
+import { createGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
+
 import { getTestContext } from '../../../utils/testUtils';
 // we import the root-level schema and resolver so we test the entire integration:
 import { testSchema as typeDefs, resolvers } from '../..';
+
+ApollosConfig.loadJs({
+  ROCK: {
+    API_URL: 'https://apollosrock.newspring.cc/api',
+    API_TOKEN: 'some-rock-token',
+    IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+  },
+  ROCK_MAPPINGS: {
+    DISCOVER_CONTENT_CHANNEL_IDS: [2, 3, 4, 6, 8],
+  },
+});
 
 const contentChannelFragment = `
   fragment ContentChannelFragment on ContentChannel {
