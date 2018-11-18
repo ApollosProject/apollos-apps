@@ -3,6 +3,9 @@
   "version": "0.6.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
+  "files": [
+    "src/**"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .js"
