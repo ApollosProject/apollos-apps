@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -310,6 +311,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3245CDED1BFEE35C00EABF68;
 			remoteInfo = RCTOneSignal;
+		};
+		42B4B6CB219DD7CB00162F25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59AF37DEFAA847DBAB3A0526 /* RNScreens.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNScreens;
 		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -739,6 +747,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		42B4B698219DD7CA00162F25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B4B6CC219DD7CB00162F25 /* libRNScreens.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4446111C6E474E038489E599 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1154,7 +1170,7 @@
 					ProjectRef = 3BD7DCDF7B194D7BB9BE3C6C /* RNImagePicker.xcodeproj */;
 				},
 				{
-					ProductGroup = 794FE954219DF8880046142B /* Products */;
+					ProductGroup = 42B4B698219DD7CA00162F25 /* Products */;
 					ProjectRef = 59AF37DEFAA847DBAB3A0526 /* RNScreens.xcodeproj */;
 				},
 				{
@@ -1410,6 +1426,13 @@
 			fileType = archive.ar;
 			path = libRCTOneSignal.a;
 			remoteRef = 427787EC2149B96A0045AD7F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42B4B6CC219DD7CB00162F25 /* libRNScreens.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNScreens.a;
+			remoteRef = 42B4B6CB219DD7CB00162F25 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
