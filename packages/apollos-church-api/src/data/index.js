@@ -10,13 +10,13 @@ import {
 } from '@apollosproject/data-connector-rock-content';
 import * as Analytics from '@apollosproject/data-connector-analytics';
 import { Person, Family } from '@apollosproject/data-connector-people';
+import * as Scripture from '@apollosproject/data-connector-bible';
 
 import RockConstants from '../connectors/rock/rock-constants';
 
 import * as Media from './media';
 import * as LiveStream from './live';
 import * as Theme from './theme';
-import * as Scripture from './bible';
 import * as Interactions from './interactions';
 
 const data = {
