@@ -31,7 +31,7 @@ const TileSpacer = styled(({ theme }) => ({
 }))(View);
 
 const Tile = styled(({ theme }) => ({
-  width: Dimensions.get('window').width * (248 / 375),
+  width: Dimensions.get('window').width * 0.66,
   aspectRatio: 1,
   borderRadius: theme.sizing.baseUnit,
   backgroundColor: theme.colors.lightTertiary,

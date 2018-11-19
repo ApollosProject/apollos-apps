@@ -5,7 +5,7 @@ import { Dimensions } from 'react-native';
 
 import Card from '../Card';
 import { ImageSourceType } from '../ConnectedImage';
-import { ThemeMixin, withTheme } from '../theme';
+import { ThemeMixin } from '../theme';
 import { withIsLoading } from '../isLoading';
 import styled from '../styled';
 
@@ -17,7 +17,7 @@ import CardFooter from './CardFooter';
 
 const ContentCardWrapper = styled(({ tile }) => {
   if (!tile) return {};
-  const size = Dimensions.get('window').width * (248 / 375);
+  const size = Dimensions.get('window').width * 0.66;
   return {
     width: size,
   };
