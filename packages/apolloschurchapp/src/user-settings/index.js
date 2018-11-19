@@ -53,7 +53,6 @@ class UserSettings extends PureComponent {
               <AvatarView>
                 <AvatarForm
                   text
-                  photo={this.props.navigation.getParam('photo', '')}
                   refetch={this.props.navigation.getParam('refetch', {})}
                 />
               </AvatarView>

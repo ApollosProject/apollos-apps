@@ -6,6 +6,7 @@ import getUserProfile from '../../tabs/connect/getUserProfile';
 
 const options = {
   title: 'Select Profile Image',
+  quality: 0,
   storageOptions: {
     skipBackup: true,
     path: 'images',
