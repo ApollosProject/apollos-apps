@@ -3,8 +3,7 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
-import { ThemeMixin } from 'apolloschurchapp/src/ui/theme';
+import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 
 import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenLoaded';
 import { events } from 'apolloschurchapp/src/analytics';
