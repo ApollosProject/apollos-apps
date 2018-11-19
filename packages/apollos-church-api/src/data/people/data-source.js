@@ -16,6 +16,20 @@ export default class Person extends RockApolloDataSource {
       .filter(`Email eq '${email}'`)
       .get();
 
+  getFromAlias = async (alias) => {
+    const _ids = await this.get(`/PersonAlias?$filter=Guid%20eq%20(guid'${alias}')&$select=PersonId`);
+
+    if (!_ids) throw new Error('Invalid Person Alias');
+
+    const _id = _ids[0].personId;
+
+    if (_id) {
+      return await this.get(`/People/${_id}`);
+    }
+
+    return null;
+  }
+
   // fields is an array of objects matching the pattern
   // [{ field: String, value: String }]
   updateProfile = async (fields) => {
