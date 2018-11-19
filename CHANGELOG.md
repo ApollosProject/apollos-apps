@@ -1,4 +1,3 @@
-
 v0.6.0: October 18, 2018
 
 - Adds Apollo engine setup (#333) (ede2801)

@@ -17,10 +17,14 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "babel-preset-apollos": "0.6.0"
+    "@apollosproject/babel-preset-apollos": "^0.6.0"
   },
   "dependencies": {
     "js-yaml": "^3.12.0"
   },
-  "license": "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
 }

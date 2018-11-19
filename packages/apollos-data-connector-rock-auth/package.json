@@ -17,8 +17,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "0.6.0",
-    "@apollosproject/server-core": "0.6.0",
+    "@apollosproject/data-schema": "^0.6.0",
+    "@apollosproject/server-core": "^0.6.0",
     "apollo-server": "^2.1.0",
     "apollo-server-env": "^2.2.0",
     "lodash": "^4.17.11",
@@ -29,10 +29,14 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "babel-preset-apollos": "0.6.0",
-    "graphql": "0.13.2",
-    "@apollosproject/config": "0.6.0",
-    "@apollosproject/rock-apollo-data-source": "0.6.0"
+    "@apollosproject/babel-preset-apollos": "^0.6.0",
+    "@apollosproject/config": "^0.6.0",
+    "@apollosproject/rock-apollo-data-source": "^0.6.0",
+    "graphql": "0.13.2"
   },
-  "license": "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
 }

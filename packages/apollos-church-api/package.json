@@ -51,9 +51,9 @@
     "with-query": "1.0.2"
   },
   "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^0.6.0",
     "@babel/cli": "7.1.5",
     "@babel/core": "7.1.6",
-    "babel-preset-apollos": "^0.6.0",
     "codecov": "3.0.2",
     "coveralls": "3.0.1",
     "jest": "23.6.0",

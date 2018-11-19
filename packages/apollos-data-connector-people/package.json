@@ -30,6 +30,6 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "babel-preset-apollos": "^0.6.0"
+    "@apollosproject/babel-preset-apollos": "^0.6.0"
   }
 }

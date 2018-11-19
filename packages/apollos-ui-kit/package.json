@@ -3,6 +3,9 @@
   "version": "0.6.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
+  "files": [
+    "src/**"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .js"
@@ -43,8 +46,8 @@
     "rn-placeholder": "1.2.0"
   },
   "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^0.6.0",
     "@storybook/react-native": "^4.0.7",
-    "babel-preset-apollos": "0.6.0",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
@@ -56,5 +59,6 @@
     "react-native-svg": "6.5.2",
     "react-test-renderer": "16.6.1"
   },
-  "license": "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md",
+  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
 }
