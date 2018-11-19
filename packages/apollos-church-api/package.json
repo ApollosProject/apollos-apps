@@ -28,6 +28,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "@apollosproject/data-connector-rock-content": "^0.6.0",
+    "@apollosproject/server-core": "^0.6.0",
     "@apollosproject/config": "^0.6.0",
     "@apollosproject/data-connector-analytics": "^0.6.0",
     "@apollosproject/data-connector-people": "^0.6.0",

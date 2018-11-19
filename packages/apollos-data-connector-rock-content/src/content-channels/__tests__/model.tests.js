@@ -1,5 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
-import { buildGetMock } from '../../../utils/testUtils';
+import { buildGetMock } from '../../test-utils';
 import ContentChannelDataSource from '../data-source';
 
 ApollosConfig.loadJs({

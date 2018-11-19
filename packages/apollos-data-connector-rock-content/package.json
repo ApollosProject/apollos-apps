@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/data-connector-people",
+  "name": "@apollosproject/data-connector-rock-content",
   "version": "0.6.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
@@ -18,21 +18,14 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.6.0",
-    "@apollosproject/server-core": "^0.6.0",
-    "apollo-server": "^2.1.0",
-    "apollo-server-env": "^2.2.0",
-    "form-data": "^2.3.3",
-    "jest": "^23.6.0",
-    "lodash": "^4.17.11"
+    "@apollosproject/server-core": "^0.6.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.6.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "@apollosproject/babel-preset-apollos": "^0.6.0",
+    "jest": "^23.6.0"
   }
 }

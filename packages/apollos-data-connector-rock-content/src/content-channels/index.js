@@ -1,28 +1,8 @@
-import { gql } from 'apollo-server';
 import { createGlobalId } from '@apollosproject/server-core';
 
 // export { default as model } from './model';
 export { default as dataSource } from './data-source';
-
-export const schema = gql`
-  type ContentChannel implements Node {
-    id: ID!
-    name: String!
-    description: String
-
-    childContentChannels: [ContentChannel]
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-
-    iconName: String
-  }
-
-  extend type Query {
-    contentChannels: [ContentChannel]
-  }
-`;
+export { contentChannelSchema as schema } from '@apollosproject/data-schema';
 
 export const resolver = {
   Query: {

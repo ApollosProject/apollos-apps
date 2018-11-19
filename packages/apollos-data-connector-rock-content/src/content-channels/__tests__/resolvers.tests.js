@@ -1,12 +1,29 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
-import { createGlobalId } from '@apollosproject/server-core';
+import {
+  createGlobalId,
+  createApolloServerConfig,
+} from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
-import { getTestContext } from '../../../utils/testUtils';
+import {
+  mediaSchema,
+  testSchema,
+  themeSchema,
+  scriptureSchema,
+} from '@apollosproject/data-schema';
+
+import { buildContext } from '../../test-utils';
 // we import the root-level schema and resolver so we test the entire integration:
-import { testSchema as typeDefs, resolvers } from '../..';
+import { ContentChannel, ContentItem, Sharable } from '../..';
+
+const serverConfig = createApolloServerConfig({
+  ContentChannel,
+  ContentItem,
+  Sharable,
+});
+const getTestContext = buildContext(serverConfig);
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -50,7 +67,16 @@ describe('ContentChannel', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({ typeDefs, resolvers });
+    schema = makeExecutableSchema({
+      typeDefs: [
+        ...serverConfig.schema,
+        mediaSchema,
+        testSchema,
+        themeSchema,
+        scriptureSchema,
+      ],
+      resolvers: serverConfig.resolvers,
+    });
     context = getTestContext();
   });
 

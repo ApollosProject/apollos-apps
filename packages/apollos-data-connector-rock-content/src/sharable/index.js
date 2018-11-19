@@ -1,10 +1,4 @@
-export const schema = `
-interface Sharable {
-  url: String
-  message: String
-  title: String
-}
-`;
+export { contentSharableSchema as schema } from '@apollosproject/data-schema';
 
 export const resolver = {
   Sharable: {

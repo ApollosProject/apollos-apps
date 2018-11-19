@@ -2,11 +2,51 @@ import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { makeExecutableSchema } from 'apollo-server';
 
-import { createGlobalId } from '@apollosproject/server-core';
+import {
+  createGlobalId,
+  createApolloServerConfig,
+} from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
-import { testSchema as typeDefs, resolvers } from '../..';
-import { resolver } from '..';
-import { getTestContext } from '../../../utils/testUtils';
+
+import {
+  mediaSchema,
+  testSchema,
+  themeSchema,
+  scriptureSchema,
+} from '@apollosproject/data-schema';
+
+import { buildContext } from '../../test-utils';
+// we import the root-level schema and resolver so we test the entire integration:
+import { ContentChannel, ContentItem, Sharable } from '../..';
+
+class Scripture {
+  // eslint-disable-next-line class-methods-use-this
+  initialize() {}
+
+  // eslint-disable-next-line class-methods-use-this
+  getScriptures() {
+    return [
+      {
+        html: `<p class="p"><span data-number="1" class="v">1</span>The Song of songs, which is Solomon’s.</p>`,
+      },
+    ];
+  }
+}
+const serverConfig = createApolloServerConfig({
+  ContentChannel,
+  ContentItem,
+  Sharable,
+  UniversalContentItem: {
+    dataSource: ContentItem.dataSource,
+  }, // alias
+  DevotionalContentItem: {
+    dataSource: ContentItem.dataSource,
+  }, // alias
+  Scripture: {
+    dataSource: Scripture,
+  },
+});
+const getTestContext = buildContext(serverConfig);
 // we import the root-level schema and resolver so we test the entire integration:
 
 ApollosConfig.loadJs({
@@ -102,7 +142,16 @@ describe('UniversalContentItem', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({ typeDefs, resolvers });
+    schema = makeExecutableSchema({
+      typeDefs: [
+        ...serverConfig.schema,
+        mediaSchema,
+        testSchema,
+        themeSchema,
+        scriptureSchema,
+      ],
+      resolvers: serverConfig.resolvers,
+    });
     context = getTestContext();
   });
 
@@ -222,7 +271,7 @@ describe('UniversalContentItem', () => {
   });
 });
 
-const { ContentItemsConnection } = resolver;
+const { ContentItemsConnection } = serverConfig.resolvers;
 
 describe('ContentItemsConnection resolvee', () => {
   it('builds a pageInfo object with items', async () => {
