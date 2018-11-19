@@ -116,6 +116,41 @@ export const mediaSchema = gql`
   }
 `;
 
+export const themeSchema = gql`
+  type Theme {
+    type: ThemeType
+    colors: ThemeColors
+  }
+
+  enum ThemeType {
+    LIGHT
+    DARK
+  }
+
+  scalar Color
+
+  type ThemeColors {
+    primary: Color
+    secondary: Color
+    screen: Color
+    paper: Color
+    alert: Color
+  }
+`;
+
+export const scriptureSchema = gql`
+  type Scripture {
+    id: String
+    html: String
+    reference: String
+    copyright: String
+  }
+
+  extend type Query {
+    scripture(query: String!): Scripture
+  }
+`;
+
 export const analyticsSchema = gql`
   # Not supported right now...
   # union AnalyticsValue = String | Float | Boolean | Int
@@ -159,5 +194,195 @@ export const analyticsSchema = gql`
   extend type Mutation {
     identifySelf(input: AnalyticsIdentifyInput!): AnalyticsResult
     trackEvent(input: AnalyticsTrackInput!): AnalyticsResult
+  }
+`;
+
+export const contentItemSchema = gql`
+  type SharableContentItem implements Sharable {
+    url: String
+    message: String
+    title: String
+  }
+
+  interface ContentItem {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+  }
+
+  type UniversalContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+  }
+
+  type DevotionalContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
+  }
+
+  type MediaContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
+  }
+
+  type ContentSeriesContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
+  }
+
+  input ContentItemsConnectionInput {
+    first: Int
+    after: String
+  }
+
+  type ContentItemsConnection {
+    edges: [ContentItemsConnectionEdge]
+    # TODO totalCount: Int
+    pageInfo: PaginationInfo
+  }
+
+  type ContentItemsConnectionEdge {
+    node: ContentItem
+    cursor: String
+  }
+
+  extend type Query {
+    userFeed(first: Int, after: String): ContentItemsConnection
+    getAllLikedContent: [ContentItem]
+  }
+`;
+
+export const contentChannelSchema = gql`
+  type ContentChannel implements Node {
+    id: ID!
+    name: String!
+    description: String
+
+    childContentChannels: [ContentChannel]
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+
+    iconName: String
+  }
+
+  extend type Query {
+    contentChannels: [ContentChannel]
+  }
+`;
+
+export const contentSharableSchema = gql`
+  interface Sharable {
+    url: String
+    message: String
+    title: String
+  }
+`;
+
+export const familySchema = gql`
+  extend type Person {
+    location: String
   }
 `;

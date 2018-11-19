@@ -116,7 +116,7 @@ exports[`The TileFeed component renders correctly 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -195,7 +195,7 @@ exports[`The TileFeed component renders correctly 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >

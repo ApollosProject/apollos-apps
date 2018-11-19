@@ -4276,29 +4276,6 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-"babel-preset-apollos@file:packages/babel-preset-apollos":
-  version "0.6.0"
-  dependencies:
-    "@babel/plugin-proposal-class-properties" "7.1.0"
-    "@babel/plugin-proposal-decorators" "7.1.6"
-    "@babel/plugin-proposal-do-expressions" "7.0.0"
-    "@babel/plugin-proposal-export-default-from" "7.0.0"
-    "@babel/plugin-proposal-export-namespace-from" "7.0.0"
-    "@babel/plugin-proposal-function-bind" "7.0.0"
-    "@babel/plugin-proposal-function-sent" "7.0.0"
-    "@babel/plugin-proposal-json-strings" "7.0.0"
-    "@babel/plugin-proposal-logical-assignment-operators" "7.0.0"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "7.0.0"
-    "@babel/plugin-proposal-numeric-separator" "7.0.0"
-    "@babel/plugin-proposal-optional-chaining" "7.0.0"
-    "@babel/plugin-proposal-pipeline-operator" "7.0.0"
-    "@babel/plugin-proposal-throw-expressions" "7.0.0"
-    "@babel/plugin-syntax-dynamic-import" "7.0.0"
-    "@babel/plugin-syntax-import-meta" "7.0.0"
-    "@babel/plugin-transform-runtime" "7.0.0"
-    "@babel/preset-env" "7.1.6"
-    babel-plugin-module-resolver "^3.1.1"
-
 babel-preset-env@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.7.0.tgz#dea79fa4ebeb883cd35dab07e260c1c9c04df77a"
@@ -7504,7 +7481,7 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-form-data@^2.3.2, form-data@~2.3.2:
+form-data@^2.3.3, form-data@~2.3.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.3.3.tgz#dcce52c05f644f298c6a7ab936bd724ceffbf3a6"
   integrity sha512-1lLKB2Mu3aGP1Q/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7UtZ1N38rVXm+6+MEhJQ==
@@ -9514,7 +9491,7 @@ jest-worker@^24.0.0-alpha.2:
   dependencies:
     merge-stream "^1.0.1"
 
-jest@23.6.0:
+jest@23.6.0, jest@^23.6.0:
   version "23.6.0"
   resolved "https://registry.yarnpkg.com/jest/-/jest-23.6.0.tgz#ad5835e923ebf6e19e7a1d7529a432edfee7813d"
   integrity sha512-lWzcd+HSiqeuxyhG+EnZds6iO3Y3ZEnMrfZq/OTGvF/C+Z4fPMCdhWTGSAiO2Oym9rbEXfwddHhh6jqrTF3+Lw==

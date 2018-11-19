@@ -118,7 +118,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -218,7 +218,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -446,7 +446,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -542,7 +542,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -638,7 +638,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -734,7 +734,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >
@@ -830,7 +830,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "width": 496,
+                  "width": 495,
                 }
               }
             >

@@ -506,7 +506,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
           },
           "shadowOpacity": 1,
           "shadowRadius": 6,
-          "width": 496,
+          "width": 495,
         }
       }
       tile={true}
@@ -785,7 +785,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
           },
           "shadowOpacity": 1,
           "shadowRadius": 6,
-          "width": 496,
+          "width": 495,
         }
       }
       tile={true}
@@ -1035,7 +1035,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
           },
           "shadowOpacity": 1,
           "shadowRadius": 6,
-          "width": 496,
+          "width": 495,
         }
       }
       tile={true}
@@ -1319,7 +1319,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
           },
           "shadowOpacity": 1,
           "shadowRadius": 6,
-          "width": 496,
+          "width": 495,
         }
       }
       tile={true}

@@ -46,7 +46,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -170,7 +170,7 @@ exports[`the CardTile component should render 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -262,7 +262,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -355,7 +355,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -543,7 +543,7 @@ exports[`the CardTile component should render a number box 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -668,7 +668,7 @@ exports[`the CardTile component should render card details 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -912,7 +912,7 @@ exports[`the CardTile component should render card details with date 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >
@@ -1167,7 +1167,7 @@ exports[`the CardTile component should render children 1`] = `
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "width": 496,
+            "width": 495,
           }
         }
       >

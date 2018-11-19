@@ -230,7 +230,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     },
                     "shadowOpacity": 1,
                     "shadowRadius": 6,
-                    "width": 496,
+                    "width": 495,
                   }
                 }
                 tile={true}
@@ -482,7 +482,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     },
                     "shadowOpacity": 1,
                     "shadowRadius": 6,
-                    "width": 496,
+                    "width": 495,
                   }
                 }
                 tile={true}
@@ -913,7 +913,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     },
                     "shadowOpacity": 1,
                     "shadowRadius": 6,
-                    "width": 496,
+                    "width": 495,
                   }
                 }
                 tile={true}
@@ -1165,7 +1165,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     },
                     "shadowOpacity": 1,
                     "shadowRadius": 6,
-                    "width": 496,
+                    "width": 495,
                   }
                 }
                 tile={true}
