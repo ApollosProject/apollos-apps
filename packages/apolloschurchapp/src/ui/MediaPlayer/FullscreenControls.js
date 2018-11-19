@@ -11,6 +11,11 @@ import LinearGradient from 'react-native-linear-gradient';
 import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import { compose } from 'recompose';
+import {
+  AirPlayListener,
+  AirPlayButton,
+  AirPlay,
+} from 'react-native-airplay-btn';
 
 import {
   PaddedView,
@@ -23,11 +28,6 @@ import {
   Touchable,
 } from '@apollosproject/ui-kit';
 
-import {
-  AirPlayListener,
-  AirPlayButton,
-  AirPlay,
-} from 'react-native-airplay-btn';
 import Seeker from './Seeker';
 import { getControlState } from './queries';
 import {
