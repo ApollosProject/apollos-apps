@@ -5,7 +5,6 @@ import { get } from 'lodash';
 import { Query } from 'react-apollo';
 
 import {
-  ConnectedImage,
   Touchable,
   ButtonLink,
   Avatar,
@@ -19,8 +18,8 @@ import uploadPhoto from './uploadPhoto';
 const GetPhotoData = ({ children }) => (
   <Query query={getUserProfile}>
     {({ data: { currentUser = {} } = {} }) => {
-      const photoUpdated = get(currentUser, 'profile.photo');
-      return children({ photoUpdated });
+      const photo = get(currentUser, 'profile.photo');
+      return children({ photo });
     }}
   </Query>
 );
@@ -67,7 +66,6 @@ export default class AvatarForm extends PureComponent {
   };
 
   render() {
-    const { photo } = this.props;
     const { isUploadingFile } = this.state;
 
     return (
@@ -78,10 +76,10 @@ export default class AvatarForm extends PureComponent {
           size="medium"
         >
           <GetPhotoData>
-            {({ photoUpdated }) => (
+            {({ photo }) => (
               <View>
                 <StyledAvatar
-                  source={photoUpdated || photo}
+                  source={photo}
                   size="medium"
                   isLoading={isUploadingFile}
                 />
@@ -103,7 +101,6 @@ export default class AvatarForm extends PureComponent {
 
 AvatarForm.propTypes = {
   refetch: PropTypes.func.isRequired,
-  photo: ConnectedImage.propTypes.source,
   disabled: PropTypes.bool,
   text: PropTypes.bool,
 };
