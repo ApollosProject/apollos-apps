@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-schema",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -19,12 +19,12 @@
     "graphql-tag": "^2.10.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.6.0",
+    "@apollosproject/babel-preset-apollos": "^0.7.0",
     "graphql": "0.13.2"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
+  "gitHead": "5c3bccdfe37c8bd7a275ecd1f67053f2962449d8"
 }
