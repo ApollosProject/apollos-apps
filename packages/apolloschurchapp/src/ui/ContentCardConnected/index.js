@@ -34,9 +34,9 @@ const ContentCardConnected = ({
         return (
           <ContentCard
             {...node}
+            {...otherProps}
             coverImage={coverImage}
             metrics={metrics}
-            {...otherProps}
             tile={tile}
             isLoading={loading}
           />
