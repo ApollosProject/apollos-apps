@@ -1,125 +1,29 @@
-import { gql } from 'apollo-server';
 import { get } from 'lodash';
 import flow from 'lodash/fp/flow';
 import omitBy from 'lodash/fp/omitBy';
 import pickBy from 'lodash/fp/pickBy';
 import mapValues from 'lodash/fp/mapValues';
 import values from 'lodash/fp/values';
-import { createGlobalId } from '@apollosproject/server-core';
+import {
+  createGlobalId,
+  withEdgePagination,
+} from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
-import sanitizeHtml from '../../utils/sanitize-html';
-import { withEdgePagination } from '../pagination/utils';
+import sanitizeHtml from '../sanitize-html';
 
-const { ROCK_CONSTANTS, ROCK_MAPPINGS } = ApollosConfig;
+const { ROCK_CONSTANTS, ROCK_MAPPINGS, ROCK } = ApollosConfig;
 const mapValuesWithKey = mapValues.convert({ cap: false });
+
+const enforceProtocol = (uri) => (uri.startsWith('//') ? `https:${uri}` : uri);
+
+const createImageUrl = (uri) =>
+  uri.split('-').length === 5
+    ? `${ROCK.IMAGE_URL}?guid=${uri}`
+    : enforceProtocol(uri);
 
 // export { default as model } from './model';
 export { default as dataSource } from './data-source';
-
-export const schema = gql`
-  type SharableContentItem implements Sharable {
-    url: String
-    message: String
-    title: String
-  }
-
-  interface ContentItem {
-    id: ID!
-    title: String
-    coverImage: ImageMedia
-    images: [ImageMedia]
-    videos: [VideoMedia]
-    audios: [AudioMedia]
-    htmlContent: String
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    siblingContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    parentChannel: ContentChannel
-
-    sharing: SharableContentItem
-    theme: Theme
-    isLiked: Boolean
-  }
-
-  type UniversalContentItem implements ContentItem & Node {
-    id: ID!
-    title: String
-    coverImage: ImageMedia
-    images: [ImageMedia]
-    videos: [VideoMedia]
-    audios: [AudioMedia]
-    htmlContent: String
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    siblingContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    parentChannel: ContentChannel
-    terms(match: String): [Term]
-
-    sharing: SharableContentItem
-    theme: Theme
-    isLiked: Boolean
-  }
-
-  type DevotionalContentItem implements ContentItem & Node {
-    id: ID!
-    title: String
-    coverImage: ImageMedia
-    images: [ImageMedia]
-    videos: [VideoMedia]
-    audios: [AudioMedia]
-    htmlContent: String
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    siblingContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    parentChannel: ContentChannel
-
-    sharing: SharableContentItem
-    theme: Theme
-    isLiked: Boolean
-    scriptures: [Scripture]
-  }
-
-  type Term {
-    key: String
-    value: String
-  }
-
-  input ContentItemsConnectionInput {
-    first: Int
-    after: String
-  }
-
-  type ContentItemsConnection {
-    edges: [ContentItemsConnectionEdge]
-    # TODO totalCount: Int
-    pageInfo: PaginationInfo
-  }
-
-  type ContentItemsConnectionEdge {
-    node: ContentItem
-    cursor: String
-  }
-
-  extend type Query {
-    userFeed(first: Int, after: String): ContentItemsConnection
-    getAllLikedContent: [ContentItem]
-  }
-`;
+export { contentItemSchema as schema } from '@apollosproject/data-schema';
 
 // Empty fields in rock default to `''`
 const hasScripture = ({ attributeValues }) =>
@@ -177,7 +81,7 @@ export const defaultContentItemResolvers = {
       key,
       name: attributes[key].name,
       sources: attributeValues[key].value
-        ? [{ uri: attributeValues[key].value }]
+        ? [{ uri: createImageUrl(attributeValues[key].value) }]
         : [],
     }));
   },
