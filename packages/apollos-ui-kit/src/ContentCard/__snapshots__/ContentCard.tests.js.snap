@@ -159,7 +159,6 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -202,9 +201,9 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -256,12 +255,13 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   16.8k
                 </Text>
@@ -406,7 +406,6 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -623,7 +622,6 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -666,9 +664,9 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                   fill={
                     Array [
                       0,
-                      0.8588235294117647,
-                      0.8588235294117647,
-                      0.8509803921568627,
+                      0.43137254901960786,
+                      0.6313725490196078,
+                      0.6392156862745098,
                       1,
                     ]
                   }
@@ -720,12 +718,13 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#DBDBD9",
+                      "color": "rgb(110, 161, 163)",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="rgb(110, 161, 163)"
                 >
                   150
                 </Text>
@@ -873,7 +872,6 @@ exports[`ContentCard renders as Tile/No image 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -916,9 +914,9 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -970,12 +968,13 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   150
                 </Text>
@@ -1157,7 +1156,6 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -1200,9 +1198,9 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -1254,12 +1252,13 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   16.8k
                 </Text>
@@ -1413,7 +1412,6 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -1593,7 +1591,6 @@ exports[`ContentCard renders with No image 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -1636,9 +1633,9 @@ exports[`ContentCard renders with No image 1`] = `
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -1690,12 +1687,13 @@ exports[`ContentCard renders with No image 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   150
                 </Text>
@@ -1866,7 +1864,6 @@ exports[`ContentCard renders with an Image only 1`] = `
             style={
               Object {
                 "flexDirection": "column",
-                "opacity": 0.4,
               }
             }
           >
@@ -1909,9 +1906,9 @@ exports[`ContentCard renders with an Image only 1`] = `
                   fill={
                     Array [
                       0,
-                      0.8588235294117647,
-                      0.8588235294117647,
-                      0.8509803921568627,
+                      0.43137254901960786,
+                      0.6313725490196078,
+                      0.6392156862745098,
                       1,
                     ]
                   }
@@ -1963,12 +1960,13 @@ exports[`ContentCard renders with an Image only 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#DBDBD9",
+                      "color": "rgb(110, 161, 163)",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="rgb(110, 161, 163)"
                 >
                   150
                 </Text>

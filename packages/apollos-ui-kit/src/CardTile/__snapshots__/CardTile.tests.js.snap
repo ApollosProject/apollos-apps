@@ -791,9 +791,9 @@ exports[`the CardTile component should render card details 1`] = `
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -845,12 +845,13 @@ exports[`the CardTile component should render card details 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   Marty McFly
                 </Text>
@@ -1034,9 +1035,9 @@ exports[`the CardTile component should render card details with date 1`] = `
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -1088,12 +1089,13 @@ exports[`the CardTile component should render card details with date 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   Marty McFly
                 </Text>

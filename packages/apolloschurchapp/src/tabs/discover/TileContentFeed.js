@@ -9,8 +9,9 @@ import {
   styled,
   ButtonLink,
   TouchableScale,
-  ContentCard,
 } from '@apollosproject/ui-kit';
+
+import ContentCardConnected from '../../ui/ContentCardConnected';
 
 const RowHeader = styled({
   flexDirection: 'row',
@@ -46,7 +47,7 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
             });
           }}
         >
-          <ContentCard
+          <ContentCardConnected
             contentId={item.id}
             isLoading={isLoading}
             tile

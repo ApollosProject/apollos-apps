@@ -119,14 +119,6 @@ const defaultLoadingState = {
   title: '',
   channelType: '',
   coverImage: [],
-  theme: {
-    isLight: '',
-    colors: {
-      background: {
-        paper: '',
-      },
-    },
-  },
   parentChannel: {
     id: '',
     name: '',

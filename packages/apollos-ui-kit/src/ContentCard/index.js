@@ -5,7 +5,7 @@ import { Dimensions } from 'react-native';
 
 import Card from '../Card';
 import { ImageSourceType } from '../ConnectedImage';
-import { ThemeMixin } from '../theme';
+import { ThemeMixin, withTheme } from '../theme';
 import { withIsLoading } from '../isLoading';
 import styled from '../styled';
 
@@ -83,6 +83,7 @@ class ContentCard extends PureComponent {
 
   renderCardFooter() {
     if (!this.props.metrics && !this.props.isLoading) return null;
+
     const floating =
       !this.props.isLoading && this.props.coverImage && !this.props.title;
 
@@ -91,6 +92,7 @@ class ContentCard extends PureComponent {
         <Metrics
           isLoading={this.props.isLoading}
           metrics={this.props.metrics}
+          floating={floating}
         />
       </CardFooter>
     );
@@ -126,7 +128,7 @@ class ContentCard extends PureComponent {
       <ThemeMixin
         mixin={{
           type: get(this.props, 'theme.type', 'light').toLowerCase(),
-          colors: get(this.props, 'theme.colors'),
+          colors: get(this.props, 'theme.colors', {}),
         }}
       >
         <ContentCardWrapper

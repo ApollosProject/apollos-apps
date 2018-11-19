@@ -421,12 +421,13 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   Time Travel
                 </Text>
@@ -558,12 +559,13 @@ exports[`the ThumbnailCard component should render with a category and images 1`
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   Time Travel
                 </Text>

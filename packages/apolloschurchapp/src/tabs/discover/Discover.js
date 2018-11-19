@@ -3,7 +3,6 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
 import { FeedView, BackgroundView } from '@apollosproject/ui-kit';
-import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import TileContentFeed from './TileContentFeed';
 import getContentChannels from './getContentChannels';
@@ -42,7 +41,6 @@ class Discover extends PureComponent {
             refetch,
           }) => (
             <FeedView
-              ListItemComponent={ContentCardConnected}
               error={error}
               content={contentChannels}
               isLoading={loading}

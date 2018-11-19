@@ -2,27 +2,48 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import numeral from 'numeral';
+import Color from 'color';
+
 import ChannelLabel from '../ChannelLabel';
 import styled from '../styled';
+import { withTheme } from '../theme';
 
-const Container = styled(({ theme }) => ({
+const Container = styled({
   flexDirection: 'column',
-  opacity: theme.alpha.low,
-}))(View);
+})(View);
 
 const formatValue = (value) => numeral(value).format('0[.]0a');
 
-const Metrics = ({ metrics = [], isLoading }) => (
-  <Container>
-    {isLoading && (!metrics || !metrics.length) ? (
-      <ChannelLabel isLoading icon="empty" label="empty" key="loading" />
-    ) : (
-      metrics.map(({ value, icon }) => (
-        <ChannelLabel label={formatValue(value)} icon={icon} key={icon} />
-      ))
-    )}
-  </Container>
-);
+const Metrics = ({
+  metrics = [],
+  isLoading,
+  theme,
+  floating,
+  ...channelLabelProps
+}) => {
+  const tint = floating
+    ? Color(theme.colors.primary)
+        .mix(Color(theme.colors.text.secondary))
+        .string()
+    : undefined;
+  return (
+    <Container>
+      {isLoading && (!metrics || !metrics.length) ? (
+        <ChannelLabel isLoading icon="empty" label="empty" key="loading" />
+      ) : (
+        metrics.map(({ value, icon }) => (
+          <ChannelLabel
+            label={formatValue(value)}
+            icon={icon}
+            key={icon}
+            tint={tint}
+            {...channelLabelProps}
+          />
+        ))
+      )}
+    </Container>
+  );
+};
 
 Metrics.propTypes = {
   metrics: PropTypes.arrayOf(
@@ -32,6 +53,8 @@ Metrics.propTypes = {
     })
   ),
   isLoading: PropTypes.bool,
+  theme: PropTypes.shape({}),
+  floating: PropTypes.bool,
 };
 
-export default Metrics;
+export default withTheme()(Metrics);
