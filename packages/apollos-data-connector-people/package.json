@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-people",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.6.0",
-    "@apollosproject/server-core": "^0.6.0",
+    "@apollosproject/data-schema": "^0.7.0",
+    "@apollosproject/server-core": "^0.7.0",
     "apollo-server": "^2.1.0",
     "apollo-server-env": "^2.2.0",
     "form-data": "^2.3.3",
@@ -30,9 +30,10 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.6.0"
+    "@apollosproject/babel-preset-apollos": "^0.7.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "5c3bccdfe37c8bd7a275ecd1f67053f2962449d8"
 }
