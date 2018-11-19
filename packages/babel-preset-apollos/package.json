@@ -1,5 +1,5 @@
 {
-  "name": "babel-preset-apollos",
+  "name": "@apollosproject/babel-preset-apollos",
   "version": "0.6.0",
   "main": "./index.js",
   "dependencies": {
@@ -23,5 +23,9 @@
     "@babel/preset-env": "7.1.6",
     "babel-plugin-module-resolver": "^3.1.1"
   },
-  "license": "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
 }
