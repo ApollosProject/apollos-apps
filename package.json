@@ -27,6 +27,9 @@
     "nuke:cache": "watchman watch-del-all && ./node_modules/.bin/lerna run start --scope apolloschurchapp --stream -- --reset-cache",
     "postinstall": "lerna run build"
   },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
   "devDependencies": {
     "@babel/cli": "7.1.5",
     "@babel/core": "7.1.6",

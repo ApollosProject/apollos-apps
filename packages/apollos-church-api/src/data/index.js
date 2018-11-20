@@ -39,6 +39,12 @@ const data = {
   DevotionalContentItem: {
     dataSource: ContentItem.dataSource,
   }, // alias
+  ContentSeriesContentItem: {
+    dataSource: ContentItem.dataSource,
+  }, // alias
+  MediaContentItem: {
+    dataSource: ContentItem.dataSource,
+  }, // alias
 };
 
 const { dataSources, resolvers, schema, context } = createApolloServerConfig(
