@@ -27,6 +27,6 @@ jobs:
       before_deploy: npm install -g now
       deploy:
         - provider: script
-          script: yarn deploy
+          script: echo "Deploying via Github hooks"
           skip_cleanup: true
           master: true
