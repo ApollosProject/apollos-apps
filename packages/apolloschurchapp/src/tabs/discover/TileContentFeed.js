@@ -20,6 +20,12 @@ const RowHeader = styled({
   paddingBottom: 0,
 })(PaddedView);
 
+const loadingStateObject = {
+  id: 'fake_id',
+  title: '',
+  coverImage: [],
+};
+
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
     <RowHeader>
@@ -55,11 +61,7 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
           />
         </TouchableScale>
       )}
-      loadingStateObject={{
-        id: 'fake_id',
-        title: '',
-        coverImage: [],
-      }}
+      loadingStateObject={loadingStateObject}
       isLoading={isLoading}
     />
   </PaddedView>
