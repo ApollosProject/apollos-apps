@@ -52,6 +52,7 @@ exports[`the Card component should render 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -61,7 +62,7 @@ exports[`the Card component should render 1`] = `
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -150,6 +151,7 @@ exports[`the Card component should render with an error inside an object 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -159,7 +161,7 @@ exports[`the Card component should render with an error inside an object 1`] = `
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >
@@ -248,6 +250,7 @@ exports[`the Card component should render with an error message inside an object
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -257,7 +260,7 @@ exports[`the Card component should render with an error message inside an object
           style={
             Object {
               "paddingHorizontal": 16,
-              "paddingVertical": 12,
+              "paddingVertical": 16,
             }
           }
         >

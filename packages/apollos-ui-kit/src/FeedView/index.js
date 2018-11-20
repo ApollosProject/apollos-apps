@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
 
-import FeedItemCard from '../FeedItemCard';
+import ContentCard from '../ContentCard';
 import { enhancer as mediaQuery } from '../MediaQuery';
 import { withTheme } from '../theme';
 import { ErrorCard } from '../Card';
@@ -30,6 +30,7 @@ class FeedView extends Component {
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
     ListEmptyComponent: PropTypes.func,
+    ListItemComponent: PropTypes.any, // eslint-disable-line
     numColumns: PropTypes.number,
     onEndReachedThreshold: PropTypes.number,
     onPressItem: PropTypes.func,
@@ -40,7 +41,7 @@ class FeedView extends Component {
 
   static defaultProps = {
     isLoading: false,
-    // renderItem: this.defaultFeedItemRenderer,
+    ListItemComponent: ContentCard,
     onEndReachedThreshold: 0.7,
     keyExtractor: (item) => item && item.id,
     content: [],
@@ -58,21 +59,16 @@ class FeedView extends Component {
     if (this.props.renderItem) {
       return this.props.renderItem({ item });
     }
+    const Item = this.props.ListItemComponent;
     return (
       // These are all props of FeedItemCard but they do not have data coming
       // back yet. So I moved them here for safe keeping.
       // TODO: Move them back when the data is ready.
       <TouchableScale onPress={() => this.props.onPressItem({ ...item })}>
-        <FeedItemCard
-          id={get(item, 'id')}
-          title={get(item, 'title') || get(item, 'name') || ' '}
-          isLiked={get(item, 'isLiked')}
-          channelType={get(item, 'parentChannel.name')}
-          channelTypeIcon={get(item, 'parentChannel.iconName')}
-          images={get(item, 'coverImage.sources')}
-          isLoading={get(item, 'isLoading')}
-          isLight={get(item, 'theme.type', '').toLowerCase() !== 'dark'}
-          backgroundColor={get(item, 'theme.colors.paper')}
+        <Item
+          {...item}
+          contentId={item.isLoading ? null : get(item, 'id')}
+          isLoading={item.isLoading}
         />
       </TouchableScale>
     );
@@ -85,6 +81,7 @@ class FeedView extends Component {
       fetchMore,
       isLoading,
       keyExtractor,
+      ListItemComponent,
       ListEmptyComponent,
       numColumns,
       onEndReachedThreshold,
@@ -122,14 +119,6 @@ const defaultLoadingState = {
   title: '',
   channelType: '',
   coverImage: [],
-  theme: {
-    isLight: '',
-    colors: {
-      background: {
-        paper: '',
-      },
-    },
-  },
   parentChannel: {
     id: '',
     name: '',

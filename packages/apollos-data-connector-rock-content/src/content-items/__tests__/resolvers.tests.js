@@ -62,14 +62,16 @@ ApollosConfig.loadJs({
   },
   ROCK_MAPPINGS: {
     FEED_CONTENT_CHANNEL_IDS: [1, 2, 3, 4, 6, 8],
+    SERIES_CONTENT_CHANNEL_TYPE_IDS: [6, 7],
   },
 });
 
 const contentItemFragment = `
-  fragment ContentItemFragment on UniversalContentItem {
+  fragment ContentItemFragment on ContentItem {
     id
     __typename
     title
+    summary
     coverImage {
       name
       key
@@ -123,16 +125,13 @@ const contentItemFragment = `
       id
       __typename
     }
-    terms {
-      key
-      value
-    }
     sharing {
       __typename
       url
       title
       message
     }
+    likedCount
   }
 `;
 
@@ -177,6 +176,34 @@ describe('UniversalContentItem', () => {
     const query = `
       query {
         node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+          ...ContentItemFragment
+        }
+      }
+      ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('gets a MediaContentItem item', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(1, 'MediaContentItem')}") {
+          ...ContentItemFragment
+        }
+      }
+      ${contentItemFragment}
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('gets a ContentSeriesContentItem item', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(1, 'ContentSeriesContentItem')}") {
           ...ContentItemFragment
         }
       }
@@ -248,23 +275,6 @@ describe('UniversalContentItem', () => {
       }
       ${contentItemFragment}
     `;
-    const rootValue = {};
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
-
-  it('filters terms by a match string', async () => {
-    const query = `
-    query {
-      node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
-        ...on UniversalContentItem {
-          terms(match: "speaker") {
-            value
-          }
-        }
-      }
-    }
-  `;
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();

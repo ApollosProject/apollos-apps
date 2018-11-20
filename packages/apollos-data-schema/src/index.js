@@ -212,6 +212,7 @@ export const contentItemSchema = gql`
     videos: [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
+    summary: String
     childContentItemsConnection(
       first: Int
       after: String
@@ -224,6 +225,7 @@ export const contentItemSchema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    likedCount: Int
     isLiked: Boolean
   }
 
@@ -235,6 +237,7 @@ export const contentItemSchema = gql`
     videos: [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
+    summary: String
     childContentItemsConnection(
       first: Int
       after: String
@@ -244,10 +247,9 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-    terms(match: String): [Term]
-
     sharing: SharableContentItem
     theme: Theme
+    likedCount: Int
     isLiked: Boolean
   }
 
@@ -259,6 +261,7 @@ export const contentItemSchema = gql`
     videos: [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
+    summary: String
     childContentItemsConnection(
       first: Int
       after: String
@@ -271,13 +274,61 @@ export const contentItemSchema = gql`
 
     sharing: SharableContentItem
     theme: Theme
+    likedCount: Int
     isLiked: Boolean
     scriptures: [Scripture]
   }
 
-  type Term {
-    key: String
-    value: String
+  type MediaContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
+  }
+
+  type ContentSeriesContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    sharing: SharableContentItem
+    theme: Theme
+    likedCount: Int
+    isLiked: Boolean
+    scriptures: [Scripture]
   }
 
   input ContentItemsConnectionInput {

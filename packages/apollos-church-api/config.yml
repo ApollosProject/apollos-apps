@@ -52,6 +52,12 @@ ROCK_MAPPINGS:
   DEVOTIONAL_TYPE_IDS:
     - 1
 
+  # The apollos app will use the content channel types as "Content Series" types. A Content Series
+  # is any content item that represents a series of content - Sermon Series, Devotional Series, Podcast Series etc
+  SERIES_CONTENT_CHANNEL_TYPE_IDS:
+    - 6
+    - 7
+
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
   TEXT: 1
