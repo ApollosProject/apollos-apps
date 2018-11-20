@@ -40,9 +40,17 @@ class DevotionalContentItem extends PureComponent {
    * Returns: an array of scripture references.
    */
   getScriptureReferences = (scripture) => {
-    // only add refs to the array if not null
-    if (scripture) return scripture.filter((ref) => ref.reference != null);
-    return null;
+    let arrayOfRefrences = null;
+
+    if (scripture) {
+      arrayOfRefrences = scripture.map(
+        (ref) =>
+          // only add refs to the array if they exist
+          ref.reference || ''
+      );
+    }
+
+    return arrayOfRefrences;
   };
 
   /**
@@ -82,6 +90,7 @@ class DevotionalContentItem extends PureComponent {
     const validScriptures = scriptures.filter(
       (scripture) => scripture.reference != null
     );
+
     const hasScripture = loading || validScriptures.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
