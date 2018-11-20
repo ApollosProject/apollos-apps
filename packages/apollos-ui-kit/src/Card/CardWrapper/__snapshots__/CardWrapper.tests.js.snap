@@ -53,6 +53,7 @@ exports[`the CardWrapper component should accept a backgroundColor 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -120,6 +121,7 @@ exports[`the CardWrapper component should accept additional props 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -184,6 +186,7 @@ exports[`the CardWrapper component should accept and render passed in styles 1`]
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -246,6 +249,7 @@ exports[`the CardWrapper component should render 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -308,6 +312,7 @@ exports[`the CardWrapper component should render children 1`] = `
       <View
         style={
           Object {
+            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }

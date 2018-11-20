@@ -1,6 +1,6 @@
 {
   "name": "apolloschurchapp",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "devDependencies": {
     "@storybook/addon-actions": "4.0.7",
@@ -33,7 +33,7 @@
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "lint": "eslint ./src --ext .js",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
-    "prestart": "node ./scripts/get-introspection-data.js",
+    "prestart": "babel-node ./scripts/get-introspection-data.js",
     "start": "react-native start",
     "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007 --root ../../",
     "test": "jest",
@@ -62,7 +62,7 @@
     }
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.6.0",
+    "@apollosproject/ui-kit": "^0.7.0",
     "apollo-cache-inmemory": "1.3.5",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.4.2",
@@ -84,6 +84,7 @@
     "lodash": "^4.17.11",
     "memoize-one": "4.0.0",
     "moment": "2.22.2",
+    "numeral": "^2.0.6",
     "node-fetch": "2.2.0",
     "prettier": "1.14.2",
     "querystring": "^0.2.0",

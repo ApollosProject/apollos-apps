@@ -1,6 +1,7 @@
 import gql from 'graphql-tag';
 
 import { contentItemFragment } from 'apolloschurchapp/src/content-single/getContentItem';
+import { tileCardFragment } from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 export default gql`
   query getContentChannels {
@@ -12,21 +13,12 @@ export default gql`
           node {
             id
             ...contentItemFragment
-            title
-            coverImage {
-              sources {
-                uri
-              }
-            }
-            sharing {
-              title
-              message
-              url
-            }
+            ...tileCardFragment
           }
         }
       }
     }
   }
   ${contentItemFragment}
+  ${tileCardFragment}
 `;

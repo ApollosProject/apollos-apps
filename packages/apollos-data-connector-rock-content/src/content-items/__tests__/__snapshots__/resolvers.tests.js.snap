@@ -1,16 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UniversalContentItem filters terms by a match string 1`] = `
+exports[`UniversalContentItem gets a ContentSeriesContentItem item 1`] = `
 Object {
   "data": Object {
-    "node": Object {
-      "terms": Array [
-        Object {
-          "value": "Pete Foster",
-        },
-      ],
-    },
+    "node": null,
   },
+  "errors": Array [
+    [GraphQLError: No dataSource found using ContentSeriesContentItem],
+  ],
+}
+`;
+
+exports[`UniversalContentItem gets a MediaContentItem item 1`] = `
+Object {
+  "data": Object {
+    "node": null,
+  },
+  "errors": Array [
+    [GraphQLError: No dataSource found using MediaContentItem],
+  ],
 }
 `;
 
@@ -37,8 +45,8 @@ Object {
           Object {
             "cursor": "b487224762b030f470967f45d7205823",
             "node": Object {
-              "__typename": "UniversalContentItem",
-              "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+              "__typename": "MediaContentItem",
+              "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
             },
           },
         ],
@@ -121,6 +129,7 @@ Object {
           ],
         },
       ],
+      "likedCount": null,
       "parentChannel": Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -131,28 +140,7 @@ Object {
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
-      "terms": Array [
-        Object {
-          "key": "summaryText",
-          "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a.",
-        },
-        Object {
-          "key": "campuses",
-          "value": "",
-        },
-        Object {
-          "key": "primaryAudience",
-          "value": "B364CDEE-F000-4965-AE67-0C80DDA365DC",
-        },
-        Object {
-          "key": "secondaryAudiences",
-          "value": "",
-        },
-        Object {
-          "key": "speaker",
-          "value": "Pete Foster",
-        },
-      ],
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "title": "SAMPLE: Easter",
       "videos": Array [
         Object {
@@ -170,6 +158,9 @@ Object {
       ],
     },
   },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
+  ],
 }
 `;
 
@@ -180,7 +171,7 @@ Object {
       "edges": Array [
         Object {
           "node": Object {
-            "__typename": "UniversalContentItem",
+            "__typename": "MediaContentItem",
             "audios": Array [
               Object {
                 "__typename": "AudioMedia",
@@ -199,8 +190,8 @@ Object {
                 Object {
                   "cursor": "b487224762b030f470967f45d7205823",
                   "node": Object {
-                    "__typename": "UniversalContentItem",
-                    "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+                    "__typename": "MediaContentItem",
+                    "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
                   },
                 },
               ],
@@ -225,7 +216,7 @@ Object {
 <p>
 	Vivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>
 ",
-            "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+            "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
             "images": Array [
               Object {
                 "__typename": "ImageMedia",
@@ -283,6 +274,7 @@ Object {
                 ],
               },
             ],
+            "likedCount": null,
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -293,39 +285,7 @@ Object {
               "title": "SAMPLE: Easter",
               "url": "https://apollosrock.newspring.cc/",
             },
-            "siblingContentItemsConnection": Object {
-              "edges": Array [
-                Object {
-                  "cursor": "b487224762b030f470967f45d7205823",
-                  "node": Object {
-                    "__typename": "UniversalContentItem",
-                    "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
-                  },
-                },
-              ],
-            },
-            "terms": Array [
-              Object {
-                "key": "summaryText",
-                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a.",
-              },
-              Object {
-                "key": "campuses",
-                "value": "",
-              },
-              Object {
-                "key": "primaryAudience",
-                "value": "B364CDEE-F000-4965-AE67-0C80DDA365DC",
-              },
-              Object {
-                "key": "secondaryAudiences",
-                "value": "",
-              },
-              Object {
-                "key": "speaker",
-                "value": "Pete Foster",
-              },
-            ],
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "title": "SAMPLE: Easter",
             "videos": Array [
               Object {
@@ -346,6 +306,9 @@ Object {
       ],
     },
   },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
+  ],
 }
 `;
 
@@ -372,7 +335,7 @@ Object {
       "edges": Array [
         Object {
           "node": Object {
-            "__typename": "UniversalContentItem",
+            "__typename": "MediaContentItem",
             "audios": Array [
               Object {
                 "__typename": "AudioMedia",
@@ -391,8 +354,8 @@ Object {
                 Object {
                   "cursor": "b487224762b030f470967f45d7205823",
                   "node": Object {
-                    "__typename": "UniversalContentItem",
-                    "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+                    "__typename": "MediaContentItem",
+                    "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
                   },
                 },
               ],
@@ -417,7 +380,7 @@ Object {
 <p>
 	Vivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>
 ",
-            "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+            "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
             "images": Array [
               Object {
                 "__typename": "ImageMedia",
@@ -475,6 +438,7 @@ Object {
                 ],
               },
             ],
+            "likedCount": null,
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -485,28 +449,7 @@ Object {
               "title": "SAMPLE: Easter",
               "url": "https://apollosrock.newspring.cc/",
             },
-            "terms": Array [
-              Object {
-                "key": "summaryText",
-                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a.",
-              },
-              Object {
-                "key": "campuses",
-                "value": "",
-              },
-              Object {
-                "key": "primaryAudience",
-                "value": "B364CDEE-F000-4965-AE67-0C80DDA365DC",
-              },
-              Object {
-                "key": "secondaryAudiences",
-                "value": "",
-              },
-              Object {
-                "key": "speaker",
-                "value": "Pete Foster",
-              },
-            ],
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "title": "SAMPLE: Easter",
             "videos": Array [
               Object {
@@ -527,6 +470,9 @@ Object {
       ],
     },
   },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
+  ],
 }
 `;
 
@@ -541,8 +487,8 @@ Object {
           Object {
             "cursor": "b487224762b030f470967f45d7205823",
             "node": Object {
-              "__typename": "UniversalContentItem",
-              "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+              "__typename": "MediaContentItem",
+              "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
             },
           },
         ],
@@ -569,6 +515,7 @@ Object {
 ",
       "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       "images": Array [],
+      "likedCount": null,
       "parentChannel": Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -579,10 +526,13 @@ Object {
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
-      "terms": Array [],
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "title": "SAMPLE: Easter",
       "videos": Array [],
     },
   },
+  "errors": Array [
+    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
+  ],
 }
 `;
