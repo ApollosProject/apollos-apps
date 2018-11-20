@@ -48,7 +48,7 @@ Object {
     },
     "alert": "#c64f55",
     "background": Object {
-      "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+      "accent": "rgba(165, 165, 165, 0.30000000000000004)",
       "inactive": "#A5A5A5",
       "paper": "#FFFFFF",
       "screen": "#F8F7F4",
@@ -122,7 +122,7 @@ Object {
           "tertiary": "#6EC5B8",
         },
         "background": Object {
-          "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+          "accent": "rgba(165, 165, 165, 0.30000000000000004)",
           "inactive": "#A5A5A5",
           "paper": "#FFFFFF",
           "screen": "#F8F7F4",
@@ -147,7 +147,7 @@ Object {
           "tertiary": "#6EC5B8",
         },
         "background": Object {
-          "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+          "accent": "rgba(165, 165, 165, 0.30000000000000004)",
           "inactive": "#A5A5A5",
           "paper": "#FFFFFF",
           "screen": "#F8F7F4",
@@ -212,7 +212,7 @@ Object {
   },
   "alert": "#c64f55",
   "background": Object {
-    "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+    "accent": "rgba(165, 165, 165, 0.30000000000000004)",
     "inactive": "#A5A5A5",
     "paper": "#FFFFFF",
     "screen": "#F8F7F4",
@@ -332,7 +332,7 @@ Object {
     },
     "alert": "#c64f55",
     "background": Object {
-      "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+      "accent": "rgba(165, 165, 165, 0.30000000000000004)",
       "inactive": "#A5A5A5",
       "paper": "#FFFFFF",
       "screen": "#F8F7F4",
@@ -402,7 +402,7 @@ Object {
           "tertiary": "#6EC5B8",
         },
         "background": Object {
-          "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+          "accent": "rgba(165, 165, 165, 0.30000000000000004)",
           "inactive": "#A5A5A5",
           "paper": "#FFFFFF",
           "screen": "#F8F7F4",
@@ -427,7 +427,7 @@ Object {
           "tertiary": "#6EC5B8",
         },
         "background": Object {
-          "accent": "rgba(165, 165, 165, 0.09999999999999998)",
+          "accent": "rgba(165, 165, 165, 0.30000000000000004)",
           "inactive": "#A5A5A5",
           "paper": "#FFFFFF",
           "screen": "#F8F7F4",

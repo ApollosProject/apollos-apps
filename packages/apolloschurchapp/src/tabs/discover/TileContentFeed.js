@@ -8,15 +8,23 @@ import {
   HorizontalTileFeed,
   styled,
   ButtonLink,
+  TouchableScale,
 } from '@apollosproject/ui-kit';
-import TileImageItem from './TileImageItem';
+
+import ContentCardConnected from '../../ui/ContentCardConnected';
 
 const RowHeader = styled({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingVertical: 0,
+  paddingBottom: 0,
 })(PaddedView);
+
+const loadingStateObject = {
+  id: 'fake_id',
+  title: '',
+  coverImage: [],
+};
 
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
@@ -38,17 +46,22 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
     <HorizontalTileFeed
       content={content}
       renderItem={({ item }) => (
-        <TileImageItem
-          item={item}
-          isLoading={isLoading}
-          navigation={navigation}
-        />
+        <TouchableScale
+          onPress={() => {
+            navigation.push('ContentSingle', {
+              itemId: item.id,
+            });
+          }}
+        >
+          <ContentCardConnected
+            contentId={item.id}
+            isLoading={isLoading}
+            tile
+            inHorizontalList
+          />
+        </TouchableScale>
       )}
-      loadingStateObject={{
-        id: 'fake_id',
-        title: '',
-        coverImage: [],
-      }}
+      loadingStateObject={loadingStateObject}
       isLoading={isLoading}
     />
   </PaddedView>

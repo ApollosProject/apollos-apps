@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -46,7 +46,7 @@
     "rn-placeholder": "1.2.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.6.0",
+    "@apollosproject/babel-preset-apollos": "^0.7.0",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
@@ -60,5 +60,5 @@
     "react-test-renderer": "16.6.1"
   },
   "license": "SEE LICENSE IN LICENSE.md",
-  "gitHead": "2ef3497714668880b73bb94f2785b9cdc52a9149"
+  "gitHead": "5c3bccdfe37c8bd7a275ecd1f67053f2962449d8"
 }

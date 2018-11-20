@@ -10,7 +10,7 @@ export CenteredView from './CenteredView';
 export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
-export FeedItemCard from './FeedItemCard';
+export ContentCard from './ContentCard';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
