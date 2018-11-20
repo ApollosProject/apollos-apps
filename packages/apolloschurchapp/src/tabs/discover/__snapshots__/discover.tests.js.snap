@@ -318,6 +318,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -938,6 +939,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -1558,6 +1560,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -2178,6 +2181,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -2798,6 +2802,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -3418,6 +3423,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -4038,6 +4044,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -4658,6 +4665,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -5278,6 +5286,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
@@ -5898,6 +5907,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           Object {
                             "height": 600,
                             "paddingBottom": 8,
+                            "paddingTop": 0,
                           }
                         }
                         tileHeight={600}
