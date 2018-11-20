@@ -87,14 +87,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   "id": "",
                   "name": "",
                 },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
-                },
                 "title": "",
               },
               Object {
@@ -105,14 +97,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 "parentChannel": Object {
                   "id": "",
                   "name": "",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
                 },
                 "title": "",
               },
@@ -125,14 +109,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   "id": "",
                   "name": "",
                 },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
-                },
                 "title": "",
               },
               Object {
@@ -143,14 +119,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 "parentChannel": Object {
                   "id": "",
                   "name": "",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
                 },
                 "title": "",
               },
@@ -163,14 +131,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   "id": "",
                   "name": "",
                 },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
-                },
                 "title": "",
               },
               Object {
@@ -181,14 +141,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 "parentChannel": Object {
                   "id": "",
                   "name": "",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
                 },
                 "title": "",
               },
@@ -201,14 +153,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   "id": "",
                   "name": "",
                 },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
-                },
                 "title": "",
               },
               Object {
@@ -219,14 +163,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 "parentChannel": Object {
                   "id": "",
                   "name": "",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
                 },
                 "title": "",
               },
@@ -239,14 +175,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   "id": "",
                   "name": "",
                 },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
-                },
                 "title": "",
               },
               Object {
@@ -257,14 +185,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 "parentChannel": Object {
                   "id": "",
                   "name": "",
-                },
-                "theme": Object {
-                  "colors": Object {
-                    "background": Object {
-                      "paper": "",
-                    },
-                  },
-                  "isLight": "",
                 },
                 "title": "",
               },
@@ -346,6 +266,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId0"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -365,6 +293,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -373,43 +302,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -425,8 +345,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -440,48 +373,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -510,6 +450,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId1"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -529,6 +477,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -537,43 +486,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -589,8 +529,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -604,48 +557,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -674,6 +634,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId2"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -693,6 +661,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -701,43 +670,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -753,8 +713,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -768,48 +741,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -838,6 +818,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId3"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -857,6 +845,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -865,43 +854,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -917,8 +897,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -932,48 +925,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1002,6 +1002,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId4"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -1021,6 +1029,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1029,43 +1038,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -1081,8 +1081,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -1096,48 +1109,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1166,6 +1186,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId5"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -1185,6 +1213,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1193,43 +1222,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -1245,8 +1265,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -1260,48 +1293,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1330,6 +1370,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId6"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -1349,6 +1397,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1357,43 +1406,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -1409,8 +1449,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -1424,48 +1477,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1494,6 +1554,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId7"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -1513,6 +1581,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1521,43 +1590,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -1573,8 +1633,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -1588,48 +1661,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1658,6 +1738,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId8"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -1677,6 +1765,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1685,43 +1774,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -1737,8 +1817,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -1752,48 +1845,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1822,6 +1922,14 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               >
                 <View
+                  channelType=""
+                  id="fakeId9"
+                  parentChannel={
+                    Object {
+                      "id": "",
+                      "name": "",
+                    }
+                  }
                   style={
                     Object {
                       "backgroundColor": "#FFFFFF",
@@ -1841,6 +1949,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
+                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1849,43 +1958,34 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "opacity": 1,
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
+                          "paddingBottom": 12,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 12,
+                          "paddingTop": 24,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -1901,8 +2001,21 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 16,
+                            "marginVertical": 5,
+                            "width": "100%",
+                          }
+                        }
+                      />
                     </View>
                     <View
+                      floating={false}
                       style={
                         Object {
                           "alignItems": "center",
@@ -1916,48 +2029,55 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       }
                     >
                       <View
-                        flexed={true}
                         style={
                           Object {
-                            "alignItems": "center",
-                            "flex": 1,
-                            "flexDirection": "row",
+                            "flexDirection": "column",
                           }
                         }
                       >
                         <View
+                          flexed={false}
                           style={
                             Object {
-                              "flex": 1,
-                              "paddingRight": 8,
+                              "alignItems": "center",
+                              "flex": null,
+                              "flexDirection": "row",
                             }
                           }
-                          withIcon={null}
                         >
                           <View
                             style={
                               Object {
-                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
+                                "height": 19.2,
+                                "width": 19.2,
                               }
                             }
                           />
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 4,
+                              }
+                            }
+                            withIcon="empty"
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignSelf": "stretch",
+                                  "backgroundColor": "#A5A5A5",
+                                  "borderRadius": 16,
+                                  "height": 12,
+                                  "marginVertical": 2.6400000000000006,
+                                  "width": "50%",
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 19.2,
-                            "width": 19.2,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>

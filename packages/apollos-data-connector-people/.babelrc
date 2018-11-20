@@ -1,8 +1,8 @@
 {
-    "presets": ["apollos"],
-    "env": {
-      "development": {
-        "sourceMaps": "inline"
-      }
+  "presets": ["@apollosproject/apollos"],
+  "env": {
+    "development": {
+      "sourceMaps": "inline"
     }
   }
+}

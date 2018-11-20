@@ -10,12 +10,12 @@ const StyledCard = compose(
   withIsLoading,
   styled(({ theme, cardColor, inHorizontalList = false }) => ({
     // card styles
-    backgroundColor: cardColor || theme.colors.background.paper,
+    backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
     borderRadius: theme.sizing.baseUnit,
     ...(inHorizontalList
       ? {
-          marginLeft: theme.sizing.baseUnit * 0.5,
-          marginRight: 0,
+          // provides spacing between cards also fixes android shadow needing "space" to render into
+          margin: theme.sizing.baseUnit / 2,
         }
       : {
           marginHorizontal: theme.sizing.baseUnit,
@@ -29,20 +29,22 @@ const StyledCard = compose(
  * Overflow on iOS, when declared on the same element as a shadow, clips the shadow so overflow must
  * live on a child wrapper. https://github.com/facebook/react-native/issues/449
  */
-const OverflowFix = styled(({ theme }) => ({
+const OverflowFix = styled(({ theme, forceRatio }) => ({
   borderRadius: theme.sizing.baseUnit,
   overflow: 'hidden',
+  aspectRatio: forceRatio,
 }))(View);
 
-const Card = pure(({ children, isLoading, ...otherProps }) => (
-  <StyledCard {...otherProps}>
-    <OverflowFix>{children}</OverflowFix>
+const Card = pure(({ children, isLoading, forceRatio, ...otherProps }) => (
+  <StyledCard forceRatio={forceRatio} {...otherProps}>
+    <OverflowFix forceRatio={forceRatio}>{children}</OverflowFix>
   </StyledCard>
 ));
 
 Card.propTypes = {
   backgroundColor: PropTypes.string,
   children: PropTypes.node,
+  forceRatio: PropTypes.number,
   style: PropTypes.any, // eslint-disable-line
 };
 
