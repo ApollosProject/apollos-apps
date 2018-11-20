@@ -16,6 +16,7 @@ import * as Sharable from './sharable';
 import * as Analytics from './analytics';
 import * as Family from './family';
 import * as Pagination from './pagination';
+import * as Group from './groups';
 
 const data = {
   ContentChannel,
@@ -38,6 +39,7 @@ const data = {
   DevotionalContentItem: {
     dataSource: ContentItem.dataSource,
   }, // alias
+  Group,
 };
 
 const { dataSources, resolvers, schema, context } = createApolloServerConfig(
