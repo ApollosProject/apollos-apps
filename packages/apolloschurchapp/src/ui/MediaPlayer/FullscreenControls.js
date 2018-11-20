@@ -12,11 +12,15 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 
-import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { withTheme, withThemeMixin } from 'apolloschurchapp/src/ui/theme';
-import styled from 'apolloschurchapp/src/ui/styled';
-import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
-import { ButtonIcon } from 'apolloschurchapp/src/ui/Button';
+import {
+  PaddedView,
+  withTheme,
+  withThemeMixin,
+  styled,
+  H4,
+  H6,
+  ButtonIcon,
+} from '@apollosproject/ui-kit';
 
 import Seeker from './Seeker';
 import { getControlState } from './queries';

@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { Platform, View, Animated, StyleSheet } from 'react-native';
 import { Mutation, Query } from 'react-apollo';
 
-import styled from 'apolloschurchapp/src/ui/styled';
-import Touchable from 'apolloschurchapp/src/ui/Touchable';
-import { H5, H6 } from 'apolloschurchapp/src/ui/typography';
-import { ButtonIcon } from 'apolloschurchapp/src/ui/Button';
-import Icon from 'apolloschurchapp/src/ui/Icon';
-import { withTheme } from 'apolloschurchapp/src/ui/theme';
+import {
+  withTheme,
+  Icon,
+  styled,
+  Touchable,
+  H5,
+  H6,
+  ButtonIcon,
+} from '@apollosproject/ui-kit';
 
 import Seeker from './Seeker';
 

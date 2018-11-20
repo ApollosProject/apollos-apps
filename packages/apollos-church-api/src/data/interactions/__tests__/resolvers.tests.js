@@ -4,8 +4,8 @@ import { makeExecutableSchema } from 'apollo-server';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 
+import { generateToken } from '@apollosproject/data-connector-rock-auth';
 import { getTestContext } from '../../../utils/testUtils';
-import { generateToken } from '../../auth/token';
 import { testSchema as typeDefs, resolvers } from '../..';
 
 ApollosConfig.loadJs({
@@ -13,6 +13,9 @@ ApollosConfig.loadJs({
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+  },
+  ROCK_MAPPINGS: {
+    SERIES_CONTENT_CHANNEL_TYPE_IDS: [6, 7],
   },
 });
 
