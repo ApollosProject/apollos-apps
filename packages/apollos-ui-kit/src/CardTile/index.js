@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { Dimensions, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
 import moment from 'moment';
@@ -31,7 +31,7 @@ const TileSpacer = styled(({ theme }) => ({
 }))(View);
 
 const Tile = styled(({ theme }) => ({
-  height: '100%',
+  width: Dimensions.get('window').width * 0.66,
   aspectRatio: 1,
   borderRadius: theme.sizing.baseUnit,
   backgroundColor: theme.colors.lightTertiary,

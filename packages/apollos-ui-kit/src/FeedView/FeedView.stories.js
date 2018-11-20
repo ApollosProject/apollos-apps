@@ -17,14 +17,6 @@ storiesOf('FeedView', module).add('Example', () => (
               height: 400,
             },
           ],
-          theme: {
-            isLight: true,
-            colors: {
-              background: {
-                paper: '#fa8072',
-              },
-            },
-          },
           parentChannel: {
             id: '01',
             name: 'eschatology',
@@ -43,14 +35,6 @@ storiesOf('FeedView', module).add('Example', () => (
               height: 400,
             },
           ],
-          theme: {
-            isLight: true,
-            colors: {
-              background: {
-                paper: '#e9967a',
-              },
-            },
-          },
           parentChannel: {
             id: '02',
             name: 'eschatology',

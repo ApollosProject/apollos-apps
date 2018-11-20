@@ -236,9 +236,9 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
                   fill={
                     Array [
                       0,
-                      0.3137254901960784,
-                      0.3137254901960784,
-                      0.3137254901960784,
+                      0.6470588235294118,
+                      0.6470588235294118,
+                      0.6470588235294118,
                       1,
                     ]
                   }
@@ -282,8 +282,7 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
               <View
                 style={
                   Object {
-                    "flex": 1,
-                    "paddingHorizontal": 8,
+                    "paddingHorizontal": 4,
                   }
                 }
                 withIcon="pin"
@@ -291,12 +290,13 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
                 <Text
                   style={
                     Object {
-                      "color": "#505050",
+                      "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "lineHeight": 17.28,
                     }
                   }
+                  tint="#A5A5A5"
                 >
                   
                 </Text>

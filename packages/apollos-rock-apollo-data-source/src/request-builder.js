@@ -112,6 +112,15 @@ export default class RockRequestBuilder {
   };
 
   /**
+   * Select which attributes to return
+   * @param {string} select
+   */
+  select = (select) => {
+    this.query.$select = select;
+    return this;
+  };
+
+  /**
    * Transform the shape of the results.
    * This is ran _after_ data is requested and not
    * affected by other methods that are chained to the request

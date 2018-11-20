@@ -22,6 +22,8 @@ InMemoryCache {
         "ContentItem": Array [
           "UniversalContentItem",
           "DevotionalContentItem",
+          "MediaContentItem",
+          "ContentSeriesContentItem",
         ],
         "Media": Array [
           "ImageMedia",
@@ -39,6 +41,8 @@ InMemoryCache {
           "Interaction",
           "UniversalContentItem",
           "DevotionalContentItem",
+          "MediaContentItem",
+          "ContentSeriesContentItem",
         ],
         "Sharable": Array [
           "SharableContentItem",

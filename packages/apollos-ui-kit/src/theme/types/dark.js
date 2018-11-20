@@ -12,7 +12,7 @@ const dark = ({ colors, alpha }) => ({
       screen: colors.screen,
       paper: colors.paper,
       accent: Color(colors.darkTertiary)
-        .fade(alpha.high)
+        .fade(alpha.medium)
         .string(),
       inactive: colors.darkTertiary,
     },

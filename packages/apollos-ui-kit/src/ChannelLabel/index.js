@@ -14,7 +14,10 @@ import * as Icons from '../Icon/icons';
 const enhance = compose(
   withIsLoading,
   pure,
-  withTheme()
+  withTheme(({ theme, tint, iconSize }) => ({
+    tint: tint || theme.colors.text.tertiary,
+    iconSize: iconSize || theme.helpers.rem(1.2),
+  }))
 );
 
 const Wrapper = styled(({ flexed }) => ({
@@ -24,37 +27,34 @@ const Wrapper = styled(({ flexed }) => ({
 }))(View);
 
 const PlaceholderWrapper = styled(({ theme, withIcon }) => ({
-  flex: 1,
   ...(withIcon
-    ? { paddingHorizontal: theme.sizing.baseUnit / 2 }
-    : { paddingRight: theme.sizing.baseUnit / 2 }),
+    ? { paddingHorizontal: theme.sizing.baseUnit / 4 }
+    : { paddingRight: theme.sizing.baseUnit / 4 }),
 }))(View);
 
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
+const StyledH6 = styled(({ tint }) => ({
+  color: tint,
 }))(H6);
 
-const ChannelLabel = enhance(({ label, icon, withFlex, isLoading, theme }) => (
-  <Wrapper flexed={withFlex}>
-    {icon ? (
-      <Icon
-        name={icon}
-        size={theme.helpers.rem(1.2)}
-        fill={theme.colors.text.secondary}
-        isLoading={isLoading}
-      />
-    ) : null}
-    <PlaceholderWrapper withIcon={icon}>
-      <StyledH6>{label}</StyledH6>
-    </PlaceholderWrapper>
-  </Wrapper>
-));
+const ChannelLabel = enhance(
+  ({ label, tint, icon, withFlex, isLoading, iconSize }) => (
+    <Wrapper flexed={withFlex}>
+      {icon ? (
+        <Icon name={icon} size={iconSize} fill={tint} isLoading={isLoading} />
+      ) : null}
+      <PlaceholderWrapper withIcon={icon}>
+        <StyledH6 tint={tint}>{label}</StyledH6>
+      </PlaceholderWrapper>
+    </Wrapper>
+  )
+);
 
 ChannelLabel.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   icon: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)),
   isLoading: PropTypes.bool,
   withFlex: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 ChannelLabel.defaultProps = {

@@ -64,7 +64,9 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
         <View
           style={
             Object {
+              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -94,7 +96,6 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
               }
               style={
                 Object {
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "opacity": 0,
                   "resizeMode": "cover",
@@ -191,7 +192,9 @@ exports[`the TileImage component should render 1`] = `
         <View
           style={
             Object {
+              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -221,7 +224,6 @@ exports[`the TileImage component should render 1`] = `
               }
               style={
                 Object {
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "opacity": 0,
                   "resizeMode": "cover",
@@ -245,7 +247,7 @@ exports[`the TileImage component should render 1`] = `
             }
             locations={
               Array [
-                0.3,
+                0.5,
                 1,
               ]
             }
@@ -353,7 +355,9 @@ exports[`the TileImage component should render a loading state 1`] = `
         <View
           style={
             Object {
+              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -475,7 +479,9 @@ exports[`the TileImage component should render without text 1`] = `
         <View
           style={
             Object {
+              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
               "width": "100%",
             }
           }
@@ -505,7 +511,6 @@ exports[`the TileImage component should render without text 1`] = `
               }
               style={
                 Object {
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "opacity": 0,
                   "resizeMode": "cover",

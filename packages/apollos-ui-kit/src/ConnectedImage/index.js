@@ -8,7 +8,7 @@ import styled from '../styled';
 import SkeletonImage from './SkeletonImage';
 
 // This mirrors the File resource we get from Heighliner:
-const ImageSourceType = PropTypes.oneOfType([
+export const ImageSourceType = PropTypes.oneOfType([
   PropTypes.shape({
     uri: PropTypes.string,
     label: PropTypes.string,

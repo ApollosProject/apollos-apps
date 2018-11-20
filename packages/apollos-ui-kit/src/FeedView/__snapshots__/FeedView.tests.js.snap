@@ -55,14 +55,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                 "id": "01",
                 "name": "eschatology",
               },
-              "theme": Object {
-                "colors": Object {
-                  "background": Object {
-                    "paper": "#fa8072",
-                  },
-                },
-                "isLight": true,
-              },
               "title": "Will I get to shake Jesus' hand?",
             },
           },
@@ -98,6 +90,7 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
         >
           <View
             accessible={true}
+            id="1"
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -123,6 +116,7 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
             <View
               style={
                 Object {
+                  "aspectRatio": undefined,
                   "borderRadius": 16,
                   "overflow": "hidden",
                 }
@@ -132,15 +126,29 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
               >
-                <View
+                <Image
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "height": 400,
+                        "uri": "https://picsum.photos/600/400/?random",
+                        "width": 600,
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.5,
                       "backgroundColor": "#A5A5A5",
+                      "opacity": 1,
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
@@ -149,12 +157,16 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "paddingBottom": 12,
                     "paddingHorizontal": 16,
-                    "paddingVertical": 12,
+                    "paddingTop": 24,
+                    "paddingVertical": 16,
                   }
                 }
               >
                 <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#303030",
@@ -166,197 +178,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
                 >
                   Will I get to shake Jesus' hand?
                 </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "flexWrap": "wrap",
-                    "justifyContent": "space-between",
-                    "paddingHorizontal": 16,
-                    "paddingTop": 4,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
-                <View
-                  flexed={true}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "flexDirection": "row",
-                    }
-                  }
-                >
-                  <RNSVGSvgView
-                    align="xMidYMid"
-                    bbHeight="19.2"
-                    bbWidth="19.2"
-                    meetOrSlice={0}
-                    minX={0}
-                    minY={0}
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "transparent",
-                        },
-                        undefined,
-                        false,
-                        Object {
-                          "flex": 0,
-                          "height": 19.2,
-                          "width": 19.2,
-                        },
-                      ]
-                    }
-                    vbHeight={24}
-                    vbWidth={24}
-                  >
-                    <RNSVGPath
-                      d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                      fill={
-                        Array [
-                          0,
-                          0.3137254901960784,
-                          0.3137254901960784,
-                          0.3137254901960784,
-                          1,
-                        ]
-                      }
-                      fillOpacity={1}
-                      fillRule={1}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth="1"
-                      x={0}
-                      y={0}
-                    />
-                  </RNSVGSvgView>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                        "paddingHorizontal": 8,
-                      }
-                    }
-                    withIcon="like"
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#505050",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 17.28,
-                        }
-                      }
-                    >
-                      Eschatology
-                    </Text>
-                  </View>
-                </View>
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight="19.2"
-                  bbWidth="19.2"
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                      },
-                      undefined,
-                      false,
-                      Object {
-                        "flex": 0,
-                        "height": 19.2,
-                        "width": 19.2,
-                      },
-                    ]
-                  }
-                  vbHeight={24}
-                  vbWidth={24}
-                >
-                  <RNSVGPath
-                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                    fill={
-                      Array [
-                        0,
-                        0.18823529411764706,
-                        0.18823529411764706,
-                        0.18823529411764706,
-                        1,
-                      ]
-                    }
-                    fillOpacity={1}
-                    fillRule={1}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={
-                      Array [
-                        "fill",
-                      ]
-                    }
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth="1"
-                    x={0}
-                    y={0}
-                  />
-                </RNSVGSvgView>
               </View>
             </View>
           </View>
@@ -416,14 +237,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -434,14 +247,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -454,14 +259,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -472,14 +269,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -492,14 +281,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -510,14 +291,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -530,14 +303,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -548,14 +313,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -568,14 +325,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -586,14 +335,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -648,6 +389,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId0"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -667,6 +417,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -675,43 +426,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -727,8 +469,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -742,48 +497,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -812,6 +574,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId1"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -831,6 +602,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -839,43 +611,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -891,8 +654,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -906,48 +682,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -976,6 +759,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId2"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -995,6 +787,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1003,43 +796,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -1055,8 +839,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1070,48 +867,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1140,6 +944,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId3"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1159,6 +972,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1167,43 +981,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -1219,8 +1024,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1234,48 +1052,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1304,6 +1129,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId4"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1323,6 +1157,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1331,43 +1166,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -1383,8 +1209,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1398,48 +1237,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1468,6 +1314,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId5"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1487,6 +1342,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1495,43 +1351,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -1547,8 +1394,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1562,48 +1422,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1632,6 +1499,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId6"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1651,6 +1527,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1659,43 +1536,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -1711,8 +1579,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1726,48 +1607,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1796,6 +1684,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId7"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1815,6 +1712,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1823,43 +1721,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -1875,8 +1764,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -1890,48 +1792,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -1960,6 +1869,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId8"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1979,6 +1897,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1987,43 +1906,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -2039,8 +1949,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -2054,48 +1977,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -2124,6 +2054,15 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId9"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -2143,6 +2082,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2151,43 +2091,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -2203,8 +2134,21 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -2218,48 +2162,55 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -2326,14 +2277,6 @@ exports[`The FeedView component renders correctly 1`] = `
                 "id": "01",
                 "name": "eschatology",
               },
-              "theme": Object {
-                "colors": Object {
-                  "background": Object {
-                    "paper": "#fa8072",
-                  },
-                },
-                "isLight": true,
-              },
               "title": "Will I get to shake Jesus' hand?",
             },
           },
@@ -2351,14 +2294,6 @@ exports[`The FeedView component renders correctly 1`] = `
                 "iconName": "like",
                 "id": "02",
                 "name": "eschatology",
-              },
-              "theme": Object {
-                "colors": Object {
-                  "background": Object {
-                    "paper": "#e9967a",
-                  },
-                },
-                "isLight": true,
               },
               "title": "Where is the new Jerusalem anyways?",
             },
@@ -2412,6 +2347,24 @@ exports[`The FeedView component renders correctly 1`] = `
             }
           >
             <View
+              node={
+                Object {
+                  "coverImage": Array [
+                    Object {
+                      "height": 400,
+                      "uri": "https://picsum.photos/600/400/?random",
+                      "width": 600,
+                    },
+                  ],
+                  "id": "1",
+                  "parentChannel": Object {
+                    "iconName": "like",
+                    "id": "01",
+                    "name": "eschatology",
+                  },
+                  "title": "Will I get to shake Jesus' hand?",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -2431,6 +2384,7 @@ exports[`The FeedView component renders correctly 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2439,30 +2393,15 @@ exports[`The FeedView component renders correctly 1`] = `
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
-                      "width": "100%",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
+                      "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
                   <Text
+                    ellipsizeMode="tail"
+                    numberOfLines={3}
                     style={
                       Object {
                         "color": "#303030",
@@ -2471,128 +2410,7 @@ exports[`The FeedView component renders correctly 1`] = `
                         "lineHeight": 27.6,
                       }
                     }
-                  >
-                     
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "flexWrap": "wrap",
-                      "justifyContent": "space-between",
-                      "paddingHorizontal": 16,
-                      "paddingTop": 4,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    flexed={true}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "paddingRight": 8,
-                        }
-                      }
-                      withIcon={null}
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                          }
-                        }
-                      >
-                        
-                      </Text>
-                    </View>
-                  </View>
-                  <RNSVGSvgView
-                    align="xMidYMid"
-                    bbHeight="19.2"
-                    bbWidth="19.2"
-                    meetOrSlice={0}
-                    minX={0}
-                    minY={0}
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "transparent",
-                        },
-                        undefined,
-                        false,
-                        Object {
-                          "flex": 0,
-                          "height": 19.2,
-                          "width": 19.2,
-                        },
-                      ]
-                    }
-                    vbHeight={24}
-                    vbWidth={24}
-                  >
-                    <RNSVGPath
-                      d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                      fill={
-                        Array [
-                          0,
-                          0.18823529411764706,
-                          0.18823529411764706,
-                          0.18823529411764706,
-                          1,
-                        ]
-                      }
-                      fillOpacity={1}
-                      fillRule={1}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth="1"
-                      x={0}
-                      y={0}
-                    />
-                  </RNSVGSvgView>
+                  />
                 </View>
               </View>
             </View>
@@ -2621,6 +2439,24 @@ exports[`The FeedView component renders correctly 1`] = `
             }
           >
             <View
+              node={
+                Object {
+                  "coverImage": Array [
+                    Object {
+                      "height": 400,
+                      "uri": "https://picsum.photos/600/400/?random",
+                      "width": 600,
+                    },
+                  ],
+                  "id": "2",
+                  "parentChannel": Object {
+                    "iconName": "like",
+                    "id": "02",
+                    "name": "eschatology",
+                  },
+                  "title": "Where is the new Jerusalem anyways?",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -2640,6 +2476,7 @@ exports[`The FeedView component renders correctly 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2648,30 +2485,15 @@ exports[`The FeedView component renders correctly 1`] = `
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
-                      "width": "100%",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
+                      "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingVertical": 16,
                     }
                   }
                 >
                   <Text
+                    ellipsizeMode="tail"
+                    numberOfLines={3}
                     style={
                       Object {
                         "color": "#303030",
@@ -2680,128 +2502,7 @@ exports[`The FeedView component renders correctly 1`] = `
                         "lineHeight": 27.6,
                       }
                     }
-                  >
-                     
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "flexWrap": "wrap",
-                      "justifyContent": "space-between",
-                      "paddingHorizontal": 16,
-                      "paddingTop": 4,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    flexed={true}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "paddingRight": 8,
-                        }
-                      }
-                      withIcon={null}
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                          }
-                        }
-                      >
-                        
-                      </Text>
-                    </View>
-                  </View>
-                  <RNSVGSvgView
-                    align="xMidYMid"
-                    bbHeight="19.2"
-                    bbWidth="19.2"
-                    meetOrSlice={0}
-                    minX={0}
-                    minY={0}
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "transparent",
-                        },
-                        undefined,
-                        false,
-                        Object {
-                          "flex": 0,
-                          "height": 19.2,
-                          "width": 19.2,
-                        },
-                      ]
-                    }
-                    vbHeight={24}
-                    vbWidth={24}
-                  >
-                    <RNSVGPath
-                      d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                      fill={
-                        Array [
-                          0,
-                          0.18823529411764706,
-                          0.18823529411764706,
-                          0.18823529411764706,
-                          1,
-                        ]
-                      }
-                      fillOpacity={1}
-                      fillRule={1}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth="1"
-                      x={0}
-                      y={0}
-                    />
-                  </RNSVGSvgView>
+                  />
                 </View>
               </View>
             </View>
@@ -2862,14 +2563,6 @@ exports[`The FeedView component renders empty state 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -2880,14 +2573,6 @@ exports[`The FeedView component renders empty state 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -2900,14 +2585,6 @@ exports[`The FeedView component renders empty state 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -2918,14 +2595,6 @@ exports[`The FeedView component renders empty state 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -2938,14 +2607,6 @@ exports[`The FeedView component renders empty state 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -2956,14 +2617,6 @@ exports[`The FeedView component renders empty state 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -2976,14 +2629,6 @@ exports[`The FeedView component renders empty state 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -2994,14 +2639,6 @@ exports[`The FeedView component renders empty state 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -3014,14 +2651,6 @@ exports[`The FeedView component renders empty state 1`] = `
               "id": "",
               "name": "",
             },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
-            },
             "title": "",
           },
           Object {
@@ -3032,14 +2661,6 @@ exports[`The FeedView component renders empty state 1`] = `
             "parentChannel": Object {
               "id": "",
               "name": "",
-            },
-            "theme": Object {
-              "colors": Object {
-                "background": Object {
-                  "paper": "",
-                },
-              },
-              "isLight": "",
             },
             "title": "",
           },
@@ -3093,6 +2714,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId0"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -3112,6 +2742,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3120,43 +2751,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -3172,8 +2794,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -3187,48 +2822,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -3257,6 +2899,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId1"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -3276,6 +2927,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3284,43 +2936,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -3336,8 +2979,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -3351,48 +3007,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -3421,6 +3084,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId2"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -3440,6 +3112,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3448,43 +3121,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -3500,8 +3164,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -3515,48 +3192,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -3585,6 +3269,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId3"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -3604,6 +3297,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3612,43 +3306,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -3664,8 +3349,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -3679,48 +3377,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -3749,6 +3454,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId4"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -3768,6 +3482,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3776,43 +3491,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -3828,8 +3534,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -3843,48 +3562,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -3913,6 +3639,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId5"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -3932,6 +3667,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3940,43 +3676,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -3992,8 +3719,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -4007,48 +3747,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -4077,6 +3824,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId6"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -4096,6 +3852,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4104,43 +3861,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -4156,8 +3904,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -4171,48 +3932,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -4241,6 +4009,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId7"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -4260,6 +4037,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4268,43 +4046,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -4320,8 +4089,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -4335,48 +4117,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -4405,6 +4194,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId8"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -4424,6 +4222,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4432,43 +4231,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -4484,8 +4274,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -4499,48 +4302,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
@@ -4569,6 +4379,15 @@ exports[`The FeedView component renders empty state 1`] = `
             }
           >
             <View
+              channelType=""
+              contentId={null}
+              id="fakeId9"
+              parentChannel={
+                Object {
+                  "id": "",
+                  "name": "",
+                }
+              }
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -4588,6 +4407,7 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
+                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4596,43 +4416,34 @@ exports[`The FeedView component renders empty state 1`] = `
                 <View
                   style={
                     Object {
+                      "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={Array []}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "opacity": 1,
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
+                  />
                 </View>
                 <View
                   style={
                     Object {
+                      "paddingBottom": 12,
                       "paddingHorizontal": 16,
-                      "paddingVertical": 12,
+                      "paddingTop": 24,
+                      "paddingVertical": 16,
                     }
                   }
                 >
@@ -4648,8 +4459,21 @@ exports[`The FeedView component renders empty state 1`] = `
                       }
                     }
                   />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 5,
+                        "width": "100%",
+                      }
+                    }
+                  />
                 </View>
                 <View
+                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
@@ -4663,48 +4487,55 @@ exports[`The FeedView component renders empty state 1`] = `
                   }
                 >
                   <View
-                    flexed={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "flex": 1,
-                        "flexDirection": "row",
+                        "flexDirection": "column",
                       }
                     }
                   >
                     <View
+                      flexed={false}
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingRight": 8,
+                          "alignItems": "center",
+                          "flex": null,
+                          "flexDirection": "row",
                         }
                       }
-                      withIcon={null}
                     >
                       <View
                         style={
                           Object {
-                            "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 12,
-                            "marginVertical": 2.6400000000000006,
-                            "width": "50%",
+                            "height": 19.2,
+                            "width": 19.2,
                           }
                         }
                       />
+                      <View
+                        style={
+                          Object {
+                            "paddingHorizontal": 4,
+                          }
+                        }
+                        withIcon="empty"
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "stretch",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 12,
+                              "marginVertical": 2.6400000000000006,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </View>
                     </View>
                   </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 19.2,
-                        "width": 19.2,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>

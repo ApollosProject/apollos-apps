@@ -1,15 +1,14 @@
 import { Platform } from 'react-native';
 import { compose } from 'recompose';
 
+import GradientOverlayImage from '../GradientOverlayImage';
 import styled from '../styled';
-import ProgressiveImage from '../ProgressiveImage';
 import { getIsLoading } from '../isLoading';
 
 const Image = compose(
   getIsLoading,
   styled(
     ({ theme }) => ({
-      aspectRatio: 1,
       width: '100%',
       ...Platform.select({
         android: {
@@ -21,8 +20,8 @@ const Image = compose(
     }),
     'Card.Image'
   )
-)(ProgressiveImage);
+)(GradientOverlayImage);
 
-Image.propTypes = ProgressiveImage.propTypes;
+Image.propTypes = GradientOverlayImage.propTypes;
 
 export default Image;

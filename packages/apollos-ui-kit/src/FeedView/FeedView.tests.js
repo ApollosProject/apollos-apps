@@ -4,7 +4,7 @@ import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 
 import Providers from '../Providers';
-import FeedItemCard from '../FeedItemCard';
+import ContentCard from '../ContentCard';
 
 import FeedView from '.';
 
@@ -25,14 +25,6 @@ describe('The FeedView component', () => {
                     height: 400,
                   },
                 ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#fa8072',
-                    },
-                  },
-                },
                 parentChannel: {
                   id: '01',
                   name: 'eschatology',
@@ -51,14 +43,6 @@ describe('The FeedView component', () => {
                     height: 400,
                   },
                 ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#e9967a',
-                    },
-                  },
-                },
                 parentChannel: {
                   id: '02',
                   name: 'eschatology',
@@ -85,13 +69,10 @@ describe('The FeedView component', () => {
       const theItem = get(item, 'item', {});
       return (
         <TouchableWithoutFeedback>
-          <FeedItemCard
+          <ContentCard
             id={theItem.node.id}
-            title={theItem.node.title || theItem.node.name || ' '}
-            channelType={theItem.node.parentChannel.name}
-            channelTypeIcon={theItem.node.parentChannel.iconName}
-            images={theItem.node.coverImage.sources}
-            isLoading={theItem.node.isLoading}
+            title={theItem.node.title}
+            coverImage={theItem.node.coverImage}
           />
         </TouchableWithoutFeedback>
       );
@@ -113,14 +94,6 @@ describe('The FeedView component', () => {
                     height: 400,
                   },
                 ],
-                theme: {
-                  isLight: true,
-                  colors: {
-                    background: {
-                      paper: '#fa8072',
-                    },
-                  },
-                },
                 parentChannel: {
                   id: '01',
                   name: 'eschatology',

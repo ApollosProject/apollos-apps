@@ -6,6 +6,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { styled, FeedView, BackgroundView } from '@apollosproject/ui-kit';
+import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
 
@@ -44,6 +45,7 @@ class Home extends PureComponent {
           <Query query={getUserFeed} fetchPolicy="cache-and-network">
             {({ loading, error, data, refetch }) => (
               <FeedView
+                ListItemComponent={ContentCardConnected}
                 content={get(data, 'userFeed.edges', []).map(
                   (edge) => edge.node
                 )}
