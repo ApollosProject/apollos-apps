@@ -38,6 +38,7 @@ export TableView, {
   Cell,
   CellText,
   CellIcon,
+  CellContent,
   Divider,
   FormFields,
 } from './TableView';
