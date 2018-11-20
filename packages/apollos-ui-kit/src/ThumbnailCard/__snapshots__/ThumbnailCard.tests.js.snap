@@ -45,8 +45,7 @@ exports[`the ThumbnailCard component should render 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 16,
-          "marginRight": 0,
+          "margin": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -151,8 +150,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 16,
-          "marginRight": 0,
+          "margin": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -348,8 +346,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 16,
-          "marginRight": 0,
+          "margin": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -486,8 +483,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 16,
-          "marginRight": 0,
+          "margin": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -684,8 +680,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 16,
-          "marginRight": 0,
+          "margin": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,
@@ -812,8 +807,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginLeft": 16,
-          "marginRight": 0,
+          "margin": 8,
           "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
           "shadowOffset": Object {
             "height": 1,

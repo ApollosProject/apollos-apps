@@ -33,6 +33,12 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
     }
   >
     <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "padding": 8,
+          "paddingBottom": 0,
+        }
+      }
       data={
         Array [
           Object {
@@ -82,12 +88,6 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
       snapToAlignment="start"
       snapToInterval={512}
       stickyHeaderIndices={Array []}
-      style={
-        Object {
-          "paddingBottom": 8,
-          "paddingTop": 16,
-        }
-      }
       updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
       windowSize={21}
@@ -332,6 +332,12 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
     }
   >
     <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "padding": 8,
+          "paddingBottom": 0,
+        }
+      }
       data={
         Array [
           Object {
@@ -410,12 +416,6 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
       snapToAlignment="start"
       snapToInterval={512}
       stickyHeaderIndices={Array []}
-      style={
-        Object {
-          "paddingBottom": 8,
-          "paddingTop": 16,
-        }
-      }
       updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
       windowSize={21}
