@@ -108,6 +108,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
         contentContainerStyle={
           Object {
             "padding": 8,
+            "paddingBottom": 0,
           }
         }
         data={

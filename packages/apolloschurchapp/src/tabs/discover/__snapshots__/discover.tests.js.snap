@@ -257,6 +257,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -1311,6 +1312,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -2365,6 +2367,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -3419,6 +3422,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -4473,6 +4477,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -5527,6 +5532,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -6581,6 +6587,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -7635,6 +7642,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -8689,6 +8697,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={
@@ -9743,6 +9752,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         contentContainerStyle={
                           Object {
                             "padding": 8,
+                            "paddingBottom": 0,
                           }
                         }
                         data={

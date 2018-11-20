@@ -108,6 +108,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
         contentContainerStyle={
           Object {
             "padding": 8,
+            "paddingBottom": 0,
           }
         }
         data={
@@ -790,6 +791,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
         contentContainerStyle={
           Object {
             "padding": 8,
+            "paddingBottom": 0,
           }
         }
         data={
