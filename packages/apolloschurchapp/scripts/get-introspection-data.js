@@ -1,11 +1,15 @@
-const fs = require('fs');
-const Path = require('path');
+import fs from 'fs';
+import Path from 'path';
+import { APP_DATA_URL } from 'react-native-dotenv';
+import fetch from 'node-fetch';
 
-const fetch = require('node-fetch');
+const attempts = 0;
+const maxAttempts = 3;
+const timeBetweenAttempts = 5 * 1000;
 
-(async () => {
+const getIntrospectionData = async () => {
   try {
-    const query = await fetch(`https://apollos-church-api.now.sh/graphql`, {
+    const query = await fetch(APP_DATA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -36,7 +40,20 @@ const fetch = require('node-fetch');
       Path.resolve(__dirname, '../src/client/fragmentTypes.json'),
       JSON.stringify(data)
     );
+
+    console.log('Successfully wrote fragmentTypes!');
   } catch (e) {
-    throw new Error('Error writing fragmentTypes file', e);
+    if (attempts < maxAttempts) {
+      console.log(
+        `Error writing fragmentTypes (-api probably hasn't started yet). Trying again after wait. Attempt: ${attempts +
+          1} of ${maxAttempts}`
+      );
+      await new Promise((resolve) => setTimeout(resolve, timeBetweenAttempts)); // try again after waiting
+      getIntrospectionData();
+    } else {
+      // throw new Error('Error writing fragmentTypes file', e);
+    }
   }
-})();
+};
+
+getIntrospectionData();

@@ -1,9 +1,6 @@
 import { get } from 'lodash';
-import flow from 'lodash/fp/flow';
-import omitBy from 'lodash/fp/omitBy';
-import pickBy from 'lodash/fp/pickBy';
-import mapValues from 'lodash/fp/mapValues';
-import values from 'lodash/fp/values';
+import natural from 'natural';
+import sanitizeHtmlNode from 'sanitize-html';
 import {
   createGlobalId,
   withEdgePagination,
@@ -12,7 +9,6 @@ import ApollosConfig from '@apollosproject/config';
 import sanitizeHtml from '../sanitize-html';
 
 const { ROCK_CONSTANTS, ROCK_MAPPINGS, ROCK } = ApollosConfig;
-const mapValuesWithKey = mapValues.convert({ cap: false });
 
 const enforceProtocol = (uri) => (uri.startsWith('//') ? `https:${uri}` : uri);
 
@@ -49,6 +45,22 @@ const isAudio = ({ key, attributeValues, attributes }) =>
     typeof attributeValues[key].value === 'string' &&
     attributeValues[key].value.startsWith('http')); // looks like an audio url
 
+const hasMedia = ({ attributeValues, attributes }) =>
+  Object.keys(attributes).filter((key) =>
+    isVideo({
+      key,
+      attributeValues,
+      attributes,
+    })
+  ).length ||
+  Object.keys(attributes).filter((key) =>
+    isAudio({
+      key,
+      attributeValues,
+      attributes,
+    })
+  ).length;
+
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
     createGlobalId(id, parentType.name),
@@ -67,6 +79,17 @@ export const defaultContentItemResolvers = {
       cursor: await dataSources.ContentItem.getCursorBySiblingContentItemId(id),
       args,
     }),
+
+  summary: ({ summary, content }) => {
+    if (summary) return summary;
+    const tokenizer = new natural.SentenceTokenizer();
+    return tokenizer.tokenize(
+      sanitizeHtmlNode(content, {
+        allowedTags: [],
+        allowedAttributes: [],
+      })
+    )[0];
+  },
 
   images: ({ attributeValues, attributes }) => {
     const imageKeys = Object.keys(attributes).filter((key) =>
@@ -160,12 +183,22 @@ export const defaultContentItemResolvers = {
 
   theme: () => null, // todo: integrate themes from Rock
 
+  likedCount: ({ id }, args, { dataSources }) =>
+    dataSources.Interactions.getCountByOperationForContentItem({
+      contentItemId: id,
+      operation: 'Like',
+    }),
+
   isLiked: async ({ id, isLiked }, args, { dataSources }) => {
     if (isLiked != null) return isLiked;
 
-    const interactions = await dataSources.Interactions.getForContentItem({
-      contentItemId: id,
-    });
+    const interactions = await dataSources.Interactions.getByCurrentUserForContentItem(
+      {
+        contentItemId: id,
+      }
+    );
+
+    if (!interactions) return false;
 
     const likes = interactions.filter((i) => i.operation === 'Like').length;
     const unlike = interactions.filter((i) => i.operation === 'Unlike').length;
@@ -184,7 +217,7 @@ export const resolver = {
       }),
     getAllLikedContent: async (root, args, { dataSources }) => {
       // Get All Interactions from current user
-      const interactions = await dataSources.Interactions.getForContentItems();
+      const interactions = await dataSources.Interactions.getByCurrentUserForContentItems();
       // Iterate over the interactions and determine which pieces of content
       // has more likes than unlikes
 
@@ -260,29 +293,39 @@ export const resolver = {
   },
   UniversalContentItem: {
     ...defaultContentItemResolvers,
-    terms: ({ attributeValues, attributes }, { match }) =>
-      flow([
-        omitBy((value, key) => isImage({ key, attributes, attributeValues })),
-        omitBy((value, key) => isVideo({ key, attributes, attributeValues })),
-        omitBy((value, key) => isAudio({ key, attributes, attributeValues })),
-        omitBy((value, key) => key === 'videoEmbed'),
-        pickBy((value, key) => (match ? key.match(match) : true)),
-        mapValuesWithKey(({ value }, key) => ({
-          key,
-          value,
-        })),
-        values,
-      ])(attributeValues),
+  },
+  ContentSeriesContentItem: {
+    ...defaultContentItemResolvers,
+  },
+  MediaContentItem: {
+    ...defaultContentItemResolvers,
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: ({ attributeValues, contentChannelTypeId }) => {
+    __resolveType: async ({
+      attributeValues,
+      attributes,
+      contentChannelTypeId,
+    }) => {
       if (
         hasScripture({ attributeValues }) &&
         ROCK_MAPPINGS.DEVOTIONAL_TYPE_IDS.includes(contentChannelTypeId)
       ) {
         return 'DevotionalContentItem';
       }
+
+      if (
+        ROCK_MAPPINGS.SERIES_CONTENT_CHANNEL_TYPE_IDS.includes(
+          contentChannelTypeId
+        )
+      ) {
+        return 'ContentSeriesContentItem';
+      }
+
+      if (hasMedia({ attributeValues, attributes })) {
+        return 'MediaContentItem';
+      }
+
       return 'UniversalContentItem';
     },
   },

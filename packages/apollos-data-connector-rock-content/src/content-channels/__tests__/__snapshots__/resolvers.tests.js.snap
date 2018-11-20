@@ -12,8 +12,8 @@ Object {
             Object {
               "cursor": "b487224762b030f470967f45d7205823",
               "node": Object {
-                "__typename": "UniversalContentItem",
-                "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+                "__typename": "MediaContentItem",
+                "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
               },
             },
           ],
@@ -39,8 +39,8 @@ Object {
           Object {
             "cursor": "b487224762b030f470967f45d7205823",
             "node": Object {
-              "__typename": "UniversalContentItem",
-              "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+              "__typename": "MediaContentItem",
+              "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
             },
           },
         ],

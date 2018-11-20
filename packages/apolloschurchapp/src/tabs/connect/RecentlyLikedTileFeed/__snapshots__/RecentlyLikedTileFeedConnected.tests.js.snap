@@ -48,7 +48,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             "flexDirection": "row",
             "justifyContent": "space-between",
             "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "paddingVertical": 0,
           }
         }
       >
@@ -105,6 +105,12 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
         </View>
       </View>
       <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "padding": 8,
+            "paddingBottom": 0,
+          }
+        }
         data={
           Array [
             Object {
@@ -174,15 +180,8 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
         scrollEventThrottle={50}
         showsHorizontalScrollIndicator={false}
         snapToAlignment="start"
-        snapToInterval={592}
+        snapToInterval={512}
         stickyHeaderIndices={Array []}
-        style={
-          Object {
-            "height": 600,
-            "paddingBottom": 8,
-          }
-        }
-        tileHeight={600}
         updateCellsBatchingPeriod={50}
         viewabilityConfigCallbackPairs={Array []}
         windowSize={21}
@@ -200,138 +199,162 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             }
           >
             <View
+              accessible={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "flex": 1,
-                  "padding": 8,
-                  "paddingLeft": 16,
-                  "paddingRight": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
             >
               <View
-                accessible={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                    ],
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 16,
+                    "marginHorizontal": 16,
+                    "marginVertical": 12,
+                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 6,
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": undefined,
                       "borderRadius": 16,
-                      "height": "100%",
                       "overflow": "hidden",
-                      "width": "100%",
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
                       }
                     }
                   >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
+                    <Text
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "width": "100%",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 23.04,
+                          "textAlign": "center",
                         }
                       }
                     >
-                      <Image
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "cache": "force-cache",
-                              "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=58c037fa-cc7f-4d72-9571-a0cc0558e346",
-                            },
-                          ]
-                        }
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          0,
-                          4278190080,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0.3,
-                          1,
-                        ]
-                      }
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
+                      Uh oh!
+                    </Text>
+                    <Text
                       style={
                         Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 17.28,
+                          "textAlign": "center",
                         }
                       }
-                    />
+                    >
+                      Network error: No more mocked responses for the query: query getContentCard($contentId: ID!, $tile: Boolean!) {
+  node(id: $contentId) {
+    id
+    __typename
+    ...tileCardFragment @include(if: $tile)
+    ...largeCardFragment @skip(if: $tile)
+  }
+}
+
+fragment tileCardFragment on ContentItem {
+  ... on ContentSeriesContentItem {
+    id
+    ...themeFragment
+    ...coverImageFragment
+    ...contentCardMetricsFragment
+    __typename
+  }
+  ... on UniversalContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  ... on DevotionalContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  ... on MediaContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  __typename
+}
+
+fragment baseCardFragment on ContentItem {
+  id
+  __typename
+  ...contentCardMetricsFragment
+  ...coverImageFragment
+  ...themeFragment
+  title
+  summary
+}
+
+fragment contentCardMetricsFragment on ContentItem {
+  isLiked
+  likedCount
+  __typename
+}
+
+fragment coverImageFragment on ContentItem {
+  coverImage {
+    sources {
+      uri
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment themeFragment on ContentItem {
+  theme {
+    type
+    colors {
+      primary
+      secondary
+      screen
+      paper
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment largeCardFragment on ContentItem {
+  ...baseCardFragment
+  __typename
+}
+, variables: {"contentId":"UniversalContentItem:296373ecb53580855cadffa0375ebe18","tile":true}
+                    </Text>
                   </View>
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "bottom": 16,
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "left": 16,
-                        "lineHeight": 23.04,
-                        "position": "absolute",
-                        "right": 16,
-                      }
-                    }
-                  >
-                    Guys Night!
-                  </Text>
                 </View>
               </View>
             </View>
@@ -348,138 +371,162 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             }
           >
             <View
+              accessible={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "flex": 1,
-                  "padding": 8,
-                  "paddingLeft": 16,
-                  "paddingRight": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
             >
               <View
-                accessible={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                    ],
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 16,
+                    "marginHorizontal": 16,
+                    "marginVertical": 12,
+                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 6,
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": undefined,
                       "borderRadius": 16,
-                      "height": "100%",
                       "overflow": "hidden",
-                      "width": "100%",
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
                       }
                     }
                   >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
+                    <Text
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "width": "100%",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 23.04,
+                          "textAlign": "center",
                         }
                       }
                     >
-                      <Image
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "cache": "force-cache",
-                              "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=f54b0db0-95f5-44ad-b8f2-8bcd1b23cfdb",
-                            },
-                          ]
-                        }
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          0,
-                          4278190080,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0.3,
-                          1,
-                        ]
-                      }
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
+                      Uh oh!
+                    </Text>
+                    <Text
                       style={
                         Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 17.28,
+                          "textAlign": "center",
                         }
                       }
-                    />
+                    >
+                      Network error: No more mocked responses for the query: query getContentCard($contentId: ID!, $tile: Boolean!) {
+  node(id: $contentId) {
+    id
+    __typename
+    ...tileCardFragment @include(if: $tile)
+    ...largeCardFragment @skip(if: $tile)
+  }
+}
+
+fragment tileCardFragment on ContentItem {
+  ... on ContentSeriesContentItem {
+    id
+    ...themeFragment
+    ...coverImageFragment
+    ...contentCardMetricsFragment
+    __typename
+  }
+  ... on UniversalContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  ... on DevotionalContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  ... on MediaContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  __typename
+}
+
+fragment baseCardFragment on ContentItem {
+  id
+  __typename
+  ...contentCardMetricsFragment
+  ...coverImageFragment
+  ...themeFragment
+  title
+  summary
+}
+
+fragment contentCardMetricsFragment on ContentItem {
+  isLiked
+  likedCount
+  __typename
+}
+
+fragment coverImageFragment on ContentItem {
+  coverImage {
+    sources {
+      uri
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment themeFragment on ContentItem {
+  theme {
+    type
+    colors {
+      primary
+      secondary
+      screen
+      paper
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment largeCardFragment on ContentItem {
+  ...baseCardFragment
+  __typename
+}
+, variables: {"contentId":"UniversalContentItem:39193b5ad28717ebfeab4d226664d8e7","tile":true}
+                    </Text>
                   </View>
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "bottom": 16,
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "left": 16,
-                        "lineHeight": 23.04,
-                        "position": "absolute",
-                        "right": 16,
-                      }
-                    }
-                  >
-                    This August at NewSpring
-                  </Text>
                 </View>
               </View>
             </View>
@@ -496,138 +543,162 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             }
           >
             <View
+              accessible={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "flex": 1,
-                  "padding": 8,
-                  "paddingLeft": 16,
-                  "paddingRight": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
             >
               <View
-                accessible={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                    ],
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 16,
+                    "marginHorizontal": 16,
+                    "marginVertical": 12,
+                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 6,
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": undefined,
                       "borderRadius": 16,
-                      "height": "100%",
                       "overflow": "hidden",
-                      "width": "100%",
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#A5A5A5",
-                        "width": "100%",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
                       }
                     }
                   >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
+                    <Text
                       style={
                         Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "width": "100%",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 23.04,
+                          "textAlign": "center",
                         }
                       }
                     >
-                      <Image
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "cache": "force-cache",
-                              "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a65bc45d-f961-4b7e-a899-63eb1f9b8da9",
-                            },
-                          ]
-                        }
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          0,
-                          4278190080,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0.3,
-                          1,
-                        ]
-                      }
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
+                      Uh oh!
+                    </Text>
+                    <Text
                       style={
                         Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 17.28,
+                          "textAlign": "center",
                         }
                       }
-                    />
+                    >
+                      Network error: No more mocked responses for the query: query getContentCard($contentId: ID!, $tile: Boolean!) {
+  node(id: $contentId) {
+    id
+    __typename
+    ...tileCardFragment @include(if: $tile)
+    ...largeCardFragment @skip(if: $tile)
+  }
+}
+
+fragment tileCardFragment on ContentItem {
+  ... on ContentSeriesContentItem {
+    id
+    ...themeFragment
+    ...coverImageFragment
+    ...contentCardMetricsFragment
+    __typename
+  }
+  ... on UniversalContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  ... on DevotionalContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  ... on MediaContentItem {
+    ...baseCardFragment
+    __typename
+  }
+  __typename
+}
+
+fragment baseCardFragment on ContentItem {
+  id
+  __typename
+  ...contentCardMetricsFragment
+  ...coverImageFragment
+  ...themeFragment
+  title
+  summary
+}
+
+fragment contentCardMetricsFragment on ContentItem {
+  isLiked
+  likedCount
+  __typename
+}
+
+fragment coverImageFragment on ContentItem {
+  coverImage {
+    sources {
+      uri
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment themeFragment on ContentItem {
+  theme {
+    type
+    colors {
+      primary
+      secondary
+      screen
+      paper
+      __typename
+    }
+    __typename
+  }
+  __typename
+}
+
+fragment largeCardFragment on ContentItem {
+  ...baseCardFragment
+  __typename
+}
+, variables: {"contentId":"UniversalContentItem:ae8ec75906ba7437c49ad2534b5024db","tile":true}
+                    </Text>
                   </View>
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "bottom": 16,
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "left": 16,
-                        "lineHeight": 23.04,
-                        "position": "absolute",
-                        "right": 16,
-                      }
-                    }
-                  >
-                    A Place to Worship Free of Fear
-                  </Text>
                 </View>
               </View>
             </View>
