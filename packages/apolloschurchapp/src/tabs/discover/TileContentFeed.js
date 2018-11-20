@@ -30,6 +30,10 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
               itemTitle: name,
             });
           }}
+          style={{
+            marginRight: -16,
+            padding: 16,
+          }}
         >
           View All
         </ButtonLink>
@@ -50,6 +54,7 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
         coverImage: [],
       }}
       isLoading={isLoading}
+      style={{ paddingTop: 0 }}
     />
   </PaddedView>
 );
