@@ -7,6 +7,7 @@ const TileFeed = withTheme(({ theme }) => ({
     // The horizontal padding keeps cards on grid (the other half of the baseUnit lives on the
     // card). The vertical padding is purly stylistic.
     padding: theme.sizing.baseUnit / 2,
+    paddingBottom: 0,
   },
 }))(FlatList);
 

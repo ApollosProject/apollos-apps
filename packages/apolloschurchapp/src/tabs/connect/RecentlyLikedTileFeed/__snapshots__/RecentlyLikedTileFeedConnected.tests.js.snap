@@ -105,6 +105,11 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
         </View>
       </View>
       <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "padding": 8,
+          }
+        }
         data={
           Array [
             Object {
@@ -176,12 +181,6 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
         snapToAlignment="start"
         snapToInterval={512}
         stickyHeaderIndices={Array []}
-        style={
-          Object {
-            "paddingBottom": 8,
-            "paddingTop": 16,
-          }
-        }
         updateCellsBatchingPeriod={50}
         viewabilityConfigCallbackPairs={Array []}
         windowSize={21}

@@ -254,6 +254,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -315,12 +320,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -362,8 +361,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -551,8 +549,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -740,8 +737,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -929,8 +925,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -1118,8 +1113,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -1314,6 +1308,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -1375,12 +1374,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -1422,8 +1415,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -1611,8 +1603,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -1800,8 +1791,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -1989,8 +1979,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -2178,8 +2167,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -2374,6 +2362,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -2435,12 +2428,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -2482,8 +2469,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -2671,8 +2657,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -2860,8 +2845,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -3049,8 +3033,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -3238,8 +3221,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -3434,6 +3416,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -3495,12 +3482,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -3542,8 +3523,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -3731,8 +3711,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -3920,8 +3899,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -4109,8 +4087,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -4298,8 +4275,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -4494,6 +4470,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -4555,12 +4536,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -4602,8 +4577,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -4791,8 +4765,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -4980,8 +4953,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -5169,8 +5141,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -5358,8 +5329,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -5554,6 +5524,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -5615,12 +5590,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -5662,8 +5631,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -5851,8 +5819,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -6040,8 +6007,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -6229,8 +6195,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -6418,8 +6383,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -6614,6 +6578,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -6675,12 +6644,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -6722,8 +6685,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -6911,8 +6873,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -7100,8 +7061,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -7289,8 +7249,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -7478,8 +7437,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -7674,6 +7632,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -7735,12 +7698,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -7782,8 +7739,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -7971,8 +7927,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -8160,8 +8115,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -8349,8 +8303,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -8538,8 +8491,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -8734,6 +8686,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -8795,12 +8752,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -8842,8 +8793,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -9031,8 +8981,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -9220,8 +9169,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -9409,8 +9357,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -9598,8 +9545,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -9794,6 +9740,11 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         />
                       </View>
                       <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                          }
+                        }
                         data={
                           Array [
                             Object {
@@ -9855,12 +9806,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         snapToAlignment="start"
                         snapToInterval={512}
                         stickyHeaderIndices={Array []}
-                        style={
-                          Object {
-                            "paddingBottom": 8,
-                            "paddingTop": 16,
-                          }
-                        }
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -9902,8 +9847,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -10091,8 +10035,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -10280,8 +10223,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -10469,8 +10411,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,
@@ -10658,8 +10599,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   Object {
                                     "backgroundColor": "#FFFFFF",
                                     "borderRadius": 16,
-                                    "marginLeft": 16,
-                                    "marginRight": 0,
+                                    "margin": 8,
                                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                     "shadowOffset": Object {
                                       "height": 1,

@@ -105,6 +105,11 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
         </View>
       </View>
       <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "padding": 8,
+          }
+        }
         data={
           Array [
             Object {
@@ -174,12 +179,6 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
         snapToAlignment="start"
         snapToInterval={512}
         stickyHeaderIndices={Array []}
-        style={
-          Object {
-            "paddingBottom": 8,
-            "paddingTop": 16,
-          }
-        }
         updateCellsBatchingPeriod={50}
         viewabilityConfigCallbackPairs={Array []}
         windowSize={21}
@@ -221,8 +220,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "marginLeft": 16,
-                    "marginRight": 0,
+                    "margin": 8,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                     "shadowOffset": Object {
                       "height": 1,
@@ -473,8 +471,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "marginLeft": 16,
-                    "marginRight": 0,
+                    "margin": 8,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                     "shadowOffset": Object {
                       "height": 1,
@@ -790,6 +787,11 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
         </View>
       </View>
       <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "padding": 8,
+          }
+        }
         data={
           Array [
             Object {
@@ -857,12 +859,6 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
         snapToAlignment="start"
         snapToInterval={512}
         stickyHeaderIndices={Array []}
-        style={
-          Object {
-            "paddingBottom": 8,
-            "paddingTop": 16,
-          }
-        }
         updateCellsBatchingPeriod={50}
         viewabilityConfigCallbackPairs={Array []}
         windowSize={21}
@@ -904,8 +900,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "marginLeft": 16,
-                    "marginRight": 0,
+                    "margin": 8,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                     "shadowOffset": Object {
                       "height": 1,
@@ -1156,8 +1151,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "marginLeft": 16,
-                    "marginRight": 0,
+                    "margin": 8,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                     "shadowOffset": Object {
                       "height": 1,
