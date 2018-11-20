@@ -17,7 +17,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "natural": "^0.6.2"
+    "natural": "^0.6.2",
     "@apollosproject/data-schema": "^0.8.0-alpha.0",
     "@apollosproject/server-core": "^0.8.0-alpha.0"
   },
