@@ -68,7 +68,7 @@ exports[`the Card component it should render a placeholder 1`] = `
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#FFFFFF",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 24,
                 "lineHeight": 27.6,
@@ -79,7 +79,7 @@ exports[`the Card component it should render a placeholder 1`] = `
             padded={true}
             style={
               Object {
-                "color": "#505050",
+                "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
                 "lineHeight": 17.28,
@@ -99,7 +99,7 @@ exports[`the Card component it should render a placeholder 1`] = `
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#FFFFFF",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -128,8 +128,8 @@ exports[`the Card component it should render a placeholder 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#FFFFFF",
                 "borderRadius": 8,
                 "borderWidth": 2,
                 "elevation": 2,

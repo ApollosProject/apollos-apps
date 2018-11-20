@@ -486,7 +486,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 40,
                         "width": 40,
@@ -506,7 +506,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 24,
                         "marginVertical": 1.8000000000000007,
@@ -582,7 +582,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 40,
                         "width": 40,
@@ -602,7 +602,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 24,
                         "marginVertical": 1.8000000000000007,
@@ -678,7 +678,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 40,
                         "width": 40,
@@ -698,7 +698,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 24,
                         "marginVertical": 1.8000000000000007,
@@ -774,7 +774,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 40,
                         "width": 40,
@@ -794,7 +794,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 24,
                         "marginVertical": 1.8000000000000007,
@@ -870,7 +870,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 40,
                         "width": 40,
@@ -890,7 +890,7 @@ exports[`The HorizontalTileFeed component renders empty state 1`] = `
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#DBDBD9",
+                        "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
                         "height": 24,
                         "marginVertical": 1.8000000000000007,
