@@ -215,7 +215,7 @@ class FullscreenPlayer extends PureComponent {
     return (
       <Animated.View style={this.coverStyle}>
         <FullscreenMediaPlayerSafeLayout isFullscreen={isFullscreen}>
-          <StatusBar hidden={!!isFullscreen} />
+          {isFullscreen ? <StatusBar hidden /> : null}
           {coverFlow}
         </FullscreenMediaPlayerSafeLayout>
       </Animated.View>
