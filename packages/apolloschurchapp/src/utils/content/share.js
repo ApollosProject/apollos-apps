@@ -1,12 +1,12 @@
-import { Share } from 'react-native';
+import { Platform, Share } from 'react-native';
 // import { get } from 'lodash';
 import { track, events } from 'apolloschurchapp/src/analytics';
 // import getSiteLink from './getSiteLink';
 
-const share = ({ title, message, url, id = '' }) => {
+const share = ({ title, url, id = '' }) => {
   Share.share({
     title,
-    message,
+    message: Platform.OS === 'android' ? `${title}\n${url}` : title,
     url,
   });
 
