@@ -1,49 +1,30 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
+import Color from 'color';
 
 import styled from '../styled';
-import Icon from '../Icon';
+import { ButtonIcon } from '../Button';
 import { withTheme } from '../theme';
 
-const CloseIcon = withTheme(({ theme }) => ({
-  name: 'close',
+const StyledButtonIcon = withTheme(({ theme }) => ({
   fill: theme.colors.text.tertiary,
   size: theme.sizing.baseUnit,
-}))(Icon);
+  iconPadding: theme.sizing.baseUnit * 1.75,
+}))(ButtonIcon);
 
-const BackIcon = withTheme(({ theme }) => ({
-  name: 'arrow-back',
-  fill: theme.colors.text.tertiary,
-  size: theme.sizing.baseUnit,
-}))(Icon);
-
-const RightTouchable = styled(({ theme }) => ({
+const ButtonWrapper = styled(({ theme, right, left }) => ({
   position: 'absolute',
   top: theme.sizing.baseUnit * 1.5,
-  right: theme.sizing.baseUnit * 1.5,
+  right: right ? theme.sizing.baseUnit * 1.5 : null,
+  left: left ? theme.sizing.baseUnit * 1.5 : null,
   width: theme.sizing.baseUnit * 1.75,
   height: theme.sizing.baseUnit * 1.75,
   borderRadius: theme.sizing.baseUnit * 1.75,
   alignItems: 'center',
   justifyContent: 'center',
-  overflow: 'hidden',
-  backgroundColor: theme.colors.text.primary,
-  opacity: 0.9,
-}))(TouchableOpacity);
-
-const LeftTouchable = styled(({ theme }) => ({
-  position: 'absolute',
-  top: theme.sizing.baseUnit * 1.5,
-  left: theme.sizing.baseUnit * 1.5,
-  width: theme.sizing.baseUnit * 1.75,
-  height: theme.sizing.baseUnit * 1.75,
-  borderRadius: theme.sizing.baseUnit * 1.75,
-  alignItems: 'center',
-  justifyContent: 'center',
-  overflow: 'hidden',
-  backgroundColor: theme.colors.text.primary,
-  opacity: 0.9,
-}))(TouchableOpacity);
+  backgroundColor: Color(theme.colors.text.primary).fade(0.1),
+  zIndex: 2,
+}))(View);
 
 const Handle = styled({
   // helps in swipe-to-close gesture
@@ -59,14 +40,14 @@ const ModalView = ({ onClose, onBack }) => (
     <StatusBar hidden />
     <Handle />
     {onBack ? (
-      <LeftTouchable onPress={onBack}>
-        <BackIcon />
-      </LeftTouchable>
+      <ButtonWrapper left>
+        <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
+      </ButtonWrapper>
     ) : null}
     {onClose ? (
-      <RightTouchable onPress={onClose}>
-        <CloseIcon />
-      </RightTouchable>
+      <ButtonWrapper right>
+        <StyledButtonIcon name={'close'} onPress={onClose} />
+      </ButtonWrapper>
     ) : null}
   </>
 );
