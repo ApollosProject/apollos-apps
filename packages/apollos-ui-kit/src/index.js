@@ -3,7 +3,7 @@ export ActivityIndicator, {
 } from './ActivityIndicator';
 export Avatar, { AvatarList } from './Avatar';
 export BackgroundView from './BackgroundView';
-export Button, { ButtonLink } from './Button';
+export Button, { ButtonLink, ButtonIcon } from './Button';
 export Card, { CardImage, CardContent, CardActions, ErrorCard } from './Card';
 export CardTile from './CardTile';
 export CenteredView from './CenteredView';
