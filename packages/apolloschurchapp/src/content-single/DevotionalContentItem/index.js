@@ -3,10 +3,13 @@ import { SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
-import { ErrorCard } from 'apolloschurchapp/src/ui/Card';
-import TabView, { SceneMap } from 'apolloschurchapp/src/ui/TabView';
-import BackgroundView from 'apolloschurchapp/src/ui/BackgroundView';
-import styled from 'apolloschurchapp/src/ui/styled';
+import {
+  ErrorCard,
+  TabView,
+  TabSceneMap as SceneMap,
+  BackgroundView,
+  styled,
+} from '@apollosproject/ui-kit';
 import ContentTab from './ContentTab';
 import ScriptureTab from './ScriptureTab';
 
@@ -37,10 +40,17 @@ class DevotionalContentItem extends PureComponent {
    * Returns: an array of scripture references.
    */
   getScriptureReferences = (scripture) => {
-    if (scripture && scripture.length) {
-      return scripture.map((ref) => ref.reference);
+    let arrayOfRefrences = null;
+
+    if (scripture) {
+      arrayOfRefrences = scripture.map(
+        (ref) =>
+          // only add refs to the array if they exist
+          ref.reference || ''
+      );
     }
-    return null;
+
+    return arrayOfRefrences;
   };
 
   /**
@@ -76,7 +86,12 @@ class DevotionalContentItem extends PureComponent {
     loading,
   }) => {
     if (error) return <ErrorCard error={error} />;
-    const hasScripture = loading || scriptures.length;
+    // only include scriptures where the references are not null
+    const validScriptures = scriptures.filter(
+      (scripture) => scripture.reference != null
+    );
+
+    const hasScripture = loading || validScriptures.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
     if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
     return (

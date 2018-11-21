@@ -12,12 +12,15 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 
-import PaddedView from 'apolloschurchapp/src/ui/PaddedView';
-import { withTheme, withThemeMixin } from 'apolloschurchapp/src/ui/theme';
-import styled from 'apolloschurchapp/src/ui/styled';
-import { H4, H6 } from 'apolloschurchapp/src/ui/typography';
-import Icon from 'apolloschurchapp/src/ui/Icon';
-import Touchable from 'apolloschurchapp/src/ui/Touchable';
+import {
+  PaddedView,
+  withTheme,
+  withThemeMixin,
+  styled,
+  H4,
+  H6,
+  ButtonIcon,
+} from '@apollosproject/ui-kit';
 
 import Seeker from './Seeker';
 import { getControlState } from './queries';
@@ -73,20 +76,20 @@ const Titles = styled({
 const Title = styled({ textAlign: 'center' })(H4);
 const Artist = styled({ textAlign: 'center' })(H6);
 
-const IconSm = withTheme(({ theme, disabled }) => ({
-  size: theme.sizing.baseUnit,
-  opacity: disabled ? 0.5 : 1.25,
-}))(Icon);
+const IconSm = withTheme(({ theme }) => ({
+  size: theme.sizing.baseUnit * 1.25,
+  iconPadding: theme.sizing.baseUnit * 1.25,
+}))(ButtonIcon);
 
-const IconMd = withTheme(({ theme, disabled }) => ({
+const IconMd = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit * 1.875,
-  opacity: disabled ? 0.5 : 1,
-}))(Icon);
+  iconPadding: theme.sizing.baseUnit * 0.9375,
+}))(ButtonIcon);
 
-const IconLg = withTheme(({ theme, disabled }) => ({
+const IconLg = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit * 3.125,
-  opacity: disabled ? 0.5 : 1,
-}))(Icon);
+  iconPadding: theme.sizing.baseUnit * 0.3125,
+}))(ButtonIcon);
 
 /**
  * FullscreenControls displays fading player controls
@@ -197,21 +200,40 @@ class FullscreenControls extends PureComponent {
     this.closeTimeout = setTimeout(this.handleControlVisibility, 5000);
   };
 
-  renderSkipForward = ({ skip }) => (
-    <Touchable onPress={() => skip(30)}>
-      <IconMd name="skip-forward-thirty" />
-    </Touchable>
-  );
-
-  renderSkipBack = ({ skip }) => (
-    <Touchable onPress={() => skip(-30)}>
-      <IconMd name="skip-back-thirty" />
-    </Touchable>
+  renderPlayerControls = ({ isLoading, skip }) => (
+    <PlayControls>
+      <IconSm
+        onPress={this.isMuted ? this.handleUnMute : this.handleMute}
+        name={this.isMuted ? 'mute' : 'volume'}
+        disabled={isLoading}
+      />
+      <IconMd
+        onPress={() => skip(-30)}
+        name={'skip-back-thirty'}
+        disabled={isLoading}
+      />
+      <IconLg
+        onPress={this.isPlaying ? this.handlePause : this.handlePlay}
+        name={this.isPlaying ? 'pause' : 'play'}
+        disabled={isLoading}
+      />
+      <IconMd
+        onPress={() => skip(30)}
+        name={'skip-forward-thirty'}
+        disabled={isLoading}
+      />
+      <IconSm
+        onPress={this.isVideo ? this.handleHideVideo : this.handleShowVideo}
+        name={this.isVideo ? 'video' : 'video-off'}
+        disabled={isLoading}
+      />
+    </PlayControls>
   );
 
   renderFullscreenControls = ({ data: { mediaPlayer = {} } = {} }) => {
     this.isVideo = get(mediaPlayer, 'showVideo');
     this.isPlaying = mediaPlayer.isPlaying;
+    this.isMuted = mediaPlayer.muted;
 
     if (
       (mediaPlayer.isFullscreen && !this.wasFullscreen) ||
@@ -233,51 +255,21 @@ class FullscreenControls extends PureComponent {
               style={StyleSheet.absoluteFill}
               forceInset={{ top: 'always', bottom: 'always' }}
             >
-              <Touchable onPress={this.handleClose}>
+              <TouchableWithoutFeedback onPress={this.handleClose}>
                 <UpperControl>
-                  <IconSm name="arrow-down" />
+                  <IconSm name="arrow-down" onPress={this.handleClose} />
                   <Titles>
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  <IconSm name="empty" />
+                  <IconSm name="empty" disabled />
                 </UpperControl>
-              </Touchable>
+              </TouchableWithoutFeedback>
               <LowerControl>
                 <PlayHead>
                   <Seeker onScrubbing={this.handleOnScrubbing} />
                 </PlayHead>
-                <PlayControls>
-                  {get(mediaPlayer, 'muted') ? (
-                    <Touchable onPress={this.handleUnMute}>
-                      <IconSm name="mute" />
-                    </Touchable>
-                  ) : (
-                    <Touchable onPress={this.handleMute}>
-                      <IconSm name="volume" />
-                    </Touchable>
-                  )}
-                  <ControlsConsumer>{this.renderSkipBack}</ControlsConsumer>
-                  {mediaPlayer.isPlaying ? (
-                    <Touchable onPress={this.handlePause}>
-                      <IconLg name="pause" />
-                    </Touchable>
-                  ) : (
-                    <Touchable onPress={this.handlePlay}>
-                      <IconLg name="play" />
-                    </Touchable>
-                  )}
-                  <ControlsConsumer>{this.renderSkipForward}</ControlsConsumer>
-                  {mediaPlayer.showVideo ? (
-                    <Touchable onPress={this.handleHideVideo}>
-                      <IconSm name="video" />
-                    </Touchable>
-                  ) : (
-                    <Touchable onPress={this.handleShowVideo}>
-                      <IconSm name="video-off" />
-                    </Touchable>
-                  )}
-                </PlayControls>
+                <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
               </LowerControl>
             </SafeAreaView>
           </Background>

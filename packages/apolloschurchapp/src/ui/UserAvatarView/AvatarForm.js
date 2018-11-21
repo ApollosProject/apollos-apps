@@ -1,15 +1,32 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
+import { Query } from 'react-apollo';
 
-import ConnectedImage from 'apolloschurchapp/src/ui/ConnectedImage';
-import Touchable from 'apolloschurchapp/src/ui/Touchable';
-import { ButtonLink } from 'apolloschurchapp/src/ui/Button';
-import Avatar from 'apolloschurchapp/src/ui/Avatar';
-import { withTheme } from 'apolloschurchapp/src/ui/theme';
-import { H5 } from 'apolloschurchapp/src/ui/typography';
-import styled from 'apolloschurchapp/src/ui/styled';
+import {
+  Touchable,
+  ButtonLink,
+  Avatar,
+  withTheme,
+  H5,
+  styled,
+} from '@apollosproject/ui-kit';
+import getUserProfile from '../../tabs/connect/getUserProfile';
 import uploadPhoto from './uploadPhoto';
+
+const GetPhotoData = ({ children }) => (
+  <Query query={getUserProfile}>
+    {({ data: { currentUser = {} } = {} }) => {
+      const photo = get(currentUser, 'profile.photo');
+      return children({ photo });
+    }}
+  </Query>
+);
+
+GetPhotoData.propTypes = {
+  children: PropTypes.func.isRequired,
+};
 
 const StyledAvatar = withTheme(({ theme }) => ({
   containerStyle: {
@@ -17,6 +34,10 @@ const StyledAvatar = withTheme(({ theme }) => ({
     marginBottom: theme.sizing.baseUnit / 2,
   },
 }))(Avatar);
+
+const RoundTouchable = withTheme(({ theme, size }) => ({
+  borderRadius: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+}))(Touchable);
 
 const Wrapper = styled({
   justifyContent: 'center',
@@ -45,21 +66,27 @@ export default class AvatarForm extends PureComponent {
   };
 
   render() {
-    const { photo } = this.props;
     const { isUploadingFile } = this.state;
 
     return (
       <Wrapper>
-        <Touchable
+        <RoundTouchable
           disabled={this.props.disabled}
           onPress={this.handleUploadPhoto}
+          size="medium"
         >
-          <StyledAvatar
-            source={photo}
-            size="medium"
-            isLoading={isUploadingFile}
-          />
-        </Touchable>
+          <GetPhotoData>
+            {({ photo }) => (
+              <View>
+                <StyledAvatar
+                  source={photo}
+                  size="medium"
+                  isLoading={isUploadingFile}
+                />
+              </View>
+            )}
+          </GetPhotoData>
+        </RoundTouchable>
         {this.props.text ? (
           <H5>
             <ButtonLink onPress={this.handleUploadPhoto}>
@@ -74,7 +101,6 @@ export default class AvatarForm extends PureComponent {
 
 AvatarForm.propTypes = {
   refetch: PropTypes.func.isRequired,
-  photo: ConnectedImage.propTypes.source,
   disabled: PropTypes.bool,
   text: PropTypes.bool,
 };
