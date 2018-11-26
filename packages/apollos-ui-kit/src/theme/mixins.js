@@ -19,7 +19,7 @@ const withThemeMixin = (themeInput) =>
         if (typeof themeInput === 'function') {
           themeInputAsObject = themeInput({ ...ownProps, theme });
         }
-        themeInputAsObject = merge(originalThemeInput, themeInputAsObject);
+        themeInputAsObject = merge({}, originalThemeInput, themeInputAsObject);
 
         const themeWithMixin = createTheme(themeInputAsObject);
         return {

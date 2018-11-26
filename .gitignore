@@ -78,3 +78,5 @@ storyLoader.js
 # compiled code
 
 **/lib
+
+.watchmanconfig
