@@ -1502,7 +1502,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     <Text
                       style={
                         Object {
-                          "color": "#F8F7F4",
+                          "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
                           "height": 16,
@@ -3235,7 +3235,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     <Text
                       style={
                         Object {
-                          "color": "#F8F7F4",
+                          "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
                           "height": 16,

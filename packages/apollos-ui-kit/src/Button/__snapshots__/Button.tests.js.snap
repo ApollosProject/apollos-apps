@@ -227,7 +227,7 @@ exports[`The Button component should render a bordered button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#FFFFFF",
+            "borderColor": "#00676D",
             "borderRadius": 48,
             "borderWidth": 2,
             "flexDirection": "row",
@@ -242,7 +242,7 @@ exports[`The Button component should render a bordered button 1`] = `
         <Text
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#00676D",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -311,8 +311,8 @@ exports[`The Button component should render a disabled button 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderColor": "#FFFFFF",
+            "backgroundColor": "#00676D",
+            "borderColor": "#00676D",
             "borderRadius": 48,
             "borderWidth": 2,
             "elevation": 2,
@@ -398,7 +398,7 @@ exports[`The Button component should render a ghost button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#FFFFFF",
+            "borderColor": "#303030",
             "borderRadius": 48,
             "borderWidth": 2,
             "flexDirection": "row",
@@ -413,7 +413,7 @@ exports[`The Button component should render a ghost button 1`] = `
         <Text
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -483,7 +483,7 @@ exports[`The Button component should render a ghost pill button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#FFFFFF",
+            "borderColor": "#303030",
             "borderRadius": 48,
             "borderWidth": 2,
             "flexDirection": "row",
@@ -498,7 +498,7 @@ exports[`The Button component should render a ghost pill button 1`] = `
         <Text
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -567,8 +567,8 @@ exports[`The Button component should render a loading state 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderColor": "#FFFFFF",
+            "backgroundColor": "#00676D",
+            "borderColor": "#00676D",
             "borderRadius": 48,
             "borderWidth": 2,
             "elevation": 2,
@@ -647,8 +647,8 @@ exports[`The Button component should render a pill button 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderColor": "#FFFFFF",
+            "backgroundColor": "#00676D",
+            "borderColor": "#00676D",
             "borderRadius": 48,
             "borderWidth": 2,
             "elevation": 2,
@@ -733,8 +733,8 @@ exports[`The Button component should render a primary button 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderColor": "#FFFFFF",
+            "backgroundColor": "#00676D",
+            "borderColor": "#00676D",
             "borderRadius": 48,
             "borderWidth": 2,
             "elevation": 2,
@@ -922,7 +922,7 @@ exports[`The Button component should render as default type 1`] = `
         <Text
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -976,8 +976,8 @@ exports[`The Button component should render with children 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#FFFFFF",
-          "borderColor": "#FFFFFF",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
           "borderRadius": 48,
           "borderWidth": 2,
           "elevation": 2,

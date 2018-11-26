@@ -146,10 +146,9 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -164,10 +163,9 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Italic",
+              "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
-              "textAlign": "center",
             }
           }
         >
@@ -235,10 +233,9 @@ exports[`the HTMLView component should render a link 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -335,10 +332,9 @@ exports[`the HTMLView component should render a list 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -358,10 +354,9 @@ exports[`the HTMLView component should render a list 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -392,10 +387,9 @@ exports[`the HTMLView component should render a list 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -415,10 +409,9 @@ exports[`the HTMLView component should render a list 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1175,10 +1168,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1215,10 +1207,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1240,10 +1231,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1265,10 +1255,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1329,10 +1318,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1373,10 +1361,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1413,10 +1400,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1438,10 +1424,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1502,10 +1487,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1542,10 +1526,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1565,10 +1548,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1599,10 +1581,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1622,10 +1603,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1656,10 +1636,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1679,10 +1658,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 style={
                   Object {
                     "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
+                    "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
-                    "textAlign": "center",
                   }
                 }
               >
@@ -1706,10 +1684,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1731,10 +1708,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1775,10 +1751,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -1820,10 +1795,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -1843,10 +1817,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -1877,10 +1850,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -1900,10 +1872,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -1934,10 +1905,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -1957,10 +1927,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -1991,10 +1960,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -2014,10 +1982,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               style={
                 Object {
                   "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
+                  "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
-                  "textAlign": "center",
                 }
               }
             >
@@ -2040,10 +2007,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -2065,10 +2031,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -2138,10 +2103,9 @@ exports[`the HTMLView component should render handle relative links 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
@@ -2308,10 +2272,9 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Italic",
+                "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
-                "textAlign": "center",
               }
             }
           >
