@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/data-connector-rock-content",
+  "name": "@apollosproject/data-connector-cloudinary",
   "version": "0.8.0-alpha.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
@@ -17,17 +17,16 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.8.0-alpha.0",
-    "@apollosproject/server-core": "^0.8.0-alpha.0",
-    "natural": "^0.6.2"
+    "cloudinary": "^1.13.2"
   },
   "peerDependencies": {
-    "@apollosproject/config": "*",
-    "@apollosproject/rock-apollo-data-source": "*"
+    "@apollosproject/config": "*"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.0",
     "jest": "^23.6.0"
   },
-  "gitHead": "5c3bccdfe37c8bd7a275ecd1f67053f2962449d8"
+  "publishConfig": {
+    "access": "public"
+  }
 }
