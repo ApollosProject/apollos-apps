@@ -386,3 +386,14 @@ export const familySchema = gql`
     location: String
   }
 `;
+
+export const liveSchema = gql`
+  type LiveStream {
+    isLive: Boolean
+    eventStartTime: String
+  }
+
+  extend type Query {
+    liveStream: LiveStream
+  }
+`;

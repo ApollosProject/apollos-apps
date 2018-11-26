@@ -11,10 +11,10 @@ import {
 import * as Analytics from '@apollosproject/data-connector-analytics';
 import { Person, Family } from '@apollosproject/data-connector-people';
 import * as Scripture from '@apollosproject/data-connector-bible';
+import * as LiveStream from '@apollosproject/data-connector-church-online';
 import * as Cloudinary from '@apollosproject/data-connector-cloudinary';
-import RockConstants from '../connectors/rock/rock-constants';
 
-import * as LiveStream from './live';
+import RockConstants from '../connectors/rock/rock-constants';
 import * as Theme from './theme';
 import * as Interactions from './interactions';
 
