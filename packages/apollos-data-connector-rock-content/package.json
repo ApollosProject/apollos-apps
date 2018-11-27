@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-rock-content",
-  "version": "0.8.0-alpha.2",
+  "version": "0.8.0-alpha.3",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.8.0-alpha.2",
-    "@apollosproject/server-core": "^0.8.0-alpha.2",
+    "@apollosproject/data-schema": "^0.8.0-alpha.3",
+    "@apollosproject/server-core": "^0.8.0-alpha.3",
     "natural": "^0.6.2"
   },
   "peerDependencies": {
@@ -26,7 +26,7 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.2",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.3",
     "jest": "^23.6.0"
   },
   "gitHead": "5c3bccdfe37c8bd7a275ecd1f67053f2962449d8"
