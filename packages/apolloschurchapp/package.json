@@ -11,7 +11,7 @@
     "get-dev-paths": "^0.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
-    "nodemon": "1.17.5",
+    "nodemon": "1.18.7",
     "prop-types": "15.6.1",
     "react-dom": "16.6.3",
     "react-native-dotenv": "0.2.0",
