@@ -281,9 +281,25 @@ describe('UniversalContentItem', () => {
   });
 });
 
-const { ContentItemsConnection } = serverConfig.resolvers;
+const {
+  ContentItemsConnection,
+  ContentItem: ContentItemResolver,
+} = serverConfig.resolvers;
 
-describe('ContentItemsConnection resolvee', () => {
+describe('ContentItem resolver', () => {
+  it('fetches an item summary for an item with no description', () => {
+    const item = { content: '' };
+    const summary = ContentItemResolver.summary(item);
+    expect(summary).toEqual('');
+  });
+  it('fetches an item summary for an item with a description', () => {
+    const item = { content: 'Foo bar baz. Some other foo.' };
+    const summary = ContentItemResolver.summary(item);
+    expect(summary).toEqual('Foo bar baz.');
+  });
+});
+
+describe('ContentItemsConnection resolver', () => {
   it('builds a pageInfo object with items', async () => {
     const edges = Promise.resolve([
       { cursor: `item-0` },
