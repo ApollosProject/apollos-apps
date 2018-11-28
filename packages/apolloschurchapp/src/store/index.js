@@ -87,11 +87,8 @@ export const resolvers = {
     },
   },
   Mutation: {
-    logout: (root, variables, { cache }) => {
+    logout: () => {
       client.resetStore();
-      cache.writeData({
-        data: defaults,
-      });
       track({ eventName: events.UserLogout });
       return null;
     },
