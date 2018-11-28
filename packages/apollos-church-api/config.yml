@@ -28,6 +28,11 @@ CLOUDINARY:
 
 # This key holds various properties that allow our GraphQL server to map to your Rock Instance
 ROCK_MAPPINGS:
+  CONTENT_ITEM_TYPES:
+    - ContentItem
+    - UniversalContentItem
+    - DevotionalContentItem
+    - MediaContentItem
   # Apollos will pull these content channels and expose them in the app on the discover screen.
   DISCOVER_CONTENT_CHANNEL_IDS:
     - 2

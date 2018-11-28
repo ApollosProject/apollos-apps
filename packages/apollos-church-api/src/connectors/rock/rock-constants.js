@@ -1,16 +1,15 @@
 // TODO - eliminate this file through more robust configuration.
 
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import Config from '@apollosproject/config';
+
+const { CONTENT_ITEM_TYPES } = Config.ROCK_MAPPINGS;
 
 const mapApollosNameToRockName = (name) => {
-  switch (name) {
-    case 'ContentItem':
-    case 'UniversalContentItem':
-    case 'DevotionalContentItem':
-      return 'ContentChannelItem';
-    default:
-      throw new Error(`${name} has not been mapped into a Rock type!`);
+  if (CONTENT_ITEM_TYPES.includes(name)) {
+    return 'ContentChannelItem';
   }
+  throw new Error(`${name} has not been mapped into a Rock type!`);
 };
 
 export default class RockConstants extends RockApolloDataSource {
@@ -38,17 +37,31 @@ export default class RockConstants extends RockApolloDataSource {
     return ret;
   }
 
-  async createOrFindInteractionComponent({ componentName, channelId }) {
+  async createOrFindInteractionComponent({
+    componentName,
+    channelId,
+    entityId,
+  }) {
     return this.findOrCreate({
       model: 'InteractionComponents',
-      objectAttributes: { Name: componentName, ChannelId: channelId },
+      objectAttributes: {
+        Name: componentName,
+        ChannelId: channelId,
+        EntityId: entityId,
+      },
     });
   }
 
-  async createOrFindInteractionChannel({ channelName }) {
+  async createOrFindInteractionChannel({ channelName, entityTypeId }) {
     return this.findOrCreate({
       model: 'InteractionChannels',
-      objectAttributes: { Name: channelName, UsesSession: true },
+      objectAttributes: {
+        Name: channelName,
+        UsesSession: true,
+        IsActive: true,
+        ComponentEntityTypeId: entityTypeId,
+        ChannelTypeMediumValueId: 512,
+      },
     });
   }
 
@@ -66,7 +79,24 @@ export default class RockConstants extends RockApolloDataSource {
     });
   }
 
-  async modelTypeId(nameInput) {
+  async contentItemInteractionComponent({ contentItemId, contentName = null }) {
+    const channel = await this.contentItemInteractionChannel();
+    return this.createOrFindInteractionComponent({
+      componentName: `Apollos Content Item - ${contentName || contentItemId}`,
+      channelId: channel.id,
+      entityId: parseInt(contentItemId, 10),
+    });
+  }
+
+  async contentItemInteractionChannel() {
+    const { id } = await this.modelType('ContentItem');
+    return this.createOrFindInteractionChannel({
+      channelName: 'Apollos App',
+      entityTypeId: id,
+    });
+  }
+
+  async modelType(nameInput) {
     const name = mapApollosNameToRockName(nameInput);
 
     const types = await this.request('EntityTypes')

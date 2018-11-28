@@ -10,7 +10,7 @@ export default class RockInteractionAnalytics extends BaseAnalytics {
     switch (event) {
       case 'View Content': {
         return this.trackViewContent({
-          contentId: properties.ContentId,
+          contentId: properties.itemId,
           sessionId,
         });
       }
@@ -25,7 +25,7 @@ export default class RockInteractionAnalytics extends BaseAnalytics {
       console.log('No ContentId or SessionId included in `track` call.');
       return null;
     }
-    return this.context.dataSources.Interactions.createInteraction({
+    return this.context.dataSources.Interactions.createContentItemInteraction({
       nodeId: contentId,
       sessionId,
       operationName: 'View Content',

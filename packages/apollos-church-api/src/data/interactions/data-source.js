@@ -5,28 +5,34 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
 
-  async createInteraction({ nodeId, operationName }) {
-    const { dataSources } = this.context;
-    const { id, __type } = parseGlobalId(nodeId);
-    const contentItemType = await dataSources.RockConstants.modelTypeId(__type);
-    const interactionComponent = await this.context.dataSources.RockConstants.interactionComponent();
-    const currentUser = await dataSources.Auth.getCurrentPerson();
+  async createContentItemInteraction({ nodeId, operationName }) {
+    const {
+      dataSources: { RockConstants, Auth },
+    } = this.context;
+    const { id } = parseGlobalId(nodeId);
 
+    const interactionComponent = await RockConstants.contentItemInteractionComponent(
+      {
+        contentItemId: id,
+      }
+    );
+    const currentUser = await Auth.getCurrentPerson();
     const interactionId = await this.post('/Interactions', {
-      RelatedEntityId: id,
-      RelatedEntityTypeId: contentItemType.id,
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
       InteractionSessionId: this.context.sessionId,
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
+      InteractionData:
+        'https://apollosrock.newspring.cc/page/3?returnurl=%252f',
     });
+
     return this.get(`/Interactions/${interactionId}`);
   }
 
   async getCountByOperationForContentItem({ contentItemId, operation }) {
     const { dataSources } = this.context;
-    const contentItemType = await dataSources.RockConstants.modelTypeId(
+    const contentItemType = await dataSources.RockConstants.modelType(
       'ContentItem'
     );
     try {
@@ -50,7 +56,7 @@ export default class Interactions extends RockApolloDataSource {
 
   async getByCurrentUserForContentItem({ contentItemId }) {
     const { dataSources } = this.context;
-    const contentItemType = await dataSources.RockConstants.modelTypeId(
+    const contentItemType = await dataSources.RockConstants.modelType(
       'ContentItem'
     );
     try {
@@ -73,7 +79,7 @@ export default class Interactions extends RockApolloDataSource {
 
   async getByCurrentUserForContentItems() {
     const { dataSources } = this.context;
-    const contentItemType = await dataSources.RockConstants.modelTypeId(
+    const contentItemType = await dataSources.RockConstants.modelType(
       'ContentItem'
     );
     try {
