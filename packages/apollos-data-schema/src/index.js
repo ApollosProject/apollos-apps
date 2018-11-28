@@ -225,8 +225,6 @@ export const contentItemSchema = gql`
 
     sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -249,8 +247,6 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
   }
 
   type DevotionalContentItem implements ContentItem & Node {
@@ -274,8 +270,6 @@ export const contentItemSchema = gql`
 
     sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
     scriptures: [Scripture]
   }
 
@@ -300,8 +294,6 @@ export const contentItemSchema = gql`
 
     sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
     scriptures: [Scripture]
   }
 
@@ -326,8 +318,6 @@ export const contentItemSchema = gql`
 
     sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
     scriptures: [Scripture]
   }
 
@@ -349,7 +339,6 @@ export const contentItemSchema = gql`
 
   extend type Query {
     userFeed(first: Int, after: String): ContentItemsConnection
-    getAllLikedContent: [ContentItem]
   }
 `;
 

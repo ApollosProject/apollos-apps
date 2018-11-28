@@ -1,5 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import dataSource from './data-source';
-import schema from './schema';
-import resolver from './resolver';
 
-export { schema, resolver, dataSource };
+export { dataSource };

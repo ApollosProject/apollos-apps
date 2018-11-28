@@ -65,20 +65,6 @@ export default class RockConstants extends RockApolloDataSource {
     });
   }
 
-  async interactionChannel() {
-    return this.createOrFindInteractionChannel({
-      channelName: 'Apollos App',
-    });
-  }
-
-  async interactionComponent() {
-    const channel = await this.interactionChannel();
-    return this.createOrFindInteractionComponent({
-      componentName: 'Apollos Content Item',
-      channelId: channel.id,
-    });
-  }
-
   async contentItemInteractionComponent({ contentItemId, contentName = null }) {
     const channel = await this.contentItemInteractionChannel();
     return this.createOrFindInteractionComponent({

@@ -17,8 +17,10 @@ import * as Cloudinary from '@apollosproject/data-connector-cloudinary';
 import RockConstants from '../connectors/rock/rock-constants';
 import * as Theme from './theme';
 import * as Interactions from './interactions';
+import * as Followings from './followings';
 
 const data = {
+  Followings,
   ContentChannel,
   ContentItem,
   Person,
