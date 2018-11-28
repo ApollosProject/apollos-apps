@@ -19,6 +19,8 @@ export const client = new ApolloClient({
   shouldBatch: true,
 });
 
+client.onResetStore(clientStateLink.writeDefaults);
+
 class ClientProvider extends PureComponent {
   static propTypes = {
     client: PropTypes.shape({
