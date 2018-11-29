@@ -2,8 +2,6 @@ import { parseGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 
-const { DEEP_LINK_HOST } = ApollosConfig.APP;
-
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
 
@@ -27,7 +25,9 @@ export default class Interactions extends RockApolloDataSource {
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${operationName} - ${nodeTitle}`,
-      InteractionData: `${DEEP_LINK_HOST}://Interactions/ContentSingle?itemId=${nodeId}`,
+      InteractionData: `${
+        ApollosConfig.APP.DEEP_LINK_HOST
+      }://Interactions/ContentSingle?itemId=${nodeId}`,
     });
 
     return this.get(`/Interactions/${interactionId}`);

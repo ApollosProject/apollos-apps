@@ -15,7 +15,8 @@ export default class Followings extends RockApolloDataSource {
       await this.unFollowNode({ nodeId });
     }
     const { id } = parseGlobalId(nodeId);
-    return ContentItem.getFromId(id);
+    const item = await ContentItem.getFromId(id);
+    return { ...item, isLiked: operation === 'Like' };
   }
 
   async followNode({ nodeId }) {
@@ -55,21 +56,14 @@ export default class Followings extends RockApolloDataSource {
     const { id, __type } = parseGlobalId(nodeId);
     const nodeType = await RockConstants.modelType(__type);
 
-    try {
-      return (await this.request('Followings')
-        .filter(
-          // eslint-disable-next-line prettier/prettier
+    return (await this.request('Followings')
+      .filter(
+        // eslint-disable-next-line prettier/prettier
           `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id})`
-        )
-        .select('Id') // $count not supported, next best thing to make efficient
-        .cache({ ttl: 1800 }) // TODO: whats the right way to do this?
-        .get()).length;
-    } catch (e) {
-      if (e instanceof AuthenticationError) {
-        return [];
-      }
-      throw e;
-    }
+      )
+      .select('Id') // $count not supported, next best thing to make efficient
+      .cache({ ttl: 1800 }) // TODO: whats the right way to do this?
+      .get()).length;
   }
 
   async getFollowingsForCurrentUserAndNode({ nodeId }) {

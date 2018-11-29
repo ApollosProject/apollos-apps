@@ -12,7 +12,7 @@ const mapApollosNameToRockName = (name) => {
   throw new Error(`${name} has not been mapped into a Rock type!`);
 };
 
-export default class RockConstants extends RockApolloDataSource {
+class RockConstants extends RockApolloDataSource {
   async findOrCreate({ model, objectAttributes }) {
     // Turns {ChannelId: 7, Name: 'Something'} into '(ChannelId eq 7) and (Name eq 'Something')'
     const filter = Object.keys(objectAttributes)
@@ -96,3 +96,5 @@ export default class RockConstants extends RockApolloDataSource {
     return null;
   }
 }
+
+export { RockConstants as dataSource };

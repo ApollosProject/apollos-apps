@@ -1,12 +1,81 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import { makeExecutableSchema } from 'apollo-server';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
+import { AuthenticationError } from 'apollo-server';
+import { get } from 'lodash';
 
+import {
+  contentItemSchema,
+  contentChannelSchema,
+  themeSchema,
+  scriptureSchema,
+} from '@apollosproject/data-schema';
 import { generateToken } from '@apollosproject/data-connector-rock-auth';
-import { getTestContext } from '../../../utils/testUtils';
-import { testSchema as typeDefs, resolvers } from '../..';
+import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import * as Followings from '../index';
+import * as RockConstants from '../../rock-constants';
+
+class ContentItemDataSource {
+  // eslint-disable-next-line class-methods-use-this
+  initialize() {}
+
+  // eslint-disable-next-line class-methods-use-this
+  getFromId(id) {
+    return { id };
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  getFromIds(ids) {
+    return { get: () => ids.map((id) => ({ id })) };
+  }
+}
+
+class AuthDataSource {
+  initialize({ context }) {
+    this.context = context;
+  }
+
+  getCurrentPerson() {
+    if (this.context.currentPerson) {
+      return { id: 'someId' };
+    }
+    throw new AuthenticationError('Must be logged in');
+  }
+}
+
+const ContentItem = {
+  dataSource: ContentItemDataSource,
+  resolver: {
+    ContentItem: {
+      __resolveType: () => 'UniversalContentItem',
+    },
+    UniversalContentItem: {
+      id: ({ id }) => createGlobalId(id, 'UniversalContentItem'),
+    },
+  },
+};
+
+const Auth = {
+  dataSource: AuthDataSource,
+  contextMiddleware: ({ req, context }) => {
+    if (get(req, 'headers.authorization')) {
+      return {
+        ...context,
+        currentPerson: true,
+      };
+    }
+    return { ...context };
+  },
+};
+
+const { getSchema, getContext } = createTestHelpers({
+  Followings,
+  RockConstants,
+  ContentItem,
+  UniversalContentItem: ContentItem,
+  Auth,
+});
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -16,18 +85,32 @@ ApollosConfig.loadJs({
   },
   ROCK_MAPPINGS: {
     SERIES_CONTENT_CHANNEL_TYPE_IDS: [6, 7],
+    CONTENT_ITEM_TYPES: [
+      'ContentItem',
+      'UniversalContentItem',
+      'DevotionalContentItem',
+      'MediaContentItem',
+    ],
+  },
+  APP: {
+    DEEP_LINK_HOST: 'apolloschurch',
   },
 });
 
-describe('Interactions', () => {
+describe('Following', () => {
   let schema;
   let context;
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({ typeDefs, resolvers });
+    schema = getSchema([
+      contentItemSchema,
+      contentChannelSchema,
+      themeSchema,
+      scriptureSchema,
+    ]);
     const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
-    context = getTestContext({
+    context = getContext({
       req: {
         headers: { authorization: token },
       },
@@ -44,8 +127,7 @@ describe('Interactions', () => {
           }
         ) {
           id
-          operation
-          interactionDateTime
+          isLiked
         }
       }
     `;
@@ -53,12 +135,30 @@ describe('Interactions', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
-  it('uses interactions to track if a user liked content', async () => {
+  it('unlikes an entity', async () => {
+    const query = `
+      mutation likeEntity {
+        updateLikeEntity(
+          input: {
+            nodeId: "${createGlobalId(1, 'UniversalContentItem')}"
+            operation: Unlike
+          }
+        ) {
+          id
+          isLiked
+        }
+      }
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+  it('uses following table to track if a user liked content', async () => {
     const query = `
       query getContent {
         node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
           id
-          ... on UniversalContentItem {
+          ... on ContentItem {
             isLiked
           }
         }
@@ -69,12 +169,45 @@ describe('Interactions', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('returns isLiked false if a user is logged out', async () => {
+    const query = `
+      query getContent {
+        node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+          id
+          ... on ContentItem {
+            isLiked
+          }
+        }
+      }
+    `;
+    const contextWithoutUser = getContext();
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, contextWithoutUser);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('returns a likeCount', async () => {
+    const query = `
+      query getContent {
+        node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+          id
+          ... on ContentItem {
+            likedCount
+          }
+        }
+      }
+    `;
+    const contextWithoutUser = getContext();
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, contextWithoutUser);
+    expect(result).toMatchSnapshot();
+  });
+
   it('gets all user liked content', async () => {
     const query = `
       query {
         getAllLikedContent {
           id
-          title
           isLiked
         }
       }
@@ -89,12 +222,11 @@ describe('Interactions', () => {
       query {
         getAllLikedContent {
           id
-          title
           isLiked
         }
       }
     `;
-    const contextWithoutUser = getTestContext();
+    const contextWithoutUser = getContext();
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, contextWithoutUser);
     expect(result).toMatchSnapshot();

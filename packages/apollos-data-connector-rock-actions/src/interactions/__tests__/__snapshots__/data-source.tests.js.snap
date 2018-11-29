@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Interactions creates a new interaction 1`] = `
+Object {
+  "id": 1,
+}
+`;
+
+exports[`Interactions creates a new interaction 2`] = `
+Array [
+  Array [
+    "/Interactions/1",
+  ],
+]
+`;
+
+exports[`Interactions creates a new interaction 3`] = `
+Array [
+  Array [
+    "/Interactions",
+    Object {
+      "InteractionComponentId": 789,
+      "InteractionData": "apolloschurch://Interactions/ContentSingle?itemId=UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "InteractionDateTime": "2018-11-29T19:00:01.288Z",
+      "InteractionSessionId": undefined,
+      "InteractionSummary": "Like - Super Cool Content",
+      "Operation": "Like",
+      "PersonAliasId": undefined,
+    },
+  ],
+]
+`;
+
+exports[`Interactions gets all user liked content 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Cannot query field "getAllLikedContent" on type "Query".],
+  ],
+}
+`;
+
+exports[`Interactions likes an entity 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Cannot query field "updateLikeEntity" on type "Mutation".],
+  ],
+}
+`;
+
+exports[`Interactions uses interactions to track if a user liked content 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Unknown type "UniversalContentItem".],
+  ],
+}
+`;

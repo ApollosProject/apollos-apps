@@ -1,6 +1,6 @@
 import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
-import RockConstants from '../index';
+import { dataSource as RockConstants } from '../index';
 
 ApollosConfig.loadJs({
   ROCK_MAPPINGS: {
@@ -13,7 +13,7 @@ ApollosConfig.loadJs({
   },
 });
 
-export const buildGetMock = (response, dataSource) => {
+const buildGetMock = (response, dataSource) => {
   const get = jest.fn();
   if (Array.isArray(response) && Array.isArray(response[0])) {
     response.forEach((responseVal) => {

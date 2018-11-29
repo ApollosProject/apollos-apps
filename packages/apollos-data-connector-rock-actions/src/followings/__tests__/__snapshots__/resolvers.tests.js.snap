@@ -1,32 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Interactions gets all user liked content 1`] = `
+exports[`Following gets all user liked content 1`] = `
 Object {
   "data": Object {
     "getAllLikedContent": Array [
       Object {
-        "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+        "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         "isLiked": true,
-        "title": "SAMPLE: Easter",
       },
     ],
   },
 }
 `;
 
-exports[`Interactions likes an entity 1`] = `
+exports[`Following likes an entity 1`] = `
 Object {
   "data": Object {
     "updateLikeEntity": Object {
-      "id": "Interaction:fb344cb78f7b3f41416ffcbdc457e30c",
-      "interactionDateTime": "2018-08-21T14:55:01.000Z",
-      "operation": "Like",
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "isLiked": true,
     },
   },
 }
 `;
 
-exports[`Interactions returns an empty array for liked content without a user logged in 1`] = `
+exports[`Following returns a likeCount 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "likedCount": 1,
+    },
+  },
+}
+`;
+
+exports[`Following returns an empty array for liked content without a user logged in 1`] = `
 Object {
   "data": Object {
     "getAllLikedContent": Array [],
@@ -34,7 +43,29 @@ Object {
 }
 `;
 
-exports[`Interactions uses interactions to track if a user liked content 1`] = `
+exports[`Following returns isLiked false if a user is logged out 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "isLiked": false,
+    },
+  },
+}
+`;
+
+exports[`Following unlikes an entity 1`] = `
+Object {
+  "data": Object {
+    "updateLikeEntity": Object {
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "isLiked": false,
+    },
+  },
+}
+`;
+
+exports[`Following uses following table to track if a user liked content 1`] = `
 Object {
   "data": Object {
     "node": Object {
