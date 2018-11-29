@@ -1,5 +1,3 @@
-// TODO - eliminate this file through more robust configuration.
-
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import Config from '@apollosproject/config';
 
@@ -96,5 +94,5 @@ class RockConstants extends RockApolloDataSource {
     return null;
   }
 }
-
+// eslint-disable-next-line import/prefer-default-export
 export { RockConstants as dataSource };
