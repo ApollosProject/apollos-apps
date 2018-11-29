@@ -94,7 +94,7 @@ describe('Analytics Data Source', () => {
           dataSources: {
             Auth: AuthWithUser,
             Interactions: {
-              createInteraction: mockCreateInteraction,
+              createContentItemInteraction: mockCreateInteraction,
             },
           },
         },
@@ -103,8 +103,8 @@ describe('Analytics Data Source', () => {
       const result = await dataSource.track({
         eventName: 'View Content',
         properties: [
-          { field: 'ContentId', value: 'Content:123' },
-          { field: 'SessionId', value: 'Session:123' },
+          { field: 'itemId', value: 'Content:123' },
+          { field: 'title', value: 'Super Cool Content' },
         ],
       });
 

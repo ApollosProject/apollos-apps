@@ -242,6 +242,7 @@ Array [
   Array [
     Object {
       "nodeId": "Content:123",
+      "nodeTitle": "Super Cool Content",
       "operationName": "View Content",
       "sessionId": "Session:123",
     },
