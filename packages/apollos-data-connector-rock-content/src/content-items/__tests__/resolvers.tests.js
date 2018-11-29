@@ -1,21 +1,16 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import { makeExecutableSchema } from 'apollo-server';
 
-import {
-  createGlobalId,
-  createApolloServerConfig,
-} from '@apollosproject/server-core';
+import { createGlobalId } from '@apollosproject/server-core';
+import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import ApollosConfig from '@apollosproject/config';
 
 import {
   mediaSchema,
-  testSchema,
   themeSchema,
   scriptureSchema,
 } from '@apollosproject/data-schema';
 
-import { buildContext } from '../../test-utils';
 // we import the root-level schema and resolver so we test the entire integration:
 import { ContentChannel, ContentItem, Sharable } from '../..';
 
@@ -32,7 +27,8 @@ class Scripture {
     ];
   }
 }
-const serverConfig = createApolloServerConfig({
+
+const { getSchema, getContext } = createTestHelpers({
   ContentChannel,
   ContentItem,
   Sharable,
@@ -46,7 +42,6 @@ const serverConfig = createApolloServerConfig({
     dataSource: Scripture,
   },
 });
-const getTestContext = buildContext(serverConfig);
 // we import the root-level schema and resolver so we test the entire integration:
 
 ApollosConfig.loadJs({
@@ -141,17 +136,8 @@ describe('UniversalContentItem', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({
-      typeDefs: [
-        ...serverConfig.schema,
-        mediaSchema,
-        testSchema,
-        themeSchema,
-        scriptureSchema,
-      ],
-      resolvers: serverConfig.resolvers,
-    });
-    context = getTestContext();
+    schema = getSchema([themeSchema, mediaSchema, scriptureSchema]);
+    context = getContext();
   });
 
   it('gets a user feed', async () => {
@@ -281,7 +267,7 @@ describe('UniversalContentItem', () => {
   });
 });
 
-const { ContentItemsConnection } = serverConfig.resolvers;
+const { ContentItemsConnection } = ContentItem.resolver;
 
 describe('ContentItemsConnection resolvee', () => {
   it('builds a pageInfo object with items', async () => {
