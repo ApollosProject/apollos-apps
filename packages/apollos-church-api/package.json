@@ -36,6 +36,7 @@
     "@apollosproject/data-connector-people": "^0.8.0-alpha.3",
     "@apollosproject/data-connector-rock-auth": "^0.8.0-alpha.3",
     "@apollosproject/data-connector-rock-content": "^0.8.0-alpha.3",
+    "@apollosproject/data-connector-rock-actions": "^0.8.0-alpha.3",
     "@apollosproject/rock-apollo-data-source": "^0.8.0-alpha.3",
     "@apollosproject/server-core": "^0.8.0-alpha.3",
     "apollo-datasource-rest": "0.1.1",
