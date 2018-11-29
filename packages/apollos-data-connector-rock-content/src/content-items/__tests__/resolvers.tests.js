@@ -8,30 +8,12 @@ import {
 } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
-import {
-  mediaSchema,
-  testSchema,
-  themeSchema,
-  scriptureSchema,
-} from '@apollosproject/data-schema';
+import { testSchema, themeSchema } from '@apollosproject/data-schema';
 
 import { buildContext } from '../../test-utils';
 // we import the root-level schema and resolver so we test the entire integration:
 import { ContentChannel, ContentItem, Sharable } from '../..';
 
-class Scripture {
-  // eslint-disable-next-line class-methods-use-this
-  initialize() {}
-
-  // eslint-disable-next-line class-methods-use-this
-  getScriptures() {
-    return [
-      {
-        html: `<p class="p"><span data-number="1" class="v">1</span>The Song of songs, which is Solomon’s.</p>`,
-      },
-    ];
-  }
-}
 const serverConfig = createApolloServerConfig({
   ContentChannel,
   ContentItem,
@@ -42,9 +24,6 @@ const serverConfig = createApolloServerConfig({
   DevotionalContentItem: {
     dataSource: ContentItem.dataSource,
   }, // alias
-  Scripture: {
-    dataSource: Scripture,
-  },
 });
 const getTestContext = buildContext(serverConfig);
 // we import the root-level schema and resolver so we test the entire integration:
@@ -142,13 +121,7 @@ describe('UniversalContentItem', () => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
     schema = makeExecutableSchema({
-      typeDefs: [
-        ...serverConfig.schema,
-        mediaSchema,
-        testSchema,
-        themeSchema,
-        scriptureSchema,
-      ],
+      typeDefs: [...serverConfig.schema, testSchema, themeSchema],
       resolvers: serverConfig.resolvers,
     });
     context = getTestContext();
@@ -214,25 +187,25 @@ describe('UniversalContentItem', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('gets a devotional item', async () => {
-    const query = `
-      query {
-        node(id: "${createGlobalId(123, 'DevotionalContentItem')}") {
-          id
-          ... on DevotionalContentItem {
-            id
-            title
-            scriptures {
-              html
-            }
-          }
-        }
-      }
-    `;
-    const rootValue = {};
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
+  // it('gets a devotional item', async () => {
+  //   const query = `
+  //     query {
+  //       node(id: "${createGlobalId(123, 'DevotionalContentItem')}") {
+  //         id
+  //         ... on DevotionalContentItem {
+  //           id
+  //           title
+  //           scriptures {
+  //             html
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `;
+  //   const rootValue = {};
+  //   const result = await graphql(schema, query, rootValue, context);
+  //   expect(result).toMatchSnapshot();
+  // });
 
   it("gets a content item and it's siblings", async () => {
     const query = `

@@ -283,13 +283,6 @@ export const resolver = {
   },
   DevotionalContentItem: {
     ...defaultContentItemResolvers,
-    scriptures: ({ attributeValues }, args, { dataSources }) => {
-      const reference = get(attributeValues, 'scriptures.value');
-      if (reference && reference != null) {
-        return dataSources.Scripture.getScriptures(reference);
-      }
-      return null;
-    },
   },
   UniversalContentItem: {
     ...defaultContentItemResolvers,

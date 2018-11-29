@@ -149,6 +149,10 @@ export const scriptureSchema = gql`
   extend type Query {
     scripture(query: String!): Scripture
   }
+
+  extend type DevotionalContentItem {
+    scriptures: [Scripture]
+  }
 `;
 
 export const analyticsSchema = gql`
@@ -276,7 +280,6 @@ export const contentItemSchema = gql`
     theme: Theme
     likedCount: Int
     isLiked: Boolean
-    scriptures: [Scripture]
   }
 
   type MediaContentItem implements ContentItem & Node {
@@ -302,7 +305,6 @@ export const contentItemSchema = gql`
     theme: Theme
     likedCount: Int
     isLiked: Boolean
-    scriptures: [Scripture]
   }
 
   type ContentSeriesContentItem implements ContentItem & Node {
@@ -328,7 +330,6 @@ export const contentItemSchema = gql`
     theme: Theme
     likedCount: Int
     isLiked: Boolean
-    scriptures: [Scripture]
   }
 
   input ContentItemsConnectionInput {

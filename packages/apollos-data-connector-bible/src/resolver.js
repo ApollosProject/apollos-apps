@@ -11,4 +11,13 @@ export default {
     reference: ({ data: { passages } = {} }) => get(passages, '[0].reference'),
     copyright: ({ data: { passages } = {} }) => get(passages, '[0].copyright'),
   },
+  DevotionalContentItem: {
+    scriptures: ({ attributeValues }, args, { dataSources }) => {
+      const reference = get(attributeValues, 'scriptures.value');
+      if (reference && reference != null) {
+        return dataSources.Scripture.getScriptures(reference);
+      }
+      return null;
+    },
+  },
 };
