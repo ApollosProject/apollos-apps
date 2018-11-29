@@ -164,6 +164,32 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         }
       }
 
+      if (url.match('api/Followings')) {
+        if (request.method === 'GET') {
+          return resolveWith([rockMocks.followings()]);
+        }
+        if (request.method === 'POST') {
+          const response = new Response('123', {
+            status: 200,
+            statusText: 'OK',
+            headers: new apolloServerEnv.Headers({
+              'Content-Type': 'application/json',
+            }),
+          });
+          return Promise.resolve(response);
+        }
+        if (request.method === 'DELETE') {
+          console.log('Deleting following');
+          const response = new Response(null, {
+            status: 204,
+            headers: new apolloServerEnv.Headers({
+              'Content-Type': null,
+            }),
+          });
+          return Promise.resolve(response);
+        }
+      }
+
       if (url.match('api/InteractionSessions')) {
         if (request.method === 'GET') {
           return resolveWith(rockMocks.session());

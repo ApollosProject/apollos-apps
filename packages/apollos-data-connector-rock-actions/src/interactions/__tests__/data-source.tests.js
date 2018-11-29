@@ -37,7 +37,7 @@ const context = {
       contentItemInteractionComponent: buildGetMock({ Id: 789 }),
     },
     Auth: {
-      getCurrentPerson: buildGetMock({ Id: 456 }),
+      getCurrentPerson: buildGetMock({ Id: 456, PrimaryAliasId: 456 }),
     },
   },
 };
@@ -58,6 +58,7 @@ describe('Interactions', () => {
       operationName: 'Like',
       nodeTitle: 'Super Cool Content',
     });
+    delete dataSource.post.mock.calls[0][1].InteractionDateTime;
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls).toMatchSnapshot();
