@@ -3,10 +3,10 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import Config from '@apollosproject/config';
 
-const { CONTENT_ITEM_TYPES } = Config.ROCK_MAPPINGS;
+const { ROCK_MAPPINGS } = Config;
 
 const mapApollosNameToRockName = (name) => {
-  if (CONTENT_ITEM_TYPES.includes(name)) {
+  if (ROCK_MAPPINGS.CONTENT_ITEM_TYPES.includes(name)) {
     return 'ContentChannelItem';
   }
   throw new Error(`${name} has not been mapped into a Rock type!`);
