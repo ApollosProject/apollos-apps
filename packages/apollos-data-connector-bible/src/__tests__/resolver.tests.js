@@ -1,38 +1,16 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import { makeExecutableSchema } from 'apollo-server';
-import { KeyValueCache } from 'apollo-server-caching';
-import { createApolloServerConfig } from '@apollosproject/server-core';
-import { testSchema } from '@apollosproject/data-schema';
+import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import * as Scripture from '../index';
 
-const serverConfig = createApolloServerConfig({ Scripture });
-
-function getTestContext(req) {
-  const testContext = serverConfig.context(req);
-  const testDataSources = serverConfig.dataSources();
-  // Apollo Server does this internally.
-  Object.values(testDataSources).forEach((dataSource) => {
-    if (dataSource.initialize) {
-      dataSource.initialize({ context: testContext, cache: KeyValueCache });
-    }
-  });
-  testContext.dataSources = testDataSources;
-  return testContext;
-}
+const { getContext, getSchema } = createTestHelpers({ Scripture });
 
 describe('Scripture', () => {
   let schema;
   let context;
   beforeEach(() => {
-    schema = makeExecutableSchema({
-      typeDefs: [...serverConfig.schema, testSchema],
-      resolvers: serverConfig.resolvers,
-      resolverValidationOptions: {
-        requireResolversForResolveType: false,
-      },
-    });
-    context = getTestContext();
+    schema = getSchema();
+    context = getContext();
 
     fetch.resetMocks();
     fetch.mockLiveDataSourceApis();

@@ -1,18 +1,13 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import { makeExecutableSchema } from 'apollo-server';
-import { KeyValueCache } from 'apollo-server-caching';
 import ApollosConfig from '@apollosproject/config';
-import {
-  createGlobalId,
-  createApolloServerConfig,
-} from '@apollosproject/server-core';
+import { createGlobalId } from '@apollosproject/server-core';
+import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import {
   generateToken,
   registerToken,
 } from '@apollosproject/data-connector-rock-auth';
 import {
-  testSchema,
   peopleSchema,
   mediaSchema,
   authSchema,
@@ -22,20 +17,7 @@ import * as Person from '../index';
 import authMock from '../../authMock';
 
 const Auth = { schema: authSchema, dataSource: authMock };
-const serverConfig = createApolloServerConfig({ Person, Auth });
-
-const getTestContext = (req) => {
-  const context = serverConfig.context(req);
-  const dataSources = serverConfig.dataSources();
-  // Apollo Server does this internally.
-  Object.values(dataSources).forEach((dataSource) => {
-    if (dataSource.initialize) {
-      dataSource.initialize({ context, cache: KeyValueCache });
-    }
-  });
-  context.dataSources = dataSources;
-  return context;
-};
+const { getContext, getSchema } = createTestHelpers({ Person, Auth });
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -51,14 +33,8 @@ describe('Person', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({
-      typeDefs: [...serverConfig.schema, peopleSchema, mediaSchema, testSchema],
-      resolvers: serverConfig.resolvers,
-      resolverValidationOptions: {
-        requireResolversForResolveType: false,
-      },
-    });
-    context = getTestContext();
+    schema = getSchema([peopleSchema, mediaSchema]);
+    context = getContext();
   });
 
   it("updates a user's attributes, if there is a current user", async () => {

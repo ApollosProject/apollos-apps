@@ -1,14 +1,8 @@
 import { graphql } from 'graphql';
-import { KeyValueCache } from 'apollo-server-caching';
 import { fetch } from 'apollo-server-env';
-import { makeExecutableSchema } from 'apollo-server';
 import ApollosConfig from '@apollosproject/config';
-import { createApolloServerConfig } from '@apollosproject/server-core';
-import {
-  peopleSchema,
-  mediaSchema,
-  testSchema,
-} from '@apollosproject/data-schema';
+import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { peopleSchema, mediaSchema } from '@apollosproject/data-schema';
 
 import * as Auth from '../index';
 import { generateToken, registerToken } from '../token';
@@ -20,20 +14,7 @@ ApollosConfig.loadJs({
   },
 });
 
-const serverConfig = createApolloServerConfig({ Auth });
-
-function getTestContext(req) {
-  const testContext = serverConfig.context(req);
-  const testDataSources = serverConfig.dataSources();
-  // Apollo Server does this internally.
-  Object.values(testDataSources).forEach((dataSource) => {
-    if (dataSource.initialize) {
-      dataSource.initialize({ context: testContext, cache: KeyValueCache });
-    }
-  });
-  testContext.dataSources = testDataSources;
-  return testContext;
-}
+const { getContext, getSchema } = createTestHelpers({ Auth });
 
 describe('Auth', () => {
   let schema;
@@ -41,14 +22,8 @@ describe('Auth', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({
-      typeDefs: [...serverConfig.schema, peopleSchema, mediaSchema, testSchema],
-      resolvers: serverConfig.resolvers,
-      resolverValidationOptions: {
-        requireResolversForResolveType: false,
-      },
-    });
-    context = getTestContext();
+    schema = getSchema([peopleSchema, mediaSchema]);
+    context = getContext();
   });
 
   it('logs in a user', async () => {
@@ -108,7 +83,7 @@ describe('Auth', () => {
       const rootValue = {};
       const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
 
-      context = getTestContext({
+      context = getContext({
         req: {
           headers: { authorization: token },
         },
@@ -121,7 +96,7 @@ describe('Auth', () => {
     it('logs a user out without a sessionId', async () => {
       const rootValue = {};
       const token = generateToken({ cookie: 'some-cookie' });
-      context = getTestContext({
+      context = getContext({
         req: {
           headers: { authorization: token },
         },
@@ -147,7 +122,7 @@ describe('Auth', () => {
 
   it('registers an auth token and passes the cookie on requests to rock', async () => {
     const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
-    const secondContext = getTestContext({
+    const secondContext = getContext({
       req: {
         headers: { authorization: token },
       },

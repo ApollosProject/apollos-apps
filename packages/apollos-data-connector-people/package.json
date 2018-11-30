@@ -30,7 +30,8 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.3"
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.3",
+    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.3"
   },
   "publishConfig": {
     "access": "public"
