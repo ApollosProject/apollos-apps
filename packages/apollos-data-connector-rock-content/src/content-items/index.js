@@ -82,6 +82,10 @@ export const defaultContentItemResolvers = {
 
   summary: ({ summary, content }) => {
     if (summary) return summary;
+    if (content == null) return '';
+    // Protect against 0 length sentences (tokenizer will throw an error)
+    if (content.split(' ').length === 1) return '';
+
     const tokenizer = new natural.SentenceTokenizer();
     return tokenizer.tokenize(
       sanitizeHtmlNode(content, {
