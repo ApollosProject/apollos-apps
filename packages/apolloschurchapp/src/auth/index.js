@@ -6,7 +6,7 @@ import {
   FlexedView,
   TabView,
   TabSceneMap as SceneMap,
-  H1,
+  H2,
   H5,
   styled,
   Icon,
@@ -22,12 +22,17 @@ import SignUpForm from './signup';
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
 
-const Title = styled(({ theme }) => ({ color: theme.colors.primary }))(H1);
+const Title = styled(({ theme }) => ({
+  color: theme.colors.primary,
+}))(H2);
+
+const StyledH5 = styled(() => ({
+  padding: 0,
+}))(H5);
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
-  size: theme.sizing.baseUnit * 2.25,
-  marginVertical: theme.sizing.baseUnit,
+  size: theme.sizing.baseUnit * 3.0,
   fill: theme.colors.primary,
 }))(Icon);
 
@@ -38,6 +43,17 @@ const HeaderContainer = styled(({ theme }) => ({
 const Header = styled(({ theme }) => ({
   padding: theme.sizing.baseUnit,
   paddingBottom: theme.sizing.baseUnit * 1.5,
+  flexDirection: 'row',
+  alignItems: 'center',
+}))(View);
+
+const HeaderText = styled(({ theme }) => ({
+  flexDirection: 'column',
+  paddingTop: 0,
+  paddingBottom: 0,
+  paddingRight: 0,
+  paddingLeft: theme.sizing.baseUnit,
+  marginBottom: 0,
 }))(View);
 
 const CancelButton = styled(({ theme }) => ({
@@ -79,8 +95,10 @@ class Auth extends PureComponent {
           <CancelButton onPress={this.handleFinish}>Cancel</CancelButton>
           <Header>
             <BrandIcon />
-            <Title>Welcome!</Title>
-            <H5>Please sign in to continue</H5>
+            <HeaderText>
+              <Title>Welcome!</Title>
+              <StyledH5>Please sign in to continue</StyledH5>
+            </HeaderText>
           </Header>
         </HeaderContainer>
         <TabView
