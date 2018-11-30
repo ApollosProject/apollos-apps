@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.3",
+    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.3",
     "jest": "^23.6.0"
   },
   "gitHead": "5c3bccdfe37c8bd7a275ecd1f67053f2962449d8"
