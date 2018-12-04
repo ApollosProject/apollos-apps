@@ -129,7 +129,6 @@ Object {
           ],
         },
       ],
-      "likedCount": null,
       "parentChannel": Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -158,9 +157,6 @@ Object {
       ],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
-  ],
 }
 `;
 
@@ -274,7 +270,6 @@ Object {
                 ],
               },
             ],
-            "likedCount": null,
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -306,9 +301,6 @@ Object {
       ],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
-  ],
 }
 `;
 
@@ -438,7 +430,6 @@ Object {
                 ],
               },
             ],
-            "likedCount": null,
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -470,9 +461,6 @@ Object {
       ],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
-  ],
 }
 `;
 
@@ -515,7 +503,6 @@ Object {
 ",
       "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       "images": Array [],
-      "likedCount": null,
       "parentChannel": Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -531,8 +518,5 @@ Object {
       "videos": Array [],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'getCountByOperationForContentItem' of undefined],
-  ],
 }
 `;

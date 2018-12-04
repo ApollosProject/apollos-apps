@@ -3,6 +3,7 @@ import { DataSource } from 'apollo-datasource';
 import ApollosConfig from '@apollosproject/config';
 import GAInterface from './interfaces/ga';
 import SegmentInterface from './interfaces/segment';
+import RockInteractions from './interfaces/rock_interactions';
 
 const { ANALYTICS } = ApollosConfig;
 // Utility function to convert GQL array of key/values to Object.
@@ -15,7 +16,7 @@ const mapArrayToObject = (array = []) =>
 
 // Add interfaces to this function to get picked up automatically.
 export const getInterfaces = () => {
-  const interfaces = [];
+  const interfaces = [new RockInteractions()];
   if (ANALYTICS.SEGMENT_KEY) {
     interfaces.push(new SegmentInterface(ANALYTICS.SEGMENT_KEY));
   }

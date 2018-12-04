@@ -80,6 +80,11 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ContentChannelId eq ${id}`)
       .orderBy('StartDateTime', 'desc');
 
+  getFromIds = (ids) => {
+    const filter = ids.map((id) => `(Id eq ${id})`).join(' or ');
+    return this.request().filter(filter);
+  };
+
   getFromId = (id) =>
     this.request()
       .find(id)

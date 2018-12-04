@@ -1,0 +1,32 @@
+{
+  "name": "@apollosproject/data-connector-rock-actions",
+  "version": "0.8.0-alpha.3",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "lint": "eslint ./src --ext .js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@apollosproject/data-schema": "^0.8.0-alpha.3",
+    "@apollosproject/server-core": "^0.8.0-alpha.3"
+  },
+  "peerDependencies": {
+    "@apollosproject/config": "*",
+    "@apollosproject/rock-apollo-data-source": "*"
+  },
+  "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.3",
+    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.3",
+    "jest": "^23.6.0"
+  }
+}

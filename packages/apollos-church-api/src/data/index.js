@@ -13,12 +13,15 @@ import { Person, Family } from '@apollosproject/data-connector-people';
 import * as Scripture from '@apollosproject/data-connector-bible';
 import * as LiveStream from '@apollosproject/data-connector-church-online';
 import * as Cloudinary from '@apollosproject/data-connector-cloudinary';
-
-import RockConstants from '../connectors/rock/rock-constants';
+import {
+  Followings,
+  Interactions,
+  RockConstants,
+} from '@apollosproject/data-connector-rock-actions';
 import * as Theme from './theme';
-import * as Interactions from './interactions';
 
 const data = {
+  Followings,
   ContentChannel,
   ContentItem,
   Person,
@@ -28,7 +31,7 @@ const data = {
   Theme,
   Scripture,
   Interactions,
-  RockConstants: { dataSource: RockConstants },
+  RockConstants,
   Sharable,
   Analytics,
   Family,

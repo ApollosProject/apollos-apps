@@ -198,12 +198,6 @@ export const analyticsSchema = gql`
 `;
 
 export const contentItemSchema = gql`
-  type SharableContentItem implements Sharable {
-    url: String
-    message: String
-    title: String
-  }
-
   interface ContentItem {
     id: ID!
     title: String
@@ -223,10 +217,7 @@ export const contentItemSchema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
 
-    sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
   }
 
   type UniversalContentItem implements ContentItem & Node {
@@ -247,10 +238,7 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-    sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
   }
 
   type DevotionalContentItem implements ContentItem & Node {
@@ -272,10 +260,7 @@ export const contentItemSchema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
 
-    sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
     scriptures: [Scripture]
   }
 
@@ -298,10 +283,7 @@ export const contentItemSchema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
 
-    sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
     scriptures: [Scripture]
   }
 
@@ -324,10 +306,7 @@ export const contentItemSchema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
 
-    sharing: SharableContentItem
     theme: Theme
-    likedCount: Int
-    isLiked: Boolean
     scriptures: [Scripture]
   }
 
@@ -349,7 +328,6 @@ export const contentItemSchema = gql`
 
   extend type Query {
     userFeed(first: Int, after: String): ContentItemsConnection
-    getAllLikedContent: [ContentItem]
   }
 `;
 
@@ -379,6 +357,32 @@ export const contentSharableSchema = gql`
     message: String
     title: String
   }
+
+  type SharableContentItem implements Sharable {
+    url: String
+    message: String
+    title: String
+  }
+
+  extend interface ContentItem {
+    sharing: SharableContentItem
+  }
+
+  extend type DevotionalContentItem {
+    sharing: SharableContentItem
+  }
+
+  extend type UniversalContentItem {
+    sharing: SharableContentItem
+  }
+
+  extend type MediaContentItem {
+    sharing: SharableContentItem
+  }
+
+  extend type ContentSeriesContentItem {
+    sharing: SharableContentItem
+  }
 `;
 
 export const familySchema = gql`
@@ -395,5 +399,50 @@ export const liveSchema = gql`
 
   extend type Query {
     liveStream: LiveStream
+  }
+`;
+
+export const followingsSchema = gql`
+  enum LIKE_OPERATION {
+    Like
+    Unlike
+  }
+
+  input LikeEntityInput {
+    nodeId: ID!
+    operation: LIKE_OPERATION!
+  }
+
+  extend type Mutation {
+    updateLikeEntity(input: LikeEntityInput!): ContentItem
+  }
+
+  extend interface ContentItem {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  extend type DevotionalContentItem {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  extend type UniversalContentItem {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  extend type MediaContentItem {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  extend type ContentSeriesContentItem {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  extend type Query {
+    getAllLikedContent: [ContentItem]
   }
 `;

@@ -12,5 +12,8 @@ Object {
   },
   "ROCK_CONSTANTS": Object {},
   "ROCK_MAPPINGS": Object {},
+  "VALUE_NOT_IN_DEFAULT_CONFIG": Object {
+    "FOO": "bar",
+  },
 }
 `;
