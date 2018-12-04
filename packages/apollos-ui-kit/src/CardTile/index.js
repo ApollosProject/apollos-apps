@@ -6,7 +6,7 @@ import moment from 'moment';
 
 import Placeholder from '../Placeholder';
 import { withIsLoading } from '../isLoading';
-import { withTheme } from '../theme';
+import { withTheme, withThemeMixin } from '../theme';
 import styled from '../styled';
 import { H3, H5, H6 } from '../typography';
 import { CardContent, CardActions } from '../Card';
@@ -14,6 +14,14 @@ import ChannelLabel from '../ChannelLabel';
 
 const enhance = compose(
   withIsLoading,
+  withThemeMixin(({ theme }) => ({
+    type: 'light',
+    colors: {
+      background: {
+        inactive: theme.colors.lightSecondary,
+      },
+    },
+  })),
   withTheme(),
   pure
 );
