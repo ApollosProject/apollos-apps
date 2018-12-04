@@ -11,11 +11,10 @@ import {
 import * as Analytics from '@apollosproject/data-connector-analytics';
 import { Person, Family } from '@apollosproject/data-connector-people';
 import * as Scripture from '@apollosproject/data-connector-bible';
+import * as LiveStream from '@apollosproject/data-connector-church-online';
+import * as Cloudinary from '@apollosproject/data-connector-cloudinary';
 
 import RockConstants from '../connectors/rock/rock-constants';
-
-import * as Media from './media';
-import * as LiveStream from './live';
 import * as Theme from './theme';
 import * as Interactions from './interactions';
 
@@ -23,7 +22,7 @@ const data = {
   ContentChannel,
   ContentItem,
   Person,
-  Media,
+  Cloudinary,
   Auth,
   LiveStream,
   Theme,
