@@ -56,4 +56,14 @@ APP:
     - UniversalContentItem
     - DevotionalContentItem
     - MediaContentItem
-    ```
+```
+  - [ ] Add `INTERACTIONS` to `ROCK_MAPPINGS`. Change your values to match your team / project
+```
+  INTERACTIONS:
+    # Name of the InteractionChannel that will be created
+    CHANNEL_NAME: Apollos App
+    # Name of the InteractionComponent that will be created for Content Items
+    COMPONENT_NAME: Apollos Content Item
+    # 512 is "Mobile App"
+    CHANNEL_MEDIUM_TYPE_ID: 512
+```
