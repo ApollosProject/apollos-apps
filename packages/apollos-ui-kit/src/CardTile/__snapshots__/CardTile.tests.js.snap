@@ -292,7 +292,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "#DBDBD9",
                   "borderRadius": 16,
                   "height": 24,
                   "marginVertical": 1.8000000000000007,
@@ -393,7 +393,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "#DBDBD9",
                   "borderRadius": 16,
                   "height": 40,
                   "width": 40,
@@ -413,7 +413,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "#DBDBD9",
                   "borderRadius": 16,
                   "height": 24,
                   "marginVertical": 1.8000000000000007,
@@ -448,7 +448,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "#DBDBD9",
                     "borderRadius": 16,
                     "height": 19.2,
                     "width": 19.2,
@@ -467,7 +467,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "#DBDBD9",
                       "borderRadius": 16,
                       "height": 12,
                       "marginVertical": 2.6400000000000006,
@@ -481,7 +481,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "#DBDBD9",
                   "borderRadius": 16,
                   "height": 12,
                   "marginVertical": 2.6400000000000006,
