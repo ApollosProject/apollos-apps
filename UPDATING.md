@@ -7,8 +7,8 @@
 1. In `src/data/index.js`
   - [ ] Remove `Interactions` import and delete folder `data/interactions`.
   - [ ] Remove `RockConstants` import and delete `connectors` folder and all contents.
-  - [ ] Add below code to top of file ```
-import {
+  - [ ] Add below code to top of file
+```
 import RockConstants from '../connectors/rock/rock-constants';    Followings,
   Interactions,
   RockConstants,
