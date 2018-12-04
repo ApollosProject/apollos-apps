@@ -19,14 +19,14 @@ const defaultContentItemResolvers = {
   },
 };
 
-export default {
+const resolvers = {
   Mutation: {
     updateLikeEntity: async (
       root,
       { input: { nodeId, operation } },
       { dataSources }
     ) =>
-      dataSources.Followings.updateLikeContent({
+      dataSources.Followings.updateLikeContentItem({
         nodeId,
         operation,
       }),
@@ -54,3 +54,5 @@ export default {
   ContentSeriesContentItem: defaultContentItemResolvers,
   MediaContentItem: defaultContentItemResolvers,
 };
+
+export { resolvers as default };

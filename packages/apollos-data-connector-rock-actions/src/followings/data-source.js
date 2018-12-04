@@ -5,7 +5,7 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 export default class Followings extends RockApolloDataSource {
   resource = 'Followings';
 
-  async updateLikeContent({ nodeId, operation }) {
+  async updateLikeContentItem({ nodeId, operation }) {
     const {
       dataSources: { ContentItem },
     } = this.context;
@@ -45,6 +45,7 @@ export default class Followings extends RockApolloDataSource {
     const { id, __type } = parseGlobalId(nodeId);
     const nodeType = await RockConstants.modelType(__type);
     const currentUser = await Auth.getCurrentPerson();
+    // currentUser.id is correct, this path does not use aliasId
     return this.delete(`/Followings/${nodeType.id}/${id}/${currentUser.id}`);
   }
 

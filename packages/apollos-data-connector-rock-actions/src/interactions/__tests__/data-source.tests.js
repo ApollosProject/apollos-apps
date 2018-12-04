@@ -54,9 +54,9 @@ describe('Interactions', () => {
     dataSource.post = buildGetMock('1');
 
     const result = await dataSource.createContentItemInteraction({
-      nodeId: createGlobalId(1, 'UniversalContentItem'),
+      itemId: createGlobalId(1, 'UniversalContentItem'),
       operationName: 'Like',
-      nodeTitle: 'Super Cool Content',
+      itemTitle: 'Super Cool Content',
     });
     delete dataSource.post.mock.calls[0][1].InteractionDateTime;
     expect(result).toMatchSnapshot();

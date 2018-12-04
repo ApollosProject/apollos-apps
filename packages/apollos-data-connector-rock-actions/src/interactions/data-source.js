@@ -5,16 +5,18 @@ import ApollosConfig from '@apollosproject/config';
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
 
-  async createContentItemInteraction({ nodeId, operationName, nodeTitle }) {
+  async createContentItemInteraction({ itemId, operationName, itemTitle }) {
     const {
       dataSources: { RockConstants, Auth },
     } = this.context;
-    const { id } = parseGlobalId(nodeId);
+    const { id } = parseGlobalId(itemId);
 
     const interactionComponent = await RockConstants.contentItemInteractionComponent(
       {
         contentItemId: id,
-        contentName: id, // Don't want to recreate channels if name changes
+        // Don't want to recreate channels if name changes
+        // In the future, we could use itemTitle here.
+        contentName: id,
       }
     );
     const currentUser = await Auth.getCurrentPerson();
@@ -24,10 +26,10 @@ export default class Interactions extends RockApolloDataSource {
       InteractionSessionId: this.context.sessionId,
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
-      InteractionSummary: `${operationName} - ${nodeTitle}`,
+      InteractionSummary: `${operationName} - ${itemTitle}`,
       InteractionData: `${
         ApollosConfig.APP.DEEP_LINK_HOST
-      }://Interactions/ContentSingle?itemId=${nodeId}`,
+      }://Interactions/ContentSingle?itemId=${itemId}`,
     });
 
     return this.get(`/Interactions/${interactionId}`);

@@ -10,6 +10,11 @@ ApollosConfig.loadJs({
       'DevotionalContentItem',
       'MediaContentItem',
     ],
+    INTERACTIONS: {
+      CHANNEL_NAME: 'Apollos App',
+      COMPONENT_NAME: 'Apollos Content Item',
+      CHANNEL_MEDIUM_TYPE_ID: 512,
+    },
   },
 });
 
