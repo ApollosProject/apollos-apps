@@ -8,3 +8,4 @@ export userLogins from './user-logins';
 export session from './session';
 export interaction from './interaction';
 export families from './families';
+export followings from './followings';

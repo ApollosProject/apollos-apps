@@ -241,7 +241,8 @@ exports[`Analytics Data Source track must track specific events using the Rock a
 Array [
   Array [
     Object {
-      "nodeId": "Content:123",
+      "itemId": "Content:123",
+      "itemTitle": "Super Cool Content",
       "operationName": "View Content",
       "sessionId": "Session:123",
     },

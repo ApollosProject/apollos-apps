@@ -126,7 +126,6 @@ const contentItemFragment = `
       title
       message
     }
-    likedCount
   }
 `;
 
