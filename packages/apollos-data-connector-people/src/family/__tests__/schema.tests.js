@@ -1,17 +1,14 @@
-import { KeyValueCache } from 'apollo-server-caching';
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import { makeExecutableSchema } from 'apollo-server';
 
 import ApollosConfig from '@apollosproject/config';
 import { generateToken } from '@apollosproject/data-connector-rock-auth';
 import {
-  testSchema,
   peopleSchema,
   mediaSchema,
   authSchema,
 } from '@apollosproject/data-schema';
-import { createApolloServerConfig } from '@apollosproject/server-core';
+import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { Person, Family } from '../..';
 // we import the root-level schema and resolver so we test the entire integration:
 import authMock from '../../authMock';
@@ -30,20 +27,7 @@ const Auth = {
   resolver: { Query: { currentUser: () => ({ profile: { id: 51 } }) } },
 };
 
-const serverConfig = createApolloServerConfig({ Family, Person, Auth });
-
-const getTestContext = (req) => {
-  const context = serverConfig.context(req);
-  const dataSources = serverConfig.dataSources();
-  // Apollo Server does this internally.
-  Object.values(dataSources).forEach((dataSource) => {
-    if (dataSource.initialize) {
-      dataSource.initialize({ context, cache: KeyValueCache });
-    }
-  });
-  context.dataSources = dataSources;
-  return context;
-};
+const { getContext, getSchema } = createTestHelpers({ Person, Family, Auth });
 
 describe('Family', () => {
   let schema;
@@ -51,18 +35,12 @@ describe('Family', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = makeExecutableSchema({
-      typeDefs: [...serverConfig.schema, peopleSchema, mediaSchema, testSchema],
-      resolvers: serverConfig.resolvers,
-      resolverValidationOptions: {
-        requireResolversForResolveType: false,
-      },
-    });
+    schema = getSchema([peopleSchema, mediaSchema]);
     const token = generateToken({
       cookie: 'some-cookie',
       sessionId: 'somessessionid',
     });
-    context = getTestContext({ req: { headers: { authorization: token } } });
+    context = getContext({ req: { headers: { authorization: token } } });
   });
 
   it("returns a user's location", async () => {
