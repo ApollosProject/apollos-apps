@@ -9,6 +9,9 @@ describe('the yaml loader', () => {
       BIBLE_API: {
         API_TOKEN: 'foobar',
       },
+      VALUE_NOT_IN_DEFAULT_CONFIG: {
+        FOO: 'bar',
+      },
     });
     expect(ApollosConfig.config).toMatchSnapshot();
   });
