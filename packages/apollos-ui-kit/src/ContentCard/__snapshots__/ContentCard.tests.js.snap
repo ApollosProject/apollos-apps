@@ -142,16 +142,34 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
           </Text>
         </View>
         <View
-          floating={false}
           style={
             Object {
               "alignItems": "center",
               "flexDirection": "row",
               "flexWrap": "wrap",
+              "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
               "paddingTop": 4,
               "paddingVertical": 16,
+            }
+          }
+        />
+        <View
+          floating={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "left": 0,
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "right": 0,
             }
           }
         >
@@ -389,16 +407,34 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
           />
         </View>
         <View
-          floating={false}
           style={
             Object {
               "alignItems": "center",
               "flexDirection": "row",
               "flexWrap": "wrap",
+              "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
               "paddingTop": 4,
               "paddingVertical": 16,
+            }
+          }
+        />
+        <View
+          floating={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "left": 0,
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "right": 0,
             }
           }
         >
@@ -600,6 +636,20 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
             }
           />
         </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 32,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+            }
+          }
+        />
         <View
           floating={true}
           style={
@@ -850,6 +900,20 @@ exports[`ContentCard renders as Tile/No image 1`] = `
             As Hurricane Florence moves toward South Carolina, Gov. Henry McMaster has called for a mandatory evacuation of several coastal communities and many surrounding school districts are closing in preparation for the storm.
           </Text>
         </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 32,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+            }
+          }
+        />
         <View
           floating={true}
           style={
@@ -1135,6 +1199,20 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
           </Text>
         </View>
         <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 32,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+            }
+          }
+        />
+        <View
           floating={true}
           style={
             Object {
@@ -1391,6 +1469,20 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
           />
         </View>
         <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 32,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+            }
+          }
+        />
+        <View
           floating={true}
           style={
             Object {
@@ -1580,10 +1672,28 @@ exports[`ContentCard renders with No image 1`] = `
               "alignItems": "center",
               "flexDirection": "row",
               "flexWrap": "wrap",
+              "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
               "paddingTop": 4,
               "paddingVertical": 16,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "left": 0,
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "right": 0,
             }
           }
         >
@@ -1842,6 +1952,20 @@ exports[`ContentCard renders with an Image only 1`] = `
             }
           />
         </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 32,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 4,
+              "paddingVertical": 16,
+            }
+          }
+        />
         <View
           floating={true}
           style={

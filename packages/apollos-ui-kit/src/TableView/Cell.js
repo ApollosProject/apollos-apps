@@ -12,12 +12,12 @@ const asFirstChild = (child) =>
 const Container = styled(
   ({ theme }) => ({
     padding: theme.sizing.baseUnit / 2,
-    paddingLeft: theme.sizing.baseUnit / 1.5,
+    paddingLeft: theme.sizing.baseUnit,
     backgroundColor: theme.colors.background.paper,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    height: theme.sizing.baseUnit * 2.5,
+    minHeight: theme.sizing.baseUnit * 2.5,
   }),
   'TableView.Cell.Container'
 )(View);
