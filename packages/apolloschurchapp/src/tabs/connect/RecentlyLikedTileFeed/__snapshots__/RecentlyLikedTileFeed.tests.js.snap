@@ -301,6 +301,20 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     />
                   </View>
                   <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "flexWrap": "wrap",
+                        "height": 32,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 16,
+                        "paddingTop": 4,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  />
+                  <View
                     floating={true}
                     style={
                       Object {
@@ -551,6 +565,20 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                       }
                     />
                   </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "flexWrap": "wrap",
+                        "height": 32,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 16,
+                        "paddingTop": 4,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  />
                   <View
                     floating={true}
                     style={
@@ -982,6 +1010,20 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     />
                   </View>
                   <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "flexWrap": "wrap",
+                        "height": 32,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 16,
+                        "paddingTop": 4,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  />
+                  <View
                     floating={true}
                     style={
                       Object {
@@ -1232,6 +1274,20 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                       }
                     />
                   </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "flexWrap": "wrap",
+                        "height": 32,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 16,
+                        "paddingTop": 4,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  />
                   <View
                     floating={true}
                     style={

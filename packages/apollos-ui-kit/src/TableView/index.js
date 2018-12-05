@@ -11,6 +11,7 @@ export { default as CellText } from './CellText';
 export { default as CellIcon } from './CellIcon';
 export { default as Divider } from './Divider';
 export { default as FormFields } from './FormFields';
+export { default as CellContent } from './CellContent';
 
 const TableView = compose(
   styled(
