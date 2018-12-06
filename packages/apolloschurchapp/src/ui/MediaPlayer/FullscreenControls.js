@@ -264,9 +264,8 @@ class FullscreenControls extends PureComponent {
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  <IconSm name="empty">
-                    <AirplayControls />
-                  </IconSm>
+                  {/* <IconSm name="empty" /> */}
+                  <AirplayControls />
                 </UpperControl>
               </TouchableWithoutFeedback>
               <LowerControl>
