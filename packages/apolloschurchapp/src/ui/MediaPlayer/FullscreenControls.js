@@ -11,11 +11,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import { compose } from 'recompose';
-import {
-  AirPlayListener,
-  AirPlayButton,
-  AirPlay,
-} from 'react-native-airplay-btn';
 
 import {
   PaddedView,
@@ -40,6 +35,8 @@ import {
 } from './mutations';
 
 import { ControlsConsumer } from './PlayheadState';
+
+import AirplayControls from './AirplayControls';
 
 const Background = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
@@ -129,23 +126,6 @@ class FullscreenControls extends PureComponent {
     this.fader.addListener(({ value }) => {
       this.controlsVisible = value > 0.05;
     });
-
-    // Airplay listeners
-    this.airPlayAvailable = AirPlayListener.addListener(
-      'airplayAvailable',
-      (devices) =>
-        this.setState({
-          airPlayAvailable: devices.available,
-        })
-    );
-
-    this.airPlayConnected = AirPlayListener.addListener(
-      'airplayConnected',
-      (devices) =>
-        this.setState({
-          airPlayConnected: devices.available,
-        })
-    );
   }
 
   componentDidMount() {
@@ -156,21 +136,11 @@ class FullscreenControls extends PureComponent {
       }
       return false;
     });
-
-    // start airplay scan
-    AirPlay.startScan();
   }
 
   componentWillUnmount() {
     this.backHandler.remove();
     if (this.closeTimeout) clearTimeout(this.closeTimeout);
-
-    // remove airplay handlers
-    this.airPlayConnected.remove();
-    this.airPlayAvailable.remove();
-
-    // TODO: when should we disconnect?
-    // AirPlay.disconnect();
   }
 
   handleOnScrubbing = ({ isScrubbing }) => {
@@ -294,8 +264,9 @@ class FullscreenControls extends PureComponent {
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  <AirPlayButton />
-                  {/* <IconSm name="empty" /> */}
+                  <IconSm name="empty">
+                    <AirplayControls />
+                  </IconSm>
                 </UpperControl>
               </TouchableWithoutFeedback>
               <LowerControl>
