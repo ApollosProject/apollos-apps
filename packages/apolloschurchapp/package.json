@@ -1,6 +1,6 @@
 {
   "name": "apolloschurchapp",
-  "version": "0.6.0",
+  "version": "0.8.0-alpha.4",
   "private": true,
   "devDependencies": {
     "@storybook/addon-actions": "4.0.7",
@@ -11,7 +11,7 @@
     "get-dev-paths": "^0.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
-    "nodemon": "1.17.5",
+    "nodemon": "1.18.7",
     "prop-types": "15.6.1",
     "react-dom": "16.6.3",
     "react-native-dotenv": "0.2.0",
@@ -33,7 +33,7 @@
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "lint": "eslint ./src --ext .js",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
-    "prestart": "node ./scripts/get-introspection-data.js",
+    "prestart": "babel-node ./scripts/get-introspection-data.js",
     "start": "react-native start",
     "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007 --root ../../",
     "test": "jest",
@@ -62,7 +62,7 @@
     }
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "0.6.0",
+    "@apollosproject/ui-kit": "^0.8.0-alpha.4",
     "apollo-cache-inmemory": "1.3.5",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.4.2",
@@ -85,6 +85,7 @@
     "memoize-one": "4.0.0",
     "moment": "2.22.2",
     "node-fetch": "2.2.0",
+    "numeral": "^2.0.6",
     "prettier": "1.14.2",
     "querystring": "^0.2.0",
     "react": "16.6.1",

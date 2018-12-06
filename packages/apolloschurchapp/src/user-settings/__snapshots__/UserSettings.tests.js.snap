@@ -243,10 +243,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
                   "flexDirection": "row",
-                  "height": 40,
                   "justifyContent": "flex-start",
+                  "minHeight": 40,
                   "padding": 8,
-                  "paddingLeft": 10.666666666666666,
+                  "paddingLeft": 16,
                 }
               }
             >
@@ -256,8 +256,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                     "color": "#303030",
                     "flexGrow": 1,
                     "flexShrink": 1,
-                    "fontFamily": "InterUI-Medium",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontStyle": null,
+                    "fontWeight": null,
                     "lineHeight": 20.16,
                     "paddingLeft": 0,
                     "paddingRight": 8,
@@ -371,10 +373,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
                   "flexDirection": "row",
-                  "height": 40,
                   "justifyContent": "flex-start",
+                  "minHeight": 40,
                   "padding": 8,
-                  "paddingLeft": 10.666666666666666,
+                  "paddingLeft": 16,
                 }
               }
             >
@@ -384,8 +386,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                     "color": "#303030",
                     "flexGrow": 1,
                     "flexShrink": 1,
-                    "fontFamily": "InterUI-Medium",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontStyle": null,
+                    "fontWeight": null,
                     "lineHeight": 20.16,
                     "paddingLeft": 0,
                     "paddingRight": 8,
@@ -503,10 +507,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
                   "flexDirection": "row",
-                  "height": 40,
                   "justifyContent": "flex-start",
+                  "minHeight": 40,
                   "padding": 8,
-                  "paddingLeft": 10.666666666666666,
+                  "paddingLeft": 16,
                 }
               }
             >
@@ -516,8 +520,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                     "color": "#303030",
                     "flexGrow": 1,
                     "flexShrink": 1,
-                    "fontFamily": "InterUI-Medium",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontStyle": null,
+                    "fontWeight": null,
                     "lineHeight": 20.16,
                     "paddingLeft": 0,
                     "paddingRight": 8,
@@ -635,10 +641,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
                   "flexDirection": "row",
-                  "height": 40,
                   "justifyContent": "flex-start",
+                  "minHeight": 40,
                   "padding": 8,
-                  "paddingLeft": 10.666666666666666,
+                  "paddingLeft": 16,
                 }
               }
             >
@@ -648,8 +654,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                     "color": "#303030",
                     "flexGrow": 1,
                     "flexShrink": 1,
-                    "fontFamily": "InterUI-Medium",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontStyle": null,
+                    "fontWeight": null,
                     "lineHeight": 20.16,
                     "paddingLeft": 0,
                     "paddingRight": 8,
@@ -763,10 +771,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
                   "flexDirection": "row",
-                  "height": 40,
                   "justifyContent": "flex-start",
+                  "minHeight": 40,
                   "padding": 8,
-                  "paddingLeft": 10.666666666666666,
+                  "paddingLeft": 16,
                 }
               }
             >
@@ -776,8 +784,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                     "color": "#303030",
                     "flexGrow": 1,
                     "flexShrink": 1,
-                    "fontFamily": "InterUI-Medium",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontStyle": null,
+                    "fontWeight": null,
                     "lineHeight": 20.16,
                     "paddingLeft": 0,
                     "paddingRight": 8,
@@ -895,10 +905,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
                   "flexDirection": "row",
-                  "height": 40,
                   "justifyContent": "flex-start",
+                  "minHeight": 40,
                   "padding": 8,
-                  "paddingLeft": 10.666666666666666,
+                  "paddingLeft": 16,
                 }
               }
             >
@@ -908,8 +918,10 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                     "color": "#303030",
                     "flexGrow": 1,
                     "flexShrink": 1,
-                    "fontFamily": "InterUI-Medium",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontStyle": null,
+                    "fontWeight": null,
                     "lineHeight": 20.16,
                     "paddingLeft": 0,
                     "paddingRight": 8,

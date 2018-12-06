@@ -1,11 +1,14 @@
 import { compact, mapValues, merge, values } from 'lodash';
 import gql from 'graphql-tag';
 import * as Node from './node';
+import * as Pagination from './pagination';
+import * as Media from './media';
 
 export { createGlobalId, parseGlobalId } from './node';
+export { withEdgePagination } from './pagination/utils';
 
 // Types that all apollos-church servers will use.
-const builtInData = { Node };
+const builtInData = { Node, Pagination, Media };
 
 export const createSchema = (data) => [
   gql`

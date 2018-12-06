@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-analytics",
-  "version": "0.6.0",
+  "version": "0.8.0-alpha.4",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.6.0",
-    "@apollosproject/server-core": "^0.6.0",
+    "@apollosproject/data-schema": "^0.8.0-alpha.4",
+    "@apollosproject/server-core": "^0.8.0-alpha.4",
     "analytics-node": "^3.3.0",
     "apollo-datasource": "^0.2.0",
     "apollo-server": "^2.1.0",
@@ -28,10 +28,14 @@
     "universal-analytics": "^0.4.20"
   },
   "peerDependencies": {
-    "@apollosproject/config": "^0.6.0",
-    "@apollosproject/rock-apollo-data-source": "^0.6.0"
+    "@apollosproject/config": "*",
+    "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "babel-preset-apollos": "file:../babel-preset-apollos"
-  }
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "375e9a2d747fe4c0b5406681e2db676d60c24227"
 }

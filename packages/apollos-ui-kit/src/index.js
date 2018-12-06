@@ -3,14 +3,14 @@ export ActivityIndicator, {
 } from './ActivityIndicator';
 export Avatar, { AvatarList } from './Avatar';
 export BackgroundView from './BackgroundView';
-export Button, { ButtonLink } from './Button';
+export Button, { ButtonLink, ButtonIcon } from './Button';
 export Card, { CardImage, CardContent, CardActions, ErrorCard } from './Card';
 export CardTile from './CardTile';
 export CenteredView from './CenteredView';
 export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
-export FeedItemCard from './FeedItemCard';
+export ContentCard from './ContentCard';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
@@ -28,7 +28,7 @@ export MediaQuery, {
   enhancer as withMediaQuery,
   withWindow,
 } from './MediaQuery';
-export ModalView from './ModalView';
+export ModalView, { ModalViewHeader } from './ModalView';
 export PaddedView from './PaddedView';
 export Placeholder, { withPlaceholder } from './Placeholder';
 export ProgressieImage from './ProgressiveImage';
@@ -38,6 +38,7 @@ export TableView, {
   Cell,
   CellText,
   CellIcon,
+  CellContent,
   Divider,
   FormFields,
 } from './TableView';
