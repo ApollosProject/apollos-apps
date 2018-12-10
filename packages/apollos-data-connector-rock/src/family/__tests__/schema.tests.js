@@ -2,13 +2,13 @@ import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 
 import ApollosConfig from '@apollosproject/config';
-import { generateToken } from '@apollosproject/data-connector-rock-auth';
 import {
   peopleSchema,
   mediaSchema,
   authSchema,
 } from '@apollosproject/data-schema';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { generateToken } from '../../auth';
 import { Person, Family } from '../..';
 // we import the root-level schema and resolver so we test the entire integration:
 import authMock from '../../authMock';
