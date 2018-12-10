@@ -3,13 +3,14 @@ import React from 'react';
 import {
   // AirPlayListener,
   AirPlayButton,
-  AirPlay,
+  // AirPlay,
 } from 'react-native-airplay-btn';
 
-class AirplayControls extends React.Component {
-  // TODO: use these if we need to know the status for anything
-  // Airplay listeners
+function AirplayControls() {
+  // TODO: use a class if we need to know the airplay status for anything later
   /*
+//class AirplayControls extends React.Component {
+  // Airplay listeners
   airPlayAvailable = AirPlayListener.addListener(
     'airplayAvailable',
     (devices) =>
@@ -25,7 +26,6 @@ class AirplayControls extends React.Component {
         airPlayConnected: devices.available,
       })
   );
-  */
   componentDidMount() {
     AirPlay.startScan();
   }
@@ -39,8 +39,8 @@ class AirplayControls extends React.Component {
   }
 
   render() {
-    return <AirPlayButton />;
-  }
+  */
+  return <AirPlayButton />;
 }
 
 export default AirplayControls;
