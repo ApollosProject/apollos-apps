@@ -483,16 +483,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -668,16 +686,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -853,16 +889,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -1038,16 +1092,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -1223,16 +1295,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -1408,16 +1498,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -1593,16 +1701,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -1778,16 +1904,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -1963,16 +2107,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -2148,16 +2310,34 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -2808,16 +2988,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -2993,16 +3191,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -3178,16 +3394,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -3363,16 +3597,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -3548,16 +3800,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -3733,16 +4003,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -3918,16 +4206,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -4103,16 +4409,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -4288,16 +4612,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >
@@ -4473,16 +4815,34 @@ exports[`The FeedView component renders empty state 1`] = `
                   />
                 </View>
                 <View
-                  floating={false}
                   style={
                     Object {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "flexWrap": "wrap",
+                      "height": 32,
                       "justifyContent": "space-between",
                       "paddingHorizontal": 16,
                       "paddingTop": 4,
                       "paddingVertical": 16,
+                    }
+                  }
+                />
+                <View
+                  floating={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-between",
+                      "left": 0,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 4,
+                      "paddingVertical": 16,
+                      "position": "absolute",
+                      "right": 0,
                     }
                   }
                 >

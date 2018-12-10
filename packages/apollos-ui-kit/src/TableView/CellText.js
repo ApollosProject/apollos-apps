@@ -1,4 +1,4 @@
-import { H5 } from '../typography';
+import { UIText } from '../typography';
 import styled from '../styled';
 
 const CellText = styled(({ theme }) => ({
@@ -6,6 +6,6 @@ const CellText = styled(({ theme }) => ({
   flexShrink: 1,
   paddingLeft: theme.sizing.baseUnit / 2,
   paddingRight: theme.sizing.baseUnit / 2,
-}))(H5);
+}))(UIText);
 
 export default CellText;

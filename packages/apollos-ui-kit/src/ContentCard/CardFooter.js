@@ -1,20 +1,22 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import styled from '../styled';
 import { CardActions } from '../Card';
 
-const CardFooter = styled(({ floating }) =>
-  floating
-    ? {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-      }
-    : {}
-)(CardActions);
+const Spacer = styled(({ theme }) => ({ height: theme.sizing.baseUnit * 2 }))(
+  CardActions
+);
+const Wrapper = styled({
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  right: 0,
+})(CardActions);
 
-CardFooter.propTypes = {
-  floating: PropTypes.bool,
-};
+const CardFooter = (props) => (
+  <>
+    <Spacer />
+    <Wrapper {...props} />
+  </>
+);
 
 export default CardFooter;

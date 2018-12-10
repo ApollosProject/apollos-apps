@@ -16,11 +16,9 @@ import Metrics from './Metrics';
 import CardFooter from './CardFooter';
 
 const ContentCardWrapper = styled(({ tile }) => {
-  if (!tile) return {};
-  const size = Dimensions.get('window').width * 0.66;
-  return {
-    width: size,
-  };
+  const style = {};
+  if (tile) style.width = Dimensions.get('window').width * 0.66;
+  return style;
 })(Card);
 
 class ContentCard extends PureComponent {
@@ -43,9 +41,13 @@ class ContentCard extends PureComponent {
       colors: PropTypes.shape({}),
     }),
     tile: PropTypes.bool,
+    header: PropTypes.element,
+    content: PropTypes.element,
+    footer: PropTypes.element,
   };
 
   renderCardHeader() {
+    if (this.props.header) return this.props.header;
     if (this.props.coverImage || this.props.isLoading) {
       let forceRatio = null;
       if (this.props.isLoading) {
@@ -70,6 +72,7 @@ class ContentCard extends PureComponent {
   }
 
   renderCardContent() {
+    if (this.props.content) return this.props.content;
     if (!this.props.title && !this.props.isLoading) return null;
     return (
       <ContentText
@@ -82,6 +85,7 @@ class ContentCard extends PureComponent {
   }
 
   renderCardFooter() {
+    if (this.props.footer) return this.props.footer;
     if (!this.props.metrics && !this.props.isLoading) return null;
 
     const floating =
@@ -121,6 +125,8 @@ class ContentCard extends PureComponent {
       metrics,
       theme,
       tile,
+      fixedSize,
+      children,
       ...cardProps
     } = this.props;
 

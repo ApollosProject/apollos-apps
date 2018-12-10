@@ -33,9 +33,13 @@ class Config {
   }
 
   loadJs(data = {}) {
-    Object.keys(this.config).forEach((key) => {
-      if (data[key]) {
+    Object.keys(data).forEach((key) => {
+      if (this.config[key]) {
+        // Deep merge defaults if they exist.
         this.config[key] = Object.assign(this.config[key], data[key]);
+      } else {
+        // Otherwise attach results to config.
+        this.config[key] = data[key];
       }
     });
     this.attachConfigToClass(this.config);
