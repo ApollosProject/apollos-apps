@@ -22,6 +22,9 @@
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.4",
     "graphql": "0.13.2"
   },
+  "peerDependencies": {
+    "@apollosproject/config": "*"
+  },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {
     "access": "public"

@@ -15,8 +15,7 @@ export default class Followings extends RockApolloDataSource {
     } else {
       await this.unFollowNode({ nodeId });
     }
-    const { id } = parseGlobalId(nodeId);
-    const item = await Node.get(id, dataSources);
+    const item = await Node.get(nodeId, dataSources);
     return { ...item, isLiked: operation === 'Like' };
   }
 
