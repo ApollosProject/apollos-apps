@@ -4,8 +4,8 @@ import Config from '@apollosproject/config';
 const { ROCK_MAPPINGS } = Config;
 
 const mapApollosNameToRockName = (name) => {
-  if (ROCK_MAPPINGS.CONTENT_ITEM_TYPES.includes(name)) {
-    return 'ContentChannelItem';
+  if (ROCK_MAPPINGS.CONTENT_ITEM_TYPES[name]) {
+    return ROCK_MAPPINGS.CONTENT_ITEM_TYPES[name].EntityType;
   }
   throw new Error(`${name} has not been mapped into a Rock type!`);
 };
