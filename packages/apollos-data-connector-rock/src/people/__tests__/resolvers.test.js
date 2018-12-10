@@ -4,14 +4,11 @@ import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import {
-  generateToken,
-  registerToken,
-} from '@apollosproject/data-connector-rock-auth';
-import {
   peopleSchema,
   mediaSchema,
   authSchema,
 } from '@apollosproject/data-schema';
+import { generateToken, registerToken } from '../../auth';
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Person from '../index';
 import authMock from '../../authMock';

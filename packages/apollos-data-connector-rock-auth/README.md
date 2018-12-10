@@ -1,11 +1,2 @@
-# `apollos-rock-auth-connector`
-
-> TODO: description
-
-## Usage
-
-```
-const apollosRockAuthConnector = require('apollos-rock-auth-connector');
-
-// TODO: DEMONSTRATE API
-```
+# MOVED TO
+# [https://www.npmjs.com/package/@apollosproject/data-connector-rock](https://www.npmjs.com/package/@apollosproject/data-connector-rock)

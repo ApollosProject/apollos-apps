@@ -1,20 +1,7 @@
 import ApollosConfig from '@apollosproject/config';
 import Person from '../data-source';
+import { buildGetMock } from '../../test-utils';
 
-const buildGetMock = (response, dataSource) => {
-  const get = jest.fn();
-  if (Array.isArray(response) && Array.isArray(response[0])) {
-    response.forEach((responseVal) => {
-      get.mockReturnValueOnce(
-        new Promise((resolve) => resolve(dataSource.normalize(responseVal)))
-      );
-    });
-  }
-  get.mockReturnValue(
-    new Promise((resolve) => resolve(dataSource.normalize(response)))
-  );
-  return get;
-};
 ApollosConfig.loadJs({
   ROCK: {
     API_URL: 'https://apollosrock.newspring.cc/api',

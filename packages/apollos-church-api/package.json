@@ -33,26 +33,14 @@
     "@apollosproject/data-connector-bible": "^0.8.0-alpha.4",
     "@apollosproject/data-connector-church-online": "^0.8.0-alpha.4",
     "@apollosproject/data-connector-cloudinary": "^0.8.0-alpha.4",
-    "@apollosproject/data-connector-people": "^0.8.0-alpha.4",
-    "@apollosproject/data-connector-rock-actions": "^0.8.0-alpha.4",
-    "@apollosproject/data-connector-rock-auth": "^0.8.0-alpha.4",
-    "@apollosproject/data-connector-rock-content": "^0.8.0-alpha.4",
-    "@apollosproject/rock-apollo-data-source": "^0.8.0-alpha.4",
+    "@apollosproject/data-connector-rock": "^0.8.0-alpha.4",
     "@apollosproject/server-core": "^0.8.0-alpha.4",
-    "apollo-datasource-rest": "0.1.1",
     "apollo-server": "^2.0.5",
-    "casual": "1.5.19",
     "color": "3.0.0",
-    "dataloader": "1.4.0",
     "dotenv": "6.0.0",
     "graphql": "0.13.2",
-    "isomorphic-fetch": "2.2.1",
-    "lodash": "4.17.10",
     "prettier": "1.12.1",
-    "randomcolor": "0.5.3",
-    "sanitize-html": "1.18.2",
-    "url-join": "4.0.0",
-    "with-query": "1.0.2"
+    "randomcolor": "0.5.3"
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.4",
@@ -60,9 +48,6 @@
     "@babel/cli": "7.1.5",
     "@babel/core": "7.1.6",
     "codecov": "3.0.2",
-    "coveralls": "3.0.1",
-    "jest": "23.6.0",
-    "jest-fetch-mock": "1.6.2",
     "nodemon": "1.18.7"
   }
 }

@@ -1,11 +1,2 @@
-# `apollos-data-connector-analytics`
-
-> TODO: description
-
-## Usage
-
-```
-const apollosDataConnectorAnalytics = require('apollos-data-connector-analytics');
-
-// TODO: DEMONSTRATE API
-```
+# MOVED TO
+# [https://www.npmjs.com/package/@apollosproject/data-connector-rock](https://www.npmjs.com/package/@apollosproject/data-connector-rock)
