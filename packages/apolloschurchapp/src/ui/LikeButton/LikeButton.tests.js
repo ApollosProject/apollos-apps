@@ -110,5 +110,5 @@ describe('the LikeButton component', () => {
     //       </Providers>
     //     );
     //     expect(tree).toMatchSnapshot();
-  });  
+  });
 });
