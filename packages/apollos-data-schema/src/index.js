@@ -365,7 +365,7 @@ export const contentSharableSchema = gql`
     title: String
   }
 
-${extendForEachContentItemType(`
+  ${extendForEachContentItemType(`
     sharing: SharableContentItem
 `)}
 `;
@@ -402,7 +402,7 @@ export const followingsSchema = gql`
     updateLikeEntity(input: LikeEntityInput!): ContentItem
   }
 
-${extendForEachContentItemType(`
+  ${extendForEachContentItemType(`
     isLiked: Boolean
     likedCount: Int
 `)}
