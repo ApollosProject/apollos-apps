@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/data-connector-rock-actions",
+  "name": "@apollosproject/data-connector-rock",
   "version": "0.8.0-alpha.4",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
@@ -18,7 +18,13 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.0-alpha.4",
-    "@apollosproject/server-core": "^0.8.0-alpha.4"
+    "@apollosproject/server-core": "^0.8.0-alpha.4",
+    "form-data": "^2.3.3",
+    "jest": "^23.6.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "natural": "^0.6.2",
+    "sanitize-html": "^1.19.3"
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
