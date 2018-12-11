@@ -94,6 +94,9 @@ const IconLg = withTheme(({ theme }) => ({
   iconPadding: theme.sizing.baseUnit * 0.3125,
 }))(ButtonIcon);
 
+const AirPlayContainer = styled({
+  padding: 40,
+})(View);
 /**
  * FullscreenControls displays fading player controls
  */
@@ -266,9 +269,9 @@ class FullscreenControls extends PureComponent {
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
                   {/* TODO: this is terrible */}
-                  <View style={{ padding: 40 }}>
+                  <AirPlayContainer>
                     <AirplayControls />
-                  </View>
+                  </AirPlayContainer>
                 </UpperControl>
               </TouchableWithoutFeedback>
               <LowerControl>
