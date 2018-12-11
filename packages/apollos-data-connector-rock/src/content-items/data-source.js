@@ -2,6 +2,8 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
+const LIVE_CONTENT = (date = new Date()) =>
+  `(StartDateTime lt datetime'${date.toISOString()}') and (ExpireDateTime gt datetime'${date.toISOString()}')`;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
@@ -19,7 +21,7 @@ export default class ContentItem extends RockApolloDataSource {
       request.filter(`Id eq ${childContentChannelItemId}`);
     });
 
-    return request.orderBy('Order');
+    return request.filter(LIVE_CONTENT(), 'and').orderBy('Order');
   };
 
   getCursorByChildContentItemId = async (id) => {
@@ -33,7 +35,7 @@ export default class ContentItem extends RockApolloDataSource {
       request.filter(`Id eq ${contentChannelItemId}`);
     });
 
-    return request.orderBy('Order');
+    return request.filter(LIVE_CONTENT(), 'and').orderBy('Order');
   };
 
   getCursorBySiblingContentItemId = async (id) => {
@@ -63,7 +65,7 @@ export default class ContentItem extends RockApolloDataSource {
       request.filter(`Id eq ${childContentChannelItemId}`);
     });
 
-    return request.orderBy('Order');
+    return request.filter(LIVE_CONTENT(), 'and').orderBy('Order');
   };
 
   byUserFeed = () =>
@@ -73,16 +75,20 @@ export default class ContentItem extends RockApolloDataSource {
           (id) => `(ContentChannelId eq ${id})`
         ).join(' or ')
       )
+      .filter(LIVE_CONTENT(), 'and')
       .orderBy('StartDateTime', 'desc');
 
   byContentChannelId = (id) =>
     this.request()
       .filter(`ContentChannelId eq ${id}`)
+      .filter(LIVE_CONTENT(), 'and')
       .orderBy('StartDateTime', 'desc');
 
   getFromIds = (ids) => {
     const filter = ids.map((id) => `(Id eq ${id})`).join(' or ');
-    return this.request().filter(filter);
+    return this.request()
+      .filter(filter)
+      .filter(LIVE_CONTENT(), 'and');
   };
 
   getFromId = (id) =>
@@ -90,3 +96,5 @@ export default class ContentItem extends RockApolloDataSource {
       .find(id)
       .get();
 }
+
+console.log(LIVE_CONTENT());
