@@ -7,7 +7,7 @@ ApolloServer.loadJs({
         EntityType: 'ContentChannelItem',
       },
       DevotionalContentItem: {
-        EntityType: 'ContentChannelItem',
+        EntityType: 'SomeOtherEntity',
       },
       MediaContentItem: {
         EntityType: 'ContentChannelItem',
