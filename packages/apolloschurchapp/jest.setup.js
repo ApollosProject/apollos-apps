@@ -30,3 +30,5 @@ jest.mock('react-native-device-info', () => ({
 }));
 
 jest.mock('react-native-video', () => 'Video');
+
+jest.mock('NativeEventEmitter');
