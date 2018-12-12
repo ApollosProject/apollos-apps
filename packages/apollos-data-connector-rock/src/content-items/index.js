@@ -224,15 +224,6 @@ export const resolver = {
       attributes,
       contentChannelTypeId,
     }) => {
-      if (
-        hasScripture({ attributeValues }) &&
-        ROCK_MAPPINGS.CONTENT_ITEM.DevotionalContentItem.ContentChannelTypeId.includes(
-          contentChannelTypeId
-        )
-      ) {
-        return 'DevotionalContentItem';
-      }
-
       // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
       if (
         Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
