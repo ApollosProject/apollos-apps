@@ -1,10 +1,7 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import ApollosConfig from '@apollosproject/config';
 import * as Scripture from '../index';
-
-console.log(ApollosConfig);
 
 const { getContext, getSchema } = createTestHelpers({ Scripture });
 
