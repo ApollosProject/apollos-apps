@@ -21,10 +21,6 @@ const createImageUrl = (uri) =>
 export { default as dataSource } from './data-source';
 export { contentItemSchema as schema } from '@apollosproject/data-schema';
 
-// Empty fields in rock default to `''`
-const hasScripture = ({ attributeValues }) =>
-  get(attributeValues, 'scriptures.value', '') !== '';
-
 const isImage = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
   (key.toLowerCase().includes('image') &&
