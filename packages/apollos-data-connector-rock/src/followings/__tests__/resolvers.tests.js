@@ -11,8 +11,8 @@ import {
   themeSchema,
   scriptureSchema,
 } from '@apollosproject/data-schema';
-import { generateToken } from '@apollosproject/data-connector-rock-auth';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { generateToken } from '../../auth';
 import * as Followings from '../index';
 import * as RockConstants from '../../rock-constants';
 
