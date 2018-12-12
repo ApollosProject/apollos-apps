@@ -26,28 +26,33 @@ const loadingStateObject = {
   coverImage: [],
 };
 
+const StyledButtonLink = styled(({ theme }) => ({
+  marginRight: theme.sizing.baseUnit * -0.5,
+  padding: theme.sizing.baseUnit * 0.5,
+}))(ButtonLink);
+
+const StyledHorizontalTileFeed = styled({
+  paddingTop: 0,
+})(HorizontalTileFeed);
+
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
     <RowHeader>
       <H4 isLoading={isLoading}>{name}</H4>
       {!isLoading ? (
-        <ButtonLink
+        <StyledButtonLink
           onPress={() => {
             navigation.navigate('ContentFeed', {
               itemId: id,
               itemTitle: name,
             });
           }}
-          style={{
-            marginRight: -16,
-            padding: 16,
-          }}
         >
           View All
-        </ButtonLink>
+        </StyledButtonLink>
       ) : null}
     </RowHeader>
-    <HorizontalTileFeed
+    <StyledHorizontalTileFeed
       content={content}
       renderItem={({ item }) => (
         <TouchableScale
@@ -67,7 +72,6 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
       )}
       loadingStateObject={loadingStateObject}
       isLoading={isLoading}
-      style={{ paddingTop: 0 }}
     />
   </PaddedView>
 );
