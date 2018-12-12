@@ -25,7 +25,12 @@ GetLikeData.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
-const UpdateLikeStatus = ({ itemId, item, isLiked, children }) => (
+const UpdateLikeStatus = ({
+  itemId,
+  item = { __typename: null },
+  isLiked,
+  children,
+}) => (
   <Mutation
     mutation={updateLikeEntity}
     optimisticResponse={{
