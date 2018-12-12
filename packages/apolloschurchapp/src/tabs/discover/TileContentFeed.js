@@ -17,8 +17,22 @@ const RowHeader = styled({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  paddingBottom: 0,
+  zIndex: 2, // UX hack to improve tapability. Positions RowHeader above StyledHorizontalTileFeed
 })(PaddedView);
+
+const StyledButtonLink = styled(({ theme }) => ({
+  /* UX hack to improve tapability. The following styles intentionally pad and move the button
+   * around to allow for us to increase its tappable area. */
+  padding: theme.sizing.baseUnit,
+  marginRight: theme.sizing.baseUnit * -1,
+}))(ButtonLink);
+
+const StyledHorizontalTileFeed = styled(({ theme }) => ({
+  /* UX hack to improve tapability. The magic number below happens to be the number of pixels that
+   * aligns everything in the same place as if none of the UX hacks were there. */
+  marginTop: theme.sizing.baseUnit * -0.625,
+  zIndex: 1,
+}))(HorizontalTileFeed);
 
 const loadingStateObject = {
   id: 'fake_id',
@@ -26,18 +40,9 @@ const loadingStateObject = {
   coverImage: [],
 };
 
-const StyledButtonLink = styled(({ theme }) => ({
-  marginRight: theme.sizing.baseUnit * -0.5,
-  padding: theme.sizing.baseUnit * 0.5,
-}))(ButtonLink);
-
-const StyledHorizontalTileFeed = styled({
-  paddingTop: 0,
-})(HorizontalTileFeed);
-
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
-    <RowHeader>
+    <RowHeader vertical={false}>
       <H4 isLoading={isLoading}>{name}</H4>
       {!isLoading ? (
         <StyledButtonLink
