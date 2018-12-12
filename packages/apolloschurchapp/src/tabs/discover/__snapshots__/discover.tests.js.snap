@@ -323,12 +323,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -1456,12 +1453,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -2589,12 +2583,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -3722,12 +3713,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -4855,12 +4843,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -5988,12 +5973,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -7121,12 +7103,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -8254,12 +8233,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -9387,12 +9363,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
@@ -10520,12 +10493,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         stickyHeaderIndices={Array []}
                         style={
                           Object {
-                            "height": 600,
-                            "paddingBottom": 8,
                             "paddingTop": 0,
                           }
                         }
-                        tileHeight={600}
                         updateCellsBatchingPeriod={50}
                         viewabilityConfigCallbackPairs={Array []}
                         windowSize={21}
