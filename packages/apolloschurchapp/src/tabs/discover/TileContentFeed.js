@@ -8,6 +8,7 @@ import {
   H4,
   HorizontalTileFeed,
   styled,
+  withTheme,
   ButtonLink,
   TouchableScale,
 } from '@apollosproject/ui-kit';
@@ -28,11 +29,15 @@ const Name = styled({
   flexGrow: 2,
 })(View);
 
-const StyledButtonLink = styled(({ theme }) => ({
-  /* UX hack to improve tapability. The following styles intentionally pad and move the button
-   * around to allow for us to increase its tappable area. */
-  padding: theme.sizing.baseUnit,
-}))(ButtonLink);
+const AndroidTouchableFix = withTheme(({ theme }) => ({
+  borderRadius: theme.sizing.baseUnit / 2,
+}))(Touchable);
+
+const ButtonLinkSpacing = styled(({ theme }) => ({
+  flexDirection: 'row', // correctly positions the loading state
+  justifyContent: 'flex-end', // correctly positions the loading state
+  padding: theme.sizing.baseUnit, // UX hack to improve tapability.
+}))(View);
 
 const StyledHorizontalTileFeed = styled(({ theme }) => ({
   /* UX hack to improve tapability. The magic number below happens to be the number of pixels that
@@ -53,18 +58,20 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
       <Name>
         <H5 isLoading={isLoading}>{name}</H5>
       </Name>
-      {!isLoading ? (
-        <StyledButtonLink
-          onPress={() => {
-            navigation.navigate('ContentFeed', {
-              itemId: id,
-              itemTitle: name,
-            });
-          }}
-        >
-          View All
-        </StyledButtonLink>
-      ) : null}
+      <AndroidTouchableFix
+        onPress={() => {
+          navigation.navigate('ContentFeed', {
+            itemId: id,
+            itemTitle: name,
+          });
+        }}
+      >
+        <ButtonLinkSpacing>
+          <H6>
+            <ButtonLink>View All</ButtonLink>
+          </H6>
+        </ButtonLinkSpacing>
+      </AndroidTouchableFix>
     </RowHeader>
     <StyledHorizontalTileFeed
       content={content}
@@ -102,4 +109,4 @@ TileContentFeed.propTypes = {
   ),
 };
 
-export default withNavigation(TileContentFeed);
+export default withNavigation(withIsLoading(TileContentFeed));
