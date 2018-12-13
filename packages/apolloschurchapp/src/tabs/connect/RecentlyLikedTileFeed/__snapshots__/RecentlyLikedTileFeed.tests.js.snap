@@ -47,15 +47,16 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
             "alignItems": "center",
             "flexDirection": "row",
             "justifyContent": "space-between",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
+            "paddingLeft": 16,
+            "paddingTop": 8,
+            "zIndex": 2,
           }
         }
       >
         <View
           style={
             Object {
-              "flexGrow": 1,
+              "flexGrow": 2,
             }
           }
         >
@@ -63,9 +64,9 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 23.04,
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 20.16,
               }
             }
           >
@@ -73,35 +74,50 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
           </Text>
         </View>
         <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "flexDirection": "row-reverse",
+              "opacity": 1,
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "System",
-                "fontSize": 14,
-                "fontStyle": null,
-                "fontWeight": null,
-                "lineHeight": 20.16,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "padding": 16,
               }
             }
           >
             <Text
-              onPress={[Function]}
               style={
                 Object {
-                  "color": "#17B582",
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
                 }
               }
             >
-              View All
+              <Text
+                style={
+                  Object {
+                    "color": "#17B582",
+                  }
+                }
+              >
+                View All
+              </Text>
             </Text>
-          </Text>
+          </View>
         </View>
       </View>
       <RCTScrollView
@@ -180,6 +196,12 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
         snapToAlignment="start"
         snapToInterval={512}
         stickyHeaderIndices={Array []}
+        style={
+          Object {
+            "marginTop": -20,
+            "zIndex": 1,
+          }
+        }
         updateCellsBatchingPeriod={50}
         viewabilityConfigCallbackPairs={Array []}
         windowSize={21}
@@ -769,35 +791,16 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
             "alignItems": "center",
             "flexDirection": "row",
             "justifyContent": "space-between",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
+            "paddingLeft": 16,
+            "paddingTop": 8,
+            "zIndex": 2,
           }
         }
       >
         <View
           style={
             Object {
-              "flexGrow": 1,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 16,
-                "marginVertical": 3.5199999999999996,
-                "width": "80%",
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "flexDirection": "row-reverse",
+              "flexGrow": 2,
             }
           }
         >
@@ -809,10 +812,48 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 "borderRadius": 16,
                 "height": 14,
                 "marginVertical": 3.08,
-                "width": "40%",
+                "width": "60%",
               }
             }
           />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "padding": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 2.6400000000000006,
+                  "width": "50%",
+                }
+              }
+            />
+          </View>
         </View>
       </View>
       <RCTScrollView
@@ -889,6 +930,12 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
         snapToAlignment="start"
         snapToInterval={512}
         stickyHeaderIndices={Array []}
+        style={
+          Object {
+            "marginTop": -20,
+            "zIndex": 1,
+          }
+        }
         updateCellsBatchingPeriod={50}
         viewabilityConfigCallbackPairs={Array []}
         windowSize={21}
