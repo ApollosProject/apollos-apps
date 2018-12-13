@@ -269,7 +269,7 @@ class FullscreenControls extends PureComponent {
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  {/* TODO: this is terrible */}
+                  {/* TODO: this is terrible, ideally we want to be able to style our own button */}
                   <AirPlayContainer>
                     {Platform.OS === 'ios' ? <AirplayControls /> : null}
                   </AirPlayContainer>
