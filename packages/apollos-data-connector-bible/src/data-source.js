@@ -27,7 +27,6 @@ export default class Scripture extends RESTDataSource {
   async getScriptures(query) {
     const bibleId = BIBLE_API.BIBLE_ID;
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    console.log(scriptures);
     return scriptures.data.passages;
   }
 }
