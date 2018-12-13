@@ -24,6 +24,10 @@ const RowHeader = styled(({ theme }) => ({
   paddingLeft: theme.sizing.baseUnit,
 }))(View);
 
+const Name = styled({
+  flexGrow: 2,
+})(View);
+
 const StyledButtonLink = styled(({ theme }) => ({
   /* UX hack to improve tapability. The following styles intentionally pad and move the button
    * around to allow for us to increase its tappable area. */
@@ -45,9 +49,10 @@ const loadingStateObject = {
 
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
-    <RowHeader vertical={false}>
-      <H4 isLoading={isLoading}>{name}</H4>
     <RowHeader>
+      <Name>
+        <H5 isLoading={isLoading}>{name}</H5>
+      </Name>
       {!isLoading ? (
         <StyledButtonLink
           onPress={() => {
