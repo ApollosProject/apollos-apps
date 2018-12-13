@@ -5,8 +5,6 @@ import {
   StyleSheet,
   Animated,
   TouchableWithoutFeedback,
-  View,
-  Platform,
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
@@ -38,7 +36,7 @@ import {
 
 import { ControlsConsumer } from './PlayheadState';
 
-import AirplayControls from './AirplayControls';
+import CastingControls from './CastingControls';
 
 const Background = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
@@ -95,9 +93,6 @@ const IconLg = withTheme(({ theme }) => ({
   iconPadding: theme.sizing.baseUnit * 0.3125,
 }))(ButtonIcon);
 
-const AirPlayContainer = styled(({ theme }) => ({
-  padding: theme.sizing.baseUnit * 2,
-}))(View);
 /**
  * FullscreenControls displays fading player controls
  */
@@ -269,10 +264,7 @@ class FullscreenControls extends PureComponent {
                     <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                     <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                   </Titles>
-                  {/* TODO: this is terrible, ideally we want to be able to style our own button */}
-                  <AirPlayContainer>
-                    {Platform.OS === 'ios' ? <AirplayControls /> : null}
-                  </AirPlayContainer>
+                  <CastingControls />
                 </UpperControl>
               </TouchableWithoutFeedback>
               <LowerControl>
