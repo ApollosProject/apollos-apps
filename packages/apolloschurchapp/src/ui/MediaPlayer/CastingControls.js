@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
-import { styled, ButtonIcon } from '@apollosproject/ui-kit';
+import { styled } from '@apollosproject/ui-kit';
 import {
   AirPlayButton,
   // AirPlayListener,
