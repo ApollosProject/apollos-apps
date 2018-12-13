@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 
@@ -14,17 +15,19 @@ import {
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
 const RowHeader = styled({
+const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
   zIndex: 2, // UX hack to improve tapability. Positions RowHeader above StyledHorizontalTileFeed
 })(PaddedView);
+  paddingLeft: theme.sizing.baseUnit,
+}))(View);
 
 const StyledButtonLink = styled(({ theme }) => ({
   /* UX hack to improve tapability. The following styles intentionally pad and move the button
    * around to allow for us to increase its tappable area. */
   padding: theme.sizing.baseUnit,
-  marginRight: theme.sizing.baseUnit * -1,
 }))(ButtonLink);
 
 const StyledHorizontalTileFeed = styled(({ theme }) => ({
@@ -44,6 +47,7 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
   <PaddedView horizontal={false}>
     <RowHeader vertical={false}>
       <H4 isLoading={isLoading}>{name}</H4>
+    <RowHeader>
       {!isLoading ? (
         <StyledButtonLink
           onPress={() => {
