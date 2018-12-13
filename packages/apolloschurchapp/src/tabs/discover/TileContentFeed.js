@@ -4,24 +4,25 @@ import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
 
 import {
-  PaddedView,
-  H4,
-  HorizontalTileFeed,
   styled,
   withTheme,
+  H5,
+  H6,
+  HorizontalTileFeed,
   ButtonLink,
   TouchableScale,
+  Touchable,
+  withIsLoading,
 } from '@apollosproject/ui-kit';
 
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
-const RowHeader = styled({
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
   zIndex: 2, // UX hack to improve tapability. Positions RowHeader above StyledHorizontalTileFeed
-})(PaddedView);
+  paddingTop: theme.sizing.baseUnit * 0.5,
   paddingLeft: theme.sizing.baseUnit,
 }))(View);
 
@@ -42,7 +43,7 @@ const ButtonLinkSpacing = styled(({ theme }) => ({
 const StyledHorizontalTileFeed = styled(({ theme }) => ({
   /* UX hack to improve tapability. The magic number below happens to be the number of pixels that
    * aligns everything in the same place as if none of the UX hacks were there. */
-  marginTop: theme.sizing.baseUnit * -0.625,
+  marginTop: theme.sizing.baseUnit * -1.25,
   zIndex: 1,
 }))(HorizontalTileFeed);
 
@@ -53,10 +54,10 @@ const loadingStateObject = {
 };
 
 const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
-  <PaddedView horizontal={false}>
+  <>
     <RowHeader>
       <Name>
-        <H5 isLoading={isLoading}>{name}</H5>
+        <H5>{name}</H5>
       </Name>
       <AndroidTouchableFix
         onPress={() => {
@@ -94,7 +95,7 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
       loadingStateObject={loadingStateObject}
       isLoading={isLoading}
     />
-  </PaddedView>
+  </>
 );
 
 TileContentFeed.propTypes = {
