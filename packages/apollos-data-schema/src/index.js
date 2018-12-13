@@ -148,6 +148,7 @@ export const scriptureSchema = gql`
 
   extend type Query {
     scripture(query: String!): Scripture
+    scriptures(query: String!): [Scripture]
   }
 `;
 

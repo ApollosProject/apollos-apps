@@ -24,10 +24,10 @@ export default class Scripture extends RESTDataSource {
     return null;
   }
 
-  // In the future, we can use this field to handle content that returns multiple
-  // "scriptures". Like references across several different books of the bible.
   async getScriptures(query) {
-    const scripture = await this.getScripture(query);
-    return scripture.data.passages;
+    const bibleId = BIBLE_API.BIBLE_ID;
+    const scriptures = await this.get(`${bibleId}/search?query=${query}`);
+    console.log(scriptures);
+    return scriptures.data.passages;
   }
 }
