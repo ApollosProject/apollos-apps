@@ -6,6 +6,7 @@ import {
   Animated,
   TouchableWithoutFeedback,
   View,
+  Platform,
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
@@ -270,7 +271,7 @@ class FullscreenControls extends PureComponent {
                   </Titles>
                   {/* TODO: this is terrible */}
                   <AirPlayContainer>
-                    <AirplayControls />
+                    {Platform.OS === 'ios' ? <AirplayControls /> : null}
                   </AirPlayContainer>
                 </UpperControl>
               </TouchableWithoutFeedback>
