@@ -212,20 +212,11 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                   }
                 >
                   <View
-                    accessible={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
                         "alignItems": "center",
                         "flexDirection": "row",
                         "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
                       }
                     }
                   >
@@ -332,6 +323,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
+                          "flex": 1,
                           "paddingHorizontal": 16,
                           "paddingVertical": 0,
                         }
@@ -363,7 +355,10 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     <View
                       style={
                         Object {
-                          "padding": 32,
+                          "alignItems": "center",
+                          "height": 60,
+                          "justifyContent": "center",
+                          "width": 60,
                         }
                       }
                     >
@@ -371,11 +366,12 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     </View>
                   </View>
                   <View
+                    horizontal={false}
                     style={
                       Object {
                         "bottom": 0,
                         "left": 0,
-                        "paddingHorizontal": 16,
+                        "paddingHorizontal": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1902,20 +1898,11 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                   }
                 >
                   <View
-                    accessible={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
                         "alignItems": "center",
                         "flexDirection": "row",
                         "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
                       }
                     }
                   >
@@ -2022,6 +2009,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       style={
                         Object {
                           "alignItems": "center",
+                          "flex": 1,
                           "paddingHorizontal": 16,
                           "paddingVertical": 0,
                         }
@@ -2053,7 +2041,10 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     <View
                       style={
                         Object {
-                          "padding": 32,
+                          "alignItems": "center",
+                          "height": 60,
+                          "justifyContent": "center",
+                          "width": 60,
                         }
                       }
                     >
@@ -2061,11 +2052,12 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     </View>
                   </View>
                   <View
+                    horizontal={false}
                     style={
                       Object {
                         "bottom": 0,
                         "left": 0,
-                        "paddingHorizontal": 16,
+                        "paddingHorizontal": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -3592,20 +3584,11 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                   }
                 >
                   <View
-                    accessible={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
                         "alignItems": "center",
                         "flexDirection": "row",
                         "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
                       }
                     }
                   >
@@ -3712,6 +3695,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       style={
                         Object {
                           "alignItems": "center",
+                          "flex": 1,
                           "paddingHorizontal": 16,
                           "paddingVertical": 0,
                         }
@@ -3743,7 +3727,10 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     <View
                       style={
                         Object {
-                          "padding": 32,
+                          "alignItems": "center",
+                          "height": 60,
+                          "justifyContent": "center",
+                          "width": 60,
                         }
                       }
                     >
@@ -3751,11 +3738,12 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     </View>
                   </View>
                   <View
+                    horizontal={false}
                     style={
                       Object {
                         "bottom": 0,
                         "left": 0,
-                        "paddingHorizontal": 16,
+                        "paddingHorizontal": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
