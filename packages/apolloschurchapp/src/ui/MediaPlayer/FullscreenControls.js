@@ -94,9 +94,9 @@ const IconLg = withTheme(({ theme }) => ({
   iconPadding: theme.sizing.baseUnit * 0.3125,
 }))(ButtonIcon);
 
-const AirPlayContainer = styled({
-  padding: 40,
-})(View);
+const AirPlayContainer = styled(({ theme }) => ({
+  padding: theme.sizing.baseUnit * 2,
+}))(View);
 /**
  * FullscreenControls displays fading player controls
  */
