@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Animated,
   TouchableWithoutFeedback,
+  View,
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
@@ -22,7 +23,6 @@ import {
   ButtonIcon,
 } from '@apollosproject/ui-kit';
 
-import Seeker from './Seeker';
 import { getControlState } from './queries';
 import {
   play,
@@ -33,8 +33,9 @@ import {
   mute,
   unmute,
 } from './mutations';
-
 import { ControlsConsumer } from './PlayheadState';
+import Seeker from './Seeker';
+import AirPlayButton from './AirPlayButton';
 
 const Background = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
@@ -46,13 +47,13 @@ const Background = withTheme(({ theme }) => ({
   locations: [0, 0.4, 0.95],
 }))(LinearGradient);
 
-const UpperControl = styled({
+const UpperControls = styled({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-})(PaddedView);
+})(View);
 
-const LowerControl = styled({
+const LowerControls = styled({
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -69,6 +70,7 @@ const PlayControls = styled(({ theme }) => ({
 const PlayHead = styled({ paddingVertical: 0 })(PaddedView);
 
 const Titles = styled({
+  flex: 1,
   alignItems: 'center',
   paddingVertical: 0,
 })(PaddedView);
@@ -255,22 +257,20 @@ class FullscreenControls extends PureComponent {
               style={StyleSheet.absoluteFill}
               forceInset={{ top: 'always', bottom: 'always' }}
             >
-              <TouchableWithoutFeedback onPress={this.handleClose}>
-                <UpperControl>
-                  <IconSm name="arrow-down" onPress={this.handleClose} />
-                  <Titles>
-                    <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
-                    <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
-                  </Titles>
-                  <IconSm name="empty" disabled />
-                </UpperControl>
-              </TouchableWithoutFeedback>
-              <LowerControl>
+              <UpperControls>
+                <IconSm name="arrow-down" onPress={this.handleClose} />
+                <Titles>
+                  <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
+                  <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
+                </Titles>
+                <AirPlayButton />
+              </UpperControls>
+              <LowerControls horizontal={false}>
                 <PlayHead>
                   <Seeker onScrubbing={this.handleOnScrubbing} />
                 </PlayHead>
                 <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
-              </LowerControl>
+              </LowerControls>
             </SafeAreaView>
           </Background>
         </Animated.View>

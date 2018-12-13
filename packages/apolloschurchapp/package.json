@@ -91,6 +91,7 @@
     "react": "16.6.1",
     "react-apollo": "2.2.4",
     "react-native": "0.57.5",
+    "react-native-airplay-btn": "^1.0.6",
     "react-native-custom-tabs": "0.1.7",
     "react-native-device-info": "0.22.5",
     "react-native-image-picker": "0.26.10",
