@@ -13,8 +13,6 @@ const Wrapper = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
-console.log(AirPlayBtn);
-
 const AirPlayButton = () =>
   Platform.OS === 'ios' ? (
     <Wrapper>
