@@ -363,7 +363,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     <View
                       style={
                         Object {
-                          "padding": 40,
+                          "padding": 32,
                         }
                       }
                     >
@@ -2053,7 +2053,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     <View
                       style={
                         Object {
-                          "padding": 40,
+                          "padding": 32,
                         }
                       }
                     >
@@ -3743,7 +3743,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     <View
                       style={
                         Object {
-                          "padding": 40,
+                          "padding": 32,
                         }
                       }
                     >
