@@ -3,7 +3,7 @@ import ApollosConfig from '@apollosproject/config';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
 const LIVE_CONTENT = (date = new Date()) =>
-  `(StartDateTime lt datetime'${date.toISOString()}') and (ExpireDateTime gt datetime'${date.toISOString()}')`;
+  `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
