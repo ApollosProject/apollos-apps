@@ -32,6 +32,30 @@ describe('RequestBuilder', () => {
     ).resolves.toMatchSnapshot();
   });
 
+  it('combines multiple filters with an and operator', () => {
+    expect(
+      request
+        .filter('Something eq SomethingElse')
+        .andFilter('AnotherThing eq SomethingDifferent')
+        .get()
+    ).resolves.toMatchSnapshot();
+  });
+
+  it('combines multiple filters with an or operator', () => {
+    expect(
+      request
+        .filter('Something eq SomethingElse')
+        .orFilter('AnotherThing eq SomethingDifferent')
+        .get()
+    ).resolves.toMatchSnapshot();
+  });
+
+  it('filters by one of a list of conditions', () => {
+    expect(
+      request.filterOneOf(['Id eq 123', 'Id eq 456', 'Id eq 789']).get()
+    ).resolves.toMatchSnapshot();
+  });
+
   it('chains multiple filters', () => {
     expect(
       request
@@ -78,6 +102,10 @@ describe('RequestBuilder', () => {
 
   it('orders', () => {
     expect(request.orderBy('MyField').get()).resolves.toMatchSnapshot();
+  });
+
+  it('selects', () => {
+    expect(request.select('Id').get()).resolves.toMatchSnapshot();
   });
 
   it('orders in custom order', () => {

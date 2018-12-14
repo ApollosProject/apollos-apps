@@ -12,9 +12,23 @@ ApollosConfig.loadJs({
   },
 });
 
+const RealDate = Date;
+
+function mockDate(isoDate) {
+  global.Date = class extends RealDate {
+    constructor() {
+      return new RealDate(isoDate);
+    }
+  };
+}
+
 describe('ContentItemsModel', () => {
   beforeEach(() => {
+    mockDate('2017-11-25T12:34:56z');
     fetch.resetMocks();
+  });
+  afterEach(() => {
+    global.Date = RealDate;
   });
   it('constructs', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();

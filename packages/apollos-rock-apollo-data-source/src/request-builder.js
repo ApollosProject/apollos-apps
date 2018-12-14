@@ -53,14 +53,23 @@ export default class RockRequestBuilder {
   /**
    * Filter resources by an odata string
    */
-  filter = (filter) => {
+  filter = (filter, { operator } = { operator: 'or' }) => {
     const key = '$filter';
     if (this.query[key]) {
-      this.query[key] = `(${this.query[key]}) or (${filter})`;
+      this.query[key] = `(${this.query[key]}) ${operator} (${filter})`;
     } else {
       this.query[key] = filter;
     }
     return this;
+  };
+
+  andFilter = (filter) => this.filter(filter, { operator: 'and' });
+
+  orFilter = (filter) => this.filter(filter, { operator: 'or' });
+
+  filterOneOf = (filters) => {
+    const filter = filters.map((f) => `(${f})`).join(' or ');
+    return this.filter(filter);
   };
 
   cache = ({ ttl }) => {
