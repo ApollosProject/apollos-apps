@@ -25,7 +25,10 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         return resolveWith(apolloDatasourceMocks.liveStreamLive(), request.url);
       }
       if (request.url.match('api.scripture.api.bible')) {
-        return resolveWith(apolloDatasourceMocks.Scripture(), request.url);
+        if (request.url.includes('and')) {
+          return resolveWith(apolloDatasourceMocks.Scripture()[1], request.url);
+        }
+        return resolveWith(apolloDatasourceMocks.Scripture()[0], request.url);
       }
       return Promise.reject();
     });
@@ -37,7 +40,7 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
       url = decodeURI(url);
       if (!url.match('https://apollosrock.newspring.cc/api')) {
         if (request.url.match('/api.scripture.api.bible/v1')) {
-          return resolveWith(apolloDatasourceMocks.Scripture());
+          return resolveWith(apolloDatasourceMocks.Scripture()[0]);
         }
         return Promise.reject();
       }
