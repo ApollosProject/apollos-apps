@@ -2,6 +2,8 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
+const LIVE_CONTENT = (date = new Date()) =>
+  `(StartDateTime lt datetime'${date.toISOString()}') and (ExpireDateTime gt datetime'${date.toISOString()}')`;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
@@ -14,10 +16,13 @@ export default class ContentItem extends RockApolloDataSource {
       .get();
 
     if (!associations || !associations.length) return null;
+
     const request = this.request();
-    associations.forEach(({ childContentChannelItemId }) => {
-      request.filter(`Id eq ${childContentChannelItemId}`);
-    });
+
+    const associationsFilter = associations.map(
+      ({ childContentChannelItemId }) => `Id eq ${childContentChannelItemId}`
+    );
+    request.filterOneOf(associationsFilter).andFilter(LIVE_CONTENT());
 
     return request.orderBy('Order');
   };
@@ -29,9 +34,11 @@ export default class ContentItem extends RockApolloDataSource {
 
     if (!associations || !associations.length) return null;
     const request = this.request();
-    associations.forEach(({ contentChannelItemId }) => {
-      request.filter(`Id eq ${contentChannelItemId}`);
-    });
+    const associationsFilter = associations.map(
+      ({ contentChannelItemId }) => `Id eq ${contentChannelItemId}`
+    );
+
+    request.filterOneOf(associationsFilter).andFilter(LIVE_CONTENT());
 
     return request.orderBy('Order');
   };
@@ -50,40 +57,45 @@ export default class ContentItem extends RockApolloDataSource {
     const siblingAssociationsRequest = await this.request(
       'ContentChannelItemAssociations'
     );
-    parentAssociations.forEach(({ contentChannelItemId }) => {
-      siblingAssociationsRequest.filter(
+
+    const parentFilter = parentAssociations.map(
+      ({ contentChannelItemId }) =>
         `(ContentChannelItemId eq ${contentChannelItemId}) and (ChildContentChannelItemId ne ${id})`
-      );
-    });
+    );
+    siblingAssociationsRequest.filterOneOf(parentFilter);
+
     const siblingAssociations = await siblingAssociationsRequest.get();
     if (!siblingAssociations || !siblingAssociations.length) return null;
 
     const request = this.request();
-    siblingAssociations.forEach(({ childContentChannelItemId }) => {
-      request.filter(`Id eq ${childContentChannelItemId}`);
-    });
+    const siblingFilter = siblingAssociations.map(
+      ({ childContentChannelItemId }) => `Id eq ${childContentChannelItemId}`
+    );
+    request.filterOneOf(siblingFilter).andFilter(LIVE_CONTENT());
 
     return request.orderBy('Order');
   };
 
   byUserFeed = () =>
     this.request()
-      .filter(
+      .filterOneOf(
         ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
-          (id) => `(ContentChannelId eq ${id})`
-        ).join(' or ')
+          (id) => `ContentChannelId eq ${id}`
+        )
       )
+      .andFilter(LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
   byContentChannelId = (id) =>
     this.request()
       .filter(`ContentChannelId eq ${id}`)
+      .andFilter(LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
-  getFromIds = (ids) => {
-    const filter = ids.map((id) => `(Id eq ${id})`).join(' or ');
-    return this.request().filter(filter);
-  };
+  getFromIds = (ids) =>
+    this.request()
+      .filterOneOf(ids.map((id) => `Id eq ${id}`))
+      .andFilter(LIVE_CONTENT());
 
   getFromId = (id) =>
     this.request()

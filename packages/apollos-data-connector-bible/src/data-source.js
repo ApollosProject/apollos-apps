@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
@@ -16,13 +17,16 @@ export default class Scripture extends RESTDataSource {
 
   async getScripture(query) {
     const bibleId = BIBLE_API.BIBLE_ID;
-    return this.get(`${bibleId}/search?query=${query}`);
+    const scriptures = await this.get(`${bibleId}/search?query=${query}`);
+    if (get(scriptures, 'data.passages[0]')) {
+      return scriptures.data.passages[0];
+    }
+    return null;
   }
 
-  // In the future, we can use this field to handle content that returns multiple
-  // "scriptures". Like references across several different books of the bible.
   async getScriptures(query) {
-    const scripture = await this.getScripture(query);
-    return [scripture];
+    const bibleId = BIBLE_API.BIBLE_ID;
+    const scriptures = await this.get(`${bibleId}/search?query=${query}`);
+    return scriptures.data.passages;
   }
 }

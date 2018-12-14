@@ -16,10 +16,27 @@ describe('Scripture', () => {
     fetch.mockLiveDataSourceApis();
   });
 
-  it('returns', async () => {
+  it('returns a single verse', async () => {
     const query = `
       query {
         scripture (query: "SNG.1.1") {
+          id
+          html
+          reference
+          copyright
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('returns multiple verses', async () => {
+    const query = `
+      query {
+        scriptures (query: "1 Peter 1:1 and John 3:16") {
           id
           html
           reference
