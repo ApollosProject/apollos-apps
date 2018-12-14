@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import { extendForEachContentItemType } from './utils';
 
 export const testSchema = gql`
   scalar Upload
@@ -365,25 +366,9 @@ export const contentSharableSchema = gql`
     title: String
   }
 
-  extend interface ContentItem {
+  ${extendForEachContentItemType(`
     sharing: SharableContentItem
-  }
-
-  extend type DevotionalContentItem {
-    sharing: SharableContentItem
-  }
-
-  extend type UniversalContentItem {
-    sharing: SharableContentItem
-  }
-
-  extend type MediaContentItem {
-    sharing: SharableContentItem
-  }
-
-  extend type ContentSeriesContentItem {
-    sharing: SharableContentItem
-  }
+`)}
 `;
 
 export const familySchema = gql`
@@ -418,32 +403,14 @@ export const followingsSchema = gql`
     updateLikeEntity(input: LikeEntityInput!): ContentItem
   }
 
-  extend interface ContentItem {
+  ${extendForEachContentItemType(`
     isLiked: Boolean
     likedCount: Int
-  }
-
-  extend type DevotionalContentItem {
-    isLiked: Boolean
-    likedCount: Int
-  }
-
-  extend type UniversalContentItem {
-    isLiked: Boolean
-    likedCount: Int
-  }
-
-  extend type MediaContentItem {
-    isLiked: Boolean
-    likedCount: Int
-  }
-
-  extend type ContentSeriesContentItem {
-    isLiked: Boolean
-    likedCount: Int
-  }
+`)}
 
   extend type Query {
     getAllLikedContent: [ContentItem]
   }
 `;
+
+export { extendForEachContentItemType };

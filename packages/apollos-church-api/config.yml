@@ -40,11 +40,22 @@ ROCK_MAPPINGS:
     # 512 is "Mobile App"
     CHANNEL_MEDIUM_TYPE_ID: 512
 
-  CONTENT_ITEM_TYPES:
-    - ContentItem
-    - UniversalContentItem
-    - DevotionalContentItem
-    - MediaContentItem
+  CONTENT_ITEM:
+    ContentSeriesContentItem:
+      # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
+      EntityType: ContentChannelItem
+      # Used to define the subset of content channels types that use this specific type.
+      ContentChannelTypeId: [6, 7]
+    DevotionalContentItem:
+      EntityType: ContentChannelItem
+      ContentChannelTypeId: [1]
+    MediaContentItem:
+      EntityType: ContentChannelItem
+    UniversalContentItem:
+      EntityType: ContentChannelItem
+    ContentItem:
+      EntityType: ContentChannelItem
+
   # Apollos will pull these content channels and expose them in the app on the discover screen.
   DISCOVER_CONTENT_CHANNEL_IDS:
     - 2
@@ -62,18 +73,6 @@ ROCK_MAPPINGS:
     - 5
     - 6
     - 8
-
-  # The apollos app will show scripture for specific ContentChannelTypeIds, specified here.
-  # As of right now, it will pull from the 'scriptures' field.
-  # Ignore if this doesn't apply to you.
-  DEVOTIONAL_TYPE_IDS:
-    - 1
-
-  # The apollos app will use the content channel types as "Content Series" types. A Content Series
-  # is any content item that represents a series of content - Sermon Series, Devotional Series, Podcast Series etc
-  SERIES_CONTENT_CHANNEL_TYPE_IDS:
-    - 6
-    - 7
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:

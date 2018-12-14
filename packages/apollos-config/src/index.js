@@ -8,7 +8,9 @@ class Config {
     CLOUDINARY: {},
     ROCK: {},
     ROCK_CONSTANTS: {},
-    ROCK_MAPPINGS: {},
+    ROCK_MAPPINGS: {
+      CONTENT_ITEM: {},
+    },
     BIBLE_API: {},
   };
 

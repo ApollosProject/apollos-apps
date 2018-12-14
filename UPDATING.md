@@ -1,5 +1,37 @@
 # Updating
 
+## Updating from 0.8.0-alpha.4 to 0.8.0-alpha.5
+
+### Updating Config
+1. In Config.yml
+  Replace
+```
+  CONTENT_ITEM_TYPES:
+    - ContentItem
+    - UniversalContentItem
+    - DevotionalContentItem
+    - MediaContentItem
+```
+  With
+```
+  CONTENT_ITEM:
+    ContentSeriesContentItem:
+      # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
+      EntityType: ContentChannelItem
+      # Used to define the subset of content channels types that use this specific type.
+      ContentChannelTypeId: [6, 7]
+    DevotionalContentItem:
+      EntityType: ContentChannelItem
+      ContentChannelTypeId: [1]
+    MediaContentItem:
+      EntityType: ContentChannelItem
+    UniversalContentItem:
+      EntityType: ContentChannelItem
+    ContentItem:
+      EntityType: ContentChannelItem
+```
+  Delete `SERIES_CONTENT_CHANNEL_TYPE_IDS:` and `DEVOTIONAL_TYPE_IDS:`
+
 ## Updating from 0.8.0-alpha.3 to 0.8.0-alpha.4
 
 ### Updating API
@@ -9,7 +41,8 @@
   - [ ] Remove `RockConstants` import and delete `connectors` folder and all contents.
   - [ ] Add below code to top of file
 ```
-import RockConstants from '../connectors/rock/rock-constants';    Followings,
+import {
+  Followings,
   Interactions,
   RockConstants,
 } from '@apollosproject/data-connector-rock-actions';
@@ -27,10 +60,9 @@ import RockConstants from '../connectors/rock/rock-constants';    Followings,
 2. In `src/ui/LikeButton/index.js`
   - [ ] (line 33-35) Change `updateLikeEntity` prop of `Mutation` to
 ```
-        operation: isLiked ? 'Unlike' : 'Like',         id: itemId, // unknown at this time
-        id: null, // unknown at this time         isLiked: !isLiked,
-        interactionDateTime: new Date().toJSON(),         __typename: item.__typename,
-        __typename: 'Interaction',
+        id: itemId, // unknown at this time
+        isLiked: !isLiked,
+        __typename: item.__typename,
 ```
   - [ ] (line 33-35) Change `updateLikeEntity: { operation },` into `updateLikeEntity: { isLiked: liked },`
   - [ ] (line 53) Change `isLiked: operation === 'Like',` to `isLiked: liked,`

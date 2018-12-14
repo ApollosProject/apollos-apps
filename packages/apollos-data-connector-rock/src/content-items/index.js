@@ -21,10 +21,6 @@ const createImageUrl = (uri) =>
 export { default as dataSource } from './data-source';
 export { contentItemSchema as schema } from '@apollosproject/data-schema';
 
-// Empty fields in rock default to `''`
-const hasScripture = ({ attributeValues }) =>
-  get(attributeValues, 'scriptures.value', '') !== '';
-
 const isImage = ({ key, attributeValues, attributes }) =>
   attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
   (key.toLowerCase().includes('image') &&
@@ -224,19 +220,21 @@ export const resolver = {
       attributes,
       contentChannelTypeId,
     }) => {
+      // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
       if (
-        hasScripture({ attributeValues }) &&
-        ROCK_MAPPINGS.DEVOTIONAL_TYPE_IDS.includes(contentChannelTypeId)
-      ) {
-        return 'DevotionalContentItem';
-      }
-
-      if (
-        ROCK_MAPPINGS.SERIES_CONTENT_CHANNEL_TYPE_IDS.includes(
-          contentChannelTypeId
+        Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
+          ({ ContentChannelTypeId }) =>
+            ContentChannelTypeId &&
+            ContentChannelTypeId.includes(contentChannelTypeId)
         )
       ) {
-        return 'ContentSeriesContentItem';
+        return Object.keys(ROCK_MAPPINGS.CONTENT_ITEM).find((key) => {
+          const value = ROCK_MAPPINGS.CONTENT_ITEM[key];
+          return (
+            value.ContentChannelTypeId &&
+            value.ContentChannelTypeId.includes(contentChannelTypeId)
+          );
+        });
       }
 
       if (hasMedia({ attributeValues, attributes })) {

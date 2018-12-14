@@ -7,15 +7,15 @@ export default class Followings extends RockApolloDataSource {
 
   async updateLikeContentItem({ nodeId, operation }) {
     const {
-      dataSources: { ContentItem },
+      dataSources,
+      models: { Node },
     } = this.context;
     if (operation === 'Like') {
       await this.followNode({ nodeId });
     } else {
       await this.unFollowNode({ nodeId });
     }
-    const { id } = parseGlobalId(nodeId);
-    const item = await ContentItem.getFromId(id);
+    const item = await Node.get(nodeId, dataSources);
     return { ...item, isLiked: operation === 'Like' };
   }
 

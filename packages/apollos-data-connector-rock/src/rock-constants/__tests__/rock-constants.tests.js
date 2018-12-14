@@ -5,12 +5,6 @@ import { buildGetMock } from '../../test-utils';
 
 ApollosConfig.loadJs({
   ROCK_MAPPINGS: {
-    CONTENT_ITEM_TYPES: [
-      'ContentItem',
-      'UniversalContentItem',
-      'DevotionalContentItem',
-      'MediaContentItem',
-    ],
     INTERACTIONS: {
       CHANNEL_NAME: 'Apollos App',
       COMPONENT_NAME: 'Apollos Content Item',
@@ -73,6 +67,13 @@ describe('RockConstants', () => {
     const dataSource = new RockConstants();
     dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
     const result = await dataSource.modelType('ContentItem');
+    expect(result).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('finds a model ID for an item not using ContentChannelItem', async () => {
+    const dataSource = new RockConstants();
+    dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
+    const result = await dataSource.modelType('DevotionalContentItem');
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
