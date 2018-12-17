@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/rock-apollo-data-source",
-  "version": "0.8.0-alpha.4",
+  "version": "0.8.0-alpha.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "with-query": "^1.1.2"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.4",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.5",
     "graphql": "0.13.2"
   },
   "license": "SEE LICENSE IN LICENSE.md",
