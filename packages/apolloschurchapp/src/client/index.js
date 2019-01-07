@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
 import SplashScreen from 'react-native-splash-screen';
+import gql from 'graphql-tag';
 
 import httpLink from './httpLink';
 import clientStateLink from './clientStateLink';
@@ -20,6 +21,18 @@ export const client = new ApolloClient({
 });
 
 client.onResetStore(clientStateLink.writeDefaults);
+
+export const CACHE_LOADED = gql`
+  query {
+    cacheLoaded @client
+  }
+`;
+
+export const MARK_CACHE_LOADED = gql`
+  mutation markCacheLoaded {
+    cacheMarkLoaded @client
+  }
+`;
 
 class ClientProvider extends PureComponent {
   static propTypes = {
@@ -39,6 +52,7 @@ class ClientProvider extends PureComponent {
       throw e;
     } finally {
       if (SplashScreen && SplashScreen.hide) SplashScreen.hide();
+      client.mutate({ mutation: MARK_CACHE_LOADED });
     }
   }
 
