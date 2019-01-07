@@ -1,52 +1,37 @@
 import { graphql } from 'graphql';
-import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import * as Scripture from '../index';
+import { peopleSchema } from '@apollosproject/data-schema';
+import * as OneSignal from '../index';
 
-const { getContext, getSchema } = createTestHelpers({ Scripture });
+const { getContext, getSchema } = createTestHelpers({ OneSignal });
 
-describe('Scripture', () => {
+describe('OneSignal', () => {
   let schema;
   let context;
   beforeEach(() => {
-    schema = getSchema();
+    schema = getSchema([peopleSchema]);
     context = getContext();
-
-    fetch.resetMocks();
-    fetch.mockLiveDataSourceApis();
   });
 
-  it('returns a single verse', async () => {
+  it('updates an external push id with a valid user', async () => {
     const query = `
-      query {
-        scripture (query: "SNG.1.1") {
+      mutation updatePushId {
+        updateUserPushSettings(input: { pushId: "some-push-id" }) {
           id
-          html
-          reference
-          copyright
         }
       }
     `;
     const rootValue = {};
 
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
+    const put = jest.fn();
+    const getCurrentPerson = jest.fn(() => Promise.resolve({ id: 'user123' }));
+    const Auth = { getCurrentPerson };
 
-  it('returns multiple verses', async () => {
-    const query = `
-      query {
-        scriptures (query: "1 Peter 1:1 and John 3:16") {
-          id
-          html
-          reference
-          copyright
-        }
-      }
-    `;
-    const rootValue = {};
+    context.dataSources.OneSignal.put = put;
+    context.dataSources.Auth = Auth;
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+    expect(put).toMatchSnapshot();
   });
 });
