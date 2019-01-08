@@ -16,7 +16,7 @@ describe('OneSignal', () => {
   it('updates an external push id with a valid user', async () => {
     const query = `
       mutation updatePushId {
-        updateUserPushSettings(input: { pushId: "some-push-id" }) {
+        updateUserPushSettings(input: { pushProviderUserId: "some-push-id" }) {
           id
         }
       }

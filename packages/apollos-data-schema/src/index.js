@@ -391,7 +391,7 @@ export const liveSchema = gql`
 export const pushSchema = gql`
   input PushSettingsInput {
     enabled: Boolean
-    pushId: String
+    pushProviderUserId: String
   }
 
   extend type Mutation {
