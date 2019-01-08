@@ -388,6 +388,17 @@ export const liveSchema = gql`
   }
 `;
 
+export const pushSchema = gql`
+  input PushSettingsInput {
+    enabled: Boolean
+    pushProviderUserId: String
+  }
+
+  extend type Mutation {
+    updateUserPushSettings(input: PushSettingsInput!): Person
+  }
+`;
+
 export const followingsSchema = gql`
   enum LIKE_OPERATION {
     Like

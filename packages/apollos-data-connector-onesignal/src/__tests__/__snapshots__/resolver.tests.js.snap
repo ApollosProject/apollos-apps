@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneSignal updates an external push id with a valid user 1`] = `
+Object {
+  "data": Object {
+    "updateUserPushSettings": Object {
+      "id": "user123",
+    },
+  },
+}
+`;
+
+exports[`OneSignal updates an external push id with a valid user 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "players/some-push-id",
+      Object {
+        "app_id": "some-app-id",
+        "external_user_id": "user123",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

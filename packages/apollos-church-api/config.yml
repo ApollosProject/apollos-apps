@@ -15,6 +15,9 @@ ROCK:
   API_URL: https://apollosrock.newspring.cc/api
   API_TOKEN: ${ROCK_TOKEN}
   IMAGE_URL: https://apollosrock.newspring.cc/GetImage.ashx
+ONE_SIGNAL:
+  APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
+  REST_KEY: ${ONE_SIGNAL_REST_KEY}
 ANALYTICS:
   # Filling out these fields will automatically enable analytics tracking
   # on the accompanying service

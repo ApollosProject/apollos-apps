@@ -34,6 +34,7 @@
     "@apollosproject/data-connector-church-online": "^0.8.0-alpha.6",
     "@apollosproject/data-connector-cloudinary": "^0.8.0-alpha.6",
     "@apollosproject/data-connector-rock": "^0.8.0-alpha.6",
+    "@apollosproject/data-connector-onesignal": "^0.8.0-alpha.6",
     "@apollosproject/server-core": "^0.8.0-alpha.6",
     "apollo-server": "^2.0.5",
     "color": "3.0.0",
