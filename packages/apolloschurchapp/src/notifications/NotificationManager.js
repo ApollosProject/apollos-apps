@@ -5,9 +5,9 @@ import { Component } from 'react';
 import { Linking } from 'react-native';
 import OneSignal from 'react-native-onesignal';
 import { get } from 'lodash';
-import NavigationService from './NavigationService';
-import { ONE_SIGNAL_KEY } from './config';
-import { client } from './client';
+import NavigationService from '../NavigationService';
+import { ONE_SIGNAL_KEY } from '../config';
+import { client } from '../client';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {

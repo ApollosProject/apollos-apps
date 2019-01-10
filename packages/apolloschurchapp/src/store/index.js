@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 import { track, events } from 'apolloschurchapp/src/analytics';
 import { client, CACHE_LOADED } from '../client'; // eslint-disable-line
-import updatePushId from '../utils/push/updatePushId';
+import updatePushId from '../notifications/updatePushId';
 import getAuthToken from './getAuthToken';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
@@ -116,13 +116,6 @@ export const resolvers = {
           data: { authToken },
         });
 
-        const { authToken: authTokenFromStore } = await client.query({
-          query: gql`
-            query {
-              authToken @client
-            }
-          `,
-        });
         const { pushId } = cache.readQuery({
           query: gql`
             query {
@@ -130,7 +123,6 @@ export const resolvers = {
             }
           `,
         });
-        console.log({ authTokenFromStore, pushId });
         if (pushId) {
           updatePushId({ pushId });
         }

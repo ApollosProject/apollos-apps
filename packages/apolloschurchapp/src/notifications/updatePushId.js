@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import { client } from '../../client';
+import { client } from '../client';
 
 const UPDATE_PUSH_ID = gql`
   mutation updateUserPushSettings($input: PushSettingsInput!) {
