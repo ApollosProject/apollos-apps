@@ -18,6 +18,7 @@ exports[`Personal device data source must post a user's device to Rock 2`] = `
 [MockFunction] {
   "calls": Array [
     Array [
+      "/PersonalDevices",
       Object {
         "DeviceRegistrationId": "somepushid",
         "NotificationsEnabled": 1,
