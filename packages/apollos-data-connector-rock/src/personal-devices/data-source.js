@@ -17,7 +17,7 @@ export default class PersonalDevices extends RockApolloDataSource {
     // if we already have a device, shortcut the function;
     if (existing.length) return currentUser;
 
-    await this.post({
+    await this.post('/PersonalDevices', {
       PersonAliasId: currentUser.primaryAliasId,
       DeviceRegistrationId: pushId,
       PersonalDeviceTypeValueId: 671, // `mobile` device type
