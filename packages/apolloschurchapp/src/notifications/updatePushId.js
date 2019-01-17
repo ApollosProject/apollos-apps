@@ -10,11 +10,10 @@ const UPDATE_PUSH_ID = gql`
 `;
 
 const updatePushId = async ({ pushId }) => {
-  const result = await client.mutate({
+  await client.mutate({
     mutation: UPDATE_PUSH_ID,
-    variables: { input: { pushId } },
+    variables: { input: { pushProviderUserId: pushId } },
   });
-  console.log(result);
 };
 
 export { updatePushId as default };
