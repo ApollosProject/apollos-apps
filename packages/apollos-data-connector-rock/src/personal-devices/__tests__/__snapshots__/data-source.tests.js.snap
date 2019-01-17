@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Personal device data source must exit early if a device is found 1`] = `
+Object {
+  "primaryAliasId": 123,
+}
+`;
+
+exports[`Personal device data source must exit early if a device is found 2`] = `[MockFunction]`;
+
+exports[`Personal device data source must post a user's device to Rock 1`] = `
+Object {
+  "primaryAliasId": 123,
+}
+`;
+
+exports[`Personal device data source must post a user's device to Rock 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "/PersonalDevices",
+      Object {
+        "DeviceRegistrationId": "somepushid",
+        "NotificationsEnabled": 1,
+        "PersonAliasId": 123,
+        "PersonalDeviceTypeValueId": 671,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": Promise {},
+    },
+  ],
+}
+`;

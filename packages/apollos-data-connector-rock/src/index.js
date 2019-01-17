@@ -7,6 +7,7 @@ import * as Sharable from './sharable';
 import * as Person from './people';
 import * as Family from './family';
 import * as Auth from './auth';
+import * as PersonalDevice from './personal-devices';
 
 export {
   Followings,
@@ -18,4 +19,5 @@ export {
   Person,
   Family,
   Auth,
+  PersonalDevice,
 };

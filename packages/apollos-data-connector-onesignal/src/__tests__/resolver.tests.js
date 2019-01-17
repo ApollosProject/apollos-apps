@@ -24,7 +24,9 @@ describe('OneSignal', () => {
     const rootValue = {};
 
     const put = jest.fn();
-    const getCurrentPerson = jest.fn(() => Promise.resolve({ id: 'user123' }));
+    const getCurrentPerson = jest.fn(() =>
+      Promise.resolve({ primaryAliasId: 'user123', id: 'user123' })
+    );
     const Auth = { getCurrentPerson };
 
     context.dataSources.OneSignal.put = put;
