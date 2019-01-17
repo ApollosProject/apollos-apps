@@ -1,24 +1,31 @@
 import querystring from 'querystring';
 import URL from 'url';
+import gql from 'graphql-tag';
 import { Component } from 'react';
 import { Linking } from 'react-native';
 import OneSignal from 'react-native-onesignal';
-import NavigationService from './NavigationService';
-import { ONE_SIGNAL_KEY } from './config';
+import { get } from 'lodash';
+import NavigationService from '../NavigationService';
+import { ONE_SIGNAL_KEY } from '../config';
+import { client } from '../client';
+
+const UPDATE_DEVICE_PUSH_ID = gql`
+  mutation updateDevicePushId($pushId: String!) {
+    updateDevicePushId(pushId: $pushId) @client
+  }
+`;
 
 export default class NotificationsInit extends Component {
   static navigationOptions = {};
 
-  componentWillMount() {
+  componentDidMount() {
     OneSignal.init(ONE_SIGNAL_KEY, {
       kOSSettingsKeyAutoPrompt: true,
     });
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
     OneSignal.addEventListener('ids', this.onIds);
-  }
-
-  componentDidMount() {
+    OneSignal.configure();
     Linking.getInitialURL().then((url) => {
       this.navigate(url);
     });
@@ -53,14 +60,17 @@ export default class NotificationsInit extends Component {
     // apolloschurchapp://AppStackNavigator/Connect
     // apolloschurchapp://SomethingElse/Connect
     // apolloschurchapp://SomethingElse/ContentSingle?itemId=SomeItemId:blablalba
-    const { url } = openResult.notification.payload.additionalData;
+    const url = get(openResult, 'notification.payload.additionalData.url');
     if (url) {
       this.navigate(url);
     }
   };
 
   onIds = (device) => {
-    console.log('Device info: ', device);
+    client.mutate({
+      mutation: UPDATE_DEVICE_PUSH_ID,
+      variables: { pushId: device.userId },
+    });
   };
 
   render() {
