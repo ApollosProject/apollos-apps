@@ -1,0 +1,1 @@
+export NotificationsManager from './NotificationManager';

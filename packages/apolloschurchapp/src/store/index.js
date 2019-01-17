@@ -2,7 +2,8 @@ import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 import { track, events } from 'apolloschurchapp/src/analytics';
-import { client } from '../client'; // eslint-disable-line
+import { client, CACHE_LOADED } from '../client'; // eslint-disable-line
+import updatePushId from '../notifications/updatePushId';
 import getAuthToken from './getAuthToken';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
@@ -12,6 +13,8 @@ export const schema = `
     authToken: String
     mediaPlayer: MediaPlayerState
     isLoggedIn: Boolean
+    devicePushId: String
+    cacheLoaded: Boolean
   }
 
   type Mutation {
@@ -27,7 +30,11 @@ export const schema = `
       isVideo: Boolean,
     ): Boolean
 
+    cacheMarkLoaded
+
     handleLogin(authToken: String!)
+
+    updateDevicePushId(pushId: String!)
   }
 
   type MediaPlayerState {
@@ -59,6 +66,8 @@ export const schema = `
 export const defaults = {
   __typename: 'Query',
   authToken: null,
+  cacheLoaded: false,
+  pushId: null,
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     currentTrack: null,
@@ -106,6 +115,17 @@ export const resolvers = {
         await cache.writeData({
           data: { authToken },
         });
+
+        const { pushId } = cache.readQuery({
+          query: gql`
+            query {
+              pushId
+            }
+          `,
+        });
+        if (pushId) {
+          updatePushId({ pushId });
+        }
 
         track({ eventName: events.UserLogin });
       } catch (e) {
@@ -235,6 +255,46 @@ export const resolvers = {
         },
       });
       return null;
+    },
+    updateDevicePushId: (root, { pushId }, { cache }) => {
+      const query = gql`
+        query {
+          pushId @client
+        }
+      `;
+      cache.writeQuery({
+        query,
+        data: {
+          pushId,
+        },
+      });
+
+      const isLoggedIn = resolvers.Query.isLoggedIn();
+      if (isLoggedIn) {
+        updatePushId({ pushId });
+      }
+      return null;
+    },
+
+    cacheMarkLoaded: (root, args, { cache }) => {
+      cache.writeQuery({
+        query: CACHE_LOADED,
+        data: {
+          cacheLoaded: true,
+        },
+      });
+      const isLoggedIn = resolvers.Query.isLoggedIn();
+      const { pushId } = cache.readQuery({
+        query: gql`
+          query {
+            pushId @client
+          }
+        `,
+      });
+
+      if (isLoggedIn && pushId) {
+        updatePushId({ pushId });
+      }
     },
   },
 };

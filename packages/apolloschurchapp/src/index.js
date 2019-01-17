@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation';
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Providers from './Providers';
-import NotificationsInit from './Notifications';
+import { NotificationsManager } from './notifications';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
@@ -47,7 +47,7 @@ const App = () => (
           NavigationService.setTopLevelNavigator(navigatorRef);
         }}
       />
-      <NotificationsInit />
+      <NotificationsManager />
       <MediaPlayer />
     </BackgroundView>
   </Providers>
