@@ -1,12 +1,25 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
+import moment from 'moment-timezone';
 
-const { ROCK_MAPPINGS } = ApollosConfig;
-const LIVE_CONTENT = (date = new Date()) =>
-  `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
+const { ROCK_MAPPINGS, ROCK } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
+
+  LIVE_CONTENT = () => {
+    // get a date in the local timezone of the rock instance.
+    // Rock doesn't respect timezone information, hence the need to warp the date
+    const date = moment()
+      .utc()
+      .add(
+        moment()
+          .tz(ROCK.TIMEZONE)
+          .utcOffset(),
+        'minutes'
+      );
+    return `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
+  };
 
   expanded = true;
 
@@ -22,7 +35,7 @@ export default class ContentItem extends RockApolloDataSource {
     const associationsFilter = associations.map(
       ({ childContentChannelItemId }) => `Id eq ${childContentChannelItemId}`
     );
-    request.filterOneOf(associationsFilter).andFilter(LIVE_CONTENT());
+    request.filterOneOf(associationsFilter).andFilter(this.LIVE_CONTENT());
 
     return request.orderBy('Order');
   };
@@ -38,7 +51,7 @@ export default class ContentItem extends RockApolloDataSource {
       ({ contentChannelItemId }) => `Id eq ${contentChannelItemId}`
     );
 
-    request.filterOneOf(associationsFilter).andFilter(LIVE_CONTENT());
+    request.filterOneOf(associationsFilter).andFilter(this.LIVE_CONTENT());
 
     return request.orderBy('Order');
   };
@@ -71,7 +84,7 @@ export default class ContentItem extends RockApolloDataSource {
     const siblingFilter = siblingAssociations.map(
       ({ childContentChannelItemId }) => `Id eq ${childContentChannelItemId}`
     );
-    request.filterOneOf(siblingFilter).andFilter(LIVE_CONTENT());
+    request.filterOneOf(siblingFilter).andFilter(this.LIVE_CONTENT());
 
     return request.orderBy('Order');
   };
@@ -83,19 +96,19 @@ export default class ContentItem extends RockApolloDataSource {
           (id) => `ContentChannelId eq ${id}`
         )
       )
-      .andFilter(LIVE_CONTENT())
+      .andFilter(this.LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
   byContentChannelId = (id) =>
     this.request()
       .filter(`ContentChannelId eq ${id}`)
-      .andFilter(LIVE_CONTENT())
+      .andFilter(this.LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
   getFromIds = (ids) =>
     this.request()
       .filterOneOf(ids.map((id) => `Id eq ${id}`))
-      .andFilter(LIVE_CONTENT());
+      .andFilter(this.LIVE_CONTENT());
 
   getFromId = (id) =>
     this.request()
