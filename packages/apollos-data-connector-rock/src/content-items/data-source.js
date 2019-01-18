@@ -13,6 +13,7 @@ export default class ContentItem extends RockApolloDataSource {
     const date = moment().utc().add(moment().tz(ROCK.TIMEZONE).utcOffset(), 'minutes');
     return `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
   }
+
   expanded = true;
 
   getCursorByParentContentItemId = async (id) => {
