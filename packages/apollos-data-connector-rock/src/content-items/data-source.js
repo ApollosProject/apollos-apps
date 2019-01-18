@@ -6,12 +6,21 @@ const { ROCK_MAPPINGS, ROCK } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
+
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
     // Rock doesn't respect timezone information, hence the need to warp the date
-    const date = moment().utc().add(moment().tz(ROCK.TIMEZONE).utcOffset(), 'minutes');
+    const date = moment()
+      .utc()
+      .add(
+        moment()
+          .tz(ROCK.TIMEZONE)
+          .utcOffset(),
+        'minutes'
+      );
     return `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
-  }
+  };
+
   expanded = true;
 
   getCursorByParentContentItemId = async (id) => {
