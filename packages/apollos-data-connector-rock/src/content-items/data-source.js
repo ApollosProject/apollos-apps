@@ -6,6 +6,7 @@ const { ROCK_MAPPINGS, ROCK } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
+
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
     // Rock doesn't respect timezone information, hence the need to warp the date
