@@ -1,5 +1,5 @@
 jest.mock('./src/client/index');
-jest.mock('./src/config', () => ({
+jest.mock('react-native-config', () => ({
   ONE_SIGNAL_KEY: 'doesntmatter',
 }));
 jest.mock('react-native-custom-tabs', () => ({
