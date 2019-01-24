@@ -7,15 +7,15 @@ buildscript {
     }
 }
 
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: "com.android.application"
+
 project.ext.envConfigFiles = [
     debug: ".env",
     release: ".env.production",
 ]
 
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
-
-apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
-apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
 
