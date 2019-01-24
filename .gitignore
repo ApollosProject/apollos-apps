@@ -46,6 +46,9 @@ typings/
 # Optional npm cache directory
 .npm
 
+# Optional terraform
+.terraform
+
 # Optional eslint cache
 .eslintcache
 
