@@ -7,6 +7,13 @@ buildscript {
     }
 }
 
+project.ext.envConfigFiles = [
+    debug: ".env",
+    release: ".env.production",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
 apply plugin: "com.android.application"
 
@@ -147,6 +154,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-config')
     compile project(':react-native-screens')
     compile project(':react-native-onesignal')
     compile project(':react-native-image-picker')
