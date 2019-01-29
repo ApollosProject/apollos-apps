@@ -21,7 +21,7 @@ export default class OneSignal extends RESTDataSource {
     if (pushProviderUserId != null) {
       await this.updateExternalUserId({
         playerId: pushProviderUserId,
-        userId: currentUser.id,
+        userId: currentUser.primaryAliasId,
       });
     }
     return currentUser;
