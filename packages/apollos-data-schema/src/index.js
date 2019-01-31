@@ -6,7 +6,7 @@ export const testSchema = gql`
 `;
 
 export const authSchema = gql`
-  type AuthenticatedUser {
+  type AuthenticatedUser @cacheControl(maxAge: 0) {
     id: ID!
     profile: Person
   }
@@ -40,7 +40,7 @@ export const peopleSchema = gql`
     value: String!
   }
 
-  type Person implements Node {
+  type Person implements Node @cacheControl(maxAge: 0) {
     id: ID!
     firstName: String!
     lastName: String!
@@ -328,7 +328,7 @@ export const contentItemSchema = gql`
     cursor: String
   }
 
-  extend type Query {
+  extend type Query @cacheControl(maxAge: 0) {
     userFeed(first: Int, after: String): ContentItemsConnection
   }
 `;
@@ -419,7 +419,7 @@ export const followingsSchema = gql`
     likedCount: Int
 `)}
 
-  extend type Query {
+  extend type Query @cacheControl(maxAge: 0) {
     getAllLikedContent: [ContentItem]
   }
 `;
