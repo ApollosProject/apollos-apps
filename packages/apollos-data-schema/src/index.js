@@ -419,8 +419,8 @@ export const followingsSchema = gql`
     likedCount: Int
 `)}
 
-  extend type Query @cacheControl(maxAge: 0) {
-    getAllLikedContent: [ContentItem]
+  extend type Query {
+    getAllLikedContent: [ContentItem] @cacheControl(maxAge: 0)
   }
 `;
 
