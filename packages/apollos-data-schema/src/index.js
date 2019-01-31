@@ -415,7 +415,7 @@ export const followingsSchema = gql`
   }
 
   ${extendForEachContentItemType(`
-    isLiked: Boolean
+    isLiked: Boolean @cacheControl(maxAge: 0)
     likedCount: Int
 `)}
 
