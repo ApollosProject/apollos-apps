@@ -328,8 +328,9 @@ export const contentItemSchema = gql`
     cursor: String
   }
 
-  extend type Query @cacheControl(maxAge: 0) {
+  extend type Query {
     userFeed(first: Int, after: String): ContentItemsConnection
+      @cacheControl(maxAge: 0)
   }
 `;
 
