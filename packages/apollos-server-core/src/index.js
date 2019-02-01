@@ -76,10 +76,19 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   return context;
 };
 
+export const createMiddleware = (data) => (...args) => {
+  const middlewares = compact(
+    values({ ...builtInData, ...data }).map((datum) => datum.serverMiddleware)
+  );
+
+  middlewares.forEach((middleware) => middleware(...args));
+};
+
 export const createApolloServerConfig = (data) => {
   const context = createContext(data);
   const dataSources = createDataSources(data);
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
-  return { context, dataSources, schema, resolvers };
+  const applyServerMiddleware = createMiddleware(data);
+  return { context, dataSources, schema, resolvers, applyServerMiddleware };
 };

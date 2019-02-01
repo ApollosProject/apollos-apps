@@ -7,6 +7,7 @@ import * as Scripture from '@apollosproject/data-connector-bible';
 import * as LiveStream from '@apollosproject/data-connector-church-online';
 import * as Cloudinary from '@apollosproject/data-connector-cloudinary';
 import * as OneSignal from '@apollosproject/data-connector-onesignal';
+import * as Passes from '@apollosproject/data-connector-passes';
 import {
   Followings,
   Interactions,
@@ -55,13 +56,18 @@ const data = {
   }, // alias
   PersonalDevice,
   OneSignalWithRock,
+  Passes,
 };
 
-const { dataSources, resolvers, schema, context } = createApolloServerConfig(
-  data
-);
+const {
+  dataSources,
+  resolvers,
+  schema,
+  context,
+  applyServerMiddleware,
+} = createApolloServerConfig(data);
 
-export { dataSources, resolvers, schema, context };
+export { dataSources, resolvers, schema, context, applyServerMiddleware };
 
 // the upload Scalar is added
 export const testSchema = [

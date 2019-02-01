@@ -1,10 +1,18 @@
-import { ApolloServer } from 'apollo-server';
+import { ApolloServer } from 'apollo-server-express';
+import express from 'express';
 
-import { resolvers, schema, testSchema, context, dataSources } from './data';
+import {
+  resolvers,
+  schema,
+  testSchema,
+  context,
+  dataSources,
+  applyServerMiddleware,
+} from './data';
 
 export { resolvers, schema, testSchema };
 
-export default new ApolloServer({
+const apolloServer = new ApolloServer({
   typeDefs: schema,
   resolvers,
   dataSources,
@@ -20,3 +28,10 @@ export default new ApolloServer({
     },
   },
 });
+
+const app = express();
+
+apolloServer.applyMiddleware({ app });
+applyServerMiddleware({ app });
+
+export default app;
