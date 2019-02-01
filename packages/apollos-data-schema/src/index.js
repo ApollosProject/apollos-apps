@@ -424,4 +424,48 @@ export const followingsSchema = gql`
   }
 `;
 
+export const passSchema = gql`
+  type Pass {
+    type: PassType!
+    description: String!
+    thumbnailImage: ImageMediaSource
+    barcodeImage: ImageMediaSource
+    primaryFields: [PassField]
+    secondaryFields: [PassField]
+    backgorundColor: Color
+    foregroundColor: Color
+    labelColor: Color
+    logoText: String
+    passkitFileUrl: String
+  }
+
+  type PassField {
+    key: String!
+    label: String
+    value: String!
+    textAlignment: PassFieldTextAlignment
+  }
+
+  enum PassFieldTextAlignment {
+    LEFT
+    CENTER
+    RIGHT
+    NATURAL
+  }
+
+  enum PassBarcodeFormat {
+    QR
+    PDF417
+    Aztec
+  }
+
+  enum PassBarcodeMessageEncoding {
+    ISO88591
+  }
+
+  enum PassType {
+    GENERIC
+  }
+`;
+
 export { extendForEachContentItemType };
