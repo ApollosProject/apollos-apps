@@ -19,4 +19,9 @@ export default new ApolloServer({
       'editor.cursorShape': 'line',
     },
   },
+  cacheControl: {
+    stripFormattedExtensions: false,
+    calculateHttpHeaders: true,
+    defaultMaxAge: 600,
+  },
 });
