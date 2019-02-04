@@ -79,7 +79,6 @@ const resolver = {
     ...defaultContentItemResolvers,
     __resolveType: async (
       { attributeValues, attributes, contentChannelTypeId },
-      arg,
       { dataSources: { ContentItem } }
     ) => {
       // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
