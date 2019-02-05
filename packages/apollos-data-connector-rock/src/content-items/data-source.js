@@ -10,6 +10,13 @@ const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
 
+  enforceProtocol = (uri) => (uri.startsWith('//') ? `https:${uri}` : uri);
+
+  createImageUrl = (uri) =>
+    uri.split('-').length === 5
+      ? `${ROCK.IMAGE_URL}?guid=${uri}`
+      : this.enforceProtocol(uri);
+
   attributeIsImage = ({ key, attributeValues, attributes }) =>
     attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
     (key.toLowerCase().includes('image') &&
@@ -32,14 +39,14 @@ export default class ContentItem extends RockApolloDataSource {
 
   hasMedia = ({ attributeValues, attributes }) =>
     Object.keys(attributes).filter((key) =>
-      this.isVideo({
+      this.attributeIsVideo({
         key,
         attributeValues,
         attributes,
       })
     ).length ||
     Object.keys(attributes).filter((key) =>
-      this.isAudio({
+      this.attributeIsAudio({
         key,
         attributeValues,
         attributes,
@@ -48,7 +55,7 @@ export default class ContentItem extends RockApolloDataSource {
 
   getImages = ({ attributeValues, attributes }) => {
     const imageKeys = Object.keys(attributes).filter((key) =>
-      this.isImage({
+      this.attributeIsImage({
         key,
         attributeValues,
         attributes,
@@ -66,7 +73,7 @@ export default class ContentItem extends RockApolloDataSource {
 
   getVideos = ({ attributeValues, attributes }) => {
     const videoKeys = Object.keys(attributes).filter((key) =>
-      this.isVideo({
+      this.attributeIsVideo({
         key,
         attributeValues,
         attributes,
@@ -85,7 +92,7 @@ export default class ContentItem extends RockApolloDataSource {
 
   getAudios = ({ attributeValues, attributes }) => {
     const audioKeys = Object.keys(attributes).filter((key) =>
-      this.isAudio({
+      this.attributeIsAudio({
         key,
         attributeValues,
         attributes,
@@ -126,9 +133,9 @@ export default class ContentItem extends RockApolloDataSource {
       return { ...images[0], __typename: 'ImageMedia' };
     };
 
-    const ourImages = this.getImages
-      .images(root)
-      .filter((image) => image.sources.length); // filter images w/o URLs
+    const ourImages = this.getImages(root).filter(
+      (image) => image.sources.length
+    ); // filter images w/o URLs
     if (ourImages.length) return pickBestImage(ourImages);
 
     // If no image, check parent for image:
