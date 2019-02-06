@@ -14,13 +14,18 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
     "testEnvironment": "node"
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.0-alpha.7",
     "@apollosproject/server-core": "^0.8.0-alpha.7",
+    "datauri": "^1.1.0",
     "jest": "^23.6.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "passkit-generator": "alexandercerutti/passkit-generator#next"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"

@@ -425,9 +425,17 @@ export const followingsSchema = gql`
 `;
 
 export const passSchema = gql`
-  type Pass {
+  extend type Query {
+    userPasses: [Pass]
+  }
+
+  scalar Color
+
+  type Pass implements Node {
+    id: ID!
     type: PassType!
     description: String!
+    logoImage: ImageMediaSource
     thumbnailImage: ImageMediaSource
     barcodeImage: ImageMediaSource
     primaryFields: [PassField]
