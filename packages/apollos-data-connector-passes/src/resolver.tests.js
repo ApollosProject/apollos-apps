@@ -6,7 +6,7 @@ import { Person, Family } from '@apollosproject/data-connector-rock';
 import gql from 'graphql-tag';
 
 import { generateToken } from '@apollosproject/data-connector-rock/lib/auth';
-import * as Passes from './index';
+import * as Pass from './index';
 
 class AuthDataSourceMock {
   initialize = () => {};
@@ -33,7 +33,7 @@ const Auth = {
 };
 
 const { getContext, getSchema } = createTestHelpers({
-  Passes,
+  Pass,
   Person,
   Family,
   Auth,
