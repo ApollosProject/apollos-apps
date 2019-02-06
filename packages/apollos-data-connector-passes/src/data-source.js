@@ -27,20 +27,34 @@ export default class Pass extends DataSource {
     return template;
   }
 
-  async generatePassData({ template } = {}) {
-    let compiledTemplate = await this.compileTemplate(template);
+  async generatePassData({
+    template,
+    currentPersonId,
+    includeImageDataURIs = true,
+  } = {}) {
+    let compiledTemplate = await this.compileTemplate({
+      template,
+      currentPersonId,
+    });
+
+    let images = {};
+    if (includeImageDataURIs) {
+      images = {
+        logo: this.getPassImage({ template, image: 'icon' }),
+        thumbnail: this.getPassImage({ template, image: 'thumbnail' }),
+      };
+    }
 
     // mixin data for graphql:
     compiledTemplate = {
-      logoImage: this.getPassImage({ template, image: 'icon' }),
-      thumbnailImage: this.getPassImage({ template, image: 'thumbnail' }),
+      ...images,
       ...compiledTemplate,
     };
 
     return compiledTemplate;
   }
 
-  async compileTemplate(template) {
+  async compileTemplate({ template, currentPersonId }) {
     if (!template) throw new UserInputError('no pass template provided');
 
     const templateFile = `${this.getPassPathFromTemplateName(
@@ -53,6 +67,7 @@ export default class Pass extends DataSource {
       compiledTemplate = await this.context.dataSources.Template.renderTemplate(
         {
           template: rawTemplate,
+          currentPersonId,
         }
       );
     }

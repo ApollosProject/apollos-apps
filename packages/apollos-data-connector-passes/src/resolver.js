@@ -4,7 +4,7 @@ import { camelCase } from 'lodash';
 import QRCode from 'qrcode';
 
 // Gets a list of supported pass types according to the graph schema
-const getSupportedPassTypes = (schema) => {
+const getSupportedPassTypes = schema => {
   const { values = [] } = schema.getTypeMap().PassType.astNode;
   return values.map(({ name }) => name.value);
 };
@@ -12,9 +12,7 @@ const getSupportedPassTypes = (schema) => {
 // Returns pass type... ex: 'GENERIC'
 const getPassType = ({ pass, schema }) => {
   const types = getSupportedPassTypes(schema);
-  return types.find((type) =>
-    Object.hasOwnProperty.call(pass, camelCase(type))
-  );
+  return types.find(type => Object.hasOwnProperty.call(pass, camelCase(type)));
 };
 
 const getPassStyleFields = ({ pass, schema }) => {
@@ -42,7 +40,7 @@ export default {
       // the type is detected by which set of "style key" is provided in the template,
       // according to Apple docs: https://developer.apple.com/library/archive/documentation/UserExperience/Reference/PassKit_Bundle/Chapters/TopLevel.html#//apple_ref/doc/uid/TP40012026-CH2-SW1
       getPassType({ pass, schema }),
-    barcodeImage: async ({ barcodes = [] }) => {
+    barcode: async ({ barcodes = [] }) => {
       if (!barcodes.length) return null;
 
       const supportedType = 'PKBarcodeFormatQR';

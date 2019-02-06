@@ -12,7 +12,7 @@ const privateKeyPassword = 'password';
 ApolloServer.loadJs({
   PASS: {
     TEMPLATES: {
-      EXAMPLE: `${process.env.PWD}/example-pass`,
+      EXAMPLE: `${process.env.PWD}/example-pass.pass`,
     },
     CERTIFICATES: {
       WWDR: examplePem,

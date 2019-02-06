@@ -429,15 +429,13 @@ export const passSchema = gql`
     userPasses: [Pass]
   }
 
-  scalar Color
-
   type Pass implements Node {
     id: ID!
     type: PassType!
     description: String!
-    logoImage: ImageMediaSource
-    thumbnailImage: ImageMediaSource
-    barcodeImage: ImageMediaSource
+    logo: ImageMediaSource
+    thumbnail: ImageMediaSource
+    barcode: ImageMediaSource
     primaryFields: [PassField]
     secondaryFields: [PassField]
     backgorundColor: Color

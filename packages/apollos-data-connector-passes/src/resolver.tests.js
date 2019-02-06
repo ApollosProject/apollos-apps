@@ -3,6 +3,8 @@ import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { authSchema } from '@apollosproject/data-schema';
 import { Person, Family } from '@apollosproject/data-connector-rock';
+import gql from 'graphql-tag';
+
 import { generateToken } from '@apollosproject/data-connector-rock/lib/auth';
 import * as Passes from './index';
 
@@ -35,6 +37,11 @@ const { getContext, getSchema } = createTestHelpers({
   Person,
   Family,
   Auth,
+  Theme: {
+    schema: gql`
+      scalar Color
+    `,
+  },
 });
 
 describe('Passes', () => {
@@ -65,9 +72,9 @@ describe('Passes', () => {
             id
             type
             description
-            logoImage { uri }
-            thumbnailImage { uri }
-            barcodeImage { uri }
+            logo { uri }
+            thumbnail { uri }
+            barcode { uri }
             primaryFields {
               key
               label

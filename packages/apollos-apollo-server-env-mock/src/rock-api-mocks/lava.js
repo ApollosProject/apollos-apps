@@ -1,1 +1,1 @@
-export default (lava) => `<some-lava-response>${lava}</some-lava-response>`;
+export default (lava) => `{ "template": "${lava}" }`;

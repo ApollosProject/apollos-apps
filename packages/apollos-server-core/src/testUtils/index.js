@@ -1,28 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import { makeExecutableSchema } from 'apollo-server';
 import { testSchema } from '@apollosproject/data-schema';
-import { InMemoryLRUCache } from 'apollo-server-caching';
-import { createApolloServerConfig } from '..';
+import { createApolloServerConfig, createContextGetter } from '..';
 
-export const createTestHelpers = (models) => {
+export const createTestHelpers = models => {
   const serverConfig = createApolloServerConfig(models);
-  const getContext = (req) => {
-    const testContext = serverConfig.context(req);
-    const testDataSources = serverConfig.dataSources();
 
-    // Apollo Server does this internally.
-    const cache = new InMemoryLRUCache();
-    Object.values(testDataSources).forEach((dataSource) => {
-      if (dataSource.initialize) {
-        dataSource.initialize({
-          context: testContext,
-          cache,
-        });
-      }
-    });
-    testContext.dataSources = testDataSources;
-    return testContext;
-  };
+  const getContext = createContextGetter(serverConfig);
+
   const getSchema = (schemas = []) =>
     makeExecutableSchema({
       typeDefs: [...serverConfig.schema, ...schemas, testSchema],

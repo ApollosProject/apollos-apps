@@ -13,9 +13,9 @@ export default class Template extends RockApolloDataSource {
       );
 
     const templateWithContext = `{% person id:'${personId}' %}${template}{% endperson %}`;
-
-    return this.post('Lava/RenderTemplate', {
+    const result = await this.post('Lava/RenderTemplate', {
       template: templateWithContext,
     });
+    return JSON.parse(result).template;
   };
 }

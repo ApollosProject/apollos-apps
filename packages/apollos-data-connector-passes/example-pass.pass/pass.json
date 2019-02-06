@@ -8,8 +8,8 @@
   "backgroundColor": "rgb(0,103,109)",
   "foregroundColor": "rgb(248,247,244)",
   "serialNumber": "checkinpass-{{ person | GetPersonAlternateId }}",
-  "thumbnailImage": {
-    "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=dd2aa592-80ac-4d7a-8bdc-47aeb25ce158"
+  "thumbnail": {
+    "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=dd2aa592-80ac-4d7a-8bdc-47aeb25ce158&format=png&height=200"
   },
   "barcodes": [
     {
