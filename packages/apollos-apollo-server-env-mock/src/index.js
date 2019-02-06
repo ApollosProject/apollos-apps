@@ -153,10 +153,6 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         return resolveWith([rockMocks.people()]);
       }
 
-      if (url.match('api/PersonSearchKeys/\\d')) {
-        return resolveWith(rockMocks.personSearchKeys());
-      }
-
       if (url.match('api/Interactions/\\d')) {
         return resolveWith(rockMocks.interaction());
       }

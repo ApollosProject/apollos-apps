@@ -3,7 +3,7 @@ import { makeExecutableSchema } from 'apollo-server';
 import { testSchema } from '@apollosproject/data-schema';
 import { createApolloServerConfig, createContextGetter } from '..';
 
-export const createTestHelpers = models => {
+export const createTestHelpers = (models) => {
   const serverConfig = createApolloServerConfig(models);
 
   const getContext = createContextGetter(serverConfig);
