@@ -78,8 +78,8 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   return context;
 };
 
-export const createContextGetter = (serverConfig) => (req) => {
-  const testContext = serverConfig.context({ req });
+export const createContextGetter = (serverConfig) => (data) => {
+  const testContext = serverConfig.context(data);
   const testDataSources = serverConfig.dataSources();
 
   // Apollo Server does this internally.

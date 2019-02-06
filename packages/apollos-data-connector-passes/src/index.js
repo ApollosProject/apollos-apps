@@ -9,7 +9,7 @@ export { passSchema as schema } from '@apollosproject/data-schema';
 
 const serverMiddleware = ({ app, getContext }) => {
   app.get('/pass/:template', async (req, res) => {
-    const context = getContext(req);
+    const context = getContext({ req });
     let passData;
 
     try {
