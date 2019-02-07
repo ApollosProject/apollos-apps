@@ -29,7 +29,7 @@ export default {
       if (!templates.length) return [];
 
       const defaultPassTemplate = templates[0];
-      const defaultPass = await context.dataSources.Passes.generatePassData({
+      const defaultPass = await context.dataSources.Pass.generatePassData({
         template: defaultPassTemplate,
       });
       return [defaultPass];
