@@ -14,6 +14,7 @@ import {
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import NavigationActions from 'apolloschurchapp/src/NavigationService';
+import { UserWebBrowserConsumer } from 'apolloschurchapp/src/user-web-view';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
