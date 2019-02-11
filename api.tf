@@ -12,7 +12,13 @@ variable "heroku_api_key" {
 
 variable "app_name" {
   type = "string"
-  description = "Your app's name"
+  description = "Your app's name. Name must start with a letter, end with a letter or digit and can only contain lowercase letters, digits, and dashes."
+}
+
+variable "heroku_container_size" {
+  type = "string"
+  default = "free"
+  description = "Heroku Container Size - The default is the only free container size. Other options are hobby, standard-1x, etc."
 }
 
 
@@ -36,3 +42,26 @@ resource "heroku_app" "default" {
   stack = "container"
 }
 
+# resource "heroku_addon" "database" {
+#   app  = "${heroku_app.default.name}"
+#   plan = "heroku-postgresql:hobby-basic"
+# }
+
+
+resource "heroku_build" "default" {
+  app = "${heroku_app.default.id}"
+
+  source = {
+    # A local directory, changing its contents will
+    # force a new build during `terraform apply`
+    path = "./packages/apollos-church-api"
+  }
+}
+
+resource "heroku_formation" "default" {
+  app        = "${heroku_app.default.id}"
+  type       = "web"
+  quantity   = 1
+  size       = "${var.heroku_container_size}"
+  depends_on = ["heroku_build.default"]
+}
