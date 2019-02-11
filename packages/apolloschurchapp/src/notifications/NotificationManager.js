@@ -5,8 +5,8 @@ import { Component } from 'react';
 import { Linking } from 'react-native';
 import OneSignal from 'react-native-onesignal';
 import { get } from 'lodash';
+import Config from 'react-native-config';
 import NavigationService from '../NavigationService';
-import { ONE_SIGNAL_KEY } from '../config';
 import { client } from '../client';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
@@ -19,7 +19,7 @@ export default class NotificationsInit extends Component {
   static navigationOptions = {};
 
   componentDidMount() {
-    OneSignal.init(ONE_SIGNAL_KEY, {
+    OneSignal.init(Config.ONE_SIGNAL_KEY, {
       kOSSettingsKeyAutoPrompt: true,
     });
     OneSignal.addEventListener('received', this.onReceived);
