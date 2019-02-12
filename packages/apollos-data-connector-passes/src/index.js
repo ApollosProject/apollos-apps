@@ -68,7 +68,7 @@ const serverMiddleware = ({ app, getContext }) => {
         'Content-type': 'text/html',
       });
 
-      return res.send(err.message);
+      return res.status(500).send(err.message);
     }
   });
 };
