@@ -43,7 +43,6 @@ const serverMiddleware = ({ app, getContext }) => {
       if (passData[key] && passData[key].uri) {
         const { uri } = passData[key];
         delete passData[key];
-        console.log('load', uri, `${key}.png`);
         pass.load(uri, `${key}.png`);
       }
     });
@@ -68,7 +67,7 @@ const serverMiddleware = ({ app, getContext }) => {
         'Content-type': 'text/html',
       });
 
-      return res.send(err.message);
+      return res.status(500).send(err.message);
     }
   });
 };

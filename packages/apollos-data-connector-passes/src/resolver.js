@@ -36,8 +36,8 @@ export default {
     },
   },
   Pass: {
-    id: (pass, args, context, { parentType }) =>
-      createGlobalId('pass', parentType.name),
+    id: ({ template }, args, context, { parentType }) =>
+      createGlobalId(template, parentType.name),
     type: (pass, args, context, { schema }) =>
       // the type is detected by which set of "style key" is provided in the template,
       // according to Apple docs: https://developer.apple.com/library/archive/documentation/UserExperience/Reference/PassKit_Bundle/Chapters/TopLevel.html#//apple_ref/doc/uid/TP40012026-CH2-SW1

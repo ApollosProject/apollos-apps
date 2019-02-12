@@ -27,6 +27,11 @@ export default class Pass extends DataSource {
     return template;
   }
 
+  getFromId = (template) =>
+    this.context.dataSources.Pass.generatePassData({
+      template,
+    });
+
   async generatePassData({
     template,
     currentPersonId,
@@ -47,6 +52,7 @@ export default class Pass extends DataSource {
 
     // mixin data for graphql:
     compiledTemplate = {
+      template,
       ...images,
       ...compiledTemplate,
     };
