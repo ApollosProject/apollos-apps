@@ -15,13 +15,6 @@ variable "app_name" {
   description = "Your app's name. Name must start with a letter, end with a letter or digit and can only contain lowercase letters, digits, and dashes."
 }
 
-# variable "heroku_container_size" {
-#   type = "string"
-#   default = "free"
-#   description = "Heroku Container Size - The default is the only free container size. Other options are hobby, standard-1x, etc."
-# }
-
-
 provider "heroku" {
   email   = "${var.heroku_email}"
   api_key = "${var.heroku_api_key}"
@@ -47,7 +40,7 @@ resource "heroku_addon" "cloudinary" {
   plan = "cloudinary"
 }
 
-# Uncomment the following lines to enable CDN creation
+# Comment out the following lines to enable CDN creation
 resource "heroku_addon" "fastly" {
   app  = "${heroku_app.default.name}"
   plan = "fastly:quick"
