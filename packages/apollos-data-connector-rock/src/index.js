@@ -8,6 +8,7 @@ import * as Person from './people';
 import * as Family from './family';
 import * as Auth from './auth';
 import * as PersonalDevice from './personal-devices';
+import * as Template from './template';
 
 export {
   Followings,
@@ -20,4 +21,5 @@ export {
   Family,
   Auth,
   PersonalDevice,
+  Template,
 };

@@ -14,7 +14,8 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"]
   },
   "dependencies": {
     "cloudinary": "^1.13.2"

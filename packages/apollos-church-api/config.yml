@@ -20,6 +20,14 @@ ROCK:
 ONE_SIGNAL:
   APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
+PASS:
+  TEMPLATES:
+    CHECKIN: ${PWD}/wallet-passes/checkin.pass
+  CERTIFICATES:
+    WWDR: ${PASS_WWDR_CERT}
+    SIGNER_CERT: ${PASS_SIGNER_CERT}
+    SIGNER_KEY: ${PASS_SIGNER_KEY}
+    SIGNER_KEY_PASSPHRASE: ${PASS_SIGNER_PASSPHRASE}
 ANALYTICS:
   # Filling out these fields will automatically enable analytics tracking
   # on the accompanying service
@@ -27,7 +35,7 @@ ANALYTICS:
   GA_ID:
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
-  BIBLE_ID: "9879dbb7cfe39e4d-01"
+  BIBLE_ID: '9879dbb7cfe39e4d-01'
 CLOUDINARY:
   # Cloudinary is used to improve image loading
   # value should look something like
@@ -36,7 +44,6 @@ CLOUDINARY:
 
 # This key holds various properties that allow our GraphQL server to map to your Rock Instance
 ROCK_MAPPINGS:
-
   INTERACTIONS:
     # Name of the InteractionChannel that will be created
     CHANNEL_NAME: Apollos App
