@@ -56,4 +56,4 @@ BrowserWithUserCookie.propTypes = {
 };
 
 export default BrowserWithUserCookie;
-export { UserWebBrowserProvider, UserWebBrowserConsumer } from './Provider';
+export { UserWebBrowserProvider } from './Provider';

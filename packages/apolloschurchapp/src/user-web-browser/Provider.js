@@ -6,9 +6,6 @@ import NavigationService from '../NavigationService';
 export const OpenUserWebView = (url) =>
   NavigationService.navigate('UserWebView', { url });
 
-const { Provider, Consumer } = createContext(OpenUserWebView);
+const { Provider } = createContext(OpenUserWebView);
 
-export {
-  Provider as UserWebBrowserProvider,
-  Consumer as UserWebBrowserConsumer,
-};
+export { Provider as UserWebBrowserProvider };
