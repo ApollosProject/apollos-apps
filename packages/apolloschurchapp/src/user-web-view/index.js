@@ -8,15 +8,21 @@ import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-const Browser = ({ url, cookie = '' }) => (
-  <ModalView>
-    <WebView source={{ uri: url, headers: { Cookie: cookie } }} />
-  </ModalView>
-);
+const Browser = ({ url, cookie = '', modal }) => {
+  if (modal) {
+    return (
+      <ModalView>
+        <WebView source={{ uri: url, headers: { Cookie: cookie } }} />
+      </ModalView>
+    );
+  }
+  return <WebView source={{ uri: url, headers: { Cookie: cookie } }} />;
+};
 
 Browser.propTypes = {
   url: PropTypes.string.isRequired,
   cookie: PropTypes.string,
+  modal: PropTypes.bool.isRequired,
 };
 
 const WITH_USER_COOKIE = gql`
@@ -28,7 +34,7 @@ const WITH_USER_COOKIE = gql`
   }
 `;
 
-const BrowserWithUserCookie = ({ url, navigation }) => {
+const BrowserWithUserCookie = ({ url, navigation, modal = true }) => {
   // get the url from the navigation param or default to the url prop;
   const uri = navigation.getParam('url', url);
   return (
@@ -38,7 +44,7 @@ const BrowserWithUserCookie = ({ url, navigation }) => {
           return null;
         }
         const cookie = get(data, 'currentUser.rockToken', '');
-        return <Browser cookie={cookie} url={uri} />;
+        return <Browser cookie={cookie} url={uri} modal={modal} />;
       }}
     </Query>
   );
@@ -46,6 +52,7 @@ const BrowserWithUserCookie = ({ url, navigation }) => {
 
 BrowserWithUserCookie.propTypes = {
   url: PropTypes.string,
+  modal: PropTypes.bool,
 };
 
 export default BrowserWithUserCookie;
