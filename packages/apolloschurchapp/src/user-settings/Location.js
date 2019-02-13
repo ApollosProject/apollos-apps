@@ -15,12 +15,12 @@ import marker from './marker.png';
 
 const { width, height } = Dimensions.get('window');
 
-const ASPECT_RATIO = width / height;
-const LATITUDE = 34.595334;
-const LONGITUDE = -82.621761;
-const LATITUDE_DELTA = 0.55;
-const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-const SPACE = 0.01;
+const initialRegion = {
+  aspectRatio: width / height,
+  latitute: 34.595334,
+  longitude: -82.621761,
+  latitudeDelta: 0.55,
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -62,17 +62,18 @@ class Location extends PureComponent {
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: LATITUDE,
-          longitude: LONGITUDE,
-          latitudeDelta: LATITUDE_DELTA,
-          longitudeDelta: LONGITUDE_DELTA,
+          latitude: initialRegion.latitude,
+          longitude: initialRegion.longitude,
+          latitudeDelta: initialRegion.latitudeDelta,
+          longitudeDelta:
+            initialRegion.latitudeDelta * initialRegion.aspectRatio,
         }}
         showsUserLocation
       >
         <Marker
           coordinate={{
-            latitude: LATITUDE,
-            longitude: LONGITUDE,
+            latitude: initialRegion.latitude,
+            longitude: initialRegion.longitude,
           }}
           anchor={{ x: 0.69, y: 1 }}
           image={marker}

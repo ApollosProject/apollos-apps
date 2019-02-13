@@ -5,12 +5,14 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00C989E3A6219352286974E7 /* libPods-apolloschurchapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A67256B34A1BDBE949ADF889 /* libPods-apolloschurchapp-tvOSTests.a */; };
 		00E356F31AD99517003FC87E /* apolloschurchappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* apolloschurchappTests.m */; };
 		0D4EDF6EBA274F9D93DDED76 /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F79112193F3548D284406ABF /* Inter-UI-MediumItalic.otf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -24,6 +26,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		1680179655164C96985B5731 /* libMusicControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D51DCF8F14993B9AA6990 /* libMusicControl.a */; };
 		1C1FD8B313AB4A6583A0D31B /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D838A2FAE743C7B1DA5E31 /* libRNDeviceInfo.a */; };
+		225BC54CF74A4169A3364936 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E18D291A714866A11F2C3D /* libAirMaps.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -40,6 +43,7 @@
 		3CAA28FFFCCF46518672AC8F /* libDBCustomTabs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E6499CCC9D4DB2ADD365D8 /* libDBCustomTabs.a */; };
 		417027FD83CA4902AB4DB2B4 /* Inter-UI-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E13C8F9AE60487C9ED95C21 /* Inter-UI-Black.otf */; };
 		43B3730CE8FA462F87E6A00F /* libRNAirplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E3C0D4851A40CCA095A30A /* libRNAirplay.a */; };
+		468F2C894D676C3F19008DAA /* libPods-apolloschurchapp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF33B6373DE2B165E8BC9414 /* libPods-apolloschurchapp-tvOS.a */; };
 		47D66CD51CC44ED1BFFC7FB6 /* libReactNativeConfig-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D081CFC9F7CF44A283276523 /* libReactNativeConfig-tvOS.a */; };
 		4B29B8AACC2A4FB7BA6A8EEB /* libSafariViewManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5A2B416EB74A44923FED7B /* libSafariViewManager.a */; };
 		59D8DFA78CDF4642892CC142 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D979B537509247C099CE3F24 /* DroidSerif-BoldItalic.ttf */; };
@@ -50,6 +54,7 @@
 		6E4442FB39BE4F898DE4C454 /* Inter-UI-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22246A6BC58E4CF09A22A4DF /* Inter-UI-BlackItalic.otf */; };
 		70EF26E40899400DBE087CE1 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 091DD84EC9DB4C32BCB0A0FC /* libReactNativeConfig.a */; };
 		7D060CA312AB4E828CD60DDC /* Inter-UI-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10F42B11F27E467A8C71C280 /* Inter-UI-Regular.otf */; };
+		7F1C214574B077DAB0FF4308 /* libPods-apolloschurchapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9068CD1388519F3E47E0532 /* libPods-apolloschurchapp.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		86D0B47B5BF143E797822EF1 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8FFB7C37BB4499AEB6FA37 /* libRCTVideo.a */; };
 		89331B8BDAF24EF5BE08A485 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAF46FBA8B44C7B8DCA7707 /* libRNSVG.a */; };
@@ -64,9 +69,9 @@
 		D5744BF3B41D4BC49F93CD68 /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76E6AD5294554A5FA53DB415 /* DroidSerif-Regular.ttf */; };
 		DEF13113111A40DF8F4FEB13 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84716CBFF56347BA880A16C6 /* libRNSVG-tvOS.a */; };
 		E374C61F2AAF41D3B615AB44 /* Inter-UI-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32A467E2C3364ABDBB7BD0D1 /* Inter-UI-BoldItalic.otf */; };
+		E57C51A4233C65D757522F6B /* libPods-apolloschurchappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9608C1BC3B0A246CF460EBC /* libPods-apolloschurchappTests.a */; };
 		F3F4A3D13570438F9562746F /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F08D1EBF0C2A4E6798AA8F36 /* libSplashScreen.a */; };
 		F8FAD93CCE5641A8B87611EA /* Inter-UI-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FB25CB02F40D4CC39DDA3C74 /* Inter-UI-Bold.otf */; };
-		225BC54CF74A4169A3364936 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E18D291A714866A11F2C3D /* libAirMaps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -308,6 +313,13 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
+		425B56EA22149C4F00268CFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B10C4CC78588469EB413FA0F /* AirMaps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
+			remoteInfo = AirMaps;
+		};
 		427787EC2149B96A0045AD7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84B340CC6C3940A782834F00 /* RCTOneSignal.xcodeproj */;
@@ -523,6 +535,7 @@
 		2F8741F0746D4C8A89970C4D /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
 		32A467E2C3364ABDBB7BD0D1 /* Inter-UI-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BoldItalic.otf"; path = "../assets/fonts/Inter-UI-BoldItalic.otf"; sourceTree = "<group>"; };
 		3BD7DCDF7B194D7BB9BE3C6C /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
+		3E408A16F0B768AC5DD7A5E3 /* Pods-apolloschurchappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchappTests.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchappTests/Pods-apolloschurchappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F58D699A37B432BA1C0F092 /* libRNImagePicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNImagePicker.a; sourceTree = "<group>"; };
 		4217B130214ADB740034808C /* apolloschurchapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = apolloschurchapp.entitlements; path = apolloschurchapp/apolloschurchapp.entitlements; sourceTree = "<group>"; };
 		4217B142214ADCD50034808C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -531,7 +544,9 @@
 		46704FC4FCEB45B6B9DD92BB /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		4BD3C4E6742F4F6380640CA9 /* MusicControl.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MusicControl.xcodeproj; path = "../node_modules/react-native-music-control/ios/MusicControl.xcodeproj"; sourceTree = "<group>"; };
 		4BE1789D74F64437B8E6A905 /* RNAirplay.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAirplay.xcodeproj; path = "../node_modules/react-native-airplay-btn/ios/RNAirplay.xcodeproj"; sourceTree = "<group>"; };
+		560B84835F99E98C770747F0 /* Pods-apolloschurchapp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOS/Pods-apolloschurchapp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		59AF37DEFAA847DBAB3A0526 /* RNScreens.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNScreens.xcodeproj; path = "../node_modules/react-native-screens/ios/RNScreens.xcodeproj"; sourceTree = "<group>"; };
+		5C2B02FF448CF280A21B97FA /* Pods-apolloschurchapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp/Pods-apolloschurchapp.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		60E52391C9744A46B3925A78 /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		643D51DCF8F14993B9AA6990 /* libMusicControl.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libMusicControl.a; sourceTree = "<group>"; };
@@ -547,24 +562,33 @@
 		84B340CC6C3940A782834F00 /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOneSignal.xcodeproj; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; };
 		8CA3C04F98954FB2895CD36D /* Inter-UI-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Italic.otf"; path = "../assets/fonts/Inter-UI-Italic.otf"; sourceTree = "<group>"; };
 		8E13C8F9AE60487C9ED95C21 /* Inter-UI-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Black.otf"; path = "../assets/fonts/Inter-UI-Black.otf"; sourceTree = "<group>"; };
+		8EAD95779C63FAA1D83DBC04 /* Pods-apolloschurchapp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOS/Pods-apolloschurchapp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		99E3C0D4851A40CCA095A30A /* libRNAirplay.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAirplay.a; sourceTree = "<group>"; };
 		99E70A413A2B4EC2AD2A6773 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
 		9FD7D997F4F14C439AC699B3 /* Inter-UI-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Medium.otf"; path = "../assets/fonts/Inter-UI-Medium.otf"; sourceTree = "<group>"; };
 		A574C961754742F688E43151 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; };
 		A64D00F181AE4927A4632B6E /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
+		A67256B34A1BDBE949ADF889 /* libPods-apolloschurchapp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B10C4CC78588469EB413FA0F /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		B16900D1DAC94F96B742B4EA /* libRNScreens.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNScreens.a; sourceTree = "<group>"; };
+		BF33B6373DE2B165E8BC9414 /* libPods-apolloschurchapp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5A2B416EB74A44923FED7B /* libSafariViewManager.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSafariViewManager.a; sourceTree = "<group>"; };
+		C4AF21CDD7D030C493ADA3F4 /* Pods-apolloschurchapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp/Pods-apolloschurchapp.release.xcconfig"; sourceTree = "<group>"; };
+		C9068CD1388519F3E47E0532 /* libPods-apolloschurchapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9608C1BC3B0A246CF460EBC /* libPods-apolloschurchappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA48CEBB5D7C4E051C372E75 /* Pods-apolloschurchapp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOSTests/Pods-apolloschurchapp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD1D9980DD767DA5FD5A9B1E /* Pods-apolloschurchappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchappTests.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchappTests/Pods-apolloschurchappTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFAF46FBA8B44C7B8DCA7707 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		D081CFC9F7CF44A283276523 /* libReactNativeConfig-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libReactNativeConfig-tvOS.a"; sourceTree = "<group>"; };
+		D0E18D291A714866A11F2C3D /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		D979B537509247C099CE3F24 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-BoldItalic.ttf"; path = "../assets/fonts/DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F08D1EBF0C2A4E6798AA8F36 /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		F79112193F3548D284406ABF /* Inter-UI-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-MediumItalic.otf"; path = "../assets/fonts/Inter-UI-MediumItalic.otf"; sourceTree = "<group>"; };
+		F82AB41075B25BBCA7DEB1AF /* Pods-apolloschurchapp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOSTests/Pods-apolloschurchapp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9CFD638A5414DFF961A8D11 /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Italic.ttf"; path = "../assets/fonts/DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
 		FB25CB02F40D4CC39DDA3C74 /* Inter-UI-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Bold.otf"; path = "../assets/fonts/Inter-UI-Bold.otf"; sourceTree = "<group>"; };
 		FC8FFB7C37BB4499AEB6FA37 /* libRCTVideo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTVideo.a; sourceTree = "<group>"; };
-		B10C4CC78588469EB413FA0F /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		D0E18D291A714866A11F2C3D /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				E57C51A4233C65D757522F6B /* libPods-apolloschurchappTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +632,7 @@
 				43B3730CE8FA462F87E6A00F /* libRNAirplay.a in Frameworks */,
 				70EF26E40899400DBE087CE1 /* libReactNativeConfig.a in Frameworks */,
 				225BC54CF74A4169A3364936 /* libAirMaps.a in Frameworks */,
+				7F1C214574B077DAB0FF4308 /* libPods-apolloschurchapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +652,7 @@
 				AC4174D90AD644A28D0CA9D9 /* libRNDeviceInfo-tvOS.a in Frameworks */,
 				AB7B2136E56C4B40B64F9C87 /* libMusicControl-tvOS.a in Frameworks */,
 				47D66CD51CC44ED1BFFC7FB6 /* libReactNativeConfig-tvOS.a in Frameworks */,
+				468F2C894D676C3F19008DAA /* libPods-apolloschurchapp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
+				00C989E3A6219352286974E7 /* libPods-apolloschurchapp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,8 +791,20 @@
 				4217B144214ADCE10034808C /* SystemConfiguration.framework */,
 				4217B142214ADCD50034808C /* UIKit.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				C9068CD1388519F3E47E0532 /* libPods-apolloschurchapp.a */,
+				BF33B6373DE2B165E8BC9414 /* libPods-apolloschurchapp-tvOS.a */,
+				A67256B34A1BDBE949ADF889 /* libPods-apolloschurchapp-tvOSTests.a */,
+				C9608C1BC3B0A246CF460EBC /* libPods-apolloschurchappTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		425B56E722149C4F00268CFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				425B56EB22149C4F00268CFF /* libAirMaps.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		427787E92149B9690045AD7F /* Products */ = {
@@ -840,6 +880,7 @@
 				99E3C0D4851A40CCA095A30A /* libRNAirplay.a */,
 				091DD84EC9DB4C32BCB0A0FC /* libReactNativeConfig.a */,
 				D081CFC9F7CF44A283276523 /* libReactNativeConfig-tvOS.a */,
+				D0E18D291A714866A11F2C3D /* libAirMaps.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -965,6 +1006,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4446111C6E474E038489E599 /* Resources */,
 				7914344221260177006F13B7 /* Recovered References */,
+				D26C5B1D9B00590091894BEC /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -1008,6 +1050,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D26C5B1D9B00590091894BEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C2B02FF448CF280A21B97FA /* Pods-apolloschurchapp.debug.xcconfig */,
+				C4AF21CDD7D030C493ADA3F4 /* Pods-apolloschurchapp.release.xcconfig */,
+				8EAD95779C63FAA1D83DBC04 /* Pods-apolloschurchapp-tvOS.debug.xcconfig */,
+				560B84835F99E98C770747F0 /* Pods-apolloschurchapp-tvOS.release.xcconfig */,
+				CA48CEBB5D7C4E051C372E75 /* Pods-apolloschurchapp-tvOSTests.debug.xcconfig */,
+				F82AB41075B25BBCA7DEB1AF /* Pods-apolloschurchapp-tvOSTests.release.xcconfig */,
+				3E408A16F0B768AC5DD7A5E3 /* Pods-apolloschurchappTests.debug.xcconfig */,
+				CD1D9980DD767DA5FD5A9B1E /* Pods-apolloschurchappTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC7D3D0121A32C8400626550 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,6 +1080,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "apolloschurchappTests" */;
 			buildPhases = (
+				F46B97393827D6D4709C837A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -1041,6 +1099,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "apolloschurchapp" */;
 			buildPhases = (
+				30F61D0827DC73420539BE29 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
@@ -1060,6 +1119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "apolloschurchapp-tvOS" */;
 			buildPhases = (
+				7FCA8CB8C039713CCC4D0B87 /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
@@ -1078,6 +1138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "apolloschurchapp-tvOSTests" */;
 			buildPhases = (
+				4F40993F022E2FDE4E007E59 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -1136,6 +1197,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 425B56E722149C4F00268CFF /* Products */;
+					ProjectRef = B10C4CC78588469EB413FA0F /* AirMaps.xcodeproj */;
+				},
 				{
 					ProductGroup = 7914346E2126017A006F13B7 /* Products */;
 					ProjectRef = 46704FC4FCEB45B6B9DD92BB /* BVLinearGradient.xcodeproj */;
@@ -1472,6 +1537,13 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		425B56EB22149C4F00268CFF /* libAirMaps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAirMaps.a;
+			remoteRef = 425B56EA22149C4F00268CFF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		427787ED2149B96A0045AD7F /* libRCTOneSignal.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1717,6 +1789,94 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		30F61D0827DC73420539BE29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apolloschurchapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F40993F022E2FDE4E007E59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apolloschurchapp-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FCA8CB8C039713CCC4D0B87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apolloschurchapp-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46B97393827D6D4709C837A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-apolloschurchappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1784,6 +1944,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E408A16F0B768AC5DD7A5E3 /* Pods-apolloschurchappTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1829,6 +1990,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD1D9980DD767DA5FD5A9B1E /* Pods-apolloschurchappTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1871,6 +2033,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2B02FF448CF280A21B97FA /* Pods-apolloschurchapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
@@ -1878,6 +2041,11 @@
 				CURRENT_PROJECT_VERSION = 5;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 7TM8C6252Z;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"HAVE_GOOGLE_MAPS=1",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-custom-tabs/ios/ReactNativeCustomTabs",
@@ -1909,12 +2077,18 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4AF21CDD7D030C493ADA3F4 /* Pods-apolloschurchapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 7TM8C6252Z;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"HAVE_GOOGLE_MAPS=1",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-custom-tabs/ios/ReactNativeCustomTabs",
@@ -1946,6 +2120,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EAD95779C63FAA1D83DBC04 /* Pods-apolloschurchapp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1997,6 +2172,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 560B84835F99E98C770747F0 /* Pods-apolloschurchapp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -2048,6 +2224,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA48CEBB5D7C4E051C372E75 /* Pods-apolloschurchapp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2098,6 +2275,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82AB41075B25BBCA7DEB1AF /* Pods-apolloschurchapp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
