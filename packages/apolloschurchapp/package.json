@@ -56,7 +56,9 @@
     "setupFiles": [
       "./jest.setup.js"
     ],
-    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"],
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ],
     "transform": {
       ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     }
@@ -99,6 +101,7 @@
     "react-native-image-picker": "0.26.10",
     "react-native-keyboard-aware-scroll-view": "0.7.0",
     "react-native-linear-gradient": "2.4.0",
+    "react-native-maps": "^0.23.0",
     "react-native-music-control": "0.7.3",
     "react-native-onesignal": "3.2.7",
     "react-native-safari-view": "2.1.0",
