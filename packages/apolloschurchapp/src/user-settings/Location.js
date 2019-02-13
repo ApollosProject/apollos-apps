@@ -11,14 +11,14 @@ import {
   ButtonLink,
   // TableView,
 } from '@apollosproject/ui-kit';
-import flagBlueImg from './flag-blue.png';
+import marker from './marker.png';
 
 const { width, height } = Dimensions.get('window');
 
 const ASPECT_RATIO = width / height;
 const LATITUDE = 34.595334;
 const LONGITUDE = -82.621761;
-const LATITUDE_DELTA = 0.25;
+const LATITUDE_DELTA = 0.55;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const SPACE = 0.01;
 
@@ -71,14 +71,23 @@ class Location extends PureComponent {
       >
         <Marker
           coordinate={{
-            latitude: LATITUDE + SPACE,
-            longitude: LONGITUDE + SPACE,
+            latitude: LATITUDE,
+            longitude: LONGITUDE,
           }}
-          centerOffset={{ x: -18, y: -60 }}
           anchor={{ x: 0.69, y: 1 }}
-          image={flagBlueImg}
+          image={marker}
         >
           <Text style={styles.marker}>NewSpring Anderson</Text>
+        </Marker>
+        <Marker
+          coordinate={{
+            latitude: 34.82474,
+            longitude: -82.368624,
+          }}
+          anchor={{ x: 0.69, y: 1 }}
+          image={marker}
+        >
+          <Text style={styles.marker}>NewSpring Greenville</Text>
         </Marker>
       </MapView>
     );
