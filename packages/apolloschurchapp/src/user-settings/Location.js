@@ -11,13 +11,14 @@ import {
   ButtonLink,
   // TableView,
 } from '@apollosproject/ui-kit';
+import flagBlueImg from './flag-blue.png';
 
 const { width, height } = Dimensions.get('window');
 
 const ASPECT_RATIO = width / height;
 const LATITUDE = 34.595334;
 const LONGITUDE = -82.621761;
-const LATITUDE_DELTA = 0.0922;
+const LATITUDE_DELTA = 0.25;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const SPACE = 0.01;
 
@@ -75,8 +76,9 @@ class Location extends PureComponent {
           }}
           centerOffset={{ x: -18, y: -60 }}
           anchor={{ x: 0.69, y: 1 }}
+          image={flagBlueImg}
         >
-          <Text style={styles.marker}>X</Text>
+          <Text style={styles.marker}>NewSpring Anderson</Text>
         </Marker>
       </MapView>
     );
