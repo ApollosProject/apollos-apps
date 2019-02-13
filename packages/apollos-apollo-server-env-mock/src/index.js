@@ -37,6 +37,7 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
   fetch.mockRockDataSourceAPI = () => {
     fetch.mockImplementation((request) => {
       let { url } = request;
+
       url = decodeURI(url);
       if (!url.match('https://apollosrock.newspring.cc/api')) {
         if (request.url.match('/api.scripture.api.bible/v1')) {
@@ -123,6 +124,11 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
           return Promise.resolve(response);
         }
         return Promise.reject({ ...response, status: 401 });
+      }
+
+      if (url.match('api/Lava/RenderTemplate')) {
+        const body = JSON.parse(request.body);
+        return resolveWith(rockMocks.lava(body.template));
       }
 
       if (url.match('api/People/GetCurrentPerson')) {
