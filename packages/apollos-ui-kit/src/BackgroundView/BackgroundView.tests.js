@@ -14,4 +14,13 @@ describe('The BackgroundView component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+
+  it('should render with a red to blue gradient', () => {
+    const tree = renderer.create(
+      <Providers>
+        <BackgroundView colors={['#FF0000', '#0000FF']} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
