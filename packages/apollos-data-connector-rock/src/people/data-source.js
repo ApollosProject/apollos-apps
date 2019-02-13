@@ -16,6 +16,18 @@ export default class Person extends RockApolloDataSource {
       .filter(`Email eq '${email}'`)
       .get();
 
+  // Gets a collection of all dataviews a user is in
+  // Returns an array of dataview guids
+  getPersonas = async (categoryGuid) => {
+    const { id } = await this.context.dataSources.Auth.getCurrentPerson();
+    if (!id) throw new AuthenticationError('Must be logged in.');
+
+    this.request('People/DataViews')
+      .find(id)
+      .filter(`categoryGuid=${categoryGuid}`)
+      .get();
+  };
+
   // fields is an array of objects matching the pattern
   // [{ field: String, value: String }]
   updateProfile = async (fields) => {
@@ -37,16 +49,6 @@ export default class Person extends RockApolloDataSource {
       ...currentPerson,
       ...mapKeys(fieldsAsObject, (_, key) => camelCase(key)),
     };
-  };
-
-  getPersonas = async (categoryGuid) => {
-    const { id } = await this.context.dataSources.Auth.getCurrentPerson();
-    if (!id) throw new AuthenticationError('Must be logged in.');
-
-    this.request('/DataViews')
-      .find(id)
-      .filter(`categoryGuid=${categoryGuid}`)
-      .get();
   };
 
   uploadProfileImage = async (file, length) => {
