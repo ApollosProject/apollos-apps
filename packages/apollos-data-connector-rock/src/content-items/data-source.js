@@ -89,6 +89,22 @@ export default class ContentItem extends RockApolloDataSource {
     return request.orderBy('Order');
   };
 
+  byPersonaFeed = async () => {
+    const personas = await this.context.dataSources.People.getPersonas();
+
+    const contentEntityIds = await this.request('AttributeValues')
+      .filterOneOf(personas.map((guid) => `Value eq ${guid}`))
+      .filter(`$select=EntityId`)
+      .get();
+
+    const contentItems = contentEntityIds.map((obj) => obj.EntityId);
+
+    this.request()
+      .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
+      .andFilter(this.LIVE_CONTENT())
+      .orderBy('StartDateTime', 'desc');
+  };
+
   byUserFeed = () =>
     this.request()
       .filterOneOf(

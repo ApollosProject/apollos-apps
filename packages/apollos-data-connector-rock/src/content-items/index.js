@@ -193,6 +193,11 @@ export const resolver = {
         cursor: dataSources.ContentItem.byUserFeed(),
         args,
       }),
+    personaFeed: (root, args, { dataSources }) =>
+      dataSources.ContentItem.paginate({
+        cursor: dataSources.ContentItem.byPersonaFeed(),
+        args,
+      }),
   },
   DevotionalContentItem: {
     ...defaultContentItemResolvers,

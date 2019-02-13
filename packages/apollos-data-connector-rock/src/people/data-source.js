@@ -39,6 +39,16 @@ export default class Person extends RockApolloDataSource {
     };
   };
 
+  getPersonas = async (categoryGuid) => {
+    const { id } = await this.context.dataSources.Auth.getCurrentPerson();
+    if (!id) throw new AuthenticationError('Must be logged in.');
+
+    this.request('/DataViews')
+      .find(id)
+      .filter(`categoryGuid=${categoryGuid}`)
+      .get();
+  };
+
   uploadProfileImage = async (file, length) => {
     const { stream, filename } = await file;
     const data = new FormData();
