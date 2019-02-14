@@ -1,11 +1,14 @@
 import { compact, mapValues, merge, values } from 'lodash';
 import gql from 'graphql-tag';
+import { InMemoryLRUCache } from 'apollo-server-caching';
+
 import * as Node from './node';
 import * as Pagination from './pagination';
 import * as Media from './media';
 
 export { createGlobalId, parseGlobalId } from './node';
 export { withEdgePagination } from './pagination/utils';
+export { schemaMerge } from './utils';
 
 // Types that all apollos-church servers will use.
 const builtInData = { Node, Pagination, Media };
@@ -76,10 +79,39 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   return context;
 };
 
+export const createContextGetter = (serverConfig) => (data) => {
+  const testContext = serverConfig.context(data);
+  const testDataSources = serverConfig.dataSources();
+
+  // Apollo Server does this internally.
+  const cache = new InMemoryLRUCache();
+  Object.values(testDataSources).forEach((dataSource) => {
+    if (dataSource.initialize) {
+      dataSource.initialize({
+        context: testContext,
+        cache,
+      });
+    }
+  });
+  testContext.dataSources = testDataSources;
+  return testContext;
+};
+
+export const createMiddleware = (data) => ({ app, context, dataSources }) => {
+  const middlewares = compact(
+    values({ ...builtInData, ...data }).map((datum) => datum.serverMiddleware)
+  );
+
+  const getContext = createContextGetter({ context, dataSources });
+
+  return middlewares.forEach((middleware) => middleware({ app, getContext }));
+};
+
 export const createApolloServerConfig = (data) => {
   const context = createContext(data);
   const dataSources = createDataSources(data);
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
-  return { context, dataSources, schema, resolvers };
+  const applyServerMiddleware = createMiddleware(data);
+  return { context, dataSources, schema, resolvers, applyServerMiddleware };
 };
