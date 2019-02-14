@@ -90,19 +90,27 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   byPersonaFeed = async () => {
-    const personas = await this.context.dataSources.People.getPersonas();
+    try {
+      const {
+        dataSources: { Person },
+      } = this.context;
+      const getPersonaGuidsForUser = await Person.getPersonas({
+        categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
+      });
+      const contentEntityIds = await this.request('AttributeValues')
+        .filterOneOf(
+          getPersonaGuidsForUser.map((guid) => `Value eq '${guid.guid}'`)
+        )
+        .get();
 
-    const contentEntityIds = await this.request('AttributeValues')
-      .filterOneOf(personas.map((guid) => `Value eq ${guid}`))
-      .filter(`$select=EntityId`)
-      .get();
+      const contentItems = contentEntityIds.map((obj) => obj.entityId);
 
-    const contentItems = contentEntityIds.map((obj) => obj.EntityId);
-
-    this.request()
-      .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
-      .andFilter(this.LIVE_CONTENT())
-      .orderBy('StartDateTime', 'desc');
+      return this.request()
+        .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
+        .orderBy('StartDateTime', 'desc');
+    } catch (e) {
+      throw e;
+    }
   };
 
   byUserFeed = () =>

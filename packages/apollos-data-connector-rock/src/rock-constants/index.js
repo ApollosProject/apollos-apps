@@ -31,7 +31,7 @@ class RockConstants extends RockApolloDataSource {
     }
     const objectId = await this.post(`/${model}`, objectAttributes);
     const ret = await this.get(`/${model}/${objectId}`);
-    console.log('Created', ret);
+
     return ret;
   }
 

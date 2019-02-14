@@ -18,14 +18,24 @@ export default class Person extends RockApolloDataSource {
 
   // Gets a collection of all dataviews a user is in
   // Returns an array of dataview guids
-  getPersonas = async (categoryGuid) => {
-    const { id } = await this.context.dataSources.Auth.getCurrentPerson();
-    if (!id) throw new AuthenticationError('Must be logged in.');
+  getPersonas = async ({ categoryId }) => {
+    const {
+      dataSources: { RockConstants, Auth },
+    } = this.context;
 
-    this.request('People/DataViews')
-      .find(id)
-      .filter(`categoryGuid=${categoryGuid}`)
-      .get();
+    try {
+      const { id } = await Auth.getCurrentPerson();
+
+      const personEntityTypeId = await RockConstants.modelType('Person');
+
+      return this.request('DataViews/GetPersistedDataViewsForEntity')
+        .find(`${personEntityTypeId.id}/${id}`)
+        .filter(`categoryId=${categoryId}`)
+        .select('Guid')
+        .get();
+    } catch (e) {
+      throw e;
+    }
   };
 
   // fields is an array of objects matching the pattern

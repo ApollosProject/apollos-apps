@@ -193,11 +193,13 @@ export const resolver = {
         cursor: dataSources.ContentItem.byUserFeed(),
         args,
       }),
-    personaFeed: (root, args, { dataSources }) =>
-      dataSources.ContentItem.paginate({
-        cursor: dataSources.ContentItem.byPersonaFeed(),
+    personaFeed: async (root, args, { dataSources }) => {
+      const personaFeed = await dataSources.ContentItem.byPersonaFeed();
+      return dataSources.ContentItem.paginate({
+        cursor: personaFeed,
         args,
-      }),
+      });
+    },
   },
   DevotionalContentItem: {
     ...defaultContentItemResolvers,
