@@ -273,14 +273,26 @@ const {
 } = ContentItem.resolver;
 
 describe('ContentItem resolver', () => {
+  let context;
+  beforeEach(() => {
+    fetch.resetMocks();
+    fetch.mockRockDataSourceAPI();
+    context = getContext();
+  });
   it('fetches an item summary for an item with no description', () => {
     const item = { content: '' };
-    const summary = ContentItemResolver.summary(item);
+    const summary = ContentItemResolver.summary(item, {}, context);
+    expect(summary).toEqual('');
+  });
+  // We noticed that Rock sends back an empty object for this property
+  it('fetches an item summary for an item with an empty object for condition', () => {
+    const item = { content: {} };
+    const summary = ContentItemResolver.summary(item, {}, context);
     expect(summary).toEqual('');
   });
   it('fetches an item summary for an item with a description', () => {
     const item = { content: 'Foo bar baz. Some other foo.' };
-    const summary = ContentItemResolver.summary(item);
+    const summary = ContentItemResolver.summary(item, {}, context);
     expect(summary).toEqual('Foo bar baz.');
   });
 });
