@@ -21,7 +21,6 @@ import {
   PersonalDevice,
   Template,
 } from '@apollosproject/data-connector-rock';
-import * as AuthenticatedUser from './authenticated-user';
 import * as Theme from './theme';
 
 // This module is used to attach Rock User updating to the OneSignal module.
@@ -44,7 +43,6 @@ const data = {
   Analytics,
   Family,
   OneSignal,
-  AuthenticatedUser,
   UniversalContentItem: {
     dataSource: ContentItem.dataSource,
   }, // alias
