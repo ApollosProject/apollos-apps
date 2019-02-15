@@ -1,6 +1,6 @@
-# `apollos-data-connector-rock-content`
+# `@apollosproject/data-connector-rock`
 
-> TODO: description
+This package provides the Resolvers and DataSources for all data powered by Rock RMS.
 
 ## Usage
 
