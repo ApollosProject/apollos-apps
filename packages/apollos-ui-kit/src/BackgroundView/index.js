@@ -5,12 +5,13 @@ import styled from '../styled';
 import { withTheme } from '../theme';
 
 const BackgroundView = compose(
-  withTheme(({ theme, colors }) => ({
+  withTheme(({ theme, colors, ...props }) => ({
     colors: colors ||
       theme.overrides.backgroundGradient || [
         theme.colors.background.paper,
         theme.colors.background.screen,
       ],
+    ...props,
   })),
   styled({ flex: 1 })
 )(LinearGradient);
