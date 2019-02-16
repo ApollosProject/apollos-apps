@@ -1,10 +1,10 @@
-import { createGlobalId } from '@apollosproject/server-core';
 import { get } from 'lodash';
 import { registerToken } from './token';
 
 export { registerToken, generateToken } from './token';
 export { authSchema as schema } from '@apollosproject/data-schema';
 export { default as dataSource } from './data-source';
+export { default as resolver } from './resolver';
 
 export const contextMiddleware = ({ req, context: ctx }) => {
   if (get(req, 'headers.authorization')) {
