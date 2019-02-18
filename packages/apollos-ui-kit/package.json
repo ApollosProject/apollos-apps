@@ -27,6 +27,7 @@
     "modulePaths": [
       "<rootDir>/src/"
     ],
+    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"],
     "transform": {
       ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     }
