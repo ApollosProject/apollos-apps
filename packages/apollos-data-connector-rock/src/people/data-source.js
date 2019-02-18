@@ -29,8 +29,7 @@ export default class Person extends RockApolloDataSource {
       const personEntityTypeId = await RockConstants.modelType('Person');
 
       return this.request('DataViews/GetPersistedDataViewsForEntity')
-        .find(`${personEntityTypeId.id}/${id}`)
-        .filter(`categoryId=${categoryId}`)
+        .find(`${personEntityTypeId.id}/${id}?categoryId=${categoryId}`)
         .select('Guid')
         .get();
     } catch (e) {
