@@ -56,7 +56,9 @@
     "setupFiles": [
       "./jest.setup.js"
     ],
-    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"],
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ],
     "transform": {
       ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     }
@@ -108,6 +110,7 @@
     "react-native-svg": "6.5.2",
     "react-native-video": "3.2.0",
     "react-native-video-controls": "2.2.3",
+    "react-native-webview": "^5.2.0",
     "react-navigation": "2.11.2",
     "recompose": "^0.30.0",
     "rn-placeholder": "1.2.0",
