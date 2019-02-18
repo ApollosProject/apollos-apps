@@ -9,6 +9,7 @@ export const authSchema = gql`
   type AuthenticatedUser @cacheControl(maxAge: 0) {
     id: ID!
     profile: Person
+    rockToken: String
   }
 
   type Authentication {

@@ -1,11 +1,161 @@
+import { get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 import moment from 'moment-timezone';
+import natural from 'natural';
+import sanitizeHtmlNode from 'sanitize-html';
 
-const { ROCK_MAPPINGS, ROCK } = ApollosConfig;
+const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
+
+  enforceProtocol = (uri) => (uri.startsWith('//') ? `https:${uri}` : uri);
+
+  createImageUrl = (uri) =>
+    uri.split('-').length === 5
+      ? `${ROCK.IMAGE_URL}?guid=${uri}`
+      : this.enforceProtocol(uri);
+
+  attributeIsImage = ({ key, attributeValues, attributes }) =>
+    attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
+    (key.toLowerCase().includes('image') &&
+      typeof attributeValues[key].value === 'string' &&
+      attributeValues[key].value.startsWith('http')); // looks like an image url
+
+  attributeIsVideo = ({ key, attributeValues, attributes }) =>
+    attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_FILE ||
+    attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_URL ||
+    (key.toLowerCase().includes('video') &&
+      typeof attributeValues[key].value === 'string' &&
+      attributeValues[key].value.startsWith('http')); // looks like a video url
+
+  attributeIsAudio = ({ key, attributeValues, attributes }) =>
+    attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_FILE ||
+    attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_URL ||
+    (key.toLowerCase().includes('audio') &&
+      typeof attributeValues[key].value === 'string' &&
+      attributeValues[key].value.startsWith('http')); // looks like an audio url
+
+  hasMedia = ({ attributeValues, attributes }) =>
+    Object.keys(attributes).filter((key) =>
+      this.attributeIsVideo({
+        key,
+        attributeValues,
+        attributes,
+      })
+    ).length ||
+    Object.keys(attributes).filter((key) =>
+      this.attributeIsAudio({
+        key,
+        attributeValues,
+        attributes,
+      })
+    ).length;
+
+  getImages = ({ attributeValues, attributes }) => {
+    const imageKeys = Object.keys(attributes).filter((key) =>
+      this.attributeIsImage({
+        key,
+        attributeValues,
+        attributes,
+      })
+    );
+    return imageKeys.map((key) => ({
+      __typename: 'ImageMedia',
+      key,
+      name: attributes[key].name,
+      sources: attributeValues[key].value
+        ? [{ uri: this.createImageUrl(attributeValues[key].value) }]
+        : [],
+    }));
+  };
+
+  getVideos = ({ attributeValues, attributes }) => {
+    const videoKeys = Object.keys(attributes).filter((key) =>
+      this.attributeIsVideo({
+        key,
+        attributeValues,
+        attributes,
+      })
+    );
+    return videoKeys.map((key) => ({
+      __typename: 'VideoMedia',
+      key,
+      name: attributes[key].name,
+      embedHtml: get(attributeValues, 'videoEmbed.value', null), // TODO: this assumes that the key `VideoEmebed` is always used on Rock
+      sources: attributeValues[key].value
+        ? [{ uri: attributeValues[key].value }]
+        : [],
+    }));
+  };
+
+  getAudios = ({ attributeValues, attributes }) => {
+    const audioKeys = Object.keys(attributes).filter((key) =>
+      this.attributeIsAudio({
+        key,
+        attributeValues,
+        attributes,
+      })
+    );
+    return audioKeys.map((key) => ({
+      __typename: 'AudioMedia',
+      key,
+      name: attributes[key].name,
+      sources: attributeValues[key].value
+        ? [{ uri: attributeValues[key].value }]
+        : [],
+    }));
+  };
+
+  createSummary = ({ content, summary }) => {
+    if (summary) return summary;
+    if (!content || typeof content !== 'string') return '';
+    // Protect against 0 length sentences (tokenizer will throw an error)
+    if (content.split(' ').length === 1) return '';
+
+    const tokenizer = new natural.SentenceTokenizer();
+    return tokenizer.tokenize(
+      sanitizeHtmlNode(content, {
+        allowedTags: [],
+        allowedAttributes: [],
+      })
+    )[0];
+  };
+
+  async getCoverImage(root) {
+    const pickBestImage = (images) => {
+      // TODO: there's probably a _much_ more explicit and better way to handle this
+      const squareImage = images.find((image) =>
+        image.key.toLowerCase().includes('square')
+      );
+      if (squareImage) return { ...squareImage, __typename: 'ImageMedia' };
+      return { ...images[0], __typename: 'ImageMedia' };
+    };
+
+    const ourImages = this.getImages(root).filter(
+      (image) => image.sources.length
+    ); // filter images w/o URLs
+    if (ourImages.length) return pickBestImage(ourImages);
+
+    // If no image, check parent for image:
+    const parentItemsCursor = await this.getCursorByChildContentItemId(root.id);
+    if (!parentItemsCursor) return null;
+
+    const parentItems = await parentItemsCursor.get();
+
+    if (parentItems.length) {
+      const parentImages = parentItems
+        .map(this.getImages)
+        .find((images) => images.length)
+        .filter((image) => image.sources.length); // filter images w/o URLs
+
+      if (parentImages && parentImages.length)
+        return pickBestImage(parentImages);
+    }
+
+    return null;
+  }
 
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
