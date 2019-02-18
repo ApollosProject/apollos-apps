@@ -1,18 +1,30 @@
-import { ApolloServer } from 'apollo-server';
+import { ApolloServer } from 'apollo-server-express';
+import express from 'express';
 
-// import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
-import { resolvers, schema, testSchema, context, dataSources } from './data';
+import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
+import {
+  resolvers,
+  schema,
+  testSchema,
+  context,
+  dataSources,
+  applyServerMiddleware,
+} from './data';
 
 export { resolvers, schema, testSchema };
 
-export default new ApolloServer({
+const isDev =
+  process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test';
+
+const extensions = isDev ? [() => new RockLoggingExtension()] : [];
+
+const apolloServer = new ApolloServer({
   typeDefs: schema,
   resolvers,
   dataSources,
   context,
   introspection: true,
-  // Uncomment this next line to enable logging of Rock requests.
-  // extensions: [() => new RockLoggingExtension()],
+  extensions,
   formatError: (error) => {
     console.error(error.extensions.exception.stacktrace.join('\n'));
     return error;
@@ -28,3 +40,10 @@ export default new ApolloServer({
     defaultMaxAge: 600,
   },
 });
+
+const app = express();
+
+apolloServer.applyMiddleware({ app });
+applyServerMiddleware({ app, dataSources, context });
+
+export default app;
