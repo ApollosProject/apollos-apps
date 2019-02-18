@@ -8,11 +8,17 @@ import { createCursor, parseCursor } from './cursor';
 
 import RequestBuilder from './request-builder';
 
+export { RockLoggingExtension } from './utils';
+
 const { ROCK } = ApollosConfig;
 
 export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
+
+  callCount = 0;
+
+  calls = {};
 
   baseURL = ROCK.API_URL;
 
@@ -28,6 +34,12 @@ export default class RockApolloDataSource extends RESTDataSource {
   }
 
   willSendRequest(request) {
+    this.callCount += 1;
+    if (!this.calls[request.path]) {
+      this.calls[request.path] = 0;
+    }
+    this.calls[request.path] = this.calls[request.path] + 1;
+
     request.headers.set('Authorization-Token', this.rockToken);
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
