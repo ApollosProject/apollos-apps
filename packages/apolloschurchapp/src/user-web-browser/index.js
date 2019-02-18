@@ -8,10 +8,11 @@ import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-const Browser = ({ url, cookie = '', modal }) => {
+const Browser = ({ url, cookie = '', modal, navigation }) => {
+  console.warn(cookie);
   if (modal) {
     return (
-      <ModalView>
+      <ModalView navigation={navigation}>
         <WebView source={{ uri: url, headers: { Cookie: cookie } }} />
       </ModalView>
     );
@@ -44,7 +45,14 @@ const BrowserWithUserCookie = ({ url, navigation, modal = true }) => {
           return null;
         }
         const cookie = get(data, 'currentUser.rockToken', '');
-        return <Browser cookie={cookie} url={uri} modal={modal} />;
+        return (
+          <Browser
+            cookie={cookie}
+            url={uri}
+            modal={modal}
+            navigation={navigation}
+          />
+        );
       }}
     </Query>
   );
@@ -56,4 +64,4 @@ BrowserWithUserCookie.propTypes = {
 };
 
 export default BrowserWithUserCookie;
-export { UserWebBrowserProvider } from './Provider';
+export { UserWebBrowserProvider, UserWebBrowserConsumer } from './Provider';
