@@ -249,7 +249,7 @@ export default class ContentItem extends RockApolloDataSource {
       });
       const contentEntityIds = await this.request('AttributeValues')
         .filterOneOf(
-          getPersonaGuidsForUser.map((guid) => `Value eq '${guid.guid}'`)
+          getPersonaGuidsForUser.map(({ guid }) => `Value eq '${guid}'`)
         )
         .get();
 
@@ -257,6 +257,7 @@ export default class ContentItem extends RockApolloDataSource {
 
       return this.request()
         .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
+        .andFilter(this.LIVE_CONTENT())
         .orderBy('StartDateTime', 'desc');
     } catch (e) {
       throw e;
