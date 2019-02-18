@@ -81,6 +81,7 @@ Object {
         "profile": Object {
           "email": "isaac.hardy@newspring.cc",
         },
+        "rockToken": "some cookie",
       },
     },
   },

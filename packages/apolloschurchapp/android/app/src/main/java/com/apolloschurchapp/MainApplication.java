@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.airbnb.android.react.maps.MapsPackage;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.swmansion.rnscreens.RNScreenPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
@@ -36,6 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new MapsPackage(),
+            new RNCWebViewPackage(),
             new ReactNativeConfigPackage(),
             new RNScreenPackage(),
             new ReactNativeOneSignalPackage(),
