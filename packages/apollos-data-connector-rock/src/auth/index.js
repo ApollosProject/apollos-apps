@@ -43,5 +43,9 @@ export const resolver = {
       dataSources.Auth.changePassword({ password }),
     registerPerson: (root, args, { dataSources }) =>
       dataSources.Auth.registerPerson(args),
+    requestSmsLoginPin: (root, { phoneNumber }, { dataSources }) =>
+      dataSources.Auth.requestSmsLogin({ phoneNumber }),
+    authenticateWithSms: (root, { phoneNumber, pin }, { dataSources }) =>
+      dataSources.Auth.authenticateWithSms({ phoneNumber, pin }),
   },
 };

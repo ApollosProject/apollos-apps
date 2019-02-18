@@ -16,10 +16,16 @@ export const authSchema = gql`
     token: String
   }
 
+  type SmsPinResult {
+    success: Boolean
+  }
+
   extend type Mutation {
     authenticate(identity: String!, password: String!): Authentication
     changePassword(password: String!): Authentication
     registerPerson(email: String!, password: String!): Authentication
+    requestSmsLoginPin(phoneNumber: String!): SmsPinResult
+    authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
   }
 
   extend type Query {
