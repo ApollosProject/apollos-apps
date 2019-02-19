@@ -241,32 +241,27 @@ export default class ContentItem extends RockApolloDataSource {
 
   // Generates feed based on persons dataview membership
   byPersonaFeed = async () => {
-    try {
-      const {
-        dataSources: { Person },
-      } = this.context;
-      // Grabs the guids associated with all dataviews user is memeber
-      const getPersonaGuidsForUser = await Person.getPersonas({
-        categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
-      });
+    const {
+      dataSources: { Person },
+    } = this.context;
+    // Grabs the guids associated with all dataviews user is memeber
+    const getPersonaGuidsForUser = await Person.getPersonas({
+      categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
+    });
 
-      // Sends a request to the join-table between user ID and content item ID
-      const contentEntityIds = await this.request('AttributeValues')
-        .filterOneOf(
-          getPersonaGuidsForUser.map(({ guid }) => `Value eq '${guid}'`)
-        )
-        .get();
+    // Sends a request to the join-table between user ID and content item ID
+    const contentEntityIds = await this.request('AttributeValues')
+      .filterOneOf(
+        getPersonaGuidsForUser.map(({ guid }) => `Value eq '${guid}'`)
+      )
+      .get();
 
-      const contentItems = contentEntityIds.map((obj) => obj.entityId);
+    const contentItems = contentEntityIds.map((obj) => obj.entityId);
 
-      // Returns a query to the api for all content with given ID
-      return this.request()
-        .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
-        .andFilter(this.LIVE_CONTENT())
-        .orderBy('StartDateTime', 'desc');
-    } catch (e) {
-      throw e;
-    }
+    // Returns a query to the api for all content with given ID
+    return this.request()
+      .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
+      .orderBy('StartDateTime', 'desc');
   };
 
   byUserFeed = () =>
