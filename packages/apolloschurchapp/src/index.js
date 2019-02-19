@@ -4,6 +4,8 @@ import { createStackNavigator } from 'react-navigation';
 // import { Sentry } from 'react-native-sentry';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
+import Passes from '@apollosproject/ui-passes';
+
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Providers from './Providers';
 import { NotificationsManager } from './notifications';
@@ -13,8 +15,6 @@ import Tabs from './tabs';
 import Auth from './auth';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
-
-import Passes from './passes';
 
 // Sentry.config(
 //   'https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658'

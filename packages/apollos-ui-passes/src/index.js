@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-native';
+import { Platform, SafeAreaView } from 'react-native';
 import { ErrorCard, ModalView, styled } from '@apollosproject/ui-kit';
 import { Query } from 'react-apollo';
 
@@ -28,9 +28,11 @@ class Passes extends Component {
               ) : (
                 <React.Fragment>
                   <PassView isLoading={loading} {...data.userPass || {}} />
-                  <AddToAppleWalletButton
-                    url={(data.userPass || {}).passkitFileUrl}
-                  />
+                  {Platform.OS === 'ios' ? (
+                    <AddToAppleWalletButton
+                      url={(data.userPass || {}).passkitFileUrl}
+                    />
+                  ) : null}
                 </React.Fragment>
               )
             }
@@ -40,4 +42,6 @@ class Passes extends Component {
     );
   }
 }
+
+export { PassView };
 export default Passes;

@@ -315,7 +315,6 @@ exports[`the PassView component should render 1`] = `
                     Conrad VanLandingham
                   </Text>
                 </Text>
-                )}
               </View>
               <View
                 animate={null}
@@ -412,7 +411,6 @@ exports[`the PassView component should render 1`] = `
                     Richardson, TX
                   </Text>
                 </Text>
-                )}
               </View>
               <View
                 style={
@@ -463,7 +461,6 @@ exports[`the PassView component should render 1`] = `
                     Main Campus
                   </Text>
                 </Text>
-                )}
               </View>
             </View>
           </View>

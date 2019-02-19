@@ -19,7 +19,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -32,11 +32,17 @@
     }
   },
   "peerDependencies": {
+    "@apollos-project/ui-kit": "*",
     "react": "*",
     "react-native": "*",
-    "@apollos-project/ui-kit": "*"
+    "react-native-passkit-wallet": "*",
+    "rn-fetch-blob": "*"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@apollosproject/ui-kit": "^0.8.0-alpha.7",
+    "graphql-tag": "^2.10.1",
+    "react-apollo": "^2.4.1"
+  },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.7",
     "@storybook/react-native": "^4.0.7",
@@ -44,13 +50,15 @@
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.6.1",
+    "react": "^16.8.2",
     "react-dom": "16.6.3",
-    "react-native": "0.57.5",
+    "react-native": "^0.58.5",
     "react-native-linear-gradient": "2.4.0",
+    "react-native-passkit-wallet": "^0.1.4",
     "react-native-svg": "6.5.2",
     "react-navigation": "2.11.2",
-    "react-test-renderer": "16.6.1"
+    "react-test-renderer": "16.6.1",
+    "rn-fetch-blob": "^0.10.15"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "gitHead": "375e9a2d747fe4c0b5406681e2db676d60c24227"
