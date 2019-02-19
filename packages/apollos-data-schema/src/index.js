@@ -5,10 +5,22 @@ export const testSchema = gql`
   scalar Upload
 `;
 
+export const authSmsSchema = gql`
+  type SmsPinResult {
+    success: Boolean
+  }
+
+  extend type Mutation {
+    requestSmsLoginPin(phoneNumber: String!): SmsPinResult
+    authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
+  }
+`;
+
 export const authSchema = gql`
   type AuthenticatedUser @cacheControl(maxAge: 0) {
     id: ID!
     profile: Person
+    rockToken: String
   }
 
   type Authentication {
@@ -16,16 +28,10 @@ export const authSchema = gql`
     token: String
   }
 
-  type SmsPinResult {
-    success: Boolean
-  }
-
   extend type Mutation {
     authenticate(identity: String!, password: String!): Authentication
     changePassword(password: String!): Authentication
     registerPerson(email: String!, password: String!): Authentication
-    requestSmsLoginPin(phoneNumber: String!): SmsPinResult
-    authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
   }
 
   extend type Query {

@@ -21,6 +21,7 @@ import {
   Auth,
   PersonalDevice,
   Template,
+  AuthSms,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -35,6 +36,8 @@ const data = {
   Person,
   Cloudinary,
   Auth,
+  AuthSms,
+  Sms,
   LiveStream,
   Theme,
   Scripture,
@@ -44,7 +47,6 @@ const data = {
   Analytics,
   Family,
   OneSignal,
-  Sms,
   UniversalContentItem: {
     dataSource: ContentItem.dataSource,
   }, // alias

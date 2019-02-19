@@ -3536,6 +3536,11 @@ autoprefixer@^9.3.1:
     postcss "^7.0.5"
     postcss-value-parser "^3.3.1"
 
+awesome-phonenumber@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/awesome-phonenumber/-/awesome-phonenumber-2.4.2.tgz#6dc81b95fe9c65b3dda419b747c7317963a19d3c"
+  integrity sha512-DGD2LyL8JmxEFUhycfHflTdJc60WKzgH9kMC25gk6SEF2BXUac5A3iQhdvaMkmIvFMmNiLBmK98K+ZJdyC6HTw==
+
 aws-sign2@~0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.7.0.tgz#b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8"
@@ -7313,7 +7318,7 @@ fbjs-scripts@^1.0.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.17, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -12917,6 +12922,14 @@ react-native-video@3.2.0:
   dependencies:
     keymirror "0.1.1"
     prop-types "^15.5.10"
+
+react-native-webview@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-5.2.0.tgz#909d91ce518681467d0ad11aeac254efe9cc4235"
+  integrity sha512-2jHXIk7+U8k/l6fp/tDVE3ulJEzcF3n1xZUe2xWtbmIm5BTf0qWeLKqhcPWpG+9hBXvFiTiZhL4Jw4qFwOqIYg==
+  dependencies:
+    escape-string-regexp "^1.0.5"
+    fbjs "^0.8.17"
 
 react-native@0.57.5:
   version "0.57.5"

@@ -1,5 +1,6 @@
 import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
+import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 
 import {
   resolvers,
@@ -12,12 +13,18 @@ import {
 
 export { resolvers, schema, testSchema };
 
+const isDev =
+  process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test';
+
+const extensions = isDev ? [() => new RockLoggingExtension()] : [];
+
 const apolloServer = new ApolloServer({
   typeDefs: schema,
   resolvers,
   dataSources,
   context,
   introspection: true,
+  extensions,
   formatError: (error) => {
     console.error(error.extensions.exception.stacktrace.join('\n'));
     return error;
