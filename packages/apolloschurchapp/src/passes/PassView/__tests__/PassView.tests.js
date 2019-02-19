@@ -60,4 +60,14 @@ describe('the PassView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('should display loading placeholders', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PassView isLoading />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });

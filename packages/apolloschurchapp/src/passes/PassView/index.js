@@ -34,6 +34,7 @@ const PassView = ({
   foregroundColor,
   labelColor,
   barcode,
+  isLoading,
 }) => (
   <ThemeMixin
     mixin={{
@@ -46,11 +47,13 @@ const PassView = ({
       },
     }}
   >
-    <Card>
+    <Card isLoading={isLoading}>
       <PassViewFlex>
         <View>
           <PaddedView>
-            <Description color={foregroundColor}>{description}</Description>
+            <Description color={foregroundColor} isLoading={isLoading}>
+              {description}
+            </Description>
           </PaddedView>
 
           <FieldSet>
@@ -60,20 +63,24 @@ const PassView = ({
               ValueComponent={H3}
               valueColor={foregroundColor}
               labelColor={labelColor}
+              isLoading={isLoading}
             />
 
-            {thumbnail ? <Thumbnail source={thumbnail} /> : null}
+            {thumbnail ? (
+              <Thumbnail source={thumbnail} isLoading={isLoading} />
+            ) : null}
           </FieldSet>
 
           <FieldSet>
             <FieldList
+              isLoading={isLoading}
               fields={secondaryFields}
               valueColor={foregroundColor}
               labelColor={labelColor}
             />
           </FieldSet>
         </View>
-        {barcode ? <Barcode source={barcode} /> : null}
+        {barcode ? <Barcode source={barcode} isLoading={isLoading} /> : null}
       </PassViewFlex>
     </Card>
   </ThemeMixin>
@@ -88,6 +95,7 @@ PassView.propTypes = {
   foregroundColor: PropTypes.string,
   labelColor: PropTypes.string,
   barcode: PropTypes.shape({ uri: PropTypes.string }),
+  isLoading: PropTypes.bool,
 };
 
 export default PassView;

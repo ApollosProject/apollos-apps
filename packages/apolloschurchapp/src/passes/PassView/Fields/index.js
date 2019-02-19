@@ -10,8 +10,21 @@ export const FieldSet = styled({
   alignItems: 'flex-start',
 })(PaddedView);
 
-const Fields = ({ fields, ...other }) =>
-  fields.map((field) => <Field {...field} key={field.key} {...other} />);
+const Fields = ({ fields, isLoading, ...other }) => {
+  let fieldsToRender = fields;
+  if (isLoading)
+    fieldsToRender = [
+      {
+        key: 'loading',
+        isLoading: true,
+        value: '',
+        label: '',
+      },
+    ];
+  return fieldsToRender.map((field) => (
+    <Field {...field} key={field.key} {...other} />
+  ));
+};
 
 export { fieldProps };
 export default Fields;
