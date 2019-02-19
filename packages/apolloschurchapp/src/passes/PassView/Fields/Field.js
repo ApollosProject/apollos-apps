@@ -47,7 +47,6 @@ const Field = ({
         <FieldTextAlignment textAlignment={textAlignment}>
           <ValueComponent>{value}</ValueComponent>
         </FieldTextAlignment>
-        )}
       </React.Fragment>
     )}
   </FieldColumn>

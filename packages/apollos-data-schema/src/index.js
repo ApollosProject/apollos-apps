@@ -426,7 +426,7 @@ export const followingsSchema = gql`
 
 export const passSchema = gql`
   extend type Query {
-    userPasses: [Pass]
+    userPass: Pass
   }
 
   type Pass implements Node {

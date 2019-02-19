@@ -28,8 +28,7 @@
       {
         "label": "field normal",
         "key": "member",
-        "value": "{{ person.FullName }}",
-        "textAlignment": "PKTextAlignmentRight"
+        "value": "{{ person.FullName }}"
       }
     ],
     "secondaryFields": [
@@ -44,33 +43,6 @@
         "textAlignment": "PKTextAlignmentRight",
         "value":
           "{% assign personCampus = person | Campus %}{{ personCampus.Name  }}"
-      },
-      {
-        "label": "normal",
-        "key": "normal",
-        "value": "{{ person.FullName }}"
-      },
-      {
-        "label": "center",
-        "key": "center",
-        "value": "{{ person.FullName }}"
-      },
-      {
-        "label": "right",
-        "key": "right",
-        "value": "{{ person.FullName }}"
-      },
-      {
-        "label": "natural",
-        "key": "natural",
-        "value": "{{ person.FullName }}"
-      }
-    ],
-    "auxiliaryFields": [
-      {
-        "key": "home",
-        "label": "home",
-        "value": "{{ person | Address:'Home','[[City]], [[State]]' }}"
       }
     ]
   }
