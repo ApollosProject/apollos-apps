@@ -8,7 +8,7 @@ import {
   Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 import { styled, PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 
@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const StyledMapView = styled({
+/* const StyledMapView = styled({
   ...StyleSheet.absoluteFillObject,
-})(MapView);
+})(MapView); */
 
 class Location extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -230,8 +230,8 @@ class Location extends React.Component {
     region: {
       latitude: 34.00115,
       longitude: -81.032393,
-      latitudeDelta: 0.7,
-      longitudeDelta: 0.07,
+      latitudeDelta: 4,
+      longitudeDelta: 0.4,
     },
   };
 
@@ -259,7 +259,7 @@ class Location extends React.Component {
     this.animation = new Animated.Value(0);
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     // We should detect when scrolling has stopped then animate
     // We should just debounce the event listener here
     this.animation.addListener(({ value }) => {
@@ -287,7 +287,7 @@ class Location extends React.Component {
         }
       }, 10);
     });
-  }
+  };
 
   render() {
     const interpolations = this.state.markers.map((marker, index) => {
@@ -310,10 +310,12 @@ class Location extends React.Component {
     });
     return (
       <View style={styles.container}>
-        <StyledMapView
+        <MapView
           ref={(map) => {
             this.map = map;
+            return this.map;
           }}
+          style={styles.container}
           initialRegion={this.state.region}
           showsUserLocation
         >
@@ -329,15 +331,15 @@ class Location extends React.Component {
               opacity: interpolations[index].opacity,
             };
             return (
-              <MapView.Marker key={index} coordinate={marker.coordinate}>
+              <Marker key={index} coordinate={marker.coordinate}>
                 <Animated.View style={[styles.markerWrap, opacityStyle]}>
                   <Animated.View style={[styles.ring, scaleStyle]} />
                   <View style={styles.marker} />
                 </Animated.View>
-              </MapView.Marker>
+              </Marker>
             );
           })}
-        </StyledMapView>
+        </MapView>
         <Animated.ScrollView
           horizontal
           scrollEventThrottle={1}
@@ -368,9 +370,6 @@ class Location extends React.Component {
               <View style={styles.textContent}>
                 <Text numberOfLines={1} style={styles.cardtitle}>
                   {marker.title}
-                </Text>
-                <Text numberOfLines={1} style={styles.cardDescription}>
-                  {marker.description}
                 </Text>
               </View>
             </View>
