@@ -4,6 +4,8 @@ import { fetch } from 'apollo-server-env';
 import { createGlobalId } from '@apollosproject/server-core';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import ApollosConfig from '@apollosproject/config';
+import { AuthenticationError } from 'apollo-server';
+import { get } from 'lodash';
 
 import {
   mediaSchema,
@@ -11,8 +13,11 @@ import {
   scriptureSchema,
 } from '@apollosproject/data-schema';
 
+import * as RockConstants from '../../rock-constants';
 // we import the root-level schema and resolver so we test the entire integration:
 import { ContentChannel, ContentItem, Sharable } from '../..';
+
+import { generateToken } from '../../auth/token';
 
 class Scripture {
   // eslint-disable-next-line class-methods-use-this
@@ -27,6 +32,31 @@ class Scripture {
     ];
   }
 }
+class AuthDataSource {
+  initialize({ context }) {
+    this.context = context;
+  }
+
+  getCurrentPerson() {
+    if (this.context.currentPerson) {
+      return { id: 'someId' };
+    }
+    throw new AuthenticationError('Must be logged in');
+  }
+}
+
+const Auth = {
+  dataSource: AuthDataSource,
+  contextMiddleware: ({ req, context }) => {
+    if (get(req, 'headers.authorization')) {
+      return {
+        ...context,
+        currentPerson: true,
+      };
+    }
+    return { ...context };
+  },
+};
 
 const { getSchema, getContext } = createTestHelpers({
   ContentChannel,
@@ -41,6 +71,8 @@ const { getSchema, getContext } = createTestHelpers({
   Scripture: {
     dataSource: Scripture,
   },
+  RockConstants,
+  Auth,
 });
 // we import the root-level schema and resolver so we test the entire integration:
 
@@ -137,7 +169,13 @@ describe('UniversalContentItem', () => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
     schema = getSchema([themeSchema, mediaSchema, scriptureSchema]);
-    context = getContext();
+
+    const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
+    context = getContext({
+      req: {
+        headers: { authorization: token },
+      },
+    });
   });
 
   it('gets a user feed', async () => {
@@ -153,6 +191,25 @@ describe('UniversalContentItem', () => {
       }
       ${contentItemFragment}
     `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('gets a persona feed', async () => {
+    const query = `
+      query {
+        personaFeed {
+          edges {
+            node {
+              ...ContentItemFragment
+            }
+          }
+        }
+      }
+      ${contentItemFragment}
+    `;
+
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
@@ -224,35 +281,6 @@ describe('UniversalContentItem', () => {
     const query = `
       query {
         userFeed {
-          edges {
-            node {
-              ...ContentItemFragment
-              ... on UniversalContentItem {
-                siblingContentItemsConnection {
-                        edges {
-                    node {
-                      id
-                      __typename
-                    }
-                    cursor
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      ${contentItemFragment}
-    `;
-    const rootValue = {};
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
-
-  it('gets a content item based on persona', async () => {
-    const query = `
-      query {
-        personaFeed {
           edges {
             node {
               ...ContentItemFragment
