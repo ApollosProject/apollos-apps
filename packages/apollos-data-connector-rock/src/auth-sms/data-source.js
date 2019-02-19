@@ -21,6 +21,8 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       countryCode: PhoneNumber.getCountryCodeForRegionCode(
         number.getRegionCode()
       ),
+      // "The international public telecommunication numbering plan", twilio likes numbers to be in this format.
+      e164: number.getNumber('e164'),
     };
   };
 
@@ -83,7 +85,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
   requestSmsLogin = async ({ phoneNumber: phoneNumberInput }) => {
     // E.164 Regex that twilio recommends
     // https://www.twilio.com/docs/glossary/what-e164
-    const { valid, phoneNumber } = this.parsePhoneNumber({
+    const { valid, phoneNumber, e164 } = this.parsePhoneNumber({
       phoneNumber: phoneNumberInput,
     });
 
@@ -109,7 +111,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     });
 
     this.context.dataSources.Sms.sendSms({
-      to: phoneNumber,
+      to: e164,
       body: `Your login code is ${pin}`,
     });
 

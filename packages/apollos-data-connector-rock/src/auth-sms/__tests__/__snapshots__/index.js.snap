@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthSms schema requests an SMS pin with an existing user login 1`] = `
+Object {
+  "data": Object {
+    "requestSmsLoginPin": Object {
+      "success": true,
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: create new login 1`] = `
+Array [
+  Array [
+    "/UserLogins",
+    Object {
+      "EntityTypeId": 27,
+      "PlainTextPassword": undefined,
+      "UserName": "5133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: delete existing login 1`] = `
+Array [
+  Array [
+    "/UserLogins/123",
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: get existing login 1`] = `
+Array [
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: send sms 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "Your login code is undefined",
+      "to": "+15133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login 1`] = `
+Object {
+  "data": Object {
+    "requestSmsLoginPin": Object {
+      "success": true,
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: create new login 1`] = `
+Array [
+  Array [
+    "/UserLogins",
+    Object {
+      "EntityTypeId": 27,
+      "PlainTextPassword": undefined,
+      "UserName": "5133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: delete existing login 1`] = `Array []`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: get existing login 1`] = `
+Array [
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: send sms 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "Your login code is undefined",
+      "to": "+15133061126",
+    },
+  ],
+]
+`;
