@@ -71,7 +71,7 @@ ROCK_MAPPINGS:
       EntityType: Person
   
   DATAVIEW_CATEGORIES:
-    # Id of the category used to story all persona dataviews
+    # Id of the category used to store all persona dataviews
     PersonaId: 210
 
   # Apollos will pull these content channels and expose them in the app on the discover screen.
