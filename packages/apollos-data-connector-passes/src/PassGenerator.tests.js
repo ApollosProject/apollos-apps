@@ -7,6 +7,6 @@ describe('PassGenerator', () => {
       model: ApollosConfig.PASS.TEMPLATES.EXAMPLE,
     });
 
-    expect(pass).toMatchSnapshot();
+    expect(pass.Certificates).toMatchSnapshot();
   });
 });

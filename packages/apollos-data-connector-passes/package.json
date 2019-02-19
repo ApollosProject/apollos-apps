@@ -17,6 +17,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
+    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"],
     "testEnvironment": "node"
   },
   "dependencies": {

@@ -6,9 +6,10 @@ export const testSchema = gql`
 `;
 
 export const authSchema = gql`
-  type AuthenticatedUser {
+  type AuthenticatedUser @cacheControl(maxAge: 0) {
     id: ID!
     profile: Person
+    rockToken: String
   }
 
   type Authentication {
@@ -40,7 +41,7 @@ export const peopleSchema = gql`
     value: String!
   }
 
-  type Person implements Node {
+  type Person implements Node @cacheControl(maxAge: 0) {
     id: ID!
     firstName: String!
     lastName: String!
@@ -330,6 +331,7 @@ export const contentItemSchema = gql`
 
   extend type Query {
     userFeed(first: Int, after: String): ContentItemsConnection
+      @cacheControl(maxAge: 0)
   }
 `;
 
@@ -415,12 +417,12 @@ export const followingsSchema = gql`
   }
 
   ${extendForEachContentItemType(`
-    isLiked: Boolean
-    likedCount: Int
+    isLiked: Boolean @cacheControl(maxAge: 0)
+    likedCount: Int @cacheControl(maxAge: 0)
 `)}
 
   extend type Query {
-    getAllLikedContent: [ContentItem]
+    getAllLikedContent: [ContentItem] @cacheControl(maxAge: 0)
   }
 `;
 

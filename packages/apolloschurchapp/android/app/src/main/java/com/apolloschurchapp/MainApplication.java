@@ -5,6 +5,7 @@ import android.app.Application;
 import com.facebook.react.ReactApplication;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.mybdesign.RNPassKit.RNPassKitPackage;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.swmansion.rnscreens.RNScreenPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
@@ -38,6 +39,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNFetchBlobPackage(),
             new RNPassKitPackage(),
+            new RNCWebViewPackage(),
             new ReactNativeConfigPackage(),
             new RNScreenPackage(),
             new ReactNativeOneSignalPackage(),
