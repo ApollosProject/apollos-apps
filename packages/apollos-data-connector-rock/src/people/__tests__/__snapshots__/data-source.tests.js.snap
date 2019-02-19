@@ -32,7 +32,7 @@ Object {
 }
 `;
 
-exports[`Person gets persons dataview associations 1`] = `Array []`;
+exports[`Person gets persons dataview associations 1`] = `Promise {}`;
 
 exports[`Person gets persons dataview associations 2`] = `Array []`;
 

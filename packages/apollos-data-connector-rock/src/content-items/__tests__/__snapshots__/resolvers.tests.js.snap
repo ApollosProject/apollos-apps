@@ -304,17 +304,6 @@ Object {
 }
 `;
 
-exports[`UniversalContentItem gets a content item based on persona 1`] = `
-Object {
-  "data": Object {
-    "personaFeed": null,
-  },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'getPersonas' of undefined],
-  ],
-}
-`;
-
 exports[`UniversalContentItem gets a devotional item 1`] = `
 Object {
   "data": Object {
