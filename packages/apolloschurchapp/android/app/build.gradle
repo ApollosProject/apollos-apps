@@ -154,6 +154,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-webview')
     compile project(':react-native-config')
     compile project(':react-native-screens')
     compile project(':react-native-onesignal')
