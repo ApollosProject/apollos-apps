@@ -3,6 +3,8 @@ package com.apolloschurchapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.mybdesign.RNPassKit.RNPassKitPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.swmansion.rnscreens.RNScreenPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
@@ -34,6 +36,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFetchBlobPackage(),
+            new RNPassKitPackage(),
             new ReactNativeConfigPackage(),
             new RNScreenPackage(),
             new ReactNativeOneSignalPackage(),
