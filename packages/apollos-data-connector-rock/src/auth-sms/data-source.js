@@ -79,7 +79,10 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     // Update the user login to include the PersonId.
     await this.patch(`/UserLogins/${userLogin.id}`, { PersonId: personId });
 
-    return this.context.dataSources.Auth.authenticate({ identity: phoneNumber, password });
+    return this.context.dataSources.Auth.authenticate({
+      identity: phoneNumber,
+      password,
+    });
   };
 
   requestSmsLogin = async ({ phoneNumber: phoneNumberInput }) => {
