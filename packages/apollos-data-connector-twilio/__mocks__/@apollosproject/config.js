@@ -1,9 +1,11 @@
-const ApolloServer = require.requireActual('@apollosproject/config').default;
+const ApollosConfig = require.requireActual('@apollosproject/config').default;
 
-ApolloServer.loadJs({
-  ONE_SIGNAL: {
-    APP_ID: 'some-app-id',
+ApollosConfig.loadJs({
+  TWILIO: {
+    ACCOUNT_SID: 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    AUTH_TOKEN: 'SOME_AUTH_TOKEN',
+    FROM_NUMBER: '+15133112113',
   },
 });
 
-export default ApolloServer;
+export default ApollosConfig;

@@ -1,39 +1,26 @@
-import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import { peopleSchema } from '@apollosproject/data-schema';
-import * as OneSignal from '../index';
+import * as Sms from '../index';
 
-const { getContext, getSchema } = createTestHelpers({ OneSignal });
+const { getContext } = createTestHelpers({ Sms });
+let context;
 
 describe('OneSignal', () => {
-  let schema;
-  let context;
   beforeEach(() => {
-    schema = getSchema([peopleSchema]);
     context = getContext();
   });
 
-  it('updates an external push id with a valid user', async () => {
-    const query = `
-      mutation updatePushId {
-        updateUserPushSettings(input: { pushProviderUserId: "some-push-id" }) {
-          id
-        }
-      }
-    `;
-    const rootValue = {};
+  it('constructs with Twilio', () => {
+    expect(context.dataSources.Sms).toMatchSnapshot();
+  });
 
-    const put = jest.fn();
-    const getCurrentPerson = jest.fn(() =>
-      Promise.resolve({ primaryAliasId: 'user123', id: 'user123' })
-    );
-    const Auth = { getCurrentPerson };
-
-    context.dataSources.OneSignal.put = put;
-    context.dataSources.Auth = Auth;
-
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-    expect(put).toMatchSnapshot();
+  it('sends an sms passing along args', () => {
+    const mockCreate = jest.fn();
+    context.dataSources.Sms.twilio.messages.create = mockCreate;
+    context.dataSources.Sms.sendSms({
+      body: "Here's a cool body",
+      to: '5133061126',
+      additionalData: 'something else',
+    });
+    expect(mockCreate.mock.calls).toMatchSnapshot();
   });
 });

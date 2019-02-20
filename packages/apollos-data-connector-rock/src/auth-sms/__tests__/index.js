@@ -6,7 +6,6 @@ import { peopleSchema } from '@apollosproject/data-schema';
 
 import * as AuthSms from '../index';
 import * as Auth from '../../auth/index';
-import { generateToken, registerToken } from '../../auth/token';
 
 ApollosConfig.loadJs({
   ROCK: {
