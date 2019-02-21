@@ -113,7 +113,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       PlainTextPassword: password,
     });
 
-    this.context.dataSources.Sms.sendSms({
+    await this.context.dataSources.Sms.sendSms({
       to: e164,
       body: `Your login code is ${pin}`,
     });
