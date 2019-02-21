@@ -34,7 +34,7 @@
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "babel-node ./scripts/get-introspection-data.js",
     "start": "react-native start",
-    "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007 --root ../../",
+    "storybook": "rnstl --searchDir ../ --pattern \"apollos*/src/**/*.stories.js\" && storybook start -p 7007 | react-native start --projectRoot storybook",
     "test": "jest",
     "release": "standard-version --release-as minor"
   },
@@ -108,6 +108,7 @@
     "react-native-screens": "1.0.0-alpha.12",
     "react-native-splash-screen": "^3.1.1",
     "react-native-svg": "6.5.2",
+    "react-native-swiper": "^1.5.14",
     "react-native-video": "3.2.0",
     "react-native-video-controls": "2.2.3",
     "react-native-webview": "^5.2.0",
