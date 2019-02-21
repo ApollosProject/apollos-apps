@@ -15,6 +15,7 @@ export default class AuthDataSource extends RockApolloDataSource {
   getCurrentPerson = async ({ cookie } = { cookie: null }) => {
     const { rockCookie } = this.context;
     const userCookie = cookie || rockCookie;
+
     if (userCookie) {
       const request = await this.request('People/GetCurrentPerson').get({
         options: { headers: { cookie: userCookie } },
@@ -114,12 +115,12 @@ export default class AuthDataSource extends RockApolloDataSource {
   changePassword = async ({ password }) => {
     const currentUser = await this.getCurrentPerson();
     const { email, id } = currentUser;
-    const logins = await this.request('/UserLogins')
+    const login = await this.request('/UserLogins')
       .filter(`UserName eq '${email}'`)
-      .get();
+      .first();
 
-    if (logins.length > 0) {
-      await this.delete(`/UserLogins/${logins[0].id}`);
+    if (login) {
+      await this.delete(`/UserLogins/${login.id}`);
     }
     await this.createUserLogin({
       personId: id,

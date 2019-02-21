@@ -1,7 +1,7 @@
 import { AuthenticationError } from 'apollo-server';
 import jwt from 'jsonwebtoken';
 
-const secret = process.env.SECRET || 'ASea$2gadj#asd0';
+export const secret = process.env.SECRET || 'ASea$2gadj#asd0';
 
 export const parseToken = (token) => jwt.verify(token, secret);
 

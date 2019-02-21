@@ -43,6 +43,20 @@ export default class RockRequestBuilder {
       });
 
   /**
+   * Sends a GET request to the server, resolves with the first promise
+   * @returns promise
+   */
+  first = async ({ options = {}, body = {} } = {}) => {
+    // Make sure we only get 1 result;
+    this.top(1);
+    const results = await this.get({ options, body });
+    if (results.length) {
+      return results[0];
+    }
+    return null;
+  };
+
+  /**
    * Find a single resource by ID
    */
   find = (id) => {

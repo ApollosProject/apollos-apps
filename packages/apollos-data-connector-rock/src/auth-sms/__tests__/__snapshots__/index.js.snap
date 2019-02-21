@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthSms schema logs a new user in via their phone number and pin 1`] = `
+Object {
+  "data": Object {
+    "authenticateWithSms": Object {
+      "token": "foo",
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema logs a new user in via their phone number and pin: create new phone number 1`] = `
+Array [
+  Array [
+    "/PhoneNumbers",
+    Object {
+      "CountryCode": 1,
+      "IsMessagingEnabled": false,
+      "IsSystem": false,
+      "Number": "5133061126",
+      "PersonId": 123,
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema logs a new user in via their phone number and pin: create user profile 1`] = `
+Array [
+  Array [
+    Object {
+      "email": null,
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema logs a new user in via their phone number and pin: login user 1`] = `
+Array [
+  Array [
+    Object {
+      "identity": "5133061126",
+      "password": "5dd39e500e9806efbb8c0e92d61d78e5fd20efcd2788d0ef2c56ad5df3cd2649",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema logs a new user in via their phone number and pin: try and find phone number / find user login 1`] = `
+Array [
+  Array [
+    "/PhoneNumbers?%24filter=Number%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema logs a new user in via their phone number and pin: update person id on login 1`] = `
+Array [
+  Array [
+    "/UserLogins/123",
+    Object {
+      "PersonId": 123,
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema logs an existing user in via their phone number and pin 1`] = `
+Object {
+  "data": Object {
+    "authenticateWithSms": Object {
+      "token": "foo",
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema logs an existing user in via their phone number and pin: get existing phone number 1`] = `
+Array [
+  Array [
+    "/PhoneNumbers?%24filter=Number%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema logs an existing user in via their phone number and pin: login user 1`] = `
+Array [
+  Array [
+    Object {
+      "identity": "5133061126",
+      "password": "5dd39e500e9806efbb8c0e92d61d78e5fd20efcd2788d0ef2c56ad5df3cd2649",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema logs an existing user in via their phone number and pin: update person id on login 1`] = `
+Array [
+  Array [
+    "/UserLogins/undefined",
+    Object {
+      "PersonId": 123,
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login 1`] = `
+Object {
+  "data": Object {
+    "requestSmsLoginPin": Object {
+      "success": true,
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: create new login 1`] = `
+Array [
+  Array [
+    "/UserLogins",
+    Object {
+      "EntityTypeId": 27,
+      "PlainTextPassword": undefined,
+      "UserName": "5133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: delete existing login 1`] = `
+Array [
+  Array [
+    "/UserLogins/123",
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: get existing login 1`] = `
+Array [
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin with an existing user login: send sms 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "Your login code is undefined",
+      "to": "+15133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login 1`] = `
+Object {
+  "data": Object {
+    "requestSmsLoginPin": Object {
+      "success": true,
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: create new login 1`] = `
+Array [
+  Array [
+    "/UserLogins",
+    Object {
+      "EntityTypeId": 27,
+      "PlainTextPassword": undefined,
+      "UserName": "5133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: delete existing login 1`] = `Array []`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: get existing login 1`] = `
+Array [
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema requests an SMS pin without an existing user login: send sms 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "Your login code is undefined",
+      "to": "+15133061126",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema throws an error if the user login is not found 1`] = `
+Object {
+  "data": Object {
+    "authenticateWithSms": null,
+  },
+  "errors": Array [
+    [GraphQLError: Invalid input],
+  ],
+}
+`;
+
+exports[`AuthSms schema throws an error if the user login is not found: login user 1`] = `Array []`;
+
+exports[`AuthSms schema throws an error if the user login is not found: try and find phone number / find user login 1`] = `
+Array [
+  Array [
+    "/PhoneNumbers?%24filter=Number%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema throws an error if the user login is not found: update person id on login 1`] = `Array []`;
+
+exports[`AuthSms schema throws an error on invalid phone numbers 1`] = `
+Object {
+  "data": Object {
+    "requestSmsLoginPin": null,
+  },
+  "errors": Array [
+    [GraphQLError: 30123 is not a valid phone number],
+  ],
+}
+`;

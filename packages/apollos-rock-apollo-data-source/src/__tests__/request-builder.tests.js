@@ -22,6 +22,10 @@ describe('RequestBuilder', () => {
     expect(request.get()).resolves.toMatchSnapshot();
   });
 
+  it('gets the first result', () => {
+    expect(request.first()).resolves.toMatchSnapshot();
+  });
+
   it('finds by id', () => {
     expect(request.find(1).get()).resolves.toMatchSnapshot();
   });
