@@ -1,5 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The BackgroundView component should accept extra props 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4294967295,
+          4294506484,
+        ]
+      }
+      locations={
+        Array [
+          0,
+          0.5,
+        ]
+      }
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`The BackgroundView component should render 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
@@ -37,6 +92,106 @@ exports[`The BackgroundView component should render 1`] = `
         Array [
           4294967295,
           4294506484,
+        ]
+      }
+      locations={null}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The BackgroundView component should render as a solid color 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4294606962,
+          4294606962,
+        ]
+      }
+      locations={null}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The BackgroundView component should render with custom colors 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4294901760,
+          4278190335,
         ]
       }
       locations={null}
