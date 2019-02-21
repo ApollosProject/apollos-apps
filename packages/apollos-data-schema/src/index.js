@@ -5,6 +5,17 @@ export const testSchema = gql`
   scalar Upload
 `;
 
+export const authSmsSchema = gql`
+  type SmsPinResult {
+    success: Boolean
+  }
+
+  extend type Mutation {
+    requestSmsLoginPin(phoneNumber: String!): SmsPinResult
+    authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
+  }
+`;
+
 export const authSchema = gql`
   type AuthenticatedUser @cacheControl(maxAge: 0) {
     id: ID!
