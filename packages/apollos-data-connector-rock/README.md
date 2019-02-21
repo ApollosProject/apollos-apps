@@ -112,8 +112,112 @@ const resolver = {
 }
 ```
 
-#### Define your data source.
+#### 4. Define your data source.
 
-Finally, you'll want to extend your
+Finally, you'll want to extend the existing ContentItem dataSource, and add your new method to it. The body below is just pseudo-code, and is not guaranteed to work.
+```
+class GroupContentItem extends ContentItemDataSource {
+  // because I am extending the ContentItem's data source, I have access to all the methods defined on that class.
+
+  getContentItemsWithGroups() {
+    return this.request().filter('GroupId ne Null').get();
+  }
+}
+
+export { GroupContentItem as dataSource };
+
+```
+
+#### 5. Including your new Module.
+
+Finally, back in `src/data/index.js` go ahead and import and include your new module.
+
+```
+// The import name is _very_ important. That will be the name of your dataSource.
+import * as GroupContentItem from './group-content-item'
+
+const data = {
+  ...
+  GroupContentItem,
+  ...
+}
+```
+
+Now your schema will have access to your new `contentItemsWithGroups` query. Congrats!
+
+### Changing the behavior of existing fields.
+
+Sometimes you may want to change the behavior of existing fields. For this example, we will override the firstName field of person so it always displays as all capital letters.
 
 
+#### 1. Create a new module.
+As before, this first thing you should do is create a new module, create a file/folder called `apollos-person/index.js`
+
+
+```
+import gql from graphql-tag;
+import { People } from '@apollosproject/data-connector-rock';
+
+const resolver = {};
+```
+
+#### 2. Define your overide.
+
+We have a helper to enable safely overriding. You can import if from `@apollos/server-core`.
+
+```
+import gql from graphql-tag;
+import { People } from '@apollosproject/data-connector-rock';
+import { schemaMerge } from '@apollosproject/server-core';
+
+const resolver = schemaMerge({
+  Person: {
+    firstName: ({ firstName }) => firstName.toUpperCase()
+  }
+}, People);
+
+// make sure to export your resolver as resolver.
+
+export { resolver };
+```
+
+#### 3. Import your new module.
+
+Naming this time isn't important because we don't have a data source.
+
+```
+// The import name is _very_ important. That will be the name of your dataSource.
+import * as ApollosPerson from './apollos-person'
+
+const data = {
+  ...
+  // make sure you put your override after the original person module.
+  ApollosPerson,
+}
+```
+
+#### Adding a new ContentItemType
+
+Adding a new ContentItemType is a common operation, and we have some configuration tools to make it easier. Once you define your new ContentItem type's schema by extending the `ContentItem` GraphQL interface, add a new line to your `config.yml` in the RockMapppings -> ContentItem section. For example, if we knew that all of our GroupContentItem's referenced above had a content channel id of 27, we could add this to our config.yml in the RockMappings section.
+
+```
+    GroupContentItem:
+      EntityType: ContentChannelItem
+      ContentChannelTypeId: [27]
+```
+
+If determining if the ContentItem type is more complex than something like ContentChannelTypeId, you'll need to override the `__resolveType` function on the ContentItem resolver.
+
+### F.A.Q
+
+#### Q: How do I figure out what methods are on X data source?
+
+Look at the code :D. It's easier than you would imagine to read, really!
+
+#### Q: Okay, I looked at the code. What is this `request()..` thing I keep seeing.
+
+That's a module called RequestBuilder. You can find more info about it in `@apollosproject/rock-apollo-data-source`.
+
+#### Q: I have another question that's not answered here.
+
+That's okay :) Open an issue with your question and we'll do our best to answer it.
