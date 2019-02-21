@@ -46,6 +46,3 @@ to deploy your infrastructure to Heroku. Once you have deployed your infrastruct
 ## Future...
 
 ### AWS Config
-
-
-
