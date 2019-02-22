@@ -10,16 +10,22 @@
   },
   "jest": {
     "collectCoverage": true,
+    "collectCoverageFrom": [
+       "src/**/*.{js,jsx}"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
-    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"]
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ]
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.0-alpha.7",
     "@apollosproject/server-core": "^0.8.0-alpha.7",
+    "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "jest": "^23.6.0",
     "lodash": "^4.17.11",
