@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 // import PropTypes from 'prop-types';
 import Swiper from 'react-native-swiper';
+import { withTheme } from '@apollosproject/ui-kit';
 
 import AskName from './AskName';
+
+// Provides themed colors the
+const ThemedSwiper = withTheme(({ theme }) => ({
+  dotColor: theme.colors.background.inactive, // theme.colors.lightSecondary looks the best.
+  activeDotColor: theme.colors.action.primary,
+}))(({ swiperRef, ...props }) => <Swiper ref={swiperRef} {...props} />);
 
 class Onboarding extends Component {
   constructor() {
@@ -39,13 +46,13 @@ class Onboarding extends Component {
 
   render() {
     return (
-      <Swiper
+      <ThemedSwiper
         showsPagination={this.state.pagination}
         onIndexChanged={this.handleOnIndexChanged}
         loop={false}
         // scrollEnabled={false}
         showsButtons={false}
-        ref={this.setSwiperRef}
+        swiperRef={this.setSwiperRef}
       >
         <AskName
           screenTitle={'Welcome!'}
@@ -69,11 +76,7 @@ class Onboarding extends Component {
           <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
           <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
         </View>
-        <View style={{ flex: 1, backgroundColor: 'lightgreen' }}>
-          <Text>Hello World 3</Text>
-          <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-        </View>
-      </Swiper>
+      </ThemedSwiper>
     );
   }
 }
