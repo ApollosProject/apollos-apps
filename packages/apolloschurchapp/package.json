@@ -34,7 +34,7 @@
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "babel-node ./scripts/get-introspection-data.js",
     "start": "react-native start",
-    "storybook": "rnstl --searchDir ./storybook ./src --pattern \"**/*.stories.js\" && storybook start -p 7007 --root ../../",
+    "storybook": "rnstl --searchDir ../ --pattern \"apollos*/src/**/*.stories.js\" && storybook start -p 7007 | react-native start --projectRoot storybook",
     "test": "jest",
     "release": "standard-version --release-as minor"
   },
