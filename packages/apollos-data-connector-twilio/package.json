@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/data-connector-analytics",
+  "name": "@apollosproject/data-connector-twilio",
   "version": "0.8.0-alpha.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
@@ -18,25 +18,23 @@
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
-    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"]
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ]
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.0-alpha.7",
-    "@apollosproject/server-core": "^0.8.0-alpha.7",
-    "analytics-node": "^3.3.0",
     "apollo-datasource": "^0.2.0",
-    "apollo-server": "^2.1.0",
-    "apollo-server-env": "^2.2.0",
     "lodash": "^4.17.11",
-    "moment": "^2.22.2",
-    "universal-analytics": "^0.4.20"
+    "twilio": "^3.28.0"
   },
   "peerDependencies": {
-    "@apollosproject/config": "*",
-    "@apollosproject/rock-apollo-data-source": "*"
+    "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.7"
+    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.7",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.7",
+    "jest": "^23.6.0"
   },
   "publishConfig": {
     "access": "public"

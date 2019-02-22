@@ -7,6 +7,7 @@ import * as Sharable from './sharable';
 import * as Person from './people';
 import * as Family from './family';
 import * as Auth from './auth';
+import * as AuthSms from './auth-sms';
 import * as PersonalDevice from './personal-devices';
 import * as Template from './template';
 
@@ -22,4 +23,5 @@ export {
   Auth,
   PersonalDevice,
   Template,
+  AuthSms,
 };

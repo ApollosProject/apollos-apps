@@ -98,6 +98,8 @@ Array [
 ]
 `;
 
+exports[`RequestBuilder gets the first result 1`] = `"SomeResource?%24top=1"`;
+
 exports[`RequestBuilder orders 1`] = `
 Array [
   "SomeResource?%24orderby=MyField%20asc",
