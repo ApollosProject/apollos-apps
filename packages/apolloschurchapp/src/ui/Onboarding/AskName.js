@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   styled,
@@ -45,22 +46,26 @@ const NavWrapper = styled(({ theme }) => ({
 
 class AskName extends PureComponent {
   // eslint-disable-line react/prefer-stateless-function
+  static propTypes = {
+    screenTitle: PropTypes.string,
+    description: PropTypes.string,
+    nextScreen: PropTypes.func,
+  };
+
   render() {
     return (
       <BackgroundView>
         <FlexedView>
           <PaddedView>
             <BrandIcon />
-            <Title>Welcome!</Title>
-            <StyledH5>
-              {"Every relationship starts with a name. What's yours?"}
-            </StyledH5>
+            <Title>{this.props.screenTitle}</Title>
+            <StyledH5>{this.props.description}</StyledH5>
             <TextInput
               label="First Name"
               type="text"
               returnKeyType="next"
               onSubmitEditing={() => this.LastNameInput.focus()}
-              enablesReturnKeyAutomatically
+              enzblesReturnKeyAutomatically
             />
             <TextInput
               label="Last Name"
@@ -75,7 +80,7 @@ class AskName extends PureComponent {
         </FlexedView>
         <NavWrapper vertical={false}>
           <NextButton
-            onPress={() => {}}
+            onPress={() => this.props.nextScreen(1)}
             name="arrow-next"
             aria-label={'Next Screen'}
           />

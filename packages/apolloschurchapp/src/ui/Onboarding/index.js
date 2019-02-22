@@ -13,14 +13,6 @@ class Onboarding extends Component {
     this.state = { pagination: true };
   }
 
-  togglePagination = () => {
-    if (this.currentIndex === 2 || this.state.pagination === false) {
-      this.setState((state) => ({
-        pagination: !state.pagination,
-      }));
-    }
-  };
-
   handleOnIndexChanged = (index) => {
     this.currentIndex = index;
 
@@ -29,18 +21,41 @@ class Onboarding extends Component {
     return this.currentIndex;
   };
 
+  togglePagination = () => {
+    if (this.currentIndex === 2 || this.state.pagination === false) {
+      this.setState((state) => ({
+        pagination: !state.pagination,
+      }));
+    }
+  };
+
+  setSwiperRef = (r) => {
+    this.swiper = r;
+
+    return this.swiper;
+  };
+
+  getSwiperScrollBy = (...props) => this.swiper.scrollBy(...props);
+
   render() {
     return (
       <Swiper
         showsPagination={this.state.pagination}
         onIndexChanged={this.handleOnIndexChanged}
         loop={false}
-        scrollEnabled={false}
+        // scrollEnabled={false}
         showsButtons={false}
-        ref={(ref) => (this.swiper = ref)}
+        ref={this.setSwiperRef}
       >
-        <AskName />
-        <View style={{ flex: 1, backgroundColor: 'salmon' }}>
+        <AskName
+          screenTitle={'Welcome!'}
+          description={"Every relationship starts with a name. What's yours?"}
+          nextScreen={this.getSwiperScrollBy}
+        />
+        <View
+          style={{ flex: 1, backgroundColor: 'salmon' }}
+          title={<Text>Boom</Text>}
+        >
           <Text>Hello World 1</Text>
           <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
         </View>
