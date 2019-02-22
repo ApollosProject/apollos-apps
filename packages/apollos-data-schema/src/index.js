@@ -439,7 +439,7 @@ export const followingsSchema = gql`
 
 export const passSchema = gql`
   extend type Query {
-    userPasses: [Pass]
+    userPass: Pass
   }
 
   type Pass implements Node {
@@ -451,7 +451,7 @@ export const passSchema = gql`
     barcode: ImageMediaSource
     primaryFields: [PassField]
     secondaryFields: [PassField]
-    backgorundColor: Color
+    backgroundColor: Color
     foregroundColor: Color
     labelColor: Color
     logoText: String
@@ -470,16 +470,6 @@ export const passSchema = gql`
     CENTER
     RIGHT
     NATURAL
-  }
-
-  enum PassBarcodeFormat {
-    QR
-    PDF417
-    Aztec
-  }
-
-  enum PassBarcodeMessageEncoding {
-    ISO88591
   }
 
   enum PassType {

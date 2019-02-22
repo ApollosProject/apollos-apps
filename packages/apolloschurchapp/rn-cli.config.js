@@ -1,7 +1,10 @@
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 
-const localDeps = [path.resolve('..', 'apollos-ui-kit')];
+const localDeps = [
+  path.resolve('..', 'apollos-ui-kit'),
+  path.resolve('..', 'apollos-ui-passes'),
+];
 
 module.exports = {
   resolver: {

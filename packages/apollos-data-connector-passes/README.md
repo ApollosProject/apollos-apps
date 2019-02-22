@@ -48,7 +48,7 @@ PASS:
 
 ```gql
 query {
-  userPasses {
+  userPass {
     id
     type
     description
@@ -67,7 +67,7 @@ query {
       value
       textAlignment
     }
-    backgorundColor
+    backgroundColor
     foregroundColor
     labelColor
     logoText

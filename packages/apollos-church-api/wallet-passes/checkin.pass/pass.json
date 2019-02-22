@@ -9,12 +9,10 @@
   "foregroundColor": "rgb(248,247,244)",
   "serialNumber": "checkinpass-{{ person | GetPersonAlternateId }}",
   "thumbnail": {
-    "uri":
-      "https://apollosrock.newspring.cc/GetImage.ashx?guid=dd2aa592-80ac-4d7a-8bdc-47aeb25ce158&format=png&height=200"
+    "uri": "{{ person.Photo.Url }}&format=png&height=200"
   },
   "thumbnail@2x": {
-    "uri":
-      "https://apollosrock.newspring.cc/GetImage.ashx?guid=dd2aa592-80ac-4d7a-8bdc-47aeb25ce158&format=png&height=400"
+    "uri": "{{ person.Photo.Url }}&format=png&height=400"
   },
   "barcodes": [
     {
@@ -23,6 +21,16 @@
       "messageEncoding": "iso-8859-1"
     }
   ],
+{% assign personCampus = person | Campus %}
+{% if personCampus.Location.Latitude %}
+  "locations": [
+    {
+      "latitude": {{ personCampus.Location.Latitude }},
+      "longitude": {{ personCampus.Location.Longitude }},
+      "relevantText": "Tap to check-in at {{ personCampus.Name }}"
+    }
+  ],
+{% endif %}
   "generic": {
     "primaryFields": [
       {
