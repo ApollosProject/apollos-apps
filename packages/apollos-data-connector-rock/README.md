@@ -16,7 +16,7 @@ Provides a connector to Rock for the following parts of the app
 
 ## Dependants / Dependencies
 
-None, right now. This module is 100% standalone. However, several modules internally require other modules internally. For example,
+None, right now. This module is 100% standalone. However, modules within the `data-connector` might depend on each other. For example,
 
 - `People` and `Family` modules rely on the `Auth` module.
 - `Followings` and `Interactions` relies on `RockConstants`.
