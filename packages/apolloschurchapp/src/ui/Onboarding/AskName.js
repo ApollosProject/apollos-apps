@@ -10,17 +10,9 @@ import {
   H2,
   H5,
   TextInput,
-  ButtonIcon,
+  Button,
   Icon,
 } from '@apollosproject/ui-kit';
-
-const NextButton = withTheme(({ theme }) => ({
-  backgroundColor: theme.colors.action.primary,
-  fill: theme.colors.white,
-  size: theme.helpers.rem(1.25),
-  iconPadding: theme.helpers.rem(0.875),
-  style: { alignSelf: 'flex-end' },
-}))(ButtonIcon);
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
@@ -44,6 +36,15 @@ const NavWrapper = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
 }))(PaddedView);
 
+const NextButtonIcon = withTheme(({ theme }) => ({
+  name: 'arrow-next',
+  size: theme.helpers.rem(1.25),
+  style: {
+    marginLeft: theme.sizing.baseUnit * 0.5,
+    marginRight: theme.sizing.baseUnit * -0.5,
+  },
+}))(Icon);
+
 class AskName extends PureComponent {
   // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -51,6 +52,12 @@ class AskName extends PureComponent {
     description: PropTypes.string,
     nextScreen: PropTypes.func,
   };
+
+  constructor() {
+    super();
+
+    this.AskName = null;
+  }
 
   render() {
     return (
@@ -79,11 +86,10 @@ class AskName extends PureComponent {
           </PaddedView>
         </FlexedView>
         <NavWrapper vertical={false}>
-          <NextButton
-            onPress={() => this.props.nextScreen(1)}
-            name="arrow-next"
-            aria-label={'Next Screen'}
-          />
+          <Button onPress={() => this.props.nextScreen(1)}>
+            <H5>Next</H5>
+            <NextButtonIcon />
+          </Button>
         </NavWrapper>
       </BackgroundView>
     );
