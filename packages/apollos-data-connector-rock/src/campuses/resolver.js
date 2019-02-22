@@ -1,5 +1,5 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { createImageUrlFromGuid } from '../utils';
+import { latLonDistance, createImageUrlFromGuid } from '../utils';
 
 export default {
   Query: {
@@ -21,5 +21,16 @@ export default {
       width: location.image.width,
       height: location.image.height,
     }),
+    distanceFromLocation: (campus, { location } = {}) => {
+      if (location) {
+        return latLonDistance(
+          location.latitude,
+          location.longitude,
+          campus.location.latitude,
+          campus.location.longitude
+        );
+      }
+      return campus.distanceFromLocation;
+    },
   },
 };

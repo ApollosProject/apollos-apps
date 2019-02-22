@@ -56,6 +56,34 @@ describe('Campus', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('gets a campus by id with location', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(1, 'Campus')}") {
+          ...on Campus {
+            id
+            name
+            street1
+            street2
+            city
+            state
+            postalCode
+            latitude
+            longitude
+            image {
+              uri
+            }
+            distanceFromLocation(location: { latitude: 34, longitude: -82 })
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
   it('gets campuses sorted by location', async () => {
     const query = `
       query {

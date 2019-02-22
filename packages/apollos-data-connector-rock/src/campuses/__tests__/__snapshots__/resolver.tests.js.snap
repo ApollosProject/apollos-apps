@@ -22,6 +22,28 @@ Object {
 }
 `;
 
+exports[`Campus gets a campus by id with location 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "city": "Anderson",
+      "distanceFromLocation": 54.42261893027277,
+      "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": Object {
+        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a47e8e69-9542-42de-9ed3-ff42fdc82417",
+      },
+      "latitude": 34.59814,
+      "longitude": -82.62045,
+      "name": "Anderson Campus",
+      "postalCode": "29621-3619",
+      "state": "SC",
+      "street1": "2940 Concord Rd",
+      "street2": "",
+    },
+  },
+}
+`;
+
 exports[`Campus gets campuses (without location) 1`] = `
 Object {
   "data": Object {

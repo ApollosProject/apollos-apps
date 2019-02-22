@@ -424,7 +424,7 @@ export const campusSchema = gql`
     latitude: Float
     longitude: Float
     image: ImageMediaSource
-    distanceFromLocation: Float
+    distanceFromLocation(location: CampusLocationInput): Float
   }
 
   extend type Query {
