@@ -6,7 +6,7 @@ export const enforceProtocol = (uri) =>
 export const createImageUrlFromGuid = (uri) =>
   uri.split('-').length === 5
     ? `${ApollosConfig.ROCK.IMAGE_URL}?guid=${uri}`
-    : this.enforceProtocol(uri);
+    : enforceProtocol(uri);
 
 export const latLonDistance = (lat1, lon1, lat2, lon2) => {
   if (lat1 == lat2 && lon1 === lon2) {

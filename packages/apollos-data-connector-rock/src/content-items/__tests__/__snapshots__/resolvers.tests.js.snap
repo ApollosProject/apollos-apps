@@ -55,7 +55,15 @@ Object {
           "startCursor": "b487224762b030f470967f45d7205823",
         },
       },
-      "coverImage": null,
+      "coverImage": Object {
+        "key": "image",
+        "name": "Image",
+        "sources": Array [
+          Object {
+            "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+          },
+        ],
+      },
       "htmlContent": "<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
 <p>
@@ -64,7 +72,63 @@ Object {
 	Vivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>
 ",
       "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
-      "images": null,
+      "images": Array [
+        Object {
+          "__typename": "ImageMedia",
+          "key": "image",
+          "name": "Image",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+            },
+          ],
+        },
+        Object {
+          "__typename": "ImageMedia",
+          "key": "detailImage",
+          "name": "Detail Image",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=3DA90982-118A-4BFE-9A32-58D9F610090A",
+            },
+          ],
+        },
+        Object {
+          "__typename": "ImageMedia",
+          "key": "imageByUrlTest",
+          "name": "Image By Url Test",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://some-domain.com/some/path/to/image.jpg",
+            },
+          ],
+        },
+        Object {
+          "__typename": "ImageMedia",
+          "key": "imageBySchemalessUrlTest",
+          "name": "Image By Schemaless Url Test",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://some-domain.com/some/path/to/image.jpg",
+            },
+          ],
+        },
+        Object {
+          "__typename": "ImageMedia",
+          "key": "imageUnknownFormat",
+          "name": "Image Of Unknown format",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "ftp://some-domain.com/some/path/to/image.jpg",
+            },
+          ],
+        },
+      ],
       "parentChannel": Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -93,10 +157,6 @@ Object {
       ],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-  ],
 }
 `;
 
@@ -136,7 +196,15 @@ Object {
                 "startCursor": "b487224762b030f470967f45d7205823",
               },
             },
-            "coverImage": null,
+            "coverImage": Object {
+              "key": "image",
+              "name": "Image",
+              "sources": Array [
+                Object {
+                  "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+                },
+              ],
+            },
             "htmlContent": "<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
 <p>
@@ -145,7 +213,63 @@ Object {
 	Vivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>
 ",
             "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
-            "images": null,
+            "images": Array [
+              Object {
+                "__typename": "ImageMedia",
+                "key": "image",
+                "name": "Image",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "detailImage",
+                "name": "Detail Image",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=3DA90982-118A-4BFE-9A32-58D9F610090A",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "imageByUrlTest",
+                "name": "Image By Url Test",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://some-domain.com/some/path/to/image.jpg",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "imageBySchemalessUrlTest",
+                "name": "Image By Schemaless Url Test",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://some-domain.com/some/path/to/image.jpg",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "imageUnknownFormat",
+                "name": "Image Of Unknown format",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "ftp://some-domain.com/some/path/to/image.jpg",
+                  },
+                ],
+              },
+            ],
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -177,10 +301,6 @@ Object {
       ],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-  ],
 }
 `;
 
@@ -236,7 +356,15 @@ Object {
                 "startCursor": "b487224762b030f470967f45d7205823",
               },
             },
-            "coverImage": null,
+            "coverImage": Object {
+              "key": "image",
+              "name": "Image",
+              "sources": Array [
+                Object {
+                  "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+                },
+              ],
+            },
             "htmlContent": "<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
 <p>
@@ -245,7 +373,63 @@ Object {
 	Vivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>
 ",
             "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
-            "images": null,
+            "images": Array [
+              Object {
+                "__typename": "ImageMedia",
+                "key": "image",
+                "name": "Image",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "detailImage",
+                "name": "Detail Image",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=3DA90982-118A-4BFE-9A32-58D9F610090A",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "imageByUrlTest",
+                "name": "Image By Url Test",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://some-domain.com/some/path/to/image.jpg",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "imageBySchemalessUrlTest",
+                "name": "Image By Schemaless Url Test",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://some-domain.com/some/path/to/image.jpg",
+                  },
+                ],
+              },
+              Object {
+                "__typename": "ImageMedia",
+                "key": "imageUnknownFormat",
+                "name": "Image Of Unknown format",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "ftp://some-domain.com/some/path/to/image.jpg",
+                  },
+                ],
+              },
+            ],
             "parentChannel": Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
@@ -277,10 +461,6 @@ Object {
       ],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-  ],
 }
 `;
 
@@ -305,7 +485,15 @@ Object {
           "startCursor": "b487224762b030f470967f45d7205823",
         },
       },
-      "coverImage": null,
+      "coverImage": Object {
+        "key": "image",
+        "name": "Image",
+        "sources": Array [
+          Object {
+            "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
+          },
+        ],
+      },
       "htmlContent": "<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
 <p>
@@ -330,8 +518,5 @@ Object {
       "videos": Array [],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot read property 'enforceProtocol' of undefined],
-  ],
 }
 `;
