@@ -50,7 +50,7 @@ class AskName extends PureComponent {
   static propTypes = {
     screenTitle: PropTypes.string,
     description: PropTypes.string,
-    nextScreen: PropTypes.func,
+    onboardingControl: PropTypes.func,
   };
 
   constructor() {
@@ -85,12 +85,14 @@ class AskName extends PureComponent {
             />
           </PaddedView>
         </FlexedView>
-        <NavWrapper vertical={false}>
-          <Button onPress={() => this.props.nextScreen(1)}>
-            <H5>Next</H5>
-            <NextButtonIcon />
-          </Button>
-        </NavWrapper>
+        {this.props.onboardingControl ? (
+          <NavWrapper vertical={false}>
+            <Button onPress={() => this.props.onboardingControl(1)}>
+              <H5>Next</H5>
+              <NextButtonIcon />
+            </Button>
+          </NavWrapper>
+        ) : null}
       </BackgroundView>
     );
   }

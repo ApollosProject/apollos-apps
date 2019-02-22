@@ -50,7 +50,7 @@ class Onboarding extends Component {
         <AskName
           screenTitle={'Welcome!'}
           description={"Every relationship starts with a name. What's yours?"}
-          nextScreen={this.getSwiperScrollBy}
+          onboardingControl={this.getSwiperScrollBy}
         />
         <View
           style={{ flex: 1, backgroundColor: 'salmon' }}
