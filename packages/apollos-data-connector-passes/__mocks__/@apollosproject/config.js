@@ -10,6 +10,9 @@ const examplePrivateKey =
 const privateKeyPassword = 'password';
 
 ApolloServer.loadJs({
+  APP: {
+    ROOT_API_URL: 'http://localhost:4000',
+  },
   PASS: {
     TEMPLATES: {
       EXAMPLE: `${process.env.PWD}/example-pass.pass`,

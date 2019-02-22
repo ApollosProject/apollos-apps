@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-rock",
-  "version": "0.8.0-alpha.7",
+  "version": "0.8.0-alpha.8",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
-       "src/**/*.{js,jsx}"
+      "src/**/*.{js,jsx}"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
@@ -23,8 +23,8 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.8.0-alpha.7",
-    "@apollosproject/server-core": "^0.8.0-alpha.7",
+    "@apollosproject/data-schema": "^0.8.0-alpha.8",
+    "@apollosproject/server-core": "^0.8.0-alpha.8",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "jest": "^23.6.0",
@@ -39,12 +39,12 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.7",
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.7",
+    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.8",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
     "jest": "^23.6.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "375e9a2d747fe4c0b5406681e2db676d60c24227"
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
 }
