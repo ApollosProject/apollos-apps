@@ -206,7 +206,7 @@ Adding a new ContentItemType is a common operation, and we have some configurati
       ContentChannelTypeId: [27]
 ```
 
-If determining if the ContentItem type is more complex than something like ContentChannelTypeId, you'll need to override the `__resolveType` function on the ContentItem resolver.
+If determining the `ContentItem` type is more complex than something like` ContentChannelTypeId`, you'll need to override the `__resolveType` function on the `ContentItem` resolver.
 
 ### F.A.Q
 
