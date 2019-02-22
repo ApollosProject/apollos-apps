@@ -10,6 +10,7 @@ import {
   H2,
   H5,
   TextInput,
+  ButtonLink,
   Button,
   Icon,
 } from '@apollosproject/ui-kit';
@@ -26,11 +27,11 @@ const Title = styled(({ theme }) => ({
 }))(H2);
 
 const StyledH5 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
+  color: theme.colors.text.secondary, // this may be too dark
 }))(H5);
 
 const NavWrapper = styled(({ theme }) => ({
-  flexDirection: 'row-reverse',
+  flexDirection: 'row-reverse', // reversed so the primary action is always on the right
   alignItems: 'center', // centers optional back button with dots/next button
   justifyContent: 'space-between',
   marginBottom: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
@@ -45,12 +46,17 @@ const NextButtonIcon = withTheme(({ theme }) => ({
   },
 }))(Icon);
 
+const SkipButton = styled(({ theme }) => ({
+  color: theme.colors.text.tertiary, // this is probably not the right color
+}))(ButtonLink);
+
 class AskName extends PureComponent {
   // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     screenTitle: PropTypes.string,
     description: PropTypes.string,
-    onboardingControl: PropTypes.func,
+    onboardingScrollBy: PropTypes.func,
+    onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
   };
 
   constructor() {
@@ -85,12 +91,24 @@ class AskName extends PureComponent {
             />
           </PaddedView>
         </FlexedView>
-        {this.props.onboardingControl ? (
+        {this.props.onboardingScrollBy ? (
           <NavWrapper vertical={false}>
-            <Button onPress={() => this.props.onboardingControl(1)}>
+            <Button onPress={() => this.props.onboardingScrollBy(1)}>
               <H5>Next</H5>
               <NextButtonIcon />
             </Button>
+            {this.props.onboardingSkipTo ? (
+              <SkipButton
+                onPress={() =>
+                  this.props.onboardingScrollBy(
+                    this.props.onboardingSkipTo,
+                    false // don't animate the skip transition
+                  )
+                }
+              >
+                Skip
+              </SkipButton>
+            ) : null}
           </NavWrapper>
         ) : null}
       </BackgroundView>
