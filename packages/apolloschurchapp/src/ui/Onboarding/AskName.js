@@ -6,10 +6,11 @@ import {
   BackgroundView,
   FlexedView,
   PaddedView,
-  H1,
-  H4,
+  H2,
+  H5,
   TextInput,
   ButtonIcon,
+  Icon,
 } from '@apollosproject/ui-kit';
 
 const NextButton = withTheme(({ theme }) => ({
@@ -19,6 +20,21 @@ const NextButton = withTheme(({ theme }) => ({
   iconPadding: theme.helpers.rem(0.875),
   style: { alignSelf: 'flex-end' },
 }))(ButtonIcon);
+
+const BrandIcon = withTheme(({ theme }) => ({
+  name: 'brand-icon',
+  size: theme.sizing.baseUnit * 3.0,
+  fill: theme.colors.primary,
+  style: { marginBottom: theme.sizing.baseUnit * 0.5 },
+}))(Icon);
+
+const Title = styled(({ theme }) => ({
+  color: theme.colors.primary,
+}))(H2);
+
+const StyledH5 = styled(({ theme }) => ({
+  color: theme.colors.text.secondary,
+}))(H5);
 
 const NavWrapper = styled(({ theme }) => ({
   flexDirection: 'row-reverse',
@@ -34,11 +50,11 @@ class AskName extends PureComponent {
       <BackgroundView>
         <FlexedView>
           <PaddedView>
-            {/* TODO: add App Icon */}
-            <H1>Welcome!</H1>
-            <H4 padded>
+            <BrandIcon />
+            <Title>Welcome!</Title>
+            <StyledH5>
               {"Every relationship starts with a name. What's yours?"}
-            </H4>
+            </StyledH5>
             <TextInput
               label="First Name"
               type="text"
@@ -47,7 +63,7 @@ class AskName extends PureComponent {
               enablesReturnKeyAutomatically
             />
             <TextInput
-              label="Last name"
+              label="Last Name"
               type="text"
               returnKeyType="next"
               enablesReturnKeyAutomatically
@@ -62,7 +78,6 @@ class AskName extends PureComponent {
             onPress={() => {}}
             name="arrow-next"
             aria-label={'Next Screen'}
-            // backgroundColor={'salmon'}
           />
         </NavWrapper>
       </BackgroundView>
