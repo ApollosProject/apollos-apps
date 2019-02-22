@@ -186,7 +186,6 @@ export { resolver };
 Naming this time isn't important because we don't have a data source.
 
 ```
-// The import name is _very_ important. That will be the name of your dataSource.
 import * as ApollosPerson from './apollos-person'
 
 const data = {
