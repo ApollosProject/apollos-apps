@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-passes",
-  "version": "0.8.0-alpha.7",
+  "version": "0.8.0-alpha.8",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -42,12 +42,12 @@
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.7",
+    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
     "graphql-tag": "^2.10.1",
     "react-apollo": "^2.4.1"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.7",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
@@ -63,6 +63,9 @@
     "react-test-renderer": "16.6.1",
     "rn-fetch-blob": "^0.10.15"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "SEE LICENSE IN LICENSE.md",
-  "gitHead": "375e9a2d747fe4c0b5406681e2db676d60c24227"
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
 }

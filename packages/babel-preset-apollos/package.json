@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/babel-preset-apollos",
-  "version": "0.8.0-alpha.7",
+  "version": "0.8.0-alpha.8",
   "main": "./index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "7.1.0",
@@ -27,5 +27,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "375e9a2d747fe4c0b5406681e2db676d60c24227"
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
 }
