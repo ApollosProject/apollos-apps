@@ -85,9 +85,12 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
+              "backgroundColor": null,
+              "borderRadius": null,
               "padding": 28,
             }
           }
@@ -258,9 +261,12 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
+              "backgroundColor": null,
+              "borderRadius": null,
               "padding": 28,
             }
           }
@@ -431,9 +437,12 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
+              "backgroundColor": null,
+              "borderRadius": null,
               "padding": 28,
             }
           }
@@ -557,9 +566,12 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
+              "backgroundColor": null,
+              "borderRadius": null,
               "padding": 28,
             }
           }
