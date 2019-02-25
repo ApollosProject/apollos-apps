@@ -13,6 +13,7 @@ Provides a connector to Rock for the following parts of the app
 - RockConstants
 - Shareable
 - Template
+- Campus
 
 ## Dependants / Dependencies
 
@@ -57,6 +58,7 @@ const data = {
   Auth,
   PersonalDevice,
   Template,
+  Campus,
   ...
 }
 ```

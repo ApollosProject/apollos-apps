@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Campus gets a campus by id 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "city": "Anderson",
+      "distanceFromLocation": null,
+      "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": Object {
+        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a47e8e69-9542-42de-9ed3-ff42fdc82417",
+      },
+      "latitude": 34.59814,
+      "longitude": -82.62045,
+      "name": "Anderson Campus",
+      "postalCode": "29621-3619",
+      "state": "SC",
+      "street1": "2940 Concord Rd",
+      "street2": "",
+    },
+  },
+}
+`;
+
+exports[`Campus gets a campus by id with location 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "city": "Anderson",
+      "distanceFromLocation": 54.42261893027277,
+      "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": Object {
+        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a47e8e69-9542-42de-9ed3-ff42fdc82417",
+      },
+      "latitude": 34.59814,
+      "longitude": -82.62045,
+      "name": "Anderson Campus",
+      "postalCode": "29621-3619",
+      "state": "SC",
+      "street1": "2940 Concord Rd",
+      "street2": "",
+    },
+  },
+}
+`;
+
+exports[`Campus gets campuses (without location) 1`] = `
+Object {
+  "data": Object {
+    "campuses": Array [
+      Object {
+        "city": "Anderson",
+        "distanceFromLocation": null,
+        "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a47e8e69-9542-42de-9ed3-ff42fdc82417",
+        },
+        "latitude": 34.59814,
+        "longitude": -82.62045,
+        "name": "Anderson Campus",
+        "postalCode": "29621-3619",
+        "state": "SC",
+        "street1": "2940 Concord Rd",
+        "street2": "",
+      },
+      Object {
+        "city": "Richardson",
+        "distanceFromLocation": null,
+        "id": "Campus:965b6e6d7046a885bea4e300b5c0400d",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
+        },
+        "latitude": 32.95103,
+        "longitude": -96.74738,
+        "name": "Dallas Campus",
+        "postalCode": "75080-5525",
+        "state": "TX",
+        "street1": "102 N Weatherred Dr",
+        "street2": "",
+      },
+      Object {
+        "city": "Cincinnati",
+        "distanceFromLocation": null,
+        "id": "Campus:4f68015ba18662a7409d1219a4ce013e",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=bad9eb54-3e78-44a7-a028-3f2d6e71a36f",
+        },
+        "latitude": 39.10501,
+        "longitude": -84.51138,
+        "name": "Cincinnati Campus",
+        "postalCode": "45202-2118",
+        "state": "OH",
+        "street1": "120 E 8th St",
+        "street2": "",
+      },
+      Object {
+        "city": "South Barrington",
+        "distanceFromLocation": null,
+        "id": "Campus:a0f64573eabf00a607bec911794d50fb",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=79a0e51b-8c6b-4d54-9601-cb87383b7be8",
+        },
+        "latitude": 42.09203,
+        "longitude": -88.13289,
+        "name": "Chicago Campus",
+        "postalCode": "60010-6143",
+        "state": "IL",
+        "street1": "67 Algonquin Rd",
+        "street2": "",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Campus gets campuses sorted by location 1`] = `
+Object {
+  "data": Object {
+    "campuses": Array [
+      Object {
+        "city": "Anderson",
+        "distanceFromLocation": 0,
+        "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a47e8e69-9542-42de-9ed3-ff42fdc82417",
+        },
+        "latitude": 34.59814,
+        "longitude": -82.62045,
+        "name": "Anderson Campus",
+        "postalCode": "29621-3619",
+        "state": "SC",
+        "street1": "2940 Concord Rd",
+        "street2": "",
+      },
+      Object {
+        "city": "Cincinnati",
+        "distanceFromLocation": 328.43647347848844,
+        "id": "Campus:4f68015ba18662a7409d1219a4ce013e",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=bad9eb54-3e78-44a7-a028-3f2d6e71a36f",
+        },
+        "latitude": 39.10501,
+        "longitude": -84.51138,
+        "name": "Cincinnati Campus",
+        "postalCode": "45202-2118",
+        "state": "OH",
+        "street1": "120 E 8th St",
+        "street2": "",
+      },
+      Object {
+        "city": "South Barrington",
+        "distanceFromLocation": 597.4083397282817,
+        "id": "Campus:a0f64573eabf00a607bec911794d50fb",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=79a0e51b-8c6b-4d54-9601-cb87383b7be8",
+        },
+        "latitude": 42.09203,
+        "longitude": -88.13289,
+        "name": "Chicago Campus",
+        "postalCode": "60010-6143",
+        "state": "IL",
+        "street1": "67 Algonquin Rd",
+        "street2": "",
+      },
+      Object {
+        "city": "Richardson",
+        "distanceFromLocation": 818.552029472811,
+        "id": "Campus:965b6e6d7046a885bea4e300b5c0400d",
+        "image": Object {
+          "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
+        },
+        "latitude": 32.95103,
+        "longitude": -96.74738,
+        "name": "Dallas Campus",
+        "postalCode": "75080-5525",
+        "state": "TX",
+        "street1": "102 N Weatherred Dr",
+        "street2": "",
+      },
+    ],
+  },
+}
+`;
