@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {
   styled,
   withTheme,
-  BackgroundView,
   FlexedView,
   PaddedView,
   H5,
@@ -74,7 +73,10 @@ const Screen = ({
 );
 
 Screen.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   onboardingScrollBy: PropTypes.func,
   onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
   primaryNavText: PropTypes.string, // colored button text
