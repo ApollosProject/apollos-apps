@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { compose } from 'recompose';
 
 import styled from '../styled';
-import ProgressiveImage from '../ProgressiveImage';
+import GradientOverlayImage from '../GradientOverlayImage';
 import { getIsLoading } from '../isLoading';
 
 const Image = compose(
@@ -17,8 +17,8 @@ const Image = compose(
     },
     'Card.Image'
   )
-)(ProgressiveImage);
+)(GradientOverlayImage);
 
-Image.propTypes = ProgressiveImage.propTypes;
+Image.propTypes = GradientOverlayImage.propTypes;
 
 export default Image;

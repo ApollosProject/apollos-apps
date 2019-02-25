@@ -16,6 +16,7 @@ import {
   PaddedView,
 } from '@apollosproject/ui-kit';
 import ActionTable from './ActionTable';
+import Toolbar from './Toolbar';
 import { UserAvatarHeaderConnected } from './UserAvatarHeader';
 import { RecentlyLikedTileFeedConnected } from './RecentlyLikedTileFeed';
 import getLoginState from './getLoginState';
@@ -66,6 +67,7 @@ class Connect extends PureComponent {
                   <ScrollView>
                     <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />
                     <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />
+                    <Toolbar />
                     <ActionTable />
                   </ScrollView>
                 </SafeAreaView>

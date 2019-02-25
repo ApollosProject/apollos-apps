@@ -1,20 +1,23 @@
-import React from 'react';
-import {
-  Dimensions,
-  StyleSheet,
-  View,
-  Animated,
-  Image,
-  Text,
-} from 'react-native';
+import React, { PureComponent } from 'react';
+import { Dimensions, StyleSheet, View, Animated } from 'react-native';
 import PropTypes from 'prop-types';
 import MapView, { Marker } from 'react-native-maps';
 
-import { styled, PaddedView, ButtonLink } from '@apollosproject/ui-kit';
+import {
+  PaddedView,
+  ButtonLink,
+  TouchableScale,
+  Card,
+  CardContent,
+  ChannelLabel,
+  UIText,
+  // ThumbnailCard,
+} from '@apollosproject/ui-kit';
+import { CampusCard } from './CampusCard';
 
 const { width, height } = Dimensions.get('window');
 
-const CARD_HEIGHT = height / 5;
+const CARD_HEIGHT = height / 4.5;
 const CARD_WIDTH = CARD_HEIGHT + 80;
 
 const styles = StyleSheet.create({
@@ -23,44 +26,15 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     position: 'absolute',
-    bottom: 30,
+    height: '20%',
+    bottom: 80,
     left: 0,
     right: 0,
     paddingVertical: 10,
+    backgroundColor: 'salmon',
   },
   endPadding: {
     paddingRight: width - CARD_WIDTH,
-  },
-  card: {
-    padding: 10,
-    elevation: 2,
-    backgroundColor: '#FFF',
-    marginHorizontal: 10,
-    shadowColor: '#000',
-    shadowRadius: 5,
-    shadowOpacity: 0.3,
-    shadowOffset: { x: 2, y: -2 },
-    height: CARD_HEIGHT,
-    width: CARD_WIDTH,
-    overflow: 'hidden',
-  },
-  cardImage: {
-    flex: 3,
-    width: '100%',
-    height: '100%',
-    alignSelf: 'center',
-  },
-  textContent: {
-    flex: 1,
-  },
-  cardtitle: {
-    fontSize: 12,
-    marginTop: 5,
-    fontWeight: 'bold',
-  },
-  cardDescription: {
-    fontSize: 12,
-    color: '#444',
   },
   markerWrap: {
     alignItems: 'center',
@@ -83,11 +57,12 @@ const styles = StyleSheet.create({
   },
 });
 
-/* const StyledMapView = styled({
-  ...StyleSheet.absoluteFillObject,
-})(MapView); */
+/* const CampusContentCard = styled({
+  height: CARD_HEIGHT,
+  width: CARD_WIDTH,
+})(ContentCard); */
 
-class Location extends React.Component {
+class Location extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: 'Location',
     headerLeft: null,
@@ -107,7 +82,11 @@ class Location extends React.Component {
           longitude: -81.7465594,
         },
         id: 0,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/aiken/NSC23471.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Anderson',
@@ -116,7 +95,11 @@ class Location extends React.Component {
           longitude: -82.6244131,
         },
         id: 1,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/Anderson.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Charleston',
@@ -125,7 +108,11 @@ class Location extends React.Component {
           longitude: -80.1035458,
         },
         id: 2,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/locations_chs.2x1.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Clemson',
@@ -134,7 +121,11 @@ class Location extends React.Component {
           longitude: -82.8589537,
         },
         id: 3,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/clemson/CLE_22x1_-100.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Columbia',
@@ -143,7 +134,11 @@ class Location extends React.Component {
           longitude: -81.098607,
         },
         id: 4,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/columbia/2x1lexcola.png',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Florence',
@@ -152,7 +147,11 @@ class Location extends React.Component {
           longitude: -79.7992434,
         },
         id: 5,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/florence/FLO2x1_-100.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Greenville',
@@ -161,7 +160,11 @@ class Location extends React.Component {
           longitude: -82.3567597,
         },
         id: 6,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/Greenville2x1.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Greenwood',
@@ -170,7 +173,11 @@ class Location extends React.Component {
           longitude: -82.1496785,
         },
         id: 7,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/Greenwood2x1.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Hilton Head',
@@ -179,7 +186,11 @@ class Location extends React.Component {
           longitude: -80.9448838,
         },
         id: 8,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/HHdoors.jpeg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Myrtle Beach',
@@ -188,7 +199,11 @@ class Location extends React.Component {
           longitude: -78.9272232,
         },
         id: 9,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/locations_myr.2x1.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Northeast Columbia',
@@ -197,7 +212,11 @@ class Location extends React.Component {
           longitude: -80.883067,
         },
         id: 10,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/columbia/hero.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Powdersville',
@@ -206,7 +225,11 @@ class Location extends React.Component {
           longitude: -82.4856855,
         },
         id: 11,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/pow_launch_8.7.16_web-2.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Rock Hill',
@@ -215,7 +238,11 @@ class Location extends React.Component {
           longitude: -81.0898858,
         },
         id: 12,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/rock_hill/RKH_22x1_-100.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
       {
         title: 'Spartanburg',
@@ -224,7 +251,11 @@ class Location extends React.Component {
           longitude: -81.9966683,
         },
         id: 13,
-        image: { uri: 'https://i.imgur.com/sNam9iJ.jpg' },
+        image: {
+          uri:
+            'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/campus.spartanburg.2x1.jpg',
+        },
+        description: 'This is a NewSpring Campus',
       },
     ],
     region: {
@@ -361,20 +392,27 @@ class Location extends React.Component {
           contentContainerStyle={styles.endPadding}
         >
           {this.state.markers.map((marker, index) => (
-            <View style={styles.card} key={index}>
-              <Image
-                source={marker.image}
-                style={styles.cardImage}
-                resizeMode="cover"
+            <View style={{ flex: 1 }}>
+              <CampusCard
+                key={index}
+                title={marker.title}
+                description={marker.description}
+                images={[marker.image]}
+                style={{ position: 'relative' }}
               />
-              <View style={styles.textContent}>
-                <Text numberOfLines={1} style={styles.cardtitle}>
-                  {marker.title}
-                </Text>
-              </View>
             </View>
           ))}
         </Animated.ScrollView>
+        <TouchableScale
+          onPress={console.log('TouchableScale')}
+          style={styles.button}
+        >
+          <Card>
+            <CardContent>
+              <ChannelLabel label={<UIText bold>{`Select Campus`}</UIText>} />
+            </CardContent>
+          </Card>
+        </TouchableScale>
       </View>
     );
   }
