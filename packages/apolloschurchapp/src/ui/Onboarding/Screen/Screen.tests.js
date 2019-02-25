@@ -7,7 +7,7 @@ import Providers from 'apolloschurchapp/src/Providers';
 
 import Screen from '.';
 
-describe('The onboarding Screen component', () => {
+describe('The Onboarding Screen component', () => {
   it('should render children', () => {
     const tree = renderer.create(
       <Providers>
@@ -18,10 +18,20 @@ describe('The onboarding Screen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render next button navigation', () => {
+  it('should render onboarding next button navigation', () => {
     const tree = renderer.create(
       <Providers>
         <Screen onboardingScrollBy={jest.fn()}>
+          <H1>Boom</H1>
+        </Screen>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render onboarding skip button navigation', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Screen onboardingScrollBy={jest.fn()} onboardingSkipTo={jest.fn()}>
           <H1>Boom</H1>
         </Screen>
       </Providers>
