@@ -30,6 +30,9 @@ const PrimaryNavIcon = withTheme(({ theme }) => ({
 
 const SkipButton = styled(({ theme }) => ({
   color: theme.colors.text.tertiary, // this is probably not the right color
+  paddingVertical: theme.sizing.baseUnit * 0.9375, // optically centered on typographic baseline
+  paddingHorizontal: theme.sizing.baseUnit, // improves tappability
+  marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
 }))(ButtonLink);
 
 const Screen = ({
@@ -38,6 +41,7 @@ const Screen = ({
   onboardingSkipTo,
   primaryNavText,
   primaryNavIcon,
+  hidePrimaryNav,
   secondaryNavText,
 }) => (
   <>
@@ -46,10 +50,12 @@ const Screen = ({
     </FlexedView>
     {onboardingScrollBy ? (
       <NavWrapper vertical={false}>
-        <Button onPress={() => onboardingScrollBy(1)}>
-          <H5>{primaryNavText}</H5>
-          <PrimaryNavIcon name={primaryNavIcon} />
-        </Button>
+        {!hidePrimaryNav ? (
+          <Button onPress={() => onboardingScrollBy(1)}>
+            <H5>{primaryNavText}</H5>
+            <PrimaryNavIcon name={primaryNavIcon} />
+          </Button>
+        ) : null}
         {onboardingSkipTo ? (
           <SkipButton
             onPress={() =>
@@ -73,6 +79,7 @@ Screen.propTypes = {
   onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
   primaryNavText: PropTypes.string, // colored button text
   primaryNavIcon: PropTypes.string, // optional custom icon name
+  hidePrimaryNav: PropTypes.bool, // optionally only show the secondary nav text
   secondaryNavText: PropTypes.string, // text link
 };
 
