@@ -6,6 +6,7 @@ import {
   withTheme,
   H2,
   H5,
+  BackgroundView,
   TextInput,
   Icon,
 } from '@apollosproject/ui-kit';
@@ -33,30 +34,32 @@ const AskName = memo(
     let LastNameInput = null;
 
     return (
-      <Screen
-        onboardingScrollBy={onboardingScrollBy}
-        onboardingSkipTo={onboardingSkipTo}
-      >
-        <BrandIcon />
-        <Title>{screenTitle}</Title>
-        <StyledH5>{description}</StyledH5>
-        <TextInput
-          label="First Name"
-          type="text"
-          returnKeyType="next"
-          onSubmitEditing={() => LastNameInput.focus()}
-          enzblesReturnKeyAutomatically
-        />
-        <TextInput
-          label="Last Name"
-          type="text"
-          returnKeyType="next"
-          enablesReturnKeyAutomatically
-          inputRef={(r) => {
-            LastNameInput = r;
-          }}
-        />
-      </Screen>
+      <BackgroundView>
+        <Screen
+          onboardingScrollBy={onboardingScrollBy}
+          onboardingSkipTo={onboardingSkipTo}
+        >
+          <BrandIcon />
+          <Title>{screenTitle}</Title>
+          <StyledH5>{description}</StyledH5>
+          <TextInput
+            label="First Name"
+            type="text"
+            returnKeyType="next"
+            onSubmitEditing={() => LastNameInput.focus()}
+            enzblesReturnKeyAutomatically
+          />
+          <TextInput
+            label="Last Name"
+            type="text"
+            returnKeyType="next"
+            enablesReturnKeyAutomatically
+            inputRef={(r) => {
+              LastNameInput = r;
+            }}
+          />
+        </Screen>
+      </BackgroundView>
     );
   }
 );

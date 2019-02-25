@@ -20,8 +20,7 @@ const NavWrapper = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
 }))(PaddedView);
 
-const NextButtonIcon = withTheme(({ theme }) => ({
-  name: 'arrow-next',
+const PrimaryNavIcon = withTheme(({ theme }) => ({
   size: theme.helpers.rem(1.25),
   style: {
     marginLeft: theme.sizing.baseUnit * 0.5,
@@ -33,16 +32,23 @@ const SkipButton = styled(({ theme }) => ({
   color: theme.colors.text.tertiary, // this is probably not the right color
 }))(ButtonLink);
 
-const Screen = ({ children, onboardingScrollBy, onboardingSkipTo }) => (
-  <BackgroundView>
+const Screen = ({
+  children,
+  onboardingScrollBy,
+  onboardingSkipTo,
+  primaryNavText,
+  primaryNavIcon,
+  secondaryNavText,
+}) => (
+  <>
     <FlexedView>
       <PaddedView>{children}</PaddedView>
     </FlexedView>
     {onboardingScrollBy ? (
       <NavWrapper vertical={false}>
         <Button onPress={() => onboardingScrollBy(1)}>
-          <H5>Next</H5>
-          <NextButtonIcon />
+          <H5>{primaryNavText}</H5>
+          <PrimaryNavIcon name={primaryNavIcon} />
         </Button>
         {onboardingSkipTo ? (
           <SkipButton
@@ -53,18 +59,27 @@ const Screen = ({ children, onboardingScrollBy, onboardingSkipTo }) => (
               )
             }
           >
-            Skip
+            {secondaryNavText}
           </SkipButton>
         ) : null}
       </NavWrapper>
     ) : null}
-  </BackgroundView>
+  </>
 );
 
 Screen.propTypes = {
   children: PropTypes.node,
   onboardingScrollBy: PropTypes.func,
   onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
+  primaryNavText: PropTypes.string, // colored button text
+  primaryNavIcon: PropTypes.string, // optional custom icon name
+  secondaryNavText: PropTypes.string, // text link
+};
+
+Screen.defaultProps = {
+  primaryNavText: 'Next',
+  primaryNavIcon: 'arrow-next',
+  secondaryNavText: 'Skip',
 };
 
 export default Screen;
