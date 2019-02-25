@@ -22,6 +22,7 @@ import {
   PersonalDevice,
   Template,
   AuthSms,
+  Campus,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -63,6 +64,7 @@ const data = {
   OneSignalWithRock,
   Pass,
   Template,
+  Campus,
 };
 
 const {

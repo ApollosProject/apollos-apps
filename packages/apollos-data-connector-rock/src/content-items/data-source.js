@@ -5,17 +5,12 @@ import moment from 'moment-timezone';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
 
+import { createImageUrlFromGuid } from '../utils';
+
 const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
-
-  enforceProtocol = (uri) => (uri.startsWith('//') ? `https:${uri}` : uri);
-
-  createImageUrl = (uri) =>
-    uri.split('-').length === 5
-      ? `${ROCK.IMAGE_URL}?guid=${uri}`
-      : this.enforceProtocol(uri);
 
   attributeIsImage = ({ key, attributeValues, attributes }) =>
     attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
@@ -66,7 +61,7 @@ export default class ContentItem extends RockApolloDataSource {
       key,
       name: attributes[key].name,
       sources: attributeValues[key].value
-        ? [{ uri: this.createImageUrl(attributeValues[key].value) }]
+        ? [{ uri: createImageUrlFromGuid(attributeValues[key].value) }]
         : [],
     }));
   };

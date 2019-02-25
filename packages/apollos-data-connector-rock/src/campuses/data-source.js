@@ -1,0 +1,40 @@
+import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import { latLonDistance } from '../utils';
+
+export default class Campus extends RockApolloDataSource {
+  resource = 'Campuses';
+
+  expanded = true;
+
+  getFromId = (id) =>
+    this.request()
+      .find(id)
+      .expand('Location')
+      .expand('Location/Image')
+      .get();
+
+  getAll = () =>
+    this.request()
+      .expand('Location')
+      .expand('Location/Image')
+      .get();
+
+  getByLocation = async ({ latitude, longitude } = {}) => {
+    let campuses = await this.getAll();
+    campuses = campuses.map((campus) => ({
+      ...campus,
+      distanceFromLocation: latLonDistance(
+        latitude,
+        longitude,
+        campus.location.latitude,
+        campus.location.longitude
+      ),
+    }));
+
+    campuses = campuses.sort(
+      (a, b) => a.distanceFromLocation - b.distanceFromLocation
+    );
+
+    return campuses;
+  };
+}

@@ -412,6 +412,31 @@ export const pushSchema = gql`
   }
 `;
 
+export const campusSchema = gql`
+  type Campus implements Node {
+    id: ID!
+    name: String!
+    street1: String
+    street2: String
+    city: String
+    state: String
+    postalCode: String
+    latitude: Float
+    longitude: Float
+    image: ImageMediaSource
+    distanceFromLocation(location: CampusLocationInput): Float
+  }
+
+  extend type Query {
+    campuses(location: CampusLocationInput): [Campus]
+  }
+
+  input CampusLocationInput {
+    latitude: Float!
+    longitude: Float!
+  }
+`;
+
 export const followingsSchema = gql`
   enum LIKE_OPERATION {
     Like

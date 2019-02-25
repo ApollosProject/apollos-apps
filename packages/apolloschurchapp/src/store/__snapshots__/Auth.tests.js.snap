@@ -39,6 +39,7 @@ InMemoryCache {
           "ContentChannel",
           "Person",
           "Pass",
+          "Campus",
           "UniversalContentItem",
           "DevotionalContentItem",
           "MediaContentItem",

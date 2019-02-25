@@ -10,6 +10,7 @@ import * as Auth from './auth';
 import * as AuthSms from './auth-sms';
 import * as PersonalDevice from './personal-devices';
 import * as Template from './template';
+import * as Campus from './campuses';
 
 export {
   Followings,
@@ -24,4 +25,5 @@ export {
   PersonalDevice,
   Template,
   AuthSms,
+  Campus,
 };
