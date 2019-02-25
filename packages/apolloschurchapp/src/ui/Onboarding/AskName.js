@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -24,43 +24,27 @@ const Title = styled(({ theme }) => ({
 }))(H2);
 
 const StyledH5 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary, // this may be too dark
+  color: theme.colors.text.secondary,
 }))(H5);
 
-class AskName extends PureComponent {
-  static propTypes = {
-    screenTitle: PropTypes.string,
-    description: PropTypes.string,
-    onboardingScrollBy: PropTypes.func,
-    onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
-  };
+// memo = sfc PureComponent 💥
+const AskName = memo(
+  ({ screenTitle, description, onboardingScrollBy, onboardingSkipTo }) => {
+    let LastNameInput = null;
 
-  constructor() {
-    super();
-
-    this.LastNameInput = null;
-  }
-
-  setLastNameInputRef = (r) => {
-    this.LastNameInput = r;
-
-    return this.LastNameInput;
-  };
-
-  render() {
     return (
       <Screen
-        onboardingScrollBy={this.props.onboardingScrollBy}
-        onboardingSkipTo={this.props.onboardingSkipTo}
+        onboardingScrollBy={onboardingScrollBy}
+        onboardingSkipTo={onboardingSkipTo}
       >
         <BrandIcon />
-        <Title>{this.props.screenTitle}</Title>
-        <StyledH5>{this.props.description}</StyledH5>
+        <Title>{screenTitle}</Title>
+        <StyledH5>{description}</StyledH5>
         <TextInput
           label="First Name"
           type="text"
           returnKeyType="next"
-          onSubmitEditing={() => this.LastNameInput.focus()}
+          onSubmitEditing={() => LastNameInput.focus()}
           enzblesReturnKeyAutomatically
         />
         <TextInput
@@ -68,11 +52,20 @@ class AskName extends PureComponent {
           type="text"
           returnKeyType="next"
           enablesReturnKeyAutomatically
-          inputRef={this.setLastNameInputRef}
+          inputRef={(r) => {
+            LastNameInput = r;
+          }}
         />
       </Screen>
     );
   }
-}
+);
+
+AskName.propTypes = {
+  screenTitle: PropTypes.string,
+  description: PropTypes.string,
+  onboardingScrollBy: PropTypes.func,
+  onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
+};
 
 export default AskName;

@@ -66,6 +66,7 @@ class Onboarding extends Component {
         >
           <Text>Hello World 1</Text>
           <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
+          <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
         </View>
         <View style={{ flex: 1, backgroundColor: 'lightgreen' }}>
           <Text>Hello World 2</Text>
