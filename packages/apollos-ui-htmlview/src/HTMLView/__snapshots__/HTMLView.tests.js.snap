@@ -49,28 +49,22 @@ exports[`the HTMLView component should render a block quote 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -85,29 +79,11 @@ exports[`the HTMLView component should render a block quote 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Italic",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                  "textAlign": "center",
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </View>
       </View>
     </View>
@@ -164,28 +140,22 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </View>
         <Text
           bold={false}
@@ -257,28 +227,6 @@ exports[`the HTMLView component should render a link 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
-              Testings 
-            </Text>
-          </View>
           <Text
             bold={false}
             italic={false}
@@ -291,6 +239,9 @@ exports[`the HTMLView component should render a link 1`] = `
               }
             }
           >
+            <Text>
+              Testings 
+            </Text>
             <Text
               onPress={[Function]}
               style={
@@ -299,28 +250,9 @@ exports[`the HTMLView component should render a link 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  Google
-                </Text>
-              </View>
+              <Text>
+                Google
+              </Text>
             </Text>
           </Text>
         </View>
@@ -416,28 +348,22 @@ exports[`the HTMLView component should render a list 1`] = `
                 }
               }
             >
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
+                <Text>
                   Testings
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
           <View
@@ -477,28 +403,22 @@ exports[`the HTMLView component should render a list 1`] = `
                 }
               }
             >
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
+                <Text>
                   Testings
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
         </View>
@@ -604,28 +524,22 @@ exports[`the HTMLView component should render a paragraph 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </View>
       </View>
     </View>
@@ -687,28 +601,11 @@ exports[`the HTMLView component should render an H1 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </Text>
       </View>
     </View>
@@ -771,28 +668,11 @@ exports[`the HTMLView component should render an H2 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </Text>
       </View>
     </View>
@@ -855,28 +735,11 @@ exports[`the HTMLView component should render an H3 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </Text>
       </View>
     </View>
@@ -939,28 +802,11 @@ exports[`the HTMLView component should render an H4 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </Text>
       </View>
     </View>
@@ -1023,28 +869,11 @@ exports[`the HTMLView component should render an H5 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </Text>
       </View>
     </View>
@@ -1106,28 +935,11 @@ exports[`the HTMLView component should render an H6 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Testings
             </Text>
-          </View>
+          </Text>
         </Text>
       </View>
     </View>
@@ -1289,28 +1101,9 @@ exports[`the HTMLView component should render bold text 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  Testings
-                </Text>
-              </View>
+              <Text>
+                Testings
+              </Text>
             </Text>
           </Text>
         </View>
@@ -1369,40 +1162,21 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               I sat on my couch next to my high school 
             </Text>
-          </View>
-          <Text
-            bold={false}
-            italic={false}
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 16,
-                "lineHeight": 26,
-              }
-            }
-          >
             <Text
               onPress={[Function]}
               style={
@@ -1411,52 +1185,14 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  Fuse Group
-                </Text>
-              </View>
+              <Text>
+                Fuse Group
+              </Text>
             </Text>
-          </Text>
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               , silently fuming at their inability to put their phones down during Bible study. Finally, I spoke up, teasing one of the girls in a tone that clearly said, “I’m not actually kidding.” 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1465,28 +1201,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               A few days later, I was in the car with my sister, and as I sat in the passenger seat responding to emails, I heard her laugh and say, “You always mumble when you are typing. Stop doing that.” 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1495,28 +1225,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               “Sorry,” I responded. “I just don’t want people to think I’m ignoring them when I’m typing.”
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1525,28 +1249,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               But the truth is, I am ignoring them! In my head, this behavior is totally acceptable. I tell myself I’m tending to my priorities in order, and in doing so, I send a message to the person in front of me that she is of lesser importance.
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1568,29 +1286,23 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
-            <View
+            <Text
+              bold={false}
+              italic={false}
               style={
                 Object {
-                  "paddingBottom": 17.28,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Italic",
+                  "fontSize": 16,
+                  "lineHeight": 26,
+                  "textAlign": "center",
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                    "textAlign": "center",
-                  }
-                }
-              >
+              <Text>
                 My phone is the primary outlet that distracts me from people who need my attention.
               </Text>
-            </View>
+            </Text>
           </View>
         </View>
         <View
@@ -1600,28 +1312,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               I quickly get frustrated when I am the one on the outside, but how often to I shut others out during my own social media binges or email frenzies? Just like my girls, I’m learning that my phone is the primary outlet that distracts me from people who need my attention.
             </Text>
-          </View>
+          </Text>
         </View>
         <Text
           padded={true}
@@ -1636,28 +1342,11 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Why Being Present Matters
             </Text>
-          </View>
+          </Text>
         </Text>
         <View
           style={
@@ -1666,28 +1355,6 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
-              There is nothing wrong with using our phones — as long as we remember that the best investment we can make is to invest in our relationships with Jesus and each other. We were created for 
-            </Text>
-          </View>
           <Text
             bold={false}
             italic={false}
@@ -1700,6 +1367,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
+            <Text>
+              There is nothing wrong with using our phones — as long as we remember that the best investment we can make is to invest in our relationships with Jesus and each other. We were created for 
+            </Text>
             <Text
               onPress={[Function]}
               style={
@@ -1708,52 +1378,14 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  community
-                </Text>
-              </View>
+              <Text>
+                community
+              </Text>
             </Text>
-          </Text>
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
                by God, who exists in community as Father, Son, and Holy Spirit (John 1:1-2, Genesis 2:18). 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1762,28 +1394,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Our phones help us stay connected, but they are not the foundation of all connection. If we’re honest, our phones are much quicker to distract and disengage us from the people right in front of us. 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1792,28 +1418,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Jesus said loving God and loving others is greatest of all God’s commandments (Matthew 22:38-40). And, after trying everything the world had to offer, King Solomon reminded his people that their relationships with God and others are the only things that really matter (Ecclesiastes 2:24-26, Ecclesiastes 3:9). 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1835,29 +1455,23 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
-            <View
+            <Text
+              bold={false}
+              italic={false}
               style={
                 Object {
-                  "paddingBottom": 17.28,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Italic",
+                  "fontSize": 16,
+                  "lineHeight": 26,
+                  "textAlign": "center",
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Italic",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                    "textAlign": "center",
-                  }
-                }
-              >
+              <Text>
                 Greater love has no one than this: to lay down one’s phone for one’s loved ones.
               </Text>
-            </View>
+            </Text>
           </View>
         </View>
         <View
@@ -1867,28 +1481,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               So the next time we feel like we have to text back immediately or tweet before someone else does, consider: 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -1934,28 +1542,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 }
               }
             >
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
+                <Text>
                   Am I putting others before myself right now?
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
           <View
@@ -1995,28 +1597,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 }
               }
             >
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
+                <Text>
                   How can I love the people around me if I’m not even paying attention to them?
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
           <View
@@ -2056,28 +1652,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 }
               }
             >
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
+                <Text>
                   What if Jesus wants to speak through me, but I’ve got my nose stuck in my phone? 
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
         </View>
@@ -2088,28 +1678,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               The world won’t implode if we don’t reply to every text or email immediately. And that Instagram picture doesn’t need to go up ASAP. If it’s already been a week between posts, what’s a few more hours? We love everyone better — our friends to our coworkers to our social media followers — when we give them the gift of our full attention. 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -2118,28 +1702,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               I can almost hear Jesus saying, “Greater love has no one than this: to lay down one’s phone for one’s loved ones”  (John 15:13). 
             </Text>
-          </View>
+          </Text>
         </View>
         <Text
           padded={true}
@@ -2154,28 +1732,11 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+          <Text>
+            <Text>
               Four Ways To Stay Away From Your Phone And Be Intentionally Present
             </Text>
-          </View>
+          </Text>
         </Text>
         <View
           style={
@@ -2204,52 +1765,14 @@ exports[`the HTMLView component should render example HTML 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  This holiday season
-                </Text>
-              </View>
+              <Text>
+                This holiday season
+              </Text>
             </Text>
-          </Text>
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               , we will have more opportunities to be around friends and family than usual. So let’s make the most of each minute. The following are some tips can help us all be a little more present.  
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -2288,28 +1811,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
-            <View
+            <Text
+              bold={false}
+              italic={false}
               style={
                 Object {
-                  "paddingBottom": 17.28,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Regular",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
-                }
-              >
+              <Text>
                 Turn your phone off, leave it in the car, or put it in airplane mode. Habitual notification checks can take a break.
               </Text>
-            </View>
+            </Text>
           </View>
         </View>
         <View
@@ -2349,28 +1866,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
-            <View
+            <Text
+              bold={false}
+              italic={false}
               style={
                 Object {
-                  "paddingBottom": 17.28,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Regular",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
-                }
-              >
+              <Text>
                 Talk about something other than yourself. Ask someone else about their life (job, school, kids).
               </Text>
-            </View>
+            </Text>
           </View>
         </View>
         <View
@@ -2410,28 +1921,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
-            <View
+            <Text
+              bold={false}
+              italic={false}
               style={
                 Object {
-                  "paddingBottom": 17.28,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Regular",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
-                }
-              >
+              <Text>
                 Look for opportunities to encourage someone. Ask the Holy Spirit to speak through you and help you love people.
               </Text>
-            </View>
+            </Text>
           </View>
         </View>
         <View
@@ -2471,28 +1976,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
               }
             }
           >
-            <View
+            <Text
+              bold={false}
+              italic={false}
               style={
                 Object {
-                  "paddingBottom": 17.28,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Regular",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
-                }
-              >
+              <Text>
                 Ask Jesus to keep your heart interested and engaged in what really matters. He wants to help!
               </Text>
-            </View>
+            </Text>
           </View>
         </View>
         <View
@@ -2502,28 +2001,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Intentionally taking advantage of time with loved ones sometimes does require sacrificing our own immediate desires or comforts, but that’s what we are commanded to do (Philippians 2:3). 
             </Text>
-          </View>
+          </Text>
         </View>
         <View
           style={
@@ -2532,28 +2025,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Take pictures, but don’t let the only memory be a digital one. The positive outcome of interactions should be more than Instagram likes. Unplug from social media, choose to be present, and you will be surprised at the good it does for your heart and the hearts of those around you.
             </Text>
-          </View>
+          </Text>
         </View>
       </View>
     </View>
@@ -2610,28 +2097,6 @@ exports[`the HTMLView component should render handle relative links 1`] = `
             }
           }
         >
-          <View
-            style={
-              Object {
-                "paddingBottom": 17.28,
-              }
-            }
-          >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
-              Testings 
-            </Text>
-          </View>
           <Text
             bold={false}
             italic={false}
@@ -2644,6 +2109,9 @@ exports[`the HTMLView component should render handle relative links 1`] = `
               }
             }
           >
+            <Text>
+              Testings 
+            </Text>
             <Text
               onPress={[Function]}
               style={
@@ -2652,28 +2120,9 @@ exports[`the HTMLView component should render handle relative links 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  Google
-                </Text>
-              </View>
+              <Text>
+                Google
+              </Text>
             </Text>
           </Text>
         </View>
@@ -2756,28 +2205,9 @@ exports[`the HTMLView component should render italic text 1`] = `
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingBottom": 17.28,
-                  }
-                }
-              >
-                <Text
-                  bold={false}
-                  italic={false}
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
-                    }
-                  }
-                >
-                  Testings
-                </Text>
-              </View>
+              <Text>
+                Testings
+              </Text>
             </Text>
           </Text>
         </View>
@@ -2836,28 +2266,22 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 17.28,
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
+            <Text>
               Bad link
             </Text>
-          </View>
+          </Text>
         </View>
       </View>
     </View>

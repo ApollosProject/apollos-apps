@@ -37,7 +37,8 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.8"
+    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
+    "htmlparser2": "3.9.2"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
