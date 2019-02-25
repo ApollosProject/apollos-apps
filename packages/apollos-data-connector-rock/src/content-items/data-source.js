@@ -250,17 +250,12 @@ export default class ContentItem extends RockApolloDataSource {
     });
 
     // Sends a request to the join-table between user ID and content item ID
-    const contentEntityIds = await this.request('AttributeValues')
-      .filterOneOf(
-        getPersonaGuidsForUser.map(({ guid }) => `Value eq '${guid}'`)
-      )
-      .get();
-
-    const contentItems = contentEntityIds.map((obj) => obj.entityId);
-
-    // Returns a query to the api for all content with given ID
-    return this.request()
-      .filterOneOf(contentItems.map((id) => `Id eq ${id}`))
+    return this.request(
+      `ContentChannelItems/GetFromPersonDataView/${getPersonaGuidsForUser
+        .map((obj) => obj.guid)
+        .join()}`
+    )
+      .andFilter(this.LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
   };
 
