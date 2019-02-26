@@ -22,18 +22,6 @@ describe('The ButtonIcon component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a backgroundColor', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ButtonIcon
-          name={'umbrella'}
-          onPress={jest.fn()}
-          backgroundColor={'salmon'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
   it('should render disabled', () => {
     const tree = renderer.create(
       <Providers>

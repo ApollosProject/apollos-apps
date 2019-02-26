@@ -102,12 +102,9 @@ exports[`The ModalView component should render 1`] = `
           }
         >
           <View
-            borderRadius={44}
             iconPadding={28}
             style={
               Object {
-                "backgroundColor": null,
-                "borderRadius": null,
                 "padding": 28,
               }
             }
@@ -296,12 +293,9 @@ exports[`The ModalView component should render a custom back action 1`] = `
           }
         >
           <View
-            borderRadius={44}
             iconPadding={28}
             style={
               Object {
-                "backgroundColor": null,
-                "borderRadius": null,
                 "padding": 28,
               }
             }

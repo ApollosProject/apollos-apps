@@ -6,13 +6,9 @@ import styled from '../../styled';
 import Icon from '../../Icon';
 import Touchable from '../../Touchable';
 
-const ControlPadding = styled(
-  ({ iconPadding, backgroundColor, borderRadius }) => ({
-    padding: iconPadding, // maximize vertical space for tappability.
-    backgroundColor: backgroundColor || null,
-    borderRadius: backgroundColor ? borderRadius : null,
-  })
-)(View);
+const ControlPadding = styled(({ iconPadding }) => ({
+  padding: iconPadding, // maximize vertical space for tappability.
+}))(View);
 
 class ButtonIcon extends PureComponent {
   static propTypes = {
@@ -37,7 +33,6 @@ class ButtonIcon extends PureComponent {
       size,
       name,
       fill,
-      backgroundColor,
       isLoading,
       ...otherProps
     } = this.props;
@@ -56,10 +51,6 @@ class ButtonIcon extends PureComponent {
             this.props.iconPadding >= 0
               ? this.props.iconPadding
               : this.props.size
-          }
-          backgroundColor={this.props.backgroundColor}
-          borderRadius={
-            this.props.iconPadding + this.props.size || this.props.size * 2
           }
         >
           <Icon
