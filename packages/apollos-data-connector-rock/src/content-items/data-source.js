@@ -244,12 +244,13 @@ export default class ContentItem extends RockApolloDataSource {
     const {
       dataSources: { Person },
     } = this.context;
+
     // Grabs the guids associated with all dataviews user is memeber
     const getPersonaGuidsForUser = await Person.getPersonas({
       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
     });
 
-    // Sends a request to the join-table between user ID and content item ID
+    // Grabs content items based on personas
     return this.request(
       `ContentChannelItems/GetFromPersonDataView/${getPersonaGuidsForUser
         .map((obj) => obj.guid)
