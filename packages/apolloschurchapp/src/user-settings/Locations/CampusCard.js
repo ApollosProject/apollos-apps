@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import { TouchableWithoutFeedback } from 'react-native';
 import { compose, pure } from 'recompose';
 
-import Card, {
+import {
+  Card,
   FlexedView,
-  Thumbnail,
+  ProgressiveImage,
   SideBySideView,
   withIsLoading,
   styled,
   CardContent,
   H5,
+  H6,
   BodyText,
   Paragraph,
 } from '@apollosproject/ui-kit';
@@ -25,21 +27,27 @@ const HorizontalLayout = styled({
   minHeight: 110, // kind of the best middle ground for various title lengths.
 })(SideBySideView);
 
-const LeftColumn = styled(({ theme }) => ({
+const HorizontalTextLayout = styled(({ theme }) => ({
+  height: theme.helpers.verticalRhythm(0.875),
+}))(SideBySideView);
+
+const RightColumn = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 0.75,
-  backgroundColor: 'purple',
 }))(CardContent);
 
-const RightColumn = styled({
+const LeftColumn = styled({
   alignSelf: 'stretch',
-  // height: '100%',
-  // aspectRatio: 1,
+  backgroundColor: 'red',
+  overflow: 'hidden',
+  height: '100%',
+  aspectRatio: 1,
 })(FlexedView);
 
 const CampusCard = enhance(
   ({
     title,
     description,
+    distance,
     images,
     thumbnailImage,
     category,
@@ -50,19 +58,31 @@ const CampusCard = enhance(
     <TouchableWithoutFeedback onPress={() => onPressItem()}>
       <Card isLoading={isLoading} inHorizontalList {...otherProps}>
         <HorizontalLayout>
-          <LeftColumn>
-            <H5>{title}</H5>
+          {images ? (
+            <LeftColumn>
+              <ProgressiveImage
+                source={images}
+                imageStyle={{
+                  aspectRatio: 1,
+                  resizeMode: 'cover',
+                }}
+              />
+            </LeftColumn>
+          ) : null}
+          <RightColumn>
+            <HorizontalTextLayout>
+              <H5>{title}</H5>
+              <H6>
+                {distance}
+                mi
+              </H6>
+            </HorizontalTextLayout>
             {description ? (
               <Paragraph>
                 <BodyText>{description}</BodyText>
               </Paragraph>
             ) : null}
-          </LeftColumn>
-          {images ? (
-            <RightColumn>
-              <Thumbnail source={images} />
-            </RightColumn>
-          ) : null}
+          </RightColumn>
         </HorizontalLayout>
       </Card>
     </TouchableWithoutFeedback>
@@ -77,4 +97,4 @@ CampusCard.propTypes = {
   isLoading: PropTypes.bool,
 };
 
-export { CampusCard };
+export default CampusCard;

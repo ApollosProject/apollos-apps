@@ -15,7 +15,7 @@ import Tabs from './tabs';
 import Auth from './auth';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
-import Location from './user-settings/Locations/Location';
+import Location from './user-settings/Locations';
 import UserWebBrowser from './user-web-browser';
 
 // Sentry.config(

@@ -13,7 +13,7 @@ import {
   UIText,
   // ThumbnailCard,
 } from '@apollosproject/ui-kit';
-import { CampusCard } from './CampusCard';
+import CampusCard from './CampusCard';
 
 const { width, height } = Dimensions.get('window');
 
@@ -26,12 +26,10 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     position: 'absolute',
-    height: '20%',
-    bottom: 80,
+    minHeight: '30%',
+    bottom: 5,
     left: 0,
     right: 0,
-    paddingVertical: 10,
-    backgroundColor: 'salmon',
   },
   endPadding: {
     paddingRight: width - CARD_WIDTH,
@@ -57,11 +55,6 @@ const styles = StyleSheet.create({
   },
 });
 
-/* const CampusContentCard = styled({
-  height: CARD_HEIGHT,
-  width: CARD_WIDTH,
-})(ContentCard); */
-
 class Location extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: 'Location',
@@ -81,6 +74,7 @@ class Location extends PureComponent {
           latitude: 33.5664789,
           longitude: -81.7465594,
         },
+        distance: 12,
         id: 0,
         image: {
           uri:
@@ -371,48 +365,47 @@ class Location extends PureComponent {
             );
           })}
         </MapView>
-        <Animated.ScrollView
-          horizontal
-          scrollEventThrottle={1}
-          showsHorizontalScrollIndicator={false}
-          snapToInterval={CARD_WIDTH}
-          onScroll={Animated.event(
-            [
-              {
-                nativeEvent: {
-                  contentOffset: {
-                    x: this.animation,
+        <View style={styles.scrollView}>
+          <Animated.ScrollView
+            horizontal
+            scrollEventThrottle={1}
+            showsHorizontalScrollIndicator={false}
+            snapToInterval={CARD_WIDTH}
+            onScroll={Animated.event(
+              [
+                {
+                  nativeEvent: {
+                    contentOffset: {
+                      x: this.animation,
+                    },
                   },
                 },
-              },
-            ],
-            { useNativeDriver: true }
-          )}
-          style={styles.scrollView}
-          contentContainerStyle={styles.endPadding}
-        >
-          {this.state.markers.map((marker, index) => (
-            <View style={{ flex: 1 }}>
-              <CampusCard
-                key={index}
-                title={marker.title}
-                description={marker.description}
-                images={[marker.image]}
-                style={{ position: 'relative' }}
-              />
-            </View>
-          ))}
-        </Animated.ScrollView>
-        <TouchableScale
-          onPress={console.log('TouchableScale')}
-          style={styles.button}
-        >
-          <Card>
-            <CardContent>
-              <ChannelLabel label={<UIText bold>{`Select Campus`}</UIText>} />
-            </CardContent>
-          </Card>
-        </TouchableScale>
+              ],
+              { useNativeDriver: true }
+            )}
+            contentContainerStyle={styles.endPadding}
+          >
+            {this.state.markers.map((marker) => (
+              <View style={styles.container}>
+                <CampusCard
+                  key={marker.id}
+                  distance={marker.distance}
+                  title={marker.title}
+                  description={marker.description}
+                  images={[marker.image]}
+                  style={{ position: 'relative' }}
+                />
+              </View>
+            ))}
+          </Animated.ScrollView>
+          <TouchableScale style={styles.button}>
+            <Card>
+              <CardContent>
+                <ChannelLabel label={<UIText bold>{`Select Campus`}</UIText>} />
+              </CardContent>
+            </Card>
+          </TouchableScale>
+        </View>
       </View>
     );
   }
