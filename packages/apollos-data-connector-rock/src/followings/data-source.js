@@ -90,6 +90,13 @@ export default class Followings extends RockApolloDataSource {
     }
   }
 
+  async paginatedGetFollowingsForCurrentUser({ type, after, first = 20 }) {
+    return this.paginate({
+      cursor: await this.getFollowingsForCurrentUser({ type }),
+      args: { after, first },
+    });
+  }
+
   async getFollowingsForCurrentUser({ type }) {
     const {
       dataSources: { RockConstants, Auth },
@@ -101,10 +108,11 @@ export default class Followings extends RockApolloDataSource {
       const currentUser = await Auth.getCurrentPerson();
       return this.request('Followings')
         .filter(
-          // eslint-disable-next-line prettier/prettier
-          `(EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${currentUser.primaryAliasId})`
+          `(EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${
+            currentUser.primaryAliasId
+          })`
         )
-        .get();
+        .orderBy('CreatedDateTime', 'desc');
     } catch (e) {
       if (e instanceof AuthenticationError) {
         return [];
