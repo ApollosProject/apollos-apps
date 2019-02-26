@@ -64,6 +64,20 @@ describe('The Onboarding Screen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render onboarding skip button with custom text', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Screen
+          onboardingScrollBy={jest.fn()}
+          onboardingSkipTo={jest.fn()}
+          secondaryNavText={'Custom skip button text'}
+        >
+          <Text>Boom</Text>
+        </Screen>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should hide onboarding primary navigation button', () => {
     const tree = renderer.create(
       <Providers>
