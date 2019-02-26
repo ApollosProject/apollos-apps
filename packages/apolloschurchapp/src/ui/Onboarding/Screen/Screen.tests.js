@@ -1,7 +1,6 @@
 import React from 'react';
+import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
-
-import { H1 } from '@apollosproject/ui-kit';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
@@ -12,7 +11,7 @@ describe('The Onboarding Screen component', () => {
     const tree = renderer.create(
       <Providers>
         <Screen>
-          <H1>Boom</H1>
+          <Text>Boom</Text>
         </Screen>
       </Providers>
     );
@@ -22,7 +21,7 @@ describe('The Onboarding Screen component', () => {
     const tree = renderer.create(
       <Providers>
         <Screen onboardingScrollBy={jest.fn()}>
-          <H1>Boom</H1>
+          <Text>Boom</Text>
         </Screen>
       </Providers>
     );
@@ -32,7 +31,21 @@ describe('The Onboarding Screen component', () => {
     const tree = renderer.create(
       <Providers>
         <Screen onboardingScrollBy={jest.fn()} onboardingSkipTo={jest.fn()}>
-          <H1>Boom</H1>
+          <Text>Boom</Text>
+        </Screen>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should hide onboarding primary navigation button', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Screen
+          onboardingScrollBy={jest.fn()}
+          onboardingSkipTo={jest.fn()}
+          hidePrimaryNav
+        >
+          <Text>Boom</Text>
         </Screen>
       </Providers>
     );
