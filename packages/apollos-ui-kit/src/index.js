@@ -31,7 +31,7 @@ export MediaQuery, {
 export ModalView, { ModalViewHeader } from './ModalView';
 export PaddedView from './PaddedView';
 export Placeholder, { withPlaceholder } from './Placeholder';
-export ProgressieImage from './ProgressiveImage';
+export ProgressiveImage from './ProgressiveImage';
 export SideBySideView from './SideBySideView';
 export styled from './styled';
 export TableView, {
