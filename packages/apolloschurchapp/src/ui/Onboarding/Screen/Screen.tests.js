@@ -27,6 +27,33 @@ describe('The Onboarding Screen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render primary navigation button with custom text', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Screen
+          onboardingScrollBy={jest.fn()}
+          primaryNavText={'Custom nav text'}
+        >
+          <Text>Boom</Text>
+        </Screen>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render primary navigation button with custom a custom icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Screen
+          onboardingScrollBy={jest.fn()}
+          primaryNavText={'Custom nav text with custom icon'}
+          primaryNavIcon={'umbrella'}
+        >
+          <Text>Boom</Text>
+        </Screen>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render onboarding skip button navigation', () => {
     const tree = renderer.create(
       <Providers>
