@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 // import PropTypes from 'prop-types';
 import Swiper from 'react-native-swiper';
-import { withTheme, BackgroundView } from '@apollosproject/ui-kit';
+import {
+  withTheme,
+  styled,
+  BackgroundView,
+  FlexedView,
+} from '@apollosproject/ui-kit';
 
-import Screen from './Screen';
 import AskName from './AskName';
 
 // Provides themed colors the
@@ -12,6 +16,10 @@ const ThemedSwiper = withTheme(({ theme }) => ({
   dotColor: theme.colors.background.inactive, // theme.colors.lightSecondary looks the best.
   activeDotColor: theme.colors.action.primary,
 }))(({ swiperRef, ...props }) => <Swiper ref={swiperRef} {...props} />);
+
+const Boom = styled(({ bgcolor }) => ({
+  backgroundColor: bgcolor,
+}))(FlexedView);
 
 class Onboarding extends Component {
   constructor() {
@@ -56,30 +64,25 @@ class Onboarding extends Component {
           showsButtons={false}
           swiperRef={this.setSwiperRef}
         >
-          <Screen
+          <AskName
             onboardingScrollBy={this.getSwiperScrollBy}
             onboardingSkipTo={2}
-          >
-            <AskName />
-          </Screen>
-          <View
-            style={{ flex: 1, backgroundColor: 'salmon' }}
-            title={<Text>Boom</Text>}
-          >
+          />
+          <Boom bgcolor={'salmon'}>
             <Text>Hello World 1</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
             <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-          </View>
-          <View style={{ flex: 1, backgroundColor: 'lightgreen' }}>
+          </Boom>
+          <Boom bgcolor={'lightgreen'}>
             <Text>Hello World 2</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
             <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-          </View>
-          <View style={{ flex: 1, backgroundColor: 'lightyellow' }}>
+          </Boom>
+          <Boom bgcolor={'lightyellow'}>
             <Text>No pager!</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
             <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-          </View>
+          </Boom>
         </ThemedSwiper>
       </BackgroundView>
     );

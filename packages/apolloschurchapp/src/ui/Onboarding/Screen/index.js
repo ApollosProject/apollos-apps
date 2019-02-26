@@ -80,8 +80,8 @@ Screen.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  onboardingScrollBy: PropTypes.func,
-  onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
+  onboardingScrollBy: PropTypes.func, // based by ref from react-native-swiper
+  onboardingSkipTo: PropTypes.number, // shows a skip button and sets how far ahead to skip
   primaryNavText: PropTypes.string, // colored button text
   primaryNavIcon: PropTypes.string, // optional custom icon name
   hidePrimaryNav: PropTypes.bool, // optionally only show the secondary nav text

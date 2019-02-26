@@ -10,6 +10,8 @@ import {
   Icon,
 } from '@apollosproject/ui-kit';
 
+import Screen from './Screen';
+
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
@@ -26,10 +28,11 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 // memo = sfc PureComponent 💥
-const AskName = memo(({ screenTitle, description }) => {
+const AskName = memo(({ screenTitle, description, ...props }) => {
   let LastNameInput = null;
+  console.count('AskName');
   return (
-    <>
+    <Screen {...props}>
       <BrandIcon />
       <Title>{screenTitle}</Title>
       <StyledH5>{description}</StyledH5>
@@ -49,7 +52,7 @@ const AskName = memo(({ screenTitle, description }) => {
           LastNameInput = r;
         }}
       />
-    </>
+    </Screen>
   );
 });
 
