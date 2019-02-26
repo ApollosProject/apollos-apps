@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -34,42 +34,45 @@ const SkipButton = styled(({ theme }) => ({
   marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
 }))(ButtonLink);
 
-const Screen = ({
-  children,
-  onboardingScrollBy,
-  onboardingSkipTo,
-  primaryNavText,
-  primaryNavIcon,
-  hidePrimaryNav,
-  secondaryNavText,
-}) => (
-  <>
-    <FlexedView>
-      <PaddedView>{children}</PaddedView>
-    </FlexedView>
-    {onboardingScrollBy ? (
-      <NavWrapper vertical={false}>
-        {!hidePrimaryNav ? (
-          <Button onPress={() => onboardingScrollBy(1)}>
-            <H5>{primaryNavText}</H5>
-            <PrimaryNavIcon name={primaryNavIcon} />
-          </Button>
-        ) : null}
-        {onboardingSkipTo ? (
-          <SkipButton
-            onPress={() =>
-              onboardingScrollBy(
-                onboardingSkipTo,
-                false // don't animate the skip transition
-              )
-            }
-          >
-            {secondaryNavText}
-          </SkipButton>
-        ) : null}
-      </NavWrapper>
-    ) : null}
-  </>
+// memo = sfc PureComponent 💥
+const Screen = memo(
+  ({
+    children,
+    onboardingScrollBy,
+    onboardingSkipTo,
+    primaryNavText,
+    primaryNavIcon,
+    hidePrimaryNav,
+    secondaryNavText,
+  }) => (
+    <>
+      <FlexedView>
+        <PaddedView>{children}</PaddedView>
+      </FlexedView>
+      {onboardingScrollBy ? (
+        <NavWrapper vertical={false}>
+          {!hidePrimaryNav ? (
+            <Button onPress={() => onboardingScrollBy(1)}>
+              <H5>{primaryNavText}</H5>
+              <PrimaryNavIcon name={primaryNavIcon} />
+            </Button>
+          ) : null}
+          {onboardingSkipTo ? (
+            <SkipButton
+              onPress={() =>
+                onboardingScrollBy(
+                  onboardingSkipTo,
+                  false // don't animate the skip transition
+                )
+              }
+            >
+              {secondaryNavText}
+            </SkipButton>
+          ) : null}
+        </NavWrapper>
+      ) : null}
+    </>
+  )
 );
 
 Screen.propTypes = {

@@ -6,12 +6,9 @@ import {
   withTheme,
   H2,
   H5,
-  BackgroundView,
   TextInput,
   Icon,
 } from '@apollosproject/ui-kit';
-
-import Screen from './Screen';
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
@@ -29,46 +26,41 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 // memo = sfc PureComponent 💥
-const AskName = memo(
-  ({ screenTitle, description, onboardingScrollBy, onboardingSkipTo }) => {
-    let LastNameInput = null;
-
-    return (
-      <BackgroundView>
-        <Screen
-          onboardingScrollBy={onboardingScrollBy}
-          onboardingSkipTo={onboardingSkipTo}
-        >
-          <BrandIcon />
-          <Title>{screenTitle}</Title>
-          <StyledH5>{description}</StyledH5>
-          <TextInput
-            label="First Name"
-            type="text"
-            returnKeyType="next"
-            onSubmitEditing={() => LastNameInput.focus()}
-            enzblesReturnKeyAutomatically
-          />
-          <TextInput
-            label="Last Name"
-            type="text"
-            returnKeyType="next"
-            enablesReturnKeyAutomatically
-            inputRef={(r) => {
-              LastNameInput = r;
-            }}
-          />
-        </Screen>
-      </BackgroundView>
-    );
-  }
-);
+const AskName = memo(({ screenTitle, description }) => {
+  let LastNameInput = null;
+  return (
+    <>
+      <BrandIcon />
+      <Title>{screenTitle}</Title>
+      <StyledH5>{description}</StyledH5>
+      <TextInput
+        label="First Name"
+        type="text"
+        returnKeyType="next"
+        onSubmitEditing={() => LastNameInput.focus()}
+        enzblesReturnKeyAutomatically
+      />
+      <TextInput
+        label="Last Name"
+        type="text"
+        returnKeyType="next"
+        enablesReturnKeyAutomatically
+        inputRef={(r) => {
+          LastNameInput = r;
+        }}
+      />
+    </>
+  );
+});
 
 AskName.propTypes = {
   screenTitle: PropTypes.string,
   description: PropTypes.string,
-  onboardingScrollBy: PropTypes.func,
-  onboardingSkipTo: PropTypes.number, // shows a skip button and defines how far ahead to skip
+};
+
+AskName.defaultProps = {
+  screenTitle: 'Welcome!',
+  description: "Every relationship starts with a name. What's yours?",
 };
 
 export default AskName;

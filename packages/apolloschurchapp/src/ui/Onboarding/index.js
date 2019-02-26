@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 // import PropTypes from 'prop-types';
 import Swiper from 'react-native-swiper';
-import { withTheme } from '@apollosproject/ui-kit';
+import { withTheme, BackgroundView } from '@apollosproject/ui-kit';
 
+import Screen from './Screen';
 import AskName from './AskName';
 
 // Provides themed colors the
@@ -46,39 +47,41 @@ class Onboarding extends Component {
 
   render() {
     return (
-      <ThemedSwiper
-        showsPagination={this.state.pagination}
-        onIndexChanged={this.handleOnIndexChanged}
-        loop={false}
-        // scrollEnabled={false}
-        showsButtons={false}
-        swiperRef={this.setSwiperRef}
-      >
-        <AskName
-          screenTitle={'Welcome!'}
-          description={"Every relationship starts with a name. What's yours?"}
-          onboardingScrollBy={this.getSwiperScrollBy}
-          onboardingSkipTo={2}
-        />
-        <View
-          style={{ flex: 1, backgroundColor: 'salmon' }}
-          title={<Text>Boom</Text>}
+      <BackgroundView>
+        <ThemedSwiper
+          showsPagination={this.state.pagination}
+          onIndexChanged={this.handleOnIndexChanged}
+          loop={false}
+          // scrollEnabled={false}
+          showsButtons={false}
+          swiperRef={this.setSwiperRef}
         >
-          <Text>Hello World 1</Text>
-          <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
-          <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-        </View>
-        <View style={{ flex: 1, backgroundColor: 'lightgreen' }}>
-          <Text>Hello World 2</Text>
-          <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
-          <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-        </View>
-        <View style={{ flex: 1, backgroundColor: 'lightyellow' }}>
-          <Text>No pager!</Text>
-          <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
-          <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-        </View>
-      </ThemedSwiper>
+          <Screen
+            onboardingScrollBy={this.getSwiperScrollBy}
+            onboardingSkipTo={2}
+          >
+            <AskName />
+          </Screen>
+          <View
+            style={{ flex: 1, backgroundColor: 'salmon' }}
+            title={<Text>Boom</Text>}
+          >
+            <Text>Hello World 1</Text>
+            <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
+            <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
+          </View>
+          <View style={{ flex: 1, backgroundColor: 'lightgreen' }}>
+            <Text>Hello World 2</Text>
+            <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
+            <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
+          </View>
+          <View style={{ flex: 1, backgroundColor: 'lightyellow' }}>
+            <Text>No pager!</Text>
+            <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
+            <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
+          </View>
+        </ThemedSwiper>
+      </BackgroundView>
     );
   }
 }
