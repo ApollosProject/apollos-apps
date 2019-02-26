@@ -12,3 +12,4 @@ export followings from './followings';
 export lava from './lava';
 export dataView from './data-view';
 export attributeValues from './attribute-values';
+export campuses from './campuses';

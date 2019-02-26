@@ -7,8 +7,10 @@ import * as Sharable from './sharable';
 import * as Person from './people';
 import * as Family from './family';
 import * as Auth from './auth';
+import * as AuthSms from './auth-sms';
 import * as PersonalDevice from './personal-devices';
 import * as Template from './template';
+import * as Campus from './campuses';
 
 export {
   Followings,
@@ -22,4 +24,6 @@ export {
   Auth,
   PersonalDevice,
   Template,
+  AuthSms,
+  Campus,
 };
