@@ -750,7 +750,7 @@ exports[`The Onboarding Screen component should render onboarding skip button wi
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render primary navigation button with custom a custom icon 1`] = `
+exports[`The Onboarding Screen component should render primary navigation button with a custom icon 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={

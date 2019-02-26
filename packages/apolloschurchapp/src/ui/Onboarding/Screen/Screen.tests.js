@@ -40,7 +40,7 @@ describe('The Onboarding Screen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render primary navigation button with custom a custom icon', () => {
+  it('should render primary navigation button with a custom icon', () => {
     const tree = renderer.create(
       <Providers>
         <Screen
