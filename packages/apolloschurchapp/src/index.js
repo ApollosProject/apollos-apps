@@ -4,6 +4,8 @@ import { createStackNavigator } from 'react-navigation';
 // import { Sentry } from 'react-native-sentry';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
+import Passes from '@apollosproject/ui-passes';
+
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Providers from './Providers';
 import { NotificationsManager } from './notifications';
@@ -31,6 +33,7 @@ const AppNavigator = createStackNavigator(
     Auth,
     PersonalDetails,
     ChangePassword,
+    Passes,
     UserWebBrowser,
   },
   {

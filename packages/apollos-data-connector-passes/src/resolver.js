@@ -1,3 +1,4 @@
+import url from 'url';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { camelCase } from 'lodash';
@@ -24,7 +25,7 @@ const getPassStyleFields = ({ pass, schema }) => {
 
 export default {
   Query: {
-    userPasses: async (a, b, context) => {
+    userPass: async (a, b, context) => {
       const templates = Object.keys(ApollosConfig.PASS.TEMPLATES);
       if (!templates.length) return [];
 
@@ -32,7 +33,7 @@ export default {
       const defaultPass = await context.dataSources.Pass.generatePassData({
         template: defaultPassTemplate,
       });
-      return [defaultPass];
+      return defaultPass;
     },
   },
   Pass: {
@@ -62,6 +63,8 @@ export default {
       const styleFields = getPassStyleFields({ pass, schema }) || {};
       return styleFields.secondaryFields;
     },
+    passkitFileUrl: ({ template }) =>
+      url.resolve(ApollosConfig.APP.ROOT_API_URL, `pass/${template}`),
   },
   PassField: {
     textAlignment: ({ textAlignment }) => {
