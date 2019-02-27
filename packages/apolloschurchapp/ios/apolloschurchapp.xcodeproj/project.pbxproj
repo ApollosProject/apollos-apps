@@ -1372,12 +1372,9 @@
 					ProjectRef = 4BE1789D74F64437B8E6A905 /* RNAirplay.xcodeproj */;
 				},
 				{
-<<<<<<< HEAD
 					ProductGroup = 426B76DB221B62AB00BA236B /* Products */;
 					ProductGroup = 79A38FF0221CA949002356B6 /* Products */;
-=======
 					ProductGroup = 7941889A22204B710014A75B /* Products */;
->>>>>>> c980b43483782ab4066071f159ee2f926f8cc25a
 					ProjectRef = CB4A6E14A2C44A53B23042FF /* RNCWebView.xcodeproj */;
 				},
 				{
