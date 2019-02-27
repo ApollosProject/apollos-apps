@@ -29,6 +29,12 @@ jest.mock('react-native-device-info', () => ({
   getBuildNumber: () => 0,
 }));
 
+jest.mock('rn-fetch-blob', () => 'Fetch');
+jest.mock(
+  '@apollosproject/ui-passes/node_modules/rn-fetch-blob',
+  () => 'Fetch'
+);
+
 jest.mock('react-native-video', () => 'Video');
 
 jest.mock('NativeEventEmitter');

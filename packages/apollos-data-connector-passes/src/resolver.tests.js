@@ -90,7 +90,7 @@ describe('Passes', () => {
                 value
                 textAlignment
               }
-              backgorundColor
+              backgroundColor
               foregroundColor
               labelColor
               logoText
@@ -110,7 +110,7 @@ describe('Passes', () => {
     it('returns the checkin pass', async () => {
       const query = `
         query {
-          userPasses {
+          userPass {
             id
             type
             description
@@ -129,7 +129,7 @@ describe('Passes', () => {
               value
               textAlignment
             }
-            backgorundColor
+            backgroundColor
             foregroundColor
             labelColor
             logoText
