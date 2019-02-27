@@ -35,7 +35,7 @@ const SkipButton = styled(({ theme }) => ({
 }))(ButtonLink);
 
 // memo = sfc PureComponent 💥
-const Screen = memo(
+const SlideWrapper = memo(
   ({
     children,
     onboardingScrollBy,
@@ -75,7 +75,7 @@ const Screen = memo(
   )
 );
 
-Screen.propTypes = {
+SlideWrapper.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -88,10 +88,10 @@ Screen.propTypes = {
   secondaryNavText: PropTypes.string, // text link
 };
 
-Screen.defaultProps = {
+SlideWrapper.defaultProps = {
   primaryNavText: 'Next',
   primaryNavIcon: 'arrow-next',
   secondaryNavText: 'Skip',
 };
 
-export default Screen;
+export default SlideWrapper;

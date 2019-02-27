@@ -11,7 +11,7 @@ import {
 
 import AskName from './AskName';
 
-// Provides themed colors the
+// Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
   dotColor: theme.colors.background.inactive, // theme.colors.lightSecondary looks the best.
   activeDotColor: theme.colors.action.primary,
@@ -45,12 +45,14 @@ class Onboarding extends Component {
     }
   };
 
+  // Creates ref to Swiper to be passed as a prop to children.
   setSwiperRef = (r) => {
     this.swiper = r;
 
     return this.swiper;
   };
 
+  // Returns Swipers scrollBy method by ref via this.swiper
   getSwiperScrollBy = (...props) => this.swiper.scrollBy(...props);
 
   render() {
@@ -60,6 +62,8 @@ class Onboarding extends Component {
           showsPagination={this.state.pagination}
           onIndexChanged={this.handleOnIndexChanged}
           loop={false}
+          /* Disables swipe gestures. We currently we don't display a back button so this is our
+           * only back navigation option. */
           // scrollEnabled={false}
           showsButtons={false}
           swiperRef={this.setSwiperRef}

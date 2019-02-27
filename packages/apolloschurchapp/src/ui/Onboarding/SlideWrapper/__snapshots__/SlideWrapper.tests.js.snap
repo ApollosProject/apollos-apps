@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding Screen component should hide onboarding primary navigation button 1`] = `
+exports[`The Onboarding SlideWrapper component should hide onboarding primary navigation button 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -83,7 +83,7 @@ exports[`The Onboarding Screen component should hide onboarding primary navigati
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render children 1`] = `
+exports[`The Onboarding SlideWrapper component should render children 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -139,7 +139,7 @@ exports[`The Onboarding Screen component should render children 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render onboarding next button navigation 1`] = `
+exports[`The Onboarding SlideWrapper component should render onboarding next button navigation 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -334,7 +334,7 @@ exports[`The Onboarding Screen component should render onboarding next button na
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render onboarding skip button navigation 1`] = `
+exports[`The Onboarding SlideWrapper component should render onboarding skip button navigation 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -542,7 +542,7 @@ exports[`The Onboarding Screen component should render onboarding skip button na
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render onboarding skip button with custom text 1`] = `
+exports[`The Onboarding SlideWrapper component should render onboarding skip button with custom text 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -750,7 +750,7 @@ exports[`The Onboarding Screen component should render onboarding skip button wi
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render primary navigation button with a custom icon 1`] = `
+exports[`The Onboarding SlideWrapper component should render primary navigation button with a custom icon 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -945,7 +945,7 @@ exports[`The Onboarding Screen component should render primary navigation button
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding Screen component should render primary navigation button with custom text 1`] = `
+exports[`The Onboarding SlideWrapper component should render primary navigation button with custom text 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={

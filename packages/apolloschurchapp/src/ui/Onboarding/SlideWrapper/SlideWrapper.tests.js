@@ -4,15 +4,15 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import Screen from '.';
+import SlideWrapper from '.';
 
-describe('The Onboarding Screen component', () => {
+describe('The Onboarding SlideWrapper component', () => {
   it('should render children', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen>
+        <SlideWrapper>
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -20,9 +20,9 @@ describe('The Onboarding Screen component', () => {
   it('should render onboarding next button navigation', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen onboardingScrollBy={jest.fn()}>
+        <SlideWrapper onboardingScrollBy={jest.fn()}>
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -30,12 +30,12 @@ describe('The Onboarding Screen component', () => {
   it('should render primary navigation button with custom text', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen
+        <SlideWrapper
           onboardingScrollBy={jest.fn()}
           primaryNavText={'Custom nav text'}
         >
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -43,13 +43,13 @@ describe('The Onboarding Screen component', () => {
   it('should render primary navigation button with a custom icon', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen
+        <SlideWrapper
           onboardingScrollBy={jest.fn()}
           primaryNavText={'Custom nav text with custom icon'}
           primaryNavIcon={'umbrella'}
         >
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -57,9 +57,9 @@ describe('The Onboarding Screen component', () => {
   it('should render onboarding skip button navigation', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen onboardingScrollBy={jest.fn()} onboardingSkipTo={jest.fn()}>
+        <SlideWrapper onboardingScrollBy={jest.fn()} onboardingSkipTo={jest.fn()}>
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -67,13 +67,13 @@ describe('The Onboarding Screen component', () => {
   it('should render onboarding skip button with custom text', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen
+        <SlideWrapper
           onboardingScrollBy={jest.fn()}
           onboardingSkipTo={jest.fn()}
           secondaryNavText={'Custom skip button text'}
         >
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -81,13 +81,13 @@ describe('The Onboarding Screen component', () => {
   it('should hide onboarding primary navigation button', () => {
     const tree = renderer.create(
       <Providers>
-        <Screen
+        <SlideWrapper
           onboardingScrollBy={jest.fn()}
           onboardingSkipTo={jest.fn()}
           hidePrimaryNav
         >
           <Text>Boom</Text>
-        </Screen>
+        </SlideWrapper>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

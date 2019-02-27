@@ -10,7 +10,7 @@ import {
   Icon,
 } from '@apollosproject/ui-kit';
 
-import Screen from './Screen';
+import SlideWrapper from './SlideWrapper';
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
@@ -28,13 +28,13 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 // memo = sfc PureComponent 💥
-const AskName = memo(({ screenTitle, description, ...props }) => {
+const AskName = memo(({ slideTitle, description, ...props }) => {
   let LastNameInput = null;
 
   return (
-    <Screen {...props}>
+    <SlideWrapper {...props}>
       <BrandIcon />
-      <Title>{screenTitle}</Title>
+      <Title>{slideTitle}</Title>
       <StyledH5>{description}</StyledH5>
       <TextInput
         label="First Name"
@@ -52,17 +52,17 @@ const AskName = memo(({ screenTitle, description, ...props }) => {
           LastNameInput = r;
         }}
       />
-    </Screen>
+    </SlideWrapper>
   );
 });
 
 AskName.propTypes = {
-  screenTitle: PropTypes.string,
+  slideTitle: PropTypes.string,
   description: PropTypes.string,
 };
 
 AskName.defaultProps = {
-  screenTitle: 'Welcome!',
+  slideTitle: 'Welcome!',
   description: "Every relationship starts with a name. What's yours?",
 };
 
