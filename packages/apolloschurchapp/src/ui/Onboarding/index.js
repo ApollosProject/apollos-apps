@@ -52,7 +52,9 @@ class Onboarding extends Component {
     return this.swiper;
   };
 
-  // Returns Swipers scrollBy method by ref via this.swiper
+  /* Returns Swipers scrollBy method by ref via this.swiper. See Swiper documentation for
+   * scrollBy details. https://github.com/leecade/react-native-swiper#methods
+   */
   getSwiperScrollBy = (...props) => this.swiper.scrollBy(...props);
 
   render() {
