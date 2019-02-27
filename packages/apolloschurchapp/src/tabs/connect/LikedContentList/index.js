@@ -50,6 +50,7 @@ class LikedContentList extends PureComponent {
               isLoading={loading}
               error={error}
               refetch={refetch}
+              onPressItem={this.handleOnPress}
             />
           )}
         </Query>
