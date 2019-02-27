@@ -30,7 +30,7 @@ const StyledH5 = styled(({ theme }) => ({
 // memo = sfc PureComponent 💥
 const AskName = memo(({ screenTitle, description, ...props }) => {
   let LastNameInput = null;
-  console.count('AskName');
+
   return (
     <Screen {...props}>
       <BrandIcon />
