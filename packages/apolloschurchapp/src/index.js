@@ -7,12 +7,12 @@ import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
+import Auth from '@apollosproject/ui-auth';
 import Providers from './Providers';
 import { NotificationsManager } from './notifications';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
-import Auth from './auth';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
 import UserWebBrowser from './user-web-browser';

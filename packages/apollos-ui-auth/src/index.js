@@ -14,13 +14,17 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import { track } from 'apolloschurchapp/src/analytics';
+// import { track } from 'apolloschurchapp/src/analytics';
 
 import LoginForm from './login';
 import SignUpForm from './signup';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
+export Provider from './Provider';
+
+export getLoginState from './getLoginState';
+export logout from './logout';
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -80,7 +84,7 @@ class Auth extends PureComponent {
 
   handleFinish = () => {
     // trigger the auth modal to close
-    track({ eventName: 'UserLogin' });
+    // track({ eventName: 'UserLogin' });
     this.props.navigation.goBack();
   };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Icon, withTheme } from '@apollosproject/ui-kit';
-import ProtectedTouchable from '../../auth/ProtectedTouchable';
+import { ProtectedTouchable } from '@apollosproject/ui-auth';
 
 const LikeIcon = withTheme(
   ({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({

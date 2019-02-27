@@ -1,0 +1,93 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ApolloConsumer } from 'react-apollo';
+import gql from 'graphql-tag';
+
+import getLoginState from './getLoginState';
+
+// const schema = gql`
+// extend type Query {
+//   authToken: String
+//   isLoggedIn: Boolean
+// }
+
+// extend type Mutation {
+//   logout
+//   handleLogin(authToken: String!)
+// }
+// `;
+
+const getAuthToken = gql`
+  query authToken {
+    authToken @client
+  }
+`;
+
+const resolvers = {
+  Query: {
+    isLoggedIn: (_root, _args, { cache }) => {
+      // When logging out, this query returns an error.
+      // Rescue the error, and return false.
+      try {
+        const { authToken } = cache.readQuery({ query: getAuthToken });
+        return !!authToken;
+      } catch (e) {
+        return false;
+      }
+    },
+  },
+  Mutation: {
+    logout: (_root, _args, { client }) => {
+      client.resetStore();
+      // TODO: track({ eventName: events.UserLogout });
+      return null;
+    },
+
+    handleLogin: async (root, { authToken }, { cache }) => {
+      try {
+        await cache.writeQuery({
+          query: getAuthToken,
+          data: { authToken },
+        });
+        await cache.writeQuery({
+          query: getLoginState,
+          data: { isLoggedIn: true },
+        });
+        await cache.writeData({
+          data: { authToken },
+        });
+
+        // TODO: const { pushId } = cache.readQuery({
+        //   query: gql`
+        //     query {
+        //       pushId
+        //     }
+        //   `,
+        // });
+        // TODO: if (pushId) {
+        //   updatePushId({ pushId });
+        // }
+
+        // TODO: track({ eventName: events.UserLogin });
+      } catch (e) {
+        throw e.message;
+      }
+
+      return null;
+    },
+  },
+};
+
+const Provider = ({ children }) => (
+  <ApolloConsumer>
+    {(client) => {
+      client.addResolvers(resolvers);
+      console.log({ client });
+      return children;
+    }}
+  </ApolloConsumer>
+);
+
+Provider.propTypes = {
+  children: PropTypes.node,
+};
