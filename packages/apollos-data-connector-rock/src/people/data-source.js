@@ -23,20 +23,17 @@ export default class Person extends RockApolloDataSource {
       dataSources: { RockConstants, Auth },
     } = this.context;
 
-    try {
-      // Get current user
-      const { id } = await Auth.getCurrentPerson();
+    // Get current user
+    const { id } = await Auth.getCurrentPerson();
 
-      // Get the entity type ID of the Person model
-      const personEntityTypeId = await RockConstants.modelType('Person');
+    // Get the entity type ID of the Person model
+    const personEntityTypeId = await RockConstants.modelType('Person');
 
-      // Return a list of all dataviews by GUID a user is a memeber
-      return this.request('DataViews/GetPersistedDataViewsForEntity')
-        .find(`${personEntityTypeId.id}/${id}?categoryId=${categoryId}`)
-        .select('Guid')
-        .get();
-    } catch (e) {
-      throw e;
+    // Return a list of all dataviews by GUID a user is a memeber
+    return this.request('DataViews/GetPersistedDataViewsForEntity')
+      .find(`${personEntityTypeId.id}/${id}?categoryId=${categoryId}`)
+      .select('Guid')
+      .get();
     }
   };
 
