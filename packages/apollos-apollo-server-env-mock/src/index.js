@@ -120,10 +120,6 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         return resolveWith([rockMocks.dataView()]);
       }
 
-      if (url.match('api/AttributeValues')) {
-        return resolveWith([rockMocks.attributeValues()]);
-      }
-
       if (url.match('api/Auth/Login')) {
         const body = JSON.parse(request.body);
         const response = new Response('');
