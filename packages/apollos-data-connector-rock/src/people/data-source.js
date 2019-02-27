@@ -34,7 +34,6 @@ export default class Person extends RockApolloDataSource {
       .find(`${personEntityTypeId.id}/${id}?categoryId=${categoryId}`)
       .select('Guid')
       .get();
-    }
   };
 
   // fields is an array of objects matching the pattern
