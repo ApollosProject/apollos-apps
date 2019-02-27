@@ -247,7 +247,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     // Grabs content items based on personas
     return this.request(
-      `ContentChannelItems/GetFromPersonDataView/${getPersonaGuidsForUser
+      `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
         .map((obj) => obj.guid)
         .join()}`
     )
