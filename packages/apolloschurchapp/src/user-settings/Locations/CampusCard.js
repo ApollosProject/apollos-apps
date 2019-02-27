@@ -24,7 +24,7 @@ const enhance = compose(
 
 const HorizontalLayout = styled({
   alignItems: 'center',
-  minHeight: 110, // kind of the best middle ground for various title lengths.
+  minHeight: 90, // kind of the best middle ground for various title lengths.
 })(SideBySideView);
 
 const HorizontalTextLayout = styled(({ theme }) => ({
@@ -32,16 +32,20 @@ const HorizontalTextLayout = styled(({ theme }) => ({
 }))(SideBySideView);
 
 const RightColumn = styled(({ theme }) => ({
-  paddingVertical: theme.sizing.baseUnit * 0.75,
+  paddingVertical: theme.sizing.baseUnit * 0.85,
 }))(CardContent);
 
 const LeftColumn = styled({
   alignSelf: 'stretch',
-  backgroundColor: 'red',
   overflow: 'hidden',
   height: '100%',
   aspectRatio: 1,
 })(FlexedView);
+
+const campusImage = {
+  aspectRatio: 1,
+  resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
+};
 
 const CampusCard = enhance(
   ({
@@ -60,13 +64,7 @@ const CampusCard = enhance(
         <HorizontalLayout>
           {images ? (
             <LeftColumn>
-              <ProgressiveImage
-                source={images}
-                imageStyle={{
-                  aspectRatio: 1,
-                  resizeMode: 'cover',
-                }}
-              />
+              <ProgressiveImage source={images} imageStyle={campusImage} />
             </LeftColumn>
           ) : null}
           <RightColumn>
@@ -95,6 +93,7 @@ CampusCard.propTypes = {
   images: PropTypes.source,
   category: PropTypes.string,
   isLoading: PropTypes.bool,
+  key: PropTypes.number,
 };
 
 export default CampusCard;

@@ -1,13 +1,10 @@
 rootProject.name = 'apolloschurchapp'
-<<<<<<< HEAD
 include ':react-native-maps'
 project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
-=======
 include ':rn-fetch-blob'
 project(':rn-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/rn-fetch-blob/android')
 include ':react-native-passkit-wallet'
 project(':react-native-passkit-wallet').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-passkit-wallet/android')
->>>>>>> a711067a0adcb2d43d88e69f70e6523269da0f1a
 include ':react-native-webview'
 project(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')
 include ':react-native-config'

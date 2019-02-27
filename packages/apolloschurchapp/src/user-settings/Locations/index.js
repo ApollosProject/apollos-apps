@@ -11,28 +11,48 @@ import {
   CardContent,
   ChannelLabel,
   UIText,
+  styled,
   // ThumbnailCard,
 } from '@apollosproject/ui-kit';
 import CampusCard from './CampusCard';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
-const CARD_HEIGHT = height / 4.5;
-const CARD_WIDTH = CARD_HEIGHT + 80;
+const CARD_WIDTH = width * 0.94;
+
+const ContainerView = styled({
+  flex: 1,
+})(View);
+
+const ScrollingView = styled({
+  position: 'absolute',
+  minHeight: '30%',
+  bottom: 5,
+  left: 0,
+  right: 0,
+})(View);
+
+const MarkerView = styled(({ theme }) => ({
+  width: 8,
+  height: 8,
+  borderRadius: 4,
+  backgroundColor: theme.colors.primary.fade(theme.alpha.medium),
+}))(View);
+
+const scaleStyle = {
+  transform: [
+    {
+      scale: interpolations[index].scale,
+    },
+  ],
+};
+const opacityStyle = {
+  opacity: interpolations[index].opacity,
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  scrollView: {
-    position: 'absolute',
-    minHeight: '30%',
-    bottom: 5,
-    left: 0,
-    right: 0,
-  },
-  endPadding: {
-    paddingRight: width - CARD_WIDTH,
   },
   markerWrap: {
     alignItems: 'center',
@@ -288,7 +308,7 @@ class Location extends PureComponent {
     // We should detect when scrolling has stopped then animate
     // We should just debounce the event listener here
     this.animation.addListener(({ value }) => {
-      let index = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item
+      let index = Math.floor(value / CARD_WIDTH); // animate 30% away from landing on the next item
       if (index >= this.state.markers.length) {
         index = this.state.markers.length - 1;
       }
@@ -334,7 +354,7 @@ class Location extends PureComponent {
       return { scale, opacity };
     });
     return (
-      <View style={styles.container}>
+      <ContainerView style={styles.container}>
         <MapView
           ref={(map) => {
             this.map = map;
@@ -359,13 +379,13 @@ class Location extends PureComponent {
               <Marker key={index} coordinate={marker.coordinate}>
                 <Animated.View style={[styles.markerWrap, opacityStyle]}>
                   <Animated.View style={[styles.ring, scaleStyle]} />
-                  <View style={styles.marker} />
+                  <MarkerView />
                 </Animated.View>
               </Marker>
             );
           })}
         </MapView>
-        <View style={styles.scrollView}>
+        <ScrollingView>
           <Animated.ScrollView
             horizontal
             scrollEventThrottle={1}
@@ -386,7 +406,7 @@ class Location extends PureComponent {
             contentContainerStyle={styles.endPadding}
           >
             {this.state.markers.map((marker) => (
-              <View style={styles.container}>
+              <ContainerView style={styles.container}>
                 <CampusCard
                   key={marker.id}
                   distance={marker.distance}
@@ -395,18 +415,18 @@ class Location extends PureComponent {
                   images={[marker.image]}
                   style={{ position: 'relative' }}
                 />
-              </View>
+              </ContainerView>
             ))}
           </Animated.ScrollView>
-          <TouchableScale style={styles.button}>
+          <TouchableScale>
             <Card>
               <CardContent>
                 <ChannelLabel label={<UIText bold>{`Select Campus`}</UIText>} />
               </CardContent>
             </Card>
           </TouchableScale>
-        </View>
-      </View>
+        </ScrollingView>
+      </ContainerView>
     );
   }
 }
