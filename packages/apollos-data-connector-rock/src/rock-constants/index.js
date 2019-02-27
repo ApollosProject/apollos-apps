@@ -7,7 +7,7 @@ const mapApollosNameToRockName = (name) => {
   if (ROCK_MAPPINGS.CONTENT_ITEM[name]) {
     return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
   }
-  throw new Error(`${name} has not been mapped into a Rock type!`);
+  return name;
 };
 
 class RockConstants extends RockApolloDataSource {
