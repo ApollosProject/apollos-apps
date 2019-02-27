@@ -91,10 +91,22 @@ export default class Followings extends RockApolloDataSource {
   }
 
   async paginatedGetFollowingsForCurrentUser({ type, after, first = 20 }) {
-    return this.paginate({
-      cursor: await this.getFollowingsForCurrentUser({ type }),
-      args: { after, first },
-    });
+    const {
+      dataSources: { Auth },
+    } = this.context;
+    try {
+      await Auth.getCurrentPerson();
+
+      return this.paginate({
+        cursor: await this.getFollowingsForCurrentUser({ type }),
+        args: { after, first },
+      });
+    } catch (e) {
+      if (e instanceof AuthenticationError) {
+        return { edges: [] };
+      }
+      throw e;
+    }
   }
 
   async getFollowingsForCurrentUser({ type }) {

@@ -207,8 +207,12 @@ describe('Following', () => {
     const query = `
       query {
         getAllLikedContent {
-          id
-          isLiked
+          edges {
+            node {
+              id
+              isLiked
+            }
+          }
         }
       }
     `;
@@ -221,8 +225,12 @@ describe('Following', () => {
     const query = `
       query {
         getAllLikedContent {
-          id
-          isLiked
+          edges {
+            node {
+              id
+              isLiked
+            }
+          }
         }
       }
     `;
