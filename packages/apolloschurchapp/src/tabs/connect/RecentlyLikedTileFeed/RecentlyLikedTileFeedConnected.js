@@ -8,7 +8,7 @@ import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
 const RecentlyLikedTileFeedConnected = ({ navigation }) => (
   <Query
     query={getLikedContent}
-    fetchPolicy="network-only"
+    fetchPolicy="cache-and-network"
     variables={{ first: 3 }}
   >
     {({
