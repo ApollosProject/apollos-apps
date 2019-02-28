@@ -16,6 +16,26 @@ export default class Person extends RockApolloDataSource {
       .filter(`Email eq '${email}'`)
       .get();
 
+  // Gets a collection of all dataviews a user is in
+  // Returns an array of dataview guids
+  getPersonas = async ({ categoryId }) => {
+    const {
+      dataSources: { RockConstants, Auth },
+    } = this.context;
+
+    // Get current user
+    const { id } = await Auth.getCurrentPerson();
+
+    // Get the entity type ID of the Person model
+    const personEntityTypeId = await RockConstants.modelType('Person');
+
+    // Return a list of all dataviews by GUID a user is a memeber
+    return this.request('DataViews/GetPersistedDataViewsForEntity')
+      .find(`${personEntityTypeId.id}/${id}?categoryId=${categoryId}`)
+      .select('Guid')
+      .get();
+  };
+
   // fields is an array of objects matching the pattern
   // [{ field: String, value: String }]
   updateProfile = async (fields) => {

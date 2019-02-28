@@ -239,6 +239,27 @@ export default class ContentItem extends RockApolloDataSource {
     return request.orderBy('Order');
   };
 
+  // Generates feed based on persons dataview membership
+  byPersonaFeed = async () => {
+    const {
+      dataSources: { Person },
+    } = this.context;
+
+    // Grabs the guids associated with all dataviews user is memeber
+    const getPersonaGuidsForUser = await Person.getPersonas({
+      categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
+    });
+
+    // Grabs content items based on personas
+    return this.request(
+      `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
+        .map((obj) => obj.guid)
+        .join()}`
+    )
+      .andFilter(this.LIVE_CONTENT())
+      .orderBy('StartDateTime', 'desc');
+  };
+
   byUserFeed = () =>
     this.request()
       .filterOneOf(

@@ -10,4 +10,5 @@ export interaction from './interaction';
 export families from './families';
 export followings from './followings';
 export lava from './lava';
+export dataView from './data-view';
 export campuses from './campuses';
