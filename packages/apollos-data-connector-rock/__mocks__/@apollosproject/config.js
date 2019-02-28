@@ -19,6 +19,9 @@ ApolloServer.loadJs({
         EntityType: 'ContentChannelItem',
       },
     },
+    DATAVIEW_CATEGORIES: {
+      PersonaId: 123,
+    },
   },
   ROCK: {
     TIMEZONE: 'America/New_York',
