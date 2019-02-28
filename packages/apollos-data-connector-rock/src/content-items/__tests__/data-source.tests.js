@@ -114,4 +114,18 @@ describe('ContentItemsModel', () => {
     expect(cursor).toBe(null);
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
+
+  it('returns null when there are no parent content items with images', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+
+    const image = await dataSource.getCoverImage({
+      attributeValues: {},
+      attributes: {},
+    });
+
+    expect(image).toBe(null);
+  });
 });
