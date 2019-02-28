@@ -2,56 +2,53 @@ import React from 'react';
 import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
-import SlideWrapper from '.';
+import Slide from '.';
 
-storiesOf('Onboarding/SlideWrapper', module)
+storiesOf('Onboarding/Slide', module)
   .add('default', () => (
-    <SlideWrapper>
+    <Slide>
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ))
   .add('With Navigation', () => (
-    <SlideWrapper onboardingScrollBy={() => {}}>
+    <Slide onboardingScrollBy={() => {}}>
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ))
   .add('primaryNavText', () => (
-    <SlideWrapper
-      onboardingScrollBy={() => {}}
-      primaryNavText={'Custom button text'}
-    >
+    <Slide onboardingScrollBy={() => {}} primaryNavText={'Custom button text'}>
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ))
   .add('primaryNavIcon', () => (
-    <SlideWrapper
+    <Slide
       onboardingScrollBy={() => {}}
       primaryNavText={'Custom icon'}
       primaryNavIcon={'umbrella'}
     >
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ))
   .add('With Skip Button', () => (
-    <SlideWrapper onboardingScrollBy={() => {}} onboardingSkipTo={() => {}}>
+    <Slide onboardingScrollBy={() => {}} onboardingSkipTo={() => {}}>
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ))
   .add('With Skip Button', () => (
-    <SlideWrapper
+    <Slide
       onboardingScrollBy={() => {}}
       onboardingSkipTo={() => {}}
       secondaryNavText={'Custom skip button'}
     >
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ))
   .add('hidePrimaryNav', () => (
-    <SlideWrapper
+    <Slide
       onboardingScrollBy={() => {}}
       onboardingSkipTo={() => {}}
       hidePrimaryNav
     >
       <Text>Boom</Text>
-    </SlideWrapper>
+    </Slide>
   ));

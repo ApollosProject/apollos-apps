@@ -10,7 +10,7 @@ import {
   Icon,
 } from '@apollosproject/ui-kit';
 
-import SlideWrapper from '../../SlideWrapper';
+import Slide from '../../Slide';
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
@@ -32,7 +32,7 @@ const AskName = memo(({ slideTitle, description, ...props }) => {
   let LastNameInput = null;
 
   return (
-    <SlideWrapper {...props}>
+    <Slide {...props}>
       <BrandIcon />
       <Title>{slideTitle}</Title>
       <StyledH5>{description}</StyledH5>
@@ -52,7 +52,7 @@ const AskName = memo(({ slideTitle, description, ...props }) => {
           LastNameInput = r;
         }}
       />
-    </SlideWrapper>
+    </Slide>
   );
 });
 

@@ -35,7 +35,7 @@ const SkipButton = styled(({ theme }) => ({
 }))(ButtonLink);
 
 // memo = sfc PureComponent 💥
-const SlideWrapper = memo(
+const Slide = memo(
   ({
     children,
     onPressPrimary,
@@ -70,7 +70,7 @@ const SlideWrapper = memo(
   )
 );
 
-SlideWrapper.propTypes = {
+Slide.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -83,10 +83,10 @@ SlideWrapper.propTypes = {
   secondaryNavText: PropTypes.string, // text link
 };
 
-SlideWrapper.defaultProps = {
+Slide.defaultProps = {
   primaryNavText: 'Next',
   primaryNavIcon: 'arrow-next',
   secondaryNavText: 'Skip',
 };
 
-export default SlideWrapper;
+export default Slide;
