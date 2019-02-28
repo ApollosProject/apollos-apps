@@ -11,18 +11,18 @@ storiesOf('Onboarding/Slide', module)
     </Slide>
   ))
   .add('With Navigation', () => (
-    <Slide onboardingScrollBy={() => {}}>
+    <Slide onPressPrimary={() => {}}>
       <Text>Boom</Text>
     </Slide>
   ))
   .add('primaryNavText', () => (
-    <Slide onboardingScrollBy={() => {}} primaryNavText={'Custom button text'}>
+    <Slide onPressPrimary={() => {}} primaryNavText={'Custom button text'}>
       <Text>Boom</Text>
     </Slide>
   ))
   .add('primaryNavIcon', () => (
     <Slide
-      onboardingScrollBy={() => {}}
+      onPressPrimary={() => {}}
       primaryNavText={'Custom icon'}
       primaryNavIcon={'umbrella'}
     >
@@ -30,25 +30,21 @@ storiesOf('Onboarding/Slide', module)
     </Slide>
   ))
   .add('With Skip Button', () => (
-    <Slide onboardingScrollBy={() => {}} onboardingSkipTo={() => {}}>
+    <Slide onPressPrimary={() => {}} onPressSecondary={() => {}}>
       <Text>Boom</Text>
     </Slide>
   ))
   .add('With Skip Button', () => (
     <Slide
-      onboardingScrollBy={() => {}}
-      onboardingSkipTo={() => {}}
+      onPressPrimary={() => {}}
+      onPressSecondary={() => {}}
       secondaryNavText={'Custom skip button'}
     >
       <Text>Boom</Text>
     </Slide>
   ))
   .add('hidePrimaryNav', () => (
-    <Slide
-      onboardingScrollBy={() => {}}
-      onboardingSkipTo={() => {}}
-      hidePrimaryNav
-    >
+    <Slide onPressPrimary={() => {}} onPressSecondary={() => {}} hidePrimaryNav>
       <Text>Boom</Text>
     </Slide>
   ));
