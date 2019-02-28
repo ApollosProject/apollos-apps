@@ -44,7 +44,7 @@ describe('Person', () => {
     const Auth = auth(dataSource);
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSource: { Auth },
+      dataSources: { Auth },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -63,7 +63,7 @@ describe('Person', () => {
     const Auth = auth(dataSource);
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSource: { Auth },
+      dataSources: { Auth },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -75,6 +75,23 @@ describe('Person', () => {
     expect(result).resolves.toMatchSnapshot();
     expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it('Throws an error if trying to set an invalid gender', () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'Gender',
+        value: 'Squirrel',
+      },
+    ]);
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it("uploads a user's profile picture", async () => {
