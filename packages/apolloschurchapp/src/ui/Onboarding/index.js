@@ -9,7 +9,7 @@ import {
   FlexedView,
 } from '@apollosproject/ui-kit';
 
-import AskName from './slides';
+import { AskName } from './slides';
 
 // Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
