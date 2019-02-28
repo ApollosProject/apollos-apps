@@ -58,6 +58,25 @@ describe('Person', () => {
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
+  it("updates a user's gender attributes", () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSource: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'Gender',
+        value: 'Male',
+      },
+    ]);
+    expect(result).resolves.toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
   it("uploads a user's profile picture", async () => {
     const dataSource = new Person();
     dataSource.context = { rockCookie: 'fakeCookie' };
