@@ -57,6 +57,9 @@ const AskName = memo(({ slideTitle, description, ...props }) => {
 });
 
 AskName.propTypes = {
+  /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
+   * children. Thus we have to use more unique name.
+   */
   slideTitle: PropTypes.string,
   description: PropTypes.string,
 };
