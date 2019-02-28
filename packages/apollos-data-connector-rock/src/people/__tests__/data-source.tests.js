@@ -104,6 +104,25 @@ describe('Person', () => {
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
+  it("updates a user's birth date attributes", async () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = await dataSource.updateProfile([
+      {
+        field: 'BirthDate',
+        value: '1996-11-02T07:00:00.000Z',
+      },
+    ]);
+    expect(result).toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
   it('Throws an error if trying to set an invalid gender', () => {
     const dataSource = new Person();
     const Auth = auth(dataSource);
