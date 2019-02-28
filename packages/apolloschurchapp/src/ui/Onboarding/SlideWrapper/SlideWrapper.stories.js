@@ -16,7 +16,10 @@ storiesOf('Onboarding/SlideWrapper', module)
     </SlideWrapper>
   ))
   .add('primaryNavText', () => (
-    <SlideWrapper onboardingScrollBy={() => {}} primaryNavText={'Custom button text'}>
+    <SlideWrapper
+      onboardingScrollBy={() => {}}
+      primaryNavText={'Custom button text'}
+    >
       <Text>Boom</Text>
     </SlideWrapper>
   ))
