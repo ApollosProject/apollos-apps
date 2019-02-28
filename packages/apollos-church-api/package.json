@@ -1,6 +1,6 @@
 {
   "name": "apollos-church-api",
-  "version": "0.8.0-alpha.8",
+  "version": "0.8.0-alpha.9",
   "private": true,
   "main": "lib/index.js",
   "scripts": {
@@ -34,15 +34,15 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/config": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-analytics": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-bible": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-church-online": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-cloudinary": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-onesignal": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-passes": "^0.8.0-alpha.8",
-    "@apollosproject/data-connector-rock": "^0.8.0-alpha.8",
-    "@apollosproject/server-core": "^0.8.0-alpha.8",
+    "@apollosproject/config": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-analytics": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-bible": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-church-online": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-cloudinary": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-onesignal": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-passes": "^0.8.0-alpha.9",
+    "@apollosproject/data-connector-rock": "^0.8.0-alpha.9",
+    "@apollosproject/server-core": "^0.8.0-alpha.9",
     "apollo-server": "^2.0.5",
     "color": "3.0.0",
     "dotenv": "6.0.0",
@@ -51,8 +51,8 @@
     "randomcolor": "0.5.3"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.8",
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
+    "@apollosproject/apollo-server-env-mock": "^0.8.0-alpha.9",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.9",
     "@babel/cli": "7.1.5",
     "@babel/core": "7.1.6",
     "codecov": "3.0.2",
