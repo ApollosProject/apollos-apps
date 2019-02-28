@@ -57,7 +57,10 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should render onboarding skip button navigation', () => {
     const tree = renderer.create(
       <Providers>
-        <SlideWrapper onboardingScrollBy={jest.fn()} onboardingSkipTo={jest.fn()}>
+        <SlideWrapper
+          onboardingScrollBy={jest.fn()}
+          onboardingSkipTo={jest.fn()}
+        >
           <Text>Boom</Text>
         </SlideWrapper>
       </Providers>

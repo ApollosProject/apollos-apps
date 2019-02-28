@@ -10,7 +10,7 @@ import {
   Icon,
 } from '@apollosproject/ui-kit';
 
-import SlideWrapper from './SlideWrapper';
+import SlideWrapper from '../../SlideWrapper';
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
