@@ -4,13 +4,10 @@ coverage:
       api:
         paths:
           - packages/apollos-church-api/*
-          - packages/apollos-data-*/*
-          - packages/apollos-config/*
-          - packages/apollos-server-core/*
+          - packages/apollos-data-prayer/*
       mobile:
         paths:
           - packages/apolloschurchapp/*
-          - packages/ui-kit/*
 comment:
   layout: "reach, diff, files"
   behavior: once
