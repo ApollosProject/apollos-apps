@@ -16,6 +16,15 @@ const auth = (dataSource) => ({
     dataSource
   ),
 });
+const personaAuth = (dataSource) => ({
+  getCurrentPerson: buildGetMock(
+    { id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+    dataSource
+  ),
+});
+const rockConstants = () => ({
+  modelType: (type) => ({ id: 15, type }),
+});
 describe('Person', () => {
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
@@ -29,6 +38,24 @@ describe('Person', () => {
     const result = dataSource.getFromEmail('isaac.hardy@newspring.cc');
     expect(result).resolves.toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('gets persons dataview associations', () => {
+    const dataSource = new Person();
+    const Auth = personaAuth(dataSource);
+
+    const RockConstants = rockConstants();
+    const categoryId = 210;
+
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSource: { Auth, RockConstants },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+
+    const result = dataSource.getPersonas(categoryId);
+    expect(result).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
   it('gets person from id', () => {
