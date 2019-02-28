@@ -66,7 +66,7 @@ exports[`The Onboarding SlideWrapper component should hide onboarding primary na
       vertical={false}
     >
       <Text
-        onPress={[Function]}
+        onPress={[MockFunction]}
         style={
           Object {
             "color": "#A5A5A5",
@@ -525,7 +525,7 @@ exports[`The Onboarding SlideWrapper component should render onboarding skip but
         </View>
       </View>
       <Text
-        onPress={[Function]}
+        onPress={[MockFunction]}
         style={
           Object {
             "color": "#A5A5A5",
@@ -733,7 +733,7 @@ exports[`The Onboarding SlideWrapper component should render onboarding skip but
         </View>
       </View>
       <Text
-        onPress={[Function]}
+        onPress={[MockFunction]}
         style={
           Object {
             "color": "#A5A5A5",

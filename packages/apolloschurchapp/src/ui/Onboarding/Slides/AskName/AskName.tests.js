@@ -33,7 +33,7 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should pass additional props to SlideWrapper', () => {
     const tree = renderer.create(
       <Providers>
-        <AskName onboardingScrollBy={jest.fn()} />
+        <AskName onPressPrimary={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

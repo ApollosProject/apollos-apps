@@ -20,7 +20,7 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should render onboarding next button navigation', () => {
     const tree = renderer.create(
       <Providers>
-        <SlideWrapper onboardingScrollBy={jest.fn()}>
+        <SlideWrapper onPressPrimary={jest.fn()}>
           <Text>Boom</Text>
         </SlideWrapper>
       </Providers>
@@ -31,7 +31,7 @@ describe('The Onboarding SlideWrapper component', () => {
     const tree = renderer.create(
       <Providers>
         <SlideWrapper
-          onboardingScrollBy={jest.fn()}
+          onPressPrimary={jest.fn()}
           primaryNavText={'Custom nav text'}
         >
           <Text>Boom</Text>
@@ -44,7 +44,7 @@ describe('The Onboarding SlideWrapper component', () => {
     const tree = renderer.create(
       <Providers>
         <SlideWrapper
-          onboardingScrollBy={jest.fn()}
+          onPressPrimary={jest.fn()}
           primaryNavText={'Custom nav text with custom icon'}
           primaryNavIcon={'umbrella'}
         >
@@ -57,10 +57,7 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should render onboarding skip button navigation', () => {
     const tree = renderer.create(
       <Providers>
-        <SlideWrapper
-          onboardingScrollBy={jest.fn()}
-          onboardingSkipTo={jest.fn()}
-        >
+        <SlideWrapper onPressPrimary={jest.fn()} onPressSecondary={jest.fn()}>
           <Text>Boom</Text>
         </SlideWrapper>
       </Providers>
@@ -71,8 +68,8 @@ describe('The Onboarding SlideWrapper component', () => {
     const tree = renderer.create(
       <Providers>
         <SlideWrapper
-          onboardingScrollBy={jest.fn()}
-          onboardingSkipTo={jest.fn()}
+          onPressPrimary={jest.fn()}
+          onPressSecondary={jest.fn()}
           secondaryNavText={'Custom skip button text'}
         >
           <Text>Boom</Text>
@@ -85,8 +82,8 @@ describe('The Onboarding SlideWrapper component', () => {
     const tree = renderer.create(
       <Providers>
         <SlideWrapper
-          onboardingScrollBy={jest.fn()}
-          onboardingSkipTo={jest.fn()}
+          onPressPrimary={jest.fn()}
+          onPressSecondary={jest.fn()}
           hidePrimaryNav
         >
           <Text>Boom</Text>

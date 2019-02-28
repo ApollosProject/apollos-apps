@@ -52,10 +52,8 @@ class Onboarding extends Component {
     return this.swiper;
   };
 
-  /* Returns Swipers scrollBy method by ref via this.swiper. See Swiper documentation for
-   * scrollBy details. https://github.com/leecade/react-native-swiper#methods
-   */
-  getSwiperScrollBy = (...props) => this.swiper.scrollBy(...props);
+  // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
+  handleOnPressPrimary = () => this.swiper.scrollBy(1);
 
   render() {
     return (
@@ -70,10 +68,7 @@ class Onboarding extends Component {
           showsButtons={false}
           swiperRef={this.setSwiperRef}
         >
-          <AskName
-            onboardingScrollBy={this.getSwiperScrollBy}
-            onboardingSkipTo={2}
-          />
+          <AskName onPressPrimary={this.handleOnPressPrimary} />
           <Boom bgcolor={'salmon'}>
             <Text>Hello World 1</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>

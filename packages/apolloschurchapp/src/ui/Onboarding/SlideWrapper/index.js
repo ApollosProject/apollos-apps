@@ -38,8 +38,8 @@ const SkipButton = styled(({ theme }) => ({
 const SlideWrapper = memo(
   ({
     children,
-    onboardingScrollBy,
-    onboardingSkipTo,
+    onPressPrimary,
+    onPressSecondary,
     primaryNavText,
     primaryNavIcon,
     hidePrimaryNav,
@@ -49,23 +49,18 @@ const SlideWrapper = memo(
       <FlexedView>
         <PaddedView>{children}</PaddedView>
       </FlexedView>
-      {onboardingScrollBy ? (
+      {onPressPrimary ? (
         <NavWrapper vertical={false}>
           {!hidePrimaryNav ? (
-            <Button onPress={() => onboardingScrollBy(1)}>
-              <H5>{primaryNavText}</H5>
-              <PrimaryNavIcon name={primaryNavIcon} />
+            <Button onPress={onPressPrimary}>
+              <>
+                <H5>{primaryNavText}</H5>
+                <PrimaryNavIcon name={primaryNavIcon} />
+              </>
             </Button>
           ) : null}
-          {onboardingSkipTo ? (
-            <SkipButton
-              onPress={() =>
-                onboardingScrollBy(
-                  onboardingSkipTo,
-                  false // don't animate the skip transition
-                )
-              }
-            >
+          {onPressSecondary ? (
+            <SkipButton onPress={onPressSecondary}>
               {secondaryNavText}
             </SkipButton>
           ) : null}
@@ -80,8 +75,8 @@ SlideWrapper.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  onboardingScrollBy: PropTypes.func, // based by ref from react-native-swiper
-  onboardingSkipTo: PropTypes.number, // shows a skip button and sets how far ahead to skip
+  onPressPrimary: PropTypes.func,
+  onPressSecondary: PropTypes.func,
   primaryNavText: PropTypes.string, // colored button text
   primaryNavIcon: PropTypes.string, // optional custom icon name
   hidePrimaryNav: PropTypes.bool, // optionally only show the secondary nav text
