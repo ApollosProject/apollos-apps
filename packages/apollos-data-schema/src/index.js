@@ -446,6 +446,14 @@ export const campusSchema = gql`
     latitude: Float!
     longitude: Float!
   }
+
+  extend type Person {
+    campus: Campus
+  }
+
+  extend type Mutation {
+    updateUserCampus(campusId: String!): Person
+  }
 `;
 
 export const followingsSchema = gql`
