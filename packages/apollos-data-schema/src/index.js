@@ -395,12 +395,6 @@ export const contentSharableSchema = gql`
 `)}
 `;
 
-export const familySchema = gql`
-  extend type Person {
-    location: String
-  }
-`;
-
 export const liveSchema = gql`
   type LiveStream {
     isLive: Boolean
