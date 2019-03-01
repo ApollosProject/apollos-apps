@@ -19,13 +19,13 @@ import getLoginState from './getLoginState';
 
 const AuthContext = React.createContext(() => {});
 
-const getAuthToken = gql`
+export const getAuthToken = gql`
   query authToken {
     authToken @client
   }
 `;
 
-const resolvers = {
+export const resolvers = {
   Query: {
     isLoggedIn: (_root, _args, { cache }) => {
       // When logging out, this query returns an error.
