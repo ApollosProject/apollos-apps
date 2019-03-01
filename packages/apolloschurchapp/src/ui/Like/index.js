@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { Icon, withTheme } from '@apollosproject/ui-kit';
 import { ProtectedTouchable } from '@apollosproject/ui-auth';
 
+import { withNavigation } from 'react-navigation';
+
 const LikeIcon = withTheme(
   ({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({
     name: isLiked ? 'like-solid' : 'like',
@@ -15,14 +17,17 @@ LikeIcon.propTypes = {
   isLiked: PropTypes.bool,
 };
 
-const Like = ({ isLiked, toggleLike, itemId }) => (
-  <ProtectedTouchable
-    onPress={() =>
-      toggleLike({ itemId, operation: isLiked ? 'Unlike' : 'Like' })
-    }
-  >
-    <LikeIcon isLiked={isLiked} />
-  </ProtectedTouchable>
+const Like = withNavigation(
+  ({ isLiked, toggleLike, itemId, navigation }) =>
+    console.log('Like', { navigation }) || (
+      <ProtectedTouchable
+        onPress={() =>
+          toggleLike({ itemId, operation: isLiked ? 'Unlike' : 'Like' })
+        }
+      >
+        <LikeIcon isLiked={isLiked} />
+      </ProtectedTouchable>
+    )
 );
 
 Like.propTypes = {

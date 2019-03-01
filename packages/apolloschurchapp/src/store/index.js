@@ -1,7 +1,7 @@
 import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import { track, events } from 'apolloschurchapp/src/analytics';
-import { client, CACHE_LOADED } from "../client"; // eslint-disable-line
+import { CACHE_LOADED } from '../client'; // eslint-disable-line
 import updatePushId from '../notifications/updatePushId';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
@@ -72,6 +72,12 @@ export const defaults = {
 };
 
 let trackId = 0;
+
+const getIsLoggedIn = gql`
+  query {
+    isLoggedIn @client
+  }
+`;
 
 export const resolvers = {
   Query: {},
@@ -197,7 +203,7 @@ export const resolvers = {
       });
       return null;
     },
-    updateDevicePushId: (root, { pushId }, { cache }) => {
+    updateDevicePushId: async (root, { pushId }, { cache, client }) => {
       const query = gql`
         query {
           pushId @client
@@ -210,21 +216,27 @@ export const resolvers = {
         },
       });
 
-      const isLoggedIn = resolvers.Query.isLoggedIn();
+      const { data: { isLoggedIn } = {} } = await client.query({
+        query: getIsLoggedIn,
+      });
+
       if (isLoggedIn) {
         updatePushId({ pushId });
       }
       return null;
     },
 
-    cacheMarkLoaded: (root, args, { cache }) => {
+    cacheMarkLoaded: async (root, args, { cache, client }) => {
       cache.writeQuery({
         query: CACHE_LOADED,
         data: {
           cacheLoaded: true,
         },
       });
-      const isLoggedIn = resolvers.Query.isLoggedIn();
+      const { data: { isLoggedIn } = {} } = await client.query({
+        query: getIsLoggedIn,
+      });
+
       const { pushId } = cache.readQuery({
         query: gql`
           query {

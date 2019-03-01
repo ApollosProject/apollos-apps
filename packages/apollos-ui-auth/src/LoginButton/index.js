@@ -1,40 +1,30 @@
-import React, { PureComponent } from 'react';
-import { withNavigation } from 'react-navigation';
+import React from 'react';
 import { Query } from 'react-apollo';
-import PropTypes from 'prop-types';
 
 import { Button } from '@apollosproject/ui-kit';
 
 import getLoginState from '../getLoginState';
+import { TriggerAuthConsumer } from '../Provider';
 
-class LoginButton extends PureComponent {
-  static propTypes = {
-    navigation: PropTypes.shape({
-      push: PropTypes.func,
-    }),
-  };
-
-  handleLoginPress = () => this.props.navigation.push('Auth');
-
-  render() {
-    const { navigation, ...otherProps } = this.props;
-    return (
-      <Query query={getLoginState}>
-        {({ data }) => {
-          const { isLoggedIn, loading } = data;
-          if (isLoggedIn) return null;
-          return (
+const LoginButton = (props) => (
+  <Query query={getLoginState}>
+    {({ data }) => {
+      const { isLoggedIn, loading } = data;
+      if (isLoggedIn) return null;
+      return (
+        <TriggerAuthConsumer>
+          {(triggerLogin) => (
             <Button
-              onPress={this.handleLoginPress}
+              onPress={triggerLogin}
               title="Get Connected"
               loading={loading}
-              {...otherProps}
+              {...props}
             />
-          );
-        }}
-      </Query>
-    );
-  }
-}
+          )}
+        </TriggerAuthConsumer>
+      );
+    }}
+  </Query>
+);
 
-export default withNavigation(LoginButton);
+export default LoginButton;

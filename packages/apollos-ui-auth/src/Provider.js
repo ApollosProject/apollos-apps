@@ -17,6 +17,8 @@ import getLoginState from './getLoginState';
 // }
 // `;
 
+const AuthContext = React.createContext(() => {});
+
 const getAuthToken = gql`
   query authToken {
     authToken @client
@@ -78,16 +80,26 @@ const resolvers = {
   },
 };
 
-const Provider = ({ children }) => (
-  <ApolloConsumer>
-    {(client) => {
-      client.addResolvers(resolvers);
-      console.log({ client });
-      return children;
-    }}
-  </ApolloConsumer>
+const Provider = ({ children, onTriggerAuth }) => (
+  <AuthContext.Provider value={onTriggerAuth}>
+    <ApolloConsumer>
+      {(client) => {
+        client.addResolvers(resolvers);
+        return children;
+      }}
+    </ApolloConsumer>
+  </AuthContext.Provider>
 );
 
 Provider.propTypes = {
   children: PropTypes.node,
+  onTriggerAuth: PropTypes.func,
 };
+
+Provider.defaultProps = {
+  onTriggerAuth: () => {},
+};
+
+export const TriggerAuthConsumer = AuthContext.Consumer;
+
+export default Provider;

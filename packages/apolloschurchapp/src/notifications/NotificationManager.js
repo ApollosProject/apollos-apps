@@ -1,13 +1,14 @@
 import querystring from 'querystring';
 import URL from 'url';
 import gql from 'graphql-tag';
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { Linking } from 'react-native';
+import { withApollo } from 'react-apollo';
 import OneSignal from 'react-native-onesignal';
 import { get } from 'lodash';
 import Config from 'react-native-config';
 import NavigationService from '../NavigationService';
-import { client } from '../client';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -15,8 +16,14 @@ const UPDATE_DEVICE_PUSH_ID = gql`
   }
 `;
 
-export default class NotificationsInit extends Component {
+class NotificationsInit extends Component {
   static navigationOptions = {};
+
+  static propTypes = {
+    client: PropTypes.shape({
+      mutate: PropTypes.func,
+    }),
+  };
 
   componentDidMount() {
     OneSignal.init(Config.ONE_SIGNAL_KEY, {
@@ -67,7 +74,7 @@ export default class NotificationsInit extends Component {
   };
 
   onIds = (device) => {
-    client.mutate({
+    this.props.client.mutate({
       mutation: UPDATE_DEVICE_PUSH_ID,
       variables: { pushId: device.userId },
     });
@@ -77,3 +84,5 @@ export default class NotificationsInit extends Component {
     return null;
   }
 }
+
+export default withApollo(NotificationsInit);

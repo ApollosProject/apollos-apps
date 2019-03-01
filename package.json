@@ -11,11 +11,7 @@
       "**/react-native-*",
       "**/react-native-*/**",
       "**/rn-*",
-      "**/rn-*/**",
-      "**/react-navigation",
-      "**/react-navigation/**",
-      "**/react-navigation-*",
-      "**/react-navigation-*/**"
+      "**/rn-*/**"
     ]
   },
   "scripts": {
