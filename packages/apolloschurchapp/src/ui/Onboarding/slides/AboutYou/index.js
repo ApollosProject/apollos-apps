@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import Image from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, H2, H5 } from '@apollosproject/ui-kit';
+import { styled, H2, H5, RadioButton, DateInput } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
@@ -16,23 +16,22 @@ const StyledH5 = styled(({ theme }) => ({
 
 const CoverImage = styled(() => ({
   width: '80%',
-  height: '60%',
+  height: '40%',
   marginTop: '30px',
 }))(Image);
 
-const Features = memo(({ slideTitle, description, ...props }) => {
-  // TODO: make name smart
-  const titleWithName = `${slideTitle} Michael!`;
-  return (
-    <Slide {...props}>
-      <CoverImage source={require('./mountain.jpeg')} />
-      <Title>{titleWithName}</Title>
-      <StyledH5>{description}</StyledH5>
-    </Slide>
-  );
-});
+const AboutYou = memo(({ slideTitle, description, ...props }) => (
+  <Slide {...props}>
+    <CoverImage source={require('./mountain.jpeg')} />
+    <Title>{slideTitle}</Title>
+    <StyledH5>{description}</StyledH5>
+    <RadioButton label="Gender">Male</RadioButton>
+    <RadioButton label="Gender">Female</RadioButton>
+    <DateInput label="Birthday" type="date" />
+  </Slide>
+));
 
-Features.propTypes = {
+AboutYou.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
    */
@@ -40,10 +39,10 @@ Features.propTypes = {
   description: PropTypes.string,
 };
 
-Features.defaultProps = {
-  slideTitle: 'Hey',
+AboutYou.defaultProps = {
+  slideTitle: "This one's easy.",
   description:
-    "We'd like to help personalize your mobile experience so we can help you with every step on your journey.",
+    'Help us understand who you are so we can connect you with the best ministries and events.',
 };
 
-export default Features;
+export default AboutYou;
