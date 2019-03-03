@@ -27,7 +27,7 @@ const CoverImage = styled(() => ({
 
 const Launch = memo(({ slideTitle, description, ...props }) => (
   <Slide {...props}>
-    <CoverImage source={{ uri: './launch.png' }} />
+    <CoverImage source={require('./launch.png')} />
     <BrandIcon />
     <Title>{slideTitle}</Title>
     <StyledH5>{description}</StyledH5>
