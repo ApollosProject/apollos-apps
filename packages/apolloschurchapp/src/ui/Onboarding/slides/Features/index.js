@@ -20,13 +20,17 @@ const CoverImage = styled(() => ({
   marginTop: '30px',
 }))(Image);
 
-const Features = memo(({ slideTitle, description, ...props }) => (
-  <Slide {...props}>
-    <CoverImage source={require('./mountain.jpeg')} />
-    <Title>{slideTitle}</Title>
-    <StyledH5>{description}</StyledH5>
-  </Slide>
-));
+const Features = memo(({ slideTitle, description, ...props }) => {
+  // TODO: make name smart
+  const titleWithName = `${slideTitle} Michael!`;
+  return (
+    <Slide {...props}>
+      <CoverImage source={require('./mountain.jpeg')} />
+      <Title>{titleWithName}</Title>
+      <StyledH5>{description}</StyledH5>
+    </Slide>
+  );
+});
 
 Features.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
@@ -37,9 +41,9 @@ Features.propTypes = {
 };
 
 Features.defaultProps = {
-  slideTitle: "We're glad you're here.",
+  slideTitle: 'Hey',
   description:
-    "We're not just a building you go to, but a family to belong to.",
+    "We'd like to help personalize your mobile experience so we can help you with every step on your journey.",
 };
 
 export default Features;
