@@ -3,13 +3,13 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import Launch from '.';
+import Features from '.';
 
 describe('The Onboarding SlideWrapper component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <Launch />
+        <Features />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>
-        <Launch slideTitle={'Custom title text'} />
+        <Features slideTitle={'Custom title text'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should render a custom description', () => {
     const tree = renderer.create(
       <Providers>
-        <Launch description={'Custom description text'} />
+        <Features description={'Custom description text'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -33,7 +33,7 @@ describe('The Onboarding SlideWrapper component', () => {
   it('should pass additional props to SlideWrapper', () => {
     const tree = renderer.create(
       <Providers>
-        <Launch onPressPrimary={jest.fn()} />
+        <Features onPressPrimary={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

@@ -2,16 +2,9 @@ import React, { memo } from 'react';
 import Image from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, withTheme, Icon, H2, H5 } from '@apollosproject/ui-kit';
+import { styled, H2, H5 } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
-
-const BrandIcon = withTheme(({ theme }) => ({
-  name: 'brand-icon',
-  size: theme.sizing.baseUnit * 3.0,
-  fill: theme.colors.primary,
-  style: { marginBottom: theme.sizing.baseUnit * 0.5 },
-}))(Icon);
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -22,19 +15,20 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 const CoverImage = styled(() => ({
-  resizeMode: 'cover',
+  width: '80%',
+  height: '60%',
+  marginTop: '30px',
 }))(Image);
 
-const Launch = memo(({ slideTitle, description, ...props }) => (
+const Features = memo(({ slideTitle, description, ...props }) => (
   <Slide {...props}>
-    <CoverImage source={require('./launch.png')} />
-    <BrandIcon />
+    <CoverImage source={require('./mountain.jpeg')} />
     <Title>{slideTitle}</Title>
     <StyledH5>{description}</StyledH5>
   </Slide>
 ));
 
-Launch.propTypes = {
+Features.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
    */
@@ -42,10 +36,10 @@ Launch.propTypes = {
   description: PropTypes.string,
 };
 
-Launch.defaultProps = {
+Features.defaultProps = {
   slideTitle: "We're glad you're here.",
   description:
     "We're not just a building you go to, but a family to belong to.",
 };
 
-export default Launch;
+export default Features;
