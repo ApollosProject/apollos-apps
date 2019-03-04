@@ -10,6 +10,12 @@ const RockGenderMap = {
   Female: 2,
 };
 
+const RockGenderMap = {
+  Unknown: 0,
+  Male: 1,
+  Female: 2,
+};
+
 export default class Person extends RockApolloDataSource {
   resource = 'People';
 
