@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
-import Image from 'react-native';
+import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, H2, H5, RadioButton, DateInput } from '@apollosproject/ui-kit';
+import { styled, H2, H5, Radio, DateInput } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
@@ -14,10 +14,12 @@ const StyledH5 = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
 }))(H5);
 
-const CoverImage = styled(() => ({
-  width: '80%',
-  height: '40%',
-  marginTop: '30px',
+const CoverImage = styled(({ theme }) => ({
+  height: '55%',
+  width: '100%',
+  marginBottom: theme.sizing.baseUnit * 2,
+  marginVertical: theme.sizing.baseUnit * 0.5,
+  alignSelf: 'center',
 }))(Image);
 
 const AboutYou = memo(({ slideTitle, description, ...props }) => (
@@ -25,9 +27,8 @@ const AboutYou = memo(({ slideTitle, description, ...props }) => (
     <CoverImage source={require('./mountain.jpeg')} />
     <Title>{slideTitle}</Title>
     <StyledH5>{description}</StyledH5>
-    <RadioButton label="Gender">Male</RadioButton>
-    <RadioButton label="Gender">Female</RadioButton>
-    <DateInput label="Birthday" type="date" />
+    {/* TODO: getting some warning with this DateInput */}
+    <DateInput label="Birthday" placeholder={'mm/dd/yyyy'} />
   </Slide>
 ));
 
