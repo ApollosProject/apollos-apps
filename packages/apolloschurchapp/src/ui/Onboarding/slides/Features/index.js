@@ -14,15 +14,13 @@ const StyledH5 = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
 }))(H5);
 
-const CoverImage = styled(() => ({
+const CoverImage = styled(({ theme }) => ({
   height: '75%',
-  marginBottom: 30,
-  borderWidth: 1,
-  borderColor: 'grey',
+  marginBottom: theme.sizing.baseUnit * 2,
+  marginVertical: theme.sizing.baseUnit,
 }))(Image);
 
-const Features = memo(({ firstName = 'friend', description, ...props }) => {
-  // TODO: make name smart
+const Features = memo(({ firstName, description, ...props }) => {
   const titleWithName = `Hey ${firstName}!`;
   return (
     <Slide {...props}>
@@ -37,12 +35,12 @@ Features.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
    */
-  slideTitle: PropTypes.string,
+  firstName: PropTypes.string,
   description: PropTypes.string,
 };
 
 Features.defaultProps = {
-  slideTitle: 'Hey',
+  firstName: 'friend',
   description:
     "We'd like to help personalize your mobile experience so we can help you with every step on your journey.",
 };
