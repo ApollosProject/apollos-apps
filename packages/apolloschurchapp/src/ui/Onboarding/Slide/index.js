@@ -45,9 +45,7 @@ const Slide = memo(
     secondaryNavText,
   }) => (
     <>
-      <FlexedView>
-        <PaddedView>{children}</PaddedView>
-      </FlexedView>
+      <FlexedView>{children}</FlexedView>
       {onPressPrimary || onPressSecondary ? (
         <NavWrapper vertical={false}>
           {onPressPrimary ? (

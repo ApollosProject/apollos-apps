@@ -39,18 +39,9 @@ exports[`The Onboarding Slide component should render both slide navigation butt
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
     <View
       style={
@@ -247,18 +238,9 @@ exports[`The Onboarding Slide component should render children 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -303,18 +285,9 @@ exports[`The Onboarding Slide component should render onboarding next button nav
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
     <View
       style={
@@ -498,18 +471,9 @@ exports[`The Onboarding Slide component should render onboarding skip button nav
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
     <View
       style={
@@ -581,18 +545,9 @@ exports[`The Onboarding Slide component should render onboarding skip button wit
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
     <View
       style={
@@ -664,18 +619,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
     <View
       style={
@@ -859,18 +805,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text>
-          Boom
-        </Text>
-      </View>
+      <Text>
+        Boom
+      </Text>
     </View>
     <View
       style={
