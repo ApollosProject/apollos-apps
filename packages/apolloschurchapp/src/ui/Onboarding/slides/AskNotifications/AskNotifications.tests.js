@@ -30,6 +30,14 @@ describe('The Onboarding AskNotifications component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render custom button text', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskNotifications buttonText={'Custom button text'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should pass additional props to Slide component', () => {
     const tree = renderer.create(
       <Providers>
