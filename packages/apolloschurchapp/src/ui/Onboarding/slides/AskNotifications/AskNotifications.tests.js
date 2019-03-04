@@ -14,4 +14,12 @@ describe('The Onboarding SlideWrapper component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a custom title', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskNotifications slideTitle={'Custom title text'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
