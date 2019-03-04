@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableWithoutFeedback } from 'react-native';
 import { compose, pure } from 'recompose';
 
 import {
@@ -47,6 +46,10 @@ const campusImage = {
   resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
 };
 
+const PositionedCard = styled({
+  position: 'relative',
+})(Card);
+
 const CampusCard = enhance(
   ({
     title,
@@ -56,34 +59,31 @@ const CampusCard = enhance(
     thumbnailImage,
     category,
     isLoading,
-    onPressItem,
     ...otherProps
   }) => (
-    <TouchableWithoutFeedback onPress={() => onPressItem()}>
-      <Card isLoading={isLoading} inHorizontalList {...otherProps}>
-        <HorizontalLayout>
-          {images ? (
-            <LeftColumn>
-              <ProgressiveImage source={images} imageStyle={campusImage} />
-            </LeftColumn>
+    <PositionedCard isLoading={isLoading} inHorizontalList {...otherProps}>
+      <HorizontalLayout>
+        {images ? (
+          <LeftColumn>
+            <ProgressiveImage source={images} imageStyle={campusImage} />
+          </LeftColumn>
+        ) : null}
+        <RightColumn>
+          <HorizontalTextLayout>
+            <H5>{title}</H5>
+            <H6>
+              {distance}
+              mi
+            </H6>
+          </HorizontalTextLayout>
+          {description ? (
+            <Paragraph>
+              <BodyText>{description}</BodyText>
+            </Paragraph>
           ) : null}
-          <RightColumn>
-            <HorizontalTextLayout>
-              <H5>{title}</H5>
-              <H6>
-                {distance}
-                mi
-              </H6>
-            </HorizontalTextLayout>
-            {description ? (
-              <Paragraph>
-                <BodyText>{description}</BodyText>
-              </Paragraph>
-            ) : null}
-          </RightColumn>
-        </HorizontalLayout>
-      </Card>
-    </TouchableWithoutFeedback>
+        </RightColumn>
+      </HorizontalLayout>
+    </PositionedCard>
   )
 );
 

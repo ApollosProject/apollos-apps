@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Dimensions, StyleSheet, View, Animated } from 'react-native';
+import { Dimensions, View, Animated } from 'react-native';
 import PropTypes from 'prop-types';
 import MapView, { Marker } from 'react-native-maps';
 import Color from 'color';
@@ -45,30 +45,33 @@ const MarkerView = styled(({ theme }) => ({
   backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
 }))(View);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  markerWrap: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  marker: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: 'rgba(107,172,67, 0.9)',
-  },
-  ring: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    backgroundColor: 'rgba(107,172,67, 0.3)',
-    position: 'absolute',
-    borderWidth: 1,
-    borderColor: 'rgba(107,172,67, 0.5)',
-  },
-});
+const MarkerWrapView = styled({
+  alignItems: 'center',
+  justifyContent: 'center',
+})(View);
+
+// This is not good. Is there a better way to prevent cascading styles?
+
+const MarkerRingView = styled(({ theme }) => ({
+  width: 24,
+  height: 24,
+  borderRadius: 12,
+  right: -8,
+  top: -8,
+  backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low),
+  position: 'absolute',
+  borderWidth: 1,
+  borderColor: Color(theme.colors.primary).fade(theme.alpha.medium),
+  alignItems: 'stretch',
+}))(View);
+
+const getCurrentLocation = () =>
+  new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve(position),
+      (e) => reject(e)
+    );
+  });
 
 class Location extends PureComponent {
   static propTypes = {
@@ -82,7 +85,7 @@ class Location extends PureComponent {
       latitude: PropTypes.number,
       longitude: PropTypes.number,
       latitudeDelta: PropTypes.number,
-      longitutdeDelta: PropTypes.number,
+      longitudeDelta: PropTypes.number,
     }),
     campuses: PropTypes.shape({
       name: PropTypes.string,
@@ -107,7 +110,7 @@ class Location extends PureComponent {
     this.state = {
       markers: [
         {
-          title: 'Aiken',
+          name: 'Aiken',
           coordinate: {
             latitude: 33.5664789,
             longitude: -81.7465594,
@@ -121,7 +124,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Anderson',
+          name: 'Anderson',
           coordinate: {
             latitude: 34.595434,
             longitude: -82.6244131,
@@ -134,7 +137,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Charleston',
+          name: 'Charleston',
           coordinate: {
             latitude: 32.914992,
             longitude: -80.1035458,
@@ -147,7 +150,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Clemson',
+          name: 'Clemson',
           coordinate: {
             latitude: 34.68901,
             longitude: -82.8589537,
@@ -160,7 +163,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Columbia',
+          name: 'Columbia',
           coordinate: {
             latitude: 34.030309,
             longitude: -81.098607,
@@ -173,7 +176,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Florence',
+          name: 'Florence',
           coordinate: {
             latitude: 34.2121752,
             longitude: -79.7992434,
@@ -186,7 +189,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Greenville',
+          name: 'Greenville',
           coordinate: {
             latitude: 34.852042,
             longitude: -82.3567597,
@@ -199,7 +202,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Greenwood',
+          name: 'Greenwood',
           coordinate: {
             latitude: 34.2140468,
             longitude: -82.1496785,
@@ -212,7 +215,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Hilton Head',
+          name: 'Hilton Head',
           coordinate: {
             latitude: 32.2722634,
             longitude: -80.9448838,
@@ -225,7 +228,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Myrtle Beach',
+          name: 'Myrtle Beach',
           coordinate: {
             latitude: 33.7159127,
             longitude: -78.9272232,
@@ -238,7 +241,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Northeast Columbia',
+          name: 'Northeast Columbia',
           coordinate: {
             latitude: 34.1109545,
             longitude: -80.883067,
@@ -251,7 +254,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Powdersville',
+          name: 'Powdersville',
           coordinate: {
             latitude: 34.7877695,
             longitude: -82.4856855,
@@ -264,7 +267,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Rock Hill',
+          name: 'Rock Hill',
           coordinate: {
             latitude: 34.950421,
             longitude: -81.0898858,
@@ -277,7 +280,7 @@ class Location extends PureComponent {
           description: 'This is a NewSpring Campus',
         },
         {
-          title: 'Spartanburg',
+          name: 'Spartanburg',
           coordinate: {
             latitude: 34.9331235,
             longitude: -81.9966683,
@@ -300,31 +303,30 @@ class Location extends PureComponent {
   }
 
   componentDidMount() {
-    // We should detect when scrolling has stopped then animate
-
-    this.animation.addListener(debounce(this.updateCoordinates));
+    return getCurrentLocation().then((position) => {
+      if (position) {
+        this.setState({
+          region: {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            latitudeDelta: 4,
+            longitudeDelta: 0.4,
+          },
+        });
+      }
+      this.map.animateToRegion({
+        latitude: this.state.region.latitude,
+        longitude: this.state.region.longitude,
+        latitudeDelta: this.state.region.latitudeDelta,
+        longitudeDelta: this.state.region.longitudeDelta,
+      });
+      this.animation.addListener(debounce(this.updateCoordinates));
+    });
   }
 
-  // Look into all this index logic and figure out why there's possibly a negative index.
-  // This might have to do with the scroolview index and how that's calculated.
-  // Figure out how value gets passed in. Animation event listeners. how to normalize value.
-
-  updateIndex = ({ value }) => {
-    let index = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item
-    if (index >= this.state.markers.length) {
-      index = this.state.markers.length - 1;
-    }
-    if (index <= 0) {
-      index = 0;
-    }
-    if (this.index !== index) {
-      this.index = index;
-      this.updateCoordinates();
-    }
-  };
-
-  updateCoordinates() {
-    const { coordinate } = this.state.markers[this.index];
+  updateCoordinates = ({ value }) => {
+    const cardIndex = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item
+    const { coordinate } = this.state.markers[cardIndex];
     this.map.animateToRegion(
       {
         ...coordinate,
@@ -333,7 +335,7 @@ class Location extends PureComponent {
       },
       350
     );
-  }
+  };
 
   render() {
     const interpolations = this.state.markers.map((marker, index) => {
@@ -356,12 +358,14 @@ class Location extends PureComponent {
     });
     return (
       <ContainerView>
+        {/* I've been unable to figure out why the MapView component does not render correctly
+          when it is a styled component, so there is an inline style for now. */}
         <MapView
           ref={(map) => {
             this.map = map;
             return this.map;
           }}
-          style={styles.container}
+          style={{ flex: 1 }}
           initialRegion={this.state.region}
           showsUserLocation
         >
@@ -377,11 +381,15 @@ class Location extends PureComponent {
               opacity: interpolations[index].opacity,
             };
             return (
-              <Marker key={index} coordinate={marker.coordinate}>
-                <Animated.View style={[styles.markerWrap, opacityStyle]}>
-                  <Animated.View style={[styles.ring, scaleStyle]} />
-                  <MarkerView />
-                </Animated.View>
+              <Marker key={marker.id} coordinate={marker.coordinate}>
+                <MarkerWrapView>
+                  <Animated.View style={opacityStyle}>
+                    <MarkerRingView>
+                      <Animated.View style={scaleStyle} />
+                    </MarkerRingView>
+                    <MarkerView />
+                  </Animated.View>
+                </MarkerWrapView>
               </Marker>
             );
           })}
@@ -390,7 +398,6 @@ class Location extends PureComponent {
           <Animated.ScrollView
             horizontal
             scrollEventThrottle={1}
-            showsHorizontalScrollIndicator={false}
             snapToInterval={CARD_WIDTH}
             onScroll={Animated.event(
               [
@@ -407,14 +414,13 @@ class Location extends PureComponent {
             contentContainerStyle={endPadding}
           >
             {this.state.markers.map((marker) => (
-              <ContainerView>
+              <ContainerView key={marker.id}>
                 <CampusCard
                   key={marker.id}
                   distance={marker.distance}
-                  title={marker.title}
+                  title={marker.name}
                   description={marker.description}
                   images={[marker.image]}
-                  style={{ position: 'relative' }}
                 />
               </ContainerView>
             ))}
