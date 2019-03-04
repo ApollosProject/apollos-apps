@@ -55,9 +55,10 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
           }
           style={
             Object {
-              "height": "200%",
+              "height": 1354,
               "marginTop": -50,
               "position": "absolute",
+              "width": 770,
             }
           }
         />
@@ -362,9 +363,10 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
           }
           style={
             Object {
-              "height": "200%",
+              "height": 1354,
               "marginTop": -50,
               "position": "absolute",
+              "width": 770,
             }
           }
         />
@@ -530,9 +532,10 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
           }
           style={
             Object {
-              "height": "200%",
+              "height": 1354,
               "marginTop": -50,
               "position": "absolute",
+              "width": 770,
             }
           }
         />
@@ -698,9 +701,10 @@ exports[`The Onboarding SlideWrapper component should render a custom title 1`] 
           }
           style={
             Object {
-              "height": "200%",
+              "height": 1354,
               "marginTop": -50,
               "position": "absolute",
+              "width": 770,
             }
           }
         />
