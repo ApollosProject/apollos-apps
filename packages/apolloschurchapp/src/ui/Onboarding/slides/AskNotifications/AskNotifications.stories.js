@@ -5,6 +5,9 @@ import AskNotifications from '.';
 
 storiesOf('Onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
+  .add('imageSource', () => (
+    <AskNotifications imageSource={'https://picsum.photos/640/640/?random'} />
+  ))
   .add('slideTitle', () => (
     <AskNotifications slideTitle={'Custom title text'} />
   ))

@@ -31,22 +31,27 @@ const StyledH5 = styled(({ theme }) => ({
 
 // memo = sfc PureComponent 💥
 const AskNotifications = memo(
-  ({ slideTitle, description, buttonText, buttonOnPress, ...props }) => (
+  ({
+    imageSource,
+    slideTitle,
+    description,
+    buttonText,
+    buttonOnPress,
+    ...props
+  }) => (
     <Slide {...props}>
       <ContentWrapper vertical={false}>
-        <ProgressiveImage
-          source={{
-            uri: 'https://picsum.photos/640/640/?random',
-            height: 320,
-            width: 320,
-          }}
-          // thumbnail={{
-          //   uri: 'https://picsum.photos/50/50/?random',
-          //   width: 50,
-          //   height: 50,
-          // }}
-          imageStyle={{ width: 320, height: 320 }}
-        />
+        {imageSource ? (
+          <ProgressiveImage
+            source={imageSource}
+            // thumbnail={{
+            //   uri: 'https://picsum.photos/50/50/?random',
+            //   width: 50,
+            //   height: 50,
+            // }}
+            imageStyle={{ width: 320, height: 320 }}
+          />
+        ) : null}
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
@@ -61,6 +66,7 @@ AskNotifications.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use a more unique name.
    */
+  imageSource: ProgressiveImage.propTypes,
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   buttonText: PropTypes.string,

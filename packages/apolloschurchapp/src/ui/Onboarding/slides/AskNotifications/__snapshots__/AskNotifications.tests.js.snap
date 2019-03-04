@@ -52,37 +52,6 @@ exports[`The Onboarding AskNotifications component should pass additional props 
         <View
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 320,
-                  "uri": "https://picsum.photos/640/640/?random",
-                  "width": 320,
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "height": 320,
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": 320,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
               "flex": 1,
               "justifyContent": "flex-end",
             }
@@ -233,37 +202,6 @@ exports[`The Onboarding AskNotifications component should render 1`] = `
         <View
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 320,
-                  "uri": "https://picsum.photos/640/640/?random",
-                  "width": 320,
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "height": 320,
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": 320,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
               "flex": 1,
               "justifyContent": "flex-end",
             }
@@ -384,37 +322,6 @@ exports[`The Onboarding AskNotifications component should render a custom descri
         }
         vertical={false}
       >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 320,
-                  "uri": "https://picsum.photos/640/640/?random",
-                  "width": 320,
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "height": 320,
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": 320,
-              }
-            }
-          />
-        </View>
         <View
           style={
             Object {
@@ -541,37 +448,6 @@ exports[`The Onboarding AskNotifications component should render a custom title 
         <View
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 320,
-                  "uri": "https://picsum.photos/640/640/?random",
-                  "width": 320,
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "height": 320,
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": 320,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
               "flex": 1,
               "justifyContent": "flex-end",
             }
@@ -692,37 +568,6 @@ exports[`The Onboarding AskNotifications component should render custom button t
         }
         vertical={false}
       >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "width": "100%",
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 320,
-                  "uri": "https://picsum.photos/640/640/?random",
-                  "width": 320,
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "height": 320,
-                "opacity": 1,
-                "resizeMode": "cover",
-                "width": 320,
-              }
-            }
-          />
-        </View>
         <View
           style={
             Object {

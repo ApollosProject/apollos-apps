@@ -14,6 +14,12 @@ describe('The Onboarding AskNotifications component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with an image', () => {
+    const tree = renderer.create(
+      <AskNotifications imageSource={'https://picsum.photos/640/640/?random'} />
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>
