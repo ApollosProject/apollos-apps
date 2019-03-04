@@ -28,9 +28,4 @@ export default {
     Male: 1,
     Female: 2,
   },
-  GENDER: {
-    Unknown: 0,
-    Male: 1,
-    Female: 2,
-  },
 };
