@@ -111,191 +111,6 @@ class Location extends PureComponent {
     this.index = 0;
     this.animation = new Animated.Value(0);
     this.state = {
-      markers: [
-        {
-          name: 'Aiken',
-          coordinate: {
-            latitude: 33.5664789,
-            longitude: -81.7465594,
-          },
-          distance: 12,
-          id: 0,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/aiken/NSC23471.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Anderson',
-          coordinate: {
-            latitude: 34.595434,
-            longitude: -82.6244131,
-          },
-          id: 1,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/Anderson.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Charleston',
-          coordinate: {
-            latitude: 32.914992,
-            longitude: -80.1035458,
-          },
-          id: 2,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/locations_chs.2x1.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Clemson',
-          coordinate: {
-            latitude: 34.68901,
-            longitude: -82.8589537,
-          },
-          id: 3,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/clemson/CLE_22x1_-100.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Columbia',
-          coordinate: {
-            latitude: 34.030309,
-            longitude: -81.098607,
-          },
-          id: 4,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/columbia/2x1lexcola.png',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Florence',
-          coordinate: {
-            latitude: 34.2121752,
-            longitude: -79.7992434,
-          },
-          id: 5,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/florence/FLO2x1_-100.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Greenville',
-          coordinate: {
-            latitude: 34.852042,
-            longitude: -82.3567597,
-          },
-          id: 6,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/Greenville2x1.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Greenwood',
-          coordinate: {
-            latitude: 34.2140468,
-            longitude: -82.1496785,
-          },
-          id: 7,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/Greenwood2x1.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Hilton Head',
-          coordinate: {
-            latitude: 32.2722634,
-            longitude: -80.9448838,
-          },
-          id: 8,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/HHdoors.jpeg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Myrtle Beach',
-          coordinate: {
-            latitude: 33.7159127,
-            longitude: -78.9272232,
-          },
-          id: 9,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/locations_myr.2x1.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Northeast Columbia',
-          coordinate: {
-            latitude: 34.1109545,
-            longitude: -80.883067,
-          },
-          id: 10,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/columbia/hero.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Powdersville',
-          coordinate: {
-            latitude: 34.7877695,
-            longitude: -82.4856855,
-          },
-          id: 11,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/pow_launch_8.7.16_web-2.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Rock Hill',
-          coordinate: {
-            latitude: 34.950421,
-            longitude: -81.0898858,
-          },
-          id: 12,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/rock_hill/RKH_22x1_-100.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-        {
-          name: 'Spartanburg',
-          coordinate: {
-            latitude: 34.9331235,
-            longitude: -81.9966683,
-          },
-          id: 13,
-          image: {
-            uri:
-              'https://s3.amazonaws.com/ns.images/all/heroes/newspring/campuses/campus.spartanburg.2x1.jpg',
-          },
-          description: 'This is a NewSpring Campus',
-        },
-      ],
       region: {
         latitude: 34.00115,
         longitude: -81.032393,
@@ -359,23 +174,23 @@ class Location extends PureComponent {
       });
       return { scale, opacity };
     });
-    const { latitude, longitude } = this.props;
     return (
       <ContainerView>
-        {/* I've been unable to figure out why the MapView component does not render correctly
-          when it is a styled component, so there is an inline style for now. */}
+        {console.log('Before the Query', this.props)};
         <Query
           query={getAllCampuses}
-          variables={{ latitude, longitude }}
+          variables={{
+            latitude: this.state.region.latitude,
+            longitude: this.state.region.longitude,
+          }}
           fetchPolicy="cache-and-network"
         >
           {({ loading, error, data, refetch }) => {
-            const campusCoordinates = get(data, {
-              latitude: 'campuses.latitude',
-              longitude: 'campuses.longitude',
-            });
+            console.log('This is after the Query', data);
             return (
               <ContainerView>
+                {/* I've been unable to figure out why the MapView component does not render correctly
+                    when it is a styled component, so there is an inline style for now. */}
                 <MapView
                   ref={(map) => {
                     this.map = map;
@@ -400,7 +215,10 @@ class Location extends PureComponent {
                       opacity: interpolations[index].opacity,
                     };
                     return (
-                      <Marker key={campus.id} coordinate={campusCoordinates}>
+                      <Marker
+                        key={campus.id}
+                        coordinate={this.state.coordinates}
+                      >
                         <MarkerWrapView>
                           <Animated.View style={opacityStyle}>
                             <MarkerRingView>
