@@ -1,36 +1,42 @@
 import React, { memo } from 'react';
-import Image from 'react-native';
+import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, withTheme, Icon, H2, H5 } from '@apollosproject/ui-kit';
+import { styled, withTheme, Icon, H1, H4 } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
-  fill: theme.colors.primary,
-  style: { marginBottom: theme.sizing.baseUnit * 0.5 },
+  fill: 'white',
+  style: { marginBottom: theme.sizing.baseUnit * 0.5, marginTop: 200 },
 }))(Icon);
 
-const Title = styled(({ theme }) => ({
-  color: theme.colors.primary,
-}))(H2);
+const Title = styled(() => ({
+  color: 'white',
+  marginBottom: 40,
+  marginTop: 20,
+}))(H1);
 
-const StyledH5 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-}))(H5);
+const StyledH4 = styled(() => ({
+  color: 'white',
+}))(H4);
 
+// TODO: get window size from ui-kit
 const CoverImage = styled(() => ({
   resizeMode: 'cover',
+  position: 'absolute',
+  top: -50,
+  flex: 1,
 }))(Image);
 
 const Launch = memo(({ slideTitle, description, ...props }) => (
   <Slide {...props}>
-    <CoverImage source={require('./launch.png')} />
+    <CoverImage source={require('./launch.jpg')} />
     <BrandIcon />
-    <Title>{slideTitle}</Title>
-    <StyledH5>{description}</StyledH5>
+    <Title>{slideTitle.toUpperCase()}</Title>
+    <StyledH4>{description}</StyledH4>
   </Slide>
 ));
 
