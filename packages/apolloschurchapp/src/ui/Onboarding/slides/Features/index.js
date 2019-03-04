@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import Image from 'react-native';
+import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { styled, H2, H5 } from '@apollosproject/ui-kit';
@@ -15,14 +15,15 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 const CoverImage = styled(() => ({
-  width: '80%',
-  height: '60%',
-  marginTop: '30px',
+  height: '75%',
+  marginBottom: 30,
+  borderWidth: 1,
+  borderColor: 'grey',
 }))(Image);
 
-const Features = memo(({ slideTitle, description, ...props }) => {
+const Features = memo(({ firstName = 'friend', description, ...props }) => {
   // TODO: make name smart
-  const titleWithName = `${slideTitle} Michael!`;
+  const titleWithName = `Hey ${firstName}!`;
   return (
     <Slide {...props}>
       <CoverImage source={require('./mountain.jpeg')} />
