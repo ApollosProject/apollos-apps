@@ -21,4 +21,9 @@ export default {
       typeof firstName === 'object' ? '' : firstName,
     lastName: ({ lastName }) => (typeof lastName === 'object' ? '' : lastName),
   },
+  GENDER: {
+    Unknown: 0,
+    Male: 1,
+    Female: 2,
+  },
 };
