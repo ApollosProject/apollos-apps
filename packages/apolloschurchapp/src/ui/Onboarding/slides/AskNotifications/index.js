@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
 import {
+  PaddedView,
   FlexedView,
   ProgressiveImage,
   styled,
@@ -11,6 +11,14 @@ import {
 } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
+
+const ContentWrapper = styled({
+  height: '100%',
+})(PaddedView);
+
+const Content = styled({
+  justifyContent: 'flex-end',
+})(FlexedView);
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -24,7 +32,7 @@ const StyledH5 = styled(({ theme }) => ({
 // memo = sfc PureComponent 💥
 const AskNotifications = memo(({ slideTitle, description, ...props }) => (
   <Slide {...props}>
-    <View>
+    <ContentWrapper vertical={false}>
       <ProgressiveImage
         source={{
           uri: 'https://picsum.photos/640/640/?random',
@@ -38,12 +46,12 @@ const AskNotifications = memo(({ slideTitle, description, ...props }) => (
         // }}
         imageStyle={{ width: 320, height: 320 }}
       />
-    </View>
-    <View style={{ flexGrow: 1, backgroundColor: 'salmon' }}>
-      <Title>{slideTitle}</Title>
-      <StyledH5>{description}</StyledH5>
-      <Button title={'Yes, enable notifications'} pill={false} />
-    </View>
+      <Content>
+        <Title>{slideTitle}</Title>
+        <StyledH5>{description}</StyledH5>
+        <Button title={'Yes, enable notifications'} pill={false} />
+      </Content>
+    </ContentWrapper>
   </Slide>
 ));
 
