@@ -5,7 +5,7 @@ import Providers from 'apolloschurchapp/src/Providers';
 
 import AskNotifications from '.';
 
-describe('The Onboarding SlideWrapper component', () => {
+describe('The Onboarding AskNotifications component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
@@ -26,6 +26,17 @@ describe('The Onboarding SlideWrapper component', () => {
     const tree = renderer.create(
       <Providers>
         <AskNotifications description={'Custom description text'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should pass additional props to Slide component', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskNotifications
+          onPressSecondary={jest.fn()}
+          secondaryNavText={'Later'}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
