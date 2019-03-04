@@ -76,6 +76,27 @@ describe('Person', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it("updates a user's gender ", async () => {
+    const query = `
+      mutation {
+        updateProfileFields(input: [
+          { field: Gender, value: "Male" },
+        ]) {
+          id
+          gender
+        }
+      }
+    `;
+    const { userToken, rockCookie } = registerToken(
+      generateToken({ cookie: 'some-cookie' })
+    );
+    context.userToken = userToken;
+    context.rockCookie = rockCookie;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
   it("fails to update a user's attributes, without a current user", async () => {
     const query = `
       mutation {

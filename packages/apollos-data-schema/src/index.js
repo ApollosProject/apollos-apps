@@ -40,11 +40,17 @@ export const authSchema = gql`
 `;
 
 export const peopleSchema = gql`
+  enum GENDER {
+    Male
+    Female
+    Unknown
+  }
   enum UPDATEABLE_PROFILE_FIELDS {
     FirstName
     LastName
     Email
     NickName
+    Gender
   }
 
   input UpdateProfileInput {
@@ -58,6 +64,7 @@ export const peopleSchema = gql`
     lastName: String!
     nickName: String
     email: String
+    gender: GENDER
     photo: ImageMediaSource
   }
 
