@@ -38,6 +38,8 @@ exports[`Person gets persons dataview associations 1`] = `Promise {}`;
 
 exports[`Person gets persons dataview associations 2`] = `Array []`;
 
+exports[`Person throws an error setting an invalid birth date 1`] = `"BirthDate must be a valid date"`;
+
 exports[`Person updates a user's birth date attributes 1`] = `
 Object {
   "birthDate": "1996-11-02T07:00:00.000Z",

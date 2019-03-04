@@ -123,6 +123,23 @@ describe('Person', () => {
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
+  it('throws an error setting an invalid birth date', () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'BirthDate',
+        value: 'ABCD',
+      },
+    ]);
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
+  });
+
   it('Throws an error if trying to set an invalid gender', () => {
     const dataSource = new Person();
     const Auth = auth(dataSource);
