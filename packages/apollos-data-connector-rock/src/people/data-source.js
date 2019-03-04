@@ -17,11 +17,6 @@ export default class Person extends RockApolloDataSource {
       .find(id)
       .get();
 
-  getFromEmail = (email) =>
-    this.request()
-      .filter(`Email eq '${email}'`)
-      .get();
-
   // Gets a collection of all dataviews a user is in
   // Returns an array of dataview guids
   getPersonas = async ({ categoryId }) => {
