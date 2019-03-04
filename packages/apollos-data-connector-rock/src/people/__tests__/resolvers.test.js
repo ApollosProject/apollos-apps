@@ -111,27 +111,6 @@ describe('Person', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('gets people by an email', async () => {
-    const query = `
-      query {
-        people(email: "isaac.hardy@newspring.cc") {
-          id
-          firstName
-          lastName
-          nickName
-          email
-          photo {
-            uri
-          }
-        }
-      }
-    `;
-    const rootValue = {};
-
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
-
   it('gets a single person when querying by root node', async () => {
     const query = `
       query {
