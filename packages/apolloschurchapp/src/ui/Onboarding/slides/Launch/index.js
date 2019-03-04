@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Image } from 'react-native';
+import { Image, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { styled, withTheme, Icon, H1, H4 } from '@apollosproject/ui-kit';
@@ -23,12 +23,11 @@ const StyledH4 = styled(() => ({
   color: 'white',
 }))(H4);
 
-// TODO: get window size from ui-kit
 const CoverImage = styled(() => ({
   position: 'absolute',
-  // height: '150%',
-  // resizeMode: 'cover',
   marginTop: -50,
+  width: Dimensions.get('window').width + 20,
+  height: Dimensions.get('window').height + 20,
 }))(Image);
 
 const Launch = memo(({ slideTitle, description, ...props }) => (
