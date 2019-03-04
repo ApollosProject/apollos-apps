@@ -28,7 +28,6 @@ const CoverImage = styled(() => ({
   resizeMode: 'cover',
   position: 'absolute',
   top: -50,
-  flex: 1,
 }))(Image);
 
 const Launch = memo(({ slideTitle, description, ...props }) => (
