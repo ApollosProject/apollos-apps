@@ -25,9 +25,11 @@ const StyledH4 = styled(() => ({
 
 // TODO: get window size from ui-kit
 const CoverImage = styled(() => ({
-  resizeMode: 'cover',
   position: 'absolute',
-  top: -50,
+  // height: '150%',
+  // resizeMode: 'cover',
+  marginTop: -50,
+  height: '200%',
 }))(Image);
 
 const Launch = memo(({ slideTitle, description, ...props }) => (
