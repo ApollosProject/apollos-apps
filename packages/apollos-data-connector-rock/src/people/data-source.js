@@ -1,7 +1,13 @@
-import { AuthenticationError } from 'apollo-server';
+import { AuthenticationError, UserInputError } from 'apollo-server';
 import FormData from 'form-data';
 import { camelCase, mapKeys } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+
+const RockGenderMap = {
+  Unknown: 0,
+  Male: 1,
+  Female: 2,
+};
 
 export default class Person extends RockApolloDataSource {
   resource = 'People';
@@ -50,6 +56,15 @@ export default class Person extends RockApolloDataSource {
       }),
       {}
     );
+
+    if (fieldsAsObject.Gender) {
+      if (!['Unknown', 'Male', 'Female'].includes(fieldsAsObject.Gender)) {
+        throw new UserInputError(
+          'Rock gender must be either Unknown, Male, or Female'
+        );
+      }
+      fieldsAsObject.Gender = RockGenderMap[fieldsAsObject.Gender];
+    }
 
     await this.patch(`/People/${currentPerson.id}`, fieldsAsObject);
 
