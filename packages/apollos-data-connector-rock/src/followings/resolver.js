@@ -32,7 +32,7 @@ const resolvers = {
       }),
   },
   Query: {
-    getAllLikedContent: async (root, { after, first }, { dataSources }) => {
+    likedContent: async (root, { after, first }, { dataSources }) => {
       const followingsPaginated = await dataSources.Followings.paginatedGetFollowingsForCurrentUser(
         { type: 'ContentItem', after, first }
       );

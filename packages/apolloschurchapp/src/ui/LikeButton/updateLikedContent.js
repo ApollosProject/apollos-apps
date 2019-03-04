@@ -13,7 +13,7 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
     });
     const newEdges = [
       fullItem,
-      ...data.getAllLikedContent.edges.map(({ node }) => node),
+      ...data.likedContent.edges.map(({ node }) => node),
     ].map((node) => ({
       __typename: 'ContentItemsConnectionEdge',
       node,
@@ -23,8 +23,8 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
       variables,
       data: {
         ...data,
-        getAllLikedContent: {
-          ...data.getAllLikedContent,
+        likedContent: {
+          ...data.likedContent,
           edges: newEdges,
         },
       },
@@ -43,7 +43,7 @@ const removeItemFromLikedContentList = ({ cache, item, variables }) => {
       variables,
     });
 
-    const filteredEdges = data.getAllLikedContent.edges.filter(
+    const filteredEdges = data.likedContent.edges.filter(
       ({ node }) => node.id !== item.id
     );
 
@@ -52,8 +52,8 @@ const removeItemFromLikedContentList = ({ cache, item, variables }) => {
       variables,
       data: {
         ...data,
-        getAllLikedContent: {
-          ...data.getAllLikedContent,
+        likedContent: {
+          ...data.likedContent,
           edges: filteredEdges,
         },
       },

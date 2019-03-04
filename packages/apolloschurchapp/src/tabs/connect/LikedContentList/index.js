@@ -44,7 +44,7 @@ class LikedContentList extends PureComponent {
           {({ loading, error, data, refetch }) => (
             <FeedView
               ListItemComponent={ContentCardConnected}
-              content={get(data, 'getAllLikedContent.edges', []).map(
+              content={get(data, 'likedContent.edges', []).map(
                 (edge) => edge.node
               )}
               isLoading={loading}

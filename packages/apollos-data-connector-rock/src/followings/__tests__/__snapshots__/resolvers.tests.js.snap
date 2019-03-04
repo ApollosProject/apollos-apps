@@ -3,7 +3,7 @@
 exports[`Following gets all user liked content 1`] = `
 Object {
   "data": Object {
-    "getAllLikedContent": Object {
+    "likedContent": Object {
       "edges": Array [
         Object {
           "node": Object {
@@ -42,7 +42,7 @@ Object {
 exports[`Following returns an empty array for liked content without a user logged in 1`] = `
 Object {
   "data": Object {
-    "getAllLikedContent": Object {
+    "likedContent": Object {
       "edges": Array [],
     },
   },

@@ -51,7 +51,7 @@ exports[`LikedContentList component renders LikedContentList 1`] = `
           <Err
             error={
               [Error: Network error: No more mocked responses for the query: query getAllLikedContent($first: Int) {
-  getAllLikedContent(first: $first) {
+  likedContent(first: $first) {
     edges {
       node {
         ... on ContentItem {
@@ -262,7 +262,7 @@ fragment themeFragment on ContentItem {
                   }
                 >
                   Network error: No more mocked responses for the query: query getAllLikedContent($first: Int) {
-  getAllLikedContent(first: $first) {
+  likedContent(first: $first) {
     edges {
       node {
         ... on ContentItem {

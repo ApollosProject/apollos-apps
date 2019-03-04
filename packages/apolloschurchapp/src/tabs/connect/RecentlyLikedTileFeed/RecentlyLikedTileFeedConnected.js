@@ -13,7 +13,7 @@ const RecentlyLikedTileFeedConnected = ({ navigation }) => (
   >
     {({
       loading,
-      data: { getAllLikedContent: { edges = [] } = { edges: [] } } = {},
+      data: { likedContent: { edges = [] } = { edges: [] } } = {},
     }) => {
       if (!edges.length) return null;
       return (

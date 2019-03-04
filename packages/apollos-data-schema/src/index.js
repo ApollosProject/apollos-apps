@@ -467,7 +467,7 @@ export const followingsSchema = gql`
 `)}
 
   extend type Query {
-    getAllLikedContent(first: Int, after: String): ContentItemsConnection
+    likedContent(first: Int, after: String): ContentItemsConnection
       @cacheControl(maxAge: 0)
   }
 `;

@@ -206,7 +206,7 @@ describe('Following', () => {
   it('gets all user liked content', async () => {
     const query = `
       query {
-        getAllLikedContent {
+        likedContent {
           edges {
             node {
               id
@@ -224,7 +224,7 @@ describe('Following', () => {
   it('returns an empty array for liked content without a user logged in', async () => {
     const query = `
       query {
-        getAllLikedContent {
+        likedContent {
           edges {
             node {
               id

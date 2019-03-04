@@ -5,7 +5,7 @@ import { contentItemFragment } from 'apolloschurchapp/src/content-single/getCont
 
 export default gql`
   query getAllLikedContent($first: Int) {
-    getAllLikedContent(first: $first) {
+    likedContent(first: $first) {
       edges {
         node {
           ... on ContentItem {
