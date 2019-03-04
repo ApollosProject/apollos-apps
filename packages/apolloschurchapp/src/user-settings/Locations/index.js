@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Dimensions, View, Animated } from 'react-native';
 import PropTypes from 'prop-types';
+import { Query } from 'react-apollo';
 import MapView, { Marker } from 'react-native-maps';
 import Color from 'color';
-import { debounce } from 'lodash';
+import { debounce, get } from 'lodash';
 
 import {
   PaddedView,
@@ -17,6 +18,8 @@ import {
   // ThumbnailCard,
 } from '@apollosproject/ui-kit';
 import CampusCard from './CampusCard';
+
+import getAllCampuses from './getCampusLocations';
 
 const { width } = Dimensions.get('window');
 
@@ -356,83 +359,105 @@ class Location extends PureComponent {
       });
       return { scale, opacity };
     });
+    const { latitude, longitude } = this.props;
     return (
       <ContainerView>
         {/* I've been unable to figure out why the MapView component does not render correctly
           when it is a styled component, so there is an inline style for now. */}
-        <MapView
-          ref={(map) => {
-            this.map = map;
-            return this.map;
-          }}
-          style={{ flex: 1 }}
-          initialRegion={this.state.region}
-          showsUserLocation
+        <Query
+          query={getAllCampuses}
+          variables={{ latitude, longitude }}
+          fetchPolicy="cache-and-network"
         >
-          {this.state.markers.map((marker, index) => {
-            const scaleStyle = {
-              transform: [
-                {
-                  scale: interpolations[index].scale,
-                },
-              ],
-            };
-            const opacityStyle = {
-              opacity: interpolations[index].opacity,
-            };
+          {({ loading, error, data, refetch }) => {
+            const campusCoordinates = get(data, {
+              latitude: 'campuses.latitude',
+              longitude: 'campuses.longitude',
+            });
             return (
-              <Marker key={marker.id} coordinate={marker.coordinate}>
-                <MarkerWrapView>
-                  <Animated.View style={opacityStyle}>
-                    <MarkerRingView>
-                      <Animated.View style={scaleStyle} />
-                    </MarkerRingView>
-                    <MarkerView />
-                  </Animated.View>
-                </MarkerWrapView>
-              </Marker>
-            );
-          })}
-        </MapView>
-        <ScrollingView>
-          <Animated.ScrollView
-            horizontal
-            scrollEventThrottle={1}
-            snapToInterval={CARD_WIDTH}
-            onScroll={Animated.event(
-              [
-                {
-                  nativeEvent: {
-                    contentOffset: {
-                      x: this.animation,
-                    },
-                  },
-                },
-              ],
-              { useNativeDriver: true }
-            )}
-            contentContainerStyle={endPadding}
-          >
-            {this.state.markers.map((marker) => (
-              <ContainerView key={marker.id}>
-                <CampusCard
-                  key={marker.id}
-                  distance={marker.distance}
-                  title={marker.name}
-                  description={marker.description}
-                  images={[marker.image]}
-                />
+              <ContainerView>
+                <MapView
+                  ref={(map) => {
+                    this.map = map;
+                    return this.map;
+                  }}
+                  style={{ flex: 1 }}
+                  initialRegion={this.state.region}
+                  showsUserLocation
+                  isLoading={loading}
+                  error={error}
+                  refetch={refetch}
+                >
+                  {data.campuses.map((campus, index) => {
+                    const scaleStyle = {
+                      transform: [
+                        {
+                          scale: interpolations[index].scale,
+                        },
+                      ],
+                    };
+                    const opacityStyle = {
+                      opacity: interpolations[index].opacity,
+                    };
+                    return (
+                      <Marker key={campus.id} coordinate={campusCoordinates}>
+                        <MarkerWrapView>
+                          <Animated.View style={opacityStyle}>
+                            <MarkerRingView>
+                              <Animated.View style={scaleStyle} />
+                            </MarkerRingView>
+                            <MarkerView />
+                          </Animated.View>
+                        </MarkerWrapView>
+                      </Marker>
+                    );
+                  })}
+                </MapView>
+                <ScrollingView>
+                  <Animated.ScrollView
+                    horizontal
+                    scrollEventThrottle={1}
+                    snapToInterval={CARD_WIDTH}
+                    onScroll={Animated.event(
+                      [
+                        {
+                          nativeEvent: {
+                            contentOffset: {
+                              x: this.animation,
+                            },
+                          },
+                        },
+                      ],
+                      { useNativeDriver: true }
+                    )}
+                    contentContainerStyle={endPadding}
+                  >
+                    {this.state.markers.map((marker) => (
+                      <ContainerView key={marker.id}>
+                        <CampusCard
+                          key={marker.id}
+                          distance={marker.distance}
+                          title={marker.name}
+                          description={marker.description}
+                          images={[marker.image]}
+                        />
+                      </ContainerView>
+                    ))}
+                  </Animated.ScrollView>
+                  <TouchableScale>
+                    <Card>
+                      <CardContent>
+                        <ChannelLabel
+                          label={<UIText bold>{`Select Campus`}</UIText>}
+                        />
+                      </CardContent>
+                    </Card>
+                  </TouchableScale>
+                </ScrollingView>
               </ContainerView>
-            ))}
-          </Animated.ScrollView>
-          <TouchableScale>
-            <Card>
-              <CardContent>
-                <ChannelLabel label={<UIText bold>{`Select Campus`}</UIText>} />
-              </CardContent>
-            </Card>
-          </TouchableScale>
-        </ScrollingView>
+            );
+          }}
+        </Query>
       </ContainerView>
     );
   }
