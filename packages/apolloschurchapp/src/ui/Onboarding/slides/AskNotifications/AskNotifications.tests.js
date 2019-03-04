@@ -22,4 +22,12 @@ describe('The Onboarding SlideWrapper component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a custom description', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskNotifications description={'Custom description text'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

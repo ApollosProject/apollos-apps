@@ -5,6 +5,12 @@ import AskNotifications from '.';
 
 storiesOf('Onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
+  .add('slideTitle', () => (
+    <AskNotifications slideTitle={'Custom title text'} />
+  ))
+  .add('description', () => (
+    <AskNotifications description={'Custom description text'} />
+  ))
   .add('SlideWrapper props', () => (
     <AskNotifications onPressSecondary={() => {}} />
   ));
