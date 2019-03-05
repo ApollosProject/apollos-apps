@@ -12,6 +12,7 @@ import {
   ChannelLabel,
   UIText,
   styled,
+  withTheme,
 } from '@apollosproject/ui-kit';
 import CampusCard, { CARD_WIDTH } from './CampusCard';
 
@@ -23,7 +24,7 @@ const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
 
-const getCampusAddress = (campus) =>
+const getCampusAddress = campus =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
 const ScrollingView = styled({
@@ -79,6 +80,11 @@ class MapView extends Component {
       latitude: PropTypes.number.isRequired,
       longitude: PropTypes.number.isRequired,
     }),
+    theme: PropTypes.shape({
+      sizing: PropTypes.shape({
+        baseUnit: PropTypes.number,
+      }),
+    }),
   };
 
   animation = new Animated.Value(0);
@@ -86,6 +92,10 @@ class MapView extends Component {
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
     this.updateCoordinates({ value: 0 });
+  }
+
+  get contentContainerStyle() {
+    return { paddingHorizontal: this.props.theme.sizing.baseUnit };
   }
 
   updateCoordinates = ({ value }) => {
@@ -154,7 +164,7 @@ class MapView extends Component {
           <FlexedMapView
             initialRegion={this.props.initialRegion}
             showsUserLocation
-            mapRef={(map) => {
+            mapRef={map => {
               this.map = map;
             }}
           >
@@ -186,7 +196,11 @@ class MapView extends Component {
           <ScrollingView>
             <Animated.ScrollView
               horizontal
+              showsHorizontalScrollIndicator={false}
               snapToInterval={CARD_WIDTH}
+              snapToAlignment="left"
+              decelerationRate="fast"
+              contentContainerStyle={this.contentContainerStyle}
               onScroll={Animated.event(
                 [
                   {
@@ -200,7 +214,7 @@ class MapView extends Component {
                 { useNativeDriver: true }
               )}
             >
-              {campuses.map((campus) => (
+              {campuses.map(campus => (
                 <CampusCard
                   key={campus.id}
                   distance={campus.distanceFromLocation}
@@ -226,4 +240,4 @@ class MapView extends Component {
   }
 }
 
-export default MapView;
+export default withTheme()(MapView);

@@ -17,7 +17,7 @@ import {
 
 const { width } = Dimensions.get('window');
 
-export const CARD_WIDTH = width * 0.94;
+export const CARD_WIDTH = width * 0.9;
 
 const enhance = compose(
   withIsLoading,
@@ -48,6 +48,11 @@ const CardContainer = styled({
   width: CARD_WIDTH,
 })(View);
 
+const StyledCard = styled(({ theme }) => ({
+  marginHorizontal: 0,
+  marginRight: theme.sizing.baseUnit / 2,
+}))(Card);
+
 const CampusCard = enhance(
   ({
     title,
@@ -60,7 +65,7 @@ const CampusCard = enhance(
     ...otherProps
   }) => (
     <CardContainer>
-      <Card isLoading={isLoading} inHorizontalList {...otherProps}>
+      <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
         <HorizontalLayout>
           {images ? <CampusImage source={images} /> : null}
           <RightColumn>
@@ -74,7 +79,7 @@ const CampusCard = enhance(
             {description ? <H6>{description}</H6> : null}
           </RightColumn>
         </HorizontalLayout>
-      </Card>
+      </StyledCard>
     </CardContainer>
   )
 );
