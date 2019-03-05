@@ -9,7 +9,7 @@ import {
   FlexedView,
 } from '@apollosproject/ui-kit';
 
-import { AskName } from './slides';
+import { AskName, AskNotifications } from './slides';
 
 // Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
@@ -69,11 +69,10 @@ class Onboarding extends Component {
           swiperRef={this.setSwiperRef}
         >
           <AskName onPressPrimary={this.handleOnPressPrimary} />
-          <Boom bgcolor={'salmon'}>
-            <Text>Hello World 1</Text>
-            <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
-            <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-          </Boom>
+          <AskNotifications
+            imageSource={'https://picsum.photos/640/640/?random'}
+            onPressSecondary={this.handleOnPressPrimary}
+          />
           <Boom bgcolor={'lightgreen'}>
             <Text>Hello World 2</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
