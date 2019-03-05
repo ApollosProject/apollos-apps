@@ -2,22 +2,6 @@
 
 exports[`Person Throws an error if trying to set an invalid gender 1`] = `"Rock gender must be either Unknown, Male, or Female"`;
 
-exports[`Person gets person from email 1`] = `
-Array [
-  Array [
-    "People?%24filter=Email%20eq%20%27isaac.hardy%40newspring.cc%27",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`Person gets person from email 2`] = `
-Object {
-  "email": "isaac.hardy@newspring.cc",
-}
-`;
-
 exports[`Person gets person from id 1`] = `
 Array [
   Array [
