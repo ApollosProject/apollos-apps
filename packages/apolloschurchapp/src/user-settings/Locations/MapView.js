@@ -193,7 +193,7 @@ class MapView extends Component {
             })}
           </FlexedMapView>
           <ScrollingView>
-            <SafeAreaView>
+            <SafeAreaView forceInset={{ bottom: 'always', top: 'never' }}>
               <Animated.ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
