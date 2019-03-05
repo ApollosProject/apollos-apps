@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Animated } from 'react-native';
+import SafeAreaView from 'react-native-safe-area-view';
 import RNMapView, { Marker } from 'react-native-maps';
 import Color from 'color';
 import { debounce } from 'lodash';
 
-import {
-  TouchableScale,
-  Card,
-  CardContent,
-  ChannelLabel,
-  UIText,
-  styled,
-  withTheme,
-} from '@apollosproject/ui-kit';
+import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
 import CampusCard, { CARD_WIDTH } from './CampusCard';
 
 const ContainerView = styled({
@@ -24,13 +17,12 @@ const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
 
-const getCampusAddress = campus =>
+const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
 const ScrollingView = styled({
   position: 'absolute',
-  minHeight: '30%',
-  bottom: 5,
+  bottom: 0,
   left: 0,
   right: 0,
 })(View);
@@ -164,7 +156,7 @@ class MapView extends Component {
           <FlexedMapView
             initialRegion={this.props.initialRegion}
             showsUserLocation
-            mapRef={map => {
+            mapRef={(map) => {
               this.map = map;
             }}
           >
@@ -194,45 +186,41 @@ class MapView extends Component {
             })}
           </FlexedMapView>
           <ScrollingView>
-            <Animated.ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              snapToInterval={CARD_WIDTH}
-              snapToAlignment="left"
-              decelerationRate="fast"
-              contentContainerStyle={this.contentContainerStyle}
-              onScroll={Animated.event(
-                [
-                  {
-                    nativeEvent: {
-                      contentOffset: {
-                        x: this.animation,
+            <SafeAreaView>
+              <Animated.ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                snapToInterval={CARD_WIDTH}
+                snapToAlignment="left"
+                decelerationRate="fast"
+                contentContainerStyle={this.contentContainerStyle}
+                onScroll={Animated.event(
+                  [
+                    {
+                      nativeEvent: {
+                        contentOffset: {
+                          x: this.animation,
+                        },
                       },
                     },
-                  },
-                ],
-                { useNativeDriver: true }
-              )}
-            >
-              {campuses.map(campus => (
-                <CampusCard
-                  key={campus.id}
-                  distance={campus.distanceFromLocation}
-                  title={campus.name}
-                  description={getCampusAddress(campus)}
-                  images={[campus.image]}
-                />
-              ))}
-            </Animated.ScrollView>
-            <TouchableScale>
-              <Card>
-                <CardContent>
-                  <ChannelLabel
-                    label={<UIText bold>{`Select Campus`}</UIText>}
+                  ],
+                  { useNativeDriver: true }
+                )}
+              >
+                {campuses.map((campus) => (
+                  <CampusCard
+                    key={campus.id}
+                    distance={campus.distanceFromLocation}
+                    title={campus.name}
+                    description={getCampusAddress(campus)}
+                    images={[campus.image]}
                   />
-                </CardContent>
-              </Card>
-            </TouchableScale>
+                ))}
+              </Animated.ScrollView>
+              <PaddedView vertical={false}>
+                <Button title="Select Campus" pill={false} type="secondary" />
+              </PaddedView>
+            </SafeAreaView>
           </ScrollingView>
         </ContainerView>
       </ContainerView>

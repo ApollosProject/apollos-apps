@@ -5,7 +5,6 @@ import { Dimensions, View } from 'react-native';
 
 import {
   Card,
-  FlexedView,
   ConnectedImage,
   SideBySideView,
   withIsLoading,
@@ -17,7 +16,7 @@ import {
 
 const { width } = Dimensions.get('window');
 
-export const CARD_WIDTH = width * 0.9;
+export const CARD_WIDTH = width - 24; // todo: remove magic number. `theme.sizing.baseUnit * 1.5`
 
 const enhance = compose(
   withIsLoading,
@@ -44,9 +43,10 @@ const CampusImage = styled({
   resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
 })(ConnectedImage);
 
-const CardContainer = styled({
+const CardContainer = styled(({ theme }) => ({
   width: CARD_WIDTH,
-})(View);
+  height: theme.sizing.baseUnit * 6,
+}))(View);
 
 const StyledCard = styled(({ theme }) => ({
   marginHorizontal: 0,
