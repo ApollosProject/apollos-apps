@@ -29,16 +29,6 @@ describe('Person', () => {
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
   });
-  it('gets person from email', () => {
-    const dataSource = new Person();
-    dataSource.get = buildGetMock(
-      { Email: 'isaac.hardy@newspring.cc' },
-      dataSource
-    );
-    const result = dataSource.getFromEmail('isaac.hardy@newspring.cc');
-    expect(result).resolves.toMatchSnapshot();
-    expect(dataSource.get.mock.calls).toMatchSnapshot();
-  });
 
   it('gets persons dataview associations', () => {
     const dataSource = new Person();
