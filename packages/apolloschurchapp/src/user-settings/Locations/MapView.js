@@ -120,10 +120,10 @@ class MapView extends Component {
     }
 
     // Now, we need to transform the given lat/lng/delta up to make room for cards at bottom.
-    // To make this math simpler, we'll assume the cards take up roughly 30% of the vertical space
+    // To make this math simpler, we'll assume the cards take up roughly 20% of the vertical space
     const maxDelta = Math.max(latitudeDelta, longitudeDelta);
-    latitude -= maxDelta * 0.3; // move the view up 30%
-    latitudeDelta *= 1.3; // include 30% more area in the view
+    latitude -= maxDelta * 0.2; // move the view up 20%
+    latitudeDelta *= 1.2; // include 20% more area in the view
 
     this.map.animateToRegion(
       {
