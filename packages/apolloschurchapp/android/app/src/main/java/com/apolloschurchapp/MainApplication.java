@@ -3,6 +3,9 @@ package com.apolloschurchapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.mybdesign.RNPassKit.RNPassKitPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.mybdesign.RNPassKit.RNPassKitPackage;
@@ -38,6 +41,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFetchBlobPackage(),
+            new RNPassKitPackage(),
+            new MapsPackage(),
             new MapsPackage(),
             new RNFetchBlobPackage(),
             new RNPassKitPackage(),
