@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Dimensions, View, Animated } from 'react-native';
+import { View, Animated } from 'react-native';
 import RNMapView, { Marker } from 'react-native-maps';
 import Color from 'color';
 import { debounce } from 'lodash';
@@ -13,24 +13,14 @@ import {
   UIText,
   styled,
 } from '@apollosproject/ui-kit';
-import CampusCard from './CampusCard';
-
-const { width } = Dimensions.get('window');
-
-const CARD_WIDTH = width * 0.94;
-
-const endPadding = {
-  paddingRight: width - CARD_WIDTH,
-};
+import CampusCard, { CARD_WIDTH } from './CampusCard';
 
 const ContainerView = styled({
   flex: 1,
 })(View);
 
-const getCampusAddress = (campus) =>
-  `${campus.street1}\n${campus.street2 ? `${campus.street2}\n` : null}${
-    campus.city
-  }, ${campus.state} ${campus.postalCode}`;
+const getCampusAddress = campus =>
+  `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
 const ScrollingView = styled({
   position: 'absolute',
@@ -95,25 +85,32 @@ class MapView extends Component {
   }
 
   updateCoordinates = ({ value }) => {
-    const cardIndex = Math.floor(value / CARD_WIDTH);
+    const cardIndex = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item;
     const campus = this.props.campuses[cardIndex];
     if (!campus) return;
 
     const { userLocation } = this.props;
 
-    const { latitude, longitude } = campus;
+    let { latitude } = campus;
+    const { longitude } = campus;
     let { latitudeDelta, longitudeDelta } = this.props.initialRegion;
 
     if (userLocation) {
       // Calculate rectangle that shows user's location in the view with campus at center
-      const minX = Math.min(campus.latitude, userLocation.latitude);
-      const maxX = Math.max(campus.latitude, userLocation.latitude);
-      const minY = Math.min(campus.longitude, userLocation.longitude);
-      const maxY = Math.max(campus.longitude, userLocation.longitude);
+      const minLat = Math.min(campus.latitude, userLocation.latitude);
+      const maxLat = Math.max(campus.latitude, userLocation.latitude);
+      const minLong = Math.min(campus.longitude, userLocation.longitude);
+      const mayLong = Math.max(campus.longitude, userLocation.longitude);
 
-      latitudeDelta = (maxX - minX) * 2.5;
-      longitudeDelta = (maxY - minY) * 2.5;
+      latitudeDelta = (maxLat - minLat) * 2.5;
+      longitudeDelta = (mayLong - minLong) * 2.5;
     }
+
+    // Now, we need to transform the given lat/lng/delta up to make room for cards at bottom.
+    // To make this math simpler, we'll assume the cards take up roughly 30% of the vertical space
+    const maxDelta = Math.max(latitudeDelta, longitudeDelta);
+    latitude -= maxDelta * 0.3; // move the view up 30%
+    latitudeDelta *= 1.3; // include 30% more area in the view
 
     this.map.animateToRegion(
       {
@@ -156,7 +153,7 @@ class MapView extends Component {
             style={{ flex: 1 }}
             initialRegion={this.props.initialRegion}
             showsUserLocation
-            ref={(map) => {
+            ref={map => {
               this.map = map;
             }}
           >
@@ -188,7 +185,6 @@ class MapView extends Component {
           <ScrollingView>
             <Animated.ScrollView
               horizontal
-              scrollEventThrottle={1}
               snapToInterval={CARD_WIDTH}
               onScroll={Animated.event(
                 [
@@ -202,17 +198,15 @@ class MapView extends Component {
                 ],
                 { useNativeDriver: true }
               )}
-              contentContainerStyle={endPadding}
             >
-              {campuses.map((campus) => (
-                <ContainerView key={campus.id}>
-                  <CampusCard
-                    distance={campus.distanceFromLocation}
-                    title={campus.name}
-                    description={getCampusAddress(campus)}
-                    images={[campus.image]}
-                  />
-                </ContainerView>
+              {campuses.map(campus => (
+                <CampusCard
+                  key={campus.id}
+                  distance={campus.distanceFromLocation}
+                  title={campus.name}
+                  description={getCampusAddress(campus)}
+                  images={[campus.image]}
+                />
               ))}
             </Animated.ScrollView>
             <TouchableScale>

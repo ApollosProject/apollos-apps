@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
+import { Dimensions, View } from 'react-native';
 
 import {
   Card,
@@ -16,6 +17,10 @@ import {
   Paragraph,
 } from '@apollosproject/ui-kit';
 
+const { width } = Dimensions.get('window');
+
+export const CARD_WIDTH = width * 0.94;
+
 const enhance = compose(
   withIsLoading,
   pure
@@ -23,7 +28,6 @@ const enhance = compose(
 
 const HorizontalLayout = styled({
   alignItems: 'center',
-  minHeight: 90, // kind of the best middle ground for various title lengths.
 })(SideBySideView);
 
 const HorizontalTextLayout = styled(({ theme }) => ({
@@ -46,9 +50,9 @@ const campusImage = {
   resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
 };
 
-const PositionedCard = styled({
-  position: 'relative',
-})(Card);
+const CardContainer = styled({
+  width: CARD_WIDTH,
+})(View);
 
 const CampusCard = enhance(
   ({
@@ -61,29 +65,31 @@ const CampusCard = enhance(
     isLoading,
     ...otherProps
   }) => (
-    <PositionedCard isLoading={isLoading} inHorizontalList {...otherProps}>
-      <HorizontalLayout>
-        {images ? (
-          <LeftColumn>
-            <ProgressiveImage source={images} imageStyle={campusImage} />
-          </LeftColumn>
-        ) : null}
-        <RightColumn>
-          <HorizontalTextLayout>
-            <H5>{title}</H5>
-            <H6>
-              {distance}
-              mi
-            </H6>
-          </HorizontalTextLayout>
-          {description ? (
-            <Paragraph>
-              <BodyText>{description}</BodyText>
-            </Paragraph>
+    <CardContainer>
+      <Card isLoading={isLoading} inHorizontalList {...otherProps}>
+        <HorizontalLayout>
+          {images ? (
+            <LeftColumn>
+              <ProgressiveImage source={images} imageStyle={campusImage} />
+            </LeftColumn>
           ) : null}
-        </RightColumn>
-      </HorizontalLayout>
-    </PositionedCard>
+          <RightColumn>
+            <HorizontalTextLayout>
+              <H5>{title}</H5>
+              <H6>
+                {distance}
+                mi
+              </H6>
+            </HorizontalTextLayout>
+            {description ? (
+              <Paragraph>
+                <BodyText>{description}</BodyText>
+              </Paragraph>
+            ) : null}
+          </RightColumn>
+        </HorizontalLayout>
+      </Card>
+    </CardContainer>
   )
 );
 
