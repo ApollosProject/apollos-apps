@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding SlideWrapper component should pass additional props to Slide component 1`] = `
+exports[`The Onboarding AskName component should pass additional props to Slide component 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -591,7 +591,7 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render 1`] = `
+exports[`The Onboarding AskName component should render 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -1043,7 +1043,7 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render a custom description 1`] = `
+exports[`The Onboarding AskName component should render a custom description 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -1495,7 +1495,7 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render a custom title 1`] = `
+exports[`The Onboarding AskName component should render a custom title 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
