@@ -6,15 +6,13 @@ import { Dimensions, View } from 'react-native';
 import {
   Card,
   FlexedView,
-  ProgressiveImage,
+  ConnectedImage,
   SideBySideView,
   withIsLoading,
   styled,
   CardContent,
   H5,
   H6,
-  BodyText,
-  Paragraph,
 } from '@apollosproject/ui-kit';
 
 const { width } = Dimensions.get('window');
@@ -36,19 +34,15 @@ const HorizontalTextLayout = styled(({ theme }) => ({
 
 const RightColumn = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 0.85,
+  flex: 1,
 }))(CardContent);
 
-const LeftColumn = styled({
-  alignSelf: 'stretch',
-  overflow: 'hidden',
+const CampusImage = styled({
+  aspectRatio: 1,
   height: '100%',
-  aspectRatio: 1,
-})(FlexedView);
-
-const campusImage = {
-  aspectRatio: 1,
+  alignSelf: 'stretch',
   resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
-};
+})(ConnectedImage);
 
 const CardContainer = styled({
   width: CARD_WIDTH,
@@ -68,24 +62,16 @@ const CampusCard = enhance(
     <CardContainer>
       <Card isLoading={isLoading} inHorizontalList {...otherProps}>
         <HorizontalLayout>
-          {images ? (
-            <LeftColumn>
-              <ProgressiveImage source={images} imageStyle={campusImage} />
-            </LeftColumn>
-          ) : null}
+          {images ? <CampusImage source={images} /> : null}
           <RightColumn>
             <HorizontalTextLayout>
               <H5>{title}</H5>
               <H6>
-                {distance}
+                {Math.round(distance)}
                 mi
               </H6>
             </HorizontalTextLayout>
-            {description ? (
-              <Paragraph>
-                <BodyText>{description}</BodyText>
-              </Paragraph>
-            ) : null}
+            {description ? <H6>{description}</H6> : null}
           </RightColumn>
         </HorizontalLayout>
       </Card>

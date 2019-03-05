@@ -19,7 +19,11 @@ const ContainerView = styled({
   flex: 1,
 })(View);
 
-const getCampusAddress = campus =>
+const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
+  <RNMapView ref={mapRef} {...props} />
+));
+
+const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
 const ScrollingView = styled({
@@ -147,13 +151,10 @@ class MapView extends Component {
     return (
       <ContainerView>
         <ContainerView>
-          {/* I've been unable to figure out why the MapView component does not render correctly
-                    when it is a styled component, so there is an inline style for now. */}
-          <RNMapView
-            style={{ flex: 1 }}
+          <FlexedMapView
             initialRegion={this.props.initialRegion}
             showsUserLocation
-            ref={map => {
+            mapRef={(map) => {
               this.map = map;
             }}
           >
@@ -181,7 +182,7 @@ class MapView extends Component {
                 </Marker>
               );
             })}
-          </RNMapView>
+          </FlexedMapView>
           <ScrollingView>
             <Animated.ScrollView
               horizontal
@@ -199,7 +200,7 @@ class MapView extends Component {
                 { useNativeDriver: true }
               )}
             >
-              {campuses.map(campus => (
+              {campuses.map((campus) => (
                 <CampusCard
                   key={campus.id}
                   distance={campus.distanceFromLocation}
