@@ -8,6 +8,14 @@ export default gql`
       latitude
       longitude
       distanceFromLocation
+      street1
+      street2
+      city
+      state
+      postalCode
+      image {
+        uri
+      }
     }
   }
 `;
