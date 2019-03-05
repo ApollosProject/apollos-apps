@@ -86,11 +86,18 @@ class MapView extends Component {
     this.updateCoordinates({ value: 0 });
   }
 
+  componentDidUpdate(oldProps) {
+    if (oldProps.userLocation !== this.props.userLocation) {
+      this.updateCoordinates({ value: this.previousScrollPosition });
+    }
+  }
+
   get contentContainerStyle() {
     return { paddingHorizontal: this.props.theme.sizing.baseUnit };
   }
 
   updateCoordinates = ({ value }) => {
+    this.previousScrollPosition = value;
     const cardIndex = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item;
     const campus = this.props.campuses[cardIndex];
     if (!campus) return;
