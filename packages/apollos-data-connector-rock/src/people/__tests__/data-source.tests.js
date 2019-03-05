@@ -29,16 +29,6 @@ describe('Person', () => {
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
   });
-  it('gets person from email', () => {
-    const dataSource = new Person();
-    dataSource.get = buildGetMock(
-      { Email: 'isaac.hardy@newspring.cc' },
-      dataSource
-    );
-    const result = dataSource.getFromEmail('isaac.hardy@newspring.cc');
-    expect(result).resolves.toMatchSnapshot();
-    expect(dataSource.get.mock.calls).toMatchSnapshot();
-  });
 
   it('gets persons dataview associations', () => {
     const dataSource = new Person();
@@ -71,7 +61,7 @@ describe('Person', () => {
     const Auth = auth(dataSource);
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSource: { Auth },
+      dataSources: { Auth },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -83,6 +73,42 @@ describe('Person', () => {
     expect(result).resolves.toMatchSnapshot();
     expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it("updates a user's gender attributes", () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'Gender',
+        value: 'Male',
+      },
+    ]);
+    expect(result).resolves.toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it('Throws an error if trying to set an invalid gender', () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'Gender',
+        value: 'Squirrel',
+      },
+    ]);
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it("uploads a user's profile picture", async () => {
