@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Onboarding PermissionsPrompt component should render 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4278216557,
+          4278211159,
+        ]
+      }
+      locations={null}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 43,
+            "lineHeight": 49.45,
+          }
+        }
+      >
+        Boom
+      </Text>
+    </BVLinearGradient>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Onboarding PermissionsPrompt component should render with a custom background colors 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4294606962,
+          4294606962,
+        ]
+      }
+      locations={null}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 43,
+            "lineHeight": 49.45,
+          }
+        }
+      >
+        Boom
+      </Text>
+    </BVLinearGradient>
+  </View>
+</RCTSafeAreaView>
+`;
