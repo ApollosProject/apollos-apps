@@ -100,6 +100,27 @@ describe('Person', () => {
   it("fails to update a user's attributes, without a current user", async () => {
     const query = `
       mutation {
+        updateProfileFields(input: [
+          { field: Gender, value: "Male" },
+        ]) {
+          id
+          gender
+        }
+      }
+    `;
+    const { userToken, rockCookie } = registerToken(
+      generateToken({ cookie: 'some-cookie' })
+    );
+    context.userToken = userToken;
+    context.rockCookie = rockCookie;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it("fails to update a user's attributes, without a current user", async () => {
+    const query = `
+      mutation {
         updateProfileField(input: { field: FirstName, value: "Richard" }) {
           firstName
           id
@@ -107,27 +128,6 @@ describe('Person', () => {
       }
     `;
     const rootValue = {};
-    const result = await graphql(schema, query, rootValue, context);
-    expect(result).toMatchSnapshot();
-  });
-
-  it('gets people by an email', async () => {
-    const query = `
-      query {
-        people(email: "isaac.hardy@newspring.cc") {
-          id
-          firstName
-          lastName
-          nickName
-          email
-          photo {
-            uri
-          }
-        }
-      }
-    `;
-    const rootValue = {};
-
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });

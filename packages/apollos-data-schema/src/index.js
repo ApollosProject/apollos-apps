@@ -75,10 +75,6 @@ export const peopleSchema = gql`
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person
   }
-
-  extend type Query {
-    people(email: String!): [Person]
-  }
 `;
 
 export const mediaSchema = gql`

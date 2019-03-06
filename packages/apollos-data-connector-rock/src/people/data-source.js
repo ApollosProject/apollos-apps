@@ -18,11 +18,6 @@ export default class Person extends RockApolloDataSource {
       .find(id)
       .get();
 
-  getFromEmail = (email) =>
-    this.request()
-      .filter(`Email eq '${email}'`)
-      .get();
-
   // Gets a collection of all dataviews a user is in
   // Returns an array of dataview guids
   getPersonas = async ({ categoryId }) => {
@@ -74,6 +69,11 @@ export default class Person extends RockApolloDataSource {
     if (fieldsAsObject.BirthDate) {
       delete rockUpdateFields.BirthDate;
       const birthDate = moment(fieldsAsObject.BirthDate);
+
+      if (!birthDate.isValid()) {
+        throw new UserInputError('BirthDate must be a valid date');
+      }
+
       rockUpdateFields = {
         ...rockUpdateFields,
         // months in moment are 0 indexed
