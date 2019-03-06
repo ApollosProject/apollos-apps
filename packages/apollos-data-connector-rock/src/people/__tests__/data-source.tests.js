@@ -16,19 +16,36 @@ const auth = (dataSource) => ({
     dataSource
   ),
 });
+const personaAuth = (dataSource) => ({
+  getCurrentPerson: buildGetMock(
+    { id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+    dataSource
+  ),
+});
+const rockConstants = () => ({
+  modelType: (type) => ({ id: 15, type }),
+});
 describe('Person', () => {
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
   });
-  it('gets person from email', () => {
+
+  it('gets persons dataview associations', () => {
     const dataSource = new Person();
-    dataSource.get = buildGetMock(
-      { Email: 'isaac.hardy@newspring.cc' },
-      dataSource
-    );
-    const result = dataSource.getFromEmail('isaac.hardy@newspring.cc');
-    expect(result).resolves.toMatchSnapshot();
-    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    const Auth = personaAuth(dataSource);
+
+    const RockConstants = rockConstants();
+    const categoryId = 210;
+
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSource: { Auth, RockConstants },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+
+    const result = dataSource.getPersonas(categoryId);
+    expect(result).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
   it('gets person from id', () => {
@@ -44,7 +61,7 @@ describe('Person', () => {
     const Auth = auth(dataSource);
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSource: { Auth },
+      dataSources: { Auth },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -56,6 +73,78 @@ describe('Person', () => {
     expect(result).resolves.toMatchSnapshot();
     expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it("updates a user's gender attributes", () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'Gender',
+        value: 'Male',
+      },
+    ]);
+    expect(result).resolves.toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it("updates a user's birth date attributes", async () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = await dataSource.updateProfile([
+      {
+        field: 'BirthDate',
+        value: '1996-11-02T07:00:00.000Z',
+      },
+    ]);
+    expect(result).toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it('throws an error setting an invalid birth date', () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'BirthDate',
+        value: 'ABCD',
+      },
+    ]);
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
+  });
+
+  it('Throws an error if trying to set an invalid gender', () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'Gender',
+        value: 'Squirrel',
+      },
+    ]);
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it("uploads a user's profile picture", async () => {
