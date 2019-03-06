@@ -51,6 +51,7 @@ export const peopleSchema = gql`
     Email
     NickName
     Gender
+    BirthDate
   }
 
   input UpdateProfileInput {
@@ -65,6 +66,7 @@ export const peopleSchema = gql`
     nickName: String
     email: String
     gender: GENDER
+    birthDate: String
     photo: ImageMediaSource
   }
 

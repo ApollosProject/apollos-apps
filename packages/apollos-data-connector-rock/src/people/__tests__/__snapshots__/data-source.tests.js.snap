@@ -22,6 +22,36 @@ exports[`Person gets persons dataview associations 1`] = `Promise {}`;
 
 exports[`Person gets persons dataview associations 2`] = `Array []`;
 
+exports[`Person throws an error setting an invalid birth date 1`] = `"BirthDate must be a valid date"`;
+
+exports[`Person updates a user's birth date attributes 1`] = `
+Object {
+  "birthDate": "1996-11-02T07:00:00.000Z",
+  "firstName": "Vincent",
+  "id": 51,
+  "lastName": "Wilson",
+}
+`;
+
+exports[`Person updates a user's birth date attributes 2`] = `
+Array [
+  Array [],
+]
+`;
+
+exports[`Person updates a user's birth date attributes 3`] = `
+Array [
+  Array [
+    "/People/51",
+    Object {
+      "BirthDay": 2,
+      "BirthMonth": 11,
+      "BirthYear": 1996,
+    },
+  ],
+]
+`;
+
 exports[`Person updates a user's gender attributes 1`] = `
 Array [
   Array [],

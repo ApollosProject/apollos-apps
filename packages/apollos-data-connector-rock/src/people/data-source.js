@@ -2,6 +2,7 @@ import { AuthenticationError, UserInputError } from 'apollo-server';
 import FormData from 'form-data';
 import { camelCase, mapKeys } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import moment from 'moment';
 
 const RockGenderMap = {
   Unknown: 0,
@@ -52,6 +53,8 @@ export default class Person extends RockApolloDataSource {
       {}
     );
 
+    // Because we have a custom enum for Gender, we do this transform prior to creating our "update object"
+    // i.e. our schema will send Gender: 1 as Gender: Male
     if (fieldsAsObject.Gender) {
       if (!['Unknown', 'Male', 'Female'].includes(fieldsAsObject.Gender)) {
         throw new UserInputError(
@@ -61,7 +64,25 @@ export default class Person extends RockApolloDataSource {
       fieldsAsObject.Gender = RockGenderMap[fieldsAsObject.Gender];
     }
 
-    await this.patch(`/People/${currentPerson.id}`, fieldsAsObject);
+    let rockUpdateFields = { ...fieldsAsObject };
+
+    if (fieldsAsObject.BirthDate) {
+      delete rockUpdateFields.BirthDate;
+      const birthDate = moment(fieldsAsObject.BirthDate);
+      console.log(birthDate.isValid(), birthDate);
+      if (!birthDate.isValid()) {
+        throw new UserInputError('BirthDate must be a valid date');
+      }
+      rockUpdateFields = {
+        ...rockUpdateFields,
+        // months in moment are 0 indexed
+        BirthMonth: birthDate.month() + 1,
+        BirthDay: birthDate.date(),
+        BirthYear: birthDate.year(),
+      };
+    }
+
+    await this.patch(`/People/${currentPerson.id}`, rockUpdateFields);
 
     return {
       ...currentPerson,

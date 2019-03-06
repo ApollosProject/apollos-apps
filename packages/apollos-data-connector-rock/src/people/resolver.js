@@ -16,6 +16,8 @@ export default {
     firstName: ({ firstName }) =>
       typeof firstName === 'object' ? '' : firstName,
     lastName: ({ lastName }) => (typeof lastName === 'object' ? '' : lastName),
+    birthDate: ({ birthDate }) =>
+      typeof birthDate === 'object' ? null : birthDate,
   },
   GENDER: {
     Unknown: 0,
