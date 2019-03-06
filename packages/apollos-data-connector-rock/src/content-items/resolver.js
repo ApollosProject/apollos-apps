@@ -55,6 +55,13 @@ const resolver = {
         cursor: dataSources.ContentItem.byUserFeed(),
         args,
       }),
+    personaFeed: async (root, args, { dataSources }) => {
+      const personaFeed = await dataSources.ContentItem.byPersonaFeed();
+      return dataSources.ContentItem.paginate({
+        cursor: personaFeed,
+        args,
+      });
+    },
   },
   DevotionalContentItem: {
     ...defaultContentItemResolvers,

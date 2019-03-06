@@ -40,11 +40,18 @@ export const authSchema = gql`
 `;
 
 export const peopleSchema = gql`
+  enum GENDER {
+    Male
+    Female
+    Unknown
+  }
   enum UPDATEABLE_PROFILE_FIELDS {
     FirstName
     LastName
     Email
     NickName
+    Gender
+    BirthDate
   }
 
   input UpdateProfileInput {
@@ -58,6 +65,8 @@ export const peopleSchema = gql`
     lastName: String!
     nickName: String
     email: String
+    gender: GENDER
+    birthDate: String
     photo: ImageMediaSource
   }
 
@@ -65,10 +74,6 @@ export const peopleSchema = gql`
     updateProfileField(input: UpdateProfileInput!): Person
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person
-  }
-
-  extend type Query {
-    people(email: String!): [Person]
   }
 `;
 
@@ -342,6 +347,8 @@ export const contentItemSchema = gql`
 
   extend type Query {
     userFeed(first: Int, after: String): ContentItemsConnection
+      @cacheControl(maxAge: 0)
+    personaFeed(first: Int, after: String): ContentItemsConnection
       @cacheControl(maxAge: 0)
   }
 `;
