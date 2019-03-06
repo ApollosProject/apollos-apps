@@ -1,12 +1,11 @@
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import { Auth, Person, Family } from '@apollosproject/data-connector-rock';
+import { Auth, Person } from '@apollosproject/data-connector-rock';
 import { fetch } from 'apollo-server-env';
 
 import Template from './data-source';
 
 const { getContext } = createTestHelpers({
   Person,
-  Family,
   Auth,
   Template: { dataSource: Template },
 });

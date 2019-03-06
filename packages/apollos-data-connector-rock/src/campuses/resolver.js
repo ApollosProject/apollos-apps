@@ -33,4 +33,12 @@ export default {
       return campus.distanceFromLocation;
     },
   },
+  Person: {
+    campus: ({ id }, args, { dataSources }) =>
+      dataSources.Campus.getForPerson({ personId: id }),
+  },
+  Mutation: {
+    updateUserCampus: (root, { campusId }, { dataSources }) =>
+      dataSources.Campus.updateCurrentUserCampus({ campusId }),
+  },
 };

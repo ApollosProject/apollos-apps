@@ -39,7 +39,7 @@ Object {
 }
 `;
 
-exports[`Person updates a user's gender  1`] = `
+exports[`Person updates a user's gender 1`] = `
 Object {
   "data": Object {
     "updateProfileFields": Object {

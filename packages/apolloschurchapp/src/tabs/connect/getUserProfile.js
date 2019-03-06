@@ -7,7 +7,9 @@ export default gql`
       profile {
         firstName
         lastName
-        location
+        campus {
+          name
+        }
         email
         nickName
         photo {

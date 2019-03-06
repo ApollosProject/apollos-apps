@@ -76,7 +76,7 @@ describe('Person', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it("updates a user's gender ", async () => {
+  it("updates a user's gender", async () => {
     const query = `
       mutation {
         updateProfileFields(input: [
