@@ -50,7 +50,6 @@
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.9",
-    "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
@@ -58,8 +57,8 @@
     "react": "16.6.1",
     "react-dom": "16.6.3",
     "react-native": "0.57.5",
-    "react-native-linear-gradient": "2.4.0",
-    "react-native-svg": "6.5.2",
+    "react-native-linear-gradient": "2.5.3",
+    "react-native-svg": "9.2.4",
     "react-navigation": "2.11.2",
     "react-test-renderer": "16.6.1"
   },
