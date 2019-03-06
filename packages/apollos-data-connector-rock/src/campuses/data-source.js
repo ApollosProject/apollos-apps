@@ -40,11 +40,12 @@ export default class Campus extends RockApolloDataSource {
   };
 
   getForPerson = async ({ personId }) => {
-    const familyCampus = await this.request(`/Groups/GetFamilies/${personId}`)
+    const family = await this.request(`/Groups/GetFamilies/${personId}`)
       .expand('Campus')
       .first();
-    if (familyCampus) {
-      return familyCampus.campus;
+
+    if (family) {
+      return family.campus;
     }
     return null;
   };
@@ -58,7 +59,6 @@ export default class Campus extends RockApolloDataSource {
     ).first();
 
     if (!personGroup) return null;
-
     const { id: rockCampusId } = parseGlobalId(campusId);
 
     await this.patch(`/Groups/${personGroup.id}`, { CampusId: rockCampusId });

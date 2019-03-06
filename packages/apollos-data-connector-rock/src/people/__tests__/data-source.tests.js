@@ -130,7 +130,6 @@ describe('Person', () => {
     expect(result).rejects.toThrowErrorMatchingSnapshot();
   });
 
-
   it('Throws an error if trying to set an invalid gender', () => {
     const dataSource = new Person();
     const Auth = auth(dataSource);

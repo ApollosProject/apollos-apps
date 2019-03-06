@@ -17,10 +17,7 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
-    "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.0-alpha.9",
