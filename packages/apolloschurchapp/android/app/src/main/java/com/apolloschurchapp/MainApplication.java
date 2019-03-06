@@ -6,9 +6,6 @@ import com.facebook.react.ReactApplication;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.mybdesign.RNPassKit.RNPassKitPackage;
 import com.airbnb.android.react.maps.MapsPackage;
-import com.airbnb.android.react.maps.MapsPackage;
-import com.RNFetchBlob.RNFetchBlobPackage;
-import com.mybdesign.RNPassKit.RNPassKitPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.swmansion.rnscreens.RNScreenPackage;
@@ -44,9 +41,6 @@ public class MainApplication extends Application implements ReactApplication {
             new RNFetchBlobPackage(),
             new RNPassKitPackage(),
             new MapsPackage(),
-            new MapsPackage(),
-            new RNFetchBlobPackage(),
-            new RNPassKitPackage(),
             new RNCWebViewPackage(),
             new ReactNativeConfigPackage(),
             new RNScreenPackage(),
