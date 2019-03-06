@@ -1,6 +1,6 @@
 {
-  "name": "@apollosproject/ui-passes",
-  "version": "0.8.0-alpha.9",
+  "name": "@apollosproject/ui-htmlview",
+  "version": "0.8.0-alpha.8",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -24,9 +24,6 @@
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
     ],
-    "setupFiles": [
-      "./jest.setup.js"
-    ],
     "modulePaths": [
       "<rootDir>/src/"
     ],
@@ -37,17 +34,14 @@
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
     "react": "*",
-    "react-native": "*",
-    "react-native-passkit-wallet": "*",
-    "rn-fetch-blob": "*"
+    "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.9",
-    "graphql-tag": "^2.10.1",
-    "react-apollo": "^2.4.1"
+    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
+    "htmlparser2": "3.9.2"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.9",
+    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
@@ -56,12 +50,7 @@
     "react": "^16.8.2",
     "react-dom": "16.6.3",
     "react-native": "0.57.5",
-    "react-native-linear-gradient": "2.4.0",
-    "react-native-passkit-wallet": "^0.1.4",
-    "react-native-svg": "6.5.2",
-    "react-navigation": "2.11.2",
-    "react-test-renderer": "16.6.1",
-    "rn-fetch-blob": "^0.10.15"
+    "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
     "access": "public"

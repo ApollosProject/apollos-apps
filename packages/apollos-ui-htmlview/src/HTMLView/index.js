@@ -5,7 +5,9 @@ import { Parser, DomHandler } from 'htmlparser2';
 
 import { Paragraph as ParagraphPlaceholder } from '@apollosproject/ui-kit';
 
-import defaultRenderer from './defaultRenderer';
+import defaultRenderer, { wrapTextChildren } from './defaultRenderer';
+
+export { defaultRenderer, wrapTextChildren };
 
 class HTMLView extends PureComponent {
   static propTypes = {
