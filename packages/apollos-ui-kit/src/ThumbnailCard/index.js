@@ -26,25 +26,21 @@ const HorizontalLayout = styled({
 })(SideBySideView);
 
 const LeftColumn = compose(
-  // styled({ flex: 1.66 }),
+  styled({ flex: 1.66 }),
   mediaQuery(
     ({ md }) => ({ maxWidth: md }),
     styled(({ theme }) => ({
       paddingVertical: theme.sizing.baseUnit * 0.75,
-      backgroundColor: 'purple',
     })),
     styled(({ theme }) => ({
       paddingVertical: theme.sizing.baseUnit * 2,
       paddingHorizontal: theme.sizing.baseUnit * 1.5,
-      backgroundColor: 'red',
     }))
   )
 )(CardContent);
 
 const RightColumn = styled({
   alignSelf: 'stretch',
-  // height: '100%',
-  // aspectRatio: 1,
 })(FlexedView);
 
 const ThumbnailCard = enhance(
