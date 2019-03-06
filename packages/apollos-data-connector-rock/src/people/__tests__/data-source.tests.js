@@ -29,16 +29,6 @@ describe('Person', () => {
   it('constructs', () => {
     expect(new Person()).toBeTruthy();
   });
-  it('gets person from email', () => {
-    const dataSource = new Person();
-    dataSource.get = buildGetMock(
-      { Email: 'isaac.hardy@newspring.cc' },
-      dataSource
-    );
-    const result = dataSource.getFromEmail('isaac.hardy@newspring.cc');
-    expect(result).resolves.toMatchSnapshot();
-    expect(dataSource.get.mock.calls).toMatchSnapshot();
-  });
 
   it('gets persons dataview associations', () => {
     const dataSource = new Person();
@@ -102,6 +92,42 @@ describe('Person', () => {
     expect(result).resolves.toMatchSnapshot();
     expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it("updates a user's birth date attributes", async () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = await dataSource.updateProfile([
+      {
+        field: 'BirthDate',
+        value: '1996-11-02T07:00:00.000Z',
+      },
+    ]);
+    expect(result).toMatchSnapshot();
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+  });
+
+  it('throws an error setting an invalid birth date', () => {
+    const dataSource = new Person();
+    const Auth = auth(dataSource);
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.patch = buildGetMock({}, dataSource);
+    const result = dataSource.updateProfile([
+      {
+        field: 'BirthDate',
+        value: 'ABCD',
+      },
+    ]);
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it('Throws an error if trying to set an invalid gender', () => {

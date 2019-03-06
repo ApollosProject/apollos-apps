@@ -1,10 +1,6 @@
 import { createGlobalId } from '@apollosproject/server-core';
 
 export default {
-  Query: {
-    people: (root, { email }, { dataSources }) =>
-      dataSources.Person.getFromEmail(email),
-  },
   Mutation: {
     updateProfileField: (root, { input: { field, value } }, { dataSources }) =>
       dataSources.Person.updateProfile([{ field, value }]),
@@ -20,6 +16,8 @@ export default {
     firstName: ({ firstName }) =>
       typeof firstName === 'object' ? '' : firstName,
     lastName: ({ lastName }) => (typeof lastName === 'object' ? '' : lastName),
+    birthDate: ({ birthDate }) =>
+      typeof birthDate === 'object' ? null : birthDate,
   },
   GENDER: {
     Unknown: 0,
