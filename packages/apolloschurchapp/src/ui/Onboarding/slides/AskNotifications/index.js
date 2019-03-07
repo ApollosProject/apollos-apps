@@ -36,7 +36,7 @@ const AskNotifications = memo(
     slideTitle,
     description,
     buttonText,
-    buttonOnPress,
+    onPressButton,
     ...props
   }) => (
     <Slide {...props}>
@@ -55,7 +55,9 @@ const AskNotifications = memo(
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
-          <Button title={buttonText} onPress={buttonOnPress} pill={false} />
+          {onPressButton ? (
+            <Button title={buttonText} onPress={onPressButton} pill={false} />
+          ) : null}
         </Content>
       </ContentWrapper>
     </Slide>
@@ -70,7 +72,7 @@ AskNotifications.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   buttonText: PropTypes.string,
-  buttonOnPress: PropTypes.func,
+  onPressButton: PropTypes.func,
 };
 
 AskNotifications.defaultProps = {

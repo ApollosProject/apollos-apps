@@ -15,7 +15,10 @@ storiesOf('Onboarding/slides/AskNotifications', module)
     <AskNotifications description={'Custom description text'} />
   ))
   .add('buttonText', () => (
-    <AskNotifications buttonText={'Custom button text'} />
+    <AskNotifications
+      onPressButton={() => {}}
+      buttonText={'Custom button text'}
+    />
   ))
   .add('SlideWrapper props', () => (
     <AskNotifications onPressSecondary={() => {}} />

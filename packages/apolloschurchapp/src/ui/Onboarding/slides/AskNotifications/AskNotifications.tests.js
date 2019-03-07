@@ -36,10 +36,21 @@ describe('The Onboarding AskNotifications component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render custom button text', () => {
+  it('should render with a button', () => {
     const tree = renderer.create(
       <Providers>
-        <AskNotifications buttonText={'Custom button text'} />
+        <AskNotifications onPressButton={jest.fn()} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a button with custom text', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskNotifications
+          onPressButton={jest.fn()}
+          buttonText={'Custom button text'}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
