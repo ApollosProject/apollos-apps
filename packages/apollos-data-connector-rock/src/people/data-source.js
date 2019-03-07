@@ -69,10 +69,11 @@ export default class Person extends RockApolloDataSource {
     if (fieldsAsObject.BirthDate) {
       delete rockUpdateFields.BirthDate;
       const birthDate = moment(fieldsAsObject.BirthDate);
-      console.log(birthDate.isValid(), birthDate);
+
       if (!birthDate.isValid()) {
         throw new UserInputError('BirthDate must be a valid date');
       }
+
       rockUpdateFields = {
         ...rockUpdateFields,
         // months in moment are 0 indexed
