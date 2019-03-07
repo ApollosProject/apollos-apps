@@ -5,9 +5,12 @@ import SafeAreaView from 'react-native-safe-area-view';
 import RNMapView, { Marker } from 'react-native-maps';
 import Color from 'color';
 import { debounce } from 'lodash';
+import { Mutation } from 'react-apollo';
 
 import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
 import CampusCard, { CARD_WIDTH } from './CampusCard';
+
+import campusChange from './campusChange';
 
 const ContainerView = styled({
   flex: 1,
@@ -225,7 +228,21 @@ class MapView extends Component {
                 ))}
               </Animated.ScrollView>
               <PaddedView vertical={false}>
-                <Button title="Select Campus" pill={false} type="secondary" />
+                <Mutation mutation={campusChange}>
+                  {(handlePress, campusId) => (
+                    <Button
+                      title="Select Campus"
+                      pill={false}
+                      type="secondary"
+                      onPress={async (variables: campusId) => {
+                        await handlePress({
+                          variables,
+                        });
+                        await this.props.navigation.goBack();
+                      }}
+                    />
+                  )}
+                </Mutation>
               </PaddedView>
             </SafeAreaView>
           </ScrollingView>
