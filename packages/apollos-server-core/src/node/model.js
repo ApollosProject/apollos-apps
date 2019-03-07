@@ -1,4 +1,5 @@
 import Crypto from 'crypto';
+import { get } from 'lodash';
 
 const secret = process.env.SECRET || 'LZEVhlgzFZKClu1r';
 
@@ -29,19 +30,36 @@ export function parseGlobalId(encodedId) {
   }
 }
 
+const getPossibleDataModels = ({ schema, __type }) => {
+  const possibleType = schema.getTypeMap()[__type];
+  if (!possibleType || !possibleType.astNode.interfaces) {
+    return [__type];
+  }
+  const possibleInterfaces = possibleType.astNode.interfaces
+    .map(({ name: { value } }) => value)
+    .filter((value) => value !== 'Node');
+
+  return [__type, ...possibleInterfaces];
+};
+
 export default class Node {
   // eslint-disable-next-line class-methods-use-this
-  async get(encodedId, dataSources) {
+  async get(encodedId, dataSources, schema) {
     const { __type, id } = parseGlobalId(encodedId);
-    if (
-      !dataSources ||
-      !dataSources[__type] ||
-      !dataSources[__type].getFromId
-    ) {
+    const possibleModels = getPossibleDataModels({ __type, schema });
+    const modelType = possibleModels.find((type) =>
+      get(dataSources, `${type}.getFromId`, false)
+    );
+
+    if (!modelType && dataSources[__type] != null) {
+      throw new Error(
+        `You have a dataSource for ${__type} but it does not implement  \`getFromId\``
+      );
+    } else if (!modelType) {
       throw new Error(`No dataSource found using ${__type}`);
     }
 
-    const data = await dataSources[__type].getFromId(id, encodedId);
+    const data = await dataSources[modelType].getFromId(id, encodedId);
     if (data) data.__type = __type;
     return data;
   }
