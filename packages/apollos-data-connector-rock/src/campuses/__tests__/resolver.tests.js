@@ -169,6 +169,8 @@ describe('Campus', () => {
             campus {
               id
               name
+              latitude
+              longitude
             }
           }
         }
@@ -177,7 +179,15 @@ describe('Campus', () => {
     const rootValue = {};
 
     const getMock = jest.fn(() =>
-      Promise.resolve([{ campus: { id: 1, name: 'the best campus' } }])
+      Promise.resolve([
+        {
+          campus: {
+            id: 1,
+            name: 'the best campus',
+            location: { latitude: 1.1, longitude: 2.2 },
+          },
+        },
+      ])
     );
 
     context.dataSources.Campus.get = getMock;
