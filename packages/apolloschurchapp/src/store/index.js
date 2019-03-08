@@ -2,8 +2,9 @@ import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 import { track, events } from 'apolloschurchapp/src/analytics';
-import { client, CACHE_LOADED } from "../client"; // eslint-disable-line
-import updatePushId from '../notifications/updatePushId';
+
+import { client, CACHE_LOADED } from '../client'; // eslint-disable-line
+import { checkForPushPermissions, updatePushId } from '../notifications';
 import getAuthToken from './getAuthToken';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
