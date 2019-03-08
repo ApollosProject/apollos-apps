@@ -44,6 +44,14 @@ describe('The Onboarding AskNotifications component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render the button disabled', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskNotifications onPressButton={jest.fn()} buttonDisabled />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a button with custom text', () => {
     const tree = renderer.create(
       <Providers>

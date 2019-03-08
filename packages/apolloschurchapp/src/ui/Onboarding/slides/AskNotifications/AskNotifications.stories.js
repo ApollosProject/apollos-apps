@@ -14,6 +14,7 @@ storiesOf('Onboarding/slides/AskNotifications', module)
   .add('description', () => (
     <AskNotifications description={'Custom description text'} />
   ))
+  .add('buttonDisabled', () => <AskNotifications buttonDisabled />)
   .add('buttonText', () => (
     <AskNotifications
       onPressButton={() => {}}
