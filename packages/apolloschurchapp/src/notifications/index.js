@@ -1,3 +1,3 @@
 export NotificationsManager from './NotificationManager';
-export checkForPushPermissions from './checkForPushPermissions';
+export { getPushPermissions, requestPushPermissions } from './permissionUtils';
 export updatePushId from './updatePushId';
