@@ -20,6 +20,12 @@ const setNotifcationsEnabled = gql`
   }
 `;
 
+const getNotificationsEnabled = gql`
+  query getPushPermissions {
+    notificationsEnabled @client
+  }
+`;
+
 const requestPushPermissions = async () => {
   const notificationsEnabled = await promptForPushNotificationsWithUserResponse();
   await client.mutate({
@@ -30,4 +36,4 @@ const requestPushPermissions = async () => {
   return notificationsEnabled;
 };
 
-export { getPushPermissions, requestPushPermissions };
+export { getPushPermissions, requestPushPermissions, getNotificationsEnabled };
