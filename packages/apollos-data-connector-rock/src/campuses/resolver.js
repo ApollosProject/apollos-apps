@@ -1,6 +1,9 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { latLonDistance, createImageUrlFromGuid } from '../utils';
-import { enforceCurrentUser } from '../utils';
+import {
+  enforceCurrentUser,
+  latLonDistance,
+  createImageUrlFromGuid,
+} from '../utils';
 
 export default {
   Query: {
