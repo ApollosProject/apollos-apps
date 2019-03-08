@@ -71,7 +71,6 @@ export const defaults = {
   authToken: null,
   cacheLoaded: false,
   pushId: null,
-  notificationsEnabled: false,
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     currentTrack: null,
@@ -98,7 +97,11 @@ export const resolvers = {
         return false;
       }
     },
-    notificationsEnabled: getPushPermissions,
+    notificationsEnabled: () => {
+      const boom = await getPushPermissions();
+      console.log(boom);
+      return boom;
+    },
   },
   Mutation: {
     logout: () => {

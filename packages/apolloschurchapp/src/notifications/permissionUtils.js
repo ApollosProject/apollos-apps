@@ -4,8 +4,10 @@ import { client } from '../client';
 
 const getPushPermissions = async () =>
   new Promise((resolve) =>
-    OneSignal.getPermissionSubscriptionState((status) =>
-      resolve(!!(status.notificationsEnabled && status.subcriptionEnabled))
+    OneSignal.getPermissionSubscriptionState(
+      (status) =>
+        console.log(status) ||
+        resolve(status.notificationsEnabled && status.subcriptionEnabled)
     )
   );
 
@@ -22,7 +24,7 @@ const setNotifcationsEnabled = gql`
 
 const getNotificationsEnabled = gql`
   query getPushPermissions {
-    notificationsEnabled @client
+    notificationsEnabled @client(always: true)
   }
 `;
 
