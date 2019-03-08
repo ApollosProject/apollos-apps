@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import AskNotifications from '.';
+import AskNotifications from './AskNotifications';
 
 describe('The Onboarding AskNotifications component', () => {
   it('should render', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import AskNotifications from '.';
+import AskNotifications from './AskNotifications';
 
 storiesOf('Onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
