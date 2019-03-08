@@ -16,7 +16,7 @@ const promptForPushNotificationsWithUserResponse = async () =>
 
 const setNotifcationsEnabled = gql`
   mutation updatePushPermissions($enabled: Boolean!) {
-    updateUserPushSettings(enabled: $enabled)
+    updateUserPushSettings(enabled: $enabled) @client
   }
 `;
 
