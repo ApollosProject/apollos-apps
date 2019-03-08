@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 // import PropTypes from 'prop-types';
 import Swiper from 'react-native-swiper';
-import OneSignal from 'react-native-onesignal';
-import Config from 'react-native-config';
 import {
   withTheme,
   styled,
@@ -11,7 +9,7 @@ import {
   FlexedView,
 } from '@apollosproject/ui-kit';
 
-import { AskName, AskNotifications } from './slides';
+import { AskName, AskNotificationsConnected } from './slides';
 
 // Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
@@ -57,9 +55,6 @@ class Onboarding extends Component {
   // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
   handleOnPressPrimary = () => this.swiper.scrollBy(1);
 
-  handleOnPressNotificatons = () =>
-    OneSignal.init(Config.ONE_SIGNAL_KEY, { kOSSettingsKeyAutoPrompt: true });
-
   render() {
     return (
       <BackgroundView>
@@ -74,9 +69,8 @@ class Onboarding extends Component {
           swiperRef={this.setSwiperRef}
         >
           <AskName onPressPrimary={this.handleOnPressPrimary} />
-          <AskNotifications
+          <AskNotificationsConnected
             imageSource={'https://picsum.photos/640/640/?random'}
-            onPressButton={this.handleOnPressNotificatons}
             onPressSecondary={this.handleOnPressPrimary}
           />
           <Boom bgcolor={'lightgreen'}>
