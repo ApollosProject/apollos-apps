@@ -40,11 +40,11 @@ export const enforceCurrentUser = (func) => async (
     if (root.id !== currentPerson.id) {
       return null;
     }
-    return func(root, args, context, info);
   } catch (e) {
     if (!(e instanceof AuthenticationError)) {
       throw e;
     }
     return null;
   }
+  return func(root, args, context, info);
 };

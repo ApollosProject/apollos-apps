@@ -17,7 +17,6 @@ export default class AuthDataSource extends RockApolloDataSource {
     const userCookie = cookie || rockCookie;
 
     if (currentPerson) {
-      console.log('eager return');
       return currentPerson;
     }
 
