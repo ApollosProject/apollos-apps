@@ -112,7 +112,7 @@ describe('Auth', () => {
       expect(result).toMatchSnapshot();
       expect(context.dataSources.Auth.get.mock).toMatchSnapshot();
       // the `get` method shouldn't bet hit b/c we aren't calling `currentUser` 
-      // the current user is already on the context.
+      // the current user is already on the context
       expect(context.dataSources.Auth.get.mock.calls.length).toEqual(0);
     });
 
