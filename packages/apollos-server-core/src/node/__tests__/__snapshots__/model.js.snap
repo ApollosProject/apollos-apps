@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Node Node class should throw error if it can't find a matching model 1`] = `"No dataSource found using NoModel"`;
+
+exports[`Node Node class should throw error if model does not have getFromId 1`] = `"You have a dataSource for Test but it does not implement  \`getFromId\`"`;
