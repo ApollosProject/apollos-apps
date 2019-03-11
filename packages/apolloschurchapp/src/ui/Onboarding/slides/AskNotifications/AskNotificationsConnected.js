@@ -10,7 +10,7 @@ import AskNotifications from '.';
 
 const AskNotificationsConnected = memo((props) => (
   <Query query={getNotificationsEnabled}>
-    {({ data: { notificationsEnabled } }) => (
+    {({ data: { notificationsEnabled = false } = {} }) => (
       <AskNotifications
         onPressButton={requestPushPermissions}
         buttonDisabled={notificationsEnabled}
