@@ -51,6 +51,7 @@ export const peopleSchema = gql`
     Email
     NickName
     Gender
+    BirthDate
   }
 
   input UpdateProfileInput {
@@ -65,6 +66,7 @@ export const peopleSchema = gql`
     nickName: String
     email: String
     gender: GENDER
+    birthDate: String
     photo: ImageMediaSource
   }
 
@@ -389,12 +391,6 @@ export const contentSharableSchema = gql`
 `)}
 `;
 
-export const familySchema = gql`
-  extend type Person {
-    location: String
-  }
-`;
-
 export const liveSchema = gql`
   type LiveStream {
     isLive: Boolean
@@ -439,6 +435,14 @@ export const campusSchema = gql`
   input CampusLocationInput {
     latitude: Float!
     longitude: Float!
+  }
+
+  extend type Person {
+    campus: Campus
+  }
+
+  extend type Mutation {
+    updateUserCampus(campusId: String!): Person
   }
 `;
 

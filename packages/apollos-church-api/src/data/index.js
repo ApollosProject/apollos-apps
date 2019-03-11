@@ -13,7 +13,6 @@ import {
   Followings,
   Interactions,
   RockConstants,
-  Family,
   Person,
   ContentItem,
   ContentChannel,
@@ -46,7 +45,6 @@ const data = {
   RockConstants,
   Sharable,
   Analytics,
-  Family,
   OneSignal,
   UniversalContentItem: {
     dataSource: ContentItem.dataSource,

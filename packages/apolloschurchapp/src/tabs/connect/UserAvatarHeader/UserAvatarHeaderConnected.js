@@ -10,7 +10,9 @@ const UserAvatarHeaderConnected = ({ navigation }) => (
     {({
       data: {
         currentUser: {
-          profile: { photo, firstName, lastName, location } = {},
+          profile: { photo, firstName, lastName, campus: { name } } = {
+            campus: {},
+          },
         } = {},
       } = {},
       refetch,
@@ -18,7 +20,7 @@ const UserAvatarHeaderConnected = ({ navigation }) => (
       <UserAvatarHeader
         firstName={firstName}
         lastName={lastName}
-        location={location}
+        location={name}
         photo={photo}
         refetch={refetch}
         navigation={navigation}
