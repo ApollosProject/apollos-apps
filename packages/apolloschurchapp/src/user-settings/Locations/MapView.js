@@ -6,8 +6,8 @@ import RNMapView, { Marker } from 'react-native-maps';
 import Color from 'color';
 import { debounce } from 'lodash';
 import { Mutation } from 'react-apollo';
-
 import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
+import { withNavigation } from 'react-navigation';
 import CampusCard, { CARD_WIDTH } from './CampusCard';
 
 import campusChange from './campusChange';
@@ -80,6 +80,13 @@ class MapView extends Component {
         baseUnit: PropTypes.number,
       }),
     }),
+    navigation: PropTypes.shape({
+      goBack: PropTypes.func,
+    }),
+  };
+
+  state = {
+    campus: {},
   };
 
   animation = new Animated.Value(0);
@@ -103,6 +110,7 @@ class MapView extends Component {
     this.previousScrollPosition = value;
     const cardIndex = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item;
     const campus = this.props.campuses[cardIndex];
+    this.setState({ campus });
     if (!campus) return;
 
     const { userLocation } = this.props;
@@ -229,14 +237,16 @@ class MapView extends Component {
               </Animated.ScrollView>
               <PaddedView vertical={false}>
                 <Mutation mutation={campusChange}>
-                  {(handlePress, campusId) => (
+                  {(handlePress) => (
                     <Button
                       title="Select Campus"
                       pill={false}
                       type="secondary"
-                      onPress={async (variables: campusId) => {
+                      onPress={async () => {
                         await handlePress({
-                          variables,
+                          variables: {
+                            campusId: this.state.campus.id,
+                          },
                         });
                         await this.props.navigation.goBack();
                       }}
@@ -252,4 +262,4 @@ class MapView extends Component {
   }
 }
 
-export default withTheme()(MapView);
+export default withTheme()(withNavigation(MapView));
