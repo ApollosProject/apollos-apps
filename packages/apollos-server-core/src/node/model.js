@@ -31,14 +31,18 @@ export function parseGlobalId(encodedId) {
 }
 
 const getPossibleDataModels = ({ schema, __type }) => {
-  const possibleType = schema.getTypeMap()[__type];
-  if (!possibleType || !possibleType.astNode.interfaces) {
+  // The ast representation of the that we're resolving `__type` 
+  const originalType = schema.getTypeMap()[__type];
+  if (!originalType || !originalType.astNode.interfaces) {
+    // if the type doesn't exist, or doesn't have any interfaces, exit early.
     return [__type];
   }
+  // Grab the names of all interfaces for that type. 
   const possibleInterfaces = possibleType.astNode.interfaces
     .map(({ name: { value } }) => value)
     .filter((value) => value !== 'Node');
 
+  // Return a list of the type itself, followed by all interfaces of that type. 
   return [__type, ...possibleInterfaces];
 };
 
@@ -46,20 +50,23 @@ export default class Node {
   // eslint-disable-next-line class-methods-use-this
   async get(encodedId, dataSources, schema) {
     const { __type, id } = parseGlobalId(encodedId);
+    // returns a list of types that could possibly be dataModels
     const possibleModels = getPossibleDataModels({ __type, schema });
-    const modelType = possibleModels.find((type) =>
+    // check to see if any of those models have a dataSource wtih a getFromId method and return's it's name
+    // (if it exists)
+    const modelName = possibleModels.find((type) =>
       get(dataSources, `${type}.getFromId`, false)
     );
 
-    if (!modelType && dataSources[__type] != null) {
+    if (!modelName && dataSources[__type] != null) {
       throw new Error(
         `You have a dataSource for ${__type} but it does not implement  \`getFromId\``
       );
-    } else if (!modelType) {
+    } else if (!modelName) {
       throw new Error(`No dataSource found using ${__type}`);
     }
 
-    const data = await dataSources[modelType].getFromId(id, encodedId);
+    const data = await dataSources[modelName].getFromId(id, encodedId);
     if (data) data.__type = __type;
     return data;
   }
