@@ -31,18 +31,18 @@ export function parseGlobalId(encodedId) {
 }
 
 const getPossibleDataModels = ({ schema, __type }) => {
-  // The ast representation of the that we're resolving `__type` 
+  // The ast representation of the that we're resolving `__type`
   const originalType = schema.getTypeMap()[__type];
   if (!originalType || !originalType.astNode.interfaces) {
-    // if the type doesn't exist, or doesn't have any interfaces, exit early.
+    // if the type doesn't exist, or doesn't have any interfaces, exit early
     return [__type];
   }
-  // Grab the names of all interfaces for that type. 
-  const possibleInterfaces = possibleType.astNode.interfaces
+  // Grab the names of all interfaces for that type
+  const possibleInterfaces = originalType.astNode.interfaces
     .map(({ name: { value } }) => value)
     .filter((value) => value !== 'Node');
 
-  // Return a list of the type itself, followed by all interfaces of that type. 
+  // Return a list of the type itself, followed by all interfaces of that type
   return [__type, ...possibleInterfaces];
 };
 
