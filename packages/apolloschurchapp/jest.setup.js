@@ -38,3 +38,5 @@ jest.mock(
 jest.mock('react-native-video', () => 'Video');
 
 jest.mock('NativeEventEmitter');
+
+jest.mock('react-native-maps');

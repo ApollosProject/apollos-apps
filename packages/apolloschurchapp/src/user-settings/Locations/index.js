@@ -74,6 +74,7 @@ class Location extends PureComponent {
   }
 
   render() {
+    const { navigation } = this.props;
     return (
       <Query
         query={getAllCampuses}
@@ -85,6 +86,7 @@ class Location extends PureComponent {
       >
         {({ loading, error, data: { campuses = [] } = {} }) => (
           <MapView
+            navigation={navigation}
             isLoading={loading}
             error={error}
             campuses={campuses}

@@ -262,4 +262,4 @@ class MapView extends Component {
   }
 }
 
-export default withTheme()(withNavigation(MapView));
+export default withTheme()(MapView);
