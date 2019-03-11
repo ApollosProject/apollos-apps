@@ -43,6 +43,12 @@ it('Query node should return the data via the `Node` class', () => {
     },
   };
 
+  const schema = {
+    getTypeMap() {
+      return [];
+    },
+  };
+
   const data = Query.node(
     null,
     {
@@ -50,6 +56,9 @@ it('Query node should return the data via the `Node` class', () => {
     },
     {
       models,
+    },
+    {
+      schema,
     }
   );
   expect(data).toEqual(sampleData);

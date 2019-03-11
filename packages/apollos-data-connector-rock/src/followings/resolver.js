@@ -24,11 +24,13 @@ const resolvers = {
     updateLikeEntity: async (
       root,
       { input: { nodeId, operation } },
-      { dataSources }
+      { dataSources },
+      { schema }
     ) =>
       dataSources.Followings.updateLikeContentItem({
         nodeId,
         operation,
+        schema,
       }),
   },
   Query: {

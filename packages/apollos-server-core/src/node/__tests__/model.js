@@ -1,6 +1,8 @@
 import casual from 'casual';
 import Node, { createGlobalId, parseGlobalId } from '../model';
 
+const schema = { getTypeMap: () => ({}) };
+
 describe('Node', () => {
   it('`createGlobalId` should take two arguments and return a string', () => {
     const id = casual.word;
@@ -50,7 +52,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    node.get(globalId, dataSources);
+    await node.get(globalId, dataSources, schema);
   });
 
   it("Node class should throw error if it can't find a matching model", async () => {
@@ -59,7 +61,25 @@ describe('Node', () => {
     const globalId = createGlobalId(id, __type);
 
     const node = new Node({});
-    expect(node.get(globalId)).rejects.toBeDefined();
+    expect(
+      node.get(globalId, {}, schema)
+    ).rejects.toThrowErrorMatchingSnapshot();
+  });
+
+  it('Node class should throw error if model does not have getFromId', async () => {
+    const id = casual.word;
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+
+    const dataSources = {
+      Test: {},
+    };
+
+    const node = new Node(dataSources);
+
+    expect(
+      node.get(globalId, dataSources, schema)
+    ).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it("Node class doesn't assign __type if model returns falsey", async () => {
@@ -76,8 +96,44 @@ describe('Node', () => {
     };
 
     const node = new Node(dataSources);
-    const record = node.get(globalId);
+    const record = await node.get(globalId, dataSources, schema);
     expect(record).not.toHaveProperty('__type');
+  });
+
+  it('Node class should return data from the models interface `getFromId` method', async () => {
+    const id = casual.word;
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+    const data = {
+      test: casual.word,
+    };
+
+    const dataSources = {
+      TestInterface: {
+        getFromId() {
+          return Promise.resolve(data);
+        },
+      },
+    };
+
+    const schemaWithInterfaces = {
+      getTypeMap: () => ({
+        Test: {
+          astNode: {
+            interfaces: [
+              { name: { value: 'Node' } },
+              { name: { value: 'SomethingElse' } },
+              { name: { value: 'TestInterface' } },
+            ],
+          },
+        },
+      }),
+    };
+
+    const node = new Node();
+    const result = await node.get(globalId, dataSources, schemaWithInterfaces);
+
+    expect(result.test).toEqual(data.test);
   });
 
   it('Node class should return data from the models `getFromId` method', async () => {
@@ -97,7 +153,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources);
+    const result = await node.get(globalId, dataSources, schema);
 
     expect(result.test).toEqual(data.test);
   });
@@ -119,7 +175,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources);
+    const result = await node.get(globalId, dataSources, schema);
 
     expect(result.__type).toEqual(__type);
   });
