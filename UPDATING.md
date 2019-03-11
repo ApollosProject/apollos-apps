@@ -1,5 +1,17 @@
 # Updating
 
+## Updating from 0.8.0-alpha.9 to 0.8.0-alpha.10
+
+This update introduces a major breaking schema in change in the `getAllLikedContent` content query. This change adds pagination to the result. Changes on the API are automatically integrated, but changes to the ReactNative project will need to be integrated automatically.
+
+To integrate these changes, *copy and paste four files* from the [master branch of apolloschurchapp](https://github.com/ApollosProject/apollos-prototype/tree/master/packages/apolloschurchapp).
+
+1. [src/tabs/connect/LikedContentList/index.js](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apolloschurchapp/src/tabs/connect/LikedContentList/index.js)
+2. [src/tabs/connect/RecentlyLikedTileFeed/RecentlyLikedTileFeedConnected.js](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apolloschurchapp/src/tabs/connect/RecentlyLikedTileFeed/RecentlyLikedTileFeedConnected.js)
+3. [src/tabs/connect/getLikedContent.js](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apolloschurchapp/src/tabs/connect/getLikedContent.js)
+4. [src/ui/LikeButton/updateLikedContent.js](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apolloschurchapp/src/ui/LikeButton/updateLikedContent.js)
+
+If you have snapshots, you will need to update them after making changes. `yarn jest -u`.
 ## Updating from 0.8.0-alpha.4 to 0.8.0-alpha.5
 
 ### Updating Config

@@ -206,9 +206,13 @@ describe('Following', () => {
   it('gets all user liked content', async () => {
     const query = `
       query {
-        getAllLikedContent {
-          id
-          isLiked
+        likedContent {
+          edges {
+            node {
+              id
+              isLiked
+            }
+          }
         }
       }
     `;
@@ -220,9 +224,13 @@ describe('Following', () => {
   it('returns an empty array for liked content without a user logged in', async () => {
     const query = `
       query {
-        getAllLikedContent {
-          id
-          isLiked
+        likedContent {
+          edges {
+            node {
+              id
+              isLiked
+            }
+          }
         }
       }
     `;
