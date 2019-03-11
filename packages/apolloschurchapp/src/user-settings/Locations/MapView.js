@@ -7,7 +7,6 @@ import Color from 'color';
 import { debounce } from 'lodash';
 import { Mutation } from 'react-apollo';
 import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
-import { withNavigation } from 'react-navigation';
 import CampusCard, { CARD_WIDTH } from './CampusCard';
 
 import campusChange from './campusChange';
