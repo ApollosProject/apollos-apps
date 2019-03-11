@@ -97,11 +97,7 @@ export const resolvers = {
         return false;
       }
     },
-    notificationsEnabled: () => {
-      const boom = await getPushPermissions();
-      console.log(boom);
-      return boom;
-    },
+    notificationsEnabled: getPushPermissions,
   },
   Mutation: {
     logout: () => {

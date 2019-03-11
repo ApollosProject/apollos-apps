@@ -14,6 +14,11 @@ const AskNotificationsConnected = memo((props) => (
       <AskNotifications
         onPressButton={requestPushPermissions}
         buttonDisabled={notificationsEnabled}
+        buttonText={
+          notificationsEnabled
+            ? 'Notifications Enabled!'
+            : 'Yes, enable notifications'
+        }
         {...props}
       />
     )}

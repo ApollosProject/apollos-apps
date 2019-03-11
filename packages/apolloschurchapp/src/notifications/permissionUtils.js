@@ -4,10 +4,9 @@ import { client } from '../client';
 
 const getPushPermissions = async () =>
   new Promise((resolve) =>
-    OneSignal.getPermissionSubscriptionState(
-      (status) =>
-        console.log(status) ||
-        resolve(status.notificationsEnabled && status.subcriptionEnabled)
+    OneSignal.getPermissionSubscriptionState((status) =>
+      // Ensure the client (notificationsEnabled) && OneSignal (subscriptionEnabled) are boolean values
+      resolve(!!(status.notificationsEnabled && status.subscriptionEnabled))
     )
   );
 
