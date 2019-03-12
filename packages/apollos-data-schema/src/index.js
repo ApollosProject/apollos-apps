@@ -51,6 +51,7 @@ export const peopleSchema = gql`
     Email
     NickName
     Gender
+    BirthDate
   }
 
   input UpdateProfileInput {
@@ -65,6 +66,7 @@ export const peopleSchema = gql`
     nickName: String
     email: String
     gender: GENDER
+    birthDate: String
     photo: ImageMediaSource
   }
 
@@ -72,10 +74,6 @@ export const peopleSchema = gql`
     updateProfileField(input: UpdateProfileInput!): Person
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person
-  }
-
-  extend type Query {
-    people(email: String!): [Person]
   }
 `;
 
@@ -393,12 +391,6 @@ export const contentSharableSchema = gql`
 `)}
 `;
 
-export const familySchema = gql`
-  extend type Person {
-    location: String
-  }
-`;
-
 export const liveSchema = gql`
   type LiveStream {
     isLive: Boolean
@@ -444,6 +436,14 @@ export const campusSchema = gql`
     latitude: Float!
     longitude: Float!
   }
+
+  extend type Person {
+    campus: Campus
+  }
+
+  extend type Mutation {
+    updateUserCampus(campusId: String!): Person
+  }
 `;
 
 export const followingsSchema = gql`
@@ -467,7 +467,8 @@ export const followingsSchema = gql`
 `)}
 
   extend type Query {
-    getAllLikedContent: [ContentItem] @cacheControl(maxAge: 0)
+    likedContent(first: Int, after: String): ContentItemsConnection
+      @cacheControl(maxAge: 0)
   }
 `;
 

@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/config",
-  "version": "0.8.0-alpha.9",
+  "version": "0.8.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.9"
+    "@apollosproject/babel-preset-apollos": "^0.8.0"
   },
   "dependencies": {
     "js-yaml": "^3.12.0"
