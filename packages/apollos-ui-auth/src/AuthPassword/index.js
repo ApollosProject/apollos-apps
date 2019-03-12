@@ -1,7 +1,16 @@
+/* eslint-disable react/no-unused-prop-types */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { SafeAreaView, KeyboardAvoidingView, StyleSheet } from 'react-native';
+import {
+  BackgroundView,
+  TabView,
+  PaddedView,
+  TabSceneMap as SceneMap,
+} from '@apollosproject/ui-kit';
 
-import { TabView, TabSceneMap as SceneMap } from '@apollosproject/ui-kit';
+import { PromptText } from '../styles';
+import { AuthConsumer } from '../Provider';
 import LoginForm from './Login';
 
 import SignUpForm from './Signup';
@@ -21,31 +30,44 @@ class AuthPassword extends PureComponent {
       goBack: PropTypes.func,
     }),
     onFinish: PropTypes.func,
+    passwordPromptText: PropTypes.string,
+    screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
   };
 
-  handleFinish = () => {
-    // trigger the auth modal to close
-    // TODO: track({ eventName: 'UserLogin' });
-    if (this.props.onFinish) {
-      this.props.onFinish();
-    } else if (this.props.navigation && this.props.navigation.goBack) {
-      this.props.navigation.goBack();
-    }
+  static defaultProps = {
+    passwordPromptText: 'Login with your email and password.',
   };
 
-  renderLogin = () => <LoginForm onLogin={this.handleFinish} />;
-
-  renderSignup = () => <SignUpForm onSignup={this.handleFinish} />;
+  get flatProps() {
+    return { ...this.props, ...(this.props.screenProps || {}) };
+  }
 
   render() {
     return (
-      <TabView
-        routes={this.tabRoutes}
-        renderScene={SceneMap({
-          login: this.renderLogin,
-          signup: this.renderSignup,
-        })}
-      />
+      <AuthConsumer>
+        {({ closeAuth }) => (
+          <KeyboardAvoidingView
+            style={StyleSheet.absoluteFill}
+            behavior="padding"
+          >
+            <BackgroundView>
+              <SafeAreaView style={StyleSheet.absoluteFill}>
+                <PaddedView>
+                  <PromptText>{this.flatProps.passwordPromptText}</PromptText>
+                </PaddedView>
+
+                <TabView
+                  routes={this.tabRoutes}
+                  renderScene={SceneMap({
+                    login: () => <LoginForm onLogin={closeAuth} />,
+                    signup: () => <SignUpForm onSignup={closeAuth} />,
+                  })}
+                />
+              </SafeAreaView>
+            </BackgroundView>
+          </KeyboardAvoidingView>
+        )}
+      </AuthConsumer>
     );
   }
 }

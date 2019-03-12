@@ -7,13 +7,14 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
-import {
-  H6,
-  PaddedView,
-  BackgroundView,
-  TextInput,
-  FlexedView,
-} from '@apollosproject/ui-kit';
+import { PaddedView, BackgroundView, TextInput } from '@apollosproject/ui-kit';
+
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import gql from 'graphql-tag';
+import { ApolloConsumer, Mutation } from 'react-apollo';
+
+import handleLogin from '../handleLogin';
 
 import {
   NextButtonRow,
@@ -23,6 +24,15 @@ import {
   BrandIcon,
 } from '../styles';
 
+import { AuthConsumer } from '../Provider';
+
+const verifyPinMutation = gql`
+  mutation verifyPin($phone: String!, $code: String!) {
+    authenticateWithSms(phoneNumber: $phone, pin: $code) {
+      token
+    }
+  }
+`;
 class Verification extends Component {
   static propTypes = {
     brand: PropTypes.node,
@@ -39,12 +49,31 @@ class Verification extends Component {
       'We just sent you a code. Enter it below when it comes.',
   };
 
+  validationSchema = Yup.object().shape({
+    phone: Yup.string().matches(/^[6-9]\d{9}$/),
+  });
+
   get flatProps() {
     return { ...this.props, ...(this.props.screenProps || {}) };
   }
 
-  handleAdvance = () => {
-    this.props.navigation.navigate('AuthSMSVerification');
+  submitHandler = ({ verifyPin, closeAuth }) => async (
+    { code },
+    { setSubmitting, setFieldError }
+  ) => {
+    setSubmitting(true);
+    try {
+      await verifyPin({
+        variables: { code, phone: this.props.navigation.state.params.phone },
+      });
+      closeAuth();
+    } catch (e) {
+      setFieldError(
+        'code',
+        'There was an error. Please double check your number and try again.'
+      );
+    }
+    setSubmitting(false);
   };
 
   render() {
@@ -57,27 +86,73 @@ class Verification extends Component {
     return (
       <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior="padding">
         <BackgroundView>
-          <SafeAreaView style={StyleSheet.absoluteFill}>
-            <ScrollView>
-              <PaddedView>
-                {brand}
-                <TitleText>{confirmationTitleText}</TitleText>
-                <PromptText padded>{confirmationPromptText}</PromptText>
-                <TextInput
-                  autoFocus
-                  label="Verification Code"
-                  type="numeric"
-                  autoComplete="password"
-                  returnKeyType="next"
-                  onSubmitEditing={this.handleAdvance}
-                  enzblesReturnKeyAutomatically
-                />
-              </PaddedView>
-            </ScrollView>
-            <NextButtonRow>
-              <NextButton onPress={this.handleAdvance} />
-            </NextButtonRow>
-          </SafeAreaView>
+          <AuthConsumer>
+            {({ closeAuth }) => (
+              <ApolloConsumer>
+                {(client) => (
+                  <Mutation
+                    mutation={verifyPinMutation}
+                    update={(cache, { data: { authenticateWithSms } }) => {
+                      client.mutate({
+                        mutation: handleLogin,
+                        variables: {
+                          authToken: authenticateWithSms.token,
+                        },
+                      });
+                    }}
+                  >
+                    {(verifyPin) => (
+                      <Formik
+                        initialValues={{ code: '' }}
+                        validationSchema={this.validationSchema}
+                        onSubmit={this.submitHandler({ verifyPin, closeAuth })}
+                      >
+                        {({
+                          handleChange,
+                          handleSubmit,
+                          values,
+                          isSubmitting,
+                          isValid,
+                          touched,
+                          errors,
+                        }) => (
+                          <SafeAreaView style={StyleSheet.absoluteFill}>
+                            <ScrollView>
+                              <PaddedView>
+                                {brand}
+                                <TitleText>{confirmationTitleText}</TitleText>
+                                <PromptText padded>
+                                  {confirmationPromptText}
+                                </PromptText>
+                                <TextInput
+                                  autoFocus
+                                  label="Verification Code"
+                                  type="numeric"
+                                  autoComplete="password"
+                                  returnKeyType="next"
+                                  enzblesReturnKeyAutomatically
+                                  error={touched.code && errors.code}
+                                  onChangeText={handleChange('code')}
+                                  value={values.code}
+                                />
+                              </PaddedView>
+                            </ScrollView>
+                            <NextButtonRow>
+                              <NextButton
+                                onPress={handleSubmit}
+                                disabled={isSubmitting || !isValid}
+                                isLoading={isSubmitting}
+                              />
+                            </NextButtonRow>
+                          </SafeAreaView>
+                        )}
+                      </Formik>
+                    )}
+                  </Mutation>
+                )}
+              </ApolloConsumer>
+            )}
+          </AuthConsumer>
         </BackgroundView>
       </KeyboardAvoidingView>
     );

@@ -37,8 +37,6 @@ export const NextButtonRow = styled({
   flexDirection: 'row',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  // justifyContent: 'space-between',
-  // marginBottom: theme.sizing.baseUnit * 0.5,
 })(PaddedView);
 
 export const NextButton = (props) => (

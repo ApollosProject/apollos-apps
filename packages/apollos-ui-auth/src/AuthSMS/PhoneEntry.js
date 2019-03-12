@@ -13,8 +13,12 @@ import {
   BackgroundView,
   TextInput,
   FlexedView,
-  styled,
+  ButtonLink,
 } from '@apollosproject/ui-kit';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import gql from 'graphql-tag';
+import { Mutation } from 'react-apollo';
 
 import {
   NextButtonRow,
@@ -24,6 +28,14 @@ import {
   BrandIcon,
 } from '../styles';
 
+const requestPin = gql`
+  mutation requestPin($phone: String!) {
+    requestSmsLoginPin(phoneNumber: $phone) {
+      success
+    }
+  }
+`;
+
 class PhoneEntry extends Component {
   static propTypes = {
     brand: PropTypes.node,
@@ -31,7 +43,6 @@ class PhoneEntry extends Component {
     smsPromptText: PropTypes.string,
     smsPolicyInfo: PropTypes.node,
     allowPassword: PropTypes.bool,
-    smsOnPasswordLoginPress: PropTypes.func,
     smsPasswordLoginPrompt: PropTypes.node,
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
   };
@@ -46,15 +57,37 @@ class PhoneEntry extends Component {
         {"We'll never share your information or contact you (unless you ask!)."}
       </H6>
     ),
+    allowPassword: true,
     smsPasswordLoginPrompt: "I'd rather use my email and a password",
   };
+
+  validationSchema = Yup.object().shape({
+    phone: Yup.string().matches(/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/),
+  });
 
   get flatProps() {
     return { ...this.props, ...(this.props.screenProps || {}) };
   }
 
-  handleAdvance = () => {
-    this.props.navigation.navigate('AuthSMSVerification');
+  submitHandler = (mutate) => async (
+    { phone },
+    { setSubmitting, setFieldError }
+  ) => {
+    setSubmitting(true);
+    try {
+      await mutate({ variables: { phone } });
+      this.props.navigation.navigate('AuthSMSVerification', { phone });
+    } catch (e) {
+      setFieldError(
+        'phone',
+        'There was an error. Please double check your number and try again.'
+      );
+    }
+    setSubmitting(false);
+  };
+
+  handlePasswordLoginPress = () => {
+    this.props.navigation.navigate('AuthPassword');
   };
 
   render() {
@@ -63,36 +96,70 @@ class PhoneEntry extends Component {
       authTitleText,
       smsPromptText,
       smsPolicyInfo,
-      // allowPassword,
-      // smsOnPasswordLoginPress,
-      // smsPasswordLoginPrompt,
+      allowPassword,
+      smsPasswordLoginPrompt,
     } = this.flatProps;
 
     return (
       <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior="padding">
         <BackgroundView>
-          <SafeAreaView style={StyleSheet.absoluteFill}>
-            <ScrollView>
-              <PaddedView>
-                {brand}
-                <TitleText>{authTitleText}</TitleText>
-                <PromptText padded>{smsPromptText}</PromptText>
-                <TextInput
-                  autoFocus
-                  autoComplete="tel"
-                  label="Mobile Number"
-                  type="phone"
-                  returnKeyType="next"
-                  onSubmitEditing={this.handleAdvance}
-                  enzblesReturnKeyAutomatically
-                />
-              </PaddedView>
-            </ScrollView>
-            <NextButtonRow>
-              <FlexedView>{smsPolicyInfo}</FlexedView>
-              <NextButton onPress={this.handleAdvance} />
-            </NextButtonRow>
-          </SafeAreaView>
+          <Mutation mutation={requestPin}>
+            {(mutate) => (
+              <Formik
+                initialValues={{ phone: '' }}
+                validationSchema={this.validationSchema}
+                onSubmit={this.submitHandler(mutate)}
+              >
+                {({
+                  handleChange,
+                  handleSubmit,
+                  values,
+                  isSubmitting,
+                  isValid,
+                  touched,
+                  errors,
+                }) => (
+                  <SafeAreaView style={StyleSheet.absoluteFill}>
+                    <ScrollView>
+                      <PaddedView>
+                        {brand}
+                        <TitleText>{authTitleText}</TitleText>
+                        <PromptText padded>{smsPromptText}</PromptText>
+
+                        <TextInput
+                          autoFocus
+                          autoComplete="tel"
+                          label="Mobile Number"
+                          type="phone"
+                          returnKeyType="next"
+                          onSubmitEditing={this.handleAdvance}
+                          enzblesReturnKeyAutomatically
+                          error={touched.phone && errors.phone}
+                          onChangeText={handleChange('phone')}
+                          value={values.phone}
+                        />
+                      </PaddedView>
+                      {allowPassword ? (
+                        <PaddedView>
+                          <ButtonLink onPress={this.handlePasswordLoginPress}>
+                            {smsPasswordLoginPrompt}
+                          </ButtonLink>
+                        </PaddedView>
+                      ) : null}
+                    </ScrollView>
+                    <NextButtonRow>
+                      <FlexedView>{smsPolicyInfo}</FlexedView>
+                      <NextButton
+                        onPress={handleSubmit}
+                        disabled={isSubmitting || !isValid}
+                        isLoading={isSubmitting}
+                      />
+                    </NextButtonRow>
+                  </SafeAreaView>
+                )}
+              </Formik>
+            )}
+          </Mutation>
         </BackgroundView>
       </KeyboardAvoidingView>
     );
