@@ -17,11 +17,13 @@ describe('The Onboarding AskNotifications component', () => {
   });
   it('should render children (image)', () => {
     const tree = renderer.create(
-      <AskNotifications>
-        <GradientOverlayImage
-          source={'https://picsum.photos/640/640/?random'}
-        />
-      </AskNotifications>
+      <Providers>
+        <AskNotifications>
+          <GradientOverlayImage
+            source={'https://picsum.photos/640/640/?random'}
+          />
+        </AskNotifications>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });

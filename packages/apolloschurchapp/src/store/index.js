@@ -1,10 +1,15 @@
 import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
+import { Platform } from 'react-native';
 import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 import { track, events } from 'apolloschurchapp/src/analytics';
 
 import { client, CACHE_LOADED } from '../client'; // eslint-disable-line
-import { getPushPermissions, updatePushId } from '../notifications';
+import {
+  getPushPermissions,
+  updatePushId,
+  getNotificationsEnabled,
+} from '../notifications';
 import getAuthToken from './getAuthToken';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
@@ -71,6 +76,7 @@ export const defaults = {
   authToken: null,
   cacheLoaded: false,
   pushId: null,
+  notificationsEnabled: Platform.OS === 'android',
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     currentTrack: null,
@@ -280,13 +286,8 @@ export const resolvers = {
       return null;
     },
     updatePushPermissions: (root, { enabled }, { cache }) => {
-      const query = gql`
-        query {
-          notificationsEnabled @client
-        }
-      `;
-      cache.writeQuery({
-        query,
+      const result = cache.writeQuery({
+        query: getNotificationsEnabled,
         data: {
           notificationsEnabled: enabled,
         },
