@@ -91,7 +91,7 @@ const Text = enhance(
                   .string()}
                 {...textInputProps}
                 editable={!disabled}
-                value={`${value || ''}`}
+                value={value}
               />
             </Animated.View>
             <InputAddon>{suffix}</InputAddon>

@@ -1,22 +1,15 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { styled, ButtonLink, FlexedView } from '@apollosproject/ui-kit';
 
 import {
-  FlexedView,
-  TabView,
-  TabSceneMap as SceneMap,
-  H2,
-  H5,
-  styled,
-  Icon,
-  ButtonLink,
-  withTheme,
-} from '@apollosproject/ui-kit';
+  SMSPhoneEntry as AuthSMSPhoneEntry,
+  SMSVerification as AuthSMSVerification,
+} from './AuthSMS';
+import AuthPassword from './AuthPassword';
 
-import LoginForm from './login';
-import SignUpForm from './signup';
+import Header from './Header';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
@@ -28,39 +21,7 @@ export getLoginState from './getLoginState';
 export logout from './logout';
 export authLink from './authLink';
 
-const Title = styled(({ theme }) => ({
-  color: theme.colors.primary,
-}))(H2);
-
-const StyledH5 = styled(() => ({
-  padding: 0,
-}))(H5);
-
-const BrandIcon = withTheme(({ theme }) => ({
-  name: 'brand-icon',
-  size: theme.sizing.baseUnit * 3.0,
-  fill: theme.colors.primary,
-}))(Icon);
-
-const HeaderContainer = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
-}))(SafeAreaView);
-
-const Header = styled(({ theme }) => ({
-  padding: theme.sizing.baseUnit,
-  paddingBottom: theme.sizing.baseUnit * 1.5,
-  flexDirection: 'row',
-  alignItems: 'center',
-}))(View);
-
-const HeaderText = styled(({ theme }) => ({
-  flexDirection: 'column',
-  paddingTop: 0,
-  paddingBottom: 0,
-  paddingRight: 0,
-  paddingLeft: theme.sizing.baseUnit,
-  marginBottom: 0,
-}))(View);
+export { AuthSMSPhoneEntry, AuthSMSVerification, AuthPassword };
 
 const CancelButton = styled(({ theme }) => ({
   alignSelf: 'flex-end',
@@ -68,59 +29,54 @@ const CancelButton = styled(({ theme }) => ({
   paddingRight: theme.sizing.baseUnit,
 }))(ButtonLink);
 
-class Auth extends PureComponent {
-  static navigationOptions = {
-    header: null,
-    gesturesEnabled: false,
-  };
-
-  tabRoutes = [
-    { title: 'Sign In', key: 'login' },
-    { title: 'Register', key: 'signup' },
-  ];
-
-  static propTypes = {
-    navigation: PropTypes.shape({
-      goBack: PropTypes.func,
-    }),
-    onFinish: PropTypes.func,
-  };
-
-  handleFinish = () => {
-    if (this.props.onFinish) {
-      this.props.onFinish();
-    } else if (this.props.navigation && this.props.navigation.goBack) {
-      this.props.navigation.goBack();
-    }
-  };
-
-  renderLogin = () => <LoginForm onLogin={this.handleFinish} />;
-
-  renderSignup = () => <SignUpForm onSignup={this.handleFinish} />;
-
-  render() {
-    return (
-      <FlexedView>
-        <HeaderContainer forceInset={{ top: 'always' }}>
-          <CancelButton onPress={this.handleFinish}>Cancel</CancelButton>
-          <Header>
-            <BrandIcon />
-            <HeaderText>
-              <Title>Welcome!</Title>
-              <StyledH5>Please sign in to continue</StyledH5>
-            </HeaderText>
-          </Header>
-        </HeaderContainer>
-        <TabView
-          routes={this.tabRoutes}
-          renderScene={SceneMap({
-            login: this.renderLogin,
-            signup: this.renderSignup,
-          })}
-        />
-      </FlexedView>
-    );
+const AuthNavigator = createStackNavigator(
+  {
+    AuthSMSPhoneEntry,
+    AuthSMSVerification,
+    AuthPassword,
+  },
+  {
+    initialRouteName: 'AuthSMSPhoneEntry',
+    headerMode: 'none',
   }
-}
+);
 
-export default Auth;
+// <CancelButton onPress={this.handleFinish}>Cancel</CancelButton>
+AuthNavigator.navigationOptions = ({
+  navigation: { goBack },
+  screenProps: { cancelText = 'Cancel', allowCancel = true, onFinishAuth } = {},
+} = {}) => ({
+  header: null,
+  // (
+  //   <Header>
+  //     <FlexedView />
+  //     {allowCancel ? (
+  //       <CancelButton
+  //         onPress={() => (onFinishAuth ? onFinishAuth() : goBack())}
+  //       >
+  //         {cancelText}
+  //       </CancelButton>
+  //     ) : null}
+  //   </Header>
+  // ),
+});
+
+AuthNavigator.propTypes = {
+  screenProps: PropTypes.shape({
+    brand: PropTypes.node,
+    authTitleText: PropTypes.string,
+    smsPromptText: PropTypes.string,
+    smsPolicyInfo: PropTypes.node,
+    allowPassword: PropTypes.bool,
+    smsOnPasswordLoginPress: PropTypes.func,
+    smsPasswordLoginPrompt: PropTypes.node,
+    passwordPromptText: PropTypes.string,
+    confirmationTitleText: PropTypes.string,
+    confirmationPromptText: PropTypes.string,
+    onFinishAuth: PropTypes.func,
+    allowCancel: PropTypes.bool,
+    cancelText: PropTypes.string,
+  }),
+};
+
+export default AuthNavigator;
