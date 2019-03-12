@@ -7,6 +7,7 @@ import {
   styled,
   BackgroundView,
   FlexedView,
+  GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 
 import { AskName, AskNotificationsConnected } from './slides';
@@ -70,9 +71,12 @@ class Onboarding extends Component {
         >
           <AskName onPressPrimary={this.handleOnPressPrimary} />
           <AskNotificationsConnected
-            imageSource={'https://picsum.photos/640/640/?random'}
             onPressSecondary={this.handleOnPressPrimary}
-          />
+          >
+            <GradientOverlayImage
+              source={'https://picsum.photos/640/640/?random'}
+            />
+          </AskNotificationsConnected>
           <Boom bgcolor={'lightgreen'}>
             <Text>Hello World 2</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>

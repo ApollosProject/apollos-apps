@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import {
   PaddedView,
   FlexedView,
-  ProgressiveImage,
   styled,
   H2,
   H5,
@@ -14,11 +14,11 @@ import Slide from '../../Slide';
 
 const ContentWrapper = styled({
   height: '100%',
-})(PaddedView);
+})(View);
 
 const Content = styled({
   justifyContent: 'flex-end',
-})(FlexedView);
+})(PaddedView);
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -32,7 +32,7 @@ const StyledH5 = styled(({ theme }) => ({
 // memo = sfc PureComponent 💥
 const AskNotifications = memo(
   ({
-    imageSource,
+    children,
     slideTitle,
     description,
     buttonText,
@@ -41,18 +41,8 @@ const AskNotifications = memo(
     ...props
   }) => (
     <Slide {...props}>
-      <ContentWrapper vertical={false}>
-        {imageSource ? (
-          <ProgressiveImage
-            source={imageSource}
-            // thumbnail={{
-            //   uri: 'https://picsum.photos/50/50/?random',
-            //   width: 50,
-            //   height: 50,
-            // }}
-            imageStyle={{ width: 320, height: 320 }}
-          />
-        ) : null}
+      <ContentWrapper>
+        <FlexedView>{children}</FlexedView>
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
@@ -74,7 +64,10 @@ AskNotifications.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use a more unique name.
    */
-  imageSource: ProgressiveImage.propTypes,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   buttonText: PropTypes.string,

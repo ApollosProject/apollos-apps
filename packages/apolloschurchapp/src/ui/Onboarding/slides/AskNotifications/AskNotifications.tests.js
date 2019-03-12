@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
@@ -14,9 +15,13 @@ describe('The Onboarding AskNotifications component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with an image', () => {
+  it('should render children (image)', () => {
     const tree = renderer.create(
-      <AskNotifications imageSource={'https://picsum.photos/640/640/?random'} />
+      <AskNotifications>
+        <GradientOverlayImage
+          source={'https://picsum.photos/640/640/?random'}
+        />
+      </AskNotifications>
     );
     expect(tree).toMatchSnapshot();
   });

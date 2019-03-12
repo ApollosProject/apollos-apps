@@ -43,17 +43,22 @@ exports[`The Onboarding AskNotifications component should pass additional props 
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -159,17 +164,22 @@ exports[`The Onboarding AskNotifications component should render 1`] = `
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -248,17 +258,22 @@ exports[`The Onboarding AskNotifications component should render a button with c
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -387,17 +402,22 @@ exports[`The Onboarding AskNotifications component should render a custom descri
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -476,17 +496,22 @@ exports[`The Onboarding AskNotifications component should render a custom title 
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -565,17 +590,22 @@ exports[`The Onboarding AskNotifications component should render the button disa
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -704,17 +734,22 @@ exports[`The Onboarding AskNotifications component should render with a button 1
         style={
           Object {
             "height": "100%",
-            "paddingHorizontal": 16,
-            "paddingVertical": 0,
           }
         }
-        vertical={false}
       >
         <View
           style={
             Object {
               "flex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >

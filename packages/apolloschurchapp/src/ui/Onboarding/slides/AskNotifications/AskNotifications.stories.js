@@ -1,12 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
+import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import AskNotifications from './AskNotifications';
 
 storiesOf('Onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
-  .add('imageSource', () => (
-    <AskNotifications imageSource={'https://picsum.photos/640/640/?random'} />
+  .add('children (image)', () => (
+    <AskNotifications>
+      <GradientOverlayImage source={'https://picsum.photos/640/640/?random'} />
+    </AskNotifications>
   ))
   .add('slideTitle', () => (
     <AskNotifications slideTitle={'Custom title text'} />
