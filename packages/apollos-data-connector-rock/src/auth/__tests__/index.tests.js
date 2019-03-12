@@ -94,6 +94,28 @@ describe('Auth', () => {
       expect(result).toMatchSnapshot();
     });
 
+    it('will return current person from context to avoid duplicate checks', async () => {
+      const rootValue = {};
+      const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
+
+      context = getContext({
+        req: {
+          headers: { authorization: token },
+        },
+      });
+
+      context.dataSources.Auth.get = jest.fn(() => ({}));
+
+      context.currentPerson = { id: 123456 };
+
+      const result = await graphql(schema, query, rootValue, context);
+      expect(result).toMatchSnapshot();
+      expect(context.dataSources.Auth.get.mock).toMatchSnapshot();
+      // the `get` method shouldn't bet hit b/c we aren't calling `currentUser`
+      // the current user is already on the context
+      expect(context.dataSources.Auth.get.mock.calls.length).toEqual(0);
+    });
+
     it('logs a user out without a sessionId', async () => {
       const rootValue = {};
       const token = generateToken({ cookie: 'some-cookie' });

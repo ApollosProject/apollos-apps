@@ -1,4 +1,5 @@
 import { createGlobalId } from '@apollosproject/server-core';
+import { enforceCurrentUser } from '../utils';
 
 export default {
   Mutation: {
@@ -16,8 +17,11 @@ export default {
     firstName: ({ firstName }) =>
       typeof firstName === 'object' ? '' : firstName,
     lastName: ({ lastName }) => (typeof lastName === 'object' ? '' : lastName),
-    birthDate: ({ birthDate }) =>
-      typeof birthDate === 'object' ? null : birthDate,
+    birthDate: enforceCurrentUser(({ birthDate }) =>
+      typeof birthDate === 'object' ? null : birthDate
+    ),
+    gender: enforceCurrentUser(({ gender }) => gender),
+    email: enforceCurrentUser(({ email }) => email),
   },
   GENDER: {
     Unknown: 0,
