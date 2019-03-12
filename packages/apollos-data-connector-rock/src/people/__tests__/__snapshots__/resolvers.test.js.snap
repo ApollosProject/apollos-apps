@@ -61,3 +61,5 @@ Object {
   },
 }
 `;
+
+exports[`enforceCurrentUser won't swallow non-auth errors 1`] = `"Random Error"`;

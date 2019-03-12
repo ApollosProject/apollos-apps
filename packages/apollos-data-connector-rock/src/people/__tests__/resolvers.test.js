@@ -1,5 +1,6 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
+import { AuthenticationError } from 'apollo-server';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
@@ -12,6 +13,7 @@ import { generateToken, registerToken } from '../../auth';
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Person from '../index';
 import authMock from '../../authMock';
+import { enforceCurrentUser } from '../../utils';
 
 const Auth = { schema: authSchema, dataSource: authMock };
 const { getContext, getSchema } = createTestHelpers({ Person, Auth });
@@ -133,5 +135,81 @@ describe('Person', () => {
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+  });
+});
+
+describe('enforceCurrentUser', () => {
+  it('will return a field if the queried user is the current user', async () => {
+    const context = {
+      dataSources: { Auth: { getCurrentPerson: () => ({ id: 1 }) } },
+    };
+    const resultFunc = enforceCurrentUser(({ firstName }) => firstName);
+
+    const result = await resultFunc(
+      { firstName: 'John', id: 1 },
+      {},
+      context,
+      {}
+    );
+    expect(result).toEqual('John');
+  });
+
+  it("won't return a field with no user", async () => {
+    const context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => throw new AuthenticationError() },
+      },
+    };
+    const resultFunc = enforceCurrentUser(({ firstName }) => firstName);
+
+    const result = await resultFunc(
+      { firstName: 'John', id: 1 },
+      {},
+      context,
+      {}
+    );
+    expect(result).toEqual(null);
+  });
+
+  it("won't return a field with a different user", async () => {
+    const context = {
+      dataSources: { Auth: { getCurrentPerson: () => ({ id: 9 }) } },
+    };
+    const resultFunc = enforceCurrentUser(({ firstName }) => firstName);
+
+    const result = await resultFunc(
+      { firstName: 'John', id: 1 },
+      {},
+      context,
+      {}
+    );
+    expect(result).toEqual(null);
+  });
+
+  it("won't swallow non-auth errors", async () => {
+    const context = {
+      dataSources: { Auth: { getCurrentPerson: () => ({ id: 9 }) } },
+    };
+    const resultFunc = enforceCurrentUser(({ firstName }) => firstName);
+
+    const result = await resultFunc(
+      { firstName: 'John', id: 1 },
+      {},
+      context,
+      {}
+    );
+    expect(result).toEqual(null);
+  });
+
+  it("won't swallow non-auth errors", () => {
+    const context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => throw new Error('Random Error') },
+      },
+    };
+    const resultFunc = enforceCurrentUser(({ firstName }) => firstName);
+
+    const result = resultFunc({ firstName: 'John', id: 1 }, {}, context, {});
+    expect(result).rejects.toThrowErrorMatchingSnapshot();
   });
 });

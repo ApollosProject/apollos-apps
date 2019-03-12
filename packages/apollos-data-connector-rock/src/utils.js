@@ -1,4 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
+import { AuthenticationError } from 'apollo-server';
 
 export const enforceProtocol = (uri) =>
   uri.startsWith('//') ? `https:${uri}` : uri;
@@ -26,4 +27,24 @@ export const latLonDistance = (lat1, lon1, lat2, lon2) => {
   dist = (dist * 180) / Math.PI;
   dist = dist * 60 * 1.1515;
   return dist;
+};
+
+export const enforceCurrentUser = (func) => async (
+  root,
+  args,
+  context,
+  info
+) => {
+  try {
+    const currentPerson = await context.dataSources.Auth.getCurrentPerson();
+    if (root.id !== currentPerson.id) {
+      return null;
+    }
+  } catch (e) {
+    if (!(e instanceof AuthenticationError)) {
+      throw e;
+    }
+    return null;
+  }
+  return func(root, args, context, info);
 };

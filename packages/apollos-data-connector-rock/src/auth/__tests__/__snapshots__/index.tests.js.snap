@@ -72,6 +72,28 @@ Object {
 }
 `;
 
+exports[`Auth currentUser query will return current person from context to avoid duplicate checks 1`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "id": "AuthenticatedUser:820e872a1e13865c139d7cae82e71ac7",
+      "profile": Object {
+        "email": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`Auth currentUser query will return current person from context to avoid duplicate checks 2`] = `
+Object {
+  "calls": Array [],
+  "instances": Array [],
+  "invocationCallOrder": Array [],
+  "results": Array [],
+}
+`;
+
 exports[`Auth logs in a user 1`] = `
 Object {
   "data": Object {

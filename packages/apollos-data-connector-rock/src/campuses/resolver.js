@@ -1,5 +1,9 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { latLonDistance, createImageUrlFromGuid } from '../utils';
+import {
+  enforceCurrentUser,
+  latLonDistance,
+  createImageUrlFromGuid,
+} from '../utils';
 
 export default {
   Query: {
@@ -34,8 +38,9 @@ export default {
     },
   },
   Person: {
-    campus: ({ id }, args, { dataSources }) =>
-      dataSources.Campus.getForPerson({ personId: id }),
+    campus: enforceCurrentUser(({ id }, args, { dataSources }) =>
+      dataSources.Campus.getForPerson({ personId: id })
+    ),
   },
   Mutation: {
     updateUserCampus: (root, { campusId }, { dataSources }) =>
