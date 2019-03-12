@@ -24,29 +24,38 @@ const resolvers = {
     updateLikeEntity: async (
       root,
       { input: { nodeId, operation } },
-      { dataSources }
+      { dataSources },
+      { schema }
     ) =>
       dataSources.Followings.updateLikeContentItem({
         nodeId,
         operation,
+        schema,
       }),
   },
   Query: {
-    getAllLikedContent: async (root, args, { dataSources }) => {
-      const followings = await dataSources.Followings.getFollowingsForCurrentUser(
-        { type: 'ContentItem' }
+    likedContent: async (root, { after, first }, { dataSources }) => {
+      const followingsPaginated = await dataSources.Followings.paginatedGetFollowingsForCurrentUser(
+        { type: 'ContentItem', after, first }
       );
-      const ids = followings.map((f) => f.entityId);
-      const contentItems = await dataSources.ContentItem.getFromIds(ids).get();
-      const sortedContentItems = contentItems.sort((a, b) => {
-        const followA = followings.find((f) => f.entityId === a.id);
-        const followB = followings.find((f) => f.entityId === b.id);
-        return (
-          new Date(followA.createdDateTime) < new Date(followB.createdDateTime)
-        );
-      });
 
-      return sortedContentItems.map((i) => ({ ...i, isLiked: true }));
+      const followings = await followingsPaginated.edges;
+      const ids = followings.map((f) => f.node.entityId);
+      const contentItems = await dataSources.ContentItem.getFromIds(ids).get();
+      const contentItemEdges = contentItems.map((contentItem) => ({
+        node: { ...contentItem, isLiked: true },
+        following: followings.find((f) => f.node.entityId === contentItem.id)
+          .node,
+        cursor: followings.find((f) => f.node.entityId === contentItem.id)
+          .cursor,
+      }));
+      const sortedContentItemEdges = contentItemEdges.sort(
+        (a, b) =>
+          new Date(a.following.createdDateTime) <
+          new Date(b.following.createdDateTime)
+      );
+
+      return { edges: sortedContentItemEdges };
     },
   },
   UniversalContentItem: defaultContentItemResolvers,

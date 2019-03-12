@@ -142,11 +142,16 @@ export default class ContentItem extends RockApolloDataSource {
     if (parentItems.length) {
       const parentImages = parentItems
         .map(this.getImages)
-        .find((images) => images.length)
-        .filter((image) => image.sources.length); // filter images w/o URLs
+        .find((images) => images.length);
 
-      if (parentImages && parentImages.length)
-        return pickBestImage(parentImages);
+      if (!parentImages) return null;
+
+      const validParentImages = parentImages.filter(
+        (image) => image.sources.length
+      );
+
+      if (validParentImages && validParentImages.length)
+        return pickBestImage(validParentImages);
     }
 
     return null;
@@ -232,6 +237,27 @@ export default class ContentItem extends RockApolloDataSource {
     request.filterOneOf(siblingFilter).andFilter(this.LIVE_CONTENT());
 
     return request.orderBy('Order');
+  };
+
+  // Generates feed based on persons dataview membership
+  byPersonaFeed = async () => {
+    const {
+      dataSources: { Person },
+    } = this.context;
+
+    // Grabs the guids associated with all dataviews user is memeber
+    const getPersonaGuidsForUser = await Person.getPersonas({
+      categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
+    });
+
+    // Grabs content items based on personas
+    return this.request(
+      `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
+        .map((obj) => obj.guid)
+        .join()}`
+    )
+      .andFilter(this.LIVE_CONTENT())
+      .orderBy('StartDateTime', 'desc');
   };
 
   byUserFeed = () =>

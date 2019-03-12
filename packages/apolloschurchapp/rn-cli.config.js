@@ -5,6 +5,7 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-kit'),
   path.resolve('..', 'apollos-ui-passes'),
   path.resolve('..', 'apollos-ui-auth'),
+  path.resolve('..', 'apollos-ui-htmlview'),
 ];
 
 module.exports = {

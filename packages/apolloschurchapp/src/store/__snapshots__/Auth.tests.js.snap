@@ -38,8 +38,8 @@ InMemoryCache {
         "Node": Array [
           "ContentChannel",
           "Person",
-          "Pass",
           "Campus",
+          "Pass",
           "UniversalContentItem",
           "DevotionalContentItem",
           "MediaContentItem",
