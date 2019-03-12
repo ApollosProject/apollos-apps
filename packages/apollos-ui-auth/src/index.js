@@ -16,16 +16,17 @@ import {
 
 // import { track } from 'apolloschurchapp/src/analytics';
 
-import LoginForm from './Login';
-import SignUpForm from './Signup';
+import LoginForm from './login';
+import SignUpForm from './signup';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
 export ProtectedTouchable from './ProtectedTouchable';
-export Provider from './Provider';
+export AuthProvider, { AuthConsumer } from './Provider';
 
 export getLoginState from './getLoginState';
 export logout from './logout';
+export authLink from './authLink';
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,

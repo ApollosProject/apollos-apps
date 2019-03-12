@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { AsyncStorage } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 
@@ -17,7 +18,7 @@ import getLoginState from './getLoginState';
 // }
 // `;
 
-const AuthContext = React.createContext(() => {});
+const AuthContext = React.createContext({ navigateToAuth: () => {} });
 
 export const getAuthToken = gql`
   query authToken {
@@ -27,6 +28,7 @@ export const getAuthToken = gql`
 
 export const resolvers = {
   Query: {
+    authToken: () => AsyncStorage.getItem('authToken'),
     isLoggedIn: (_root, _args, { cache }) => {
       // When logging out, this query returns an error.
       // Rescue the error, and return false.
@@ -47,6 +49,8 @@ export const resolvers = {
 
     handleLogin: async (root, { authToken }, { cache }) => {
       try {
+        await AsyncStorage.setItem('authToken', authToken);
+
         await cache.writeQuery({
           query: getAuthToken,
           data: { authToken },
@@ -80,8 +84,8 @@ export const resolvers = {
   },
 };
 
-const Provider = ({ children, onTriggerAuth }) => (
-  <AuthContext.Provider value={onTriggerAuth}>
+const Provider = ({ children, navigateToAuth }) => (
+  <AuthContext.Provider value={{ navigateToAuth }}>
     <ApolloConsumer>
       {(client) => {
         client.addResolvers(resolvers);
@@ -93,13 +97,13 @@ const Provider = ({ children, onTriggerAuth }) => (
 
 Provider.propTypes = {
   children: PropTypes.node,
-  onTriggerAuth: PropTypes.func,
+  navigateToAuth: PropTypes.func,
 };
 
 Provider.defaultProps = {
-  onTriggerAuth: () => {},
+  navigateToAuth: () => {},
 };
 
-export const TriggerAuthConsumer = AuthContext.Consumer;
+export const AuthConsumer = AuthContext.Consumer;
 
 export default Provider;

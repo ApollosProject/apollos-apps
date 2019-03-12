@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import getLoginState from './getLoginState';
 
-import { TriggerAuthConsumer } from './Provider';
+import { AuthConsumer } from './Provider';
 
 class ProtectedAction extends PureComponent {
   queuedActionsToTriggerOnLogin = [];
@@ -54,12 +54,12 @@ class ProtectedAction extends PureComponent {
 }
 
 const ProtectedActionWithProps = (props) => (
-  <TriggerAuthConsumer>
-    {(triggerAuth) => (
+  <AuthConsumer>
+    {({ navigateToAuth }) => (
       <Query query={getLoginState}>
         {({ data: { isLoggedIn = false } = {}, loading }) => (
           <ProtectedAction
-            onTriggerAuth={triggerAuth}
+            onTriggerAuth={navigateToAuth}
             isLoggedIn={isLoggedIn}
             loading={loading}
             {...props}
@@ -67,7 +67,7 @@ const ProtectedActionWithProps = (props) => (
         )}
       </Query>
     )}
-  </TriggerAuthConsumer>
+  </AuthConsumer>
 );
 
 export default ProtectedActionWithProps;

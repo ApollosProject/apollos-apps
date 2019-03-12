@@ -37,6 +37,7 @@
     "react-native": "*"
   },
   "dependencies": {
+    "apollo-link-context": "1.0.14",
     "apollo-client": "2.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",

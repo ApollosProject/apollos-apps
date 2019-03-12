@@ -6,9 +6,9 @@ import { ApolloLink } from 'apollo-link';
 import SplashScreen from 'react-native-splash-screen';
 import gql from 'graphql-tag';
 
+import { authLink } from '@apollosproject/ui-auth';
 import { resolvers, schema, defaults } from '../store';
 import httpLink from './httpLink';
-import authLink from './authLink'; // eslint-disable-line
 import cache, { ensureCacheHydration } from './cache';
 
 const link = ApolloLink.from([authLink, httpLink]);
