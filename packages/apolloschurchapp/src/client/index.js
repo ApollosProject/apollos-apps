@@ -6,7 +6,7 @@ import { ApolloLink } from 'apollo-link';
 import SplashScreen from 'react-native-splash-screen';
 import gql from 'graphql-tag';
 
-import { resolvers, schema } from '../store';
+import { resolvers, schema, defaults } from '../store';
 import httpLink from './httpLink';
 import authLink from './authLink'; // eslint-disable-line
 import cache, { ensureCacheHydration } from './cache';
@@ -23,7 +23,7 @@ export const client = new ApolloClient({
 });
 
 // client.onResetStore(() => cache.writeData(defaults));
-// cache.writeData(defaults);
+cache.writeData({ data: defaults });
 
 export const CACHE_LOADED = gql`
   query {

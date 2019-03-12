@@ -37,7 +37,6 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
     "apollo-client": "2.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
@@ -45,6 +44,7 @@
     "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
   "devDependencies": {
+    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
     "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",

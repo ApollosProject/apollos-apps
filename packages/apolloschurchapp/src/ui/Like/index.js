@@ -17,18 +17,15 @@ LikeIcon.propTypes = {
   isLiked: PropTypes.bool,
 };
 
-const Like = withNavigation(
-  ({ isLiked, toggleLike, itemId, navigation }) =>
-    console.log('Like', { navigation }) || (
-      <ProtectedTouchable
-        onPress={() =>
-          toggleLike({ itemId, operation: isLiked ? 'Unlike' : 'Like' })
-        }
-      >
-        <LikeIcon isLiked={isLiked} />
-      </ProtectedTouchable>
-    )
-);
+const Like = withNavigation(({ isLiked, toggleLike, itemId }) => (
+  <ProtectedTouchable
+    onPress={() =>
+      toggleLike({ itemId, operation: isLiked ? 'Unlike' : 'Like' })
+    }
+  >
+    <LikeIcon isLiked={isLiked} />
+  </ProtectedTouchable>
+));
 
 Like.propTypes = {
   itemId: PropTypes.string,
