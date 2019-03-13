@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import {
   styled,
   withTheme,
+  Icon,
   H2,
   H5,
+  PaddedView,
   TextInput,
-  Icon,
 } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
@@ -16,7 +17,10 @@ const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
   fill: theme.colors.primary,
-  style: { marginBottom: theme.sizing.baseUnit * 0.5 },
+  style: {
+    marginTop: theme.sizing.baseUnit * 2,
+    marginBottom: theme.sizing.baseUnit * 0.5,
+  },
 }))(Icon);
 
 const Title = styled(({ theme }) => ({
@@ -33,25 +37,27 @@ const AskName = memo(({ slideTitle, description, ...props }) => {
 
   return (
     <Slide {...props}>
-      <BrandIcon />
-      <Title>{slideTitle}</Title>
-      <StyledH5>{description}</StyledH5>
-      <TextInput
-        label="First Name"
-        type="text"
-        returnKeyType="next"
-        onSubmitEditing={() => LastNameInput.focus()}
-        enzblesReturnKeyAutomatically
-      />
-      <TextInput
-        label="Last Name"
-        type="text"
-        returnKeyType="next"
-        enablesReturnKeyAutomatically
-        inputRef={(r) => {
-          LastNameInput = r;
-        }}
-      />
+      <PaddedView vertical={false}>
+        <BrandIcon />
+        <Title>{slideTitle}</Title>
+        <StyledH5>{description}</StyledH5>
+        <TextInput
+          label="First Name"
+          type="text"
+          returnKeyType="next"
+          onSubmitEditing={() => LastNameInput.focus()}
+          enzblesReturnKeyAutomatically
+        />
+        <TextInput
+          label="Last Name"
+          type="text"
+          returnKeyType="next"
+          enablesReturnKeyAutomatically
+          inputRef={(r) => {
+            LastNameInput = r;
+          }}
+        />
+      </PaddedView>
     </Slide>
   );
 });
