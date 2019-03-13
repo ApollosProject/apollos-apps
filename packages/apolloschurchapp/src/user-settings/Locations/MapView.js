@@ -82,6 +82,7 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
+    navigationButton: PropTypes.func,
   };
 
   state = {
@@ -234,7 +235,7 @@ class MapView extends Component {
                   />
                 ))}
               </Animated.ScrollView>
-              <PaddedView vertical={false}>
+              <PaddedView>
                 <Mutation mutation={campusChange}>
                   {(handlePress) => (
                     <Button
@@ -247,7 +248,7 @@ class MapView extends Component {
                             campusId: this.state.campus.id,
                           },
                         });
-                        await this.props.navigation.goBack();
+                        await this.props.navigationButton;
                       }}
                     />
                   )}

@@ -75,6 +75,7 @@ class Location extends PureComponent {
 
   render() {
     const { navigation } = this.props;
+    const navigationButton = navigation.goBack;
     return (
       <Query
         query={getAllCampuses}
@@ -92,6 +93,7 @@ class Location extends PureComponent {
             campuses={campuses}
             initialRegion={this.props.initialRegion}
             userLocation={this.state.userLocation}
+            navigationButton={navigationButton}
           />
         )}
       </Query>
