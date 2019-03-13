@@ -1,4 +1,3 @@
-jest.mock('./src/client/index');
 jest.mock('react-native-config', () => ({
   ONE_SIGNAL_KEY: 'doesntmatter',
 }));
@@ -13,7 +12,15 @@ jest.mock('react-native-safari-view', () => ({
   show: jest.fn(),
 }));
 
-jest.mock('react-native-onesignal');
+jest.mock('react-native-onesignal', () => ({
+  getPermissionSubscriptionState: (callback) =>
+    callback({ notificationsEnabled: true, subscriptionEnabled: true }),
+  promptForPushNotificationsWithUserResponse: (callback) => callback(true),
+  init: jest.fn(),
+  addEventListener: jest.fn(),
+  configure: jest.fn(),
+}));
+
 jest.mock('react-native-music-control', () => ({
   enableBackgroundMode: jest.fn(),
   enableControl: jest.fn(),
@@ -38,3 +45,5 @@ jest.mock(
 jest.mock('react-native-video', () => 'Video');
 
 jest.mock('NativeEventEmitter');
+
+jest.mock('./src/client/index');

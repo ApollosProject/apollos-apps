@@ -10,7 +10,7 @@ storiesOf('Onboarding/Slide', module)
       <Text>Boom</Text>
     </Slide>
   ))
-  .add('With Navigation', () => (
+  .add('onPressPrimary', () => (
     <Slide onPressPrimary={() => {}}>
       <Text>Boom</Text>
     </Slide>
@@ -29,22 +29,21 @@ storiesOf('Onboarding/Slide', module)
       <Text>Boom</Text>
     </Slide>
   ))
-  .add('With Skip Button', () => (
-    <Slide onPressPrimary={() => {}} onPressSecondary={() => {}}>
+  .add('onPressSecondary', () => (
+    <Slide onPressSecondary={() => {}}>
       <Text>Boom</Text>
     </Slide>
   ))
-  .add('With Skip Button', () => (
+  .add('secondaryNavText', () => (
     <Slide
-      onPressPrimary={() => {}}
       onPressSecondary={() => {}}
-      secondaryNavText={'Custom skip button'}
+      secondaryNavText={'Custom skip button text'}
     >
       <Text>Boom</Text>
     </Slide>
   ))
-  .add('hidePrimaryNav', () => (
-    <Slide onPressPrimary={() => {}} onPressSecondary={() => {}} hidePrimaryNav>
+  .add('With Navigation', () => (
+    <Slide onPressPrimary={() => {}} onPressSecondary={() => {}}>
       <Text>Boom</Text>
     </Slide>
   ));
