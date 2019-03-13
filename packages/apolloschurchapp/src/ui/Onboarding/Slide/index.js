@@ -42,16 +42,13 @@ const Slide = memo(
     onPressSecondary,
     primaryNavText,
     primaryNavIcon,
-    hidePrimaryNav,
     secondaryNavText,
   }) => (
     <>
-      <FlexedView>
-        <PaddedView>{children}</PaddedView>
-      </FlexedView>
-      {onPressPrimary ? (
+      <FlexedView>{children}</FlexedView>
+      {onPressPrimary || onPressSecondary ? (
         <NavWrapper vertical={false}>
-          {!hidePrimaryNav ? (
+          {onPressPrimary ? (
             <Button onPress={onPressPrimary}>
               <>
                 <H5>{primaryNavText}</H5>
@@ -79,7 +76,6 @@ Slide.propTypes = {
   onPressSecondary: PropTypes.func,
   primaryNavText: PropTypes.string, // colored button text
   primaryNavIcon: PropTypes.string, // optional custom icon name
-  hidePrimaryNav: PropTypes.bool, // optionally only show the secondary nav text
   secondaryNavText: PropTypes.string, // text link
 };
 

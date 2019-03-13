@@ -1,11 +1,13 @@
-import querystring from 'querystring';
 import URL from 'url';
-import gql from 'graphql-tag';
+import querystring from 'querystring';
 import { Component } from 'react';
 import { Linking } from 'react-native';
+import PropTypes from 'prop-types';
+import gql from 'graphql-tag';
 import OneSignal from 'react-native-onesignal';
-import { get } from 'lodash';
 import Config from 'react-native-config';
+import { get } from 'lodash';
+
 import NavigationService from '../NavigationService';
 import { client } from '../client';
 
@@ -16,6 +18,13 @@ const UPDATE_DEVICE_PUSH_ID = gql`
 `;
 
 export default class NotificationsInit extends Component {
+  static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
+  };
+
   static navigationOptions = {};
 
   componentDidMount() {
@@ -74,6 +83,6 @@ export default class NotificationsInit extends Component {
   };
 
   render() {
-    return null;
+    return this.props.children;
   }
 }
