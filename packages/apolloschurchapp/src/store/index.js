@@ -286,7 +286,7 @@ export const resolvers = {
       return null;
     },
     updatePushPermissions: (root, { enabled }, { cache }) => {
-      const result = cache.writeQuery({
+      cache.writeQuery({
         query: getNotificationsEnabled,
         data: {
           notificationsEnabled: enabled,
