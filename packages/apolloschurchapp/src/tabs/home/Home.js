@@ -10,7 +10,9 @@ import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
 
+import ActionTable from '../../ui/ActionTable';
 import getUserFeed from './getUserFeed';
+import getPersonaFeed from './getPersonaFeed';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -56,6 +58,22 @@ class Home extends PureComponent {
                   <>
                     <LogoTitle source={require('./wordmark.png')} />
                     <LiveButton />
+                    <Query
+                      query={getPersonaFeed}
+                      fetchPolicy="cache-and-network"
+                    >
+                      {({ data: personaData, loading: actionLoading }) => (
+                        <ActionTable
+                          isLoading={actionLoading}
+                          onPress={this.handleOnPress}
+                          content={get(
+                            personaData,
+                            'personaFeed.edges',
+                            []
+                          ).map((edge) => edge.node)}
+                        />
+                      )}
+                    </Query>
                   </>
                 }
                 onPressItem={this.handleOnPress}
