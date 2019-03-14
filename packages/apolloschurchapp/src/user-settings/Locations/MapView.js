@@ -80,7 +80,6 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
-    navigationButton: PropTypes.func,
   };
 
   state = {

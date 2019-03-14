@@ -87,10 +87,9 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
               style={
                 Object {
                   "paddingHorizontal": 16,
-                  "paddingVertical": 0,
+                  "paddingVertical": 16,
                 }
               }
-              vertical={false}
             >
               <View
                 accessible={true}
