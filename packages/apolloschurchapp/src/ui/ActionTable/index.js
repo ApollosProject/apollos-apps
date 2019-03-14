@@ -7,7 +7,7 @@ import {
   Divider,
   ContentCard,
   CardContent,
-  H5,
+  ChannelLabel,
   H3,
   styled,
 } from '@apollosproject/ui-kit';
@@ -22,11 +22,13 @@ class ActionTable extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool,
-    content: PropTypes.array,
+    content: PropTypes.array, // eslint-disable-line
+    label: PropTypes.string,
+    title: PropTypes.string,
   };
 
   render() {
-    const { onPress, isLoading, content } = this.props;
+    const { onPress, isLoading, content, label, title } = this.props;
     if (isLoading) {
       return <Text>Hi</Text>;
     }
@@ -35,25 +37,23 @@ class ActionTable extends PureComponent {
         isLoading={isLoading}
         header={
           <Header>
-            <H5>FOR YOU</H5>
+            <ChannelLabel label={label} />
             <H3 numberOfLines={3} ellipsizeMode="tail">
-              Some random text that encourages you
+              {title}
             </H3>
           </Header>
         }
         content={
           <TableView>
             {content.map((item) => (
-              <>
-                <ActionItem
-                  key={item.id}
-                  onPress={onPress}
-                  label={item.parentChannel ? item.parentChannel.name : ''}
-                  title={item.title || ''}
-                  imageSource={item.coverImage ? item.coverImage.sources : ''}
-                />
-                <Divider />
-              </>
+              <ActionItem
+                key={item.id}
+                id={item.id}
+                onPress={onPress}
+                label={item.parentChannel ? item.parentChannel.name : ''}
+                title={item.title || ''}
+                imageSource={item.coverImage ? item.coverImage.sources : ''}
+              />
             ))}
           </TableView>
         }

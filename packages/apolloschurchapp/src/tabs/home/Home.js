@@ -64,6 +64,8 @@ class Home extends PureComponent {
                     >
                       {({ data: personaData, loading: actionLoading }) => (
                         <ActionTable
+                          label={'FOR YOU'}
+                          title={'Some random text that encourages you'}
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}
                           content={get(

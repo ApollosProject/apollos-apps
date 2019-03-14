@@ -8,6 +8,7 @@ import {
   H4,
   CellContent,
   styled,
+  Divider,
   TouchableScale,
 } from '@apollosproject/ui-kit';
 
@@ -20,9 +21,10 @@ const CellImage = styled(({ theme }) => ({
 class ActionItem extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
-    imageSource: PropTypes.number,
+    imageSource: PropTypes.any, // eslint-disable-line
     label: PropTypes.string,
     title: PropTypes.string,
+    id: PropTypes.string,
   };
 
   render() {
@@ -30,7 +32,7 @@ class ActionItem extends PureComponent {
       <TouchableScale
         onPress={() =>
           this.props.onPress({
-            id: 'ContentChannelItem:asdfhakljdshflkajhsdflkahsdf',
+            id: this.props.id,
             transitionKey: 2,
           })
         }
@@ -42,6 +44,7 @@ class ActionItem extends PureComponent {
             <H4>{this.props.title}</H4>
           </CellContent>
         </Cell>
+        <Divider />
       </TouchableScale>
     );
   }
