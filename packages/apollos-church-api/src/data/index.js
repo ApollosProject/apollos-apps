@@ -46,18 +46,6 @@ const data = {
   Sharable,
   Analytics,
   OneSignal,
-  UniversalContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
-  DevotionalContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
-  ContentSeriesContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
-  MediaContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
   PersonalDevice,
   OneSignalWithRock,
   Pass,
