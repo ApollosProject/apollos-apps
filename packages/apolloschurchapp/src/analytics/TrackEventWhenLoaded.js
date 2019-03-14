@@ -1,8 +1,9 @@
-import { PureComponent } from 'react';
+import React, { PureComponent } from 'react';
+import { ApolloConsumer } from 'react-apollo';
 import PropTypes from 'prop-types';
 import { track } from './index';
 
-export default class TrackEventWhenLoaded extends PureComponent {
+class TrackEventWhenLoaded extends PureComponent {
   componentDidMount() {
     if (this.props.loaded) {
       this.track();
@@ -20,8 +21,8 @@ export default class TrackEventWhenLoaded extends PureComponent {
   }
 
   track() {
-    const { eventName, properties } = this.props;
-    return this.trackClient({ eventName, properties });
+    const { eventName, properties, client } = this.props;
+    return this.trackClient({ eventName, properties, client });
   }
 
   render() {
@@ -36,3 +37,11 @@ TrackEventWhenLoaded.propTypes = {
   properties: PropTypes.any,
   track: PropTypes.func,
 };
+
+const TrackEventWhenLoadedConnected = (props) => (
+  <ApolloConsumer>
+    {(client) => <TrackEventWhenLoaded {...props} client={client} />}
+  </ApolloConsumer>
+);
+
+export default TrackEventWhenLoadedConnected;

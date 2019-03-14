@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 
 import { track, events } from 'apolloschurchapp/src/analytics';
 import { Platform } from 'react-native';
-import { CACHE_LOADED } from '../client'; // eslint-disable-line
+import { CACHE_LOADED } from '../client/cache'; // eslint-disable-line
 
 import {
   getPushPermissions,

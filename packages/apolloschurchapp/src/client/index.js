@@ -4,19 +4,18 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
 import SplashScreen from 'react-native-splash-screen';
-import gql from 'graphql-tag';
 
 import { authLink } from '@apollosproject/ui-auth';
 import { resolvers, schema, defaults } from '../store';
 import httpLink from './httpLink';
-import cache, { ensureCacheHydration } from './cache';
+import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
 const link = ApolloLink.from([authLink, httpLink]);
 
 export const client = new ApolloClient({
   link,
   cache,
-  queryDeduplication: true,
+  queryDeduplication: false,
   shouldBatch: true,
   resolvers,
   typeDefs: schema,
@@ -24,18 +23,6 @@ export const client = new ApolloClient({
 
 // client.onResetStore(() => cache.writeData(defaults));
 cache.writeData({ data: defaults });
-
-export const CACHE_LOADED = gql`
-  query {
-    cacheLoaded @client
-  }
-`;
-
-export const MARK_CACHE_LOADED = gql`
-  mutation markCacheLoaded {
-    cacheMarkLoaded @client
-  }
-`;
 
 class ClientProvider extends PureComponent {
   static propTypes = {
