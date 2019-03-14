@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
@@ -8,6 +8,8 @@ import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import MapView from './MapView';
 
 import getAllCampuses from './getCampusLocations';
+
+import campusChange from './campusChange';
 
 const getCurrentLocation = () =>
   new Promise((resolve, reject) => {
@@ -75,7 +77,6 @@ class Location extends PureComponent {
 
   render() {
     const { navigation } = this.props;
-    const navigationButton = navigation.goBack;
     return (
       <Query
         query={getAllCampuses}
@@ -86,15 +87,26 @@ class Location extends PureComponent {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data: { campuses = [] } = {} }) => (
-          <MapView
-            navigation={navigation}
-            isLoading={loading}
-            error={error}
-            campuses={campuses}
-            initialRegion={this.props.initialRegion}
-            userLocation={this.state.userLocation}
-            navigationButton={navigationButton}
-          />
+          <Mutation mutation={campusChange}>
+            {(handlePress) => (
+              <MapView
+                navigation={navigation}
+                isLoading={loading}
+                error={error}
+                campuses={campuses}
+                initialRegion={this.props.initialRegion}
+                userLocation={this.state.userLocation}
+                onLocationSelect={async ({ id }) => {
+                  await handlePress({
+                    variables: {
+                      campusId: id,
+                    },
+                  });
+                  await navigation.goBack();
+                }}
+              />
+            )}
+          </Mutation>
         )}
       </Query>
     );

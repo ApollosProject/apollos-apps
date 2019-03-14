@@ -5,11 +5,8 @@ import SafeAreaView from 'react-native-safe-area-view';
 import RNMapView, { Marker } from 'react-native-maps';
 import Color from 'color';
 import { debounce } from 'lodash';
-import { Mutation } from 'react-apollo';
 import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
 import CampusCard, { CARD_WIDTH } from './CampusCard';
-
-import campusChange from './campusChange';
 
 const ContainerView = styled({
   flex: 1,
@@ -64,6 +61,7 @@ class MapView extends Component {
         longitude: PropTypes.number.isRequired,
       })
     ),
+    onLocationSelect: PropTypes.func.isRequired,
     initialRegion: PropTypes.shape({
       latitude: PropTypes.number.isRequired,
       longitude: PropTypes.number.isRequired,
@@ -82,7 +80,6 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
-    navigationButton: PropTypes.func,
   };
 
   state = {
@@ -236,23 +233,12 @@ class MapView extends Component {
                 ))}
               </Animated.ScrollView>
               <PaddedView>
-                <Mutation mutation={campusChange}>
-                  {(handlePress) => (
-                    <Button
-                      title="Select Campus"
-                      pill={false}
-                      type="secondary"
-                      onPress={async () => {
-                        await handlePress({
-                          variables: {
-                            campusId: this.state.campus.id,
-                          },
-                        });
-                        await this.props.navigationButton;
-                      }}
-                    />
-                  )}
-                </Mutation>
+                <Button
+                  title="Select Campus"
+                  pill={false}
+                  type="secondary"
+                  onPress={() => this.props.onLocationSelect(this.state.campus)}
+                />
               </PaddedView>
             </SafeAreaView>
           </ScrollingView>
