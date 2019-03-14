@@ -42,6 +42,8 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
       <View
         style={
           Object {
+            "flex": 1,
+            "justifyContent": "center",
             "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
@@ -62,7 +64,6 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
               },
               Object {
                 "marginBottom": 16,
-                "marginTop": 266.8,
               },
               false,
               Object {
@@ -337,6 +338,8 @@ exports[`The Onboarding Splash component should render 1`] = `
       <View
         style={
           Object {
+            "flex": 1,
+            "justifyContent": "center",
             "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
@@ -357,7 +360,6 @@ exports[`The Onboarding Splash component should render 1`] = `
               },
               Object {
                 "marginBottom": 16,
-                "marginTop": 266.8,
               },
               false,
               Object {
@@ -493,6 +495,8 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
       <View
         style={
           Object {
+            "flex": 1,
+            "justifyContent": "center",
             "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
@@ -513,7 +517,6 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
               },
               Object {
                 "marginBottom": 16,
-                "marginTop": 266.8,
               },
               false,
               Object {
@@ -649,6 +652,8 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
       <View
         style={
           Object {
+            "flex": 1,
+            "justifyContent": "center",
             "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
@@ -669,7 +674,6 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
               },
               Object {
                 "marginBottom": 16,
-                "marginTop": 266.8,
               },
               false,
               Object {
@@ -742,7 +746,7 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
             }
           }
         >
-          CUSTOM TITLE TEXT
+          Custom title text
         </Text>
         <Text
           isLight={true}
@@ -805,21 +809,23 @@ exports[`The Onboarding Splash component should render light text on a dark back
       <Image
         source={
           Object {
-            "testUri": "../../../src/ui/Splash/img/splash.jpg",
+            "height": 1200,
+            "uri": "https://picsum.photos/1200/1200?random",
+            "width": 1200,
           }
         }
         style={
           Object {
-            "height": 1354,
-            "marginTop": -50,
             "position": "absolute",
-            "width": 770,
+            "resizeMode": "cover",
           }
         }
       />
       <View
         style={
           Object {
+            "flex": 1,
+            "justifyContent": "center",
             "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
@@ -840,7 +846,6 @@ exports[`The Onboarding Splash component should render light text on a dark back
               },
               Object {
                 "marginBottom": 16,
-                "marginTop": 266.8,
               },
               false,
               Object {
