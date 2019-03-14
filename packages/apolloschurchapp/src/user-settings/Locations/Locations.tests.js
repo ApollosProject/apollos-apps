@@ -1,6 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import wait from 'waait';
+import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 
 import Providers from 'apolloschurchapp/src/Providers';
 import getCampusLocations from './getCampusLocations';
@@ -101,12 +100,11 @@ describe('Display Native Map with Locations', () => {
       },
     };
 
-    const tree = renderer.create(
-      <Providers mocks={[mock]}>
+    const tree = await renderWithApolloData(
+      <Providers mocks={[mock]} addTypename={false}>
         <Location navigation={navigation} initialRegion={mockRegion} />
       </Providers>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 });
