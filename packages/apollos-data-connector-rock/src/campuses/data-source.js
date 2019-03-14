@@ -1,4 +1,5 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import { parseGlobalId } from '@apollosproject/server-core';
 import { latLonDistance } from '../utils';
 
 export default class Campus extends RockApolloDataSource {
@@ -36,5 +37,34 @@ export default class Campus extends RockApolloDataSource {
     );
 
     return campuses;
+  };
+
+  getForPerson = async ({ personId }) => {
+    const family = await this.request(`/Groups/GetFamilies/${personId}`)
+      .expand('Campus')
+      .expand('Campus/Location')
+      .expand('Campus/Location/Image')
+      .first();
+
+    if (family) {
+      return family.campus;
+    }
+    return null;
+  };
+
+  updateCurrentUserCampus = async ({ campusId }) => {
+    const { Auth } = this.context.dataSources;
+
+    const currentUser = await Auth.getCurrentPerson();
+    const personGroup = await this.request(
+      `/Groups/GetFamilies/${currentUser.id}`
+    ).first();
+
+    if (!personGroup) return null;
+    const { id: rockCampusId } = parseGlobalId(campusId);
+
+    await this.patch(`/Groups/${personGroup.id}`, { CampusId: rockCampusId });
+
+    return currentUser;
   };
 }
