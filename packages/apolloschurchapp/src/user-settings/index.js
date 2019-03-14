@@ -50,10 +50,7 @@ class UserSettings extends PureComponent {
           return (
             <BackgroundContainer>
               <AvatarView>
-                <AvatarForm
-                  text
-                  refetch={this.props.navigation.getParam('refetch', {})}
-                />
+                <AvatarForm text />
               </AvatarView>
               <WebBrowserConsumer>
                 {(openUrl) => (

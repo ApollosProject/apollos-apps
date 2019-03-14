@@ -13,6 +13,8 @@ const RockGenderMap = {
 export default class Person extends RockApolloDataSource {
   resource = 'People';
 
+  expanded = true;
+
   getFromId = (id) =>
     this.request()
       .find(id)
@@ -92,6 +94,10 @@ export default class Person extends RockApolloDataSource {
   };
 
   uploadProfileImage = async (file, length) => {
+    const currentPerson = await this.context.dataSources.Auth.getCurrentPerson();
+
+    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
+
     const { stream, filename } = await file;
     const data = new FormData();
     data.append('file', stream, {
@@ -109,7 +115,14 @@ export default class Person extends RockApolloDataSource {
         },
       }
     );
+
     const photoId = await response.text();
-    return this.updateProfile([{ field: 'PhotoId', value: photoId }]);
+    const person = await this.updateProfile([
+      { field: 'PhotoId', value: photoId },
+    ]);
+    const photo = await this.request('/BinaryFiles')
+      .filter(`Id eq ${photoId}`)
+      .first();
+    return { ...person, photo };
   };
 }
