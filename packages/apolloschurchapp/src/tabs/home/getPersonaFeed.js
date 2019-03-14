@@ -5,7 +5,7 @@ import { largeCardFragment } from 'apolloschurchapp/src/ui/ContentCardConnected'
 
 export default gql`
   query getPersonaFeed {
-    personaFeed {
+    personaFeed(first: 4) {
       edges {
         node {
           ...largeCardFragment

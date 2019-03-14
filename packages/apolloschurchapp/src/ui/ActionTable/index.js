@@ -4,7 +4,6 @@ import { Text } from 'react-native';
 
 import {
   TableView,
-  Divider,
   ContentCard,
   CardContent,
   ChannelLabel,
