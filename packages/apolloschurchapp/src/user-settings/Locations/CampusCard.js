@@ -54,16 +54,7 @@ const StyledCard = styled(({ theme }) => ({
 }))(Card);
 
 const CampusCard = enhance(
-  ({
-    title,
-    description,
-    distance,
-    images,
-    thumbnailImage,
-    category,
-    isLoading,
-    ...otherProps
-  }) => (
+  ({ title, description, distance, images, isLoading, ...otherProps }) => (
     <CardContainer>
       <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
         <HorizontalLayout>
