@@ -22,6 +22,8 @@ export const client = new ApolloClient({
 });
 
 cache.writeData({ data: defaults });
+// Ensure that media player still works after logout.
+client.onResetStore(() => cache.writeData({ data: defaults }));
 
 class ClientProvider extends PureComponent {
   static propTypes = {
