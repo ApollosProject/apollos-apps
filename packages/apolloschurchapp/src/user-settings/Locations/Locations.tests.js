@@ -73,14 +73,12 @@ const campuses = [
 ];
 
 describe('Display Native Map with Locations', () => {
-  const mockRegion = {
-    initialRegion: {
-      // roughly show the entire USA by default
-      latitude: 39.809734,
-      longitude: -98.555618,
-      latitudeDelta: 100,
-      longitudeDelta: 10,
-    },
+  const initialRegion = {
+    // roughly show the entire USA by default
+    latitude: 39.809734,
+    longitude: -98.555618,
+    latitudeDelta: 100,
+    longitudeDelta: 10,
   };
   it('Render a native map view', async () => {
     const navigation = {
@@ -92,6 +90,10 @@ describe('Display Native Map with Locations', () => {
     const mock = {
       request: {
         query: getCampusLocations,
+        variables: {
+          latitude: initialRegion.latitude,
+          longitude: initialRegion.longitude,
+        },
       },
       result: {
         data: {
@@ -102,7 +104,7 @@ describe('Display Native Map with Locations', () => {
 
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]} addTypename={false}>
-        <Location navigation={navigation} initialRegion={mockRegion} />
+        <Location navigation={navigation} initialRegion={initialRegion} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
