@@ -13,8 +13,6 @@ const RockGenderMap = {
 export default class Person extends RockApolloDataSource {
   resource = 'People';
 
-  expanded = true;
-
   getFromId = (id) =>
     this.request()
       .find(id)
