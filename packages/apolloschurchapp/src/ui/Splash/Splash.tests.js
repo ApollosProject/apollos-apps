@@ -14,6 +14,14 @@ describe('The Onboarding Splash component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render light text on a dark background', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Splash imageUrl={require('./img/splash.jpg')} isLight={false} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>

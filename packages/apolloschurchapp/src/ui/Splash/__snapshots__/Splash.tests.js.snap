@@ -47,25 +47,11 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
           }
         }
       >
-        <Image
-          source={
-            Object {
-              "testUri": "../../../src/ui/Splash/img/splash.jpg",
-            }
-          }
-          style={
-            Object {
-              "height": 1354,
-              "marginTop": -50,
-              "position": "absolute",
-              "width": 770,
-            }
-          }
-        />
         <RNSVGSvgView
           align="xMidYMid"
           bbHeight="48"
           bbWidth="48"
+          isLight={true}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -76,7 +62,7 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
               },
               Object {
                 "marginBottom": 8,
-                "marginTop": 200,
+                "marginTop": 266.8,
               },
               false,
               Object {
@@ -94,9 +80,9 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
             fill={
               Array [
                 0,
-                1,
-                1,
-                1,
+                0.18823529411764706,
+                0.18823529411764706,
+                0.18823529411764706,
                 1,
               ]
             }
@@ -138,23 +124,25 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
           />
         </RNSVGSvgView>
         <Text
+          isLight={true}
           style={
             Object {
-              "color": "white",
+              "color": "#303030",
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 40,
-              "marginTop": 20,
+              "marginBottom": 32,
+              "marginTop": 16,
             }
           }
         >
           WE'RE GLAD YOU'RE HERE.
         </Text>
         <Text
+          isLight={true}
           style={
             Object {
-              "color": "white",
+              "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -355,25 +343,11 @@ exports[`The Onboarding Splash component should render 1`] = `
           }
         }
       >
-        <Image
-          source={
-            Object {
-              "testUri": "../../../src/ui/Splash/img/splash.jpg",
-            }
-          }
-          style={
-            Object {
-              "height": 1354,
-              "marginTop": -50,
-              "position": "absolute",
-              "width": 770,
-            }
-          }
-        />
         <RNSVGSvgView
           align="xMidYMid"
           bbHeight="48"
           bbWidth="48"
+          isLight={true}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -384,7 +358,7 @@ exports[`The Onboarding Splash component should render 1`] = `
               },
               Object {
                 "marginBottom": 8,
-                "marginTop": 200,
+                "marginTop": 266.8,
               },
               false,
               Object {
@@ -402,9 +376,9 @@ exports[`The Onboarding Splash component should render 1`] = `
             fill={
               Array [
                 0,
-                1,
-                1,
-                1,
+                0.18823529411764706,
+                0.18823529411764706,
+                0.18823529411764706,
                 1,
               ]
             }
@@ -446,23 +420,25 @@ exports[`The Onboarding Splash component should render 1`] = `
           />
         </RNSVGSvgView>
         <Text
+          isLight={true}
           style={
             Object {
-              "color": "white",
+              "color": "#303030",
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 40,
-              "marginTop": 20,
+              "marginBottom": 32,
+              "marginTop": 16,
             }
           }
         >
           WE'RE GLAD YOU'RE HERE.
         </Text>
         <Text
+          isLight={true}
           style={
             Object {
-              "color": "white",
+              "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -524,25 +500,11 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
           }
         }
       >
-        <Image
-          source={
-            Object {
-              "testUri": "../../../src/ui/Splash/img/splash.jpg",
-            }
-          }
-          style={
-            Object {
-              "height": 1354,
-              "marginTop": -50,
-              "position": "absolute",
-              "width": 770,
-            }
-          }
-        />
         <RNSVGSvgView
           align="xMidYMid"
           bbHeight="48"
           bbWidth="48"
+          isLight={true}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -553,7 +515,7 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
               },
               Object {
                 "marginBottom": 8,
-                "marginTop": 200,
+                "marginTop": 266.8,
               },
               false,
               Object {
@@ -571,9 +533,9 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
             fill={
               Array [
                 0,
-                1,
-                1,
-                1,
+                0.18823529411764706,
+                0.18823529411764706,
+                0.18823529411764706,
                 1,
               ]
             }
@@ -615,23 +577,25 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
           />
         </RNSVGSvgView>
         <Text
+          isLight={true}
           style={
             Object {
-              "color": "white",
+              "color": "#303030",
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 40,
-              "marginTop": 20,
+              "marginBottom": 32,
+              "marginTop": 16,
             }
           }
         >
           WE'RE GLAD YOU'RE HERE.
         </Text>
         <Text
+          isLight={true}
           style={
             Object {
-              "color": "white",
+              "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
@@ -693,25 +657,11 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
           }
         }
       >
-        <Image
-          source={
-            Object {
-              "testUri": "../../../src/ui/Splash/img/splash.jpg",
-            }
-          }
-          style={
-            Object {
-              "height": 1354,
-              "marginTop": -50,
-              "position": "absolute",
-              "width": 770,
-            }
-          }
-        />
         <RNSVGSvgView
           align="xMidYMid"
           bbHeight="48"
           bbWidth="48"
+          isLight={true}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -722,7 +672,179 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
               },
               Object {
                 "marginBottom": 8,
-                "marginTop": 200,
+                "marginTop": 266.8,
+              },
+              false,
+              Object {
+                "flex": 0,
+                "height": 48,
+                "width": 48,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+        >
+          <RNSVGPath
+            d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+            fill={
+              Array [
+                0,
+                0.18823529411764706,
+                0.18823529411764706,
+                0.18823529411764706,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth="1"
+            x={0}
+            y={0}
+          />
+        </RNSVGSvgView>
+        <Text
+          isLight={true}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 43,
+              "lineHeight": 49.45,
+              "marginBottom": 32,
+              "marginTop": 16,
+            }
+          }
+        >
+          CUSTOM TITLE TEXT
+        </Text>
+        <Text
+          isLight={true}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 23.04,
+            }
+          }
+        >
+          We're not just a building you go to, but a family to belong to.
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Onboarding Splash component should render light text on a dark background 1`] = `
+<RCTSafeAreaView
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/ui/Splash/img/splash.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 1354,
+            "marginTop": -50,
+            "position": "absolute",
+            "width": 770,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight="48"
+          bbWidth="48"
+          isLight={false}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "marginBottom": 8,
+                "marginTop": 266.8,
               },
               false,
               Object {
@@ -784,23 +906,25 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
           />
         </RNSVGSvgView>
         <Text
+          isLight={false}
           style={
             Object {
-              "color": "white",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 40,
-              "marginTop": 20,
+              "marginBottom": 32,
+              "marginTop": 16,
             }
           }
         >
-          CUSTOM TITLE TEXT
+          WE'RE GLAD YOU'RE HERE.
         </Text>
         <Text
+          isLight={false}
           style={
             Object {
-              "color": "white",
+              "color": "#FFFFFF",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 23.04,
