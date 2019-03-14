@@ -17,7 +17,10 @@ const BrandIcon = withTheme(({ theme, isLight }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
   fill: isLight ? theme.colors.text.primary : theme.colors.white,
-  style: { marginBottom: theme.sizing.baseUnit * 0.5, marginTop: 200 },
+  style: {
+    marginBottom: theme.sizing.baseUnit * 0.5,
+    marginTop: Dimensions.get('window').height * 0.2,
+  },
 }))(Icon);
 
 const Title = styled(({ theme, isLight }) => ({
