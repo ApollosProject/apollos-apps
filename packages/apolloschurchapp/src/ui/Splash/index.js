@@ -18,7 +18,7 @@ const BrandIcon = withTheme(({ theme, isLight }) => ({
   size: theme.sizing.baseUnit * 3.0,
   fill: isLight ? theme.colors.text.primary : theme.colors.white,
   style: {
-    marginBottom: theme.sizing.baseUnit * 0.5,
+    marginBottom: theme.sizing.baseUnit,
     marginTop: Dimensions.get('window').height * 0.2,
   },
 }))(Icon);
@@ -26,7 +26,6 @@ const BrandIcon = withTheme(({ theme, isLight }) => ({
 const Title = styled(({ theme, isLight }) => ({
   color: isLight ? theme.colors.text.primary : theme.colors.white,
   marginBottom: theme.sizing.baseUnit * 2,
-  marginTop: theme.sizing.baseUnit,
 }))(H1);
 
 const CoverImage = styled({
