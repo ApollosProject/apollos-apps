@@ -2,10 +2,9 @@ import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 
 import { track, events } from 'apolloschurchapp/src/analytics';
-import { CACHE_LOADED } from '../client'; // eslint-disable-line
-import updatePushId from '../notifications/updatePushId';
 import { Platform } from 'react-native';
 import { CACHE_LOADED } from '../client'; // eslint-disable-line
+
 import {
   getPushPermissions,
   updatePushId,
