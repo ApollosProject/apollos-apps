@@ -17,7 +17,7 @@ describe('The Onboarding Splash component', () => {
   it('should render light text on a dark background', () => {
     const tree = renderer.create(
       <Providers>
-        <Splash imageUrl={require('./img/splash.jpg')} isLight={false} />
+        <Splash imgSrc={require('./img/splash.jpg')} isLight={false} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Image, Dimensions } from 'react-native';
+import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
@@ -13,13 +13,17 @@ import {
 
 import Slide from '../Onboarding/Slide';
 
+const Content = styled({
+  flex: 1,
+  justifyContent: 'center',
+})(PaddedView);
+
 const BrandIcon = withTheme(({ theme, isLight }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
   fill: isLight ? theme.colors.text.primary : theme.colors.white,
   style: {
     marginBottom: theme.sizing.baseUnit,
-    marginTop: Dimensions.get('window').height * 0.2,
   },
 }))(Icon);
 
@@ -29,10 +33,8 @@ const Title = styled(({ theme, isLight }) => ({
 }))(H1);
 
 const CoverImage = styled({
+  resizeMode: 'cover',
   position: 'absolute',
-  marginTop: -50,
-  width: Dimensions.get('window').width + 20,
-  height: Dimensions.get('window').height + 20,
 })(Image);
 
 const StyledH4 = styled(({ theme, isLight }) => ({
@@ -40,14 +42,14 @@ const StyledH4 = styled(({ theme, isLight }) => ({
 }))(H4);
 
 const Splash = memo(
-  ({ slideTitle, description, imageUrl, isLight, ...props }) => (
+  ({ slideTitle, description, imgSrc, isLight, ...props }) => (
     <Slide {...props}>
-      {imageUrl ? <CoverImage source={imageUrl} /> : null}
-      <PaddedView>
+      {imgSrc ? <CoverImage source={imgSrc} /> : null}
+      <Content>
         <BrandIcon isLight={isLight} />
-        <Title isLight={isLight}>{slideTitle.toUpperCase()}</Title>
+        <Title isLight={isLight}>{slideTitle}</Title>
         <StyledH4 isLight={isLight}>{description}</StyledH4>
-      </PaddedView>
+      </Content>
     </Slide>
   )
 );
@@ -58,12 +60,12 @@ Splash.propTypes = {
    */
   slideTitle: PropTypes.string,
   description: PropTypes.string,
-  imageUrl: PropTypes.string,
+  imgSrc: PropTypes.string,
   isLight: PropTypes.boolean,
 };
 
 Splash.defaultProps = {
-  slideTitle: "We're glad you're here.",
+  slideTitle: "We're glad you're here.".toUpperCase(),
   description:
     "We're not just a building you go to, but a family to belong to.",
   isLight: true,
