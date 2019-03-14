@@ -6,6 +6,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import FullscreenPlayer from './FullscreenPlayer';
 
+// TODO: Get these tests to work.
+
 describe('the FullscreenPlayer component', () => {
   it('should render miniplayer with video', async () => {
     const cache = new InMemoryCache().restore({
@@ -24,13 +26,6 @@ describe('the FullscreenPlayer component', () => {
         __typename: 'MediaPlayerTrack',
       },
     });
-    const mediaPlayer = {
-      currentTrack: {
-        isVideo: true,
-      },
-      isVisible: true,
-      isFullscreen: false,
-    };
     const tree = await renderWithApolloData(
       <Providers cache={cache}>
         <FullscreenPlayer />

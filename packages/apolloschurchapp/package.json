@@ -58,7 +58,10 @@
     ],
     "transform": {
       ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    },
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ]
   },
   "dependencies": {
     "apollo-cache-inmemory": "1.5.1",
