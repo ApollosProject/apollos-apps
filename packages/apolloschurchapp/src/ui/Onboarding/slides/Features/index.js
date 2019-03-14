@@ -2,61 +2,45 @@ import React, { memo } from 'react';
 import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, H2, H5 } from '@apollosproject/ui-kit';
+import { styled, H2, H5, PaddedView } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
+  marginBottom: theme.sizing.baseUnit * 0.5,
 }))(H2);
 
 const StyledH5 = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
 }))(H5);
 
-const CoverImage = styled(({ theme }) => ({
-  height: '75%',
-  width: '100%',
-  marginBottom: theme.sizing.baseUnit * 2,
-  marginVertical: theme.sizing.baseUnit * 0.5,
-  alignSelf: 'center',
+const StyledImage = styled(({ theme }) => ({
+  flex: 3,
+  marginBottom: theme.sizing.baseUnit,
 }))(Image);
 
-const CheckIcon = styled(() => ({
-  height: 20,
-  width: 20,
-  marginRight: 5,
-}))(Image);
+const Content = styled({
+  flex: 1,
+  justifyContent: 'center',
+})(PaddedView);
 
-const defaults = [
-  'Grow in scripture',
-  'Childcare check-in',
-  'Keep up with your campus',
-  'Find a community group',
-  'Watch services',
-  'Receive prayer',
-  'Manage giving',
-];
+const TextContent = styled({
+  flex: 1,
+  justifyContent: 'center',
+})(View);
 
-const FeatureList = memo(({ featureDescriptions }) => (
-  <View style={{ position: 'absolute', top: 180, alignSelf: 'center' }}>
-    {featureDescriptions.map((feature, key) => (
-      <View style={{ flexDirection: 'row', margin: 5 }}>
-        <CheckIcon source={require('./check.png')} />
-        <StyledH5 key={key}>{feature}</StyledH5>
-      </View>
-    ))}
-  </View>
-));
-
-const Features = memo(({ firstName, description, ...props }) => {
+const Features = memo(({ firstName, description, imgSrc, ...props }) => {
   const titleWithName = `Hey ${firstName}!`;
   return (
     <Slide {...props}>
-      <CoverImage source={require('./mountain.jpeg')} />
-      <FeatureList featureDescriptions={defaults} />
-      <Title>{titleWithName}</Title>
-      <StyledH5>{description}</StyledH5>
+      <Content>
+        <StyledImage source={imgSrc} />
+        <TextContent>
+          <Title>{titleWithName}</Title>
+          <StyledH5>{description}</StyledH5>
+        </TextContent>
+      </Content>
     </Slide>
   );
 });
@@ -67,6 +51,7 @@ Features.propTypes = {
    */
   firstName: PropTypes.string,
   description: PropTypes.string,
+  imgSrc: PropTypes.string,
 };
 
 Features.defaultProps = {

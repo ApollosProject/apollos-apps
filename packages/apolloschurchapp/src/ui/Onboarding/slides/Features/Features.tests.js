@@ -14,6 +14,23 @@ describe('The Onboarding SlideWrapper component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a custom image', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Features imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render a custom first name', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Features firstName={'firstName'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>
@@ -30,7 +47,7 @@ describe('The Onboarding SlideWrapper component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should pass additional props to SlideWrapper', () => {
+  it('should pass additional props to Slide', () => {
     const tree = renderer.create(
       <Providers>
         <Features onPressPrimary={jest.fn()} />
