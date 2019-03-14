@@ -43,6 +43,12 @@ const CampusImage = styled({
   resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
 })(ConnectedImage);
 
+const CampusImageSizer = styled({
+  aspectRatio: 1,
+  height: '100%',
+  alignSelf: 'stretch',
+})(View);
+
 const CardContainer = styled(({ theme }) => ({
   width: CARD_WIDTH,
   height: theme.sizing.baseUnit * 6,
@@ -58,7 +64,11 @@ const CampusCard = enhance(
     <CardContainer>
       <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
         <HorizontalLayout>
-          {images ? <CampusImage source={images} /> : null}
+          {images ? (
+            <CampusImageSizer>
+              <CampusImage source={images} />
+            </CampusImageSizer>
+          ) : null}
           <RightColumn>
             <HorizontalTextLayout>
               <H5>{title}</H5>
@@ -78,10 +88,9 @@ const CampusCard = enhance(
 CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  images: PropTypes.source,
+  images: PropTypes.any, // eslint-disable-line
   category: PropTypes.string,
   isLoading: PropTypes.bool,
-  key: PropTypes.number,
 };
 
 export default CampusCard;
