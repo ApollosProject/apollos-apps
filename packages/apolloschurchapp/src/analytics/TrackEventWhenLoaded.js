@@ -35,6 +35,8 @@ TrackEventWhenLoaded.propTypes = {
   eventName: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   properties: PropTypes.any,
+  // eslint-disable-next-line react/forbid-prop-types
+  client: PropTypes.any,
   track: PropTypes.func,
 };
 

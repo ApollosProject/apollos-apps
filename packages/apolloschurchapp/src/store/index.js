@@ -94,7 +94,7 @@ export const resolvers = {
     notificationsEnabled: getPushPermissions,
   },
   Mutation: {
-    mediaPlayerPlayNow: (root, trackInfo, { cache }) => {
+    mediaPlayerPlayNow: (root, trackInfo, { cache, client }) => {
       const query = gql`
         query {
           mediaPlayer {
@@ -151,7 +151,6 @@ export const resolvers = {
           mediaPlayer: newMediaPlayerState,
         },
       });
-
       track({
         eventName: events.UserPlayedMedia,
         properties: {
@@ -159,6 +158,7 @@ export const resolvers = {
           title: mediaTrack.title,
           type: mediaTrack.isVideo ? 'Video' : 'Audio',
         },
+        client,
       });
       return null;
     },
@@ -233,7 +233,7 @@ export const resolvers = {
       });
 
       if (isLoggedIn) {
-        updatePushId({ pushId });
+        updatePushId({ pushId, client });
       }
       return null;
     },
@@ -268,7 +268,7 @@ export const resolvers = {
       });
 
       if (isLoggedIn && pushId) {
-        updatePushId({ pushId });
+        updatePushId({ pushId, client });
       }
       return null;
     },

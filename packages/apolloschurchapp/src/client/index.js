@@ -21,7 +21,6 @@ export const client = new ApolloClient({
   typeDefs: schema,
 });
 
-// client.onResetStore(() => cache.writeData(defaults));
 cache.writeData({ data: defaults });
 
 class ClientProvider extends PureComponent {

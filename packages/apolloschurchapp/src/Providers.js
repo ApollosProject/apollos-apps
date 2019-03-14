@@ -5,7 +5,6 @@ import NavigationService from './NavigationService';
 import { NotificationsManager } from './notifications';
 import ClientProvider from './client';
 
-
 const AppProviders = (props) => (
   <ClientProvider {...props}>
     <NotificationsManager>
