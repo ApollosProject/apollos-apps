@@ -38,8 +38,8 @@ InMemoryCache {
         "Node": Array [
           "ContentChannel",
           "Person",
-          "Pass",
           "Campus",
+          "Pass",
           "UniversalContentItem",
           "DevotionalContentItem",
           "MediaContentItem",
@@ -73,6 +73,7 @@ InMemoryCache {
           "type": "id",
           "typename": "MediaPlayerState",
         },
+        "notificationsEnabled": false,
         "pushId": null,
       },
     },
@@ -142,6 +143,13 @@ InMemoryCache {
                 "kind": "Field",
                 "name": Object {
                   "kind": "Name",
+                  "value": "notificationsEnabled",
+                },
+              },
+              Object {
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
                   "value": "mediaPlayer",
                 },
                 "selectionSet": Object {
@@ -249,6 +257,13 @@ InMemoryCache {
                 "name": Object {
                   "kind": "Name",
                   "value": "pushId",
+                },
+              },
+              Object {
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "notificationsEnabled",
                 },
               },
               Object {
@@ -369,6 +384,13 @@ InMemoryCache {
                 "kind": "Field",
                 "name": Object {
                   "kind": "Name",
+                  "value": "notificationsEnabled",
+                },
+              },
+              Object {
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
                   "value": "mediaPlayer",
                 },
                 "selectionSet": Object {
@@ -476,6 +498,13 @@ InMemoryCache {
                 "name": Object {
                   "kind": "Name",
                   "value": "pushId",
+                },
+              },
+              Object {
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "notificationsEnabled",
                 },
               },
               Object {

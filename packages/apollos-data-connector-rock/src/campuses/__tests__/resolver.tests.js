@@ -3,12 +3,37 @@ import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import { campusSchema } from '@apollosproject/data-schema';
+import { campusSchema, authSchema } from '@apollosproject/data-schema';
 
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Campus from '../index';
+import { Person } from '../../index';
 
-const { getContext, getSchema } = createTestHelpers({ Campus });
+class AuthDataSourceMock {
+  initialize = () => {};
+
+  getCurrentPerson = () => ({
+    id: 51,
+    firstName: 'Isaac',
+    lastName: 'Hardy',
+    nickName: 'Isaac',
+    email: 'isaac.hardy@newspring.cc',
+    photo: {
+      url:
+        'https://apollosrock.newspring.cc:443/GetImage.ashx?guid=60fd5f35-3167-4c26-9a30-d44937287b87',
+    },
+  });
+
+  getCurrentPersonAlternateLookupId = () => '0faad2f-3258f47';
+}
+
+const Auth = {
+  schema: authSchema,
+  dataSource: AuthDataSourceMock,
+  resolver: { Query: { currentUser: () => ({ profile: { id: 51 } }) } },
+};
+
+const { getContext, getSchema } = createTestHelpers({ Campus, Person, Auth });
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -134,5 +159,95 @@ describe('Campus', () => {
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+  });
+
+  it("gets current user's campus", async () => {
+    const query = `
+      query {
+        currentUser {
+          profile {
+            campus {
+              id
+              name
+              latitude
+              longitude
+            }
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const getMock = jest.fn(() =>
+      Promise.resolve([
+        {
+          campus: {
+            id: 1,
+            name: 'the best campus',
+            location: { latitude: 1.1, longitude: 2.2 },
+          },
+        },
+      ])
+    );
+
+    context.dataSources.Campus.get = getMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(getMock.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns null if a user has no campus', async () => {
+    const query = `
+      query {
+        currentUser {
+          profile {
+            campus {
+              id
+              name
+            }
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const getMock = jest.fn(() => Promise.resolve([]));
+
+    context.dataSources.Campus.get = getMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(getMock.mock.calls).toMatchSnapshot();
+  });
+
+  it("updates a current user's campus", async () => {
+    const query = `
+      mutation {
+        updateUserCampus(campusId: "${createGlobalId(123, 'Campus')}") {
+          campus {
+            id
+            name
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const getMock = jest.fn(() =>
+      Promise.resolve([
+        { id: 1, campus: { id: 123, name: 'the very best campus' } },
+      ])
+    );
+
+    const patchMock = jest.fn(() => Promise.resolve());
+
+    context.dataSources.Campus.get = getMock;
+    context.dataSources.Campus.patch = patchMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(getMock.mock.calls).toMatchSnapshot();
+    expect(patchMock.mock.calls).toMatchSnapshot();
   });
 });

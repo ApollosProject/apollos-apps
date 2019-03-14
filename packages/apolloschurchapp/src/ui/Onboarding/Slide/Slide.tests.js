@@ -54,7 +54,7 @@ describe('The Onboarding Slide component', () => {
   it('should render onboarding skip button navigation', () => {
     const tree = renderer.create(
       <Providers>
-        <Slide onPressPrimary={jest.fn()} onPressSecondary={jest.fn()}>
+        <Slide onPressSecondary={jest.fn()}>
           <Text>Boom</Text>
         </Slide>
       </Providers>
@@ -65,7 +65,6 @@ describe('The Onboarding Slide component', () => {
     const tree = renderer.create(
       <Providers>
         <Slide
-          onPressPrimary={jest.fn()}
           onPressSecondary={jest.fn()}
           secondaryNavText={'Custom skip button text'}
         >
@@ -75,14 +74,10 @@ describe('The Onboarding Slide component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should hide onboarding primary navigation button', () => {
+  it('should render both slide navigation buttons', () => {
     const tree = renderer.create(
       <Providers>
-        <Slide
-          onPressPrimary={jest.fn()}
-          onPressSecondary={jest.fn()}
-          hidePrimaryNav
-        >
+        <Slide onPressPrimary={jest.fn()} onPressSecondary={jest.fn()}>
           <Text>Boom</Text>
         </Slide>
       </Providers>

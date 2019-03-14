@@ -7,4 +7,4 @@ storiesOf('Onboarding/slides/AskName', module)
   .add('default', () => <AskName />)
   .add('slideTitle', () => <AskName slideTitle={'Custom title text'} />)
   .add('description', () => <AskName description={'Custom description text'} />)
-  .add('SlideWrapper props', () => <AskName onboardingScrollBy={() => {}} />);
+  .add('SlideWrapper props', () => <AskName onPressPrimary={() => {}} />);

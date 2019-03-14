@@ -8,7 +8,6 @@ import Passes from '@apollosproject/ui-passes';
 
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Providers from './Providers';
-import { NotificationsManager } from './notifications';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
@@ -52,7 +51,6 @@ const App = () => (
           NavigationService.setTopLevelNavigator(navigatorRef);
         }}
       />
-      <NotificationsManager />
       <MediaPlayer />
     </BackgroundView>
   </Providers>

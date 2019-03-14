@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-htmlview",
-  "version": "0.8.0-alpha.8",
+  "version": "0.8.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -37,11 +37,11 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
+    "@apollosproject/ui-kit": "^0.8.0",
     "htmlparser2": "3.9.2"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
+    "@apollosproject/babel-preset-apollos": "^0.8.0",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
