@@ -2,26 +2,29 @@ import React, { memo } from 'react';
 import { Image, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, withTheme, Icon, H1, H4 } from '@apollosproject/ui-kit';
+import {
+  styled,
+  withTheme,
+  Icon,
+  H1,
+  H4,
+  PaddedView,
+} from '@apollosproject/ui-kit';
 
 import Slide from '../Onboarding/Slide';
 
-const BrandIcon = withTheme(({ theme }) => ({
+const BrandIcon = withTheme(({ theme, isLight }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
-  fill: 'white',
+  fill: isLight ? theme.colors.text.primary : theme.colors.white,
   style: { marginBottom: theme.sizing.baseUnit * 0.5, marginTop: 200 },
 }))(Icon);
 
-const Title = styled({
-  color: 'white',
+const Title = styled(({ theme, isLight }) => ({
+  color: isLight ? theme.colors.text.primary : theme.colors.white,
   marginBottom: 40,
   marginTop: 20,
-})(H1);
-
-const StyledH4 = styled({
-  color: 'white',
-})(H4);
+}))(H1);
 
 const CoverImage = styled({
   position: 'absolute',
@@ -30,13 +33,19 @@ const CoverImage = styled({
   height: Dimensions.get('window').height + 20,
 })(Image);
 
+const StyledH4 = styled(({ theme, isLight }) => ({
+  color: isLight ? theme.colors.text.primary : theme.colors.white,
+}))(H4);
+
 const Splash = memo(
-  ({ slideTitle, description, imageUrl, themeType, ...props }) => (
+  ({ slideTitle, description, imageUrl, isLight, ...props }) => (
     <Slide {...props}>
       {imageUrl ? <CoverImage source={imageUrl} /> : null}
-      <BrandIcon />
-      <Title>{slideTitle.toUpperCase()}</Title>
-      <StyledH4>{description}</StyledH4>
+      <PaddedView>
+        <BrandIcon isLight={isLight} />
+        <Title isLight={isLight}>{slideTitle.toUpperCase()}</Title>
+        <StyledH4 isLight={isLight}>{description}</StyledH4>
+      </PaddedView>
     </Slide>
   )
 );
@@ -48,14 +57,14 @@ Splash.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   imageUrl: PropTypes.string,
-  themeType: PropTypes.oneOf(['dark', 'light']),
+  isLight: PropTypes.boolean,
 };
 
 Splash.defaultProps = {
   slideTitle: "We're glad you're here.",
   description:
     "We're not just a building you go to, but a family to belong to.",
-  themeType: 'light',
+  isLight: true,
 };
 
 export default Splash;
