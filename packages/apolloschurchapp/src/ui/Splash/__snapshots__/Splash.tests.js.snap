@@ -61,7 +61,7 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
                 "backgroundColor": "transparent",
               },
               Object {
-                "marginBottom": 8,
+                "marginBottom": 16,
                 "marginTop": 266.8,
               },
               false,
@@ -132,7 +132,6 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
               "fontSize": 43,
               "lineHeight": 49.45,
               "marginBottom": 32,
-              "marginTop": 16,
             }
           }
         >
@@ -357,7 +356,7 @@ exports[`The Onboarding Splash component should render 1`] = `
                 "backgroundColor": "transparent",
               },
               Object {
-                "marginBottom": 8,
+                "marginBottom": 16,
                 "marginTop": 266.8,
               },
               false,
@@ -428,7 +427,6 @@ exports[`The Onboarding Splash component should render 1`] = `
               "fontSize": 43,
               "lineHeight": 49.45,
               "marginBottom": 32,
-              "marginTop": 16,
             }
           }
         >
@@ -514,7 +512,7 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
                 "backgroundColor": "transparent",
               },
               Object {
-                "marginBottom": 8,
+                "marginBottom": 16,
                 "marginTop": 266.8,
               },
               false,
@@ -585,7 +583,6 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
               "fontSize": 43,
               "lineHeight": 49.45,
               "marginBottom": 32,
-              "marginTop": 16,
             }
           }
         >
@@ -671,7 +668,7 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
                 "backgroundColor": "transparent",
               },
               Object {
-                "marginBottom": 8,
+                "marginBottom": 16,
                 "marginTop": 266.8,
               },
               false,
@@ -742,7 +739,6 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
               "fontSize": 43,
               "lineHeight": 49.45,
               "marginBottom": 32,
-              "marginTop": 16,
             }
           }
         >
@@ -843,7 +839,7 @@ exports[`The Onboarding Splash component should render light text on a dark back
                 "backgroundColor": "transparent",
               },
               Object {
-                "marginBottom": 8,
+                "marginBottom": 16,
                 "marginTop": 266.8,
               },
               false,
@@ -914,7 +910,6 @@ exports[`The Onboarding Splash component should render light text on a dark back
               "fontSize": 43,
               "lineHeight": 49.45,
               "marginBottom": 32,
-              "marginTop": 16,
             }
           }
         >
