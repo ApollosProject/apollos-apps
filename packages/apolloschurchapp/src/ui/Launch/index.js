@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { styled, withTheme, Icon, H1, H4 } from '@apollosproject/ui-kit';
 
-import Slide from '../../Slide';
+import Slide from '../Onboarding/Slide';
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
@@ -13,26 +13,26 @@ const BrandIcon = withTheme(({ theme }) => ({
   style: { marginBottom: theme.sizing.baseUnit * 0.5, marginTop: 200 },
 }))(Icon);
 
-const Title = styled(() => ({
+const Title = styled({
   color: 'white',
   marginBottom: 40,
   marginTop: 20,
-}))(H1);
+})(H1);
 
-const StyledH4 = styled(() => ({
+const StyledH4 = styled({
   color: 'white',
-}))(H4);
+})(H4);
 
-const CoverImage = styled(() => ({
+const CoverImage = styled({
   position: 'absolute',
   marginTop: -50,
   width: Dimensions.get('window').width + 20,
   height: Dimensions.get('window').height + 20,
-}))(Image);
+})(Image);
 
-const Launch = memo(({ slideTitle, description, ...props }) => (
+const Launch = memo(({ slideTitle, description, imageUrl, ...props }) => (
   <Slide {...props}>
-    <CoverImage source={require('./launch.jpg')} />
+    <CoverImage source={{ uri: imageUrl }} />
     <BrandIcon />
     <Title>{slideTitle.toUpperCase()}</Title>
     <StyledH4>{description}</StyledH4>
@@ -45,12 +45,14 @@ Launch.propTypes = {
    */
   slideTitle: PropTypes.string,
   description: PropTypes.string,
+  imageUrl: PropTypes.string,
 };
 
 Launch.defaultProps = {
   slideTitle: "We're glad you're here.",
   description:
     "We're not just a building you go to, but a family to belong to.",
+  imageUrl: './launch.jpg',
 };
 
 export default Launch;
