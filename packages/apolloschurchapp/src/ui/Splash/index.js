@@ -30,14 +30,16 @@ const CoverImage = styled({
   height: Dimensions.get('window').height + 20,
 })(Image);
 
-const Splash = memo(({ slideTitle, description, ...props }) => (
-  <Slide {...props}>
-    <CoverImage source={require('./img/splash.jpg')} />
-    <BrandIcon />
-    <Title>{slideTitle.toUpperCase()}</Title>
-    <StyledH4>{description}</StyledH4>
-  </Slide>
-));
+const Splash = memo(
+  ({ slideTitle, description, imageUrl, themeType, ...props }) => (
+    <Slide {...props}>
+      {imageUrl ? <CoverImage source={imageUrl} /> : null}
+      <BrandIcon />
+      <Title>{slideTitle.toUpperCase()}</Title>
+      <StyledH4>{description}</StyledH4>
+    </Slide>
+  )
+);
 
 Splash.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
@@ -46,12 +48,14 @@ Splash.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   imageUrl: PropTypes.string,
+  themeType: PropTypes.oneOf(['dark', 'light']),
 };
 
 Splash.defaultProps = {
   slideTitle: "We're glad you're here.",
   description:
     "We're not just a building you go to, but a family to belong to.",
+  themeType: 'light',
 };
 
 export default Splash;

@@ -5,6 +5,7 @@ import Splash from '.';
 
 storiesOf('Splash', module)
   .add('default', () => <Splash />)
+  .add('withImage', () => <Splash imageUrl={require('./img/splash.jpg')} />)
   .add('slideTitle', () => <Splash slideTitle={'Custom title text'} />)
   .add('description', () => <Splash description={'Custom description text'} />)
   .add('SlideWrapper props', () => <Splash onboardingScrollBy={() => {}} />);
