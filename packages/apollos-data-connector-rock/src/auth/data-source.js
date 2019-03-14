@@ -13,13 +13,18 @@ export default class AuthDataSource extends RockApolloDataSource {
   userToken = null;
 
   getCurrentPerson = async ({ cookie } = { cookie: null }) => {
-    const { rockCookie } = this.context;
+    const { rockCookie, currentPerson } = this.context;
     const userCookie = cookie || rockCookie;
+
+    if (currentPerson) {
+      return currentPerson;
+    }
 
     if (userCookie) {
       const request = await this.request('People/GetCurrentPerson').get({
         options: { headers: { cookie: userCookie } },
       });
+      this.context.currentPerson = request;
       return request;
     }
     throw new AuthenticationError('Must be logged in');

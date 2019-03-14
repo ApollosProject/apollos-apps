@@ -5,7 +5,7 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 export default class Followings extends RockApolloDataSource {
   resource = 'Followings';
 
-  async updateLikeContentItem({ nodeId, operation }) {
+  async updateLikeContentItem({ nodeId, operation, schema }) {
     const {
       dataSources,
       models: { Node },
@@ -15,7 +15,7 @@ export default class Followings extends RockApolloDataSource {
     } else {
       await this.unFollowNode({ nodeId });
     }
-    const item = await Node.get(nodeId, dataSources);
+    const item = await Node.get(nodeId, dataSources, schema);
     return { ...item, isLiked: operation === 'Like' };
   }
 
@@ -90,6 +90,25 @@ export default class Followings extends RockApolloDataSource {
     }
   }
 
+  async paginatedGetFollowingsForCurrentUser({ type, after, first = 20 }) {
+    const {
+      dataSources: { Auth },
+    } = this.context;
+    try {
+      await Auth.getCurrentPerson();
+
+      return this.paginate({
+        cursor: await this.getFollowingsForCurrentUser({ type }),
+        args: { after, first },
+      });
+    } catch (e) {
+      if (e instanceof AuthenticationError) {
+        return { edges: [] };
+      }
+      throw e;
+    }
+  }
+
   async getFollowingsForCurrentUser({ type }) {
     const {
       dataSources: { RockConstants, Auth },
@@ -101,10 +120,11 @@ export default class Followings extends RockApolloDataSource {
       const currentUser = await Auth.getCurrentPerson();
       return this.request('Followings')
         .filter(
-          // eslint-disable-next-line prettier/prettier
-          `(EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${currentUser.primaryAliasId})`
+          `(EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${
+            currentUser.primaryAliasId
+          })`
         )
-        .get();
+        .orderBy('CreatedDateTime', 'desc');
     } catch (e) {
       if (e instanceof AuthenticationError) {
         return [];
