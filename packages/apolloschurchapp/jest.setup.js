@@ -46,8 +46,5 @@ jest.mock('react-native-video', () => 'Video');
 
 jest.mock('NativeEventEmitter');
 
-<<<<<<< HEAD
 jest.mock('react-native-maps');
-=======
 jest.mock('./src/client/index');
->>>>>>> 9c2505cce56f580ac2fe6f306117e32a1bbdb924
