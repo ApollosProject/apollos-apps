@@ -56,6 +56,34 @@ describe('Person', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('gets person from aliasId', async () => {
+    const dataSource = new Person();
+    dataSource.get = jest.fn(() => Promise.resolve([{ personId: 123 }]));
+    dataSource.getFromId = jest.fn(() =>
+      Promise.resolve({ id: 321, firstName: 'John' })
+    );
+
+    const result = await dataSource.getFromAliasId(51);
+    expect(result).toMatchSnapshot('The result from getAliasId');
+    expect(dataSource.get.mock.calls).toMatchSnapshot(
+      'The call to fetch the alias id'
+    );
+    expect(dataSource.getFromId.mock.calls).toMatchSnapshot(
+      'The call to fetch the person by id'
+    );
+  });
+
+  it('returns null when getPersonByAliasId is not valid', async () => {
+    const dataSource = new Person();
+    dataSource.get = jest.fn(() => Promise.resolve([]));
+
+    const result = await dataSource.getFromAliasId(51);
+    expect(result).toMatchSnapshot('The result from getAliasId');
+    expect(dataSource.get.mock.calls).toMatchSnapshot(
+      'The call to fetch the alias id'
+    );
+  });
+
   it("updates a user's profile attributes", () => {
     const dataSource = new Person();
     const Auth = auth(dataSource);

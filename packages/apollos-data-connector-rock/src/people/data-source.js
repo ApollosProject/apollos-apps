@@ -18,6 +18,21 @@ export default class Person extends RockApolloDataSource {
       .find(id)
       .get();
 
+  getFromAliasId = async (id) => {
+    // Fetch the PersonAlias, selecting only the PersonId.
+    const personAlias = await this.request('/PersonAlias')
+      .filter(`Id eq ${id}`)
+      .select('PersonId')
+      .first();
+
+    // If we have a personAlias, return him.
+    if (personAlias) {
+      return this.getFromId(personAlias.personId);
+    }
+    // Otherwise, return null.
+    return null;
+  };
+
   // Gets a collection of all dataviews a user is in
   // Returns an array of dataview guids
   getPersonas = async ({ categoryId }) => {
