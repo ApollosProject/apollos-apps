@@ -1,0 +1,94 @@
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { Query } from 'react-apollo';
+import { Dimensions } from 'react-native';
+
+// import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
+
+import MapView, {
+  getAllCampuses,
+} from 'apolloschurchapp/src/user-settings/Locations';
+
+const getCurrentLocation = () =>
+  new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve(position),
+      (e) => reject(e)
+    );
+  });
+
+const screen = Dimensions.get('window');
+
+const ASPECT_RATIO = screen.width / screen.height;
+
+class LocationFinderMapView extends PureComponent {
+  static propTypes = {
+    navigation: PropTypes.shape({
+      getParam: PropTypes.func,
+      navigate: PropTypes.func,
+      goBack: PropTypes.func,
+    }),
+    initialRegion: PropTypes.shape({
+      latitude: PropTypes.number,
+      longitude: PropTypes.number,
+      latitudeDelta: PropTypes.number,
+      longitudeDelta: PropTypes.number,
+    }),
+  };
+
+  static defaultProps = {
+    initialRegion: {
+      // roughly show the entire USA by default
+      latitude: 39.809734,
+      longitude: -98.555618,
+      latitudeDelta: 100,
+      longitudeDelta: 100 * ASPECT_RATIO,
+    },
+  };
+
+  state = {
+    region: this.props.initialRegion,
+  };
+
+  componentDidMount() {
+    return getCurrentLocation().then((position) => {
+      if (position) {
+        this.setState({
+          userLocation: {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          },
+        });
+      }
+    });
+  }
+
+  render() {
+    const { navigation } = this.props;
+    const navigationButton = navigation.goBack;
+    return (
+      <Query
+        query={getAllCampuses}
+        variables={{
+          latitude: this.state.region.latitude,
+          longitude: this.state.region.longitude,
+        }}
+        fetchPolicy="cache-and-network"
+      >
+        {({ loading, error, data: { campuses = [] } = {} }) => (
+          <MapView
+            navigation={navigation}
+            isLoading={loading}
+            error={error}
+            campuses={campuses}
+            initialRegion={this.props.initialRegion}
+            userLocation={this.state.userLocation}
+            navigationButton={navigationButton}
+          />
+        )}
+      </Query>
+    );
+  }
+}
+
+export default LocationFinderMapView;
