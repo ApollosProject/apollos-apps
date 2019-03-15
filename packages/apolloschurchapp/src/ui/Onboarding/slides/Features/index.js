@@ -30,20 +30,17 @@ const TextContent = styled({
   justifyContent: 'center',
 })(PaddedView);
 
-const Features = memo(({ firstName, description, imgSrc, ...props }) => {
-  const titleWithName = `Hey ${firstName}!`;
-  return (
-    <Slide {...props}>
-      <Content>
-        <StyledImage source={imgSrc} />
-        <TextContent>
-          <Title>{titleWithName}</Title>
-          <StyledH5>{description}</StyledH5>
-        </TextContent>
-      </Content>
-    </Slide>
-  );
-});
+const Features = memo(({ firstName, description, imgSrc, ...props }) => (
+  <Slide {...props}>
+    <Content>
+      <StyledImage source={imgSrc} />
+      <TextContent>
+        <Title>{`Hey ${firstName}!`}</Title>
+        <StyledH5>{description}</StyledH5>
+      </TextContent>
+    </Content>
+  </Slide>
+));
 
 Features.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
