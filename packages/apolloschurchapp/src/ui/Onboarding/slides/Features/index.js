@@ -23,12 +23,12 @@ const StyledImage = styled(({ theme }) => ({
 const Content = styled({
   flex: 1,
   justifyContent: 'center',
-})(PaddedView);
+})(View);
 
 const TextContent = styled({
   flex: 1,
   justifyContent: 'center',
-})(View);
+})(PaddedView);
 
 const Features = memo(({ firstName, description, imgSrc, ...props }) => {
   const titleWithName = `Hey ${firstName}!`;
