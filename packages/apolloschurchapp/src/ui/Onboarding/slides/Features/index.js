@@ -17,6 +17,7 @@ const StyledH5 = styled(({ theme }) => ({
 
 const StyledImage = styled(({ theme }) => ({
   flex: 3,
+  resizeMode: 'contain',
   marginBottom: theme.sizing.baseUnit,
 }))(Image);
 
@@ -35,7 +36,7 @@ const Features = memo(({ firstName, description, imgSrc, ...props }) => {
   return (
     <Slide {...props}>
       <Content>
-        <StyledImage source={imgSrc} />
+        {imgSrc ? <StyledImage source={imgSrc} /> : null}
         <TextContent>
           <Title>{titleWithName}</Title>
           <StyledH5>{description}</StyledH5>

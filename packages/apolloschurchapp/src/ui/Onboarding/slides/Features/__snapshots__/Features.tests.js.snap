@@ -49,14 +49,6 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
           }
         }
       >
-        <Image
-          style={
-            Object {
-              "flex": 3,
-              "marginBottom": 16,
-            }
-          }
-        />
         <View
           style={
             Object {
@@ -285,14 +277,6 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
           }
         }
       >
-        <Image
-          style={
-            Object {
-              "flex": 3,
-              "marginBottom": 16,
-            }
-          }
-        />
         <View
           style={
             Object {
@@ -382,14 +366,6 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
           }
         }
       >
-        <Image
-          style={
-            Object {
-              "flex": 3,
-              "marginBottom": 16,
-            }
-          }
-        />
         <View
           style={
             Object {
@@ -479,14 +455,6 @@ exports[`The Onboarding SlideWrapper component should render a custom first name
           }
         }
       >
-        <Image
-          style={
-            Object {
-              "flex": 3,
-              "marginBottom": 16,
-            }
-          }
-        />
         <View
           style={
             Object {
@@ -586,6 +554,7 @@ exports[`The Onboarding SlideWrapper component should render a custom image 1`] 
             Object {
               "flex": 3,
               "marginBottom": 16,
+              "resizeMode": "contain",
             }
           }
         />
@@ -678,14 +647,6 @@ exports[`The Onboarding SlideWrapper component should render a custom title 1`] 
           }
         }
       >
-        <Image
-          style={
-            Object {
-              "flex": 3,
-              "marginBottom": 16,
-            }
-          }
-        />
         <View
           style={
             Object {
