@@ -26,6 +26,7 @@ const StyledH5 = styled(({ theme }) => ({
 
 const Label = styled({
   color: 'gray',
+  opacity: 0.7,
 })(H6);
 
 const StyledDate = styled(({ theme }) => ({
