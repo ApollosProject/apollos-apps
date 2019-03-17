@@ -2,14 +2,7 @@ import React, { memo } from 'react';
 import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import {
-  styled,
-  H2,
-  H5,
-  Radio,
-  DateInput,
-  PaddedView,
-} from '@apollosproject/ui-kit';
+import { styled, H2, H5, DateInput, PaddedView } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
@@ -20,7 +13,12 @@ const Title = styled(({ theme }) => ({
 
 const StyledH5 = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
+  marginBottom: theme.sizing.baseUnit,
 }))(H5);
+
+const StyledDate = styled(({ theme }) => ({
+  marginBottom: theme.sizing.baseUnit,
+}))(DateInput);
 
 const StyledImage = styled(({ theme }) => ({
   flex: 3,
@@ -48,14 +46,14 @@ const AboutYou = memo(
           <StyledH5>{description}</StyledH5>
           {/* TODO: getting some warning with this DateInput */}
           {birthday ? (
-            <DateInput
+            <StyledDate
               label="Birthday"
               value={birthday}
               displayValue={`${birthday.getMonth() +
                 1}/${birthday.getDate()}/${birthday.getFullYear()}`}
             />
           ) : (
-            <DateInput label="Birthday" placeholder={'mm/dd/yyyy'} />
+            <StyledDate label="Birthday" placeholder={'Select a date...'} />
           )}
         </TextContent>
       </Content>
