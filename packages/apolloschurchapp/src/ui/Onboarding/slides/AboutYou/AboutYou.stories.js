@@ -5,8 +5,12 @@ import AboutYou from '.';
 
 storiesOf('Onboarding/slides/AboutYou', module)
   .add('default', () => <AboutYou />)
+  .add('withImg', () => (
+    <AboutYou imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }} />
+  ))
   .add('slideTitle', () => <AboutYou slideTitle={'Custom title text'} />)
   .add('description', () => (
     <AboutYou description={'Custom description text'} />
   ))
+  .add('birthday', () => <AboutYou birthday={new Date('02/14/1989')} />)
   .add('SlideWrapper props', () => <AboutYou onboardingScrollBy={() => {}} />);
