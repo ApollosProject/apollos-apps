@@ -39,7 +39,7 @@ const TextContent = styled({
 })(View);
 
 const AboutYou = memo(
-  ({ imgSrc, slideTitle, description, birthday, ...props }) => (
+  ({ imgSrc, slideTitle, description, birthday, gender, ...props }) => (
     <Slide {...props}>
       <Content>
         {imgSrc ? <StyledImage source={imgSrc} /> : null}
@@ -71,6 +71,7 @@ AboutYou.propTypes = {
   description: PropTypes.string,
   imgSrc: PropTypes.string,
   birthday: PropTypes.instanceOf(Date),
+  gender: PropTypes.oneOf('Male', 'Female'),
 };
 
 AboutYou.defaultProps = {
