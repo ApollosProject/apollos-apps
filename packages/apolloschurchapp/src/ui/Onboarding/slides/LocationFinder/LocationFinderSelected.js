@@ -1,17 +1,12 @@
 import React, { memo } from 'react';
 import { Query } from 'react-apollo';
-
-import {
-  requestPushPermissions,
-  getNotificationsEnabled,
-} from 'apolloschurchapp/src/notifications';
-
-import AskNotifications from '.';
+import getCurrentCampus from './getCurrentCampus';
+import LocationFinder from '.';
 
 const AskNotificationsConnected = memo((props) => (
-  <Query query={getNotificationsEnabled}>
+  <Query query={getCurrentCampus}>
     {({ data: { notificationsEnabled = false } = {} }) => (
-      <AskNotifications
+      <LocationFinder
         onPressButton={requestPushPermissions}
         buttonDisabled={notificationsEnabled}
         buttonText={
