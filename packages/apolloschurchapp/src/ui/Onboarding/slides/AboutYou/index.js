@@ -1,8 +1,16 @@
 import React, { memo } from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, H2, H5, DateInput, PaddedView } from '@apollosproject/ui-kit';
+import {
+  styled,
+  H2,
+  Button,
+  H5,
+  H6,
+  DateInput,
+  PaddedView,
+} from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
@@ -16,12 +24,16 @@ const StyledH5 = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
 }))(H5);
 
+const Label = styled({
+  color: 'gray',
+})(H6);
+
 const StyledDate = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
 }))(DateInput);
 
 const StyledImage = styled(({ theme }) => ({
-  flex: 3,
+  flex: 2,
   resizeMode: 'contain',
   marginBottom: theme.sizing.baseUnit * 2,
 }))(Image);
@@ -36,6 +48,35 @@ const TextContent = styled({
   justifyContent: 'center',
 })(View);
 
+const GenderButtons = styled(({ theme }) => ({
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginBottom: theme.sizing.baseUnit,
+}))(View);
+
+const GenderButton = styled({
+  flex: 1,
+  backgroundColor: 'white',
+  borderColor: 'gray',
+  borderWidth: 0.5,
+  height: 32,
+})(Button);
+
+const LeftButton = styled({
+  borderBottomRightRadius: 0,
+  borderTopRightRadius: 0,
+  borderBottomLeftRadius: 10,
+  borderTopLeftRadius: 10,
+})(GenderButton);
+
+const RightButton = styled({
+  borderBottomLeftRadius: 0,
+  borderTopLeftRadius: 0,
+  borderBottomRightRadius: 10,
+  borderTopRightRadius: 10,
+})(GenderButton);
+
 const AboutYou = memo(
   ({ imgSrc, slideTitle, description, birthday, gender, ...props }) => (
     <Slide {...props}>
@@ -44,17 +85,30 @@ const AboutYou = memo(
         <TextContent>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
+          <View>
+            <Label>Gender</Label>
+            <GenderButtons>
+              <LeftButton>
+                <Text>Male</Text>
+              </LeftButton>
+              <RightButton>
+                <Text>Female</Text>
+              </RightButton>
+            </GenderButtons>
+          </View>
           {/* TODO: getting some warning with this DateInput */}
-          {birthday ? (
-            <StyledDate
-              label="Birthday"
-              value={birthday}
-              displayValue={`${birthday.getMonth() +
-                1}/${birthday.getDate()}/${birthday.getFullYear()}`}
-            />
-          ) : (
-            <StyledDate label="Birthday" placeholder={'Select a date...'} />
-          )}
+          <View>
+            <Label>Birthday</Label>
+            {birthday ? (
+              <StyledDate
+                value={birthday}
+                displayValue={`${birthday.getMonth() +
+                  1}/${birthday.getDate()}/${birthday.getFullYear()}`}
+              />
+            ) : (
+              <StyledDate placeholder={'Select a date...'} />
+            )}
+          </View>
         </TextContent>
       </Content>
     </Slide>
