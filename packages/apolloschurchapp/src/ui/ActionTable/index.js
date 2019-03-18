@@ -7,7 +7,6 @@ import {
   ContentCard,
   CardContent,
   ChannelLabel,
-  H3,
   styled,
 } from '@apollosproject/ui-kit';
 
@@ -22,35 +21,29 @@ const ContentTable = styled(() => ({
   borderTopWidth: 0,
 }))(TableView);
 
-const ActionTitle = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 1.5,
-}))(H3);
-
 class ActionTable extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool,
     content: PropTypes.array, // eslint-disable-line
     label: PropTypes.string,
-    title: PropTypes.string,
+
+    dynamicHeader: PropTypes.element,
   };
 
   render() {
-    const { onPress, isLoading, content, label, title } = this.props;
+    const { onPress, isLoading, content, label, dynamicHeader } = this.props;
     if (isLoading) {
       return <Text>Hi</Text>; // TODO: Updated loading state
     }
 
-    // TODO: Extract header
     return (
       <ContentCard
         isLoading={isLoading}
         header={
           <Header>
             <ChannelLabel label={label} />
-            <ActionTitle numberOfLines={3} ellipsizeMode="tail">
-              {title}
-            </ActionTitle>
+            {dynamicHeader}
           </Header>
         }
         content={

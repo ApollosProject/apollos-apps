@@ -5,7 +5,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { styled, FeedView, BackgroundView } from '@apollosproject/ui-kit';
+import { styled, FeedView, BackgroundView, H3 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
@@ -20,6 +20,10 @@ const LogoTitle = styled(({ theme }) => ({
   alignSelf: 'center',
   resizeMode: 'contain',
 }))(Image);
+
+const ActionTitle = styled(({ theme }) => ({
+  marginTop: theme.sizing.baseUnit / 1.5,
+}))(H3);
 
 class Home extends PureComponent {
   static navigationOptions = () => ({
@@ -40,7 +44,6 @@ class Home extends PureComponent {
       transitionKey: item.transitionKey,
     });
 
-  // TODO: Update render to pass in dynamic data to the ActionTable
   render() {
     return (
       <BackgroundView>
@@ -66,9 +69,13 @@ class Home extends PureComponent {
                       {({ data: personaData, loading: actionLoading }) => (
                         <ActionTable
                           label={'FOR YOU'}
-                          title={'Some random text that encourages you'}
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}
+                          dynamicHeader={
+                            <ActionTitle numberOfLines={3} ellipsizeMode="tail">
+                              Some random text that encourages you
+                            </ActionTitle>
+                          }
                           content={get(
                             personaData,
                             'personaFeed.edges',

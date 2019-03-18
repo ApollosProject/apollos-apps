@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
-
+import { styled, H3 } from '@apollosproject/ui-kit';
 import ActionTable from '.';
 
 const content = [
@@ -58,23 +58,34 @@ const content = [
   },
 ];
 
-// TODO: Update actionTable story once ActionTable component is update
+const ActionTitle = styled(({ theme }) => ({
+  marginTop: theme.sizing.baseUnit / 1.5,
+}))(H3);
+
 storiesOf('ActionTable', module)
   .add('Example', () => (
     <ActionTable
       label={'FOR YOU'}
-      title={'Some random text that encourages you'}
       isLoading={false}
       onPress={() => {}}
       content={content}
+      dynamicHeader={
+        <ActionTitle numberOfLines={3} ellipsizeMode="tail">
+          Some random text that encourages you
+        </ActionTitle>
+      }
     />
   ))
   .add('Loading', () => (
     <ActionTable
       label={'FOR YOU'}
-      title={'Some random text that encourages you'}
       isLoading
       onPress={() => {}}
       content={content}
+      dynamicHeader={
+        <ActionTitle numberOfLines={3} ellipsizeMode="tail">
+          Some random text that encourages you
+        </ActionTitle>
+      }
     />
   ));
