@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Text } from 'react-native';
 
 import {
   TableView,
@@ -27,15 +26,11 @@ class ActionTable extends PureComponent {
     isLoading: PropTypes.bool,
     content: PropTypes.array, // eslint-disable-line
     label: PropTypes.string,
-
     dynamicHeader: PropTypes.element,
   };
 
   render() {
     const { onPress, isLoading, content, label, dynamicHeader } = this.props;
-    if (isLoading) {
-      return <Text>Hi</Text>; // TODO: Updated loading state
-    }
 
     return (
       <ContentCard
