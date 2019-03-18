@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import RadioButton from './RadioButton';
 
-export default class Radio extends Component {
+class Radio extends Component {
   static Button = RadioButton;
 
   static propTypes = {
@@ -64,3 +64,5 @@ export default class Radio extends Component {
     return <View style={this.props.style}>{this.props.children}</View>;
   }
 }
+
+export default Radio;
