@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 
-// import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
-
 import MapView, {
   getAllCampuses,
   campusChange,
@@ -46,6 +44,10 @@ class LocationFinderMapView extends PureComponent {
       longitudeDelta: 100 * ASPECT_RATIO,
     },
   };
+
+  static navigationOptions = () => ({
+    title: 'LocationFinderMapView',
+  });
 
   state = {
     region: this.props.initialRegion,

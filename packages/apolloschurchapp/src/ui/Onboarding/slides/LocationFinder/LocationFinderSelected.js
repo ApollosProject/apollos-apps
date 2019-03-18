@@ -3,21 +3,21 @@ import { Query } from 'react-apollo';
 import getCurrentCampus from './getCurrentCampus';
 import LocationFinder from '.';
 
-const AskNotificationsConnected = memo((props) => (
+const requestLocation = async () => {
+  await this.props.navigation.navigate('LocationFinderMapView');
+};
+
+const LocationFinderSelected = memo((props) => (
   <Query query={getCurrentCampus}>
-    {({ data: { notificationsEnabled = false } = {} }) => (
+    {({ data: { currentCampus = false } = {} }) => (
       <LocationFinder
-        onPressButton={requestPushPermissions}
-        buttonDisabled={notificationsEnabled}
-        buttonText={
-          notificationsEnabled
-            ? 'Notifications Enabled!'
-            : 'Yes, enable notifications'
-        }
+        onPressButton={requestLocation}
+        buttonDisabled={currentCampus}
+        buttonText={'Yes, find my local campus'}
         {...props}
       />
     )}
   </Query>
 ));
 
-export default AskNotificationsConnected;
+export default LocationFinderSelected;
