@@ -6,6 +6,23 @@ import Providers from 'apolloschurchapp/src/Providers';
 
 import LocationFinder from './LocationFinder';
 
+const campus = {
+  id: 'Campus:a0f64573eabf00a607bec911794d50fb',
+  name: 'Chicago Campus',
+  latitude: 42.09203,
+  longitude: -88.13289,
+  distanceFromLocation: null,
+  street1: '67 Algonquin Rd',
+  street2: '',
+  city: 'South Barrington',
+  state: 'IL',
+  postalCode: '60010-6143',
+  image: {
+    uri:
+      'https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47',
+  },
+};
+
 describe('The Onboarding LocationFinder component', () => {
   it('should render', () => {
     const tree = renderer.create(
@@ -54,7 +71,11 @@ describe('The Onboarding LocationFinder component', () => {
   it('should render the button disabled', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinder onPressButton={jest.fn()} buttonDisabled />
+        <LocationFinder
+          onPressButton={jest.fn()}
+          buttonDisabled
+          campus={campus}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
