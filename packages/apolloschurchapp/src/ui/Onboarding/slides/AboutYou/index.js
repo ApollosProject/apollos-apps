@@ -7,12 +7,11 @@ import {
   H2,
   H5,
   Radio,
+  RadioButton,
   H6,
   DateInput,
   PaddedView,
 } from '@apollosproject/ui-kit';
-
-// import {RadioButton} from '@apollosproject/ui-kit/inputs/Radio';
 
 import Slide from '../../Slide';
 
@@ -53,7 +52,6 @@ const StyledDate = styled(({ theme }) => ({
 
 const StyledRadio = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
-  flex: 1,
   flexDirection: 'row',
 }))(Radio);
 
@@ -68,8 +66,12 @@ const AboutYou = memo(
           <View>
             <Label>Gender</Label>
             <StyledRadio>
-              <Radio.Button value={'Male'} Label={'Male'} />
-              <Radio.Button value={'Female'} Label={'Female'} />
+              <RadioButton value={'Male'} label={'Male'} underline={false} />
+              <RadioButton
+                value={'Female'}
+                label={'Female'}
+                underline={false}
+              />
             </StyledRadio>
           </View>
           {/* TODO: getting some warning with this DateInput */}
