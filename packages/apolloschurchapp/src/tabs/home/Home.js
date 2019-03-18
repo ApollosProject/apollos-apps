@@ -40,6 +40,7 @@ class Home extends PureComponent {
       transitionKey: item.transitionKey,
     });
 
+  // TODO: Update render to pass in dynamic data to the ActionTable
   render() {
     return (
       <BackgroundView>

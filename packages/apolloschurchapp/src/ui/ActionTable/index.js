@@ -17,6 +17,15 @@ const Header = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
 }))(CardContent);
 
+const ContentTable = styled(() => ({
+  borderBottomWidth: 0,
+  borderTopWidth: 0,
+}))(TableView);
+
+const ActionTitle = styled(({ theme }) => ({
+  marginTop: theme.sizing.baseUnit / 1.5,
+}))(H3);
+
 class ActionTable extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
@@ -29,21 +38,23 @@ class ActionTable extends PureComponent {
   render() {
     const { onPress, isLoading, content, label, title } = this.props;
     if (isLoading) {
-      return <Text>Hi</Text>;
+      return <Text>Hi</Text>; // TODO: Updated loading state
     }
+
+    // TODO: Extract header
     return (
       <ContentCard
         isLoading={isLoading}
         header={
           <Header>
             <ChannelLabel label={label} />
-            <H3 numberOfLines={3} ellipsizeMode="tail">
+            <ActionTitle numberOfLines={3} ellipsizeMode="tail">
               {title}
-            </H3>
+            </ActionTitle>
           </Header>
         }
         content={
-          <TableView>
+          <ContentTable>
             {content.map((item) => (
               <ActionItem
                 key={item.id}
@@ -54,7 +65,7 @@ class ActionTable extends PureComponent {
                 imageSource={item.coverImage ? item.coverImage.sources : ''}
               />
             ))}
-          </TableView>
+          </ContentTable>
         }
       />
     );

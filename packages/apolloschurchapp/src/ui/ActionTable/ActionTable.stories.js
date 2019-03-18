@@ -12,7 +12,9 @@ const content = [
       name: 'NewSpring - Articles',
     },
     coverImage: {
-      uri: 'google.com',
+      sources: {
+        uri: 'https://picsum.photos/600/400/?image=63',
+      },
     },
   },
   {
@@ -23,7 +25,9 @@ const content = [
       name: 'NewSpring - Articles',
     },
     coverImage: {
-      uri: 'google.com',
+      sources: {
+        uri: 'https://picsum.photos/600/400/?image=63',
+      },
     },
   },
   {
@@ -34,7 +38,9 @@ const content = [
       name: 'NewSpring - Articles',
     },
     coverImage: {
-      uri: 'google.com',
+      sources: {
+        uri: 'https://picsum.photos/600/400/?image=63',
+      },
     },
   },
   {
@@ -45,11 +51,14 @@ const content = [
       name: 'NewSpring - Articles',
     },
     coverImage: {
-      uri: 'google.com',
+      sources: {
+        uri: 'https://picsum.photos/600/400/?image=63',
+      },
     },
   },
 ];
 
+// TODO: Update actionTable story once ActionTable component is update
 storiesOf('ActionTable', module)
   .add('Example', () => (
     <ActionTable

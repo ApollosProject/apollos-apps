@@ -18,6 +18,10 @@ const CellImage = styled(({ theme }) => ({
   borderRadius: theme.sizing.baseUnit,
 }))(Image);
 
+const StyledDivider = styled(({ theme }) => ({
+  marginLeft: theme.sizing.baseUnit * 5.5,
+}))(Divider);
+
 class ActionItem extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
@@ -44,7 +48,7 @@ class ActionItem extends PureComponent {
             <H4>{this.props.title}</H4>
           </CellContent>
         </Cell>
-        <Divider />
+        <StyledDivider />
       </TouchableScale>
     );
   }
