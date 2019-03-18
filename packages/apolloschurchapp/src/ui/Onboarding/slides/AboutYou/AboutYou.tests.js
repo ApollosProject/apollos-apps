@@ -49,7 +49,7 @@ describe('The Onboarding AboutYou component', () => {
   it('should display custom birthday', () => {
     const tree = renderer.create(
       <Providers>
-        <AboutYou birthday={new Date(1989, 1, 14, 7, 30, 0, 0)} />
+        <AboutYou birthday={new Date('2/14/1989')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

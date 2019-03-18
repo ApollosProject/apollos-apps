@@ -10,7 +10,6 @@ import {
   RadioButton,
   H6,
   DateInput,
-  TextInput,
   PaddedView,
 } from '@apollosproject/ui-kit';
 
@@ -87,15 +86,18 @@ const AboutYou = memo(
           {/* TODO: getting some warning with this DateInput */}
           <View>
             <Label>Birthday</Label>
-            <StyledDate
-              value={birthday || null}
-              displayValue={
-                birthday
-                  ? `${birthday.getMonth() +
-                      1}/${birthday.getDate()}/${birthday.getFullYear()}`
-                  : 'Select a date...'
-              }
-            />
+            {birthday ? (
+              <StyledDate
+                value={birthday}
+                displayValue={`${birthday.getMonth() +
+                  1}/${birthday.getDate()}/${birthday.getFullYear()}`}
+              />
+            ) : (
+              <StyledDate
+                value={new Date('1/1/2000')}
+                placeholder={'Select a date...'}
+              />
+            )}
           </View>
         </TextContent>
       </Content>
