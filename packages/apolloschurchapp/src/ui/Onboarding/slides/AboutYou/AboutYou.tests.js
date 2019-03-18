@@ -38,6 +38,14 @@ describe('The Onboarding SlideWrapper component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should show users gender', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AboutYou gender={'Male'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should display custom birthday', () => {
     const tree = renderer.create(
       <Providers>
