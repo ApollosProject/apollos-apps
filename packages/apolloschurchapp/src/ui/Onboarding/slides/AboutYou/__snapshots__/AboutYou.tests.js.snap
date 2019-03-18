@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding SlideWrapper component should display custom birthday 1`] = `
+exports[`The Onboarding AboutYou component should display custom birthday 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -527,7 +527,7 @@ exports[`The Onboarding SlideWrapper component should display custom birthday 1`
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should pass additional props to Slide 1`] = `
+exports[`The Onboarding AboutYou component should pass additional props to Slide 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -918,7 +918,7 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552940884408}
+                          date={1552941220475}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1193,7 +1193,7 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render 1`] = `
+exports[`The Onboarding AboutYou component should render 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -1584,7 +1584,7 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552940884026}
+                          date={1552941220054}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1720,7 +1720,7 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render a custom description 1`] = `
+exports[`The Onboarding AboutYou component should render a custom description 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -2111,7 +2111,7 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552940884310}
+                          date={1552941220302}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2247,7 +2247,7 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render a custom image 1`] = `
+exports[`The Onboarding AboutYou component should render a custom image 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -2652,7 +2652,7 @@ exports[`The Onboarding SlideWrapper component should render a custom image 1`] 
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552940884250}
+                          date={1552941220177}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2788,7 +2788,7 @@ exports[`The Onboarding SlideWrapper component should render a custom image 1`] 
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should render a custom title 1`] = `
+exports[`The Onboarding AboutYou component should render a custom title 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -3179,7 +3179,7 @@ exports[`The Onboarding SlideWrapper component should render a custom title 1`] 
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552940884281}
+                          date={1552941220244}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -3315,7 +3315,7 @@ exports[`The Onboarding SlideWrapper component should render a custom title 1`] 
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding SlideWrapper component should show users gender 1`] = `
+exports[`The Onboarding AboutYou component should show users gender 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -3718,7 +3718,7 @@ exports[`The Onboarding SlideWrapper component should show users gender 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552940884346}
+                          date={1552941220361}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
