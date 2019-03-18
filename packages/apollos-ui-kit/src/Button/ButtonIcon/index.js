@@ -8,7 +8,7 @@ import Touchable from '../../Touchable';
 
 const ControlPadding = styled(({ iconPadding, additionalStyles }) => ({
   padding: iconPadding, // maximize vertical space for tappability.
-  ...additionalStyles,
+  ...additionalStyles, // pass ButtonIcon styles into here for styling instead of Touchable
 }))(View);
 
 class ButtonIcon extends PureComponent {
