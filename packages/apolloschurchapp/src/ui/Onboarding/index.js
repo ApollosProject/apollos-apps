@@ -10,7 +10,7 @@ import {
   GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 
-import { AskName, AskNotificationsConnected } from './slides';
+import { AskName, AskNotificationsConnected, Features } from './slides';
 
 // Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
@@ -39,7 +39,7 @@ class Onboarding extends Component {
   };
 
   togglePagination = () => {
-    if (this.currentIndex === 2 || this.state.pagination === false) {
+    if (this.currentIndex === 3 || this.state.pagination === false) {
       this.setState((state) => ({
         pagination: !state.pagination,
       }));
@@ -70,6 +70,10 @@ class Onboarding extends Component {
           swiperRef={this.setSwiperRef}
         >
           <AskName onPressPrimary={this.handleOnPressPrimary} />
+          <Features
+            imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
+            onPressPrimary={this.handleOnPressPrimary}
+          />
           <AskNotificationsConnected
             onPressSecondary={this.handleOnPressPrimary}
           >
