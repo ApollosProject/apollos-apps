@@ -1,9 +1,15 @@
 import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
+import { Platform } from 'react-native';
 import getLoginState from 'apolloschurchapp/src/auth/getLoginState';
 import { track, events } from 'apolloschurchapp/src/analytics';
+
 import { client, CACHE_LOADED } from '../client'; // eslint-disable-line
-import updatePushId from '../notifications/updatePushId';
+import {
+  getPushPermissions,
+  updatePushId,
+  getNotificationsEnabled,
+} from '../notifications';
 import getAuthToken from './getAuthToken';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
@@ -15,6 +21,7 @@ export const schema = `
     isLoggedIn: Boolean
     devicePushId: String
     cacheLoaded: Boolean
+    notificationsEnabled: Boolean
   }
 
   type Mutation {
@@ -35,6 +42,7 @@ export const schema = `
     handleLogin(authToken: String!)
 
     updateDevicePushId(pushId: String!)
+    updatePushPermissions(enabled: Boolean!)
   }
 
   type MediaPlayerState {
@@ -68,6 +76,7 @@ export const defaults = {
   authToken: null,
   cacheLoaded: false,
   pushId: null,
+  notificationsEnabled: Platform.OS === 'android',
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     currentTrack: null,
@@ -94,6 +103,7 @@ export const resolvers = {
         return false;
       }
     },
+    notificationsEnabled: getPushPermissions,
   },
   Mutation: {
     logout: () => {
@@ -275,6 +285,16 @@ export const resolvers = {
       }
       return null;
     },
+    updatePushPermissions: (root, { enabled }, { cache }) => {
+      cache.writeQuery({
+        query: getNotificationsEnabled,
+        data: {
+          notificationsEnabled: enabled,
+        },
+      });
+
+      return null;
+    },
 
     cacheMarkLoaded: (root, args, { cache }) => {
       cache.writeQuery({
@@ -295,6 +315,7 @@ export const resolvers = {
       if (isLoggedIn && pushId) {
         updatePushId({ pushId });
       }
+      return null;
     },
   },
 };
