@@ -22,13 +22,13 @@ describe('The ButtonIcon component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a backgroundColor', () => {
+  it('should render additional styles', () => {
     const tree = renderer.create(
       <Providers>
         <ButtonIcon
           name={'umbrella'}
           onPress={jest.fn()}
-          backgroundColor={'salmon'}
+          style={{ backgroundColor: 'salmon' }} // eslint-disable-line
         />
       </Providers>
     );

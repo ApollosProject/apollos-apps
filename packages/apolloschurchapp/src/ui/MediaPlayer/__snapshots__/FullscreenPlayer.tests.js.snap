@@ -253,8 +253,6 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         iconPadding={20}
                         style={
                           Object {
-                            "backgroundColor": null,
-                            "borderRadius": null,
                             "padding": 20,
                           }
                         }
@@ -570,8 +568,6 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           iconPadding={20}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 20,
                             }
                           }
@@ -849,8 +845,6 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           iconPadding={15}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 15,
                             }
                           }
@@ -951,8 +945,6 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           iconPadding={5}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 5,
                             }
                           }
@@ -1053,8 +1045,6 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           iconPadding={15}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 15,
                             }
                           }
@@ -1155,8 +1145,6 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           iconPadding={20}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 20,
                             }
                           }
@@ -1538,8 +1526,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         iconPadding={20}
                         style={
                           Object {
-                            "backgroundColor": null,
-                            "borderRadius": null,
                             "padding": 20,
                           }
                         }
@@ -1855,8 +1841,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           iconPadding={20}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 20,
                             }
                           }
@@ -2134,8 +2118,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           iconPadding={15}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 15,
                             }
                           }
@@ -2236,8 +2218,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           iconPadding={5}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 5,
                             }
                           }
@@ -2338,8 +2318,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           iconPadding={15}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 15,
                             }
                           }
@@ -2440,8 +2418,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           iconPadding={20}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 20,
                             }
                           }
@@ -2829,8 +2805,6 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     iconPadding={20}
                     style={
                       Object {
-                        "backgroundColor": null,
-                        "borderRadius": null,
                         "padding": 20,
                       }
                     }
@@ -3246,8 +3220,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         iconPadding={20}
                         style={
                           Object {
-                            "backgroundColor": null,
-                            "borderRadius": null,
                             "padding": 20,
                           }
                         }
@@ -3563,8 +3535,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           iconPadding={20}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 20,
                             }
                           }
@@ -3842,8 +3812,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           iconPadding={15}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 15,
                             }
                           }
@@ -3944,8 +3912,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           iconPadding={5}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 5,
                             }
                           }
@@ -4046,8 +4012,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           iconPadding={15}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 15,
                             }
                           }
@@ -4148,8 +4112,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           iconPadding={20}
                           style={
                             Object {
-                              "backgroundColor": null,
-                              "borderRadius": null,
                               "padding": 20,
                             }
                           }
@@ -4537,8 +4499,6 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     iconPadding={20}
                     style={
                       Object {
-                        "backgroundColor": null,
-                        "borderRadius": null,
                         "padding": 20,
                       }
                     }
