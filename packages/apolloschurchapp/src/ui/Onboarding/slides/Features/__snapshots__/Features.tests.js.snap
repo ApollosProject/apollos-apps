@@ -44,8 +44,6 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -54,6 +52,8 @@ exports[`The Onboarding SlideWrapper component should pass additional props to S
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -272,8 +272,6 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -282,6 +280,8 @@ exports[`The Onboarding SlideWrapper component should render 1`] = `
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -361,8 +361,6 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -371,6 +369,8 @@ exports[`The Onboarding SlideWrapper component should render a custom descriptio
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -450,8 +450,6 @@ exports[`The Onboarding SlideWrapper component should render a custom first name
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -460,6 +458,8 @@ exports[`The Onboarding SlideWrapper component should render a custom first name
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -539,8 +539,6 @@ exports[`The Onboarding SlideWrapper component should render a custom image 1`] 
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -563,6 +561,8 @@ exports[`The Onboarding SlideWrapper component should render a custom image 1`] 
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -642,8 +642,6 @@ exports[`The Onboarding SlideWrapper component should render a custom title 1`] 
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -652,6 +650,8 @@ exports[`The Onboarding SlideWrapper component should render a custom title 1`] 
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >

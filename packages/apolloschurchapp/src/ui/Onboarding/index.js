@@ -39,7 +39,7 @@ class Onboarding extends Component {
   };
 
   togglePagination = () => {
-    if (this.currentIndex === 2 || this.state.pagination === false) {
+    if (this.currentIndex === 3 || this.state.pagination === false) {
       this.setState((state) => ({
         pagination: !state.pagination,
       }));
