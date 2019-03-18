@@ -42,4 +42,4 @@ class RadioButtonIndicator extends PureComponent {
   }
 }
 
-export default RadioButtonIndicator
+export default RadioButtonIndicator;
