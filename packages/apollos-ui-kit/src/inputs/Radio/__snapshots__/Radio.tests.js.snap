@@ -51,6 +51,7 @@ exports[`The Radio component should render correctly 1`] = `
             "padding": 8,
           }
         }
+        underline={true}
       >
         <View
           style={
@@ -96,6 +97,7 @@ exports[`The Radio component should render correctly 1`] = `
             "padding": 8,
           }
         }
+        underline={true}
       >
         <View
           style={
