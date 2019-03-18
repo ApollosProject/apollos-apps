@@ -21,7 +21,7 @@ const FilledCircle = styled(({ theme }) => ({
   backgroundColor: theme.colors.primary,
 }))(View);
 
-export default class RadioButtonIndicator extends PureComponent {
+class RadioButtonIndicator extends PureComponent {
   static propTypes = {
     isSelected: PropTypes.bool,
   };
@@ -41,3 +41,5 @@ export default class RadioButtonIndicator extends PureComponent {
     return <OutlinedCircle />;
   }
 }
+
+export default RadioButtonIndicator;
