@@ -5,11 +5,16 @@ import {
   TableView,
   ContentCard,
   CardContent,
-  ChannelLabel,
+  H6,
   styled,
+  withIsLoading,
 } from '@apollosproject/ui-kit';
 
 import ActionItem from './ActionItem';
+
+const StyledH6 = styled(({ theme }) => ({
+  color: theme.colors.text.tertiary,
+}))(H6);
 
 const Header = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
@@ -23,22 +28,21 @@ const ContentTable = styled(() => ({
 class ActionTable extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
-    isLoading: PropTypes.bool,
+    isLoading: PropTypes.bool, // eslint-disable-line
     content: PropTypes.array, // eslint-disable-line
     label: PropTypes.string,
-    dynamicHeader: PropTypes.element,
+    DynamicHeader: PropTypes.element,
   };
 
   render() {
-    const { onPress, isLoading, content, label, dynamicHeader } = this.props;
+    const { onPress, content, label, DynamicHeader } = this.props;
 
     return (
       <ContentCard
-        isLoading={isLoading}
         header={
-          <Header>
-            <ChannelLabel label={label} />
-            {dynamicHeader}
+          <Header isLoading>
+            <StyledH6>{label}</StyledH6>
+            {DynamicHeader}
           </Header>
         }
         content={
@@ -51,6 +55,7 @@ class ActionTable extends PureComponent {
                 label={item.parentChannel ? item.parentChannel.name : ''}
                 title={item.title || ''}
                 imageSource={item.coverImage ? item.coverImage.sources : ''}
+                isLoading
               />
             ))}
           </ContentTable>
@@ -60,4 +65,4 @@ class ActionTable extends PureComponent {
   }
 }
 
-export default ActionTable;
+export default withIsLoading(ActionTable);

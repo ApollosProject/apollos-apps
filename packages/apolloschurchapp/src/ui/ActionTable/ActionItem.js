@@ -1,26 +1,33 @@
 import React, { PureComponent } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { Image } from 'react-native';
 
 import {
   Cell,
-  ChannelLabel,
+  H6,
   H4,
   CellContent,
   styled,
   Divider,
   TouchableScale,
+  withIsLoading,
+  ConnectedImage,
 } from '@apollosproject/ui-kit';
 
 const CellImage = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,
   height: theme.sizing.baseUnit * 4,
   borderRadius: theme.sizing.baseUnit,
-}))(Image);
+  overflow: 'hidden',
+}))(View);
 
 const StyledDivider = styled(({ theme }) => ({
   marginLeft: theme.sizing.baseUnit * 5.5,
 }))(Divider);
+
+const StyledH6 = styled(({ theme }) => ({
+  color: theme.colors.text.tertiary,
+}))(H6);
 
 class ActionItem extends PureComponent {
   static propTypes = {
@@ -42,9 +49,11 @@ class ActionItem extends PureComponent {
         }
       >
         <Cell>
-          <CellImage source={this.props.imageSource} />
+          <CellImage>
+            <ConnectedImage source={this.props.imageSource} isLoading />
+          </CellImage>
           <CellContent>
-            <ChannelLabel label={this.props.label} />
+            <StyledH6>{this.props.label}</StyledH6>
             <H4>{this.props.title}</H4>
           </CellContent>
         </Cell>
@@ -54,4 +63,4 @@ class ActionItem extends PureComponent {
   }
 }
 
-export default ActionItem;
+export default withIsLoading(ActionItem);

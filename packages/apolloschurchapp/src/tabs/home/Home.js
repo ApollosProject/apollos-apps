@@ -71,7 +71,7 @@ class Home extends PureComponent {
                           label={'FOR YOU'}
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}
-                          dynamicHeader={
+                          DynamicHeader={
                             <ActionTitle numberOfLines={3} ellipsizeMode="tail">
                               Some random text that encourages you
                             </ActionTitle>

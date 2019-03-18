@@ -63,26 +63,25 @@ const ActionTitle = styled(({ theme }) => ({
 }))(H3);
 
 storiesOf('ActionTable', module)
-  .add('Example', () => (
+  .add('simple', () => (
     <ActionTable
       label={'FOR YOU'}
-      isLoading={false}
       onPress={() => {}}
       content={content}
-      dynamicHeader={
+      DynamicHeader={
         <ActionTitle numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
         </ActionTitle>
       }
     />
   ))
-  .add('Loading', () => (
+  .add('isLoading', () => (
     <ActionTable
       label={'FOR YOU'}
-      isLoading
       onPress={() => {}}
+      isLoading
       content={content}
-      dynamicHeader={
+      DynamicHeader={
         <ActionTitle numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
         </ActionTitle>
