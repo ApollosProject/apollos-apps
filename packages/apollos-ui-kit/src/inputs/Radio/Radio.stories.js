@@ -8,8 +8,8 @@ import Radio, { RadioButton } from '.';
 storiesOf('Choices', module).add('Radio', () => (
   <FlexedView>
     <Radio label="Choices">
-      <RadioButton Label="option 1" value="one" />
-      <RadioButton Label="option 2" value="two" />
+      <RadioButton label="option 1" value="one" />
+      <RadioButton label="option 2" value="two" />
     </Radio>
   </FlexedView>
 ));
