@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
@@ -25,6 +26,10 @@ const ContentTable = styled(() => ({
   borderTopWidth: 0,
 }))(TableView);
 
+const ActionTitle = styled(({ theme }) => ({
+  marginTop: theme.sizing.baseUnit / 1.5,
+}))(View);
+
 class ActionTable extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
@@ -35,27 +40,27 @@ class ActionTable extends PureComponent {
   };
 
   render() {
-    const { onPress, content, label, DynamicHeader } = this.props;
+    const { onPress, isLoading, content, label, DynamicHeader } = this.props;
 
     return (
       <ContentCard
         header={
-          <Header isLoading>
-            <StyledH6>{label}</StyledH6>
-            {DynamicHeader}
+          <Header>
+            <StyledH6 isLoading={isLoading}>{label}</StyledH6>
+            <ActionTitle>{DynamicHeader}</ActionTitle>
           </Header>
         }
         content={
           <ContentTable>
             {content.map((item) => (
               <ActionItem
+                isLoading={isLoading}
                 key={item.id}
                 id={item.id}
                 onPress={onPress}
                 label={item.parentChannel ? item.parentChannel.name : ''}
                 title={item.title || ''}
                 imageSource={item.coverImage ? item.coverImage.sources : ''}
-                isLoading
               />
             ))}
           </ContentTable>

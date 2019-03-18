@@ -17,7 +17,7 @@ const item = {
   },
 };
 
-storiesOf('ActionItem', module).add('Example', () => (
+storiesOf('ActionItem', module).add('simple', () => (
   <ActionItem
     onPress={() => {}}
     imageSource={item.coverImage.sources}

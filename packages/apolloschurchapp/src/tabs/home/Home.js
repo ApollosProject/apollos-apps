@@ -21,10 +21,6 @@ const LogoTitle = styled(({ theme }) => ({
   resizeMode: 'contain',
 }))(Image);
 
-const ActionTitle = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 1.5,
-}))(H3);
-
 class Home extends PureComponent {
   static navigationOptions = () => ({
     header: null,
@@ -72,9 +68,13 @@ class Home extends PureComponent {
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}
                           DynamicHeader={
-                            <ActionTitle numberOfLines={3} ellipsizeMode="tail">
+                            <H3
+                              isLoading={actionLoading}
+                              numberOfLines={3}
+                              ellipsizeMode="tail"
+                            >
                               Some random text that encourages you
-                            </ActionTitle>
+                            </H3>
                           }
                           content={get(
                             personaData,

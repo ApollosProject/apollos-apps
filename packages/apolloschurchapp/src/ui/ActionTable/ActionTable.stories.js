@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
-import { styled, H3 } from '@apollosproject/ui-kit';
+import { H3 } from '@apollosproject/ui-kit';
 import ActionTable from '.';
 
 const content = [
@@ -58,10 +58,6 @@ const content = [
   },
 ];
 
-const ActionTitle = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 1.5,
-}))(H3);
-
 storiesOf('ActionTable', module)
   .add('simple', () => (
     <ActionTable
@@ -69,9 +65,9 @@ storiesOf('ActionTable', module)
       onPress={() => {}}
       content={content}
       DynamicHeader={
-        <ActionTitle numberOfLines={3} ellipsizeMode="tail">
+        <H3 numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
-        </ActionTitle>
+        </H3>
       }
     />
   ))
@@ -82,9 +78,9 @@ storiesOf('ActionTable', module)
       isLoading
       content={content}
       DynamicHeader={
-        <ActionTitle numberOfLines={3} ellipsizeMode="tail">
+        <H3 isLoading numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
-        </ActionTitle>
+        </H3>
       }
     />
   ));
