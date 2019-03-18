@@ -6,12 +6,12 @@ import {
   Cell,
   H6,
   H4,
-  CellContent,
   styled,
   Divider,
   TouchableScale,
   withIsLoading,
   ConnectedImage,
+  FlexedView,
 } from '@apollosproject/ui-kit';
 
 const CellImage = styled(({ theme }) => ({
@@ -19,6 +19,7 @@ const CellImage = styled(({ theme }) => ({
   height: theme.sizing.baseUnit * 4,
   borderRadius: theme.sizing.baseUnit,
   overflow: 'hidden',
+  marginRight: theme.sizing.baseUnit / 2,
 }))(View);
 
 const StyledDivider = styled(({ theme }) => ({
@@ -52,10 +53,12 @@ class ActionItem extends PureComponent {
           <CellImage>
             <ConnectedImage source={this.props.imageSource} isLoading />
           </CellImage>
-          <CellContent>
+          <FlexedView>
             <StyledH6>{this.props.label}</StyledH6>
-            <H4>{this.props.title}</H4>
-          </CellContent>
+            <H4 numberOfLines={2} ellipsizeMode="tail">
+              {this.props.title}
+            </H4>
+          </FlexedView>
         </Cell>
         <StyledDivider />
       </TouchableScale>
