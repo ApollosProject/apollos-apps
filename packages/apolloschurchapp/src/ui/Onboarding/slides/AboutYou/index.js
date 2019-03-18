@@ -1,18 +1,36 @@
 import React, { memo } from 'react';
-import { Image, View, Text } from 'react-native';
+import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
   styled,
   H2,
-  Button,
   H5,
+  Radio,
   H6,
   DateInput,
   PaddedView,
 } from '@apollosproject/ui-kit';
 
+// import {RadioButton} from '@apollosproject/ui-kit/inputs/Radio';
+
 import Slide from '../../Slide';
+
+const Content = styled({
+  flex: 1,
+  justifyContent: 'center',
+})(PaddedView);
+
+const StyledImage = styled(({ theme }) => ({
+  flex: 2,
+  resizeMode: 'contain',
+  marginBottom: theme.sizing.baseUnit * 2,
+}))(Image);
+
+const TextContent = styled({
+  flex: 1,
+  justifyContent: 'center',
+})(View);
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -33,50 +51,11 @@ const StyledDate = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
 }))(DateInput);
 
-const StyledImage = styled(({ theme }) => ({
-  flex: 2,
-  resizeMode: 'contain',
-  marginBottom: theme.sizing.baseUnit * 2,
-}))(Image);
-
-const Content = styled({
-  flex: 1,
-  justifyContent: 'center',
-})(PaddedView);
-
-const TextContent = styled({
-  flex: 1,
-  justifyContent: 'center',
-})(View);
-
-const GenderButtons = styled(({ theme }) => ({
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
+const StyledRadio = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
-}))(View);
-
-const GenderButton = styled({
   flex: 1,
-  backgroundColor: 'white',
-  borderColor: 'gray',
-  borderWidth: 0.5,
-  height: 32,
-})(Button);
-
-const LeftButton = styled({
-  borderBottomRightRadius: 0,
-  borderTopRightRadius: 0,
-  borderBottomLeftRadius: 10,
-  borderTopLeftRadius: 10,
-})(GenderButton);
-
-const RightButton = styled({
-  borderBottomLeftRadius: 0,
-  borderTopLeftRadius: 0,
-  borderBottomRightRadius: 10,
-  borderTopRightRadius: 10,
-})(GenderButton);
+  flexDirection: 'row',
+}))(Radio);
 
 const AboutYou = memo(
   ({ imgSrc, slideTitle, description, birthday, gender, ...props }) => (
@@ -88,14 +67,10 @@ const AboutYou = memo(
           <StyledH5>{description}</StyledH5>
           <View>
             <Label>Gender</Label>
-            <GenderButtons>
-              <LeftButton>
-                <Text>Male</Text>
-              </LeftButton>
-              <RightButton>
-                <Text>Female</Text>
-              </RightButton>
-            </GenderButtons>
+            <StyledRadio>
+              <Radio.Button value={'Male'} Label={'Male'} />
+              <Radio.Button value={'Female'} Label={'Female'} />
+            </StyledRadio>
           </View>
           {/* TODO: getting some warning with this DateInput */}
           <View>
