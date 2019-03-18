@@ -33,6 +33,10 @@ const StyledH5 = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(H5);
 
+const SelectedCampusCard = styled({
+  flex: 1,
+})(CampusCard);
+
 // memo = sfc PureComponent 💥
 const LocationFinder = memo(
   ({
@@ -51,23 +55,22 @@ const LocationFinder = memo(
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
-          {buttonDisabled || onPressButton ? (
-            <Button
-              title={buttonText}
-              onPress={onPressButton}
-              disabled={buttonDisabled}
-              pill={false}
-            />
-          ) : null}
-          {campus ? (
-            <CampusCard
+          {buttonDisabled ? (
+            <SelectedCampusCard
               key={campus.id}
               distance={campus.distanceFromLocation}
               title={campus.name}
               description={getCampusAddress(campus)}
               images={[campus.image]}
             />
-          ) : null}
+          ) : (
+            <Button
+              title={buttonText}
+              onPress={onPressButton}
+              disabled={buttonDisabled}
+              pill={false}
+            />
+          )}
         </Content>
       </ContentWrapper>
     </Slide>

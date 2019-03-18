@@ -9,11 +9,12 @@ const requestLocation = async () => {
 
 const LocationFinderSelected = memo((props) => (
   <Query query={getCurrentCampus}>
-    {({ data: { currentCampus = false } = {} }) => (
+    {({ data: { campus = null } = {} }) => (
       <LocationFinder
         onPressButton={requestLocation}
-        buttonDisabled={currentCampus}
+        buttonDisabled={!!campus}
         buttonText={'Yes, find my local campus'}
+        campus={campus}
         {...props}
       />
     )}
