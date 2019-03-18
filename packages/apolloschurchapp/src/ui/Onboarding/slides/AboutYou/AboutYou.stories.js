@@ -13,4 +13,5 @@ storiesOf('Onboarding/slides/AboutYou', module)
     <AboutYou description={'Custom description text'} />
   ))
   .add('birthday', () => <AboutYou birthday={new Date('02/14/1989')} />)
-  .add('SlideWrapper props', () => <AboutYou onboardingScrollBy={() => {}} />);
+  .add('gender', () => <AboutYou gender={'Male'} />)
+  .add('Slide props', () => <AboutYou onPressPrimary={() => {}} />);

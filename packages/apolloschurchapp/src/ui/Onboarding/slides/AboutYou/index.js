@@ -10,6 +10,7 @@ import {
   RadioButton,
   H6,
   DateInput,
+  TextInput,
   PaddedView,
 } from '@apollosproject/ui-kit';
 
@@ -36,7 +37,7 @@ const Title = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit * 0.5,
 }))(H2);
 
-const StyledH5 = styled(({ theme }) => ({
+const Description = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
   marginBottom: theme.sizing.baseUnit,
 }))(H5);
@@ -47,6 +48,7 @@ const Label = styled({
 })(H6);
 
 const StyledDate = styled(({ theme }) => ({
+  marginTop: 0,
   marginBottom: theme.sizing.baseUnit,
 }))(DateInput);
 
@@ -55,6 +57,12 @@ const StyledRadio = styled(({ theme }) => ({
   flexDirection: 'row',
 }))(Radio);
 
+const RadioLabel = styled(({ theme }) => ({
+  marginLeft: theme.sizing.baseUnit * 0.5,
+}))(H5);
+
+const genders = ['Male', 'Female'];
+
 const AboutYou = memo(
   ({ imgSrc, slideTitle, description, birthday, gender, ...props }) => (
     <Slide {...props}>
@@ -62,30 +70,32 @@ const AboutYou = memo(
         {imgSrc ? <StyledImage source={imgSrc} /> : null}
         <TextContent>
           <Title>{slideTitle}</Title>
-          <StyledH5>{description}</StyledH5>
+          <Description>{description}</Description>
           <View>
             <Label>Gender</Label>
-            <StyledRadio>
-              <RadioButton value={'Male'} label={'Male'} underline={false} />
-              <RadioButton
-                value={'Female'}
-                label={'Female'}
-                underline={false}
-              />
+            <StyledRadio value={gender || null}>
+              {genders.map((x) => [
+                <RadioButton
+                  key={x}
+                  value={x}
+                  label={() => <RadioLabel>{x}</RadioLabel>}
+                  underline={false}
+                />,
+              ])}
             </StyledRadio>
           </View>
           {/* TODO: getting some warning with this DateInput */}
           <View>
             <Label>Birthday</Label>
-            {birthday ? (
-              <StyledDate
-                value={birthday}
-                displayValue={`${birthday.getMonth() +
-                  1}/${birthday.getDate()}/${birthday.getFullYear()}`}
-              />
-            ) : (
-              <StyledDate placeholder={'Select a date...'} />
-            )}
+            <StyledDate
+              value={birthday || null}
+              displayValue={
+                birthday
+                  ? `${birthday.getMonth() +
+                      1}/${birthday.getDate()}/${birthday.getFullYear()}`
+                  : 'Select a date...'
+              }
+            />
           </View>
         </TextContent>
       </Content>
@@ -101,7 +111,7 @@ AboutYou.propTypes = {
   description: PropTypes.string,
   imgSrc: PropTypes.string,
   birthday: PropTypes.instanceOf(Date),
-  gender: PropTypes.oneOf('Male', 'Female'),
+  gender: PropTypes.oneOf(genders),
 };
 
 AboutYou.defaultProps = {
