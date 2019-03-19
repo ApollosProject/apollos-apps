@@ -93,10 +93,7 @@ const AboutYou = memo(
                   1}/${birthday.getDate()}/${birthday.getFullYear()}`}
               />
             ) : (
-              <StyledDate
-                value={new Date('1/1/2000')}
-                placeholder={'Select a date...'}
-              />
+              <StyledDate placeholder={'Select a date...'} />
             )}
           </View>
         </TextContent>
