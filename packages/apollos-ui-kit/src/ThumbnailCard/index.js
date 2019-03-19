@@ -73,7 +73,7 @@ const ThumbnailCard = enhance(
           </LeftColumn>
           {images ? (
             <RightColumn>
-              <Thumbnail source={images} thumbnail={thumbnailImage} />
+              <Thumbnail source={images} />
             </RightColumn>
           ) : null}
         </HorizontalLayout>

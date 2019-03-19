@@ -15,7 +15,7 @@ const ButtonStyles = styled(
   ({ theme, disabled, bordered, pill }) => ({
     paddingHorizontal: theme.sizing.baseUnit,
     overflow: 'hidden',
-    borderRadius: pill ? theme.sizing.baseUnit * 3 : theme.sizing.baseUnit / 2,
+    borderRadius: pill ? theme.sizing.baseUnit * 3 : theme.sizing.baseUnit,
     flexDirection: 'row',
     height: theme.sizing.baseUnit * 3,
     alignItems: 'center',
