@@ -44,8 +44,6 @@ exports[`The Onboarding AboutYou component should display custom birthday 1`] = 
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -54,6 +52,8 @@ exports[`The Onboarding AboutYou component should display custom birthday 1`] = 
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -246,7 +246,7 @@ exports[`The Onboarding AboutYou component should display custom birthday 1`] = 
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -571,8 +571,6 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -581,6 +579,8 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -773,7 +773,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -918,7 +918,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552959895405}
+                          date={1553087330240}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1237,8 +1237,6 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -1247,6 +1245,8 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -1439,7 +1439,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -1584,7 +1584,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552959894983}
+                          date={1553087329291}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1764,8 +1764,6 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -1774,6 +1772,8 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -1966,7 +1966,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -2111,7 +2111,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552959895220}
+                          date={1553087329970}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2291,8 +2291,6 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -2315,6 +2313,8 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -2507,7 +2507,7 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -2652,7 +2652,7 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552959895099}
+                          date={1553087329806}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2832,8 +2832,6 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -2842,6 +2840,8 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -3034,7 +3034,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -3179,7 +3179,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552959895162}
+                          date={1553087329885}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -3359,8 +3359,6 @@ exports[`The Onboarding AboutYou component should show users gender 1`] = `
           Object {
             "flex": 1,
             "justifyContent": "center",
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
           }
         }
       >
@@ -3369,6 +3367,8 @@ exports[`The Onboarding AboutYou component should show users gender 1`] = `
             Object {
               "flex": 1,
               "justifyContent": "center",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
@@ -3573,7 +3573,7 @@ exports[`The Onboarding AboutYou component should show users gender 1`] = `
                       "alignItems": "center",
                       "backgroundColor": "#A5A5A5",
                       "borderColor": "#A5A5A5",
-                      "borderRadius": 8,
+                      "borderRadius": 16,
                       "borderWidth": 2,
                       "elevation": 2,
                       "flexDirection": "row",
@@ -3718,7 +3718,7 @@ exports[`The Onboarding AboutYou component should show users gender 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1552959895280}
+                          date={1553087330049}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}

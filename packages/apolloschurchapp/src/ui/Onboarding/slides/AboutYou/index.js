@@ -10,15 +10,15 @@ import {
   RadioButton,
   H6,
   DateInput,
+  FlexedView,
   PaddedView,
 } from '@apollosproject/ui-kit';
 
 import Slide from '../../Slide';
 
 const Content = styled({
-  flex: 1,
   justifyContent: 'center',
-})(PaddedView);
+})(FlexedView);
 
 const StyledImage = styled(({ theme }) => ({
   flex: 2,
@@ -29,7 +29,7 @@ const StyledImage = styled(({ theme }) => ({
 const TextContent = styled({
   flex: 1,
   justifyContent: 'center',
-})(View);
+})(PaddedView);
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
