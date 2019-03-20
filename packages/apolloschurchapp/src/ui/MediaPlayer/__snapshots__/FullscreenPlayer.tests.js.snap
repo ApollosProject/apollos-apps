@@ -249,6 +249,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       }
                     >
                       <View
+                        borderRadius={40}
                         iconPadding={20}
                         style={
                           Object {
@@ -563,6 +564,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         }
                       >
                         <View
+                          borderRadius={40}
                           iconPadding={20}
                           style={
                             Object {
@@ -839,6 +841,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         }
                       >
                         <View
+                          borderRadius={45}
                           iconPadding={15}
                           style={
                             Object {
@@ -938,6 +941,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         }
                       >
                         <View
+                          borderRadius={55}
                           iconPadding={5}
                           style={
                             Object {
@@ -1037,6 +1041,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         }
                       >
                         <View
+                          borderRadius={45}
                           iconPadding={15}
                           style={
                             Object {
@@ -1136,6 +1141,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         }
                       >
                         <View
+                          borderRadius={40}
                           iconPadding={20}
                           style={
                             Object {
@@ -1516,6 +1522,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       }
                     >
                       <View
+                        borderRadius={40}
                         iconPadding={20}
                         style={
                           Object {
@@ -1830,6 +1837,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         }
                       >
                         <View
+                          borderRadius={40}
                           iconPadding={20}
                           style={
                             Object {
@@ -2106,6 +2114,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         }
                       >
                         <View
+                          borderRadius={45}
                           iconPadding={15}
                           style={
                             Object {
@@ -2205,6 +2214,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         }
                       >
                         <View
+                          borderRadius={55}
                           iconPadding={5}
                           style={
                             Object {
@@ -2304,6 +2314,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         }
                       >
                         <View
+                          borderRadius={45}
                           iconPadding={15}
                           style={
                             Object {
@@ -2403,6 +2414,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         }
                       >
                         <View
+                          borderRadius={40}
                           iconPadding={20}
                           style={
                             Object {
@@ -2789,6 +2801,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                   }
                 >
                   <View
+                    borderRadius={40}
                     iconPadding={20}
                     style={
                       Object {
@@ -3203,6 +3216,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       }
                     >
                       <View
+                        borderRadius={40}
                         iconPadding={20}
                         style={
                           Object {
@@ -3517,6 +3531,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         }
                       >
                         <View
+                          borderRadius={40}
                           iconPadding={20}
                           style={
                             Object {
@@ -3793,6 +3808,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         }
                       >
                         <View
+                          borderRadius={45}
                           iconPadding={15}
                           style={
                             Object {
@@ -3892,6 +3908,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         }
                       >
                         <View
+                          borderRadius={55}
                           iconPadding={5}
                           style={
                             Object {
@@ -3991,6 +4008,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         }
                       >
                         <View
+                          borderRadius={45}
                           iconPadding={15}
                           style={
                             Object {
@@ -4090,6 +4108,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         }
                       >
                         <View
+                          borderRadius={40}
                           iconPadding={20}
                           style={
                             Object {
@@ -4476,6 +4495,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                   }
                 >
                   <View
+                    borderRadius={40}
                     iconPadding={20}
                     style={
                       Object {
