@@ -10,7 +10,7 @@ import {
   Button,
 } from '@apollosproject/ui-kit';
 
-import CampusCard from 'apolloschurchapp/src/user-settings/Locations';
+import CampusCard from 'apolloschurchapp/src/user-settings/Locations/CampusCard';
 import Slide from '../../Slide';
 
 const getCampusAddress = (campus) =>
@@ -33,9 +33,9 @@ const StyledH5 = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(H5);
 
-const SelectedCampusCard = styled({
-  flex: 1,
-})(CampusCard);
+// const SelectedCampusCard = styled({
+//   flex: 1,
+// })(CampusCard);
 
 // memo = sfc PureComponent 💥
 const LocationFinder = memo(
@@ -55,8 +55,8 @@ const LocationFinder = memo(
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
-          {buttonDisabled ? (
-            <SelectedCampusCard
+          {buttonDisabled || campus ? (
+            <CampusCard
               key={campus.id}
               distance={campus.distanceFromLocation}
               title={campus.name}
@@ -90,6 +90,10 @@ LocationFinder.propTypes = {
   buttonText: PropTypes.string,
   buttonDisabled: PropTypes.bool,
   onPressButton: PropTypes.func,
+  campus: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 LocationFinder.defaultProps = {

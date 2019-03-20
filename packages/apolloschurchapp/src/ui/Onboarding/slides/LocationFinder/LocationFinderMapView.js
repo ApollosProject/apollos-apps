@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 
-import MapView, {
-  getAllCampuses,
-  campusChange,
-} from 'apolloschurchapp/src/user-settings/Locations';
+import MapView from 'apolloschurchapp/src/user-settings/Locations';
+
+import campusChange from 'apolloschurchapp/src/user-settings/Locations/campusChange';
+import getCampusLocations from 'apolloschurchapp/src/user-settings/Locations/getCampusLocations';
 
 const getCurrentLocation = () =>
   new Promise((resolve, reject) => {
@@ -70,7 +70,7 @@ class LocationFinderMapView extends PureComponent {
     const { navigation } = this.props;
     return (
       <Query
-        query={getAllCampuses}
+        query={getCampusLocations}
         variables={{
           latitude: this.state.region.latitude,
           longitude: this.state.region.longitude,

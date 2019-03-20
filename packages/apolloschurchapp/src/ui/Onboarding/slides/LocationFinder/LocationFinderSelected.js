@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
 import { Query } from 'react-apollo';
+import NavigationActions from 'apolloschurchapp/src/NavigationService';
 import getCurrentCampus from './getCurrentCampus';
 import LocationFinder from '.';
 
 const requestLocation = async () => {
-  await this.props.navigation.navigate('LocationFinderMapView');
+  await NavigationActions.navigate('LocationFinderMapView');
 };
 
 const LocationFinderSelected = memo((props) => (
