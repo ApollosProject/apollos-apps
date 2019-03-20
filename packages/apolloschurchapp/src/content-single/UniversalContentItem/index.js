@@ -19,13 +19,13 @@ const UniversalContentItem = ({ content, loading }) => {
   const coverImageSources = get(content, 'coverImage.sources', []);
   return (
     <FlexedScrollView>
-      {coverImageSources.length || loading ? (
-        <GradientOverlayImage
-          isLoading={!coverImageSources.length && loading}
-          source={coverImageSources}
-        />
-      ) : null}
       <BackgroundView>
+        {coverImageSources.length || loading ? (
+          <GradientOverlayImage
+            isLoading={true || !coverImageSources.length && loading}
+            source={coverImageSources}
+          />
+        ) : null}
         <MediaControls contentId={content.id} />
         <PaddedView>
           <H2 padded isLoading={!content.title && loading}>

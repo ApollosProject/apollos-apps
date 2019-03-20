@@ -43,7 +43,6 @@ const TabBar = (props) => (
         <MediaPlayerSpacer>
           <ThemedBottomTabBar
             {...props}
-            safeAreaInset={{ bottom: 'never', top: 'never' }}
           />
         </MediaPlayerSpacer>
       </TabBarWrapper>

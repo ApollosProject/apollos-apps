@@ -2,6 +2,31 @@
 
 exports[`Person Throws an error if trying to set an invalid gender 1`] = `"Rock gender must be either Unknown, Male, or Female"`;
 
+exports[`Person gets person from aliasId: The call to fetch the alias id 1`] = `
+Array [
+  Array [
+    "/PersonAlias?%24filter=Id%20eq%2051&%24select=PersonId&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Person gets person from aliasId: The call to fetch the person by id 1`] = `
+Array [
+  Array [
+    123,
+  ],
+]
+`;
+
+exports[`Person gets person from aliasId: The result from getAliasId 1`] = `
+Object {
+  "firstName": "John",
+  "id": 321,
+}
+`;
+
 exports[`Person gets person from id 1`] = `
 Array [
   Array [
@@ -21,6 +46,18 @@ Object {
 exports[`Person gets persons dataview associations 1`] = `Promise {}`;
 
 exports[`Person gets persons dataview associations 2`] = `Array []`;
+
+exports[`Person returns null when getPersonByAliasId is not valid: The call to fetch the alias id 1`] = `
+Array [
+  Array [
+    "/PersonAlias?%24filter=Id%20eq%2051&%24select=PersonId&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Person returns null when getPersonByAliasId is not valid: The result from getAliasId 1`] = `null`;
 
 exports[`Person throws an error setting an invalid birth date 1`] = `"BirthDate must be a valid date"`;
 

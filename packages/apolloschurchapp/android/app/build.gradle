@@ -118,7 +118,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 5
-        versionName "0.7.0"
+        versionName "0.8.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -154,6 +154,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-maps')
     implementation project(':rn-fetch-blob')
     implementation project(':react-native-webview')
     implementation project(':react-native-video')
