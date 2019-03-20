@@ -56,6 +56,7 @@
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.6.1",
+    "react-docgen": "^4.1.0",
     "react-dom": "16.6.3",
     "react-native": "0.57.5",
     "react-native-linear-gradient": "2.4.0",
