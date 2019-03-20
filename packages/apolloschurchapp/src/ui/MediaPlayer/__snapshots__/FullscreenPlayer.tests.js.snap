@@ -43,7 +43,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
           "top": 0,
           "transform": Array [
             Object {
-              "translateY": 1284,
+              "translateY": 0,
             },
           ],
         }
@@ -157,7 +157,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               Object {
                 "bottom": 0,
                 "left": 0,
-                "opacity": 0,
+                "opacity": 10,
                 "position": "absolute",
                 "right": 0,
                 "top": 0,
@@ -3269,7 +3269,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       Object {
                         "bottom": 0,
                         "left": 0,
-                        "opacity": 0.2638959922581895,
+                        "opacity": 0.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
@@ -5401,7 +5401,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       Object {
                         "bottom": 0,
                         "left": 0,
-                        "opacity": 0.48753177495221517,
+                        "opacity": 0.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
