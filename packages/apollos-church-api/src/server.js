@@ -44,7 +44,6 @@ const apolloServer = new ApolloServer({
 const app = express();
 
 apolloServer.applyMiddleware({ app });
-apolloServer.applyMiddleware({ app, path: '/' });
 applyServerMiddleware({ app, dataSources, context });
 
 export default app;
