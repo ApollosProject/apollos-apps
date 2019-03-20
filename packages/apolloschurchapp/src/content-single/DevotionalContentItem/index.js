@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { SafeAreaView } from 'react-navigation'
+import { SafeAreaView } from 'react-navigation';
 import { Query } from 'react-apollo';
 
 import {
@@ -108,7 +108,7 @@ class DevotionalContentItem extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <FlexedSafeAreaView forceInset={{top: 'always'}}>
+        <FlexedSafeAreaView forceInset={{ top: 'always' }}>
           <Query query={getScripture} variables={{ itemId: this.props.id }}>
             {this.renderTabs}
           </Query>

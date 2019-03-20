@@ -2,6 +2,7 @@
 
 exports[`the CardTile component number box should grow elegantly with larger numbers 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -126,6 +127,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
 
 exports[`the CardTile component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -218,6 +220,7 @@ exports[`the CardTile component should render 1`] = `
 
 exports[`the CardTile component should render a loading skeleton 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -310,6 +313,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
 
 exports[`the CardTile component should render a loading skeleton for all available props 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -499,6 +503,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
 
 exports[`the CardTile component should render a number box 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -623,6 +628,7 @@ exports[`the CardTile component should render a number box 1`] = `
 
 exports[`the CardTile component should render card details 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -922,6 +928,7 @@ exports[`the CardTile component should render card details 1`] = `
 
 exports[`the CardTile component should render card details with date 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1233,6 +1240,7 @@ exports[`the CardTile component should render card details with date 1`] = `
 
 exports[`the CardTile component should render children 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

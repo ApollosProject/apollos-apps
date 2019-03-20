@@ -2,6 +2,7 @@
 
 exports[`the TableView Component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

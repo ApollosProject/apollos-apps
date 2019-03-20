@@ -2,6 +2,7 @@
 
 exports[`The BackgroundView component should accept extra props 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -70,6 +71,7 @@ exports[`The BackgroundView component should accept extra props 1`] = `
 
 exports[`The BackgroundView component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -133,6 +135,7 @@ exports[`The BackgroundView component should render 1`] = `
 
 exports[`The BackgroundView component should render as a solid color 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -196,6 +199,7 @@ exports[`The BackgroundView component should render as a solid color 1`] = `
 
 exports[`The BackgroundView component should render with custom colors 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

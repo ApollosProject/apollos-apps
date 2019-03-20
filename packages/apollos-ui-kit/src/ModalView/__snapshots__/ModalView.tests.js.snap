@@ -2,6 +2,7 @@
 
 exports[`The ModalView component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -261,6 +262,7 @@ exports[`The ModalView component should render 1`] = `
 
 exports[`The ModalView component should render a custom back action 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

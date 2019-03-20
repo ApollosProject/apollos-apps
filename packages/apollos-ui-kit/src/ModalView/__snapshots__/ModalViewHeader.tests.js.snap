@@ -2,6 +2,7 @@
 
 exports[`The ModalView/ModalViewHeader component should render a back button 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -231,6 +232,7 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
 
 exports[`The ModalView/ModalViewHeader component should render a close button 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -460,6 +462,7 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
 
 exports[`The ModalView/ModalViewHeader component should render both buttons 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

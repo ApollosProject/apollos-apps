@@ -2,6 +2,7 @@
 
 exports[`The ArrowBack icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -165,6 +166,7 @@ exports[`The ArrowBack icon renders correctly 1`] = `
 
 exports[`The ArrowDown icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -328,6 +330,7 @@ exports[`The ArrowDown icon renders correctly 1`] = `
 
 exports[`The ArrowNext icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -491,6 +494,7 @@ exports[`The ArrowNext icon renders correctly 1`] = `
 
 exports[`The ArrowUp icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -654,6 +658,7 @@ exports[`The ArrowUp icon renders correctly 1`] = `
 
 exports[`The Audio icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -817,6 +822,7 @@ exports[`The Audio icon renders correctly 1`] = `
 
 exports[`The Avatar icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -980,6 +986,7 @@ exports[`The Avatar icon renders correctly 1`] = `
 
 exports[`The Bank icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1143,6 +1150,7 @@ exports[`The Bank icon renders correctly 1`] = `
 
 exports[`The BrandIcon icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1306,6 +1314,7 @@ exports[`The BrandIcon icon renders correctly 1`] = `
 
 exports[`The Building icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1469,6 +1478,7 @@ exports[`The Building icon renders correctly 1`] = `
 
 exports[`The Calendar icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1632,6 +1642,7 @@ exports[`The Calendar icon renders correctly 1`] = `
 
 exports[`The Camera icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1795,6 +1806,7 @@ exports[`The Camera icon renders correctly 1`] = `
 
 exports[`The Check icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1958,6 +1970,7 @@ exports[`The Check icon renders correctly 1`] = `
 
 exports[`The CheckboxChecked icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2121,6 +2134,7 @@ exports[`The CheckboxChecked icon renders correctly 1`] = `
 
 exports[`The CheckboxUnchecked icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2284,6 +2298,7 @@ exports[`The CheckboxUnchecked icon renders correctly 1`] = `
 
 exports[`The Chromecast icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2447,6 +2462,7 @@ exports[`The Chromecast icon renders correctly 1`] = `
 
 exports[`The CircleOutlineCheckMark icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2654,6 +2670,7 @@ exports[`The CircleOutlineCheckMark icon renders correctly 1`] = `
 
 exports[`The CircleOutlineXMark icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2861,6 +2878,7 @@ exports[`The CircleOutlineXMark icon renders correctly 1`] = `
 
 exports[`The Close icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3024,6 +3042,7 @@ exports[`The Close icon renders correctly 1`] = `
 
 exports[`The Credit icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3187,6 +3206,7 @@ exports[`The Credit icon renders correctly 1`] = `
 
 exports[`The Download icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3350,6 +3370,7 @@ exports[`The Download icon renders correctly 1`] = `
 
 exports[`The Dropdown icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3513,6 +3534,7 @@ exports[`The Dropdown icon renders correctly 1`] = `
 
 exports[`The Empty icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3632,6 +3654,7 @@ exports[`The Empty icon renders correctly 1`] = `
 
 exports[`The Failed icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3795,6 +3818,7 @@ exports[`The Failed icon renders correctly 1`] = `
 
 exports[`The Filter icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3958,6 +3982,7 @@ exports[`The Filter icon renders correctly 1`] = `
 
 exports[`The Fullscreen icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -4121,6 +4146,7 @@ exports[`The Fullscreen icon renders correctly 1`] = `
 
 exports[`The Groups icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -4284,6 +4310,7 @@ exports[`The Groups icon renders correctly 1`] = `
 
 exports[`The Home icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -4447,6 +4474,7 @@ exports[`The Home icon renders correctly 1`] = `
 
 exports[`The Information icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -4610,6 +4638,7 @@ exports[`The Information icon renders correctly 1`] = `
 
 exports[`The Like icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -4773,6 +4802,7 @@ exports[`The Like icon renders correctly 1`] = `
 
 exports[`The LikeSolid icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -4936,6 +4966,7 @@ exports[`The LikeSolid icon renders correctly 1`] = `
 
 exports[`The Locate icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -5099,6 +5130,7 @@ exports[`The Locate icon renders correctly 1`] = `
 
 exports[`The Lock icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -5262,6 +5294,7 @@ exports[`The Lock icon renders correctly 1`] = `
 
 exports[`The Mute icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -5429,6 +5462,7 @@ exports[`The Mute icon renders correctly 1`] = `
 
 exports[`The Pause icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -5592,6 +5626,7 @@ exports[`The Pause icon renders correctly 1`] = `
 
 exports[`The Pin icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -5755,6 +5790,7 @@ exports[`The Pin icon renders correctly 1`] = `
 
 exports[`The Play icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -5918,6 +5954,7 @@ exports[`The Play icon renders correctly 1`] = `
 
 exports[`The Print icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -6081,6 +6118,7 @@ exports[`The Print icon renders correctly 1`] = `
 
 exports[`The Profile icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -6244,6 +6282,7 @@ exports[`The Profile icon renders correctly 1`] = `
 
 exports[`The RadioChecked icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -6407,6 +6446,7 @@ exports[`The RadioChecked icon renders correctly 1`] = `
 
 exports[`The RadioUnchecked icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -6570,6 +6610,7 @@ exports[`The RadioUnchecked icon renders correctly 1`] = `
 
 exports[`The Repeat icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -6733,6 +6774,7 @@ exports[`The Repeat icon renders correctly 1`] = `
 
 exports[`The RepeatAll icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -6896,6 +6938,7 @@ exports[`The RepeatAll icon renders correctly 1`] = `
 
 exports[`The RepeatOne icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -7059,6 +7102,7 @@ exports[`The RepeatOne icon renders correctly 1`] = `
 
 exports[`The Search icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -7222,6 +7266,7 @@ exports[`The Search icon renders correctly 1`] = `
 
 exports[`The Sections icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -7385,6 +7430,7 @@ exports[`The Sections icon renders correctly 1`] = `
 
 exports[`The Settings icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -7548,6 +7594,7 @@ exports[`The Settings icon renders correctly 1`] = `
 
 exports[`The Share icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -7711,6 +7758,7 @@ exports[`The Share icon renders correctly 1`] = `
 
 exports[`The Shuffle icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -7874,6 +7922,7 @@ exports[`The Shuffle icon renders correctly 1`] = `
 
 exports[`The SkipBackThirty icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -8037,6 +8086,7 @@ exports[`The SkipBackThirty icon renders correctly 1`] = `
 
 exports[`The SkipForwardThirty icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -8200,6 +8250,7 @@ exports[`The SkipForwardThirty icon renders correctly 1`] = `
 
 exports[`The SkipNext icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -8363,6 +8414,7 @@ exports[`The SkipNext icon renders correctly 1`] = `
 
 exports[`The SkipPrevious icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -8526,6 +8578,7 @@ exports[`The SkipPrevious icon renders correctly 1`] = `
 
 exports[`The Text icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -8689,6 +8742,7 @@ exports[`The Text icon renders correctly 1`] = `
 
 exports[`The Time icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -8852,6 +8906,7 @@ exports[`The Time icon renders correctly 1`] = `
 
 exports[`The Umbrella icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -9015,6 +9070,7 @@ exports[`The Umbrella icon renders correctly 1`] = `
 
 exports[`The Video icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -9178,6 +9234,7 @@ exports[`The Video icon renders correctly 1`] = `
 
 exports[`The VideoOff icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -9385,6 +9442,7 @@ exports[`The VideoOff icon renders correctly 1`] = `
 
 exports[`The Volume icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -9713,6 +9771,7 @@ exports[`The Volume icon renders correctly 1`] = `
 
 exports[`The Warning icon renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

@@ -2,6 +2,7 @@
 
 exports[`the ChannelLabel component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -70,6 +71,7 @@ exports[`the ChannelLabel component should render 1`] = `
 
 exports[`the ChannelLabel component should render a skeleton view 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -137,6 +139,7 @@ exports[`the ChannelLabel component should render a skeleton view 1`] = `
 
 exports[`the ChannelLabel component should render a skeleton view that supports an icon 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -215,6 +218,7 @@ exports[`the ChannelLabel component should render a skeleton view that supports 
 
 exports[`the ChannelLabel component should render flexed 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -283,6 +287,7 @@ exports[`the ChannelLabel component should render flexed 1`] = `
 
 exports[`the ChannelLabel component should render with an icon 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

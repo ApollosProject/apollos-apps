@@ -2,6 +2,7 @@
 
 exports[`The Picker Input component focuses and blurs 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -398,6 +399,7 @@ exports[`The Picker Input component focuses and blurs 1`] = `
 
 exports[`The Picker Input component focuses and blurs 2`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -794,6 +796,7 @@ exports[`The Picker Input component focuses and blurs 2`] = `
 
 exports[`The Picker Input component focuses and blurs 3`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1190,6 +1193,7 @@ exports[`The Picker Input component focuses and blurs 3`] = `
 
 exports[`The Picker Input component should render correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

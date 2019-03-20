@@ -2,6 +2,7 @@
 
 exports[`ContentCard renders Basic card, with Image 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -350,6 +351,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
 
 exports[`ContentCard renders a Default Placeholder 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -552,6 +554,7 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
 
 exports[`ContentCard renders as Tile/Image only 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -900,6 +903,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
 
 exports[`ContentCard renders as Tile/No image 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1219,6 +1223,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
 
 exports[`ContentCard renders basic tile card, with Image 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1572,6 +1577,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
 
 exports[`ContentCard renders with Default Placeholder 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1779,6 +1785,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
 
 exports[`ContentCard renders with No image 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2094,6 +2101,7 @@ exports[`ContentCard renders with No image 1`] = `
 
 exports[`ContentCard renders with an Image only 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
