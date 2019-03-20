@@ -22,7 +22,7 @@ class RadioButton extends PureComponent {
   static propTypes = {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     currentValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    Label: PropTypes.oneOfType([
+    label: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element,
       PropTypes.func,
@@ -35,7 +35,7 @@ class RadioButton extends PureComponent {
   };
 
   static defaultProps = {
-    Label: '',
+    label: '',
     onSelectValue() {},
     RadioButtonIndicator,
   };
@@ -52,10 +52,10 @@ class RadioButton extends PureComponent {
           <Indicator
             isSelected={this.props.currentValue === this.props.value}
           />
-          {isString(this.props.Label) ? (
-            <H6>{this.props.Label}</H6>
+          {isString(this.props.label) ? (
+            <H6>{this.props.label}</H6>
           ) : (
-            <this.props.Label />
+            <this.props.label />
           )}
         </Row>
       </TouchableWithoutFeedback>

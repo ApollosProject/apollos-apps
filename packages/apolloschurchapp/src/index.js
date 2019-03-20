@@ -14,7 +14,9 @@ import Tabs from './tabs';
 import Auth from './auth';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
+import Location from './user-settings/Locations';
 import UserWebBrowser from './user-web-browser';
+import Onboarding from './onboarding';
 
 // Sentry.config(
 //   'https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658'
@@ -32,8 +34,10 @@ const AppNavigator = createStackNavigator(
     Auth,
     PersonalDetails,
     ChangePassword,
+    Location,
     Passes,
     UserWebBrowser,
+    Onboarding,
   },
   {
     initialRouteName: 'Tabs',
