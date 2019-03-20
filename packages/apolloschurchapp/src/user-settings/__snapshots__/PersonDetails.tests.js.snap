@@ -2,6 +2,7 @@
 
 exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -567,7 +568,9 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           </View>
         </View>
       </RCTScrollView>
-      <RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+      >
         <View
           style={
             Object {

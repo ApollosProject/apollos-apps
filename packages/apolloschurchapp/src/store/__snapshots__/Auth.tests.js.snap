@@ -117,6 +117,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "__typename",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -124,6 +125,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "authToken",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -131,6 +133,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "cacheLoaded",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -138,6 +141,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "pushId",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -145,6 +149,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "notificationsEnabled",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -161,6 +166,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "__typename",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -168,6 +174,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "currentTrack",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -175,6 +182,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "isPlaying",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -182,6 +190,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "isFullscreen",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -189,6 +198,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "isVisible",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -196,6 +206,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "currentTime",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -203,6 +214,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "showVideo",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -210,6 +222,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "muted",
                       },
+                      "selectionSet": undefined,
                     },
                   ],
                 },
@@ -237,6 +250,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "__typename",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -244,6 +258,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "authToken",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -251,6 +266,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "cacheLoaded",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -258,6 +274,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "pushId",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -265,6 +282,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "notificationsEnabled",
                 },
+                "selectionSet": undefined,
               },
               Object {
                 "kind": "Field",
@@ -281,6 +299,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "__typename",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -288,6 +307,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "currentTrack",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -295,6 +315,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "isPlaying",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -302,6 +323,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "isFullscreen",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -309,6 +331,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "isVisible",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -316,6 +339,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "currentTime",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -323,6 +347,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "showVideo",
                       },
+                      "selectionSet": undefined,
                     },
                     Object {
                       "kind": "Field",
@@ -330,247 +355,7 @@ InMemoryCache {
                         "kind": "Name",
                         "value": "muted",
                       },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-      "kind": "Document",
-    },
-    Object {
-      "definitions": Array [
-        Object {
-          "kind": "OperationDefinition",
-          "name": Object {
-            "kind": "Name",
-            "value": "GeneratedClientQuery",
-          },
-          "operation": "query",
-          "selectionSet": Object {
-            "kind": "SelectionSet",
-            "selections": Array [
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "__typename",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "authToken",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "cacheLoaded",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "pushId",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "notificationsEnabled",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "mediaPlayer",
-                },
-                "selectionSet": Object {
-                  "kind": "SelectionSet",
-                  "selections": Array [
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "__typename",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "currentTrack",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "isPlaying",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "isFullscreen",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "isVisible",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "currentTime",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "showVideo",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "muted",
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      ],
-      "kind": "Document",
-    } => Object {
-      "definitions": Array [
-        Object {
-          "kind": "OperationDefinition",
-          "name": Object {
-            "kind": "Name",
-            "value": "GeneratedClientQuery",
-          },
-          "operation": "query",
-          "selectionSet": Object {
-            "kind": "SelectionSet",
-            "selections": Array [
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "__typename",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "authToken",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "cacheLoaded",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "pushId",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "notificationsEnabled",
-                },
-              },
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "mediaPlayer",
-                },
-                "selectionSet": Object {
-                  "kind": "SelectionSet",
-                  "selections": Array [
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "__typename",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "currentTrack",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "isPlaying",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "isFullscreen",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "isVisible",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "currentTime",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "showVideo",
-                      },
-                    },
-                    Object {
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "muted",
-                      },
+                      "selectionSet": undefined,
                     },
                   ],
                 },
@@ -599,6 +384,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "authToken",
                 },
+                "selectionSet": undefined,
               },
             ],
           },
@@ -623,55 +409,7 @@ InMemoryCache {
                   "kind": "Name",
                   "value": "authToken",
                 },
-              },
-            ],
-          },
-        },
-      ],
-      "kind": "Document",
-    },
-    Object {
-      "definitions": Array [
-        Object {
-          "kind": "OperationDefinition",
-          "name": Object {
-            "kind": "Name",
-            "value": "GeneratedClientQuery",
-          },
-          "operation": "query",
-          "selectionSet": Object {
-            "kind": "SelectionSet",
-            "selections": Array [
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "authToken",
-                },
-              },
-            ],
-          },
-        },
-      ],
-      "kind": "Document",
-    } => Object {
-      "definitions": Array [
-        Object {
-          "kind": "OperationDefinition",
-          "name": Object {
-            "kind": "Name",
-            "value": "GeneratedClientQuery",
-          },
-          "operation": "query",
-          "selectionSet": Object {
-            "kind": "SelectionSet",
-            "selections": Array [
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "authToken",
-                },
+                "selectionSet": undefined,
               },
             ],
           },

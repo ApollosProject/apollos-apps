@@ -19,6 +19,10 @@ export default class ThemeProvider extends PureComponent {
     themeInput: {},
   };
 
+  constructor(props) {
+    super(props)
+  }
+
   getChildContext = () => ({
     theme: createTheme(this.props.themeInput),
     themeInput: this.props.themeInput,
