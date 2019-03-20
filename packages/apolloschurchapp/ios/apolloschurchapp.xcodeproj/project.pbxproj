@@ -44,6 +44,7 @@
 		43B3730CE8FA462F87E6A00F /* libRNAirplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E3C0D4851A40CCA095A30A /* libRNAirplay.a */; };
 		47D66CD51CC44ED1BFFC7FB6 /* libReactNativeConfig-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D081CFC9F7CF44A283276523 /* libReactNativeConfig-tvOS.a */; };
 		4B29B8AACC2A4FB7BA6A8EEB /* libSafariViewManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5A2B416EB74A44923FED7B /* libSafariViewManager.a */; };
+		4C25E840C01747F494BC4964 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741F996C3F2D4D9EBE3B9A1F /* libAirMaps.a */; };
 		59D8DFA78CDF4642892CC142 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D979B537509247C099CE3F24 /* DroidSerif-BoldItalic.ttf */; };
 		5C862E57737C4032A378868D /* libRNScreens.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16900D1DAC94F96B742B4EA /* libRNScreens.a */; };
 		5CA1D8E805684478B04ABB60 /* Inter-UI-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3C04F98954FB2895CD36D /* Inter-UI-Italic.otf */; };
@@ -458,12 +459,12 @@
 			remoteGlobalIDString = A15C300E1CD25C330074CB35;
 			remoteInfo = RNFetchBlob;
 		};
-		79A38FF3221CA949002356B6 /* PBXContainerItemProxy */ = {
+		79CEBF76222EC02C00D8F685 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CB4A6E14A2C44A53B23042FF /* RNCWebView.xcodeproj */;
+			containerPortal = 80D5507126614B069B00AB9D /* AirMaps.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNCWebView;
+			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
+			remoteInfo = AirMaps;
 		};
 		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -573,8 +574,10 @@
 		6B6E5A404A4B4A34B18D7D34 /* SafariViewManager.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SafariViewManager.xcodeproj; path = "../node_modules/react-native-safari-view/SafariViewManager.xcodeproj"; sourceTree = "<group>"; };
 		6BAAC994942548609D0EEECA /* ReactNativeCustomTabs.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeCustomTabs.xcodeproj; path = "../node_modules/react-native-custom-tabs/ios/ReactNativeCustomTabs.xcodeproj"; sourceTree = "<group>"; };
 		71E6499CCC9D4DB2ADD365D8 /* libDBCustomTabs.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libDBCustomTabs.a; sourceTree = "<group>"; };
+		741F996C3F2D4D9EBE3B9A1F /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		76E6AD5294554A5FA53DB415 /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Regular.ttf"; path = "../assets/fonts/DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		80D5507126614B069B00AB9D /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		828255630B3246AEA19CF24D /* libRCTOneSignal.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOneSignal.a; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		84716CBFF56347BA880A16C6 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
@@ -644,6 +647,7 @@
 				69FC66FAF4BF4EC69C11B7F1 /* libRNPassKit.a in Frameworks */,
 				0DC5CDB69C3C4BCC9DD00070 /* libRNFetchBlob.a in Frameworks */,
 				F11DC26543E04A3DA179B698 /* libRNCWebView.a in Frameworks */,
+				4C25E840C01747F494BC4964 /* libAirMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,6 +884,7 @@
 				DB6523DB0DD34F9CAE748DAE /* libRNPassKit.a */,
 				19EF4D99E3FA43FDB57C4CF0 /* libRNFetchBlob.a */,
 				8E919BA2ED2A4CA48E331A2E /* libRNCWebView.a */,
+				741F996C3F2D4D9EBE3B9A1F /* libAirMaps.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -977,10 +982,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		79A38FF0221CA949002356B6 /* Products */ = {
+		79CEBF73222EC02C00D8F685 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79A38FF4221CA949002356B6 /* libRNCWebView.a */,
+				79CEBF77222EC02C00D8F685 /* libAirMaps.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1016,6 +1021,7 @@
 				4C2572091A7645C2AA852E59 /* RNPassKit.xcodeproj */,
 				06026C5613C84055BF449230 /* RNFetchBlob.xcodeproj */,
 				CB4A6E14A2C44A53B23042FF /* RNCWebView.xcodeproj */,
+				80D5507126614B069B00AB9D /* AirMaps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1210,6 +1216,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 79CEBF73222EC02C00D8F685 /* Products */;
+					ProjectRef = 80D5507126614B069B00AB9D /* AirMaps.xcodeproj */;
+				},
 				{
 					ProductGroup = 7914346E2126017A006F13B7 /* Products */;
 					ProjectRef = 46704FC4FCEB45B6B9DD92BB /* BVLinearGradient.xcodeproj */;
@@ -1705,11 +1715,11 @@
 			remoteRef = 79A38EF7221C989B002356B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		79A38FF4221CA949002356B6 /* libRNCWebView.a */ = {
+		79CEBF77222EC02C00D8F685 /* libAirMaps.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libRNCWebView.a;
-			remoteRef = 79A38FF3221CA949002356B6 /* PBXContainerItemProxy */;
+			path = libAirMaps.a;
+			remoteRef = 79CEBF76222EC02C00D8F685 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
@@ -1922,12 +1932,14 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = apolloschurchappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1967,12 +1979,14 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = apolloschurchappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2016,6 +2030,7 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = apolloschurchapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2055,6 +2070,7 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = apolloschurchapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2098,11 +2114,13 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = "apolloschurchapp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2152,11 +2170,13 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = "apolloschurchapp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2205,11 +2225,13 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = "apolloschurchapp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -2253,11 +2275,13 @@
 					"$(SRCROOT)/../node_modules/react-native-passkit-wallet/ios/RNPassKit",
 					"$(SRCROOT)/../node_modules/rn-fetch-blob/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-webview/ios",
+					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 				);
 				INFOPLIST_FILE = "apolloschurchapp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
