@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import {
@@ -14,28 +14,29 @@ import HTMLContent from '../HTMLContent';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);
+const FlexedView = styled({ flex: 1 })(ScrollView);
 
 const UniversalContentItem = ({ content, loading }) => {
   const coverImageSources = get(content, 'coverImage.sources', []);
   return (
-    <FlexedScrollView>
-      <BackgroundView>
-        {coverImageSources.length || loading ? (
-          <GradientOverlayImage
-            isLoading={true || !coverImageSources.length && loading}
-            source={coverImageSources}
-          />
-        ) : null}
-        <MediaControls contentId={content.id} />
-        <PaddedView>
-          <H2 padded isLoading={!content.title && loading}>
-            {content.title}
-          </H2>
-          <HTMLContent contentId={content.id} />
-        </PaddedView>
-        <HorizontalContentFeed contentId={content.id} />
-      </BackgroundView>
-    </FlexedScrollView>
+    <BackgroundView>
+      <FlexedScrollView>
+          {coverImageSources.length || loading ? (
+            <GradientOverlayImage
+              isLoading={!coverImageSources.length && loading}
+              source={coverImageSources}
+            />
+          ) : null}
+          <MediaControls contentId={content.id} />
+          <PaddedView>
+            <H2 padded isLoading={!content.title && loading}>
+              {content.title}
+            </H2>
+            <HTMLContent contentId={content.id} />
+          </PaddedView>
+          <HorizontalContentFeed contentId={content.id} />
+      </FlexedScrollView>
+    </BackgroundView>
   );
 };
 

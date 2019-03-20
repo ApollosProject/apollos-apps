@@ -15,7 +15,7 @@ import getShareContent from './getShareContent';
 
 const PositioningView = styled(({ theme }) => ({
   justifyContent: 'space-around',
-  paddingTop: theme.sizing.baseUnit / 2,
+  paddingVertical: theme.sizing.baseUnit / 2,
   paddingHorizontal: theme.sizing.baseUnit,
 }))(SideBySideView);
 

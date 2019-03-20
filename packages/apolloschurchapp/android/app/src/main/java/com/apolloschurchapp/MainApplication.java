@@ -3,15 +3,14 @@ package com.apolloschurchapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.mybdesign.RNPassKit.RNPassKitPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
-import com.airbnb.android.react.maps.MapsPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.horcrux.svg.SvgPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.swmansion.rnscreens.RNScreenPackage;
-import com.mybdesign.RNPassKit.RNPassKitPackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.tanguyantoine.react.MusicControl;
 import com.BV.LinearGradient.LinearGradientPackage;
@@ -39,15 +38,14 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNPassKitPackage(),
             new MapsPackage(),
             new RNFetchBlobPackage(),
-            new MapsPackage(),
             new RNCWebViewPackage(),
             new ReactVideoPackage(),
             new SvgPackage(),
             new SplashScreenReactPackage(),
             new RNScreenPackage(),
-            new RNPassKitPackage(),
             new ReactNativeOneSignalPackage(),
             new MusicControl(),
             new LinearGradientPackage(),
