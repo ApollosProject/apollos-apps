@@ -156,6 +156,13 @@ android {
 dependencies {
     compile project(':rn-fetch-blob')
     compile project(':react-native-passkit-wallet')
+    compile project(':react-native-maps')
+    implementation(project(':react-native-maps')){
+        exclude group: 'com.google.android.gms', module: 'play-services-base'
+        exclude group: 'com.google.android.gms', module: 'play-services-maps'
+    }
+    implementation 'com.google.android.gms:play-services-base:12.0.0'
+    implementation 'com.google.android.gms:play-services-maps:12.0.0'
     compile project(':react-native-webview')
     compile project(':react-native-config')
     compile project(':react-native-screens')
