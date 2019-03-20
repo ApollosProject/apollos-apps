@@ -15,6 +15,7 @@ import ActionItem from './ActionItem';
 
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
+  marginTop: theme.sizing.baseUnit / 1.5,
 }))(H6);
 
 const Header = styled(({ theme }) => ({
@@ -27,7 +28,7 @@ const ContentTable = styled(() => ({
 }))(TableView);
 
 const ActionTitle = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 1.5,
+  marginTop: theme.sizing.baseUnit / 2,
 }))(View);
 
 class ActionTable extends PureComponent {

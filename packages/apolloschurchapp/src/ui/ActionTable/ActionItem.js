@@ -17,7 +17,7 @@ const CellImage = styled(({ theme }) => ({
   height: theme.sizing.baseUnit * 4,
   borderRadius: theme.sizing.baseUnit,
   overflow: 'hidden',
-  marginRight: theme.sizing.baseUnit / 2,
+  marginRight: theme.sizing.baseUnit,
 }))(View);
 
 const StyledH6 = styled(({ theme }) => ({
@@ -25,15 +25,15 @@ const StyledH6 = styled(({ theme }) => ({
 }))(H6);
 
 const TextContainer = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 2,
+  marginTop: theme.sizing.baseUnit / 2.5,
   borderBottomWidth: 0.5,
-  height: theme.sizing.baseUnit * 4,
+  height: theme.sizing.baseUnit * 4.25,
   borderColor: theme.colors.shadows.default,
 }))(FlexedView);
 
 const Cell = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
-  paddingVertical: theme.sizing.baseUnit / 2.5,
+  paddingVertical: theme.sizing.baseUnit / 4,
   backgroundColor: theme.colors.background.paper,
   flexDirection: 'row',
   justifyContent: 'flex-start',
