@@ -51,6 +51,7 @@ function generateProp(propName, prop) {
 }
 
 function generateProps(props) {
+  if (!props) return '\n';
   const title = 'Props';
 
   return (
