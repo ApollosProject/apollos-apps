@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .js",
-    "docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"
+    "generate-docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"
   },
   "keywords": [
     "react-native-component",
