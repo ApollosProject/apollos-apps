@@ -1,13 +1,11 @@
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+import { View, Style } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
-  Cell,
   H6,
   H4,
   styled,
-  Divider,
   TouchableScale,
   withIsLoading,
   ConnectedImage,
@@ -22,13 +20,25 @@ const CellImage = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit / 2,
 }))(View);
 
-const StyledDivider = styled(({ theme }) => ({
-  marginLeft: theme.sizing.baseUnit * 5.5,
-}))(Divider);
-
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
+
+const TextContainer = styled(({ theme }) => ({
+  marginTop: theme.sizing.baseUnit / 2,
+  borderBottomWidth: 0.5,
+  height: theme.sizing.baseUnit * 4,
+  borderColor: theme.colors.shadows.default,
+}))(FlexedView);
+
+const Cell = styled(({ theme }) => ({
+  paddingHorizontal: theme.sizing.baseUnit,
+  paddingVertical: theme.sizing.baseUnit / 2,
+  backgroundColor: theme.colors.background.paper,
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+}))(View);
 
 class ActionItem extends PureComponent {
   static propTypes = {
@@ -53,14 +63,13 @@ class ActionItem extends PureComponent {
           <CellImage>
             <ConnectedImage source={this.props.imageSource} isLoading />
           </CellImage>
-          <FlexedView>
+          <TextContainer>
             <StyledH6>{this.props.label}</StyledH6>
             <H4 numberOfLines={2} ellipsizeMode="tail">
               {this.props.title}
             </H4>
-          </FlexedView>
+          </TextContainer>
         </Cell>
-        <StyledDivider />
       </TouchableScale>
     );
   }
