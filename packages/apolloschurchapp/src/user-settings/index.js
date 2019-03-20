@@ -75,6 +75,17 @@ class UserSettings extends PureComponent {
                       <Divider />
                       <Touchable
                         onPress={async () => {
+                          await this.props.navigation.navigate('Location');
+                        }}
+                      >
+                        <Cell>
+                          <CellText>Location</CellText>
+                          <CellIcon name="arrow-next" />
+                        </Cell>
+                      </Touchable>
+                      <Divider />
+                      <Touchable
+                        onPress={async () => {
                           await this.props.navigation.navigate(
                             'ChangePassword'
                           );
