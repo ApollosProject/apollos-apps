@@ -39,15 +39,28 @@ exports[`The BackgroundView component should accept extra props 1`] = `
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={
         Array [
           0,
           0.5,
         ]
       }
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     />
@@ -94,10 +107,23 @@ exports[`The BackgroundView component should render 1`] = `
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     />
@@ -144,10 +170,23 @@ exports[`The BackgroundView component should render as a solid color 1`] = `
           4294606962,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     />
@@ -194,10 +233,23 @@ exports[`The BackgroundView component should render with custom colors 1`] = `
           4278190335,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     />

@@ -32,7 +32,12 @@
     ],
     "transform": {
       ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/react-native-svg",
+      "<rootDir>/node_modules/@storybook/react-native",
+      "<rootDir>/node_modules/react-navigation"
+    ]
   },
   "peerDependencies": {
     "react": "*",

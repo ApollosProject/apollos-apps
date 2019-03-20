@@ -115,8 +115,9 @@ exports[`The Picker Input component focuses and blurs 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="18"
-                bbWidth="18"
+                bbHeight={18}
+                bbWidth={18}
+                height={18}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -124,9 +125,10 @@ exports[`The Picker Input component focuses and blurs 1`] = `
                   Array [
                     Object {
                       "backgroundColor": "transparent",
+                      "borderWidth": 0,
                     },
                     undefined,
-                    false,
+                    null,
                     Object {
                       "flex": 0,
                       "height": 18,
@@ -136,20 +138,18 @@ exports[`The Picker Input component focuses and blurs 1`] = `
                 }
                 vbHeight={24}
                 vbWidth={24}
+                width={18}
               >
-                <RNSVGPath
-                  d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                <RNSVGGroup
                   fill={
                     Array [
                       0,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      1,
+                      4278190080,
                     ]
                   }
                   fillOpacity={1}
                   fillRule={1}
+                  font={Object {}}
                   matrix={
                     Array [
                       1,
@@ -166,6 +166,16 @@ exports[`The Picker Input component focuses and blurs 1`] = `
                   propList={
                     Array [
                       "fill",
+                      "fillOpacity",
+                      "fillRule",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeOpacity",
+                      "strokeDasharray",
+                      "strokeDashoffset",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                      "strokeMiterlimit",
                     ]
                   }
                   rotation={0}
@@ -180,10 +190,55 @@ exports[`The Picker Input component focuses and blurs 1`] = `
                   strokeLinejoin={0}
                   strokeMiterlimit={4}
                   strokeOpacity={1}
-                  strokeWidth="1"
+                  strokeWidth={1}
                   x={0}
                   y={0}
-                />
+                >
+                  <RNSVGPath
+                    d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                    fill={
+                      Array [
+                        0,
+                        4281348144,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
           </View>
@@ -456,8 +511,9 @@ exports[`The Picker Input component focuses and blurs 2`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="18"
-                bbWidth="18"
+                bbHeight={18}
+                bbWidth={18}
+                height={18}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -465,9 +521,10 @@ exports[`The Picker Input component focuses and blurs 2`] = `
                   Array [
                     Object {
                       "backgroundColor": "transparent",
+                      "borderWidth": 0,
                     },
                     undefined,
-                    false,
+                    null,
                     Object {
                       "flex": 0,
                       "height": 18,
@@ -477,20 +534,18 @@ exports[`The Picker Input component focuses and blurs 2`] = `
                 }
                 vbHeight={24}
                 vbWidth={24}
+                width={18}
               >
-                <RNSVGPath
-                  d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                <RNSVGGroup
                   fill={
                     Array [
                       0,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      1,
+                      4278190080,
                     ]
                   }
                   fillOpacity={1}
                   fillRule={1}
+                  font={Object {}}
                   matrix={
                     Array [
                       1,
@@ -507,6 +562,16 @@ exports[`The Picker Input component focuses and blurs 2`] = `
                   propList={
                     Array [
                       "fill",
+                      "fillOpacity",
+                      "fillRule",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeOpacity",
+                      "strokeDasharray",
+                      "strokeDashoffset",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                      "strokeMiterlimit",
                     ]
                   }
                   rotation={0}
@@ -521,10 +586,55 @@ exports[`The Picker Input component focuses and blurs 2`] = `
                   strokeLinejoin={0}
                   strokeMiterlimit={4}
                   strokeOpacity={1}
-                  strokeWidth="1"
+                  strokeWidth={1}
                   x={0}
                   y={0}
-                />
+                >
+                  <RNSVGPath
+                    d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                    fill={
+                      Array [
+                        0,
+                        4281348144,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
           </View>
@@ -797,8 +907,9 @@ exports[`The Picker Input component focuses and blurs 3`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="18"
-                bbWidth="18"
+                bbHeight={18}
+                bbWidth={18}
+                height={18}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -806,9 +917,10 @@ exports[`The Picker Input component focuses and blurs 3`] = `
                   Array [
                     Object {
                       "backgroundColor": "transparent",
+                      "borderWidth": 0,
                     },
                     undefined,
-                    false,
+                    null,
                     Object {
                       "flex": 0,
                       "height": 18,
@@ -818,20 +930,18 @@ exports[`The Picker Input component focuses and blurs 3`] = `
                 }
                 vbHeight={24}
                 vbWidth={24}
+                width={18}
               >
-                <RNSVGPath
-                  d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                <RNSVGGroup
                   fill={
                     Array [
                       0,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      1,
+                      4278190080,
                     ]
                   }
                   fillOpacity={1}
                   fillRule={1}
+                  font={Object {}}
                   matrix={
                     Array [
                       1,
@@ -848,6 +958,16 @@ exports[`The Picker Input component focuses and blurs 3`] = `
                   propList={
                     Array [
                       "fill",
+                      "fillOpacity",
+                      "fillRule",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeOpacity",
+                      "strokeDasharray",
+                      "strokeDashoffset",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                      "strokeMiterlimit",
                     ]
                   }
                   rotation={0}
@@ -862,10 +982,55 @@ exports[`The Picker Input component focuses and blurs 3`] = `
                   strokeLinejoin={0}
                   strokeMiterlimit={4}
                   strokeOpacity={1}
-                  strokeWidth="1"
+                  strokeWidth={1}
                   x={0}
                   y={0}
-                />
+                >
+                  <RNSVGPath
+                    d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                    fill={
+                      Array [
+                        0,
+                        4281348144,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
           </View>
@@ -1129,8 +1294,9 @@ exports[`The Picker Input component should render correctly 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="18"
-                bbWidth="18"
+                bbHeight={18}
+                bbWidth={18}
+                height={18}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -1138,9 +1304,10 @@ exports[`The Picker Input component should render correctly 1`] = `
                   Array [
                     Object {
                       "backgroundColor": "transparent",
+                      "borderWidth": 0,
                     },
                     undefined,
-                    false,
+                    null,
                     Object {
                       "flex": 0,
                       "height": 18,
@@ -1150,20 +1317,18 @@ exports[`The Picker Input component should render correctly 1`] = `
                 }
                 vbHeight={24}
                 vbWidth={24}
+                width={18}
               >
-                <RNSVGPath
-                  d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                <RNSVGGroup
                   fill={
                     Array [
                       0,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      0.18823529411764706,
-                      1,
+                      4278190080,
                     ]
                   }
                   fillOpacity={1}
                   fillRule={1}
+                  font={Object {}}
                   matrix={
                     Array [
                       1,
@@ -1180,6 +1345,16 @@ exports[`The Picker Input component should render correctly 1`] = `
                   propList={
                     Array [
                       "fill",
+                      "fillOpacity",
+                      "fillRule",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeOpacity",
+                      "strokeDasharray",
+                      "strokeDashoffset",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                      "strokeMiterlimit",
                     ]
                   }
                   rotation={0}
@@ -1194,10 +1369,55 @@ exports[`The Picker Input component should render correctly 1`] = `
                   strokeLinejoin={0}
                   strokeMiterlimit={4}
                   strokeOpacity={1}
-                  strokeWidth="1"
+                  strokeWidth={1}
                   x={0}
                   y={0}
-                />
+                >
+                  <RNSVGPath
+                    d="M12 18c-.16 0-.32-.06-.46-.2L3 9.66 3.9 8l8.1 7.72L20.1 8l.9 1.65-8.54 8.16c-.14.15-.3.2-.46.2z"
+                    fill={
+                      Array [
+                        0,
+                        4281348144,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
           </View>
