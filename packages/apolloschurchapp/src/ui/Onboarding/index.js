@@ -10,7 +10,12 @@ import {
   GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 
-import { AskName, AskNotificationsConnected, Features } from './slides';
+import {
+  AskName,
+  AskNotificationsConnected,
+  Features,
+  LocationFinderSelected,
+} from './slides';
 
 // Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
@@ -81,6 +86,11 @@ class Onboarding extends Component {
               source={'https://picsum.photos/640/640/?random'}
             />
           </AskNotificationsConnected>
+          <LocationFinderSelected onPressTertiary={this.handleOnPressPrimary}>
+            <GradientOverlayImage
+              source={'https://picsum.photos/640/640/?random'}
+            />
+          </LocationFinderSelected>
           <Boom bgcolor={'lightgreen'}>
             <Text>Hello World 2</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
