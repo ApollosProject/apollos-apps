@@ -38,18 +38,34 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should show users gender', () => {
+  it('should render custom gender list', () => {
     const tree = renderer.create(
       <Providers>
-        <AboutYou gender={'Male'} />
+        <AboutYou genderList={['M', 'F']} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should display custom birthday', () => {
+  it('should render selected gender', () => {
     const tree = renderer.create(
       <Providers>
-        <AboutYou birthday={new Date('2/14/1989')} />
+        <AboutYou userGender={'Male'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should check when invalid gender is passed', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AboutYou genderList={['M', 'F']} userGender={'Male'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render custom date picker', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AboutYou userDOB={new Date('2/14/1989')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

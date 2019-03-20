@@ -12,6 +12,7 @@ storiesOf('Onboarding/slides/AboutYou', module)
   .add('description', () => (
     <AboutYou description={'Custom description text'} />
   ))
-  .add('birthday', () => <AboutYou birthday={new Date('02/14/1989')} />)
-  .add('gender', () => <AboutYou gender={'Male'} />)
+  .add('userDOB', () => <AboutYou userDOB={new Date('02/14/1989')} />)
+  .add('userGender', () => <AboutYou userGender={'Male'} />)
+  .add('genderList', () => <AboutYou genderList={['M', 'F']} />)
   .add('Slide props', () => <AboutYou onPressPrimary={() => {}} />);

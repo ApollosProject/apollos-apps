@@ -60,10 +60,16 @@ const RadioLabel = styled(({ theme }) => ({
   marginLeft: theme.sizing.baseUnit * 0.5,
 }))(H5);
 
-const genders = ['Male', 'Female'];
-
 const AboutYou = memo(
-  ({ imgSrc, slideTitle, description, birthday, gender, ...props }) => (
+  ({
+    imgSrc,
+    slideTitle,
+    description,
+    userDOB,
+    userGender,
+    genderList,
+    ...props
+  }) => (
     <Slide {...props}>
       <Content>
         {imgSrc ? <StyledImage source={imgSrc} /> : null}
@@ -72,12 +78,17 @@ const AboutYou = memo(
           <Description>{description}</Description>
           <View>
             <Label>Gender</Label>
-            <StyledRadio value={gender || null}>
-              {genders.map((x) => [
+            <StyledRadio
+              value={
+                // TODO: we should let the user know invalid prop type somehow
+                genderList.includes(userGender) ? userGender : null
+              }
+            >
+              {genderList.map((gender) => [
                 <RadioButton
-                  key={x}
-                  value={x}
-                  label={() => <RadioLabel>{x}</RadioLabel>}
+                  key={gender}
+                  value={gender}
+                  label={() => <RadioLabel>{gender}</RadioLabel>}
                   underline={false}
                 />,
               ])}
@@ -86,11 +97,11 @@ const AboutYou = memo(
           {/* TODO: getting some warning with this DateInput */}
           <View>
             <Label>Birthday</Label>
-            {birthday ? (
+            {userDOB ? (
               <StyledDate
-                value={birthday}
-                displayValue={`${birthday.getMonth() +
-                  1}/${birthday.getDate()}/${birthday.getFullYear()}`}
+                value={userDOB}
+                displayValue={`${userDOB.getMonth() +
+                  1}/${userDOB.getDate()}/${userDOB.getFullYear()}`}
               />
             ) : (
               <StyledDate placeholder={'Select a date...'} />
@@ -109,14 +120,16 @@ AboutYou.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   imgSrc: PropTypes.string,
-  birthday: PropTypes.instanceOf(Date),
-  gender: PropTypes.oneOf(genders),
+  userDOB: PropTypes.instanceOf(Date),
+  userGender: PropTypes.string,
+  genderList: PropTypes.shape([PropTypes.string]),
 };
 
 AboutYou.defaultProps = {
   slideTitle: "This one's easy.",
   description:
     'Help us understand who you are so we can connect you with the best ministries and events.',
+  genderList: ['Male', 'Female'],
 };
 
 export default AboutYou;
