@@ -865,7 +865,7 @@ Object {
 exports[`UniversalContentItem gets campaigns content 1`] = `
 Object {
   "data": Object {
-    "getCampaigns": Object {
+    "campaigns": Object {
       "edges": Array [
         Object {
           "node": Object {

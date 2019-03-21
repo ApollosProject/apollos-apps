@@ -219,7 +219,7 @@ describe('UniversalContentItem', () => {
   it('gets campaigns content', async () => {
     const query = `
       query {
-        getCampaigns {
+        campaigns {
           edges {
             node {
               ...ContentItemFragment

@@ -19,6 +19,7 @@ import { LiveButton } from '../../live';
 import ActionTable from '../../ui/ActionTable';
 import getUserFeed from './getUserFeed';
 import getPersonaFeed from './getPersonaFeed';
+import getCampaignContentItem from './getCampaignContentItem';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -65,19 +66,28 @@ class Home extends PureComponent {
                     <LogoTitle source={require('./wordmark.png')} />
                     <LiveButton />
                     <Query
-                      query={getPersonaFeed}
+                      query={getCampaignContentItem}
                       fetchPolicy="cache-and-network"
                     >
                       {({ data: theData, loading: isLoading }) => {
-                        const first = get(theData, 'personaFeed.edges', []).map(
-                          (edge) => edge.node
-                        );
-                        console.log(first);
+                        const featuredContent = get(
+                          theData,
+                          'campaigns.edges',
+                          []
+                        ).map((edge) => edge.node);
+                        const yes = get(
+                          featuredContent[0],
+                          'childContentItemsConnection.edges',
+                          []
+                        ).map((edge) => edge.node);
                         return (
                           <TouchableScale onPress={this.handleOnPress}>
                             <ContentCardConnected
-                              contentId={
-                                'UniversalContentItem:2e17f5a66407d114ab9f2392b03ebccd'
+                              contentId={yes[0] && yes[0].id ? yes[0].id : ''}
+                              coverImage={
+                                yes[0] && yes[0].coverImage.source
+                                  ? yes[0].coverImage.source
+                                  : {}
                               }
                               isLoading={isLoading}
                             />
