@@ -31,6 +31,7 @@ describe('The Radio component', () => {
   it('should render horizontally', () => {
     const tree = renderer.create(
       <Providers>
+        {/* eslint-disable-next-line react-native/no-inline-styles */}
         <Radio label="Choices" style={{ flexDirection: 'row' }}>
           <RadioButton label="option 1" value="one" underline={false} />
           <RadioButton label="option 2" value="two" underline={false} />
