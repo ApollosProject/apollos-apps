@@ -346,6 +346,7 @@ export const contentItemSchema = gql`
   }
 
   extend type Query {
+    getCampaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
       @cacheControl(maxAge: 0)
     personaFeed(first: Int, after: String): ContentItemsConnection

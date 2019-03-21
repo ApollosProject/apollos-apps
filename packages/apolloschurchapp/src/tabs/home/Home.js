@@ -5,7 +5,13 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { styled, FeedView, BackgroundView, H3 } from '@apollosproject/ui-kit';
+import {
+  styled,
+  FeedView,
+  BackgroundView,
+  H3,
+  TouchableScale,
+} from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
@@ -58,6 +64,27 @@ class Home extends PureComponent {
                   <>
                     <LogoTitle source={require('./wordmark.png')} />
                     <LiveButton />
+                    <Query
+                      query={getPersonaFeed}
+                      fetchPolicy="cache-and-network"
+                    >
+                      {({ data: theData, loading: isLoading }) => {
+                        const first = get(theData, 'personaFeed.edges', []).map(
+                          (edge) => edge.node
+                        );
+                        console.log(first);
+                        return (
+                          <TouchableScale onPress={this.handleOnPress}>
+                            <ContentCardConnected
+                              contentId={
+                                'UniversalContentItem:2e17f5a66407d114ab9f2392b03ebccd'
+                              }
+                              isLoading={isLoading}
+                            />
+                          </TouchableScale>
+                        );
+                      }}
+                    </Query>
                     <Query
                       query={getPersonaFeed}
                       fetchPolicy="cache-and-network"
