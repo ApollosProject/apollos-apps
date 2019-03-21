@@ -122,6 +122,7 @@ AboutYou.propTypes = {
   description: PropTypes.string,
   imgSrc: Image.propTypes,
   userDOB: PropTypes.instanceOf(Date),
+  defaultDate: PropTypes.instanceOf(Date),
   userGender: PropTypes.string,
   genderList: PropTypes.shape([PropTypes.string]),
 };
@@ -133,5 +134,7 @@ AboutYou.defaultProps = {
   genderList: ['Male', 'Female'],
   defaultDate: new Date(),
 };
+
+AboutYou.displayName = 'AboutYou';
 
 export default AboutYou;
