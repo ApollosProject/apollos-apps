@@ -7,7 +7,7 @@ import AboutYou from '.';
 
 describe('The Onboarding AboutYou component', () => {
   it('should render', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -17,7 +17,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom image', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -30,7 +30,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom title', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -43,7 +43,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom description', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -56,7 +56,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render custom gender list', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -69,7 +69,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render selected gender', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -79,7 +79,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should check when invalid gender is passed', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
@@ -101,7 +101,7 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should pass additional props to Slide', () => {
-    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
