@@ -100,12 +100,15 @@ const AboutYou = memo(
             <Label>Birthday</Label>
             {userDOB ? (
               <StyledDate
-                value={userDOB || defaultDate}
+                value={userDOB}
                 displayValue={`${userDOB.getMonth() +
                   1}/${userDOB.getDate()}/${userDOB.getFullYear()}`}
               />
             ) : (
-              <StyledDate placeholder={'Select a date...'} />
+              <StyledDate
+                placeholder={'Select a date...'}
+                value={defaultDate}
+              />
             )}
           </View>
         </TextContent>
