@@ -1,3 +1,4 @@
+
 {
   "name": "apolloschurchapp",
   "version": "0.8.0",
@@ -43,6 +44,7 @@
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],
