@@ -9,13 +9,22 @@ const requestLocation = async () => {
 };
 
 const LocationFinderSelected = memo((props) => (
-  <Query query={getCurrentCampus}>
-    {({ data: { campus = null } = {} }) => (
+  <Query query={getCurrentCampus} fetchPolicy="cache-and-network">
+    {({
+      data: {
+        currentUser: {
+          profile: { campus } = {
+            campus: {},
+          },
+        } = {},
+      } = {},
+      refetch,
+    }) => (
       <LocationFinder
         onPressButton={requestLocation}
-        buttonDisabled={!!campus}
         buttonText={'Yes, find my local campus'}
         campus={campus}
+        refetch={refetch}
         {...props}
       />
     )}

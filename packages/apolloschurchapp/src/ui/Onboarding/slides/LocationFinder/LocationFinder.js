@@ -47,6 +47,7 @@ const LocationFinder = memo(
     buttonDisabled,
     onPressButton,
     campus,
+    refetch,
     ...props
   }) => (
     <Slide {...props}>
@@ -55,7 +56,13 @@ const LocationFinder = memo(
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
-          {buttonDisabled || campus ? (
+          <Button
+            title={buttonText}
+            onPress={onPressButton}
+            disabled={buttonDisabled}
+            pill={false}
+          />
+          {campus ? (
             <CampusCard
               key={campus.id}
               distance={campus.distanceFromLocation}
@@ -63,14 +70,7 @@ const LocationFinder = memo(
               description={getCampusAddress(campus)}
               images={[campus.image]}
             />
-          ) : (
-            <Button
-              title={buttonText}
-              onPress={onPressButton}
-              disabled={buttonDisabled}
-              pill={false}
-            />
-          )}
+          ) : null}
         </Content>
       </ContentWrapper>
     </Slide>
