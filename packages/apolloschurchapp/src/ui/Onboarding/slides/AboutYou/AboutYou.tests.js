@@ -11,7 +11,7 @@ describe('The Onboarding AboutYou component', () => {
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou userDOB={new Date('1989-02-14')} />
+        <AboutYou defaultDate={new Date('2019-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
-          userDOB={new Date('1989-02-14')}
+          defaultDate={new Date('2019-02-14')}
         />
       </Providers>
     );
@@ -36,7 +36,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           slideTitle={'Custom title text'}
-          userDOB={new Date('1989-02-14')}
+          defaultDate={new Date('2019-02-14')}
         />
       </Providers>
     );
@@ -60,7 +60,10 @@ describe('The Onboarding AboutYou component', () => {
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou genderList={['M', 'F']} userDOB={new Date('1989-02-14')} />
+        <AboutYou
+          genderList={['M', 'F']}
+          defaultDate={new Date('2019-02-14')}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -70,7 +73,7 @@ describe('The Onboarding AboutYou component', () => {
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou userGender={'Male'} userDOB={new Date('1989-02-14')} />
+        <AboutYou userGender={'Male'} defaultDate={new Date('2019-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -83,7 +86,7 @@ describe('The Onboarding AboutYou component', () => {
         <AboutYou
           genderList={['M', 'F']}
           userGender={'Male'}
-          userDOB={new Date('1989-02-14')}
+          defaultDate={new Date('2019-02-14')}
         />
       </Providers>
     );
@@ -102,7 +105,10 @@ describe('The Onboarding AboutYou component', () => {
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou onPressPrimary={jest.fn()} userDOB={new Date('1989-02-14')} />
+        <AboutYou
+          onPressPrimary={jest.fn()}
+          defaultDate={new Date('2019-02-14')}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

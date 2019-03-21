@@ -65,6 +65,7 @@ const AboutYou = memo(
     imgSrc,
     slideTitle,
     description,
+    defaultDate,
     userDOB,
     userGender,
     genderList,
@@ -99,7 +100,7 @@ const AboutYou = memo(
             <Label>Birthday</Label>
             {userDOB ? (
               <StyledDate
-                value={userDOB}
+                value={userDOB || defaultDate}
                 displayValue={`${userDOB.getMonth() +
                   1}/${userDOB.getDate()}/${userDOB.getFullYear()}`}
               />
@@ -119,7 +120,7 @@ AboutYou.propTypes = {
    */
   slideTitle: PropTypes.string,
   description: PropTypes.string,
-  imgSrc: PropTypes.string,
+  imgSrc: Image.propTypes,
   userDOB: PropTypes.instanceOf(Date),
   userGender: PropTypes.string,
   genderList: PropTypes.shape([PropTypes.string]),
@@ -130,6 +131,7 @@ AboutYou.defaultProps = {
   description:
     'Help us understand who you are so we can connect you with the best ministries and events.',
   genderList: ['Male', 'Female'],
+  defaultDate: new Date(),
 };
 
 export default AboutYou;
