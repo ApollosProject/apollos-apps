@@ -1,21 +1,20 @@
 import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
-import { withNavigation } from 'react-navigation';
 
 import getLoginState from './getLoginState';
+
+import { AuthConsumer } from './Provider';
 
 class ProtectedAction extends PureComponent {
   queuedActionsToTriggerOnLogin = [];
 
   static propTypes = {
     children: PropTypes.func,
-    navigation: PropTypes.shape({
-      push: PropTypes.func,
-    }),
     loading: PropTypes.bool,
     isLoggedIn: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     action: PropTypes.func.isRequired,
+    onTriggerAuth: PropTypes.func,
   };
 
   componentDidUpdate(oldProps) {
@@ -38,14 +37,12 @@ class ProtectedAction extends PureComponent {
     this.queuedActionsToTriggerOnLogin = [];
   };
 
-  triggerLogin = () => this.props.navigation.push('Auth');
-
   protectedActionHandler = (action) => (...args) => {
     if (this.props.isLoggedIn) {
       action(...args);
     } else {
       this.queuedActionsToTriggerOnLogin.push(action.bind(this, ...args));
-      if (!this.props.loading) this.triggerLogin();
+      if (!this.props.loading) this.props.onTriggerAuth();
     }
   };
 
@@ -56,12 +53,21 @@ class ProtectedAction extends PureComponent {
   }
 }
 
-const ProtectedActionWithQuery = (props) => (
-  <Query query={getLoginState}>
-    {({ data: { isLoggedIn = false } = {}, loading }) => (
-      <ProtectedAction isLoggedIn={isLoggedIn} loading={loading} {...props} />
+const ProtectedActionWithProps = (props) => (
+  <AuthConsumer>
+    {({ navigateToAuth }) => (
+      <Query query={getLoginState}>
+        {({ data: { isLoggedIn = false } = {}, loading }) => (
+          <ProtectedAction
+            onTriggerAuth={navigateToAuth}
+            isLoggedIn={isLoggedIn}
+            loading={loading}
+            {...props}
+          />
+        )}
+      </Query>
     )}
-  </Query>
+  </AuthConsumer>
 );
 
-export default withNavigation(ProtectedActionWithQuery);
+export default ProtectedActionWithProps;

@@ -1,6 +1,5 @@
 import gql from 'graphql-tag';
 import ImagePicker from 'react-native-image-picker';
-import { client } from 'apolloschurchapp/src/client';
 import { ReactNativeFile } from 'apollo-upload-client';
 import getUserProfile from '../../tabs/connect/getUserProfile';
 
@@ -27,7 +26,7 @@ function showImagePicker() {
   });
 }
 
-export default async ({ onUpload = () => ({}) }) => {
+export default async ({ client, onUpload = () => ({}) }) => {
   try {
     const image = await showImagePicker();
     const file = new ReactNativeFile({
@@ -75,6 +74,7 @@ export default async ({ onUpload = () => ({}) }) => {
       },
     });
   } catch (e) {
+    console.warn(e);
     return null;
   }
 };

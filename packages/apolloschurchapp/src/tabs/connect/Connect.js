@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { LoginButton } from 'apolloschurchapp/src/auth';
+import { LoginButton } from '@apollosproject/ui-auth';
 import {
   H1,
   BodyText,

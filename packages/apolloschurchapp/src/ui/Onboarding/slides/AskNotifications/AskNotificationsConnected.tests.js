@@ -29,19 +29,11 @@ describe('The Onboarding AskNotificationsConnected component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render with a user having granted push notifications permissions', async () => {
-    const mocks = [
-      {
-        request: {
-          query: getNotificationsEnabled,
-        },
-        result: {
-          data: { notificationsEnabled: true },
-        },
-      },
-    ];
-
     const component = (
-      <Providers mocks={mocks} addTypename={false}>
+      <Providers
+        resolvers={{ Query: { notificationsEnabled: Promise.resolve(true) } }}
+        addTypename={false}
+      >
         <AskNotificationsConnected />
       </Providers>
     );

@@ -2,32 +2,32 @@ import React from 'react';
 
 import Providers from 'apolloschurchapp/src/Providers';
 import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
-import { getFullVisibilityState } from './queries';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import FullscreenPlayer from './FullscreenPlayer';
 
+// TODO: Get these tests to work.
+
 describe('the FullscreenPlayer component', () => {
   it('should render miniplayer with video', async () => {
-    const mocks = [
-      {
-        request: {
-          query: getFullVisibilityState,
-        },
-        result: {
-          data: {
-            mediaPlayer: {
-              currentTrack: {
-                isVideo: true,
-              },
-              isVisible: true,
-              isFullscreen: false,
-            },
-          },
+    const cache = new InMemoryCache().restore({
+      ROOT_QUERY: {
+        mediaPlayer: {
+          currentTime: 0,
+          isFullscreen: false,
+          isVisible: false,
+          currentTrack: 'MediaPlayerTrack:0',
+          __typename: 'MediaPlayerState',
         },
       },
-    ];
+      'MediaPlayerTrack:0': {
+        isVideo: true,
+        id: 0,
+        __typename: 'MediaPlayerTrack',
+      },
+    });
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks} addTypename={false}>
+      <Providers cache={cache}>
         <FullscreenPlayer />
       </Providers>
     );
@@ -35,26 +35,17 @@ describe('the FullscreenPlayer component', () => {
   });
 
   it('should render miniplayer with audio', async () => {
-    const mocks = [
-      {
-        request: {
-          query: getFullVisibilityState,
-        },
-        result: {
-          data: {
-            mediaPlayer: {
-              currentTrack: {
-                isVideo: false,
-              },
-              isVisible: true,
-              isFullscreen: false,
-            },
-          },
-        },
+    const mediaPlayer = {
+      currentTrack: {
+        isVideo: false,
       },
-    ];
+      isVisible: true,
+      isFullscreen: false,
+    };
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks} addTypename={false}>
+      <Providers
+        resolvers={{ Query: { mediaPlayer: Promise.resolve(mediaPlayer) } }}
+      >
         <FullscreenPlayer />
       </Providers>
     );
@@ -62,26 +53,17 @@ describe('the FullscreenPlayer component', () => {
   });
 
   it('should render fullscreen', async () => {
-    const mocks = [
-      {
-        request: {
-          query: getFullVisibilityState,
-        },
-        result: {
-          data: {
-            mediaPlayer: {
-              currentTrack: {
-                isVideo: false,
-              },
-              isVisible: true,
-              isFullscreen: true,
-            },
-          },
-        },
+    const mediaPlayer = {
+      currentTrack: {
+        isVideo: true,
       },
-    ];
+      isVisible: true,
+      isFullscreen: true,
+    };
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks} addTypename={false}>
+      <Providers
+        resolvers={{ Query: { mediaPlayer: Promise.resolve(mediaPlayer) } }}
+      >
         <FullscreenPlayer />
       </Providers>
     );

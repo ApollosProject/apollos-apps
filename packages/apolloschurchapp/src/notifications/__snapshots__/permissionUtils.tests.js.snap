@@ -2,7 +2,7 @@
 
 exports[`requestPushPermissions must update the store if OneSignal returns true: After calling mutation 1`] = `
 Object {
-  "notificationsEnabled": false,
+  "notificationsEnabled": true,
 }
 `;
 

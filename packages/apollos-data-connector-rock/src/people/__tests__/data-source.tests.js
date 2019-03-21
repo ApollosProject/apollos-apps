@@ -177,9 +177,18 @@ describe('Person', () => {
 
   it("uploads a user's profile picture", async () => {
     const dataSource = new Person();
-    dataSource.context = { rockCookie: 'fakeCookie' };
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: {
+        Auth: { getCurrentPerson: () => Promise.resolve({ id: 123 }) },
+      },
+    };
     dataSource.updateProfile = buildGetMock(
       { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+      dataSource
+    );
+    dataSource.get = buildGetMock(
+      [{ Id: 123, Url: 'http://imageurl.....' }],
       dataSource
     );
     dataSource.nodeFetch = buildGetMock({ text: () => '245' }, dataSource);
@@ -201,5 +210,6 @@ describe('Person', () => {
     ].replace(/\d+/, '');
     expect(nodeFetchCalls).toMatchSnapshot();
     expect(dataSource.updateProfile.mock.calls).toMatchSnapshot({});
+    expect(dataSource.get.mock.calls).toMatchSnapshot({});
   });
 });

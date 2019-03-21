@@ -2,8 +2,6 @@ import gql from 'graphql-tag';
 import DeviceInfo from 'react-native-device-info';
 import { Platform } from 'react-native';
 
-import { client } from '../client';
-
 const anonymousId = DeviceInfo.getUniqueID();
 
 const deviceInfo = {
@@ -36,7 +34,7 @@ const propertiesToGqlInput = (props = []) =>
     value: props[key],
   }));
 
-export const track = ({ eventName, properties }) =>
+export const track = ({ eventName, properties, client }) =>
   client.mutate({
     mutation: trackMutation,
     variables: {
@@ -49,7 +47,7 @@ export const track = ({ eventName, properties }) =>
     },
   });
 
-export const identify = () =>
+export const identify = ({ client }) =>
   client.mutate({
     mutation: identifyMutation,
     variables: {
