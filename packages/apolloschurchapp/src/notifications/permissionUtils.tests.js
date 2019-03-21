@@ -18,7 +18,7 @@ describe('requestPushPermissions', () => {
       client.readQuery({ query: getNotificationsEnabled })
     ).toMatchSnapshot('Before calling mutation');
 
-    const result = await requestPushPermissions();
+    const result = await requestPushPermissions({ client });
     expect(result).toEqual(true);
     // this doesn't work yet :(
     // the result is same as above, it looks like the client state isn't loading in time
