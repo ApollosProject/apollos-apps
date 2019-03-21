@@ -17,6 +17,17 @@ describe('The Radio component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render without an underline', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Radio>
+          <RadioButton label="option 1" value="one" underline={false} />
+          <RadioButton label="option 2" value="two" underline={false} />
+        </Radio>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render horizontally', () => {
     const tree = renderer.create(
       <Providers>

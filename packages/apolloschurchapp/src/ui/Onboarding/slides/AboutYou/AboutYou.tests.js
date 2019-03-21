@@ -65,7 +65,7 @@ describe('The Onboarding AboutYou component', () => {
   it('should render custom date picker', () => {
     const tree = renderer.create(
       <Providers>
-        <AboutYou userDOB={new Date('2/14/1989')} />
+        <AboutYou userDOB={new Date('1989-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

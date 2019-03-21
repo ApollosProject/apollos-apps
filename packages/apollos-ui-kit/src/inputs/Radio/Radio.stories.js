@@ -13,7 +13,7 @@ storiesOf('inputs/Radio', module).add('default', () => (
     </Radio>
   </FlexedView>
 ));
-storiesOf('inputs/Radio', module).add('noUnderline', () => (
+storiesOf('inputs/Radio', module).add('underline (false)', () => (
   <FlexedView>
     <Radio>
       <RadioButton label="option 1" value="one" underline={false} />
