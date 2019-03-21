@@ -2,6 +2,7 @@
 
 exports[`the styled HOC allows a theme to supply overrides 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -55,6 +56,7 @@ exports[`the styled HOC passes style literal to the base component 1`] = `
 
 exports[`the styled HOC provides a theme 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

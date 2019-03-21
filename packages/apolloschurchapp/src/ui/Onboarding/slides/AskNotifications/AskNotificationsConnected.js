@@ -8,6 +8,7 @@ import {
 
 import AskNotifications from '.';
 
+// eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo((props) => (
   <ApolloConsumer>
     {(client) => (

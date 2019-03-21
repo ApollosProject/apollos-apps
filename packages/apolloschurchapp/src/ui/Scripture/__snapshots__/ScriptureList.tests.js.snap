@@ -2,6 +2,7 @@
 
 exports[`the ScriptureList component renders a scripture List 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

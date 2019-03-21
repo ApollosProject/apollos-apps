@@ -2,6 +2,7 @@
 
 exports[`TabView Component renders 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

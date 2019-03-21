@@ -26,13 +26,11 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
-    ],
-    "transform": {
-      ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    ]
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
+    "react-navigation": "*",
     "react": "*",
     "react-native": "*"
   },
@@ -54,7 +52,8 @@
     "prop-types": "15.6.1",
     "react": "^16.8.2",
     "react-dom": "16.6.3",
-    "react-native": "0.57.5",
+    "react-native": "0.58.5",
+    "react-navigation": "2.11.2",
     "react-test-renderer": "16.6.1"
   },
   "publishConfig": {

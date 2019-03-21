@@ -2,6 +2,7 @@
 
 exports[`The Typography placeholder renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -49,6 +50,7 @@ exports[`The Typography placeholder renders correctly 1`] = `
 
 exports[`The Typography placeholder translates type styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

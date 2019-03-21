@@ -6,6 +6,9 @@ class TouchableScale extends Component {
   static propTypes = {
     minScale: PropTypes.number,
     springConfig: PropTypes.shape({}),
+    active: PropTypes.bool,
+    style: PropTypes.any, // eslint-disable-line
+    children: PropTypes.any, // eslint-disable-line
   };
 
   static defaultProps = {

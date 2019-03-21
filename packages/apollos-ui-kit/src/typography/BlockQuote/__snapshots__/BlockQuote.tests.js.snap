@@ -2,6 +2,7 @@
 
 exports[`the BlockQuote component should render a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -64,6 +65,7 @@ exports[`the BlockQuote component should render a loading state 1`] = `
 
 exports[`the BlockQuote component should render a string 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -129,6 +131,7 @@ exports[`the BlockQuote component should render a string 1`] = `
 
 exports[`the BlockQuote component should render child components 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

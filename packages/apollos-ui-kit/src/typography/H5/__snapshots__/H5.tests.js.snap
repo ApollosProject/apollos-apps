@@ -2,6 +2,7 @@
 
 exports[`the H5 component should accept additional props 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -51,6 +52,7 @@ exports[`the H5 component should accept additional props 1`] = `
 
 exports[`the H5 component should accept and render passed in styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -99,6 +101,7 @@ exports[`the H5 component should accept and render passed in styles 1`] = `
 
 exports[`the H5 component should render a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -147,6 +150,7 @@ exports[`the H5 component should render a loading state 1`] = `
 
 exports[`the H5 component should render a loading state with correct positioning (margins) 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -197,6 +201,7 @@ exports[`the H5 component should render a loading state with correct positioning
 
 exports[`the H5 component should render correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -245,6 +250,7 @@ exports[`the H5 component should render correctly 1`] = `
 
 exports[`the H5 component should render with correct padding 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

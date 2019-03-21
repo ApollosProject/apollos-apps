@@ -14,7 +14,7 @@ const BackgroundView = compose(
     ],
     ...props,
   })),
-  styled({ flex: 1 })
+  styled({ flex: 1, height: '100%' })
 )(LinearGradient);
 
 export default BackgroundView;

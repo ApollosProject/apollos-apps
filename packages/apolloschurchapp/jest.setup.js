@@ -6,6 +6,30 @@ jest.mock('react-native-custom-tabs', () => ({
     openURL: jest.fn(),
   },
 }));
+jest.mock('Animated', () => {
+  const ActualAnimated = require.requireActual('Animated');
+  return {
+    ...ActualAnimated,
+    timing: (value, config) => {
+      return {
+        start: (callback) => {
+          value.setValue(config.toValue);
+          callback && callback()
+        },
+        stop: () => ({}),
+      };
+    },
+    spring: (value, config) => {
+      return {
+        start: (callback) => {
+          value.setValue(config.toValue);
+          callback && callback()
+        },
+        stop: () => ({}),
+      };
+    },
+  };
+});
 
 jest.mock('react-native-safari-view', () => ({
   isAvailable: jest.fn().mockImplementation(() => Promise.resolve(true)),

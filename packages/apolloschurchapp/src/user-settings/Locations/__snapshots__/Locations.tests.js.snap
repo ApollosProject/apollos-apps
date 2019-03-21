@@ -2,6 +2,7 @@
 
 exports[`Display Native Map with Locations Render a native map view 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

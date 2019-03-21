@@ -18,6 +18,8 @@ class ButtonIcon extends PureComponent {
     name: PropTypes.string.isRequired,
     size: PropTypes.number,
     fill: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    style: PropTypes.any, // eslint-disable-line
     iconPadding: PropTypes.number, // this optionally defaults to this.props.size / 2
     isLoading: PropTypes.bool,
   };

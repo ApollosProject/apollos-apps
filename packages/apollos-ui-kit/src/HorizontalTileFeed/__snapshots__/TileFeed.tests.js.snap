@@ -2,6 +2,7 @@
 
 exports[`The TileFeed component renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -257,6 +258,7 @@ exports[`The TileFeed component renders correctly 1`] = `
 
 exports[`The TileFeed component renders empty state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

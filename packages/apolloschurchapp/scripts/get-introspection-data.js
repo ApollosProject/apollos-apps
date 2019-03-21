@@ -1,7 +1,7 @@
-import fs from 'fs';
-import Path from 'path';
-import 'dotenv/config';
-import fetch from 'node-fetch';
+const fs = require('fs');
+const Path = require('path');
+require('dotenv/config');
+const fetch = require('node-fetch');
 
 const attempts = 0;
 const maxAttempts = 3;

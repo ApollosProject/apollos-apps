@@ -2,6 +2,7 @@
 
 exports[`The Radio component should render correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

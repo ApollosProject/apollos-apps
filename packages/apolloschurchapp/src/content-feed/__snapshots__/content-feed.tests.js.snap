@@ -2,6 +2,7 @@
 
 exports[`content feed query component renders a feedview after successful query 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -39,10 +40,23 @@ exports[`content feed query component renders a feedview after successful query 
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     >

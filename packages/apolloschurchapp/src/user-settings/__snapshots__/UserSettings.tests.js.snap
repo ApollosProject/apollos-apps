@@ -2,6 +2,7 @@
 
 exports[`UserSettings component renders UserSettings when logged in 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

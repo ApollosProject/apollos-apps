@@ -41,6 +41,7 @@ const StyledH4 = styled(({ theme, isLight }) => ({
   color: isLight ? theme.colors.text.primary : theme.colors.white,
 }))(H4);
 
+// eslint-disable-next-line react/display-name
 const Splash = memo(
   ({ slideTitle, description, imgSrc, isLight, ...props }) => (
     <Slide {...props}>

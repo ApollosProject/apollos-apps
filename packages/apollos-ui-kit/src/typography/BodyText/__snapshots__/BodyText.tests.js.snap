@@ -2,6 +2,7 @@
 
 exports[`the BodyText component should accept additional props 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -53,6 +54,7 @@ exports[`the BodyText component should accept additional props 1`] = `
 
 exports[`the BodyText component should accept and render passed in styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -103,6 +105,7 @@ exports[`the BodyText component should accept and render passed in styles 1`] = 
 
 exports[`the BodyText component should render a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -151,6 +154,7 @@ exports[`the BodyText component should render a loading state 1`] = `
 
 exports[`the BodyText component should render as bold 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -201,6 +205,7 @@ exports[`the BodyText component should render as bold 1`] = `
 
 exports[`the BodyText component should render as bold italic 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -251,6 +256,7 @@ exports[`the BodyText component should render as bold italic 1`] = `
 
 exports[`the BodyText component should render as italic 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -301,6 +307,7 @@ exports[`the BodyText component should render as italic 1`] = `
 
 exports[`the BodyText component should render correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

@@ -2,6 +2,7 @@
 
 exports[`the FlexedView component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

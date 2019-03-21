@@ -2,6 +2,7 @@
 
 exports[`The HorizontalTileFeed component renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -301,6 +302,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
 
 exports[`The HorizontalTileFeed component renders empty state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

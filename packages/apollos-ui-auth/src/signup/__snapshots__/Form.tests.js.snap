@@ -2,6 +2,7 @@
 
 exports[`The SignupForm component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -392,6 +393,7 @@ exports[`The SignupForm component should render 1`] = `
         </View>
       </RCTScrollView>
       <RCTSafeAreaView
+        emulateUnlessSupported={true}
         style={
           Object {
             "bottom": 0,

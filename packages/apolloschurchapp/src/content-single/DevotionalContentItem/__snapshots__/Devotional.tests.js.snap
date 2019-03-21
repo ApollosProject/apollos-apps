@@ -2,6 +2,7 @@
 
 exports[`the Devotional component renders a devotional 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -39,17 +40,36 @@ exports[`the Devotional component renders a devotional 1`] = `
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     >
-      <RCTSafeAreaView
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
         style={
           Object {
             "flex": 1,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
           }
         }
       >
@@ -875,7 +895,7 @@ exports[`the Devotional component renders a devotional 1`] = `
             </RCTScrollView>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </BVLinearGradient>
   </View>
 </RCTSafeAreaView>
@@ -883,6 +903,7 @@ exports[`the Devotional component renders a devotional 1`] = `
 
 exports[`the Devotional component renders a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -920,17 +941,36 @@ exports[`the Devotional component renders a loading state 1`] = `
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     >
-      <RCTSafeAreaView
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
         style={
           Object {
             "flex": 1,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
           }
         }
       >
@@ -1408,7 +1448,7 @@ exports[`the Devotional component renders a loading state 1`] = `
             </RCTScrollView>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </BVLinearGradient>
   </View>
 </RCTSafeAreaView>
@@ -1416,6 +1456,7 @@ exports[`the Devotional component renders a loading state 1`] = `
 
 exports[`the Devotional component renders even with empty scripture array 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1453,17 +1494,36 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     >
-      <RCTSafeAreaView
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
         style={
           Object {
             "flex": 1,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
           }
         }
       >
@@ -1941,7 +2001,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
             </RCTScrollView>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </BVLinearGradient>
   </View>
 </RCTSafeAreaView>

@@ -2,6 +2,7 @@
 
 exports[`the UIText component should render a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -82,6 +83,7 @@ exports[`the UIText component should render a loading state 1`] = `
 
 exports[`the UIText component should render correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

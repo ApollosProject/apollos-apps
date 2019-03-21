@@ -2,6 +2,7 @@
 
 exports[`The Line placeholder accepts custom styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -49,6 +50,7 @@ exports[`The Line placeholder accepts custom styles 1`] = `
 
 exports[`The Line placeholder accepts width 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -96,6 +98,7 @@ exports[`The Line placeholder accepts width 1`] = `
 
 exports[`The Line placeholder renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

@@ -15,7 +15,7 @@ export class HorizontalTileFeed extends PureComponent {
     fetchMore: PropTypes.func,
     isLoading: PropTypes.bool,
     keyExtractor: PropTypes.func,
-    theme: PropTypes.shape({}),
+    theme: PropTypes.shape({ baseUnit: PropTypes.number }),
   };
 
   static defaultProps = {

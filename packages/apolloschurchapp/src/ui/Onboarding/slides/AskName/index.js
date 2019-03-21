@@ -32,6 +32,7 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 // memo = sfc PureComponent 💥
+// eslint-disable-next-line react/display-name
 const AskName = memo(({ slideTitle, description, ...props }) => {
   let LastNameInput = null;
 

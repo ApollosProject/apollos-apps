@@ -2,6 +2,7 @@
 
 exports[`The DateInput component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -288,6 +289,7 @@ exports[`The DateInput component should render 1`] = `
 
 exports[`The DateInput component should render with a displayValue 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -628,6 +630,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
 
 exports[`The DateInput component should render with a label 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -970,6 +973,7 @@ exports[`The DateInput component should render with a label 1`] = `
 
 exports[`The DateInput component should render with a placeholder 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

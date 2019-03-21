@@ -12,6 +12,7 @@ import { resolvers, schema, defaults } from '../../store';
 // eslint-disable-next-line
 export default (props) => {
   let finalProps = props;
+  // eslint-disable-next-line
   if (!props.mocks) {
     // eslint-disable-next-line
     finalProps = { ...props, resolvers };

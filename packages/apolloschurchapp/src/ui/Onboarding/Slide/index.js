@@ -35,6 +35,7 @@ const SkipButton = styled(({ theme }) => ({
 }))(ButtonLink);
 
 // memo = sfc PureComponent 💥
+// eslint-disable-next-line react/display-name
 const Slide = memo(
   ({
     children,

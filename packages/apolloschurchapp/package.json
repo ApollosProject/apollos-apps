@@ -1,3 +1,4 @@
+
 {
   "name": "apolloschurchapp",
   "version": "0.8.0",
@@ -32,9 +33,9 @@
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "lint": "eslint ./src --ext .js",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
-    "prestart": "babel-node ./scripts/get-introspection-data.js",
+    "prestart": "node ./scripts/get-introspection-data.js",
     "start": "react-native start",
-    "storybook": "rnstl --searchDir ../ --pattern \"apollos*/src/**/*.stories.js\" && storybook start -p 7007 | react-native start --projectRoot storybook",
+    "storybook": "rnstl --searchDir ../ --pattern \"apollos*/src/**/*.stories.js\" && storybook start -p 7007  | react-native start --projectRoot $PWD/storybook",
     "test": "jest",
     "release": "standard-version --release-as minor"
   },
@@ -56,9 +57,6 @@
     "setupFiles": [
       "./jest.setup.js"
     ],
-    "transform": {
-      ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    },
     "reporters": [
       "<rootDir>/../../scripts/fingers-crossed-reporter.js"
     ]
@@ -86,30 +84,31 @@
     "graphql-tools": "3.1.1",
     "lodash": "^4.17.11",
     "memoize-one": "4.0.0",
+    "metro-react-native-babel-preset": "^0.53.1",
     "moment": "2.22.2",
     "node-fetch": "2.2.0",
     "numeral": "^2.0.6",
     "prettier": "1.14.2",
     "querystring": "^0.2.0",
-    "react": "16.6.1",
+    "react": "16.6.3",
+    "react-native": "0.58.5",
     "react-apollo": "2.5.1",
-    "react-native": "0.57.5",
     "react-native-airplay-btn": "^1.0.6",
     "react-native-config": "^0.11.7",
     "react-native-custom-tabs": "0.1.7",
     "react-native-device-info": "0.22.5",
     "react-native-image-picker": "0.26.10",
     "react-native-keyboard-aware-scroll-view": "0.7.0",
-    "react-native-linear-gradient": "2.4.0",
+    "react-native-linear-gradient": "2.5.3",
     "react-native-maps": "^0.23.0",
     "react-native-music-control": "0.7.3",
     "react-native-onesignal": "3.2.7",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-safari-view": "2.1.0",
-    "react-native-safe-area-view": "0.11.0",
+    "react-native-safe-area-view": "0.13.1",
     "react-native-screens": "1.0.0-alpha.12",
     "react-native-splash-screen": "^3.1.1",
-    "react-native-svg": "6.5.2",
+    "react-native-svg": "9.2.4",
     "react-native-swiper": "^1.5.14",
     "react-native-video": "3.2.0",
     "react-native-video-controls": "2.2.3",

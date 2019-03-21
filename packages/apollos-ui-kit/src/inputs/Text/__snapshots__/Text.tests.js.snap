@@ -2,6 +2,7 @@
 
 exports[`The Text Input component should render as a numeric field 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -188,6 +189,7 @@ exports[`The Text Input component should render as a numeric field 1`] = `
 
 exports[`The Text Input component should render as a password field with an icon 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -286,8 +288,9 @@ exports[`The Text Input component should render as a password field with an icon
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight="18"
-              bbWidth="18"
+              bbHeight={18}
+              bbWidth={18}
+              height={18}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -295,9 +298,10 @@ exports[`The Text Input component should render as a password field with an icon
                 Array [
                   Object {
                     "backgroundColor": "transparent",
+                    "borderWidth": 0,
                   },
                   undefined,
-                  false,
+                  null,
                   Object {
                     "flex": 0,
                     "height": 18,
@@ -307,20 +311,18 @@ exports[`The Text Input component should render as a password field with an icon
               }
               vbHeight={24}
               vbWidth={24}
+              width={18}
             >
-              <RNSVGPath
-                d="M9 11.18h6.4V8.73c0-.9-.3-1.68-.94-2.32-.62-.6-1.38-.9-2.26-.9-.88 0-1.64.3-2.26.97C9.3 7.1 9 7.87 9 8.77v2.45zm10.4 1.23v7.4c0 .37-.12.66-.35.9-.23.24-.52.36-.85.36h-12c-.33 0-.62-.1-.85-.35-.23-.24-.35-.53-.35-.87v-7.4c0-.32.12-.6.35-.85.23-.24.52-.36.85-.36h.4V8.74c0-1.57.55-2.92 1.65-4.04C9.35 3.5 10.67 3 12.2 3c1.53 0 2.85.56 3.95 1.7 1.1 1.1 1.65 2.46 1.65 4.03v2.45h.4c.33 0 .62.12.85.36.23.24.35.53.35.87z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    0.18823529411764706,
-                    0.18823529411764706,
-                    0.18823529411764706,
-                    1,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -337,6 +339,16 @@ exports[`The Text Input component should render as a password field with an icon
                 propList={
                   Array [
                     "fill",
+                    "fillOpacity",
+                    "fillRule",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeOpacity",
+                    "strokeDasharray",
+                    "strokeDashoffset",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                    "strokeMiterlimit",
                   ]
                 }
                 rotation={0}
@@ -351,10 +363,55 @@ exports[`The Text Input component should render as a password field with an icon
                 strokeLinejoin={0}
                 strokeMiterlimit={4}
                 strokeOpacity={1}
-                strokeWidth="1"
+                strokeWidth={1}
                 x={0}
                 y={0}
-              />
+              >
+                <RNSVGPath
+                  d="M9 11.18h6.4V8.73c0-.9-.3-1.68-.94-2.32-.62-.6-1.38-.9-2.26-.9-.88 0-1.64.3-2.26.97C9.3 7.1 9 7.87 9 8.77v2.45zm10.4 1.23v7.4c0 .37-.12.66-.35.9-.23.24-.52.36-.85.36h-12c-.33 0-.62-.1-.85-.35-.23-.24-.35-.53-.35-.87v-7.4c0-.32.12-.6.35-.85.23-.24.52-.36.85-.36h.4V8.74c0-1.57.55-2.92 1.65-4.04C9.35 3.5 10.67 3 12.2 3c1.53 0 2.85.56 3.95 1.7 1.1 1.1 1.65 2.46 1.65 4.03v2.45h.4c.33 0 .62.12.85.36.23.24.35.53.35.87z"
+                  fill={
+                    Array [
+                      0,
+                      4281348144,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
             </RNSVGSvgView>
           </View>
         </View>
@@ -449,6 +506,7 @@ exports[`The Text Input component should render as a password field with an icon
 
 exports[`The Text Input component should render as a phone number field 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -635,6 +693,7 @@ exports[`The Text Input component should render as a phone number field 1`] = `
 
 exports[`The Text Input component should render as an email field 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -823,6 +882,7 @@ exports[`The Text Input component should render as an email field 1`] = `
 
 exports[`The Text Input component should render correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

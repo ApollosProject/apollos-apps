@@ -31,6 +31,7 @@ const TextContent = styled({
   justifyContent: 'center',
 })(PaddedView);
 
+// eslint-disable-next-line react/display-name
 const Features = memo(({ firstName, description, imgSrc, ...props }) => (
   <Slide {...props}>
     <Content>

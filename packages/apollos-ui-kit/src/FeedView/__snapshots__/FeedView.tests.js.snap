@@ -2,6 +2,7 @@
 
 exports[`The FeedView component handles a renderItem prop 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -190,6 +191,7 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
 
 exports[`The FeedView component passes an onPressItem prop 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2404,6 +2406,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
 
 exports[`The FeedView component renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2696,6 +2699,7 @@ exports[`The FeedView component renders correctly 1`] = `
 
 exports[`The FeedView component renders empty state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

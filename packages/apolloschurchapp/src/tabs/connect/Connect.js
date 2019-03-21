@@ -43,6 +43,10 @@ const StyledLoginButton = styled(({ theme }) => ({
   marginVertical: theme.sizing.baseUnit,
 }))(LoginButton);
 
+const StyledScrollView = styled(({ theme }) => ({
+  marginVertical: theme.sizing.baseUnit,
+}))(ScrollView);
+
 class Connect extends PureComponent {
   static navigationOptions = () => ({
     title: 'Connect',
@@ -64,12 +68,12 @@ class Connect extends PureComponent {
             if (get(data, 'isLoggedIn', false))
               return (
                 <SafeAreaView>
-                  <ScrollView>
+                  <StyledScrollView>
                     <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />
                     <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />
                     <Toolbar />
                     <ActionTable />
-                  </ScrollView>
+                  </StyledScrollView>
                 </SafeAreaView>
               );
             return (
