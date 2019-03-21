@@ -47,6 +47,7 @@ class LocationFinderMapView extends PureComponent {
 
   static navigationOptions = () => ({
     title: 'LocationFinderMapView',
+    header: null,
   });
 
   state = {

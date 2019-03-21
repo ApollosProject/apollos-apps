@@ -22,7 +22,10 @@ const LocationFinderSelected = memo((props) => (
     }) => (
       <LocationFinder
         onPressButton={requestLocation}
-        buttonText={'Yes, find my local campus'}
+        buttonText={
+          campus ? 'We found your campus!' : 'Yes, find my local campus'
+        }
+        buttonDisabled={!!campus}
         campus={campus}
         refetch={refetch}
         {...props}

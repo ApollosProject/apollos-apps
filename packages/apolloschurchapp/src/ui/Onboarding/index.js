@@ -86,7 +86,7 @@ class Onboarding extends Component {
               source={'https://picsum.photos/640/640/?random'}
             />
           </AskNotificationsConnected>
-          <LocationFinderSelected onPressPrimary={this.handleOnPressPrimary}>
+          <LocationFinderSelected onPressSecondary={this.handleOnPressPrimary}>
             <GradientOverlayImage
               source={'https://picsum.photos/640/640/?random'}
             />

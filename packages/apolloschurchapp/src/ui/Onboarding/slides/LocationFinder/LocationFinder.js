@@ -33,10 +33,6 @@ const StyledH5 = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(H5);
 
-// const SelectedCampusCard = styled({
-//   flex: 1,
-// })(CampusCard);
-
 // memo = sfc PureComponent 💥
 const LocationFinder = memo(
   ({
