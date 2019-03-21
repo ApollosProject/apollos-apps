@@ -30,6 +30,7 @@
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
+    "react-navigation": "*",
     "react": "*",
     "react-native": "*"
   },
@@ -52,6 +53,7 @@
     "react": "^16.8.2",
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
+    "react-navigation": "2.11.2",
     "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
