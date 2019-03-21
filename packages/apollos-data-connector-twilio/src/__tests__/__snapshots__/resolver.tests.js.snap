@@ -9,6 +9,7 @@ TwilioSms {
     "_autopilot": undefined,
     "_chat": undefined,
     "_fax": undefined,
+    "_flexApi": undefined,
     "_insights": undefined,
     "_ipMessaging": undefined,
     "_lookups": undefined,

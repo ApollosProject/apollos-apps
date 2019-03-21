@@ -2,6 +2,7 @@
 
 exports[`The Button component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -48,6 +49,7 @@ exports[`The Button component should render 1`] = `
 
 exports[`The Button component should render inherit typographic styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

@@ -2,6 +2,7 @@
 
 exports[`the GradientOverlayImage component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -70,6 +71,7 @@ exports[`the GradientOverlayImage component should render 1`] = `
 
 exports[`the GradientOverlayImage component should render with an overlayColor 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

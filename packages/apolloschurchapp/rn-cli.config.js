@@ -25,11 +25,22 @@ module.exports = {
         (depPath) =>
           new RegExp(`${depPath}/node_modules/react-native-linear-gradient/.*`)
       ),
+      ...localDeps.map(
+        (depPath) =>
+          new RegExp(`${depPath}/node_modules/.*/node_modules/react-native/.*`)
+      ),
+      new RegExp(
+        `${path.resolve('.', 'node_modules')}/.*/node_modules/react-native/.*`
+      ),
       new RegExp(
         `${path.resolve('..', '..', 'node_modules', 'react-native')}/.*`
       ),
       new RegExp(
-        `${path.resolve('..', '..', 'node_modules')}/.*/react-native/.*`
+        `${path.resolve(
+          '..',
+          '..',
+          'node_modules'
+        )}/.*/node_modules/react-native/.*`
       ),
       new RegExp(
         `${path.resolve('../../node_modules/react-native-linear-gradient')}/.*`

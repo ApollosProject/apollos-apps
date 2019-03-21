@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar, View } from 'react-native';
 import Color from 'color';
+import PropTypes from 'prop-types';
 
 import styled from '../styled';
 import { ButtonIcon } from '../Button';
@@ -51,5 +52,10 @@ const ModalView = ({ onClose, onBack }) => (
     ) : null}
   </>
 );
+
+ModalView.propTypes = {
+  onClose: PropTypes.func,
+  onBack: PropTypes.func,
+};
 
 export default ModalView;
