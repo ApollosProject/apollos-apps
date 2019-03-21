@@ -7,57 +7,84 @@ import AboutYou from '.';
 
 describe('The Onboarding AboutYou component', () => {
   it('should render', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou />
+        <AboutYou userDOB={new Date('1989-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom image', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }} />
+        <AboutYou
+          imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
+          userDOB={new Date('1989-02-14')}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom title', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou slideTitle={'Custom title text'} />
+        <AboutYou
+          slideTitle={'Custom title text'}
+          userDOB={new Date('1989-02-14')}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom description', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou description={'Custom description text'} />
+        <AboutYou
+          description={'Custom description text'}
+          userDOB={new Date('1989-02-14')}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render custom gender list', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou genderList={['M', 'F']} />
+        <AboutYou genderList={['M', 'F']} userDOB={new Date('1989-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render selected gender', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou userGender={'Male'} />
+        <AboutYou userGender={'Male'} userDOB={new Date('1989-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should check when invalid gender is passed', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou genderList={['M', 'F']} userGender={'Male'} />
+        <AboutYou
+          genderList={['M', 'F']}
+          userGender={'Male'}
+          userDOB={new Date('1989-02-14')}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -71,9 +98,11 @@ describe('The Onboarding AboutYou component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should pass additional props to Slide', () => {
+    /* we have to pass in a date via userDOB or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou onPressPrimary={jest.fn()} />
+        <AboutYou onPressPrimary={jest.fn()} userDOB={new Date('1989-02-14')} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
