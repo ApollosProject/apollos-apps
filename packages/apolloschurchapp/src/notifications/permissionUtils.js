@@ -1,6 +1,5 @@
 import OneSignal from 'react-native-onesignal';
 import gql from 'graphql-tag';
-import { client } from '../client';
 
 const getPushPermissions = async () =>
   new Promise((resolve) =>
@@ -27,7 +26,7 @@ const getNotificationsEnabled = gql`
   }
 `;
 
-const requestPushPermissions = async () => {
+const requestPushPermissions = async ({ client }) => {
   const notificationsEnabled = await promptForPushNotificationsWithUserResponse();
   await client.mutate({
     mutation: setNotifcationsEnabled,
