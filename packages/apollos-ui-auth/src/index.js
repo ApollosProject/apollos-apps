@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+import { SafeAreaView } from 'react-navigation'
 
 import {
   FlexedView,
@@ -14,13 +15,19 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import { track } from 'apolloschurchapp/src/analytics';
+// import { track } from 'apolloschurchapp/src/analytics';
 
 import LoginForm from './login';
 import SignUpForm from './signup';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
+export ProtectedTouchable from './ProtectedTouchable';
+export AuthProvider, { AuthConsumer } from './Provider';
+
+export getLoginState from './getLoginState';
+export logout from './logout';
+export authLink from './authLink';
 
 const Title = styled(({ theme }) => ({
   color: theme.colors.primary,
@@ -37,6 +44,10 @@ const BrandIcon = withTheme(({ theme }) => ({
 }))(Icon);
 
 const HeaderContainer = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.paper,
+}))(SafeAreaView);
+
+const FooterContainer = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
 }))(SafeAreaView);
 
@@ -76,12 +87,17 @@ class Auth extends PureComponent {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
+    onFinish: PropTypes.func,
   };
 
   handleFinish = () => {
     // trigger the auth modal to close
-    track({ eventName: 'UserLogin' });
-    this.props.navigation.goBack();
+    // TODO: track({ eventName: 'UserLogin' });
+    if (this.props.onFinish) {
+      this.props.onFinish();
+    } else if (this.props.navigation && this.props.navigation.goBack) {
+      this.props.navigation.goBack();
+    }
   };
 
   renderLogin = () => <LoginForm onLogin={this.handleFinish} />;
