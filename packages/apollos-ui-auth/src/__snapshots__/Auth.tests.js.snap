@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth Store logs a user out 1`] = `
+InMemoryCache {
+  "addTypename": true,
+  "cacheKeyRoot": CacheKeyNode {
+    "children": null,
+    "key": null,
+  },
+  "config": Object {
+    "addTypename": true,
+    "dataIdFromObject": [Function],
+    "fragmentMatcher": HeuristicFragmentMatcher {},
+    "resultCaching": true,
+  },
+  "data": DepTrackingCache {
+    "data": Object {
+      "ROOT_QUERY": Object {
+        "authToken": "some-auth-token",
+      },
+    },
+    "depend": [Function],
+  },
+  "maybeBroadcastWatch": [Function],
+  "optimisticData": DepTrackingCache {
+    "data": Object {
+      "ROOT_QUERY": Object {
+        "authToken": "some-auth-token",
+      },
+    },
+    "depend": [Function],
+  },
+  "silenceBroadcast": false,
+  "storeReader": StoreReader {
+    "cacheKeyRoot": CacheKeyNode {
+      "children": null,
+      "key": null,
+    },
+    "executeSelectionSet": [Function],
+    "executeStoreQuery": [Function],
+  },
+  "storeWriter": StoreWriter {},
+  "typenameDocumentCache": Map {
+    Object {
+      "definitions": Array [
+        Object {
+          "kind": "OperationDefinition",
+          "name": Object {
+            "kind": "Name",
+            "value": "GeneratedClientQuery",
+          },
+          "operation": "query",
+          "selectionSet": Object {
+            "kind": "SelectionSet",
+            "selections": Array [
+              Object {
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "authToken",
+                },
+                "selectionSet": undefined,
+              },
+            ],
+          },
+        },
+      ],
+      "kind": "Document",
+    } => Object {
+      "definitions": Array [
+        Object {
+          "kind": "OperationDefinition",
+          "name": Object {
+            "kind": "Name",
+            "value": "GeneratedClientQuery",
+          },
+          "operation": "query",
+          "selectionSet": Object {
+            "kind": "SelectionSet",
+            "selections": Array [
+              Object {
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "authToken",
+                },
+                "selectionSet": undefined,
+              },
+            ],
+          },
+        },
+      ],
+      "kind": "Document",
+    },
+  },
+  "watches": Set {},
+}
+`;

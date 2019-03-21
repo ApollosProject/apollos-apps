@@ -18,8 +18,7 @@ import {
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import AvatarForm from 'apolloschurchapp/src/ui/UserAvatarView/AvatarForm';
 
-import getLoginState from '../auth/getLoginState';
-import logout from '../auth/logout';
+import { getLoginState, logout } from '@apollosproject/ui-auth';
 
 const AvatarView = styled({
   alignItems: 'center',
@@ -51,10 +50,7 @@ class UserSettings extends PureComponent {
           return (
             <BackgroundContainer>
               <AvatarView>
-                <AvatarForm
-                  text
-                  refetch={this.props.navigation.getParam('refetch', {})}
-                />
+                <AvatarForm text />
               </AvatarView>
               <WebBrowserConsumer>
                 {(openUrl) => (

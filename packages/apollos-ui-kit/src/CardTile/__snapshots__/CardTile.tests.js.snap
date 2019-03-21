@@ -2,6 +2,7 @@
 
 exports[`the CardTile component number box should grow elegantly with larger numbers 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -126,6 +127,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
 
 exports[`the CardTile component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -218,6 +220,7 @@ exports[`the CardTile component should render 1`] = `
 
 exports[`the CardTile component should render a loading skeleton 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -310,6 +313,7 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
 
 exports[`the CardTile component should render a loading skeleton for all available props 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -499,6 +503,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
 
 exports[`the CardTile component should render a number box 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -623,6 +628,7 @@ exports[`the CardTile component should render a number box 1`] = `
 
 exports[`the CardTile component should render card details 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -764,8 +770,9 @@ exports[`the CardTile component should render card details 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="19.2"
-                bbWidth="19.2"
+                bbHeight={19.2}
+                bbWidth={19.2}
+                height={19.2}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -773,32 +780,31 @@ exports[`the CardTile component should render card details 1`] = `
                   Array [
                     Object {
                       "backgroundColor": "transparent",
+                      "borderWidth": 0,
                     },
                     undefined,
-                    false,
+                    null,
                     Object {
                       "flex": 0,
-                      "height": 19.2,
-                      "width": 19.2,
+                      "height": 19,
+                      "width": 19,
                     },
                   ]
                 }
                 vbHeight={24}
                 vbWidth={24}
+                width={19.2}
               >
-                <RNSVGPath
-                  d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+                <RNSVGGroup
                   fill={
                     Array [
                       0,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      1,
+                      4278190080,
                     ]
                   }
                   fillOpacity={1}
                   fillRule={1}
+                  font={Object {}}
                   matrix={
                     Array [
                       1,
@@ -815,6 +821,16 @@ exports[`the CardTile component should render card details 1`] = `
                   propList={
                     Array [
                       "fill",
+                      "fillOpacity",
+                      "fillRule",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeOpacity",
+                      "strokeDasharray",
+                      "strokeDashoffset",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                      "strokeMiterlimit",
                     ]
                   }
                   rotation={0}
@@ -829,10 +845,55 @@ exports[`the CardTile component should render card details 1`] = `
                   strokeLinejoin={0}
                   strokeMiterlimit={4}
                   strokeOpacity={1}
-                  strokeWidth="1"
+                  strokeWidth={1}
                   x={0}
                   y={0}
-                />
+                >
+                  <RNSVGPath
+                    d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
               <View
                 style={
@@ -867,6 +928,7 @@ exports[`the CardTile component should render card details 1`] = `
 
 exports[`the CardTile component should render card details with date 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1008,8 +1070,9 @@ exports[`the CardTile component should render card details with date 1`] = `
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight="19.2"
-                bbWidth="19.2"
+                bbHeight={19.2}
+                bbWidth={19.2}
+                height={19.2}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -1017,32 +1080,31 @@ exports[`the CardTile component should render card details with date 1`] = `
                   Array [
                     Object {
                       "backgroundColor": "transparent",
+                      "borderWidth": 0,
                     },
                     undefined,
-                    false,
+                    null,
                     Object {
                       "flex": 0,
-                      "height": 19.2,
-                      "width": 19.2,
+                      "height": 19,
+                      "width": 19,
                     },
                   ]
                 }
                 vbHeight={24}
                 vbWidth={24}
+                width={19.2}
               >
-                <RNSVGPath
-                  d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+                <RNSVGGroup
                   fill={
                     Array [
                       0,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      0.6470588235294118,
-                      1,
+                      4278190080,
                     ]
                   }
                   fillOpacity={1}
                   fillRule={1}
+                  font={Object {}}
                   matrix={
                     Array [
                       1,
@@ -1059,6 +1121,16 @@ exports[`the CardTile component should render card details with date 1`] = `
                   propList={
                     Array [
                       "fill",
+                      "fillOpacity",
+                      "fillRule",
+                      "stroke",
+                      "strokeWidth",
+                      "strokeOpacity",
+                      "strokeDasharray",
+                      "strokeDashoffset",
+                      "strokeLinecap",
+                      "strokeLinejoin",
+                      "strokeMiterlimit",
                     ]
                   }
                   rotation={0}
@@ -1073,10 +1145,55 @@ exports[`the CardTile component should render card details with date 1`] = `
                   strokeLinejoin={0}
                   strokeMiterlimit={4}
                   strokeOpacity={1}
-                  strokeWidth="1"
+                  strokeWidth={1}
                   x={0}
                   y={0}
-                />
+                >
+                  <RNSVGPath
+                    d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
               <View
                 style={
@@ -1123,6 +1240,7 @@ exports[`the CardTile component should render card details with date 1`] = `
 
 exports[`the CardTile component should render children 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
