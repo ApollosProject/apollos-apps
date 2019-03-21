@@ -1515,6 +1515,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                   }
                 >
                   <View
+                    borderRadius={40}
                     iconPadding={20}
                     style={
                       Object {
