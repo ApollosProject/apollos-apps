@@ -127,6 +127,10 @@ Object {
   "firstName": "Vincent",
   "id": 51,
   "lastName": "Wilson",
+  "photo": Object {
+    "id": 123,
+    "url": "http://imageurl.....",
+  },
 }
 `;
 
@@ -175,6 +179,16 @@ Object {
         "value": "245",
       },
     ],
+  ],
+}
+`;
+
+exports[`Person uploads a user's profile picture 4`] = `
+Object {
+  "0": Array [
+    "/BinaryFiles?%24filter=Id%20eq%20245&%24top=1",
+    Object {},
+    Object {},
   ],
 }
 `;

@@ -1,5 +1,4 @@
 import gql from 'graphql-tag';
-import { client } from '../client';
 
 const UPDATE_PUSH_ID = gql`
   mutation updateUserPushSettings($input: PushSettingsInput!) {
@@ -9,7 +8,7 @@ const UPDATE_PUSH_ID = gql`
   }
 `;
 
-const updatePushId = async ({ pushId }) => {
+const updatePushId = async ({ pushId, client }) => {
   await client.mutate({
     mutation: UPDATE_PUSH_ID,
     variables: { input: { pushProviderUserId: pushId } },

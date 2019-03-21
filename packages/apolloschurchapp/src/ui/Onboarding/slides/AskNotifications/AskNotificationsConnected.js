@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Query } from 'react-apollo';
+import { Query, ApolloConsumer } from 'react-apollo';
 
 import {
   requestPushPermissions,
@@ -9,20 +9,24 @@ import {
 import AskNotifications from '.';
 
 const AskNotificationsConnected = memo((props) => (
-  <Query query={getNotificationsEnabled}>
-    {({ data: { notificationsEnabled = false } = {} }) => (
-      <AskNotifications
-        onPressButton={requestPushPermissions}
-        buttonDisabled={notificationsEnabled}
-        buttonText={
-          notificationsEnabled
-            ? 'Notifications Enabled!'
-            : 'Yes, enable notifications'
-        }
-        {...props}
-      />
+  <ApolloConsumer>
+    {(client) => (
+      <Query query={getNotificationsEnabled}>
+        {({ data: { notificationsEnabled = false } = {} }) => (
+          <AskNotifications
+            onPressButton={() => requestPushPermissions({ client })}
+            buttonDisabled={notificationsEnabled}
+            buttonText={
+              notificationsEnabled
+                ? 'Notifications Enabled!'
+                : 'Yes, enable notifications'
+            }
+            {...props}
+          />
+        )}
+      </Query>
     )}
-  </Query>
+  </ApolloConsumer>
 ));
 
 export default AskNotificationsConnected;
