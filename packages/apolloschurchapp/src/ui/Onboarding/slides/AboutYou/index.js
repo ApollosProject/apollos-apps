@@ -127,7 +127,7 @@ AboutYou.propTypes = {
   userDOB: PropTypes.instanceOf(Date),
   defaultDate: PropTypes.instanceOf(Date),
   userGender: PropTypes.string,
-  genderList: PropTypes.shape([PropTypes.string]),
+  genderList: PropTypes.arrayOf(PropTypes.number),
 };
 
 AboutYou.defaultProps = {
