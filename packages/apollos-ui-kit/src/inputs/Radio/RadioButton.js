@@ -9,9 +9,9 @@ import styled from '../../styled';
 
 import RadioButtonIndicator from './RadioButtonIndicator';
 
-const Row = styled(({ theme }) => ({
+const Row = styled(({ theme, underline }) => ({
   padding: theme.sizing.baseUnit / 2,
-  borderBottomWidth: 1,
+  borderBottomWidth: underline ? 1 : 0,
   borderBottomColor: theme.colors.background.accent,
   flexDirection: 'row',
   justifyContent: 'space-between',
@@ -20,6 +20,7 @@ const Row = styled(({ theme }) => ({
 
 class RadioButton extends PureComponent {
   static propTypes = {
+    underline: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     currentValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     label: PropTypes.oneOfType([
@@ -35,6 +36,7 @@ class RadioButton extends PureComponent {
   };
 
   static defaultProps = {
+    underline: true,
     label: '',
     onSelectValue() {},
     RadioButtonIndicator,
@@ -48,7 +50,7 @@ class RadioButton extends PureComponent {
     const Indicator = this.props.RadioButtonIndicator;
     return (
       <TouchableWithoutFeedback onPress={this.handleOnPress}>
-        <Row>
+        <Row underline={this.props.underline}>
           <Indicator
             isSelected={this.props.currentValue === this.props.value}
           />

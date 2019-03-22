@@ -52,6 +52,7 @@ exports[`The Radio component should render correctly 1`] = `
             "padding": 8,
           }
         }
+        underline={true}
       >
         <View
           style={
@@ -97,6 +98,275 @@ exports[`The Radio component should render correctly 1`] = `
             "padding": 8,
           }
         }
+        underline={true}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#A5A5A5",
+              "borderRadius": 99,
+              "borderWidth": 2,
+              "height": 20,
+              "justifyContent": "center",
+              "width": 20,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 17.28,
+            }
+          }
+        >
+          option 2
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Radio component should render horizontally 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "borderBottomWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "padding": 8,
+          }
+        }
+        underline={false}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#A5A5A5",
+              "borderRadius": 99,
+              "borderWidth": 2,
+              "height": 20,
+              "justifyContent": "center",
+              "width": 20,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 17.28,
+            }
+          }
+        >
+          option 1
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "borderBottomWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "padding": 8,
+          }
+        }
+        underline={false}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#A5A5A5",
+              "borderRadius": 99,
+              "borderWidth": 2,
+              "height": 20,
+              "justifyContent": "center",
+              "width": 20,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 17.28,
+            }
+          }
+        >
+          option 2
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Radio component should render without an underline 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "borderBottomWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "padding": 8,
+          }
+        }
+        underline={false}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "#A5A5A5",
+              "borderRadius": 99,
+              "borderWidth": 2,
+              "height": 20,
+              "justifyContent": "center",
+              "width": 20,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 17.28,
+            }
+          }
+        >
+          option 1
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "borderBottomWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "padding": 8,
+          }
+        }
+        underline={false}
       >
         <View
           style={

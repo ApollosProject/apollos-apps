@@ -10,7 +10,12 @@ import {
   GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 
-import { AskName, AskNotificationsConnected, Features } from './slides';
+import {
+  AskName,
+  Features,
+  AboutYou,
+  AskNotificationsConnected,
+} from './slides';
 
 // Provides themed colors to Swiper dots
 const ThemedSwiper = withTheme(({ theme }) => ({
@@ -39,7 +44,7 @@ class Onboarding extends Component {
   };
 
   togglePagination = () => {
-    if (this.currentIndex === 3 || this.state.pagination === false) {
+    if (this.currentIndex === 4 || this.state.pagination === false) {
       this.setState((state) => ({
         pagination: !state.pagination,
       }));
@@ -74,6 +79,10 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
+          <AboutYou
+            imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
+            onPressPrimary={this.handleOnPressPrimary}
+          />
           <AskNotificationsConnected
             onPressSecondary={this.handleOnPressPrimary}
           >
@@ -83,11 +92,6 @@ class Onboarding extends Component {
           </AskNotificationsConnected>
           <Boom bgcolor={'lightgreen'}>
             <Text>Hello World 2</Text>
-            <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
-            <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
-          </Boom>
-          <Boom bgcolor={'lightyellow'}>
-            <Text>No pager!</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>
             <Text onPress={() => this.swiper.scrollBy(-1)}>Previous!</Text>
           </Boom>
