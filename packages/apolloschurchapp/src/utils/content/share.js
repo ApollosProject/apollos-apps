@@ -9,11 +9,6 @@ const share = ({ title, url, id = '' }) => {
     message: Platform.OS === 'android' ? `${title}\n${url}` : title,
     url,
   });
-
-  // track({
-  //   eventName: events.ShareContent,
-  //   properties: { title, id },
-  // });
 };
 
 export default share;

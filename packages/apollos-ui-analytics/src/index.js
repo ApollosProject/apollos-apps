@@ -1,14 +1,4 @@
-import AnalyticsProvider, { AnalyticsConsumer } from './Provider';
+import AnalyticsProvider, { AnalyticsConsumer, track } from './Provider';
 import TrackEventWhenLoaded from './TrackEventWhenLoaded';
-import {
-  track as trackMutation,
-  identify as identifyMutation,
-} from './clientMutations';
 
-export {
-  trackMutation,
-  identifyMutation,
-  AnalyticsConsumer,
-  AnalyticsProvider,
-  TrackEventWhenLoaded,
-};
+export { AnalyticsConsumer, AnalyticsProvider, TrackEventWhenLoaded, track };

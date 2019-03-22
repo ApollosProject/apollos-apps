@@ -15,8 +15,6 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-// import { track } from 'apolloschurchapp/src/analytics';
-
 import LoginForm from './login';
 import SignUpForm from './signup';
 
@@ -88,7 +86,6 @@ class Auth extends PureComponent {
 
   handleFinish = () => {
     // trigger the auth modal to close
-    // TODO: track({ eventName: 'UserLogin' });
     if (this.props.onFinish) {
       this.props.onFinish();
     } else if (this.props.navigation && this.props.navigation.goBack) {

@@ -4,7 +4,10 @@ import DeviceInfo from 'react-native-device-info';
 import { Platform } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
-import { track, identify } from './serverMutations';
+import {
+  track as trackServer,
+  identify as identifyServer,
+} from './serverMutations';
 import {
   track as trackClient,
   identify as identifyClient,
@@ -20,7 +23,10 @@ const deviceInfo = {
   appVersion: DeviceInfo.getVersion(),
 };
 
-const AnalyticsContext = React.createContext({ track: () => {}, identify });
+const AnalyticsContext = React.createContext({
+  track: () => {},
+  identify: () => {},
+});
 
 export const objectToGqlInput = (props = {}) =>
   Object.keys(props).map((key) => ({
@@ -31,13 +37,18 @@ export const objectToGqlInput = (props = {}) =>
 export const gqlInputToObject = (props = []) =>
   props.reduce((acum, { field, value }) => ({ ...acum, [field]: value }), {});
 
-const createTrack = ({ client }) => ({ eventName, properties }) => {
-  const variables = {
-    properties: objectToGqlInput(properties),
-    eventName,
-  };
-  return client.mutate({ mutation: trackClient, variables });
-};
+// handy wrapper around track mutations
+export const track = ({ client, eventName, properties }) =>
+  client.mutate({
+    mutation: trackClient,
+    variables: {
+      eventName,
+      properties: objectToGqlInput(properties),
+    },
+  });
+
+const createTrack = ({ client }) => ({ eventName, properties }) =>
+  track({ eventName, properties, client });
 
 const createIdentify = ({ client }) => () =>
   client.mutate({ mutation: identifyClient });
@@ -55,7 +66,7 @@ const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
         }
       });
       await client.mutate({
-        mutation: track,
+        mutation: trackServer,
         variables: {
           input: {
             anonymousId,
@@ -79,7 +90,7 @@ const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
         }
       });
       await client.mutate({
-        mutation: identify,
+        mutation: identifyServer,
         variables: {
           input: {
             anonymousId,
