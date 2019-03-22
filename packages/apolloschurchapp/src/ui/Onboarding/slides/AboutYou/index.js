@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import {
   styled,
@@ -100,9 +101,8 @@ const AboutYou = memo(
             <Label>Birthday</Label>
             {userDOB ? (
               <StyledDate
-                value={userDOB}
-                displayValue={`${userDOB.getMonth() +
-                  1}/${userDOB.getDate()}/${userDOB.getFullYear()}`}
+                value={moment.utc(userDOB).toDate()}
+                displayValue={moment.utc(userDOB).format('MM/DD/YYYY')}
               />
             ) : (
               <StyledDate
