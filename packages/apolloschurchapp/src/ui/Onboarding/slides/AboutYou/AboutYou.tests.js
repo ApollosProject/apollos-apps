@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import moment from 'moment';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
@@ -11,7 +12,7 @@ describe('The Onboarding AboutYou component', () => {
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou defaultDate={new Date('2019-02-14')} />
+        <AboutYou defaultDate={moment.utc('2019-02-14').toDate()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -23,7 +24,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
-          defaultDate={new Date('2019-02-14')}
+          defaultDate={moment.utc('2019-02-14').toDate()}
         />
       </Providers>
     );
@@ -36,7 +37,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           slideTitle={'Custom title text'}
-          defaultDate={new Date('2019-02-14')}
+          defaultDate={moment.utc('2019-02-14').toDate()}
         />
       </Providers>
     );
@@ -49,7 +50,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           description={'Custom description text'}
-          userDOB={new Date('1989-02-14')}
+          defaultDate={moment.utc('2019-02-14').toDate()}
         />
       </Providers>
     );
@@ -62,7 +63,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           genderList={['M', 'F']}
-          defaultDate={new Date('2019-02-14')}
+          defaultDate={moment.utc('2019-02-14').toDate()}
         />
       </Providers>
     );
@@ -73,7 +74,10 @@ describe('The Onboarding AboutYou component', () => {
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
-        <AboutYou userGender={'Male'} defaultDate={new Date('2019-02-14')} />
+        <AboutYou
+          userGender={'Male'}
+          defaultDate={moment.utc('2019-02-14').toDate()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -86,7 +90,7 @@ describe('The Onboarding AboutYou component', () => {
         <AboutYou
           genderList={['M', 'F']}
           userGender={'Male'}
-          defaultDate={new Date('2019-02-14')}
+          defaultDate={moment.utc('2019-02-14').toDate()}
         />
       </Providers>
     );
@@ -95,7 +99,7 @@ describe('The Onboarding AboutYou component', () => {
   it('should render custom date picker', () => {
     const tree = renderer.create(
       <Providers>
-        <AboutYou userDOB={new Date('1989-02-14')} />
+        <AboutYou userDOB={moment.utc('1989-02-14').toDate()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -107,7 +111,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           onPressPrimary={jest.fn()}
-          defaultDate={new Date('2019-02-14')}
+          defaultDate={moment.utc('2019-02-14').toDate()}
         />
       </Providers>
     );
