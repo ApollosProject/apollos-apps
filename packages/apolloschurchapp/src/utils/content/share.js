@@ -1,6 +1,6 @@
 import { Platform, Share } from 'react-native';
 // import { get } from 'lodash';
-import { track, events } from 'apolloschurchapp/src/analytics';
+// import { track, events } from 'apolloschurchapp/src/analytics';
 // import getSiteLink from './getSiteLink';
 
 const share = ({ title, url, id = '' }) => {
@@ -10,10 +10,10 @@ const share = ({ title, url, id = '' }) => {
     url,
   });
 
-  track({
-    eventName: events.ShareContent,
-    properties: { title, id },
-  });
+  // track({
+  //   eventName: events.ShareContent,
+  //   properties: { title, id },
+  // });
 };
 
 export default share;

@@ -5,7 +5,7 @@ import { get } from 'lodash';
 import { Query, Mutation, ApolloConsumer } from 'react-apollo';
 
 import Like from 'apolloschurchapp/src/ui/Like';
-import { track, events } from 'apolloschurchapp/src/analytics';
+// import { track, events } from 'apolloschurchapp/src/analytics';
 
 import updateLikeEntity from './updateLikeEntity';
 import getLikedContentItem from './getLikedContentItem';
@@ -70,15 +70,15 @@ const UpdateLikeStatus = ({
                 toggleLike: async (variables) => {
                   try {
                     await createNewInteraction({ variables });
-                    track({
-                      eventName: isLiked
-                        ? events.UnlikeContent
-                        : events.LikeContent,
-                      properties: {
-                        id: itemId,
-                      },
-                      client,
-                    });
+                    // track({
+                    //   eventName: isLiked
+                    //     ? events.UnlikeContent
+                    //     : events.LikeContent,
+                    //   properties: {
+                    //     id: itemId,
+                    //   },
+                    //   client,
+                    // });
                   } catch (e) {
                     throw e.message;
                   }
