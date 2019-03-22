@@ -56,7 +56,7 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render custom gender list', () => {
+  it('should render a custom gender list', () => {
     /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
@@ -69,7 +69,7 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render selected gender', () => {
+  it('should render the selected gender', () => {
     /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
@@ -82,21 +82,7 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should check when invalid gender is passed', () => {
-    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
-     * object and invalidate the snapshots every time. */
-    const tree = renderer.create(
-      <Providers>
-        <AboutYou
-          genderList={['M', 'F']}
-          userGender={'Male'}
-          defaultDate={moment.utc('2019-02-14').toDate()}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render custom date picker', () => {
+  it('should render a custom date picker', () => {
     const tree = renderer.create(
       <Providers>
         <AboutYou userDOB={moment.utc('1989-02-14').toDate()} />
