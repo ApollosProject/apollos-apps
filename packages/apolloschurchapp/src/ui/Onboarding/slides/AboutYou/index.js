@@ -80,12 +80,7 @@ const AboutYou = memo(
           <Description>{description}</Description>
           <View>
             <Label>Gender</Label>
-            <StyledRadio
-              value={
-                // TODO: we should let the user know invalid prop type somehow
-                genderList.includes(userGender) ? userGender : null
-              }
-            >
+            <StyledRadio value={userGender}>
               {genderList.map((gender) => [
                 <RadioButton
                   key={gender}
