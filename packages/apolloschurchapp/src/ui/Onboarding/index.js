@@ -12,15 +12,9 @@ import {
 
 import {
   AskName,
-<<<<<<< HEAD
   AskNotificationsConnected,
   Features,
   LocationFinderSelected,
-=======
-  Features,
-  AboutYou,
-  AskNotificationsConnected,
->>>>>>> b115456e344d22a3d73c49d98226035d800d00ca
 } from './slides';
 
 // Provides themed colors to Swiper dots
