@@ -5,7 +5,13 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { styled, FeedView, BackgroundView, H3 } from '@apollosproject/ui-kit';
+import {
+  styled,
+  FeedView,
+  BackgroundView,
+  H3,
+  H6,
+} from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
@@ -20,6 +26,11 @@ const LogoTitle = styled(({ theme }) => ({
   alignSelf: 'center',
   resizeMode: 'contain',
 }))(Image);
+
+const StyledH6 = styled(({ theme }) => ({
+  color: theme.colors.text.tertiary,
+  marginBottom: theme.sizing.baseUnit / 2,
+}))(H6);
 
 class Home extends PureComponent {
   static navigationOptions = () => ({
@@ -64,17 +75,21 @@ class Home extends PureComponent {
                     >
                       {({ data: personaData, loading: actionLoading }) => (
                         <ContentTableCard
-                          label={'FOR YOU'}
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}
                           DynamicHeader={
-                            <H3
-                              isLoading={actionLoading}
-                              numberOfLines={3}
-                              ellipsizeMode="tail"
-                            >
-                              Some random text that encourages you
-                            </H3>
+                            <>
+                              <StyledH6 isLoading={actionLoading}>
+                                FOR YOU
+                              </StyledH6>
+                              <H3
+                                isLoading={actionLoading}
+                                numberOfLines={3}
+                                ellipsizeMode="tail"
+                              >
+                                Some random text that encourages you
+                              </H3>
+                            </>
                           }
                           content={get(
                             personaData,

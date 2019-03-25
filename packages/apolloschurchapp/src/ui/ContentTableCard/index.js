@@ -6,17 +6,11 @@ import {
   TableView,
   Card,
   CardContent,
-  H6,
   styled,
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
 import ContentTableCardItem from './ContentTableCardItem';
-
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-  marginTop: theme.sizing.baseUnit / 1.5,
-}))(H6);
 
 const Header = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
@@ -36,17 +30,15 @@ class ContentTableCard extends PureComponent {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool, // eslint-disable-line
     content: PropTypes.array, // eslint-disable-line
-    label: PropTypes.string,
     DynamicHeader: PropTypes.element,
   };
 
   render() {
-    const { onPress, isLoading, content, label, DynamicHeader } = this.props;
+    const { onPress, isLoading, content, DynamicHeader } = this.props;
 
     return (
       <Card>
         <Header>
-          <StyledH6 isLoading={isLoading}>{label}</StyledH6>
           <Title>{DynamicHeader}</Title>
         </Header>
         <Content>
