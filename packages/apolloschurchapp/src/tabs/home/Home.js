@@ -10,7 +10,7 @@ import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
 
-import ActionTable from '../../ui/ActionTable';
+import ContentTableCard from '../../ui/ContentTableCard';
 import getUserFeed from './getUserFeed';
 import getPersonaFeed from './getPersonaFeed';
 
@@ -63,7 +63,7 @@ class Home extends PureComponent {
                       fetchPolicy="cache-and-network"
                     >
                       {({ data: personaData, loading: actionLoading }) => (
-                        <ActionTable
+                        <ContentTableCard
                           label={'FOR YOU'}
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}

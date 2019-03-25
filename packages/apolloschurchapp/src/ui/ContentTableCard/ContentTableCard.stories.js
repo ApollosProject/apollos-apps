@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import { H3 } from '@apollosproject/ui-kit';
-import ActionTable from '.';
+import ContentTableCard from '.';
 
 const content = [
   {
@@ -58,9 +58,9 @@ const content = [
   },
 ];
 
-storiesOf('ActionTable', module)
+storiesOf('ContentTableCard', module)
   .add('simple', () => (
-    <ActionTable
+    <ContentTableCard
       label={'FOR YOU'}
       onPress={() => {}}
       content={content}
@@ -72,7 +72,7 @@ storiesOf('ActionTable', module)
     />
   ))
   .add('isLoading', () => (
-    <ActionTable
+    <ContentTableCard
       label={'FOR YOU'}
       onPress={() => {}}
       isLoading

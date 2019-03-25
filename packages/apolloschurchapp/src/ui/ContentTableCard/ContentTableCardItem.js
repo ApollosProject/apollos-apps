@@ -40,7 +40,7 @@ const Cell = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
-class ActionItem extends PureComponent {
+class ContentTableCardItem extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     imageSource: PropTypes.any, // eslint-disable-line
@@ -75,4 +75,4 @@ class ActionItem extends PureComponent {
   }
 }
 
-export default withIsLoading(ActionItem);
+export default withIsLoading(ContentTableCardItem);

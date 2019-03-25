@@ -11,7 +11,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
-import ActionItem from './ActionItem';
+import ContentTableCardItem from './ContentTableCardItem';
 
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
@@ -22,16 +22,16 @@ const Header = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
 }))(CardContent);
 
-const ContentTable = styled(() => ({
+const Content = styled(() => ({
   borderBottomWidth: 0,
   borderTopWidth: 0,
 }))(TableView);
 
-const ActionTitle = styled(({ theme }) => ({
+const Title = styled(({ theme }) => ({
   marginTop: theme.sizing.baseUnit / 2,
 }))(View);
 
-class ActionTable extends PureComponent {
+class ContentTableCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool, // eslint-disable-line
@@ -47,11 +47,11 @@ class ActionTable extends PureComponent {
       <Card>
         <Header>
           <StyledH6 isLoading={isLoading}>{label}</StyledH6>
-          <ActionTitle>{DynamicHeader}</ActionTitle>
+          <Title>{DynamicHeader}</Title>
         </Header>
-        <ContentTable>
+        <Content>
           {content.map((item) => (
-            <ActionItem
+            <ContentTableCardItem
               isLoading={isLoading}
               key={item.id}
               id={item.id}
@@ -61,10 +61,10 @@ class ActionTable extends PureComponent {
               imageSource={item.coverImage ? item.coverImage.sources : ''}
             />
           ))}
-        </ContentTable>
+        </Content>
       </Card>
     );
   }
 }
 
-export default withIsLoading(ActionTable);
+export default withIsLoading(ContentTableCard);

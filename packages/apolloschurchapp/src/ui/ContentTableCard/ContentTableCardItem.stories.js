@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import ActionItem from './ActionItem';
+import ContentTableCardItem from './ContentTableCardItem';
 
 const item = {
   id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
@@ -17,8 +17,8 @@ const item = {
   },
 };
 
-storiesOf('ActionItem', module).add('simple', () => (
-  <ActionItem
+storiesOf('ContentTableCardItem', module).add('simple', () => (
+  <ContentTableCardItem
     onPress={() => {}}
     imageSource={item.coverImage.sources}
     label={item.parentChannel.name}
