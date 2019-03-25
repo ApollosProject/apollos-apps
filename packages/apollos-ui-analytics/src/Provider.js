@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DeviceInfo from 'react-native-device-info';
 import { Platform } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
-import gql from 'graphql-tag';
+
 import {
   track as trackServer,
   identify as identifyServer,
@@ -53,7 +53,7 @@ const createTrack = ({ client }) => ({ eventName, properties }) =>
 const createIdentify = ({ client }) => () =>
   client.mutate({ mutation: identifyClient });
 
-const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
+export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
   Mutation: {
     track: async (root, { properties, eventName }, { client }) => {
       trackFunctions.forEach((func) => {
