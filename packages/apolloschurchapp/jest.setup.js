@@ -64,7 +64,7 @@ jest.mock(
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
-  AnalyticsConsumer: ({ children }) => children,
+  AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
 }));
 
