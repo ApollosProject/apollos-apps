@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {
   TableView,
-  ContentCard,
+  Card,
   CardContent,
   H6,
   styled,
@@ -44,29 +44,25 @@ class ActionTable extends PureComponent {
     const { onPress, isLoading, content, label, DynamicHeader } = this.props;
 
     return (
-      <ContentCard
-        header={
-          <Header>
-            <StyledH6 isLoading={isLoading}>{label}</StyledH6>
-            <ActionTitle>{DynamicHeader}</ActionTitle>
-          </Header>
-        }
-        content={
-          <ContentTable>
-            {content.map((item) => (
-              <ActionItem
-                isLoading={isLoading}
-                key={item.id}
-                id={item.id}
-                onPress={onPress}
-                label={item.parentChannel ? item.parentChannel.name : ''}
-                title={item.title || ''}
-                imageSource={item.coverImage ? item.coverImage.sources : ''}
-              />
-            ))}
-          </ContentTable>
-        }
-      />
+      <Card>
+        <Header>
+          <StyledH6 isLoading={isLoading}>{label}</StyledH6>
+          <ActionTitle>{DynamicHeader}</ActionTitle>
+        </Header>
+        <ContentTable>
+          {content.map((item) => (
+            <ActionItem
+              isLoading={isLoading}
+              key={item.id}
+              id={item.id}
+              onPress={onPress}
+              label={item.parentChannel ? item.parentChannel.name : ''}
+              title={item.title || ''}
+              imageSource={item.coverImage ? item.coverImage.sources : ''}
+            />
+          ))}
+        </ContentTable>
+      </Card>
     );
   }
 }
