@@ -5,6 +5,7 @@ import { Dimensions } from 'react-native';
 
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 
+import getUserProfile from '../../tabs/connect/getUserProfile';
 import MapView from './MapView';
 
 import getAllCampuses from './getCampusLocations';
@@ -87,7 +88,29 @@ class Location extends PureComponent {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data: { campuses = [] } = {} }) => (
-          <Mutation mutation={campusChange}>
+          <Mutation
+            mutation={campusChange}
+            update={async (cache, { data: { updateUserCampus } }) => {
+              const { currentUser } = await cache.readQuery({
+                query: getUserProfile,
+              });
+              await cache.writeQuery({
+                query: getUserProfile,
+                data: {
+                  currentUser: {
+                    ...currentUser,
+                    profile: {
+                      ...currentUser.profile,
+                      campus: {
+                        ...currentUser.profile.campus,
+                        name: updateUserCampus.campus.name,
+                      },
+                    },
+                  },
+                },
+              });
+            }}
+          >
             {(handlePress) => (
               <MapView
                 navigation={navigation}
