@@ -2,6 +2,7 @@
 
 exports[`Test the Discover Component Query Should retrieve the Content Channel Feeds 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -109,10 +110,23 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                   4294506484,
                 ]
               }
+              endPoint={
+                Object {
+                  "x": 0.5,
+                  "y": 1,
+                }
+              }
               locations={null}
+              startPoint={
+                Object {
+                  "x": 0.5,
+                  "y": 0,
+                }
+              }
               style={
                 Object {
                   "flex": 1,
+                  "height": "100%",
                 }
               }
             >

@@ -2,6 +2,7 @@
 
 exports[`The Media placeholder accepts custom styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -48,6 +49,7 @@ exports[`The Media placeholder accepts custom styles 1`] = `
 
 exports[`The Media placeholder accepts size 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -94,6 +96,7 @@ exports[`The Media placeholder accepts size 1`] = `
 
 exports[`The Media placeholder renders correctly 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

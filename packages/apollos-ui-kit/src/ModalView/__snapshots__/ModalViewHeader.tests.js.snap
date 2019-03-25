@@ -2,6 +2,7 @@
 
 exports[`The ModalView/ModalViewHeader component should render a back button 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -85,6 +86,7 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
@@ -94,8 +96,9 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="16"
-            bbWidth="16"
+            bbHeight={16}
+            bbWidth={16}
+            height={16}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -103,6 +106,7 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 undefined,
                 Object {
@@ -117,20 +121,18 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
             }
             vbHeight={24}
             vbWidth={24}
+            width={16}
           >
-            <RNSVGPath
-              d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -147,6 +149,16 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -161,10 +173,55 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
+                fill={
+                  Array [
+                    0,
+                    4289045925,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -175,6 +232,7 @@ exports[`The ModalView/ModalViewHeader component should render a back button 1`]
 
 exports[`The ModalView/ModalViewHeader component should render a close button 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -258,6 +316,7 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
@@ -267,8 +326,9 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="16"
-            bbWidth="16"
+            bbHeight={16}
+            bbWidth={16}
+            height={16}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -276,6 +336,7 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 undefined,
                 Object {
@@ -290,20 +351,18 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
             }
             vbHeight={24}
             vbWidth={24}
+            width={16}
           >
-            <RNSVGPath
-              d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -320,6 +379,16 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -334,10 +403,55 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                fill={
+                  Array [
+                    0,
+                    4289045925,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -348,6 +462,7 @@ exports[`The ModalView/ModalViewHeader component should render a close button 1`
 
 exports[`The ModalView/ModalViewHeader component should render both buttons 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -431,6 +546,7 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
@@ -440,8 +556,9 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="16"
-            bbWidth="16"
+            bbHeight={16}
+            bbWidth={16}
+            height={16}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -449,6 +566,7 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 undefined,
                 Object {
@@ -463,20 +581,18 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
             }
             vbHeight={24}
             vbWidth={24}
+            width={16}
           >
-            <RNSVGPath
-              d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -493,6 +609,16 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -507,10 +633,55 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
+                fill={
+                  Array [
+                    0,
+                    4289045925,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -557,6 +728,7 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
         }
       >
         <View
+          borderRadius={44}
           iconPadding={28}
           style={
             Object {
@@ -566,8 +738,9 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="16"
-            bbWidth="16"
+            bbHeight={16}
+            bbWidth={16}
+            height={16}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -575,6 +748,7 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 undefined,
                 Object {
@@ -589,20 +763,18 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
             }
             vbHeight={24}
             vbWidth={24}
+            width={16}
           >
-            <RNSVGPath
-              d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  0.6470588235294118,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -619,6 +791,16 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -633,10 +815,55 @@ exports[`The ModalView/ModalViewHeader component should render both buttons 1`] 
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                fill={
+                  Array [
+                    0,
+                    4289045925,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>

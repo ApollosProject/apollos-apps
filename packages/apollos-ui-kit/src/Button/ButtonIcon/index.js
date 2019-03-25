@@ -6,8 +6,9 @@ import styled from '../../styled';
 import Icon from '../../Icon';
 import Touchable from '../../Touchable';
 
-const ControlPadding = styled(({ iconPadding }) => ({
+const ControlPadding = styled(({ iconPadding, additionalStyles }) => ({
   padding: iconPadding, // maximize vertical space for tappability.
+  ...additionalStyles, // pass ButtonIcon styles into here for styling instead of Touchable
 }))(View);
 
 class ButtonIcon extends PureComponent {
@@ -17,6 +18,8 @@ class ButtonIcon extends PureComponent {
     name: PropTypes.string.isRequired,
     size: PropTypes.number,
     fill: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    style: PropTypes.any, // eslint-disable-line
     iconPadding: PropTypes.number, // this optionally defaults to this.props.size / 2
     isLoading: PropTypes.bool,
   };
@@ -33,6 +36,8 @@ class ButtonIcon extends PureComponent {
       size,
       name,
       fill,
+      backgroundColor,
+      style,
       isLoading,
       ...otherProps
     } = this.props;
@@ -51,6 +56,10 @@ class ButtonIcon extends PureComponent {
             this.props.iconPadding >= 0
               ? this.props.iconPadding
               : this.props.size
+          }
+          additionalStyles={this.props.style}
+          borderRadius={
+            this.props.iconPadding + this.props.size || this.props.size * 2
           }
         >
           <Icon

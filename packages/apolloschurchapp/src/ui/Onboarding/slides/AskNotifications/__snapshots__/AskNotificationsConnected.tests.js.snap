@@ -2,6 +2,7 @@
 
 exports[`The Onboarding AskNotificationsConnected component should render with a user having granted push notifications permissions 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -146,6 +147,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with a
 
 exports[`The Onboarding AskNotificationsConnected component should render with a user not having granted push notifications permissions 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -290,6 +292,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with a
 
 exports[`The Onboarding AskNotificationsConnected component should render with no data in the cache 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
