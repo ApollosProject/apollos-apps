@@ -416,7 +416,7 @@ export const pushSchema = gql`
 export const campusSchema = gql`
   type Campus implements Node {
     id: ID!
-    name: String!
+    name: String
     street1: String
     street2: String
     city: String

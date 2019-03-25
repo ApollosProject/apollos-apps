@@ -29,10 +29,7 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
-    ],
-    "transform": {
-      ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    ]
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
@@ -53,9 +50,9 @@
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "^16.8.2",
+    "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-native": "0.57.5",
+    "react-native": "0.58.5",
     "react-native-linear-gradient": "2.4.0",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-svg": "6.5.2",

@@ -2,6 +2,7 @@
 
 exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -37,6 +38,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
 
 exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

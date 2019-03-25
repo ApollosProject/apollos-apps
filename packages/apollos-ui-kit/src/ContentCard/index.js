@@ -125,8 +125,6 @@ class ContentCard extends PureComponent {
       metrics,
       theme,
       tile,
-      fixedSize,
-      children,
       ...cardProps
     } = this.props;
 

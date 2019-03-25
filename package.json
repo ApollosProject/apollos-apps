@@ -58,14 +58,8 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-native": "^3.2.1",
-    "babel-plugin-module-resolver": "3.1.1",
     "lerna": "^3.0.6",
-    "prettier": "^1.14.2",
-    "prop-types": "15.6.1",
-    "react": "16.6.1",
-    "react-native": "0.57.5",
-    "react-native-linear-gradient": "2.4.0",
-    "react-native-svg": "6.5.2"
+    "prettier": "^1.14.2"
   },
   "now": {
     "name": "apollos-church-api",
