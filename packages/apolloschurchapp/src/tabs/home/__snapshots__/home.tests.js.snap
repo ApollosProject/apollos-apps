@@ -1016,25 +1016,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               />
               <View
-                content={<mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(getContext(mapProps(WithWindow)))))))))))) />}
-                header={
-                  <mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))))))))))))>
-                    <mapProps(getContext(mapProps(withPropsOnChange(mapProps(H6)))))
-                      isLoading={true}
-                    >
-                      FOR YOU
-                    </mapProps(getContext(mapProps(withPropsOnChange(mapProps(H6)))))>
-                    <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-                      <H3
-                        ellipsizeMode="tail"
-                        isLoading={true}
-                        numberOfLines={3}
-                      >
-                        Some random text that encourages you
-                      </H3>
-                    </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-                  </mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))))))))))))>
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
