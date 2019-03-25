@@ -3,7 +3,7 @@ import { Platform, Share } from 'react-native';
 // import { track, events } from 'apolloschurchapp/src/analytics';
 // import getSiteLink from './getSiteLink';
 
-const share = ({ title, url, id = '' }) => {
+const share = ({ title, url }) => {
   Share.share({
     title,
     message: Platform.OS === 'android' ? `${title}\n${url}` : title,
