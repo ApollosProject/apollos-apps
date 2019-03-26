@@ -1,3 +1,27 @@
+
+v0.8.1: March 25, 2019
+
+- Adds Onboarding About You Screen (#581) (756d540d)
+- Adds UI Auth package (#576) (ac64f9e8)
+- Adds testing control panel access to onboarding (#599) (80eb0349)
+- Adds Radio Exports, Tests, and Stories (#597) (93908dfc)
+- Adds Onboarding "Features" Screen (#580) (9db71fe5)
+- Adds App Splash Screen (#579) (19ed0a76)
+- Adds MapView Component (#527) (a5449d66)
+- Adds Person dataSource method to getViaAliasId w/ tests (#595) (f7d73f04)
+- Adds Onboarding notifications screen (#578) (9c2505cc)
+- Adds support for Node to use Interface's DataModel instead of relying on Aliases (#585) (269e2926)
+- Adds Pagination w/ First and Limit support to the getLikedContent (#568) (a586294e)
+
+- Fixes profile after updating location (#605) (b115456e)
+- Fixes mounting graphql at root to fix pass generation (#600) (b392ad59)
+- Fixes ButtonIcon to support style prop (#547) (34fc51d4)
+- Fixes accessing a person's field by non-current person (#587) (da9fc161)
+- Fixes user campus not returning location (#584) (4ca7b3fb)
+
+- Upgrades React Native (#572) (7ad160da)
+
+
 v0.8.0: March 6, 2019
 
 - Adds API for getting / updating current campus (#577) (5257f595)
