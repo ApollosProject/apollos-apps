@@ -43,7 +43,6 @@ const LocationFinderConnected = memo((props) => (
             )}
           </Query>
         )}
-        ;
       </ApolloConsumer>
     )}
   </Query>
