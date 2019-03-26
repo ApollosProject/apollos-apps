@@ -24,6 +24,9 @@ As a `<type of user>` _(who)_ I want to `<perform an action>` _(what)_ so that I
 
 <!--- Not obligatory, but suggest an idea for implementing addition or change -->
 <!--- What still needs to be discussed -->
+<!--- Where should this component or feature "live"? It's own package inside of Apollos? A component in UI Kit? Somewhere else? -->
+<!--- What existing components could we leverage? -->
+<!--- Are there existing third party deps that could be used? -->
 
 ### Other Resources
 
