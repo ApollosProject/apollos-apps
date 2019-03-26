@@ -6,6 +6,7 @@ export default gql`
       id
       profile {
         campus {
+          isCurrentCampus @client(always: true)
           id
           name
           latitude

@@ -3,15 +3,15 @@ import renderer from 'react-test-renderer';
 import Providers from 'apolloschurchapp/src/Providers';
 import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 
-import LocationFinderSelected from './LocationFinderSelected';
-import getCurrentCampus from './getCurrentCampus';
+import LocationFinderConnected from './LocationFinderConnected';
+import getUserCampus from './getUserCampus';
 
-describe('The Onboarding LocationFinderSelected component', () => {
+describe('The Onboarding LocationFinderConnected component', () => {
   it('should render with a user not having a campus selected', async () => {
     const mocks = [
       {
         request: {
-          query: getCurrentCampus,
+          query: getUserCampus,
         },
         result: {
           data: { campus: null },
@@ -21,7 +21,7 @@ describe('The Onboarding LocationFinderSelected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderSelected />
+        <LocationFinderConnected />
       </Providers>
     );
 
@@ -32,7 +32,7 @@ describe('The Onboarding LocationFinderSelected component', () => {
     const mocks = [
       {
         request: {
-          query: getCurrentCampus,
+          query: getUserCampus,
         },
         result: {
           data: {
@@ -61,7 +61,7 @@ describe('The Onboarding LocationFinderSelected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderSelected />
+        <LocationFinderConnected />
       </Providers>
     );
 
@@ -72,7 +72,7 @@ describe('The Onboarding LocationFinderSelected component', () => {
   it('should render with no data in the cache', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinderSelected />
+        <LocationFinderConnected />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

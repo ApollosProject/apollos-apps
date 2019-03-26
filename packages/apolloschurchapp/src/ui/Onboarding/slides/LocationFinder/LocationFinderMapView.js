@@ -7,7 +7,7 @@ import MapView from 'apolloschurchapp/src/user-settings/Locations';
 
 import campusChange from 'apolloschurchapp/src/user-settings/Locations/campusChange';
 import getCampusLocations from 'apolloschurchapp/src/user-settings/Locations/getCampusLocations';
-import getCurrentCampus from './getCurrentCampus';
+import getUserCampus from './getUserCampus';
 
 const getCurrentLocation = () =>
   new Promise((resolve, reject) => {
@@ -84,10 +84,10 @@ class LocationFinderMapView extends PureComponent {
             mutation={campusChange}
             update={async (cache, { data: { updateUserCampus } }) => {
               const { currentUser } = await cache.readQuery({
-                query: getCurrentCampus,
+                query: getUserCampus,
               });
               await cache.writeQuery({
-                query: getCurrentCampus,
+                query: getUserCampus,
                 data: {
                   currentUser: {
                     ...currentUser,

@@ -4,7 +4,7 @@ export AskNotifications, {
   AskNotificationsConnected,
 } from './AskNotifications';
 export LocationFinder, {
-  LocationFinderSelected,
+  LocationFinderConnected,
   LocationFinderMapView,
 } from './LocationFinder';
 export Features from './Features';

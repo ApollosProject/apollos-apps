@@ -37,12 +37,14 @@ const StyledH5 = styled(({ theme }) => ({
 // eslint-disable-next-line react/display-name
 const LocationFinder = memo(
   ({
+    onPressPrimary,
     children,
     slideTitle,
     description,
     buttonText,
     buttonDisabled,
     onPressButton,
+    isCurrentCampus,
     campus,
     ...props
   }) => (
@@ -58,7 +60,7 @@ const LocationFinder = memo(
             disabled={buttonDisabled}
             pill={false}
           />
-          {campus ? (
+          {isCurrentCampus ? (
             <CampusCard
               key={campus.id}
               distance={campus.distanceFromLocation}
@@ -77,6 +79,7 @@ LocationFinder.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use a more unique name.
    */
+  onPressPrimary: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -90,10 +93,7 @@ LocationFinder.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  currentCampus: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  isCurrentCampus: PropTypes.bool,
 };
 
 LocationFinder.defaultProps = {

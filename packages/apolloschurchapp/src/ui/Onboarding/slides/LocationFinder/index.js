@@ -1,5 +1,5 @@
 import LocationFinder from './LocationFinder';
 
-export LocationFinderSelected from './LocationFinderSelected';
+export LocationFinderConnected from './LocationFinderConnected';
 export LocationFinderMapView from './LocationFinderMapView';
 export default LocationFinder;

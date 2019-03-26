@@ -15,7 +15,7 @@ import {
   AskNotificationsConnected,
   Features,
   AboutYou,
-  LocationFinderSelected,
+  LocationFinderConnected,
 } from './slides';
 
 // Provides themed colors to Swiper dots
@@ -38,7 +38,9 @@ class Onboarding extends Component {
     super();
 
     this.swiper = null;
-    this.state = { pagination: true };
+    this.state = {
+      pagination: true,
+    };
   }
 
   handleOnIndexChanged = (index) => {
@@ -89,11 +91,11 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
-          <LocationFinderSelected onPressSecondary={this.handleOnPressPrimary}>
+          <LocationFinderConnected onPressSecondary={this.handleOnPressPrimary}>
             <GradientOverlayImage
               source={'https://picsum.photos/640/640/?random'}
             />
-          </LocationFinderSelected>
+          </LocationFinderConnected>
           <AskNotificationsConnected
             onPressSecondary={this.handleOnPressPrimary}
           >

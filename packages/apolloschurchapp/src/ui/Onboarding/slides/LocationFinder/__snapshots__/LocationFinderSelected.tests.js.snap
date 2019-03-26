@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding LocationFinderSelected component should render with a user having selected a campus 1`] = `
+exports[`The Onboarding LocationFinderConnected component should render with a user having selected a campus 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -144,7 +144,7 @@ exports[`The Onboarding LocationFinderSelected component should render with a us
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding LocationFinderSelected component should render with a user not having a campus selected 1`] = `
+exports[`The Onboarding LocationFinderConnected component should render with a user not having a campus selected 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
@@ -288,7 +288,7 @@ exports[`The Onboarding LocationFinderSelected component should render with a us
 </RCTSafeAreaView>
 `;
 
-exports[`The Onboarding LocationFinderSelected component should render with no data in the cache 1`] = `
+exports[`The Onboarding LocationFinderConnected component should render with no data in the cache 1`] = `
 <RCTSafeAreaView
   onLayout={[Function]}
   style={
