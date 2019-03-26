@@ -1,3 +1,8 @@
+---
+name: "\U0001F680 New Feature or Component Spec"
+about: Document a new feature request or component to add
+---
+
 ### User Story
 
 As a `<type of user>` _(who)_ I want to `<perform an action>` _(what)_ so that I can `<achieve a goal>` _(why)_.
