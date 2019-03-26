@@ -7,6 +7,7 @@ import MapView from 'apolloschurchapp/src/user-settings/Locations';
 
 import campusChange from 'apolloschurchapp/src/user-settings/Locations/campusChange';
 import getCampusLocations from 'apolloschurchapp/src/user-settings/Locations/getCampusLocations';
+import getCurrentCampus from './getCurrentCampus';
 
 const getCurrentLocation = () =>
   new Promise((resolve, reject) => {
@@ -79,7 +80,40 @@ class LocationFinderMapView extends PureComponent {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data: { campuses = [] } = {} }) => (
-          <Mutation mutation={campusChange}>
+          <Mutation
+            mutation={campusChange}
+            update={async (cache, { data: { updateUserCampus } }) => {
+              const { currentUser } = await cache.readQuery({
+                query: getCurrentCampus,
+              });
+              await cache.writeQuery({
+                query: getCurrentCampus,
+                data: {
+                  currentUser: {
+                    ...currentUser,
+                    profile: {
+                      ...currentUser.profile,
+                      campus: {
+                        ...currentUser.profile.campus,
+                        id: updateUserCampus.campus.id,
+                        name: updateUserCampus.campus.name,
+                        latitude: updateUserCampus.campus.latitude,
+                        longitude: updateUserCampus.campus.longitude,
+                        distanceFromLocation:
+                          updateUserCampus.campus.distanceFromLocation,
+                        street1: updateUserCampus.campus.street1,
+                        street2: updateUserCampus.campus.street2,
+                        city: updateUserCampus.campus.city,
+                        state: updateUserCampus.campus.state,
+                        postalCode: updateUserCampus.campus.postalCode,
+                        image: updateUserCampus.campus.image,
+                      },
+                    },
+                  },
+                },
+              });
+            }}
+          >
             {(handlePress) => (
               <MapView
                 navigation={navigation}
@@ -94,7 +128,7 @@ class LocationFinderMapView extends PureComponent {
                       campusId: id,
                     },
                   });
-                  await navigation.goBack();
+                  await navigation.navigate('Onboarding');
                 }}
               />
             )}

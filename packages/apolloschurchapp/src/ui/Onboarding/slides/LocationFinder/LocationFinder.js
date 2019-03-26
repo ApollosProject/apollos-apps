@@ -34,6 +34,7 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 // memo = sfc PureComponent 💥
+// eslint-disable-next-line react/display-name
 const LocationFinder = memo(
   ({
     children,
@@ -43,7 +44,6 @@ const LocationFinder = memo(
     buttonDisabled,
     onPressButton,
     campus,
-    refetch,
     ...props
   }) => (
     <Slide {...props}>
@@ -90,6 +90,10 @@ LocationFinder.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  currentCampus: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 LocationFinder.defaultProps = {
@@ -98,7 +102,6 @@ LocationFinder.defaultProps = {
     "We'll use your location to connect you with your nearby campus and community",
   buttonText: 'Yes, find my local campus',
   buttonDisabled: false,
-  secondaryNavText: 'Later',
 };
 
 export default LocationFinder;

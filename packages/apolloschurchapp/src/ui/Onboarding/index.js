@@ -14,6 +14,7 @@ import {
   AskName,
   AskNotificationsConnected,
   Features,
+  AboutYou,
   LocationFinderSelected,
 } from './slides';
 
@@ -28,6 +29,11 @@ const Boom = styled(({ bgcolor }) => ({
 }))(FlexedView);
 
 class Onboarding extends Component {
+  static navigationOptions = () => ({
+    title: 'Onboarding',
+    header: null,
+  });
+
   constructor() {
     super();
 
@@ -68,7 +74,7 @@ class Onboarding extends Component {
           showsPagination={this.state.pagination}
           onIndexChanged={this.handleOnIndexChanged}
           loop={false}
-          /* Disables swipe gestures. We currently we don't display a back button so this is our
+          /* Disables swipe gestures. We currently we dont display a back button so this is our
            * only back navigation option. */
           // scrollEnabled={false}
           showsButtons={false}
@@ -83,6 +89,11 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
+          <LocationFinderSelected onPressSecondary={this.handleOnPressPrimary}>
+            <GradientOverlayImage
+              source={'https://picsum.photos/640/640/?random'}
+            />
+          </LocationFinderSelected>
           <AskNotificationsConnected
             onPressSecondary={this.handleOnPressPrimary}
           >
@@ -90,11 +101,6 @@ class Onboarding extends Component {
               source={'https://picsum.photos/640/640/?random'}
             />
           </AskNotificationsConnected>
-          <LocationFinderSelected onPressSecondary={this.handleOnPressPrimary}>
-            <GradientOverlayImage
-              source={'https://picsum.photos/640/640/?random'}
-            />
-          </LocationFinderSelected>
           <Boom bgcolor={'lightgreen'}>
             <Text>Hello World 2</Text>
             <Text onPress={() => this.swiper.scrollBy(1)}>Next!</Text>

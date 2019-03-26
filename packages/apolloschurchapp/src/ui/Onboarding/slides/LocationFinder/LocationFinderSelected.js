@@ -8,6 +8,7 @@ const requestLocation = async () => {
   await NavigationActions.navigate('LocationFinderMapView');
 };
 
+// eslint-disable-next-line react/display-name
 const LocationFinderSelected = memo((props) => (
   <Query query={getCurrentCampus} fetchPolicy="cache-and-network">
     {({
@@ -22,9 +23,7 @@ const LocationFinderSelected = memo((props) => (
     }) => (
       <LocationFinder
         onPressButton={requestLocation}
-        buttonText={
-          campus ? 'We found your campus!' : 'Yes, find my local campus'
-        }
+        buttonText={'Yes, find my local campus'}
         buttonDisabled={!!campus}
         campus={campus}
         refetch={refetch}
