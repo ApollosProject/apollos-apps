@@ -11,7 +11,6 @@ As a `<type of user>` _(who)_ I want to `<perform an action>` _(what)_ so that I
 <!-- Provide a clear and concise description of what the feature is. -->
 
 ### Why
-
 <!--- Why is this change important? How would it be used? -->
 <!--- How can it benefit other users? -->
 
@@ -21,11 +20,10 @@ As a `<type of user>` _(who)_ I want to `<perform an action>` _(what)_ so that I
 * [ ] It should [SPEC_DETAIL]
 
 ### Possible Implementation & Open Questions
-
 <!--- Not obligatory, but suggest an idea for implementing addition or change -->
 <!--- What still needs to be discussed -->
-<!--- Where should this component or feature "live"? It's own package inside of Apollos? A component in UI Kit? Somewhere else? -->
-<!--- What existing components could we leverage? -->
+<!--- Where should this component or feature "live"? Its own package inside of Apollos? A component in UI Kit? Somewhere else? -->
+<!--- What existing components could we leverage or are similar? -->
 <!--- Are there existing third party deps that could be used? -->
 
 ### Other Resources
