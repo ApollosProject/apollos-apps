@@ -2,6 +2,7 @@
 
 exports[`The Onboarding LocationFinder component should pass additional props to Slide component 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -157,6 +158,7 @@ exports[`The Onboarding LocationFinder component should pass additional props to
 
 exports[`The Onboarding LocationFinder component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -285,6 +287,7 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
 
 exports[`The Onboarding LocationFinder component should render a button with custom text 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -429,6 +432,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
 
 exports[`The Onboarding LocationFinder component should render a custom description 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -557,6 +561,7 @@ exports[`The Onboarding LocationFinder component should render a custom descript
 
 exports[`The Onboarding LocationFinder component should render a custom title 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -685,6 +690,7 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
 
 exports[`The Onboarding LocationFinder component should render children (image) 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -857,6 +863,7 @@ exports[`The Onboarding LocationFinder component should render children (image) 
 
 exports[`The Onboarding LocationFinder component should render the button disabled 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -943,114 +950,204 @@ exports[`The Onboarding LocationFinder component should render the button disabl
             We'll use your location to connect you with your nearby campus and community
           </Text>
           <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "flex": 1,
+                "opacity": 1,
               }
             }
           >
             <View
+              bordered={false}
+              disabled={true}
+              pill={false}
               style={
                 Object {
-                  "flex": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 16,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 23.04,
+                  }
+                }
+              >
+                Yes, find my local campus
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "height": 96,
+                "width": 726,
+              }
+            }
+          >
+            <View
+              inHorizontalList={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "margin": 8,
+                  "marginHorizontal": 0,
+                  "marginRight": 8,
+                  "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
+                    "aspectRatio": undefined,
+                    "borderRadius": 16,
+                    "overflow": "hidden",
                   }
                 }
               >
                 <View
-                  onLayout={[Function]}
-                  pointerEvents="box-none"
                   style={
                     Object {
-                      "paddingBottom": 0,
-                      "paddingLeft": 0,
-                      "paddingRight": 0,
-                      "paddingTop": 0,
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "nowrap",
+                      "justifyContent": "space-between",
                     }
                   }
                 >
-                  <RCTScrollView
-                    contentContainerStyle={
-                      Object {
-                        "paddingHorizontal": 16,
-                      }
-                    }
-                    decelerationRate="fast"
-                    horizontal={true}
-                    onScroll={[Function]}
-                    showsHorizontalScrollIndicator={false}
-                    snapToAlignment="left"
-                    snapToInterval={726}
-                  >
-                    <View />
-                  </RCTScrollView>
                   <View
                     style={
                       Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
+                        "alignSelf": "stretch",
+                        "aspectRatio": 1,
+                        "height": "100%",
                       }
                     }
                   >
                     <View
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "opacity": 1,
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
                         }
                       }
                     >
-                      <View
-                        bordered={false}
-                        disabled={false}
-                        pill={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
+                            },
+                          ]
+                        }
                         style={
                           Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#17B582",
-                            "borderColor": "#17B582",
-                            "borderRadius": 16,
-                            "borderWidth": 2,
-                            "elevation": 2,
-                            "flexDirection": "row",
-                            "height": 48,
-                            "justifyContent": "center",
-                            "opacity": 1,
-                            "overflow": "hidden",
-                            "paddingHorizontal": 16,
+                            "alignSelf": "stretch",
+                            "aspectRatio": 1,
+                            "backgroundColor": "#A5A5A5",
+                            "height": "100%",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 13.6,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "stretch",
+                          "flexDirection": "row",
+                          "flexWrap": "nowrap",
+                          "height": 20.16,
+                          "justifyContent": "space-between",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 20.16,
                           }
                         }
                       >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#FFFFFF",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 23.04,
-                            }
+                        Chicago Campus
+                      </Text>
+                      <Text
+                        style={
+                          Object {
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
                           }
-                        >
-                          Select Campus
-                        </Text>
-                      </View>
+                        }
+                      >
+                        0
+                        mi
+                      </Text>
                     </View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 17.28,
+                        }
+                      }
+                    >
+                      67 Algonquin Rd
+South Barrington, IL 60010-6143
+                    </Text>
                   </View>
                 </View>
               </View>
@@ -1065,6 +1162,7 @@ exports[`The Onboarding LocationFinder component should render the button disabl
 
 exports[`The Onboarding LocationFinder component should render with a button 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

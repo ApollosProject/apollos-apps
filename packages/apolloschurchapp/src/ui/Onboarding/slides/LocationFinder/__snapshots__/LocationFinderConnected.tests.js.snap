@@ -2,6 +2,7 @@
 
 exports[`The Onboarding LocationFinderConnected component should render with a user having selected a campus 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -146,6 +147,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
 
 exports[`The Onboarding LocationFinderConnected component should render with a user not having a campus selected 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -290,6 +292,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
 
 exports[`The Onboarding LocationFinderConnected component should render with no data in the cache 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
