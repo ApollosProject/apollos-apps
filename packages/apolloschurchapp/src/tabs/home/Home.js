@@ -29,7 +29,6 @@ const LogoTitle = styled(({ theme }) => ({
 
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
-  marginBottom: theme.sizing.baseUnit / 2,
 }))(H6);
 
 class Home extends PureComponent {
