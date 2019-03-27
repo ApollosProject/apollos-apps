@@ -21,10 +21,6 @@ const Content = styled(() => ({
   borderTopWidth: 0,
 }))(TableView);
 
-// const Title = styled(({ theme }) => ({
-//   marginTop: theme.sizing.baseUnit / 2,
-// }))(View);
-
 class ContentTableCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
@@ -34,11 +30,11 @@ class ContentTableCard extends PureComponent {
   };
 
   render() {
-    const { onPress, isLoading, content, header } = this.props;
+    const { onPress, isLoading, content, header: headerContent } = this.props;
 
     return (
       <Card>
-        <Header>{header}</Header>
+        <Header>{headerContent}</Header>
         <Content>
           {content.map((item) => (
             <ContentTableCardItem
