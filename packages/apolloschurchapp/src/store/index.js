@@ -10,7 +10,7 @@ import {
   updatePushId,
   getNotificationsEnabled,
 } from '../notifications';
-import getCurrentCampus from '../ui/Onboarding/slides/LocationFinder';
+import { getCurrentCampus } from '../ui/Onboarding/slides/LocationFinder/campusUtils';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
 

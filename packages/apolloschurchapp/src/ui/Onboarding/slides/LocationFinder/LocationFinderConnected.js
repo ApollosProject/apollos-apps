@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Query, ApolloConsumer } from 'react-apollo';
 import NavigationActions from 'apolloschurchapp/src/NavigationService';
 import getUserCampus from './getUserCampus';
-import { getCurrentCampusSelected, requestCurrentCampus } from './campusUtils';
+import { getCurrentCampus, requestCurrentCampus } from './campusUtils';
 import LocationFinder from '.';
 
 // const requestLocation = async () => {
@@ -20,11 +20,10 @@ const LocationFinderConnected = memo((props) => (
           },
         } = {},
       } = {},
-      refetch,
     }) => (
       <ApolloConsumer>
         {(client) => (
-          <Query query={getCurrentCampusSelected}>
+          <Query query={getCurrentCampus}>
             {({ data: { isCurrentCampus = false } = {} }) => (
               <LocationFinder
                 onPressButton={async () => {
@@ -37,7 +36,6 @@ const LocationFinderConnected = memo((props) => (
                     : 'Yes, find my local campus'
                 }
                 campus={campus}
-                refetch={refetch}
                 {...props}
               />
             )}

@@ -6,7 +6,7 @@ const setCurrentCampus = gql`
   }
 `;
 
-const getCurrentCampusSelected = gql`
+const getCurrentCampus = gql`
   query getCurrentCampus {
     isCurrentCampus @client(always: true)
   }
@@ -21,4 +21,4 @@ const requestCurrentCampus = async ({ client, isCurrentCampus }) => {
   return isCurrentCampus;
 };
 
-export { requestCurrentCampus, getCurrentCampusSelected };
+export { requestCurrentCampus, getCurrentCampus };
