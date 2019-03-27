@@ -159,7 +159,7 @@ export default class ContentItem extends RockApolloDataSource {
 
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
-    // should output something like 2019-03-27T12:27:20-04:00 which means 12:27 in New York
+    // should output something like 2019-03-27T12:27:20-04:00 which means 12:27pm in New York
     const date = moment()
       .tz(ROCK.TIMEZONE)
       .format();
