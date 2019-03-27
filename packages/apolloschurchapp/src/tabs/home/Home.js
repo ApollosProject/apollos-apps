@@ -77,7 +77,7 @@ class Home extends PureComponent {
                         <ContentTableCard
                           isLoading={actionLoading}
                           onPress={this.handleOnPress}
-                          DynamicHeader={
+                          header={
                             <>
                               <StyledH6 isLoading={actionLoading}>
                                 FOR YOU
@@ -87,7 +87,7 @@ class Home extends PureComponent {
                                 numberOfLines={3}
                                 ellipsizeMode="tail"
                               >
-                                Some random text that encourages you
+                                Explore what God calls you to today
                               </H3>
                             </>
                           }

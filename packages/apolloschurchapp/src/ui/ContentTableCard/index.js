@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+// import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
@@ -21,26 +21,24 @@ const Content = styled(() => ({
   borderTopWidth: 0,
 }))(TableView);
 
-const Title = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 2,
-}))(View);
+// const Title = styled(({ theme }) => ({
+//   marginTop: theme.sizing.baseUnit / 2,
+// }))(View);
 
 class ContentTableCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool, // eslint-disable-line
     content: PropTypes.array, // eslint-disable-line
-    DynamicHeader: PropTypes.element,
+    header: PropTypes.element,
   };
 
   render() {
-    const { onPress, isLoading, content, DynamicHeader } = this.props;
+    const { onPress, isLoading, content, header } = this.props;
 
     return (
       <Card>
-        <Header>
-          <Title>{DynamicHeader}</Title>
-        </Header>
+        <Header>{header}</Header>
         <Content>
           {content.map((item) => (
             <ContentTableCardItem
