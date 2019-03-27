@@ -11,18 +11,18 @@ import LocationFinder from '.';
 
 // eslint-disable-next-line react/display-name
 const LocationFinderConnected = memo((props) => (
-  <Query query={getUserCampus} fetchPolicy="cache-and-network">
-    {({
-      data: {
-        currentUser: {
-          profile: { campus } = {
-            campus: {},
-          },
-        } = {},
-      } = {},
-    }) => (
-      <ApolloConsumer>
-        {(client) => (
+  <ApolloConsumer>
+    {(client) => (
+      <Query query={getUserCampus} fetchPolicy="cache-and-network">
+        {({
+          data: {
+            currentUser: {
+              profile: { campus } = {
+                campus: {},
+              },
+            } = {},
+          } = {},
+        }) => (
           <Query query={getCurrentCampus}>
             {({ data: { isCurrentCampus = false } = {} }) => (
               <LocationFinder
@@ -30,20 +30,21 @@ const LocationFinderConnected = memo((props) => (
                   await requestCurrentCampus({ client });
                   await NavigationActions.navigate('LocationFinderMapView');
                 }}
+                buttonDisabled={isCurrentCampus}
                 buttonText={
                   isCurrentCampus
-                    ? 'Confirm your Campus '
+                    ? 'We found your campus! '
                     : 'Yes, find my local campus'
                 }
-                campus={campus}
+                campus={isCurrentCampus ? campus : null}
                 {...props}
               />
             )}
           </Query>
         )}
-      </ApolloConsumer>
+      </Query>
     )}
-  </Query>
+  </ApolloConsumer>
 ));
 
 export default LocationFinderConnected;

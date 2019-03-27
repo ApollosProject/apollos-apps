@@ -60,7 +60,7 @@ const LocationFinder = memo(
             disabled={buttonDisabled}
             pill={false}
           />
-          {isCurrentCampus ? (
+          {campus ? (
             <CampusCard
               key={campus.id}
               distance={campus.distanceFromLocation}

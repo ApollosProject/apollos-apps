@@ -12,7 +12,8 @@ const getCurrentCampus = gql`
   }
 `;
 
-const requestCurrentCampus = async ({ client, isCurrentCampus }) => {
+const requestCurrentCampus = async ({ client }) => {
+  const isCurrentCampus = true;
   await client.mutate({
     mutation: setCurrentCampus,
     variables: { selected: isCurrentCampus },
