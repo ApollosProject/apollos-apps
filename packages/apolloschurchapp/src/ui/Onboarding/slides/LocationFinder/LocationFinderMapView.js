@@ -106,7 +106,10 @@ class LocationFinderMapView extends PureComponent {
                         city: updateUserCampus.campus.city,
                         state: updateUserCampus.campus.state,
                         postalCode: updateUserCampus.campus.postalCode,
-                        image: updateUserCampus.campus.image,
+                        image: {
+                          ...currentUser.profile.campus.image,
+                          uri: updateUserCampus.campus.image.uri,
+                        },
                       },
                     },
                   },

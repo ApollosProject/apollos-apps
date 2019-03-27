@@ -6,7 +6,19 @@ export default gql`
       id
       campus {
         __typename
+        id
         name
+        latitude
+        longitude
+        distanceFromLocation
+        street1
+        street2
+        city
+        state
+        postalCode
+        image {
+          uri
+        }
       }
     }
   }
