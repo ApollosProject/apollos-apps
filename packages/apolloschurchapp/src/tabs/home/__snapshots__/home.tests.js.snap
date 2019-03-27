@@ -1065,23 +1065,15 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
-                          "marginTop": 8,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
                         }
                       }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 24,
-                            "marginVertical": 1.8000000000000007,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                   <View
                     style={
