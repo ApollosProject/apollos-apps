@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`requestCurrentCampus must update the store the currentCampus is true: After calling mutation 1`] = `
+Object {
+  "isCurrentCampus": true,
+}
+`;
+
+exports[`requestCurrentCampus must update the store the currentCampus is true: Before calling mutation 1`] = `
+Object {
+  "isCurrentCampus": false,
+}
+`;
