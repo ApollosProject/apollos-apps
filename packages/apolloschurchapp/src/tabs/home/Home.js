@@ -10,26 +10,21 @@ import {
   FeedView,
   BackgroundView,
   H3,
-<<<<<<< HEAD
-  TouchableScale,
-=======
   H6,
->>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
+  H4,
+  TouchableScale,
+  Card,
+  FlexedView,
+  ConnectedImage,
 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
 
-<<<<<<< HEAD
-import ActionTable from '../../ui/ActionTable';
-import getUserFeed from './getUserFeed';
-import getPersonaFeed from './getPersonaFeed';
-import getCampaignContentItem from './getCampaignContentItem';
-=======
 import ContentTableCard from '../../ui/ContentTableCard';
 import getUserFeed from './getUserFeed';
 import getPersonaFeed from './getPersonaFeed';
->>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
+import getCampaignContentItem from './getCampaignContentItem';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -41,6 +36,13 @@ const LogoTitle = styled(({ theme }) => ({
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
+
+const TextContainer = styled(({ theme }) => ({
+  marginTop: theme.sizing.baseUnit / 2.5,
+  borderBottomWidth: 0.5,
+  height: theme.sizing.baseUnit * 4.25,
+  borderColor: theme.colors.shadows.default,
+}))(FlexedView);
 
 class Home extends PureComponent {
   static navigationOptions = () => ({
@@ -83,28 +85,41 @@ class Home extends PureComponent {
                       query={getCampaignContentItem}
                       fetchPolicy="cache-and-network"
                     >
-                      {({ data: theData, loading: isLoading }) => {
+                      {({ data: featuredData, loading: isFeaturedLoading }) => {
                         const featuredContent = get(
-                          theData,
+                          featuredData,
                           'campaigns.edges',
                           []
                         ).map((edge) => edge.node);
-                        const yes = get(
+
+                        const featuredItem = get(
                           featuredContent[0],
-                          'childContentItemsConnection.edges',
-                          []
-                        ).map((edge) => edge.node);
+                          'childContentItemsConnection.edges[0].node',
+                          {}
+                        );
                         return (
-                          <TouchableScale onPress={this.handleOnPress}>
-                            <ContentCardConnected
-                              contentId={yes[0] && yes[0].id ? yes[0].id : ''}
-                              coverImage={
-                                yes[0] && yes[0].coverImage.source
-                                  ? yes[0].coverImage.source
-                                  : {}
-                              }
-                              isLoading={isLoading}
-                            />
+                          <TouchableScale
+                            onPress={() => this.handleOnPress(featuredItem)}
+                          >
+                            <Card isLoading={isFeaturedLoading}>
+                              <ConnectedImage
+                                source={get(
+                                  featuredItem,
+                                  'coverImage.sources[0]',
+                                  {}
+                                )}
+                                isLoading
+                              >
+                                <TextContainer>
+                                  <StyledH6>
+                                    {get(featuredItem, 'title', '')}
+                                  </StyledH6>
+                                  <H4 numberOfLines={2} ellipsizeMode="tail">
+                                    {get(featuredItem, 'summary', '')}
+                                  </H4>
+                                </TextContainer>
+                              </ConnectedImage>
+                            </Card>
                           </TouchableScale>
                         );
                       }}
@@ -113,17 +128,20 @@ class Home extends PureComponent {
                       query={getPersonaFeed}
                       fetchPolicy="cache-and-network"
                     >
-                      {({ data: personaData, loading: actionLoading }) => (
+                      {({
+                        data: personaData,
+                        loading: isContentTableLoading,
+                      }) => (
                         <ContentTableCard
-                          isLoading={actionLoading}
+                          isLoading={isContentTableLoading}
                           onPress={this.handleOnPress}
                           header={
                             <>
-                              <StyledH6 isLoading={actionLoading}>
+                              <StyledH6 isLoading={isContentTableLoading}>
                                 FOR YOU
                               </StyledH6>
                               <H3
-                                isLoading={actionLoading}
+                                isLoading={isContentTableLoading}
                                 numberOfLines={3}
                                 ellipsizeMode="tail"
                               >
