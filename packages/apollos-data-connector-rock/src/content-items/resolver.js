@@ -56,7 +56,9 @@ const resolver = {
         args,
       }),
     personaFeed: async (root, args, { dataSources }) => {
-      const personaFeed = await dataSources.ContentItem.byPersonaFeed();
+      const personaFeed = await dataSources.ContentItem.byPersonaFeed(
+        args.first
+      );
       return dataSources.ContentItem.paginate({
         cursor: personaFeed,
         args,

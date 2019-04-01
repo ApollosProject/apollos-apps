@@ -240,7 +240,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   // Generates feed based on persons dataview membership
-  byPersonaFeed = async () => {
+  byPersonaFeed = async (first) => {
     const {
       dataSources: { Person },
     } = this.context;
@@ -257,6 +257,7 @@ export default class ContentItem extends RockApolloDataSource {
         .join()}`
     )
       .andFilter(this.LIVE_CONTENT())
+      .top(first)
       .orderBy('StartDateTime', 'desc');
   };
 
