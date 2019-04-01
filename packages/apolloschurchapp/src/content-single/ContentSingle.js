@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 
 import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 
-import TrackEventWhenLoaded from 'apolloschurchapp/src/analytics/TrackEventWhenLoaded';
-import { events } from 'apolloschurchapp/src/analytics';
+import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 
 import ActionContainer from './ActionContainer';
 import getContentItem from './getContentItem';
@@ -80,7 +79,7 @@ class ContentSingle extends PureComponent {
       >
         <TrackEventWhenLoaded
           loaded={!!(!loading && content.title)}
-          eventName={events.ViewContent}
+          eventName={'View Contentx'}
           properties={{
             title: content.title,
             itemId: this.itemId,
