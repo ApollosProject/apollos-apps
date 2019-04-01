@@ -11,8 +11,6 @@ import {
   TextInput,
 } from '@apollosproject/ui-kit';
 
-import { setFieldValue, values, touched, errors } from 'formik';
-
 import Slide from '../../Slide';
 
 const BrandIcon = withTheme(({ theme }) => ({
@@ -51,9 +49,6 @@ const AskName = memo(
             returnKeyType="next"
             onSubmitEditing={() => LastNameInput.focus()}
             enablesReturnKeyAutomatically
-            value={values.firstName}
-            error={touched.firstName && errors.firstName}
-            onChangeText={(text) => setFieldValue('firstName', text)}
           />
           <TextInput
             label="Last Name"
@@ -63,9 +58,6 @@ const AskName = memo(
             inputRef={(r) => {
               LastNameInput = r;
             }}
-            value={values.lastName}
-            error={touched.lastName && errors.lastName}
-            onChangeText={(text) => setFieldValue('lastName', text)}
           />
         </PaddedView>
       </Slide>

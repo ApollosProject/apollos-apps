@@ -11,7 +11,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 import {
-  AskName,
+  AskNameConnected,
   Features,
   AboutYou,
   AskNotificationsConnected,
@@ -74,7 +74,7 @@ class Onboarding extends Component {
           showsButtons={false}
           swiperRef={this.setSwiperRef}
         >
-          <AskName onPressPrimary={this.handleOnPressPrimary} />
+          <AskNameConnected onPressPrimary={this.handleOnPressPrimary} />
           <Features
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
