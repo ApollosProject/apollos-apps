@@ -2,6 +2,7 @@
 
 exports[`the Card component it should render a placeholder 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -172,6 +173,7 @@ exports[`the Card component it should render a placeholder 1`] = `
 
 exports[`the Card component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

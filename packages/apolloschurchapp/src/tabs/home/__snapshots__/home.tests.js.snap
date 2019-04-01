@@ -2,6 +2,7 @@
 
 exports[`User Home Feed Query should return correct query results 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -39,10 +40,23 @@ exports[`User Home Feed Query should return correct query results 1`] = `
           4294506484,
         ]
       }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
       locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
       style={
         Object {
           "flex": 1,
+          "height": "100%",
         }
       }
     >
@@ -79,6 +93,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         "kind": "OperationDefinition",
                         "name": Object {
                           "kind": "Name",
+<<<<<<< HEAD
                           "value": "campaigns",
                         },
                         "operation": "query",
@@ -871,6 +886,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         "kind": "OperationDefinition",
                         "name": Object {
                           "kind": "Name",
+=======
+>>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
                           "value": "getPersonaFeed",
                         },
                         "operation": "query",
@@ -1794,6 +1811,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               />
               <View
+<<<<<<< HEAD
                 accessible={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -2022,6 +2040,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
                   </mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))))))))))))>
                 }
+=======
+>>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -2071,6 +2091,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
+<<<<<<< HEAD
                           "marginTop": 8,
                         }
                       }
@@ -2088,6 +2109,17 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         }
                       />
                     </View>
+=======
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
+                        }
+                      }
+                    />
+>>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
                   </View>
                   <View
                     style={

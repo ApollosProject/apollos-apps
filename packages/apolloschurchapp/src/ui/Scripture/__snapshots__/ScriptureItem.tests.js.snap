@@ -2,6 +2,7 @@
 
 exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -314,6 +315,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
 
 exports[`the ScriptureItem component renders John 3:16-17 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -491,6 +493,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
 
 exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -857,6 +860,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
 
 exports[`the ScriptureItem component renders Psalm 23 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -1354,6 +1358,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
 
 exports[`the ScriptureItem component renders Psalm 32 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -2138,6 +2143,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
 
 exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3102,6 +3108,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
 
 exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3358,6 +3365,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
 
 exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -3803,6 +3811,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
 
 exports[`the ScriptureItem component renders a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

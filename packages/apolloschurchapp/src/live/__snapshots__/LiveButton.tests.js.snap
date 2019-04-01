@@ -2,6 +2,7 @@
 
 exports[`renders without error 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
