@@ -1,7 +1,7 @@
 import { merge, get } from 'lodash';
 import gql from 'graphql-tag';
 
-import { track, events } from 'apolloschurchapp/src/analytics';
+import { track } from '@apollosproject/ui-analytics';
 import { Platform } from 'react-native';
 import { CACHE_LOADED } from '../client/cache'; // eslint-disable-line
 
@@ -152,13 +152,13 @@ export const resolvers = {
         },
       });
       track({
-        eventName: events.UserPlayedMedia,
+        client,
+        eventName: 'UserPlayedMedia',
         properties: {
           uri: mediaTrack.uri,
           title: mediaTrack.title,
           type: mediaTrack.isVideo ? 'Video' : 'Audio',
         },
-        client,
       });
       return null;
     },
