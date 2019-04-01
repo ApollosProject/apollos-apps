@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { AsyncStorage } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
-
+import { track } from '@apollosproject/ui-analytics';
 import getLoginState from './getLoginState';
 
 // const schema = gql`
@@ -43,11 +43,11 @@ export const resolvers = {
   Mutation: {
     logout: (_root, _args, { client }) => {
       client.resetStore();
-      // TODO: track({ eventName: events.UserLogout });
+      track({ eventName: 'UserLogout', client });
       return null;
     },
 
-    handleLogin: async (root, { authToken }, { cache }) => {
+    handleLogin: async (root, { authToken }, { cache, client }) => {
       try {
         await AsyncStorage.setItem('authToken', authToken);
 
@@ -74,7 +74,7 @@ export const resolvers = {
         //   updatePushId({ pushId });
         // }
 
-        // TODO: track({ eventName: events.UserLogin });
+        track({ eventName: 'UserLogin', client });
       } catch (e) {
         throw e.message;
       }
