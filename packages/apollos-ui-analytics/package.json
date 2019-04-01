@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/ui-auth",
+  "name": "@apollosproject/ui-analytics",
   "version": "0.8.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
@@ -26,9 +26,6 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
-    ],
-    "setupFiles": [
-      "./jest.setup.js"
     ]
   },
   "peerDependencies": {
@@ -43,11 +40,12 @@
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
     "react-apollo": "2.5.1",
+    "react-native-device-info": "^1.1.0",
     "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.1",
-    "@apollosproject/ui-kit": "^0.8.1",
+    "@apollosproject/babel-preset-apollos": "^0.8.0",
+    "@apollosproject/ui-kit": "^0.8.0",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",

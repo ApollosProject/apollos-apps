@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
-import { ApolloConsumer } from 'react-apollo';
 import PropTypes from 'prop-types';
-import { track } from './index';
+import { AnalyticsConsumer } from './Provider';
 
 class TrackEventWhenLoaded extends PureComponent {
   componentDidMount() {
@@ -17,12 +16,12 @@ class TrackEventWhenLoaded extends PureComponent {
   }
 
   get trackClient() {
-    return this.props.track || track;
+    return this.props.track;
   }
 
   track() {
-    const { eventName, properties, client } = this.props;
-    return this.trackClient({ eventName, properties, client });
+    const { eventName, properties } = this.props;
+    return this.trackClient({ eventName, properties });
   }
 
   render() {
@@ -36,14 +35,13 @@ TrackEventWhenLoaded.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   properties: PropTypes.any,
   // eslint-disable-next-line react/forbid-prop-types
-  client: PropTypes.any,
   track: PropTypes.func,
 };
 
 const TrackEventWhenLoadedConnected = (props) => (
-  <ApolloConsumer>
-    {(client) => <TrackEventWhenLoaded {...props} client={client} />}
-  </ApolloConsumer>
+  <AnalyticsConsumer>
+    {({ track }) => <TrackEventWhenLoaded {...props} track={track} />}
+  </AnalyticsConsumer>
 );
 
 export default TrackEventWhenLoadedConnected;

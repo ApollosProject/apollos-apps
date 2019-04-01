@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Analytics Store doesn't throw an error, if the user passed identify function is not a function: User provided identify 1`] = `
+Array [
+  Array [],
+]
+`;
+
+exports[`Analytics Store doesn't throw an error, if the user passed track function is not a function: User provided track 1`] = `
+Array [
+  Array [
+    Object {
+      "eventName": "TrackSomething",
+      "properties": Object {
+        "ContentId": "Content:123",
+      },
+    },
+  ],
+]
+`;
+
+exports[`Analytics Store identify's a user by calling user provided function and server function: Server identify 1`] = `
+Array [
+  Array [
+    "/graphql",
+    Object {
+      "body": "{\\"operationName\\":\\"identify\\",\\"variables\\":{\\"input\\":{\\"anonymousId\\":\\"id-123\\",\\"deviceInfo\\":{\\"platform\\":\\"iOS\\",\\"deviceId\\":\\"id-123\\",\\"deviceModel\\":\\"ios\\",\\"osVersion\\":\\"sys-version-123\\",\\"appVersion\\":\\"version-123\\"}}},\\"query\\":\\"mutation identify($input: AnalyticsIdentifyInput!) {\\\\n  identifySelf(input: $input) {\\\\n    success\\\\n    __typename\\\\n  }\\\\n}\\\\n\\"}",
+      "credentials": undefined,
+      "headers": Object {
+        "accept": "*/*",
+        "content-type": "application/json",
+      },
+      "method": "POST",
+    },
+  ],
+]
+`;
+
+exports[`Analytics Store identify's a user by calling user provided function and server function: User provided identify 1`] = `
+Array [
+  Array [],
+]
+`;
+
+exports[`Analytics Store tracks an event by calling user provided function and server function: Server track 1`] = `
+Array [
+  Array [
+    "/graphql",
+    Object {
+      "body": "{\\"operationName\\":\\"track\\",\\"variables\\":{\\"input\\":{\\"anonymousId\\":\\"id-123\\",\\"deviceInfo\\":{\\"platform\\":\\"iOS\\",\\"deviceId\\":\\"id-123\\",\\"deviceModel\\":\\"ios\\",\\"osVersion\\":\\"sys-version-123\\",\\"appVersion\\":\\"version-123\\"},\\"eventName\\":\\"TrackSomething\\",\\"properties\\":[{\\"field\\":\\"ContentId\\",\\"value\\":\\"Content:123\\"}]}},\\"query\\":\\"mutation track($input: AnalyticsTrackInput!) {\\\\n  trackEvent(input: $input) {\\\\n    success\\\\n    __typename\\\\n  }\\\\n}\\\\n\\"}",
+      "credentials": undefined,
+      "headers": Object {
+        "accept": "*/*",
+        "content-type": "application/json",
+      },
+      "method": "POST",
+    },
+  ],
+]
+`;
+
+exports[`Analytics Store tracks an event by calling user provided function and server function: User provided track 1`] = `
+Array [
+  Array [
+    Object {
+      "eventName": "TrackSomething",
+      "properties": Object {
+        "ContentId": "Content:123",
+      },
+    },
+  ],
+]
+`;

@@ -2,10 +2,10 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { Query, Mutation, ApolloConsumer } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 
 import Like from 'apolloschurchapp/src/ui/Like';
-import { track, events } from 'apolloschurchapp/src/analytics';
+import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
 import updateLikeEntity from './updateLikeEntity';
 import getLikedContentItem from './getLikedContentItem';
@@ -31,8 +31,8 @@ const UpdateLikeStatus = ({
   isLiked,
   children,
 }) => (
-  <ApolloConsumer>
-    {(client) => (
+  <AnalyticsConsumer>
+    {({ track }) => (
       <Mutation
         mutation={updateLikeEntity}
         optimisticResponse={{
@@ -71,13 +71,10 @@ const UpdateLikeStatus = ({
                   try {
                     await createNewInteraction({ variables });
                     track({
-                      eventName: isLiked
-                        ? events.UnlikeContent
-                        : events.LikeContent,
+                      eventName: isLiked ? 'UnlikeContent' : 'LikeContent',
                       properties: {
                         id: itemId,
                       },
-                      client,
                     });
                   } catch (e) {
                     throw e.message;
@@ -88,7 +85,7 @@ const UpdateLikeStatus = ({
         }
       </Mutation>
     )}
-  </ApolloConsumer>
+  </AnalyticsConsumer>
 );
 
 UpdateLikeStatus.propTypes = {
