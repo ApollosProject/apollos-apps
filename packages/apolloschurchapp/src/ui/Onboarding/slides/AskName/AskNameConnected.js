@@ -65,7 +65,7 @@ const AskNameConnected = memo((props) => (
                 setSubmitting(false);
               }}
             >
-              <AskName {...props} />
+              {(formikBag) => <AskName {...formikBag} {...props} />}
             </Formik>
           )}
         </Mutation>

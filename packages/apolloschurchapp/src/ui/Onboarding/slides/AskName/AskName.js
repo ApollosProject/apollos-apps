@@ -34,9 +34,24 @@ const StyledH5 = styled(({ theme }) => ({
 // memo = sfc PureComponent 💥
 // eslint-disable-next-line react/display-name
 const AskName = memo(
-  ({ slideTitle, description, firstName, lastName, ...props }) => {
+  ({
+    onPrimaryPress,
+    slideTitle,
+    description,
+    firstName,
+    lastName,
+    ...props
+  }) => {
     let LastNameInput = null;
-
+    const {
+      values,
+      touched,
+      errors,
+      handleSubmit,
+      setFieldValue,
+      isValid,
+      isSubmitting,
+    } = props;
     return (
       <Slide {...props}>
         <PaddedView vertical={false}>
@@ -47,6 +62,9 @@ const AskName = memo(
             label="First Name"
             type="text"
             returnKeyType="next"
+            value={values.firstName}
+            error={touched.firstName && errors.firstName}
+            onChangeText={(text) => setFieldValue('firstName', text)}
             onSubmitEditing={() => LastNameInput.focus()}
             enablesReturnKeyAutomatically
           />
@@ -54,6 +72,9 @@ const AskName = memo(
             label="Last Name"
             type="text"
             returnKeyType="next"
+            value={values.lastName}
+            error={touched.lastName && errors.lastName}
+            onChangeText={(text) => setFieldValue('lastName', text)}
             enablesReturnKeyAutomatically
             inputRef={(r) => {
               LastNameInput = r;
@@ -73,6 +94,14 @@ AskName.propTypes = {
   description: PropTypes.string,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
+  setFieldValue: PropTypes.func,
+  touched: PropTypes.shape({}),
+  errors: PropTypes.shape({}),
+  values: PropTypes.shape({}),
+  handleSubmit: PropTypes.func,
+  isSubmitting: PropTypes.bool,
+  isValid: PropTypes.bool,
+  onPrimaryPress: PropTypes.func,
 };
 
 AskName.defaultProps = {
