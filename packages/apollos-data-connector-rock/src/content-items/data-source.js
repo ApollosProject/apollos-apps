@@ -164,7 +164,7 @@ export default class ContentItem extends RockApolloDataSource {
     const date = moment()
       .tz(ROCK.TIMEZONE)
       .format()
-      .split('-')[0];
+      .split(/-\d+:\d+/)[0];
     return `((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)) `;
   };
 
