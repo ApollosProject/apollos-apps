@@ -26,7 +26,6 @@ const AskNameConnected = memo((props) => (
                     ...currentUser.profile,
                     firstName: updateProfileFields.firstName,
                     lastName: updateProfileFields.lastName,
-                    email: updateProfileFields.email,
                   },
                 },
               },

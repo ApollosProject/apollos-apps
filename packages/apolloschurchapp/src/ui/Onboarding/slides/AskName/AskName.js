@@ -43,15 +43,7 @@ const AskName = memo(
     ...props
   }) => {
     let LastNameInput = null;
-    const {
-      values,
-      touched,
-      errors,
-      handleSubmit,
-      setFieldValue,
-      isValid,
-      isSubmitting,
-    } = props;
+    const { values, touched, errors, handleSubmit, setFieldValue } = props;
     return (
       <Slide {...props}>
         <PaddedView vertical={false}>
@@ -75,6 +67,7 @@ const AskName = memo(
             value={values.lastName}
             error={touched.lastName && errors.lastName}
             onChangeText={(text) => setFieldValue('lastName', text)}
+            onSubmitEditing={handleSubmit}
             enablesReturnKeyAutomatically
             inputRef={(r) => {
               LastNameInput = r;
@@ -99,8 +92,6 @@ AskName.propTypes = {
   errors: PropTypes.shape({}),
   values: PropTypes.shape({}),
   handleSubmit: PropTypes.func,
-  isSubmitting: PropTypes.bool,
-  isValid: PropTypes.bool,
   onPrimaryPress: PropTypes.func,
 };
 
