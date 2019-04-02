@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Formik } from 'formik';
 
 import {
   styled,
@@ -45,40 +44,28 @@ const Slide = memo(
     primaryNavText,
     primaryNavIcon,
     secondaryNavText,
-    ...props
-  }) => {
-    const { isValid, handleSubmit, isSubmitting } = props;
-    const submitAndAdvance = async () => {
-      await handleSubmit();
-      await onPressPrimary();
-    };
-    return (
-      <>
-        <FlexedView>{children}</FlexedView>
-        {onPressPrimary || onPressSecondary ? (
-          <NavWrapper vertical={false}>
-            {onPressPrimary ? (
-              <Button
-                onPress={submitAndAdvance}
-                disabled={!isValid}
-                loading={isSubmitting}
-              >
-                <>
-                  <H5>{primaryNavText}</H5>
-                  <PrimaryNavIcon name={primaryNavIcon} />
-                </>
-              </Button>
-            ) : null}
-            {onPressSecondary ? (
-              <SkipButton onPress={onPressSecondary}>
-                {secondaryNavText}
-              </SkipButton>
-            ) : null}
-          </NavWrapper>
-        ) : null}
-      </>
-    );
-  }
+  }) => (
+    <>
+      <FlexedView>{children}</FlexedView>
+      {onPressPrimary || onPressSecondary ? (
+        <NavWrapper vertical={false}>
+          {onPressPrimary ? (
+            <Button onPress={onPressPrimary}>
+              <>
+                <H5>{primaryNavText}</H5>
+                <PrimaryNavIcon name={primaryNavIcon} />
+              </>
+            </Button>
+          ) : null}
+          {onPressSecondary ? (
+            <SkipButton onPress={onPressSecondary}>
+              {secondaryNavText}
+            </SkipButton>
+          ) : null}
+        </NavWrapper>
+      ) : null}
+    </>
+  )
 );
 
 Slide.propTypes = {
@@ -91,9 +78,6 @@ Slide.propTypes = {
   primaryNavText: PropTypes.string, // colored button text
   primaryNavIcon: PropTypes.string, // optional custom icon name
   secondaryNavText: PropTypes.string, // text link
-  handleSubmit: PropTypes.func,
-  isValid: PropTypes.bool,
-  isSubmitting: PropTypes.bool,
 };
 
 Slide.defaultProps = {
