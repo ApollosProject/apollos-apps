@@ -11,11 +11,11 @@ import {
   BackgroundView,
   H3,
   H6,
-  H4,
+  H2,
   TouchableScale,
   Card,
   FlexedView,
-  ConnectedImage,
+  GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
@@ -38,9 +38,9 @@ const StyledH6 = styled(({ theme }) => ({
 }))(H6);
 
 const TextContainer = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit / 2.5,
-  borderBottomWidth: 0.5,
-  height: theme.sizing.baseUnit * 4.25,
+  // marginTop: theme.sizing.baseUnit / 2.5,
+  // borderBottomWidth: 0.5,
+  // height: theme.sizing.baseUnit * 4.25,
   borderColor: theme.colors.shadows.default,
 }))(FlexedView);
 
@@ -97,28 +97,46 @@ class Home extends PureComponent {
                           'childContentItemsConnection.edges[0].node',
                           {}
                         );
+
+                        const imageStyle = {
+                          position: 'absolute',
+                          bottom: 0,
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                        };
+
                         return (
                           <TouchableScale
                             onPress={() => this.handleOnPress(featuredItem)}
                           >
-                            <Card isLoading={isFeaturedLoading}>
-                              <ConnectedImage
+                            <Card
+                              isLoading={isFeaturedLoading}
+                              forceRatio={0.75}
+                            >
+                              <GradientOverlayImage
                                 source={get(
                                   featuredItem,
                                   'coverImage.sources[0]',
                                   {}
                                 )}
                                 isLoading
-                              >
-                                <TextContainer>
-                                  <StyledH6>
-                                    {get(featuredItem, 'title', '')}
-                                  </StyledH6>
-                                  <H4 numberOfLines={2} ellipsizeMode="tail">
-                                    {get(featuredItem, 'summary', '')}
-                                  </H4>
-                                </TextContainer>
-                              </ConnectedImage>
+                                forceRatio={0.75}
+                                resizeMode="stretch"
+                                imageStyle={imageStyle}
+                                overlayColor={get(
+                                  featuredItem,
+                                  'theme.colors.primary',
+                                  '#fff'
+                                )}
+                                maintainAspectRatio
+                              />
+                              <TextContainer>
+                                <StyledH6>{featuredItem.title}</StyledH6>
+                                <H2 numberOfLines={2} ellipsizeMode="tail">
+                                  {featuredItem.summary}
+                                </H2>
+                              </TextContainer>
                             </Card>
                           </TouchableScale>
                         );

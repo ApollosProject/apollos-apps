@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Animated, Image, ImageBackground } from 'react-native';
+import { Animated, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { every } from 'lodash';
 
@@ -194,27 +194,14 @@ class ConnectedImage extends PureComponent {
     const {
       ImageComponent = Animated.Image,
       style,
+      forceRatio,
       isLoading,
-      children,
       maintainAspectRatio,
       ...otherProps
     } = this.props;
-    if (children) {
-      return (
-        <SkeletonImage onReady={!this.isLoading}>
-          <ImageBackground
-            {...otherProps}
-            source={source}
-            onLoad={this.handleOnLoad}
-            style={[this.aspectRatio, { opacity: this.imageOpacity }, style]}
-          >
-            {children}
-          </ImageBackground>
-        </SkeletonImage>
-      );
-    }
+
     return (
-      <SkeletonImage onReady={!this.isLoading}>
+      <SkeletonImage onReady={!this.isLoading} forceRatio={forceRatio}>
         <ImageComponent
           {...otherProps}
           source={source}
