@@ -1,6 +1,8 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, ActivityIndicator, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 // import { Sentry } from 'react-native-sentry';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
@@ -8,6 +10,7 @@ import Passes from '@apollosproject/ui-passes';
 
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Auth from '@apollosproject/ui-auth';
+// import AuthLoading from './auth-loading';
 import Providers from './Providers';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
@@ -22,10 +25,27 @@ import Onboarding from './onboarding';
 //   'https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658'
 // ).install();
 
+const getLoginState = gql`
+  query {
+    isLoggedIn @client
+  }
+`;
+
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
+
+const AuthNavigator = createStackNavigator(
+  {
+    Auth,
+  },
+  {
+    initialRouteName: 'Auth',
+    mode: 'modal',
+    headerMode: 'screen',
+  }
+);
 
 const AppNavigator = createStackNavigator(
   {
@@ -50,11 +70,35 @@ const App = () => (
   <Providers>
     <BackgroundView>
       <AppStatusBar barStyle="dark-content" />
-      <AppNavigator
-        ref={(navigatorRef) => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
+      <Query query={getLoginState}>
+        {({ data: { isLoggedIn } = {}, loading }) => {
+          console.log('loading = ', loading);
+          console.log('isLoggedIn = ', isLoggedIn);
+          if (!loading) {
+            if (isLoggedIn) {
+              return (
+                <AppNavigator
+                  ref={(navigatorRef) => {
+                    NavigationService.setTopLevelNavigator(navigatorRef);
+                  }}
+                />
+              );
+            }
+            return (
+              <AuthNavigator
+                ref={(navigatorRef) => {
+                  NavigationService.setTopLevelNavigator(navigatorRef);
+                }}
+              />
+            );
+          }
+          return (
+            <View>
+              <ActivityIndicator />
+            </View>
+          );
         }}
-      />
+      </Query>
       <MediaPlayer />
     </BackgroundView>
   </Providers>
