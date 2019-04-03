@@ -239,8 +239,9 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -391,6 +392,7 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
@@ -941,8 +943,9 @@ exports[`The Onboarding AskName component should render 1`] = `
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -1093,6 +1096,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
@@ -1449,8 +1453,9 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -1601,6 +1606,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
@@ -1957,8 +1963,9 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -2109,6 +2116,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
