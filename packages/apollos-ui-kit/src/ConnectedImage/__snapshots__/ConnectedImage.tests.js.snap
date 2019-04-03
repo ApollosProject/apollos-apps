@@ -2,6 +2,7 @@
 
 exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -58,6 +59,7 @@ exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
 
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

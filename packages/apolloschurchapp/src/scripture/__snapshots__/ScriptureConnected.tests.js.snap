@@ -2,6 +2,7 @@
 
 exports[`ScriptureConnected component renders without errors 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

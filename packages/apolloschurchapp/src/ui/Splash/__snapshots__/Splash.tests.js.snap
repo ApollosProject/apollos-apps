@@ -2,6 +2,7 @@
 
 exports[`The Onboarding Splash component should pass additional props to Slide 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -51,8 +52,9 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="48"
-          bbWidth="48"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
           isLight={true}
           meetOrSlice={0}
           minX={0}
@@ -61,11 +63,12 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
             Array [
               Object {
                 "backgroundColor": "transparent",
+                "borderWidth": 0,
               },
               Object {
                 "marginBottom": 16,
               },
-              false,
+              null,
               Object {
                 "flex": 0,
                 "height": 48,
@@ -75,20 +78,18 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
           }
           vbHeight={24}
           vbWidth={24}
+          width={48}
         >
-          <RNSVGPath
-            d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                0.18823529411764706,
-                0.18823529411764706,
-                0.18823529411764706,
-                1,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -105,6 +106,16 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
             propList={
               Array [
                 "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
               ]
             }
             rotation={0}
@@ -119,10 +130,55 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
             strokeLinejoin={0}
             strokeMiterlimit={4}
             strokeOpacity={1}
-            strokeWidth="1"
+            strokeWidth={1}
             x={0}
             y={0}
-          />
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4281348144,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
         </RNSVGSvgView>
         <Text
           isLight={true}
@@ -216,8 +272,9 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
           </Text>
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="20"
-            bbWidth="20"
+            bbHeight={20}
+            bbWidth={20}
+            height={20}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -225,12 +282,13 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 Object {
                   "marginLeft": 8,
                   "marginRight": -8,
                 },
-                false,
+                null,
                 Object {
                   "flex": 0,
                   "height": 20,
@@ -240,20 +298,18 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
             }
             vbHeight={24}
             vbWidth={24}
+            width={20}
           >
-            <RNSVGPath
-              d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  1,
-                  1,
-                  1,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -270,6 +326,16 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -284,10 +350,55 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+                fill={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -298,6 +409,7 @@ exports[`The Onboarding Splash component should pass additional props to Slide 1
 
 exports[`The Onboarding Splash component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -347,8 +459,9 @@ exports[`The Onboarding Splash component should render 1`] = `
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="48"
-          bbWidth="48"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
           isLight={true}
           meetOrSlice={0}
           minX={0}
@@ -357,11 +470,12 @@ exports[`The Onboarding Splash component should render 1`] = `
             Array [
               Object {
                 "backgroundColor": "transparent",
+                "borderWidth": 0,
               },
               Object {
                 "marginBottom": 16,
               },
-              false,
+              null,
               Object {
                 "flex": 0,
                 "height": 48,
@@ -371,20 +485,18 @@ exports[`The Onboarding Splash component should render 1`] = `
           }
           vbHeight={24}
           vbWidth={24}
+          width={48}
         >
-          <RNSVGPath
-            d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                0.18823529411764706,
-                0.18823529411764706,
-                0.18823529411764706,
-                1,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -401,6 +513,16 @@ exports[`The Onboarding Splash component should render 1`] = `
             propList={
               Array [
                 "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
               ]
             }
             rotation={0}
@@ -415,10 +537,55 @@ exports[`The Onboarding Splash component should render 1`] = `
             strokeLinejoin={0}
             strokeMiterlimit={4}
             strokeOpacity={1}
-            strokeWidth="1"
+            strokeWidth={1}
             x={0}
             y={0}
-          />
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4281348144,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
         </RNSVGSvgView>
         <Text
           isLight={true}
@@ -455,6 +622,7 @@ exports[`The Onboarding Splash component should render 1`] = `
 
 exports[`The Onboarding Splash component should render a custom description 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -504,8 +672,9 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="48"
-          bbWidth="48"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
           isLight={true}
           meetOrSlice={0}
           minX={0}
@@ -514,11 +683,12 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
             Array [
               Object {
                 "backgroundColor": "transparent",
+                "borderWidth": 0,
               },
               Object {
                 "marginBottom": 16,
               },
-              false,
+              null,
               Object {
                 "flex": 0,
                 "height": 48,
@@ -528,20 +698,18 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
           }
           vbHeight={24}
           vbWidth={24}
+          width={48}
         >
-          <RNSVGPath
-            d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                0.18823529411764706,
-                0.18823529411764706,
-                0.18823529411764706,
-                1,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -558,6 +726,16 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
             propList={
               Array [
                 "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
               ]
             }
             rotation={0}
@@ -572,10 +750,55 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
             strokeLinejoin={0}
             strokeMiterlimit={4}
             strokeOpacity={1}
-            strokeWidth="1"
+            strokeWidth={1}
             x={0}
             y={0}
-          />
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4281348144,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
         </RNSVGSvgView>
         <Text
           isLight={true}
@@ -612,6 +835,7 @@ exports[`The Onboarding Splash component should render a custom description 1`] 
 
 exports[`The Onboarding Splash component should render a custom title 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -661,8 +885,9 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="48"
-          bbWidth="48"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
           isLight={true}
           meetOrSlice={0}
           minX={0}
@@ -671,11 +896,12 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
             Array [
               Object {
                 "backgroundColor": "transparent",
+                "borderWidth": 0,
               },
               Object {
                 "marginBottom": 16,
               },
-              false,
+              null,
               Object {
                 "flex": 0,
                 "height": 48,
@@ -685,20 +911,18 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
           }
           vbHeight={24}
           vbWidth={24}
+          width={48}
         >
-          <RNSVGPath
-            d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                0.18823529411764706,
-                0.18823529411764706,
-                0.18823529411764706,
-                1,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -715,6 +939,16 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
             propList={
               Array [
                 "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
               ]
             }
             rotation={0}
@@ -729,10 +963,55 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
             strokeLinejoin={0}
             strokeMiterlimit={4}
             strokeOpacity={1}
-            strokeWidth="1"
+            strokeWidth={1}
             x={0}
             y={0}
-          />
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4281348144,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
         </RNSVGSvgView>
         <Text
           isLight={true}
@@ -769,6 +1048,7 @@ exports[`The Onboarding Splash component should render a custom title 1`] = `
 
 exports[`The Onboarding Splash component should render light text on a dark background 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -833,8 +1113,9 @@ exports[`The Onboarding Splash component should render light text on a dark back
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight="48"
-          bbWidth="48"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
           isLight={false}
           meetOrSlice={0}
           minX={0}
@@ -843,11 +1124,12 @@ exports[`The Onboarding Splash component should render light text on a dark back
             Array [
               Object {
                 "backgroundColor": "transparent",
+                "borderWidth": 0,
               },
               Object {
                 "marginBottom": 16,
               },
-              false,
+              null,
               Object {
                 "flex": 0,
                 "height": 48,
@@ -857,20 +1139,18 @@ exports[`The Onboarding Splash component should render light text on a dark back
           }
           vbHeight={24}
           vbWidth={24}
+          width={48}
         >
-          <RNSVGPath
-            d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                1,
-                1,
-                1,
-                1,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -887,6 +1167,16 @@ exports[`The Onboarding Splash component should render light text on a dark back
             propList={
               Array [
                 "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
               ]
             }
             rotation={0}
@@ -901,10 +1191,55 @@ exports[`The Onboarding Splash component should render light text on a dark back
             strokeLinejoin={0}
             strokeMiterlimit={4}
             strokeOpacity={1}
-            strokeWidth="1"
+            strokeWidth={1}
             x={0}
             y={0}
-          />
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4294967295,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
         </RNSVGSvgView>
         <Text
           isLight={false}

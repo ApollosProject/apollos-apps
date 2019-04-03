@@ -30,6 +30,7 @@ const StyledH5 = styled(({ theme }) => ({
 }))(H5);
 
 // memo = sfc PureComponent 💥
+// eslint-disable-next-line react/display-name
 const AskNotifications = memo(
   ({
     children,
@@ -81,7 +82,6 @@ AskNotifications.defaultProps = {
     "We'll let you know when important things are happening and keep you in the loop",
   buttonText: 'Yes, enable notifications',
   buttonDisabled: false,
-  secondaryNavText: 'Later',
 };
 
 export default AskNotifications;

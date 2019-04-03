@@ -2,6 +2,7 @@
 
 exports[`The Onboarding Slide component should render both slide navigation buttons 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -106,8 +107,9 @@ exports[`The Onboarding Slide component should render both slide navigation butt
           </Text>
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="20"
-            bbWidth="20"
+            bbHeight={20}
+            bbWidth={20}
+            height={20}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -115,12 +117,13 @@ exports[`The Onboarding Slide component should render both slide navigation butt
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 Object {
                   "marginLeft": 8,
                   "marginRight": -8,
                 },
-                false,
+                null,
                 Object {
                   "flex": 0,
                   "height": 20,
@@ -130,20 +133,18 @@ exports[`The Onboarding Slide component should render both slide navigation butt
             }
             vbHeight={24}
             vbWidth={24}
+            width={20}
           >
-            <RNSVGPath
-              d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  1,
-                  1,
-                  1,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -160,6 +161,16 @@ exports[`The Onboarding Slide component should render both slide navigation butt
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -174,10 +185,55 @@ exports[`The Onboarding Slide component should render both slide navigation butt
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+                fill={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -201,6 +257,7 @@ exports[`The Onboarding Slide component should render both slide navigation butt
 
 exports[`The Onboarding Slide component should render children 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -248,6 +305,7 @@ exports[`The Onboarding Slide component should render children 1`] = `
 
 exports[`The Onboarding Slide component should render onboarding next button navigation 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -352,8 +410,9 @@ exports[`The Onboarding Slide component should render onboarding next button nav
           </Text>
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="20"
-            bbWidth="20"
+            bbHeight={20}
+            bbWidth={20}
+            height={20}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -361,12 +420,13 @@ exports[`The Onboarding Slide component should render onboarding next button nav
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 Object {
                   "marginLeft": 8,
                   "marginRight": -8,
                 },
-                false,
+                null,
                 Object {
                   "flex": 0,
                   "height": 20,
@@ -376,20 +436,18 @@ exports[`The Onboarding Slide component should render onboarding next button nav
             }
             vbHeight={24}
             vbWidth={24}
+            width={20}
           >
-            <RNSVGPath
-              d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  1,
-                  1,
-                  1,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -406,6 +464,16 @@ exports[`The Onboarding Slide component should render onboarding next button nav
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -420,10 +488,55 @@ exports[`The Onboarding Slide component should render onboarding next button nav
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+                fill={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -434,6 +547,7 @@ exports[`The Onboarding Slide component should render onboarding next button nav
 
 exports[`The Onboarding Slide component should render onboarding skip button navigation 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -508,6 +622,7 @@ exports[`The Onboarding Slide component should render onboarding skip button nav
 
 exports[`The Onboarding Slide component should render onboarding skip button with custom text 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -582,6 +697,7 @@ exports[`The Onboarding Slide component should render onboarding skip button wit
 
 exports[`The Onboarding Slide component should render primary navigation button with a custom icon 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -686,8 +802,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
           </Text>
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="20"
-            bbWidth="20"
+            bbHeight={20}
+            bbWidth={20}
+            height={20}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -695,12 +812,13 @@ exports[`The Onboarding Slide component should render primary navigation button 
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 Object {
                   "marginLeft": 8,
                   "marginRight": -8,
                 },
-                false,
+                null,
                 Object {
                   "flex": 0,
                   "height": 20,
@@ -710,20 +828,18 @@ exports[`The Onboarding Slide component should render primary navigation button 
             }
             vbHeight={32}
             vbWidth={32}
+            width={20}
           >
-            <RNSVGPath
-              d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  1,
-                  1,
-                  1,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -740,6 +856,16 @@ exports[`The Onboarding Slide component should render primary navigation button 
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -754,10 +880,55 @@ exports[`The Onboarding Slide component should render primary navigation button 
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+                fill={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>
@@ -768,6 +939,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
 
 exports[`The Onboarding Slide component should render primary navigation button with custom text 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -872,8 +1044,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
           </Text>
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight="20"
-            bbWidth="20"
+            bbHeight={20}
+            bbWidth={20}
+            height={20}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -881,12 +1054,13 @@ exports[`The Onboarding Slide component should render primary navigation button 
               Array [
                 Object {
                   "backgroundColor": "transparent",
+                  "borderWidth": 0,
                 },
                 Object {
                   "marginLeft": 8,
                   "marginRight": -8,
                 },
-                false,
+                null,
                 Object {
                   "flex": 0,
                   "height": 20,
@@ -896,20 +1070,18 @@ exports[`The Onboarding Slide component should render primary navigation button 
             }
             vbHeight={24}
             vbWidth={24}
+            width={20}
           >
-            <RNSVGPath
-              d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  1,
-                  1,
-                  1,
-                  1,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -926,6 +1098,16 @@ exports[`The Onboarding Slide component should render primary navigation button 
               propList={
                 Array [
                   "fill",
+                  "fillOpacity",
+                  "fillRule",
+                  "stroke",
+                  "strokeWidth",
+                  "strokeOpacity",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
                 ]
               }
               rotation={0}
@@ -940,10 +1122,55 @@ exports[`The Onboarding Slide component should render primary navigation button 
               strokeLinejoin={0}
               strokeMiterlimit={4}
               strokeOpacity={1}
-              strokeWidth="1"
+              strokeWidth={1}
               x={0}
               y={0}
-            />
+            >
+              <RNSVGPath
+                d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
+                fill={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
           </RNSVGSvgView>
         </View>
       </View>

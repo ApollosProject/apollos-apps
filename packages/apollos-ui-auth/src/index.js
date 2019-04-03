@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 
 import {
   FlexedView,
@@ -13,8 +14,6 @@ import {
   ButtonLink,
   withTheme,
 } from '@apollosproject/ui-kit';
-
-// import { track } from 'apolloschurchapp/src/analytics';
 
 import LoginForm from './login';
 import SignUpForm from './signup';
@@ -87,7 +86,6 @@ class Auth extends PureComponent {
 
   handleFinish = () => {
     // trigger the auth modal to close
-    // TODO: track({ eventName: 'UserLogin' });
     if (this.props.onFinish) {
       this.props.onFinish();
     } else if (this.props.navigation && this.props.navigation.goBack) {

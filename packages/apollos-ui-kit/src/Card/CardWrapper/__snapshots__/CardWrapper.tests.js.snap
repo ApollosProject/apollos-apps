@@ -2,6 +2,7 @@
 
 exports[`the CardWrapper component should accept a backgroundColor 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -70,6 +71,7 @@ exports[`the CardWrapper component should accept a backgroundColor 1`] = `
 
 exports[`the CardWrapper component should accept additional props 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -134,6 +136,7 @@ exports[`the CardWrapper component should accept additional props 1`] = `
 
 exports[`the CardWrapper component should accept and render passed in styles 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -199,6 +202,7 @@ exports[`the CardWrapper component should accept and render passed in styles 1`]
 
 exports[`the CardWrapper component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -262,6 +266,7 @@ exports[`the CardWrapper component should render 1`] = `
 
 exports[`the CardWrapper component should render children 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
