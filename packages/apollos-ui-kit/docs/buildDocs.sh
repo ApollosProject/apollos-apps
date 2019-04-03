@@ -32,7 +32,7 @@ function buildDocs(api) {
   for (const filepath in api) {
     const name = getComponentName(filepath);
     const markdown = generateMarkdown(name, api[filepath]);
-    fs.writeFileSync(`${name}.md`, markdown);
+    fs.writeFileSync(`docs/generated/${name}.md`, markdown);
     process.stdout.write(`${filepath} -> ${name}.md\n`);
   }
 }
