@@ -39,7 +39,7 @@ after_success:
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
   - git clone git://${GH_DOCS_REPO}
   # copy over ui-kit docs
-  - cp -fr packages/apollos-ui-kit/docs/generated/* docs/ui-kit
+  - cp -fr packages/apollos-ui-kit/docs/generated/* docs/docs/ui-kit
   - cd docs
   - git remote
   - git config user.email ${GH_EMAIL}
