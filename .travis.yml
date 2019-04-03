@@ -33,16 +33,16 @@ jobs:
           script: echo "Deploying via Github hooks"
           skip_cleanup: true
           master: true
-# push new generated docs for ui-kit
+# push new generated docs
 after_success:
   - yarn generate-docs
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
-  - git clone git://${GH_REPO}
-  - mv -f ${FILES} docs/ui-kit
-  - cd docs/ui-kit
+  - git clone git://${GH_DOCS_REPO}
+  # copy over ui-kit docs
+  - cp -fr packages/apollos-ui-kit/docs/generated/* docs/ui-kit
+  - cd docs
   - git remote
-  - git config user.email ${EMAIL}
-  - git config user.name ${USER}
-  - git add ${FILES}
-  - git commit -m ${MESSAGE}
-  - git push "https://${TRAVIS_SECURE_TOKEN_NAME}@${GH_REPO}" master > /dev/null 2>&1
+  - git config user.email ${GH_EMAIL}
+  - git config user.name ${GH_USER}
+  - git commit -am ${MESSAGE}
+  - git push "https://${GH_TOKEN}@${GH_DOCS_REPO}" master > /dev/null 2>&1
