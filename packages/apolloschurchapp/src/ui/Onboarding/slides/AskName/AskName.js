@@ -35,17 +35,21 @@ const StyledH5 = styled(({ theme }) => ({
 // eslint-disable-next-line react/display-name
 const AskName = memo(
   ({
-    onPrimaryPress,
+    onPressPrimary,
     slideTitle,
     description,
     firstName,
     lastName,
+    values,
+    touched,
+    errors,
+    setFieldValue,
     ...props
   }) => {
     let LastNameInput = null;
-    const { values, touched, errors, handleSubmit, setFieldValue } = props;
+
     return (
-      <Slide {...props}>
+      <Slide onPressPrimary={onPressPrimary} {...props}>
         <PaddedView vertical={false}>
           <BrandIcon />
           <Title>{slideTitle}</Title>
@@ -67,7 +71,7 @@ const AskName = memo(
             value={values.lastName}
             error={touched.lastName && errors.lastName}
             onChangeText={(text) => setFieldValue('lastName', text)}
-            onSubmitEditing={handleSubmit}
+            onSubmitEditing={onPressPrimary}
             enablesReturnKeyAutomatically
             inputRef={(r) => {
               LastNameInput = r;
@@ -91,8 +95,7 @@ AskName.propTypes = {
   touched: PropTypes.shape({}),
   errors: PropTypes.shape({}),
   values: PropTypes.shape({}),
-  handleSubmit: PropTypes.func,
-  onPrimaryPress: PropTypes.func,
+  onPressPrimary: PropTypes.func,
 };
 
 AskName.defaultProps = {

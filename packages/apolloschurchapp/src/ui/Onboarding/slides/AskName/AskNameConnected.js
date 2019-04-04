@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import getUserProfile from '../../../../tabs/connect/getUserProfile';
 import AskName from './AskName';
@@ -9,7 +10,7 @@ import AskName from './AskName';
 import updateUserName from './updateUserName';
 
 // eslint-disable-next-line react/display-name
-const AskNameConnected = memo((props) => (
+const AskNameConnected = memo(({ onPressPrimary, ...props }) => (
   <Query query={getUserProfile}>
     {({ data: { currentUser = { profile: {} } } = {} }) => {
       const { firstName, lastName } = currentUser.profile;
@@ -64,7 +65,20 @@ const AskNameConnected = memo((props) => (
                 setSubmitting(false);
               }}
             >
-              {(formikBag) => <AskName {...formikBag} {...props} />}
+              {({ submitForm, ...formikBag }) => {
+                const handleOnPressPrimary = () => {
+                  submitForm();
+                  onPressPrimary();
+                };
+
+                return (
+                  <AskName
+                    onPressPrimary={handleOnPressPrimary}
+                    {...formikBag}
+                    {...props}
+                  />
+                );
+              }}
             </Formik>
           )}
         </Mutation>
@@ -72,5 +86,9 @@ const AskNameConnected = memo((props) => (
     }}
   </Query>
 ));
+
+AskNameConnected.propTypes = {
+  onPressPrimary: PropTypes.func,
+};
 
 export default AskNameConnected;
