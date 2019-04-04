@@ -4,18 +4,18 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import getUserProfile from '../../../../tabs/connect/getUserProfile';
-import AskName from './AskName';
+import AboutYou from './AboutYou';
 
-import updateUserName from './updateUserName';
+import updateUserDetails from './updateUserDetails';
 
 // eslint-disable-next-line react/display-name
 const AskNameConnected = memo((props) => (
   <Query query={getUserProfile}>
     {({ data: { currentUser = { profile: {} } } = {} }) => {
-      const { firstName, lastName } = currentUser.profile;
+      const { gender, birthDate } = currentUser.profile;
       return (
         <Mutation
-          mutation={updateUserName}
+          mutation={updateUserDetails}
           update={async (cache, { data: { updateProfileFields } }) => {
             await cache.writeQuery({
               query: getUserProfile,
@@ -24,24 +24,24 @@ const AskNameConnected = memo((props) => (
                   ...currentUser,
                   profile: {
                     ...currentUser.profile,
-                    firstName: updateProfileFields.firstName,
-                    lastName: updateProfileFields.lastName,
+                    gender: updateProfileFields.gender,
+                    birthDate: updateProfileFields.birthDate,
                   },
                 },
               },
             });
           }}
         >
-          {(updateName) => (
+          {(updateDetails) => (
             <Formik
-              initialValues={{ firstName, lastName }}
+              initialValues={{ gender, birthDate }}
               validationSchema={Yup.object().shape({
-                firstName: Yup.string().required('First Name is required!'),
-                lastName: Yup.string().required('Last Name is required!'),
+                gender: Yup.enum().required('Gender is required!'),
+                birthDate: Yup.string().required('Birth Date is required!'),
               })}
               onSubmit={async (variables, { setSubmitting, setFieldError }) => {
                 try {
-                  await updateName({ variables });
+                  await updateDetails({ variables });
                 } catch (e) {
                   const { graphQLErrors } = e;
                   if (
@@ -51,12 +51,12 @@ const AskNameConnected = memo((props) => (
                     )
                   ) {
                     setFieldError(
-                      'firstName',
+                      'gender',
                       'There was a problem sending your request'
                     );
                   } else {
                     setFieldError(
-                      'firstName',
+                      'gender',
                       'Unknown error. Please try again later.'
                     );
                   }
@@ -64,7 +64,7 @@ const AskNameConnected = memo((props) => (
                 setSubmitting(false);
               }}
             >
-              {(formikBag) => <AskName {...formikBag} {...props} />}
+              {(formikBag) => <AboutYou {...formikBag} {...props} />}
             </Formik>
           )}
         </Mutation>

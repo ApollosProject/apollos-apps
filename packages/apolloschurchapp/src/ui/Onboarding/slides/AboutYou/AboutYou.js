@@ -71,45 +71,50 @@ const AboutYou = memo(
     userGender,
     genderList,
     ...props
-  }) => (
-    <Slide {...props}>
-      <Content>
-        {imgSrc ? <StyledImage source={imgSrc} /> : null}
-        <TextContent>
-          <Title>{slideTitle}</Title>
-          <Description>{description}</Description>
-          <View>
-            <Label>Gender</Label>
-            <StyledRadio value={userGender}>
-              {genderList.map((gender) => [
-                <RadioButton
-                  key={gender}
-                  value={gender}
-                  label={() => <RadioLabel>{gender}</RadioLabel>}
-                  underline={false}
-                />,
-              ])}
-            </StyledRadio>
-          </View>
-          {/* TODO: getting some warning with this DateInput */}
-          <View>
-            <Label>Birthday</Label>
-            {userDOB ? (
-              <StyledDate
-                value={moment.utc(userDOB).toDate()}
-                displayValue={moment.utc(userDOB).format('MM/DD/YYYY')}
-              />
-            ) : (
-              <StyledDate
-                placeholder={'Select a date...'}
-                value={defaultDate}
-              />
-            )}
-          </View>
-        </TextContent>
-      </Content>
-    </Slide>
-  )
+  }) => {
+    const { values, handleSubmit } = props;
+    return (
+      <Slide {...props}>
+        <Content>
+          {imgSrc ? <StyledImage source={imgSrc} /> : null}
+          <TextContent>
+            <Title>{slideTitle}</Title>
+            <Description>{description}</Description>
+            <View>
+              <Label>Gender</Label>
+              <StyledRadio value={userGender}>
+                {genderList.map((gender) => [
+                  <RadioButton
+                    key={gender}
+                    value={gender}
+                    label={() => <RadioLabel>{gender}</RadioLabel>}
+                    underline={false}
+                  />,
+                ])}
+              </StyledRadio>
+            </View>
+            {/* TODO: getting some warning with this DateInput */}
+            <View>
+              <Label>Birthday</Label>
+              {userDOB ? (
+                <StyledDate
+                  value={moment.utc(userDOB).toDate()}
+                  displayValue={moment.utc(userDOB).format('MM/DD/YYYY')}
+                  onConfirm={handleSubmit}
+                />
+              ) : (
+                <StyledDate
+                  placeholder={'Select a date...'}
+                  value={defaultDate}
+                  onConfirm={handleSubmit}
+                />
+              )}
+            </View>
+          </TextContent>
+        </Content>
+      </Slide>
+    );
+  }
 );
 
 AboutYou.propTypes = {
@@ -123,6 +128,8 @@ AboutYou.propTypes = {
   defaultDate: PropTypes.instanceOf(Date),
   userGender: PropTypes.string,
   genderList: PropTypes.arrayOf(PropTypes.number),
+  values: PropTypes.shape({}),
+  handleSubmit: PropTypes.func,
 };
 
 AboutYou.defaultProps = {
