@@ -65,7 +65,7 @@ const AskNameConnected = memo(({ onPressPrimary, ...props }) => (
                 setSubmitting(false);
               }}
             >
-              {({ submitForm, ...formikBag }) => {
+              {({ submitForm, values, touched, errors, setFieldValue }) => {
                 const handleOnPressPrimary = () => {
                   submitForm();
                   onPressPrimary();
@@ -74,7 +74,12 @@ const AskNameConnected = memo(({ onPressPrimary, ...props }) => (
                 return (
                   <AskName
                     onPressPrimary={handleOnPressPrimary}
-                    {...formikBag}
+                    firstName={firstName}
+                    lastName={lastName}
+                    values={values}
+                    touched={touched}
+                    errors={errors}
+                    setFieldValue={setFieldValue}
                     {...props}
                   />
                 );
