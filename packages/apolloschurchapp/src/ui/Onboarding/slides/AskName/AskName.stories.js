@@ -14,7 +14,6 @@ storiesOf('Onboarding/slides/AskName', module)
   .add('firstName and lastName', () => (
     <AskName
       values={{ firstName: 'Marty', lastName: 'McFly' }}
-      errors={{ lastName: true }}
       setFieldValue={() => {}}
     />
   ))
