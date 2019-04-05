@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  mutation updateDetails($gender: GENDER, $birthDate: String) {
+  mutation updateDetails($gender: String!, $birthDate: String!) {
     updateProfileFields(
       input: [
         { field: Gender, value: $gender }

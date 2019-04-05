@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonalDetails component renders Gender and BirthDate when logged in 1`] = `null`;

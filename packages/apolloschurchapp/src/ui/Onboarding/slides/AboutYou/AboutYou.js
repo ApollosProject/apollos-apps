@@ -63,58 +63,69 @@ const RadioLabel = styled(({ theme }) => ({
 
 const AboutYou = memo(
   ({
+    onPressPrimary,
     imgSrc,
     slideTitle,
     description,
     defaultDate,
-    userDOB,
-    userGender,
+    birthDate,
     genderList,
+    userGender,
+    values,
+    touched,
+    errors,
+    setFieldValue,
     ...props
-  }) => {
-    const { values, handleSubmit } = props;
-    return (
-      <Slide {...props}>
-        <Content>
-          {imgSrc ? <StyledImage source={imgSrc} /> : null}
-          <TextContent>
-            <Title>{slideTitle}</Title>
-            <Description>{description}</Description>
-            <View>
-              <Label>Gender</Label>
-              <StyledRadio value={userGender}>
-                {genderList.map((gender) => [
-                  <RadioButton
-                    key={gender}
-                    value={gender}
-                    label={() => <RadioLabel>{gender}</RadioLabel>}
-                    underline={false}
-                  />,
-                ])}
-              </StyledRadio>
-            </View>
-            {/* TODO: getting some warning with this DateInput */}
-            <View>
-              <Label>Birthday</Label>
-              {userDOB ? (
-                <StyledDate
-                  value={moment.utc(userDOB).toDate()}
-                  displayValue={moment.utc(userDOB).format('MM/DD/YYYY')}
-                  onConfirm={handleSubmit}
-                />
-              ) : (
-                <StyledDate
-                  placeholder={'Select a date...'}
-                  value={defaultDate}
-                  onConfirm={handleSubmit}
-                />
-              )}
-            </View>
-          </TextContent>
-        </Content>
-      </Slide>
-    );
-  }
+  }) => (
+    <Slide onPressPrimary={onPressPrimary} {...props}>
+      <Content>
+        {imgSrc ? <StyledImage source={imgSrc} /> : null}
+        <TextContent>
+          <Title>{slideTitle}</Title>
+          <Description>{description}</Description>
+          <View>
+            <Label>Gender</Label>
+            <StyledRadio
+              label="Gender"
+              type="radio"
+              value={values.userGender}
+              error={touched.gender && errors.gender}
+              onChange={(value) => setFieldValue('gender', value)}
+            >
+              {genderList.map((gender) => [
+                <RadioButton
+                  key={gender}
+                  value={gender}
+                  label={() => <RadioLabel>{gender}</RadioLabel>}
+                  underline={false}
+                />,
+              ])}
+            </StyledRadio>
+          </View>
+          {/* TODO: getting some warning with this DateInput */}
+          <View>
+            <Label>Birthday</Label>
+            <StyledDate
+              type="DateInput"
+              placeholder={
+                birthDate
+                  ? moment.utc(birthDate).format('MM/DD/YYYY')
+                  : 'Select a date...'
+              }
+              value={values.birthDate}
+              error={touched.birthDate && errors.birthDate}
+              displayValue={
+                birthDate
+                  ? moment.utc(birthDate).format('MM/DD/YYYY')
+                  : 'Select a date...'
+              }
+              onChange={(value) => setFieldValue('birthDate', value)}
+            />
+          </View>
+        </TextContent>
+      </Content>
+    </Slide>
+  )
 );
 
 AboutYou.propTypes = {
@@ -124,12 +135,15 @@ AboutYou.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   imgSrc: Image.propTypes,
-  userDOB: PropTypes.instanceOf(Date),
+  birthDate: PropTypes.instanceOf(Date),
   defaultDate: PropTypes.instanceOf(Date),
   userGender: PropTypes.string,
   genderList: PropTypes.arrayOf(PropTypes.number),
   values: PropTypes.shape({}),
-  handleSubmit: PropTypes.func,
+  touched: PropTypes.shape({}),
+  errors: PropTypes.shape({}),
+  onPressPrimary: PropTypes.func,
+  setFieldValue: PropTypes.func,
 };
 
 AboutYou.defaultProps = {

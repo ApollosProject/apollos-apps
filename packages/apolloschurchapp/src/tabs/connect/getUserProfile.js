@@ -12,6 +12,8 @@ export default gql`
         }
         email
         nickName
+        gender
+        birthDate
         photo {
           uri
         }

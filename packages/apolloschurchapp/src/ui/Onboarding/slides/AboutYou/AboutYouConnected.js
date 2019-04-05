@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import getUserProfile from '../../../../tabs/connect/getUserProfile';
 import AboutYou from './AboutYou';
@@ -9,7 +10,7 @@ import AboutYou from './AboutYou';
 import updateUserDetails from './updateUserDetails';
 
 // eslint-disable-next-line react/display-name
-const AskNameConnected = memo((props) => (
+const AboutYouConnected = memo(({ onPressPrimary, ...props }) => (
   <Query query={getUserProfile}>
     {({ data: { currentUser = { profile: {} } } = {} }) => {
       const { gender, birthDate } = currentUser.profile;
@@ -36,7 +37,7 @@ const AskNameConnected = memo((props) => (
             <Formik
               initialValues={{ gender, birthDate }}
               validationSchema={Yup.object().shape({
-                gender: Yup.enum().required('Gender is required!'),
+                gender: Yup.string().required('Gender is required!'),
                 birthDate: Yup.string().required('Birth Date is required!'),
               })}
               onSubmit={async (variables, { setSubmitting, setFieldError }) => {
@@ -47,7 +48,7 @@ const AskNameConnected = memo((props) => (
                   if (
                     graphQLErrors.length &&
                     graphQLErrors.find(({ message }) =>
-                      message.includes('User already exists')
+                      message.includes('Invalid')
                     )
                   ) {
                     setFieldError(
@@ -64,7 +65,19 @@ const AskNameConnected = memo((props) => (
                 setSubmitting(false);
               }}
             >
-              {(formikBag) => <AboutYou {...formikBag} {...props} />}
+              {({ submitForm, ...formikBag }) => {
+                const handleOnPressPrimary = () => {
+                  submitForm();
+                  onPressPrimary();
+                };
+                return (
+                  <AboutYou
+                    onPressPrimary={handleOnPressPrimary}
+                    {...formikBag}
+                    {...props}
+                  />
+                );
+              }}
             </Formik>
           )}
         </Mutation>
@@ -73,4 +86,8 @@ const AskNameConnected = memo((props) => (
   </Query>
 ));
 
-export default AskNameConnected;
+AboutYouConnected.propTypes = {
+  onPressPrimary: PropTypes.func,
+};
+
+export default AboutYouConnected;
