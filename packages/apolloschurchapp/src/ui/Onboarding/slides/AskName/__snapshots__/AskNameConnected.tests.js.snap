@@ -255,6 +255,7 @@ exports[`PersonalDetails component renders User Name when logged in 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -406,6 +407,7 @@ exports[`PersonalDetails component renders User Name when logged in 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""

@@ -58,8 +58,9 @@ const AskName = memo(
           <TextInput
             label={'First Name'}
             type={'text'}
+            textContentType={'givenName'} // ios autofill
             returnKeyType={'next'}
-            value={get(values, 'firstName', '')}
+            value={get(values, 'firstName')}
             error={
               get(touched, 'firstName', false) && get(errors, 'firstName', null)
             }
@@ -70,8 +71,9 @@ const AskName = memo(
           <TextInput
             label={'Last Name'}
             type={'text'}
+            textContentType={'familyName'} // ios autofill
             returnKeyType={'next'}
-            value={get(values, 'lastName', '')}
+            value={get(values, 'lastName')}
             error={
               get(touched, 'lastName', false) && get(errors, 'lastName', null)
             }

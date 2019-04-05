@@ -255,6 +255,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value="Marty"
@@ -405,6 +406,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -765,6 +767,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -915,6 +918,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value="McFly"
@@ -1275,6 +1279,7 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -1426,6 +1431,7 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -1980,6 +1986,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -2130,6 +2137,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -2490,6 +2498,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -2640,6 +2649,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -3000,6 +3010,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -3150,6 +3161,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
