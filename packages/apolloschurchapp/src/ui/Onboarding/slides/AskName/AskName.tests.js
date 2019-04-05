@@ -9,11 +9,7 @@ describe('The Onboarding AskName component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <AskName
-          values={{ email: '', password: '' }}
-          touched={{ email: false, password: false }}
-          errors={{ email: null, password: null }}
-        />
+        <AskName setFieldValue={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -21,12 +17,7 @@ describe('The Onboarding AskName component', () => {
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>
-        <AskName
-          values={{ email: '', password: '' }}
-          touched={{ email: false, password: false }}
-          errors={{ email: null, password: null }}
-          slideTitle={'Custom title text'}
-        />
+        <AskName slideTitle={'Custom title text'} setFieldValue={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -35,11 +26,25 @@ describe('The Onboarding AskName component', () => {
     const tree = renderer.create(
       <Providers>
         <AskName
-          values={{ email: '', password: '' }}
-          touched={{ email: false, password: false }}
-          errors={{ email: null, password: null }}
           description={'Custom description text'}
+          setFieldValue={jest.fn()}
         />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should accept a firstName', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskName values={{ firstName: 'Marty' }} setFieldValue={jest.fn()} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should accept a lastName', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskName values={{ lastName: 'McFly' }} setFieldValue={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -47,12 +52,7 @@ describe('The Onboarding AskName component', () => {
   it('should pass additional props to Slide component', () => {
     const tree = renderer.create(
       <Providers>
-        <AskName
-          values={{ email: '', password: '' }}
-          touched={{ email: false, password: false }}
-          errors={{ email: null, password: null }}
-          onPressPrimary={jest.fn()}
-        />
+        <AskName onPressPrimary={jest.fn()} setFieldValue={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
