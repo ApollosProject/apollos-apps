@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import {
   styled,
@@ -55,21 +56,25 @@ const AskName = memo(
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
           <TextInput
-            label="First Name"
-            type="text"
-            returnKeyType="next"
-            value={values.firstName}
-            error={touched.firstName && errors.firstName}
+            label={'First Name'}
+            type={'text'}
+            returnKeyType={'next'}
+            value={get(values, 'firstName', '')}
+            error={
+              get(touched, 'firstName', false) && get(errors, 'firstName', null)
+            }
             onChangeText={(text) => setFieldValue('firstName', text)}
             onSubmitEditing={() => LastNameInput.focus()}
             enablesReturnKeyAutomatically
           />
           <TextInput
-            label="Last Name"
-            type="text"
-            returnKeyType="next"
-            value={values.lastName}
-            error={touched.lastName && errors.lastName}
+            label={'Last Name'}
+            type={'text'}
+            returnKeyType={'next'}
+            value={get(values, 'lastName', '')}
+            error={
+              get(touched, 'lastName', false) && get(errors, 'lastName', null)
+            }
             onChangeText={(text) => setFieldValue('lastName', text)}
             onSubmitEditing={onPressPrimary}
             enablesReturnKeyAutomatically
@@ -87,11 +92,11 @@ AskName.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
    */
+  setFieldValue: PropTypes.func.isRequired,
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
-  setFieldValue: PropTypes.func,
   touched: PropTypes.shape({}),
   errors: PropTypes.shape({}),
   values: PropTypes.shape({}),
