@@ -108,11 +108,7 @@ const AboutYou = memo(
             <Label>Birthday</Label>
             <StyledDate
               type="DateInput"
-              placeholder={
-                birthDate
-                  ? moment.utc(birthDate).format('MM/DD/YYYY')
-                  : 'Select a date...'
-              }
+              placeholder={'Select a date...'}
               value={get(values, 'birthDate')}
               error={get(touched, 'birthDate') && get(errors, 'birthDate')}
               displayValue={
