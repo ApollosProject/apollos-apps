@@ -1,5 +1,5 @@
 export AboutYou, { AboutYouConnected } from './AboutYou';
-export AskName from './AskName';
+export AskName, { AskNameConnected } from './AskName';
 export AskNotifications, {
   AskNotificationsConnected,
 } from './AskNotifications';
