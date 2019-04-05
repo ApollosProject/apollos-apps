@@ -107,14 +107,14 @@ const AboutYou = memo(
           <View>
             <Label>Birthday</Label>
             <StyledDate
-              type="DateInput"
+              type={'DateInput'}
               placeholder={'Select a date...'}
               value={get(values, 'birthDate')}
               error={get(touched, 'birthDate') && get(errors, 'birthDate')}
               displayValue={
-                birthDate
-                  ? moment.utc(birthDate).format('MM/DD/YYYY')
-                  : 'Select a date...'
+                get(values, 'birthDate')
+                  ? moment.utc(get(values, 'birthDate')).format('MM/DD/YYYY')
+                  : null
               }
               onChange={(value) => setFieldValue('birthDate', value)}
             />
@@ -129,6 +129,7 @@ AboutYou.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
    */
+  setFieldValue: PropTypes.func.isRequired,
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   imgSrc: Image.propTypes,
@@ -140,7 +141,6 @@ AboutYou.propTypes = {
   touched: PropTypes.shape({}),
   errors: PropTypes.shape({}),
   onPressPrimary: PropTypes.func,
-  setFieldValue: PropTypes.func,
 };
 
 AboutYou.defaultProps = {
