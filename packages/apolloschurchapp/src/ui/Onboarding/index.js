@@ -11,7 +11,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 import {
-  AskName,
+  AskNameConnected,
   Features,
   AboutYou,
   AskNotificationsConnected,
@@ -68,13 +68,13 @@ class Onboarding extends Component {
           showsPagination={this.state.pagination}
           onIndexChanged={this.handleOnIndexChanged}
           loop={false}
-          /* Disables swipe gestures. We currently we don't display a back button so this is our
+          /* Disables swipe gestures. We currently we dont display a back button so this is our
            * only back navigation option. */
           // scrollEnabled={false}
           showsButtons={false}
           swiperRef={this.setSwiperRef}
         >
-          <AskName onPressPrimary={this.handleOnPressPrimary} />
+          <AskNameConnected onPressPrimary={this.handleOnPressPrimary} />
           <Features
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}

@@ -1,5 +1,1029 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The Onboarding AskName component should accept a firstName 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 0,
+          }
+        }
+        vertical={false}
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "marginBottom": 8,
+                "marginTop": 32,
+              },
+              null,
+              Object {
+                "flex": 0,
+                "height": 48,
+                "width": 48,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={48}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            x={0}
+            y={0}
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4278216557,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Object {
+              "color": "#00676D",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 36,
+              "lineHeight": 41.4,
+            }
+          }
+        >
+          Welcome!
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
+            }
+          }
+        >
+          Every relationship starts with a name. What's yours?
+        </Text>
+        <View
+          disabled={false}
+          style={
+            Object {
+              "marginVertical": 16,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "opacity": 1,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  editable={true}
+                  enablesReturnKeyAutomatically={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  onSubmitEditing={[Function]}
+                  placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                  returnKeyType="next"
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 14,
+                      "height": 38,
+                      "paddingVertical": 0,
+                    }
+                  }
+                  textContentType="givenName"
+                  type="text"
+                  underlineColorAndroid="transparent"
+                  value="Marty"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+            </View>
+            <View
+              onLayout={[Function]}
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "opacity": 0.8,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.8,
+                    },
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 17.28,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                First Name
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "bottom": -0.5,
+                    "height": 0.5,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "right": 0,
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  }
+                }
+              >
+                <View
+                  hasError={false}
+                  style={
+                    Object {
+                      "backgroundColor": "#00676D",
+                      "bottom": 0,
+                      "height": 0.5,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          disabled={false}
+          style={
+            Object {
+              "marginVertical": 16,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "opacity": 0,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  editable={true}
+                  enablesReturnKeyAutomatically={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                  returnKeyType="next"
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 14,
+                      "height": 38,
+                      "paddingVertical": 0,
+                    }
+                  }
+                  textContentType="familyName"
+                  type="text"
+                  underlineColorAndroid="transparent"
+                  value=""
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+            </View>
+            <View
+              onLayout={[Function]}
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 17.28,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                Last Name
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "bottom": -0.5,
+                    "height": 0.5,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "right": 0,
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.0001,
+                      },
+                    ],
+                  }
+                }
+              >
+                <View
+                  hasError={false}
+                  style={
+                    Object {
+                      "backgroundColor": "#00676D",
+                      "bottom": 0,
+                      "height": 0.5,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Onboarding AskName component should accept a lastName 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 0,
+          }
+        }
+        vertical={false}
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={48}
+          bbWidth={48}
+          height={48}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "marginBottom": 8,
+                "marginTop": 32,
+              },
+              null,
+              Object {
+                "flex": 0,
+                "height": 48,
+                "width": 48,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={48}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "fillOpacity",
+                "fillRule",
+                "stroke",
+                "strokeWidth",
+                "strokeOpacity",
+                "strokeDasharray",
+                "strokeDashoffset",
+                "strokeLinecap",
+                "strokeLinejoin",
+                "strokeMiterlimit",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            x={0}
+            y={0}
+          >
+            <RNSVGPath
+              d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+              fill={
+                Array [
+                  0,
+                  4278216557,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Object {
+              "color": "#00676D",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 36,
+              "lineHeight": 41.4,
+            }
+          }
+        >
+          Welcome!
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 20.16,
+            }
+          }
+        >
+          Every relationship starts with a name. What's yours?
+        </Text>
+        <View
+          disabled={false}
+          style={
+            Object {
+              "marginVertical": 16,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "opacity": 0,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  editable={true}
+                  enablesReturnKeyAutomatically={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  onSubmitEditing={[Function]}
+                  placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                  returnKeyType="next"
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 14,
+                      "height": 38,
+                      "paddingVertical": 0,
+                    }
+                  }
+                  textContentType="givenName"
+                  type="text"
+                  underlineColorAndroid="transparent"
+                  value=""
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+            </View>
+            <View
+              onLayout={[Function]}
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 17.28,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                First Name
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "bottom": -0.5,
+                    "height": 0.5,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "right": 0,
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.0001,
+                      },
+                    ],
+                  }
+                }
+              >
+                <View
+                  hasError={false}
+                  style={
+                    Object {
+                      "backgroundColor": "#00676D",
+                      "bottom": 0,
+                      "height": 0.5,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          disabled={false}
+          style={
+            Object {
+              "marginVertical": 16,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "opacity": 1,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  editable={true}
+                  enablesReturnKeyAutomatically={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                  returnKeyType="next"
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 14,
+                      "height": 38,
+                      "paddingVertical": 0,
+                    }
+                  }
+                  textContentType="familyName"
+                  type="text"
+                  underlineColorAndroid="transparent"
+                  value="McFly"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
+              />
+            </View>
+            <View
+              onLayout={[Function]}
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "opacity": 0.8,
+                  "position": "absolute",
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.8,
+                    },
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 17.28,
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                Last Name
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "bottom": -0.5,
+                    "height": 0.5,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "right": 0,
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  }
+                }
+              >
+                <View
+                  hasError={false}
+                  style={
+                    Object {
+                      "backgroundColor": "#00676D",
+                      "bottom": 0,
+                      "height": 0.5,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`The Onboarding AskName component should pass additional props to Slide component 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -239,8 +1263,9 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -254,6 +1279,7 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -391,7 +1417,9 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
+                  onSubmitEditing={[MockFunction]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
                   style={
@@ -403,6 +1431,7 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -941,8 +1970,9 @@ exports[`The Onboarding AskName component should render 1`] = `
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -956,6 +1986,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -1093,6 +2124,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
@@ -1105,6 +2137,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -1449,8 +2482,9 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -1464,6 +2498,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -1601,6 +2636,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
@@ -1613,6 +2649,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -1957,8 +2994,9 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 <TextInput
                   allowFontScaling={true}
                   editable={true}
-                  enzblesReturnKeyAutomatically={true}
+                  enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   onSubmitEditing={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
@@ -1972,6 +3010,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
@@ -2109,6 +3148,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                   editable={true}
                   enablesReturnKeyAutomatically={true}
                   onBlur={[Function]}
+                  onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholderTextColor="rgba(48, 48, 48, 0.6)"
                   returnKeyType="next"
@@ -2121,6 +3161,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                       "paddingVertical": 0,
                     }
                   }
+                  textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
                   value=""
