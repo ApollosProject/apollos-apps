@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { get } from 'lodash';
 
 import {
   styled,
@@ -88,8 +89,8 @@ const AboutYou = memo(
             <StyledRadio
               label="Gender"
               type="radio"
-              value={values.userGender}
-              error={touched.gender && errors.gender}
+              value={get(values, 'userGender')}
+              error={get(touched, 'gender') && get(errors, 'gender')}
               onChange={(value) => setFieldValue('gender', value)}
             >
               {genderList.map((gender) => [
@@ -112,8 +113,8 @@ const AboutYou = memo(
                   ? moment.utc(birthDate).format('MM/DD/YYYY')
                   : 'Select a date...'
               }
-              value={values.birthDate}
-              error={touched.birthDate && errors.birthDate}
+              value={get(values, 'birthDate')}
+              error={get(touched, 'birthDate') && get(errors, 'birthDate')}
               displayValue={
                 birthDate
                   ? moment.utc(birthDate).format('MM/DD/YYYY')
