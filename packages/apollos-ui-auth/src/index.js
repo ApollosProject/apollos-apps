@@ -84,13 +84,22 @@ class Auth extends PureComponent {
     onFinish: PropTypes.func,
   };
 
+  get finishFunction() {
+    return this.props.navigation.getParam('onFinish', () => {});
+  }
+
   handleFinish = () => {
     // trigger the auth modal to close
-    if (this.props.onFinish) {
-      this.props.onFinish();
-    } else if (this.props.navigation && this.props.navigation.goBack) {
-      this.props.navigation.goBack();
+    console.log('finishFunction = ', this.finishFunction);
+    if (this.finishFunction) {
+      console.log('this.finishFunction is true');
+      this.finishFunction(this.props);
     }
+    // if (this.props.onFinish) {
+    //   this.props.onFinish();
+    // } else if (this.props.navigation && this.props.navigation.goBack) {
+    //   this.props.navigation.goBack();
+    // }
   };
 
   renderLogin = () => <LoginForm onLogin={this.handleFinish} />;

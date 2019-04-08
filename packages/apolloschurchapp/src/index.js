@@ -27,7 +27,7 @@ import Onboarding from './onboarding';
 
 const getLoginState = gql`
   query {
-    isLoggedIn @client
+    isLoggedIn @client(always: true)
   }
 `;
 
@@ -39,9 +39,13 @@ const AppStatusBar = withTheme(({ theme }) => ({
 const AuthNavigator = createStackNavigator(
   {
     Auth,
+    Onboarding,
   },
   {
     initialRouteName: 'Auth',
+    initialRouteParams: {
+      onFinish: (props) => props.navigation.navigate('Onboarding'),
+    },
     mode: 'modal',
     headerMode: 'screen',
   }
@@ -71,9 +75,7 @@ const App = () => (
     <BackgroundView>
       <AppStatusBar barStyle="dark-content" />
       <Query query={getLoginState}>
-        {({ data: { isLoggedIn } = {}, loading }) => {
-          console.log('loading = ', loading);
-          console.log('isLoggedIn = ', isLoggedIn);
+        {({ data: { isLoggedIn = false } = {}, loading }) => {
           if (!loading) {
             if (isLoggedIn) {
               return (
