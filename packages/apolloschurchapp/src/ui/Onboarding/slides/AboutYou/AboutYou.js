@@ -107,11 +107,11 @@ const AboutYou = memo(
             <StyledDate
               type={'DateInput'}
               placeholder={'Select a date...'}
-              value={get(values, 'birthDate', defaultDate)}
+              value={moment.utc(get(values, 'birthDate', defaultDate)).toDate()}
               error={get(touched, 'birthDate') && get(errors, 'birthDate')}
-              displayValue={moment
-                .utc(get(values, 'birthDate', defaultDate))
-                .format('MM/DD/YYYY')}
+              displayValue={moment(
+                get(values, 'birthDate', defaultDate)
+              ).format('MM/DD/YYYY')}
               onChange={(value) => setFieldValue('birthDate', value)}
             />
           </View>

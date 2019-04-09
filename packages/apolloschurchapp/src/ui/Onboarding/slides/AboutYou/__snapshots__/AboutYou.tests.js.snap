@@ -391,7 +391,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -1107,7 +1107,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -1629,7 +1629,7 @@ exports[`The Onboarding AboutYou component should render a custom date picker 1`
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={1989-02-14T06:00:00.000Z}
+                        date={1989-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -2151,7 +2151,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -2673,7 +2673,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -3209,7 +3209,7 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -3731,7 +3731,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
@@ -4265,7 +4265,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={2019-02-14T06:00:00.000Z}
+                        date={2019-02-14T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}

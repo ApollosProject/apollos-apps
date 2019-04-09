@@ -403,7 +403,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                       onStartShouldSetResponderCapture={[Function]}
                     >
                       <DatePicker
-                        date={1980-02-10T06:00:00.000Z}
+                        date={1980-02-10T00:00:00.000Z}
                         minuteInterval={1}
                         mode="date"
                         onCancel={[Function]}
