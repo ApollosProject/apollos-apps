@@ -91,7 +91,7 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
-          <LocationFinderConnected onPressSecondary={this.handleOnPressPrimary}>
+          <LocationFinderConnected onPressPrimary={this.handleOnPressPrimary}>
             <GradientOverlayImage
               source={'https://picsum.photos/640/640/?random'}
             />

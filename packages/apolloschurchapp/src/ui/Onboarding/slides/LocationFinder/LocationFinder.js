@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
+
 import {
   PaddedView,
   FlexedView,
@@ -8,6 +9,7 @@ import {
   H2,
   H5,
   Button,
+  Touchable,
 } from '@apollosproject/ui-kit';
 
 import CampusCard from 'apolloschurchapp/src/user-settings/Locations/CampusCard';
@@ -48,27 +50,42 @@ const LocationFinder = memo(
     campus,
     ...props
   }) => (
-    <Slide {...props}>
+    <Slide
+      onPressPrimary={
+        campus /* show the primary action button (next) if we have a campus */
+          ? onPressPrimary
+          : null
+      }
+      onPressSecondary={
+        !campus /* show the secondary action button (skip) if we don't have a campus */
+          ? onPressPrimary
+          : null
+      }
+      {...props}
+    >
       <ContentWrapper>
         <FlexedView>{children}</FlexedView>
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
-          <Button
-            title={buttonText}
-            onPress={onPressButton}
-            disabled={buttonDisabled}
-            pill={false}
-          />
           {campus ? (
-            <CampusCard
-              key={campus.id}
-              distance={campus.distanceFromLocation}
-              title={campus.name}
-              description={getCampusAddress(campus)}
-              images={[campus.image]}
+            <Touchable onPress={onPressButton}>
+              <CampusCard
+                key={campus.id}
+                distance={campus.distanceFromLocation}
+                title={campus.name}
+                description={getCampusAddress(campus)}
+                images={[campus.image]}
+              />
+            </Touchable>
+          ) : (
+            <Button
+              title={buttonText}
+              onPress={onPressButton}
+              disabled={buttonDisabled}
+              pill={false}
             />
-          ) : null}
+          )}
         </Content>
       </ContentWrapper>
     </Slide>
