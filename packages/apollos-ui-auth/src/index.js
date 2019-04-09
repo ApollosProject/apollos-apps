@@ -88,7 +88,6 @@ class Auth extends PureComponent {
 
   handleFinish = () => {
     const onFinish = this.props.navigation.getParam('onFinish', () => {});
-    console.log(onFinish);
     if (onFinish) {
       onFinish(this.props.navigation);
     } else if (this.props.onFinish) {

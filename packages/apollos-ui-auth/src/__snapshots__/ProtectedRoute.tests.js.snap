@@ -57,6 +57,9 @@ exports[`ProtectedRoute component navigates to the auth route when logged out 2`
 Array [
   Array [
     "AuthFoo",
+    Object {
+      "onFinish": [Function],
+    },
   ],
 ]
 `;
