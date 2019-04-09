@@ -392,7 +392,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139624}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1114,7 +1114,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139172}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1527,7 +1527,7 @@ exports[`The Onboarding AboutYou component should render a custom date picker 1`
                       }
                     }
                   >
-                    02/14/1989
+                    Select a date...
                   </Text>
                 </View>
               </View>
@@ -1642,7 +1642,7 @@ exports[`The Onboarding AboutYou component should render a custom date picker 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={603417600000}
+                          date={1554827139590}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2170,7 +2170,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139498}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2698,7 +2698,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139531}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -3240,7 +3240,7 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139388}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -3768,7 +3768,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139449}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -4031,11 +4031,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 underline={false}
               >
                 <View
-                  isSelected={true}
                   style={
                     Object {
                       "alignItems": "center",
-                      "borderColor": "#00676D",
+                      "borderColor": "#A5A5A5",
                       "borderRadius": 99,
                       "borderWidth": 2,
                       "height": 20,
@@ -4043,18 +4042,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                       "width": 20,
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#00676D",
-                        "borderRadius": 99,
-                        "height": 12,
-                        "width": 12,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <Text
                   style={
                     Object {
@@ -4308,7 +4296,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                     >
                       <View>
                         <RCTDatePicker
-                          date={1550102400000}
+                          date={1554827139563}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}

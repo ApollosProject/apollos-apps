@@ -69,7 +69,6 @@ const AboutYou = memo(
     slideTitle,
     description,
     defaultDate,
-    birthDate,
     genderList,
     userGender,
     values,
@@ -114,7 +113,7 @@ const AboutYou = memo(
               displayValue={
                 get(values, 'birthDate')
                   ? moment.utc(get(values, 'birthDate')).format('MM/DD/YYYY')
-                  : null
+                  : moment.utc(defaultDate).format('MM/DD/YYYY')
               }
               onChange={(value) => setFieldValue('birthDate', value)}
             />
@@ -133,7 +132,6 @@ AboutYou.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   imgSrc: Image.propTypes,
-  birthDate: PropTypes.instanceOf(Date),
   defaultDate: PropTypes.instanceOf(Date),
   userGender: PropTypes.string,
   genderList: PropTypes.arrayOf(PropTypes.number),
