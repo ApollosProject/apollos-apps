@@ -81,7 +81,7 @@ class Form extends PureComponent {
             </View>
           </PaddedView>
         </KeyboardAwareScrollView>
-        <BottomSafeAreaView>
+        <BottomSafeAreaView forceInset={{ bottom: 'always' }}>
           <PaddedView vertical={false}>
             <Button
               onPress={handleSubmit}

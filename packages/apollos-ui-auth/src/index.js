@@ -71,6 +71,7 @@ const CancelButton = styled(({ theme }) => ({
 class Auth extends PureComponent {
   static navigationOptions = {
     header: null,
+    gesturesEnabled: false,
   };
 
   tabRoutes = [
@@ -100,7 +101,7 @@ class Auth extends PureComponent {
   render() {
     return (
       <FlexedView>
-        <HeaderContainer>
+        <HeaderContainer forceInset={{ top: 'always' }}>
           <CancelButton onPress={this.handleFinish}>Cancel</CancelButton>
           <Header>
             <BrandIcon />
