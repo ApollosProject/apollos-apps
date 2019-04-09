@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import get from 'lodash';
 
 import {
   PaddedView,
@@ -75,7 +76,7 @@ const LocationFinder = memo(
                 distance={campus.distanceFromLocation}
                 title={campus.name}
                 description={getCampusAddress(campus)}
-                images={[campus.image]}
+                images={[get(campus, 'image')]}
               />
             </Touchable>
           ) : (
