@@ -13,7 +13,7 @@ import {
 import {
   AskNameConnected,
   Features,
-  AboutYou,
+  AboutYouConnected,
   AskNotificationsConnected,
 } from './slides';
 
@@ -79,7 +79,7 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
-          <AboutYou
+          <AboutYouConnected
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />

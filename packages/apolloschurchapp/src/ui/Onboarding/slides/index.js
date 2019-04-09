@@ -1,4 +1,4 @@
-export AboutYou from './AboutYou';
+export AboutYou, { AboutYouConnected } from './AboutYou';
 export AskName, { AskNameConnected } from './AskName';
 export AskNotifications, {
   AskNotificationsConnected,

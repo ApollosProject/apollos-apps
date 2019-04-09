@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import renderer from 'react-test-renderer';
-
-const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
+import wait from 'waait';
 
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);
