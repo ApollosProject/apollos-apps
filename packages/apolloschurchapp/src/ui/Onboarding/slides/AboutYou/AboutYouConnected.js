@@ -14,6 +14,7 @@ const AboutYouConnected = memo(({ onPressPrimary, ...props }) => (
   <Query query={getUserProfile}>
     {({ data: { currentUser = { profile: {} } } = {} }) => {
       const { gender, birthDate } = currentUser.profile;
+
       return (
         <Mutation
           mutation={updateUserDetails}

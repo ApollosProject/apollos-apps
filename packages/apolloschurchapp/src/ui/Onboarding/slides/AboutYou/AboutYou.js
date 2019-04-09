@@ -70,7 +70,6 @@ const AboutYou = memo(
     description,
     defaultDate,
     genderList,
-    userGender,
     values,
     touched,
     errors,
@@ -88,7 +87,7 @@ const AboutYou = memo(
             <StyledRadio
               label="Gender"
               type="radio"
-              value={get(values, 'userGender')}
+              value={get(values, 'gender')}
               error={get(touched, 'gender') && get(errors, 'gender')}
               onChange={(value) => setFieldValue('gender', value)}
             >
