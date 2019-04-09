@@ -61,6 +61,12 @@ class Onboarding extends Component {
   // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
   handleOnPressPrimary = () => this.swiper.scrollBy(1);
 
+  // The last slide in the Onboarding flow should navigate the person to the
+  // home feed.
+  handleLastSlideNavigation = () => {
+    this.props.navigation.navigate('Home');
+  };
+
   render() {
     return (
       <BackgroundView>
@@ -84,7 +90,7 @@ class Onboarding extends Component {
             onPressPrimary={this.handleOnPressPrimary}
           />
           <AskNotificationsConnected
-            onPressSecondary={this.handleOnPressPrimary}
+            onPressSecondary={this.handleLastSlideNavigation}
           >
             <GradientOverlayImage
               source={'https://picsum.photos/640/640/?random'}

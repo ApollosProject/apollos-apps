@@ -8,6 +8,6 @@ export default class TestingControlPanel extends PureComponent {
   });
 
   render() {
-    return <Onboarding />;
+    return <Onboarding navigation={this.props.navigation} />;
   }
 }
