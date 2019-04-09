@@ -4031,10 +4031,11 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 underline={false}
               >
                 <View
+                  isSelected={true}
                   style={
                     Object {
                       "alignItems": "center",
-                      "borderColor": "#A5A5A5",
+                      "borderColor": "#00676D",
                       "borderRadius": 99,
                       "borderWidth": 2,
                       "height": 20,
@@ -4042,7 +4043,18 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                       "width": 20,
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#00676D",
+                        "borderRadius": 99,
+                        "height": 12,
+                        "width": 12,
+                      }
+                    }
+                  />
+                </View>
                 <Text
                   style={
                     Object {

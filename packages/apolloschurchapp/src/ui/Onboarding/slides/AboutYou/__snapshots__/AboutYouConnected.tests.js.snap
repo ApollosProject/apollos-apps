@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PersonalDetails component renders Gender and BirthDate when logged in 1`] = `
+exports[`AboutYouConnected component renders Gender and BirthDate when logged in 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -127,10 +127,11 @@ exports[`PersonalDetails component renders Gender and BirthDate when logged in 1
                 underline={false}
               >
                 <View
+                  isSelected={true}
                   style={
                     Object {
                       "alignItems": "center",
-                      "borderColor": "#A5A5A5",
+                      "borderColor": "#00676D",
                       "borderRadius": 99,
                       "borderWidth": 2,
                       "height": 20,
@@ -138,7 +139,18 @@ exports[`PersonalDetails component renders Gender and BirthDate when logged in 1
                       "width": 20,
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#00676D",
+                        "borderRadius": 99,
+                        "height": 12,
+                        "width": 12,
+                      }
+                    }
+                  />
+                </View>
                 <Text
                   style={
                     Object {
@@ -277,7 +289,7 @@ exports[`PersonalDetails component renders Gender and BirthDate when logged in 1
                       }
                     }
                   >
-                    04/09/2019
+                    02/10/1980
                   </Text>
                 </View>
               </View>
@@ -389,23 +401,7 @@ exports[`PersonalDetails component renders Gender and BirthDate when logged in 1
                     </View>
                     <View
                       onStartShouldSetResponderCapture={[Function]}
-                    >
-                      <View>
-                        <RCTDatePicker
-                          date={1554839397407}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                     <View
                       accessible={true}
                       isTVSelectable={true}

@@ -41,6 +41,7 @@ const AboutYouConnected = memo(({ onPressPrimary, ...props }) => (
                 gender: Yup.string().required('Gender is required!'),
                 birthDate: Yup.string().required('Birth Date is required!'),
               })}
+              enableReinitialize
               onSubmit={async (variables, { setSubmitting, setFieldError }) => {
                 try {
                   await updateDetails({ variables });

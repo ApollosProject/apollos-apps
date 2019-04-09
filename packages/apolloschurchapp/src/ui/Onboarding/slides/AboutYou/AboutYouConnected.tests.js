@@ -1,13 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import wait from 'waait';
-
 import Providers from 'apolloschurchapp/src/Providers';
 
+import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 import getUserProfile from '../../../../tabs/connect/getUserProfile';
 import AboutYouConnected from './AboutYouConnected';
 
-describe('PersonalDetails component', () => {
+describe('AboutYouConnected component', () => {
   it('renders Gender and BirthDate when logged in', async () => {
     const mock = {
       request: {
@@ -16,20 +14,34 @@ describe('PersonalDetails component', () => {
       result: {
         data: {
           currentUser: {
+            __typename: 'AuthenticatedUser',
+            id: 'AuthenticatedUser:123',
             profile: {
+              __typename: 'Person',
               gender: 'Male',
-              birthDate: '01/12/2001',
+              birthDate: '1980-02-10T00:00:00',
+              firstName: 'Isaac',
+              lastName: 'Hardy',
+              campus: {
+                __typename: 'Campus',
+                name: 'Coolest Campus',
+              },
+              email: 'isaac.hardy@newspring.cc',
+              nickName: 'Batman',
+              photo: {
+                __typename: 'ImageMediaSource',
+                uri: 'https://some-uri.com/test.jpg',
+              },
             },
           },
         },
       },
     };
-    const tree = renderer.create(
+    const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <AboutYouConnected />
+        <AboutYouConnected setFieldValue={jest.fn()} />
       </Providers>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 });

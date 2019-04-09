@@ -78,7 +78,7 @@ describe('The Onboarding AboutYou component', () => {
     const tree = renderer.create(
       <Providers>
         <AboutYou
-          userGender={'Male'}
+          values={{ gender: 'Male' }}
           defaultDate={'2019-02-14'}
           setFieldValue={jest.fn()}
         />
