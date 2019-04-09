@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import { ActivityIndicator, View } from 'react-native';
 import PropTypes from 'prop-types';
-import gql from 'graphql-tag';
+import getLoginStateWithCacheLoaded from './getLoginStateWithCacheLoaded';
 
 /* This function can be included as the default route in your navigator
 to direct the user to a different route depending on if the user is logged in or not.
@@ -75,15 +75,8 @@ class AuthLoading extends PureComponent {
   }
 }
 
-export const getLoginWithCacheLoaded = gql`
-  query getLoginWithCacheLoaded {
-    isLoggedIn @client
-    cacheLoaded @client
-  }
-`;
-
 const AuthLoadingWithData = (props) => (
-  <Query fetchPolicy={'network-only'} query={getLoginWithCacheLoaded}>
+  <Query fetchPolicy={'network-only'} query={getLoginStateWithCacheLoaded}>
     {({
       data: { isLoggedIn = false, cacheLoaded = false } = {},
       loading = true,

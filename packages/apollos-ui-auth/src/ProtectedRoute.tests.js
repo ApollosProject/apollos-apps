@@ -8,11 +8,12 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { MockedProvider } from 'react-apollo/test-utils';
 import AuthProvider, { getAuthToken } from './Provider';
 
-import ProtectedRoute, { getLoginWithCacheLoaded } from './ProtectedRoute';
+import ProtectedRoute from './ProtectedRoute';
+import getLoginStateWithCacheLoaded from './getLoginStateWithCacheLoaded';
 
 const setLoginState = async ({ cache, isLoggedIn }) => {
   await cache.writeQuery({
-    query: getLoginWithCacheLoaded,
+    query: getLoginStateWithCacheLoaded,
     data: { isLoggedIn, cacheLoaded: true },
   });
   if (isLoggedIn) {
