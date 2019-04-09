@@ -35,6 +35,11 @@ class AuthLoading extends PureComponent {
     LoadingIndicator: PropTypes.node,
   };
 
+  static defaultProps = {
+    loggedOutRouteName: 'Tabs',
+    loggedInRouteName: 'Auth',
+  };
+
   componentDidMount() {
     this.handleLoginDataChanged();
   }
@@ -53,9 +58,9 @@ class AuthLoading extends PureComponent {
     } = this.props;
 
     if (!isLoading && isLoggedIn) {
-      navigation.navigate(loggedInRouteName || 'Tabs');
+      navigation.navigate(loggedInRouteName);
     } else if (!isLoading) {
-      navigation.navigate(loggedOutRouteName || 'Auth');
+      navigation.navigate(loggedOutRouteName);
     }
   };
 

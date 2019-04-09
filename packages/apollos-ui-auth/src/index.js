@@ -22,7 +22,7 @@ export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
 export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
-export AuthLoadingSwitch from './AuthLoadingSwitch';
+export ProtectedRoute from './ProtectedRoute';
 
 export getLoginState from './getLoginState';
 export logout from './logout';

@@ -8,9 +8,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { MockedProvider } from 'react-apollo/test-utils';
 import AuthProvider, { getAuthToken } from './Provider';
 
-import AuthLoadingSwitch, {
-  getLoginWithCacheLoaded,
-} from './AuthLoadingSwitch';
+import ProtectedRoute, { getLoginWithCacheLoaded } from './ProtectedRoute';
 
 const setLoginState = async ({ cache, isLoggedIn }) => {
   await cache.writeQuery({
@@ -26,7 +24,7 @@ const setLoginState = async ({ cache, isLoggedIn }) => {
 };
 
 let cache;
-describe('AuthLoadingSwitch component', () => {
+describe('ProtectedRoute component', () => {
   beforeEach(() => {
     cache = new InMemoryCache();
   });
@@ -40,10 +38,7 @@ describe('AuthLoadingSwitch component', () => {
       <MockedProvider cache={cache}>
         <AuthProvider>
           <Providers>
-            <AuthLoadingSwitch
-              loggedInRouteName="Home"
-              navigation={navigation}
-            />
+            <ProtectedRoute loggedInRouteName="Home" navigation={navigation} />
           </Providers>
         </AuthProvider>
       </MockedProvider>
@@ -62,7 +57,7 @@ describe('AuthLoadingSwitch component', () => {
       <MockedProvider cache={cache}>
         <AuthProvider>
           <Providers>
-            <AuthLoadingSwitch
+            <ProtectedRoute
               loggedOutRouteName="AuthFoo"
               navigation={navigation}
             />
@@ -83,7 +78,7 @@ describe('AuthLoadingSwitch component', () => {
       <MockedProvider cache={cache}>
         <AuthProvider>
           <Providers>
-            <AuthLoadingSwitch
+            <ProtectedRoute
               LoadingIndicator={<View />}
               navigation={navigation}
             />

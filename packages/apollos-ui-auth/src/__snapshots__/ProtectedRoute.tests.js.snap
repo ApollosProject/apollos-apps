@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthLoadingSwitch component navigates to the auth route when logged out 1`] = `
+exports[`ProtectedRoute component navigates to the auth route when logged out 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -45,7 +45,7 @@ exports[`AuthLoadingSwitch component navigates to the auth route when logged out
 </RCTSafeAreaView>
 `;
 
-exports[`AuthLoadingSwitch component navigates to the auth route when logged out 2`] = `
+exports[`ProtectedRoute component navigates to the auth route when logged out 2`] = `
 Array [
   Array [
     "AuthFoo",
@@ -53,7 +53,7 @@ Array [
 ]
 `;
 
-exports[`AuthLoadingSwitch component navigates to the logged in route when logged in 1`] = `
+exports[`ProtectedRoute component navigates to the logged in route when logged in 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -98,7 +98,7 @@ exports[`AuthLoadingSwitch component navigates to the logged in route when logge
 </RCTSafeAreaView>
 `;
 
-exports[`AuthLoadingSwitch component navigates to the logged in route when logged in 2`] = `
+exports[`ProtectedRoute component navigates to the logged in route when logged in 2`] = `
 Array [
   Array [
     "Home",
@@ -106,7 +106,7 @@ Array [
 ]
 `;
 
-exports[`AuthLoadingSwitch component renders a custom loading component 1`] = `
+exports[`ProtectedRoute component renders a custom loading component 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -144,4 +144,4 @@ exports[`AuthLoadingSwitch component renders a custom loading component 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`AuthLoadingSwitch component renders a custom loading component 2`] = `Array []`;
+exports[`ProtectedRoute component renders a custom loading component 2`] = `Array []`;

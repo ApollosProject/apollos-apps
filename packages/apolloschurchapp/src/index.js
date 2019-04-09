@@ -7,7 +7,7 @@ import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
-import Auth, { AuthLoadingSwitch } from '@apollosproject/ui-auth';
+import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import Providers from './Providers';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
@@ -29,7 +29,7 @@ const AppStatusBar = withTheme(({ theme }) => ({
 
 const AppNavigator = createStackNavigator(
   {
-    AuthLoadingSwitch,
+    ProtectedRoute,
     Tabs,
     ContentSingle,
     Auth,
@@ -41,7 +41,7 @@ const AppNavigator = createStackNavigator(
     Onboarding,
   },
   {
-    initialRouteName: 'AuthLoadingSwitch',
+    initialRouteName: 'ProtectedRoute',
     mode: 'modal',
     headerMode: 'screen',
   }
