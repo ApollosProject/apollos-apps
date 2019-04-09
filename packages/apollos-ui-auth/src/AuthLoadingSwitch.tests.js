@@ -63,7 +63,7 @@ describe('AuthLoadingSwitch component', () => {
         <AuthProvider>
           <Providers>
             <AuthLoadingSwitch
-              authRouteName="AuthFoo"
+              loggedOutRouteName="AuthFoo"
               navigation={navigation}
             />
           </Providers>

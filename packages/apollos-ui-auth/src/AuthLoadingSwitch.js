@@ -9,7 +9,7 @@ to direct the user to a different route depending on if the user is logged in or
 
 Usage:
 ```
-const AuthLoading = (props) => <AuthLoadingSwitch loggedInRouteName="Home" authRouteName="Auth" LoadingIndicator={LoadingComponent}
+const AuthLoading = (props) => <AuthLoadingSwitch loggedInRouteName="Home" loggedOutRouteName="Auth" LoadingIndicator={LoadingComponent}
 
 const AppNavigator = createStackNavigator(
   {
@@ -31,7 +31,7 @@ class AuthLoading extends PureComponent {
     isLoading: PropTypes.bool.isRequired,
     isLoggedIn: PropTypes.bool.isRequired,
     loggedInRouteName: PropTypes.string,
-    authRouteName: PropTypes.string,
+    loggedOutRouteName: PropTypes.string,
     LoadingIndicator: PropTypes.node,
   };
 
@@ -49,13 +49,13 @@ class AuthLoading extends PureComponent {
       isLoggedIn,
       navigation,
       loggedInRouteName,
-      authRouteName,
+      loggedOutRouteName,
     } = this.props;
 
     if (!isLoading && isLoggedIn) {
       navigation.navigate(loggedInRouteName || 'Tabs');
     } else if (!isLoading) {
-      navigation.navigate(authRouteName || 'Auth');
+      navigation.navigate(loggedOutRouteName || 'Auth');
     }
   };
 
