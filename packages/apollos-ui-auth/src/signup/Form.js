@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import { View, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { SafeAreaView } from 'react-navigation';
 
 import {
   FlexedView,
@@ -72,7 +73,7 @@ class Form extends PureComponent {
             </View>
           </PaddedView>
         </KeyboardAwareScrollView>
-        <BottomSafeAreaView>
+        <BottomSafeAreaView forceInset={{ bottom: 'always' }}>
           <PaddedView vertical={false}>
             <Button
               onPress={handleSubmit}
