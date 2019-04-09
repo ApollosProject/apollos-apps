@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator } from 'react-native';
+import { CenteredView } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
 import getLoginStateWithCacheLoaded from './getLoginStateWithCacheLoaded';
 
@@ -36,8 +37,8 @@ class AuthLoading extends PureComponent {
   };
 
   static defaultProps = {
-    loggedOutRouteName: 'Tabs',
-    loggedInRouteName: 'Auth',
+    loggedOutRouteName: 'Auth',
+    loggedInRouteName: 'Tabs',
   };
 
   componentDidMount() {
@@ -68,9 +69,9 @@ class AuthLoading extends PureComponent {
     const { LoadingIndicator } = this.props;
     if (LoadingIndicator) return LoadingIndicator;
     return (
-      <View>
+      <CenteredView>
         <ActivityIndicator />
-      </View>
+      </CenteredView>
     );
   }
 }
