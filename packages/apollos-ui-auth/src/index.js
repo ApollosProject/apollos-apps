@@ -22,6 +22,7 @@ export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
 export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
+export ProtectedRoute from './ProtectedRoute';
 
 export getLoginState from './getLoginState';
 export logout from './logout';
@@ -70,6 +71,7 @@ const CancelButton = styled(({ theme }) => ({
 class Auth extends PureComponent {
   static navigationOptions = {
     header: null,
+    gesturesEnabled: false,
   };
 
   tabRoutes = [
@@ -85,7 +87,6 @@ class Auth extends PureComponent {
   };
 
   handleFinish = () => {
-    // trigger the auth modal to close
     if (this.props.onFinish) {
       this.props.onFinish();
     } else if (this.props.navigation && this.props.navigation.goBack) {
@@ -100,7 +101,7 @@ class Auth extends PureComponent {
   render() {
     return (
       <FlexedView>
-        <HeaderContainer>
+        <HeaderContainer forceInset={{ top: 'always' }}>
           <CancelButton onPress={this.handleFinish}>Cancel</CancelButton>
           <Header>
             <BrandIcon />
