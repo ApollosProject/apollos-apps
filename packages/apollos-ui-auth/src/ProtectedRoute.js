@@ -49,6 +49,10 @@ class AuthLoading extends PureComponent {
     this.handleLoginDataChanged();
   }
 
+  onFinish = (navigation) => {
+    navigation.navigate('Onboarding');
+  };
+
   handleLoginDataChanged = () => {
     const {
       isLoading,
@@ -61,7 +65,9 @@ class AuthLoading extends PureComponent {
     if (!isLoading && isLoggedIn) {
       navigation.navigate(loggedInRouteName);
     } else if (!isLoading) {
-      navigation.navigate(loggedOutRouteName);
+      navigation.navigate(loggedOutRouteName, {
+        onFinish: this.onFinish,
+      });
     }
   };
 
