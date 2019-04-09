@@ -1,0 +1,98 @@
+import React from 'react';
+import { View } from 'react-native';
+import renderer from 'react-test-renderer';
+import wait from 'waait';
+
+import { Providers } from '@apollosproject/ui-kit';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { MockedProvider } from 'react-apollo/test-utils';
+import AuthProvider, { getAuthToken } from './Provider';
+
+import AuthLoadingSwitch, {
+  getLoginWithCacheLoaded,
+} from './AuthLoadingSwitch';
+
+const setLoginState = async ({ cache, isLoggedIn }) => {
+  await cache.writeQuery({
+    query: getLoginWithCacheLoaded,
+    data: { isLoggedIn, cacheLoaded: true },
+  });
+  if (isLoggedIn) {
+    await cache.writeQuery({
+      query: getAuthToken,
+      data: { authToken: 'test' },
+    });
+  }
+};
+
+let cache;
+describe('AuthLoadingSwitch component', () => {
+  beforeEach(() => {
+    cache = new InMemoryCache();
+  });
+
+  it('navigates to the logged in route when logged in', async () => {
+    const navigateMock = jest.fn();
+    const navigation = { navigate: navigateMock };
+    await setLoginState({ cache, isLoggedIn: true });
+
+    const tree = renderer.create(
+      <MockedProvider cache={cache}>
+        <AuthProvider>
+          <Providers>
+            <AuthLoadingSwitch
+              loggedInRouteName="Home"
+              navigation={navigation}
+            />
+          </Providers>
+        </AuthProvider>
+      </MockedProvider>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+    expect(navigateMock.mock.calls).toMatchSnapshot();
+  });
+
+  it('navigates to the auth route when logged out', async () => {
+    const navigateMock = jest.fn();
+    const navigation = { navigate: navigateMock };
+    await setLoginState({ cache, isLoggedIn: false });
+
+    const tree = renderer.create(
+      <MockedProvider cache={cache}>
+        <AuthProvider>
+          <Providers>
+            <AuthLoadingSwitch
+              authRouteName="AuthFoo"
+              navigation={navigation}
+            />
+          </Providers>
+        </AuthProvider>
+      </MockedProvider>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+    expect(navigateMock.mock.calls).toMatchSnapshot();
+  });
+
+  it('renders a custom loading component', async () => {
+    const navigateMock = jest.fn();
+    const navigation = { navigate: navigateMock };
+
+    const tree = renderer.create(
+      <MockedProvider cache={cache}>
+        <AuthProvider>
+          <Providers>
+            <AuthLoadingSwitch
+              LoadingIndicator={<View />}
+              navigation={navigation}
+            />
+          </Providers>
+        </AuthProvider>
+      </MockedProvider>
+    );
+    await wait(0); // wait for response from graphql
+    expect(tree).toMatchSnapshot();
+    expect(navigateMock.mock.calls).toMatchSnapshot();
+  });
+});

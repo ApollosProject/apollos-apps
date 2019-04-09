@@ -1,16 +1,13 @@
 import React from 'react';
-import { StatusBar, ActivityIndicator, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
 // import { Sentry } from 'react-native-sentry';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
-import Auth from '@apollosproject/ui-auth';
-// import AuthLoading from './auth-loading';
+import Auth, { AuthLoadingSwitch } from '@apollosproject/ui-auth';
 import Providers from './Providers';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
@@ -25,34 +22,14 @@ import Onboarding from './onboarding';
 //   'https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658'
 // ).install();
 
-const getLoginState = gql`
-  query {
-    isLoggedIn @client(always: true)
-  }
-`;
-
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
 
-const AuthNavigator = createStackNavigator(
-  {
-    Auth,
-    Onboarding,
-  },
-  {
-    initialRouteName: 'Auth',
-    initialRouteParams: {
-      onFinish: (props) => props.navigation.navigate('Onboarding'),
-    },
-    mode: 'modal',
-    headerMode: 'screen',
-  }
-);
-
 const AppNavigator = createStackNavigator(
   {
+    AuthLoadingSwitch,
     Tabs,
     ContentSingle,
     Auth,
@@ -64,7 +41,7 @@ const AppNavigator = createStackNavigator(
     Onboarding,
   },
   {
-    initialRouteName: 'Tabs',
+    initialRouteName: 'AuthLoadingSwitch',
     mode: 'modal',
     headerMode: 'screen',
   }
@@ -74,33 +51,11 @@ const App = () => (
   <Providers>
     <BackgroundView>
       <AppStatusBar barStyle="dark-content" />
-      <Query query={getLoginState}>
-        {({ data: { isLoggedIn = false } = {}, loading }) => {
-          if (!loading) {
-            if (isLoggedIn) {
-              return (
-                <AppNavigator
-                  ref={(navigatorRef) => {
-                    NavigationService.setTopLevelNavigator(navigatorRef);
-                  }}
-                />
-              );
-            }
-            return (
-              <AuthNavigator
-                ref={(navigatorRef) => {
-                  NavigationService.setTopLevelNavigator(navigatorRef);
-                }}
-              />
-            );
-          }
-          return (
-            <View>
-              <ActivityIndicator />
-            </View>
-          );
+      <AppNavigator
+        ref={(navigatorRef) => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
         }}
-      </Query>
+      />
       <MediaPlayer />
     </BackgroundView>
   </Providers>

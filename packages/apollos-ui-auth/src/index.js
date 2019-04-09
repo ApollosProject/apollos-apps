@@ -22,6 +22,7 @@ export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
 export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
+export AuthLoadingSwitch from './AuthLoadingSwitch';
 
 export getLoginState from './getLoginState';
 export logout from './logout';
@@ -84,22 +85,12 @@ class Auth extends PureComponent {
     onFinish: PropTypes.func,
   };
 
-  get finishFunction() {
-    return this.props.navigation.getParam('onFinish', () => {});
-  }
-
   handleFinish = () => {
-    // trigger the auth modal to close
-    console.log('finishFunction = ', this.finishFunction);
-    if (this.finishFunction) {
-      console.log('this.finishFunction is true');
-      this.finishFunction(this.props);
+    if (this.props.onFinish) {
+      this.props.onFinish();
+    } else if (this.props.navigation && this.props.navigation.goBack) {
+      this.props.navigation.goBack();
     }
-    // if (this.props.onFinish) {
-    //   this.props.onFinish();
-    // } else if (this.props.navigation && this.props.navigation.goBack) {
-    //   this.props.navigation.goBack();
-    // }
   };
 
   renderLogin = () => <LoginForm onLogin={this.handleFinish} />;
