@@ -17,6 +17,7 @@ describe('PersonalDetails component', () => {
         data: {
           currentUser: {
             profile: {
+              gender: 'Male',
               birthDate: '01/12/2001',
             },
           },

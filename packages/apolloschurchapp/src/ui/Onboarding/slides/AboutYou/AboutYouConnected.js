@@ -65,7 +65,7 @@ const AboutYouConnected = memo(({ onPressPrimary, ...props }) => (
                 setSubmitting(false);
               }}
             >
-              {({ submitForm, ...formikBag }) => {
+              {({ submitForm, values, touched, errors, setFieldValue }) => {
                 const handleOnPressPrimary = () => {
                   submitForm();
                   onPressPrimary();
@@ -73,7 +73,12 @@ const AboutYouConnected = memo(({ onPressPrimary, ...props }) => (
                 return (
                   <AboutYou
                     onPressPrimary={handleOnPressPrimary}
-                    {...formikBag}
+                    gender={gender}
+                    birthDate={birthDate}
+                    values={values}
+                    touched={touched}
+                    errors={errors}
+                    setFieldValue={setFieldValue}
                     {...props}
                   />
                 );
