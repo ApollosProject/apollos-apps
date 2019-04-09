@@ -392,7 +392,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832565209}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1114,7 +1114,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832564687}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -1527,7 +1527,7 @@ exports[`The Onboarding AboutYou component should render a custom date picker 1`
                       }
                     }
                   >
-                    04/09/2019
+                    02/14/1989
                   </Text>
                 </View>
               </View>
@@ -1642,7 +1642,7 @@ exports[`The Onboarding AboutYou component should render a custom date picker 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832565166}
+                          date={603439200000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2170,7 +2170,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832565047}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -2698,7 +2698,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832565083}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -3240,7 +3240,7 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832564949}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -3768,7 +3768,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832565004}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
@@ -4296,7 +4296,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                     >
                       <View>
                         <RCTDatePicker
-                          date={1554832565117}
+                          date={1550124000000}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}

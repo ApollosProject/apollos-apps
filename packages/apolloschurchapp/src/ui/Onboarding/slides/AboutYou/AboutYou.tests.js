@@ -89,7 +89,10 @@ describe('The Onboarding AboutYou component', () => {
   it('should render a custom date picker', () => {
     const tree = renderer.create(
       <Providers>
-        <AboutYou userDOB={'1989-02-14'} setFieldValue={jest.fn()} />
+        <AboutYou
+          values={{ birthDate: '1989-02-14' }}
+          setFieldValue={jest.fn()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
