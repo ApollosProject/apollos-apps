@@ -7,4 +7,4 @@ const AuthWithOnboarding = (props) => (
 
 AuthWithOnboarding.navigationOptions = Auth.navigationOptions;
 
-export default Auth;
+export default AuthWithOnboarding;
