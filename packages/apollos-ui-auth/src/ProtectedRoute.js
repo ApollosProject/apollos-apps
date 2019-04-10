@@ -25,9 +25,9 @@ const AppNavigator = createStackNavigator(
 ```
 */
 
-class AuthLoading extends PureComponent {
+class ProtectedRoute extends PureComponent {
   static propTypes = {
-    navigation: PropTypes.shape({ navigate: PropTypes.func.isRequired })
+    navigation: PropTypes.shape({ replace: PropTypes.func.isRequired })
       .isRequired,
     isLoading: PropTypes.bool.isRequired,
     isLoggedIn: PropTypes.bool.isRequired,
@@ -77,13 +77,13 @@ class AuthLoading extends PureComponent {
   }
 }
 
-const AuthLoadingWithData = (props) => (
+const ProtectedRouteWithData = (props) => (
   <Query fetchPolicy={'network-only'} query={getLoginStateWithCacheLoaded}>
     {({
       data: { isLoggedIn = false, cacheLoaded = false } = {},
       loading = true,
     }) => (
-      <AuthLoading
+      <ProtectedRoute
         {...props}
         isLoggedIn={isLoggedIn}
         isLoading={loading || !cacheLoaded}
@@ -92,4 +92,4 @@ const AuthLoadingWithData = (props) => (
   </Query>
 );
 
-export default AuthLoadingWithData;
+export default ProtectedRouteWithData;
