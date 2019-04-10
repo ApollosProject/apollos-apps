@@ -5,9 +5,9 @@ import { createStackNavigator } from 'react-navigation';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
-
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import { ProtectedRoute } from '@apollosproject/ui-auth';
+
 import Providers from './Providers';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
