@@ -11,7 +11,7 @@ const AppProviders = (props) => (
     <NotificationsManager>
       <AuthProvider
         navigateToAuth={() => NavigationService.navigate('Auth')}
-        closeAuth={() => NavigationService.goBack('Auth')}
+        closeAuth={() => NavigationService.navigate('Onboarding')}
       >
         <AnalyticsProvider trackFunctions={[console.warn]}>
           <Providers {...props} />

@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { SafeAreaView, KeyboardAvoidingView, StyleSheet } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 import {
   BackgroundView,
   TabView,
   PaddedView,
   TabSceneMap as SceneMap,
 } from '@apollosproject/ui-kit';
+import { SafeAreaView } from 'react-navigation';
 
 import { PromptText } from '../styles';
 import { AuthConsumer } from '../Provider';

@@ -1,14 +1,9 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  SafeAreaView,
-  KeyboardAvoidingView,
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StyleSheet } from 'react-native';
 import { PaddedView, BackgroundView, TextInput } from '@apollosproject/ui-kit';
-
+import { SafeAreaView } from 'react-navigation';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import gql from 'graphql-tag';

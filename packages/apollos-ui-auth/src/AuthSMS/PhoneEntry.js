@@ -1,12 +1,8 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  SafeAreaView,
-  KeyboardAvoidingView,
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import {
   H6,
   PaddedView,
