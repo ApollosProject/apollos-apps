@@ -3,7 +3,6 @@ import { Query } from 'react-apollo';
 import { ActivityIndicator } from 'react-native';
 import { CenteredView } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
-import { withNavigationFocus } from 'react-navigation';
 import getLoginStateWithCacheLoaded from './getLoginStateWithCacheLoaded';
 
 /* This function can be included as the default route in your navigator
@@ -35,7 +34,6 @@ class AuthLoading extends PureComponent {
     loggedInRouteName: PropTypes.string,
     loggedOutRouteName: PropTypes.string,
     LoadingIndicator: PropTypes.node,
-    isFocused: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
@@ -58,10 +56,9 @@ class AuthLoading extends PureComponent {
       navigation,
       loggedInRouteName,
       loggedOutRouteName,
-      isFocused,
     } = this.props;
 
-    const shouldNavigate = !isLoading && isFocused;
+    const shouldNavigate = !isLoading;
     if (shouldNavigate && isLoggedIn) {
       navigation.replace(loggedInRouteName);
     } else if (shouldNavigate) {
@@ -80,15 +77,13 @@ class AuthLoading extends PureComponent {
   }
 }
 
-const AuthLoadingWithFocus = withNavigationFocus(AuthLoading);
-
 const AuthLoadingWithData = (props) => (
   <Query fetchPolicy={'network-only'} query={getLoginStateWithCacheLoaded}>
     {({
       data: { isLoggedIn = false, cacheLoaded = false } = {},
       loading = true,
     }) => (
-      <AuthLoadingWithFocus
+      <AuthLoading
         {...props}
         isLoggedIn={isLoggedIn}
         isLoading={loading || !cacheLoaded}
