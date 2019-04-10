@@ -5,8 +5,6 @@ import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import LocationFinder from './LocationFinder';
 
-const campus = {};
-
 storiesOf('Onboarding/slides/LocationFinder', module)
   .add('default', () => <LocationFinder />)
   .add('children (image)', () => (
@@ -18,8 +16,24 @@ storiesOf('Onboarding/slides/LocationFinder', module)
   .add('description', () => (
     <LocationFinder description={'Custom description text'} />
   ))
-  .add('buttonDisabled', () => (
-    <LocationFinder buttonDisabled campus={campus} />
+  .add('campus', () => (
+    <LocationFinder
+      campus={{
+        id: 'Campus:a0f64573eabf00a607bec911794d50fb',
+        name: 'Lyon Estates',
+        latitude: 42.09203,
+        longitude: -88.13289,
+        distanceFromLocation: 88,
+        street1: '9303 Lyon Drive',
+        street2: '',
+        city: 'Hill Valley',
+        state: 'CA',
+        postalCode: '95420',
+        image: {
+          uri: 'https://picsum.photos/300/300/?random',
+        },
+      }}
+    />
   ))
   .add('buttonText', () => (
     <LocationFinder

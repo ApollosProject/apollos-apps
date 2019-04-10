@@ -18,8 +18,7 @@ const campus = {
   state: 'IL',
   postalCode: '60010-6143',
   image: {
-    uri:
-      'https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47',
+    uri: 'https://picsum.photos/300/300/?random',
   },
 };
 
