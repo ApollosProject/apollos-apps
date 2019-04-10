@@ -14,8 +14,8 @@ import {
   AskNotificationsConnected,
   AskNameConnected,
   Features,
-  AboutYou,
-  LocationFinderConnected,
+  AboutYouConnected,
+  AskNotificationsConnected,
 } from './slides';
 
 // Provides themed colors to Swiper dots
@@ -87,7 +87,7 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
-          <AboutYou
+          <AboutYouConnected
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />

@@ -277,7 +277,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -390,21 +390,15 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -999,7 +993,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -1112,21 +1106,15 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -1640,21 +1628,15 @@ exports[`The Onboarding AboutYou component should render a custom date picker 1`
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={603417600000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={1989-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -2055,7 +2037,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -2168,21 +2150,15 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -2583,7 +2559,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -2696,21 +2672,15 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -3125,7 +3095,7 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -3238,21 +3208,15 @@ exports[`The Onboarding AboutYou component should render a custom image 1`] = `
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -3653,7 +3617,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -3766,21 +3730,15 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
@@ -4193,7 +4151,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                       }
                     }
                   >
-                    Select a date...
+                    02/14/2019
                   </Text>
                 </View>
               </View>
@@ -4306,21 +4264,15 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                     <View
                       onStartShouldSetResponderCapture={[Function]}
                     >
-                      <View>
-                        <RCTDatePicker
-                          date={1550102400000}
-                          minuteInterval={1}
-                          mode="date"
-                          onChange={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "height": 216,
-                            }
-                          }
-                        />
-                      </View>
+                      <DatePicker
+                        date={2019-02-14T00:00:00.000Z}
+                        minuteInterval={1}
+                        mode="date"
+                        onCancel={[Function]}
+                        onConfirm={[Function]}
+                        onDateChange={[Function]}
+                        onHideAfterConfirm={[Function]}
+                      />
                     </View>
                     <View
                       accessible={true}
