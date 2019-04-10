@@ -15,7 +15,7 @@ import {
   AskNameConnected,
   Features,
   AboutYouConnected,
-  AskNotificationsConnected,
+  LocationFinderConnected,
 } from './slides';
 
 // Provides themed colors to Swiper dots
