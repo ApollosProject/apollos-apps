@@ -71,7 +71,6 @@ const CancelButton = styled(({ theme }) => ({
 class Auth extends PureComponent {
   static navigationOptions = {
     header: null,
-    gesturesEnabled: false,
   };
 
   tabRoutes = [
