@@ -40,6 +40,7 @@ const AskNameConnected = memo(({ onPressPrimary, ...props }) => (
                 firstName: Yup.string().required('First Name is required!'),
                 lastName: Yup.string().required('Last Name is required!'),
               })}
+              enableReinitialize
               onSubmit={async (variables, { setSubmitting, setFieldError }) => {
                 try {
                   await updateName({ variables });

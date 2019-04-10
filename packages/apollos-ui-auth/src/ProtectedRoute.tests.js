@@ -32,7 +32,7 @@ describe('ProtectedRoute component', () => {
 
   it('navigates to the logged in route when logged in', async () => {
     const navigateMock = jest.fn();
-    const navigation = { navigate: navigateMock };
+    const navigation = { replace: navigateMock };
     await setLoginState({ cache, isLoggedIn: true });
 
     const tree = renderer.create(
@@ -51,7 +51,7 @@ describe('ProtectedRoute component', () => {
 
   it('navigates to the auth route when logged out', async () => {
     const navigateMock = jest.fn();
-    const navigation = { navigate: navigateMock };
+    const navigation = { replace: navigateMock };
     await setLoginState({ cache, isLoggedIn: false });
 
     const tree = renderer.create(
@@ -73,7 +73,7 @@ describe('ProtectedRoute component', () => {
 
   it('renders a custom loading component', async () => {
     const navigateMock = jest.fn();
-    const navigation = { navigate: navigateMock };
+    const navigation = { replace: navigateMock };
 
     const tree = renderer.create(
       <MockedProvider cache={cache}>
