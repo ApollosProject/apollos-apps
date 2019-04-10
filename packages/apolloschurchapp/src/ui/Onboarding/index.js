@@ -25,7 +25,7 @@ class Onboarding extends Component {
     super();
 
     this.swiper = null;
-    this.state = { pagination: true, swipingEnabled: true };
+    this.state = { pagination: true };
   }
 
   // Creates ref to Swiper to be passed as a prop to children.
@@ -43,7 +43,6 @@ class Onboarding extends Component {
       <BackgroundView>
         <ThemedSwiper
           showsPagination={this.state.pagination}
-          scrollEnabled={this.state.swipingEnabled}
           loop={false}
           /* Disables swipe gestures. We currently we dont display a back button so this is our
            * only back navigation option. */
