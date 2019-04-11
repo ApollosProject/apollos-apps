@@ -1,18 +1,17 @@
-import React, { memo } from 'react';
-import { Query, ApolloConsumer } from 'react-apollo';
-import NavigationActions from 'apolloschurchapp/src/NavigationService';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { Query } from 'react-apollo';
+import { withNavigation } from 'react-navigation';
 import getUserCampus from './getUserCampus';
-import { getCurrentCampus, requestCurrentCampus } from './campusUtils';
 import LocationFinder from '.';
 
-// const requestLocation = async () => {
-//   await NavigationActions.navigate('LocationFinderMapView');
-// };
+class LocationFinderConnected extends PureComponent {
+  state = { selectedCampus: false };
 
-// eslint-disable-next-line react/display-name
-const LocationFinderConnected = memo((props) => (
-  <ApolloConsumer>
-    {(client) => (
+  render() {
+    const { onPressPrimary, navigation } = this.props;
+    const { selectedCampus } = this.state;
+    return (
       <Query query={getUserCampus} fetchPolicy="cache-and-network">
         {({
           data: {
@@ -23,28 +22,28 @@ const LocationFinderConnected = memo((props) => (
             } = {},
           } = {},
         }) => (
-          <Query query={getCurrentCampus}>
-            {({ data: { isCurrentCampus = false } = {} }) => (
-              <LocationFinder
-                onPressButton={async () => {
-                  await requestCurrentCampus({ client });
-                  await NavigationActions.navigate('LocationFinderMapView');
-                }}
-                buttonDisabled={isCurrentCampus}
-                buttonText={
-                  isCurrentCampus
-                    ? 'We found your campus! '
-                    : 'Yes, find my local campus'
-                }
-                campus={isCurrentCampus ? campus : null}
-                {...props}
-              />
-            )}
-          </Query>
+          <LocationFinder
+            onPressButton={async () => {
+              this.setState({ selectedCampus: true });
+              navigation.navigate('LocationFinderMapView', {
+                onFinished: onPressPrimary,
+              });
+            }}
+            buttonText={'Yes, find my local campus'}
+            campus={selectedCampus ? campus : null}
+            onPressPrimary={onPressPrimary}
+            {...this.props}
+          />
         )}
       </Query>
-    )}
-  </ApolloConsumer>
-));
+    );
+  }
+}
 
-export default LocationFinderConnected;
+LocationFinderConnected.propTypes = {
+  onPressPrimary: PropTypes.func.isRequired,
+};
+
+LocationFinderConnected.displayName = 'LocationFinderConnected';
+
+export default withNavigation(LocationFinderConnected);

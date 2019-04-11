@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import CampusParts from 'apolloschurchapp/src/user-settings/Locations/campusFragment';
 
 export default gql`
   query getCurrentCampus {
@@ -6,21 +7,10 @@ export default gql`
       id
       profile {
         campus {
-          id
-          name
-          latitude
-          longitude
-          distanceFromLocation
-          street1
-          street2
-          city
-          state
-          postalCode
-          image {
-            uri
-          }
+          ...CampusParts
         }
       }
     }
   }
+  ${CampusParts}
 `;

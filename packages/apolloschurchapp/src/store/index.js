@@ -10,7 +10,6 @@ import {
   updatePushId,
   getNotificationsEnabled,
 } from '../notifications';
-import { getCurrentCampus } from '../ui/Onboarding/slides/LocationFinder/campusUtils';
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
 
@@ -20,7 +19,6 @@ export const schema = `
     devicePushId: String
     cacheLoaded: Boolean
     notificationsEnabled: Boolean
-    isCurrentCampus: Boolean
   }
 
   type Mutation {
@@ -250,14 +248,6 @@ export const resolvers = {
       });
 
       return null;
-    },
-    updateCurrentCampus: (root, { selected }, { cache }) => {
-      cache.writeQuery({
-        query: getCurrentCampus,
-        data: {
-          isCurrentCampus: selected,
-        },
-      });
     },
 
     cacheMarkLoaded: async (root, args, { cache, client }) => {

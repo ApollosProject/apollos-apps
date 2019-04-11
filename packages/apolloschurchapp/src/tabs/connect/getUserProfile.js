@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import CampusParts from 'apolloschurchapp/src/user-settings/Locations/campusFragment';
 
 export default gql`
   query getCurrentUserProfile {
@@ -8,7 +9,7 @@ export default gql`
         firstName
         lastName
         campus {
-          name
+          ...CampusParts
         }
         email
         nickName
@@ -20,4 +21,5 @@ export default gql`
       }
     }
   }
+  ${CampusParts}
 `;
