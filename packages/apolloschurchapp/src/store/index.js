@@ -36,7 +36,6 @@ export const schema = `
     cacheMarkLoaded
     updateDevicePushId(pushId: String!)
     updatePushPermissions(enabled: Boolean!)
-    updateCurrentCampus(selected: Boolean!)
   }
 
   type MediaPlayerState {
@@ -70,7 +69,6 @@ export const defaults = {
   cacheLoaded: false,
   pushId: null,
   notificationsEnabled: Platform.OS === 'android',
-  isCurrentCampus: false,
   mediaPlayer: {
     __typename: 'MediaPlayerState',
     currentTrack: null,

@@ -6,6 +6,7 @@ import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 import LocationFinderConnected from './LocationFinderConnected';
 import getUserCampus from './getUserCampus';
 
+const navigation = { navigate: jest.fn() };
 describe('The Onboarding LocationFinderConnected component', () => {
   it('should render with a user not having a campus selected', async () => {
     const mocks = [
@@ -21,7 +22,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderConnected />
+        <LocationFinderConnected navigation={navigation} />
       </Providers>
     );
 
@@ -61,7 +62,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderConnected />
+        <LocationFinderConnected navigation={navigation} />
       </Providers>
     );
 
@@ -72,7 +73,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
   it('should render with no data in the cache', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinderConnected />
+        <LocationFinderConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

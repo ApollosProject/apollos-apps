@@ -1036,27 +1036,8 @@ exports[`The Onboarding LocationFinder component should render the button disabl
                           source={
                             Array [
                               Object {
-                                "__actions__": Array [],
-                                "__chain__": false,
-                                "__index__": 0,
-                                "__values__": undefined,
-                                "__wrapped__": Object {
-                                  "city": "South Barrington",
-                                  "distanceFromLocation": null,
-                                  "id": "Campus:a0f64573eabf00a607bec911794d50fb",
-                                  "image": Object {
-                                    "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
-                                  },
-                                  "latitude": 42.09203,
-                                  "longitude": -88.13289,
-                                  "name": "Chicago Campus",
-                                  "postalCode": "60010-6143",
-                                  "state": "IL",
-                                  "street1": "67 Algonquin Rd",
-                                  "street2": "",
-                                },
                                 "cache": "force-cache",
-                                "uri": "",
+                                "uri": "https://picsum.photos/300/300/?random",
                               },
                             ]
                           }
