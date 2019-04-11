@@ -97,6 +97,18 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a custom date picker when the birth date is null', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AboutYou
+          values={{ birthDate: null }}
+          setFieldValue={jest.fn()}
+          defaultDate={'2019-02-14'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should pass additional props to Slide', () => {
     /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
