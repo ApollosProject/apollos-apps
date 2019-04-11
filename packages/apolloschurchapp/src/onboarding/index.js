@@ -5,9 +5,10 @@ export default class TestingControlPanel extends PureComponent {
   static navigationOptions = () => ({
     title: 'Onboarding',
     header: null,
+    gesturesEnabled: false,
   });
 
   render() {
-    return <Onboarding />;
+    return <Onboarding {...this.props} />;
   }
 }
