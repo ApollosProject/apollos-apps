@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@color/deep_water"/>
+        android:drawable="@color/primary"/>
 
     <item
         android:width="95.28dp"
