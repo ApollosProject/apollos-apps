@@ -84,7 +84,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "iPhone 6s - portrait.png",
+      "filename" : "640x960.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
@@ -101,7 +101,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "9.7” iPad - Portrait.png",
+      "filename" : "768x1024.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "1x"
@@ -109,7 +109,7 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - landscape-1.png",
+      "filename" : "1024x768.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "1x"
@@ -133,14 +133,14 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "iPhone SE - portrait-1.png",
+      "filename" : "320x480.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "iPhone SE - portrait-3.png",
+      "filename" : "640x960-1.png",
       "extent" : "full-screen",
       "scale" : "2x"
     },
@@ -155,35 +155,35 @@
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - portrait-5.png",
+      "filename" : "768x1004.png",
       "extent" : "to-status-bar",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - portrait-7.png",
+      "filename" : "768x1024-1.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - portrait-9.png",
+      "filename" : "1024x748.png",
       "extent" : "to-status-bar",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - portrait-11.png",
+      "filename" : "1024x768-1.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - portrait-6.png",
+      "filename" : "1536x2008.png",
       "extent" : "to-status-bar",
       "scale" : "2x"
     },
@@ -197,7 +197,7 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "iPhone SE - portrait-10.png",
+      "filename" : "2048x1496.png",
       "extent" : "to-status-bar",
       "scale" : "2x"
     },
