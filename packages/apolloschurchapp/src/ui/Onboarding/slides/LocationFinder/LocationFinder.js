@@ -35,6 +35,11 @@ const StyledH5 = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 1.5,
 }))(H5);
 
+const StyledCampusCard = styled(({ theme }) => ({
+  marginHorizontal: theme.sizing.baseUnit,
+  marginBottom: theme.sizing.baseUnit,
+}))(CampusCard);
+
 // memo = sfc PureComponent 💥
 // eslint-disable-next-line react/display-name
 const LocationFinder = memo(
@@ -68,25 +73,27 @@ const LocationFinder = memo(
         <Content>
           <Title>{slideTitle}</Title>
           <StyledH5>{description}</StyledH5>
-          {campus ? (
-            <Touchable onPress={onPressButton}>
-              <CampusCard
-                key={campus.id}
-                distance={campus.distanceFromLocation}
-                title={campus.name}
-                description={getCampusAddress(campus)}
-                images={[campus.image]}
-              />
-            </Touchable>
-          ) : (
+        </Content>
+        {campus ? (
+          <Touchable onPress={onPressButton}>
+            <StyledCampusCard
+              key={campus.id}
+              distance={campus.distanceFromLocation}
+              title={campus.name}
+              description={getCampusAddress(campus)}
+              images={[campus.image]}
+            />
+          </Touchable>
+        ) : (
+          <Content>
             <Button
               title={buttonText}
               onPress={onPressButton}
               disabled={buttonDisabled}
               pill={false}
             />
-          )}
-        </Content>
+          </Content>
+        )}
       </ContentWrapper>
     </Slide>
   )
