@@ -98,47 +98,11 @@ class Home extends PureComponent {
                           {}
                         );
 
-                        const imageStyle = {
-                          position: 'absolute',
-                          bottom: 0,
-                          top: 0,
-                          left: 0,
-                          right: 0,
-                        };
-
                         return (
-                          <TouchableScale
-                            onPress={() => this.handleOnPress(featuredItem)}
-                          >
-                            <Card
-                              isLoading={isFeaturedLoading}
-                              forceRatio={0.75}
-                            >
-                              <GradientOverlayImage
-                                source={get(
-                                  featuredItem,
-                                  'coverImage.sources[0]',
-                                  {}
-                                )}
-                                isLoading
-                                forceRatio={0.75}
-                                resizeMode="stretch"
-                                imageStyle={imageStyle}
-                                overlayColor={get(
-                                  featuredItem,
-                                  'theme.colors.primary',
-                                  '#fff'
-                                )}
-                                maintainAspectRatio
-                              />
-                              <TextContainer>
-                                <StyledH6>{featuredItem.title}</StyledH6>
-                                <H2 numberOfLines={2} ellipsizeMode="tail">
-                                  {featuredItem.summary}
-                                </H2>
-                              </TextContainer>
-                            </Card>
-                          </TouchableScale>
+                          <ContentCardConnected
+                            contentId={featuredItem.id}
+                            isLoading={isFeaturedLoading}
+                          />
                         );
                       }}
                     </Query>
