@@ -55,13 +55,15 @@ const CardContainer = styled(({ theme }) => ({
 }))(View);
 
 const StyledCard = styled(({ theme }) => ({
+  width: CARD_WIDTH,
+  height: theme.sizing.baseUnit * 6,
   marginHorizontal: 0,
   marginRight: theme.sizing.baseUnit / 2,
 }))(Card);
 
 const CampusCard = enhance(
   ({ title, description, distance, images, isLoading, ...otherProps }) => (
-    <CardContainer>
+    <CardContainer collapsable={false}>
       <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
         <HorizontalLayout>
           {images ? (
