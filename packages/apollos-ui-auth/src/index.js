@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import {
   SMSPhoneEntry as AuthSMSPhoneEntry,
   SMSVerification as AuthSMSVerification,
-} from './AuthSMS';
-import AuthPassword from './AuthPassword';
+} from './SMS';
+import AuthPassword from './Password';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
