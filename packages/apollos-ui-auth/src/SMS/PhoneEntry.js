@@ -107,7 +107,7 @@ class PhoneEntry extends Component {
                 onSubmit={this.submitHandler(mutate)}
               >
                 {({
-                  handleChange,
+                  setFieldValue,
                   handleSubmit,
                   values,
                   isSubmitting,
@@ -131,7 +131,7 @@ class PhoneEntry extends Component {
                           onSubmitEditing={this.handleAdvance}
                           enzblesReturnKeyAutomatically
                           error={touched.phone && errors.phone}
-                          onChangeText={handleChange('phone')}
+                          onChangeText={(text) => setFieldValue('phone', text)}
                           value={values.phone}
                         />
                       </PaddedView>

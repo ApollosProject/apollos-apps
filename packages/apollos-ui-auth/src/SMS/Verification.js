@@ -103,7 +103,7 @@ class Verification extends Component {
                         onSubmit={this.submitHandler({ verifyPin, closeAuth })}
                       >
                         {({
-                          handleChange,
+                          setFieldValue,
                           handleSubmit,
                           values,
                           isSubmitting,
@@ -127,7 +127,9 @@ class Verification extends Component {
                                   returnKeyType="next"
                                   enzblesReturnKeyAutomatically
                                   error={touched.code && errors.code}
-                                  onChangeText={handleChange('code')}
+                                  onChangeText={(text) =>
+                                    setFieldValue('code', text)
+                                  }
                                   value={values.code}
                                 />
                               </PaddedView>
