@@ -74,7 +74,7 @@ class MapView extends Component {
   }
 
   get contentContainerStyle() {
-    return { paddingHorizontal: this.props.theme.sizing.baseUnit };
+    return { paddingHorizontal: this.props.theme.sizing.baseUnit * 0.75 }; // pad cards from edge of screen but account for card margin
   }
 
   updateCoordinates = ({ value }) => {
@@ -176,10 +176,11 @@ class MapView extends Component {
               <Animated.ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                snapToInterval={CARD_WIDTH}
-                snapToAlignment="left"
-                decelerationRate="fast"
-                contentContainerStyle={this.contentContainerStyle}
+                snapToInterval={CARD_WIDTH + 8} // account for padding
+                snapToAlignment={'start'}
+                decelerationRate={'fast'}
+                contentContainerStyle={this.contentContainerStyle} // correctly pads cards in ScrollView
+                scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
                 onScroll={Animated.event(
                   [
                     {
