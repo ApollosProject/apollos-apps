@@ -3,12 +3,11 @@ import { View } from 'react-native';
 
 import styled from '../styled';
 
-const CenteredView = styled(({ theme }) => ({
+const CenteredView = styled({
   flex: 1,
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: theme.colors.background.screen,
-}))(View);
+})(View);
 
 CenteredView.defaultProps = {
   children: null,
