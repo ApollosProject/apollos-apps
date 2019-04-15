@@ -32,7 +32,7 @@ const Container = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.inactive,
 }))(View);
 
-const DefaultImageComponent = styled(({ resizeMode }) => ({
+const DefaultImageComponent = styled(({ resizeMode = 'cover' }) => ({
   width: '100%',
   resizeMode,
 }))(ConnectedImage);

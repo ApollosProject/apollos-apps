@@ -93,7 +93,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         "kind": "OperationDefinition",
                         "name": Object {
                           "kind": "Name",
-<<<<<<< HEAD
                           "value": "campaigns",
                         },
                         "operation": "query",
@@ -886,8 +885,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         "kind": "OperationDefinition",
                         "name": Object {
                           "kind": "Name",
-=======
->>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
                           "value": "getPersonaFeed",
                         },
                         "operation": "query",
@@ -1811,47 +1808,38 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 }
               />
               <View
-<<<<<<< HEAD
-                accessible={true}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                    ],
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 16,
+                    "marginHorizontal": 16,
+                    "marginVertical": 12,
+                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "shadowRadius": 6,
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#FFFFFF",
+                      "aspectRatio": undefined,
                       "borderRadius": 16,
-                      "marginHorizontal": 16,
-                      "marginVertical": 12,
-                      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                      "shadowOffset": Object {
-                        "height": 1,
-                        "width": 0,
-                      },
-                      "shadowOpacity": 1,
-                      "shadowRadius": 6,
+                      "overflow": "hidden",
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
-                        "borderRadius": 16,
+                        "aspectRatio": 2,
+                        "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
+                        "width": "100%",
                       }
                     }
                   >
@@ -1860,160 +1848,125 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "overflow": "hidden",
                           "width": "100%",
                         }
                       }
-                    >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "width": "100%",
-                          }
-                        }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={
-                            Array [
-                              Object {
-                                "cache": "force-cache",
-                                "uri": "",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "aspectRatio": 2,
-                              "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                              "width": "100%",
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "paddingBottom": 12,
-                          "paddingHorizontal": 16,
-                          "paddingTop": 24,
-                          "paddingVertical": 16,
-                        }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "paddingBottom": 12,
+                        "paddingHorizontal": 16,
+                        "paddingTop": 24,
+                        "paddingVertical": 16,
                       }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 24,
-                            "marginVertical": 1.8000000000000007,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
+                    }
+                  >
                     <View
                       style={
                         Object {
-                          "alignItems": "center",
-                          "flexDirection": "row",
-                          "flexWrap": "wrap",
-                          "height": 32,
-                          "justifyContent": "space-between",
-                          "paddingHorizontal": 16,
-                          "paddingTop": 4,
-                          "paddingVertical": 16,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
                         }
                       }
                     />
                     <View
-                      floating={false}
                       style={
                         Object {
-                          "alignItems": "center",
-                          "bottom": 0,
-                          "flexDirection": "row",
-                          "flexWrap": "wrap",
-                          "justifyContent": "space-between",
-                          "left": 0,
-                          "paddingHorizontal": 16,
-                          "paddingTop": 4,
-                          "paddingVertical": 16,
-                          "position": "absolute",
-                          "right": 0,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "flexWrap": "wrap",
+                        "height": 32,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 16,
+                        "paddingTop": 4,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  />
+                  <View
+                    floating={false}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "bottom": 0,
+                        "flexDirection": "row",
+                        "flexWrap": "wrap",
+                        "justifyContent": "space-between",
+                        "left": 0,
+                        "paddingHorizontal": 16,
+                        "paddingTop": 4,
+                        "paddingVertical": 16,
+                        "position": "absolute",
+                        "right": 0,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "flexDirection": "column",
                         }
                       }
                     >
                       <View
+                        flexed={false}
                         style={
                           Object {
-                            "flexDirection": "column",
+                            "alignItems": "center",
+                            "flex": null,
+                            "flexDirection": "row",
                           }
                         }
                       >
                         <View
-                          flexed={false}
                           style={
                             Object {
-                              "alignItems": "center",
-                              "flex": null,
-                              "flexDirection": "row",
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 16,
+                              "height": 19.2,
+                              "width": 19.2,
                             }
                           }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "paddingHorizontal": 4,
+                            }
+                          }
+                          withIcon="empty"
                         >
                           <View
                             style={
                               Object {
+                                "alignSelf": "stretch",
                                 "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "height": 19.2,
-                                "width": 19.2,
+                                "height": 12,
+                                "marginVertical": 2.6400000000000006,
+                                "width": "50%",
                               }
                             }
                           />
-                          <View
-                            style={
-                              Object {
-                                "paddingHorizontal": 4,
-                              }
-                            }
-                            withIcon="empty"
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "alignSelf": "stretch",
-                                  "backgroundColor": "#A5A5A5",
-                                  "borderRadius": 16,
-                                  "height": 12,
-                                  "marginVertical": 2.6400000000000006,
-                                  "width": "50%",
-                                }
-                              }
-                            />
-                          </View>
                         </View>
                       </View>
                     </View>
@@ -2021,27 +1974,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 </View>
               </View>
               <View
-                content={<mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(getContext(mapProps(WithWindow)))))))))))) />}
-                header={
-                  <mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))))))))))))>
-                    <mapProps(getContext(mapProps(withPropsOnChange(mapProps(H6)))))
-                      isLoading={true}
-                    >
-                      FOR YOU
-                    </mapProps(getContext(mapProps(withPropsOnChange(mapProps(H6)))))>
-                    <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-                      <H3
-                        ellipsizeMode="tail"
-                        isLoading={true}
-                        numberOfLines={3}
-                      >
-                        Some random text that encourages you
-                      </H3>
-                    </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-                  </mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))))))))))))>
-                }
-=======
->>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -2091,25 +2023,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     <View
                       style={
                         Object {
-<<<<<<< HEAD
-                          "marginTop": 8,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 24,
-                            "marginVertical": 1.8000000000000007,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-=======
                           "alignSelf": "stretch",
                           "backgroundColor": "#A5A5A5",
                           "borderRadius": 16,
@@ -2119,7 +2032,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         }
                       }
                     />
->>>>>>> e7a4720f93618831d62a9413deb44ac5c0219afd
                   </View>
                   <View
                     style={
