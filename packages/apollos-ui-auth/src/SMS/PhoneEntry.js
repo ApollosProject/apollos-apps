@@ -65,7 +65,7 @@ class PhoneEntry extends Component {
     return { ...this.props, ...(this.props.screenProps || {}) };
   }
 
-  submitHandler = (mutate) => async (
+  handleOnSubmit = (mutate) => async (
     { phone },
     { setSubmitting, setFieldError }
   ) => {
@@ -104,7 +104,7 @@ class PhoneEntry extends Component {
               <Formik
                 initialValues={{ phone: '' }}
                 validationSchema={this.validationSchema}
-                onSubmit={this.submitHandler(mutate)}
+                onSubmit={this.handleOnSubmit(mutate)}
               >
                 {({
                   setFieldValue,

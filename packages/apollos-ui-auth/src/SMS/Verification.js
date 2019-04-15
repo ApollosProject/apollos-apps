@@ -52,7 +52,7 @@ class Verification extends Component {
     return { ...this.props, ...(this.props.screenProps || {}) };
   }
 
-  submitHandler = ({ verifyPin, closeAuth }) => async (
+  handleOnSubmit = ({ verifyPin, closeAuth }) => async (
     { code },
     { setSubmitting, setFieldError }
   ) => {
@@ -100,7 +100,7 @@ class Verification extends Component {
                       <Formik
                         initialValues={{ code: '' }}
                         validationSchema={this.validationSchema}
-                        onSubmit={this.submitHandler({ verifyPin, closeAuth })}
+                        onSubmit={this.handleOnSubmit({ verifyPin, closeAuth })}
                       >
                         {({
                           setFieldValue,
