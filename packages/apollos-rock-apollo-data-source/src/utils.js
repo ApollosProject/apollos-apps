@@ -24,11 +24,13 @@ export class RockLoggingExtension {
     const callTable = Object.keys(calls)
       .map((callPath) => `${decodeURI(callPath)}: ${calls[callPath]}`)
       .join('\n');
-    console.log(
-      `While running query: ${Object.keys(data)[0]}
-Total Network Calls: ${totalNetworkCalls}
-${callTable}
-`
-    );
+    if (calls && data) {
+      console.log(
+        `While running query: ${Object.keys(data)[0]}
+      Total Network Calls: ${totalNetworkCalls}
+      ${callTable}
+      `
+      );
+    }
   }
 }

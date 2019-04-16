@@ -8469,7 +8469,7 @@ got@^8.3.1:
     url-parse-lax "^3.0.0"
     url-to-options "^1.0.1"
 
-got@^9.3.2:
+got@^9.6.0:
   version "9.6.0"
   resolved "https://registry.yarnpkg.com/got/-/got-9.6.0.tgz#edf45e7d67f99545705de1f7bbeeeb121765ed85"
   integrity sha512-R7eWptXuGYxwijs0eV+v3o6+XH1IqVK8dJOEecQfTmkncw9AV4dcw/Dhxi8MdlqPthxxpZyizMzyg8RTmEsG+Q==
@@ -11503,7 +11503,7 @@ moment@2.22.2:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
 
-"moment@>= 2.9.0", moment@^2.15.2, moment@^2.22.2:
+"moment@>= 2.9.0", moment@^2.15.2, moment@^2.22.2, moment@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
@@ -12503,15 +12503,16 @@ pascalcase@^0.1.1:
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
 
-passkit-generator@alexandercerutti/passkit-generator#next:
-  version "1.5.5"
-  resolved "https://codeload.github.com/alexandercerutti/passkit-generator/tar.gz/5e917d6dbbf4445480bb4a5cd782745f7f391194"
+passkit-generator@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/passkit-generator/-/passkit-generator-1.5.9.tgz#b411393eaf450e9738f33364bcc83b6ef0e9d6b4"
+  integrity sha512-fFTAY0xuMvaO1WwB8VeGSUS6mk0X6HNl7vL5MYK1Y7123gIq+sbVFpsh0Ly6zBBHZchrX4E4dNYmotXP2Ei2bw==
   dependencies:
     archiver "^3.0.0"
     debug "^3.2.6"
-    got "^9.3.2"
+    got "^9.6.0"
     joi "^13.7.0"
-    moment "^2.22.2"
+    moment "^2.24.0"
     node-forge "^0.7.6"
 
 password-prompt@^1.0.7:
