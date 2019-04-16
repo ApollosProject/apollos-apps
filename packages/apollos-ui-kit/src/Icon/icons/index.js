@@ -34,6 +34,7 @@ export Mute from './Mute';
 export Pause from './Pause';
 export Pin from './Pin';
 export Play from './Play';
+export Pray from './Pray';
 export Print from './Print';
 export Profile from './Profile';
 export RadioChecked from './RadioChecked';
