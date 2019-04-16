@@ -409,7 +409,6 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                   textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -770,7 +769,6 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                   textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -1282,7 +1280,6 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                   textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -1434,7 +1431,6 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                   textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -1989,7 +1985,6 @@ exports[`The Onboarding AskName component should render 1`] = `
                   textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -2140,7 +2135,6 @@ exports[`The Onboarding AskName component should render 1`] = `
                   textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -2501,7 +2495,6 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                   textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -2652,7 +2645,6 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                   textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -3013,7 +3005,6 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                   textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -3164,7 +3155,6 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                   textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View

@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Animated } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
-import RNMapView, { Marker } from 'react-native-maps';
-import Color from 'color';
+import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
+
 import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
+
 import CampusCard, { CARD_WIDTH } from './CampusCard';
+import Marker from './Marker';
 
 const ContainerView = styled({
   flex: 1,
@@ -25,33 +27,6 @@ const ScrollingView = styled({
   left: 0,
   right: 0,
 })(View);
-
-const MarkerView = styled(({ theme }) => ({
-  width: 8,
-  height: 8,
-  borderRadius: 4,
-  backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
-}))(View);
-
-const MarkerWrapView = styled({
-  alignItems: 'center',
-  justifyContent: 'center',
-})(View);
-
-// This is not good. Is there a better way to prevent cascading styles?
-
-const MarkerRingView = styled(({ theme }) => ({
-  width: 24,
-  height: 24,
-  borderRadius: 12,
-  right: -8,
-  top: -8,
-  backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low),
-  position: 'absolute',
-  borderWidth: 1,
-  borderColor: Color(theme.colors.primary).fade(theme.alpha.medium),
-  alignItems: 'stretch',
-}))(View);
 
 class MapView extends Component {
   static propTypes = {
@@ -83,14 +58,13 @@ class MapView extends Component {
   };
 
   state = {
-    campus: {},
+    campus: null,
   };
 
   animation = new Animated.Value(0);
 
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
-    this.updateCoordinates({ value: 0 });
   }
 
   componentDidUpdate(oldProps) {
@@ -100,7 +74,7 @@ class MapView extends Component {
   }
 
   get contentContainerStyle() {
-    return { paddingHorizontal: this.props.theme.sizing.baseUnit };
+    return { paddingHorizontal: this.props.theme.sizing.baseUnit * 0.75 }; // pad cards from edge of screen but account for card margin
   }
 
   updateCoordinates = ({ value }) => {
@@ -145,7 +119,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { campuses = [] } = this.props;
+    const { campuses = [], onLocationSelect } = this.props;
     const interpolations = campuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * CARD_WIDTH,
@@ -187,16 +161,13 @@ class MapView extends Component {
                 opacity: interpolations[index].opacity,
               };
               return (
-                <Marker key={campus.id} coordinate={campus}>
-                  <MarkerWrapView>
-                    <Animated.View style={opacityStyle}>
-                      <MarkerRingView>
-                        <Animated.View style={scaleStyle} />
-                      </MarkerRingView>
-                      <MarkerView />
-                    </Animated.View>
-                  </MarkerWrapView>
-                </Marker>
+                <Marker
+                  key={campus.id}
+                  opacityStyle={opacityStyle}
+                  scaleStyle={scaleStyle}
+                  latitude={campus.latitude}
+                  longitude={campus.longitude}
+                />
               );
             })}
           </FlexedMapView>
@@ -205,10 +176,11 @@ class MapView extends Component {
               <Animated.ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                snapToInterval={CARD_WIDTH}
-                snapToAlignment="left"
-                decelerationRate="fast"
-                contentContainerStyle={this.contentContainerStyle}
+                snapToInterval={CARD_WIDTH + 8} // account for padding
+                snapToAlignment={'start'}
+                decelerationRate={'fast'}
+                contentContainerStyle={this.contentContainerStyle} // correctly pads cards in ScrollView
+                scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
                 onScroll={Animated.event(
                   [
                     {
@@ -237,7 +209,9 @@ class MapView extends Component {
                   title="Select Campus"
                   pill={false}
                   type="secondary"
-                  onPress={() => this.props.onLocationSelect(this.state.campus)}
+                  onPress={() =>
+                    onLocationSelect(this.state.campus || campuses[0])
+                  }
                 />
               </PaddedView>
             </SafeAreaView>
