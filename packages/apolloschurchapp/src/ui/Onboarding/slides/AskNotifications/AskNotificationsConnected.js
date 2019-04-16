@@ -30,7 +30,7 @@ const AskNotificationsConnected = memo(
                   // if notifications are not enabled show the secondary nav button (skip)
                   notificationsEnabled
                     ? null
-                    : onPressSecondary || onPressPrimary
+                    : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
                 }
                 {...props}
               />
