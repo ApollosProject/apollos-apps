@@ -88,6 +88,16 @@ exports[`The Onboarding LocationFinder component should pass additional props to
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             bordered={false}
             disabled={false}
@@ -244,6 +254,16 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             bordered={false}
             disabled={false}
@@ -373,6 +393,16 @@ exports[`The Onboarding LocationFinder component should render a button with cus
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             accessible={true}
             isTVSelectable={true}
@@ -518,6 +548,16 @@ exports[`The Onboarding LocationFinder component should render a custom descript
           >
             Custom description text
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             bordered={false}
             disabled={false}
@@ -647,6 +687,16 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             bordered={false}
             disabled={false}
@@ -820,6 +870,16 @@ exports[`The Onboarding LocationFinder component should render children (image) 
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             bordered={false}
             disabled={false}
@@ -949,172 +1009,165 @@ exports[`The Onboarding LocationFinder component should render the button disabl
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
           <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            inHorizontalList={true}
             style={
               Object {
-                "opacity": 1,
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "height": 96,
+                "margin": 8,
+                "marginBottom": 16,
+                "marginHorizontal": 16,
+                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 714,
               }
             }
           >
             <View
               style={
                 Object {
-                  "height": 96,
-                  "width": 726,
+                  "aspectRatio": undefined,
+                  "borderRadius": 16,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
-                inHorizontalList={true}
                 style={
                   Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "margin": 8,
-                    "marginHorizontal": 0,
-                    "marginRight": 8,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                    "justifyContent": "space-between",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
-                      "borderRadius": 16,
-                      "overflow": "hidden",
+                      "alignSelf": "stretch",
+                      "aspectRatio": 1,
+                      "height": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={
+                        Array [
+                          Object {
+                            "cache": "force-cache",
+                            "uri": "https://picsum.photos/300/300/?random",
+                          },
+                        ]
+                      }
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "height": "100%",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 13.6,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
+                        "alignItems": "stretch",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
+                        "height": 20.16,
                         "justifyContent": "space-between",
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "aspectRatio": 1,
-                          "height": "100%",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 20.16,
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "width": "100%",
-                          }
-                        }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={
-                            Array [
-                              Object {
-                                "cache": "force-cache",
-                                "uri": "https://picsum.photos/300/300/?random",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "height": "100%",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                    <View
+                      Chicago Campus
+                    </Text>
+                    <Text
                       style={
                         Object {
-                          "flex": 1,
-                          "paddingHorizontal": 16,
-                          "paddingVertical": 13.6,
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 17.28,
                         }
                       }
                     >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "stretch",
-                            "flexDirection": "row",
-                            "flexWrap": "nowrap",
-                            "height": 20.16,
-                            "justifyContent": "space-between",
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Medium",
-                              "fontSize": 14,
-                              "lineHeight": 20.16,
-                            }
-                          }
-                        >
-                          Chicago Campus
-                        </Text>
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                          0
-                          mi
-                        </Text>
-                      </View>
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                          }
-                        }
-                      >
-                        67 Algonquin Rd
-South Barrington, IL 60010-6143
-                      </Text>
-                    </View>
+                      0
+                      mi
+                    </Text>
                   </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                      }
+                    }
+                  >
+                    67 Algonquin Rd
+South Barrington, IL 60010-6143
+                  </Text>
                 </View>
               </View>
             </View>
@@ -1214,6 +1267,16 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             accessible={true}
             isTVSelectable={true}

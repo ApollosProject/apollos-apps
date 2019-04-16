@@ -88,6 +88,16 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             accessible={true}
             isTVSelectable={true}
@@ -233,6 +243,16 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             accessible={true}
             isTVSelectable={true}
@@ -378,6 +398,16 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
           >
             We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "justifyContent": "flex-end",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             accessible={true}
             isTVSelectable={true}
