@@ -6,19 +6,12 @@ import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 import getLoginState from './getLoginState';
 
-// const schema = gql`
-// extend type Query {
-//   authToken: String
-//   isLoggedIn: Boolean
-// }
+const defaultContext = {
+  navigateToAuth: () => {},
+  closeAuth: () => {},
+};
 
-// extend type Mutation {
-//   logout
-//   handleLogin(authToken: String!)
-// }
-// `;
-
-const AuthContext = React.createContext({ navigateToAuth: () => {} });
+const AuthContext = React.createContext(defaultContext);
 
 export const getAuthToken = gql`
   query authToken {
@@ -84,8 +77,8 @@ export const resolvers = {
   },
 };
 
-const Provider = ({ children, navigateToAuth }) => (
-  <AuthContext.Provider value={{ navigateToAuth }}>
+const Provider = ({ children, ...authContext }) => (
+  <AuthContext.Provider value={{ ...defaultContext, ...authContext }}>
     <ApolloConsumer>
       {(client) => {
         client.addResolvers(resolvers);
@@ -98,11 +91,10 @@ const Provider = ({ children, navigateToAuth }) => (
 Provider.propTypes = {
   children: PropTypes.node,
   navigateToAuth: PropTypes.func,
+  closeAuth: PropTypes.func,
 };
 
-Provider.defaultProps = {
-  navigateToAuth: () => {},
-};
+Provider.defaultProps = {};
 
 export const AuthConsumer = AuthContext.Consumer;
 

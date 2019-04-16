@@ -258,7 +258,6 @@ exports[`PersonalDetails component renders User Name when logged in 1`] = `
                   textContentType="givenName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View
@@ -410,7 +409,6 @@ exports[`PersonalDetails component renders User Name when logged in 1`] = `
                   textContentType="familyName"
                   type="text"
                   underlineColorAndroid="transparent"
-                  value=""
                 />
               </View>
               <View

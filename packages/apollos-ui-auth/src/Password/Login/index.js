@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
-import handleLogin from '../handleLogin';
+import handleLogin from '../../handleLogin';
 import authenticateMutation from './authenticate';
 import LoginForm from './Form';
 
