@@ -15,27 +15,23 @@ const AskNotificationsConnected = memo(
     <ApolloConsumer>
       {(client) => (
         <Query query={getNotificationsEnabled}>
-          {({ data: { notificationsEnabled = false } = {} }) =>
-            console.log(notificationsEnabled) || (
-              <AskNotifications
-                onPressButton={() => requestPushPermissions({ client })}
-                buttonDisabled={notificationsEnabled}
-                buttonText={
-                  notificationsEnabled
-                    ? 'Notifications Enabled!'
-                    : 'Yes, enable notifications'
-                }
-                onPressPrimary={notificationsEnabled ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
-                onPressSecondary={
-                  // if notifications are not enabled show the secondary nav button (skip)
-                  notificationsEnabled
-                    ? null
-                    : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
-                }
-                {...props}
-              />
-            )
-          }
+          {({ data: { notificationsEnabled = false } = {} }) => (
+            <AskNotifications
+              onPressButton={() => requestPushPermissions({ client })}
+              buttonDisabled={notificationsEnabled}
+              buttonText={
+                notificationsEnabled
+                  ? 'Notifications Enabled!'
+                  : 'Yes, enable notifications'
+              }
+              onPressPrimary={notificationsEnabled ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
+              onPressSecondary={
+                // if notifications are not enabled show the secondary nav button (skip)
+                notificationsEnabled ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
+              }
+              {...props}
+            />
+          )}
         </Query>
       )}
     </ApolloConsumer>
