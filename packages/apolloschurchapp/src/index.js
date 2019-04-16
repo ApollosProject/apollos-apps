@@ -15,6 +15,7 @@ import Tabs from './tabs';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
 import Location from './user-settings/Locations';
+import { LocationFinderMapView } from './ui/Onboarding/slides/LocationFinder';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './onboarding';
 // Sentry.config(
@@ -35,6 +36,7 @@ const AppNavigator = createStackNavigator(
     PersonalDetails,
     ChangePassword,
     Location,
+    LocationFinderMapView,
     Passes,
     UserWebBrowser,
     Onboarding,

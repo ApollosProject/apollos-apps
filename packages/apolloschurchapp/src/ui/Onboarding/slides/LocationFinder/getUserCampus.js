@@ -2,21 +2,12 @@ import gql from 'graphql-tag';
 import CampusParts from 'apolloschurchapp/src/user-settings/Locations/campusFragment';
 
 export default gql`
-  query getCurrentUserProfile {
+  query getCurrentCampus {
     currentUser {
       id
       profile {
-        firstName
-        lastName
         campus {
           ...CampusParts
-        }
-        email
-        nickName
-        gender
-        birthDate
-        photo {
-          uri
         }
       }
     }

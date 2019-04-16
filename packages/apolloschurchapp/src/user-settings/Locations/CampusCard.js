@@ -16,7 +16,9 @@ import {
 
 const { width } = Dimensions.get('window');
 
-export const CARD_WIDTH = width - 24; // todo: remove magic number. `theme.sizing.baseUnit * 1.5`
+/* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
+ * calculation of width minus `CampusCard` margins */
+export const CARD_WIDTH = width - 36;
 
 const enhance = compose(
   withIsLoading,
@@ -49,39 +51,33 @@ const CampusImageSizer = styled({
   alignSelf: 'stretch',
 })(View);
 
-const CardContainer = styled(({ theme }) => ({
+const StyledCard = styled(({ theme }) => ({
   width: CARD_WIDTH,
   height: theme.sizing.baseUnit * 6,
-}))(View);
-
-const StyledCard = styled(({ theme }) => ({
-  marginHorizontal: 0,
-  marginRight: theme.sizing.baseUnit / 2,
+  marginHorizontal: theme.sizing.baseUnit / 4,
 }))(Card);
 
 const CampusCard = enhance(
   ({ title, description, distance, images, isLoading, ...otherProps }) => (
-    <CardContainer>
-      <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
-        <HorizontalLayout>
-          {images ? (
-            <CampusImageSizer>
-              <CampusImage source={images} />
-            </CampusImageSizer>
-          ) : null}
-          <RightColumn>
-            <HorizontalTextLayout>
-              <H5>{title}</H5>
-              <H6>
-                {Math.round(distance)}
-                mi
-              </H6>
-            </HorizontalTextLayout>
-            {description ? <H6>{description}</H6> : null}
-          </RightColumn>
-        </HorizontalLayout>
-      </StyledCard>
-    </CardContainer>
+    <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
+      <HorizontalLayout>
+        {images ? (
+          <CampusImageSizer>
+            <CampusImage source={images} />
+          </CampusImageSizer>
+        ) : null}
+        <RightColumn>
+          <HorizontalTextLayout>
+            <H5>{title}</H5>
+            <H6>
+              {Math.round(distance)}
+              mi
+            </H6>
+          </HorizontalTextLayout>
+          {description ? <H6>{description}</H6> : null}
+        </RightColumn>
+      </HorizontalLayout>
+    </StyledCard>
   )
 );
 

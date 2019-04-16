@@ -62,7 +62,7 @@ const AskNotifications = memo(
 );
 
 AskNotifications.propTypes = {
-  /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
+  /* The `Swiper` component used in `<onBoarding>` looks for and hijacks the title prop of it's
    * children. Thus we have to use a more unique name.
    */
   children: PropTypes.oneOfType([

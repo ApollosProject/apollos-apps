@@ -8,10 +8,11 @@ import {
 } from '@apollosproject/ui-kit';
 
 import {
+  AskNotificationsConnected,
   AskNameConnected,
   Features,
   AboutYouConnected,
-  AskNotificationsConnected,
+  LocationFinderConnected,
 } from './slides';
 
 // Provides themed colors to Swiper dots
@@ -21,6 +22,11 @@ const ThemedSwiper = withTheme(({ theme }) => ({
 }))(({ swiperRef, ...props }) => <Swiper ref={swiperRef} {...props} />);
 
 class Onboarding extends Component {
+  static navigationOptions = () => ({
+    title: 'Onboarding',
+    header: null,
+  });
+
   constructor() {
     super();
 
@@ -57,6 +63,11 @@ class Onboarding extends Component {
             imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
             onPressPrimary={this.handleOnPressPrimary}
           />
+          <LocationFinderConnected onPressPrimary={this.handleOnPressPrimary}>
+            <GradientOverlayImage
+              source={'https://picsum.photos/640/640/?random'}
+            />
+          </LocationFinderConnected>
           <AskNotificationsConnected
             onPressSecondary={() => this.props.navigation.navigate('Home')}
           >

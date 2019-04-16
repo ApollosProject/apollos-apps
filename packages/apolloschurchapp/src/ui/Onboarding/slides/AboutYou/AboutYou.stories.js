@@ -7,7 +7,7 @@ storiesOf('Onboarding/slides/AboutYou', module)
   .add('default', () => <AboutYou />)
   .add('withImg', () => (
     <AboutYou
-      imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
+      imgSrc={{ uri: 'https://picsum.photos/750/750?random' }}
       setFieldValue={() => {}}
     />
   ))
@@ -20,14 +20,14 @@ storiesOf('Onboarding/slides/AboutYou', module)
       setFieldValue={() => {}}
     />
   ))
-  .add('userDOB', () => (
-    <AboutYou userDOB={new Date('02/14/1989')} setFieldValue={() => {}} />
-  ))
-  .add('userGender', () => (
-    <AboutYou userGender={'Male'} setFieldValue={() => {}} />
-  ))
   .add('genderList', () => (
     <AboutYou genderList={['M', 'F']} setFieldValue={() => {}} />
+  ))
+  .add('values – birthDate', () => (
+    <AboutYou values={{ birthDate: '1989-02-14' }} setFieldValue={() => {}} />
+  ))
+  .add('values – gender', () => (
+    <AboutYou values={{ gender: 'Male' }} setFieldValue={() => {}} />
   ))
   .add('Slide props', () => (
     <AboutYou onPressPrimary={() => {}} setFieldValue={() => {}} />
