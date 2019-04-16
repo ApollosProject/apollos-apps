@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
-import handleLogin from '../handleLogin';
+import handleLogin from '../../handleLogin';
 import registerPersonMutation from './registerPerson';
 import SignupForm from './Form';
 
