@@ -34,7 +34,7 @@ export const resolvers = {
     },
   },
   Mutation: {
-    logout: (_root, _args, { client, ...args }) => {
+    logout: (_root, _args, { client }) => {
       client.resetStore();
       track({ eventName: 'UserLogout', client });
       return null;
