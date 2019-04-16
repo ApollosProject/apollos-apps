@@ -154,7 +154,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-passkit-wallet')
     implementation project(':react-native-maps')
     implementation project(':rn-fetch-blob')
     implementation project(':react-native-webview')
