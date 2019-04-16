@@ -28,7 +28,7 @@
     "datauri": "^1.1.0",
     "jest": "^23.6.0",
     "lodash": "^4.17.11",
-    "passkit-generator": "alexandercerutti/passkit-generator#next",
+    "passkit-generator": "^1.5.9",
     "qrcode": "^1.3.3"
   },
   "peerDependencies": {
