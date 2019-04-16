@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Query, ApolloConsumer } from 'react-apollo';
+import PropTypes from 'prop-types';
 
 import {
   requestPushPermissions,
@@ -22,6 +23,11 @@ const AskNotificationsConnected = memo((props) => (
                 ? 'Notifications Enabled!'
                 : 'Yes, enable notifications'
             }
+            onPressPrimary={notificationsEnabled ? props.onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
+            onPressSecondary={
+              // if notifications are not enabled show the secondary nav button (skip)
+              notificationsEnabled ? null : props.onPressPrimary
+            }
             {...props}
           />
         )}
@@ -29,5 +35,10 @@ const AskNotificationsConnected = memo((props) => (
     )}
   </ApolloConsumer>
 ));
+
+AskNotificationsConnected.propTypes = {
+  onPressPrimary: PropTypes.func,
+  onPressSecondary: PropTypes.func,
+};
 
 export default AskNotificationsConnected;
