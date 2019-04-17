@@ -1,4 +1,28 @@
 
+v0.8.2: April 17, 2019
+
+- Fixs Chip component prop warning that was noticed on onboarding (#639) (84e4a1ea)
+- Fixes UX for when users finish onboarding (#637) (70beb296)
+- disable default notifications prompt (#638) (ec306b6b)
+- Add Prayer Icon (#632) (9248fbd7)
+- Upgrades Formik (#633) (050f9e27)
+- Updated the passkit package to latest version (#627) (0f2a17b2)
+- Adds OnBoarding LocationFinder Screens (#598) (1dc4bcea)
+- Adds SMS Auth UI (#591) (18bda067)
+- Updates Android color variable names to be more generic (#618) (5345ca62)
+- Fixes date picker being unusable for users with null dates (#622) (ce4c5399)
+- Adds routing from Auth -> Onboarding -> Home (#621) (0afd5089)
+- [OnBoarding] Adds Connected AboutYou Component (#613) (88de0638)
+- Adds `AuthLoadingSwitch` to Navigate different directions, depending on if a user is logged in. (#615) (4655403d)
+- Fixes Live Content Timezones (#611) (10609dcd)
+- Adds ConnectedAskName Components to Onboarding (#612) (51324c79)
+- Makes Android Development Smoother (#586) (3c09b69b)
+- Creates new personalize component for home feed. (#596) (e7a4720f)
+- Adds Analytics UI Package (#604) (62d06122)
+- add new issue templates (#608) (35c28751)
+- v0.8.1 (#607) (678c7891)
+
+
 v0.8.1: March 25, 2019
 
 - Adds Onboarding About You Screen (#581) (756d540d)
