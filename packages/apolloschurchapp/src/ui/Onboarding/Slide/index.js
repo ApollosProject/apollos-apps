@@ -34,7 +34,8 @@ const SkipButton = styled(({ theme }) => ({
   marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
 }))(ButtonLink);
 
-// memo = sfc PureComponent 💥
+/* Slide uses memo = sfc PureComponent 💥 Additionally, this component when rendered in a `Slider`
+ * is automatically rendered in a `View` */
 // eslint-disable-next-line react/display-name
 const Slide = memo(
   ({
