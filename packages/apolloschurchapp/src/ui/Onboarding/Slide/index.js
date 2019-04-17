@@ -54,7 +54,9 @@ const Slide = memo(
             <Button onPress={onPressPrimary}>
               <>
                 <H5>{primaryNavText}</H5>
-                <PrimaryNavIcon name={primaryNavIcon} />
+                {primaryNavIcon ? (
+                  <PrimaryNavIcon name={primaryNavIcon} />
+                ) : null}
               </>
             </Button>
           ) : null}
@@ -77,7 +79,7 @@ Slide.propTypes = {
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   primaryNavText: PropTypes.string, // colored button text
-  primaryNavIcon: PropTypes.string, // optional custom icon name
+  primaryNavIcon: PropTypes.string, // optional custom icon name or empty string for no icon at all
   secondaryNavText: PropTypes.string, // text link
 };
 
