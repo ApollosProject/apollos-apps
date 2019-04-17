@@ -21,7 +21,7 @@ describe('The Onboarding AskNotificationsConnected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <AskNotificationsConnected />
+        <AskNotificationsConnected onPressPrimary={jest.fn()} />
       </Providers>
     );
 
@@ -34,7 +34,7 @@ describe('The Onboarding AskNotificationsConnected component', () => {
         resolvers={{ Query: { notificationsEnabled: Promise.resolve(true) } }}
         addTypename={false}
       >
-        <AskNotificationsConnected />
+        <AskNotificationsConnected onPressPrimary={jest.fn()} />
       </Providers>
     );
 

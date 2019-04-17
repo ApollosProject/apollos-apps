@@ -69,7 +69,8 @@ class Onboarding extends Component {
             />
           </LocationFinderConnected>
           <AskNotificationsConnected
-            onPressSecondary={() => this.props.navigation.navigate('Home')}
+            onPressPrimary={() => this.props.navigation.navigate('Home')}
+            primaryNavText={'Finish'}
           >
             <GradientOverlayImage
               source={'https://picsum.photos/640/640/?random'}
