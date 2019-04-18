@@ -20,6 +20,14 @@ function generateTitle(name) {
   return `${title}\n${stringOfLength('=', title.length)}\n`;
 }
 
+function generateDocusaurusHeader(name) {
+  const id = `id: ${name}`;
+  const title = `title: ${generateTitle(name)}`;
+  const label = `sidebar_label: ${name.charAt(0).toUpperCase() +
+    name.slice(1)}`;
+  return `---\n${id}\n${title}\n${label}\n---`;
+}
+
 function generateDesciption(description) {
   return `${description}\n`;
 }
@@ -64,9 +72,11 @@ function generateProps(props) {
 }
 
 function generateMarkdown(name, reactAPI) {
-  const markdownString = `${generateTitle(name)}\n${generateDesciption(
-    reactAPI.description
-  )}\n${generateProps(reactAPI.props)}`;
+  const markdownString = `${generateDocusaurusHeader(
+    name
+  )}\n${generateDesciption(reactAPI.description)}\n${generateProps(
+    reactAPI.props
+  )}`;
 
   return markdownString;
 }
