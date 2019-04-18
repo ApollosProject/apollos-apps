@@ -159,16 +159,13 @@ export default class ContentItem extends RockApolloDataSource {
 
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
-    // Rock doesn't respect timezone information, hence the need to warp the date
+    // will create a timezone formatted string and then strip off the offset
+    // should output something like 2019-03-27T12:27:20 which means 12:27pm in New York
     const date = moment()
-      .utc()
-      .add(
-        moment()
-          .tz(ROCK.TIMEZONE)
-          .utcOffset(),
-        'minutes'
-      );
-    return `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
+      .tz(ROCK.TIMEZONE)
+      .format()
+      .split(/[-+]\d+:\d+/)[0];
+    return `((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)) `;
   };
 
   expanded = true;

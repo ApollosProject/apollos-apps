@@ -143,7 +143,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                         }
                         type="text"
                         underlineColorAndroid="transparent"
-                        value=""
                       />
                     </View>
                     <View
@@ -292,7 +291,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                         }
                         type="text"
                         underlineColorAndroid="transparent"
-                        value=""
                       />
                     </View>
                     <View
@@ -467,7 +465,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                         }
                         type="email"
                         underlineColorAndroid="transparent"
-                        value=""
                       />
                     </View>
                     <View
