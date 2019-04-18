@@ -1,6 +1,8 @@
-`Mute` (component)
-==================
-
+---
+id: mute
+title: `Mute` (component)
+sidebar_label: Mute
+---
 
 
 Props

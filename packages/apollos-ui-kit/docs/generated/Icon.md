@@ -1,6 +1,8 @@
-`Icon` (component)
-==================
-
+---
+id: icon
+title: `Icon` (component)
+sidebar_label: Icon
+---
 
 
 Props

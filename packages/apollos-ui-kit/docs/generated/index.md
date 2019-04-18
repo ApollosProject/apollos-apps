@@ -1,6 +1,8 @@
-`index` (component)
-===================
-
+---
+id: index
+title: `index` (component)
+sidebar_label: Index
+---
 
 
 Props

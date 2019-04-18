@@ -1,6 +1,8 @@
-`Pause` (component)
-===================
-
+---
+id: pause
+title: `Pause` (component)
+sidebar_label: Pause
+---
 
 
 Props

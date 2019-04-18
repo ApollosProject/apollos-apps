@@ -1,6 +1,8 @@
-`Groups` (component)
-====================
-
+---
+id: groups
+title: `Groups` (component)
+sidebar_label: Groups
+---
 
 
 Props

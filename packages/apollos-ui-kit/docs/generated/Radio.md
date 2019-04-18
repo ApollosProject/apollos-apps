@@ -1,6 +1,8 @@
-`Radio` (component)
-===================
-
+---
+id: radio
+title: `Radio` (component)
+sidebar_label: Radio
+---
 
 
 Props

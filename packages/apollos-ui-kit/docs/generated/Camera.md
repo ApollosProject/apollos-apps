@@ -1,6 +1,8 @@
-`Camera` (component)
-====================
-
+---
+id: camera
+title: `Camera` (component)
+sidebar_label: Camera
+---
 
 
 Props

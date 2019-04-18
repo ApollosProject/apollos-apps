@@ -1,6 +1,8 @@
-`Shuffle` (component)
-=====================
-
+---
+id: shuffle
+title: `Shuffle` (component)
+sidebar_label: Shuffle
+---
 
 
 Props

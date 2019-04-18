@@ -1,6 +1,8 @@
-`BulletListItem` (component)
-============================
-
+---
+id: bulletlistitem
+title: `BulletListItem` (component)
+sidebar_label: BulletListItem
+---
 
 
 Props

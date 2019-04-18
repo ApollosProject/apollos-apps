@@ -1,6 +1,8 @@
-`DateInput` (component)
-=======================
-
+---
+id: dateinput
+title: `DateInput` (component)
+sidebar_label: DateInput
+---
 
 
 Props

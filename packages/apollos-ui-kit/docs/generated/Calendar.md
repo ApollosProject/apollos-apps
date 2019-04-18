@@ -1,6 +1,8 @@
-`Calendar` (component)
-======================
-
+---
+id: calendar
+title: `Calendar` (component)
+sidebar_label: Calendar
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`Cell` (component)
-==================
-
+---
+id: cell
+title: `Cell` (component)
+sidebar_label: Cell
+---
 
 
 Props

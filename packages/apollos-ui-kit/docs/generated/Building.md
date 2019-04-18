@@ -1,6 +1,8 @@
-`Building` (component)
-======================
-
+---
+id: building
+title: `Building` (component)
+sidebar_label: Building
+---
 
 
 Props

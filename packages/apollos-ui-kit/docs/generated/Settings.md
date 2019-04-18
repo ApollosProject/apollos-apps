@@ -1,6 +1,8 @@
-`Settings` (component)
-======================
-
+---
+id: settings
+title: `Settings` (component)
+sidebar_label: Settings
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`InputUnderline` (component)
-============================
-
+---
+id: inputunderline
+title: `InputUnderline` (component)
+sidebar_label: InputUnderline
+---
 
 
 Props

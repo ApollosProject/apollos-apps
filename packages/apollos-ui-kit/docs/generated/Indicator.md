@@ -1,6 +1,8 @@
-`Indicator` (component)
-=======================
-
+---
+id: indicator
+title: `Indicator` (component)
+sidebar_label: Indicator
+---
 
 
 Props

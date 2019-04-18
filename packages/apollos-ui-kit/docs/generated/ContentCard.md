@@ -1,6 +1,8 @@
-`ContentCard` (component)
-=========================
-
+---
+id: contentcard
+title: `ContentCard` (component)
+sidebar_label: ContentCard
+---
 
 
 Props

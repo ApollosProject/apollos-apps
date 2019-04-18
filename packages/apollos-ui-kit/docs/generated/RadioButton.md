@@ -1,6 +1,8 @@
-`RadioButton` (component)
-=========================
-
+---
+id: radiobutton
+title: `RadioButton` (component)
+sidebar_label: RadioButton
+---
 
 
 Props
@@ -27,6 +29,12 @@ defaultValue: `''`
 
 type: `func`
 defaultValue: `function() {}`
+
+
+### `underline`
+
+type: `bool`
+defaultValue: `true`
 
 
 ### `value` (required)

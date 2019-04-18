@@ -1,6 +1,8 @@
-`Metrics` (component)
-=====================
-
+---
+id: metrics
+title: `Metrics` (component)
+sidebar_label: Metrics
+---
 
 
 Props

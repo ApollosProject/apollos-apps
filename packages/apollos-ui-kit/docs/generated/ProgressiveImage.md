@@ -1,6 +1,8 @@
-`ProgressiveImage` (component)
-==============================
-
+---
+id: progressiveimage
+title: `ProgressiveImage` (component)
+sidebar_label: ProgressiveImage
+---
 
 
 Props

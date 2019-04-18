@@ -1,6 +1,8 @@
-`Time` (component)
-==================
-
+---
+id: time
+title: `Time` (component)
+sidebar_label: Time
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`ArrowUp` (component)
-=====================
-
+---
+id: arrowup
+title: `ArrowUp` (component)
+sidebar_label: ArrowUp
+---
 
 
 Props

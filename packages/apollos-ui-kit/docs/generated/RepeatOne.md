@@ -1,6 +1,8 @@
-`RepeatOne` (component)
-=======================
-
+---
+id: repeatone
+title: `RepeatOne` (component)
+sidebar_label: RepeatOne
+---
 
 
 Props

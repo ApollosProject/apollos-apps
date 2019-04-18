@@ -1,6 +1,8 @@
-`ImageHeader` (component)
-=========================
-
+---
+id: imageheader
+title: `ImageHeader` (component)
+sidebar_label: ImageHeader
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`FloatingLabel` (component)
-===========================
-
+---
+id: floatinglabel
+title: `FloatingLabel` (component)
+sidebar_label: FloatingLabel
+---
 
 
 Props

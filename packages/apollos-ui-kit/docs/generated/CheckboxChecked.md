@@ -1,6 +1,8 @@
-`CheckboxChecked` (component)
-=============================
-
+---
+id: checkboxchecked
+title: `CheckboxChecked` (component)
+sidebar_label: CheckboxChecked
+---
 
 
 Props

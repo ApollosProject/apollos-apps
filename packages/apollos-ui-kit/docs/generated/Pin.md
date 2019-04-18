@@ -1,6 +1,8 @@
-`Pin` (component)
-=================
-
+---
+id: pin
+title: `Pin` (component)
+sidebar_label: Pin
+---
 
 
 Props

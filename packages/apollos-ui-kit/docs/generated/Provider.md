@@ -1,6 +1,8 @@
-`Provider` (component)
-======================
-
+---
+id: provider
+title: `Provider` (component)
+sidebar_label: Provider
+---
 
 
 Props

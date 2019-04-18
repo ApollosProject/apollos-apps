@@ -1,6 +1,8 @@
-`ErrorCard` (component)
-=======================
-
+---
+id: errorcard
+title: `ErrorCard` (component)
+sidebar_label: ErrorCard
+---
 
 
 Props

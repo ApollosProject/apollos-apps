@@ -1,6 +1,8 @@
-`BlockQuote` (component)
-========================
-
+---
+id: blockquote
+title: `BlockQuote` (component)
+sidebar_label: BlockQuote
+---
 
 
 Props

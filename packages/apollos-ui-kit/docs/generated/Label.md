@@ -1,6 +1,8 @@
-`Label` (component)
-===================
-
+---
+id: label
+title: `Label` (component)
+sidebar_label: Label
+---
 
 
 Props

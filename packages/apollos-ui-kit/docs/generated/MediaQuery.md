@@ -1,6 +1,8 @@
-`MediaQuery` (component)
-========================
-
+---
+id: mediaquery
+title: `MediaQuery` (component)
+sidebar_label: MediaQuery
+---
 
 
 Props

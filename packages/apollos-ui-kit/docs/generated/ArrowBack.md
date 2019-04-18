@@ -1,6 +1,8 @@
-`ArrowBack` (component)
-=======================
-
+---
+id: arrowback
+title: `ArrowBack` (component)
+sidebar_label: ArrowBack
+---
 
 
 Props

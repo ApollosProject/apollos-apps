@@ -1,6 +1,8 @@
-`ThemeProvider` (component)
-===========================
-
+---
+id: themeprovider
+title: `ThemeProvider` (component)
+sidebar_label: ThemeProvider
+---
 
 
 Props

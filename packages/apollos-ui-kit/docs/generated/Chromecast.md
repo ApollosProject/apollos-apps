@@ -1,6 +1,8 @@
-`Chromecast` (component)
-========================
-
+---
+id: chromecast
+title: `Chromecast` (component)
+sidebar_label: Chromecast
+---
 
 
 Props

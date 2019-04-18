@@ -1,6 +1,8 @@
-`LikeSolid` (component)
-=======================
-
+---
+id: likesolid
+title: `LikeSolid` (component)
+sidebar_label: LikeSolid
+---
 
 
 Props

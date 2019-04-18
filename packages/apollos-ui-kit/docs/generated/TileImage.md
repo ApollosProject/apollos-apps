@@ -1,6 +1,8 @@
-`TileImage` (component)
-=======================
-
+---
+id: tileimage
+title: `TileImage` (component)
+sidebar_label: TileImage
+---
 
 
 Props

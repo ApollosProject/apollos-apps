@@ -1,6 +1,8 @@
-`Bank` (component)
-==================
-
+---
+id: bank
+title: `Bank` (component)
+sidebar_label: Bank
+---
 
 
 Props

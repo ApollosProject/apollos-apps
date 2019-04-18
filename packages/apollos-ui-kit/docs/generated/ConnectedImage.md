@@ -1,6 +1,8 @@
-`ConnectedImage` (component)
-============================
-
+---
+id: connectedimage
+title: `ConnectedImage` (component)
+sidebar_label: ConnectedImage
+---
 
 
 Props

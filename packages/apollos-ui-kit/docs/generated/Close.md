@@ -1,6 +1,8 @@
-`Close` (component)
-===================
-
+---
+id: close
+title: `Close` (component)
+sidebar_label: Close
+---
 
 
 Props

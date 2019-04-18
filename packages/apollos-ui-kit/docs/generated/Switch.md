@@ -1,6 +1,8 @@
-`Switch` (component)
-====================
-
+---
+id: switch
+title: `Switch` (component)
+sidebar_label: Switch
+---
 
 
 Props

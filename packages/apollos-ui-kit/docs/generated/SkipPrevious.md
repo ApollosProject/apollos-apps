@@ -1,6 +1,8 @@
-`SkipPrevious` (component)
-==========================
-
+---
+id: skipprevious
+title: `SkipPrevious` (component)
+sidebar_label: SkipPrevious
+---
 
 
 Props

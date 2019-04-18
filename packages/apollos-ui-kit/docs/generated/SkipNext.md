@@ -1,6 +1,8 @@
-`SkipNext` (component)
-======================
-
+---
+id: skipnext
+title: `SkipNext` (component)
+sidebar_label: SkipNext
+---
 
 
 Props

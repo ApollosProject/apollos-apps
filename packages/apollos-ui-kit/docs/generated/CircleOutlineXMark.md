@@ -1,6 +1,8 @@
-`CircleOutlineXMark` (component)
-================================
-
+---
+id: circleoutlinexmark
+title: `CircleOutlineXMark` (component)
+sidebar_label: CircleOutlineXMark
+---
 
 
 Props

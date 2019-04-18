@@ -1,6 +1,8 @@
-`RadioChecked` (component)
-==========================
-
+---
+id: radiochecked
+title: `RadioChecked` (component)
+sidebar_label: RadioChecked
+---
 
 
 Props

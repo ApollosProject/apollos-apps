@@ -1,6 +1,8 @@
-`Share` (component)
-===================
-
+---
+id: share
+title: `Share` (component)
+sidebar_label: Share
+---
 
 
 Props

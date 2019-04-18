@@ -1,6 +1,8 @@
-`Credit` (component)
-====================
-
+---
+id: credit
+title: `Credit` (component)
+sidebar_label: Credit
+---
 
 
 Props

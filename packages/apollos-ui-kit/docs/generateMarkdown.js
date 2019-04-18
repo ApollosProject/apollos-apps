@@ -16,12 +16,11 @@ function stringOfLength(string, length) {
 }
 
 function generateTitle(name) {
-  const title = `\`${name}\` (component)`;
-  return `${title}\n${stringOfLength('=', title.length)}\n`;
+  return `\`${name}\` (component)`;
 }
 
 function generateDocusaurusHeader(name) {
-  const id = `id: ${name}`;
+  const id = `id: ${name.toLowerCase()}`;
   const title = `title: ${generateTitle(name)}`;
   const label = `sidebar_label: ${name.charAt(0).toUpperCase() +
     name.slice(1)}`;

@@ -1,6 +1,8 @@
-`Locate` (component)
-====================
-
+---
+id: locate
+title: `Locate` (component)
+sidebar_label: Locate
+---
 
 
 Props

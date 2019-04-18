@@ -1,6 +1,8 @@
-`Chip` (component)
-==================
-
+---
+id: chip
+title: `Chip` (component)
+sidebar_label: Chip
+---
 
 
 Props

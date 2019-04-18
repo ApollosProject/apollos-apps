@@ -1,6 +1,8 @@
-`SkipForwardThirty` (component)
-===============================
-
+---
+id: skipforwardthirty
+title: `SkipForwardThirty` (component)
+sidebar_label: SkipForwardThirty
+---
 
 
 Props

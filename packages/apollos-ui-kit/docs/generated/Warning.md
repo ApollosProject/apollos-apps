@@ -1,6 +1,8 @@
-`Warning` (component)
-=====================
-
+---
+id: warning
+title: `Warning` (component)
+sidebar_label: Warning
+---
 
 
 Props

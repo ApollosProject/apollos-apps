@@ -1,6 +1,8 @@
-`Volume` (component)
-====================
-
+---
+id: volume
+title: `Volume` (component)
+sidebar_label: Volume
+---
 
 
 Props

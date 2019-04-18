@@ -1,6 +1,8 @@
-`CircleOutlineCheckMark` (component)
-====================================
-
+---
+id: circleoutlinecheckmark
+title: `CircleOutlineCheckMark` (component)
+sidebar_label: CircleOutlineCheckMark
+---
 
 
 Props

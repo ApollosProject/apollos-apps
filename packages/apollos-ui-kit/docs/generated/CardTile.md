@@ -1,6 +1,8 @@
-`CardTile` (component)
-======================
-
+---
+id: cardtile
+title: `CardTile` (component)
+sidebar_label: CardTile
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`TextHeader` (component)
-========================
-
+---
+id: textheader
+title: `TextHeader` (component)
+sidebar_label: TextHeader
+---
 
 
 Props

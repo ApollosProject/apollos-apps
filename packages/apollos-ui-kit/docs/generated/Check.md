@@ -1,6 +1,8 @@
-`Check` (component)
-===================
-
+---
+id: check
+title: `Check` (component)
+sidebar_label: Check
+---
 
 
 Props

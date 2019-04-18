@@ -1,6 +1,8 @@
-`Umbrella` (component)
-======================
-
+---
+id: umbrella
+title: `Umbrella` (component)
+sidebar_label: Umbrella
+---
 
 
 Props

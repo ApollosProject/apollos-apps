@@ -1,6 +1,8 @@
-`Dropdown` (component)
-======================
-
+---
+id: dropdown
+title: `Dropdown` (component)
+sidebar_label: Dropdown
+---
 
 
 Props

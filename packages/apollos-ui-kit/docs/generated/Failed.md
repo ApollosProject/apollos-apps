@@ -1,6 +1,8 @@
-`Failed` (component)
-====================
-
+---
+id: failed
+title: `Failed` (component)
+sidebar_label: Failed
+---
 
 
 Props

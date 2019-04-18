@@ -1,6 +1,8 @@
-`Sections` (component)
-======================
-
+---
+id: sections
+title: `Sections` (component)
+sidebar_label: Sections
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`CardWrapper` (component)
-=========================
-
+---
+id: cardwrapper
+title: `CardWrapper` (component)
+sidebar_label: CardWrapper
+---
 
 
 Props

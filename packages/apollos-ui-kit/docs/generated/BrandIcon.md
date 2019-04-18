@@ -1,6 +1,8 @@
-`BrandIcon` (component)
-=======================
-
+---
+id: brandicon
+title: `BrandIcon` (component)
+sidebar_label: BrandIcon
+---
 
 
 Props

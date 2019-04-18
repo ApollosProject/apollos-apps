@@ -1,6 +1,8 @@
-`Touchable` (component)
-=======================
-
+---
+id: touchable
+title: `Touchable` (component)
+sidebar_label: Touchable
+---
 
 
 Props

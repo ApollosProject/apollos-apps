@@ -1,6 +1,8 @@
-`FeedView` (component)
-======================
-
+---
+id: feedview
+title: `FeedView` (component)
+sidebar_label: FeedView
+---
 
 
 Props

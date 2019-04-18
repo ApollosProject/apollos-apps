@@ -1,6 +1,8 @@
-`ThumbnailCard` (component)
-===========================
-
+---
+id: thumbnailcard
+title: `ThumbnailCard` (component)
+sidebar_label: ThumbnailCard
+---
 
 
 Props

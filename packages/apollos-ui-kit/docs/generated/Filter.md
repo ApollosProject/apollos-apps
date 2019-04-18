@@ -1,6 +1,8 @@
-`Filter` (component)
-====================
-
+---
+id: filter
+title: `Filter` (component)
+sidebar_label: Filter
+---
 
 
 Props

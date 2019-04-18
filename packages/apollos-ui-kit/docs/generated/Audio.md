@@ -1,6 +1,8 @@
-`Audio` (component)
-===================
-
+---
+id: audio
+title: `Audio` (component)
+sidebar_label: Audio
+---
 
 
 Props

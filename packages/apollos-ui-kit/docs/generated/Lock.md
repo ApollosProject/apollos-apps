@@ -1,6 +1,8 @@
-`Lock` (component)
-==================
-
+---
+id: lock
+title: `Lock` (component)
+sidebar_label: Lock
+---
 
 
 Props

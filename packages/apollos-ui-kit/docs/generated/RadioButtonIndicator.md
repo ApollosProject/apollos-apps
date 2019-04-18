@@ -1,6 +1,8 @@
-`RadioButtonIndicator` (component)
-==================================
-
+---
+id: radiobuttonindicator
+title: `RadioButtonIndicator` (component)
+sidebar_label: RadioButtonIndicator
+---
 
 
 Props

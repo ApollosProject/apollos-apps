@@ -1,6 +1,8 @@
-`ChannelLabel` (component)
-==========================
-
+---
+id: channellabel
+title: `ChannelLabel` (component)
+sidebar_label: ChannelLabel
+---
 
 
 Props

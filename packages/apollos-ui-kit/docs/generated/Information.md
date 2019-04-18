@@ -1,6 +1,8 @@
-`Information` (component)
-=========================
-
+---
+id: information
+title: `Information` (component)
+sidebar_label: Information
+---
 
 
 Props

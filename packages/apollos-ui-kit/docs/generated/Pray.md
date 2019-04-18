@@ -1,7 +1,7 @@
 ---
-id: fullscreen
-title: `Fullscreen` (component)
-sidebar_label: Fullscreen
+id: pray
+title: `Pray` (component)
+sidebar_label: Pray
 ---
 
 

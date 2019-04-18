@@ -1,6 +1,8 @@
-`PickerList` (component)
-========================
-
+---
+id: pickerlist
+title: `PickerList` (component)
+sidebar_label: PickerList
+---
 
 
 Props

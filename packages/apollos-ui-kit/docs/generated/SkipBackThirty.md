@@ -1,6 +1,8 @@
-`SkipBackThirty` (component)
-============================
-
+---
+id: skipbackthirty
+title: `SkipBackThirty` (component)
+sidebar_label: SkipBackThirty
+---
 
 
 Props

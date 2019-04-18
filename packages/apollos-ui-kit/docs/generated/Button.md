@@ -1,6 +1,8 @@
-`Button` (component)
-====================
-
+---
+id: button
+title: `Button` (component)
+sidebar_label: Button
+---
 
 
 Props

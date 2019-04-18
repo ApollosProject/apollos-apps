@@ -1,6 +1,8 @@
-`Avatar` (component)
-====================
-
+---
+id: avatar
+title: `Avatar` (component)
+sidebar_label: Avatar
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`Download` (component)
-======================
-
+---
+id: download
+title: `Download` (component)
+sidebar_label: Download
+---
 
 
 Props

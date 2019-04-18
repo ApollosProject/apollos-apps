@@ -1,6 +1,8 @@
-`Print` (component)
-===================
-
+---
+id: print
+title: `Print` (component)
+sidebar_label: Print
+---
 
 
 Props

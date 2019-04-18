@@ -1,6 +1,8 @@
-`Video` (component)
-===================
-
+---
+id: video
+title: `Video` (component)
+sidebar_label: Video
+---
 
 
 Props

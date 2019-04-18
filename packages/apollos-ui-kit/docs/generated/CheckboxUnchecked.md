@@ -1,6 +1,8 @@
-`CheckboxUnchecked` (component)
-===============================
-
+---
+id: checkboxunchecked
+title: `CheckboxUnchecked` (component)
+sidebar_label: CheckboxUnchecked
+---
 
 
 Props

@@ -1,6 +1,8 @@
-`ArrowNext` (component)
-=======================
-
+---
+id: arrownext
+title: `ArrowNext` (component)
+sidebar_label: ArrowNext
+---
 
 
 Props

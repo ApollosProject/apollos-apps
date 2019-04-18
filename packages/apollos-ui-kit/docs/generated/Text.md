@@ -1,6 +1,8 @@
-`Text` (component)
-==================
-
+---
+id: text
+title: `Text` (component)
+sidebar_label: Text
+---
 
 
 Props

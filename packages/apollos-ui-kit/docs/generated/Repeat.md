@@ -1,6 +1,8 @@
-`Repeat` (component)
-====================
-
+---
+id: repeat
+title: `Repeat` (component)
+sidebar_label: Repeat
+---
 
 
 Props

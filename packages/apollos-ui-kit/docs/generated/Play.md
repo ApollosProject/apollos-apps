@@ -1,6 +1,8 @@
-`Play` (component)
-==================
-
+---
+id: play
+title: `Play` (component)
+sidebar_label: Play
+---
 
 
 Props

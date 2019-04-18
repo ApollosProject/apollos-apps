@@ -1,6 +1,8 @@
-`ArrowDown` (component)
-=======================
-
+---
+id: arrowdown
+title: `ArrowDown` (component)
+sidebar_label: ArrowDown
+---
 
 
 Props

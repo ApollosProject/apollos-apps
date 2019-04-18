@@ -1,6 +1,8 @@
-`Home` (component)
-==================
-
+---
+id: home
+title: `Home` (component)
+sidebar_label: Home
+---
 
 
 Props

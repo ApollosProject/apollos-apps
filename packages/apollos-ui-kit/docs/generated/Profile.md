@@ -1,6 +1,8 @@
-`Profile` (component)
-=====================
-
+---
+id: profile
+title: `Profile` (component)
+sidebar_label: Profile
+---
 
 
 Props
