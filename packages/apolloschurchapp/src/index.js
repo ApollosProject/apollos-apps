@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import { useScreens } from 'react-native-screens';
 // import { Sentry } from 'react-native-sentry';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
@@ -21,6 +22,9 @@ import Onboarding from './onboarding';
 // Sentry.config(
 //   'https://5908fa19ed37447f86b2717423cadec5:45dd3b58792b413cb67109c5e63a0bb7@sentry.io/1241658'
 // ).install();
+
+// from react-native-screens to optimize navigation
+useScreens();
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
