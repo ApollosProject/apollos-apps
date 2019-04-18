@@ -51,6 +51,20 @@ describe('The Onboarding Slide component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render primary navigation button without a custom icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Slide
+          onPressPrimary={jest.fn()}
+          primaryNavText={'Custom nav text without an icon'}
+          primaryNavIcon={''}
+        >
+          <Text>Boom</Text>
+        </Slide>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render onboarding skip button navigation', () => {
     const tree = renderer.create(
       <Providers>
