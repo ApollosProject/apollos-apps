@@ -3,15 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const generateMarkdown = require('./generateMarkdown');
-
-let json = '';
-process.stdin.setEncoding('utf8');
-process.stdin.on('readable', () => {
-  const chunk = process.stdin.read();
-  if (chunk !== null) {
-    json += chunk;
-  }
-});
+const generateID = require('./generateID');
 
 function getComponentName(filepath) {
   let name = path.basename(filepath);
@@ -28,15 +20,27 @@ function getComponentName(filepath) {
 }
 
 function buildDocs(api) {
+  const docsList = [];
   // api is an object keyed by filepath. We use the file name as component name.
-  for (const filepath in api) {
+  Object.keys(api).forEach((filepath) => {
     const name = getComponentName(filepath);
+    docsList.push(generateID(name));
     const markdown = generateMarkdown(name, api[filepath]);
-    // fs.mkdirSync(path.dirname(`docs/generated`), { recursive: true });
     fs.writeFileSync(`docs/generated/${name}.md`, markdown);
     process.stdout.write(`${filepath} -> ${name}.md\n`);
-  }
+  });
+  const docsObj = { 'UI-Kit': docsList };
+  fs.writeFileSync(`docs/generated/docs.json`, JSON.stringify(docsObj));
 }
+
+let json = '';
+process.stdin.setEncoding('utf8');
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
+  if (chunk !== null) {
+    json += chunk;
+  }
+});
 
 process.stdin.on('end', () => {
   buildDocs(JSON.parse(json));

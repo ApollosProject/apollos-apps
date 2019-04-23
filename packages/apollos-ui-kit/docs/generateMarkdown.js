@@ -7,6 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+const generateID = require('./generateID');
+
 function stringOfLength(string, length) {
   let newString = '';
   for (let i = 0; i < length; i++) {
@@ -20,7 +22,7 @@ function generateTitle(name) {
 }
 
 function generateDocusaurusHeader(name) {
-  const id = `id: ${name.toLowerCase()}`;
+  const id = `id: ${generateID(name)}`;
   const title = `title: ${generateTitle(name)}`;
   const label = `sidebar_label: ${name.charAt(0).toUpperCase() +
     name.slice(1)}`;
