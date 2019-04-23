@@ -34,7 +34,8 @@ const SkipButton = styled(({ theme }) => ({
   marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
 }))(ButtonLink);
 
-// memo = sfc PureComponent 💥
+/* Slide uses memo = sfc PureComponent 💥 Additionally, this component when rendered in a `Slider`
+ * is automatically rendered in a `View` */
 // eslint-disable-next-line react/display-name
 const Slide = memo(
   ({
@@ -53,7 +54,9 @@ const Slide = memo(
             <Button onPress={onPressPrimary}>
               <>
                 <H5>{primaryNavText}</H5>
-                <PrimaryNavIcon name={primaryNavIcon} />
+                {primaryNavIcon ? (
+                  <PrimaryNavIcon name={primaryNavIcon} />
+                ) : null}
               </>
             </Button>
           ) : null}
@@ -76,7 +79,7 @@ Slide.propTypes = {
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   primaryNavText: PropTypes.string, // colored button text
-  primaryNavIcon: PropTypes.string, // optional custom icon name
+  primaryNavIcon: PropTypes.string, // optional custom icon name or empty string for no icon at all
   secondaryNavText: PropTypes.string, // text link
 };
 
