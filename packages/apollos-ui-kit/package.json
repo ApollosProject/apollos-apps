@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./src --ext .js"
+    "lint": "eslint ./src --ext .js",
+    "generate-docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"
   },
   "keywords": [
     "react-native-component",
@@ -57,6 +58,7 @@
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
+    "react-docgen": "^4.1.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-native": "0.58.5",

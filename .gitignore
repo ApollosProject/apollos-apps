@@ -88,3 +88,6 @@ storyLoader.js
 **/lib
 
 .watchmanconfig
+
+# generated markdown docs
+packages/**/docs/generated/*
