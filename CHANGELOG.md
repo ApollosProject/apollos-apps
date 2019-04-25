@@ -1,5 +1,5 @@
 
-v0.8.2: April 25, 2019
+v0.8.3: April 25, 2019
 
 - Adds Script to Generate Component Docs (#601) (a7b5fb54)
 - removed warning from onboarding (#653) (33d1bcc7)
