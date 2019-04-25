@@ -101,7 +101,6 @@ const AboutYou = memo(
               ])}
             </StyledRadio>
           </View>
-          {/* TODO: getting some warning with this DateInput */}
           <View>
             <Label>Birthday</Label>
             <StyledDate
