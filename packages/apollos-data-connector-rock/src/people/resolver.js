@@ -3,7 +3,7 @@ import { enforceCurrentUser } from '../utils';
 
 // Rock returns `{}` instead of `null` for null values.
 // This function eliminates the annoyance of checking those values.
-export const ifExists = (field) => (typeof field === 'object' ? null : field);
+export const ifNotObject = (field) => (typeof field === 'object' ? null : field);
 
 export default {
   Mutation: {
@@ -18,11 +18,11 @@ export default {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     photo: ({ photo: { url } }) => ({ uri: url }),
-    firstName: ({ firstName }) => ifExists(firstName),
-    lastName: ({ lastName }) => ifExists(lastName),
-    birthDate: enforceCurrentUser(({ birthDate }) => ifExists(birthDate)),
+    firstName: ({ firstName }) => ifNotObject(firstName),
+    lastName: ({ lastName }) => ifNotObject(lastName),
+    birthDate: enforceCurrentUser(({ birthDate }) => ifNotObject(birthDate)),
     gender: enforceCurrentUser(({ gender }) => gender),
-    email: enforceCurrentUser(({ email }) => ifExists(email)),
+    email: enforceCurrentUser(({ email }) => ifNotObject(email)),
   },
   GENDER: {
     Unknown: 0,
