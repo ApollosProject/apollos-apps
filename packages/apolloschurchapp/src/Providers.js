@@ -9,8 +9,11 @@ import ClientProvider from './client';
 const AppProviders = (props) => (
   <ClientProvider {...props}>
     <NotificationsManager>
-      <AuthProvider navigateToAuth={() => NavigationService.navigate('Auth')}>
-        <AnalyticsProvider trackFunctions={[console.warn]}>
+      <AuthProvider
+        navigateToAuth={() => NavigationService.navigate('Auth')}
+        closeAuth={() => NavigationService.navigate('Onboarding')}
+      >
+        <AnalyticsProvider>
           <Providers {...props} />
         </AnalyticsProvider>
       </AuthProvider>

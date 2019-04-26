@@ -62,8 +62,10 @@ const Chip = enhance(
       pill={pill}
       {...buttonProps}
     >
-      {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
-      {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
+      <>
+        {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
+        {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
+      </>
     </StyledButton>
   )
 );

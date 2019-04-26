@@ -1,13 +1,16 @@
 import React, { PureComponent } from 'react';
-import { View, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
+// import { track, events } from 'apolloschurchapp/src/analytics';
 import {
   FlexedView,
   PaddedView,
   TextInput,
   Button,
+  ButtonLink,
   styled,
 } from '@apollosproject/ui-kit';
 
@@ -27,6 +30,7 @@ class Form extends PureComponent {
     handleSubmit: PropTypes.func,
     isSubmitting: PropTypes.bool,
     isValid: PropTypes.bool,
+    handleForgotPassword: PropTypes.func,
   };
 
   render() {
@@ -69,14 +73,19 @@ class Form extends PureComponent {
                   this.passwordInput = r;
                 }}
               />
+              {this.props.handleForgotPassword ? (
+                <ButtonLink onPress={this.props.handleForgotPassword}>
+                  Forgot your password?
+                </ButtonLink>
+              ) : null}
             </View>
           </PaddedView>
         </KeyboardAwareScrollView>
-        <BottomSafeAreaView>
+        <BottomSafeAreaView forceInset={{ bottom: 'always' }}>
           <PaddedView vertical={false}>
             <Button
               onPress={handleSubmit}
-              title="Register"
+              title="Sign in"
               disabled={!isValid}
               loading={isSubmitting}
             />

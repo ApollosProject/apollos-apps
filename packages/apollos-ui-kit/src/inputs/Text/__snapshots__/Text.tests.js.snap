@@ -86,7 +86,6 @@ exports[`The Text Input component should render as a numeric field 1`] = `
               }
               type="numeric"
               underlineColorAndroid="transparent"
-              value=""
             />
           </View>
           <View
@@ -275,7 +274,6 @@ exports[`The Text Input component should render as a password field with an icon
               }
               type="password"
               underlineColorAndroid="transparent"
-              value=""
             />
           </View>
           <View
@@ -590,7 +588,6 @@ exports[`The Text Input component should render as a phone number field 1`] = `
               }
               type="phone"
               underlineColorAndroid="transparent"
-              value=""
             />
           </View>
           <View
@@ -779,7 +776,6 @@ exports[`The Text Input component should render as an email field 1`] = `
               }
               type="email"
               underlineColorAndroid="transparent"
-              value=""
             />
           </View>
           <View
@@ -964,7 +960,6 @@ exports[`The Text Input component should render correctly 1`] = `
                 }
               }
               underlineColorAndroid="transparent"
-              value=""
             />
           </View>
           <View

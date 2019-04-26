@@ -1,12 +1,12 @@
 {
   "name": "apolloschurchapp",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "private": true,
   "devDependencies": {
-    "@storybook/addon-actions": "4.0.7",
-    "@storybook/addon-links": "4.0.7",
-    "@storybook/addons": "4.0.7",
-    "@storybook/react-native": "4.0.7",
+    "@storybook/addon-actions": "4.1.16",
+    "@storybook/addon-links": "4.1.16",
+    "@storybook/addons": "4.1.16",
+    "@storybook/react-native": "4.1.1",
     "codecov": "3.0.2",
     "get-dev-paths": "^0.1.0",
     "jest": "23.6.0",
@@ -26,7 +26,7 @@
     "src"
   ],
   "scripts": {
-    "android": "react-native run-android",
+    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.apolloschurch.app --main-activity LaunchActivity",
     "codecov": "cat ./coverage/lcov.info | codecov",
     "fixlint": "eslint ./src --fix",
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
@@ -61,11 +61,11 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/ui-auth": "^0.8.1",
-    "@apollosproject/ui-kit": "^0.8.1",
-    "@apollosproject/ui-passes": "^0.8.1",
+    "@apollosproject/ui-analytics": "^0.8.2",
+    "@apollosproject/ui-auth": "^0.8.2",
+    "@apollosproject/ui-kit": "^0.8.2",
+    "@apollosproject/ui-passes": "^0.8.2",
     "apollo-cache-inmemory": "1.5.1",
-    "@apollosproject/ui-analytics": "^0.8.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.5.1",
     "apollo-link": "1.2.8",
@@ -78,7 +78,7 @@
     "dotenv": "^6.2.0",
     "entities": "1.1.1",
     "events": "^3.0.0",
-    "formik": "0.11.11",
+    "formik": "^1.5.2",
     "graphql": "0.13.2",
     "graphql-tag": "2.9.2",
     "graphql-tools": "3.1.1",

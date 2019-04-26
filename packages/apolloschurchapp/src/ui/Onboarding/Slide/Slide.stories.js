@@ -29,6 +29,15 @@ storiesOf('Onboarding/Slide', module)
       <Text>Boom</Text>
     </Slide>
   ))
+  .add('no icon', () => (
+    <Slide
+      onPressPrimary={() => {}}
+      primaryNavText={'No Icon!'}
+      primaryNavIcon={''}
+    >
+      <Text>Boom</Text>
+    </Slide>
+  ))
   .add('onPressSecondary', () => (
     <Slide onPressSecondary={() => {}}>
       <Text>Boom</Text>

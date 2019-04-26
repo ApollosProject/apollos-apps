@@ -35,7 +35,7 @@ class NotificationsInit extends Component {
 
   componentDidMount() {
     OneSignal.init(Config.ONE_SIGNAL_KEY, {
-      kOSSettingsKeyAutoPrompt: true,
+      kOSSettingsKeyAutoPrompt: false,
     });
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
