@@ -72,7 +72,7 @@ ROCK_MAPPINGS:
       EntityType: ContentChannelItem
     ContentItem:
       EntityType: ContentChannelItem
-  
+
   DATAVIEW_CATEGORIES:
     # Id of the category used to store all persona dataviews
     PersonaId: 210
@@ -95,7 +95,8 @@ ROCK_MAPPINGS:
     - 6
     - 8
 
-  CAMPAIGN_CHANNEL_ID: 11
+  CAMPAIGN_CHANNEL_IDS:
+    - 11
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:

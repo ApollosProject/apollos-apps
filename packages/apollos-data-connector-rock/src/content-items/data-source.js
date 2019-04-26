@@ -277,6 +277,12 @@ export default class ContentItem extends RockApolloDataSource {
       .andFilter(this.LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
+  byContentChannelIds = (ids = []) =>
+    this.request()
+      .filterOneOf(ids.map((id) => `ContentChannelId eq ${id}`))
+      .andFilter(this.LIVE_CONTENT())
+      .orderBy('StartDateTime', 'desc');
+
   getFromIds = (ids) =>
     this.request()
       .filterOneOf(ids.map((id) => `Id eq ${id}`))
