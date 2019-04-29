@@ -1,4 +1,13 @@
 
+v0.8.3: April 25, 2019
+
+- Adds Script to Generate Component Docs (#601) (a7b5fb54)
+- Adds Static iOS Launch Images (#624) (b2ca824e)
+- Removes warning from onboarding (#653) (33d1bcc7)
+- Simplifies Switch and Fixes Warnings (#628) (56c81a2a)
+- v0.8.2 (#643) (4c1ce053)
+
+
 v0.8.2: April 17, 2019
 
 - Fixs Chip component prop warning that was noticed on onboarding (#639) (84e4a1ea)
