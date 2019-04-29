@@ -22,8 +22,6 @@ const Container = styled(
     height: themeSize,
     backgroundColor: theme.colors.white,
     borderRadius: themeSize / 2,
-    marginRight: themeSize / 4,
-    marginBottom: themeSize / 4,
     alignItems: 'center',
     justifyContent: 'flex-end',
     overflow: 'hidden',
