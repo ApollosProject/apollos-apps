@@ -5,4 +5,4 @@
    -H "Travis-API-Version: 3" \
    -H "Authorization: token NgwCFMqRYxaqurXAeNu50Q" \
    -d '{ "quiet": true }' \
-   https://api.travis-ci.com/job/$"{TRAVIS_JOB_ID}"/debug
+   https://api.travis-ci.org/job/2535.4/debug
