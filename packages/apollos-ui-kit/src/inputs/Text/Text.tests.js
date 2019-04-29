@@ -67,4 +67,16 @@ describe('The Text Input component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with no underline', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Text
+          label="Text input..."
+          placeholder="Some placeholder"
+          underline={false}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
