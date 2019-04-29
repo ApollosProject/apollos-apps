@@ -1228,7 +1228,7 @@ exports[`the CardTile component should render card details with date 1`] = `
                 }
               }
             >
-              33y
+              1d
             </Text>
           </View>
         </View>
