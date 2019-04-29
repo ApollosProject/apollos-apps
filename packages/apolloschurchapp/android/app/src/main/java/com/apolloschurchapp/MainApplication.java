@@ -15,7 +15,6 @@ import com.tanguyantoine.react.MusicControl;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
-import com.github.droibit.android.reactnative.customtabs.CustomTabsPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -49,7 +48,6 @@ public class MainApplication extends Application implements ReactApplication {
             new LinearGradientPackage(),
             new ImagePickerPackage(),
             new RNDeviceInfo(),
-            new CustomTabsPackage(),
             new ReactNativeConfigPackage()
       );
     }
