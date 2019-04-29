@@ -61,7 +61,7 @@ describe('the CardTile component', () => {
           title={'Why Jesus is Timeless'}
           showDetails
           byLine={'Marty McFly'}
-          date={moment(new Date()).add(-1, 'days')} // this snapshot will expire in a year
+          date={moment(new Date()).add(-1, 'days')}
         />
       </Providers>
     );

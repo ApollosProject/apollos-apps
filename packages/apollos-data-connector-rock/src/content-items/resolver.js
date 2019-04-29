@@ -50,6 +50,13 @@ export const defaultContentItemResolvers = {
 
 const resolver = {
   Query: {
+    campaigns: (root, args, { dataSources }) =>
+      dataSources.ContentItem.paginate({
+        cursor: dataSources.ContentItem.byContentChannelIds(
+          ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+        ),
+        args,
+      }),
     userFeed: (root, args, { dataSources }) =>
       dataSources.ContentItem.paginate({
         cursor: dataSources.ContentItem.byUserFeed(),
