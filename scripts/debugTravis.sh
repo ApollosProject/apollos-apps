@@ -3,6 +3,6 @@
    -H "Content-Type: application/json" \
    -H "Accept: application/json" \
    -H "Travis-API-Version: 3" \
-   -H "Authorization: token NgwCFMqRYxaqurXAeNu50Q" \
+   -H "Authorization: token ${TRAVIS_TOKEN}" \
    -d '{ "quiet": true }' \
-   https://api.travis-ci.org/job/2535.4/debug
+   https://api.travis-ci.org/job/"${TRAVIS_JOB_ID}"/debug
