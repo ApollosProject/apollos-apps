@@ -32,10 +32,10 @@ const Container = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.inactive,
 }))(View);
 
-const DefaultImageComponent = styled({
+const DefaultImageComponent = styled(({ resizeMode = 'cover' }) => ({
   width: '100%',
-  resizeMode: 'cover',
-})(ConnectedImage);
+  resizeMode,
+}))(ConnectedImage);
 
 const NoImagePlaceholder = styled(({ theme }) => ({
   width: '100%',
@@ -51,16 +51,20 @@ const GradientOverlayImage = pure(
     isLoading,
     style,
     imageStyle,
+    resizeMode,
+    forceRatio,
     ...otherProps
   }) => {
     const Component = ComponentProp || DefaultImageComponent;
     return (
-      <Container style={style}>
+      <Container style={style} forceRatio={forceRatio}>
         {imageSource || isLoading ? (
           <Component
             source={imageSource}
             isLoading={isLoading}
+            resizeMode={resizeMode}
             style={imageStyle}
+            forceRatio={forceRatio}
             {...otherProps}
           />
         ) : (
