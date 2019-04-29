@@ -19,6 +19,7 @@ import { LiveButton } from '../../live';
 import ContentTableCard from '../../ui/ContentTableCard';
 import getUserFeed from './getUserFeed';
 import getPersonaFeed from './getPersonaFeed';
+import getCampaignContentItem from './getCampaignContentItem';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -69,20 +70,48 @@ class Home extends PureComponent {
                     <LogoTitle source={require('./wordmark.png')} />
                     <LiveButton />
                     <Query
+                      query={getCampaignContentItem}
+                      fetchPolicy="cache-and-network"
+                    >
+                      {({ data: featuredData, loading: isFeaturedLoading }) => {
+                        const featuredContent = get(
+                          featuredData,
+                          'campaigns.edges',
+                          []
+                        ).map((edge) => edge.node);
+
+                        const featuredItem = get(
+                          featuredContent[0],
+                          'childContentItemsConnection.edges[0].node',
+                          {}
+                        );
+
+                        return (
+                          <ContentCardConnected
+                            contentId={featuredItem.id}
+                            isLoading={isFeaturedLoading}
+                          />
+                        );
+                      }}
+                    </Query>
+                    <Query
                       query={getPersonaFeed}
                       fetchPolicy="cache-and-network"
                     >
-                      {({ data: personaData, loading: actionLoading }) => (
+                      {({
+                        data: personaData,
+                        loading: isContentTableLoading,
+                      }) => (
                         <ContentTableCard
-                          isLoading={actionLoading}
+                          isLoading={isContentTableLoading}
                           onPress={this.handleOnPress}
                           header={
                             <>
-                              <StyledH6 isLoading={actionLoading}>
+                              <StyledH6 isLoading={isContentTableLoading}>
                                 FOR YOU
                               </StyledH6>
                               <H3
-                                isLoading={actionLoading}
+                                isLoading={isContentTableLoading}
                                 numberOfLines={3}
                                 ellipsizeMode="tail"
                               >

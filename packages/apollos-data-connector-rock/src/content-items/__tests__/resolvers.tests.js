@@ -216,6 +216,25 @@ describe('UniversalContentItem', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('gets campaigns content', async () => {
+    const query = `
+      query {
+        campaigns {
+          edges {
+            node {
+              ...ContentItemFragment
+            }
+          }
+        }
+      }
+      ${contentItemFragment}
+    `;
+
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
   it('gets a content item', async () => {
     const query = `
       query {

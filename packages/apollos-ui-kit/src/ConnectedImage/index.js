@@ -194,12 +194,14 @@ class ConnectedImage extends PureComponent {
     const {
       ImageComponent = Animated.Image,
       style,
+      forceRatio,
       isLoading,
       maintainAspectRatio,
       ...otherProps
     } = this.props;
+
     return (
-      <SkeletonImage onReady={!this.isLoading}>
+      <SkeletonImage onReady={!this.isLoading} forceRatio={forceRatio}>
         <ImageComponent
           {...otherProps}
           source={source}
