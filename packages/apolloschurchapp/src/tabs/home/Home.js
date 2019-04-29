@@ -11,11 +11,6 @@ import {
   BackgroundView,
   H3,
   H6,
-  H2,
-  TouchableScale,
-  Card,
-  FlexedView,
-  GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
@@ -36,13 +31,6 @@ const LogoTitle = styled(({ theme }) => ({
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
-
-const TextContainer = styled(({ theme }) => ({
-  // marginTop: theme.sizing.baseUnit / 2.5,
-  // borderBottomWidth: 0.5,
-  // height: theme.sizing.baseUnit * 4.25,
-  borderColor: theme.colors.shadows.default,
-}))(FlexedView);
 
 class Home extends PureComponent {
   static navigationOptions = () => ({
