@@ -78,7 +78,7 @@ Adding new fields to the schema is a three part process. The process differs dep
 Inside the `src/data/` directory of the API, create a new folder named after your new model. For this example, will pretend we are adding a new query to find ContentItems that have groups attached, so we will create a folder named `group-content-item` and a file called `index.js` within that folder. For now, that file will look something like this.
 
 ```
-import gql from graphql-tag;
+import gql from 'graphql-tag';
 import { ContentItem } from '@apollosproject/data-connector-rock';
 
 const ContentItemDataSource = ContentItem.dataSource;
