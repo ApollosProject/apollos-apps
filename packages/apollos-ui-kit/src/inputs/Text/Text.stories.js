@@ -28,6 +28,7 @@ storiesOf('Inputs', module).add('Text', () => (
       type="phone"
       label="Phone Number"
       placeholder="Some placeholder"
+      underline={false}
     />
   </FlexedView>
 ));
