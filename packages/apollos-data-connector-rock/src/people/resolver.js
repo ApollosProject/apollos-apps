@@ -3,7 +3,9 @@ import { enforceCurrentUser } from '../utils';
 
 // Rock returns `{}` instead of `null` for null values.
 // This function eliminates the annoyance of checking those values.
-export const ifNotObject = (field) => (typeof field === 'object' ? null : field);
+export const ifNotObject = (field) => (
+  typeof field === 'object' ? null : field
+);
 
 export default {
   Mutation: {
