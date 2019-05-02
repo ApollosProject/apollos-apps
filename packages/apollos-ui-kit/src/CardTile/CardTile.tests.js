@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
+import moment from 'moment';
 
 import Providers from '../Providers';
 
@@ -60,7 +61,7 @@ describe('the CardTile component', () => {
           title={'Why Jesus is Timeless'}
           showDetails
           byLine={'Marty McFly'}
-          date={'Sat Oct 26 1985 01:24:00 GMT+0008 (UTC)'} // this snapshot will expire in a year
+          date={moment(new Date()).add(-1, 'days')}
         />
       </Providers>
     );
@@ -84,7 +85,7 @@ describe('the CardTile component', () => {
           title={'Why Jesus is Timeless'}
           showDetails
           byLine={'Marty McFly'}
-          date={'Sat Oct 26 1985 01:24:00 GMT+0008 (UTC)'}
+          date={moment(new Date()).add(-1, 'days')}
           isLoading
         />
       </Providers>
