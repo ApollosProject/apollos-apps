@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-passes",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,8 +23,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.8.3",
-    "@apollosproject/server-core": "^0.8.3",
+    "@apollosproject/data-schema": "^0.8.4",
+    "@apollosproject/server-core": "^0.8.4",
     "datauri": "^1.1.0",
     "jest": "^23.6.0",
     "lodash": "^4.17.11",
@@ -35,8 +35,8 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^0.8.3",
-    "@apollosproject/babel-preset-apollos": "^0.8.3",
+    "@apollosproject/apollo-server-env-mock": "^0.8.4",
+    "@apollosproject/babel-preset-apollos": "^0.8.4",
     "jest": "^23.6.0"
   },
   "publishConfig": {
