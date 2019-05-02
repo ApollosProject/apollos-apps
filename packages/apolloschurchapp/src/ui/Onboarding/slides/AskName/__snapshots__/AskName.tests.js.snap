@@ -47,28 +47,27 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -554,8 +553,8 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -609,28 +608,27 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -1116,8 +1114,8 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -1171,28 +1169,27 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -1678,8 +1675,8 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -1699,15 +1696,12 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -1891,7 +1885,7 @@ exports[`The Onboarding AskName component should pass additional props to Slide 
             </RNSVGSvgView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -1944,28 +1938,27 @@ exports[`The Onboarding AskName component should render 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -2450,8 +2443,8 @@ exports[`The Onboarding AskName component should render 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -2505,28 +2498,27 @@ exports[`The Onboarding AskName component should render a custom description 1`]
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -3011,8 +3003,8 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -3066,28 +3058,27 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -3572,8 +3563,8 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -3627,28 +3618,27 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -4135,8 +4125,8 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>

@@ -52,18 +52,20 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -161,7 +163,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -220,18 +222,20 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -329,7 +333,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -388,18 +392,20 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -497,7 +503,7 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>

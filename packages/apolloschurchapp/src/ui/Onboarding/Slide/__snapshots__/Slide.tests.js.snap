@@ -69,15 +69,12 @@ exports[`The Onboarding Slide component should render a loading indicator 1`] = 
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -125,7 +122,7 @@ exports[`The Onboarding Slide component should render a loading indicator 1`] = 
             />
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -200,15 +197,12 @@ exports[`The Onboarding Slide component should render both slide navigation butt
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -405,7 +399,7 @@ exports[`The Onboarding Slide component should render both slide navigation butt
         >
           Skip
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -536,15 +530,12 @@ exports[`The Onboarding Slide component should render onboarding next button nav
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -728,7 +719,7 @@ exports[`The Onboarding Slide component should render onboarding next button nav
             </RNSVGSvgView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -803,15 +794,12 @@ exports[`The Onboarding Slide component should render onboarding skip button nav
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -828,7 +816,7 @@ exports[`The Onboarding Slide component should render onboarding skip button nav
         >
           Skip
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -903,15 +891,12 @@ exports[`The Onboarding Slide component should render onboarding skip button wit
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -928,7 +913,7 @@ exports[`The Onboarding Slide component should render onboarding skip button wit
         >
           Custom skip button text
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -1003,15 +988,12 @@ exports[`The Onboarding Slide component should render primary navigation button 
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -1195,7 +1177,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
             </RNSVGSvgView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -1270,15 +1252,12 @@ exports[`The Onboarding Slide component should render primary navigation button 
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -1462,7 +1441,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
             </RNSVGSvgView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -1537,15 +1516,12 @@ exports[`The Onboarding Slide component should render primary navigation button 
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -1599,7 +1575,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
             </Text>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>

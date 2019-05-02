@@ -47,28 +47,27 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -556,8 +555,8 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -577,15 +576,12 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -769,7 +765,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
             </RNSVGSvgView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -822,28 +818,27 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -1331,8 +1326,8 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -1352,15 +1347,12 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -1421,7 +1413,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
         >
           Skip
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -1474,28 +1466,27 @@ exports[`The AskNameConnected component renders loading state when fetching data
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "always",
+              "top": "always",
             }
           }
         >
-          <View
-            onLayout={[Function]}
-            pointerEvents="box-none"
+          <RCTSafeAreaView
+            emulateUnlessSupported={true}
+            forceInset={
+              Object {
+                "bottom": "always",
+              }
+            }
             style={
               Object {
                 "marginBottom": 48,
-                "paddingBottom": 0,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 20,
+                "paddingHorizontal": 16,
+                "paddingTop": 16,
               }
             }
           >
@@ -1983,8 +1974,8 @@ exports[`The AskNameConnected component renders loading state when fetching data
                 </View>
               </View>
             </View>
-          </View>
-        </View>
+          </RCTSafeAreaView>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -2004,15 +1995,12 @@ exports[`The AskNameConnected component renders loading state when fetching data
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -2073,7 +2061,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
         >
           Skip
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>

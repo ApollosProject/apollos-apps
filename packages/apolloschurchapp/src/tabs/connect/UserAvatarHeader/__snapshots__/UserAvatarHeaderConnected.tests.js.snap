@@ -98,36 +98,49 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
                   }
                   themeSize={80}
                 >
-                  <Image
-                    onLoad={[Function]}
-                    size="medium"
-                    source={
-                      Array [
-                        Object {
-                          "__typename": "ImageMediaSource",
-                          "cache": "force-cache",
-                          "height": 240,
-                          "uri": "https://some-uri.com/test.jpg",
-                          "width": 320,
-                        },
-                      ]
-                    }
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
+                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 40,
-                        "bottom": 0,
-                        "height": "100%",
-                        "left": 0,
-                        "opacity": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
                         "width": "100%",
                       }
                     }
-                    themeSize={80}
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      size="medium"
+                      source={
+                        Array [
+                          Object {
+                            "__typename": "ImageMediaSource",
+                            "cache": "force-cache",
+                            "uri": "https://some-uri.com/test.jpg",
+                          },
+                        ]
+                      }
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 40,
+                          "bottom": 0,
+                          "height": "100%",
+                          "left": 0,
+                          "marginBottom": 8,
+                          "marginRight": 0,
+                          "opacity": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                          "width": "100%",
+                        }
+                      }
+                      themeSize={80}
+                    />
+                  </View>
                 </View>
               </View>
             </View>

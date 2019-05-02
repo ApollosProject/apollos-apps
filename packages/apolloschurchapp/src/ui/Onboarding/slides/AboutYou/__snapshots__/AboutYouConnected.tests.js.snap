@@ -49,16 +49,18 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -540,7 +542,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
               />
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -560,15 +562,12 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -752,7 +751,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
             </RNSVGSvgView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -805,16 +804,18 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -1284,7 +1285,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
               />
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -1304,15 +1305,12 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -1329,7 +1327,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
         >
           Skip
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>

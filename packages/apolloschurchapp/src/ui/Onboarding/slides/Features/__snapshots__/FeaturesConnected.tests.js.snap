@@ -47,16 +47,18 @@ exports[`The Onboarding FeaturesConnected component renders with a firstName whe
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -94,7 +96,7 @@ exports[`The Onboarding FeaturesConnected component renders with a firstName whe
               We'd like to help personalize your mobile experience so we can help you with every step on your journey.
             </Text>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>

@@ -47,18 +47,20 @@ exports[`The Onboarding AskNotifications component should pass additional props 
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -96,7 +98,7 @@ exports[`The Onboarding AskNotifications component should pass additional props 
               We'll let you know when important things are happening and keep you in the loop
             </Text>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
     <View
@@ -116,15 +118,12 @@ exports[`The Onboarding AskNotifications component should pass additional props 
       }
       vertical={false}
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "bottom": "always",
+            "top": "never",
           }
         }
       >
@@ -141,7 +140,7 @@ exports[`The Onboarding AskNotifications component should pass additional props 
         >
           Later
         </Text>
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>
 </RCTSafeAreaView>
@@ -194,18 +193,20 @@ exports[`The Onboarding AskNotifications component should render 1`] = `
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -243,7 +244,7 @@ exports[`The Onboarding AskNotifications component should render 1`] = `
               We'll let you know when important things are happening and keep you in the loop
             </Text>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -340,18 +341,20 @@ exports[`The Onboarding AskNotifications component should render a BackgroundCom
             />
           </View>
         </View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -389,7 +392,7 @@ exports[`The Onboarding AskNotifications component should render a BackgroundCom
               We'll let you know when important things are happening and keep you in the loop
             </Text>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -443,18 +446,20 @@ exports[`The Onboarding AskNotifications component should render a button with c
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -552,7 +557,7 @@ exports[`The Onboarding AskNotifications component should render a button with c
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -606,18 +611,20 @@ exports[`The Onboarding AskNotifications component should render a custom descri
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -655,7 +662,7 @@ exports[`The Onboarding AskNotifications component should render a custom descri
               Custom description text
             </Text>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -709,18 +716,20 @@ exports[`The Onboarding AskNotifications component should render a custom title 
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -758,7 +767,7 @@ exports[`The Onboarding AskNotifications component should render a custom title 
               We'll let you know when important things are happening and keep you in the loop
             </Text>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -812,18 +821,20 @@ exports[`The Onboarding AskNotifications component should render the button disa
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -921,7 +932,7 @@ exports[`The Onboarding AskNotifications component should render the button disa
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
@@ -975,18 +986,20 @@ exports[`The Onboarding AskNotifications component should render with a button 1
       }
     >
       <View>
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
           style={
             Object {
               "flex": 1,
               "justifyContent": "space-between",
               "marginBottom": 48,
-              "paddingBottom": 0,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 20,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
             }
           }
         >
@@ -1084,7 +1097,7 @@ exports[`The Onboarding AskNotifications component should render with a button 1
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RCTScrollView>
   </View>
