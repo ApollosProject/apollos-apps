@@ -236,7 +236,14 @@ describe('Campus', () => {
 
     const getMock = jest.fn(() =>
       Promise.resolve([
-        { id: 1, campus: { id: 123, name: 'the very best campus' } },
+        {
+          id: 1,
+          campus: {
+            id: 123,
+            name: 'the very best campus',
+            location: { latitude: 1.1, longitude: 2.2 },
+          },
+        },
       ])
     );
 

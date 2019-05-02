@@ -9,8 +9,8 @@ const dark = ({ colors, alpha }) => ({
       link: colors.secondary,
     },
     background: {
-      screen: colors.screen,
-      paper: colors.paper,
+      screen: colors.black,
+      paper: colors.darkPrimary,
       accent: Color(colors.darkTertiary)
         .fade(alpha.medium)
         .string(),

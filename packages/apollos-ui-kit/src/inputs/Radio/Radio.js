@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
+import styled from '../../styled';
+import ErrorText from '../ErrorText';
+
 import RadioButton from './RadioButton';
+
+const ErrorWrapper = styled({
+  alignSelf: 'stretch',
+  width: '100%',
+})(View);
 
 class Radio extends Component {
   static Button = RadioButton;
@@ -11,7 +19,8 @@ class Radio extends Component {
     children: PropTypes.node,
     onChange: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    style: PropTypes.any // eslint-disable-line
+    style: PropTypes.any, // eslint-disable-line
+    error: PropTypes.any, // eslint-disable-line
   };
 
   static childContextTypes = {
@@ -61,7 +70,16 @@ class Radio extends Component {
   };
 
   render() {
-    return <View style={this.props.style}>{this.props.children}</View>;
+    return (
+      <View style={this.props.style}>
+        {this.props.children}
+        {this.props.error && typeof this.props.error === 'string' ? (
+          <ErrorWrapper>
+            <ErrorText>{this.props.error}</ErrorText>
+          </ErrorWrapper>
+        ) : null}
+      </View>
+    );
   }
 }
 

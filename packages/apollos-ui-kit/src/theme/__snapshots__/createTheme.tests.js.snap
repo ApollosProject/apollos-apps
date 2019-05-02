@@ -124,8 +124,8 @@ Object {
         "background": Object {
           "accent": "rgba(165, 165, 165, 0.30000000000000004)",
           "inactive": "#A5A5A5",
-          "paper": "#FFFFFF",
-          "screen": "#F8F7F4",
+          "paper": "#303030",
+          "screen": "#000000",
         },
         "shadows": Object {
           "default": "rgba(165, 165, 165, 0.30000000000000004)",
@@ -334,8 +334,8 @@ Object {
     "background": Object {
       "accent": "rgba(165, 165, 165, 0.30000000000000004)",
       "inactive": "#A5A5A5",
-      "paper": "#FFFFFF",
-      "screen": "#F8F7F4",
+      "paper": "#303030",
+      "screen": "#000000",
     },
     "black": "#000000",
     "darkPrimary": "#303030",
@@ -404,8 +404,8 @@ Object {
         "background": Object {
           "accent": "rgba(165, 165, 165, 0.30000000000000004)",
           "inactive": "#A5A5A5",
-          "paper": "#FFFFFF",
-          "screen": "#F8F7F4",
+          "paper": "#303030",
+          "screen": "#000000",
         },
         "shadows": Object {
           "default": "rgba(165, 165, 165, 0.30000000000000004)",

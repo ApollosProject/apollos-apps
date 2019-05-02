@@ -40,4 +40,15 @@ describe('The Radio component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with an error', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Radio error={'Danger Will Robinson'}>
+          <RadioButton label="option 1" value="one" />
+          <RadioButton label="option 2" value="two" />
+        </Radio>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

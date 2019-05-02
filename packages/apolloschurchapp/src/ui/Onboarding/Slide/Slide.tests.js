@@ -98,4 +98,14 @@ describe('The Onboarding Slide component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading indicator', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Slide onPressPrimary={jest.fn()} isLoading>
+          <Text>Boom</Text>
+        </Slide>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

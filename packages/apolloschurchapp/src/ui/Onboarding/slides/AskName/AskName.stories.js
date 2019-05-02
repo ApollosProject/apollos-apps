@@ -17,6 +17,13 @@ storiesOf('Onboarding/slides/AskName', module)
       setFieldValue={() => {}}
     />
   ))
+  .add('isLoading', () => (
+    <AskName
+      values={{ firstName: 'Marty', lastName: 'McFly' }}
+      setFieldValue={() => {}}
+      isLoading
+    />
+  ))
   .add('SlideWrapper props', () => (
     <AskName setFieldValue={() => {}} onPressPrimary={() => {}} />
   ));

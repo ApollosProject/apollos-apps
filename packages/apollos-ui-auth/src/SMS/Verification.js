@@ -1,7 +1,12 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, ScrollView, StyleSheet } from 'react-native';
+import {
+  View,
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+} from 'react-native';
 import { PaddedView, BackgroundView, TextInput } from '@apollosproject/ui-kit';
 import { SafeAreaView } from 'react-navigation';
 import { Formik } from 'formik';
@@ -135,10 +140,11 @@ class Verification extends Component {
                               </PaddedView>
                             </ScrollView>
                             <NextButtonRow>
+                              <View />
                               <NextButton
                                 onPress={handleSubmit}
                                 disabled={isSubmitting || !isValid}
-                                isLoading={isSubmitting}
+                                loading={isSubmitting}
                               />
                             </NextButtonRow>
                           </SafeAreaView>

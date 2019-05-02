@@ -1,52 +1,24 @@
 import React, { memo } from 'react';
-import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { get } from 'lodash';
 
 import {
   styled,
-  H2,
   H5,
   Radio,
   RadioButton,
   H6,
   DateInput,
-  FlexedView,
-  PaddedView,
 } from '@apollosproject/ui-kit';
 
-import Slide from '../../Slide';
+import Slide, { SlideContent } from '../../Slide';
 
-const Content = styled({
-  justifyContent: 'center',
-})(FlexedView);
-
-const StyledImage = styled(({ theme }) => ({
-  flex: 2,
-  resizeMode: 'contain',
-  marginBottom: theme.sizing.baseUnit * 2,
-}))(Image);
-
-const TextContent = styled({
-  flex: 1,
-  justifyContent: 'center',
-})(PaddedView);
-
-const Title = styled(({ theme }) => ({
-  color: theme.colors.primary,
-  marginBottom: theme.sizing.baseUnit * 0.5,
-}))(H2);
-
-const Description = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-  marginBottom: theme.sizing.baseUnit,
-}))(H5);
-
-const Label = styled({
+const Label = styled(({ theme, padded }) => ({
   color: 'gray',
   opacity: 0.7,
-})(H6);
+  ...(padded ? { marginTop: theme.sizing.baseUnit } : {}),
+}))(H6);
 
 const StyledDate = styled(({ theme }) => ({
   marginTop: 0,
@@ -56,6 +28,8 @@ const StyledDate = styled(({ theme }) => ({
 const StyledRadio = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
   flexDirection: 'row',
+  alignItems: 'center',
+  flexWrap: 'wrap',
 }))(Radio);
 
 const RadioLabel = styled(({ theme }) => ({
@@ -64,8 +38,6 @@ const RadioLabel = styled(({ theme }) => ({
 
 const AboutYou = memo(
   ({
-    onPressPrimary,
-    imgSrc,
     slideTitle,
     description,
     defaultDate,
@@ -74,50 +46,46 @@ const AboutYou = memo(
     touched,
     errors,
     setFieldValue,
+    BackgroundComponent,
     ...props
   }) => (
-    <Slide onPressPrimary={onPressPrimary} {...props}>
-      <Content>
-        {imgSrc ? <StyledImage source={imgSrc} /> : null}
-        <TextContent>
-          <Title>{slideTitle}</Title>
-          <Description>{description}</Description>
-          <View>
-            <Label>Gender</Label>
-            <StyledRadio
-              label="Gender"
-              type="radio"
-              value={get(values, 'gender')}
-              error={get(touched, 'gender') && get(errors, 'gender')}
-              onChange={(value) => setFieldValue('gender', value)}
-            >
-              {genderList.map((gender) => [
-                <RadioButton
-                  key={gender}
-                  value={gender}
-                  label={() => <RadioLabel>{gender}</RadioLabel>}
-                  underline={false}
-                />,
-              ])}
-            </StyledRadio>
-          </View>
-          <View>
-            <Label>Birthday</Label>
-            <StyledDate
-              type={'DateInput'}
-              placeholder={'Select a date...'}
-              value={moment
-                .utc(get(values, 'birthDate', defaultDate) || defaultDate)
-                .toDate()}
-              error={get(touched, 'birthDate') && get(errors, 'birthDate')}
-              displayValue={moment(
-                get(values, 'birthDate', defaultDate) || defaultDate
-              ).format('MM/DD/YYYY')}
-              onChange={(value) => setFieldValue('birthDate', value)}
-            />
-          </View>
-        </TextContent>
-      </Content>
+    <Slide {...props}>
+      {BackgroundComponent}
+      <SlideContent title={slideTitle} description={description}>
+        <Label padded>Gender</Label>
+        <StyledRadio
+          label="Gender"
+          type="radio"
+          value={get(values, 'gender')}
+          error={get(touched, 'gender') && get(errors, 'gender')}
+          onChange={(value) => setFieldValue('gender', value)}
+        >
+          {genderList.map((gender) => [
+            <RadioButton
+              key={gender}
+              value={gender}
+              label={() => <RadioLabel>{gender}</RadioLabel>}
+              underline={false}
+            />,
+          ])}
+        </StyledRadio>
+        <Label>Birthday</Label>
+        <StyledDate
+          type={'DateInput'}
+          placeholder={'Select a date...'}
+          value={moment
+            .utc(get(values, 'birthDate', defaultDate) || defaultDate)
+            .toDate()}
+          error={get(touched, 'birthDate') && get(errors, 'birthDate')}
+          displayValue={
+            // only show a birthday if we have one.
+            get(values, 'birthDate', '') // DatePicker shows displayValue > placeholder > label in that order
+              ? moment(values.birthDate).format('MM/DD/YYYY')
+              : '' // Pass an empty string if we don't have a birthday to show the placeholder.
+          }
+          onChange={(value) => setFieldValue('birthDate', value)}
+        />
+      </SlideContent>
     </Slide>
   )
 );
@@ -126,16 +94,32 @@ AboutYou.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
    */
-  setFieldValue: PropTypes.func.isRequired,
   slideTitle: PropTypes.string,
   description: PropTypes.string,
-  imgSrc: Image.propTypes,
   defaultDate: PropTypes.instanceOf(Date),
-  genderList: PropTypes.arrayOf(PropTypes.number),
-  values: PropTypes.shape({}),
-  touched: PropTypes.shape({}),
-  errors: PropTypes.shape({}),
-  onPressPrimary: PropTypes.func,
+  genderList: PropTypes.arrayOf(PropTypes.string),
+  values: PropTypes.shape({
+    gender: PropTypes.bool,
+    birthDate: PropTypes.bool,
+  }),
+  touched: PropTypes.shape({
+    gender: PropTypes.string,
+    birthDate: PropTypes.string,
+  }),
+  errors: PropTypes.shape({
+    gender: PropTypes.string,
+    birthDate: PropTypes.string,
+  }),
+  setFieldValue: PropTypes.func.isRequired,
+  /* Recommended usage:
+   * - `Image` (react-native)
+   * - `GradientOverlayImage` (@apollosproject/ui-kit) for increased readability
+   * - `Video` (react-native-video) because moving pictures!
+   */
+  BackgroundComponent: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 AboutYou.defaultProps = {

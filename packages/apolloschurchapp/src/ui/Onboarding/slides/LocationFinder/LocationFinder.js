@@ -1,51 +1,30 @@
 import React, { memo } from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import {
-  PaddedView,
-  FlexedView,
-  styled,
-  H2,
-  H5,
-  Button,
-  Touchable,
-} from '@apollosproject/ui-kit';
+import { PaddedView, styled, Button, Touchable } from '@apollosproject/ui-kit';
 
 import CampusCard from 'apolloschurchapp/src/user-settings/Locations/CampusCard';
-import Slide from '../../Slide';
+
+import Slide, { SlideContent } from '../../Slide';
 
 const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
-const ContentWrapper = styled({
-  height: '100%',
-})(View);
-
-const Content = styled({
-  justifyContent: 'flex-end',
-})(PaddedView);
-
-const Title = styled(({ theme }) => ({
-  color: theme.colors.primary,
-}))(H2);
-
-const StyledH5 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-  paddingBottom: theme.sizing.baseUnit * 1.5,
-}))(H5);
-
 const StyledCampusCard = styled(({ theme }) => ({
-  marginHorizontal: theme.sizing.baseUnit,
   marginBottom: theme.sizing.baseUnit,
 }))(CampusCard);
+
+const StyledSlideContent = styled({
+  flex: 1,
+  justifyContent: 'space-between',
+})(SlideContent);
 
 // memo = sfc PureComponent 💥
 // eslint-disable-next-line react/display-name
 const LocationFinder = memo(
   ({
     onPressPrimary,
-    children,
+    BackgroundComponent,
     slideTitle,
     description,
     buttonText,
@@ -68,12 +47,8 @@ const LocationFinder = memo(
       }
       {...props}
     >
-      <ContentWrapper>
-        <FlexedView>{children}</FlexedView>
-        <Content>
-          <Title>{slideTitle}</Title>
-          <StyledH5>{description}</StyledH5>
-        </Content>
+      {BackgroundComponent}
+      <StyledSlideContent title={slideTitle} description={description}>
         {campus ? (
           <Touchable onPress={onPressButton}>
             <StyledCampusCard
@@ -85,16 +60,16 @@ const LocationFinder = memo(
             />
           </Touchable>
         ) : (
-          <Content>
+          <PaddedView horizontal={false}>
             <Button
               title={buttonText}
               onPress={onPressButton}
               disabled={buttonDisabled}
               pill={false}
             />
-          </Content>
+          </PaddedView>
         )}
-      </ContentWrapper>
+      </StyledSlideContent>
     </Slide>
   )
 );
@@ -104,7 +79,7 @@ LocationFinder.propTypes = {
    * children. Thus we have to use a more unique name.
    */
   onPressPrimary: PropTypes.func,
-  children: PropTypes.oneOfType([
+  BackgroundComponent: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),

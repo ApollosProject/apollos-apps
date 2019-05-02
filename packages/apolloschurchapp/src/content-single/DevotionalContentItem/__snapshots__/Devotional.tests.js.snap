@@ -60,16 +60,16 @@ exports[`the Devotional component renders a devotional 1`] = `
         }
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
+          Object {
+            "top": "always",
+          }
+        }
         style={
           Object {
             "flex": 1,
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
           }
         }
       >
@@ -895,7 +895,7 @@ exports[`the Devotional component renders a devotional 1`] = `
             </RCTScrollView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </BVLinearGradient>
   </View>
 </RCTSafeAreaView>
@@ -961,16 +961,16 @@ exports[`the Devotional component renders a loading state 1`] = `
         }
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
+          Object {
+            "top": "always",
+          }
+        }
         style={
           Object {
             "flex": 1,
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
           }
         }
       >
@@ -1448,7 +1448,7 @@ exports[`the Devotional component renders a loading state 1`] = `
             </RCTScrollView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </BVLinearGradient>
   </View>
 </RCTSafeAreaView>
@@ -1514,16 +1514,16 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
         }
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
+          Object {
+            "top": "always",
+          }
+        }
         style={
           Object {
             "flex": 1,
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
           }
         }
       >
@@ -2001,7 +2001,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
             </RCTScrollView>
           </View>
         </View>
-      </View>
+      </RCTSafeAreaView>
     </BVLinearGradient>
   </View>
 </RCTSafeAreaView>

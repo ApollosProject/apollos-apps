@@ -35,7 +35,7 @@ const NextButtonIcon = withTheme(({ theme }) => ({
 
 export const NextButtonRow = styled({
   flexDirection: 'row',
-  justifyContent: 'flex-end',
+  justifyContent: 'space-between',
   alignItems: 'center',
 })(PaddedView);
 

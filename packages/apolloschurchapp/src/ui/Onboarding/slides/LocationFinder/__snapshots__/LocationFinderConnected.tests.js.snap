@@ -33,124 +33,139 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       }
     }
   >
-    <View
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      navigation={
+        Object {
+          "navigate": [MockFunction],
+        }
+      }
+      overScrollMode="auto"
       style={
         Object {
           "flex": 1,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "height": "100%",
+      <View>
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
           }
-        }
-      >
-        <View
           style={
             Object {
               "flex": 1,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "justifyContent": "flex-end",
+              "justifyContent": "space-between",
+              "marginBottom": 48,
               "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "paddingTop": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 20.16,
-                "paddingBottom": 24,
-              }
-            }
-          >
-            We'll use your location to connect you with your nearby campus and community
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
+          <View>
             <View
-              bordered={false}
-              disabled={false}
-              pill={false}
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
-                  "flexDirection": "row",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "overflow": "hidden",
-                  "paddingHorizontal": 16,
+                  "paddingBottom": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 23.04,
+                    "color": "#00676D",
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 36,
+                    "lineHeight": 41.4,
                   }
                 }
               >
-                Yes, find my local campus
+                Let's select your local campus
               </Text>
             </View>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                }
+              }
+            >
+              We'll use your location to connect you with your nearby campus and community
+            </Text>
           </View>
-        </View>
+          <View
+            horizontal={false}
+            style={
+              Object {
+                "paddingHorizontal": 0,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                bordered={false}
+                disabled={false}
+                pill={false}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#00676D",
+                    "borderColor": "#00676D",
+                    "borderRadius": 16,
+                    "borderWidth": 2,
+                    "elevation": 2,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Yes, find my local campus
+                </Text>
+              </View>
+            </View>
+          </View>
+        </RCTSafeAreaView>
       </View>
-    </View>
+    </RCTScrollView>
   </View>
 </RCTSafeAreaView>
 `;
@@ -188,124 +203,139 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       }
     }
   >
-    <View
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      navigation={
+        Object {
+          "navigate": [MockFunction],
+        }
+      }
+      overScrollMode="auto"
       style={
         Object {
           "flex": 1,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "height": "100%",
+      <View>
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
           }
-        }
-      >
-        <View
           style={
             Object {
               "flex": 1,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "justifyContent": "flex-end",
+              "justifyContent": "space-between",
+              "marginBottom": 48,
               "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "paddingTop": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 20.16,
-                "paddingBottom": 24,
-              }
-            }
-          >
-            We'll use your location to connect you with your nearby campus and community
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
+          <View>
             <View
-              bordered={false}
-              disabled={false}
-              pill={false}
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
-                  "flexDirection": "row",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "overflow": "hidden",
-                  "paddingHorizontal": 16,
+                  "paddingBottom": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 23.04,
+                    "color": "#00676D",
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 36,
+                    "lineHeight": 41.4,
                   }
                 }
               >
-                Yes, find my local campus
+                Let's select your local campus
               </Text>
             </View>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                }
+              }
+            >
+              We'll use your location to connect you with your nearby campus and community
+            </Text>
           </View>
-        </View>
+          <View
+            horizontal={false}
+            style={
+              Object {
+                "paddingHorizontal": 0,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                bordered={false}
+                disabled={false}
+                pill={false}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#00676D",
+                    "borderColor": "#00676D",
+                    "borderRadius": 16,
+                    "borderWidth": 2,
+                    "elevation": 2,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Yes, find my local campus
+                </Text>
+              </View>
+            </View>
+          </View>
+        </RCTSafeAreaView>
       </View>
-    </View>
+    </RCTScrollView>
   </View>
 </RCTSafeAreaView>
 `;
@@ -343,124 +373,139 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
       }
     }
   >
-    <View
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      navigation={
+        Object {
+          "navigate": [MockFunction],
+        }
+      }
+      overScrollMode="auto"
       style={
         Object {
           "flex": 1,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "height": "100%",
+      <View>
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
           }
-        }
-      >
-        <View
           style={
             Object {
               "flex": 1,
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "justifyContent": "flex-end",
+              "justifyContent": "space-between",
+              "marginBottom": 48,
               "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "paddingTop": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-          <Text
-            style={
-              Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 20.16,
-                "paddingBottom": 24,
-              }
-            }
-          >
-            We'll use your location to connect you with your nearby campus and community
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "justifyContent": "flex-end",
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
+          <View>
             <View
-              bordered={false}
-              disabled={false}
-              pill={false}
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
-                  "flexDirection": "row",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "overflow": "hidden",
-                  "paddingHorizontal": 16,
+                  "paddingBottom": 8,
                 }
               }
             >
               <Text
                 style={
                   Object {
-                    "color": "#FFFFFF",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 23.04,
+                    "color": "#00676D",
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 36,
+                    "lineHeight": 41.4,
                   }
                 }
               >
-                Yes, find my local campus
+                Let's select your local campus
               </Text>
             </View>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                }
+              }
+            >
+              We'll use your location to connect you with your nearby campus and community
+            </Text>
           </View>
-        </View>
+          <View
+            horizontal={false}
+            style={
+              Object {
+                "paddingHorizontal": 0,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                bordered={false}
+                disabled={false}
+                pill={false}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#00676D",
+                    "borderColor": "#00676D",
+                    "borderRadius": 16,
+                    "borderWidth": 2,
+                    "elevation": 2,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Yes, find my local campus
+                </Text>
+              </View>
+            </View>
+          </View>
+        </RCTSafeAreaView>
       </View>
-    </View>
+    </RCTScrollView>
   </View>
 </RCTSafeAreaView>
 `;

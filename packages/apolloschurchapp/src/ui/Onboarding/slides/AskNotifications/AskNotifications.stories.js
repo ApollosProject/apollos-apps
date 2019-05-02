@@ -6,10 +6,14 @@ import AskNotifications from './AskNotifications';
 
 storiesOf('Onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
-  .add('children (image)', () => (
-    <AskNotifications>
-      <GradientOverlayImage source={'https://picsum.photos/640/640/?random'} />
-    </AskNotifications>
+  .add('BackgroundComponent', () => (
+    <AskNotifications
+      BackgroundComponent={
+        <GradientOverlayImage
+          source={'https://picsum.photos/640/640/?random'}
+        />
+      }
+    />
   ))
   .add('slideTitle', () => (
     <AskNotifications slideTitle={'Custom title text'} />

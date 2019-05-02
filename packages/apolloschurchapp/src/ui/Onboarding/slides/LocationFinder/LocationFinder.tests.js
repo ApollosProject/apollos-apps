@@ -31,14 +31,16 @@ describe('The Onboarding LocationFinder component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render children (image)', () => {
+  it('should render a BackgroundComponent', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinder>
-          <GradientOverlayImage
-            source={'https://picsum.photos/640/640/?random'}
-          />
-        </LocationFinder>
+        <LocationFinder
+          BackgroundComponent={
+            <GradientOverlayImage
+              source={'https://picsum.photos/640/640/?random'}
+            />
+          }
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

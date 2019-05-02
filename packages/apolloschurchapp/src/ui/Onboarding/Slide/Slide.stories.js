@@ -51,6 +51,11 @@ storiesOf('Onboarding/Slide', module)
       <Text>Boom</Text>
     </Slide>
   ))
+  .add('isLoading', () => (
+    <Slide onPressPrimary={() => {}} isLoading>
+      <Text>Boom</Text>
+    </Slide>
+  ))
   .add('With Navigation', () => (
     <Slide onPressPrimary={() => {}} onPressSecondary={() => {}}>
       <Text>Boom</Text>

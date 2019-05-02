@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
@@ -6,6 +7,17 @@ import getUserProfile from '../../../../tabs/connect/getUserProfile';
 import AboutYouConnected from './AboutYouConnected';
 
 describe('AboutYouConnected component', () => {
+  it('renders in a default state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AboutYouConnected
+          onPressPrimary={jest.fn()}
+          defaultDate={'2019-02-14'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('renders Gender and BirthDate when logged in', async () => {
     const mock = {
       request: {
@@ -18,6 +30,7 @@ describe('AboutYouConnected component', () => {
             id: 'AuthenticatedUser:123',
             profile: {
               __typename: 'Person',
+              id: 'Person:123',
               gender: 'Male',
               birthDate: '1980-02-10T00:00:00',
               firstName: 'Isaac',
