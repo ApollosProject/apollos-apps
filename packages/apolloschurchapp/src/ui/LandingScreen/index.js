@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SafeAreaView } from 'react-navigation';
 
 import {
   styled,
@@ -13,11 +12,6 @@ import {
 } from '@apollosproject/ui-kit';
 
 import Slide from '../Onboarding/Slide';
-
-const FlexedSafeAreaView = styled({
-  flex: 1,
-})(SafeAreaView);
-const forceInset = { top: 'never' };
 
 const Content = styled({
   flex: 1,
