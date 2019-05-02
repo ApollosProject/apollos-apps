@@ -68,7 +68,7 @@ describe('The AskNameConnected component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders loading state when fetching data', async () => {
+  it('renders loading state when fetching data', () => {
     const tree = renderer.create(
       <Providers mocks={[]}>
         <AskNameConnected onPressPrimary={jest.fn()} />
