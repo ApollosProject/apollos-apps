@@ -49,6 +49,14 @@ describe('The Onboarding AskName component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AskName setFieldValue={jest.fn()} isLoading />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should pass additional props to Slide component', () => {
     const tree = renderer.create(
       <Providers>

@@ -1,4 +1,17 @@
 
+v0.8.4: May 2, 2019
+
+- Adds featured content in home feed (#603) (bb05dc92)
+- Adds Script to Debug Travis (#663) (ad5cc98a)
+- Adds Text Input Underline Option (#630) (9425128a)
+- Updates Several RN Packages (#660) (702b6599)
+- Updates README.md with typo fix (#669) (16df16a7)
+- Cleans up and fixes lots of UI/UX related Onboarding issues (#640) (b07ca864)
+- Fixed test and snapshot scheduled to fail after a year (#666) (37abc08b)
+- Removes Avatar Margin (#667) (2a27ed41)
+- Removes Custom Tabs (#661) (7e6644f8)
+- Removes react-native-custom-tabs on ios (#671) (efc02f85)
+
 v0.8.3: April 25, 2019
 
 - Adds Script to Generate Component Docs (#601) (a7b5fb54)

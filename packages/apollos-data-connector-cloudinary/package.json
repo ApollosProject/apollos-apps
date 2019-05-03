@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-cloudinary",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -29,8 +29,8 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^0.8.3",
-    "@apollosproject/babel-preset-apollos": "^0.8.3",
+    "@apollosproject/apollo-server-env-mock": "^0.8.4",
+    "@apollosproject/babel-preset-apollos": "^0.8.4",
     "jest": "^23.6.0"
   },
   "publishConfig": {

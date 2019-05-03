@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { KeyboardAvoidingView, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import {
+  styled,
   H6,
   PaddedView,
   BackgroundView,
   TextInput,
-  FlexedView,
   ButtonLink,
 } from '@apollosproject/ui-kit';
 import { Formik } from 'formik';
@@ -32,6 +32,15 @@ const requestPin = gql`
   }
 `;
 
+const FlexedSafeAreaView = styled({
+  flex: 1,
+})(SafeAreaView);
+const forceInset = { top: 'always' };
+
+const LegalText = styled({
+  width: '70%',
+})(H6);
+
 class PhoneEntry extends Component {
   static propTypes = {
     brand: PropTypes.node,
@@ -49,16 +58,19 @@ class PhoneEntry extends Component {
     smsPromptText:
       "Lets get you signed in using your mobile number. We'll text you a code to make login super easy!",
     smsPolicyInfo: (
-      <H6>
+      <LegalText>
         {"We'll never share your information or contact you (unless you ask!)."}
-      </H6>
+      </LegalText>
     ),
     allowPassword: true,
     smsPasswordLoginPrompt: "I'd rather use my email and a password",
   };
 
   validationSchema = Yup.object().shape({
-    phone: Yup.string().matches(/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/),
+    phone: Yup.string().matches(
+      /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/,
+      'Your phone number appears to be invalid'
+    ),
   });
 
   get flatProps() {
@@ -115,7 +127,7 @@ class PhoneEntry extends Component {
                   touched,
                   errors,
                 }) => (
-                  <SafeAreaView style={StyleSheet.absoluteFill}>
+                  <FlexedSafeAreaView forceInset={forceInset}>
                     <ScrollView>
                       <PaddedView>
                         {brand}
@@ -144,14 +156,14 @@ class PhoneEntry extends Component {
                       ) : null}
                     </ScrollView>
                     <NextButtonRow>
-                      <FlexedView>{smsPolicyInfo}</FlexedView>
+                      {smsPolicyInfo}
                       <NextButton
                         onPress={handleSubmit}
                         disabled={isSubmitting || !isValid}
-                        isLoading={isSubmitting}
+                        loading={isSubmitting}
                       />
                     </NextButtonRow>
-                  </SafeAreaView>
+                  </FlexedSafeAreaView>
                 )}
               </Formik>
             )}

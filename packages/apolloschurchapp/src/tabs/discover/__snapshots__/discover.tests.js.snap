@@ -11921,20 +11921,26 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
               }
             }
           >
-            <View
-              onLayout={[Function]}
-              pointerEvents="box-none"
-              style={
+            <RCTSafeAreaView
+              emulateUnlessSupported={true}
+              forceInset={
                 Object {
-                  "backgroundColor": "#FFF",
-                  "borderBottomColor": "#A7A7AA",
-                  "borderBottomWidth": 0.5,
-                  "height": 64,
-                  "paddingBottom": 0,
-                  "paddingLeft": 0,
-                  "paddingRight": 0,
-                  "paddingTop": 20,
+                  "bottom": "never",
+                  "top": "always",
                 }
+              }
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#FFF",
+                    "borderBottomColor": "#A7A7AA",
+                    "borderBottomWidth": 0.5,
+                  },
+                  Object {
+                    "height": 44,
+                  },
+                  Object {},
+                ]
               }
             >
               <View
@@ -11994,7 +12000,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                   </View>
                 </View>
               </View>
-            </View>
+            </RCTSafeAreaView>
           </View>
         </View>
       </View>

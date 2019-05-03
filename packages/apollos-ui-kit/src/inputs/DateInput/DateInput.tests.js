@@ -49,4 +49,15 @@ describe('The DateInput component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with an error', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DateInput
+          value={moment.utc('1/1/2015').toDate()}
+          error={'Danger Will Robinson'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

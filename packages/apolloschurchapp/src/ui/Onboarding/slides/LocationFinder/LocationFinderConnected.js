@@ -39,7 +39,7 @@ class LocationFinderConnected extends PureComponent {
 }
 
 LocationFinderConnected.propTypes = {
-  onPressPrimary: PropTypes.func.isRequired,
+  onPressPrimary: PropTypes.func,
 };
 
 LocationFinderConnected.displayName = 'LocationFinderConnected';
