@@ -94,7 +94,7 @@ LocationFinder.propTypes = {
   onPressButton: PropTypes.func,
   campus: PropTypes.shape({
     image: PropTypes.shape({
-      uri: PropTypes.string
+      uri: PropTypes.string,
     }),
     distanceFromLocation: PropTypes.number,
     id: PropTypes.string,

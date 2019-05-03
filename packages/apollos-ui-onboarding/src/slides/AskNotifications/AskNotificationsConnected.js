@@ -8,7 +8,12 @@ import AskNotifications from '.';
 
 // eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo(
-  ({ onPressPrimary, onPressSecondary, onRequestPushPermissions, ...props }) => (
+  ({
+    onPressPrimary,
+    onPressSecondary,
+    onRequestPushPermissions,
+    ...props
+  }) => (
     <ApolloConsumer>
       {(client) => (
         <Query query={getNotificationsEnabled}>

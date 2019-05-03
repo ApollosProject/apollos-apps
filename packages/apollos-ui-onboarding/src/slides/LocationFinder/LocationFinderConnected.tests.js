@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Providers from 'apolloschurchapp/src/Providers';
-import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
+import { Providers, renderWithApolloData } from '../../testUtils';
 
 import LocationFinderConnected from './LocationFinderConnected';
 import getUserCampus from './getUserCampus';
@@ -62,7 +61,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderConnected navigation={navigation} />
+        <LocationFinderConnected onNavigateToLocationFinder={jest.fn()} />
       </Providers>
     );
 
@@ -73,7 +72,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
   it('should render with no data in the cache', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinderConnected navigation={navigation} />
+        <LocationFinderConnected onNavigateToLocationFinder={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

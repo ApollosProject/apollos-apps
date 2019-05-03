@@ -1,10 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Providers from 'apolloschurchapp/src/Providers';
-import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
+import { Providers, renderWithApolloData } from '../../testUtils';
 
-import getUserProfile from '../../../../tabs/connect/getUserProfile';
+import getUserFirstAndLastName from './getUserFirstAndLastName';
 import AskNameConnected from './AskNameConnected';
 
 describe('The AskNameConnected component', () => {
@@ -19,7 +18,7 @@ describe('The AskNameConnected component', () => {
   it('renders User Name when logged in', async () => {
     const mock = {
       request: {
-        query: getUserProfile,
+        query: getUserFirstAndLastName,
       },
       result: {
         data: {
@@ -29,33 +28,8 @@ describe('The AskNameConnected component', () => {
             profile: {
               __typename: 'Person',
               id: 'Person:123',
-              gender: 'Male',
-              birthDate: '1980-02-10T00:00:00',
               firstName: 'Isaac',
               lastName: 'Hardy',
-              campus: {
-                __typename: 'Campus',
-                id: 'Campus:a0f64573eabf00a607bec911794d50fb',
-                name: 'Chicago Campus',
-                latitude: 42.09203,
-                longitude: -88.13289,
-                distanceFromLocation: null,
-                street1: '67 Algonquin Rd',
-                street2: '',
-                city: 'South Barrington',
-                state: 'IL',
-                postalCode: '60010-6143',
-                image: {
-                  __typename: 'ImageMediaSource',
-                  uri: 'https://picsum.photos/300/300/?random',
-                },
-              },
-              email: 'isaac.hardy@newspring.cc',
-              nickName: 'Batman',
-              photo: {
-                __typename: 'ImageMediaSource',
-                uri: 'https://some-uri.com/test.jpg',
-              },
             },
           },
         },

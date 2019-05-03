@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
 
-import Providers from 'apolloschurchapp/src/Providers';
+import { Providers } from '../../testUtils';
 
 import SlideContent from '.';
 

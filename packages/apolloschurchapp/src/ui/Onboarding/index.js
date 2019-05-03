@@ -11,10 +11,7 @@ import {
   OnboardingSwiper,
 } from '@apollosproject/ui-onboarding';
 
-import {
-  requestPushPermissions,
-  getNotificationsEnabled,
-} from 'apolloschurchapp/src/notifications';
+import { requestPushPermissions } from 'apolloschurchapp/src/notifications';
 
 function Onboarding({ navigation }) {
   return (

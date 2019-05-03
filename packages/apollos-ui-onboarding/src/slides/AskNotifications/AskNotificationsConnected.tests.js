@@ -1,8 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Providers from 'apolloschurchapp/src/Providers';
-import { getNotificationsEnabled } from 'apolloschurchapp/src/notifications';
-import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
+import { renderWithApolloData, Providers } from '../../testUtils';
+import getNotificationsEnabled from './getNotificationsEnabled';
 
 import AskNotificationsConnected from './AskNotificationsConnected';
 
@@ -29,11 +28,18 @@ describe('The Onboarding AskNotificationsConnected component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render with a user having granted push notifications permissions', async () => {
+    const mocks = [
+      {
+        request: {
+          query: getNotificationsEnabled,
+        },
+        result: {
+          data: { notificationsEnabled: true },
+        },
+      },
+    ];
     const component = (
-      <Providers
-        resolvers={{ Query: { notificationsEnabled: Promise.resolve(true) } }}
-        addTypename={false}
-      >
+      <Providers addTypename={false} mocks={mocks}>
         <AskNotificationsConnected onPressPrimary={jest.fn()} />
       </Providers>
     );

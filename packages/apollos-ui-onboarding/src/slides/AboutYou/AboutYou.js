@@ -102,8 +102,8 @@ AboutYou.propTypes = {
     gender: PropTypes.string,
     birthDate: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.instanceOf(Date)
-     ]),
+      PropTypes.instanceOf(Date),
+    ]),
   }),
   touched: PropTypes.shape({
     gender: PropTypes.boolean,

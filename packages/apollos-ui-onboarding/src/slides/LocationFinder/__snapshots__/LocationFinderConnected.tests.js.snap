@@ -39,11 +39,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
           "minHeight": "100%",
         }
       }
-      navigation={
-        Object {
-          "navigate": [MockFunction],
-        }
-      }
+      onNavigateToLocationFinder={[MockFunction]}
       overScrollMode="auto"
       style={
         Object {
@@ -379,11 +375,7 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
           "minHeight": "100%",
         }
       }
-      navigation={
-        Object {
-          "navigate": [MockFunction],
-        }
-      }
+      onNavigateToLocationFinder={[MockFunction]}
       overScrollMode="auto"
       style={
         Object {

@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 
-import Providers from 'apolloschurchapp/src/Providers';
+import { Providers } from '../../testUtils';
 
 import getUserFirstName from './getUserFirstName';
 import FeaturesConnected from './FeaturesConnected';
