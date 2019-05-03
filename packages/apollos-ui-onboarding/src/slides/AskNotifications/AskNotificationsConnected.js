@@ -1,23 +1,20 @@
 import React, { memo } from 'react';
 import { Query, ApolloConsumer } from 'react-apollo';
 import PropTypes from 'prop-types';
-
-import {
-  requestPushPermissions,
-  getNotificationsEnabled,
-} from 'apolloschurchapp/src/notifications';
+// This query is also found in core/permissionUtils. We should refactor into a notifications module.
+import getNotificationsEnabled from './getNotificationsEnabled';
 
 import AskNotifications from '.';
 
 // eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo(
-  ({ onPressPrimary, onPressSecondary, ...props }) => (
+  ({ onPressPrimary, onPressSecondary, onRequestPushPermissions, ...props }) => (
     <ApolloConsumer>
       {(client) => (
         <Query query={getNotificationsEnabled}>
           {({ data: { notificationsEnabled = false } = {} }) => (
             <AskNotifications
-              onPressButton={() => requestPushPermissions({ client })}
+              onPressButton={() => onRequestPushPermissions({ client })}
               buttonDisabled={notificationsEnabled}
               buttonText={
                 notificationsEnabled
@@ -41,6 +38,7 @@ const AskNotificationsConnected = memo(
 AskNotificationsConnected.propTypes = {
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
+  onRequestPushPermissions: PropTypes.func.isRequired,
 };
 
 export default AskNotificationsConnected;

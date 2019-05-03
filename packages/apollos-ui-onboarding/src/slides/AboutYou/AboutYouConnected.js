@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
-import getUserProfile from '../../../../tabs/connect/getUserProfile';
+import getUserGenderAndBirthDate from './getUserGenderAndBirthDate';
 import AboutYou from './AboutYou';
 
 import updateUserDetails from './updateUserDetails';
@@ -12,7 +12,7 @@ import updateUserDetails from './updateUserDetails';
 // eslint-disable-next-line react/display-name
 const AboutYouConnected = memo(
   ({ onPressPrimary, onPressSecondary, ...props }) => (
-    <Query query={getUserProfile}>
+    <Query query={getUserGenderAndBirthDate}>
       {({ data: { currentUser = { profile: {} } } = {}, loading = false }) => {
         const { gender, birthDate } = currentUser.profile;
 

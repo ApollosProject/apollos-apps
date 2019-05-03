@@ -99,12 +99,15 @@ AboutYou.propTypes = {
   defaultDate: PropTypes.instanceOf(Date),
   genderList: PropTypes.arrayOf(PropTypes.string),
   values: PropTypes.shape({
-    gender: PropTypes.bool,
-    birthDate: PropTypes.bool,
+    gender: PropTypes.string,
+    birthDate: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.instanceOf(Date)
+     ]),
   }),
   touched: PropTypes.shape({
-    gender: PropTypes.string,
-    birthDate: PropTypes.string,
+    gender: PropTypes.boolean,
+    birthDate: PropTypes.boolean,
   }),
   errors: PropTypes.shape({
     gender: PropTypes.string,

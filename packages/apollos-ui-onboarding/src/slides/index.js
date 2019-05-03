@@ -3,8 +3,5 @@ export AskName, { AskNameConnected } from './AskName';
 export AskNotifications, {
   AskNotificationsConnected,
 } from './AskNotifications';
-export LocationFinder, {
-  LocationFinderConnected,
-  LocationFinderMapView,
-} from './LocationFinder';
+export LocationFinder, { LocationFinderConnected } from './LocationFinder';
 export Features, { FeaturesConnected } from './Features';

@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
 import { Dimensions, View } from 'react-native';
 
-import {
-  Card,
-  ConnectedImage,
-  SideBySideView,
-  withIsLoading,
-  styled,
-  CardContent,
-  H5,
-  H6,
-} from '@apollosproject/ui-kit';
+import Card, { CardContent } from '../Card';
+import ConnectedImage from '../ConnectedImage';
+import SideBySideView from '../SideBySideView';
+import { withIsLoading } from '../isLoading';
+import styled from '../styled';
+import { H5, H6 } from '../typography';
 
 const { width } = Dimensions.get('window');
 
@@ -81,6 +77,7 @@ const CampusCard = enhance(
   )
 );
 
+CampusCard.CARD_WIDTH = CARD_WIDTH;
 CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

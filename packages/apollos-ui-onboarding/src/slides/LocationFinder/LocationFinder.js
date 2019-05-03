@@ -1,9 +1,13 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import { PaddedView, styled, Button, Touchable } from '@apollosproject/ui-kit';
-
-import CampusCard from 'apolloschurchapp/src/user-settings/Locations/CampusCard';
+import {
+  CampusCard,
+  PaddedView,
+  styled,
+  Button,
+  Touchable,
+} from '@apollosproject/ui-kit';
 
 import Slide, { SlideContent } from '../../Slide';
 
@@ -88,10 +92,14 @@ LocationFinder.propTypes = {
   buttonText: PropTypes.string,
   buttonDisabled: PropTypes.bool,
   onPressButton: PropTypes.func,
-  campus: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  campus: PropTypes.shape({
+    image: PropTypes.shape({
+      uri: PropTypes.string
+    }),
+    distanceFromLocation: PropTypes.number,
+    id: PropTypes.string,
+    name: PropTypes.string,
+  }),
   isCurrentCampus: PropTypes.bool,
 };
 
