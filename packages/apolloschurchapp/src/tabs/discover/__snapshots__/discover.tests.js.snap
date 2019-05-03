@@ -74,6 +74,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
           }
         >
           <View
+            accessibilityElementsHidden={false}
             pointerEvents="auto"
             style={
               Object {
@@ -11911,7 +11912,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
           <View
             style={
               Object {
-                "backgroundColor": "#F7F7F7",
+                "backgroundColor": "#FFF",
                 "transform": Array [
                   Object {
                     "translateX": 0,
@@ -11920,33 +11921,28 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
               }
             }
           >
-            <View
-              onLayout={[Function]}
-              pointerEvents="box-none"
-              style={
+            <RCTSafeAreaView
+              emulateUnlessSupported={true}
+              forceInset={
                 Object {
-                  "backgroundColor": "#F7F7F7",
-                  "borderBottomColor": "#A7A7AA",
-                  "borderBottomWidth": 0.5,
-                  "height": 64,
-                  "paddingBottom": 0,
-                  "paddingLeft": 0,
-                  "paddingRight": 0,
-                  "paddingTop": 20,
+                  "bottom": "never",
+                  "top": "always",
                 }
               }
-            >
-              <View
-                style={
+              style={
+                Array [
                   Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              />
+                    "backgroundColor": "#FFF",
+                    "borderBottomColor": "#A7A7AA",
+                    "borderBottomWidth": 0.5,
+                  },
+                  Object {
+                    "height": 44,
+                  },
+                  Object {},
+                ]
+              }
+            >
               <View
                 style={
                   Object {
@@ -11985,6 +11981,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                   >
                     <Text
                       accessibilityTraits="header"
+                      accessible={false}
                       allowFontScaling={true}
                       numberOfLines={1}
                       onLayout={[Function]}
@@ -11992,7 +11989,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         Object {
                           "color": "rgba(0, 0, 0, .9)",
                           "fontSize": 17,
-                          "fontWeight": "700",
+                          "fontWeight": "600",
                           "marginHorizontal": 16,
                           "textAlign": "center",
                         }
@@ -12003,7 +12000,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                   </View>
                 </View>
               </View>
-            </View>
+            </RCTSafeAreaView>
           </View>
         </View>
       </View>

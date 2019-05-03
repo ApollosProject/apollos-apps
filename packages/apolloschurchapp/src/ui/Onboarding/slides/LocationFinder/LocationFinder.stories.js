@@ -7,10 +7,14 @@ import LocationFinder from './LocationFinder';
 
 storiesOf('Onboarding/slides/LocationFinder', module)
   .add('default', () => <LocationFinder />)
-  .add('children (image)', () => (
-    <LocationFinder>
-      <GradientOverlayImage source={'https://picsum.photos/640/640/?random'} />
-    </LocationFinder>
+  .add('BackgroundComponent', () => (
+    <LocationFinder
+      BackgroundComponent={
+        <GradientOverlayImage
+          source={'https://picsum.photos/640/640/?random'}
+        />
+      }
+    />
   ))
   .add('slideTitle', () => <LocationFinder slideTitle={'Custom title text'} />)
   .add('description', () => (

@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
@@ -12,20 +13,6 @@ describe('The Onboarding AboutYou component', () => {
     const tree = renderer.create(
       <Providers>
         <AboutYou defaultDate={'2019-02-14'} setFieldValue={jest.fn()} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render a custom image', () => {
-    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
-     * object and invalidate the snapshots every time. */
-    const tree = renderer.create(
-      <Providers>
-        <AboutYou
-          imgSrc={{ uri: 'https://picsum.photos/1200/1200?random' }}
-          defaultDate={'2019-02-14'}
-          setFieldValue={jest.fn()}
-        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -86,7 +73,7 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a custom date picker', () => {
+  it('should render with a selected birthdate', () => {
     const tree = renderer.create(
       <Providers>
         <AboutYou
@@ -97,13 +84,38 @@ describe('The Onboarding AboutYou component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a custom date picker when the birth date is null', () => {
+  it('should render with errors', () => {
     const tree = renderer.create(
       <Providers>
         <AboutYou
-          values={{ birthDate: null }}
-          setFieldValue={jest.fn()}
+          touched={{
+            gender: true,
+            birthDate: true,
+          }}
+          errors={{
+            gender: 'Gender errors',
+            birthDate: 'BirthDate errors',
+          }}
           defaultDate={'2019-02-14'}
+          setFieldValue={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a BackgroundComponent', () => {
+    /* we have to pass in a date via defaultDate or the DateInput component will create a current date
+     * object and invalidate the snapshots every time. */
+    const tree = renderer.create(
+      <Providers>
+        <AboutYou
+          BackgroundComponent={
+            <GradientOverlayImage
+              source={'https://picsum.photos/640/640/?random'}
+            />
+          }
+          defaultDate={'2019-02-14'}
+          setFieldValue={jest.fn()}
         />
       </Providers>
     );

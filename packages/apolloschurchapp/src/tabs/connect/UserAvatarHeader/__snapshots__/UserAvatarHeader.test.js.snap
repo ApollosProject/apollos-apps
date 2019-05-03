@@ -92,8 +92,6 @@ exports[`user avatar header renders placeholder when loading 1`] = `
                       "borderRadius": 40,
                       "height": 80,
                       "justifyContent": "flex-end",
-                      "marginBottom": 8,
-                      "marginRight": 0,
                       "overflow": "hidden",
                       "width": 80,
                     }
@@ -538,8 +536,6 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
                       "borderRadius": 40,
                       "height": 80,
                       "justifyContent": "flex-end",
-                      "marginBottom": 8,
-                      "marginRight": 0,
                       "overflow": "hidden",
                       "width": 80,
                     }

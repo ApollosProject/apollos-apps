@@ -7,4 +7,4 @@ export LocationFinder, {
   LocationFinderConnected,
   LocationFinderMapView,
 } from './LocationFinder';
-export Features from './Features';
+export Features, { FeaturesConnected } from './Features';
