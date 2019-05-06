@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
+import { ApolloConsumer } from 'react-apollo';
 
 import {
   AskNotificationsConnected,
@@ -48,16 +49,22 @@ function Onboarding({ navigation }) {
               />
             }
           />
-          <AskNotificationsConnected
-            onPressPrimary={() => navigation.navigate('Home')}
-            onRequestPushPermissions={requestPushPermissions}
-            primaryNavText={'Finish'}
-            BackgroundComponent={
-              <GradientOverlayImage
-                source={'https://picsum.photos/640/640/?random'}
+          <ApolloConsumer>
+            {(client) => (
+              <AskNotificationsConnected
+                onPressPrimary={() => navigation.navigate('Home')}
+                onRequestPushPermissions={() =>
+                  requestPushPermissions({ client })
+                }
+                primaryNavText={'Finish'}
+                BackgroundComponent={
+                  <GradientOverlayImage
+                    source={'https://picsum.photos/640/640/?random'}
+                  />
+                }
               />
-            }
-          />
+            )}
+          </ApolloConsumer>
         </>
       )}
     </OnboardingSwiper>

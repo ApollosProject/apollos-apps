@@ -14,29 +14,25 @@ const AskNotificationsConnected = memo(
     onRequestPushPermissions,
     ...props
   }) => (
-    <ApolloConsumer>
-      {(client) => (
-        <Query query={getNotificationsEnabled}>
-          {({ data: { notificationsEnabled = false } = {} }) => (
-            <AskNotifications
-              onPressButton={() => onRequestPushPermissions({ client })}
-              buttonDisabled={notificationsEnabled}
-              buttonText={
-                notificationsEnabled
-                  ? 'Notifications Enabled!'
-                  : 'Yes, enable notifications'
-              }
-              onPressPrimary={notificationsEnabled ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
-              onPressSecondary={
-                // if notifications are not enabled show the secondary nav button (skip)
-                notificationsEnabled ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
-              }
-              {...props}
-            />
-          )}
-        </Query>
+    <Query query={getNotificationsEnabled}>
+      {({ data: { notificationsEnabled = false } = {} }) => (
+        <AskNotifications
+          onPressButton={() => onRequestPushPermissions()}
+          buttonDisabled={notificationsEnabled}
+          buttonText={
+            notificationsEnabled
+              ? 'Notifications Enabled!'
+              : 'Yes, enable notifications'
+          }
+          onPressPrimary={notificationsEnabled ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
+          onPressSecondary={
+            // if notifications are not enabled show the secondary nav button (skip)
+            notificationsEnabled ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
+          }
+          {...props}
+        />
       )}
-    </ApolloConsumer>
+    </Query>
   )
 );
 

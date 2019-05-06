@@ -35,14 +35,14 @@
     "@apollos-project/ui-kit": "*",
     "react": "*",
     "react-native": "*",
-    "react-navigation": "*"
+    "react-navigation": "*",
+    "apollo-client": "*",
+    "react-apollo": "*"
   },
   "dependencies": {
-    "apollo-client": "2.5.1",
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
-    "react-apollo": "2.5.5",
     "react-is": "^16.8.6",
     "react-native-swiper": "^1.5.14",
     "react-navigation": "2.11.2",
@@ -50,6 +50,8 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
+    "apollo-client": "2.5.1",
+    "react-apollo": "2.5.5",
     "waait": "1.0.2",
     "@apollosproject/ui-kit": "^0.8.4",
     "@storybook/react-native": "^4.0.7",
