@@ -45,9 +45,12 @@
     "react-apollo": "2.5.5",
     "react-is": "^16.8.6",
     "react-native-swiper": "^1.5.14",
-    "react-navigation": "2.11.2"
+    "react-navigation": "2.11.2",
+    "moment": "2.22.2",
+    "yup": "0.26.6"
   },
   "devDependencies": {
+    "waait": "1.0.2",
     "@apollosproject/ui-kit": "^0.8.4",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
