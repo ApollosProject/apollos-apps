@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Query, ApolloConsumer } from 'react-apollo';
+import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 // This query is also found in core/permissionUtils. We should refactor into a notifications module.
 import getNotificationsEnabled from './getNotificationsEnabled';
