@@ -2,8 +2,6 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import { Paragraph, BodyText } from '..';
 import PaddedView from '../../PaddedView';
 

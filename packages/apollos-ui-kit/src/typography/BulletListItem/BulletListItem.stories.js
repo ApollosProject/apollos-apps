@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';
 

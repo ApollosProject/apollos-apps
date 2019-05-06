@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
 import { kebabCase } from 'lodash';
 
 import CenteredView from '../CenteredView';

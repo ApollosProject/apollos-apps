@@ -2,8 +2,6 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import TabView, { SceneMap } from '.';
 
 const styles = StyleSheet.create({

@@ -2,8 +2,6 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import CardTile from '.';
 
 const containerStyles = {

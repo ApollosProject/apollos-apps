@@ -17,7 +17,7 @@ storiesOf('MediaPlayer', module).add('simple', () => (
     <FlexedView>
       <CenteredView>
         <Mutation mutation={playVideoMutation}>
-          {play => (
+          {(play) => (
             <ButtonLink
               onPress={() =>
                 play({
@@ -46,7 +46,7 @@ storiesOf('MediaPlayer', module).add('simple', () => (
           )}
         </Mutation>
         <Mutation mutation={playVideoMutation}>
-          {play => (
+          {(play) => (
             <ButtonLink
               onPress={() =>
                 play({

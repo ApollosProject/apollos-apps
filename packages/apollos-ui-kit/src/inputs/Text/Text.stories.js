@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import Icon from '../../Icon';
 import FlexedView from '../../FlexedView';
 

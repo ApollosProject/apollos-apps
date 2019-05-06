@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
 import { View } from 'react-native';
 
 import styled from '../styled';

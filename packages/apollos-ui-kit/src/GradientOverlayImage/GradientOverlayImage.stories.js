@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import GradientOverlayImage from '.';
 
 storiesOf('GradientOverlayImage', module)

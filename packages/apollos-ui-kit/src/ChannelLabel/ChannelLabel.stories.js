@@ -2,8 +2,6 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import styled from '../styled';

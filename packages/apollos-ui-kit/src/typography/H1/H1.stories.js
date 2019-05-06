@@ -2,8 +2,6 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import { Paragraph, H2, BodyText } from '..';
 import PaddedView from '../../PaddedView';
 

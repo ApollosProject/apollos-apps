@@ -2,8 +2,6 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
-
 import { withIsLoading } from '../isLoading';
 
 import { H1, H2, H3, H4, H5, H6 } from '.';

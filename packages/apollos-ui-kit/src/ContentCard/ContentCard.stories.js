@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from 'ApollosStorybook/native-storybook';
 
-
 import BackgroundView from '../BackgroundView';
 
 import ContentCard from '.';
