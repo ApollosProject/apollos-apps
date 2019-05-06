@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "prestart": "lerna run generate-stories",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start"
   },
@@ -45,5 +46,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "../apolloschurchapp/assets/fonts"
+    ]
   }
 }

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from 'ApollosStorybook/native-storybook';
+
+
 
 import FlexedView from '../FlexedView';
 import { H3, H6, BodyText } from '../typography';

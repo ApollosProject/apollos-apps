@@ -3,10 +3,6 @@
   "version": "0.8.4",
   "private": true,
   "devDependencies": {
-    "@storybook/react-native": "5.2.0-alpha.3",
-    "@storybook/addon-actions": "^5.0.11",
-    "@storybook/addon-links": "^5.0.11",
-    "@storybook/addons": "^5.0.11",
     "codecov": "3.0.2",
     "get-dev-paths": "^0.1.0",
     "jest": "23.6.0",
@@ -34,7 +30,7 @@
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "node ./scripts/get-introspection-data.js",
     "start": "react-native start",
-    "storybook": "rnstl --searchDir ../ --pattern \"apollos*/src/**/*.stories.js\" && storybook start -p 7007  | react-native start --projectRoot $PWD/storybook",
+    "generate-stories": "rnstl --outputFile ./loadStories.js --searchDir ./src --pattern **/*.stories.js",
     "test": "jest",
     "release": "standard-version --release-as minor"
   },

@@ -7,6 +7,7 @@
     "src/**"
   ],
   "scripts": {
+    "generate-stories": "rnstl --outputFile ./loadStories.js --searchDir ./src --pattern **/*.stories.js",
     "test": "jest",
     "lint": "eslint ./src --ext .js"
   },

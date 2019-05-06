@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from 'ApollosStorybook/native-storybook';
 
 import styled from '../styled';
 import CardTile from '../CardTile';

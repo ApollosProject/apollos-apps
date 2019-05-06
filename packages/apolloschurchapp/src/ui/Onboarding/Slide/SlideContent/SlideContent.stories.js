@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from 'ApollosStorybook/native-storybook';
 
 import SlideContent from '.';
 

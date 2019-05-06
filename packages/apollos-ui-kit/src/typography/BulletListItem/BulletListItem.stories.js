@@ -1,5 +1,7 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from 'ApollosStorybook/native-storybook';
+
+
 
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';

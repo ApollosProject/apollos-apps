@@ -6,8 +6,6 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react-native/**",
       "**/react-native-*",
       "**/react-native-*/**",
       "**/rn-*",
@@ -60,7 +58,8 @@
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-native": "^3.2.1",
     "lerna": "^3.0.6",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "react-native-storybook-loader": "^1.8.0"
   },
   "now": {
     "name": "apollos-church-api",

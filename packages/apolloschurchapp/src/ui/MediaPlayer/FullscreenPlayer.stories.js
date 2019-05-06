@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from 'ApollosStorybook/native-storybook';
 import { Mutation } from 'react-apollo';
 
 import {
@@ -17,7 +17,7 @@ storiesOf('MediaPlayer', module).add('simple', () => (
     <FlexedView>
       <CenteredView>
         <Mutation mutation={playVideoMutation}>
-          {(play) => (
+          {play => (
             <ButtonLink
               onPress={() =>
                 play({
@@ -46,7 +46,7 @@ storiesOf('MediaPlayer', module).add('simple', () => (
           )}
         </Mutation>
         <Mutation mutation={playVideoMutation}>
-          {(play) => (
+          {play => (
             <ButtonLink
               onPress={() =>
                 play({

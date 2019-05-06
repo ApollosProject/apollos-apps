@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "test": "jest",
+    "generate-stories": "rnstl --outputFile ./loadStories.js --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
   "keywords": [
