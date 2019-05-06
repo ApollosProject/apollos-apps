@@ -12,6 +12,7 @@ export const renderWithApolloData = async (component) => {
   return tree;
 };
 
+// eslint-disable-next-line
 export const Providers = ({ children, ...props }) => (
   <UIProviders {...props}>
     <MockedProvider {...props}>{children}</MockedProvider>
