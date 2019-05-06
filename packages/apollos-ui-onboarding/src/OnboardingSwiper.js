@@ -53,8 +53,13 @@ class Onboarding extends Component {
   // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
   swipeForward = () => this.swiper.scrollBy(1);
 
+  scrollBy = (...args) => this.swiper.scrollBy(...args);
+
   render() {
-    const children = this.props.children({ swipeForward: this.swipeForward });
+    const children = this.props.children({
+      swipeForward: this.swipeForward,
+      scrollBy: this.scrollBy,
+    });
 
     // The user can pass either a set of components in a fragment, or an array of components.
     // If the uses a fragment, we need to remove the fragment and render the components directly.
@@ -63,7 +68,6 @@ class Onboarding extends Component {
     if (ReactIs.typeOf(children) === ReactIs.Fragment) {
       slides = children.props.children;
     }
-
     return (
       <BackgroundView>
         <Swiper
