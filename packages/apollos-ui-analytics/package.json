@@ -39,7 +39,7 @@
     "apollo-link-context": "1.0.14",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
-    "react-apollo": "2.5.1",
+    "react-apollo": "2.5.5",
     "react-native-device-info": "^1.1.0",
     "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
