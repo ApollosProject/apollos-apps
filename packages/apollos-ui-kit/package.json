@@ -9,6 +9,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .js",
+    "generate-stories": "rnstl --outputFile ./src/stories.js --searchDir ./src --pattern **/*.stories.js",
     "generate-docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"
   },
   "keywords": [
@@ -63,6 +64,7 @@
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-native-linear-gradient": "2.5.3",
+    "react-native-storybook-loader": "^1.8.0",
     "react-native-svg": "9.2.4",
     "react-navigation": "2.11.2",
     "react-test-renderer": "16.6.1"

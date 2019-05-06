@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`The Onboarding AboutYou component should pass additional props to Slide 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -4544,6 +4545,9 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
 `;
 
 exports[`The Onboarding AboutYou component should render with errors 1`] = `
+=======
+exports[`The Onboarding AboutYou component should render 1`] = `
+>>>>>>> e7b6d5c... initial storybook implementation
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -4757,28 +4761,6 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 }
               >
                 Female
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignSelf": "stretch",
-                  "width": "100%",
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#c64f55",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingTop": 8,
-                  }
-                }
-              >
-                Gender errors
               </Text>
             </View>
           </View>
@@ -5092,19 +5074,6 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 }
               />
             </View>
-            <Text
-              style={
-                Object {
-                  "color": "#c64f55",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 17.28,
-                  "paddingTop": 8,
-                }
-              }
-            >
-              BirthDate errors
-            </Text>
           </View>
         </RCTSafeAreaView>
       </View>
