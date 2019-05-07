@@ -9,7 +9,7 @@ describe('The onboarding swiper', () => {
     const tree = renderer.create(
       <Providers>
         <OnboardingSwiper>
-          {({ swipeForward }) => (
+          {({ swipeForward, scrollBy }) => (
             <>
               <TouchableOpacity onPress={swipeForward}>
                 <Text>1</Text>
@@ -17,7 +17,7 @@ describe('The onboarding swiper', () => {
               <TouchableOpacity onPress={swipeForward}>
                 <Text>2</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={swipeForward}>
+              <TouchableOpacity key="3" onPress={() => scrollBy(-1)}>
                 <Text>3</Text>
               </TouchableOpacity>
             </>
@@ -32,14 +32,14 @@ describe('The onboarding swiper', () => {
     const tree = renderer.create(
       <Providers>
         <OnboardingSwiper>
-          {({ swipeForward }) => [
+          {({ swipeForward, scrollBy }) => [
             <TouchableOpacity key="1" onPress={swipeForward}>
               <Text>1</Text>
             </TouchableOpacity>,
             <TouchableOpacity key="2" onPress={swipeForward}>
               <Text>2</Text>
             </TouchableOpacity>,
-            <TouchableOpacity key="3" onPress={swipeForward}>
+            <TouchableOpacity key="3" onPress={() => scrollBy(-1)}>
               <Text>3</Text>
             </TouchableOpacity>,
           ]}
