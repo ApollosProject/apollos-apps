@@ -22,7 +22,7 @@ class LocationFinderConnected extends PureComponent {
           <LocationFinder
             onPressButton={async () => {
               this.setState({ selectedCampus: true });
-              this.props.onNavigateToLocationFinder();
+              this.props.onNavigate();
             }}
             buttonText={'Yes, find my local campus'}
             campus={this.state.selectedCampus ? campus : null}
@@ -37,7 +37,7 @@ class LocationFinderConnected extends PureComponent {
 
 LocationFinderConnected.propTypes = {
   onPressPrimary: PropTypes.func,
-  onNavigateToLocationFinder: PropTypes.func.isRequired,
+  onNavigate: PropTypes.func.isRequired,
 };
 
 LocationFinderConnected.displayName = 'LocationFinderConnected';

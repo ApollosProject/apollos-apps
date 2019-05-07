@@ -38,7 +38,7 @@ function Onboarding({ navigation }) {
           />
           <LocationFinderConnected
             onPressPrimary={swipeForward}
-            onNavigateToLocationFinder={() => {
+            onNavigate={() => {
               navigation.navigate('Location', {
                 onFinished: swipeForward,
               });

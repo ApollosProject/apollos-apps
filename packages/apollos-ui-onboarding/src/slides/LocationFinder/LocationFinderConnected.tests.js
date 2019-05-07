@@ -61,7 +61,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderConnected onNavigateToLocationFinder={jest.fn()} />
+        <LocationFinderConnected onNavigate={jest.fn()} />
       </Providers>
     );
 
@@ -72,7 +72,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
   it('should render with no data in the cache', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinderConnected onNavigateToLocationFinder={jest.fn()} />
+        <LocationFinderConnected onNavigate={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
