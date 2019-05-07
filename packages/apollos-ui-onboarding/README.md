@@ -98,6 +98,7 @@ No props are needed. The first and only child should be a callback function whic
 A. A `React.Fragment` with each slide `node` as a child.
 B. An array of slide `nodes`.
 
+Looking for more flexibility? Want to jump to a specific slide or swipe back. Checkout the `ScrollBy` arg.
 
 ### AskName, AskNameConnected
 

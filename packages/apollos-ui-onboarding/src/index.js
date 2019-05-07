@@ -12,4 +12,4 @@ export {
   FeaturesConnected,
 } from './slides';
 
-export Slide from './Slide';
+export Slide, { SlideContent } from './Slide';
