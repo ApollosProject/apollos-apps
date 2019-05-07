@@ -27,7 +27,7 @@ describe('The Onboarding AskNotificationsConnected component', () => {
     const tree = await renderWithApolloData(component);
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a user having granted push notifications permissions', async () => {
+  it('should render as if a user had granted push notifications permissions', async () => {
     const mocks = [
       {
         request: {
