@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { nest } from 'recompose';
-import { storiesOf } from 'ApollosStorybook/native-storybook';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FlexedView from '../FlexedView';
 import { H4 } from '../typography';

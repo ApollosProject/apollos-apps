@@ -3,6 +3,7 @@
   "version": "0.8.4",
   "private": true,
   "devDependencies": {
+    "@apollosproject/ui-storybook": "^0.8.4",
     "codecov": "3.0.2",
     "get-dev-paths": "^0.1.0",
     "jest": "23.6.0",
@@ -28,7 +29,7 @@
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "lint": "eslint ./src --ext .js",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
-    "prestart": "node ./scripts/get-introspection-data.js",
+    "prestart": "lerna run generate-stories & node ./scripts/get-introspection-data.js",
     "start": "react-native start",
     "generate-stories": "rnstl --outputFile ./loadStories.js --searchDir ./src --pattern **/*.stories.js",
     "test": "jest",

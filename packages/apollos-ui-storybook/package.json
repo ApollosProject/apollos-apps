@@ -1,45 +1,28 @@
 {
   "name": "@apollosproject/ui-storybook",
-  "version": "0.0.1",
+  "version": "0.8.4",
   "private": true,
-  "scripts": {
-    "prestart": "lerna run generate-stories",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "storybook": "storybook start"
+  "main": "./src/index.js",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-linear-gradient": "*",
+    "react-native-svg": "*",
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-htmlview": "*",
+    "@apollosproject/ui-auth": "*"
   },
   "dependencies": {
-    "react": "16.6.3",
-    "react-native": "0.58.5",
-    "react-native-airplay-btn": "^1.0.6",
-    "react-native-config": "^0.11.7",
-    "react-native-device-info": "0.22.5",
-    "react-native-image-picker": "0.28.0",
-    "react-native-keyboard-aware-scroll-view": "0.7.0",
-    "react-native-linear-gradient": "2.5.3",
-    "react-native-maps": "^0.24.2",
-    "react-native-music-control": "^0.10.2",
-    "react-native-onesignal": "3.2.7",
-    "react-native-passkit-wallet": "^0.1.4",
-    "react-native-safari-view": "2.1.0",
-    "react-native-safe-area-view": "0.13.1",
-    "react-native-screens": "^1.0.0-alpha.22",
-    "react-native-splash-screen": "^3.1.1",
-    "react-native-svg": "9.2.4",
-    "react-native-swiper": "^1.5.14",
-    "react-native-video": "^4.4.1",
-    "react-native-video-controls": "2.2.3",
-    "react-native-webview": "^5.2.0",
-    "react-navigation": "2.14.0",
-    "react-navigation-tabs": "0.6.0"
-  },
-  "devDependencies": {
-    "metro-react-native-babel-preset": "^0.53.1",
-    "react-test-renderer": "16.8.3",
     "@storybook/react-native": "5.2.0-alpha.3",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
-    "@storybook/addons": "^5.0.11",
-    "react-dom": "16.6.3",
+    "@storybook/addons": "^5.0.11"
+  },
+  "devDependencies": {
+    "react": "16.6.3",
+    "react-native": "0.58.5",
+    "metro-react-native-babel-preset": "^0.53.1",
     "prop-types": "^15.7.2"
   },
   "rnpm": {

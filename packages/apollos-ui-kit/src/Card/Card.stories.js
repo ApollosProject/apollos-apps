@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from 'ApollosStorybook/native-storybook';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { H3, H6, BodyText, Paragraph } from '../typography';
 import Button, { ButtonLink } from '../Button';

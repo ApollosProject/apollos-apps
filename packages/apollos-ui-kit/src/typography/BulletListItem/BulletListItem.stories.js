@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from 'ApollosStorybook/native-storybook';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';

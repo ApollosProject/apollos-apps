@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from 'ApollosStorybook/native-storybook';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import UIText from '.';
 
