@@ -102,9 +102,9 @@ Looking for more flexibility? Want to jump to a specific slide or swipe back. Ch
 
 ### [AskName](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskName/AskName.js), [AskNameConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskName/AskNameConnected.js)
 
-### [AskNotifications](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskNotifications/AskNotifications.js), [AskNameConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskNotifications/AskNotificationsConnected.js)
+### [AskNotifications](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskNotifications/AskNotifications.js), [AskNotificationsConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskNotifications/AskNotificationsConnected.js)
 
 ### [AboutYou](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AboutYou/AboutYou.js), [AboutYouConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AboutYou/AboutYouConnected.js)
 
-### [LocationFinder](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/LocationFinder/LocationFinder.js), [AboutYouConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/LocationFinder/LocationFinderConnected.js)
+### [LocationFinder](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/LocationFinder/LocationFinder.js), [LocationFinderConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/LocationFinder/LocationFinderConnected.js)
 
