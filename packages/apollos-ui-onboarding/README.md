@@ -100,10 +100,11 @@ B. An array of slide `nodes`.
 
 Looking for more flexibility? Want to jump to a specific slide or swipe back. Checkout the `ScrollBy` arg.
 
-### AskName, AskNameConnected
+### [AskName](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskName/AskName.js), [AskNameConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskName/AskNameConnected.js)
 
-### AskNotifications, AskNotificationsConnected
+### [AskNotifications](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskNotifications/AskNotifications.js), [AskNameConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AskNotifications/AskNotificationsConnected.js)
 
-### AboutYou, AboutYouConnected
+### [AboutYou](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AboutYou/AboutYou.js), [AboutYouConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/AboutYou/AboutYouConnected.js)
 
-### LocationFinder, LocationFinderConnected
+### [LocationFinder](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/LocationFinder/LocationFinder.js), [AboutYouConnected](https://github.com/ApollosProject/apollos-prototype/blob/master/packages/apollos-ui-onboarding/src/slides/LocationFinder/LocationFinderConnected.js)
+
