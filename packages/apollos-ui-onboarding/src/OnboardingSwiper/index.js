@@ -52,6 +52,7 @@ class Onboarding extends Component {
 
   // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
   swipeForward = () => this.swiper.scrollBy(1);
+
   scrollBy = (...args) => this.swiper.scrollBy(...args);
 
   render() {
