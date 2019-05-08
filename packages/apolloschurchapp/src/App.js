@@ -18,13 +18,14 @@ import { LocationFinderMapView } from './ui/Onboarding/slides/LocationFinder';
 import LandingScreen from './LandingScreen';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
+import Providers from './Providers';
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
 
-const ProtectedRouteWithSplashScreen = (props) => {
+const ProtectedRouteWithSplashScreen = props => {
   const handleOnRouteChange = () => SplashScreen.hide();
 
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
@@ -53,15 +54,17 @@ const AppNavigator = createStackNavigator(
 );
 
 const App = () => (
-  <BackgroundView>
-    <AppStatusBar barStyle="dark-content" />
-    <AppNavigator
-      ref={(navigatorRef) => {
-        NavigationService.setTopLevelNavigator(navigatorRef);
-      }}
-    />
-    <MediaPlayer />
-  </BackgroundView>
+  <Providers>
+    <BackgroundView>
+      <AppStatusBar barStyle="dark-content" />
+      <AppNavigator
+        ref={navigatorRef => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }}
+      />
+      <MediaPlayer />
+    </BackgroundView>
+  </Providers>
 );
 
 export default App;

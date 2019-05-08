@@ -1,6 +1,5 @@
 import React from 'react';
 import Config from 'react-native-config';
-import Providers from './Providers';
 import Storybook from './Storybook';
 import MainApp from './App';
 
@@ -11,10 +10,6 @@ if (useStorybook) {
   App = Storybook;
 }
 
-const RootApp = () => (
-  <Providers>
-    <App />
-  </Providers>
-);
+const RootApp = () => <App />;
 
 export default RootApp;
