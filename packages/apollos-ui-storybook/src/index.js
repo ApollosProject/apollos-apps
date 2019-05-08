@@ -18,7 +18,6 @@ export const addApollosProviderDecorator = (Providers = UIKitProviders) =>
 
 // import stories
 export const loadApollosStories = () => {
-  require('./stories'); // local stories
   loadAnalyticsStories();
   loadAuthStories();
   loadHTMLViewStories();
