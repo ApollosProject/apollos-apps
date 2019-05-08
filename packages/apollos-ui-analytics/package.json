@@ -32,14 +32,14 @@
     "@apollos-project/ui-kit": "*",
     "react": "*",
     "react-native": "*",
-    "react-navigation": "*"
+    "react-navigation": "*",
+    "react-apollo": "*",
+    "apollo-client": "*"
   },
   "dependencies": {
-    "apollo-client": "2.5.1",
     "apollo-link-context": "1.0.14",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
-    "react-apollo": "2.5.1",
     "react-native-device-info": "^1.1.0",
     "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
@@ -55,7 +55,9 @@
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-navigation": "2.11.2",
-    "react-test-renderer": "16.6.1"
+    "react-test-renderer": "16.6.1",
+    "react-apollo": "2.5.5",
+    "apollo-client": "2.5.1"
   },
   "publishConfig": {
     "access": "public"
