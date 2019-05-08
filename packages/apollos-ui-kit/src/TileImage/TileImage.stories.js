@@ -9,7 +9,7 @@ import TileImage from '.';
 
 const Square = styled({ aspectRatio: 1 })(View);
 
-storiesOf('TileImage', module)
+storiesOf('ui-kit/TileImage', module)
   .add('Default', () => (
     <Square>
       <TileImage

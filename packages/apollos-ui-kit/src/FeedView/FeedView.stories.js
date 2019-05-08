@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FeedView from '.';
 
-storiesOf('FeedView', module).add('Example', () => (
+storiesOf('ui-kit/FeedView', module).add('Example', () => (
   <FeedView
     content={[
       {

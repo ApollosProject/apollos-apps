@@ -13,7 +13,7 @@ import Button from '.';
 const ViewWithMargin = styled({ margin: 10 })(View);
 const ButtonWithMargin = nest(ViewWithMargin, Button);
 
-storiesOf('Buttons/Pill (default)', module)
+storiesOf('ui-kit/Buttons/Pill (default)', module)
   .add('default', () => (
     <FlexedView>
       <ButtonWithMargin onPress={() => {}} title="Just a plain 'ole Button" />
@@ -80,7 +80,7 @@ storiesOf('Buttons/Pill (default)', module)
       />
     </FlexedView>
   ));
-storiesOf('Buttons/Square', module)
+storiesOf('ui-kit/Buttons/Square', module)
   .add('default', () => (
     <FlexedView>
       <ButtonWithMargin

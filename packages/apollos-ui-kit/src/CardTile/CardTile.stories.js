@@ -11,7 +11,7 @@ const containerStyles = {
   backgroundColor: '#f7f7f7',
 };
 
-storiesOf('CardTile', module)
+storiesOf('ui-kit/CardTile', module)
   .add('Default', () => (
     <View style={containerStyles}>
       <CardTile title={'Why Jesus is Timeless'} />

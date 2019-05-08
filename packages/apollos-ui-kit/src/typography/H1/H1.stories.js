@@ -7,7 +7,7 @@ import PaddedView from '../../PaddedView';
 
 import H1 from '.';
 
-storiesOf('typography/H1', module)
+storiesOf('ui-kit/typography/H1', module)
   .add('Default', () => (
     <ScrollView>
       <H1>

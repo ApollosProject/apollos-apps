@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import LoginForm from './Form';
 
-storiesOf('Auth/SignupForm', module).add('Example', () => (
+storiesOf('ui-auth', module).add('SignupForm', () => (
   <LoginForm
     values={{ email: '', password: '' }}
     touched={{ email: false, password: false }}

@@ -6,7 +6,7 @@ import FlexedView from '../../FlexedView';
 
 import Text from '.';
 
-storiesOf('Inputs', module).add('Text', () => (
+storiesOf('ui-kit/Inputs', module).add('Text', () => (
   <FlexedView>
     <Text editable label="Some label text" placeholder="Some placeholder" />
     <Text

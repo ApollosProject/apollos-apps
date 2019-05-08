@@ -32,7 +32,7 @@ const TypeExampleWithProps = withThemeMixin(({ color, isLight = true }) => ({
   },
 }))(TypeExample);
 
-storiesOf('Theming', module)
+storiesOf('ui-kit/Theming', module)
   .add('ThemeProvider - default', () => (
     <ThemeProvider>
       <TypeExample />

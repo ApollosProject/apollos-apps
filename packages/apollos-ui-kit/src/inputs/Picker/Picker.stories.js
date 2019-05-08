@@ -5,7 +5,7 @@ import FlexedView from '../../FlexedView';
 
 import Picker, { Item } from '.';
 
-storiesOf('Inputs', module).add('Picker', () => (
+storiesOf('ui-kit/Inputs', module).add('Picker', () => (
   <FlexedView>
     <Picker placeholder="Select a language..." label="Languages">
       <Item label="Java" value="java" />

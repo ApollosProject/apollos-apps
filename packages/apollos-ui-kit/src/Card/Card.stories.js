@@ -6,7 +6,7 @@ import Button, { ButtonLink } from '../Button';
 
 import Card, { CardActions, CardContent, CardImage } from '.';
 
-storiesOf('Card', module)
+storiesOf('ui-kit/Card', module)
   .add('simple', () => (
     <Card>
       <CardImage source={'https://picsum.photos/600/400/?image=63'} />

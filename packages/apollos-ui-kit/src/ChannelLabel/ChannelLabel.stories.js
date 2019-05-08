@@ -8,7 +8,7 @@ import styled from '../styled';
 
 import ChannelLabel from '.';
 
-storiesOf('ChannelLabel', module)
+storiesOf('ui-kit/ChannelLabel', module)
   .addDecorator((getStory) => (
     <BackgroundView>
       <CenteredView>{getStory()}</CenteredView>

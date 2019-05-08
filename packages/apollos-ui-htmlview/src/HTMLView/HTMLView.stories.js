@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import HTMLView from '.';
 
-storiesOf('HTMLView', module)
+storiesOf('ui-htmlview/HTMLView', module)
   .add('Example', () => (
     <ScrollView>
       <HTMLView>
