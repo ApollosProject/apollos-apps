@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-onboarding",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -33,37 +33,37 @@
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
-    "react": "*",
-    "react-native": "*",
-    "react-navigation": "*",
     "apollo-client": "*",
-    "react-apollo": "*"
+    "react": "*",
+    "react-apollo": "*",
+    "react-native": "*",
+    "react-navigation": "*"
   },
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
+    "moment": "2.22.2",
     "react-is": "^16.8.6",
     "react-native-swiper": "^1.5.14",
     "react-navigation": "2.11.2",
-    "moment": "2.22.2",
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "apollo-client": "2.5.1",
-    "react-apollo": "2.5.5",
-    "waait": "1.0.2",
-    "@apollosproject/ui-kit": "^0.8.4",
+    "@apollosproject/ui-kit": "^0.8.5",
     "@storybook/react-native": "^4.0.7",
+    "apollo-client": "2.5.1",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "^16.8.2",
+    "react-apollo": "2.5.5",
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-navigation": "2.11.2",
-    "react-test-renderer": "16.6.1"
+    "react-test-renderer": "16.6.1",
+    "waait": "1.0.2"
   },
   "publishConfig": {
     "access": "public"

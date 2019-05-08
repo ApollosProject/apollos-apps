@@ -1,4 +1,10 @@
 
+v0.8.5: May 8, 2019
+
+- Adds onboarding package (#678) (08c423b4)
+- Fixes email field rendering as [Object object] for sms users (#623) (82041a21)
+
+
 v0.8.4: May 2, 2019
 
 - Adds featured content in home feed (#603) (bb05dc92)
