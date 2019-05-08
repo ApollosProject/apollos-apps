@@ -4,6 +4,7 @@ export ActivityIndicator, {
 export Avatar, { AvatarList } from './Avatar';
 export BackgroundView from './BackgroundView';
 export Button, { ButtonLink, ButtonIcon } from './Button';
+export CampusCard from './CampusCard';
 export Card, { CardImage, CardContent, CardActions, ErrorCard } from './Card';
 export CardTile from './CardTile';
 export CenteredView from './CenteredView';

@@ -11,6 +11,7 @@ coverage:
         paths:
           - packages/apolloschurchapp/*
           - packages/ui-kit/*
+          - packages/apollos-ui-*/*
 comment:
   layout: "reach, diff, files"
   behavior: once

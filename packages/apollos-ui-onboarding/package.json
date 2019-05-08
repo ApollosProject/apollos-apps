@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/ui-auth",
+  "name": "@apollosproject/ui-onboarding",
   "version": "0.8.4",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
@@ -40,15 +40,19 @@
     "react-apollo": "*"
   },
   "dependencies": {
-    "apollo-link-context": "1.0.14",
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
-    "react-native-keyboard-aware-scroll-view": "0.7.0",
-    "react-navigation": "2.11.2"
+    "react-is": "^16.8.6",
+    "react-native-swiper": "^1.5.14",
+    "react-navigation": "2.11.2",
+    "moment": "2.22.2",
+    "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.4",
+    "apollo-client": "2.5.1",
+    "react-apollo": "2.5.5",
+    "waait": "1.0.2",
     "@apollosproject/ui-kit": "^0.8.4",
     "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
@@ -59,9 +63,7 @@
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-navigation": "2.11.2",
-    "react-test-renderer": "16.6.1",
-    "apollo-client": "2.5.1",
-    "react-apollo": "2.5.5"
+    "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
     "access": "public"

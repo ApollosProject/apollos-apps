@@ -41,7 +41,7 @@
   "dependencies": {
     "@apollosproject/ui-kit": "^0.8.4",
     "graphql-tag": "^2.10.1",
-    "react-apollo": "2.5.1"
+    "react-apollo": "2.5.5"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.4",
