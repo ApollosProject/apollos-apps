@@ -7,7 +7,7 @@ import { Paragraph, BodyText } from '..';
 
 import H3 from '.';
 
-storiesOf('typography/H3', module)
+storiesOf('ui-kit/typography/H3', module)
   .add('Default', () => (
     <H3>
       {

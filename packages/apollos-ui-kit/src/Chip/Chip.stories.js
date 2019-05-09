@@ -5,7 +5,7 @@ import ChipList from './List';
 
 import Chip from '.';
 
-storiesOf('Chip', module)
+storiesOf('ui-kit/Chip', module)
   .add('default', () => (
     <Chip onPress={() => {}} title="I'm just a poor chip" />
   ))

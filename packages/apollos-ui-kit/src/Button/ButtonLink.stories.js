@@ -5,7 +5,7 @@ import { BodyText } from '../typography';
 
 import ButtonLink from './ButtonLink';
 
-storiesOf('Buttons/Link', module)
+storiesOf('ui-kit/Buttons/Link', module)
   .add('default', () => <ButtonLink onPress={() => {}}>Boom</ButtonLink>)
   .add('Inherits typographic styles', () => (
     <BodyText>

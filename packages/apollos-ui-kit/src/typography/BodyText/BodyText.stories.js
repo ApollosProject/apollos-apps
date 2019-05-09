@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import BodyText from '.';
 
-storiesOf('typography/BodyText', module)
+storiesOf('ui-kit/typography/BodyText', module)
   .add('Regular', () => (
     <BodyText>
       {

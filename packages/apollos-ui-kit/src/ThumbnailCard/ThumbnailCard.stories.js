@@ -10,7 +10,7 @@ const containerStyles = {
   backgroundColor: '#f7f7f7',
 };
 
-storiesOf('ThumbnailCard', module)
+storiesOf('ui-kit/ThumbnailCard', module)
   .add('Default', () => (
     <View style={containerStyles}>
       <ThumbnailCard title={'Why Jesus is Timeless'} />

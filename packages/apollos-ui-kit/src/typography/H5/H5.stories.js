@@ -7,7 +7,7 @@ import PaddedView from '../../PaddedView';
 
 import H5 from '.';
 
-storiesOf('typography/H5', module)
+storiesOf('ui-kit/typography/H5', module)
   .add('Default', () => (
     <H5>
       {

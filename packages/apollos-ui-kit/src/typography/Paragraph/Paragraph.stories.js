@@ -8,7 +8,7 @@ import PaddedView from '../../PaddedView';
 
 import Paragraph from '.';
 
-storiesOf('typography/Paragraph', module)
+storiesOf('ui-kit/typography/Paragraph', module)
   .add('Default', () => (
     <ScrollView>
       <PaddedView>

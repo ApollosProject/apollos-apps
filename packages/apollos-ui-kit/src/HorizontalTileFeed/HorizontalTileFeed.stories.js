@@ -8,7 +8,7 @@ import TileImage from '../TileImage';
 
 import HorizontalTileFeed from '.';
 
-storiesOf('HorizontalTileFeed', module)
+storiesOf('ui-kit/HorizontalTileFeed', module)
   .add('With CardTile', () => {
     const CardTileData = [
       {

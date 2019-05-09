@@ -10,7 +10,7 @@ import * as icons from './icons';
 
 import Icon from '.';
 
-const stories = storiesOf('Icon', module).addDecorator((getStory) => (
+const stories = storiesOf('ui-kit/Icon', module).addDecorator((getStory) => (
   <BackgroundView>
     <CenteredView>{getStory()}</CenteredView>
   </BackgroundView>

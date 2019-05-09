@@ -1,14 +1,18 @@
 import StorybookUI, {
   loadApollosStories,
-  storiesOf,
+  addApollosProviderDecorator,
   configure,
 } from '@apollosproject/ui-storybook';
 import SplashScreen from 'react-native-splash-screen';
 
-import App from './App';
+import Providers from '../Providers';
+
+addApollosProviderDecorator(Providers);
 
 configure(() => {
+  require('./Welcome');
   loadApollosStories();
+
   SplashScreen.hide();
 }, module);
 

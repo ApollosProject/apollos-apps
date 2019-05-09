@@ -5,7 +5,7 @@ import BackgroundView from '../BackgroundView';
 
 import ContentCard from '.';
 
-storiesOf('ContentCard', module)
+storiesOf('ui-kit/ContentCard', module)
   .addDecorator((story) => <BackgroundView>{story()}</BackgroundView>)
   .add('Basic, with Image', () => (
     <ContentCard

@@ -7,7 +7,7 @@ import PaddedView from '../../PaddedView';
 
 import H2 from '.';
 
-storiesOf('typography/H2', module)
+storiesOf('ui-kit/typography/H2', module)
   .add('Default', () => (
     <H2>
       {

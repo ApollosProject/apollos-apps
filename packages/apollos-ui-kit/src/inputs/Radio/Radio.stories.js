@@ -5,7 +5,7 @@ import FlexedView from '../../FlexedView';
 
 import Radio, { RadioButton } from '.';
 
-storiesOf('inputs/Radio', module)
+storiesOf('ui-kit/inputs/Radio', module)
   .add('default', () => (
     <FlexedView>
       <Radio>
