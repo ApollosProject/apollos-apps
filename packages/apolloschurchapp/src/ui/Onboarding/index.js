@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { NavigationActions } from 'react-navigation';
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
 import { ApolloConsumer } from 'react-apollo';
 
@@ -52,7 +53,7 @@ function Onboarding({ navigation }) {
           <ApolloConsumer>
             {(client) => (
               <AskNotificationsConnected
-                onPressPrimary={() => navigation.navigate('Home')}
+                onPressPrimary={() => navigation.replace('Tabs')}
                 onRequestPushPermissions={() =>
                   requestPushPermissions({ client })
                 }
