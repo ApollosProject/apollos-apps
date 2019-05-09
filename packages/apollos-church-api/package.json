@@ -14,6 +14,7 @@
     "lint": "eslint ./src --ext .js",
     "fixlint": "eslint ./src --ext .js --fix",
     "codecov": "cat ./coverage/lcov.info | codecov",
+    "version": "node ../../scripts/update-apollos-version.js && git add apollos.json",
     "release": "standard-version --release-as minor"
   },
   "engines": {

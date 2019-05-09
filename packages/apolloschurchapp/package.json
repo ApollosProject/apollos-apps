@@ -31,6 +31,7 @@
     "fixlint": "eslint ./src --fix",
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "lint": "eslint ./src --ext .js",
+    "version": "node ../../scripts/update-apollos-version.js && git add apollos.json",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "node ./scripts/get-introspection-data.js",
     "start": "react-native start",
