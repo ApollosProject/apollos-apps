@@ -11,6 +11,7 @@ import * as PersonalDevice from './personal-devices';
 import * as Template from './template';
 import * as Campus from './campuses';
 import * as Utils from './utils';
+import * as BinaryFiles from './binary-files';
 
 export {
   Followings,
@@ -26,4 +27,5 @@ export {
   AuthSms,
   Campus,
   Utils,
+  BinaryFiles,
 };

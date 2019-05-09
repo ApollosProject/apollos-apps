@@ -122,7 +122,42 @@ Object {
 }
 `;
 
-exports[`Person uploads a user's profile picture 1`] = `
+exports[`Person uploads a user's profile picture: Get media datasource mock 1`] = `
+Array [
+  Array [
+    "456",
+  ],
+]
+`;
+
+exports[`Person uploads a user's profile picture: Get updated profile mock 1`] = `Array []`;
+
+exports[`Person uploads a user's profile picture: Update profile mock 1`] = `
+Array [
+  Array [
+    Array [
+      Object {
+        "field": "PhotoId",
+        "value": "456",
+      },
+    ],
+  ],
+]
+`;
+
+exports[`Person uploads a user's profile picture: Upload datasource mock 1`] = `
+Array [
+  Array [
+    Object {
+      "filename": "img.jpg",
+      "length": 456,
+      "stream": "123",
+    },
+  ],
+]
+`;
+
+exports[`Person uploads a user's profile picture: Upload result 1`] = `
 Object {
   "firstName": "Vincent",
   "id": 51,
@@ -131,64 +166,5 @@ Object {
     "id": 123,
     "url": "http://imageurl.....",
   },
-}
-`;
-
-exports[`Person uploads a user's profile picture 2`] = `
-Array [
-  Array [
-    "https://apollosrock.newspring.cc/api/BinaryFiles/Upload?binaryFileTypeId=5",
-    Object {
-      "body": FormData {
-        "_boundary": "--------------------------",
-        "_currentStream": null,
-        "_overheadLength": 103,
-        "_released": false,
-        "_streams": Array [
-          "----------------------------
-Content-Disposition: form-data; name=\\"file\\"
-
-",
-          "123",
-          [Function],
-        ],
-        "_valueLength": 456,
-        "_valuesToMeasure": Array [],
-        "dataSize": 0,
-        "maxDataSize": 2097152,
-        "pauseStreams": true,
-        "readable": true,
-        "writable": false,
-      },
-      "headers": Object {
-        "Authorization-Token": "some-rock-token",
-        "content-type": "multipart/form-data; boundary=--------------------------",
-      },
-      "method": "POST",
-    },
-  ],
-]
-`;
-
-exports[`Person uploads a user's profile picture 3`] = `
-Object {
-  "0": Array [
-    Array [
-      Object {
-        "field": "PhotoId",
-        "value": "245",
-      },
-    ],
-  ],
-}
-`;
-
-exports[`Person uploads a user's profile picture 4`] = `
-Object {
-  "0": Array [
-    "/BinaryFiles?%24filter=Id%20eq%20245&%24top=1",
-    Object {},
-    Object {},
-  ],
 }
 `;

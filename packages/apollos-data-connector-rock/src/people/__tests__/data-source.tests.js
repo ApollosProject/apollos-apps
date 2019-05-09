@@ -177,39 +177,37 @@ describe('Person', () => {
 
   it("uploads a user's profile picture", async () => {
     const dataSource = new Person();
+    const uploadMock = jest.fn(() => Promise.resolve('456'));
+    const binaryGetMock = jest.fn(() =>
+      Promise.resolve({ id: 123, url: 'http://imageurl.....' })
+    );
     dataSource.context = {
       rockCookie: 'fakeCookie',
       dataSources: {
         Auth: { getCurrentPerson: () => Promise.resolve({ id: 123 }) },
+        BinaryFiles: { uploadFile: uploadMock, getFromId: binaryGetMock },
       },
     };
     dataSource.updateProfile = buildGetMock(
       { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
       dataSource
     );
-    dataSource.get = buildGetMock(
-      [{ Id: 123, Url: 'http://imageurl.....' }],
-      dataSource
-    );
-    dataSource.nodeFetch = buildGetMock({ text: () => '245' }, dataSource);
+    dataSource.get = buildGetMock([], dataSource);
 
-    const result = await dataSource.uploadProfileImage({ stream: '123' }, 456);
-    expect(result).toMatchSnapshot();
-    const nodeFetchCalls = dataSource.nodeFetch.mock.calls;
-    // Remove randomly generated multipart boundary.
-    nodeFetchCalls[0][1].body._boundary = nodeFetchCalls[0][1].body._boundary.replace(
-      /\d+/,
-      ''
+    const result = await dataSource.uploadProfileImage(
+      { stream: '123', filename: 'img.jpg' },
+      456
     );
-    nodeFetchCalls[0][1].body._streams[0] = nodeFetchCalls[0][1].body._streams[0].replace(
-      /\d+/,
-      ''
+    expect(result).toMatchSnapshot('Upload result');
+    expect(uploadMock.mock.calls).toMatchSnapshot('Upload datasource mock');
+    expect(binaryGetMock.mock.calls).toMatchSnapshot(
+      'Get media datasource mock'
     );
-    nodeFetchCalls[0][1].headers['content-type'] = nodeFetchCalls[0][1].headers[
-      'content-type'
-    ].replace(/\d+/, '');
-    expect(nodeFetchCalls).toMatchSnapshot();
-    expect(dataSource.updateProfile.mock.calls).toMatchSnapshot({});
-    expect(dataSource.get.mock.calls).toMatchSnapshot({});
+    expect(dataSource.updateProfile.mock.calls).toMatchSnapshot(
+      'Update profile mock'
+    );
+    expect(dataSource.get.mock.calls).toMatchSnapshot(
+      'Get updated profile mock'
+    );
   });
 });
