@@ -5,7 +5,7 @@ import StorybookUI, {
 } from '@apollosproject/ui-storybook';
 import SplashScreen from 'react-native-splash-screen';
 
-import Providers from '../Providers';
+import Providers from '../src/Providers';
 
 addApollosProviderDecorator(Providers);
 

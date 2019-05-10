@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Paragraph, BodyText } from '@apollosproject/ui-kit';
+import { Paragraph, BodyText } from '@apollosproject/ui-kit';
 
 import { Slide, SlideContent } from '@apollosproject/ui-onboarding';
 
-const Intro = ({ showApp }) => (
+const Intro = () => (
   <Slide>
     <SlideContent title={`Welcome to ${'\n'}Apollos Storybook!`} icon>
       <Paragraph>
@@ -29,7 +29,6 @@ const Intro = ({ showApp }) => (
           screen to navigate the available stories.
         </BodyText>
       </Paragraph>
-      <Button onPress={() => showApp()} title={'Show the Apollos app'} />
     </SlideContent>
   </Slide>
 );
