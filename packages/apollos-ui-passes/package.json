@@ -1,13 +1,13 @@
 {
   "name": "@apollosproject/ui-passes",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
     "src/**"
   ],
   "scripts": {
-    "generate-stories": "rnstl --outputFile ./loadStories.js --searchDir ./src --pattern **/*.stories.js",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "test": "jest",
     "lint": "eslint ./src --ext .js"
   },
@@ -40,12 +40,12 @@
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.4",
+    "@apollosproject/ui-kit": "^0.8.5",
     "graphql-tag": "^2.10.1",
-    "react-apollo": "2.5.1"
+    "react-apollo": "2.5.5"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.4",
+    "@apollosproject/babel-preset-apollos": "^0.8.5",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",

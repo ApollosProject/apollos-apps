@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Binary files resolver returns a url if the person object has a id 1`] = `
+Object {
+  "uri": "https://example.com/1.jpg",
+}
+`;
+
+exports[`Binary files resolver returns a url if the person object has a id 2`] = `
+Array [
+  Array [
+    "BinaryFiles/123",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Binary files resolver returns a url if the person object has a url 1`] = `
+Object {
+  "uri": "http://alreadyhere.com/1.jpg",
+}
+`;
+
+exports[`Binary files resolver returns a url if the person object has a url 2`] = `Array []`;
+
+exports[`Binary files resolver returns null with no image 1`] = `
+Object {
+  "uri": null,
+}
+`;
+
+exports[`Binary files resolver returns null with no image 2`] = `Array []`;
+
+exports[`BinaryFiles uploads a user's profile picture 1`] = `"245"`;
+
+exports[`BinaryFiles uploads a user's profile picture 2`] = `
+Array [
+  Array [
+    "https://apollosrock.newspring.cc/api/BinaryFiles/Upload?binaryFileTypeId=5",
+    Object {
+      "body": FormData {
+        "_boundary": "--------------------------",
+        "_currentStream": null,
+        "_overheadLength": 155,
+        "_released": false,
+        "_streams": Array [
+          "----------------------------
+Content-Disposition: form-data; name=\\"file\\"; filename=\\"something.jpg\\"
+Content-Type: image/jpeg
+
+",
+          "123",
+          [Function],
+        ],
+        "_valueLength": 3,
+        "_valuesToMeasure": Array [],
+        "dataSize": 0,
+        "maxDataSize": 2097152,
+        "pauseStreams": true,
+        "readable": true,
+        "writable": false,
+      },
+      "headers": Object {
+        "Authorization-Token": "some-rock-token",
+        "content-type": "multipart/form-data; boundary=--------------------------",
+      },
+      "method": "POST",
+    },
+  ],
+]
+`;

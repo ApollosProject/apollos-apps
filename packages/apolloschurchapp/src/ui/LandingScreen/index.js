@@ -11,7 +11,7 @@ import {
   BackgroundView,
 } from '@apollosproject/ui-kit';
 
-import Slide from '../Onboarding/Slide';
+import { Slide } from '@apollosproject/ui-onboarding';
 
 const Content = styled({
   flex: 1,
