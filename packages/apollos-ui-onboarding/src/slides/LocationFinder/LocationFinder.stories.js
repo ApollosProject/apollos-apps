@@ -1,11 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import LocationFinder from './LocationFinder';
 
-storiesOf('Onboarding/slides/LocationFinder', module)
+storiesOf('ui-onboarding/slides/LocationFinder', module)
   .add('default', () => <LocationFinder />)
   .add('BackgroundComponent', () => (
     <LocationFinder

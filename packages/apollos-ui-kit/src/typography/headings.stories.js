@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { withIsLoading } from '../isLoading';
 
@@ -8,7 +8,7 @@ import { H1, H2, H3, H4, H5, H6 } from '.';
 
 const SetLoading = withIsLoading(View);
 
-storiesOf('typography', module)
+storiesOf('ui-kit/typography', module)
   .add('headings', () => (
     <View>
       <H1>Heading 1</H1>

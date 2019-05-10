@@ -1,6 +1,8 @@
 /* eslint-disable */
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
+
+
 
 import FlexedView from '../FlexedView';
 import { H3, H6, BodyText } from '../typography';
@@ -30,7 +32,7 @@ const TypeExampleWithProps = withThemeMixin(({ color, isLight = true }) => ({
   },
 }))(TypeExample);
 
-storiesOf('Theming', module)
+storiesOf('ui-kit/Theming', module)
   .add('ThemeProvider - default', () => (
     <ThemeProvider>
       <TypeExample />

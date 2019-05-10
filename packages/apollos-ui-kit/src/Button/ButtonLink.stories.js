@@ -1,11 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { BodyText } from '../typography';
 
 import ButtonLink from './ButtonLink';
 
-storiesOf('Buttons/Link', module)
+storiesOf('ui-kit/Buttons/Link', module)
   .add('default', () => <ButtonLink onPress={() => {}}>Boom</ButtonLink>)
   .add('Inherits typographic styles', () => (
     <BodyText>

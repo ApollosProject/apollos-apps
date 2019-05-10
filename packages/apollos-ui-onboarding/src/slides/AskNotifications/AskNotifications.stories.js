@@ -1,10 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import AskNotifications from './AskNotifications';
 
-storiesOf('Onboarding/slides/AskNotifications', module)
+storiesOf('ui-onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
   .add('BackgroundComponent', () => (
     <AskNotifications

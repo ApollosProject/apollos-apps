@@ -1,12 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { H1 } from '../typography';
 import styled from '../styled';
 
 import FlexedView from '.';
 
-storiesOf('FlexedView', module).add('Example', () => {
+storiesOf('ui-kit/FlexedView', module).add('Example', () => {
   const FlexedSalmonView = styled({
     backgroundColor: 'salmon',
   })(FlexedView);

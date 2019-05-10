@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import styled from '../../styled';
 import { H4, H6 } from '../../typography';
-import Card, { CardContent } from '..';
+import Card from '../CardWrapper';
+import CardContent from '../Content';
 
 const Header = styled({ textAlign: 'center' }, 'Error.Header')(H4);
 const ErrorText = styled({ textAlign: 'center' }, 'Error.Text')(H6);

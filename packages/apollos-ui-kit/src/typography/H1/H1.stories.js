@@ -1,13 +1,13 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { Paragraph, H2, BodyText } from '..';
 import PaddedView from '../../PaddedView';
 
 import H1 from '.';
 
-storiesOf('typography/H1', module)
+storiesOf('ui-kit/typography/H1', module)
   .add('Default', () => (
     <ScrollView>
       <H1>

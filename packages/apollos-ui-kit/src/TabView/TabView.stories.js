@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import TabView, { SceneMap } from '.';
 
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 const FirstRoute = () => <View style={styles.firstRoute} />;
 const SecondRoute = () => <View style={styles.SecondRoute} />;
 
-storiesOf('TabView', module).add('default', () => (
+storiesOf('ui-kit/TabView', module).add('default', () => (
   <View style={StyleSheet.absoluteFill}>
     <TabView
       routes={[

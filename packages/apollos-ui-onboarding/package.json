@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "test": "jest",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
   "keywords": [
@@ -57,7 +58,7 @@
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "^16.8.2",
+    "react": "16.6.3",
     "react-apollo": "2.5.5",
     "react-dom": "16.6.3",
     "react-native": "0.58.5",

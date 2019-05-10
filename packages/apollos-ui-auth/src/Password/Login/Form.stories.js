@@ -1,9 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import LoginForm from './Form';
 
-storiesOf('Auth/LoginForm', module).add('Example', () => (
+storiesOf('ui-auth', module).add('LoginForm', () => (
   <LoginForm
     values={{ email: '', password: '' }}
     touched={{ email: false, password: false }}
