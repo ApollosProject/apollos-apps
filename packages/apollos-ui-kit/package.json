@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .js",
-    "generate-stories": "rnstl --outputFile ./loadStories.js --searchDir ./src --pattern **/*.stories.js",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "generate-docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"
   },
   "keywords": [

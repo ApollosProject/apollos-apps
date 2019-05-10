@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import SlideContent from '.';
 
-storiesOf('Onboarding/Slide/SlideContent', module)
+storiesOf('ui-onboarding/Slide/SlideContent', module)
   .add('example', () => (
     <SlideContent
       title={'Whoa, this is heavy'}

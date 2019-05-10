@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import Slide from '.';
 
-storiesOf('Onboarding/Slide', module)
+storiesOf('ui-onboarding/Slide', module)
   .add('default', () => (
     <Slide>
       <Text>Boom</Text>

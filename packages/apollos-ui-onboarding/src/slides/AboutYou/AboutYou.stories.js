@@ -4,7 +4,7 @@ import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import AboutYou from '.';
 
-storiesOf('Onboarding/slides/AboutYou', module)
+storiesOf('ui-onboarding/slides/AboutYou', module)
   .add('default', () => <AboutYou />)
   .add('slideTitle', () => (
     <AboutYou slideTitle={'Custom title text'} setFieldValue={() => {}} />

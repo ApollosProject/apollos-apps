@@ -4,7 +4,7 @@ import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
 import AskNotifications from './AskNotifications';
 
-storiesOf('Onboarding/slides/AskNotifications', module)
+storiesOf('ui-onboarding/slides/AskNotifications', module)
   .add('default', () => <AskNotifications />)
   .add('BackgroundComponent', () => (
     <AskNotifications
