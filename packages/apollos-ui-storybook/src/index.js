@@ -8,8 +8,6 @@ import { loadStories as loadUiKitStories } from '@apollosproject/ui-kit/storyboo
 import { loadStories as loadPassesStories } from '@apollosproject/ui-passes/storybook/storyLoader';
 import { loadStories as loadOnboardingStories } from '@apollosproject/ui-onboarding/storybook/storyLoader';
 
-import './rn-addons';
-
 import { Providers as UIKitProviders } from '@apollosproject/ui-kit';
 
 export * from '@storybook/react-native';
