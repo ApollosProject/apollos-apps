@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Paragraph, BodyText } from '@apollosproject/ui-kit';
 
-import Slide, { SlideContent } from 'apolloschurchapp/src/ui/Onboarding/Slide';
+import { Slide, SlideContent } from '@apollosproject/ui-onboarding';
 
 const Intro = ({ showApp }) => (
   <Slide>

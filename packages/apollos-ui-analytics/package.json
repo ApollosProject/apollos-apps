@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-analytics",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -31,27 +31,29 @@
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
+    "apollo-client": "*",
     "react": "*",
+    "react-apollo": "*",
     "react-native": "*",
     "react-navigation": "*"
   },
   "dependencies": {
-    "apollo-client": "2.5.1",
     "apollo-link-context": "1.0.14",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
-    "react-apollo": "2.5.1",
     "react-native-device-info": "^1.1.0",
     "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.4",
-    "@apollosproject/ui-kit": "^0.8.4",
+    "@apollosproject/babel-preset-apollos": "^0.8.5",
+    "@apollosproject/ui-kit": "^0.8.5",
+    "apollo-client": "2.5.1",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.6.3",
+    "react": "^16.8.2",
+    "react-apollo": "2.5.5",
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-navigation": "2.11.2",

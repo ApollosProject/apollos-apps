@@ -8,24 +8,23 @@ import Passes from '@apollosproject/ui-passes';
 import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
+import Providers from './Providers';
 import NavigationService from './NavigationService';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
 import Location from './user-settings/Locations';
-import { LocationFinderMapView } from './ui/Onboarding/slides/LocationFinder';
 import LandingScreen from './LandingScreen';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
-import Providers from './Providers';
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
 
-const ProtectedRouteWithSplashScreen = props => {
+const ProtectedRouteWithSplashScreen = (props) => {
   const handleOnRouteChange = () => SplashScreen.hide();
 
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
@@ -40,7 +39,6 @@ const AppNavigator = createStackNavigator(
     PersonalDetails,
     ChangePassword,
     Location,
-    LocationFinderMapView,
     Passes,
     UserWebBrowser,
     Onboarding,
@@ -58,7 +56,7 @@ const App = () => (
     <BackgroundView>
       <AppStatusBar barStyle="dark-content" />
       <AppNavigator
-        ref={navigatorRef => {
+        ref={(navigatorRef) => {
           NavigationService.setTopLevelNavigator(navigatorRef);
         }}
       />
