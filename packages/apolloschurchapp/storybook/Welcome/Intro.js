@@ -29,6 +29,13 @@ const Intro = () => (
           screen to navigate the available stories.
         </BodyText>
       </Paragraph>
+      <Paragraph>
+        <BodyText>
+          The stories defined inside of your app will be listed first, with
+          Apollos UI stories below them. If you setup a theme, all of the
+          stories will reflect your theme.
+        </BodyText>
+      </Paragraph>
     </SlideContent>
   </Slide>
 );
