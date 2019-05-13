@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { get } from 'lodash';
+import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 
 import {
   styled,

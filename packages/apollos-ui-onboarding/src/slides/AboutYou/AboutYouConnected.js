@@ -4,12 +4,14 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
+import { withOnPressAnalytics } from '../../utils';
 import getUserGenderAndBirthDate from './getUserGenderAndBirthDate';
 import AboutYou from './AboutYou';
 
 import updateUserDetails from './updateUserDetails';
 
-// eslint-disable-next-line react/display-name
+const AboutYouWithAnalytics = withOnPressAnalytics(AboutYou);
+
 const AboutYouConnected = memo(
   ({ onPressPrimary, onPressSecondary, ...props }) => (
     <Query query={getUserGenderAndBirthDate}>
@@ -67,7 +69,7 @@ const AboutYouConnected = memo(
                   errors,
                   setFieldValue,
                 }) => (
-                  <AboutYou
+                  <AboutYouWithAnalytics
                     onPressPrimary={isValid ? submitForm : null} // if form `isValid` show the primary nav button (next)
                     onPressSecondary={
                       // if form `!isValid` show the secondary nav button (skip)
@@ -96,5 +98,7 @@ AboutYouConnected.propTypes = {
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
 };
+
+AboutYouConnected.displayName = 'AboutYouConnected';
 
 export default AboutYouConnected;

@@ -13,7 +13,7 @@ const AppProviders = (props) => (
         navigateToAuth={() => NavigationService.navigate('Auth')}
         closeAuth={() => NavigationService.navigate('Onboarding')}
       >
-        <AnalyticsProvider>
+        <AnalyticsProvider trackFunctions={[console.warn]}>
           <Providers {...props} />
         </AnalyticsProvider>
       </AuthProvider>

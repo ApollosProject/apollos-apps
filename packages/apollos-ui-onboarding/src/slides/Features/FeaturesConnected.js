@@ -1,20 +1,27 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
+import { withOnPressAnalytics } from '../../utils';
 import getUserFirstName from './getUserFirstName';
-import Features from '.';
+import Features from './Features';
 
-const AskNameConnected = (props) => (
+const FeaturesWithAnalytics = withOnPressAnalytics(Features);
+
+const FeaturesConnected = (props) => (
   <Query query={getUserFirstName}>
     {({
       loading,
       data: {
         currentUser: { profile: { firstName } = { campus: {} } } = {},
       } = {},
-    }) => <Features firstName={firstName} isLoading={loading} {...props} />}
+    }) => (
+      <FeaturesWithAnalytics
+        firstName={firstName}
+        isLoading={loading}
+        {...props}
+      />
+    )}
   </Query>
 );
 
-AskNameConnected.displayName = AskNameConnected;
-
-export default AskNameConnected;
+export default FeaturesConnected;

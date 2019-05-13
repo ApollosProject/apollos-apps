@@ -1,8 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
+import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
+import { withOnPressAnalytics } from '../../utils';
 import getUserCampus from './getUserCampus';
-import LocationFinder from '.';
+import LocationFinder from './LocationFinder';
+
+const LocationFinderWithAnalytics = withOnPressAnalytics(LocationFinder);
 
 class LocationFinderConnected extends PureComponent {
   state = { selectedCampus: false };
@@ -19,16 +23,30 @@ class LocationFinderConnected extends PureComponent {
             } = {},
           } = {},
         }) => (
-          <LocationFinder
-            onPressButton={async () => {
-              this.setState({ selectedCampus: true });
-              this.props.onNavigate();
-            }}
-            buttonText={'Yes, find my local campus'}
-            campus={this.state.selectedCampus ? campus : null}
-            onPressPrimary={this.props.onPressPrimary}
-            {...this.props}
-          />
+          <AnalyticsConsumer>
+            {({ track }) => (
+              <LocationFinderWithAnalytics
+                onPressButton={async () => {
+                  this.setState({ selectedCampus: true });
+                  this.props.onNavigate();
+                  track({ eventName: 'LocationFinder Opened MapView' });
+                }}
+                onPressPrimary={
+                  campus /* show the primary action button (next) if we have a campus */
+                    ? this.props.onPressPrimary
+                    : null
+                }
+                onPressSecondary={
+                  !campus /* show the secondary action button (skip) if we don't have a campus */
+                    ? this.props.onPressPrimary
+                    : null
+                }
+                buttonText={'Yes, find my local campus'}
+                campus={this.state.selectedCampus ? campus : null}
+                {...this.props}
+              />
+            )}
+          </AnalyticsConsumer>
         )}
       </Query>
     );
@@ -37,6 +55,7 @@ class LocationFinderConnected extends PureComponent {
 
 LocationFinderConnected.propTypes = {
   onPressPrimary: PropTypes.func,
+  track: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
 };
 
