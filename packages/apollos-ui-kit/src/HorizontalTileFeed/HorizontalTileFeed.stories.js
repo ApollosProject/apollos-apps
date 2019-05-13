@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import styled from '../styled';
 import CardTile from '../CardTile';
@@ -8,7 +8,7 @@ import TileImage from '../TileImage';
 
 import HorizontalTileFeed from '.';
 
-storiesOf('HorizontalTileFeed', module)
+storiesOf('ui-kit/HorizontalTileFeed', module)
   .add('With CardTile', () => {
     const CardTileData = [
       {

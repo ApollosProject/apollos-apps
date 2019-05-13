@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FlexedView from '../FlexedView';
 import Icon from '../Icon';
@@ -7,7 +7,7 @@ import { Switch } from '../inputs';
 
 import TableView, { Cell, CellText, Divider } from '.';
 
-storiesOf('TableView', module).add('Examples', () => (
+storiesOf('ui-kit/TableView', module).add('Examples', () => (
   <FlexedView>
     <TableView>
       <Cell>

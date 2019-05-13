@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import styled from '../../styled';
-import { BodyText } from '..';
+import BodyText from '../BodyText';
 
 const enhance = compose(
   setDisplayName('BulletListItem'),

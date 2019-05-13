@@ -1,11 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FlexedView from '../../FlexedView';
 
 import Radio, { RadioButton } from '.';
 
-storiesOf('inputs/Radio', module)
+storiesOf('ui-kit/inputs/Radio', module)
   .add('default', () => (
     <FlexedView>
       <Radio>

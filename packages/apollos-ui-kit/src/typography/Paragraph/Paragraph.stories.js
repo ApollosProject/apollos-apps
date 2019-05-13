@@ -1,5 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
+
 import { ScrollView } from 'react-native';
 
 import { BodyText } from '..';
@@ -7,7 +8,7 @@ import PaddedView from '../../PaddedView';
 
 import Paragraph from '.';
 
-storiesOf('typography/Paragraph', module)
+storiesOf('ui-kit/typography/Paragraph', module)
   .add('Default', () => (
     <ScrollView>
       <PaddedView>

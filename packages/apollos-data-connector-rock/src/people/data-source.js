@@ -1,5 +1,4 @@
 import { AuthenticationError, UserInputError } from 'apollo-server';
-import FormData from 'form-data';
 import { camelCase, mapKeys } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import moment from 'moment';
@@ -107,35 +106,22 @@ export default class Person extends RockApolloDataSource {
   };
 
   uploadProfileImage = async (file, length) => {
-    const currentPerson = await this.context.dataSources.Auth.getCurrentPerson();
+    const {
+      dataSources: { Auth, BinaryFiles },
+    } = this.context;
+
+    const currentPerson = await Auth.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
     const { stream, filename } = await file;
-    const data = new FormData();
-    data.append('file', stream, {
-      filename,
-      knownLength: length,
-    });
-    const response = await this.nodeFetch(
-      `${this.baseURL}/BinaryFiles/Upload?binaryFileTypeId=5`,
-      {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Authorization-Token': this.rockToken,
-          ...data.getHeaders(),
-        },
-      }
-    );
 
-    const photoId = await response.text();
+    const photoId = await BinaryFiles.uploadFile({ filename, stream, length });
     const person = await this.updateProfile([
       { field: 'PhotoId', value: photoId },
     ]);
-    const photo = await this.request('/BinaryFiles')
-      .filter(`Id eq ${photoId}`)
-      .first();
+
+    const photo = await BinaryFiles.getFromId(photoId);
     return { ...person, photo };
   };
 }
