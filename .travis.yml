@@ -18,8 +18,7 @@ stages:
   - name: Deploy Api
     if: (type IN (push) AND branch = master)
   - name: NPM Release
-    if: (type IN (pull_request)) OR (type IN (push) AND branch = master)
-    # if: (type IN (push) AND branch = master)
+    if: (type IN (push) AND branch = master)
   - name: Deploy Docs
     if: (type IN (push) AND branch = master)
 jobs:
@@ -32,7 +31,6 @@ jobs:
         - travis_wait yarn codecov
     - stage: Deploy Api
       script: skip
-      before_deploy: npm install -g now
       deploy:
         - provider: script
           script: echo "Deploying via Github hooks"
@@ -44,7 +42,9 @@ jobs:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
       deploy:
         provider: script
-        script: "yarn release:canary"
+        script:
+          - git pull origin --tags
+          - "yarn release:canary"
         skip_cleanup: true
     # Disabled until Michael has time to fix.
     # - stage: Deploy Docs
