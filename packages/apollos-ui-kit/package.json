@@ -9,6 +9,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src --ext .js",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "generate-docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"
   },
   "keywords": [
@@ -53,7 +54,6 @@
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.5",
-    "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",

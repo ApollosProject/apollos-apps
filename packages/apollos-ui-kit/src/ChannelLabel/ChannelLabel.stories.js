@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
@@ -8,7 +8,7 @@ import styled from '../styled';
 
 import ChannelLabel from '.';
 
-storiesOf('ChannelLabel', module)
+storiesOf('ui-kit/ChannelLabel', module)
   .addDecorator((getStory) => (
     <BackgroundView>
       <CenteredView>{getStory()}</CenteredView>

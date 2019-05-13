@@ -1,12 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { H3, H6, BodyText, Paragraph } from '../typography';
 import Button, { ButtonLink } from '../Button';
 
 import Card, { CardActions, CardContent, CardImage } from '.';
 
-storiesOf('Card', module)
+storiesOf('ui-kit/Card', module)
   .add('simple', () => (
     <Card>
       <CardImage source={'https://picsum.photos/600/400/?image=63'} />

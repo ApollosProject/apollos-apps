@@ -1,10 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import BodyText from '.';
 
-storiesOf('typography/BodyText', module)
+storiesOf('ui-kit/typography/BodyText', module)
   .add('Regular', () => (
     <BodyText>
       {

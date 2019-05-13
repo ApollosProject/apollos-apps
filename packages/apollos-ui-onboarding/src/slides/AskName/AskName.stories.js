@@ -1,9 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import AskName from '.';
 
-storiesOf('Onboarding/slides/AskName', module)
+storiesOf('ui-onboarding/slides/AskName', module)
   .add('default', () => <AskName setFieldValue={() => {}} />)
   .add('slideTitle', () => (
     <AskName slideTitle={'Custom title text'} setFieldValue={() => {}} />

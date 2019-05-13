@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "test": "jest",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
   "keywords": [
@@ -38,7 +39,6 @@
     "htmlparser2": "3.9.2"
   },
   "devDependencies": {
-    "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
