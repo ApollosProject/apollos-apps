@@ -1252,47 +1252,705 @@ exports[`the Devotional component renders a loading state 1`] = `
                         >
                           God is Our Banner
                         </Text>
-                        <Text
-                          style={
-                            Object {
-                              "color": "#00676D",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 23.04,
-                              "paddingBottom": 24,
-                              "textAlign": "center",
-                              "textDecorationLine": "underline",
-                            }
-                          }
-                        >
-                          <Text
-                            onPress={[Function]}
-                            padded={true}
-                            style={
-                              Object {
-                                "color": "#17B582",
-                              }
-                            }
-                          >
-                            1 Corinthians 15:57, Exodus 17:8-15
-                          </Text>
-                        </Text>
                         <View
                           lineNumber={8}
-                          onReady={true}
+                          onReady={false}
                           style={
                             Object {
                               "paddingBottom": 17.28,
                             }
                           }
                         >
-                          <View>
-                            <Text>
-                              Some content!
-                            </Text>
-                          </View>
+                          <View />
                         </View>
                       </View>
+                      <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                            "paddingBottom": 0,
+                          }
+                        }
+                        data={
+                          Array [
+                            Object {
+                              "id": "fakeId0",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId1",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId2",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId3",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId4",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                          ]
+                        }
+                        decelerationRate="fast"
+                        disableVirtualization={false}
+                        fetchMore={[Function]}
+                        getItem={[Function]}
+                        getItemCount={[Function]}
+                        horizontal={true}
+                        initialNumToRender={10}
+                        initialScrollIndex={0}
+                        keyExtractor={[Function]}
+                        loadingStateObject={
+                          Object {
+                            "node": Object {
+                              "id": "fakeId0",
+                              "isLoading": true,
+                              "title": "",
+                            },
+                          }
+                        }
+                        maxToRenderPerBatch={10}
+                        numColumns={1}
+                        onContentSizeChange={[Function]}
+                        onEndReachedThreshold={2}
+                        onLayout={[Function]}
+                        onMomentumScrollEnd={[Function]}
+                        onScroll={[Function]}
+                        onScrollBeginDrag={[Function]}
+                        onScrollEndDrag={[Function]}
+                        refreshing={true}
+                        renderItem={[Function]}
+                        scrollEventThrottle={50}
+                        showsHorizontalScrollIndicator={false}
+                        snapToAlignment="start"
+                        snapToInterval={512}
+                        stickyHeaderIndices={Array []}
+                        updateCellsBatchingPeriod={50}
+                        viewabilityConfigCallbackPairs={Array []}
+                        windowSize={21}
+                      >
+                        <View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          1
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          2
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          3
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          4
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                          <View
+                            onLayout={[Function]}
+                            style={
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
+                            }
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          5
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </RCTScrollView>
                     </View>
                   </RCTScrollView>
                 </View>
@@ -1315,132 +1973,694 @@ exports[`the Devotional component renders a loading state 1`] = `
                             "paddingVertical": 16,
                           }
                         }
+                      />
+                      <RCTScrollView
+                        contentContainerStyle={
+                          Object {
+                            "padding": 8,
+                            "paddingBottom": 0,
+                          }
+                        }
+                        data={
+                          Array [
+                            Object {
+                              "id": "fakeId0",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId1",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId2",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId3",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                            Object {
+                              "id": "fakeId4",
+                              "node": Object {
+                                "id": "fakeId0",
+                                "isLoading": true,
+                                "title": "",
+                              },
+                            },
+                          ]
+                        }
+                        decelerationRate="fast"
+                        disableVirtualization={false}
+                        fetchMore={[Function]}
+                        getItem={[Function]}
+                        getItemCount={[Function]}
+                        horizontal={true}
+                        initialNumToRender={10}
+                        initialScrollIndex={0}
+                        keyExtractor={[Function]}
+                        loadingStateObject={
+                          Object {
+                            "node": Object {
+                              "id": "fakeId0",
+                              "isLoading": true,
+                              "title": "",
+                            },
+                          }
+                        }
+                        maxToRenderPerBatch={10}
+                        numColumns={1}
+                        onContentSizeChange={[Function]}
+                        onEndReachedThreshold={2}
+                        onLayout={[Function]}
+                        onMomentumScrollEnd={[Function]}
+                        onScroll={[Function]}
+                        onScrollBeginDrag={[Function]}
+                        onScrollEndDrag={[Function]}
+                        refreshing={true}
+                        renderItem={[Function]}
+                        scrollEventThrottle={50}
+                        showsHorizontalScrollIndicator={false}
+                        snapToAlignment="start"
+                        snapToInterval={512}
+                        stickyHeaderIndices={Array []}
+                        updateCellsBatchingPeriod={50}
+                        viewabilityConfigCallbackPairs={Array []}
+                        windowSize={21}
                       >
                         <View>
                           <View
+                            onLayout={[Function]}
                             style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "40%",
-                              }
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
                             }
-                          />
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          1
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
                           <View
+                            onLayout={[Function]}
                             style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
                             }
-                          />
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          2
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
                           <View
+                            onLayout={[Function]}
                             style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
                             }
-                          />
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          3
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
                           <View
+                            onLayout={[Function]}
                             style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
                             }
-                          />
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          4
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
                           <View
+                            onLayout={[Function]}
                             style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "60%",
-                              }
+                              Array [
+                                Object {
+                                  "flexDirection": "row",
+                                },
+                                null,
+                              ]
                             }
-                          />
+                          >
+                            <View
+                              accessible={true}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <View
+                                collapsable={false}
+                                style={
+                                  Object {
+                                    "padding": 8,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "borderRadius": 16,
+                                      "width": 495,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    style={
+                                      Object {
+                                        "borderRadius": 16,
+                                        "bottom": 0,
+                                        "justifyContent": "center",
+                                        "left": 0,
+                                        "overflow": "hidden",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                  >
+                                    <View
+                                      size={1}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "#FFFFFF",
+                                          "borderBottomRightRadius": 16,
+                                          "borderTopLeftRadius": 16,
+                                          "height": 32,
+                                          "justifyContent": "center",
+                                          "left": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "width": 32,
+                                        }
+                                      }
+                                    >
+                                      <View>
+                                        <Text
+                                          style={
+                                            Object {
+                                              "color": "#303030",
+                                              "fontFamily": "InterUI-Medium",
+                                              "fontSize": 14,
+                                              "lineHeight": 20.16,
+                                            }
+                                          }
+                                        >
+                                          5
+                                        </Text>
+                                      </View>
+                                    </View>
+                                    <View
+                                      style={
+                                        Object {
+                                          "paddingHorizontal": 16,
+                                          "paddingVertical": 16,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "InterUI-Black",
+                                            "fontSize": 24,
+                                            "lineHeight": 27.6,
+                                          }
+                                        }
+                                      >
+                                        
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
                         </View>
-                        <View>
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "40%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "60%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      </RCTScrollView>
                     </View>
                   </RCTScrollView>
                 </View>
@@ -1870,125 +3090,473 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                         }
                       >
                         <View>
-                          <View
+                          <Text
                             style={
                               Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "40%",
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 23.04,
                               }
                             }
-                          />
+                          >
+                            <Text
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 16,
+                                  "lineHeight": 23.04,
+                                }
+                              }
+                            >
+                              1 Corinthians 15:57
+                            </Text>
+                             
+                            <Text
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 12,
+                                  "lineHeight": 17.28,
+                                }
+                              }
+                            >
+                              WEB
+                            </Text>
+                          </Text>
                           <View
+                            lineNumber={8}
+                            onReady={true}
                             style={
                               Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
+                                "paddingBottom": 17.28,
                               }
                             }
-                          />
-                          <View
+                          >
+                            <View>
+                              <View
+                                style={
+                                  Object {
+                                    "paddingBottom": 17.28,
+                                  }
+                                }
+                              >
+                                <Text
+                                  bold={false}
+                                  italic={false}
+                                  style={
+                                    Object {
+                                      "color": "#303030",
+                                      "fontFamily": "DroidSerif",
+                                      "fontSize": 16,
+                                      "lineHeight": 26,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      57
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
+                                    </Text>
+                                  </Text>
+                                </Text>
+                              </View>
+                            </View>
+                          </View>
+                          <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "60%",
+                                "color": "#505050",
+                                "fontFamily": "InterUI-Regular",
+                                "fontSize": 9.6,
+                                "lineHeight": 10.37,
                               }
                             }
                           />
                         </View>
                         <View>
-                          <View
+                          <Text
                             style={
                               Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "40%",
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 23.04,
                               }
                             }
-                          />
+                          >
+                            <Text
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 16,
+                                  "lineHeight": 23.04,
+                                }
+                              }
+                            >
+                              Exodus 17:8-15
+                            </Text>
+                             
+                            <Text
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 12,
+                                  "lineHeight": 17.28,
+                                }
+                              }
+                            >
+                              WEB
+                            </Text>
+                          </Text>
                           <View
+                            lineNumber={8}
+                            onReady={true}
                             style={
                               Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
+                                "paddingBottom": 17.28,
                               }
                             }
-                          />
-                          <View
+                          >
+                            <View>
+                              <View
+                                style={
+                                  Object {
+                                    "paddingBottom": 17.28,
+                                  }
+                                }
+                              >
+                                <Text
+                                  bold={false}
+                                  italic={false}
+                                  style={
+                                    Object {
+                                      "color": "#303030",
+                                      "fontFamily": "DroidSerif",
+                                      "fontSize": 16,
+                                      "lineHeight": 26,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      8
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      Then Amalek came and fought with Israel in Rephidim. 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      9
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      10
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      11
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      12
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      13
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      Joshua defeated Amalek and his people with the edge of the sword. 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      14
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
+                                    </Text>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#505050",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 9.6,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                     
+                                    <Text>
+                                      15
+                                    </Text>
+                                     
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    style={
+                                      Object {
+                                        "color": "#303030",
+                                        "fontFamily": "DroidSerif",
+                                        "fontSize": 16,
+                                        "lineHeight": 26,
+                                      }
+                                    }
+                                  >
+                                    <Text>
+                                      Moses built an altar, and called its name “Yahweh our Banner”.
+                                    </Text>
+                                  </Text>
+                                </Text>
+                              </View>
+                            </View>
+                          </View>
+                          <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "100%",
-                              }
-                            }
-                          />
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 16,
-                                "marginVertical": 5,
-                                "width": "60%",
+                                "color": "#505050",
+                                "fontFamily": "InterUI-Regular",
+                                "fontSize": 9.6,
+                                "lineHeight": 10.37,
                               }
                             }
                           />
