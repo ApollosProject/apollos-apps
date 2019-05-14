@@ -22,6 +22,7 @@ export default class PersonalDevices extends RockApolloDataSource {
       DeviceRegistrationId: pushId,
       PersonalDeviceTypeValueId: 671, // `mobile` device type
       NotificationsEnabled: 1,
+      IsActive: 1,
     });
 
     return currentUser;
