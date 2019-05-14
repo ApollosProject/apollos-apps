@@ -21,6 +21,7 @@ exports[`Personal device data source must post a user's device to Rock 2`] = `
       "/PersonalDevices",
       Object {
         "DeviceRegistrationId": "somepushid",
+        "IsActive": 1,
         "NotificationsEnabled": 1,
         "PersonAliasId": 123,
         "PersonalDeviceTypeValueId": 671,

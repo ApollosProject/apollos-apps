@@ -40,12 +40,12 @@ jobs:
       script: yarn lerna run build
       before_deploy:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+        - git pull origin --tags
       deploy:
         provider: script
-        script:
-          - git pull origin --tags
-          - "yarn release:canary"
+        script: yarn release:canary
         skip_cleanup: true
+        master: true
     # Disabled until Michael has time to fix.
     # - stage: Deploy Docs
     #   script:
