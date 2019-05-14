@@ -18,8 +18,8 @@ export default class Scripture extends RESTDataSource {
   async getScripture(query) {
     const bibleId = BIBLE_API.BIBLE_ID;
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    if (get(scriptures, 'data.passages[0]')) {
-      return scriptures.data.passages[0];
+    if (get(scriptures, 'data[0]')) {
+      return scriptures.data[0];
     }
     return null;
   }
@@ -27,6 +27,6 @@ export default class Scripture extends RESTDataSource {
   async getScriptures(query) {
     const bibleId = BIBLE_API.BIBLE_ID;
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    return scriptures.data.passages;
+    return scriptures.data;
   }
 }
