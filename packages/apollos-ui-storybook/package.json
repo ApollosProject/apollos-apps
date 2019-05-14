@@ -1,29 +1,29 @@
 {
   "name": "@apollosproject/ui-storybook",
-  "version": "0.8.4",
+  "version": "0.8.6",
   "private": true,
   "main": "./src/index.js",
   "peerDependencies": {
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-auth": "*",
+    "@apollosproject/ui-htmlview": "*",
+    "@apollosproject/ui-kit": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*",
-    "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-analytics": "*",
-    "@apollosproject/ui-htmlview": "*",
-    "@apollosproject/ui-auth": "*"
+    "react-native-svg": "*"
   },
   "dependencies": {
-    "@storybook/react-native": "5.2.0-alpha.3",
     "@storybook/addon-actions": "5.2.0-alpha.3",
     "@storybook/addon-links": "5.2.0-alpha.3",
-    "@storybook/addons": "5.2.0-alpha.3"
+    "@storybook/addons": "5.2.0-alpha.3",
+    "@storybook/react-native": "5.2.0-alpha.3"
   },
   "devDependencies": {
-    "react": "16.6.3",
-    "react-native": "0.58.5",
     "metro-react-native-babel-preset": "^0.53.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "16.6.3",
+    "react-native": "0.58.5"
   },
   "rnpm": {
     "assets": [

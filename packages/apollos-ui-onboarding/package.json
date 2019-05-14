@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-onboarding",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -51,7 +51,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollosproject/ui-kit": "^0.8.5",
+    "@apollosproject/ui-kit": "^0.8.6",
     "@storybook/react-native": "^4.0.7",
     "apollo-client": "2.5.1",
     "codecov": "3.1.0",

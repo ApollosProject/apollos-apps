@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/apollo-server-env-mock",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {

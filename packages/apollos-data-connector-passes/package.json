@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-passes",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^0.8.5",
+    "@apollosproject/apollo-server-env-mock": "^0.8.6",
     "@apollosproject/babel-preset-apollos": "^0.8.5",
     "jest": "^23.6.0"
   },

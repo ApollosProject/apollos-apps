@@ -1,6 +1,6 @@
 {
   "name": "apolloschurchapp",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "private": true,
   "devDependencies": {
     "codecov": "3.0.2",
@@ -61,12 +61,12 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/ui-analytics": "^0.8.5",
-    "@apollosproject/ui-auth": "^0.8.5",
-    "@apollosproject/ui-htmlview": "^0.8.5",
-    "@apollosproject/ui-kit": "^0.8.5",
-    "@apollosproject/ui-passes": "^0.8.5",
-    "@apollosproject/ui-storybook": "^0.8.4",
+    "@apollosproject/ui-analytics": "^0.8.6",
+    "@apollosproject/ui-auth": "^0.8.6",
+    "@apollosproject/ui-htmlview": "^0.8.6",
+    "@apollosproject/ui-kit": "^0.8.6",
+    "@apollosproject/ui-passes": "^0.8.6",
+    "@apollosproject/ui-storybook": "^0.8.6",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.5.1",

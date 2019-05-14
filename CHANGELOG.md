@@ -1,3 +1,17 @@
+v0.8.6: May 14, 2019
+
+- Adds Storybook as an NPM package (#683) (6fc05ad1)
+- Adds binary files datasource (#699) (1f04d21f)
+- Adds Apollos.json to help improve upgrade tool. (#696) (6fa6c530)
+- Adds strategy for canary releases (#703) (348f279a)
+
+- Updates bible.api usage to match current practices (#708) (32312d19)
+
+- Fixes personal devices post by providing required rock field (#706) (c1784acb)
+- Fixes Travis deploy script, deploy script arg can only take a single command (#707) (ae305ce8)
+- Fixes appcenter by running story build task (#701) (2757b73f)
+- Fixes null scripture crash and devotional tests. (#684) (f699db78)
+
 
 v0.8.5: May 8, 2019
 
