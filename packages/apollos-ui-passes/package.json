@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-passes",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -40,7 +40,7 @@
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.5",
+    "@apollosproject/ui-kit": "^0.8.6",
     "graphql-tag": "^2.10.1",
     "react-apollo": "2.5.5"
   },
