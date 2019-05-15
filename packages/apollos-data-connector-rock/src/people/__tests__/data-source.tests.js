@@ -50,7 +50,7 @@ describe('Person', () => {
 
   it('gets person from id', () => {
     const dataSource = new Person();
-    dataSource.get = buildGetMock({ Id: 51 }, dataSource);
+    dataSource.get = buildGetMock([{ Id: 51 }], dataSource);
     const result = dataSource.getFromId(51);
     expect(result).resolves.toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
