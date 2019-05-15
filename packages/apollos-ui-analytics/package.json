@@ -46,7 +46,7 @@
     "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.5",
+    "@apollosproject/babel-preset-apollos": "^0.8.6",
     "@apollosproject/ui-kit": "^0.8.6",
     "apollo-client": "2.5.1",
     "codecov": "3.1.0",

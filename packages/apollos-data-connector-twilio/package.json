@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.8.5",
+    "@apollosproject/data-schema": "^0.8.6",
     "apollo-datasource": "^0.2.0",
     "lodash": "^4.17.11",
     "twilio": "^3.28.0"
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^0.8.6",
-    "@apollosproject/babel-preset-apollos": "^0.8.5",
+    "@apollosproject/babel-preset-apollos": "^0.8.6",
     "jest": "^23.6.0"
   },
   "publishConfig": {
