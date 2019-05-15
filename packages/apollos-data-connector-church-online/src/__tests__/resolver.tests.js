@@ -2,7 +2,14 @@ import { fetch } from 'apollo-server-env';
 
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import ApollosConfig from '@apollosproject/config';
 import * as LiveStream from '../index';
+
+ApollosConfig.loadJs({
+  CHURCH_ONLINE: {
+    URL: 'https://apollos.churchonline.org/api/v1/',
+  },
+});
 // we import the root-level schema and resolver so we test the entire integration:
 
 const { getSchema, getContext } = createTestHelpers({ LiveStream });
