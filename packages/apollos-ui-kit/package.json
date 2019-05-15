@@ -1,10 +1,11 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
-    "src/**"
+    "src/**",
+    "storybook/**"
   ],
   "scripts": {
     "test": "jest",
