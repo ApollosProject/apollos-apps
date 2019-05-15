@@ -104,7 +104,11 @@ class Home extends PureComponent {
                         );
 
                         return (
-                          <TouchableScale onPress={this.handleOnPress}>
+                          <TouchableScale
+                            onPress={() =>
+                              this.handleOnPress({ id: featuredItem.id })
+                            }
+                          >
                             <ContentCard
                               {...featuredItem}
                               {...this.props}
