@@ -28,15 +28,13 @@
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "storybook:enable": "sed -i '' 's/STORYBOOK=false/STORYBOOK=true/g' .env",
     "storybook:disable": "sed -i '' 's/STORYBOOK=true/STORYBOOK=false/g' .env",
-    "build-storybook-env": "cat .env .env.dev.storybook > .env.storybook",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "version": "node ../../scripts/update-apollos-version.js && git add apollos.json",
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "lerna run generate-stories & node ./scripts/get-introspection-data.js",
     "start": "react-native start",
-    "test": "jest",
-    "release": "standard-version --release-as minor"
+    "test": "jest"
   },
   "jest": {
     "preset": "react-native",

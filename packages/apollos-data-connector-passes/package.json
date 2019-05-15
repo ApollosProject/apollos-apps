@@ -23,8 +23,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^0.8.5",
-    "@apollosproject/server-core": "^0.8.5",
+    "@apollosproject/data-schema": "^0.8.6",
+    "@apollosproject/server-core": "^0.8.6",
     "datauri": "^1.1.0",
     "jest": "^23.6.0",
     "lodash": "^4.17.11",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^0.8.6",
-    "@apollosproject/babel-preset-apollos": "^0.8.5",
+    "@apollosproject/babel-preset-apollos": "^0.8.6",
     "jest": "^23.6.0"
   },
   "publishConfig": {

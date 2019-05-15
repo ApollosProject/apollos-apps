@@ -15,16 +15,14 @@
     ]
   },
   "scripts": {
-    "start": "if test \"$NOW_ENV\" = \"true\" ; then yarn start:now ; else yarn start:dev ; fi",
-    "start:now": "lerna run start --scope apollos-church-api",
-    "start:dev": "lerna run start --parallel",
+    "start": "lerna run start --parallel",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "ci-test": "lerna run test  --stream -- --maxWorkers=2",
     "ios": "lerna run ios --stream --scope apolloschurchapp",
     "android": "lerna run android --stream --scope apolloschurchapp",
     "release": "lerna publish --no-push && echo \"Release has been tagged!\nPlease look over the CHANGELOG.md file, and use 'git commit -amend' to amend any edits.\nWhen done, be sure to 'git push --tags' and create a release PR\"",
-    "release:canary": "lerna publish --no-push --canary --yes",
+    "release:canary": "lerna publish --canary --yes",
     "preversion": "./scripts/update-change-log.sh",
     "prepublish": "lerna run build && lerna run generate-stories",
     "publish-schema": "apollo schema:publish --endpoint=\"https://apollos-church-api.now.sh\" --key=$ENGINE_API_KEY",
@@ -61,22 +59,8 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-native": "^3.2.1",
-    "lerna": "^3.0.6",
+    "lerna": "^3.14.0",
     "prettier": "^1.14.2",
     "react-native-storybook-loader": "^1.8.0"
-  },
-  "now": {
-    "name": "apollos-church-api",
-    "alias": "apollos-church-api.now.sh",
-    "env": {
-      "ROCK_API": "@rock_api",
-      "ROCK_TOKEN": "@rock_token",
-      "BIBLE_API_KEY": "@bible_api_key",
-      "BIBLE_ID": "@bible_id",
-      "ENGINE_API_KEY": "@engine_api_key",
-      "PORT": "443",
-      "CLOUDINARY_URL": "@cloudinary_url",
-      "NOW_ENV": "true"
-    }
   }
 }

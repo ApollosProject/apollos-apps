@@ -40,7 +40,6 @@ jobs:
       script: yarn lerna run build
       before_deploy:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-        - git pull origin --tags
       deploy:
         provider: script
         script: yarn release:canary

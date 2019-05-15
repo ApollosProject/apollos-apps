@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^0.8.6",
-    "@apollosproject/babel-preset-apollos": "^0.8.5",
+    "@apollosproject/babel-preset-apollos": "^0.8.6",
     "jest": "^23.6.0"
   },
   "publishConfig": {
