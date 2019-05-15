@@ -11,6 +11,8 @@ import {
   BackgroundView,
   H3,
   H6,
+  ContentCard,
+  TouchableScale,
 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
@@ -45,11 +47,13 @@ class Home extends PureComponent {
     }),
   };
 
-  handleOnPress = (item) =>
+  handleOnPress = (item) => {
+    console.log(item);
     this.props.navigation.navigate('ContentSingle', {
       itemId: item.id,
       transitionKey: item.transitionKey,
     });
+  };
 
   render() {
     return (
@@ -86,11 +90,29 @@ class Home extends PureComponent {
                           {}
                         );
 
+                        const metrics = [
+                          {
+                            icon: featuredItem.isLiked ? 'like-solid' : 'like',
+                            value: featuredItem.likedCount,
+                          },
+                        ];
+
+                        const coverImage = get(
+                          featuredItem,
+                          'coverImage.sources',
+                          undefined
+                        );
+
                         return (
-                          <ContentCardConnected
-                            contentId={featuredItem.id}
-                            isLoading={isFeaturedLoading}
-                          />
+                          <TouchableScale onPress={this.handleOnPress}>
+                            <ContentCard
+                              {...featuredItem}
+                              {...this.props}
+                              metrics={metrics}
+                              coverImage={coverImage}
+                              isLoading={isFeaturedLoading}
+                            />
+                          </TouchableScale>
                         );
                       }}
                     </Query>
