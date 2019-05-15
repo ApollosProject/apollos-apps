@@ -14,8 +14,9 @@ export default class Person extends RockApolloDataSource {
 
   getFromId = (id) =>
     this.request()
-      .find(id)
-      .get();
+      .filter(`Id eq ${id}`)
+      .expand('Photo')
+      .first();
 
   getFromAliasId = async (id) => {
     // Fetch the PersonAlias, selecting only the PersonId.
