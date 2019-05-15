@@ -30,7 +30,7 @@ Object {
 exports[`Person gets person from id 1`] = `
 Array [
   Array [
-    "People/51",
+    "People?%24filter=Id%20eq%2051&%24expand=Photo&%24top=1",
     Object {},
     Object {},
   ],
