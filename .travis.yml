@@ -53,7 +53,9 @@ jobs:
          # copy over ui-kit docs
          - cp -fr packages/apollos-ui-kit/docs/generated/* docs/docs/ui-kit
          # update sidebar
-         - cat docs/website/sidebars.json | packages/apollos-ui-kit/docs/updateSidebar.sh
+         - cd packages/apollos-ui-kit
+         - cat ../../docs/website/sidebars.json | packages/apollos-ui-kit/docs/updateSidebar.sh
+         - cd ../../
          - cp -f packages/apollos-ui-kit/docs/generated/sidebars.json docs/website/sidebars.json
          # push new docs
          - cd docs
