@@ -64,4 +64,4 @@ jobs:
          - git config user.name ${GH_USER}
            git add .
          - git commit -am ${MESSAGE}
-         - git push "https://${GH_TOKEN}@${GH_DOCS_REPO}" master > /dev/null 2>&1
+         - git push "https://${GH_TOKEN}@${GH_DOCS_REPO}" master
