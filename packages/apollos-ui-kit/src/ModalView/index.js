@@ -14,10 +14,10 @@ const Container = styled({
 })(BackgroundView);
 
 const ModalView = withNavigation(
-  ({ navigation, onBack, children, ...props }) => (
+  ({ navigation, onClose, onBack, children, ...props }) => (
     <Container {...props}>
       {children}
-      <ModalViewHeader onClose={() => (onBack ? onBack() : navigation.pop())} />
+      <ModalViewHeader onClose={onClose || navigation.pop} onBack={onBack} />
     </Container>
   )
 );
