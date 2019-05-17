@@ -36,6 +36,7 @@
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
     "react": "*",
+    "react-navigation": "*",
     "react-native": "*",
     "react-native-passkit-wallet": "*",
     "rn-fetch-blob": "*"
@@ -57,7 +58,6 @@
     "react-native-linear-gradient": "2.4.0",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-svg": "6.5.2",
-    "react-navigation": "2.11.2",
     "react-test-renderer": "16.6.1",
     "rn-fetch-blob": "^0.10.15"
   },
