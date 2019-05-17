@@ -11,7 +11,6 @@ import {
   BackgroundView,
   H3,
   H6,
-  ContentCard,
   TouchableScale,
 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
@@ -88,30 +87,14 @@ class Home extends PureComponent {
                           {}
                         );
 
-                        const metrics = [
-                          {
-                            icon: featuredItem.isLiked ? 'like-solid' : 'like',
-                            value: featuredItem.likedCount,
-                          },
-                        ];
-
-                        const coverImage = get(
-                          featuredItem,
-                          'coverImage.sources',
-                          undefined
-                        );
-
                         return (
                           <TouchableScale
                             onPress={() =>
                               this.handleOnPress({ id: featuredItem.id })
                             }
                           >
-                            <ContentCard
-                              {...featuredItem}
-                              {...this.props}
-                              metrics={metrics}
-                              coverImage={coverImage}
+                            <ContentCardConnected
+                              contentId={featuredItem.id}
                               isLoading={isFeaturedLoading}
                             />
                           </TouchableScale>
