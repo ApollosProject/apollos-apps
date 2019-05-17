@@ -56,7 +56,7 @@ class PhoneEntry extends Component {
     brand: <BrandIcon />,
     authTitleText: 'Have we met before?',
     smsPromptText:
-      "Lets get you signed in using your mobile number. We'll text you a code to make login super easy!",
+      "Let's get you signed in using your mobile number. We'll text you a code to make login super easy!",
     smsPolicyInfo: (
       <LegalText>
         {"We'll never share your information or contact you (unless you ask!)."}
