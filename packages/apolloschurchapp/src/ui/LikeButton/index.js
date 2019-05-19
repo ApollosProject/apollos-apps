@@ -47,7 +47,7 @@ const UpdateLikeStatus = ({
           cache,
           {
             data: {
-              updateLikeEntity: { isLiked: liked, likedCount },
+              updateLikeEntity: { isLiked: liked },
             },
           }
         ) => {
@@ -58,7 +58,7 @@ const UpdateLikeStatus = ({
               node: {
                 ...item,
                 isLiked: liked,
-                likedCount: likedCount + 1,
+                // likedCount: likedCount + 1,
               },
             },
           });
