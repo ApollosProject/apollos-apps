@@ -58,7 +58,6 @@ const UpdateLikeStatus = ({
               node: {
                 ...item,
                 isLiked: liked,
-                // likedCount: likedCount + 1,
               },
             },
           });
