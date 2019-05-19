@@ -7,6 +7,7 @@ import { Query, Mutation } from 'react-apollo';
 import Like from 'apolloschurchapp/src/ui/Like';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
+import getLikedContent from '../../tabs/connect/getLikedContent';
 import updateLikeEntity from './updateLikeEntity';
 import getLikedContentItem from './getLikedContentItem';
 import updateLikedContent from './updateLikedContent';
@@ -15,7 +16,14 @@ const GetLikeData = ({ itemId, children }) => (
   <Query query={getLikedContentItem} variables={{ itemId }}>
     {({ data: { node = {} } = {}, loading }) => {
       const isLiked = loading ? false : get(node, 'isLiked') || false;
-      return children({ isLiked, item: node });
+      return (
+        // This preemptively loads getLikedContent into cache.
+        // The only reason this is necessary is because we are reading this
+        // particular query from cache in the updateLikedContent mutation.
+        <Query query={getLikedContent} variables={{ first: 3 }}>
+          {() => children({ isLiked, item: node })}
+        </Query>
+      );
     }}
   </Query>
 );
