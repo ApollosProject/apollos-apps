@@ -39,6 +39,7 @@ const UpdateLikeStatus = ({
           updateLikeEntity: {
             id: itemId, // unknown at this time
             isLiked: !isLiked,
+            likedCount: 0, // don't need this right now, no sense in passing it in
             __typename: item && item.__typename,
           },
         }}
@@ -46,7 +47,7 @@ const UpdateLikeStatus = ({
           cache,
           {
             data: {
-              updateLikeEntity: { isLiked: liked },
+              updateLikeEntity: { isLiked: liked, likedCount },
             },
           }
         ) => {
@@ -57,6 +58,7 @@ const UpdateLikeStatus = ({
               node: {
                 ...item,
                 isLiked: liked,
+                likedCount: likedCount + 1,
               },
             },
           });
