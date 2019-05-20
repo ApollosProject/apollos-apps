@@ -6,7 +6,7 @@ import Providers from '../Providers';
 import ModalViewHeader from './ModalViewHeader';
 
 describe('The ModalView/ModalViewHeader component', () => {
-  it('should render a back button', () => {
+  it('should render', () => {
     const tree = renderer.create(
       <Providers>
         <ModalViewHeader onBack={jest.fn()} />
@@ -14,7 +14,7 @@ describe('The ModalView/ModalViewHeader component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a close button', () => {
+  it('should accept an onClose function', () => {
     const tree = renderer.create(
       <Providers>
         <ModalViewHeader onClose={jest.fn()} />
@@ -22,10 +22,22 @@ describe('The ModalView/ModalViewHeader component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render both buttons', () => {
+  it('should accept an onBack function', () => {
     const tree = renderer.create(
       <Providers>
-        <ModalViewHeader onBack={jest.fn()} onClose={jest.fn()} />
+        <ModalViewHeader onBack={jest.fn()} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render as a navigationHeader', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ModalViewHeader
+          onBack={jest.fn()}
+          onClose={jest.fn()}
+          navigationHeader
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
