@@ -46,8 +46,7 @@
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
-    "react-native-keyboard-aware-scroll-view": "0.7.0",
-    "react-navigation": "2.11.2"
+    "react-native-keyboard-aware-scroll-view": "0.7.0"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.6",
@@ -61,7 +60,6 @@
     "react-apollo": "2.5.5",
     "react-dom": "16.6.3",
     "react-native": "0.58.5",
-    "react-navigation": "2.11.2",
     "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
