@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.5",
+    "@apollosproject/babel-preset-apollos": "^0.8.6",
     "jest-fetch-mock": "^2.0.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",
