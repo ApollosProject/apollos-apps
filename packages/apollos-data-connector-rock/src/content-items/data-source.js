@@ -280,10 +280,12 @@ export default class ContentItem extends RockApolloDataSource {
       .andFilter(this.LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
-  getFromIds = (ids) =>
-    this.request()
+  getFromIds = (ids = []) => {
+    if (ids.length === 0) return this.request().empty();
+    return this.request()
       .filterOneOf(ids.map((id) => `Id eq ${id}`))
       .andFilter(this.LIVE_CONTENT());
+  };
 
   getFromId = (id) =>
     this.request()
