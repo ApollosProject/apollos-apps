@@ -159,6 +159,7 @@ describe('Campus', () => {
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+    expect(fetch.mock.calls).toMatchSnapshot();
   });
 
   it("gets current user's campus", async () => {
