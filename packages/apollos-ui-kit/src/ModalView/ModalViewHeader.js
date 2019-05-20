@@ -3,59 +3,57 @@ import { StatusBar, View } from 'react-native';
 import Color from 'color';
 import PropTypes from 'prop-types';
 
-import styled from '../styled';
-import { ButtonIcon } from '../Button';
 import { withTheme } from '../theme';
+import { ButtonIcon } from '../Button';
+import styled from '../styled';
+import PaddedView from '../PaddedView';
+import Icon from '../Icon';
 
 const StyledButtonIcon = withTheme(({ theme }) => ({
   fill: theme.colors.text.tertiary,
   size: theme.sizing.baseUnit,
-  iconPadding: theme.sizing.baseUnit * 1.75,
+  iconPadding: theme.sizing.baseUnit * 0.5, // TODO: decreases button tappability but gives us the desired "smaller button" look
+  style: {
+    backgroundColor: Color(theme.colors.text.primary).fade(0.3),
+  },
 }))(ButtonIcon);
 
-const ButtonWrapper = styled(({ theme, right, left }) => ({
-  position: 'absolute',
-  top: theme.sizing.baseUnit * 1.5,
-  right: right ? theme.sizing.baseUnit * 1.5 : null,
-  left: left ? theme.sizing.baseUnit * 1.5 : null,
-  width: theme.sizing.baseUnit * 1.75,
-  height: theme.sizing.baseUnit * 1.75,
-  borderRadius: theme.sizing.baseUnit * 1.75,
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: Color(theme.colors.text.primary).fade(0.1),
-  zIndex: 2,
-}))(View);
+const HeaderWrapper = styled(({ navigationHeader }) => ({
+  position: navigationHeader ? 'relative' : 'absolute',
+  top: 0,
+  width: '100%',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+}))(PaddedView);
 
 const Handle = styled({
   // helps in swipe-to-close gesture
   position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
+  width: '100%',
   height: 75,
 })(View);
 
-const ModalView = ({ onClose, onBack }) => (
-  <>
+const ModalViewHeader = ({ onClose, onBack, navigationHeader }) => (
+  <HeaderWrapper navigationHeader={navigationHeader}>
     <StatusBar hidden />
     <Handle />
     {onBack ? (
-      <ButtonWrapper left>
-        <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
-      </ButtonWrapper>
-    ) : null}
+      <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
+    ) : (
+      <Icon name="empty" />
+    )}
     {onClose ? (
-      <ButtonWrapper right>
-        <StyledButtonIcon name={'close'} onPress={onClose} />
-      </ButtonWrapper>
-    ) : null}
-  </>
+      <StyledButtonIcon name={'close'} onPress={onClose} />
+    ) : (
+      <Icon name="empty" />
+    )}
+  </HeaderWrapper>
 );
 
-ModalView.propTypes = {
+ModalViewHeader.propTypes = {
   onClose: PropTypes.func,
   onBack: PropTypes.func,
+  navigationHeader: PropTypes.bool,
 };
 
-export default ModalView;
+export default ModalViewHeader;

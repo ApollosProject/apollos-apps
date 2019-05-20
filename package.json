@@ -59,6 +59,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-native": "^3.2.1",
+    "react-navigation": "2.18.3",
     "lerna": "^3.14.0",
     "prettier": "^1.14.2",
     "react-native-storybook-loader": "^1.8.0"
