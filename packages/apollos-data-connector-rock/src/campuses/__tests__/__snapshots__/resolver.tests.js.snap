@@ -113,6 +113,58 @@ Object {
 }
 `;
 
+exports[`Campus gets campuses (without location) 2`] = `
+Array [
+  Array [
+    Request {
+      "agent": undefined,
+      "compress": true,
+      "counter": 0,
+      "follow": 20,
+      "size": 0,
+      "timeout": 0,
+      Symbol(Body internals): Object {
+        "body": null,
+        "disturbed": false,
+        "error": null,
+      },
+      Symbol(Request internals): Object {
+        "headers": Headers {
+          Symbol(map): Object {
+            "Authorization-Token": Array [
+              "some-rock-token",
+            ],
+            "Content-Type": Array [
+              "application/json",
+            ],
+            "user-agent": Array [
+              "Apollos",
+            ],
+          },
+        },
+        "method": "GET",
+        "parsedURL": Url {
+          "auth": null,
+          "hash": null,
+          "host": "apollosrock.newspring.cc",
+          "hostname": "apollosrock.newspring.cc",
+          "href": "https://apollosrock.newspring.cc/api/Campuses?loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "path": "/api/Campuses?loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "pathname": "/api/Campuses",
+          "port": null,
+          "protocol": "https:",
+          "query": "loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "search": "?loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "slashes": true,
+        },
+        "redirect": "follow",
+        "signal": null,
+      },
+    },
+  ],
+]
+`;
+
 exports[`Campus gets campuses sorted by location 1`] = `
 Object {
   "data": Object {
