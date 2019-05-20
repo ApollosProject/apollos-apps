@@ -116,6 +116,10 @@ describe('RequestBuilder', () => {
     expect(request.orderBy('MyField', 'desc').get()).resolves.toMatchSnapshot();
   });
 
+  it('returns an empty array', () => {
+    expect(request.empty().get()).resolves.toEqual([]);
+  });
+
   it('transforms result shapes', () => {
     get = jest.fn(() => new Promise((resolve) => resolve({ a: 'yo' })));
     connector = { get };
