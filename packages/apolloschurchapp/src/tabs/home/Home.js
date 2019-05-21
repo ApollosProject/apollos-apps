@@ -11,6 +11,7 @@ import {
   BackgroundView,
   H3,
   H6,
+  TouchableScale,
 } from '@apollosproject/ui-kit';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
@@ -87,10 +88,16 @@ class Home extends PureComponent {
                         );
 
                         return (
-                          <ContentCardConnected
-                            contentId={featuredItem.id}
-                            isLoading={isFeaturedLoading}
-                          />
+                          <TouchableScale
+                            onPress={() =>
+                              this.handleOnPress({ id: featuredItem.id })
+                            }
+                          >
+                            <ContentCardConnected
+                              contentId={featuredItem.id}
+                              isLoading={isFeaturedLoading}
+                            />
+                          </TouchableScale>
                         );
                       }}
                     </Query>

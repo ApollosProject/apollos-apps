@@ -24,7 +24,7 @@ const NavigationHeader = ({ scene, navigation }) => {
     navigation.pop();
   };
 
-  return <ModalViewHeader onClose={onClose} onBack={onBack} />;
+  return <ModalViewHeader onClose={onClose} onBack={onBack} navigationHeader />;
 };
 
 NavigationHeader.propTypes = {

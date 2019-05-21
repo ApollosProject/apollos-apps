@@ -43,6 +43,12 @@ export default class RockRequestBuilder {
       });
 
   /**
+   * Ends the request chain, ensuring that the caller of *get* will recieve an empty array.
+   * Used in situations where we want to bypass Rock and return nothing.
+   */
+  empty = () => ({ get: () => Promise.resolve([]) });
+
+  /**
    * Sends a GET request to the server, resolves with the first promise
    * @returns promise
    */
