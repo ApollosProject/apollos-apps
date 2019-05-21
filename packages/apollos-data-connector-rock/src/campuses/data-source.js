@@ -16,6 +16,7 @@ export default class Campus extends RockApolloDataSource {
 
   getAll = () =>
     this.request()
+      .filter('IsActive eq true')
       .expand('Location')
       .expand('Location/Image')
       .get();
