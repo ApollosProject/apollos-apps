@@ -44,7 +44,7 @@
     "@apollosproject/rock-apollo-data-source": "^0.8.6",
     "@apollosproject/server-core": "^0.8.6",
     "apollo-server": "^2.0.5",
-    "apollo-server-express": "^2.5.0",
+    "apollo-server-express": "2.4.8",
     "color": "3.0.0",
     "dotenv": "6.0.0",
     "express": "^4.17.0",
