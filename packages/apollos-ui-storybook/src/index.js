@@ -27,6 +27,9 @@ export const loadApollosStories = () => {
 
 // Refer to https://github.com/storybooks/storybook/tree/master/app/react-native#start-command-parameters
 // To find allowed options for getStorybookUI
-const StorybookUIRoot = getStorybookUI();
+const StorybookUIRoot = getStorybookUI({
+  // Fixes keyboard auto-closing itself when using `react-native-tab-bar`
+  shouldDisableKeyboardAvoidingView: true,
+});
 
 export default StorybookUIRoot;
