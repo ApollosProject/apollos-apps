@@ -46,6 +46,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -216,6 +217,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -382,6 +384,7 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView

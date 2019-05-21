@@ -45,6 +45,7 @@ exports[`The Onboarding FeaturesConnected component renders with a firstName whe
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView

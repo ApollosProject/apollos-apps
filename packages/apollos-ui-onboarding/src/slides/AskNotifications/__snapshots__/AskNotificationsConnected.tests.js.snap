@@ -45,6 +45,7 @@ exports[`The Onboarding AskNotificationsConnected component should render as if 
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -418,6 +419,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with a
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -561,7 +563,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with a
         }
       >
         <Text
-          onPress={[MockFunction]}
+          onPress={[Function]}
           style={
             Object {
               "color": "#A5A5A5",
@@ -624,6 +626,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with n
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView

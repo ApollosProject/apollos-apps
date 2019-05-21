@@ -1,6 +1,7 @@
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsProvider: ({ children }) => children,
+  AnalyticsConsumer: ({ children }) => children({ track: jest.fn() }),
 }));
 
 jest.mock('react-navigation', () => {

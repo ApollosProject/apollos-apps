@@ -47,6 +47,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -802,6 +803,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -1315,7 +1317,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
         }
       >
         <Text
-          onPress={[MockFunction]}
+          onPress={[Function]}
           style={
             Object {
               "color": "#A5A5A5",

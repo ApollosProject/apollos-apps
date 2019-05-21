@@ -45,6 +45,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -816,6 +817,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -1401,7 +1403,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
           </View>
         </View>
         <Text
-          onPress={[MockFunction]}
+          onPress={[Function]}
           style={
             Object {
               "color": "#A5A5A5",
@@ -1464,6 +1466,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
           "flex": 1,
         }
       }
+      track={[MockFunction]}
     >
       <View>
         <RCTSafeAreaView
@@ -2049,7 +2052,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
           </View>
         </View>
         <Text
-          onPress={[MockFunction]}
+          onPress={[Function]}
           style={
             Object {
               "color": "#A5A5A5",
