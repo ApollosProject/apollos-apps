@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export, react/prop-types */
 import React from 'react';
-import Stuff, { AnalyticsConsumer } from '@apollosproject/ui-analytics';
+import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
 export const withOnPressAnalytics = (Component, { displayName } = {}) => ({
   onPressPrimary,
