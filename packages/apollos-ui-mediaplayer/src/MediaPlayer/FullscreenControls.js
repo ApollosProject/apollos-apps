@@ -45,7 +45,7 @@ const Background = withTheme(({ theme }) => ({
     theme.colors.darkPrimary,
   ],
   locations: [0, 0.4, 0.95],
-}))(View);
+}))(LinearGradient);
 
 const UpperControls = styled({
   flexDirection: 'row',

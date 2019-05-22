@@ -36,7 +36,6 @@ export const defaults = {
   cacheLoaded: false,
   pushId: null,
   notificationsEnabled: Platform.OS === 'android',
-  mediaPlayer,
 };
 
 const getIsLoggedIn = gql`
