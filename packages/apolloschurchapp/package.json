@@ -99,7 +99,7 @@
     "react-native-device-info": "0.22.5",
     "react-native-image-picker": "0.28.0",
     "react-native-keyboard-aware-scroll-view": "0.7.0",
-    "react-native-linear-gradient": "2.5.3",
+    "react-native-linear-gradient": "2.5.4",
     "react-native-maps": "^0.24.2",
     "react-native-music-control": "^0.10.2",
     "react-native-onesignal": "3.2.7",
