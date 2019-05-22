@@ -1,14 +1,19 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
+import BackgroundView from '../BackgroundView';
 import styled from '../styled';
 
 import ChannelLabel from '.';
 
-storiesOf('ChannelLabel', module)
-  .addDecorator((getStory) => <CenteredView>{getStory()}</CenteredView>)
+storiesOf('ui-kit/ChannelLabel', module)
+  .addDecorator((getStory) => (
+    <BackgroundView>
+      <CenteredView>{getStory()}</CenteredView>
+    </BackgroundView>
+  ))
   .add('Default', () => <ChannelLabel label={'Default'} />)
   .add('isLoading', () => <ChannelLabel label={'Default'} isLoading />)
   .add('With Icon', () => <ChannelLabel label={'Albums'} icon={'like-solid'} />)

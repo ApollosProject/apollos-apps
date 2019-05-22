@@ -8,7 +8,6 @@ import UserAvatarView from 'apolloschurchapp/src/ui/UserAvatarView';
 import {
   withIsLoading,
   Touchable,
-  ConnectedImage,
   Icon,
   withTheme,
   styled,
@@ -34,8 +33,6 @@ const UserAvatarHeader = ({
   firstName,
   lastName,
   location,
-  photo,
-  refetch,
   navigation,
   disabled,
   isLoading,
@@ -46,15 +43,11 @@ const UserAvatarHeader = ({
         firstName={firstName}
         lastName={lastName}
         location={location}
-        photo={photo}
-        refetch={refetch}
         disabled={disabled}
         isLoading={isLoading}
       />
     </FlexedView>
-    <Touchable
-      onPress={() => navigation.navigate('UserSettings', { photo, refetch })}
-    >
+    <Touchable onPress={() => navigation.navigate('UserSettings')}>
       <SettingsIcon />
     </Touchable>
   </Container>
@@ -64,8 +57,6 @@ UserAvatarHeader.propTypes = {
   firstName: PropTypes.string,
   lastName: PropTypes.string,
   location: PropTypes.string,
-  photo: ConnectedImage.propTypes.source,
-  refetch: PropTypes.func,
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     navigate: PropTypes.func,

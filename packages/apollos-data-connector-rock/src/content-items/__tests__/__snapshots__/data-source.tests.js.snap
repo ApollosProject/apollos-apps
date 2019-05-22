@@ -3,7 +3,7 @@
 exports[`ContentItemsModel filters by content channel id 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28ContentChannelId%20eq%201%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=StartDateTime%20desc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28ContentChannelId%20eq%201%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=StartDateTime%20desc",
     Object {},
     Object {},
   ],
@@ -29,7 +29,7 @@ Array [
     Object {},
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -55,7 +55,7 @@ Array [
     Object {},
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -86,7 +86,7 @@ Array [
     Object {},
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T12%3A34%3A56.000Z%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -118,6 +118,27 @@ exports[`ContentItemsModel gets by id 2`] = `
 Object {
   "id": 1,
 }
+`;
+
+exports[`ContentItemsModel gets by ids 1`] = `
+Array [
+  Array [
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`ContentItemsModel gets by ids 2`] = `
+Array [
+  Object {
+    "id": 1,
+  },
+  Object {
+    "id": 2,
+  },
+]
 `;
 
 exports[`ContentItemsModel returns null when there are no child content items 1`] = `

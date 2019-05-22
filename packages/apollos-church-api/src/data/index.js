@@ -13,7 +13,6 @@ import {
   Followings,
   Interactions,
   RockConstants,
-  Family,
   Person,
   ContentItem,
   ContentChannel,
@@ -23,6 +22,7 @@ import {
   Template,
   AuthSms,
   Campus,
+  BinaryFiles,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -46,25 +46,13 @@ const data = {
   RockConstants,
   Sharable,
   Analytics,
-  Family,
   OneSignal,
-  UniversalContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
-  DevotionalContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
-  ContentSeriesContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
-  MediaContentItem: {
-    dataSource: ContentItem.dataSource,
-  }, // alias
   PersonalDevice,
   OneSignalWithRock,
   Pass,
   Template,
   Campus,
+  BinaryFiles,
 };
 
 const {

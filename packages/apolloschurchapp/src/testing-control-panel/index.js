@@ -28,6 +28,11 @@ export default class TestingControlPanel extends PureComponent {
             />
           )}
         </UserWebBrowserConsumer>
+        <TouchableCell
+          handlePress={() => this.props.navigation.navigate('Onboarding')}
+          iconName="Avatar"
+          cellText={`Launch Onboarding`}
+        />
       </TableView>
     );
   }

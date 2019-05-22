@@ -1,13 +1,15 @@
 {
   "name": "@apollosproject/ui-htmlview",
-  "version": "0.8.0-alpha.8",
+  "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
-    "src/**"
+    "src/**",
+    "storybook/**"
   ],
   "scripts": {
     "test": "jest",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
   "keywords": [
@@ -26,10 +28,7 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
-    ],
-    "transform": {
-      ".+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    ]
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
@@ -37,20 +36,18 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
+    "@apollosproject/ui-kit": "^0.8.6",
     "htmlparser2": "3.9.2"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
-    "@storybook/react-native": "^4.0.7",
     "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "^16.8.2",
+    "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-native": "0.57.5",
-    "react-test-renderer": "16.6.1"
+    "react-native": "0.58.5",
+    "react-test-renderer": "16.6.3"
   },
   "publishConfig": {
     "access": "public"

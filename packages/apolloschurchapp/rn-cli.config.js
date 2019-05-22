@@ -4,7 +4,12 @@ const blacklist = require('metro-config/src/defaults/blacklist');
 const localDeps = [
   path.resolve('..', 'apollos-ui-kit'),
   path.resolve('..', 'apollos-ui-passes'),
+  path.resolve('..', 'apollos-ui-auth'),
   path.resolve('..', 'apollos-ui-htmlview'),
+  path.resolve('..', 'apollos-ui-analytics'),
+  path.resolve('..', 'apollos-ui-storybook'),
+  path.resolve('..', 'apollos-ui-onboarding'),
+  path.resolve('..', 'apollos-ui-scripture'),
 ];
 
 module.exports = {
@@ -24,11 +29,22 @@ module.exports = {
         (depPath) =>
           new RegExp(`${depPath}/node_modules/react-native-linear-gradient/.*`)
       ),
+      ...localDeps.map(
+        (depPath) =>
+          new RegExp(`${depPath}/node_modules/.*/node_modules/react-native/.*`)
+      ),
+      new RegExp(
+        `${path.resolve('.', 'node_modules')}/.*/node_modules/react-native/.*`
+      ),
       new RegExp(
         `${path.resolve('..', '..', 'node_modules', 'react-native')}/.*`
       ),
       new RegExp(
-        `${path.resolve('..', '..', 'node_modules')}/.*/react-native/.*`
+        `${path.resolve(
+          '..',
+          '..',
+          'node_modules'
+        )}/.*/node_modules/react-native/.*`
       ),
       new RegExp(
         `${path.resolve('../../node_modules/react-native-linear-gradient')}/.*`

@@ -27,32 +27,23 @@ const Content = styled(({ theme }) => ({
 const UserAvatarView = withIsLoading(
   ({
     theme,
-    photo,
     firstName,
     lastName,
     location,
     isLoading,
-    refetch,
-    onPhotoPress,
-    setIsUploadingFile,
-    isUploadingFile,
     disabled,
     ...viewProps
   }) => (
     // todo: handle file select stuff
     <Container {...viewProps}>
-      <AvatarForm
-        isLoading={isLoading}
-        text={false}
-        disabled={disabled}
-        photo={photo}
-        refetch={refetch}
-      />
+      <AvatarForm isLoading={isLoading} text={false} disabled={disabled} />
       <Content>
         <H3>
           {firstName} {lastName}
         </H3>
-        <ChannelLabel icon="pin" label={location || ''} isLoading={isLoading} />
+        {location && (
+          <ChannelLabel icon="pin" label={location} isLoading={isLoading} />
+        )}
       </Content>
     </Container>
   )
@@ -64,10 +55,8 @@ UserAvatarView.propTypes = {
   lastName: PropTypes.string,
   location: PropTypes.string,
   isLoading: PropTypes.bool,
-  refetch: PropTypes.func,
-  onPhotoPress: PropTypes.func,
+  disabled: PropTypes.bool,
   blurIntensity: PropTypes.number,
-  allowProfileImageChange: PropTypes.bool,
   ...View.propTypes,
 };
 

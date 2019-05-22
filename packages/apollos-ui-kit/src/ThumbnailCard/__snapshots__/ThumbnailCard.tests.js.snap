@@ -2,6 +2,7 @@
 
 exports[`the ThumbnailCard component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -107,6 +108,7 @@ exports[`the ThumbnailCard component should render 1`] = `
 
 exports[`the ThumbnailCard component should render a loading state 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -303,6 +305,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
 
 exports[`the ThumbnailCard component should render with a category 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -440,6 +443,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
 
 exports[`the ThumbnailCard component should render with a category and images 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -637,6 +641,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
 
 exports[`the ThumbnailCard component should render with a description 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -764,6 +769,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
 
 exports[`the ThumbnailCard component should render with an images 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

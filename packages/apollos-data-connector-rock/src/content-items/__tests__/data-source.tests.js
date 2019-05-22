@@ -50,6 +50,22 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('gets by ids', () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
+    const result = dataSource.getFromIds([1, 2]).get();
+    expect(result).resolves.toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns an empty array when calling getByIds with no ids', () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn();
+    const result = dataSource.getFromIds([]).get();
+    expect(result).resolves.toEqual([]);
+    expect(dataSource.get.mock.calls.length).toEqual(0);
+  });
+
   it('gets a cursor finding child content items of a provided parent', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock(
@@ -113,5 +129,19 @@ describe('ContentItemsModel', () => {
     const cursor = await dataSource.getCursorByChildContentItemId(1);
     expect(cursor).toBe(null);
     expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns null when there are no parent content items with images', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+
+    const image = await dataSource.getCoverImage({
+      attributeValues: {},
+      attributes: {},
+    });
+
+    expect(image).toBe(null);
   });
 });

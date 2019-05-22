@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CardTile from '.';
 
@@ -11,7 +11,7 @@ const containerStyles = {
   backgroundColor: '#f7f7f7',
 };
 
-storiesOf('CardTile', module)
+storiesOf('ui-kit/CardTile', module)
   .add('Default', () => (
     <View style={containerStyles}>
       <CardTile title={'Why Jesus is Timeless'} />

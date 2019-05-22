@@ -40,11 +40,18 @@ export const authSchema = gql`
 `;
 
 export const peopleSchema = gql`
+  enum GENDER {
+    Male
+    Female
+    Unknown
+  }
   enum UPDATEABLE_PROFILE_FIELDS {
     FirstName
     LastName
     Email
     NickName
+    Gender
+    BirthDate
   }
 
   input UpdateProfileInput {
@@ -58,6 +65,8 @@ export const peopleSchema = gql`
     lastName: String!
     nickName: String
     email: String
+    gender: GENDER
+    birthDate: String
     photo: ImageMediaSource
   }
 
@@ -65,10 +74,6 @@ export const peopleSchema = gql`
     updateProfileField(input: UpdateProfileInput!): Person
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person
-  }
-
-  extend type Query {
-    people(email: String!): [Person]
   }
 `;
 
@@ -341,7 +346,10 @@ export const contentItemSchema = gql`
   }
 
   extend type Query {
+    campaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
+      @cacheControl(maxAge: 0)
+    personaFeed(first: Int, after: String): ContentItemsConnection
       @cacheControl(maxAge: 0)
   }
 `;
@@ -384,12 +392,6 @@ export const contentSharableSchema = gql`
 `)}
 `;
 
-export const familySchema = gql`
-  extend type Person {
-    location: String
-  }
-`;
-
 export const liveSchema = gql`
   type LiveStream {
     isLive: Boolean
@@ -415,7 +417,7 @@ export const pushSchema = gql`
 export const campusSchema = gql`
   type Campus implements Node {
     id: ID!
-    name: String!
+    name: String
     street1: String
     street2: String
     city: String
@@ -434,6 +436,14 @@ export const campusSchema = gql`
   input CampusLocationInput {
     latitude: Float!
     longitude: Float!
+  }
+
+  extend type Person {
+    campus: Campus
+  }
+
+  extend type Mutation {
+    updateUserCampus(campusId: String!): Person
   }
 `;
 
@@ -458,7 +468,8 @@ export const followingsSchema = gql`
 `)}
 
   extend type Query {
-    getAllLikedContent: [ContentItem] @cacheControl(maxAge: 0)
+    likedContent(first: Int, after: String): ContentItemsConnection
+      @cacheControl(maxAge: 0)
   }
 `;
 

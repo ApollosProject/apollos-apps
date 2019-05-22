@@ -1,13 +1,15 @@
-import querystring from 'querystring';
 import URL from 'url';
-import gql from 'graphql-tag';
+import querystring from 'querystring';
 import { Component } from 'react';
 import { Linking } from 'react-native';
+import PropTypes from 'prop-types';
+import gql from 'graphql-tag';
+import { withApollo } from 'react-apollo';
 import OneSignal from 'react-native-onesignal';
-import { get } from 'lodash';
 import Config from 'react-native-config';
+import { get } from 'lodash';
+
 import NavigationService from '../NavigationService';
-import { client } from '../client';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -15,12 +17,25 @@ const UPDATE_DEVICE_PUSH_ID = gql`
   }
 `;
 
-export default class NotificationsInit extends Component {
+class NotificationsInit extends Component {
+  static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
+  };
+
   static navigationOptions = {};
+
+  static propTypes = {
+    client: PropTypes.shape({
+      mutate: PropTypes.func,
+    }),
+  };
 
   componentDidMount() {
     OneSignal.init(Config.ONE_SIGNAL_KEY, {
-      kOSSettingsKeyAutoPrompt: true,
+      kOSSettingsKeyAutoPrompt: false,
     });
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
@@ -67,13 +82,15 @@ export default class NotificationsInit extends Component {
   };
 
   onIds = (device) => {
-    client.mutate({
+    this.props.client.mutate({
       mutation: UPDATE_DEVICE_PUSH_ID,
       variables: { pushId: device.userId },
     });
   };
 
   render() {
-    return null;
+    return this.props.children;
   }
 }
+
+export default withApollo(NotificationsInit);

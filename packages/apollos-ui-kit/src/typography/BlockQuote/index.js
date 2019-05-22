@@ -5,7 +5,7 @@ import { StyleSheet, View } from 'react-native';
 
 import styled from '../../styled';
 import { withThemeMixin } from '../../theme';
-import { BodyText } from '..';
+import BodyText from '../BodyText';
 
 const Block = compose(
   setDisplayName('BlockQuote'),

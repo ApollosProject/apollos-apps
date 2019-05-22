@@ -8,6 +8,7 @@ import Chip from '../../Chip';
 
 import InputWrapper from '../InputWrapper';
 import FloatingLabel from '../FloatingLabel';
+import ErrorText from '../ErrorText';
 
 const chipStyle = { marginTop: 5 };
 
@@ -66,6 +67,9 @@ class DateInput extends PureComponent {
           <FloatingLabel animation={new Animated.Value(1)}>
             {this.props.label}
           </FloatingLabel>
+        ) : null}
+        {this.props.error && typeof this.props.error === 'string' ? (
+          <ErrorText>{this.props.error}</ErrorText>
         ) : null}
       </InputWrapper>
     );

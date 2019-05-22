@@ -21,6 +21,8 @@ ROCK:
 ONE_SIGNAL:
   APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
+CHURCH_ONLINE:
+  URL: https://apollos.churchonline.org/api/v1/
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
@@ -73,6 +75,10 @@ ROCK_MAPPINGS:
     ContentItem:
       EntityType: ContentChannelItem
 
+  DATAVIEW_CATEGORIES:
+    # Id of the category used to store all persona dataviews
+    PersonaId: 210
+
   # Apollos will pull these content channels and expose them in the app on the discover screen.
   DISCOVER_CONTENT_CHANNEL_IDS:
     - 2
@@ -90,6 +96,9 @@ ROCK_MAPPINGS:
     - 5
     - 6
     - 8
+
+  CAMPAIGN_CHANNEL_IDS:
+    - 11
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:

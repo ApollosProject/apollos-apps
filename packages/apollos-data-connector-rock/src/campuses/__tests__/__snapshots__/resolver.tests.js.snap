@@ -113,6 +113,58 @@ Object {
 }
 `;
 
+exports[`Campus gets campuses (without location) 2`] = `
+Array [
+  Array [
+    Request {
+      "agent": undefined,
+      "compress": true,
+      "counter": 0,
+      "follow": 20,
+      "size": 0,
+      "timeout": 0,
+      Symbol(Body internals): Object {
+        "body": null,
+        "disturbed": false,
+        "error": null,
+      },
+      Symbol(Request internals): Object {
+        "headers": Headers {
+          Symbol(map): Object {
+            "Authorization-Token": Array [
+              "some-rock-token",
+            ],
+            "Content-Type": Array [
+              "application/json",
+            ],
+            "user-agent": Array [
+              "Apollos",
+            ],
+          },
+        },
+        "method": "GET",
+        "parsedURL": Url {
+          "auth": null,
+          "hash": null,
+          "host": "apollosrock.newspring.cc",
+          "hostname": "apollosrock.newspring.cc",
+          "href": "https://apollosrock.newspring.cc/api/Campuses?loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "path": "/api/Campuses?loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "pathname": "/api/Campuses",
+          "port": null,
+          "protocol": "https:",
+          "query": "loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "search": "?loadAttributes=expanded&%24filter=IsActive%20eq%20true&%24expand=Location%2CLocation%2FImage",
+          "slashes": true,
+        },
+        "redirect": "follow",
+        "signal": null,
+      },
+    },
+  ],
+]
+`;
+
 exports[`Campus gets campuses sorted by location 1`] = `
 Object {
   "data": Object {
@@ -180,4 +232,92 @@ Object {
     ],
   },
 }
+`;
+
+exports[`Campus gets current user's campus 1`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "profile": Object {
+        "campus": Object {
+          "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+          "latitude": 1.1,
+          "longitude": 2.2,
+          "name": "the best campus",
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Campus gets current user's campus 2`] = `
+Array [
+  Array [
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Campus returns null if a user has no campus 1`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "profile": Object {
+        "campus": null,
+      },
+    },
+  },
+}
+`;
+
+exports[`Campus returns null if a user has no campus 2`] = `
+Array [
+  Array [
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Campus updates a current user's campus 1`] = `
+Object {
+  "data": Object {
+    "updateUserCampus": Object {
+      "campus": Object {
+        "id": "Campus:2cc8f539e345e8f479a55e2fdc9743c0",
+        "name": "the very best campus",
+      },
+    },
+  },
+}
+`;
+
+exports[`Campus updates a current user's campus 2`] = `
+Array [
+  Array [
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Campus updates a current user's campus 3`] = `
+Array [
+  Array [
+    "/Groups/1",
+    Object {
+      "CampusId": "123",
+    },
+  ],
+]
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import ThumbnailCard from '.';
 
@@ -10,7 +10,7 @@ const containerStyles = {
   backgroundColor: '#f7f7f7',
 };
 
-storiesOf('ThumbnailCard', module)
+storiesOf('ui-kit/ThumbnailCard', module)
   .add('Default', () => (
     <View style={containerStyles}>
       <ThumbnailCard title={'Why Jesus is Timeless'} />

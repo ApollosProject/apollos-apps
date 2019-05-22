@@ -1,3 +1,160 @@
+v0.8.6: May 14, 2019
+
+- Adds Storybook as an NPM package (#683) (6fc05ad1)
+- Adds binary files datasource (#699) (1f04d21f)
+- Adds Apollos.json to help improve upgrade tool. (#696) (6fa6c530)
+- Adds strategy for canary releases (#703) (348f279a)
+
+- Updates bible.api usage to match current practices (#708) (32312d19)
+
+- Fixes personal devices post by providing required rock field (#706) (c1784acb)
+- Fixes Travis deploy script, deploy script arg can only take a single command (#707) (ae305ce8)
+- Fixes appcenter by running story build task (#701) (2757b73f)
+- Fixes null scripture crash and devotional tests. (#684) (f699db78)
+
+
+v0.8.5: May 8, 2019
+
+- Adds onboarding package (#678) (08c423b4)
+- Fixes email field rendering as [Object object] for sms users (#623) (82041a21)
+
+
+v0.8.4: May 2, 2019
+
+- Adds featured content in home feed (#603) (bb05dc92)
+- Adds Script to Debug Travis (#663) (ad5cc98a)
+- Adds Text Input Underline Option (#630) (9425128a)
+- Updates Several RN Packages (#660) (702b6599)
+- Updates README.md with typo fix (#669) (16df16a7)
+- Cleans up and fixes lots of UI/UX related Onboarding issues (#640) (b07ca864)
+- Fixed test and snapshot scheduled to fail after a year (#666) (37abc08b)
+- Removes Avatar Margin (#667) (2a27ed41)
+- Removes Custom Tabs (#661) (7e6644f8)
+- Removes react-native-custom-tabs on ios (#671) (efc02f85)
+
+v0.8.3: April 25, 2019
+
+- Adds Script to Generate Component Docs (#601) (a7b5fb54)
+- Adds Static iOS Launch Images (#624) (b2ca824e)
+- Removes warning from onboarding (#653) (33d1bcc7)
+- Simplifies Switch and Fixes Warnings (#628) (56c81a2a)
+- v0.8.2 (#643) (4c1ce053)
+
+
+v0.8.2: April 17, 2019
+
+- Fixs Chip component prop warning that was noticed on onboarding (#639) (84e4a1ea)
+- Fixes UX for when users finish onboarding (#637) (70beb296)
+- disable default notifications prompt (#638) (ec306b6b)
+- Add Prayer Icon (#632) (9248fbd7)
+- Upgrades Formik (#633) (050f9e27)
+- Updated the passkit package to latest version (#627) (0f2a17b2)
+- Adds OnBoarding LocationFinder Screens (#598) (1dc4bcea)
+- Adds SMS Auth UI (#591) (18bda067)
+- Updates Android color variable names to be more generic (#618) (5345ca62)
+- Fixes date picker being unusable for users with null dates (#622) (ce4c5399)
+- Adds routing from Auth -> Onboarding -> Home (#621) (0afd5089)
+- [OnBoarding] Adds Connected AboutYou Component (#613) (88de0638)
+- Adds `AuthLoadingSwitch` to Navigate different directions, depending on if a user is logged in. (#615) (4655403d)
+- Fixes Live Content Timezones (#611) (10609dcd)
+- Adds ConnectedAskName Components to Onboarding (#612) (51324c79)
+- Makes Android Development Smoother (#586) (3c09b69b)
+- Creates new personalize component for home feed. (#596) (e7a4720f)
+- Adds Analytics UI Package (#604) (62d06122)
+- add new issue templates (#608) (35c28751)
+- v0.8.1 (#607) (678c7891)
+
+
+v0.8.1: March 25, 2019
+
+- Adds Onboarding About You Screen (#581) (756d540d)
+- Adds UI Auth package (#576) (ac64f9e8)
+- Adds testing control panel access to onboarding (#599) (80eb0349)
+- Adds Radio Exports, Tests, and Stories (#597) (93908dfc)
+- Adds Onboarding "Features" Screen (#580) (9db71fe5)
+- Adds App Splash Screen (#579) (19ed0a76)
+- Adds MapView Component (#527) (a5449d66)
+- Adds Person dataSource method to getViaAliasId w/ tests (#595) (f7d73f04)
+- Adds Onboarding notifications screen (#578) (9c2505cc)
+- Adds support for Node to use Interface's DataModel instead of relying on Aliases (#585) (269e2926)
+- Adds Pagination w/ First and Limit support to the getLikedContent (#568) (a586294e)
+
+- Fixes profile after updating location (#605) (b115456e)
+- Fixes mounting graphql at root to fix pass generation (#600) (b392ad59)
+- Fixes ButtonIcon to support style prop (#547) (34fc51d4)
+- Fixes accessing a person's field by non-current person (#587) (da9fc161)
+- Fixes user campus not returning location (#584) (4ca7b3fb)
+
+- Upgrades React Native (#572) (7ad160da)
+
+
+v0.8.0: March 6, 2019
+
+- Adds API for getting / updating current campus (#577) (5257f595)
+- Adds Person Birth Date (#575) (ade8d716)
+- Adds HTMLView package (#541) (79b17838)
+- Adds Gender in Person API (#574) (5571a916)
+- Adds Onboarding Scaffold (#536) (e4d4b06c)
+- Adds PersonaFeed query [Personalize Content] (#528) (47298627)
+- Adds readme for OneSignal package (#542) (d458fd20)
+- Adds `campuses` schema and rock-connector (#538) (e0da820c)
+- Adds Passes UI (#533) (8a0305e0)
+- Adds Terraform Config (#513) (7f1a9204)
+- Adds Rock Package Readme (#537) (da8d01f8)
+- Adds Sms Login API (#534) (82f9a4d8)
+- Adds props support to BackgroundView (#524) (fb5821b4)
+- Adds Rock Request logging extension to apollo-datasource-rock (#511) (56478589)
+- Adds Authenticated WebViews (#508) (51e9dbb7)
+- Adds Passes GraphQL schema, template generation, and a REST endpoint to download pkpass files (#504) (4d346a1d)
+- Adds deep schema merge tool (#510) (bd2392c6)
+- Adds proper CDN url in prod (#509) (b2b415d3)
+- Adds ability to run yarn ios and yarn android from project root (#507) (c824a868)
+- Adds Fastly CDN and Data Caching (#502) (86731ea4)
+- Adds react-native-config instead of react-native-dotenv (#491) (c7f1b380)
+- Adds PersonalDevices dataSource and attaches PersonalDevices to OneSignal. (#482) (75405724)
+- Adds OneSignal pushId reporting to Apollos App (#478) (b1403f74)
+- Adds "Upload Push ID" Mutation (#477) (82740ade)
+- Adds configurable Content Items (#463) (56d7330d)
+- Adds filters for active in content items data source (#465) (f76ced85)
+- Adds Scripture API Multiple Verse Support (#466) (589e9fcc)
+- Adds Airplay Implementation (#422) (bd74e311)
+- Adds all Rock Classes into single Rock Package (#462) (fbefd7f4)
+- Adds Parallellized postinstall build command 💥🚀 (#460) (367acf87)
+- Adds church online connector (#440) (502704f0)
+- Adds Cloudinary / Media resolver packages (#446) (1961eb45)
+- Adds nested navigation to Content Single screens (#364) (f2f3d232)
+- Adds Like/Unlike using Following rock table (#458) (2e3f9214)
+- Adds TestUtils to be used by all package test suites (#457) (017c0d9b)
+- Adds more media player UI/UX polish and improves tappability (#420) (579dc079)
+- Adds heroku.yml for Heroku deploys (#445) (6f9cfda9)
+- Adds a new Card component and visual design for cards across the app (#323) (b20deb08)
+
+- Polishes UI/UX for Discover and Profile tabs (#442) (3fd4664c)
+- Polishes StatusBar appearance when MediaPlayer is fullscreen (#373) (7d9f018a)
+
+- Removes People (by email) Query (#582) (7a1d9e03)
+- Removes the validation requirement to select save button (#479) (dcac74d4)
+
+- Fixes filter error when content item has no images and no parents with images (#570) (db5c4757)
+- Fixes apollo server mounted on root path (#569) (4c2cee6d)
+- Fixes packing up ui-passes into server docker image (#540) (a711067a)
+- Fixes for Storybook to work in packaged monorepo (f1c16763)
+- Fixes up Content Item Code (#506) (c0488599)
+- Fixes timezone of dates sent to rock when filtering content items (#488) (2244b92c)
+- Fixes missing content when content is not expired  (#475) (8d700b00)
+- Fixes Unseen Content Like Button Crash (#464) (e68d1f6c)
+- Fixes MISC UI issues discovered while working on Willow Creek prototype (#441) (d7c9086d)
+- Fixes summary field throwing an error when no description (#456) (1d3757d7)
+- Fixes styles so that auth inputs are not hidden behind the keyboard (#447) (f7ced4ea)
+- Fixes Series Trailers not playing after Logout (#454) (bdc3f694)
+- Fixes an issue from a bad merge on content single navigation (#455) (81385b99)
+- Fixes nodemon version in client (#452) (6c042113)
+- Fixes theme mixins (#449) (316b2ce2)
+- Fixes nodemon version to remove flatmap-stream dep (#451) (e1782690)
+- Fixes sharing message and android sharing (#428) (afd9e259)
+- Fixes Empty Scripture Tab (#427) (a062ac79)
+- Fixes deploys (#439) (5225a222)
+
 v0.7.0: November 19, 2018
 
 - Adds Apollo Data Connector Bible (#436) (545956da)
