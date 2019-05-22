@@ -19,6 +19,7 @@ module.exports = {
         '.',
         'node_modules/react-native-linear-gradient'
       ),
+      'react-native-svg': path.resolve('.', 'node_modules/react-native-svg'),
     },
     blacklistRE: blacklist([
       ...localDeps.map(
@@ -27,6 +28,9 @@ module.exports = {
       ...localDeps.map(
         (depPath) =>
           new RegExp(`${depPath}/node_modules/react-native-linear-gradient/.*`)
+      ),
+      ...localDeps.map(
+        (depPath) => new RegExp(`${depPath}/node_modules/react-native-svg/.*`)
       ),
       ...localDeps.map(
         (depPath) =>
