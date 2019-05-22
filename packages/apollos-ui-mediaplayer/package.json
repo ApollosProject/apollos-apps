@@ -40,7 +40,8 @@
     "react-native-video": "*",
     "react-native-music-control": "*",
     "react-native-video-controls": "*",
-    "react-navigation": "*"
+    "react-navigation": "*",
+    "react-native-airplay-btn": "*"
   },
   "dependencies": {
     "graphql-tag": "^2.10.1"
@@ -56,7 +57,7 @@
     "react": "^16.6.3",
     "react-native": "0.58.5",
     "react-native-linear-gradient": "2.5.3",
-    "react-native-passkit-wallet": "^0.1.4",
+    "react-native-airplay-btn": "^1.0.6",
     "react-native-svg": "9.2.4",
     "react-navigation": "2.18.3",
     "react-test-renderer": "16.6.1",

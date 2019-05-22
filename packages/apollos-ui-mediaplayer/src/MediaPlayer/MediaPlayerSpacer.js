@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 import { get } from 'lodash';
 
 import { styled } from '@apollosproject/ui-kit';
-import { MINI_PLAYER_HEIGHT } from 'apolloschurchapp/src/ui/MediaPlayer';
+import { MINI_PLAYER_HEIGHT } from './MiniControls';
 
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
 

@@ -6,7 +6,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { get } from 'lodash';
 
-import { MediaPlayerSpacer } from 'apolloschurchapp/src/ui/MediaPlayer';
+import { MediaPlayerSpacer } from '@apollosproject/ui-mediaplayer';
 import { styled, withTheme } from '@apollosproject/ui-kit';
 
 const mediaPlayerIsVisibleQuery = gql`
