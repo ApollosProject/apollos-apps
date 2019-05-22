@@ -36,10 +36,6 @@
     "react": "*",
     "react-native": "*"
   },
-  "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.0-alpha.8",
-    "@apollosproject/ui-htmlview": "^0.8.0-alpha.8"
-  },
   "devDependencies": {
     "@apollosproject/ui-storybook": "^0.8.6",
     "metro-react-native-babel-preset": "^0.53.1",
