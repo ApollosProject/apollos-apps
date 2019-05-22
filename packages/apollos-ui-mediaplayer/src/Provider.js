@@ -17,28 +17,34 @@ export const defaults = {
 };
 
 export const schema = `
-  type MediaPlayerState {
-    currentTrack: MediaPlayerTrack
-    isPlaying: Boolean
-    isFullscreen: Boolean
-    isVisible: Boolean
-    currentTime: Float
-  }
-   type MediaPlayerProgress {
-    currentTime: Float
-    playableDuration: Float
-    seekableDuration: Float
-    duration: Float
-  }
-   type MediaPlayerTrack {
-    id: ID!
-    parentId: ID
-    mediaSource: VideoMediaSource!
-    posterSources: [ImageMediaSource]
-    title: String
-    artist: String
-    isVideo: Boolean
-  }
+extend type Query {
+  mediaPlayer: MediaPlayerState
+}
+
+type MediaPlayerState {
+  currentTrack: MediaPlayerTrack
+  isPlaying: Boolean
+  isFullscreen: Boolean
+  isVisible: Boolean
+  currentTime: Float
+}
+
+type MediaPlayerProgress {
+  currentTime: Float
+  playableDuration: Float
+  seekableDuration: Float
+  duration: Float
+}
+
+type MediaPlayerTrack {
+  id: ID!
+  parentId: ID
+  mediaSource: VideoMediaSource!
+  posterSources: [ImageMediaSource]
+  title: String
+  artist: String
+  isVideo: Boolean
+}
 `;
 
 const defaultContext = {
@@ -49,12 +55,6 @@ const defaultContext = {
 const MediaPlayerContext = React.createContext(defaultContext);
 
 let trackId = 0;
-
-export const getAuthToken = gql`
-  query authToken {
-    authToken @client
-  }
-`;
 
 export const resolvers = {
   Query: {},

@@ -9,7 +9,7 @@ import Share from 'apolloschurchapp/src/ui/Share';
 
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import LikeButton from 'apolloschurchapp/src/ui/LikeButton';
-import { MediaPlayerSpacer } from '@apollosproject/ui-mediaplayer';
+import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 import getShareContent from './getShareContent';
 

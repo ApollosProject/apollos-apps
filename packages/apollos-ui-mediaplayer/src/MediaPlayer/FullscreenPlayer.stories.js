@@ -13,7 +13,7 @@ import MediaPlayerProvider from '../Provider';
 import { playVideoMutation } from './mutations';
 import MediaPlayer from '.';
 
-storiesOf('MediaPlayer', module).add('simple', () => (
+storiesOf('ui-media-player/MediaPlayer', module).add('simple', () => (
   <MediaPlayerProvider>
     <BackgroundView>
       <FlexedView>

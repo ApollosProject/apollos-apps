@@ -1,10 +1,7 @@
 import gql from 'graphql-tag';
 
 import { Platform } from 'react-native';
-import {
-  defaults as mediaPlayer,
-  schema as mediaPlayerSchema,
-} from '@apollosproject/ui-mediaplayer';
+import { schema as mediaPlayerSchema } from '@apollosproject/ui-media-player';
 import { CACHE_LOADED } from '../client/cache'; // eslint-disable-line
 
 import {
@@ -17,7 +14,6 @@ import {
 
 export const schema = `
   type Query {
-    mediaPlayer: MediaPlayerState
     devicePushId: String
     cacheLoaded: Boolean
     notificationsEnabled: Boolean

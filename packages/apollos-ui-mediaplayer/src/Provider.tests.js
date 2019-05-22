@@ -1,7 +1,7 @@
 import { client } from 'apolloschurchapp/src/client';
 import gql from 'graphql-tag';
 
-import { resolvers, defaults } from '.';
+import { resolvers, defaults } from './Provider';
 
 const query = gql`
   query {

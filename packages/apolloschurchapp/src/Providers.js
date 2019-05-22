@@ -2,7 +2,7 @@ import React from 'react';
 import { Providers } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
-import { MediaPlayerProvider } from '@apollosproject/ui-mediaplayer';
+import { MediaPlayerProvider } from '@apollosproject/ui-media-player';
 import NavigationService from './NavigationService';
 import { NotificationsManager } from './notifications';
 import ClientProvider from './client';

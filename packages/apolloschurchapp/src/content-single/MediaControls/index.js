@@ -4,7 +4,7 @@ import { Query, Mutation } from 'react-apollo';
 import { View } from 'react-native';
 import { get } from 'lodash';
 
-import { playVideoMutation } from '@apollosproject/ui-mediaplayer';
+import { playVideoMutation } from '@apollosproject/ui-media-player';
 import { Icon, styled, Button } from '@apollosproject/ui-kit';
 import getContentMedia from './getContentMedia';
 
