@@ -7,13 +7,13 @@ export default class ThemeProvider extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     themeInput: PropTypes.shape(THEME_PROPS),
-    iconInput: PropTypes.objectOf(PropTypes.element),
+    iconInput: PropTypes.objectOf(PropTypes.func),
   };
 
   static childContextTypes = {
     theme: PropTypes.shape(THEME_PROPS),
     themeInput: PropTypes.shape(THEME_PROPS),
-    iconInput: PropTypes.objectOf(PropTypes.element),
+    iconInput: PropTypes.objectOf(PropTypes.func),
   };
 
   static defaultProps = {
