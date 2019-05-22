@@ -4,7 +4,8 @@
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
-    "src/**"
+    "src/**",
+    "storybook/**"
   ],
   "scripts": {
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
