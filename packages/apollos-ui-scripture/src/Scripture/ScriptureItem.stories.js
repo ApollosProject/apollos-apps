@@ -95,7 +95,7 @@ const revelation22Loading = {
   },
 };
 
-storiesOf('Scripture', module)
+storiesOf('ui-scripture/Scripture', module)
   .add('Genesis 1:1-5', () => (
     <ScrollView>
       <PaddedView>
