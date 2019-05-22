@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
-import SafeAreaView from 'react-navigation';
+import { SafeAreaView } from 'react-navigation';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 
@@ -45,7 +45,7 @@ const Background = withTheme(({ theme }) => ({
     theme.colors.darkPrimary,
   ],
   locations: [0, 0.4, 0.95],
-}))(LinearGradient);
+}))(View);
 
 const UpperControls = styled({
   flexDirection: 'row',

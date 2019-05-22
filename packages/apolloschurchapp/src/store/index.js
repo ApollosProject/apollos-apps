@@ -1,6 +1,10 @@
 import gql from 'graphql-tag';
 
 import { Platform } from 'react-native';
+import {
+  defaults as mediaPlayer,
+  schema as mediaPlayerSchema,
+} from '@apollosproject/ui-mediaplayer';
 import { CACHE_LOADED } from '../client/cache'; // eslint-disable-line
 
 import {
@@ -24,6 +28,7 @@ export const schema = `
     updateDevicePushId(pushId: String!)
     updatePushPermissions(enabled: Boolean!)
   }
+${mediaPlayerSchema}
 `;
 
 export const defaults = {
@@ -31,6 +36,7 @@ export const defaults = {
   cacheLoaded: false,
   pushId: null,
   notificationsEnabled: Platform.OS === 'android',
+  mediaPlayer,
 };
 
 const getIsLoggedIn = gql`

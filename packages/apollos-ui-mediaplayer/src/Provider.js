@@ -5,12 +5,50 @@ import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 
+export const defaults = {
+  __typename: 'MediaPlayerState',
+  currentTrack: null,
+  isPlaying: false,
+  isFullscreen: false,
+  isVisible: false,
+  currentTime: 0,
+  showVideo: true,
+  muted: false,
+};
+
+export const schema = `
+  type MediaPlayerState {
+    currentTrack: MediaPlayerTrack
+    isPlaying: Boolean
+    isFullscreen: Boolean
+    isVisible: Boolean
+    currentTime: Float
+  }
+   type MediaPlayerProgress {
+    currentTime: Float
+    playableDuration: Float
+    seekableDuration: Float
+    duration: Float
+  }
+   type MediaPlayerTrack {
+    id: ID!
+    parentId: ID
+    mediaSource: VideoMediaSource!
+    posterSources: [ImageMediaSource]
+    title: String
+    artist: String
+    isVideo: Boolean
+  }
+`;
+
 const defaultContext = {
   navigateToAuth: () => {},
   closeAuth: () => {},
 };
 
 const MediaPlayerContext = React.createContext(defaultContext);
+
+let trackId = 0;
 
 export const getAuthToken = gql`
   query authToken {
@@ -150,6 +188,7 @@ const Provider = ({ children, ...authContext }) => (
     <ApolloConsumer>
       {(client) => {
         client.addResolvers(resolvers);
+        client.writeData({ data: { mediaPlayer: defaults } });
         return children;
       }}
     </ApolloConsumer>

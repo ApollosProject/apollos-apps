@@ -1,4 +1,4 @@
-export MediaPlayerProvider from './Provider';
+export MediaPlayerProvider, { defaults, schema } from './Provider';
 export MediaPlayer from './MediaPlayer';
 
 export { MINI_PLAYER_HEIGHT } from './MediaPlayer/MiniControls';
