@@ -3,7 +3,6 @@
   "version": "0.8.6",
   "private": true,
   "devDependencies": {
-    "codecov": "3.0.2",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "nodemon": "1.18.7",
