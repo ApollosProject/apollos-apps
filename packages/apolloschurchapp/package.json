@@ -62,6 +62,7 @@
     "@apollosproject/ui-analytics": "^0.8.6",
     "@apollosproject/ui-auth": "^0.8.6",
     "@apollosproject/ui-htmlview": "^0.8.6",
+    "@apollosproject/ui-scripture": "^0.8.6",
     "@apollosproject/ui-kit": "^0.8.6",
     "@apollosproject/ui-passes": "^0.8.6",
     "@apollosproject/ui-storybook": "^0.8.6",
