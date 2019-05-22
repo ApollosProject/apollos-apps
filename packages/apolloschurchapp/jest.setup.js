@@ -45,13 +45,6 @@ jest.mock('react-native-onesignal', () => ({
   configure: jest.fn(),
 }));
 
-jest.mock('react-native-music-control', () => ({
-  enableBackgroundMode: jest.fn(),
-  enableControl: jest.fn(),
-  on: jest.fn(),
-  setNowPlaying: jest.fn(),
-}));
-
 jest.mock('react-native-device-info', () => ({
   getUniqueID: () => 'id-123',
   getSystemVersion: () => 'sys-version-123',
