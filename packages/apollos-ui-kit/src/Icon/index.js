@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { compose, pure, getContext } from 'recompose';
-import { flow, camelCase, upperFirst, kebabCase } from 'lodash';
+import { flow, camelCase, upperFirst, kebabCase, merge } from 'lodash';
 
 import Placeholder from '../Placeholder';
 
-import * as Icons from './icons';
+import * as uikitIcons from './icons';
 
 const pascalCase = (string) =>
   flow(
@@ -23,14 +23,14 @@ const pascalCase = (string) =>
 const enhance = compose(
   pure,
   getContext({
-    iconInput: PropTypes.objectOf(PropTypes.element),
+    iconInput: PropTypes.objectOf(PropTypes.func),
   })
 );
 
 const Icon = enhance(
   ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
+    const Icons = merge(iconInput, uikitIcons);
     const IconComponent = Icons[pascalCase(name)];
-    console.log(iconInput);
     return (
       <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
         <IconComponent size={size} {...otherProps} />
@@ -40,7 +40,7 @@ const Icon = enhance(
 );
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)).isRequired,
+  name: PropTypes.oneOf(Object.keys(uikitIcons).map(kebabCase)).isRequired,
   size: PropTypes.number,
   fill: PropTypes.string,
   isLoading: PropTypes.bool,
