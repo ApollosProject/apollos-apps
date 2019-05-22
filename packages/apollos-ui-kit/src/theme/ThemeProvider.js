@@ -19,7 +19,7 @@ export default class ThemeProvider extends PureComponent {
   static defaultProps = {
     children: null,
     themeInput: {},
-    iconInput: { Boom: 'What' },
+    iconInput: {},
   };
 
   getChildContext = () => ({
