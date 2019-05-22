@@ -31,6 +31,7 @@ const Icon = enhance(
   ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
     const Icons = merge(iconInput, uikitIcons);
     const IconComponent = Icons[pascalCase(name)];
+
     return (
       <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
         <IconComponent size={size} {...otherProps} />
@@ -39,8 +40,24 @@ const Icon = enhance(
   }
 );
 
+// eslint-disable-next-line consistent-return
+const namePropValidator = (props, propName, componentName) => {
+  const icons = Object.keys(merge(props.iconInput, uikitIcons)).map(kebabCase);
+
+  if (!icons.includes(props.name)) {
+    // eslint-disable-next-line no-console
+    return new Error(
+      `Invalid prop \`${propName}\` of value \`${
+        props.name
+      }\` supplied to \`${componentName}\` expected one of ${JSON.stringify(
+        icons
+      )}`
+    );
+  }
+};
+
 Icon.propTypes = {
-  name: PropTypes.oneOf(Object.keys(uikitIcons).map(kebabCase)).isRequired,
+  name: namePropValidator,
   size: PropTypes.number,
   fill: PropTypes.string,
   isLoading: PropTypes.bool,
@@ -49,5 +66,7 @@ Icon.propTypes = {
 Icon.defaultProps = {
   size: 32, // 32 is the default size used within the svg component
 };
+
+Icon.displayName = 'Icon';
 
 export default Icon;
