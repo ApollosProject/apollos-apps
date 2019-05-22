@@ -431,7 +431,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         }
                       }
                     >
-                      <RNAirplay />
+                      AirPlayButton
                     </View>
                   </View>
                   <View
@@ -2562,7 +2562,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         }
                       }
                     >
-                      <RNAirplay />
+                      AirPlayButton
                     </View>
                   </View>
                   <View
@@ -4693,7 +4693,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         }
                       }
                     >
-                      <RNAirplay />
+                      AirPlayButton
                     </View>
                   </View>
                   <View
