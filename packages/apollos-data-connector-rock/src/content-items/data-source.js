@@ -5,17 +5,12 @@ import moment from 'moment-timezone';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
 
+import { createImageUrlFromGuid } from '../utils';
+
 const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
-
-  enforceProtocol = (uri) => (uri.startsWith('//') ? `https:${uri}` : uri);
-
-  createImageUrl = (uri) =>
-    uri.split('-').length === 5
-      ? `${ROCK.IMAGE_URL}?guid=${uri}`
-      : this.enforceProtocol(uri);
 
   attributeIsImage = ({ key, attributeValues, attributes }) =>
     attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
@@ -66,7 +61,7 @@ export default class ContentItem extends RockApolloDataSource {
       key,
       name: attributes[key].name,
       sources: attributeValues[key].value
-        ? [{ uri: this.createImageUrl(attributeValues[key].value) }]
+        ? [{ uri: createImageUrlFromGuid(attributeValues[key].value) }]
         : [],
     }));
   };
@@ -147,11 +142,16 @@ export default class ContentItem extends RockApolloDataSource {
     if (parentItems.length) {
       const parentImages = parentItems
         .map(this.getImages)
-        .find((images) => images.length)
-        .filter((image) => image.sources.length); // filter images w/o URLs
+        .find((images) => images.length);
 
-      if (parentImages && parentImages.length)
-        return pickBestImage(parentImages);
+      if (!parentImages) return null;
+
+      const validParentImages = parentImages.filter(
+        (image) => image.sources.length
+      );
+
+      if (validParentImages && validParentImages.length)
+        return pickBestImage(validParentImages);
     }
 
     return null;
@@ -159,16 +159,13 @@ export default class ContentItem extends RockApolloDataSource {
 
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
-    // Rock doesn't respect timezone information, hence the need to warp the date
+    // will create a timezone formatted string and then strip off the offset
+    // should output something like 2019-03-27T12:27:20 which means 12:27pm in New York
     const date = moment()
-      .utc()
-      .add(
-        moment()
-          .tz(ROCK.TIMEZONE)
-          .utcOffset(),
-        'minutes'
-      );
-    return `((StartDateTime lt datetime'${date.toISOString()}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date.toISOString()}') or (ExpireDateTime eq null)) `;
+      .tz(ROCK.TIMEZONE)
+      .format()
+      .split(/[-+]\d+:\d+/)[0];
+    return `((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)) `;
   };
 
   expanded = true;
@@ -239,6 +236,28 @@ export default class ContentItem extends RockApolloDataSource {
     return request.orderBy('Order');
   };
 
+  // Generates feed based on persons dataview membership
+  byPersonaFeed = async (first) => {
+    const {
+      dataSources: { Person },
+    } = this.context;
+
+    // Grabs the guids associated with all dataviews user is memeber
+    const getPersonaGuidsForUser = await Person.getPersonas({
+      categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
+    });
+
+    // Grabs content items based on personas
+    return this.request(
+      `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
+        .map((obj) => obj.guid)
+        .join()}`
+    )
+      .andFilter(this.LIVE_CONTENT())
+      .top(first)
+      .orderBy('StartDateTime', 'desc');
+  };
+
   byUserFeed = () =>
     this.request()
       .filterOneOf(
@@ -255,10 +274,18 @@ export default class ContentItem extends RockApolloDataSource {
       .andFilter(this.LIVE_CONTENT())
       .orderBy('StartDateTime', 'desc');
 
-  getFromIds = (ids) =>
+  byContentChannelIds = (ids = []) =>
     this.request()
+      .filterOneOf(ids.map((id) => `ContentChannelId eq ${id}`))
+      .andFilter(this.LIVE_CONTENT())
+      .orderBy('StartDateTime', 'desc');
+
+  getFromIds = (ids = []) => {
+    if (ids.length === 0) return this.request().empty();
+    return this.request()
       .filterOneOf(ids.map((id) => `Id eq ${id}`))
       .andFilter(this.LIVE_CONTENT());
+  };
 
   getFromId = (id) =>
     this.request()

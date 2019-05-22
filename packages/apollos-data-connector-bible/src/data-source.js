@@ -16,10 +16,9 @@ export default class Scripture extends RESTDataSource {
   }
 
   async getScripture(query) {
-    const bibleId = BIBLE_API.BIBLE_ID;
-    const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    if (get(scriptures, 'data.passages[0]')) {
-      return scriptures.data.passages[0];
+    const scriptures = await this.getScriptures(query);
+    if (scriptures[0]) {
+      return scriptures[0];
     }
     return null;
   }
@@ -27,6 +26,13 @@ export default class Scripture extends RESTDataSource {
   async getScriptures(query) {
     const bibleId = BIBLE_API.BIBLE_ID;
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    return scriptures.data.passages;
+    // Bible.api has a history of making unexpected API changes.
+    // At one point scriptures had a sub field, "passages"
+    // At another point, they returned the passage data on the `data` key directly.
+    // We should handle both for the time being.
+    if (get(scriptures, 'data.passages')) {
+      return scriptures.data.passages;
+    }
+    return scriptures.data;
   }
 }

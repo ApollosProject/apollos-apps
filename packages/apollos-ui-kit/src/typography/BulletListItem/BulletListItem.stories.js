@@ -1,12 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';
 
 import BulletListItem from '.';
 
-storiesOf('typography/BulletListItem', module)
+storiesOf('ui-kit/typography/BulletListItem', module)
   .add('Default', () => (
     <PaddedView>
       <BulletListItem>

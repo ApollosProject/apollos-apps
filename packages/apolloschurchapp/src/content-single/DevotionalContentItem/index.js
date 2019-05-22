@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-navigation';
 import { Query } from 'react-apollo';
 
 import {
@@ -86,10 +86,11 @@ class DevotionalContentItem extends PureComponent {
     loading,
   }) => {
     if (error) return <ErrorCard error={error} />;
+
     // only include scriptures where the references are not null
-    const validScriptures = scriptures.filter(
-      (scripture) => scripture.reference != null
-    );
+    const validScriptures = scriptures
+      ? scriptures.filter((scripture) => scripture.reference != null)
+      : [];
 
     const hasScripture = loading || validScriptures.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
@@ -108,7 +109,7 @@ class DevotionalContentItem extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <FlexedSafeAreaView>
+        <FlexedSafeAreaView forceInset={{ top: 'always' }}>
           <Query query={getScripture} variables={{ itemId: this.props.id }}>
             {this.renderTabs}
           </Query>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import PaddedView from '../../PaddedView';
 import { Paragraph, BodyText } from '..';
 
 import H3 from '.';
 
-storiesOf('typography/H3', module)
+storiesOf('ui-kit/typography/H3', module)
   .add('Default', () => (
     <H3>
       {

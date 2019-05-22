@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
-import { Platform, Switch, View } from 'react-native';
+import { Switch, View } from 'react-native';
 
 import { withTheme } from '../../theme';
 import FlexedView from '../../FlexedView';
@@ -19,14 +19,12 @@ const ControlWrapper = withInputControlViewStyles(View);
 const enhance = compose(
   pure,
   withTheme(({ theme }) => ({
-    onTintColor: theme.colors.primary,
-    activeTrackColor: theme.colors.primary,
-    trackColor: theme.colors.background.inactive,
-    tintColor: theme.colors.background.inactive,
-    activeThumbColor: theme.colors.background.paper,
-    ...Platform.select({
-      android: { thumbTintColor: theme.colors.background.paper },
-    }),
+    trackColor: {
+      true: theme.colors.primary,
+      false: theme.colors.background.inactive,
+    },
+    thumbColor: theme.colors.background.paper,
+    ios_backgroundColor: theme.colors.background.inactive,
   }))
 );
 

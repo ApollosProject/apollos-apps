@@ -1,0 +1,67 @@
+{
+  "name": "@apollosproject/ui-analytics",
+  "version": "0.8.6",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "main": "src/index.js",
+  "files": [
+    "src/**",
+    "storybook/**"
+  ],
+  "scripts": {
+    "test": "jest",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "lint": "eslint ./src --ext .js"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
+  "jest": {
+    "preset": "react-native",
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ]
+  },
+  "peerDependencies": {
+    "@apollos-project/ui-kit": "*",
+    "apollo-client": "*",
+    "react": "*",
+    "react-apollo": "*",
+    "react-native": "*",
+    "react-navigation": "*"
+  },
+  "dependencies": {
+    "apollo-link-context": "1.0.14",
+    "graphql-tag": "2.9.2",
+    "lodash": "4.17.11",
+    "react-native-device-info": "^1.1.0",
+    "react-native-keyboard-aware-scroll-view": "0.7.0"
+  },
+  "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^0.8.6",
+    "@apollosproject/ui-kit": "^0.8.6",
+    "apollo-client": "2.5.1",
+    "codecov": "3.1.0",
+    "jest": "23.6.0",
+    "jest-react-native": "18.0.0",
+    "prop-types": "15.6.1",
+    "react": "16.6.3",
+    "react-apollo": "2.5.5",
+    "react-dom": "16.6.3",
+    "react-native": "0.58.5",
+    "react-test-renderer": "16.6.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

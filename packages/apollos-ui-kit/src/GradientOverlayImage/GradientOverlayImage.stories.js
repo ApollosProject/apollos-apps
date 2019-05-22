@@ -1,9 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import GradientOverlayImage from '.';
 
-storiesOf('GradientOverlayImage', module)
+storiesOf('ui-kit/GradientOverlayImage', module)
   .add('Default', () => (
     <GradientOverlayImage source={'https://picsum.photos/600/400/?random'} />
   ))

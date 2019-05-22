@@ -70,6 +70,7 @@ const Text = enhance(
     theme,
     inputRef,
     focusAnimation: focusAnimationInput, // from withFocusAnimation
+    underline,
     ...textInputProps
   }) => {
     const focusAnimation =
@@ -91,17 +92,19 @@ const Text = enhance(
                   .string()}
                 {...textInputProps}
                 editable={!disabled}
-                value={`${value || ''}`}
+                value={value}
               />
             </Animated.View>
             <InputAddon>{suffix}</InputAddon>
           </AddonRow>
 
           <FloatingLabel animation={focusAnimation}>{label}</FloatingLabel>
-          <InputUnderline
-            animation={focusAnimation}
-            hasError={Boolean(error)}
-          />
+          {underline ? (
+            <InputUnderline
+              animation={focusAnimation}
+              hasError={Boolean(error)}
+            />
+          ) : null}
         </View>
 
         {error && typeof error === 'string' ? (
@@ -115,6 +118,7 @@ const Text = enhance(
 Text.defaultProps = {
   returnKeyType: 'done',
   underlineColorAndroid: 'transparent',
+  underline: true,
 };
 
 Text.propTypes = {
@@ -128,6 +132,7 @@ Text.propTypes = {
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   underlineColorAndroid: PropTypes.string,
   inputRef: PropTypes.func,
+  underline: PropTypes.bool,
 };
 
 export default Text;

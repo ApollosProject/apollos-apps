@@ -2,6 +2,7 @@
 
 exports[`the PassView component should display loading placeholders 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -187,6 +188,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
 
 exports[`the PassView component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {

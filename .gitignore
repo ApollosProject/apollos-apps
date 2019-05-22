@@ -68,6 +68,7 @@ terraform.tfvars
 
 # dotenv environment variables file
 .env
+.env.storybook
 
 # next.js build output
 .next
@@ -88,3 +89,6 @@ storyLoader.js
 **/lib
 
 .watchmanconfig
+
+# generated markdown docs
+packages/**/docs/generated/*

@@ -2,6 +2,7 @@
 
 exports[`the Card component it should render a placeholder 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -131,7 +132,7 @@ exports[`the Card component it should render a placeholder 1`] = `
                 "alignItems": "center",
                 "backgroundColor": "#00676D",
                 "borderColor": "#00676D",
-                "borderRadius": 8,
+                "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
                 "flexDirection": "row",
@@ -172,6 +173,7 @@ exports[`the Card component it should render a placeholder 1`] = `
 
 exports[`the Card component should render 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   onLayout={[Function]}
   style={
     Object {
@@ -350,7 +352,7 @@ exports[`the Card component should render 1`] = `
                 "alignItems": "center",
                 "backgroundColor": "#00676D",
                 "borderColor": "#00676D",
-                "borderRadius": 8,
+                "borderRadius": 16,
                 "borderWidth": 2,
                 "elevation": 2,
                 "flexDirection": "row",

@@ -1,10 +1,11 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
+
 import BackgroundView from '../BackgroundView';
 
 import ContentCard from '.';
 
-storiesOf('ContentCard', module)
+storiesOf('ui-kit/ContentCard', module)
   .addDecorator((story) => <BackgroundView>{story()}</BackgroundView>)
   .add('Basic, with Image', () => (
     <ContentCard

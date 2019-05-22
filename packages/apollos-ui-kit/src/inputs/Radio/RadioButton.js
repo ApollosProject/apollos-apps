@@ -9,9 +9,9 @@ import styled from '../../styled';
 
 import RadioButtonIndicator from './RadioButtonIndicator';
 
-const Row = styled(({ theme }) => ({
+const Row = styled(({ theme, underline }) => ({
   padding: theme.sizing.baseUnit / 2,
-  borderBottomWidth: 1,
+  borderBottomWidth: underline ? 1 : 0,
   borderBottomColor: theme.colors.background.accent,
   flexDirection: 'row',
   justifyContent: 'space-between',
@@ -20,9 +20,10 @@ const Row = styled(({ theme }) => ({
 
 class RadioButton extends PureComponent {
   static propTypes = {
+    underline: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     currentValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    Label: PropTypes.oneOfType([
+    label: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element,
       PropTypes.func,
@@ -35,7 +36,8 @@ class RadioButton extends PureComponent {
   };
 
   static defaultProps = {
-    Label: '',
+    underline: true,
+    label: '',
     onSelectValue() {},
     RadioButtonIndicator,
   };
@@ -48,14 +50,14 @@ class RadioButton extends PureComponent {
     const Indicator = this.props.RadioButtonIndicator;
     return (
       <TouchableWithoutFeedback onPress={this.handleOnPress}>
-        <Row>
+        <Row underline={this.props.underline}>
           <Indicator
             isSelected={this.props.currentValue === this.props.value}
           />
-          {isString(this.props.Label) ? (
-            <H6>{this.props.Label}</H6>
+          {isString(this.props.label) ? (
+            <H6>{this.props.label}</H6>
           ) : (
-            <this.props.Label />
+            <this.props.label />
           )}
         </Row>
       </TouchableWithoutFeedback>

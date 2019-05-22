@@ -1,12 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react-native';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
 import Icon from '../../Icon';
 import FlexedView from '../../FlexedView';
 
 import Text from '.';
 
-storiesOf('Inputs', module).add('Text', () => (
+storiesOf('ui-kit/Inputs', module).add('Text', () => (
   <FlexedView>
     <Text editable label="Some label text" placeholder="Some placeholder" />
     <Text
@@ -28,6 +28,7 @@ storiesOf('Inputs', module).add('Text', () => (
       type="phone"
       label="Phone Number"
       placeholder="Some placeholder"
+      underline={false}
     />
   </FlexedView>
 ));
