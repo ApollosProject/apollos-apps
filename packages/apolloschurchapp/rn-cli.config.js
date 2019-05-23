@@ -13,6 +13,7 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-storybook'),
   path.resolve('..', 'apollos-ui-onboarding'),
   path.resolve('..', 'apollos-ui-media-player'),
+    path.resolve('..', 'apollos-ui-scripture'),
 ];
 
 const sharedNativeModules = [

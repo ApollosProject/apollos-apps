@@ -8,6 +8,7 @@ import { loadStories as loadUiKitStories } from '@apollosproject/ui-kit/storyboo
 import { loadStories as loadPassesStories } from '@apollosproject/ui-passes/storybook/storyLoader';
 import { loadStories as loadOnboardingStories } from '@apollosproject/ui-onboarding/storybook/storyLoader';
 import { loadStories as loadMediaPlayerStories } from '@apollosproject/ui-media-player/storybook/storyLoader';
+import { loadStories as loadScriptureStories } from '@apollosproject/ui-scripture/storybook/storyLoader';
 
 import { Providers as UIKitProviders } from '@apollosproject/ui-kit';
 
@@ -25,6 +26,7 @@ export const loadApollosStories = () => {
   loadPassesStories();
   loadOnboardingStories();
   loadMediaPlayerStories();
+  loadScriptureStories();
 };
 
 // Refer to https://github.com/storybooks/storybook/tree/master/app/react-native#start-command-parameters

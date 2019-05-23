@@ -9,6 +9,7 @@
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",
+    "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
