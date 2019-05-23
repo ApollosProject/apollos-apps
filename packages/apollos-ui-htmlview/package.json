@@ -36,16 +36,16 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.6",
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-storybook": "*",
+    "entities": "^1.1.2",
     "htmlparser2": "3.9.2"
   },
   "devDependencies": {
-    "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.6.3",
-    "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-test-renderer": "16.6.3"
   },

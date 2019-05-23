@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.6",
-    "apollo-datasource-rest": "^0.2.0",
-    "lodash": "^4.17.11"
+    "@apollosproject/server-core": "^0.8.6",
+    "apollo-datasource-rest": "^0.2.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
@@ -33,6 +33,8 @@
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^0.8.6",
     "@apollosproject/babel-preset-apollos": "^0.8.6",
+    "apollo-server-env": "^2.3.0",
+    "graphql": "^0.13.2",
     "jest": "^23.6.0"
   },
   "publishConfig": {

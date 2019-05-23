@@ -23,10 +23,12 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "@apollosproject/data-connector-rock": "^0.8.6",
     "@apollosproject/data-schema": "^0.8.6",
     "@apollosproject/server-core": "^0.8.6",
+    "apollo-datasource": "^0.4.0",
+    "apollo-server": "^2.5.0",
     "datauri": "^1.1.0",
-    "jest": "^23.6.0",
     "lodash": "^4.17.11",
     "passkit-generator": "^1.5.9",
     "qrcode": "^1.3.3"
@@ -37,7 +39,10 @@
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^0.8.6",
     "@apollosproject/babel-preset-apollos": "^0.8.6",
-    "jest": "^23.6.0"
+    "apollo-server-env": "^2.3.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.10.1",
+    "jest": "^24.8.0"
   },
   "publishConfig": {
     "access": "public"

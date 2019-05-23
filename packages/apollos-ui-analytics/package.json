@@ -39,23 +39,19 @@
     "react-navigation": "*"
   },
   "dependencies": {
-    "apollo-link-context": "1.0.14",
     "graphql-tag": "2.9.2",
-    "lodash": "4.17.11",
-    "react-native-device-info": "^1.1.0",
-    "react-native-keyboard-aware-scroll-view": "0.7.0"
+    "react-native-device-info": "^1.1.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.6",
-    "@apollosproject/ui-kit": "^0.8.6",
+    "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "2.5.1",
-    "codecov": "3.1.0",
+    "apollo-link-http": "^1.5.14",
     "jest": "23.6.0",
+    "jest-fetch-mock": "^2.1.2",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.6.3",
     "react-apollo": "2.5.5",
-    "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-test-renderer": "16.6.1"
   },

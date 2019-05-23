@@ -24,13 +24,9 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.6",
-    "@apollosproject/server-core": "^0.8.6",
     "analytics-node": "^3.3.0",
     "apollo-datasource": "^0.2.0",
     "apollo-server": "^2.1.0",
-    "apollo-server-env": "^2.2.0",
-    "lodash": "^4.17.11",
-    "moment": "^2.22.2",
     "universal-analytics": "^0.4.20"
   },
   "peerDependencies": {
