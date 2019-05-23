@@ -3,6 +3,7 @@ export MediaPlayer from './MediaPlayer';
 
 export { MINI_PLAYER_HEIGHT } from './MediaPlayer/MiniControls';
 export MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
+export withTabBarMediaSpacer from './tabBarWithMediaSpacer';
 
 export {
   pauseAndRestart,
