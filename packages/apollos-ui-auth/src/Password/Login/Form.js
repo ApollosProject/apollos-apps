@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 // import { track, events } from 'apolloschurchapp/src/analytics';
 import {
@@ -14,11 +13,9 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-const BottomSafeAreaView = styled({
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  right: 0,
+const Footer = styled({
+  flex: 1,
+  justifyContent: 'flex-end',
 })(SafeAreaView);
 
 class Form extends PureComponent {
@@ -45,43 +42,41 @@ class Form extends PureComponent {
     } = this.props;
     return (
       <FlexedView>
-        <KeyboardAwareScrollView>
-          <PaddedView>
-            <View>
-              <TextInput
-                label="Email"
-                type="email"
-                value={values.email}
-                error={touched.email && errors.email}
-                onChangeText={(text) => setFieldValue('email', text)}
-                onSubmitEditing={() => this.passwordInput.focus()}
-                returnKeyType="next"
-                textContentType="username"
-                enablesReturnKeyAutomatically
-              />
-              <TextInput
-                label="Password"
-                type="password"
-                value={values.password}
-                error={touched.password && errors.password}
-                onChangeText={(text) => setFieldValue('password', text)}
-                onSubmitEditing={handleSubmit}
-                returnKeyType="go"
-                textContentType="password"
-                enablesReturnKeyAutomatically
-                inputRef={(r) => {
-                  this.passwordInput = r;
-                }}
-              />
-              {this.props.handleForgotPassword ? (
-                <ButtonLink onPress={this.props.handleForgotPassword}>
-                  Forgot your password?
-                </ButtonLink>
-              ) : null}
-            </View>
-          </PaddedView>
-        </KeyboardAwareScrollView>
-        <BottomSafeAreaView forceInset={{ bottom: 'always' }}>
+        <PaddedView>
+          <View>
+            <TextInput
+              label="Email"
+              type="email"
+              value={values.email}
+              error={touched.email && errors.email}
+              onChangeText={(text) => setFieldValue('email', text)}
+              onSubmitEditing={() => this.passwordInput.focus()}
+              returnKeyType="next"
+              textContentType="username"
+              enablesReturnKeyAutomatically
+            />
+            <TextInput
+              label="Password"
+              type="password"
+              value={values.password}
+              error={touched.password && errors.password}
+              onChangeText={(text) => setFieldValue('password', text)}
+              onSubmitEditing={handleSubmit}
+              returnKeyType="go"
+              textContentType="password"
+              enablesReturnKeyAutomatically
+              inputRef={(r) => {
+                this.passwordInput = r;
+              }}
+            />
+            {this.props.handleForgotPassword ? (
+              <ButtonLink onPress={this.props.handleForgotPassword}>
+                Forgot your password?
+              </ButtonLink>
+            ) : null}
+          </View>
+        </PaddedView>
+        <Footer>
           <PaddedView vertical={false}>
             <Button
               onPress={handleSubmit}
@@ -90,7 +85,7 @@ class Form extends PureComponent {
               loading={isSubmitting}
             />
           </PaddedView>
-        </BottomSafeAreaView>
+        </Footer>
       </FlexedView>
     );
   }
