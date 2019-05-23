@@ -50,7 +50,6 @@
     "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.0-alpha.8",
     "@storybook/react-native": "^4.0.7",
     "apollo-client": "2.5.1",
     "react-apollo": "2.5.5",

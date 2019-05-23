@@ -183,12 +183,17 @@ export const resolvers = {
   },
 };
 
+let loaded = false;
 const Provider = ({ children, ...authContext }) => (
   <MediaPlayerContext.Provider value={{ ...defaultContext, ...authContext }}>
     <ApolloConsumer>
       {(client) => {
-        client.addResolvers(resolvers);
-        client.writeData({ data: { mediaPlayer: defaults } });
+        if (!loaded) {
+          client.addResolvers(resolvers);
+          client.writeData({ data: { mediaPlayer: defaults } });
+          loaded = true;
+        }
+
         return children;
       }}
     </ApolloConsumer>
