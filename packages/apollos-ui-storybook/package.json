@@ -9,6 +9,8 @@
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",
+    "@apollosproject/ui-passes": "*",
+    "@apollosproject/ui-onboarding": "*",
     "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-native": "*",
@@ -23,7 +25,6 @@
   },
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.53.1",
-    "prop-types": "^15.7.2",
     "react": "16.6.3",
     "react-native": "0.58.5"
   },
