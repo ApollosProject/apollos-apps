@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer';
 import { kebabCase } from 'lodash';
 
 import Providers from '../Providers';
-
-import * as icons from './icons';
+import * as icons from '../theme/icons';
 
 import Icon from '.';
 

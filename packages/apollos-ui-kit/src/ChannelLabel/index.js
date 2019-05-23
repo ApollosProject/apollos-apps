@@ -9,7 +9,7 @@ import { withTheme } from '../theme';
 import styled from '../styled';
 import { H6 } from '../typography';
 import Icon from '../Icon';
-import * as Icons from '../Icon/icons';
+import * as Icons from '../theme/icons';
 
 const enhance = compose(
   withIsLoading,
