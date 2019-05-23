@@ -45,8 +45,7 @@
     "apollo-link-context": "1.0.14",
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
-    "lodash": "4.17.11",
-    "react-native-keyboard-aware-scroll-view": "0.7.0"
+    "lodash": "4.17.11"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^0.8.6",
