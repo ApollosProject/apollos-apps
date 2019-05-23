@@ -10,6 +10,7 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-passes": "*",
     "@apollosproject/ui-onboarding": "*",
+    "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
