@@ -5,6 +5,7 @@ import { AnalyticsProvider } from '@apollosproject/ui-analytics';
 import NavigationService from './NavigationService';
 import { NotificationsManager } from './notifications';
 import ClientProvider from './client';
+import customTheme, { customIcons } from './theme';
 
 const AppProviders = (props) => (
   <ClientProvider {...props}>
@@ -14,7 +15,11 @@ const AppProviders = (props) => (
         closeAuth={() => NavigationService.navigate('Onboarding')}
       >
         <AnalyticsProvider>
-          <Providers {...props} />
+          <Providers
+            themeInput={customTheme}
+            iconInput={customIcons}
+            {...props}
+          />
         </AnalyticsProvider>
       </AuthProvider>
     </NotificationsManager>
