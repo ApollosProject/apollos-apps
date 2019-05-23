@@ -53,9 +53,6 @@
     ],
     "setupFiles": [
       "./jest.setup.js"
-    ],
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
     ]
   },
   "dependencies": {

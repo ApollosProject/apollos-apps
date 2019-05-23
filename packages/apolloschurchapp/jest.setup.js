@@ -7,9 +7,19 @@ jest.mock('react-navigation', () => {
   };
 });
 
+jest.mock('react-native-music-control', () => ({
+  enableBackgroundMode: jest.fn(),
+  enableControl: jest.fn(),
+  on: jest.fn(),
+  setNowPlaying: jest.fn(),
+  STATE_PLAYING: false,
+  STATE_PAUSED: true,
+}));
+
 jest.mock('react-native-config', () => ({
   ONE_SIGNAL_KEY: 'doesntmatter',
 }));
+
 jest.mock('Animated', () => {
   const ActualAnimated = require.requireActual('Animated');
   return {
@@ -63,6 +73,14 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
+}));
+
+jest.mock('@apollosproject/ui-media-player', () => ({
+  MediaPlayerSpacer: ({ children }) => children,
+  MediaPlayer: () => 'MediaPlayer',
+  MediaPlayerProvider: ({ children }) => children,
+  playVideoMutation: 'mutation { playVideo }',
+  withTabBarMediaSpacer: () => ({ children }) => children,
 }));
 
 jest.mock('react-native-video', () => 'Video');
