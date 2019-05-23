@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { compose, pure, getContext } from 'recompose';
-import { flow, camelCase, upperFirst, kebabCase, merge } from 'lodash';
+import { flow, camelCase, upperFirst, kebabCase } from 'lodash';
 
 import Placeholder from '../Placeholder';
 
@@ -29,7 +29,7 @@ const enhance = compose(
 
 const Icon = enhance(
   ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
-    const Icons = merge(iconInput, uikitIcons);
+    const Icons = { ...uikitIcons, ...iconInput };
     const IconComponent = Icons[pascalCase(name)];
 
     return (
@@ -42,7 +42,9 @@ const Icon = enhance(
 
 // eslint-disable-next-line consistent-return
 const namePropValidator = (props, propName, componentName) => {
-  const icons = Object.keys(merge(props.iconInput, uikitIcons)).map(kebabCase);
+  const icons = Object.keys({ ...uikitIcons, ...props.iconInput }).map(
+    kebabCase
+  );
 
   if (!icons.includes(props.name)) {
     // eslint-disable-next-line no-console
