@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { SafeAreaView, Dimensions } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
