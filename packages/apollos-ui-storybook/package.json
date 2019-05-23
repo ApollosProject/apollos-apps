@@ -8,6 +8,7 @@
     "@apollosproject/ui-auth": "*",
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
