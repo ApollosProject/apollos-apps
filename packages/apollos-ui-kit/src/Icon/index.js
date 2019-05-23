@@ -5,7 +5,7 @@ import { flow, camelCase, upperFirst, kebabCase } from 'lodash';
 
 import Placeholder from '../Placeholder';
 
-import * as Icons from './icons';
+import * as uikitIcons from '../theme/icons';
 
 const pascalCase = (string) =>
   flow(
@@ -17,13 +17,13 @@ const pascalCase = (string) =>
 // <Icon name="skip-next" {...allOtherPropsPassedToComponent} />
 //
 // Can also import the icon directly:
-// import { SkipNext } from 'Icon/icons';
+// import { SkipNext } from '../theme/icons';
 // <SkipNext />
 
 const enhance = compose(pure);
 
 const Icon = enhance(({ name, size, isLoading = false, ...otherProps }) => {
-  const IconComponent = Icons[pascalCase(name)];
+  const IconComponent = uikitIcons[pascalCase(name)];
   return (
     <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
       <IconComponent size={size} {...otherProps} />
@@ -32,7 +32,7 @@ const Icon = enhance(({ name, size, isLoading = false, ...otherProps }) => {
 });
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)).isRequired,
+  name: PropTypes.oneOf(Object.keys(uikitIcons).map(kebabCase)).isRequired,
   size: PropTypes.number,
   fill: PropTypes.string,
   isLoading: PropTypes.bool,
