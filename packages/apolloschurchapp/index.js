@@ -8,7 +8,7 @@ import MainApp from './src';
 
 const useStorybook = Config.STORYBOOK === 'true';
 
-let App = MainApp;
+const App = MainApp;
 if (useStorybook) {
   App = Storybook;
 }
