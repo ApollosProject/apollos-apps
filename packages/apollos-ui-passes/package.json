@@ -47,17 +47,12 @@
     "react-apollo": "2.5.5"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.6",
-    "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.6.3",
-    "react-dom": "16.6.3",
     "react-native": "0.58.5",
-    "react-native-linear-gradient": "2.4.0",
     "react-native-passkit-wallet": "^0.1.4",
-    "react-native-svg": "6.5.2",
     "react-test-renderer": "16.6.1",
     "rn-fetch-blob": "^0.10.15"
   },
