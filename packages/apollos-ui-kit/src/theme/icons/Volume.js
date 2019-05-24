@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Svg, { Path, G } from 'react-native-svg';
 
-import makeIcon from './makeIcon';
+import { makeIcon } from '../../Icon';
 
 const Icon = makeIcon(({ size = 32, fill, ...otherProps } = {}) => (
   <Svg width={size} height={size} viewBox="0 0 24 24" {...otherProps}>
