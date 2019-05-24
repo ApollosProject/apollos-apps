@@ -43,25 +43,25 @@
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "@apollosproject/storybook": "*"
   },
   "dependencies": {
     "color": "^3.1.0",
     "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "numeral": "^2.0.6",
     "react-native-modal-datetime-picker": "6.0.0",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
     "rn-placeholder": "1.2.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^0.8.6",
-    "codecov": "3.1.0",
     "jest": "23.6.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.6.3",
     "react-docgen": "^4.1.0",
-    "react-dom": "16.6.3",
     "react-native": "0.58.5",
     "react-native-linear-gradient": "2.5.3",
     "react-native-svg": "9.2.4",
