@@ -52,7 +52,7 @@ jobs:
         - git clone git://${GH_DOCS_REPO}
         - cp -fr packages/apollos-ui-kit/docs/generated/* docs/docs/ui-kit
         - cd packages/apollos-ui-kit
-        - cat ../../docs/website/sidebars.json | packages/apollos-ui-kit/docs/updateSidebar.sh
+        - cat ../../docs/website/sidebars.json | docs/updateSidebar.sh
         - cd ../../
         - cp -f packages/apollos-ui-kit/docs/generated/sidebars.json docs/website/sidebars.json
         - cd docs
