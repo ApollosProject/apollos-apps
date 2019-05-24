@@ -62,6 +62,6 @@ jobs:
          - git remote
          - git config user.email ${GH_EMAIL}
          - git config user.name ${GH_USER}
-           git add .
+         - git add .
          - git commit -am ${MESSAGE}
          - git push "https://${GH_TOKEN}@${GH_DOCS_REPO}" master
