@@ -45,22 +45,20 @@ jobs:
         script: yarn release:canary
         skip_cleanup: true
         master: true
-    # Disabled until Michael has time to fix.
-    # - stage: Deploy Docs
-    #   script:
-    #     - yarn generate-docs
-    #     - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
-    #     - git clone git://${GH_DOCS_REPO}
-    #     # copy over ui-kit docs
-    #     - cp -fr packages/apollos-ui-kit/docs/generated/* docs/docs/ui-kit
-    #     # update sidebar
-    #     - cat docs/website/sidebars.json | packages/apollos-ui-kit/docs/updateSidebar.sh
-    #     - cp -f packages/apollos-ui-kit/docs/generated/sidebars.json docs/website/sidebars.json
-    #     # push new docs
-    #     - cd docs
-    #     - git remote
-    #     - git config user.email ${GH_EMAIL}
-    #     - git config user.name ${GH_USER}
-    #       git add .
-    #     - git commit -am ${MESSAGE}
-    #     - git push "https://${GH_TOKEN}@${GH_DOCS_REPO}" master > /dev/null 2>&1
+    - stage: Deploy Docs
+      script:
+        - yarn generate-docs
+        - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+        - git clone git://${GH_DOCS_REPO}
+        - cp -fr packages/apollos-ui-kit/docs/generated/* docs/docs/ui-kit
+        - cd packages/apollos-ui-kit
+        - cat ../../docs/website/sidebars.json | docs/updateSidebar.sh
+        - cd ../../
+        - cp -f packages/apollos-ui-kit/docs/generated/sidebars.json docs/website/sidebars.json
+        - cd docs
+        - git remote
+        - git config user.email ${GH_EMAIL}
+        - git config user.name ${GH_USER}
+        - git add .
+        - git commit -am "${MESSAGE}"
+        - git push "https://${GH_TOKEN}@${GH_DOCS_REPO}" master
