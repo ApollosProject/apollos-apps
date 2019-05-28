@@ -19,7 +19,6 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-scripture'),
 ];
 
-console.log(path.resolve('.'), 'LOOK HERE!!!');
 
 module.exports = {
   resolver: {
