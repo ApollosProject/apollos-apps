@@ -137,21 +137,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -165,6 +151,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -209,6 +196,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -369,21 +357,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -397,6 +371,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -441,6 +416,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
@@ -592,21 +568,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -620,6 +582,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -664,6 +627,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -839,21 +803,7 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -867,6 +817,7 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -911,6 +862,7 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -1086,21 +1038,7 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1114,6 +1052,7 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -1158,6 +1097,7 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -1335,21 +1275,7 @@ exports[`The Onboarding LandingScreen component should render with a custom text
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1363,6 +1289,7 @@ exports[`The Onboarding LandingScreen component should render with a custom text
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -1407,6 +1334,7 @@ exports[`The Onboarding LandingScreen component should render with a custom text
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -1627,21 +1555,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1655,6 +1569,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -1699,6 +1614,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />

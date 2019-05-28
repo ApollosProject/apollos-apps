@@ -309,21 +309,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                             opacity={1}
                             originX={0}
                             originY={0}
-                            propList={
-                              Array [
-                                "fill",
-                                "fillOpacity",
-                                "fillRule",
-                                "stroke",
-                                "strokeWidth",
-                                "strokeOpacity",
-                                "strokeDasharray",
-                                "strokeDashoffset",
-                                "strokeLinecap",
-                                "strokeLinejoin",
-                                "strokeMiterlimit",
-                              ]
-                            }
+                            propList={Array []}
                             rotation={0}
                             scaleX={1}
                             scaleY={1}
@@ -337,6 +323,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                             strokeMiterlimit={4}
                             strokeOpacity={1}
                             strokeWidth={1}
+                            vectorEffect={0}
                             x={0}
                             y={0}
                           >
@@ -381,6 +368,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             />
@@ -679,21 +667,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -707,6 +681,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -755,6 +730,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1.5}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               >
@@ -795,6 +771,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -835,6 +812,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -875,6 +853,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -915,6 +894,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -999,21 +979,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -1027,6 +993,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -1071,6 +1038,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -1154,21 +1122,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -1182,6 +1136,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -1226,6 +1181,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -1309,21 +1265,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -1337,6 +1279,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -1381,6 +1324,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -1464,21 +1408,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -1492,6 +1422,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -1536,6 +1467,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -1580,6 +1512,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -1726,21 +1659,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           opacity={1}
                           originX={0}
                           originY={0}
-                          propList={
-                            Array [
-                              "fill",
-                              "fillOpacity",
-                              "fillRule",
-                              "stroke",
-                              "strokeWidth",
-                              "strokeOpacity",
-                              "strokeDasharray",
-                              "strokeDashoffset",
-                              "strokeLinecap",
-                              "strokeLinejoin",
-                              "strokeMiterlimit",
-                            ]
-                          }
+                          propList={Array []}
                           rotation={0}
                           scaleX={1}
                           scaleY={1}
@@ -1754,6 +1673,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           strokeMiterlimit={4}
                           strokeOpacity={1}
                           strokeWidth={1}
+                          vectorEffect={0}
                           x={0}
                           y={0}
                         >
@@ -1798,6 +1718,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                             strokeMiterlimit={4}
                             strokeOpacity={1}
                             strokeWidth={1}
+                            vectorEffect={0}
                             x={0}
                             y={0}
                           />
@@ -1958,21 +1879,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         opacity={1}
                         originX={0}
                         originY={0}
-                        propList={
-                          Array [
-                            "fill",
-                            "fillOpacity",
-                            "fillRule",
-                            "stroke",
-                            "strokeWidth",
-                            "strokeOpacity",
-                            "strokeDasharray",
-                            "strokeDashoffset",
-                            "strokeLinecap",
-                            "strokeLinejoin",
-                            "strokeMiterlimit",
-                          ]
-                        }
+                        propList={Array []}
                         rotation={0}
                         scaleX={1}
                         scaleY={1}
@@ -1986,6 +1893,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         strokeMiterlimit={4}
                         strokeOpacity={1}
                         strokeWidth={1}
+                        vectorEffect={0}
                         x={0}
                         y={0}
                       >
@@ -2030,6 +1938,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           strokeMiterlimit={4}
                           strokeOpacity={1}
                           strokeWidth={1}
+                          vectorEffect={0}
                           x={0}
                           y={0}
                         />
@@ -2440,21 +2349,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                             opacity={1}
                             originX={0}
                             originY={0}
-                            propList={
-                              Array [
-                                "fill",
-                                "fillOpacity",
-                                "fillRule",
-                                "stroke",
-                                "strokeWidth",
-                                "strokeOpacity",
-                                "strokeDasharray",
-                                "strokeDashoffset",
-                                "strokeLinecap",
-                                "strokeLinejoin",
-                                "strokeMiterlimit",
-                              ]
-                            }
+                            propList={Array []}
                             rotation={0}
                             scaleX={1}
                             scaleY={1}
@@ -2468,6 +2363,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                             strokeMiterlimit={4}
                             strokeOpacity={1}
                             strokeWidth={1}
+                            vectorEffect={0}
                             x={0}
                             y={0}
                           >
@@ -2512,6 +2408,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             />
@@ -2810,21 +2707,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -2838,6 +2721,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -2886,6 +2770,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1.5}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               >
@@ -2926,6 +2811,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -2966,6 +2852,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -3006,6 +2893,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -3046,6 +2934,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -3130,21 +3019,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -3158,6 +3033,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -3202,6 +3078,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -3285,21 +3162,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -3313,6 +3176,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -3357,6 +3221,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -3440,21 +3305,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -3468,6 +3319,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -3512,6 +3364,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -3595,21 +3448,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -3623,6 +3462,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -3667,6 +3507,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -3711,6 +3552,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -3857,21 +3699,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           opacity={1}
                           originX={0}
                           originY={0}
-                          propList={
-                            Array [
-                              "fill",
-                              "fillOpacity",
-                              "fillRule",
-                              "stroke",
-                              "strokeWidth",
-                              "strokeOpacity",
-                              "strokeDasharray",
-                              "strokeDashoffset",
-                              "strokeLinecap",
-                              "strokeLinejoin",
-                              "strokeMiterlimit",
-                            ]
-                          }
+                          propList={Array []}
                           rotation={0}
                           scaleX={1}
                           scaleY={1}
@@ -3885,6 +3713,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           strokeMiterlimit={4}
                           strokeOpacity={1}
                           strokeWidth={1}
+                          vectorEffect={0}
                           x={0}
                           y={0}
                         >
@@ -3929,6 +3758,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                             strokeMiterlimit={4}
                             strokeOpacity={1}
                             strokeWidth={1}
+                            vectorEffect={0}
                             x={0}
                             y={0}
                           />
@@ -4089,21 +3919,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         opacity={1}
                         originX={0}
                         originY={0}
-                        propList={
-                          Array [
-                            "fill",
-                            "fillOpacity",
-                            "fillRule",
-                            "stroke",
-                            "strokeWidth",
-                            "strokeOpacity",
-                            "strokeDasharray",
-                            "strokeDashoffset",
-                            "strokeLinecap",
-                            "strokeLinejoin",
-                            "strokeMiterlimit",
-                          ]
-                        }
+                        propList={Array []}
                         rotation={0}
                         scaleX={1}
                         scaleY={1}
@@ -4117,6 +3933,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         strokeMiterlimit={4}
                         strokeOpacity={1}
                         strokeWidth={1}
+                        vectorEffect={0}
                         x={0}
                         y={0}
                       >
@@ -4161,6 +3978,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           strokeMiterlimit={4}
                           strokeOpacity={1}
                           strokeWidth={1}
+                          vectorEffect={0}
                           x={0}
                           y={0}
                         />
@@ -4571,21 +4389,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                             opacity={1}
                             originX={0}
                             originY={0}
-                            propList={
-                              Array [
-                                "fill",
-                                "fillOpacity",
-                                "fillRule",
-                                "stroke",
-                                "strokeWidth",
-                                "strokeOpacity",
-                                "strokeDasharray",
-                                "strokeDashoffset",
-                                "strokeLinecap",
-                                "strokeLinejoin",
-                                "strokeMiterlimit",
-                              ]
-                            }
+                            propList={Array []}
                             rotation={0}
                             scaleX={1}
                             scaleY={1}
@@ -4599,6 +4403,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                             strokeMiterlimit={4}
                             strokeOpacity={1}
                             strokeWidth={1}
+                            vectorEffect={0}
                             x={0}
                             y={0}
                           >
@@ -4643,6 +4448,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             />
@@ -4941,21 +4747,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -4969,6 +4761,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -5017,6 +4810,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1.5}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               >
@@ -5057,6 +4851,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -5097,6 +4892,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -5137,6 +4933,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -5177,6 +4974,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                   strokeMiterlimit={4}
                                   strokeOpacity={1}
                                   strokeWidth={1}
+                                  vectorEffect={0}
                                   x={0}
                                   y={0}
                                 />
@@ -5261,21 +5059,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -5289,6 +5073,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -5333,6 +5118,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -5416,21 +5202,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -5444,6 +5216,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -5488,6 +5261,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -5571,21 +5345,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -5599,6 +5359,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -5643,6 +5404,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -5726,21 +5488,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               opacity={1}
                               originX={0}
                               originY={0}
-                              propList={
-                                Array [
-                                  "fill",
-                                  "fillOpacity",
-                                  "fillRule",
-                                  "stroke",
-                                  "strokeWidth",
-                                  "strokeOpacity",
-                                  "strokeDasharray",
-                                  "strokeDashoffset",
-                                  "strokeLinecap",
-                                  "strokeLinejoin",
-                                  "strokeMiterlimit",
-                                ]
-                              }
+                              propList={Array []}
                               rotation={0}
                               scaleX={1}
                               scaleY={1}
@@ -5754,6 +5502,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                               strokeMiterlimit={4}
                               strokeOpacity={1}
                               strokeWidth={1}
+                              vectorEffect={0}
                               x={0}
                               y={0}
                             >
@@ -5798,6 +5547,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -5842,6 +5592,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                                 strokeMiterlimit={4}
                                 strokeOpacity={1}
                                 strokeWidth={1}
+                                vectorEffect={0}
                                 x={0}
                                 y={0}
                               />
@@ -5988,21 +5739,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           opacity={1}
                           originX={0}
                           originY={0}
-                          propList={
-                            Array [
-                              "fill",
-                              "fillOpacity",
-                              "fillRule",
-                              "stroke",
-                              "strokeWidth",
-                              "strokeOpacity",
-                              "strokeDasharray",
-                              "strokeDashoffset",
-                              "strokeLinecap",
-                              "strokeLinejoin",
-                              "strokeMiterlimit",
-                            ]
-                          }
+                          propList={Array []}
                           rotation={0}
                           scaleX={1}
                           scaleY={1}
@@ -6016,6 +5753,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           strokeMiterlimit={4}
                           strokeOpacity={1}
                           strokeWidth={1}
+                          vectorEffect={0}
                           x={0}
                           y={0}
                         >
@@ -6060,6 +5798,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                             strokeMiterlimit={4}
                             strokeOpacity={1}
                             strokeWidth={1}
+                            vectorEffect={0}
                             x={0}
                             y={0}
                           />
@@ -6220,21 +5959,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         opacity={1}
                         originX={0}
                         originY={0}
-                        propList={
-                          Array [
-                            "fill",
-                            "fillOpacity",
-                            "fillRule",
-                            "stroke",
-                            "strokeWidth",
-                            "strokeOpacity",
-                            "strokeDasharray",
-                            "strokeDashoffset",
-                            "strokeLinecap",
-                            "strokeLinejoin",
-                            "strokeMiterlimit",
-                          ]
-                        }
+                        propList={Array []}
                         rotation={0}
                         scaleX={1}
                         scaleY={1}
@@ -6248,6 +5973,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         strokeMiterlimit={4}
                         strokeOpacity={1}
                         strokeWidth={1}
+                        vectorEffect={0}
                         x={0}
                         y={0}
                       >
@@ -6292,6 +6018,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           strokeMiterlimit={4}
                           strokeOpacity={1}
                           strokeWidth={1}
+                          vectorEffect={0}
                           x={0}
                           y={0}
                         />

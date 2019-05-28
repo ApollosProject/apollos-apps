@@ -101,6 +101,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     onChangeText={[Function]}
                     onFocus={[Function]}
                     placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                    rejectResponderTermination={true}
                     returnKeyType="done"
                     style={
                       Object {
@@ -249,6 +250,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     onChangeText={[Function]}
                     onFocus={[Function]}
                     placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                    rejectResponderTermination={true}
                     returnKeyType="done"
                     style={
                       Object {
@@ -423,6 +425,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                     onChangeText={[Function]}
                     onFocus={[Function]}
                     placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                    rejectResponderTermination={true}
                     returnKeyType="done"
                     style={
                       Object {

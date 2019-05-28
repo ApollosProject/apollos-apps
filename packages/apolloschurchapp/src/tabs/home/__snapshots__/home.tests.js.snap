@@ -75,7 +75,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
         <RCTScrollView
           ListHeaderComponent={
             <React.Fragment>
-              <mapProps(getContext(mapProps(withPropsOnChange(mapProps(Component)))))
+              <mapProps(getContext(mapProps(withPropsOnChange(mapProps(Image)))))
                 source={
                   Object {
                     "testUri": "../../../src/tabs/home/wordmark.png",
@@ -1780,6 +1780,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             />
           }
           refreshing={true}
+          removeClippedSubviews={false}
           renderItem={[Function]}
           scrollEventThrottle={50}
           stickyHeaderIndices={Array []}

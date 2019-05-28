@@ -307,21 +307,7 @@ exports[`The Onboarding Slide component should render both slide navigation butt
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -335,6 +321,7 @@ exports[`The Onboarding Slide component should render both slide navigation butt
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -379,6 +366,7 @@ exports[`The Onboarding Slide component should render both slide navigation butt
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -640,21 +628,7 @@ exports[`The Onboarding Slide component should render onboarding next button nav
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -668,6 +642,7 @@ exports[`The Onboarding Slide component should render onboarding next button nav
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -712,6 +687,7 @@ exports[`The Onboarding Slide component should render onboarding next button nav
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -1098,21 +1074,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1126,6 +1088,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -1170,6 +1133,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -1362,21 +1326,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1390,6 +1340,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -1434,6 +1385,7 @@ exports[`The Onboarding Slide component should render primary navigation button 
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />

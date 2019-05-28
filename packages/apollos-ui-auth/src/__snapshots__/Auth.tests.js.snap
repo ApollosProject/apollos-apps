@@ -3,14 +3,14 @@
 exports[`Auth Store logs a user out 1`] = `
 InMemoryCache {
   "addTypename": true,
-  "cacheKeyRoot": CacheKeyNode {
-    "children": null,
-    "key": null,
+  "cacheKeyRoot": KeyTrie {
+    "weakness": true,
   },
   "config": Object {
     "addTypename": true,
     "dataIdFromObject": [Function],
     "fragmentMatcher": HeuristicFragmentMatcher {},
+    "freezeResults": false,
     "resultCaching": true,
   },
   "data": DepTrackingCache {
@@ -32,12 +32,10 @@ InMemoryCache {
   },
   "silenceBroadcast": false,
   "storeReader": StoreReader {
-    "cacheKeyRoot": CacheKeyNode {
-      "children": null,
-      "key": null,
-    },
     "executeSelectionSet": [Function],
     "executeStoreQuery": [Function],
+    "executeSubSelectedArray": [Function],
+    "freezeResults": false,
   },
   "storeWriter": StoreWriter {},
   "typenameDocumentCache": Map {
