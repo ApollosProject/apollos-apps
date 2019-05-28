@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^0.8.6",
-    "crypto": "^1.0.1",
+    "apollo-server": "^2.5.0",
+    "apollo-server-caching": "^0.4.0",
     "graphql-tag": "^2.10.0",
     "lodash": "^4.17.11"
   },
