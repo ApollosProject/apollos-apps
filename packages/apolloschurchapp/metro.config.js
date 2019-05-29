@@ -1,3 +1,10 @@
+/**
+ * Metro configuration for React Native
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 
@@ -11,6 +18,7 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-onboarding'),
   path.resolve('..', 'apollos-ui-scripture'),
 ];
+
 
 module.exports = {
   resolver: {
@@ -37,6 +45,12 @@ module.exports = {
         `${path.resolve('.', 'node_modules')}/.*/node_modules/react-native/.*`
       ),
       new RegExp(
+        `${path.resolve(
+          '.',
+          'node_modules'
+        )}/react-native-iphone-x-helper/node_modules/react-native/.*`
+      ),
+      new RegExp(
         `${path.resolve('..', '..', 'node_modules', 'react-native')}/.*`
       ),
       new RegExp(
@@ -52,4 +66,12 @@ module.exports = {
     ]),
   },
   watchFolders: [...localDeps, path.resolve('..', '..', 'node_modules')],
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: false,
+      },
+    }),
+  },
 };

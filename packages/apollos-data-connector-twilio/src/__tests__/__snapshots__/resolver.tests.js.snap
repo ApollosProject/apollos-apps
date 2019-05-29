@@ -19,6 +19,7 @@ TwilioSms {
     "_preview": undefined,
     "_pricing": undefined,
     "_proxy": undefined,
+    "_serverless": undefined,
     "_studio": undefined,
     "_sync": undefined,
     "_taskrouter": undefined,

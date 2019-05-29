@@ -94,6 +94,7 @@ exports[`The LoginForm component should render 1`] = `
                     onFocus={[Function]}
                     onSubmitEditing={[Function]}
                     placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                    rejectResponderTermination={true}
                     returnKeyType="next"
                     style={
                       Object {
@@ -247,6 +248,7 @@ exports[`The LoginForm component should render 1`] = `
                     onChangeText={[Function]}
                     onFocus={[Function]}
                     placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                    rejectResponderTermination={true}
                     returnKeyType="go"
                     secureTextEntry={true}
                     style={
