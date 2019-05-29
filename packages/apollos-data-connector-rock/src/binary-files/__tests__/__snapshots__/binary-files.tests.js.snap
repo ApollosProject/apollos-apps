@@ -42,7 +42,9 @@ Array [
       "body": FormData {
         "_boundary": "--------------------------",
         "_currentStream": null,
+        "_insideLoop": false,
         "_overheadLength": 155,
+        "_pendingNext": false,
         "_released": false,
         "_streams": Array [
           "----------------------------

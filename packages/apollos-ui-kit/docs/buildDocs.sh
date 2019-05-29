@@ -25,7 +25,7 @@ function buildDocs(api) {
   // api is an object keyed by filepath. We use the file name as component name.
   Object.keys(api).forEach((filepath) => {
     const name = getComponentName(filepath);
-    docsList.push(generateID(name));
+    docsList.push(`ui-kit/${generateID(name)}`);
     const markdown = generateMarkdown(name, api[filepath]);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir);
