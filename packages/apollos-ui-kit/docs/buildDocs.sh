@@ -21,16 +21,20 @@ function getComponentName(filepath) {
 
 function buildDocs(api) {
   const docsList = [];
+  const dir = `docs/generated`;
   // api is an object keyed by filepath. We use the file name as component name.
   Object.keys(api).forEach((filepath) => {
     const name = getComponentName(filepath);
-    docsList.push(generateID(name));
+    docsList.push(`ui-kit/${generateID(name)}`);
     const markdown = generateMarkdown(name, api[filepath]);
-    fs.writeFileSync(`docs/generated/${name}.md`, markdown);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+    fs.writeFileSync(`${dir}/${name}.md`, markdown);
     process.stdout.write(`${filepath} -> ${name}.md\n`);
   });
   const docsObj = { 'UI-Kit': docsList };
-  fs.writeFileSync(`docs/generated/docs.json`, JSON.stringify(docsObj));
+  fs.writeFileSync(`${dir}/docs.json`, JSON.stringify(docsObj));
 }
 
 let json = '';

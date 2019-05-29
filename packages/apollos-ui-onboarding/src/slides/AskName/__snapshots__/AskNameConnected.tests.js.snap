@@ -130,21 +130,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                     opacity={1}
                     originX={0}
                     originY={0}
-                    propList={
-                      Array [
-                        "fill",
-                        "fillOpacity",
-                        "fillRule",
-                        "stroke",
-                        "strokeWidth",
-                        "strokeOpacity",
-                        "strokeDasharray",
-                        "strokeDashoffset",
-                        "strokeLinecap",
-                        "strokeLinejoin",
-                        "strokeMiterlimit",
-                      ]
-                    }
+                    propList={Array []}
                     rotation={0}
                     scaleX={1}
                     scaleY={1}
@@ -158,6 +144,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   >
@@ -202,6 +189,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                       strokeMiterlimit={4}
                       strokeOpacity={1}
                       strokeWidth={1}
+                      vectorEffect={0}
                       x={0}
                       y={0}
                     />
@@ -292,6 +280,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                         onFocus={[Function]}
                         onSubmitEditing={[Function]}
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
                           Object {
@@ -444,6 +433,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                         onFocus={[Function]}
                         onSubmitEditing={[Function]}
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
                           Object {
@@ -686,21 +676,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -714,6 +690,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -758,6 +735,7 @@ exports[`The AskNameConnected component renders User Name when logged in 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -901,21 +879,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
                     opacity={1}
                     originX={0}
                     originY={0}
-                    propList={
-                      Array [
-                        "fill",
-                        "fillOpacity",
-                        "fillRule",
-                        "stroke",
-                        "strokeWidth",
-                        "strokeOpacity",
-                        "strokeDasharray",
-                        "strokeDashoffset",
-                        "strokeLinecap",
-                        "strokeLinejoin",
-                        "strokeMiterlimit",
-                      ]
-                    }
+                    propList={Array []}
                     rotation={0}
                     scaleX={1}
                     scaleY={1}
@@ -929,6 +893,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   >
@@ -973,6 +938,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
                       strokeMiterlimit={4}
                       strokeOpacity={1}
                       strokeWidth={1}
+                      vectorEffect={0}
                       x={0}
                       y={0}
                     />
@@ -1064,6 +1030,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
                         onFocus={[Function]}
                         onSubmitEditing={[Function]}
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
                           Object {
@@ -1216,6 +1183,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
                         onFocus={[Function]}
                         onSubmitEditing={[Function]}
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
                           Object {
@@ -1549,21 +1517,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
                     opacity={1}
                     originX={0}
                     originY={0}
-                    propList={
-                      Array [
-                        "fill",
-                        "fillOpacity",
-                        "fillRule",
-                        "stroke",
-                        "strokeWidth",
-                        "strokeOpacity",
-                        "strokeDasharray",
-                        "strokeDashoffset",
-                        "strokeLinecap",
-                        "strokeLinejoin",
-                        "strokeMiterlimit",
-                      ]
-                    }
+                    propList={Array []}
                     rotation={0}
                     scaleX={1}
                     scaleY={1}
@@ -1577,6 +1531,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   >
@@ -1621,6 +1576,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
                       strokeMiterlimit={4}
                       strokeOpacity={1}
                       strokeWidth={1}
+                      vectorEffect={0}
                       x={0}
                       y={0}
                     />
@@ -1712,6 +1668,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
                         onFocus={[Function]}
                         onSubmitEditing={[Function]}
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
                           Object {
@@ -1864,6 +1821,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
                         onFocus={[Function]}
                         onSubmitEditing={[Function]}
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
                           Object {

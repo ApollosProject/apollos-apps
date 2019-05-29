@@ -74,6 +74,7 @@ exports[`The Text Input component should render as a numeric field 1`] = `
               onFocus={[Function]}
               placeholder="Some placeholder"
               placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Object {
@@ -261,6 +262,7 @@ exports[`The Text Input component should render as a password field with an icon
               onFocus={[Function]}
               placeholder="Some placeholder"
               placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              rejectResponderTermination={true}
               returnKeyType="done"
               secureTextEntry={true}
               style={
@@ -334,21 +336,7 @@ exports[`The Text Input component should render as a password field with an icon
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                    "fillOpacity",
-                    "fillRule",
-                    "stroke",
-                    "strokeWidth",
-                    "strokeOpacity",
-                    "strokeDasharray",
-                    "strokeDashoffset",
-                    "strokeLinecap",
-                    "strokeLinejoin",
-                    "strokeMiterlimit",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -362,6 +350,7 @@ exports[`The Text Input component should render as a password field with an icon
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
                 x={0}
                 y={0}
               >
@@ -406,6 +395,7 @@ exports[`The Text Input component should render as a password field with an icon
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 />
@@ -576,6 +566,7 @@ exports[`The Text Input component should render as a phone number field 1`] = `
               onFocus={[Function]}
               placeholder="Some placeholder"
               placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Object {
@@ -764,6 +755,7 @@ exports[`The Text Input component should render as an email field 1`] = `
               onFocus={[Function]}
               placeholder="Some placeholder"
               placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Object {
@@ -949,6 +941,7 @@ exports[`The Text Input component should render correctly 1`] = `
               onFocus={[Function]}
               placeholder="Some placeholder"
               placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Object {
@@ -1133,6 +1126,7 @@ exports[`The Text Input component should render with no underline 1`] = `
               onFocus={[Function]}
               placeholder="Some placeholder"
               placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Object {
