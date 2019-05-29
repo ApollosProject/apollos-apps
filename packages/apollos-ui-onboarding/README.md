@@ -115,3 +115,5 @@ Using this package automatically provides analytics over the onboarding experien
 As of right now, each screen emits a "ScreenName Completed" or "ScreenName Skipped" event when the screen has been completed or skipped. We consider this an "80 for the 20" aproach, because it is enough information to construct a funnel chart display points at which a user drops off from the Onboarding flow.
 
 If further analytics events are required, submit an RFC (or a pull-request!) with what you are looking for, and our team will take a look.
+
+You can implement your own anlytics by passing a `pressPrimaryEventName` or `pressSecondaryEventName` prop to the `Screen` component. If those strings are passed, a `track` will be called when the primary or secondary button is pressed.

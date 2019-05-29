@@ -4,13 +4,10 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
-import { withOnPressAnalytics } from '../../utils';
 import getUserFirstAndLastName from './getUserFirstAndLastName';
 import AskName from './AskName';
 
 import updateUserName from './updateUserName';
-
-const AskNameWithAnalytics = withOnPressAnalytics(AskName);
 
 // eslint-disable-next-line react/display-name
 const AskNameConnected = memo(
@@ -72,12 +69,14 @@ const AskNameConnected = memo(
                   errors,
                   setFieldValue,
                 }) => (
-                  <AskNameWithAnalytics
+                  <AskName
                     onPressPrimary={loading || isValid ? submitForm : null} // if form `isValid` show the primary nav button (next)
                     onPressSecondary={
                       // if form `!isValid` show the secondary nav button (skip)
                       isValid ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
                     }
+                    pressPrimaryEventName={'Ask Name Completed'}
+                    pressSecondaryEventName={'Ask Name Skipped'}
                     firstName={firstName}
                     lastName={lastName}
                     values={values}

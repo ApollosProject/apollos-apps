@@ -2,11 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
-import { withOnPressAnalytics } from '../../utils';
 import getUserCampus from './getUserCampus';
 import LocationFinder from './LocationFinder';
-
-const LocationFinderWithAnalytics = withOnPressAnalytics(LocationFinder);
 
 class LocationFinderConnected extends PureComponent {
   state = { selectedCampus: false };
@@ -25,7 +22,7 @@ class LocationFinderConnected extends PureComponent {
         }) => (
           <AnalyticsConsumer>
             {({ track }) => (
-              <LocationFinderWithAnalytics
+              <LocationFinder
                 onPressButton={async () => {
                   this.setState({ selectedCampus: true });
                   this.props.onNavigate();
@@ -41,6 +38,8 @@ class LocationFinderConnected extends PureComponent {
                     ? this.props.onPressPrimary
                     : null
                 }
+                pressPrimaryEventName={'Ask Location Completed'}
+                pressSecondaryEventName={'Ask Location Skipped'}
                 buttonText={'Yes, find my local campus'}
                 campus={this.state.selectedCampus ? campus : null}
                 {...this.props}

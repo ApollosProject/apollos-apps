@@ -1,11 +1,8 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 
-import { withOnPressAnalytics } from '../../utils';
 import getUserFirstName from './getUserFirstName';
 import Features from './Features';
-
-const FeaturesWithAnalytics = withOnPressAnalytics(Features);
 
 const FeaturesConnected = (props) => (
   <Query query={getUserFirstName}>
@@ -15,9 +12,10 @@ const FeaturesConnected = (props) => (
         currentUser: { profile: { firstName } = { campus: {} } } = {},
       } = {},
     }) => (
-      <FeaturesWithAnalytics
+      <Features
         firstName={firstName}
         isLoading={loading}
+        pressPrimaryEventName={'Features Completed'}
         {...props}
       />
     )}

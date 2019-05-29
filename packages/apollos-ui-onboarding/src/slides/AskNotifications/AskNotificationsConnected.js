@@ -2,12 +2,9 @@ import React, { memo } from 'react';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 // This query is also found in core/permissionUtils. We should refactor into a notifications module.
-import { withOnPressAnalytics } from '../../utils';
 import getNotificationsEnabled from './getNotificationsEnabled';
 
 import AskNotifications from './AskNotifications';
-
-const AskNotificationsWithAnalytics = withOnPressAnalytics(AskNotifications);
 // eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo(
   ({
@@ -18,7 +15,7 @@ const AskNotificationsConnected = memo(
   }) => (
     <Query query={getNotificationsEnabled}>
       {({ data: { notificationsEnabled = false } = {} }) => (
-        <AskNotificationsWithAnalytics
+        <AskNotifications
           onPressButton={() => onRequestPushPermissions()}
           buttonDisabled={notificationsEnabled}
           buttonText={
@@ -31,6 +28,8 @@ const AskNotificationsConnected = memo(
             // if notifications are not enabled show the secondary nav button (skip)
             notificationsEnabled ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
           }
+          pressPrimaryEventName={'Ask Notifications Completed'}
+          pressSecondaryEventName={'Ask Notifications Skipped'}
           {...props}
         />
       )}

@@ -4,13 +4,10 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
-import { withOnPressAnalytics } from '../../utils';
 import getUserGenderAndBirthDate from './getUserGenderAndBirthDate';
 import AboutYou from './AboutYou';
 
 import updateUserDetails from './updateUserDetails';
-
-const AboutYouWithAnalytics = withOnPressAnalytics(AboutYou);
 
 const AboutYouConnected = memo(
   ({ onPressPrimary, onPressSecondary, ...props }) => (
@@ -69,12 +66,14 @@ const AboutYouConnected = memo(
                   errors,
                   setFieldValue,
                 }) => (
-                  <AboutYouWithAnalytics
+                  <AboutYou
                     onPressPrimary={isValid ? submitForm : null} // if form `isValid` show the primary nav button (next)
                     onPressSecondary={
                       // if form `!isValid` show the secondary nav button (skip)
                       isValid ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
                     }
+                    pressPrimaryEventName={'About You Completed'}
+                    pressSecondaryEventName={'About You Skipped'}
                     gender={gender}
                     birthDate={birthDate}
                     values={values}
