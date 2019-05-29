@@ -241,21 +241,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -269,6 +255,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -313,6 +300,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
@@ -793,21 +781,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -821,6 +795,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -865,6 +840,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
@@ -1113,21 +1089,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -1141,6 +1103,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -1185,6 +1148,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
@@ -1467,21 +1431,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -1495,6 +1445,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -1539,6 +1490,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
@@ -1991,21 +1943,7 @@ exports[`ContentCard renders with No image 1`] = `
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -2019,6 +1957,7 @@ exports[`ContentCard renders with No image 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -2063,6 +2002,7 @@ exports[`ContentCard renders with No image 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
@@ -2334,21 +2274,7 @@ exports[`ContentCard renders with an Image only 1`] = `
                   opacity={1}
                   originX={0}
                   originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                      "fillOpacity",
-                      "fillRule",
-                      "stroke",
-                      "strokeWidth",
-                      "strokeOpacity",
-                      "strokeDasharray",
-                      "strokeDashoffset",
-                      "strokeLinecap",
-                      "strokeLinejoin",
-                      "strokeMiterlimit",
-                    ]
-                  }
+                  propList={Array []}
                   rotation={0}
                   scaleX={1}
                   scaleY={1}
@@ -2362,6 +2288,7 @@ exports[`ContentCard renders with an Image only 1`] = `
                   strokeMiterlimit={4}
                   strokeOpacity={1}
                   strokeWidth={1}
+                  vectorEffect={0}
                   x={0}
                   y={0}
                 >
@@ -2406,6 +2333,7 @@ exports[`ContentCard renders with an Image only 1`] = `
                     strokeMiterlimit={4}
                     strokeOpacity={1}
                     strokeWidth={1}
+                    vectorEffect={0}
                     x={0}
                     y={0}
                   />
