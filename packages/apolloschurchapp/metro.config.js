@@ -43,6 +43,7 @@ module.exports = {
         }),
         {}
       ),
+      'react-native-svg': path.resolve('.', 'node_modules/react-native-svg'),
     },
     blacklistRE: blacklist([
       ...localDeps.map(
@@ -59,6 +60,9 @@ module.exports = {
       ...sharedNativeModules.map(
         (moduleName) =>
           new RegExp(`${path.resolve(`../../node_modules/${moduleName}`)}/.*`)
+      ),
+      ...localDeps.map(
+        (depPath) => new RegExp(`${depPath}/node_modules/react-native-svg/.*`)
       ),
       ...localDeps.map(
         (depPath) =>
