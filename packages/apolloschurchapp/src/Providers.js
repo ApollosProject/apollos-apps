@@ -2,6 +2,7 @@ import React from 'react';
 import { Providers } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
+import { MediaPlayerProvider } from '@apollosproject/ui-media-player';
 
 import NavigationService from './NavigationService';
 import { NotificationsManager } from './notifications';
@@ -15,9 +16,11 @@ const AppProviders = (props) => (
         navigateToAuth={() => NavigationService.navigate('Auth')}
         closeAuth={() => NavigationService.navigate('Onboarding')}
       >
-        <AnalyticsProvider>
-          <Providers iconInput={CustomIcons} {...props} />
-        </AnalyticsProvider>
+        <MediaPlayerProvider>
+          <AnalyticsProvider>
+            <Providers iconInput={CustomIcons} {...props} />
+          </AnalyticsProvider>
+        </MediaPlayerProvider>
       </AuthProvider>
     </NotificationsManager>
   </ClientProvider>

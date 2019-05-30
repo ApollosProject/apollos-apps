@@ -1,8 +1,7 @@
 import React from 'react';
 
-import Providers from 'apolloschurchapp/src/Providers';
-import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import FullscreenPlayer from './FullscreenPlayer';
 
