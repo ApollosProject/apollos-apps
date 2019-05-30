@@ -83,7 +83,15 @@ exports[`user avatar header renders placeholder when loading 1`] = `
                 }
               }
             >
-              <View>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 12,
+                    "marginRight": 0,
+                    "marginTop": 8,
+                  }
+                }
+              >
                 <View
                   style={
                     Object {
@@ -503,7 +511,15 @@ exports[`user avatar header renders user avatar header if logged in 1`] = `
                 }
               }
             >
-              <View>
+              <View
+                style={
+                  Object {
+                    "marginBottom": 12,
+                    "marginRight": 0,
+                    "marginTop": 8,
+                  }
+                }
+              >
                 <View
                   style={
                     Object {
