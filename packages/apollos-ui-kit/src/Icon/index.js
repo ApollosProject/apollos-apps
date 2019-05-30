@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { compose, pure } from 'recompose';
+import { compose, pure, getContext } from 'recompose';
 import { flow, camelCase, upperFirst, kebabCase } from 'lodash';
 
 import Placeholder from '../Placeholder';
 
-import * as Icons from './icons';
+import * as uikitIcons from './icons';
 
 const pascalCase = (string) =>
   flow(
@@ -20,19 +20,46 @@ const pascalCase = (string) =>
 // import { SkipNext } from 'Icon/icons';
 // <SkipNext />
 
-const enhance = compose(pure);
+const enhance = compose(
+  pure,
+  getContext({
+    iconInput: PropTypes.objectOf(PropTypes.func),
+  })
+);
 
-const Icon = enhance(({ name, size, isLoading = false, ...otherProps }) => {
-  const IconComponent = Icons[pascalCase(name)];
-  return (
-    <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
-      <IconComponent size={size} {...otherProps} />
-    </Placeholder.Media>
+const Icon = enhance(
+  ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
+    const Icons = { ...uikitIcons, ...iconInput };
+    const IconComponent = Icons[pascalCase(name)];
+
+    return (
+      <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
+        <IconComponent size={size} {...otherProps} />
+      </Placeholder.Media>
+    );
+  }
+);
+
+// eslint-disable-next-line consistent-return
+const namePropValidator = (props, propName, componentName) => {
+  const icons = Object.keys({ ...uikitIcons, ...props.iconInput }).map(
+    kebabCase
   );
-});
+
+  if (!icons.includes(props.name)) {
+    // eslint-disable-next-line no-console
+    return new Error(
+      `Invalid prop \`${propName}\` of value \`${
+        props.name
+      }\` supplied to \`${componentName}\` expected one of ${JSON.stringify(
+        icons
+      )}`
+    );
+  }
+};
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)).isRequired,
+  name: namePropValidator,
   size: PropTypes.number,
   fill: PropTypes.string,
   isLoading: PropTypes.bool,
@@ -41,5 +68,7 @@ Icon.propTypes = {
 Icon.defaultProps = {
   size: 32, // 32 is the default size used within the svg component
 };
+
+Icon.displayName = 'Icon';
 
 export default Icon;

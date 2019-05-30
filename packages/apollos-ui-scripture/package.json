@@ -28,7 +28,8 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
-    ]
+    ],
+    "modulePathIgnorePatterns": ["node_modules/@storybook/"]
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
@@ -40,7 +41,7 @@
     "@apollosproject/ui-storybook": "^0.8.6",
     "metro-react-native-babel-preset": "^0.53.1",
     "@storybook/react-native": "^4.0.7",
-    "jest": "23.6.0",
+    "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "^16.8.3",
