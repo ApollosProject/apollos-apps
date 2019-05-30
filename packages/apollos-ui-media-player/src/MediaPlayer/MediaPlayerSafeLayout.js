@@ -1,9 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-
 import { styled, LayoutConsumer } from '@apollosproject/ui-kit';
 
-const InnerView = styled(({ safeAreaInsets, isFullscreen = false, theme }) => ({
+const InnerView = styled(({ isFullscreen = false, theme, safeAreaInsets }) => ({
   marginBottom: isFullscreen
     ? 0
     : Math.max(theme.sizing.baseUnit, safeAreaInsets.bottom * 0.75),

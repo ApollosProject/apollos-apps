@@ -8,6 +8,7 @@
     "@apollosproject/ui-auth": "*",
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-media-player": "*",
     "@apollosproject/ui-passes": "*",
     "@apollosproject/ui-onboarding": "*",
     "@apollosproject/ui-scripture": "*",

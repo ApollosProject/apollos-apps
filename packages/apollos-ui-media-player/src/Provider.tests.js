@@ -1,7 +1,7 @@
-import { client } from 'apolloschurchapp/src/client';
 import gql from 'graphql-tag';
 
-import { resolvers, defaults } from '.';
+import { resolvers, defaults } from './Provider';
+import { client } from './testUtils';
 
 const query = gql`
   query {
@@ -29,7 +29,7 @@ const testTrack = {
 
 describe('MediaPlayer Store', () => {
   beforeEach(() => {
-    client.writeData({ data: defaults });
+    client.writeData({ data: { mediaPlayer: defaults } });
   });
 
   it('plays a track', async () => {

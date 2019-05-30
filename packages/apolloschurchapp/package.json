@@ -56,9 +56,6 @@
     ],
     "setupFiles": [
       "./jest.setup.js"
-    ],
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
     ]
   },
   "dependencies": {
@@ -69,6 +66,7 @@
     "@apollosproject/ui-passes": "^0.8.6",
     "@apollosproject/ui-scripture": "^0.8.6",
     "@apollosproject/ui-storybook": "^0.8.6",
+    "@apollosproject/ui-media-player": "^0.8.6",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.5.1",

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-navigation';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 

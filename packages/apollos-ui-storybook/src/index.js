@@ -7,6 +7,7 @@ import { loadStories as loadHTMLViewStories } from '@apollosproject/ui-htmlview/
 import { loadStories as loadUiKitStories } from '@apollosproject/ui-kit/storybook/storyLoader';
 import { loadStories as loadPassesStories } from '@apollosproject/ui-passes/storybook/storyLoader';
 import { loadStories as loadOnboardingStories } from '@apollosproject/ui-onboarding/storybook/storyLoader';
+import { loadStories as loadMediaPlayerStories } from '@apollosproject/ui-media-player/storybook/storyLoader';
 import { loadStories as loadScriptureStories } from '@apollosproject/ui-scripture/storybook/storyLoader';
 
 import { Providers as UIKitProviders } from '@apollosproject/ui-kit';
@@ -24,6 +25,7 @@ export const loadApollosStories = () => {
   loadUiKitStories();
   loadPassesStories();
   loadOnboardingStories();
+  loadMediaPlayerStories();
   loadScriptureStories();
 };
 
