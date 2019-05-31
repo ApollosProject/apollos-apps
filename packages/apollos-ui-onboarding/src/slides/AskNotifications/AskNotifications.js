@@ -39,6 +39,8 @@ const AskNotifications = memo(
   )
 );
 
+AskNotifications.displayName = 'AskNotifications';
+
 AskNotifications.propTypes = {
   BackgroundComponent: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
