@@ -54,7 +54,6 @@ class LocationFinderConnected extends PureComponent {
 
 LocationFinderConnected.propTypes = {
   onPressPrimary: PropTypes.func,
-  track: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
 };
 

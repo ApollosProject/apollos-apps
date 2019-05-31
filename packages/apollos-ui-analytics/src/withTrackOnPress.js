@@ -17,11 +17,11 @@ const withTrackOnPress = (Component) => ({
   return (
     <AnalyticsConsumer>
       {({ track }) => {
-        const handlePress = () => {
+        const handleOnPress = () => {
           track({ eventName: trackEventName, properties: trackProperties });
           return onPress && onPress();
         };
-        return <Component {...props} onPress={handlePress} />;
+        return <Component {...props} onPress={handleOnPress} />;
       }}
     </AnalyticsConsumer>
   );

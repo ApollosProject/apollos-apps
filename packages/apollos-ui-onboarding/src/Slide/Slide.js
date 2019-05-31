@@ -16,7 +16,6 @@ import {
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
 
-const TrackingButtonLink = withTrackOnPress(ButtonLink);
 const TrackingButton = withTrackOnPress(Button);
 
 const styles = StyleSheet.create({
@@ -52,7 +51,7 @@ const SkipButton = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 0.9375, // optically centered on typographic baseline
   paddingHorizontal: theme.sizing.baseUnit, // improves tappability
   marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
-}))(TrackingButtonLink);
+}))(withTrackOnPress(ButtonLink));
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);
 

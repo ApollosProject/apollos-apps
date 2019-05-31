@@ -8,7 +8,7 @@ import { ProviderStack } from './testUtils';
 // Otherwise these tests are pretty much useless.
 
 describe('withOnPressTrack', () => {
-  it('Renders with an trackEventName', () => {
+  it('renders with a tracking object that includes trackEventName', () => {
     const Button = withTrackOnPress(TouchableOpacity);
     const tree = renderer.create(
       <ProviderStack>
@@ -18,7 +18,7 @@ describe('withOnPressTrack', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('Renders with an trackProperties', () => {
+  it('renders with a tracking object that includes trackProperties', () => {
     const Button = withTrackOnPress(TouchableOpacity);
     const tree = renderer.create(
       <ProviderStack>
@@ -32,7 +32,7 @@ describe('withOnPressTrack', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('Renders without an eventName', () => {
+  it('renders with a tracking object that excludes eventName', () => {
     const Button = withTrackOnPress(TouchableOpacity);
     const tree = renderer.create(
       <ProviderStack>
