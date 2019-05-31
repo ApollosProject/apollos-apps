@@ -1,3 +1,6 @@
+/* Add your custom theme definitions below. Anything that is supported in UI-Kit Theme can be
+ overridden and/or customized here! */
+
 /* Base colors.
  * These get used by theme types (see /types directory) to color
  * specific parts of the interface. For more control on how certain
