@@ -1,4 +1,4 @@
-# [The Apollos Project](apollosapp.io) [![Build status](https://build.appcenter.ms/v0.1/apps/7371d424-46b8-4202-9e79-46eafa64081a/branches/master/badge)](https://appcenter.ms) [![Build status](https://build.appcenter.ms/v0.1/apps/042a93dd-9ade-4695-9b41-8307c9acf4b9/branches/master/badge)](https://appcenter.ms)
+# [The Apollos Project](https://apollosapp.io) [![Build status](https://build.appcenter.ms/v0.1/apps/7371d424-46b8-4202-9e79-46eafa64081a/branches/master/badge)](https://appcenter.ms) [![Build status](https://build.appcenter.ms/v0.1/apps/042a93dd-9ade-4695-9b41-8307c9acf4b9/branches/master/badge)](https://appcenter.ms)
 
 ### [Visit the docs](https://apollosapp.io/docs/install)
 
