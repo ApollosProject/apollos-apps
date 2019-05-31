@@ -8,7 +8,7 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createHttpLink } from 'apollo-link-http';
 import fetch from 'jest-fetch-mock';
-import { resolvers } from './Provider';
+import { resolvers } from './store';
 
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);

@@ -1,15 +1,13 @@
 import URL from 'url';
 import querystring from 'querystring';
 import { Component } from 'react';
-import { Platform, Linking } from 'react-native';
+import { Linking } from 'react-native';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo';
 import { get } from 'lodash';
 import OneSignal from 'react-native-onesignal';
-import { getLoginState } from '@apollosproject/ui-auth';
-import { getNotificationsEnabled, getPushPermissions } from './permissionUtils';
-import updatePushId from './updatePushId';
+import { resolvers, defaults } from './store';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -17,50 +15,6 @@ const UPDATE_DEVICE_PUSH_ID = gql`
   }
 `;
 
-export const defaults = {
-  pushId: null,
-  notificationsEnabled: Platform.OS === 'android',
-};
-
-export const resolvers = {
-  Query: {
-    notificationsEnabled: getPushPermissions,
-  },
-  Mutation: {
-    updateDevicePushId: async (root, { pushId }, { cache, client }) => {
-      const query = gql`
-        query {
-          pushId @client
-        }
-      `;
-      cache.writeQuery({
-        query,
-        data: {
-          pushId,
-        },
-      });
-
-      const { data: { isLoggedIn } = {} } = await client.query({
-        query: getLoginState,
-      });
-
-      if (isLoggedIn) {
-        updatePushId({ pushId, client });
-      }
-      return null;
-    },
-    updatePushPermissions: (root, { enabled }, { cache }) => {
-      cache.writeQuery({
-        query: getNotificationsEnabled,
-        data: {
-          notificationsEnabled: enabled,
-        },
-      });
-
-      return null;
-    },
-  },
-};
 class NotificationsInit extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
