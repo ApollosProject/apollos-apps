@@ -14,6 +14,10 @@ import {
   Icon,
 } from '@apollosproject/ui-kit';
 
+import { withTrackOnPress } from '@apollosproject/ui-analytics';
+
+const TrackingButton = withTrackOnPress(Button);
+
 const styles = StyleSheet.create({
   contentContainer: { minHeight: '100%' },
 });
@@ -47,7 +51,7 @@ const SkipButton = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 0.9375, // optically centered on typographic baseline
   paddingHorizontal: theme.sizing.baseUnit, // improves tappability
   marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
-}))(ButtonLink);
+}))(withTrackOnPress(ButtonLink));
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);
 
@@ -63,6 +67,8 @@ const Slide = memo(
     primaryNavIcon,
     secondaryNavText,
     isLoading,
+    pressPrimaryEventName,
+    pressSecondaryEventName,
     ...scrollViewProps
   }) => (
     <>
@@ -77,17 +83,24 @@ const Slide = memo(
         <NavWrapper vertical={false}>
           <SafeAreaView forceInset={forceInset}>
             {onPressPrimary ? (
-              <Button onPress={onPressPrimary} loading={isLoading}>
+              <TrackingButton
+                trackEventName={pressPrimaryEventName}
+                onPress={onPressPrimary}
+                loading={isLoading}
+              >
                 <>
                   <H5>{primaryNavText}</H5>
                   {primaryNavIcon ? (
                     <PrimaryNavIcon name={primaryNavIcon} />
                   ) : null}
                 </>
-              </Button>
+              </TrackingButton>
             ) : null}
             {onPressSecondary ? (
-              <SkipButton onPress={onPressSecondary}>
+              <SkipButton
+                trackEventName={pressSecondaryEventName}
+                onPress={onPressSecondary}
+              >
                 {secondaryNavText}
               </SkipButton>
             ) : null}
@@ -105,6 +118,8 @@ Slide.propTypes = {
   ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
+  pressPrimaryEventName: PropTypes.string,
+  pressSecondaryEventName: PropTypes.string,
   primaryNavText: PropTypes.string, // colored button text
   primaryNavIcon: PropTypes.string, // optional custom icon name or empty string for no icon at all
   secondaryNavText: PropTypes.string, // text link

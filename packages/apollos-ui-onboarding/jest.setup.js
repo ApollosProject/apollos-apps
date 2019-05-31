@@ -1,6 +1,10 @@
+import React from 'react';
+
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsProvider: ({ children }) => children,
+  AnalyticsConsumer: ({ children }) => children({ track: jest.fn() }),
+  withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
 jest.mock('react-navigation', () => {
