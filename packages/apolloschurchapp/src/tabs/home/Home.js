@@ -73,8 +73,8 @@ class Home extends PureComponent {
                   (edge) => edge.node
                 )}
                 fetchMore={fetchMoreResolver({
-                  collectionName: 'userFeed.edges',
-                  after: get(data, 'userFeed.pageInfo.endCursor'),
+                  collectionName: 'userFeed',
+                  pageInfo: get(data, 'userFeed.pageInfo'),
                   fetchMore,
                   variables,
                 })}

@@ -3,26 +3,35 @@ import set from 'lodash/fp/set';
 
 export default function fetchMoreResolver({
   collectionName,
-  after,
+  pageInfo = { endCursor: null },
   variables,
   fetchMore,
 } = {}) {
   return () => {
-    if (!after) return;
+    if (!pageInfo.endCursor) return;
 
     fetchMore({
-      variables: { ...variables, after },
+      variables: { ...variables, after: pageInfo.endCursor },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         // combine previous data and fetchMore data
-        const newResult = set(
-          collectionName,
-          [
-            ...(get(previousResult, collectionName) || []),
-            ...(get(fetchMoreResult, collectionName) || []),
-          ],
-          { ...previousResult }
+        const newDataWithPageInfo = set(
+          `${collectionName}.pageInfo`,
+          {
+            ...get(previousResult, `${collectionName}.pageInfo`, {}),
+            ...get(fetchMoreResult, `${collectionName}.pageInfo`, {}),
+          },
+          previousResult
         );
-        return newResult;
+        const newDataWithAdditionalItems = set(
+          `${collectionName}.edges`,
+          [
+            ...get(previousResult, `${collectionName}.edges`, []),
+            ...get(fetchMoreResult, `${collectionName}.edges`, []),
+          ],
+          newDataWithPageInfo
+        );
+
+        return newDataWithAdditionalItems;
       },
     });
   };
