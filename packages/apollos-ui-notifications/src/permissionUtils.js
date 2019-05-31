@@ -26,6 +26,12 @@ const getNotificationsEnabled = gql`
   }
 `;
 
+export const getPushId = gql`
+  query getPushId {
+    pushId @client
+  }
+`;
+
 const requestPushPermissions = async ({ client }) => {
   const notificationsEnabled = await promptForPushNotificationsWithUserResponse();
   await client.mutate({
