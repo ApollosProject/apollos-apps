@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 // This query is also found in core/permissionUtils. We should refactor into a notifications module.
 import getNotificationsEnabled from './getNotificationsEnabled';
 
-import AskNotifications from '.';
-
+import AskNotifications from './AskNotifications';
 // eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo(
   ({
@@ -29,6 +28,8 @@ const AskNotificationsConnected = memo(
             // if notifications are not enabled show the secondary nav button (skip)
             notificationsEnabled ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
           }
+          pressPrimaryEventName={'Ask Notifications Completed'}
+          pressSecondaryEventName={'Ask Notifications Skipped'}
           {...props}
         />
       )}

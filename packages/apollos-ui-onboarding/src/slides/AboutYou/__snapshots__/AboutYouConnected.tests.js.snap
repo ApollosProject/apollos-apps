@@ -1312,6 +1312,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
               "paddingVertical": 15,
             }
           }
+          trackEventName="About You Skipped"
         >
           Skip
         </Text>

@@ -30,15 +30,15 @@ import { track } from '@apollosproject/ui-analytics'
 ### From anywhere in the component tree under the AnalyticsProvider.
 
 ```
-import { AnalyticsProvider } from '@apollosproject/ui-analytics'
+import { AnalyticsConsumer } from '@apollosproject/ui-analytics'
 
 ...
 
-  <AnalyticsProvider>
+  <AnalyticsConsumer>
   ({ track, identify }) => (
     <Something onSomethingHappened={() => track({ eventName, properties })} />
   )
-  </AnalyticsProvider
+  </AnalyticsConsumer
 ```
 
 ### Using a component.

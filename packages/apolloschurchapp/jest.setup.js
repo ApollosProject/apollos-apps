@@ -1,3 +1,4 @@
+import React from 'react';
 // We ran into an issue where SafeAreaView would break jest tests.
 jest.mock('react-navigation', () => {
   const ActualNavigation = require.requireActual('react-navigation');
@@ -73,6 +74,7 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
+  withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
 jest.mock('@apollosproject/ui-media-player', () => ({

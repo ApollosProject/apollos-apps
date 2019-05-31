@@ -24,7 +24,6 @@ const StyledSlideContent = styled({
 })(SlideContent);
 
 // memo = sfc PureComponent 💥
-// eslint-disable-next-line react/display-name
 const LocationFinder = memo(
   ({
     onPressPrimary,
@@ -38,19 +37,7 @@ const LocationFinder = memo(
     campus,
     ...props
   }) => (
-    <Slide
-      onPressPrimary={
-        campus /* show the primary action button (next) if we have a campus */
-          ? onPressPrimary
-          : null
-      }
-      onPressSecondary={
-        !campus /* show the secondary action button (skip) if we don't have a campus */
-          ? onPressPrimary
-          : null
-      }
-      {...props}
-    >
+    <Slide {...props}>
       {BackgroundComponent}
       <StyledSlideContent title={slideTitle} description={description}>
         {campus ? (
@@ -102,6 +89,8 @@ LocationFinder.propTypes = {
   }),
   isCurrentCampus: PropTypes.bool,
 };
+
+LocationFinder.displayName = 'LocationFinder';
 
 LocationFinder.defaultProps = {
   slideTitle: "Let's select your local campus",

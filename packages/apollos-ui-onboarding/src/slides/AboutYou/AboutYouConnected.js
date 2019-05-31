@@ -9,7 +9,6 @@ import AboutYou from './AboutYou';
 
 import updateUserDetails from './updateUserDetails';
 
-// eslint-disable-next-line react/display-name
 const AboutYouConnected = memo(
   ({ onPressPrimary, onPressSecondary, ...props }) => (
     <Query query={getUserGenderAndBirthDate}>
@@ -73,6 +72,8 @@ const AboutYouConnected = memo(
                       // if form `!isValid` show the secondary nav button (skip)
                       isValid ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
                     }
+                    pressPrimaryEventName={'About You Completed'}
+                    pressSecondaryEventName={'About You Skipped'}
                     gender={gender}
                     birthDate={birthDate}
                     values={values}
@@ -96,5 +97,7 @@ AboutYouConnected.propTypes = {
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
 };
+
+AboutYouConnected.displayName = 'AboutYouConnected';
 
 export default AboutYouConnected;

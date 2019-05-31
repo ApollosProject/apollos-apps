@@ -558,6 +558,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with a
               "paddingVertical": 15,
             }
           }
+          trackEventName="Ask Notifications Skipped"
         >
           Skip
         </Text>
