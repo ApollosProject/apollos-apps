@@ -5,7 +5,7 @@ import SplashScreen from 'react-native-splash-screen';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
-import MediaPlayer from 'apolloschurchapp/src/ui/MediaPlayer';
+import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
 import Providers from './Providers';
