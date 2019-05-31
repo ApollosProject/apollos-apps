@@ -74,9 +74,9 @@ class Home extends PureComponent {
                 )}
                 fetchMore={fetchMoreResolver({
                   collectionName: 'userFeed',
-                  pageInfo: get(data, 'userFeed.pageInfo'),
                   fetchMore,
                   variables,
+                  data,
                 })}
                 isLoading={loading}
                 error={error}

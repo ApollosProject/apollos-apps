@@ -61,12 +61,9 @@ class ContentFeed extends PureComponent {
               ).map((edge) => edge.node)}
               fetchMore={fetchMoreResolver({
                 collectionName: 'node.childContentItemsConnection',
-                pageInfo: get(
-                  data,
-                  'node.childContentItemsConnection.edges.pageInfo'
-                ),
                 fetchMore,
                 variables,
+                data,
               })}
               isLoading={loading}
               error={error}

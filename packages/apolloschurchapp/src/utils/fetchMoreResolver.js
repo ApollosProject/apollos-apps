@@ -3,30 +3,34 @@ import set from 'lodash/fp/set';
 
 export default function fetchMoreResolver({
   collectionName,
-  pageInfo = { endCursor: null },
   variables,
   fetchMore,
+  data,
 } = {}) {
   return () => {
-    if (!pageInfo.endCursor) return;
+    const pageInfoPath = `${collectionName}.pageInfo`;
+    const edgePath = `${collectionName}.edges`;
+
+    const after = get(data, `${pageInfoPath}.endCursor`);
+    if (!after) return;
 
     fetchMore({
-      variables: { ...variables, after: pageInfo.endCursor },
+      variables: { ...variables, after },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         // combine previous data and fetchMore data
         const newDataWithPageInfo = set(
-          `${collectionName}.pageInfo`,
+          pageInfoPath,
           {
-            ...get(previousResult, `${collectionName}.pageInfo`, {}),
-            ...get(fetchMoreResult, `${collectionName}.pageInfo`, {}),
+            ...get(previousResult, pageInfoPath, {}),
+            ...get(fetchMoreResult, pageInfoPath, {}),
           },
           previousResult
         );
         const newDataWithAdditionalItems = set(
-          `${collectionName}.edges`,
+          edgePath,
           [
-            ...get(previousResult, `${collectionName}.edges`, []),
-            ...get(fetchMoreResult, `${collectionName}.edges`, []),
+            ...get(previousResult, edgePath, []),
+            ...get(fetchMoreResult, edgePath, []),
           ],
           newDataWithPageInfo
         );

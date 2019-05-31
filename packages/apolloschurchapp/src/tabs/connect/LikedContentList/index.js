@@ -53,10 +53,10 @@ class LikedContentList extends PureComponent {
               refetch={refetch}
               onPressItem={this.handleOnPress}
               fetchMore={fetchMoreResolver({
-                collectionName: 'likedContent.edges',
-                after: get(data, 'likedContent.edges.pageInfo.endCursor'),
+                collectionName: 'likedContent',
                 fetchMore,
                 variables,
+                data,
               })}
             />
           )}
