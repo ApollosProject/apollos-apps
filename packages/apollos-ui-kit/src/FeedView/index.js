@@ -43,7 +43,7 @@ class FeedView extends Component {
     isLoading: false,
     ListItemComponent: ContentCard,
     onEndReachedThreshold: 0.7,
-    keyExtractor: item => item && item.id,
+    keyExtractor: (item) => item && item.id,
     content: [],
     refetch: undefined,
     fetchMore: undefined,
