@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withOnPressTrack Renders with an trackEventName 1`] = `
+exports[`withOnPressTrack renders with a tracking object that excludes eventName 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -52,7 +52,7 @@ exports[`withOnPressTrack Renders with an trackEventName 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`withOnPressTrack Renders with an trackProperties 1`] = `
+exports[`withOnPressTrack renders with a tracking object that includes trackEventName 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -104,7 +104,7 @@ exports[`withOnPressTrack Renders with an trackProperties 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`withOnPressTrack Renders without an eventName 1`] = `
+exports[`withOnPressTrack renders with a tracking object that includes trackProperties 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
