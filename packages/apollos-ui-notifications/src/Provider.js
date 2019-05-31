@@ -17,12 +17,12 @@ const UPDATE_DEVICE_PUSH_ID = gql`
   }
 `;
 
-const defaults = {
+export const defaults = {
   pushId: null,
   notificationsEnabled: Platform.OS === 'android',
 };
 
-const resolvers = {
+export const resolvers = {
   Query: {
     notificationsEnabled: getPushPermissions,
   },
