@@ -67,6 +67,14 @@ module.exports = {
     'no-underscore-dangle': 0,
     "graphql/template-strings": ['error', { env: 'apollo' }]
   },
+  overrides: [
+    {
+      "files": ["packages/apollos-data-schema/**/*.js"],
+      "rules": {
+        "graphql/template-strings": "off"
+      }
+    }
+  ],
   parserOptions: {
     ecmaVersion: 7,
     sourceType: 'module',
