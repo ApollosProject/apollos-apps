@@ -14,6 +14,7 @@ module.exports = {
     'jest',
     'react',
     'react-native',
+    'graphql',
   ],
   rules: {
     'prettier/prettier': [
