@@ -65,6 +65,7 @@ module.exports = {
     'import/no-cycle': 0,
     'function-paren-newline': 0,
     'no-underscore-dangle': 0,
+    "graphql/template-strings": ['error', { env: 'apollo' }]
   },
   parserOptions: {
     ecmaVersion: 7,
