@@ -8,7 +8,7 @@ import { NotificationsProvider } from '@apollosproject/ui-notifications';
 
 import NavigationService from './NavigationService';
 import ClientProvider from './client';
-import * as CustomIcons from './icons';
+import customTheme, { customIcons } from './theme';
 
 const AppProviders = (props) => (
   <ClientProvider {...props}>
@@ -22,7 +22,11 @@ const AppProviders = (props) => (
       >
         <MediaPlayerProvider>
           <AnalyticsProvider>
-            <Providers iconInput={CustomIcons} {...props} />
+            <Providers
+              themeInput={customTheme}
+              iconInput={customIcons}
+              {...props}
+            />
           </AnalyticsProvider>
         </MediaPlayerProvider>
       </AuthProvider>
