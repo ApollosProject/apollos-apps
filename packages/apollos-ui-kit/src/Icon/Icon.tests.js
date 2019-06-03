@@ -5,8 +5,8 @@ import Svg, { Path } from 'react-native-svg';
 
 import Providers from '../Providers';
 
-import * as icons from './icons';
-import makeIcon from './icons/makeIcon';
+import * as icons from '../theme/icons';
+import makeIcon from './makeIcon';
 
 import Icon from '.';
 
