@@ -170,9 +170,9 @@ We have a helper to enable safely overriding. You can import if from `@apollos/s
 ```
 import gql from graphql-tag;
 import { People } from '@apollosproject/data-connector-rock';
-import { schemaMerge } from '@apollosproject/server-core';
+import { resolverMerge } from '@apollosproject/server-core';
 
-const resolver = schemaMerge({
+const resolver = resolverMerge({
   Person: {
     firstName: ({ firstName }) => firstName.toUpperCase()
   }

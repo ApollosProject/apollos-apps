@@ -9,11 +9,11 @@ const resolver = {
   }
 }
 
-export default schemaMerge(resolver, ContentItem)
+export default resolverMerge(resolver, ContentItem)
 ```
 */
 
-export const schemaMerge = (newResolver, { resolver = {} }) => {
+export const resolverMerge = (newResolver, { resolver = {} }) => {
   const finalResolver = {};
   // For each of the keys present in both new and old resolvers
   Object.keys({ ...newResolver, ...resolver }).forEach((key) => {
