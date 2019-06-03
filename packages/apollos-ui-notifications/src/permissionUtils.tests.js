@@ -4,7 +4,7 @@ import {
   getNotificationsEnabled,
   requestPushPermissions,
 } from './permissionUtils';
-import { defaults } from './Provider';
+import { defaults } from './store';
 
 client.writeData({ data: defaults });
 
