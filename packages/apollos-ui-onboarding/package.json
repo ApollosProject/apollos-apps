@@ -35,7 +35,8 @@
     ]
   },
   "peerDependencies": {
-    "@apollos-project/ui-kit": "*",
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-analytics": "*",
     "@apollosproject/storybook": "*",
     "apollo-client": "*",
     "react": "*",

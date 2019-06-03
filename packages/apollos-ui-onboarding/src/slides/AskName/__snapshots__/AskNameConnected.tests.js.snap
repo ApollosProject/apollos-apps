@@ -1378,6 +1378,7 @@ exports[`The AskNameConnected component renders in a default state 1`] = `
               "paddingVertical": 15,
             }
           }
+          trackEventName="Ask Name Skipped"
         >
           Skip
         </Text>
@@ -2016,6 +2017,7 @@ exports[`The AskNameConnected component renders loading state when fetching data
               "paddingVertical": 15,
             }
           }
+          trackEventName="Ask Name Skipped"
         >
           Skip
         </Text>
