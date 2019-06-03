@@ -2,19 +2,24 @@ import React from 'react';
 import { Query } from 'react-apollo';
 
 import getUserFirstName from './getUserFirstName';
-import Features from '.';
+import Features from './Features';
 
-const AskNameConnected = (props) => (
+const FeaturesConnected = (props) => (
   <Query query={getUserFirstName}>
     {({
       loading,
       data: {
         currentUser: { profile: { firstName } = { campus: {} } } = {},
       } = {},
-    }) => <Features firstName={firstName} isLoading={loading} {...props} />}
+    }) => (
+      <Features
+        firstName={firstName}
+        isLoading={loading}
+        pressPrimaryEventName={'Features Completed'}
+        {...props}
+      />
+    )}
   </Query>
 );
 
-AskNameConnected.displayName = AskNameConnected;
-
-export default AskNameConnected;
+export default FeaturesConnected;

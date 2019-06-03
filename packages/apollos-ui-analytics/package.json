@@ -28,6 +28,9 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
     ]
   },
   "peerDependencies": {

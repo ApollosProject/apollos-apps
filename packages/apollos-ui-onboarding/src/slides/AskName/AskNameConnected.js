@@ -75,6 +75,8 @@ const AskNameConnected = memo(
                       // if form `!isValid` show the secondary nav button (skip)
                       isValid ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
                     }
+                    pressPrimaryEventName={'Ask Name Completed'}
+                    pressSecondaryEventName={'Ask Name Skipped'}
                     firstName={firstName}
                     lastName={lastName}
                     values={values}
