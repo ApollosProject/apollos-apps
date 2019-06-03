@@ -64,8 +64,12 @@ exports[`LikedContentList component renders LikedContentList 1`] = `
         ListEmptyComponent={
           <Err
             error={
-              [Error: Network error: No more mocked responses for the query: query getAllLikedContent($first: Int) {
-  likedContent(first: $first) {
+              [Error: Network error: No more mocked responses for the query: query getAllLikedContent($first: Int, $after: String) {
+  likedContent(first: $first, after: $after) {
+    pageInfo {
+      endCursor
+      __typename
+    }
     edges {
       node {
         ... on ContentItem {
@@ -193,6 +197,7 @@ fragment themeFragment on ContentItem {
         maxToRenderPerBatch={10}
         numColumns={1}
         onContentSizeChange={[Function]}
+        onEndReached={[Function]}
         onEndReachedThreshold={0.7}
         onLayout={[Function]}
         onMomentumScrollEnd={[Function]}
@@ -276,8 +281,12 @@ fragment themeFragment on ContentItem {
                     }
                   }
                 >
-                  Network error: No more mocked responses for the query: query getAllLikedContent($first: Int) {
-  likedContent(first: $first) {
+                  Network error: No more mocked responses for the query: query getAllLikedContent($first: Int, $after: String) {
+  likedContent(first: $first, after: $after) {
+    pageInfo {
+      endCursor
+      __typename
+    }
     edges {
       node {
         ... on ContentItem {
