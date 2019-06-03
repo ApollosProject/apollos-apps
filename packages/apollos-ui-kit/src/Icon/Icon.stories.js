@@ -5,8 +5,7 @@ import { kebabCase } from 'lodash';
 
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
-
-import * as icons from './icons';
+import * as icons from '../theme/icons';
 
 import Icon from '.';
 

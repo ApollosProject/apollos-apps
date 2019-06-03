@@ -7,7 +7,7 @@ import { MediaPlayerProvider } from '@apollosproject/ui-media-player';
 import NavigationService from './NavigationService';
 import { NotificationsManager } from './notifications';
 import ClientProvider from './client';
-import * as CustomIcons from './icons';
+import customTheme, { customIcons } from './theme';
 
 const AppProviders = (props) => (
   <ClientProvider {...props}>
@@ -18,7 +18,11 @@ const AppProviders = (props) => (
       >
         <MediaPlayerProvider>
           <AnalyticsProvider>
-            <Providers iconInput={CustomIcons} {...props} />
+            <Providers
+              themeInput={customTheme}
+              iconInput={customIcons}
+              {...props}
+            />
           </AnalyticsProvider>
         </MediaPlayerProvider>
       </AuthProvider>
