@@ -8,7 +8,7 @@ import * as Media from './media';
 
 export { createGlobalId, parseGlobalId } from './node';
 export { withEdgePagination } from './pagination/utils';
-export { schemaMerge } from './utils';
+export { resolverMerge, schemaMerge } from './utils';
 
 // Types that all apollos-church servers will use.
 const builtInData = { Node, Pagination, Media };

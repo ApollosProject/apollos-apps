@@ -1,10 +1,10 @@
-import { schemaMerge } from '../index';
+import { resolverMerge } from '../index';
 
-describe('Schema Merge Util', () => {
+describe('Resolver Merge Util', () => {
   it('safely merges schemas from a data connector without a schema', () => {
     const ContentItem = {};
     const resolver = { ContentItem: { name: 'foo' } };
-    expect(schemaMerge(resolver, ContentItem)).toEqual({
+    expect(resolverMerge(resolver, ContentItem)).toEqual({
       ContentItem: { name: 'foo' },
     });
   });
@@ -13,7 +13,7 @@ describe('Schema Merge Util', () => {
       resolver: { ContentItem: { name: 'foo', description: 'foo' } },
     };
     const resolver = { ContentItem: { name: 'bar', subtitle: 'bar' } };
-    expect(schemaMerge(resolver, ContentItem)).toEqual({
+    expect(resolverMerge(resolver, ContentItem)).toEqual({
       ContentItem: { name: 'bar', description: 'foo', subtitle: 'bar' },
     });
   });
@@ -23,7 +23,7 @@ describe('Schema Merge Util', () => {
       ContentItem: { description: 'bar' },
       Query: { someNewThing: 'bar' },
     };
-    expect(schemaMerge(resolver, ContentItem)).toEqual({
+    expect(resolverMerge(resolver, ContentItem)).toEqual({
       ContentItem: { name: 'foo', description: 'bar' },
       Query: { someNewThing: 'bar' },
     });
@@ -38,7 +38,7 @@ describe('Schema Merge Util', () => {
     const resolver = {
       ContentItem: { description: 'bar' },
     };
-    expect(schemaMerge(resolver, ContentItem)).toEqual({
+    expect(resolverMerge(resolver, ContentItem)).toEqual({
       ContentItem: { name: 'foo', description: 'bar' },
       Mutation: { someOldMutation: 'foo' },
     });
