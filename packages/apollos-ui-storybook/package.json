@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-storybook",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "private": true,
   "main": "./src/index.js",
   "peerDependencies": {
@@ -9,8 +9,8 @@
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",
-    "@apollosproject/ui-passes": "*",
     "@apollosproject/ui-onboarding": "*",
+    "@apollosproject/ui-passes": "*",
     "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-native": "*",

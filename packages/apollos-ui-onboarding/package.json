@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-onboarding",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -29,15 +29,17 @@
     "modulePaths": [
       "<rootDir>/src/"
     ],
-    "modulePathIgnorePatterns": ["node_modules/@storybook/"],
+    "modulePathIgnorePatterns": [
+      "node_modules/@storybook/"
+    ],
     "setupFiles": [
       "./jest.setup.js"
     ]
   },
   "peerDependencies": {
-    "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-analytics": "*",
     "@apollosproject/storybook": "*",
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-kit": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
