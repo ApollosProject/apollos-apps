@@ -191,6 +191,9 @@ const Provider = ({ children, ...authContext }) => (
         if (!loaded) {
           client.addResolvers(resolvers);
           client.writeData({ data: { mediaPlayer: defaults } });
+          client.onResetStore(() =>
+            client.writeData({ data: { mediaPlayer: defaults } })
+          );
           loaded = true;
         }
 

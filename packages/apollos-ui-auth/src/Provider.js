@@ -4,6 +4,8 @@ import { AsyncStorage } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
+import { getPushId, updatePushId } from '@apollosproject/ui-notifications';
+
 import getLoginState from './getLoginState';
 
 const defaultContext = {
@@ -56,16 +58,13 @@ export const resolvers = {
           data: { authToken },
         });
 
-        // TODO: const { pushId } = cache.readQuery({
-        //   query: gql`
-        //     query {
-        //       pushId
-        //     }
-        //   `,
-        // });
-        // TODO: if (pushId) {
-        //   updatePushId({ pushId });
-        // }
+        const { data: { pushId } = { data: {} } } = await client.query({
+          query: getPushId,
+        });
+
+        if (pushId) {
+          updatePushId({ pushId, client });
+        }
 
         track({ eventName: 'UserLogin', client });
       } catch (e) {

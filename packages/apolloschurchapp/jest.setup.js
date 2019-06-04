@@ -47,15 +47,6 @@ jest.mock('react-native-safari-view', () => ({
   show: jest.fn(),
 }));
 
-jest.mock('react-native-onesignal', () => ({
-  getPermissionSubscriptionState: (callback) =>
-    callback({ notificationsEnabled: true, subscriptionEnabled: true }),
-  promptForPushNotificationsWithUserResponse: (callback) => callback(true),
-  init: jest.fn(),
-  addEventListener: jest.fn(),
-  configure: jest.fn(),
-}));
-
 jest.mock('react-native-device-info', () => ({
   getUniqueID: () => 'id-123',
   getSystemVersion: () => 'sys-version-123',
@@ -75,6 +66,10 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
+}));
+
+jest.mock('@apollosproject/ui-notifications', () => ({
+  NotificationsProvider: ({ children }) => children,
 }));
 
 jest.mock('@apollosproject/ui-media-player', () => ({

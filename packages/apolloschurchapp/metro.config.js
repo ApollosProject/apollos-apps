@@ -21,11 +21,13 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-onboarding'),
   path.resolve('..', 'apollos-ui-media-player'),
   path.resolve('..', 'apollos-ui-scripture'),
+  path.resolve('..', 'apollos-ui-notifications'),
 ];
 
 const sharedNativeModules = [
   'react-native-linear-gradient',
   'react-native-svg',
+  'react-native-onesignal',
   'react-native-music-control',
   'react-native-video',
   'react-native-video-controls',

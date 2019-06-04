@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/ui-auth",
+  "name": "@apollosproject/ui-notifications",
   "version": "0.8.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
@@ -34,23 +34,20 @@
     ]
   },
   "peerDependencies": {
-    "@apollosproject/ui-analytics": "*",
-    "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-storybook": "*",
-    "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-auth": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
     "react-native": "*",
-    "react-navigation": "*"
+    "react-native-onesignal": "*"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-link-context": "1.0.14",
     "apollo-link-http": "^1.5.14",
-    "formik": "1.5.1",
     "graphql-tag": "2.9.2",
-    "yup": "^0.27.0"
+    "url": "^0.11.0",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "apollo-client": "2.5.1",
@@ -61,7 +58,8 @@
     "react-apollo": "2.5.5",
     "react-native": "0.59.8",
     "react-test-renderer": "16.6.1",
-    "waait": "^1.0.4"
+    "waait": "^1.0.4",
+    "react-native-onesignal": "3.2.7"
   },
   "publishConfig": {
     "access": "public"
