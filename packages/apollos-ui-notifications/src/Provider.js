@@ -5,11 +5,9 @@ import { Linking } from 'react-native';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo';
-import OneSignal from 'react-native-onesignal';
-import Config from 'react-native-config';
 import { get } from 'lodash';
-
-import NavigationService from '../NavigationService';
+import OneSignal from 'react-native-onesignal';
+import { resolvers, defaults } from './store';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -23,18 +21,28 @@ class NotificationsInit extends Component {
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
     ]).isRequired,
+    oneSignalKey: PropTypes.string.isRequired,
+    navigate: PropTypes.func.isRequired,
+    client: PropTypes.shape({
+      mutate: PropTypes.func,
+      addResolvers: PropTypes.func,
+      writeData: PropTypes.func,
+      onResetStore: PropTypes.func,
+    }).isRequired,
   };
 
   static navigationOptions = {};
 
-  static propTypes = {
-    client: PropTypes.shape({
-      mutate: PropTypes.func,
-    }),
-  };
+  constructor(props) {
+    super(props);
+    const { client } = props;
+    client.addResolvers(resolvers);
+    client.writeData({ data: defaults });
+    client.onResetStore(() => client.writeData({ data: defaults }));
+  }
 
   componentDidMount() {
-    OneSignal.init(Config.ONE_SIGNAL_KEY, {
+    OneSignal.init(this.props.oneSignalKey, {
       kOSSettingsKeyAutoPrompt: false,
     });
     OneSignal.addEventListener('received', this.onReceived);
@@ -59,7 +67,7 @@ class NotificationsInit extends Component {
     const url = URL.parse(rawUrl);
     const route = url.pathname.substring(1);
     const args = querystring.parse(url.query);
-    NavigationService.navigate(route, args);
+    this.props.navigate(route, args);
   };
 
   onReceived = (notification) => {

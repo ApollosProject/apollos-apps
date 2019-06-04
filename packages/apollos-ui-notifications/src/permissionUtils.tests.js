@@ -1,9 +1,12 @@
-import { client } from '../client';
+import { client } from './testUtils';
 import {
   getPushPermissions,
   getNotificationsEnabled,
   requestPushPermissions,
 } from './permissionUtils';
+import { defaults } from './store';
+
+client.writeData({ data: defaults });
 
 describe('getPushPermissions', () => {
   it('should return a boolean based on the result from OneSignal', async () => {

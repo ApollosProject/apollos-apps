@@ -67,6 +67,7 @@
     "@apollosproject/ui-scripture": "^0.8.6",
     "@apollosproject/ui-storybook": "^0.8.6",
     "@apollosproject/ui-media-player": "^0.8.6",
+    "@apollosproject/ui-notifications": "^0.8.6",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.5.1",
@@ -85,7 +86,6 @@
     "memoize-one": "4.0.0",
     "moment": "2.22.2",
     "node-fetch": "2.2.0",
-    "querystring": "^0.2.0",
     "react": "16.8.3",
     "react-apollo": "2.5.5",
     "react-native": "0.59.8",
@@ -111,7 +111,6 @@
     "recompose": "^0.30.0",
     "rn-fetch-blob": "^0.10.15",
     "stream": "^0.0.2",
-    "url": "^0.11.0",
     "yup": "0.26.6"
   },
   "rnpm": {
