@@ -25,5 +25,5 @@ export const resolverMerge = (newResolver, { resolver = {} }) => {
 };
 
 export const schemaMerge = () => {
-  console.error('`schemaMerge` has been remove. Please use resolverMerge');
+  console.error('schemaMerge has been removed. Please use resolverMerge.');
 };
