@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-auth",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -36,8 +36,8 @@
   "peerDependencies": {
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-storybook": "*",
     "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-storybook": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",

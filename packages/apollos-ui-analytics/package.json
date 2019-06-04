@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-analytics",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [

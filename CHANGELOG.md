@@ -1,3 +1,39 @@
+v0.8.7: June 4, 2019
+
+- Adds UI Notifications Package (#754) (7faac895)
+- Adds custom theme scaffolding (#742) (262a30a2)
+- Adds fetchMoreResolver and working pagination (#756) (11bb9a01)
+- Adds custom icon support (#735) (55cb01c2)
+- Adds smarter resetting of Apollo Cache (#743) (cfb881ff)
+- Adds analytics over Onboarding Scenes (#709) (44f71f4d)
+- Adds Doc Site to README (#750) (6c4fb1c6)
+- Adds Scripture Package (#544) (200d982e)
+- Adds MediaPlayer package (#543) (318ffbcc)
+- Adds filtering out of inactive campuses in the Campus datasource (#725) (a92e4e37)
+- Adds documentation around steps to unlock Rock getCurrentPerson endpoint (#748) (2236fd81)
+- Adds tap functionality for Campaign Cards (#719) (78e894c4)
+- Adds storybook files with NPM release (#715) (3a1addb2)
+- Adds church online URL configurablity (#717) (d5071139)
+
+- Upgrades to RN 59 (#738) (e3af49aa)
+- Updates Liked Count on Home Feed (#730) (aa0231a7)
+- Renames mergeSchema into the more accurate mergeResolvers (#760) (b8bd92fe)
+- Cleans up dependencies (#736) (c1ef9243)
+- Cleans up Project package.jsons (#720) (b40db5c8)
+- Removes KeyboardAwareScrollView Package (#741) (df7601e8)
+
+- Fixes Avatar Margin (#751) (1d645f38)
+- Fixes Docs Sidebar Table of Contents (#745) (00334716)
+- Fixes Travis Docs Deploy (#724) (c2e66d00)
+- Fixes Bible.api so it will handle both data.passages and data (#737) (5961a080)
+- Fixes close button navigating back too far (#727) (9a122671)
+- Fixes software keyboard in storybook (#734) (bb0412c9)
+- Fixes Android Navigation Header (#728) (e27bbf2a)
+- Fixes Liked Content Feed not populating on first like. (#732) (08aee402)
+- Fixes typo in PhoneEntry.js (#721) (3028cb4e)
+- Fixes GetPersonById not returning Photo (#723) (0954a617)
+- Fixes Content Items back redirecting to Onboarding (#698) (0a9bbf8e)
+
 v0.8.6: May 14, 2019
 
 - Adds Storybook as an NPM package (#683) (6fc05ad1)

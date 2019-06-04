@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-scripture",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -29,20 +29,22 @@
     "modulePaths": [
       "<rootDir>/src/"
     ],
-    "modulePathIgnorePatterns": ["node_modules/@storybook/"]
+    "modulePathIgnorePatterns": [
+      "node_modules/@storybook/"
+    ]
   },
   "peerDependencies": {
-    "@apollos-project/ui-kit": "*",
     "@apollos-project/ui-htmlview": "*",
+    "@apollos-project/ui-kit": "*",
     "react": "*",
     "react-native": "*"
   },
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^0.8.6",
-    "metro-react-native-babel-preset": "^0.53.1",
+    "@apollosproject/ui-storybook": "^0.8.7",
     "@storybook/react-native": "^4.0.7",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
+    "metro-react-native-babel-preset": "^0.53.1",
     "prop-types": "15.6.1",
     "react": "^16.8.3",
     "react-native": "0.59.8",
