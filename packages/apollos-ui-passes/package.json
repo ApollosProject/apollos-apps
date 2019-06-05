@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-passes",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -29,7 +29,9 @@
     "setupFiles": [
       "./jest.setup.js"
     ],
-    "modulePathIgnorePatterns": ["node_modules/@storybook/"],
+    "modulePathIgnorePatterns": [
+      "node_modules/@storybook/"
+    ],
     "modulePaths": [
       "<rootDir>/src/"
     ]
@@ -37,13 +39,13 @@
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
     "react": "*",
-    "react-navigation": "*",
     "react-native": "*",
     "react-native-passkit-wallet": "*",
+    "react-navigation": "*",
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^0.8.6",
+    "@apollosproject/ui-kit": "^0.8.7",
     "graphql-tag": "^2.10.1",
     "react-apollo": "2.5.5"
   },

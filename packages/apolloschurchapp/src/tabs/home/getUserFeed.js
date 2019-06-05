@@ -4,8 +4,11 @@ import { contentItemFragment } from 'apolloschurchapp/src/content-single/getCont
 import { largeCardFragment } from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 export default gql`
-  query getUserFeed {
-    userFeed {
+  query getUserFeed($first: Int, $after: String) {
+    userFeed(first: $first, after: $after) {
+      pageInfo {
+        endCursor
+      }
       edges {
         node {
           ...largeCardFragment

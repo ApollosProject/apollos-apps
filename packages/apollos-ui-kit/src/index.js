@@ -16,7 +16,7 @@ export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
 export HorizontalTileFeed from './HorizontalTileFeed';
-export Icon from './Icon';
+export Icon, { makeIcon } from './Icon';
 export Input, {
   Picker,
   PickerItem,

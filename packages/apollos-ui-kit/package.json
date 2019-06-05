@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -40,11 +40,11 @@
     ]
   },
   "peerDependencies": {
+    "@apollosproject/storybook": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*",
-    "@apollosproject/storybook": "*"
+    "react-native-svg": "*"
   },
   "dependencies": {
     "color": "^3.1.0",
