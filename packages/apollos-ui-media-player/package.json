@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-media-player",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -29,23 +29,25 @@
     "modulePaths": [
       "<rootDir>/src/"
     ],
-    "modulePathIgnorePatterns": ["node_modules/@storybook/"],
+    "modulePathIgnorePatterns": [
+      "node_modules/@storybook/"
+    ],
     "setupFiles": [
       "./jest.setup.js"
     ]
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
+    "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
-    "apollo-client": "*",
     "react-native": "*",
-    "react-native-video": "*",
-    "react-native-music-control": "*",
-    "react-native-video-controls": "*",
+    "react-native-airplay-btn": "*",
     "react-native-linear-gradient": "*",
-    "react-navigation": "*",
-    "react-native-airplay-btn": "*"
+    "react-native-music-control": "*",
+    "react-native-video": "*",
+    "react-native-video-controls": "*",
+    "react-navigation": "*"
   },
   "dependencies": {
     "graphql-tag": "^2.10.1"
@@ -53,20 +55,20 @@
   "devDependencies": {
     "@storybook/react-native": "^4.0.7",
     "apollo-client": "2.5.1",
-    "react-apollo": "2.5.5",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.8.3",
+    "react-apollo": "2.5.5",
     "react-native": "0.59.8",
-    "react-native-linear-gradient": "2.5.3",
     "react-native-airplay-btn": "^1.0.6",
-    "react-native-svg": "9.4.0",
-    "react-navigation": "2.18.3",
-    "react-test-renderer": "16.6.1",
+    "react-native-linear-gradient": "2.5.3",
     "react-native-music-control": "0.7.3",
+    "react-native-svg": "9.4.0",
     "react-native-video": "4.4.1",
-    "react-native-video-controls": "2.2.3"
+    "react-native-video-controls": "2.2.3",
+    "react-navigation": "2.18.3",
+    "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
     "access": "public"
