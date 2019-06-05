@@ -1,7 +1,6 @@
 {
   "name": "@apollosproject/ui-storybook",
   "version": "0.8.7",
-  "private": true,
   "main": "./src/index.js",
   "peerDependencies": {
     "@apollosproject/ui-analytics": "*",
@@ -27,6 +26,9 @@
     "metro-react-native-babel-preset": "^0.53.1",
     "react": "16.8.3",
     "react-native": "0.59.8"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "rnpm": {
     "assets": [
