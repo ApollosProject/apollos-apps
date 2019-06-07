@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sh ./scripts/generateLocalSchema.sh
+sh ./scripts/generateLocalSchema.sh --start-server
 ./node_modules/.bin/get-graphql-schema https://apollos-church-api-herokuapp-com.global.ssl.fastly.net > prod.graphql
 DIFF=$(graphql-findbreakingchanges prod.graphql local.graphql)
 rm prod.graphql
