@@ -14,6 +14,7 @@ module.exports = {
     'jest',
     'react',
     'react-native',
+    'graphql',
   ],
   rules: {
     'prettier/prettier': [
@@ -64,7 +65,16 @@ module.exports = {
     'import/no-cycle': 0,
     'function-paren-newline': 0,
     'no-underscore-dangle': 0,
+    "graphql/template-strings": ['warn', { env: 'apollo' }]
   },
+  overrides: [
+    {
+      "files": ["packages/apollos-data-*/**/*.js", "packages/apollos-church-api/**/*.js"],
+      "rules": {
+        "graphql/template-strings": "off"
+      }
+    }
+  ],
   parserOptions: {
     ecmaVersion: 7,
     sourceType: 'module',
