@@ -32,7 +32,7 @@ jobs:
         - travis_wait yarn ci-test
         - travis_wait yarn codecov
     - stage: Schema Diff
-      script: cd ./packages/apollos-chuch-api && yarn schema-diff
+      script: cd packages/apollos-chuch-api && yarn schema-diff
     - stage: Deploy Api
       script: skip
       deploy:
