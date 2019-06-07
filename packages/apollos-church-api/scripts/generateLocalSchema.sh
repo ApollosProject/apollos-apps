@@ -5,8 +5,8 @@ if eval "$PING_SERVER"; then
   ./node_modules/.bin/get-graphql-schema http://localhost:4000 > local.graphql
   echo 'Done. Check local.graphql'
 else
-  echo 'Server not running, starting server'
   if [ "$*" = "--start-server" ]; then
+    echo 'Server not running, starting server'
     npm run start > /tmp/server-log.txt &
     SERVER_PID=$!
     echo "Server running... (PID $SERVER_PID)"
