@@ -1,3 +1,9 @@
+
+v1.0.0-beta.0: June 7, 2019
+
+- Adds GraphQL Schema Diff and Linting (#759) (48ae33d7)
+- Sets storybook npm access to public (#763) (31640458)
+
 v0.8.7: June 4, 2019
 
 - Adds UI Notifications Package (#754) (7faac895)
