@@ -5,12 +5,13 @@ if eval "$PING_SERVER"; then
   ./node_modules/.bin/get-graphql-schema http://localhost:4000 > local.graphql
   echo 'Done. Check local.graphql'
 else
+  echo $*
   if [ "$*" = "--start-server" ]; then
     echo 'Server not running, starting server'
-    npm run start > /tmp/server-log.txt &
+    PORT=4000 TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX npm run start:prod > /tmp/server-log.txt &
     SERVER_PID=$!
     echo "Server running... (PID $SERVER_PID)"
-  fi;
+  fi
   sleep 1
   until eval "$PING_SERVER"; do
       sleep 1
@@ -22,6 +23,5 @@ else
   if [ "$*" = "--start-server" ]; then
     echo "Killing Server (PID $SERVER_PID)"
     kill -9 $SERVER_PID
-    killall node
-  fi;
-fi;
+  fi
+fi
