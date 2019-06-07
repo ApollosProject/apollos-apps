@@ -33,7 +33,7 @@ jobs:
         - travis_wait yarn codecov
     - stage: Schema Diff
       script:
-        - cd packages/apollos-chuch-api
+        - cd packages/apollos-church-api
         - yarn schema-diff
     - stage: Deploy Api
       script: skip
