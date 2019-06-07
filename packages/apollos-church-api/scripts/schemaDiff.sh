@@ -8,4 +8,6 @@ echo "$DIFF"
 if [[ ! $DIFF = *"NO BREAKING CHANGES"* ]]
 then
   exit 1
+else
+  exit 0
 fi
