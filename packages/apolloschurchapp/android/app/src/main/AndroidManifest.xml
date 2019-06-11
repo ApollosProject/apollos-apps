@@ -14,6 +14,9 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+      <uses-library
+        android:name="org.apache.http.legacy"
+        android:required="false" />
       <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="@string/GOOGLE_MAPS_API_KEY"/>
@@ -30,7 +33,7 @@
           <action android:name="android.intent.action.VIEW" />
           <category android:name="android.intent.category.DEFAULT" />
           <category android:name="android.intent.category.BROWSABLE" />
-          <data android:scheme="peopleapp" android:host="people" /> // A
+          <data android:scheme="peopleapp" android:host="people" />
         </intent-filter>
       </activity>
       <activity
