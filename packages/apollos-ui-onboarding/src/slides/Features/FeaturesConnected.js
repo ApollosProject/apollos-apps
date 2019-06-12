@@ -24,7 +24,7 @@ const FeaturesConnected = ({ Component, ...props }) => (
 );
 
 FeaturesConnected.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.node, // Custom component to be rendered. Defaults to Features
 };
 
 FeaturesConnected.defaultProps = {

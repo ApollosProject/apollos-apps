@@ -54,7 +54,7 @@ class LocationFinderConnected extends PureComponent {
 }
 
 LocationFinderConnected.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.node, // Custom component to be rendered. Defaults to LocationFinder
   onPressPrimary: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
 };
