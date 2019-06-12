@@ -9,6 +9,7 @@ class LocationFinderConnected extends PureComponent {
   state = { selectedCampus: false };
 
   render() {
+    // const { Component } = this.props;
     return (
       <Query query={getUserCampus} fetchPolicy="cache-and-network">
         {({
@@ -22,7 +23,7 @@ class LocationFinderConnected extends PureComponent {
         }) => (
           <AnalyticsConsumer>
             {({ track }) => (
-              <LocationFinder
+              <this.props.Component
                 onPressButton={async () => {
                   this.setState({ selectedCampus: true });
                   this.props.onNavigate();
@@ -53,8 +54,13 @@ class LocationFinderConnected extends PureComponent {
 }
 
 LocationFinderConnected.propTypes = {
+  Component: PropTypes.node,
   onPressPrimary: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
+};
+
+LocationFinderConnected.defaultProps = {
+  Component: LocationFinder,
 };
 
 LocationFinderConnected.displayName = 'LocationFinderConnected';
