@@ -97,7 +97,12 @@ const AskNameConnected = memo(
 );
 
 AskNameConnected.propTypes = {
-  Component: PropTypes.node, // Custom component to be rendered. Defaults to AskName
+  // Custom component to be rendered. Defaults to AskName
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
 };
@@ -105,5 +110,7 @@ AskNameConnected.propTypes = {
 AskNameConnected.defaultProps = {
   Component: AskName,
 };
+
+AskNameConnected.displayName = 'AskNameConnected';
 
 export default AskNameConnected;

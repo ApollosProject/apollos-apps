@@ -9,7 +9,6 @@ class LocationFinderConnected extends PureComponent {
   state = { selectedCampus: false };
 
   render() {
-    // const { Component } = this.props;
     return (
       <Query query={getUserCampus} fetchPolicy="cache-and-network">
         {({
@@ -54,7 +53,12 @@ class LocationFinderConnected extends PureComponent {
 }
 
 LocationFinderConnected.propTypes = {
-  Component: PropTypes.node, // Custom component to be rendered. Defaults to LocationFinder
+  // Custom component to be rendered. Defaults to LocationFinder
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
 };

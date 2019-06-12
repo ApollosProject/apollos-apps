@@ -49,4 +49,6 @@ AskNotificationsConnected.defaultProps = {
   Component: AskNotifications,
 };
 
+AskNotificationsConnected.displayName = 'AskNotificationsConnected';
+
 export default AskNotificationsConnected;

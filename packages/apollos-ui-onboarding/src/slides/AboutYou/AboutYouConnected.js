@@ -94,7 +94,12 @@ const AboutYouConnected = memo(
 );
 
 AboutYouConnected.propTypes = {
-  Component: PropTypes.node, // Custom component to be rendered. Defaults to AboutYou
+  // Custom component to be rendered. Defaults to AboutYou
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
 };

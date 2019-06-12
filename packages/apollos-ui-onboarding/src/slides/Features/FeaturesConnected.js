@@ -24,11 +24,18 @@ const FeaturesConnected = ({ Component, ...props }) => (
 );
 
 FeaturesConnected.propTypes = {
-  Component: PropTypes.node, // Custom component to be rendered. Defaults to Features
+  // Custom component to be rendered. Defaults to Features
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
 };
 
 FeaturesConnected.defaultProps = {
   Component: Features,
 };
+
+FeaturesConnected.displayName = 'FeaturesConnected';
 
 export default FeaturesConnected;
