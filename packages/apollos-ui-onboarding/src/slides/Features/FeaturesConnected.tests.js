@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
-import wait from 'waait';
 
 import { renderWithApolloData, Providers } from '../../testUtils';
 
@@ -9,7 +8,15 @@ import getUserFirstName from './getUserFirstName';
 import FeaturesConnected from './FeaturesConnected';
 
 describe('The Onboarding FeaturesConnected component', () => {
-  it('renders with a firstName when logged in', async () => {
+  it('should render', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturesConnected />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a firstName when logged in', async () => {
     const mock = {
       request: {
         query: getUserFirstName,
@@ -17,19 +24,23 @@ describe('The Onboarding FeaturesConnected component', () => {
       result: {
         data: {
           currentUser: {
+            __typename: 'AuthenticatedUser',
+            id: 'AuthenticatedUser:123',
             profile: {
+              __typename: 'Person',
+              id: 'Person:123',
               firstName: 'Marty',
             },
           },
         },
       },
     };
-    const tree = renderer.create(
+
+    const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
         <FeaturesConnected />
       </Providers>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
   it('should render a custom Component', async () => {
