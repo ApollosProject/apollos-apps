@@ -1,10 +1,11 @@
 import React from 'react';
 import { Query } from 'react-apollo';
+import PropTypes from 'prop-types';
 
 import getUserFirstName from './getUserFirstName';
 import Features from './Features';
 
-const FeaturesConnected = (props) => (
+const FeaturesConnected = ({ Component, ...props }) => (
   <Query query={getUserFirstName}>
     {({
       loading,
@@ -12,7 +13,7 @@ const FeaturesConnected = (props) => (
         currentUser: { profile: { firstName } = { campus: {} } } = {},
       } = {},
     }) => (
-      <Features
+      <Component
         firstName={firstName}
         isLoading={loading}
         pressPrimaryEventName={'Features Completed'}
@@ -21,5 +22,13 @@ const FeaturesConnected = (props) => (
     )}
   </Query>
 );
+
+FeaturesConnected.propTypes = {
+  Component: PropTypes.node,
+};
+
+FeaturesConnected.defaultProps = {
+  Component: Features,
+};
 
 export default FeaturesConnected;
