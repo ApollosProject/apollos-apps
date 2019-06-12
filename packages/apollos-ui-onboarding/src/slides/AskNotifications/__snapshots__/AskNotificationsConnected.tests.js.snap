@@ -34,7 +34,7 @@ exports[`The Onboarding AskNotificationsConnected component should render a cust
     }
   >
     <Text>
-      Skyline &gt; Goldstar === true
+      Skyline is better than Goldstar === true
     </Text>
   </View>
 </RCTSafeAreaView>
