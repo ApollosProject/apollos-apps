@@ -69,6 +69,7 @@ class Location extends PureComponent {
 
   componentDidMount() {
     return getCurrentLocation().then((position) => {
+      console.log(position);
       if (position) {
         this.setState({
           userLocation: {
