@@ -89,40 +89,32 @@ class MapView extends Component {
     const cardIndex = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item;
     const campus = this.props.campuses[cardIndex];
     this.setState({ campus });
-    if (!campus) return;
-
-    const { userLocation } = this.props;
-
-    let { latitude } = campus;
-    const { longitude } = campus;
-    let { latitudeDelta, longitudeDelta } = this.props.initialRegion;
-
-    if (userLocation) {
-      // Calculate rectangle that shows user's location in the view with campus at center
-      const minLat = Math.min(campus.latitude, userLocation.latitude);
-      const maxLat = Math.max(campus.latitude, userLocation.latitude);
-      const minLong = Math.min(campus.longitude, userLocation.longitude);
-      const mayLong = Math.max(campus.longitude, userLocation.longitude);
-
-      latitudeDelta = (maxLat - minLat) * 2.5;
-      longitudeDelta = (mayLong - minLong) * 2.5;
+    if (!campus) {
+      this.map.fitToCoordinates(
+        [...this.props.campuses, this.props.userLocation],
+        {
+          edgePadding: {
+            top: 100,
+            left: 100,
+            right: 100,
+            // This is higher to avoid the campus cards (baseUnit * 6) on the bottom
+            bottom: 100 + this.props.theme.sizing.baseUnit * 12,
+          },
+        }
+      );
+      return;
     }
 
-    // Now, we need to transform the given lat/lng/delta up to make room for cards at bottom.
-    // To make this math simpler, we'll assume the cards take up roughly 20% of the vertical space
-    const maxDelta = Math.max(latitudeDelta, longitudeDelta);
-    latitude -= maxDelta * 0.2; // move the view up 20%
-    latitudeDelta *= 1.2; // include 20% more area in the view
-
-    this.map.animateToRegion(
-      {
-        latitude,
-        longitude,
-        latitudeDelta,
-        longitudeDelta,
+    const { userLocation } = this.props;
+    this.map.fitToCoordinates([campus, userLocation], {
+      edgePadding: {
+        top: 100,
+        left: 100,
+        right: 100,
+        // This is higher to avoid the campus cards (baseUnit * 6) on the bottom
+        bottom: 100 + this.props.theme.sizing.baseUnit * 12,
       },
-      350
-    );
+    });
   };
 
   render() {
