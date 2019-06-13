@@ -10,7 +10,7 @@ import AboutYou from './AboutYou';
 import updateUserDetails from './updateUserDetails';
 
 const AboutYouConnected = memo(
-  ({ onPressPrimary, onPressSecondary, ...props }) => (
+  ({ Component, onPressPrimary, onPressSecondary, ...props }) => (
     <Query query={getUserGenderAndBirthDate}>
       {({ data: { currentUser = { profile: {} } } = {}, loading = false }) => {
         const { gender, birthDate } = currentUser.profile;
@@ -66,7 +66,7 @@ const AboutYouConnected = memo(
                   errors,
                   setFieldValue,
                 }) => (
-                  <AboutYou
+                  <Component
                     onPressPrimary={isValid ? submitForm : null} // if form `isValid` show the primary nav button (next)
                     onPressSecondary={
                       // if form `!isValid` show the secondary nav button (skip)
@@ -94,8 +94,18 @@ const AboutYouConnected = memo(
 );
 
 AboutYouConnected.propTypes = {
+  // Custom component to be rendered. Defaults to AboutYou
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
+};
+
+AboutYouConnected.defaultProps = {
+  Component: AboutYou,
 };
 
 AboutYouConnected.displayName = 'AboutYouConnected';
