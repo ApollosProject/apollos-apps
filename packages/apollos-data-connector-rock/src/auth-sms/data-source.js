@@ -6,8 +6,6 @@ import { get } from 'lodash';
 
 import { secret } from '../auth/token';
 
-const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
-
 export default class AuthSmsDataSource extends RockApolloDataSource {
   expanded = true;
 
