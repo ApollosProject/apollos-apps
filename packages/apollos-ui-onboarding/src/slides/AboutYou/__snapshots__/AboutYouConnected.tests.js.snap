@@ -1321,3 +1321,43 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
   </View>
 </RCTSafeAreaView>
 `;
+
+exports[`AboutYouConnected component should render a custom Component 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text>
+      Male
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;

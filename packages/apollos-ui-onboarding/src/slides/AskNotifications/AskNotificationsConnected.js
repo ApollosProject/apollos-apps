@@ -8,6 +8,7 @@ import AskNotifications from './AskNotifications';
 // eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo(
   ({
+    Component,
     onPressPrimary,
     onPressSecondary,
     onRequestPushPermissions,
@@ -15,7 +16,7 @@ const AskNotificationsConnected = memo(
   }) => (
     <Query query={getNotificationsEnabled}>
       {({ data: { notificationsEnabled = false } = {} }) => (
-        <AskNotifications
+        <Component
           onPressButton={() => onRequestPushPermissions()}
           buttonDisabled={notificationsEnabled}
           buttonText={
@@ -38,9 +39,16 @@ const AskNotificationsConnected = memo(
 );
 
 AskNotificationsConnected.propTypes = {
+  Component: PropTypes.node, // Custom component to be rendered. Defaults to AskNotifications
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   onRequestPushPermissions: PropTypes.func.isRequired,
 };
+
+AskNotificationsConnected.defaultProps = {
+  Component: AskNotifications,
+};
+
+AskNotificationsConnected.displayName = 'AskNotificationsConnected';
 
 export default AskNotificationsConnected;

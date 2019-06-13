@@ -1,5 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Text } from 'react-native';
+
 import { renderWithApolloData, Providers } from '../../testUtils';
 import getNotificationsEnabled from './getNotificationsEnabled';
 
@@ -47,7 +49,35 @@ describe('The Onboarding AskNotificationsConnected component', () => {
     const tree = await renderWithApolloData(component);
     expect(tree).toMatchSnapshot();
   });
+  it('should render a custom Component', async () => {
+    const mocks = [
+      {
+        request: {
+          query: getNotificationsEnabled,
+        },
+        result: {
+          data: { notificationsEnabled: true },
+        },
+      },
+    ];
 
+    const CustomComponent = (
+      { buttonDisabled } // eslint-disable-line react/prop-types
+    ) => (
+      // `notificationsEnabled` is passed to the `buttonDisabled` prop thus it is equal to `true` from the mock query above.
+      <Text>{`Skyline is better than Goldstar === ${buttonDisabled}`}</Text>
+    );
+
+    const tree = await renderWithApolloData(
+      <Providers addTypename={false} mocks={mocks}>
+        <AskNotificationsConnected
+          Component={CustomComponent}
+          onPressPrimary={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render with no data in the cache', () => {
     const tree = renderer.create(
       <Providers>

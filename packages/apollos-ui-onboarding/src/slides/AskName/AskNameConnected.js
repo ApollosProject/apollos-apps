@@ -11,7 +11,7 @@ import updateUserName from './updateUserName';
 
 // eslint-disable-next-line react/display-name
 const AskNameConnected = memo(
-  ({ onPressPrimary, onPressSecondary, ...props }) => (
+  ({ Component, onPressPrimary, onPressSecondary, ...props }) => (
     <Query query={getUserFirstAndLastName}>
       {({ loading, data: { currentUser = { profile: {} } } = {} }) => {
         const { firstName, lastName } = currentUser.profile;
@@ -69,7 +69,7 @@ const AskNameConnected = memo(
                   errors,
                   setFieldValue,
                 }) => (
-                  <AskName
+                  <Component
                     onPressPrimary={loading || isValid ? submitForm : null} // if form `isValid` show the primary nav button (next)
                     onPressSecondary={
                       // if form `!isValid` show the secondary nav button (skip)
@@ -97,8 +97,20 @@ const AskNameConnected = memo(
 );
 
 AskNameConnected.propTypes = {
+  // Custom component to be rendered. Defaults to AskName
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
 };
+
+AskNameConnected.defaultProps = {
+  Component: AskName,
+};
+
+AskNameConnected.displayName = 'AskNameConnected';
 
 export default AskNameConnected;

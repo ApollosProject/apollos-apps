@@ -22,7 +22,7 @@ class LocationFinderConnected extends PureComponent {
         }) => (
           <AnalyticsConsumer>
             {({ track }) => (
-              <LocationFinder
+              <this.props.Component
                 onPressButton={async () => {
                   this.setState({ selectedCampus: true });
                   this.props.onNavigate();
@@ -53,8 +53,18 @@ class LocationFinderConnected extends PureComponent {
 }
 
 LocationFinderConnected.propTypes = {
+  // Custom component to be rendered. Defaults to LocationFinder
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
+};
+
+LocationFinderConnected.defaultProps = {
+  Component: LocationFinder,
 };
 
 LocationFinderConnected.displayName = 'LocationFinderConnected';
