@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding FeaturesConnected component renders with a firstName when logged in 1`] = `
+exports[`The Onboarding FeaturesConnected component should render 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -81,6 +81,149 @@ exports[`The Onboarding FeaturesConnected component renders with a firstName whe
                 }
               >
                 Hey friend!
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                }
+              }
+            >
+              We'd like to help personalize your mobile experience so we can help you with every step on your journey.
+            </Text>
+          </View>
+        </RCTSafeAreaView>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Onboarding FeaturesConnected component should render a custom Component 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text>
+      Marty also thinks Skyline chili is the best.
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`The Onboarding FeaturesConnected component should render with a firstName when logged in 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+      overScrollMode="auto"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View>
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
+          style={
+            Object {
+              "marginBottom": 48,
+              "paddingHorizontal": 16,
+              "paddingTop": 16,
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "paddingBottom": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#00676D",
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 36,
+                    "lineHeight": 41.4,
+                  }
+                }
+              >
+                Hey Marty!
               </Text>
             </View>
             <Text
