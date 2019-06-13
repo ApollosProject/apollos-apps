@@ -92,14 +92,28 @@ class MapView extends Component {
     if (!campus) {
       this.map.fitToCoordinates(
         [...this.props.campuses, this.props.userLocation],
-        { edgePadding: { top: 100, left: 100, right: 100, bottom: 100 } }
+        {
+          edgePadding: {
+            top: 100,
+            left: 100,
+            right: 100,
+            // This is higher to avoid the campus cards (baseUnit * 6) on the bottom
+            bottom: 100 + this.props.theme.sizing.baseUnit * 12,
+          },
+        }
       );
       return;
     }
 
     const { userLocation } = this.props;
     this.map.fitToCoordinates([campus, userLocation], {
-      edgePadding: { top: 100, left: 100, right: 100, bottom: 100 },
+      edgePadding: {
+        top: 100,
+        left: 100,
+        right: 100,
+        // This is higher to avoid the campus cards (baseUnit * 6) on the bottom
+        bottom: 100 + this.props.theme.sizing.baseUnit * 12,
+      },
     });
   };
 
