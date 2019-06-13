@@ -11,11 +11,12 @@ const AskNotificationsConnected = memo(
     onPressPrimary,
     onPressSecondary,
     onRequestPushPermissions,
+    Component = AskNotifications,
     ...props
   }) => (
     <Query query={getNotificationsEnabled}>
       {({ data: { notificationsEnabled = false } = {} }) => (
-        <AskNotifications
+        <Component
           onPressButton={() => onRequestPushPermissions()}
           buttonDisabled={notificationsEnabled}
           buttonText={

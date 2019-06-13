@@ -26,13 +26,19 @@ const TitleWrapper = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 0.5, // wrapper is used to padd placeholder as well.
 }))(View);
 
-const Title = styled(({ theme }) => ({
-  color: theme.colors.primary,
-}))(H2);
+const Title = styled(
+  ({ theme }) => ({
+    color: theme.colors.primary,
+  }),
+  'SlideContent.Title'
+)(H2);
 
-const StyledH5 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-}))(H5);
+const Description = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.secondary,
+  }),
+  'SlideContent.Description'
+)(H5);
 
 const Wrapper = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit,
@@ -59,7 +65,7 @@ const SlideContent = withIsLoading(
           <TitleWrapper>
             <Title>{title}</Title>
           </TitleWrapper>
-          <StyledH5>{description}</StyledH5>
+          <Description>{description}</Description>
         </View>
         {children}
       </Wrapper>

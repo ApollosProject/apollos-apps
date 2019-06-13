@@ -9,6 +9,8 @@ class LocationFinderConnected extends PureComponent {
   state = { selectedCampus: false };
 
   render() {
+    const Component = this.props.Component || LocationFinder;
+    console.log(Component);
     return (
       <Query query={getUserCampus} fetchPolicy="cache-and-network">
         {({
@@ -22,7 +24,7 @@ class LocationFinderConnected extends PureComponent {
         }) => (
           <AnalyticsConsumer>
             {({ track }) => (
-              <LocationFinder
+              <Component
                 onPressButton={async () => {
                   this.setState({ selectedCampus: true });
                   this.props.onNavigate();
