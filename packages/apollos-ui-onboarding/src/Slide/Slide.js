@@ -16,7 +16,7 @@ import {
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
 
-const PrimaryButton = styled({}, 'Onboarding.PrimaryButton')(
+const PrimaryButton = styled({}, 'Onboarding.Slide.PrimaryButton')(
   withTrackOnPress(Button)
 );
 
@@ -40,16 +40,19 @@ const NavWrapper = styled(
     justifyContent: 'space-between',
     marginVertical: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
   }),
-  'Slide.NavWrapper'
+  'Onboarding.Slide.NavWrapper'
 )(PaddedView);
 
-const PrimaryNavIcon = withTheme(({ theme }) => ({
-  size: theme.helpers.rem(1.25),
-  style: {
-    marginLeft: theme.sizing.baseUnit * 0.5,
-    marginRight: theme.sizing.baseUnit * -0.5,
-  },
-}))(Icon);
+const PrimaryNavIcon = withTheme(
+  ({ theme }) => ({
+    size: theme.helpers.rem(1.25),
+    style: {
+      marginLeft: theme.sizing.baseUnit * 0.5,
+      marginRight: theme.sizing.baseUnit * -0.5,
+    },
+  }),
+  'Onboarding.Slide.PrimaryNavIcon'
+)(Icon);
 
 const SkipButton = styled(
   ({ theme }) => ({
@@ -58,7 +61,7 @@ const SkipButton = styled(
     paddingHorizontal: theme.sizing.baseUnit, // improves tappability
     marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
   }),
-  'Onboarding.SkipButton'
+  'Onboarding.Slide.SkipButton'
 )(withTrackOnPress(ButtonLink));
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);

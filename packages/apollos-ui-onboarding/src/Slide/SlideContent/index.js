@@ -16,11 +16,14 @@ const IconWrapper = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit, // wrapper is used to padd placeholder as well.
 }))(View);
 
-const BrandIcon = withTheme(({ theme, icon }) => ({
-  name: typeof icon === 'string' ? icon : 'brand-icon',
-  fill: theme.colors.primary,
-  size: theme.sizing.baseUnit * 3,
-}))(Icon);
+const BrandIcon = withTheme(
+  ({ theme, icon }) => ({
+    name: typeof icon === 'string' ? icon : 'brand-icon',
+    fill: theme.colors.primary,
+    size: theme.sizing.baseUnit * 3,
+  }),
+  'Onboarding.SlideContent.BrandIcon'
+)(Icon);
 
 const TitleWrapper = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 0.5, // wrapper is used to padd placeholder as well.
@@ -30,14 +33,14 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.primary,
   }),
-  'SlideContent.Title'
+  'Onboarding.SlideContent.Title'
 )(H2);
 
 const Description = styled(
   ({ theme }) => ({
     color: theme.colors.text.secondary,
   }),
-  'SlideContent.Description'
+  'Onboarding.SlideContent.Description'
 )(H5);
 
 const Wrapper = styled(({ theme }) => ({

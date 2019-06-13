@@ -12,7 +12,6 @@ const AskNotificationsConnected = memo(
     onPressPrimary,
     onPressSecondary,
     onRequestPushPermissions,
-    Component = AskNotifications,
     ...props
   }) => (
     <Query query={getNotificationsEnabled}>
