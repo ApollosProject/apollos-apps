@@ -2,10 +2,15 @@ import crypto from 'crypto';
 import { AuthenticationError, UserInputError } from 'apollo-server';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import PhoneNumber from 'awesome-phonenumber';
+import { get } from 'lodash';
 
 import { secret } from '../auth/token';
 
+const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
+
 export default class AuthSmsDataSource extends RockApolloDataSource {
+  expanded = true;
+
   hashPassword = ({ pin }) =>
     crypto
       .createHash('sha256')
@@ -37,25 +42,55 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     const { phoneNumber, countryCode } = this.parsePhoneNumber({
       phoneNumber: inputPhoneNumber,
     });
-    const existingPhoneNumber = await this.request('/PhoneNumbers')
-      .filter(`Number eq '${phoneNumber}'`)
-      .first();
 
-    if (existingPhoneNumber) {
-      return existingPhoneNumber.personId;
+    const existingPhoneNumbers = await this.request('/PhoneNumbers')
+      .filter(`Number eq '${phoneNumber}'`)
+      .get();
+
+    // If we have only one phone number, use that phone number
+    if (existingPhoneNumbers.length === 1) {
+      return existingPhoneNumbers[0].personId;
     }
 
+    // Otherwise, are there any phone numbers that ApollosGenerated?
+    const existingApollosNumber = existingPhoneNumbers.find(
+      ({ attributeValues }) =>
+        get(attributeValues, 'apollosGenerated.value') === 'True'
+    );
+
+    // If so, use that!
+    if (existingApollosNumber) {
+      return existingApollosNumber.personId;
+    }
+
+    // Otherwise, create a new user.
     const personId = await this.context.dataSources.Auth.createUserProfile({
       email: null,
     });
 
-    await this.post('/PhoneNumbers', {
+    // And create their phone number.
+    const phoneNumberId = await this.post('/PhoneNumbers', {
       PersonId: personId,
       IsMessagingEnabled: false, // should this default to true?
       IsSystem: false,
       Number: phoneNumber,
       CountryCode: countryCode,
     });
+
+    // Try and assign an ApollosGenerated: True attribute
+    // If this fails, we should warn the user that they need to complete some Rock Setup.
+    try {
+      await this.post(
+        `/PhoneNumbers/AttributeValue/${phoneNumberId}?attributeKey=ApollosGenerated&attributeValue=True`
+      );
+    } catch (e) {
+      console.warn(
+        `WARNING: You don't have an ApollosGenerated attribute on your PhoneNumber record.
+         You risk generating high numbers of duplicate profiles.
+         Add an attribute to PhoneNumbers called ApollosGenerated with a Boolean value.`,
+        e
+      );
+    }
 
     return personId;
   };
