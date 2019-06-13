@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The Onboarding LocationFinderConnected component should render a custom component 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text>
+      Yes, find my local campus nearest a Skyline chili.
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`The Onboarding LocationFinderConnected component should render with a user having selected a campus 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -34,6 +74,31 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
     }
   >
     <RCTScrollView
+      Component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "defaultProps": Object {
+            "buttonDisabled": false,
+            "buttonText": "Yes, find my local campus",
+            "description": "We'll use your location to connect you with your nearby campus and community",
+            "slideTitle": "Let's select your local campus",
+          },
+          "displayName": "LocationFinder",
+          "propTypes": Object {
+            "BackgroundComponent": [Function],
+            "buttonDisabled": [Function],
+            "buttonText": [Function],
+            "campus": [Function],
+            "description": [Function],
+            "isCurrentCampus": [Function],
+            "onPressButton": [Function],
+            "onPressPrimary": [Function],
+            "slideTitle": [Function],
+          },
+          "type": [Function],
+        }
+      }
       contentContainerStyle={
         Object {
           "minHeight": "100%",
@@ -200,6 +265,31 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
     }
   >
     <RCTScrollView
+      Component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "defaultProps": Object {
+            "buttonDisabled": false,
+            "buttonText": "Yes, find my local campus",
+            "description": "We'll use your location to connect you with your nearby campus and community",
+            "slideTitle": "Let's select your local campus",
+          },
+          "displayName": "LocationFinder",
+          "propTypes": Object {
+            "BackgroundComponent": [Function],
+            "buttonDisabled": [Function],
+            "buttonText": [Function],
+            "campus": [Function],
+            "description": [Function],
+            "isCurrentCampus": [Function],
+            "onPressButton": [Function],
+            "onPressPrimary": [Function],
+            "slideTitle": [Function],
+          },
+          "type": [Function],
+        }
+      }
       contentContainerStyle={
         Object {
           "minHeight": "100%",
@@ -370,6 +460,31 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
     }
   >
     <RCTScrollView
+      Component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "defaultProps": Object {
+            "buttonDisabled": false,
+            "buttonText": "Yes, find my local campus",
+            "description": "We'll use your location to connect you with your nearby campus and community",
+            "slideTitle": "Let's select your local campus",
+          },
+          "displayName": "LocationFinder",
+          "propTypes": Object {
+            "BackgroundComponent": [Function],
+            "buttonDisabled": [Function],
+            "buttonText": [Function],
+            "campus": [Function],
+            "description": [Function],
+            "isCurrentCampus": [Function],
+            "onPressButton": [Function],
+            "onPressPrimary": [Function],
+            "slideTitle": [Function],
+          },
+          "type": [Function],
+        }
+      }
       contentContainerStyle={
         Object {
           "minHeight": "100%",

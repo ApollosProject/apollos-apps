@@ -10,7 +10,7 @@ import AboutYou from './AboutYou';
 import updateUserDetails from './updateUserDetails';
 
 const AboutYouConnected = memo(
-  ({ onPressPrimary, onPressSecondary, Component = AboutYou, ...props }) => (
+  ({ Component, onPressPrimary, onPressSecondary, ...props }) => (
     <Query query={getUserGenderAndBirthDate}>
       {({ data: { currentUser = { profile: {} } } = {}, loading = false }) => {
         const { gender, birthDate } = currentUser.profile;
@@ -94,9 +94,18 @@ const AboutYouConnected = memo(
 );
 
 AboutYouConnected.propTypes = {
+  // Custom component to be rendered. Defaults to AboutYou
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
-  Component: PropTypes.node,
+};
+
+AboutYouConnected.defaultProps = {
+  Component: AboutYou,
 };
 
 AboutYouConnected.displayName = 'AboutYouConnected';
