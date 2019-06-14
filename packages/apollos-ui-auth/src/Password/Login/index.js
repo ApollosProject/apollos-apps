@@ -5,14 +5,14 @@ import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
 import handleLogin from '../../handleLogin';
-import authenticateMutation from './authenticate';
+import AUTHENTICATE from './authenticate';
 import LoginForm from './Form';
 
 const Login = ({ onLogin }) => (
   <ApolloConsumer>
     {(client) => (
       <Mutation
-        mutation={authenticateMutation}
+        mutation={AUTHENTICATE}
         update={(cache, { data: { authenticate } }) => {
           client.mutate({
             mutation: handleLogin,

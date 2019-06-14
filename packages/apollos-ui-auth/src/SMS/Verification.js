@@ -26,7 +26,7 @@ import {
 
 import { AuthConsumer } from '../Provider';
 
-const verifyPinMutation = gql`
+const VERIFY_PIN = gql`
   mutation verifyPin($phone: String!, $code: String!) {
     authenticateWithSms(phoneNumber: $phone, pin: $code) {
       token
@@ -91,7 +91,7 @@ class Verification extends Component {
               <ApolloConsumer>
                 {(client) => (
                   <Mutation
-                    mutation={verifyPinMutation}
+                    mutation={VERIFY_PIN}
                     update={(cache, { data: { authenticateWithSms } }) => {
                       client.mutate({
                         mutation: handleLogin,

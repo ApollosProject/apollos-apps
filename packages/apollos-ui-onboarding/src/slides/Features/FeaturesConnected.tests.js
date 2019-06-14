@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 
 import { renderWithApolloData, Providers } from '../../testUtils';
 
-import getUserFirstName from './getUserFirstName';
+import GET_USER_FIRST_NAME from './getUserFirstName';
 import FeaturesConnected from './FeaturesConnected';
 
 describe('The Onboarding FeaturesConnected component', () => {
@@ -19,7 +19,7 @@ describe('The Onboarding FeaturesConnected component', () => {
   it('should render with a firstName when logged in', async () => {
     const mock = {
       request: {
-        query: getUserFirstName,
+        query: GET_USER_FIRST_NAME,
       },
       result: {
         data: {
@@ -46,7 +46,7 @@ describe('The Onboarding FeaturesConnected component', () => {
   it('should render a custom Component', async () => {
     const mock = {
       request: {
-        query: getUserFirstName,
+        query: GET_USER_FIRST_NAME,
       },
       result: {
         data: {

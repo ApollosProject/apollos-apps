@@ -15,8 +15,8 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-import getUserProfile from '../tabs/connect/getUserProfile';
-import updateCurrentUser from './updateCurrentUser';
+import GET_USER_PROFILE from '../tabs/connect/getUserProfile';
+import UPDATE_CURRENT_USER from './updateCurrentUser';
 
 const Footer = styled({
   flex: 1,
@@ -88,16 +88,16 @@ class PersonalDetails extends PureComponent {
 
   render() {
     return (
-      <Query query={getUserProfile} fetchPolicy="cache-and-network">
+      <Query query={GET_USER_PROFILE} fetchPolicy="cache-and-network">
         {({ data: { currentUser = { profile: {} } } = {} }) => {
           const { firstName, lastName, email } = currentUser.profile;
 
           return (
             <Mutation
-              mutation={updateCurrentUser}
+              mutation={UPDATE_CURRENT_USER}
               update={async (cache, { data: { updateProfileFields } }) => {
                 await cache.writeQuery({
-                  query: getUserProfile,
+                  query: GET_USER_PROFILE,
                   data: {
                     currentUser: {
                       ...currentUser,

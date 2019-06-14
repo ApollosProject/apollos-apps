@@ -10,7 +10,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 import MediaPlayerProvider from '../Provider';
-import { playVideoMutation } from './mutations';
+import { PLAY_VIDEO } from './mutations';
 import MediaPlayer from '.';
 
 storiesOf('ui-media-player/MediaPlayer', module).add('simple', () => (
@@ -18,7 +18,7 @@ storiesOf('ui-media-player/MediaPlayer', module).add('simple', () => (
     <BackgroundView>
       <FlexedView>
         <CenteredView>
-          <Mutation mutation={playVideoMutation}>
+          <Mutation mutation={PLAY_VIDEO}>
             {(play) => (
               <ButtonLink
                 onPress={() =>
@@ -47,7 +47,7 @@ storiesOf('ui-media-player/MediaPlayer', module).add('simple', () => (
               </ButtonLink>
             )}
           </Mutation>
-          <Mutation mutation={playVideoMutation}>
+          <Mutation mutation={PLAY_VIDEO}>
             {(play) => (
               <ButtonLink
                 onPress={() =>
