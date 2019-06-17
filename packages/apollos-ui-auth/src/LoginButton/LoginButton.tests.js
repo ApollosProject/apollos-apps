@@ -5,16 +5,16 @@ import wait from 'waait';
 import { Providers } from '@apollosproject/ui-kit';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { MockedProvider } from 'react-apollo/test-utils';
-import AuthProvider, { getAuthToken } from '../Provider';
+import AuthProvider, { GET_AUTH_TOKEN } from '../Provider';
 
-import getLoginState from '../getLoginState';
+import GET_LOGIN_STATE from '../getLoginState';
 import LoginButton from '.';
 
 const cache = new InMemoryCache();
 describe('LoginButton component', () => {
   it('renders nothing when logged in', async () => {
     await cache.writeQuery({
-      query: getAuthToken,
+      query: GET_AUTH_TOKEN,
       data: { authToken: 'test' },
     });
 
@@ -35,7 +35,7 @@ describe('LoginButton component', () => {
   it('renders a LoginButton when logged out', async () => {
     const mock = {
       request: {
-        query: getLoginState,
+        query: GET_LOGIN_STATE,
       },
       result: {
         data: { isLoggedIn: null },
@@ -57,7 +57,7 @@ describe('LoginButton component', () => {
   it('renders a LoginButton that is loading', async () => {
     const mock = {
       request: {
-        query: getLoginState,
+        query: GET_LOGIN_STATE,
       },
       result: {
         data: { isLoggedIn: null },

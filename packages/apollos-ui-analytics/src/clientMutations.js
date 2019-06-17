@@ -1,16 +1,16 @@
 /* eslint-disable import/prefer-default-export */
 import gql from 'graphql-tag';
 
-const track = gql`
+const TRACK = gql`
   mutation track($properties: [AnalyticsMetaField]!, $eventName: String!) {
     track(properties: $properties, eventName: $eventName) @client
   }
 `;
 
-const identify = gql`
+const IDENTIFY = gql`
   mutation identify {
     identify @client
   }
 `;
 
-export { track, identify };
+export { TRACK, IDENTIFY };

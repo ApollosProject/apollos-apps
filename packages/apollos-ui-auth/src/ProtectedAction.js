@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-import getLoginState from './getLoginState';
+import GET_LOGIN_STATE from './getLoginState';
 
 import { AuthConsumer } from './Provider';
 
@@ -56,7 +56,7 @@ class ProtectedAction extends PureComponent {
 const ProtectedActionWithProps = (props) => (
   <AuthConsumer>
     {({ navigateToAuth }) => (
-      <Query query={getLoginState}>
+      <Query query={GET_LOGIN_STATE}>
         {({ data: { isLoggedIn = false } = {}, loading }) => (
           <ProtectedAction
             onTriggerAuth={navigateToAuth}

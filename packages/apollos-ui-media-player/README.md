@@ -73,7 +73,7 @@ const ActionContainer = ({ itemId }) => (
     <MediaPlayerSpacer>
       <PositioningView>
         <LikeButton itemId={itemId} />
-        <Query query={getShareContent} variables={{ itemId }}>
+        <Query query={GET_SHARE_CONTENT} variables={{ itemId }}>
           {({ data: { node } = {}, error, loading }) => {
             const sharing = get(node, 'sharing');
             return loading || error || !sharing ? null : (
@@ -90,9 +90,9 @@ const ActionContainer = ({ itemId }) => (
 4. Wire up ways to "call" the media player. We export a series of `Mutations` that can be used to pause, play, and advance the media player. Example:
 
 ```
-import { playVideoMutation } from '@apollosproject/ui-media-player';
+import { PLAY_VIDEO } from '@apollosproject/ui-media-player';
 ...
-      <Mutation mutation={playVideoMutation}>
+      <Mutation mutation={PLAY_VIDEO}>
         {(play) => (
           <Container>
             {videoSource ? (

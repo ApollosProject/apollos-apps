@@ -2,7 +2,7 @@ import React from 'react';
 import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 
 import Providers from 'apolloschurchapp/src/Providers';
-import getCampusLocations from './getCampusLocations';
+import GET_CAMPUS_LOCATIONS from './getCampusLocations';
 import Location from './index';
 
 const campuses = [
@@ -93,7 +93,7 @@ describe('Display Native Map with Locations', () => {
 
     const mock = {
       request: {
-        query: getCampusLocations,
+        query: GET_CAMPUS_LOCATIONS,
         variables: {
           latitude: userLocation.latitude,
           longitude: userLocation.longitude,

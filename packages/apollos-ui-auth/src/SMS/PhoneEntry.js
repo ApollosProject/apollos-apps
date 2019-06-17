@@ -24,7 +24,7 @@ import {
   BrandIcon,
 } from '../styles';
 
-const requestPin = gql`
+const REQUEST_PIN = gql`
   mutation requestPin($phone: String!) {
     requestSmsLoginPin(phoneNumber: $phone) {
       success
@@ -111,7 +111,7 @@ class PhoneEntry extends Component {
     return (
       <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior="padding">
         <BackgroundView>
-          <Mutation mutation={requestPin}>
+          <Mutation mutation={REQUEST_PIN}>
             {(mutate) => (
               <Formik
                 initialValues={{ phone: '' }}

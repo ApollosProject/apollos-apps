@@ -14,14 +14,9 @@ import {
 
 import Seeker from './Seeker';
 
-import { getControlState } from './queries';
+import { GET_CONTROL_STATE } from './queries';
 
-import {
-  goFullscreen as goFullscreenMutation,
-  dismiss as dismissMutation,
-  play as playMutation,
-  pause as pauseMutation,
-} from './mutations';
+import { GO_FULLSCREEN, DISMISS, PLAY, PAUSE } from './mutations';
 
 const MINI_PLAYER_HEIGHT = 50;
 
@@ -131,11 +126,11 @@ class MiniControls extends Component {
       useNativeDriver: true,
     }).start();
     return (
-      <Mutation mutation={goFullscreenMutation}>
+      <Mutation mutation={GO_FULLSCREEN}>
         {(goFullscreen) => (
           <Shadow>
             <Container>
-              <Mutation mutation={dismissMutation}>
+              <Mutation mutation={DISMISS}>
                 {(dismiss) => (
                   <Touchable
                     onPress={() => (isPlaying ? goFullscreen() : dismiss())}
@@ -165,7 +160,7 @@ class MiniControls extends Component {
               </TrackInfoTouchableBackground>
               <Controls>
                 {isPlaying ? (
-                  <Mutation mutation={pauseMutation}>
+                  <Mutation mutation={PAUSE}>
                     {(pause) => (
                       <StyledButtonIcon
                         name={'pause'}
@@ -174,7 +169,7 @@ class MiniControls extends Component {
                     )}
                   </Mutation>
                 ) : (
-                  <Mutation mutation={playMutation}>
+                  <Mutation mutation={PLAY}>
                     {(play) => (
                       <StyledButtonIcon name={'play'} onPress={() => play()} />
                     )}
@@ -190,7 +185,7 @@ class MiniControls extends Component {
   };
 
   render() {
-    return <Query query={getControlState}>{this.renderMiniControls}</Query>;
+    return <Query query={GET_CONTROL_STATE}>{this.renderMiniControls}</Query>;
   }
 }
 

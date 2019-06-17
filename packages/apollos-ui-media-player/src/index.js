@@ -6,16 +6,16 @@ export MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
 export withTabBarMediaSpacer from './tabBarWithMediaSpacer';
 
 export {
-  pauseAndRestart,
-  playVideoMutation,
-  goFullscreen,
-  play,
-  pause,
-  dismiss,
-  exitFullscreen,
-  updatePlayhead,
-  mute,
-  unmute,
-  showVideo,
-  hideVideo,
+  PAUSE_AND_RESTART,
+  PLAY_VIDEO,
+  GO_FULLSCREEN,
+  PLAY,
+  PAUSE,
+  DISMISS,
+  EXIT_FULLSCREEN,
+  UPDATE_PLAYHEAD,
+  MUTE,
+  UNMUTE,
+  SHOW_VIDEO,
+  HIDE_VIDEO,
 } from './MediaPlayer/mutations';

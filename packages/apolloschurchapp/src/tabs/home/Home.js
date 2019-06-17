@@ -20,9 +20,9 @@ import ContentCardConnected from '../../ui/ContentCardConnected';
 import { LiveButton } from '../../live';
 
 import ContentTableCard from '../../ui/ContentTableCard';
-import getUserFeed from './getUserFeed';
-import getPersonaFeed from './getPersonaFeed';
-import getCampaignContentItem from './getCampaignContentItem';
+import GET_USER_FEED from './getUserFeed';
+import GET_PERSONA_FEED from './getPersonaFeed';
+import GET_CAMPAIGN_CONTENT_ITEM from './getCampaignContentItem';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -59,7 +59,7 @@ class Home extends PureComponent {
       <BackgroundView>
         <SafeAreaView>
           <Query
-            query={getUserFeed}
+            query={GET_USER_FEED}
             variables={{
               first: 10,
               after: null,
@@ -86,7 +86,7 @@ class Home extends PureComponent {
                     <LogoTitle source={require('./wordmark.png')} />
                     <LiveButton />
                     <Query
-                      query={getCampaignContentItem}
+                      query={GET_CAMPAIGN_CONTENT_ITEM}
                       fetchPolicy="cache-and-network"
                     >
                       {({ data: featuredData, loading: isFeaturedLoading }) => {
@@ -117,7 +117,7 @@ class Home extends PureComponent {
                       }}
                     </Query>
                     <Query
-                      query={getPersonaFeed}
+                      query={GET_PERSONA_FEED}
                       fetchPolicy="cache-and-network"
                     >
                       {({

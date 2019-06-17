@@ -6,8 +6,8 @@ import { withApollo, Query } from 'react-apollo';
 import { throttle, get } from 'lodash';
 
 import { PlayheadConsumer, ControlsConsumer } from './PlayheadState';
-import { getMusicControlState } from './queries';
-import { play, pause, updatePlayhead } from './mutations';
+import { GET_MUSIC_CONTROL_STATE } from './queries';
+import { PLAY, PAUSE, UPDATE_PLAYHEAD } from './mutations';
 
 class MusicControls extends Component {
   static propTypes = {
@@ -131,9 +131,9 @@ class MusicControls extends Component {
     });
   };
 
-  handleOnPlay = () => this.props.client.mutate({ mutation: play });
+  handleOnPlay = () => this.props.client.mutate({ mutation: PLAY });
 
-  handleOnPause = () => this.props.client.mutate({ mutation: pause });
+  handleOnPause = () => this.props.client.mutate({ mutation: PAUSE });
 
   handleOnFastForward = () => this.props.skip(15);
 
@@ -141,7 +141,7 @@ class MusicControls extends Component {
 
   handleOnSeek = (seekTo) =>
     this.props.client.mutate({
-      mutation: updatePlayhead,
+      mutation: UPDATE_PLAYHEAD,
       variables: {
         currentTime: seekTo,
       },
@@ -153,7 +153,7 @@ class MusicControls extends Component {
 }
 
 const MusicControlsState = (props) => (
-  <Query query={getMusicControlState}>
+  <Query query={GET_MUSIC_CONTROL_STATE}>
     {({ data: { mediaPlayer = {} } = {} }) => (
       <PlayheadConsumer>
         {({ duration, currentTime }) => (

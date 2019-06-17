@@ -39,6 +39,7 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-notifications": "*",
     "@apollosproject/ui-kit": "*",
     "apollo-client": "*",
     "react": "*",

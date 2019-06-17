@@ -5,12 +5,12 @@ import { Dimensions } from 'react-native';
 
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 
-import getUserProfile from '../../tabs/connect/getUserProfile';
+import GET_USER_PROFILE from '../../tabs/connect/getUserProfile';
 import MapView from './MapView';
 
-import getAllCampuses from './getCampusLocations';
+import GET_CAMPUSES from './getCampusLocations';
 
-import campusChange from './campusChange';
+import CHANGE_CAMPUS from './campusChange';
 
 const getCurrentLocation = () =>
   new Promise((resolve, reject) => {
@@ -69,7 +69,6 @@ class Location extends PureComponent {
 
   componentDidMount() {
     return getCurrentLocation().then((position) => {
-      console.log(position);
       if (position) {
         this.setState({
           userLocation: {
@@ -91,7 +90,7 @@ class Location extends PureComponent {
 
     return (
       <Query
-        query={getAllCampuses}
+        query={GET_CAMPUSES}
         variables={{
           latitude: this.state.userLocation.latitude,
           longitude: this.state.userLocation.longitude,
@@ -100,13 +99,13 @@ class Location extends PureComponent {
       >
         {({ loading, error, data: { campuses = [] } = {} }) => (
           <Mutation
-            mutation={campusChange}
+            mutation={CHANGE_CAMPUS}
             update={async (cache, { data: { updateUserCampus } }) => {
               const { currentUser } = await cache.readQuery({
-                query: getUserProfile,
+                query: GET_USER_PROFILE,
               });
               await cache.writeQuery({
-                query: getUserProfile,
+                query: GET_USER_PROFILE,
                 data: {
                   currentUser: {
                     ...currentUser,

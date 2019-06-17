@@ -3,11 +3,11 @@ import { Query } from 'react-apollo';
 
 import { Button } from '@apollosproject/ui-kit';
 
-import getLoginState from '../getLoginState';
+import GET_LOGIN_STATE from '../getLoginState';
 import { AuthConsumer } from '../Provider';
 
 const LoginButton = (props) => (
-  <Query query={getLoginState}>
+  <Query query={GET_LOGIN_STATE}>
     {({ data }) => {
       const { isLoggedIn, loading } = data;
       if (isLoggedIn) return null;

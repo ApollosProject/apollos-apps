@@ -18,8 +18,8 @@ import MiniControls, { MINI_PLAYER_HEIGHT } from './MiniControls';
 import FullscreenControls from './FullscreenControls';
 import VideoWindow from './VideoWindow';
 import MusicControls from './MusicControls';
-import { getFullVisibilityState } from './queries';
-import { exitFullscreen, goFullscreen } from './mutations';
+import { GET_FULL_VISIBILITY_STATE } from './queries';
+import { EXIT_FULLSCREEN, GO_FULLSCREEN } from './mutations';
 import { Provider, ControlsConsumer } from './PlayheadState';
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
 
@@ -134,18 +134,18 @@ class FullscreenPlayer extends PureComponent {
 
       // Determine whether to continue the animation and exit fullscreen,
       // or stay full screen and reset back up
-      let mutation = goFullscreen;
+      let mutation = GO_FULLSCREEN;
       if (Math.abs(gestureVelocity > 0.5)) {
         if (gestureVelocity > 0) {
-          mutation = exitFullscreen;
+          mutation = EXIT_FULLSCREEN;
         }
       } else if (gestureDistance >= height / 2) {
-        mutation = exitFullscreen;
+        mutation = EXIT_FULLSCREEN;
       }
 
       const dragOffset = Math.min(0, -dy / Dimensions.get('window').height);
 
-      if (mutation === goFullscreen) {
+      if (mutation === GO_FULLSCREEN) {
         Animated.spring(this.dragOffset, {
           toValue: 0,
           useNativeDriver: true,
@@ -225,7 +225,7 @@ class FullscreenPlayer extends PureComponent {
   render() {
     return (
       <Provider>
-        <Query query={getFullVisibilityState}>{this.renderCover}</Query>
+        <Query query={GET_FULL_VISIBILITY_STATE}>{this.renderCover}</Query>
       </Provider>
     );
   }

@@ -4,19 +4,19 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
-import getUserGenderAndBirthDate from './getUserGenderAndBirthDate';
+import GET_USER_GENDER_AND_BIRTH_DATE from './getUserGenderAndBirthDate';
 import AboutYou from './AboutYou';
 
-import updateUserDetails from './updateUserDetails';
+import UPDATE_USER_DETAILS from './updateUserDetails';
 
 const AboutYouConnected = memo(
   ({ Component, onPressPrimary, onPressSecondary, ...props }) => (
-    <Query query={getUserGenderAndBirthDate}>
+    <Query query={GET_USER_GENDER_AND_BIRTH_DATE}>
       {({ data: { currentUser = { profile: {} } } = {}, loading = false }) => {
         const { gender, birthDate } = currentUser.profile;
 
         return (
-          <Mutation mutation={updateUserDetails}>
+          <Mutation mutation={UPDATE_USER_DETAILS}>
             {(updateDetails) => (
               <Formik
                 initialValues={{ gender, birthDate }}

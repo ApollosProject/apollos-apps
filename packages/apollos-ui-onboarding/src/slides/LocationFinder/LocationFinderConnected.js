@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
-import getUserCampus from './getUserCampus';
+import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
 class LocationFinderConnected extends PureComponent {
@@ -10,7 +10,7 @@ class LocationFinderConnected extends PureComponent {
 
   render() {
     return (
-      <Query query={getUserCampus} fetchPolicy="cache-and-network">
+      <Query query={GET_USER_CAMPUS} fetchPolicy="cache-and-network">
         {({
           data: {
             currentUser: {

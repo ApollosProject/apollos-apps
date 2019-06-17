@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const playVideoMutation = gql`
+const PLAY_VIDEO = gql`
   mutation playVideo(
     $mediaSource: String!
     $posterSources: String
@@ -18,84 +18,84 @@ const playVideoMutation = gql`
   }
 `;
 
-const goFullscreen = gql`
+const GO_FULLSCREEN = gql`
   mutation {
     mediaPlayerUpdateState(isFullscreen: true) @client
   }
 `;
 
-const play = gql`
+const PLAY = gql`
   mutation {
     mediaPlayerUpdateState(isPlaying: true) @client
   }
 `;
 
-const pause = gql`
+const PAUSE = gql`
   mutation {
     mediaPlayerUpdateState(isPlaying: false) @client
   }
 `;
 
-const dismiss = gql`
+const DISMISS = gql`
   mutation {
     mediaPlayerUpdateState(isPlaying: false, isVisible: false) @client
   }
 `;
 
-const pauseAndRestart = gql`
+const PAUSE_AND_RESTART = gql`
   mutation pause {
     mediaPlayerUpdateState(isPlaying: false) @client
     mediaPlayerSetPlayhead(currentTime: 0) @client
   }
 `;
 
-const exitFullscreen = gql`
+const EXIT_FULLSCREEN = gql`
   mutation {
     mediaPlayerUpdateState(isFullscreen: false) @client
   }
 `;
 
-const mute = gql`
+const MUTE = gql`
   mutation {
     mediaPlayerUpdateState(muted: true) @client
   }
 `;
 
-const unmute = gql`
+const UNMUTE = gql`
   mutation {
     mediaPlayerUpdateState(muted: false) @client
   }
 `;
 
-const showVideo = gql`
+const SHOW_VIDEO = gql`
   mutation {
     mediaPlayerUpdateState(showVideo: true) @client
   }
 `;
 
-const hideVideo = gql`
+const HIDE_VIDEO = gql`
   mutation {
     mediaPlayerUpdateState(showVideo: false) @client
   }
 `;
 
-const updatePlayhead = gql`
+const UPDATE_PLAYHEAD = gql`
   mutation mediaPlayerSetPlayhead($currentTime: Float) {
     mediaPlayerSetPlayhead(currentTime: $currentTime) @client
   }
 `;
 
 export {
-  pauseAndRestart,
-  playVideoMutation,
-  goFullscreen,
-  play,
-  pause,
-  dismiss,
-  exitFullscreen,
-  updatePlayhead,
-  mute,
-  unmute,
-  showVideo,
-  hideVideo,
+  PAUSE_AND_RESTART,
+  PLAY_VIDEO,
+  GO_FULLSCREEN,
+  PLAY,
+  PAUSE,
+  DISMISS,
+  EXIT_FULLSCREEN,
+  UPDATE_PLAYHEAD,
+  MUTE,
+  UNMUTE,
+  SHOW_VIDEO,
+  HIDE_VIDEO,
 };

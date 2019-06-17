@@ -5,7 +5,7 @@ import { Text } from 'react-native';
 import { Providers, renderWithApolloData } from '../../testUtils';
 
 import LocationFinderConnected from './LocationFinderConnected';
-import getUserCampus from './getUserCampus';
+import GET_USER_CAMPUS from './getUserCampus';
 
 const navigation = { navigate: jest.fn() };
 describe('The Onboarding LocationFinderConnected component', () => {
@@ -13,7 +13,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
     const mocks = [
       {
         request: {
-          query: getUserCampus,
+          query: GET_USER_CAMPUS,
         },
         result: {
           data: { campus: null },
@@ -34,7 +34,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
     const mocks = [
       {
         request: {
-          query: getUserCampus,
+          query: GET_USER_CAMPUS,
         },
         result: {
           data: {
@@ -77,7 +77,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
     const mocks = [
       {
         request: {
-          query: getUserCampus,
+          query: GET_USER_CAMPUS,
         },
         result: {
           data: {

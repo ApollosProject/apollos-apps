@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import { ActivityIndicator } from 'react-native';
 import { CenteredView } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
-import getLoginStateWithCacheLoaded from './getLoginStateWithCacheLoaded';
+import GET_LOGIN_STATE_WITH_CACHE_LOADED from './getLoginStateWithCacheLoaded';
 
 /* This function can be included as the default route in your navigator
 to direct the user to a different route depending on if the user is logged in or not.
@@ -81,7 +81,7 @@ class ProtectedRoute extends PureComponent {
 }
 
 const ProtectedRouteWithData = (props) => (
-  <Query fetchPolicy={'network-only'} query={getLoginStateWithCacheLoaded}>
+  <Query fetchPolicy={'network-only'} query={GET_LOGIN_STATE_WITH_CACHE_LOADED}>
     {({
       data: { isLoggedIn = false, cacheLoaded = false } = {},
       loading = true,
