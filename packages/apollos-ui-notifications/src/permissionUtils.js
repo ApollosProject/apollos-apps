@@ -14,19 +14,19 @@ const promptForPushNotificationsWithUserResponse = async () =>
     OneSignal.promptForPushNotificationsWithUserResponse(resolve)
   );
 
-const setNotifcationsEnabled = gql`
+const SET_NOTIFCATIONS_ENABLED = gql`
   mutation updatePushPermissions($enabled: Boolean!) {
     updatePushPermissions(enabled: $enabled) @client
   }
 `;
 
-const getNotificationsEnabled = gql`
+const GET_NOTIFICATIONS_ENABLED = gql`
   query getPushPermissions {
     notificationsEnabled @client(always: true)
   }
 `;
 
-export const getPushId = gql`
+const GET_PUSH_ID = gql`
   query getPushId {
     pushId @client
   }
@@ -35,11 +35,16 @@ export const getPushId = gql`
 const requestPushPermissions = async ({ client }) => {
   const notificationsEnabled = await promptForPushNotificationsWithUserResponse();
   await client.mutate({
-    mutation: setNotifcationsEnabled,
+    mutation: SET_NOTIFCATIONS_ENABLED,
     variables: { enabled: notificationsEnabled },
   });
 
   return notificationsEnabled;
 };
 
-export { getPushPermissions, requestPushPermissions, getNotificationsEnabled };
+export {
+  getPushPermissions,
+  requestPushPermissions,
+  GET_NOTIFICATIONS_ENABLED,
+  GET_PUSH_ID,
+};

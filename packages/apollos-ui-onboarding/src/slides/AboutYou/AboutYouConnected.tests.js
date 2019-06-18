@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
 
 import { renderWithApolloData, Providers } from '../../testUtils';
-import getUserGenderAndBirthDate from './getUserGenderAndBirthDate';
+import GET_USER_GENDER_AND_BIRTH_DATE from './getUserGenderAndBirthDate';
 import AboutYouConnected from './AboutYouConnected';
 
 describe('AboutYouConnected component', () => {
@@ -21,7 +21,7 @@ describe('AboutYouConnected component', () => {
   it('renders Gender and BirthDate when logged in', async () => {
     const mock = {
       request: {
-        query: getUserGenderAndBirthDate,
+        query: GET_USER_GENDER_AND_BIRTH_DATE,
       },
       result: {
         data: {
@@ -48,7 +48,7 @@ describe('AboutYouConnected component', () => {
   it('should render a custom Component', async () => {
     const mock = {
       request: {
-        query: getUserGenderAndBirthDate,
+        query: GET_USER_GENDER_AND_BIRTH_DATE,
       },
       result: {
         data: {

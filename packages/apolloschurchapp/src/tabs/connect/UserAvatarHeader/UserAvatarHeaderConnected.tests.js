@@ -3,14 +3,14 @@ import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
-import getUserProfile from '../getUserProfile';
+import GET_USER_PROFILE from '../getUserProfile';
 import UserAvatarHeaderConnected from './UserAvatarHeaderConnected';
 
 describe('user avatar header connect', () => {
   it('renders user avatar header if logged in', async () => {
     const mock = {
       request: {
-        query: getUserProfile,
+        query: GET_USER_PROFILE,
       },
       result: {
         data: {

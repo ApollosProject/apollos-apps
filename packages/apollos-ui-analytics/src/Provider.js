@@ -5,12 +5,12 @@ import { Platform } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 
 import {
-  track as trackServer,
-  identify as identifyServer,
+  TRACK as TRACK_SERVER,
+  IDENTIFY as IDENTIFY_SERVER,
 } from './serverMutations';
 import {
-  track as trackClient,
-  identify as identifyClient,
+  TRACK as TRACK_CLIENT,
+  IDENTIFY as IDENTIFY_CLIENT,
 } from './clientMutations';
 
 const anonymousId = DeviceInfo.getUniqueID();
@@ -40,7 +40,7 @@ export const gqlInputToObject = (props = []) =>
 // handy wrapper around track mutations
 export const track = ({ client, eventName, properties }) =>
   client.mutate({
-    mutation: trackClient,
+    mutation: TRACK_CLIENT,
     variables: {
       eventName,
       properties: objectToGqlInput(properties),
@@ -51,7 +51,7 @@ const createTrack = ({ client }) => ({ eventName, properties }) =>
   track({ eventName, properties, client });
 
 const createIdentify = ({ client }) => () =>
-  client.mutate({ mutation: identifyClient });
+  client.mutate({ mutation: IDENTIFY_CLIENT });
 
 export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
   Mutation: {
@@ -66,7 +66,7 @@ export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
         }
       });
       await client.mutate({
-        mutation: trackServer,
+        mutation: TRACK_SERVER,
         variables: {
           input: {
             anonymousId,
@@ -90,7 +90,7 @@ export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
         }
       });
       await client.mutate({
-        mutation: identifyServer,
+        mutation: IDENTIFY_SERVER,
         variables: {
           input: {
             anonymousId,

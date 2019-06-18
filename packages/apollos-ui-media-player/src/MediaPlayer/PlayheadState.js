@@ -3,8 +3,8 @@ import { Animated } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-import { getMediaPlayerIsPlaying } from './queries';
-import { updatePlayhead } from './mutations';
+import { GET_MEDIA_PLAYER_IS_PLAYING } from './queries';
+import { UPDATE_PLAYHEAD } from './mutations';
 
 const defaultState = {
   duration: 1,
@@ -69,7 +69,7 @@ class ProviderWithoutApollo extends Component {
 
   handlePause = () => {
     this.props.client.mutate({
-      mutation: updatePlayhead,
+      mutation: UPDATE_PLAYHEAD,
       variables: {
         currentTime: this.lastCurrentTime,
       },
@@ -84,7 +84,7 @@ class ProviderWithoutApollo extends Component {
     );
 
     await this.props.client.mutate({
-      mutation: updatePlayhead,
+      mutation: UPDATE_PLAYHEAD,
       variables: {
         currentTime,
       },
@@ -111,7 +111,7 @@ class ProviderWithoutApollo extends Component {
 
   render() {
     return (
-      <Query query={getMediaPlayerIsPlaying}>{this.renderProviders}</Query>
+      <Query query={GET_MEDIA_PLAYER_IS_PLAYING}>{this.renderProviders}</Query>
     );
   }
 }

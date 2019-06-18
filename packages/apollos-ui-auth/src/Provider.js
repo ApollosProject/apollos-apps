@@ -4,7 +4,7 @@ import { AsyncStorage } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
-import { getPushId, updatePushId } from '@apollosproject/ui-notifications';
+import { GET_PUSH_ID, updatePushId } from '@apollosproject/ui-notifications';
 
 import getLoginState from './getLoginState';
 
@@ -15,7 +15,7 @@ const defaultContext = {
 
 const AuthContext = React.createContext(defaultContext);
 
-export const getAuthToken = gql`
+export const GET_AUTH_TOKEN = gql`
   query authToken {
     authToken @client
   }
@@ -28,7 +28,7 @@ export const resolvers = {
       // When logging out, this query returns an error.
       // Rescue the error, and return false.
       try {
-        const { authToken } = cache.readQuery({ query: getAuthToken });
+        const { authToken } = cache.readQuery({ query: GET_AUTH_TOKEN });
         return !!authToken;
       } catch (e) {
         return false;
@@ -47,7 +47,7 @@ export const resolvers = {
         await AsyncStorage.setItem('authToken', authToken);
 
         await cache.writeQuery({
-          query: getAuthToken,
+          query: GET_AUTH_TOKEN,
           data: { authToken },
         });
         await cache.writeQuery({
@@ -59,7 +59,7 @@ export const resolvers = {
         });
 
         const { data: { pushId } = { data: {} } } = await client.query({
-          query: getPushId,
+          query: GET_PUSH_ID,
         });
 
         if (pushId) {
