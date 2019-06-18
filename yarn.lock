@@ -14474,10 +14474,10 @@ pascalcase@^0.1.1:
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
 
-passkit-generator@^1.5.9:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/passkit-generator/-/passkit-generator-1.6.4.tgz#c8ca2a792e1ea0e15e08a8e392ea59b49d9c6ce3"
-  integrity sha512-ob/54CMrq1nxb1irxLfrW2SbEQICh1oGX/lf3jiWeDed/Ijum8WCWXmojSapq4Gka7fKJpHbxCDSZnDswTJ0dw==
+passkit-generator@1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/passkit-generator/-/passkit-generator-1.5.9.tgz#b411393eaf450e9738f33364bcc83b6ef0e9d6b4"
+  integrity sha512-fFTAY0xuMvaO1WwB8VeGSUS6mk0X6HNl7vL5MYK1Y7123gIq+sbVFpsh0Ly6zBBHZchrX4E4dNYmotXP2Ei2bw==
   dependencies:
     archiver "^3.0.0"
     debug "^3.2.6"
