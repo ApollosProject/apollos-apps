@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "graphql-tag": "2.9.2",
-    "react-native-device-info": "^1.1.0"
+    "react-native-device-info": "^2.1.2"
   },
   "devDependencies": {
     "apollo-cache-inmemory": "^1.5.1",
