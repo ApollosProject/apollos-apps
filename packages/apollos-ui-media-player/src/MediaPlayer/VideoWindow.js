@@ -7,8 +7,8 @@ import { Animated, View, StyleSheet } from 'react-native';
 
 import { styled, ActivityIndicator } from '@apollosproject/ui-kit';
 
-import { getVideoState } from './queries';
-import { pause as pauseMutation, pauseAndRestart } from './mutations';
+import { GET_VIDEO_STATE } from './queries';
+import { PAUSE, PAUSE_AND_RESTART } from './mutations';
 
 const styles = StyleSheet.create({
   animatedPosterImage: {
@@ -42,11 +42,11 @@ class VideoWindow extends PureComponent {
   loadingStyle = [StyleSheet.absoluteFill, { opacity: this.loadingOverlay }];
 
   handleOnEnd = async () => {
-    this.props.client.mutate({ mutation: pauseAndRestart });
+    this.props.client.mutate({ mutation: PAUSE_AND_RESTART });
   };
 
   handlePause = () => {
-    this.props.client.mutate({ mutation: pauseMutation });
+    this.props.client.mutate({ mutation: PAUSE });
   };
 
   handleOnProgress = (progress) => {
@@ -140,7 +140,7 @@ class VideoWindow extends PureComponent {
   render() {
     return (
       <Background>
-        <Query query={getVideoState}>{this.renderVideo}</Query>
+        <Query query={GET_VIDEO_STATE}>{this.renderVideo}</Query>
         <Animated.View style={this.loadingStyle}>
           <ActivityIndicator size={'large'} />
         </Animated.View>

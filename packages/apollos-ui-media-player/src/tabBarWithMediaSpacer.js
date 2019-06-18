@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 import { styled } from '@apollosproject/ui-kit';
 import MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
-import { getMediaPlayerVisibility } from './MediaPlayer/queries';
+import { GET_MEDIA_PLAYER_VISIBILITY } from './MediaPlayer/queries';
 
 const TabBarWrapper = styled(({ theme, mediaPlayerIsVisible }) => ({
   backgroundColor: mediaPlayerIsVisible
@@ -16,7 +16,7 @@ const TabBarWrapper = styled(({ theme, mediaPlayerIsVisible }) => ({
 
 // eslint-disable-next-line react/display-name
 const withMediaSpacer = (TabBar) => (props) => (
-  <Query query={getMediaPlayerVisibility}>
+  <Query query={GET_MEDIA_PLAYER_VISIBILITY}>
     {({ data = {} }) => (
       <TabBarWrapper mediaPlayerIsVisible={get(data, 'mediaPlayer.isVisible')}>
         <MediaPlayerSpacer>

@@ -23,15 +23,15 @@ import {
   ButtonIcon,
 } from '@apollosproject/ui-kit';
 
-import { getControlState } from './queries';
+import { GET_CONTROL_STATE } from './queries';
 import {
-  play,
-  pause,
-  exitFullscreen,
-  showVideo,
-  hideVideo,
-  mute,
-  unmute,
+  PLAY,
+  PAUSE,
+  EXIT_FULLSCREEN,
+  SHOW_VIDEO,
+  HIDE_VIDEO,
+  MUTE,
+  UNMUTE,
 } from './mutations';
 import { ControlsConsumer } from './PlayheadState';
 import Seeker from './Seeker';
@@ -148,31 +148,31 @@ class FullscreenControls extends PureComponent {
   };
 
   handleClose = () => {
-    this.props.client.mutate({ mutation: exitFullscreen });
+    this.props.client.mutate({ mutation: EXIT_FULLSCREEN });
   };
 
   handlePlay = () => {
-    this.props.client.mutate({ mutation: play });
+    this.props.client.mutate({ mutation: PLAY });
   };
 
   handlePause = () => {
-    this.props.client.mutate({ mutation: pause });
+    this.props.client.mutate({ mutation: PAUSE });
   };
 
   handleShowVideo = () => {
-    this.props.client.mutate({ mutation: showVideo });
+    this.props.client.mutate({ mutation: SHOW_VIDEO });
   };
 
   handleHideVideo = () => {
-    this.props.client.mutate({ mutation: hideVideo });
+    this.props.client.mutate({ mutation: HIDE_VIDEO });
   };
 
   handleMute = () => {
-    this.props.client.mutate({ mutation: mute });
+    this.props.client.mutate({ mutation: MUTE });
   };
 
   handleUnMute = () => {
-    this.props.client.mutate({ mutation: unmute });
+    this.props.client.mutate({ mutation: UNMUTE });
   };
 
   handleControlVisibility = () => {
@@ -280,7 +280,7 @@ class FullscreenControls extends PureComponent {
 
   render() {
     return (
-      <Query query={getControlState}>{this.renderFullscreenControls}</Query>
+      <Query query={GET_CONTROL_STATE}>{this.renderFullscreenControls}</Query>
     );
   }
 }
