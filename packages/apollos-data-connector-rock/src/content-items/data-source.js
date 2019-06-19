@@ -142,6 +142,12 @@ export default class ContentItem extends RockApolloDataSource {
     if (parentItems.length) {
       const parentImages = parentItems
         .map(this.getImages)
+        .filter(
+          (parent) =>
+            parent
+              .map((image) => image.sources)
+              .filter((sources) => sources.length).length
+        )
         .find((images) => images.length);
 
       if (!parentImages) return null;
