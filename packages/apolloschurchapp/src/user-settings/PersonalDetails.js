@@ -1,6 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, StyleSheet } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  StatusBar,
+  Platform,
+} from 'react-native';
 import { SafeAreaView, Header } from 'react-navigation';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
@@ -47,7 +52,10 @@ class PersonalDetails extends PureComponent {
     <KeyboardAvoidingView
       behavior={'padding'}
       style={StyleSheet.absoluteFill}
-      keyboardVerticalOffset={Header.HEIGHT}
+      keyboardVerticalOffset={
+        Header.HEIGHT +
+        (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
+      }
     >
       <FlexedView>
         <PaddedView>
