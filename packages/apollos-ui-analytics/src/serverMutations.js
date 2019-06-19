@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import gql from 'graphql-tag';
 
-const track = gql`
+const TRACK = gql`
   mutation track($input: AnalyticsTrackInput!) {
     trackEvent(input: $input) {
       success
@@ -9,7 +9,7 @@ const track = gql`
   }
 `;
 
-const identify = gql`
+const IDENTIFY = gql`
   mutation identify($input: AnalyticsIdentifyInput!) {
     identifySelf(input: $input) {
       success
@@ -17,4 +17,4 @@ const identify = gql`
   }
 `;
 
-export { track, identify };
+export { TRACK, IDENTIFY };

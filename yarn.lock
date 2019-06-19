@@ -14474,10 +14474,10 @@ pascalcase@^0.1.1:
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
 
-passkit-generator@^1.5.9:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/passkit-generator/-/passkit-generator-1.6.4.tgz#c8ca2a792e1ea0e15e08a8e392ea59b49d9c6ce3"
-  integrity sha512-ob/54CMrq1nxb1irxLfrW2SbEQICh1oGX/lf3jiWeDed/Ijum8WCWXmojSapq4Gka7fKJpHbxCDSZnDswTJ0dw==
+passkit-generator@1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/passkit-generator/-/passkit-generator-1.5.9.tgz#b411393eaf450e9738f33364bcc83b6ef0e9d6b4"
+  integrity sha512-fFTAY0xuMvaO1WwB8VeGSUS6mk0X6HNl7vL5MYK1Y7123gIq+sbVFpsh0Ly6zBBHZchrX4E4dNYmotXP2Ei2bw==
   dependencies:
     archiver "^3.0.0"
     debug "^3.2.6"
@@ -15465,15 +15465,10 @@ react-native-config@^0.11.7:
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.11.7.tgz#a2b323f2ecd76a4df88cbb6bc86eaa2ef9febee7"
   integrity sha512-dn5s+zhwLyE25vRT/vaEtLk/j8ZL1UZKvejORNDWakSwpOnLmFurFeaZV83IqkPlfWHXHFdsYe2IRYG1WN4WkQ==
 
-react-native-device-info@0.22.5:
-  version "0.22.5"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-0.22.5.tgz#9b1882cbb030f2926cff77336e7cd2e87edf52bf"
-  integrity sha512-Pe+7eoWOR/TmZxWLaa8rmEmqRckyvPnniDXjiKxaUSk5oUCCtHjFajVYSVkWoJGPwd4xQYjrhx1gr/tcvjSEwQ==
-
-react-native-device-info@^1.1.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-1.8.0.tgz#98a7e3adb4e3d377eeba9c751bda03b2d7f9da35"
-  integrity sha512-pGSMzU/ywpJT97bIrC94p0JgNn6VZT4Rrfo9F47PfAfIfQJvsqSef3ulimr6FeUkK1nEfp0oRByV35OaOt+uZA==
+react-native-device-info@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-2.1.2.tgz#5c553498e8930410aa65796b83f8f8c8fb9893b4"
+  integrity sha512-q14hVR0eLRXnKeRyKX4naydXstCWetCIL+K+vUqREGkVj6qKoBouKd2yd8AxBfyomQN4uP3XRT6hTCwErIj9Ew==
 
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"

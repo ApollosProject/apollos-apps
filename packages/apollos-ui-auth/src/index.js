@@ -13,8 +13,8 @@ export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
 export ProtectedRoute from './ProtectedRoute';
 
-export getLoginState from './getLoginState';
-export logout from './logout';
+export GET_LOGIN_STATE from './getLoginState';
+export LOGOUT from './logout';
 export authLink from './authLink';
 
 export { AuthSMSPhoneEntry, AuthSMSVerification, AuthPassword };
