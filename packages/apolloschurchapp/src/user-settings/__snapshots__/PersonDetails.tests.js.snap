@@ -34,22 +34,26 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
     }
   >
     <View
+      onLayout={[Function]}
       style={
-        Object {
-          "flex": 1,
-        }
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
       <View
         style={
           Object {
-            "backgroundColor": "#FFFFFF",
-            "borderBottomWidth": 0.5,
-            "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
-            "borderLeftWidth": 0,
-            "borderRightWidth": 0,
-            "borderTopWidth": 0.5,
-            "marginBottom": 16,
+            "flex": 1,
           }
         }
       >
@@ -359,29 +363,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
               </View>
             </View>
           </View>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#FFFFFF",
-            "borderBottomWidth": 0.5,
-            "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
-            "borderLeftWidth": 0,
-            "borderRightWidth": 0,
-            "borderTopWidth": 0.5,
-            "marginBottom": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
           <View
             disabled={false}
             style={
@@ -535,76 +516,76 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
             </View>
           </View>
         </View>
-      </View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "flex-end",
-          }
-        }
-      >
-        <View
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "flex": 1,
+              "justifyContent": "flex-end",
             }
           }
         >
           <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
             <View
-              bordered={false}
-              disabled={true}
-              pill={true}
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 48,
-                  "borderWidth": 2,
-                  "elevation": 2,
-                  "flexDirection": "row",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "opacity": 0.5,
-                  "overflow": "hidden",
-                  "paddingHorizontal": 16,
+                  "opacity": 1,
                 }
               }
             >
-              <Text
+              <View
+                bordered={false}
+                disabled={true}
+                pill={true}
                 style={
                   Object {
-                    "color": "#FFFFFF",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 23.04,
+                    "alignItems": "center",
+                    "backgroundColor": "#00676D",
+                    "borderColor": "#00676D",
+                    "borderRadius": 48,
+                    "borderWidth": 2,
+                    "elevation": 2,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 0.5,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
                   }
                 }
               >
-                Save
-              </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Save
+                </Text>
+              </View>
             </View>
           </View>
-        </View>
-      </RCTSafeAreaView>
+        </RCTSafeAreaView>
+      </View>
     </View>
   </View>
 </RCTSafeAreaView>
