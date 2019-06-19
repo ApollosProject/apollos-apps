@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, StyleSheet } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, View, Platform } from 'react-native';
 import { SafeAreaView, Header } from 'react-navigation';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 import {
   TextInput,
   PaddedView,
-  FlexedView,
+  BackgroundView,
   Button,
   ButtonLink,
   styled,
@@ -21,7 +21,14 @@ import UPDATE_CURRENT_USER from './updateCurrentUser';
 const Footer = styled({
   flex: 1,
   justifyContent: 'flex-end',
+})(View);
+
+const FlexedSafeAreaView = styled({
+  flex: 1,
 })(SafeAreaView);
+const forceInset = { top: 'always' };
+
+const ANDROID_PADDING = Platform.os === 'android' ? 10 : 0;
 
 class PersonalDetails extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
@@ -47,43 +54,45 @@ class PersonalDetails extends PureComponent {
     <KeyboardAvoidingView
       behavior={'padding'}
       style={StyleSheet.absoluteFill}
-      keyboardVerticalOffset={Header.HEIGHT}
+      keyboardVerticalOffset={Header.HEIGHT + ANDROID_PADDING}
     >
-      <FlexedView>
-        <PaddedView>
-          <TextInput
-            label="First Name"
-            type="text"
-            value={props.values.firstName}
-            error={props.touched.firstName && props.errors.firstName}
-            onChangeText={(text) => props.setFieldValue('firstName', text)}
-          />
-          <TextInput
-            label="Last Name"
-            type="text"
-            value={props.values.lastName}
-            error={props.touched.lastName && props.errors.lastName}
-            onChangeText={(text) => props.setFieldValue('lastName', text)}
-          />
-          <TextInput
-            label="Email"
-            type="email"
-            value={props.values.email}
-            error={props.touched.email && props.errors.email}
-            onChangeText={(text) => props.setFieldValue('email', text)}
-          />
-        </PaddedView>
-        <Footer>
+      <BackgroundView>
+        <FlexedSafeAreaView forceInset={forceInset}>
           <PaddedView>
-            <Button
-              disabled={!props.isValid || props.isSubmitting}
-              onPress={props.handleSubmit}
-              title="Save"
-              loading={props.isSubmitting}
+            <TextInput
+              label="First Name"
+              type="text"
+              value={props.values.firstName}
+              error={props.touched.firstName && props.errors.firstName}
+              onChangeText={(text) => props.setFieldValue('firstName', text)}
+            />
+            <TextInput
+              label="Last Name"
+              type="text"
+              value={props.values.lastName}
+              error={props.touched.lastName && props.errors.lastName}
+              onChangeText={(text) => props.setFieldValue('lastName', text)}
+            />
+            <TextInput
+              label="Email"
+              type="email"
+              value={props.values.email}
+              error={props.touched.email && props.errors.email}
+              onChangeText={(text) => props.setFieldValue('email', text)}
             />
           </PaddedView>
-        </Footer>
-      </FlexedView>
+          <Footer>
+            <PaddedView>
+              <Button
+                disabled={!props.isValid || props.isSubmitting}
+                onPress={props.handleSubmit}
+                title="Save"
+                loading={props.isSubmitting}
+              />
+            </PaddedView>
+          </Footer>
+        </FlexedSafeAreaView>
+      </BackgroundView>
     </KeyboardAvoidingView>
   );
 
