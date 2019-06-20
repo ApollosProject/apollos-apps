@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, flatten } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 import moment from 'moment-timezone';
@@ -128,9 +128,11 @@ export default class ContentItem extends RockApolloDataSource {
       return { ...images[0], __typename: 'ImageMedia' };
     };
 
-    const ourImages = this.getImages(root).filter(
-      (image) => image.sources.length
-    ); // filter images w/o URLs
+    const withSources = (image) => image.sources.length;
+
+    // filter images w/o URLs
+    const ourImages = this.getImages(root).filter(withSources);
+
     if (ourImages.length) return pickBestImage(ourImages);
 
     // If no image, check parent for image:
@@ -140,15 +142,8 @@ export default class ContentItem extends RockApolloDataSource {
     const parentItems = await parentItemsCursor.get();
 
     if (parentItems.length) {
-      const parentImages = parentItems
-        .map(this.getImages)
-        .find((images) => images.length);
-
-      if (!parentImages) return null;
-
-      const validParentImages = parentImages.filter(
-        (image) => image.sources.length
-      );
+      const parentImages = flatten(parentItems.map(this.getImages));
+      const validParentImages = parentImages.filter(withSources);
 
       if (validParentImages && validParentImages.length)
         return pickBestImage(validParentImages);
