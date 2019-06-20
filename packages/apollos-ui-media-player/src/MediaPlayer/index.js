@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 
 import FullscreenPlayer from './FullscreenPlayer';
 
-import { getMediaPlayerVisibility } from './queries';
+import { GET_MEDIA_PLAYER_VISIBILITY } from './queries';
 
 /**
  * Selectively renders FullscreenPlayer component is MediaPlayer is visible
@@ -19,7 +19,9 @@ class MediaPlayer extends Component {
   };
 
   render() {
-    return <Query query={getMediaPlayerVisibility}>{this.renderPlayer}</Query>;
+    return (
+      <Query query={GET_MEDIA_PLAYER_VISIBILITY}>{this.renderPlayer}</Query>
+    );
   }
 }
 

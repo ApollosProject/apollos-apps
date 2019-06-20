@@ -7,14 +7,14 @@ import { SafeAreaView } from 'react-navigation';
 import { MINI_PLAYER_HEIGHT } from './MiniControls';
 
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
-import { getMediaPlayerVisibility } from './queries';
+import { GET_MEDIA_PLAYER_VISIBILITY } from './queries';
 
 const MediaPlayerSafeLayoutWithSpacing = styled({
   paddingBottom: MINI_PLAYER_HEIGHT,
 })(MediaPlayerSafeLayout);
 
 const MediaPlayerSpacer = (props) => (
-  <Query query={getMediaPlayerVisibility}>
+  <Query query={GET_MEDIA_PLAYER_VISIBILITY}>
     {({ data = {} }) =>
       get(data, 'mediaPlayer.isVisible') ? (
         <MediaPlayerSafeLayoutWithSpacing {...props} />
