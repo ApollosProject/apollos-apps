@@ -19,7 +19,7 @@ class Passes extends Component {
 
   render() {
     return (
-      <ModalView {...this.props}>
+      <ModalView {...this.props} onClose={() => this.props.navigation.goBack()}>
         <CenteredSafeAreaView>
           <Query query={GET_PASS}>
             {({ loading, data, error }) =>
