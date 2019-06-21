@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const getMediaPlayerVisibility = gql`
+const GET_MEDIA_PLAYER_VISIBILITY = gql`
   query mediaPlayerVisibility {
     mediaPlayer @client {
       isVisible
@@ -8,7 +8,7 @@ const getMediaPlayerVisibility = gql`
   }
 `;
 
-const getMediaPlayerIsPlaying = gql`
+const GET_MEDIA_PLAYER_IS_PLAYING = gql`
   query mediaPlayerVisibility {
     mediaPlayer @client {
       isPlaying
@@ -16,7 +16,7 @@ const getMediaPlayerIsPlaying = gql`
   }
 `;
 
-const getFullVisibilityState = gql`
+const GET_FULL_VISIBILITY_STATE = gql`
   query fullVisibilityState {
     mediaPlayer @client {
       currentTrack {
@@ -28,7 +28,7 @@ const getFullVisibilityState = gql`
   }
 `;
 
-const getControlState = gql`
+const GET_CONTROL_STATE = gql`
   query {
     mediaPlayer @client {
       isFullscreen
@@ -45,7 +45,7 @@ const getControlState = gql`
   }
 `;
 
-const getVideoState = gql`
+const GET_VIDEO_STATE = gql`
   query mediaPlayer {
     mediaPlayer @client {
       currentTrack {
@@ -66,7 +66,7 @@ const getVideoState = gql`
   }
 `;
 
-const getMusicControlState = gql`
+const GET_MUSIC_CONTROL_STATE = gql`
   query musicControlState {
     mediaPlayer @client {
       currentTrack {
@@ -82,7 +82,7 @@ const getMusicControlState = gql`
   }
 `;
 
-const getElapsedTime = gql`
+const GET_ELAPSED_TIME = gql`
   query {
     mediaPlayer @client {
       progress {
@@ -92,7 +92,7 @@ const getElapsedTime = gql`
   }
 `;
 
-const getProgress = gql`
+const GET_PROGRESS = gql`
   query {
     mediaPlayer @client {
       progress {
@@ -103,7 +103,7 @@ const getProgress = gql`
   }
 `;
 
-const getTotalTime = gql`
+const GET_TOTAL_TIME = gql`
   query {
     mediaPlayer @client {
       progress {
@@ -114,13 +114,13 @@ const getTotalTime = gql`
 `;
 
 export {
-  getMediaPlayerIsPlaying,
-  getMediaPlayerVisibility,
-  getMusicControlState,
-  getFullVisibilityState,
-  getControlState,
-  getVideoState,
-  getElapsedTime,
-  getProgress,
-  getTotalTime,
+  GET_MEDIA_PLAYER_IS_PLAYING,
+  GET_MEDIA_PLAYER_VISIBILITY,
+  GET_MUSIC_CONTROL_STATE,
+  GET_FULL_VISIBILITY_STATE,
+  GET_CONTROL_STATE,
+  GET_VIDEO_STATE,
+  GET_ELAPSED_TIME,
+  GET_PROGRESS,
+  GET_TOTAL_TIME,
 };

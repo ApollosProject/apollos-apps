@@ -4,7 +4,7 @@ import { ErrorCard, ModalView, styled } from '@apollosproject/ui-kit';
 import { Query } from 'react-apollo';
 
 import PassView from './PassView';
-import getPass from './getPass';
+import GET_PASS from './getPass';
 import AddToAppleWalletButton from './AddToAppleWalletButton';
 
 const CenteredSafeAreaView = styled({
@@ -19,9 +19,9 @@ class Passes extends Component {
 
   render() {
     return (
-      <ModalView {...this.props}>
+      <ModalView {...this.props} onClose={() => this.props.navigation.goBack()}>
         <CenteredSafeAreaView>
-          <Query query={getPass}>
+          <Query query={GET_PASS}>
             {({ loading, data, error }) =>
               error ? (
                 <ErrorCard error={error} />

@@ -2,11 +2,11 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 
-import getUserFirstName from './getUserFirstName';
+import GET_USER_FIRST_NAME from './getUserFirstName';
 import Features from './Features';
 
 const FeaturesConnected = ({ Component, ...props }) => (
-  <Query query={getUserFirstName}>
+  <Query query={GET_USER_FIRST_NAME}>
     {({
       loading,
       data: {
