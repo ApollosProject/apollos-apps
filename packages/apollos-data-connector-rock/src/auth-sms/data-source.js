@@ -2,7 +2,6 @@ import crypto from 'crypto';
 import { AuthenticationError, UserInputError } from 'apollo-server';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import PhoneNumber from 'awesome-phonenumber';
-import { get } from 'lodash';
 
 import { secret } from '../auth/token';
 
