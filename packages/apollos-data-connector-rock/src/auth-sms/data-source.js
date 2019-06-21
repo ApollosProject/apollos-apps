@@ -50,24 +50,13 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       return existingPhoneNumbers[0].personId;
     }
 
-    // Otherwise, are there any phone numbers that ApollosGenerated?
-    const existingApollosNumber = existingPhoneNumbers.find(
-      ({ attributeValues }) =>
-        get(attributeValues, 'apollosGenerated.value') === 'True'
-    );
-
-    // If so, use that!
-    if (existingApollosNumber) {
-      return existingApollosNumber.personId;
-    }
-
     // Otherwise, create a new user.
     const personId = await this.context.dataSources.Auth.createUserProfile({
       email: null,
     });
 
     // And create their phone number.
-    const phoneNumberId = await this.post('/PhoneNumbers', {
+    await this.post('/PhoneNumbers', {
       PersonId: personId,
       IsMessagingEnabled: false, // should this default to true?
       IsSystem: false,
@@ -75,29 +64,10 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       CountryCode: countryCode,
     });
 
-    // Try and assign an ApollosGenerated: True attribute
-    // If this fails, we should warn the user that they need to complete some Rock Setup.
-    try {
-      await this.post(
-        `/PhoneNumbers/AttributeValue/${phoneNumberId}?attributeKey=ApollosGenerated&attributeValue=True`
-      );
-    } catch (e) {
-      console.warn(
-        `WARNING: You don't have an ApollosGenerated attribute on your PhoneNumber record.
-         You risk generating high numbers of duplicate profiles.
-         Add an attribute to PhoneNumbers called ApollosGenerated with a Boolean value.`,
-        e
-      );
-    }
-
     return personId;
   };
 
   authenticateWithSms = async ({ pin, phoneNumber }) => {
-    const password = this.hashPassword({ pin });
-
-    const personId = await this.createOrFindSmsLoginUserId({ phoneNumber });
-
     const { phoneNumber: cleanedNumber } = this.parsePhoneNumber({
       phoneNumber,
     });
@@ -109,8 +79,16 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     if (!userLogin) {
       throw new AuthenticationError('Invalid input');
     }
-    // Update the user login to include the PersonId.
-    await this.patch(`/UserLogins/${userLogin.id}`, { PersonId: personId });
+
+    if (!userLogin.personId) {
+      // We created a login for this user, but don't know who they are yet.
+      const personId = await this.createOrFindSmsLoginUserId({ phoneNumber });
+
+      // Update the user login to include the PersonId.
+      await this.patch(`/UserLogins/${userLogin.id}`, { PersonId: personId });
+    }
+
+    const password = this.hashPassword({ pin });
 
     return this.context.dataSources.Auth.authenticate({
       identity: phoneNumber,
@@ -135,8 +113,14 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       .filter(`UserName eq '${phoneNumber}'`)
       .first();
 
+    let personOptions = {};
+
     // Updating PlainTextPassword via Patch doesn't work, so we delete and recreate.
     if (existingUserLogin) {
+      // if we have a PersonId on the user login, we should move it over to the new login.
+      if (existingUserLogin.personId)
+        personOptions = { PersonId: existingUserLogin.personId };
+
       await this.delete(`/UserLogins/${existingUserLogin.id}`);
     }
 
@@ -144,6 +128,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       EntityTypeId: 27, // A default setting we use in Rock-person-creation-flow
       UserName: phoneNumber,
       PlainTextPassword: password,
+      ...personOptions, // { PersonId: ID } OR null
     });
 
     await this.context.dataSources.Sms.sendSms({
