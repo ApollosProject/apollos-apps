@@ -66,20 +66,21 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     return personId;
   };
 
-  authenticateWithSms = async ({ pin, phoneNumber }) => {
-    const { phoneNumber: cleanedNumber } = this.parsePhoneNumber({
-      phoneNumber,
+  authenticateWithSms = async ({ pin, phoneNumber: phoneNumberInput }) => {
+    const { phoneNumber } = this.parsePhoneNumber({
+      phoneNumber: phoneNumberInput,
     });
 
     const userLogin = await this.request('/UserLogins')
-      .filter(`UserName eq '${cleanedNumber}'`)
+      .filter(`UserName eq '${phoneNumber}'`)
       .first();
 
     if (!userLogin) {
       throw new AuthenticationError('Invalid input');
     }
 
-    if (!userLogin.personId) {
+    // remember that Rock null values are often empty objects!
+    if (!userLogin.personId || typeof userLogin.personId === 'object') {
       // We created a login for this user, but don't know who they are yet.
       const personId = await this.createOrFindSmsLoginUserId({ phoneNumber });
 
