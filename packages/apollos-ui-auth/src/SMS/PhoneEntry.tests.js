@@ -4,13 +4,13 @@ import { H6 } from '@apollosproject/ui-kit';
 
 import { Providers } from '../testUtils';
 
-import SMSPhoneEntry from './SMSPhoneEntry';
+import PhoneEntry from './PhoneEntry';
 
-describe('The Auth SMSPhoneEntry component', () => {
+describe('The Auth PhoneEntry component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry setFieldValue={jest.fn()} />
+        <PhoneEntry setFieldValue={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -18,7 +18,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render with a custom alternateLoginText', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={() => {}}
           onPressAlternateLogin={() => {}}
           alternateLoginText={
@@ -32,10 +32,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render with a custom authTitleText', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
-          setFieldValue={jest.fn()}
-          authTitleText={'Custom Title'}
-        />
+        <PhoneEntry setFieldValue={jest.fn()} authTitleText={'Custom Title'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -43,7 +40,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render as disabled', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           onPressNext={jest.fn()}
           disabled
@@ -55,7 +52,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render in an error state', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           errors={{ phone: 'Boom errors.phone Boom' }}
         />
@@ -66,7 +63,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render in a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           onPressNext={jest.fn()}
           isLoading
@@ -78,7 +75,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render with an alternate login option with default text', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           onPressAlternateLogin={jest.fn()}
         />
@@ -89,7 +86,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render in a next button', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry setFieldValue={jest.fn()} onPressNext={jest.fn()} />
+        <PhoneEntry setFieldValue={jest.fn()} onPressNext={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -97,7 +94,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render a custom smsPolicyInfo component', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           smsPolicyInfo={
             <H6 style={{ color: 'salmon' }}>Boom custom legalese boom</H6> // eslint-disable-line react-native/no-inline-styles, react-native/no-color-literals
@@ -110,7 +107,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render with a custom smsPromptText', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           smsPromptText={'Boom custom prompty text boom'}
         />
@@ -121,7 +118,7 @@ describe('The Auth SMSPhoneEntry component', () => {
   it('should render with a value', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSPhoneEntry
+        <PhoneEntry
           setFieldValue={jest.fn()}
           values={{ phone: 'Boom values.phone boom' }}
         />

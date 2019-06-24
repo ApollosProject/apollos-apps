@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Auth SMSPhoneEntry component should render 1`] = `
+exports[`The Auth PhoneEntry component should render 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -372,7 +372,7 @@ exports[`The Auth SMSPhoneEntry component should render 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render a custom smsPolicyInfo component 1`] = `
+exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo component 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -744,7 +744,7 @@ exports[`The Auth SMSPhoneEntry component should render a custom smsPolicyInfo c
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render as disabled 1`] = `
+exports[`The Auth PhoneEntry component should render as disabled 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1176,7 +1176,7 @@ exports[`The Auth SMSPhoneEntry component should render as disabled 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render in a loading state 1`] = `
+exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1602,7 +1602,7 @@ exports[`The Auth SMSPhoneEntry component should render in a loading state 1`] =
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render in a next button 1`] = `
+exports[`The Auth PhoneEntry component should render in a next button 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2034,7 +2034,7 @@ exports[`The Auth SMSPhoneEntry component should render in a next button 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render in an error state 1`] = `
+exports[`The Auth PhoneEntry component should render in an error state 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2419,7 +2419,7 @@ exports[`The Auth SMSPhoneEntry component should render in an error state 1`] = 
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render with a custom alternateLoginText 1`] = `
+exports[`The Auth PhoneEntry component should render with a custom alternateLoginText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2810,7 +2810,7 @@ exports[`The Auth SMSPhoneEntry component should render with a custom alternateL
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render with a custom authTitleText 1`] = `
+exports[`The Auth PhoneEntry component should render with a custom authTitleText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -3182,7 +3182,7 @@ exports[`The Auth SMSPhoneEntry component should render with a custom authTitleT
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render with a custom smsPromptText 1`] = `
+exports[`The Auth PhoneEntry component should render with a custom smsPromptText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -3554,7 +3554,7 @@ exports[`The Auth SMSPhoneEntry component should render with a custom smsPromptT
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render with a value 1`] = `
+exports[`The Auth PhoneEntry component should render with a value 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -3927,7 +3927,7 @@ exports[`The Auth SMSPhoneEntry component should render with a value 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSPhoneEntry component should render with an alternate login option with default text 1`] = `
+exports[`The Auth PhoneEntry component should render with an alternate login option with default text 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}

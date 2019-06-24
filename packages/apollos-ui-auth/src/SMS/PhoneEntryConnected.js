@@ -6,10 +6,10 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Mutation } from 'react-apollo';
 
-import SMSPhoneEntry from './SMSPhoneEntry';
+import PhoneEntry from './PhoneEntry';
 import REQUEST_PIN from './requestPin';
 
-class SMSPhoneEntryConnected extends Component {
+class PhoneEntryConnected extends Component {
   static propTypes = {
     // Custom component to be rendered. Defaults to PhoneEntry
     Component: PropTypes.oneOfType([
@@ -21,7 +21,7 @@ class SMSPhoneEntryConnected extends Component {
   };
 
   static defaultProps = {
-    Component: SMSPhoneEntry,
+    Component: PhoneEntry,
     screenProps: {},
   };
 
@@ -96,4 +96,4 @@ class SMSPhoneEntryConnected extends Component {
   }
 }
 
-export default SMSPhoneEntryConnected;
+export default PhoneEntryConnected;

@@ -2,12 +2,12 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { H6 } from '@apollosproject/ui-kit';
 
-import SMSPhoneEntry from './SMSPhoneEntry';
+import PhoneEntry from './PhoneEntry';
 
-storiesOf('ui-auth/SMSSMSPhoneEntry', module)
-  .add('default', () => <SMSPhoneEntry setFieldValue={() => {}} />)
+storiesOf('ui-auth/SMS/PhoneEntry', module)
+  .add('default', () => <PhoneEntry setFieldValue={() => {}} />)
   .add('alternateLoginText', () => (
-    <SMSPhoneEntry
+    <PhoneEntry
       setFieldValue={() => {}}
       onPressAlternateLogin={() => {}}
       alternateLoginText={
@@ -16,28 +16,28 @@ storiesOf('ui-auth/SMSSMSPhoneEntry', module)
     />
   ))
   .add('authTitleText', () => (
-    <SMSPhoneEntry setFieldValue={() => {}} authTitleText={'Custom Title'} />
+    <PhoneEntry setFieldValue={() => {}} authTitleText={'Custom Title'} />
   ))
   .add('disabled', () => (
-    <SMSPhoneEntry setFieldValue={() => {}} onPressNext={() => {}} disabled />
+    <PhoneEntry setFieldValue={() => {}} onPressNext={() => {}} disabled />
   ))
   .add('errors', () => (
-    <SMSPhoneEntry
+    <PhoneEntry
       setFieldValue={() => {}}
       errors={{ phone: 'Boom errors.phone Boom' }}
     />
   ))
   .add('isLoading', () => (
-    <SMSPhoneEntry setFieldValue={() => {}} onPressNext={() => {}} isLoading />
+    <PhoneEntry setFieldValue={() => {}} onPressNext={() => {}} isLoading />
   ))
   .add('onPressAlternateLogin', () => (
-    <SMSPhoneEntry setFieldValue={() => {}} onPressAlternateLogin={() => {}} />
+    <PhoneEntry setFieldValue={() => {}} onPressAlternateLogin={() => {}} />
   ))
   .add('onPressNext', () => (
-    <SMSPhoneEntry setFieldValue={() => {}} onPressNext={() => {}} />
+    <PhoneEntry setFieldValue={() => {}} onPressNext={() => {}} />
   ))
   .add('smsPolicyInfo', () => (
-    <SMSPhoneEntry
+    <PhoneEntry
       setFieldValue={() => {}}
       smsPolicyInfo={
         <H6 style={{ color: 'salmon' }}>Boom custom legalese boom</H6> // eslint-disable-line react-native/no-inline-styles, react-native/no-color-literals
@@ -45,13 +45,13 @@ storiesOf('ui-auth/SMSSMSPhoneEntry', module)
     />
   ))
   .add('smsPromptText', () => (
-    <SMSPhoneEntry
+    <PhoneEntry
       setFieldValue={() => {}}
       smsPromptText={'Boom custom prompty text boom'}
     />
   ))
   .add('values', () => (
-    <SMSPhoneEntry
+    <PhoneEntry
       setFieldValue={() => {}}
       values={{ phone: 'Boom values.phone boom' }}
     />
