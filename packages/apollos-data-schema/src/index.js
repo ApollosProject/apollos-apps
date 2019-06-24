@@ -349,7 +349,6 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
 
     theme: Theme
-    features: [Features]
   }
 
   input ContentItemsConnectionInput {
@@ -540,6 +539,10 @@ export const featuresSchema = gql`
   interface Feature {
     id: ID!
     order: Int # 0 is the "Main Content". If order is < 0 than this comes before the body content.
+  }
+
+  extend type WeekendContentItem {
+    features: [Feature]
   }
 `;
 

@@ -93,8 +93,6 @@ const resolver = {
   },
   WeekendContentItem: {
     ...defaultContentItemResolvers,
-    features: (root, args, { dataSources: { ContentItem } }) =>
-      ContentItem.getFeatures(root),
   },
   ContentItem: {
     ...defaultContentItemResolvers,
