@@ -8,23 +8,31 @@ import {
   H5,
 } from '@apollosproject/ui-kit';
 
-export const BrandIcon = withTheme(({ theme }) => ({
+const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
   fill: theme.colors.primary,
   marginBottom: theme.sizing.baseUnit,
 }))(Icon);
 
-export const TitleText = styled(({ theme }) => ({
-  color: theme.colors.primary,
-}))(H2);
+const TitleText = styled(
+  ({ theme }) => ({
+    color: theme.colors.primary,
+  }),
+  'UIAuth.TitleText'
+)(H2);
 
-export const PromptText = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-}))(H5);
+const PromptText = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.secondary,
+  }),
+  'UIAuth.PromptText'
+)(H5);
 
-export const NextButton = (props) => (
+const NextButton = styled({}, 'UIAuth.NextButton')((props) => (
   <Button type={'primary'} pill={false} {...props}>
     <H5>Next</H5>
   </Button>
-);
+));
+
+export { BrandIcon, TitleText, PromptText, NextButton };
