@@ -1,3 +1,24 @@
+enum ACTION_FEATURE_ACTION {
+  READ_CONTENT
+}
+
+type ActionListAction {
+  id: ID!
+  title: String
+  subtitle: String
+  image: ImageMedia
+  relatedNode: Node
+  action: ACTION_FEATURE_ACTION
+}
+
+type ActionListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  actions: [ActionListAction]
+}
+
 input AnalyticsDeviceInfo {
   platform: AnalyticsPlatform
   deviceId: String
@@ -163,6 +184,11 @@ type DevotionalContentItem implements ContentItem & Node {
   sharing: SharableContentItem
 }
 
+interface Feature {
+  id: ID!
+  order: Int
+}
+
 enum GENDER {
   Male
   Female
@@ -320,6 +346,7 @@ type Query {
   scriptures(query: String!): [Scripture]
   userPass: Pass
   campuses(location: CampusLocationInput): [Campus]
+  userFeedFeatures: [Feature]
 }
 
 type Scripture {
@@ -407,5 +434,24 @@ type VideoMedia implements Media {
 
 type VideoMediaSource implements MediaSource {
   uri: String
+}
+
+type WeekendContentItem implements ContentItem & Node {
+  id: ID!
+  title: String
+  coverImage: ImageMedia
+  images: [ImageMedia]
+  videos: [VideoMedia]
+  audios: [AudioMedia]
+  htmlContent: String
+  summary: String
+  childContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  parentChannel: ContentChannel
+  theme: Theme
+  isLiked: Boolean
+  likedCount: Int
+  sharing: SharableContentItem
+  features: [Feature]
 }
 
