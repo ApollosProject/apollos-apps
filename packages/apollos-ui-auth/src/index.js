@@ -1,8 +1,11 @@
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
 
+import {
+  SMSVerification as AuthSMSVerification,
+  SMSVerificationConnected as AuthSMSVerificationConnected,
+} from './SMS';
 import AuthPassword from './Password';
-import SMSVerification, { SMSVerificationConnected } from './SMSVerification';
 import SMSPhoneEntry, { SMSPhoneEntryConnected } from './SMSPhoneEntry';
 
 export LoginButton from './LoginButton';
@@ -18,15 +21,15 @@ export authLink from './authLink';
 export {
   SMSPhoneEntry,
   SMSPhoneEntryConnected,
-  SMSVerification,
-  SMSVerificationConnected,
+  AuthSMSVerification,
+  AuthSMSVerificationConnected,
   AuthPassword,
 };
 
 const AuthNavigator = createStackNavigator(
   {
     SMSPhoneEntryConnected,
-    SMSVerificationConnected,
+    AuthSMSVerificationConnected,
     AuthPassword,
   },
   {

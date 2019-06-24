@@ -8,7 +8,7 @@ import { PaddedView, TextInput } from '@apollosproject/ui-kit';
 
 import { NextButton, TitleText, PromptText, BrandIcon } from '../styles';
 
-const SMSVerification = ({
+const Verification = ({
   confirmationTitleText,
   confirmationPromptText,
   disabled,
@@ -52,7 +52,7 @@ const SMSVerification = ({
   </SafeAreaView>
 );
 
-SMSVerification.propTypes = {
+Verification.propTypes = {
   confirmationTitleText: PropTypes.string,
   confirmationPromptText: PropTypes.string,
   disabled: PropTypes.bool,
@@ -67,12 +67,10 @@ SMSVerification.propTypes = {
   }),
 };
 
-SMSVerification.defaultProps = {
+Verification.defaultProps = {
   confirmationTitleText: 'Thanks!\nStand by…',
   confirmationPromptText:
     'We just sent you a code. Enter it below when it comes.',
 };
 
-SMSVerification.displayName = 'SMSVerification';
-
-export default SMSVerification;
+export default Verification;

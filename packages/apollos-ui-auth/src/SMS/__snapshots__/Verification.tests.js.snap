@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Auth SMSVerification component should render 1`] = `
+exports[`The Auth Verification component should render 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -365,7 +365,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render as disabled 1`] = `
+exports[`The Auth Verification component should render as disabled 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -790,7 +790,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render in a loading state 1`] = `
+exports[`The Auth Verification component should render in a loading state 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1209,7 +1209,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render in a next button 1`] = `
+exports[`The Auth Verification component should render in a next button 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1634,7 +1634,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render in an error state 1`] = `
+exports[`The Auth Verification component should render in an error state 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2012,7 +2012,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render with a custom confirmationPromptText 1`] = `
+exports[`The Auth Verification component should render with a custom confirmationPromptText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2377,7 +2377,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render with a value 1`] = `
+exports[`The Auth Verification component should render with a value 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2743,7 +2743,7 @@ Stand by…
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth SMSVerification component should render with custom confirmationTitleText 1`] = `
+exports[`The Auth Verification component should render with custom confirmationTitleText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}

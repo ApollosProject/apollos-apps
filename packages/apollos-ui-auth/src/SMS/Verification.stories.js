@@ -1,43 +1,39 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import SMSVerification from './SMSVerification';
+import Verification from './Verification';
 
-storiesOf('ui-auth/SMSVerification', module)
-  .add('default', () => <SMSVerification setFieldValue={() => {}} />)
+storiesOf('ui-auth/SMS/Verification', module)
+  .add('default', () => <Verification setFieldValue={() => {}} />)
   .add('confirmationTitleText', () => (
-    <SMSVerification
+    <Verification
       setFieldValue={() => {}}
       confirmationTitleText={'A Custom Title'}
     />
   ))
   .add('confirmationPromptText', () => (
-    <SMSVerification
+    <Verification
       setFieldValue={() => {}}
       confirmationPromptText={'Boom custom prompty text boom'}
     />
   ))
   .add('disabled', () => (
-    <SMSVerification setFieldValue={() => {}} onPressNext={() => {}} disabled />
+    <Verification setFieldValue={() => {}} onPressNext={() => {}} disabled />
   ))
   .add('errors', () => (
-    <SMSVerification
+    <Verification
       setFieldValue={() => {}}
       errors={{ code: 'Boom errors.code Boom' }}
     />
   ))
   .add('isLoading', () => (
-    <SMSVerification
-      setFieldValue={() => {}}
-      onPressNext={() => {}}
-      isLoading
-    />
+    <Verification setFieldValue={() => {}} onPressNext={() => {}} isLoading />
   ))
   .add('onPressNext', () => (
-    <SMSVerification setFieldValue={() => {}} onPressNext={() => {}} />
+    <Verification setFieldValue={() => {}} onPressNext={() => {}} />
   ))
   .add('values', () => (
-    <SMSVerification
+    <Verification
       setFieldValue={() => {}}
       values={{ code: 'Boom values.code boom' }}
     />

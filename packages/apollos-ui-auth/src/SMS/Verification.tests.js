@@ -3,13 +3,13 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../testUtils';
 
-import SMSVerification from './SMSVerification';
+import Verification from './Verification';
 
-describe('The Auth SMSVerification component', () => {
+describe('The Auth Verification component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification setFieldValue={jest.fn()} />
+        <Verification setFieldValue={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render with custom confirmationTitleText', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification
+        <Verification
           setFieldValue={jest.fn()}
           confirmationTitleText={'Custom Title'}
         />
@@ -28,7 +28,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render with a custom confirmationPromptText', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification
+        <Verification
           setFieldValue={jest.fn()}
           confirmationPromptText={'Boom custom prompty text boom'}
         />
@@ -39,7 +39,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render as disabled', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification
+        <Verification
           setFieldValue={jest.fn()}
           onPressNext={jest.fn()}
           disabled
@@ -51,7 +51,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render in an error state', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification
+        <Verification
           setFieldValue={jest.fn()}
           errors={{ code: 'Boom errors.code Boom' }}
         />
@@ -62,7 +62,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render in a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification
+        <Verification
           setFieldValue={jest.fn()}
           onPressNext={jest.fn()}
           isLoading
@@ -74,7 +74,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render in a next button', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification setFieldValue={jest.fn()} onPressNext={jest.fn()} />
+        <Verification setFieldValue={jest.fn()} onPressNext={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -82,7 +82,7 @@ describe('The Auth SMSVerification component', () => {
   it('should render with a value', () => {
     const tree = renderer.create(
       <Providers>
-        <SMSVerification
+        <Verification
           setFieldValue={jest.fn()}
           values={{ code: 'Boom values.code boom' }}
         />
