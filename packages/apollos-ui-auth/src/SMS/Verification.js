@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, ScrollView } from 'react-native';
 import { get } from 'lodash';
 import { PaddedView, TextInput } from '@apollosproject/ui-kit';
 
@@ -23,38 +23,40 @@ const Verification = ({
   setFieldValue,
   values,
 }) => (
-  <FlexedSafeAreaView>
-    <ScrollView>
-      <PaddedView>
-        <BrandIcon />
-        <TitleText>{confirmationTitleText}</TitleText>
-        <PromptText padded>{confirmationPromptText}</PromptText>
+  <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior={'padding'}>
+    <FlexedSafeAreaView>
+      <ScrollView>
+        <PaddedView>
+          <BrandIcon />
+          <TitleText>{confirmationTitleText}</TitleText>
+          <PromptText padded>{confirmationPromptText}</PromptText>
 
-        <TextInput
-          autoFocus
-          label={'Verification Code'}
-          type={'numeric'}
-          autoComplete={'password'}
-          enablesReturnKeyAutomatically
-          returnKeyType={'next'}
-          onSubmitEditing={onPressNext}
-          error={get(errors, 'code')}
-          onChangeText={(text) => setFieldValue('code', text)}
-          value={get(values, 'code')}
-        />
-      </PaddedView>
-    </ScrollView>
+          <TextInput
+            autoFocus
+            label={'Verification Code'}
+            type={'numeric'}
+            autoComplete={'password'}
+            enablesReturnKeyAutomatically
+            returnKeyType={'next'}
+            onSubmitEditing={onPressNext}
+            error={get(errors, 'code')}
+            onChangeText={(text) => setFieldValue('code', text)}
+            value={get(values, 'code')}
+          />
+        </PaddedView>
+      </ScrollView>
 
-    {onPressNext ? (
-      <PaddedView>
-        <NextButton
-          onPress={onPressNext}
-          disabled={disabled}
-          loading={isLoading}
-        />
-      </PaddedView>
-    ) : null}
-  </FlexedSafeAreaView>
+      {onPressNext ? (
+        <PaddedView>
+          <NextButton
+            onPress={onPressNext}
+            disabled={disabled}
+            loading={isLoading}
+          />
+        </PaddedView>
+      ) : null}
+    </FlexedSafeAreaView>
+  </KeyboardAvoidingView>
 );
 
 Verification.propTypes = {

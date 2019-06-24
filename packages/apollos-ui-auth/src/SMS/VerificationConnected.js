@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { ApolloConsumer, Mutation } from 'react-apollo';
@@ -55,56 +54,54 @@ class VerificationConnected extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior="padding">
-        <AuthConsumer>
-          {({ closeAuth }) => (
-            <ApolloConsumer>
-              {(client) => (
-                <Mutation
-                  mutation={VERIFY_PIN}
-                  update={(cache, { data: { authenticateWithSms } }) => {
-                    client.mutate({
-                      mutation: HANDLE_LOGIN,
-                      variables: {
-                        authToken: authenticateWithSms.token,
-                      },
-                    });
-                  }}
-                >
-                  {(verifyPin) => (
-                    <Formik
-                      initialValues={{ code: '' }}
-                      validationSchema={this.validationSchema}
-                      onSubmit={this.handleOnSubmit({ verifyPin, closeAuth })}
-                    >
-                      {({
-                        setFieldValue,
-                        handleSubmit,
-                        values,
-                        isSubmitting,
-                        isValid,
-                        touched,
-                        errors,
-                      }) => (
-                        <this.props.Component
-                          errors={touched.code && errors}
-                          disabled={isSubmitting || !isValid}
-                          isLoading={isSubmitting}
-                          onPressNext={handleSubmit}
-                          setFieldValue={setFieldValue}
-                          touched={touched}
-                          values={values}
-                          {...this.flatProps}
-                        />
-                      )}
-                    </Formik>
-                  )}
-                </Mutation>
-              )}
-            </ApolloConsumer>
-          )}
-        </AuthConsumer>
-      </KeyboardAvoidingView>
+      <AuthConsumer>
+        {({ closeAuth }) => (
+          <ApolloConsumer>
+            {(client) => (
+              <Mutation
+                mutation={VERIFY_PIN}
+                update={(cache, { data: { authenticateWithSms } }) => {
+                  client.mutate({
+                    mutation: HANDLE_LOGIN,
+                    variables: {
+                      authToken: authenticateWithSms.token,
+                    },
+                  });
+                }}
+              >
+                {(verifyPin) => (
+                  <Formik
+                    initialValues={{ code: '' }}
+                    validationSchema={this.validationSchema}
+                    onSubmit={this.handleOnSubmit({ verifyPin, closeAuth })}
+                  >
+                    {({
+                      setFieldValue,
+                      handleSubmit,
+                      values,
+                      isSubmitting,
+                      isValid,
+                      touched,
+                      errors,
+                    }) => (
+                      <this.props.Component
+                        errors={touched.code && errors}
+                        disabled={isSubmitting || !isValid}
+                        isLoading={isSubmitting}
+                        onPressNext={handleSubmit}
+                        setFieldValue={setFieldValue}
+                        touched={touched}
+                        values={values}
+                        {...this.flatProps}
+                      />
+                    )}
+                  </Formik>
+                )}
+              </Mutation>
+            )}
+          </ApolloConsumer>
+        )}
+      </AuthConsumer>
     );
   }
 }

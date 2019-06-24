@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Mutation } from 'react-apollo';
@@ -57,41 +56,36 @@ class PhoneEntryConnected extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView
-        style={StyleSheet.absoluteFill}
-        behavior={'padding'}
-      >
-        <Mutation mutation={REQUEST_PIN}>
-          {(mutate) => (
-            <Formik
-              initialValues={{ phone: '' }}
-              validationSchema={this.validationSchema}
-              onSubmit={this.handleOnSubmit(mutate)}
-            >
-              {({
-                setFieldValue,
-                handleSubmit,
-                values,
-                isSubmitting,
-                isValid,
-                touched,
-                errors,
-              }) => (
-                <this.props.Component
-                  disabled={isSubmitting || !isValid}
-                  errors={touched.phone && errors}
-                  isLoading={isSubmitting}
-                  onPressNext={handleSubmit}
-                  onPressAlternateLogin={this.handleOnPressAlternateLogin}
-                  setFieldValue={setFieldValue}
-                  values={values}
-                  {...this.flatProps}
-                />
-              )}
-            </Formik>
-          )}
-        </Mutation>
-      </KeyboardAvoidingView>
+      <Mutation mutation={REQUEST_PIN}>
+        {(mutate) => (
+          <Formik
+            initialValues={{ phone: '' }}
+            validationSchema={this.validationSchema}
+            onSubmit={this.handleOnSubmit(mutate)}
+          >
+            {({
+              setFieldValue,
+              handleSubmit,
+              values,
+              isSubmitting,
+              isValid,
+              touched,
+              errors,
+            }) => (
+              <this.props.Component
+                disabled={isSubmitting || !isValid}
+                errors={touched.phone && errors}
+                isLoading={isSubmitting}
+                onPressNext={handleSubmit}
+                onPressAlternateLogin={this.handleOnPressAlternateLogin}
+                setFieldValue={setFieldValue}
+                values={values}
+                {...this.flatProps}
+              />
+            )}
+          </Formik>
+        )}
+      </Mutation>
     );
   }
 }

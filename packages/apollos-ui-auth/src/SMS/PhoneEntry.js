@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, ScrollView } from 'react-native';
 import { get } from 'lodash';
 import {
   styled,
@@ -36,47 +36,49 @@ const PhoneEntry = ({
   smsPromptText,
   values,
 }) => (
-  <FlexedSafeAreaView>
-    <ScrollView>
-      <PaddedView>
-        <BrandIcon />
-        <TitleText>{authTitleText}</TitleText>
-        <PromptText padded>{smsPromptText}</PromptText>
-
-        <TextInput
-          autoFocus
-          autoComplete={'tel'}
-          label={'Mobile Number'}
-          type={'phone'}
-          enablesReturnKeyAutomatically
-          returnKeyType={'next'}
-          onSubmitEditing={onPressNext}
-          error={get(errors, 'phone')}
-          onChangeText={(text) => setFieldValue('phone', text)}
-          value={get(values, 'phone')}
-        />
-        {smsPolicyInfo}
-      </PaddedView>
-
-      {onPressAlternateLogin ? (
+  <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior={'padding'}>
+    <FlexedSafeAreaView>
+      <ScrollView>
         <PaddedView>
-          <ButtonLink onPress={onPressAlternateLogin}>
-            {alternateLoginText}
-          </ButtonLink>
+          <BrandIcon />
+          <TitleText>{authTitleText}</TitleText>
+          <PromptText padded>{smsPromptText}</PromptText>
+
+          <TextInput
+            autoFocus
+            autoComplete={'tel'}
+            label={'Mobile Number'}
+            type={'phone'}
+            enablesReturnKeyAutomatically
+            returnKeyType={'next'}
+            onSubmitEditing={onPressNext}
+            error={get(errors, 'phone')}
+            onChangeText={(text) => setFieldValue('phone', text)}
+            value={get(values, 'phone')}
+          />
+          {smsPolicyInfo}
+        </PaddedView>
+
+        {onPressAlternateLogin ? (
+          <PaddedView>
+            <ButtonLink onPress={onPressAlternateLogin}>
+              {alternateLoginText}
+            </ButtonLink>
+          </PaddedView>
+        ) : null}
+      </ScrollView>
+
+      {onPressNext ? (
+        <PaddedView>
+          <NextButton
+            onPress={onPressNext}
+            disabled={disabled}
+            loading={isLoading}
+          />
         </PaddedView>
       ) : null}
-    </ScrollView>
-
-    {onPressNext ? (
-      <PaddedView>
-        <NextButton
-          onPress={onPressNext}
-          disabled={disabled}
-          loading={isLoading}
-        />
-      </PaddedView>
-    ) : null}
-  </FlexedSafeAreaView>
+    </FlexedSafeAreaView>
+  </KeyboardAvoidingView>
 );
 
 PhoneEntry.propTypes = {
