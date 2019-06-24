@@ -47,7 +47,7 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   normalize = (data) => {
     if (Array.isArray(data)) return data.map(this.normalize);
-    if (typeof data !== 'object') return data;
+    if (typeof data !== 'object' || data === null) return data;
     const normalizedValues = mapValues(data, this.normalize);
     return mapKeys(normalizedValues, (value, key) => camelCase(key));
   };
