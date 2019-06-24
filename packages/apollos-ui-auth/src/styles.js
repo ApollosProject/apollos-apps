@@ -1,12 +1,19 @@
 import React from 'react';
+import { SafeAreaView } from 'react-navigation';
+import { compose, withProps } from 'recompose';
 import {
+  styled,
   Button,
   withTheme,
   Icon,
-  styled,
   H2,
   H5,
 } from '@apollosproject/ui-kit';
+
+const FlexedSafeAreaView = compose(
+  styled({ flex: 1 }, 'UIAuth.FlexedSafeAreaView'),
+  withProps({ forceInset: { top: 'always' } })
+)(SafeAreaView);
 
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
@@ -35,4 +42,4 @@ const NextButton = styled({}, 'UIAuth.NextButton')((props) => (
   </Button>
 ));
 
-export { BrandIcon, TitleText, PromptText, NextButton };
+export { FlexedSafeAreaView, BrandIcon, TitleText, PromptText, NextButton };

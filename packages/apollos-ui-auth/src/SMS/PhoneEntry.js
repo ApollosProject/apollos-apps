@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
 import { get } from 'lodash';
 import {
   styled,
@@ -12,12 +11,13 @@ import {
   ButtonLink,
 } from '@apollosproject/ui-kit';
 
-import { NextButton, TitleText, PromptText, BrandIcon } from '../styles';
-
-const FlexedSafeAreaView = styled({
-  flex: 1,
-})(SafeAreaView);
-const forceInset = { top: 'always' };
+import {
+  FlexedSafeAreaView,
+  NextButton,
+  TitleText,
+  PromptText,
+  BrandIcon,
+} from '../styles';
 
 const LegalText = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
@@ -36,7 +36,7 @@ const PhoneEntry = ({
   smsPromptText,
   values,
 }) => (
-  <FlexedSafeAreaView forceInset={forceInset}>
+  <FlexedSafeAreaView>
     <ScrollView>
       <PaddedView>
         <BrandIcon />

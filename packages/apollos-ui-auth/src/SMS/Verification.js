@@ -1,12 +1,17 @@
 /* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { ScrollView } from 'react-native';
 import { get } from 'lodash';
 import { PaddedView, TextInput } from '@apollosproject/ui-kit';
 
-import { NextButton, TitleText, PromptText, BrandIcon } from '../styles';
+import {
+  FlexedSafeAreaView,
+  NextButton,
+  TitleText,
+  PromptText,
+  BrandIcon,
+} from '../styles';
 
 const Verification = ({
   confirmationTitleText,
@@ -18,7 +23,7 @@ const Verification = ({
   setFieldValue,
   values,
 }) => (
-  <SafeAreaView style={StyleSheet.absoluteFill}>
+  <FlexedSafeAreaView>
     <ScrollView>
       <PaddedView>
         <BrandIcon />
@@ -49,7 +54,7 @@ const Verification = ({
         />
       </PaddedView>
     ) : null}
-  </SafeAreaView>
+  </FlexedSafeAreaView>
 );
 
 Verification.propTypes = {
