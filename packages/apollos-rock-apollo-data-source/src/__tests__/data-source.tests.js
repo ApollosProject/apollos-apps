@@ -15,24 +15,42 @@ describe('RestDataSource', () => {
   // });
 
   describe('the paginate method', () => {
-    let get;
+    let getFn;
     let dataSource;
     beforeEach(() => {
-      get = jest.fn();
-      get.mockReturnValue(new Promise((resolve) => resolve([1, 2, 3])));
+      getFn = jest.fn();
+      getFn.mockReturnValue(new Promise((resolve) => resolve([1, 2, 3])));
       dataSource = new RestDataSource();
       dataSource.request = (resource) =>
         new RequestBuilder({
           resource,
-          connector: { get },
+          connector: { get: getFn },
         });
+    });
+
+    it('transforms into a more familiar case', () => {
+      const result = dataSource.normalize({
+        Id: 123,
+        SubObject: { Id: 456, SomeValue: 'Something', NullData: null },
+        SubArray: [1, 2, 3, 4],
+        SubArrayWithObject: [{ Foo: 'Bar' }, { Foo: 'baz' }],
+        Finally: null,
+      });
+
+      expect(result).toEqual({
+        id: 123,
+        subObject: { id: 456, someValue: 'Something', nullData: null },
+        subArray: [1, 2, 3, 4],
+        subArrayWithObject: [{ foo: 'Bar' }, { foo: 'baz' }],
+        finally: null,
+      });
     });
 
     it('paginates a cursor', () => {
       const cursor = dataSource.request('TestResource');
       const result = dataSource.paginate({ cursor });
       expect(result).toBeTruthy();
-      expect(get.mock.calls[0][0]).toBe('TestResource?%24top=20&%24skip=0');
+      expect(getFn.mock.calls[0][0]).toBe('TestResource?%24top=20&%24skip=0');
     });
 
     it('skips pages', () => {
@@ -40,7 +58,7 @@ describe('RestDataSource', () => {
       const after = createCursor({ position: 25 });
       const result = dataSource.paginate({ cursor, args: { after } });
       expect(result).toBeTruthy();
-      expect(get.mock.calls[0][0]).toBe('TestResource?%24top=20&%24skip=26');
+      expect(getFn.mock.calls[0][0]).toBe('TestResource?%24top=20&%24skip=26');
     });
 
     it('throws on an invalid `after` cursor', () => {
@@ -54,7 +72,7 @@ describe('RestDataSource', () => {
       const cursor = dataSource.request('TestResource');
       const result = dataSource.paginate({ cursor, args: { first: 2 } });
       expect(result).toBeTruthy();
-      expect(get.mock.calls[0][0]).toBe('TestResource?%24top=2&%24skip=0');
+      expect(getFn.mock.calls[0][0]).toBe('TestResource?%24top=2&%24skip=0');
     });
   });
 });
