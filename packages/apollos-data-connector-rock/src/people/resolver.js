@@ -1,11 +1,6 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { enforceCurrentUser } from '../utils';
 
-// Rock returns `{}` instead of `null` for null values.
-// This function eliminates the annoyance of checking those values.
-export const ifNotObject = (field) =>
-  typeof field === 'object' ? null : field;
-
 export default {
   Mutation: {
     updateProfileField: (root, { input: { field, value } }, { dataSources }) =>
@@ -19,11 +14,9 @@ export default {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     photo: ({ photo: { url } }) => ({ uri: url }),
-    firstName: ({ firstName }) => ifNotObject(firstName),
-    lastName: ({ lastName }) => ifNotObject(lastName),
-    birthDate: enforceCurrentUser(({ birthDate }) => ifNotObject(birthDate)),
+    birthDate: enforceCurrentUser(({ birthDate }) => birthDate),
     gender: enforceCurrentUser(({ gender }) => gender),
-    email: enforceCurrentUser(({ email }) => ifNotObject(email)),
+    email: enforceCurrentUser(({ email }) => email),
   },
   GENDER: {
     Unknown: 0,
