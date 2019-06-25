@@ -18,9 +18,12 @@ import {
   BrandIcon,
 } from '../styles';
 
-const LegalText = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(H6);
+const LegalText = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'UIAuth.SMSLegalText'
+)(H6);
 
 const PhoneEntry = ({
   alternateLoginText,
