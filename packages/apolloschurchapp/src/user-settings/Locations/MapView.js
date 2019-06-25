@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Animated } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-navigation';
 import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
 
@@ -25,7 +25,7 @@ const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
 const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
-const ScrollingView = styled({
+const Footer = styled({
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -166,8 +166,8 @@ class MapView extends Component {
             );
           })}
         </FlexedMapView>
-        <ScrollingView>
-          <SafeAreaView forceInset={{ bottom: 'always', top: 'never' }}>
+        <Footer>
+          <SafeAreaView>
             <Animated.ScrollView
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -210,7 +210,7 @@ class MapView extends Component {
               />
             </PaddedView>
           </SafeAreaView>
-        </ScrollingView>
+        </Footer>
       </FlexedView>
     );
   }
