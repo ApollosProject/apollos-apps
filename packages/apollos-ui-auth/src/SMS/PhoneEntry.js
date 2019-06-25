@@ -114,6 +114,8 @@ PhoneEntry.defaultProps = {
     "Let's get you signed in using your mobile number. We'll text you a code to make login super easy!",
 };
 
+PhoneEntry.LegalText = LegalText;
+
 PhoneEntry.displayName = 'PhoneEntry';
 
 export default PhoneEntry;
