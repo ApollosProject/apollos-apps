@@ -5,6 +5,7 @@ import { get } from 'lodash';
 import {
   styled,
   H6,
+  H5,
   PaddedView,
   TextInput,
   ButtonLink,
@@ -63,9 +64,11 @@ const PhoneEntry = ({
 
         {onPressAlternateLogin ? (
           <PaddedView>
-            <ButtonLink onPress={onPressAlternateLogin}>
-              {alternateLoginText}
-            </ButtonLink>
+            <H5>
+              <ButtonLink onPress={onPressAlternateLogin}>
+                {alternateLoginText}
+              </ButtonLink>
+            </H5>
           </PaddedView>
         ) : null}
       </ScrollView>

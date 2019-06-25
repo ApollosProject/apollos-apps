@@ -2918,14 +2918,25 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
               }
             >
               <Text
-                onPress={[Function]}
                 style={
                   Object {
-                    "color": "#17B582",
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 20.16,
                   }
                 }
               >
-                Custom Text to direct people to an alternate login flow
+                <Text
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "color": "#17B582",
+                    }
+                  }
+                >
+                  Custom Text to direct people to an alternate login flow
+                </Text>
               </Text>
             </View>
           </View>
@@ -4498,14 +4509,25 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
               }
             >
               <Text
-                onPress={[MockFunction]}
                 style={
                   Object {
-                    "color": "#17B582",
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 20.16,
                   }
                 }
               >
-                I'd rather use my email and a password
+                <Text
+                  onPress={[MockFunction]}
+                  style={
+                    Object {
+                      "color": "#17B582",
+                    }
+                  }
+                >
+                  I'd rather use my email and a password
+                </Text>
               </Text>
             </View>
           </View>
