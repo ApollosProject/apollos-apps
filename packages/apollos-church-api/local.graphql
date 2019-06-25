@@ -85,7 +85,7 @@ scalar Color
 
 type ContentChannel implements Node {
   id: ID!
-  name: String!
+  name: String
   description: String
   childContentChannels: [ContentChannel]
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
@@ -257,8 +257,8 @@ type PaginationInfo {
 
 type Pass implements Node {
   id: ID!
-  type: PassType!
-  description: String!
+  type: PassType
+  description: String
   logo: ImageMediaSource
   thumbnail: ImageMediaSource
   barcode: ImageMediaSource
@@ -291,7 +291,7 @@ enum PassType {
 
 type Person implements Node {
   id: ID!
-  firstName: String!
+  firstName: String
   lastName: String!
   nickName: String
   email: String
