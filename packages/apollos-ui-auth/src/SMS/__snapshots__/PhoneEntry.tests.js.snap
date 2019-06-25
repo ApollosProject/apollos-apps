@@ -390,7 +390,7 @@ exports[`The Auth PhoneEntry component should render 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo component 1`] = `
+exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -762,7 +762,7 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo comp
               <Text
                 style={
                   Object {
-                    "color": "salmon",
+                    "color": "#A5A5A5",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 17.28,

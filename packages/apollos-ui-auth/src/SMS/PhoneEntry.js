@@ -59,7 +59,7 @@ const PhoneEntry = ({
             onChangeText={(text) => setFieldValue('phone', text)}
             value={get(values, 'phone')}
           />
-          {smsPolicyInfo}
+          <LegalText>{smsPolicyInfo}</LegalText>
         </PaddedView>
 
         {onPressAlternateLogin ? (
@@ -98,7 +98,7 @@ PhoneEntry.propTypes = {
   onPressAlternateLogin: PropTypes.func,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
   setFieldValue: PropTypes.func.isRequired,
-  smsPolicyInfo: PropTypes.node,
+  smsPolicyInfo: PropTypes.string,
   smsPromptText: PropTypes.string,
   values: PropTypes.shape({
     phone: PropTypes.string,
@@ -108,11 +108,8 @@ PhoneEntry.propTypes = {
 PhoneEntry.defaultProps = {
   authTitleText: 'Have we met before?',
   alternateLoginText: "I'd rather use my email and a password",
-  smsPolicyInfo: (
-    <LegalText>
-      {"We'll never share your information or contact you (unless you ask!)."}
-    </LegalText>
-  ),
+  smsPolicyInfo:
+    "We'll never share your information or contact you (unless you ask!).",
   smsPromptText:
     "Let's get you signed in using your mobile number. We'll text you a code to make login super easy!",
 };

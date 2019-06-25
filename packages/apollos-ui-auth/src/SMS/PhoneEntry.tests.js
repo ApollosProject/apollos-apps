@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { H6 } from '@apollosproject/ui-kit';
 
 import { Providers } from '../testUtils';
 
@@ -91,14 +90,12 @@ describe('The Auth PhoneEntry component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a custom smsPolicyInfo component', () => {
+  it('should render a custom smsPolicyInfo text', () => {
     const tree = renderer.create(
       <Providers>
         <PhoneEntry
           setFieldValue={jest.fn()}
-          smsPolicyInfo={
-            <H6 style={{ color: 'salmon' }}>Boom custom legalese boom</H6> // eslint-disable-line react-native/no-inline-styles, react-native/no-color-literals
-          }
+          smsPolicyInfo={'Boom custom legalese boom'}
         />
       </Providers>
     );
