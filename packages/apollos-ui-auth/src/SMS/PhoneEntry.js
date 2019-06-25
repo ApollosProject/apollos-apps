@@ -23,7 +23,7 @@ const LegalText = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'UIAuth.SMSLegalText'
+  'ui-auth.SMSPhoneEntry.LegalText'
 )(H6);
 
 const PhoneEntry = ({
@@ -76,6 +76,7 @@ const PhoneEntry = ({
       {onPressNext ? (
         <PaddedView>
           <NextButton
+            title={'Next'}
             onPress={onPressNext}
             disabled={disabled}
             loading={isLoading}

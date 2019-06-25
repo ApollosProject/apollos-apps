@@ -48,6 +48,7 @@ const Verification = ({
       {onPressNext ? (
         <PaddedView>
           <NextButton
+            title={'Next'}
             onPress={onPressNext}
             disabled={disabled}
             loading={isLoading}

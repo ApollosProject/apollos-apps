@@ -11,7 +11,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 const FlexedSafeAreaView = compose(
-  styled({ flex: 1 }, 'UIAuth.FlexedSafeAreaView'),
+  styled({ flex: 1 }, 'ui-auth.FlexedSafeAreaView'),
   withProps({ forceInset: { top: 'always' } })
 )(SafeAreaView);
 
@@ -26,20 +26,18 @@ const TitleText = styled(
   ({ theme }) => ({
     color: theme.colors.primary,
   }),
-  'UIAuth.TitleText'
+  'ui-auth.TitleText'
 )(H2);
 
 const PromptText = styled(
   ({ theme }) => ({
     color: theme.colors.text.secondary,
   }),
-  'UIAuth.PromptText'
+  'ui-auth.PromptText'
 )(H5);
 
-const NextButton = styled({}, 'UIAuth.NextButton')((props) => (
-  <Button type={'primary'} pill={false} {...props}>
-    <H5>Next</H5>
-  </Button>
+const NextButton = styled({}, 'ui-auth.NextButton')((props) => (
+  <Button type={'primary'} pill={false} {...props} />
 ));
 
 export { FlexedSafeAreaView, BrandIcon, TitleText, PromptText, NextButton };
