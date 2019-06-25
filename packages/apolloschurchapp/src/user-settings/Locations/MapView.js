@@ -8,6 +8,7 @@ import { debounce } from 'lodash';
 import {
   Button,
   PaddedView,
+  FlexedView,
   styled,
   withTheme,
   CampusCard,
@@ -16,10 +17,6 @@ import {
 import Marker from './Marker';
 
 const { CARD_WIDTH } = CampusCard;
-
-const ContainerView = styled({
-  flex: 1,
-})(View);
 
 const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
@@ -139,84 +136,82 @@ class MapView extends Component {
     });
 
     return (
-      <ContainerView>
-        <ContainerView>
-          <FlexedMapView
-            initialRegion={this.props.initialRegion}
-            showsUserLocation
-            mapRef={(map) => {
-              this.map = map;
-            }}
-          >
-            {campuses.map((campus, index) => {
-              const scaleStyle = {
-                transform: [
+      <FlexedView>
+        <FlexedMapView
+          initialRegion={this.props.initialRegion}
+          showsUserLocation
+          mapRef={(map) => {
+            this.map = map;
+          }}
+        >
+          {campuses.map((campus, index) => {
+            const scaleStyle = {
+              transform: [
+                {
+                  scale: interpolations[index].scale,
+                },
+              ],
+            };
+            const opacityStyle = {
+              opacity: interpolations[index].opacity,
+            };
+            return (
+              <Marker
+                key={campus.id}
+                opacityStyle={opacityStyle}
+                scaleStyle={scaleStyle}
+                latitude={campus.latitude}
+                longitude={campus.longitude}
+              />
+            );
+          })}
+        </FlexedMapView>
+        <ScrollingView>
+          <SafeAreaView forceInset={{ bottom: 'always', top: 'never' }}>
+            <Animated.ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              snapToInterval={CARD_WIDTH + 8} // account for padding
+              snapToAlignment={'start'}
+              decelerationRate={'fast'}
+              contentContainerStyle={this.contentContainerStyle} // correctly pads cards in ScrollView
+              scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
+              onScroll={Animated.event(
+                [
                   {
-                    scale: interpolations[index].scale,
-                  },
-                ],
-              };
-              const opacityStyle = {
-                opacity: interpolations[index].opacity,
-              };
-              return (
-                <Marker
-                  key={campus.id}
-                  opacityStyle={opacityStyle}
-                  scaleStyle={scaleStyle}
-                  latitude={campus.latitude}
-                  longitude={campus.longitude}
-                />
-              );
-            })}
-          </FlexedMapView>
-          <ScrollingView>
-            <SafeAreaView forceInset={{ bottom: 'always', top: 'never' }}>
-              <Animated.ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                snapToInterval={CARD_WIDTH + 8} // account for padding
-                snapToAlignment={'start'}
-                decelerationRate={'fast'}
-                contentContainerStyle={this.contentContainerStyle} // correctly pads cards in ScrollView
-                scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
-                onScroll={Animated.event(
-                  [
-                    {
-                      nativeEvent: {
-                        contentOffset: {
-                          x: this.animation,
-                        },
+                    nativeEvent: {
+                      contentOffset: {
+                        x: this.animation,
                       },
                     },
-                  ],
-                  { useNativeDriver: true }
-                )}
-              >
-                {campuses.map((campus) => (
-                  <CampusCard
-                    key={campus.id}
-                    distance={campus.distanceFromLocation}
-                    title={campus.name}
-                    description={getCampusAddress(campus)}
-                    images={[campus.image]}
-                  />
-                ))}
-              </Animated.ScrollView>
-              <PaddedView>
-                <Button
-                  title="Select Campus"
-                  pill={false}
-                  type="secondary"
-                  onPress={() =>
-                    onLocationSelect(this.state.campus || campuses[0])
-                  }
+                  },
+                ],
+                { useNativeDriver: true }
+              )}
+            >
+              {campuses.map((campus) => (
+                <CampusCard
+                  key={campus.id}
+                  distance={campus.distanceFromLocation}
+                  title={campus.name}
+                  description={getCampusAddress(campus)}
+                  images={[campus.image]}
                 />
-              </PaddedView>
-            </SafeAreaView>
-          </ScrollingView>
-        </ContainerView>
-      </ContainerView>
+              ))}
+            </Animated.ScrollView>
+            <PaddedView>
+              <Button
+                title="Select Campus"
+                pill={false}
+                type="secondary"
+                onPress={() =>
+                  onLocationSelect(this.state.campus || campuses[0])
+                }
+              />
+            </PaddedView>
+          </SafeAreaView>
+        </ScrollingView>
+      </FlexedView>
     );
   }
 }
