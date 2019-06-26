@@ -1,5 +1,9 @@
 # Updating
 
+## Updating from 0.8.7 to 1.0.0
+
+- OnboardingSwiper used to use `BackgroundView`, but it no longer does. If you want to maintain an identical visual experience, wrap your `OnboardingSwiper` in a `BackgroundView` from ui-kit.
+
 ## Updating from 0.8.0-alpha.9 to 0.8.0-alpha.10
 
 This update introduces a major breaking schema in change in the `getAllLikedContent` content query. This change adds pagination to the result. Changes on the API are automatically integrated, but changes to the ReactNative project will need to be integrated automatically.

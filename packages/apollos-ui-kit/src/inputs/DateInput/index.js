@@ -5,12 +5,13 @@ import { Animated } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
 import Chip from '../../Chip';
+import styled from '../../styled';
 
 import InputWrapper from '../InputWrapper';
 import FloatingLabel from '../FloatingLabel';
 import ErrorText from '../ErrorText';
 
-const chipStyle = { marginTop: 5 };
+const StyledChip = styled({ marginTop: 5 }, 'DateInput.Chip')(Chip);
 
 class DateInput extends PureComponent {
   static propTypes = {
@@ -48,8 +49,7 @@ class DateInput extends PureComponent {
     if (typeof date === 'string') date = moment(date).toDate();
     return (
       <InputWrapper>
-        <Chip
-          style={chipStyle}
+        <StyledChip
           title={
             this.props.displayValue ||
             this.props.placeholder ||

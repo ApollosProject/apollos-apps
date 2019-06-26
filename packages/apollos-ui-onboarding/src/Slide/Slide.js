@@ -16,7 +16,9 @@ import {
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
 
-const TrackingButton = withTrackOnPress(Button);
+const PrimaryButton = styled({}, 'Onboarding.Slide.PrimaryButton')(
+  withTrackOnPress(Button)
+);
 
 const styles = StyleSheet.create({
   contentContainer: { minHeight: '100%' },
@@ -27,31 +29,40 @@ const forceInset = {
   bottom: 'always',
 };
 
-const NavWrapper = styled(({ theme }) => ({
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  right: 0,
-  flexDirection: 'row-reverse', // reversed so the primary action is always on the right
-  alignItems: 'center', // centers optional back button with dots/next button
-  justifyContent: 'space-between',
-  marginVertical: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
-}))(PaddedView);
+const NavWrapper = styled(
+  ({ theme }) => ({
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    flexDirection: 'row-reverse', // reversed so the primary action is always on the right
+    alignItems: 'center', // centers optional back button with dots/next button
+    justifyContent: 'space-between',
+    marginVertical: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
+  }),
+  'Onboarding.Slide.NavWrapper'
+)(PaddedView);
 
-const PrimaryNavIcon = withTheme(({ theme }) => ({
-  size: theme.helpers.rem(1.25),
-  style: {
-    marginLeft: theme.sizing.baseUnit * 0.5,
-    marginRight: theme.sizing.baseUnit * -0.5,
-  },
-}))(Icon);
+const PrimaryNavIcon = withTheme(
+  ({ theme }) => ({
+    size: theme.helpers.rem(1.25),
+    style: {
+      marginLeft: theme.sizing.baseUnit * 0.5,
+      marginRight: theme.sizing.baseUnit * -0.5,
+    },
+  }),
+  'Onboarding.Slide.PrimaryNavIcon'
+)(Icon);
 
-const SkipButton = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary, // this is probably not the right color
-  paddingVertical: theme.sizing.baseUnit * 0.9375, // optically centered on typographic baseline
-  paddingHorizontal: theme.sizing.baseUnit, // improves tappability
-  marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
-}))(withTrackOnPress(ButtonLink));
+const SkipButton = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary, // this is probably not the right color
+    paddingVertical: theme.sizing.baseUnit * 0.9375, // optically centered on typographic baseline
+    paddingHorizontal: theme.sizing.baseUnit, // improves tappability
+    marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
+  }),
+  'Onboarding.Slide.SkipButton'
+)(withTrackOnPress(ButtonLink));
 
 const FlexedScrollView = styled({ flex: 1 })(ScrollView);
 
@@ -83,7 +94,7 @@ const Slide = memo(
         <NavWrapper vertical={false}>
           <SafeAreaView forceInset={forceInset}>
             {onPressPrimary ? (
-              <TrackingButton
+              <PrimaryButton
                 trackEventName={pressPrimaryEventName}
                 onPress={onPressPrimary}
                 loading={isLoading}
@@ -94,7 +105,7 @@ const Slide = memo(
                     <PrimaryNavIcon name={primaryNavIcon} />
                   ) : null}
                 </>
-              </TrackingButton>
+              </PrimaryButton>
             ) : null}
             {onPressSecondary ? (
               <SkipButton

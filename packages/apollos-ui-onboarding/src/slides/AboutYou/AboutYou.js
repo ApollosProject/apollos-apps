@@ -90,6 +90,12 @@ const AboutYou = memo(
   )
 );
 
+AboutYou.Label = Label;
+AboutYou.DateInput = StyledDate;
+AboutYou.Radio = StyledRadio;
+AboutYou.RadioLabel = RadioLabel;
+AboutYou.RadioButton = RadioButton;
+
 AboutYou.propTypes = {
   /* The `Swiper` component used in `<Onboading>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
