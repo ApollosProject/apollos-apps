@@ -76,7 +76,6 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "width": "100%",
               }
             }
           >
@@ -621,7 +620,6 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "width": "100%",
               }
             }
           >
@@ -1266,7 +1264,6 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "width": "100%",
               }
             }
           >
@@ -2115,7 +2112,6 @@ exports[`ContentCard renders with an Image only 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "width": "100%",
               }
             }
           >
