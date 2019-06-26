@@ -6,11 +6,9 @@ import { Dimensions } from 'react-native';
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 
 import GET_USER_PROFILE from '../../tabs/connect/getUserProfile';
-import MapView from './MapView';
-
 import GET_CAMPUSES from './getCampusLocations';
-
 import CHANGE_CAMPUS from './campusChange';
+import MapView from './MapView';
 
 const getCurrentLocation = () =>
   new Promise((resolve, reject) => {
@@ -19,10 +17,6 @@ const getCurrentLocation = () =>
       (e) => reject(e)
     );
   });
-
-const screen = Dimensions.get('window');
-
-const ASPECT_RATIO = screen.width / screen.height;
 
 class Location extends PureComponent {
   static propTypes = {
@@ -46,7 +40,9 @@ class Location extends PureComponent {
       latitude: 39.809734,
       longitude: -98.555618,
       latitudeDelta: 100,
-      longitudeDelta: 100 * ASPECT_RATIO,
+      longitudeDelta:
+        (100 * Dimensions.get('window').width) /
+        Dimensions.get('window').height,
     },
   };
 
@@ -83,10 +79,7 @@ class Location extends PureComponent {
   render() {
     const { navigation, onFinished } = this.props;
     // we should use the `onFinished` from the navigation param, if it exists.
-    const handleFinished = this.props.navigation.getParam(
-      'onFinished',
-      onFinished
-    );
+    const handleFinished = navigation.getParam('onFinished', onFinished);
 
     return (
       <Query

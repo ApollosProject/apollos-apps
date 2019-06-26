@@ -122,17 +122,12 @@ class MapView extends Component {
         index * CARD_WIDTH,
         (index + 1) * CARD_WIDTH,
       ];
-      const scale = this.animation.interpolate({
-        inputRange,
-        outputRange: [1, 2.5, 1],
-        extrapolate: 'clamp',
-      });
       const opacity = this.animation.interpolate({
         inputRange,
         outputRange: [0.35, 1, 0.35],
         extrapolate: 'clamp',
       });
-      return { scale, opacity };
+      return { opacity };
     });
 
     return (
@@ -145,21 +140,13 @@ class MapView extends Component {
           }}
         >
           {campuses.map((campus, index) => {
-            const scaleStyle = {
-              transform: [
-                {
-                  scale: interpolations[index].scale,
-                },
-              ],
-            };
-            const opacityStyle = {
+            const campusOpacity = {
               opacity: interpolations[index].opacity,
             };
             return (
               <Marker
                 key={campus.id}
-                opacityStyle={opacityStyle}
-                scaleStyle={scaleStyle}
+                opacityStyle={campusOpacity}
                 latitude={campus.latitude}
                 longitude={campus.longitude}
               />
