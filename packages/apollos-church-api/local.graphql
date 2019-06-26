@@ -163,6 +163,11 @@ type DevotionalContentItem implements ContentItem & Node {
   sharing: SharableContentItem
 }
 
+interface Feature {
+  id: ID!
+  order: Int
+}
+
 enum GENDER {
   Male
   Female
@@ -407,5 +412,24 @@ type VideoMedia implements Media {
 
 type VideoMediaSource implements MediaSource {
   uri: String
+}
+
+type WeekendContentItem implements ContentItem & Node {
+  id: ID!
+  title: String
+  coverImage: ImageMedia
+  images: [ImageMedia]
+  videos: [VideoMedia]
+  audios: [AudioMedia]
+  htmlContent: String
+  summary: String
+  childContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  parentChannel: ContentChannel
+  theme: Theme
+  isLiked: Boolean
+  likedCount: Int
+  sharing: SharableContentItem
+  features: [Feature]
 }
 
