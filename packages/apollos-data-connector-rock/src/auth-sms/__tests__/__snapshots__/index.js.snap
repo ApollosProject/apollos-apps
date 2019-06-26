@@ -16,9 +16,10 @@ Array [
     "/PhoneNumbers",
     Object {
       "CountryCode": 1,
-      "IsMessagingEnabled": false,
+      "IsMessagingEnabled": true,
       "IsSystem": false,
       "Number": "5133061126",
+      "NumberTypeValueId": 12,
       "PersonId": 123,
     },
   ],
@@ -139,9 +140,10 @@ Array [
     "/PhoneNumbers",
     Object {
       "CountryCode": 1,
-      "IsMessagingEnabled": false,
+      "IsMessagingEnabled": true,
       "IsSystem": false,
       "Number": "5133061126",
+      "NumberTypeValueId": 12,
       "PersonId": 123456,
     },
   ],
