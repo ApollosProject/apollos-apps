@@ -329,6 +329,28 @@ export const contentItemSchema = gql`
     scriptures: [Scripture]
   }
 
+  type WeekendContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    theme: Theme
+  }
+
   input ContentItemsConnectionInput {
     first: Int
     after: String
@@ -510,6 +532,17 @@ export const passSchema = gql`
 
   enum PassType {
     GENERIC
+  }
+`;
+
+export const featuresSchema = gql`
+  interface Feature {
+    id: ID!
+    order: Int # 0 is the "Main Content". If order is < 0 than this comes before the body content.
+  }
+
+  extend type WeekendContentItem {
+    features: [Feature]
   }
 `;
 
