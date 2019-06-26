@@ -57,10 +57,11 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     // And create their phone number.
     await this.post('/PhoneNumbers', {
       PersonId: personId,
-      IsMessagingEnabled: false, // should this default to true?
+      IsMessagingEnabled: true,
       IsSystem: false,
       Number: phoneNumber,
       CountryCode: countryCode,
+      NumberTypeValueId: 12, // 12 is a Constant Set in Rock, means "Mobile"
     });
 
     return personId;
