@@ -9,6 +9,7 @@ import {
   PaddedView,
   TextInput,
   ButtonLink,
+  BackgroundView,
 } from '@apollosproject/ui-kit';
 
 import {
@@ -38,52 +39,56 @@ const PhoneEntry = ({
   smsPolicyInfo,
   smsPromptText,
   values,
+  BackgroundComponent,
+  ...props
 }) => (
   <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior={'padding'}>
-    <FlexedSafeAreaView>
-      <ScrollView>
-        <PaddedView>
-          <BrandIcon />
-          <TitleText>{authTitleText}</TitleText>
-          <PromptText padded>{smsPromptText}</PromptText>
-
-          <TextInput
-            autoFocus
-            autoComplete={'tel'}
-            label={'Mobile Number'}
-            type={'phone'}
-            enablesReturnKeyAutomatically
-            returnKeyType={'next'}
-            onSubmitEditing={onPressNext}
-            error={get(errors, 'phone')}
-            onChangeText={(text) => setFieldValue('phone', text)}
-            value={get(values, 'phone')}
-          />
-          <LegalText>{smsPolicyInfo}</LegalText>
-        </PaddedView>
-
-        {onPressAlternateLogin ? (
+    <BackgroundComponent>
+      <FlexedSafeAreaView>
+        <ScrollView>
           <PaddedView>
-            <H5>
-              <ButtonLink onPress={onPressAlternateLogin}>
-                {alternateLoginText}
-              </ButtonLink>
-            </H5>
+            <BrandIcon />
+            <TitleText>{authTitleText}</TitleText>
+            <PromptText padded>{smsPromptText}</PromptText>
+
+            <TextInput
+              autoFocus
+              autoComplete={'tel'}
+              label={'Mobile Number'}
+              type={'phone'}
+              enablesReturnKeyAutomatically
+              returnKeyType={'next'}
+              onSubmitEditing={onPressNext}
+              error={get(errors, 'phone')}
+              onChangeText={(text) => setFieldValue('phone', text)}
+              value={get(values, 'phone')}
+            />
+            <LegalText>{smsPolicyInfo}</LegalText>
+          </PaddedView>
+
+          {onPressAlternateLogin ? (
+            <PaddedView>
+              <H5>
+                <ButtonLink onPress={onPressAlternateLogin}>
+                  {alternateLoginText}
+                </ButtonLink>
+              </H5>
+            </PaddedView>
+          ) : null}
+        </ScrollView>
+
+        {onPressNext ? (
+          <PaddedView>
+            <NextButton
+              title={'Next'}
+              onPress={onPressNext}
+              disabled={disabled}
+              loading={isLoading}
+            />
           </PaddedView>
         ) : null}
-      </ScrollView>
-
-      {onPressNext ? (
-        <PaddedView>
-          <NextButton
-            title={'Next'}
-            onPress={onPressNext}
-            disabled={disabled}
-            loading={isLoading}
-          />
-        </PaddedView>
-      ) : null}
-    </FlexedSafeAreaView>
+      </FlexedSafeAreaView>
+    </BackgroundComponent>
   </KeyboardAvoidingView>
 );
 
@@ -103,6 +108,7 @@ PhoneEntry.propTypes = {
   values: PropTypes.shape({
     phone: PropTypes.string,
   }),
+  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
 PhoneEntry.defaultProps = {
@@ -112,6 +118,7 @@ PhoneEntry.defaultProps = {
     "We'll never share your information or contact you (unless you ask!).",
   smsPromptText:
     "Let's get you signed in using your mobile number. We'll text you a code to make login super easy!",
+  BackgroundComponent: BackgroundView,
 };
 
 PhoneEntry.LegalText = LegalText;

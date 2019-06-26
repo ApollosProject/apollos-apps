@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { KeyboardAvoidingView, StyleSheet, ScrollView } from 'react-native';
 import { get } from 'lodash';
-import { PaddedView, TextInput } from '@apollosproject/ui-kit';
+import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
 
 import {
   FlexedSafeAreaView,
@@ -21,41 +21,44 @@ const Verification = ({
   onPressNext,
   setFieldValue,
   values,
+  BackgroundComponent,
 }) => (
   <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior={'padding'}>
-    <FlexedSafeAreaView>
-      <ScrollView>
-        <PaddedView>
-          <BrandIcon />
-          <TitleText>{confirmationTitleText}</TitleText>
-          <PromptText padded>{confirmationPromptText}</PromptText>
+    <BackgroundComponent>
+      <FlexedSafeAreaView>
+        <ScrollView>
+          <PaddedView>
+            <BrandIcon />
+            <TitleText>{confirmationTitleText}</TitleText>
+            <PromptText padded>{confirmationPromptText}</PromptText>
 
-          <TextInput
-            autoFocus
-            label={'Verification Code'}
-            type={'numeric'}
-            autoComplete={'password'}
-            enablesReturnKeyAutomatically
-            returnKeyType={'next'}
-            onSubmitEditing={onPressNext}
-            error={get(errors, 'code')}
-            onChangeText={(text) => setFieldValue('code', text)}
-            value={get(values, 'code')}
-          />
-        </PaddedView>
-      </ScrollView>
+            <TextInput
+              autoFocus
+              label={'Verification Code'}
+              type={'numeric'}
+              autoComplete={'password'}
+              enablesReturnKeyAutomatically
+              returnKeyType={'next'}
+              onSubmitEditing={onPressNext}
+              error={get(errors, 'code')}
+              onChangeText={(text) => setFieldValue('code', text)}
+              value={get(values, 'code')}
+            />
+          </PaddedView>
+        </ScrollView>
 
-      {onPressNext ? (
-        <PaddedView>
-          <NextButton
-            title={'Next'}
-            onPress={onPressNext}
-            disabled={disabled}
-            loading={isLoading}
-          />
-        </PaddedView>
-      ) : null}
-    </FlexedSafeAreaView>
+        {onPressNext ? (
+          <PaddedView>
+            <NextButton
+              title={'Next'}
+              onPress={onPressNext}
+              disabled={disabled}
+              loading={isLoading}
+            />
+          </PaddedView>
+        ) : null}
+      </FlexedSafeAreaView>
+    </BackgroundComponent>
   </KeyboardAvoidingView>
 );
 
@@ -72,12 +75,14 @@ Verification.propTypes = {
   values: PropTypes.shape({
     code: PropTypes.string,
   }),
+  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
 Verification.defaultProps = {
   confirmationTitleText: 'Thanks!\nStand by…',
   confirmationPromptText:
     'We just sent you a code. Enter it below when it comes.',
+  BackgroundComponent: BackgroundView,
 };
 
 export default Verification;
