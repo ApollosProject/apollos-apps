@@ -1,8 +1,6 @@
-const chokidar = require('chokidar');
-// const { debounce } = require('lodash');
 const { exec } = require('child_process');
+const chokidar = require('chokidar');
 
-// console.log(process.env.PWD);
 chokidar
   .watch('packages/apollos-data-*/**', {
     ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],
