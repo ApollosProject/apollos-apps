@@ -61,7 +61,7 @@ export const peopleSchema = gql`
 
   type Person implements Node @cacheControl(maxAge: 0) {
     id: ID!
-    firstName: String!
+    firstName: String
     lastName: String!
     nickName: String
     email: String
@@ -329,6 +329,28 @@ export const contentItemSchema = gql`
     scriptures: [Scripture]
   }
 
+  type WeekendContentItem implements ContentItem & Node {
+    id: ID!
+    title: String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+
+    theme: Theme
+  }
+
   input ContentItemsConnectionInput {
     first: Int
     after: String
@@ -357,7 +379,7 @@ export const contentItemSchema = gql`
 export const contentChannelSchema = gql`
   type ContentChannel implements Node {
     id: ID!
-    name: String!
+    name: String
     description: String
 
     childContentChannels: [ContentChannel]
@@ -480,8 +502,8 @@ export const passSchema = gql`
 
   type Pass implements Node {
     id: ID!
-    type: PassType!
-    description: String!
+    type: PassType
+    description: String
     logo: ImageMediaSource
     thumbnail: ImageMediaSource
     barcode: ImageMediaSource
@@ -510,6 +532,17 @@ export const passSchema = gql`
 
   enum PassType {
     GENERIC
+  }
+`;
+
+export const featuresSchema = gql`
+  interface Feature {
+    id: ID!
+    order: Int # 0 is the "Main Content". If order is < 0 than this comes before the body content.
+  }
+
+  extend type WeekendContentItem {
+    features: [Feature]
   }
 `;
 

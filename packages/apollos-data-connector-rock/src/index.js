@@ -12,6 +12,7 @@ import * as Template from './template';
 import * as Campus from './campuses';
 import * as Utils from './utils';
 import * as BinaryFiles from './binary-files';
+import * as Features from './features';
 
 export {
   Followings,
@@ -28,4 +29,5 @@ export {
   Campus,
   Utils,
   BinaryFiles,
+  Features,
 };

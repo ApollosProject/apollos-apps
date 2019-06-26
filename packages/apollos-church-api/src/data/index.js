@@ -23,6 +23,7 @@ import {
   AuthSms,
   Campus,
   BinaryFiles,
+  Features,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -53,6 +54,7 @@ const data = {
   Template,
   Campus,
   BinaryFiles,
+  Features,
 };
 
 const {
