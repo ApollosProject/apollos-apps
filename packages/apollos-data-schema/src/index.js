@@ -61,7 +61,7 @@ export const peopleSchema = gql`
 
   type Person implements Node @cacheControl(maxAge: 0) {
     id: ID!
-    firstName: String!
+    firstName: String
     lastName: String!
     nickName: String
     email: String
@@ -379,7 +379,7 @@ export const contentItemSchema = gql`
 export const contentChannelSchema = gql`
   type ContentChannel implements Node {
     id: ID!
-    name: String!
+    name: String
     description: String
 
     childContentChannels: [ContentChannel]
@@ -502,8 +502,8 @@ export const passSchema = gql`
 
   type Pass implements Node {
     id: ID!
-    type: PassType!
-    description: String!
+    type: PassType
+    description: String
     logo: ImageMediaSource
     thumbnail: ImageMediaSource
     barcode: ImageMediaSource
