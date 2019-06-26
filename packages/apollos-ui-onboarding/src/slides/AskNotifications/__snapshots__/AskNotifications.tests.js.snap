@@ -315,7 +315,6 @@ exports[`The Onboarding AskNotifications component should render a BackgroundCom
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "width": "100%",
               }
             }
           >

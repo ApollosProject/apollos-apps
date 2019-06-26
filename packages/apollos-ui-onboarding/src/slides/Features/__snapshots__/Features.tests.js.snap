@@ -466,7 +466,6 @@ exports[`The Onboarding Features component should render a BackgroundComponent 1
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "width": "100%",
               }
             }
           >

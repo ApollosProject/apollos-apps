@@ -140,7 +140,6 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                             Object {
                               "aspectRatio": 1,
                               "backgroundColor": "#A5A5A5",
-                              "width": "100%",
                             }
                           }
                         >
@@ -286,7 +285,6 @@ Anderson, SC 29621-3619
                             Object {
                               "aspectRatio": 1,
                               "backgroundColor": "#A5A5A5",
-                              "width": "100%",
                             }
                           }
                         >
@@ -432,7 +430,6 @@ Richardson, TX 75080-5525
                             Object {
                               "aspectRatio": 1,
                               "backgroundColor": "#A5A5A5",
-                              "width": "100%",
                             }
                           }
                         >
@@ -578,7 +575,6 @@ Cincinnati, OH 45202-2118
                             Object {
                               "aspectRatio": 1,
                               "backgroundColor": "#A5A5A5",
-                              "width": "100%",
                             }
                           }
                         >
