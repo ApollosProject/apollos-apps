@@ -6,6 +6,8 @@ import PhoneNumber from 'awesome-phonenumber';
 import { secret } from '../auth/token';
 
 export default class AuthSmsDataSource extends RockApolloDataSource {
+  expanded = true;
+
   hashPassword = ({ pin }) =>
     crypto
       .createHash('sha256')
@@ -37,18 +39,22 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     const { phoneNumber, countryCode } = this.parsePhoneNumber({
       phoneNumber: inputPhoneNumber,
     });
-    const existingPhoneNumber = await this.request('/PhoneNumbers')
-      .filter(`Number eq '${phoneNumber}'`)
-      .first();
 
-    if (existingPhoneNumber) {
-      return existingPhoneNumber.personId;
+    const existingPhoneNumbers = await this.request('/PhoneNumbers')
+      .filter(`Number eq '${phoneNumber}'`)
+      .get();
+
+    // If we have only one phone number, use that phone number
+    if (existingPhoneNumbers.length === 1) {
+      return existingPhoneNumbers[0].personId;
     }
 
+    // Otherwise, create a new user.
     const personId = await this.context.dataSources.Auth.createUserProfile({
       email: null,
     });
 
+    // And create their phone number.
     await this.post('/PhoneNumbers', {
       PersonId: personId,
       IsMessagingEnabled: false, // should this default to true?
@@ -60,24 +66,29 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     return personId;
   };
 
-  authenticateWithSms = async ({ pin, phoneNumber }) => {
-    const password = this.hashPassword({ pin });
-
-    const personId = await this.createOrFindSmsLoginUserId({ phoneNumber });
-
-    const { phoneNumber: cleanedNumber } = this.parsePhoneNumber({
-      phoneNumber,
+  authenticateWithSms = async ({ pin, phoneNumber: phoneNumberInput }) => {
+    const { phoneNumber } = this.parsePhoneNumber({
+      phoneNumber: phoneNumberInput,
     });
 
     const userLogin = await this.request('/UserLogins')
-      .filter(`UserName eq '${cleanedNumber}'`)
+      .filter(`UserName eq '${phoneNumber}'`)
       .first();
 
     if (!userLogin) {
       throw new AuthenticationError('Invalid input');
     }
-    // Update the user login to include the PersonId.
-    await this.patch(`/UserLogins/${userLogin.id}`, { PersonId: personId });
+
+    // remember that Rock null values are often empty objects!
+    if (!userLogin.personId || typeof userLogin.personId === 'object') {
+      // We created a login for this user, but don't know who they are yet.
+      const personId = await this.createOrFindSmsLoginUserId({ phoneNumber });
+
+      // Update the user login to include the PersonId.
+      await this.patch(`/UserLogins/${userLogin.id}`, { PersonId: personId });
+    }
+
+    const password = this.hashPassword({ pin });
 
     return this.context.dataSources.Auth.authenticate({
       identity: phoneNumber,
@@ -102,8 +113,14 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       .filter(`UserName eq '${phoneNumber}'`)
       .first();
 
+    let personOptions = {};
+
     // Updating PlainTextPassword via Patch doesn't work, so we delete and recreate.
     if (existingUserLogin) {
+      // if we have a PersonId on the user login, we should move it over to the new login.
+      if (existingUserLogin.personId)
+        personOptions = { PersonId: existingUserLogin.personId };
+
       await this.delete(`/UserLogins/${existingUserLogin.id}`);
     }
 
@@ -111,6 +128,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       EntityTypeId: 27, // A default setting we use in Rock-person-creation-flow
       UserName: phoneNumber,
       PlainTextPassword: password,
+      ...personOptions, // { PersonId: ID } OR null
     });
 
     await this.context.dataSources.Sms.sendSms({
