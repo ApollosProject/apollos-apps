@@ -16,23 +16,32 @@ const IconWrapper = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit, // wrapper is used to padd placeholder as well.
 }))(View);
 
-const BrandIcon = withTheme(({ theme, icon }) => ({
-  name: typeof icon === 'string' ? icon : 'brand-icon',
-  fill: theme.colors.primary,
-  size: theme.sizing.baseUnit * 3,
-}))(Icon);
+const BrandIcon = withTheme(
+  ({ theme, icon }) => ({
+    name: typeof icon === 'string' ? icon : 'brand-icon',
+    fill: theme.colors.primary,
+    size: theme.sizing.baseUnit * 3,
+  }),
+  'Onboarding.SlideContent.BrandIcon'
+)(Icon);
 
 const TitleWrapper = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 0.5, // wrapper is used to padd placeholder as well.
 }))(View);
 
-const Title = styled(({ theme }) => ({
-  color: theme.colors.primary,
-}))(H2);
+const Title = styled(
+  ({ theme }) => ({
+    color: theme.colors.primary,
+  }),
+  'Onboarding.SlideContent.Title'
+)(H2);
 
-const StyledH5 = styled(({ theme }) => ({
-  color: theme.colors.text.secondary,
-}))(H5);
+const Description = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.secondary,
+  }),
+  'Onboarding.SlideContent.Description'
+)(H5);
 
 const Wrapper = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit,
@@ -59,7 +68,7 @@ const SlideContent = withIsLoading(
           <TitleWrapper>
             <Title>{title}</Title>
           </TitleWrapper>
-          <StyledH5>{description}</StyledH5>
+          <Description>{description}</Description>
         </View>
         {children}
       </Wrapper>
