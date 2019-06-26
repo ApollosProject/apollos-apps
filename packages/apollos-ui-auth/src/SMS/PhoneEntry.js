@@ -40,7 +40,6 @@ const PhoneEntry = ({
   smsPromptText,
   values,
   BackgroundComponent,
-  ...props
 }) => (
   <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior={'padding'}>
     <BackgroundComponent>
