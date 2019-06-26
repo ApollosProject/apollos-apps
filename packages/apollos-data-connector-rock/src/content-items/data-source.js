@@ -103,6 +103,13 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
+  // eslint-disable-next-line class-methods-use-this
+  getFeatures({ id }) {
+    // todo - implement logic to get features for a content item.
+    console.log(id);
+    return [];
+  }
+
   createSummary = ({ content, summary }) => {
     if (summary) return summary;
     if (!content || typeof content !== 'string') return '';

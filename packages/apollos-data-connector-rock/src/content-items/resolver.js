@@ -91,6 +91,9 @@ const resolver = {
   MediaContentItem: {
     ...defaultContentItemResolvers,
   },
+  WeekendContentItem: {
+    ...defaultContentItemResolvers,
+  },
   ContentItem: {
     ...defaultContentItemResolvers,
     __resolveType: async (

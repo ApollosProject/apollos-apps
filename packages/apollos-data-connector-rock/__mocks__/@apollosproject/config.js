@@ -15,6 +15,9 @@ ApolloServer.loadJs({
       UniversalContentItem: {
         EntityType: 'ContentChannelItem',
       },
+      WeekendContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
       ContentItem: {
         EntityType: 'ContentChannelItem',
       },
