@@ -51,7 +51,8 @@ export default class Campus extends RockApolloDataSource {
      * if `family.campus` is empty Rock sends:
      *   `{ campus: { location: {} } }`
      */
-    if (family && Object.keys(family.campus.location).length) {
+
+    if (family && family.campus && family.campus.location) {
       return family.campus;
     }
     return null;
