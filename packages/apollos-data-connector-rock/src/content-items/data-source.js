@@ -293,4 +293,29 @@ export default class ContentItem extends RockApolloDataSource {
     this.request()
       .find(id)
       .get();
+
+  resolveType({ attributeValues, attributes, contentChannelTypeId }) {
+    // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
+    if (
+      Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
+        ({ ContentChannelTypeId }) =>
+          ContentChannelTypeId &&
+          ContentChannelTypeId.includes(contentChannelTypeId)
+      )
+    ) {
+      return Object.keys(ROCK_MAPPINGS.CONTENT_ITEM).find((key) => {
+        const value = ROCK_MAPPINGS.CONTENT_ITEM[key];
+        return (
+          value.ContentChannelTypeId &&
+          value.ContentChannelTypeId.includes(contentChannelTypeId)
+        );
+      });
+    }
+
+    if (this.hasMedia({ attributeValues, attributes })) {
+      return 'MediaContentItem';
+    }
+
+    return 'UniversalContentItem';
+  }
 }
