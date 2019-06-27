@@ -5,7 +5,6 @@ import { Dimensions } from 'react-native';
 
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 
-import GET_USER_PROFILE from '../../tabs/connect/getUserProfile';
 import GET_CAMPUSES from './getCampusLocations';
 import CHANGE_CAMPUS from './campusChange';
 import MapView from './MapView';
