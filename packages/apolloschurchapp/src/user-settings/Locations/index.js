@@ -91,28 +91,7 @@ class Location extends PureComponent {
         fetchPolicy="cache-and-network"
       >
         {({ loading, error, data: { campuses = [] } = {} }) => (
-          <Mutation
-            mutation={CHANGE_CAMPUS}
-            update={async (cache, { data: { updateUserCampus } }) => {
-              const { currentUser } = await cache.readQuery({
-                query: GET_USER_PROFILE,
-              });
-              await cache.writeQuery({
-                query: GET_USER_PROFILE,
-                data: {
-                  currentUser: {
-                    ...currentUser,
-                    profile: {
-                      ...currentUser.profile,
-                      campus: {
-                        ...updateUserCampus.campus,
-                      },
-                    },
-                  },
-                },
-              });
-            }}
-          >
+          <Mutation mutation={CHANGE_CAMPUS}>
             {(handlePress) => (
               <MapView
                 navigation={navigation}
