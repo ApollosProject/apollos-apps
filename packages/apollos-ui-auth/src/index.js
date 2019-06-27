@@ -1,9 +1,13 @@
+import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
+import hoistNonReactStatic from 'hoist-non-react-statics';
 
 import {
   SMSPhoneEntry as AuthSMSPhoneEntry,
+  SMSPhoneEntryConnected as AuthSMSPhoneEntryConnected,
   SMSVerification as AuthSMSVerification,
+  SMSVerificationConnected as AuthSMSVerificationConnected,
 } from './SMS';
 import AuthPassword from './Password';
 
@@ -17,16 +21,22 @@ export GET_LOGIN_STATE from './getLoginState';
 export LOGOUT from './logout';
 export authLink from './authLink';
 
-export { AuthSMSPhoneEntry, AuthSMSVerification, AuthPassword };
+export {
+  AuthSMSPhoneEntry,
+  AuthSMSPhoneEntryConnected,
+  AuthSMSVerification,
+  AuthSMSVerificationConnected,
+  AuthPassword,
+};
 
 const AuthNavigator = createStackNavigator(
   {
-    AuthSMSPhoneEntry,
-    AuthSMSVerification,
+    AuthSMSPhoneEntryConnected,
+    AuthSMSVerificationConnected,
     AuthPassword,
   },
   {
-    initialRouteName: 'AuthSMSPhoneEntry',
+    initialRouteName: 'AuthSMSPhoneEntryConnected',
     headerMode: 'none',
   }
 );
@@ -37,19 +47,19 @@ AuthNavigator.navigationOptions = {
 
 AuthNavigator.propTypes = {
   screenProps: PropTypes.shape({
-    brand: PropTypes.node,
+    alternateLoginText: PropTypes.node,
     authTitleText: PropTypes.string,
-    smsPromptText: PropTypes.string,
-    smsPolicyInfo: PropTypes.node,
-    allowPassword: PropTypes.bool,
-    smsPasswordLoginPrompt: PropTypes.node,
-    passwordPromptText: PropTypes.string,
     confirmationTitleText: PropTypes.string,
     confirmationPromptText: PropTypes.string,
     onFinishAuth: PropTypes.func,
-    allowCancel: PropTypes.bool,
-    cancelText: PropTypes.string,
+    passwordPromptText: PropTypes.string,
+    smsPolicyInfo: PropTypes.node,
+    smsPromptText: PropTypes.string,
   }),
+  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-export default AuthNavigator;
+const Auth = (props) => <AuthNavigator {...props} screenProps={props} />;
+hoistNonReactStatic(Auth, AuthNavigator);
+
+export default Auth;
