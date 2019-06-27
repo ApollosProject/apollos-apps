@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, Animated } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-navigation';
 import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
 
 import {
   Button,
   PaddedView,
+  FlexedView,
   styled,
   withTheme,
   CampusCard,
@@ -17,10 +18,6 @@ import Marker from './Marker';
 
 const { CARD_WIDTH } = CampusCard;
 
-const ContainerView = styled({
-  flex: 1,
-})(View);
-
 const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
@@ -28,7 +25,7 @@ const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
 const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
-const ScrollingView = styled({
+const Footer = styled({
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -125,98 +122,83 @@ class MapView extends Component {
         index * CARD_WIDTH,
         (index + 1) * CARD_WIDTH,
       ];
-      const scale = this.animation.interpolate({
-        inputRange,
-        outputRange: [1, 2.5, 1],
-        extrapolate: 'clamp',
-      });
       const opacity = this.animation.interpolate({
         inputRange,
         outputRange: [0.35, 1, 0.35],
         extrapolate: 'clamp',
       });
-      return { scale, opacity };
+      return { opacity };
     });
 
     return (
-      <ContainerView>
-        <ContainerView>
-          <FlexedMapView
-            initialRegion={this.props.initialRegion}
-            showsUserLocation
-            mapRef={(map) => {
-              this.map = map;
-            }}
-          >
-            {campuses.map((campus, index) => {
-              const scaleStyle = {
-                transform: [
+      <FlexedView>
+        <FlexedMapView
+          initialRegion={this.props.initialRegion}
+          showsUserLocation
+          mapRef={(map) => {
+            this.map = map;
+          }}
+        >
+          {campuses.map((campus, index) => {
+            const campusOpacity = {
+              opacity: interpolations[index].opacity,
+            };
+            return (
+              <Marker
+                key={campus.id}
+                opacityStyle={campusOpacity}
+                latitude={campus.latitude}
+                longitude={campus.longitude}
+              />
+            );
+          })}
+        </FlexedMapView>
+        <Footer>
+          <SafeAreaView>
+            <Animated.ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              snapToInterval={CARD_WIDTH + 8} // account for padding
+              snapToAlignment={'start'}
+              decelerationRate={'fast'}
+              contentContainerStyle={this.contentContainerStyle} // correctly pads cards in ScrollView
+              scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
+              onScroll={Animated.event(
+                [
                   {
-                    scale: interpolations[index].scale,
-                  },
-                ],
-              };
-              const opacityStyle = {
-                opacity: interpolations[index].opacity,
-              };
-              return (
-                <Marker
-                  key={campus.id}
-                  opacityStyle={opacityStyle}
-                  scaleStyle={scaleStyle}
-                  latitude={campus.latitude}
-                  longitude={campus.longitude}
-                />
-              );
-            })}
-          </FlexedMapView>
-          <ScrollingView>
-            <SafeAreaView forceInset={{ bottom: 'always', top: 'never' }}>
-              <Animated.ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                snapToInterval={CARD_WIDTH + 8} // account for padding
-                snapToAlignment={'start'}
-                decelerationRate={'fast'}
-                contentContainerStyle={this.contentContainerStyle} // correctly pads cards in ScrollView
-                scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
-                onScroll={Animated.event(
-                  [
-                    {
-                      nativeEvent: {
-                        contentOffset: {
-                          x: this.animation,
-                        },
+                    nativeEvent: {
+                      contentOffset: {
+                        x: this.animation,
                       },
                     },
-                  ],
-                  { useNativeDriver: true }
-                )}
-              >
-                {campuses.map((campus) => (
-                  <CampusCard
-                    key={campus.id}
-                    distance={campus.distanceFromLocation}
-                    title={campus.name}
-                    description={getCampusAddress(campus)}
-                    images={[campus.image]}
-                  />
-                ))}
-              </Animated.ScrollView>
-              <PaddedView>
-                <Button
-                  title="Select Campus"
-                  pill={false}
-                  type="secondary"
-                  onPress={() =>
-                    onLocationSelect(this.state.campus || campuses[0])
-                  }
+                  },
+                ],
+                { useNativeDriver: true }
+              )}
+            >
+              {campuses.map((campus) => (
+                <CampusCard
+                  key={campus.id}
+                  distance={campus.distanceFromLocation}
+                  title={campus.name}
+                  description={getCampusAddress(campus)}
+                  images={[campus.image]}
                 />
-              </PaddedView>
-            </SafeAreaView>
-          </ScrollingView>
-        </ContainerView>
-      </ContainerView>
+              ))}
+            </Animated.ScrollView>
+            <PaddedView>
+              <Button
+                title="Select Campus"
+                pill={false}
+                type="secondary"
+                onPress={() =>
+                  onLocationSelect(this.state.campus || campuses[0])
+                }
+              />
+            </PaddedView>
+          </SafeAreaView>
+        </Footer>
+      </FlexedView>
     );
   }
 }
