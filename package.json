@@ -15,7 +15,8 @@
     ]
   },
   "scripts": {
-    "start": "lerna run start --parallel",
+    "start": "lerna run start --parallel & yarn build:api-watch",
+    "build:api-watch": "node ./scripts/watch.js",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "ci-test": "lerna run test  --stream -- --maxWorkers=2",
@@ -63,6 +64,7 @@
     "prettier": "^1.14.2",
     "react-apollo": "2.5.5",
     "react-native-storybook-loader": "^1.8.0",
-    "react-navigation": "2.18.3"
+    "react-navigation": "2.18.3",
+    "chokidar": "^3.0.1"
   }
 }

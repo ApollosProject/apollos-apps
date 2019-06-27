@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`features dataSource should create an ActionListFeature from a PERSONA_FEED 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item",
+      },
+      "subtitle": "content channel",
+      "title": "first item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item",
+      },
+      "subtitle": "content channel",
+      "title": "second item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 3,
+        "title": "third item",
+      },
+      "subtitle": "content channel",
+      "title": "third item",
+    },
+  ],
+  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features dataSource should create an ActionListFeature from multiple PERSONA_FEED algorithms 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item",
+      },
+      "subtitle": "content channel",
+      "title": "first item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item",
+      },
+      "subtitle": "content channel",
+      "title": "second item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 3,
+        "title": "third item",
+      },
+      "subtitle": "content channel",
+      "title": "third item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item",
+      },
+      "subtitle": "content channel",
+      "title": "first item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item",
+      },
+      "subtitle": "content channel",
+      "title": "second item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 3,
+        "title": "third item",
+      },
+      "subtitle": "content channel",
+      "title": "third item",
+    },
+  ],
+  "id": "ActionListFeature:f3b62441ac984046bda132a1606d0a37",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features dataSource should create an ActionListFeature from no algorithms 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [],
+  "id": "ActionListFeature:3488e26db0f447696713d54c3174653b",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features resolver must return a personaFeed for the userFeedFeatures 1`] = `
+Array [
+  Object {
+    "__typename": "ActionListFeature",
+    "actions": Array [
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 1,
+          "title": "first item",
+        },
+        "subtitle": "content channel",
+        "title": "first item",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 2,
+          "title": "second item",
+        },
+        "subtitle": "content channel",
+        "title": "second item",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 3,
+          "title": "third item",
+        },
+        "subtitle": "content channel",
+        "title": "third item",
+      },
+    ],
+    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "subtitle": "Explore what God calls you to today",
+    "title": "FOR YOU",
+  },
+]
+`;
