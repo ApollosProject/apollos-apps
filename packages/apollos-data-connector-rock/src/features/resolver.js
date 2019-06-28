@@ -1,3 +1,6 @@
+import ApollosConfig from '@apollosproject/config';
+
+const { ROCK_MAPPINGS } = ApollosConfig;
 export default {
   WeekendContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
@@ -18,7 +21,12 @@ export default {
       });
       const contentChannelFeature = await Features.createActionListFeature({
         algorithms: [
-          { type: 'CONTENT_CHANNEL', arguments: { contentChannelId: 13 } },
+          {
+            type: 'CONTENT_CHANNEL',
+            arguments: {
+              contentChannelId: ROCK_MAPPINGS.HOME_FEATURE_CHANNEL_ID,
+            },
+          },
         ],
         title: 'BULLETIN',
         subtitle: "What's happening at apollos?",
