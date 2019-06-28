@@ -16,8 +16,8 @@ const StyledChannelLabel = withTheme(({ theme }) => ({
   tint: theme.colors.primary,
 }))(ChannelLabel);
 
-const ActionCard = ({ label, icon, children, action }) => (
-  <Card>
+const ActionCard = ({ label, icon, children, action, ...otherProps }) => (
+  <Card {...otherProps}>
     <CardContent>
       {label && icon ? <StyledChannelLabel label={label} icon={icon} /> : null}
       {children}
