@@ -19,8 +19,8 @@ Object {
       "fill": "#c64f55",
     },
     "default": Object {
-      "accent": "#303030",
-      "fill": "#A5A5A5",
+      "accent": "#17B582",
+      "fill": "#F8F7F4",
     },
     "ghost": Object {
       "accent": "#303030",
@@ -41,7 +41,7 @@ Object {
   },
   "colors": Object {
     "action": Object {
-      "default": "#A5A5A5",
+      "default": "#F8F7F4",
       "primary": "#00676D",
       "secondary": "#17B582",
       "tertiary": "#6EC5B8",
@@ -141,7 +141,7 @@ Object {
     "light": Object {
       "colors": Object {
         "action": Object {
-          "default": "#A5A5A5",
+          "default": "#F8F7F4",
           "primary": "#00676D",
           "secondary": "#17B582",
           "tertiary": "#6EC5B8",
@@ -205,7 +205,7 @@ Object {
 exports[`createTheme has a custom colors 1`] = `
 Object {
   "action": Object {
-    "default": "#A5A5A5",
+    "default": "#F8F7F4",
     "primary": "red",
     "secondary": "#17B582",
     "tertiary": "#6EC5B8",
@@ -303,7 +303,7 @@ Object {
       "fill": "#c64f55",
     },
     "default": Object {
-      "accent": "#F8F7F4",
+      "accent": "#17B582",
       "fill": "#A5A5A5",
     },
     "ghost": Object {
@@ -421,7 +421,7 @@ Object {
     "light": Object {
       "colors": Object {
         "action": Object {
-          "default": "#A5A5A5",
+          "default": "#F8F7F4",
           "primary": "#00676D",
           "secondary": "#17B582",
           "tertiary": "#6EC5B8",

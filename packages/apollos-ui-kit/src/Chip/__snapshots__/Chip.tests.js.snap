@@ -118,8 +118,8 @@ exports[`The Chip component should render an icon 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#A5A5A5",
-          "borderColor": "#A5A5A5",
+          "backgroundColor": "#F8F7F4",
+          "borderColor": "#F8F7F4",
           "borderRadius": 16,
           "borderWidth": 2,
           "elevation": 2,
@@ -139,7 +139,7 @@ exports[`The Chip component should render an icon 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "color": "#303030",
+            "color": "#17B582",
             "flexGrow": 1,
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
@@ -226,7 +226,7 @@ exports[`The Chip component should render an icon 1`] = `
             fill={
               Array [
                 0,
-                4281348144,
+                4279743874,
               ]
             }
             fillOpacity={1}
@@ -328,8 +328,8 @@ exports[`The Chip component should render correctly 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
+            "backgroundColor": "#F8F7F4",
+            "borderColor": "#F8F7F4",
             "borderRadius": 16,
             "borderWidth": 2,
             "elevation": 2,
@@ -349,7 +349,7 @@ exports[`The Chip component should render correctly 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "color": "#303030",
+              "color": "#17B582",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",

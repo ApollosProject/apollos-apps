@@ -121,7 +121,7 @@ export const shadows = ({ colors: themeColors }) => ({
 export const buttons = ({ colors: themeColors }) => ({
   default: {
     fill: themeColors.action.default,
-    accent: themeColors.text.primary,
+    accent: themeColors.action.secondary,
   },
   primary: {
     fill: themeColors.action.primary,
