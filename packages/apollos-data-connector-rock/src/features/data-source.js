@@ -39,6 +39,15 @@ export default class Features extends RockApolloDataSource {
     };
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  createTextFeature({ text, id }) {
+    return {
+      body: text,
+      id: createGlobalId(id, 'TextFeature'),
+      __typename: 'TextFeature',
+    };
+  }
+
   async personaFeedAlgorithm() {
     const { ContentItem } = this.context.dataSources;
 
