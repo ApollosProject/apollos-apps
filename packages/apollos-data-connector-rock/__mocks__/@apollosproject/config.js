@@ -25,6 +25,7 @@ ApolloServer.loadJs({
     DATAVIEW_CATEGORIES: {
       PersonaId: 123,
     },
+    HOME_FEATURE_CHANNEL_ID: 13,
   },
   ROCK: {
     TIMEZONE: 'America/New_York',
