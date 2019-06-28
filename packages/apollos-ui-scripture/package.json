@@ -40,7 +40,7 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^1.0.0-beta.0",
+    "@apollosproject/ui-storybook": "^1.0.0",
     "@storybook/react-native": "^4.0.7",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
