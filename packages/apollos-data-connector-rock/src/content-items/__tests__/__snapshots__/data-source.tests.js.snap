@@ -141,6 +141,30 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns a text feature when a contentItem has a TextFeature field 1`] = `
+Array [
+  Object {
+    "body": "something",
+    "id": "TextFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns a text feature when a contentItem has a TextFeature field 2`] = `
+Array [
+  Array [
+    Object {
+      "id": 123,
+      "text": "something",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns an empty array when there are no features 1`] = `Array []`;
+
+exports[`ContentItemsModel returns an empty array when there are no features 2`] = `Array []`;
+
 exports[`ContentItemsModel returns null when there are no child content items 1`] = `
 Array [
   Array [
