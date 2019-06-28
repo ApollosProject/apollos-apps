@@ -1,5 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`features dataSource should create an ActionListFeature from a CONTENT_CHANNEL algorithm 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "title": "third item by content channel id",
+    },
+  ],
+  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features dataSource should create an ActionListFeature from a CONTENT_CHANNEL algorithm 2`] = `Array []`;
+
+exports[`features dataSource should create an ActionListFeature from a CONTENT_CHANNEL algorithm with limit 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "title": "third item by content channel id",
+    },
+  ],
+  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features dataSource should create an ActionListFeature from a CONTENT_CHANNEL algorithm with limit 2`] = `
+Array [
+  Array [
+    1,
+  ],
+]
+`;
+
 exports[`features dataSource should create an ActionListFeature from a PERSONA_FEED 1`] = `
 Object {
   "__typename": "ActionListFeature",
@@ -167,7 +285,111 @@ Object {
 }
 `;
 
-exports[`features resolver must return a personaFeed for the userFeedFeatures 1`] = `
+exports[`features dataSource should create an ActionListFeature from two different algorithms 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "title": "third item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item",
+      },
+      "subtitle": "content channel",
+      "title": "first item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item",
+      },
+      "subtitle": "content channel",
+      "title": "second item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 3,
+        "title": "third item",
+      },
+      "subtitle": "content channel",
+      "title": "third item",
+    },
+  ],
+  "id": "ActionListFeature:f3b62441ac984046bda132a1606d0a37",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `
+"contentChannelId is a required argument for the CONTENT_CHANNEL ActionList algorithm.
+Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
+`;
+
+exports[`features resolver must return a personaFeed and a contentChannelFeed for the userFeedFeatures 1`] = `
 Array [
   Object {
     "__typename": "ActionListFeature",
@@ -221,6 +443,57 @@ Array [
     "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
+  },
+  Object {
+    "__typename": "ActionListFeature",
+    "actions": Array [
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:559b23fd0aa90e81b1c023e72e230fa1",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 1,
+          "title": "first item by content channel id",
+        },
+        "subtitle": "content channel",
+        "title": "first item by content channel id",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:4f68015ba18662a7409d1219a4ce013e",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 2,
+          "title": "second item by content channel id",
+        },
+        "subtitle": "content channel",
+        "title": "second item by content channel id",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:772fcb6087247ebad630814e2ce0cd16",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": null,
+          "id": 3,
+          "title": "third item by content channel id",
+        },
+        "subtitle": undefined,
+        "title": "third item by content channel id",
+      },
+    ],
+    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "subtitle": "What's happening at apollos?",
+    "title": "BULLETIN",
   },
 ]
 `;

@@ -102,6 +102,8 @@ ROCK_MAPPINGS:
   CAMPAIGN_CHANNEL_IDS:
     - 11
 
+  HOME_FEATURE_CHANNEL_ID: 13
+
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
   TEXT: 1
