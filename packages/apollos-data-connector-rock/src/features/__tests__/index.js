@@ -187,6 +187,20 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot();
     });
+
+    it('createTextFeature should create a Text feature', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createTextFeature({
+        text: 'Hello World',
+        id: 123,
+      });
+
+      expect(result).toMatchSnapshot();
+    });
   });
 
   describe('resolver', () => {
