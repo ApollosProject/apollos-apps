@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Animated } from 'react-native';
+import { View, Animated, Dimensions } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
@@ -16,7 +16,13 @@ import {
 
 import Marker from './Marker';
 
-const { CARD_WIDTH } = CampusCard;
+// const { CARD_WIDTH } = CampusCard;
+
+const { width } = Dimensions.get('window');
+
+/* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
+ * calculation of width minus `CampusCard` margins */
+export const CARD_WIDTH = width - 36;
 
 const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
@@ -31,6 +37,11 @@ const Footer = styled({
   left: 0,
   right: 0,
 })(View);
+
+const StyledCampusCard = styled(({ theme }) => ({
+  width: CARD_WIDTH,
+  marginHorizontal: theme.sizing.baseUnit / 4,
+}))(CampusCard);
 
 class MapView extends Component {
   static propTypes = {
@@ -177,7 +188,7 @@ class MapView extends Component {
               )}
             >
               {campuses.map((campus) => (
-                <CampusCard
+                <StyledCampusCard
                   key={campus.id}
                   distance={campus.distanceFromLocation}
                   title={campus.name}
