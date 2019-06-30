@@ -163,6 +163,7 @@ type ContentSeriesContentItem implements ContentItem & Node {
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
+  features: [Feature]
 }
 
 type DevotionalContentItem implements ContentItem & Node {
@@ -370,6 +371,12 @@ type SharableContentItem implements Sharable {
 
 type SmsPinResult {
   success: Boolean
+}
+
+type TextFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  body: String
 }
 
 type Theme {

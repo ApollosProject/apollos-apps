@@ -6,6 +6,10 @@ export default {
     features: (root, args, { dataSources: { ContentItem } }) =>
       ContentItem.getFeatures(root),
   },
+  ContentSeriesContentItem: {
+    features: (root, args, { dataSources: { ContentItem } }) =>
+      ContentItem.getFeatures(root),
+  },
   Feature: {
     // Implementors must attach __typename to root.
     __resolveType: ({ __typename }) => __typename,

@@ -104,10 +104,17 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   // eslint-disable-next-line class-methods-use-this
-  getFeatures({ id }) {
-    // todo - implement logic to get features for a content item.
-    console.log(id);
-    return [];
+  getFeatures({ attributeValues }) {
+    const { Features } = this.context.dataSources;
+    const features = [];
+
+    const text = get(attributeValues, 'textFeature.value', '');
+    if (text !== '') {
+      features.push(
+        Features.createTextFeature({ text, id: attributeValues.textFeature.id })
+      );
+    }
+    return features;
   }
 
   createSummary = ({ content, summary }) => {

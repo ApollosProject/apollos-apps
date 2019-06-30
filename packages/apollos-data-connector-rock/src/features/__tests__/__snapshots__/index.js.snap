@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`features dataSource createTextFeature should create a Text feature 1`] = `
+Object {
+  "__typename": "TextFeature",
+  "body": "Hello World",
+  "id": "TextFeature:2cc8f539e345e8f479a55e2fdc9743c0",
+}
+`;
+
 exports[`features dataSource should create an ActionListFeature from a CONTENT_CHANNEL algorithm 1`] = `
 Object {
   "__typename": "ActionListFeature",

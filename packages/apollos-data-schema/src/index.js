@@ -564,7 +564,18 @@ export const featuresSchema = gql`
     actions: [ActionListAction]
   }
 
+  type TextFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    body: String
+  }
+
   extend type WeekendContentItem {
+    features: [Feature]
+  }
+
+  extend type ContentSeriesContentItem {
     features: [Feature]
   }
 
