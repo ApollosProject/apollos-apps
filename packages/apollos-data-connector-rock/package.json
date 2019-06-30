@@ -40,8 +40,8 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.0.0-beta.0",
-    "@apollosproject/babel-preset-apollos": "^1.0.0-beta.0",
+    "@apollosproject/apollo-server-env-mock": "^1.0.0",
+    "@apollosproject/babel-preset-apollos": "^1.0.0",
     "apollo-server": "^2.5.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "0.13.2",
