@@ -16,11 +16,9 @@ import {
 
 import Marker from './Marker';
 
-const { width } = Dimensions.get('window');
-
 /* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
  * calculation of width minus `CampusCard` margins */
-export const CARD_WIDTH = width - 36;
+const CARD_WIDTH = Dimensions.get('window').width - 36;
 
 const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
