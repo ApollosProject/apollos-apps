@@ -16,8 +16,6 @@ import {
 
 import Marker from './Marker';
 
-// const { CARD_WIDTH } = CampusCard;
-
 const { width } = Dimensions.get('window');
 
 /* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
