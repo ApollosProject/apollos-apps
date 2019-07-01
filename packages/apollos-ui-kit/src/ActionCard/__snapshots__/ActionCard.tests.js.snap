@@ -74,6 +74,7 @@ exports[`the ActionCard component should render 1`] = `
                 "alignItems": "center",
                 "flex": null,
                 "flexDirection": "row",
+                "paddingBottom": 16,
               }
             }
           >

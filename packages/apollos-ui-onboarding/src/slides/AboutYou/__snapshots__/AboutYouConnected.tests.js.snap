@@ -273,8 +273,8 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "#A5A5A5",
-                    "borderColor": "#A5A5A5",
+                    "backgroundColor": "#F8F7F4",
+                    "borderColor": "#F8F7F4",
                     "borderRadius": 16,
                     "borderWidth": 2,
                     "elevation": 2,
@@ -295,7 +295,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                   style={
                     Object {
                       "alignItems": "center",
-                      "color": "#303030",
+                      "color": "#17B582",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "justifyContent": "center",
@@ -1004,8 +1004,8 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "#A5A5A5",
-                    "borderColor": "#A5A5A5",
+                    "backgroundColor": "#F8F7F4",
+                    "borderColor": "#F8F7F4",
                     "borderRadius": 16,
                     "borderWidth": 2,
                     "elevation": 2,
@@ -1026,7 +1026,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "color": "#303030",
+                      "color": "#17B582",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
                       "justifyContent": "center",
