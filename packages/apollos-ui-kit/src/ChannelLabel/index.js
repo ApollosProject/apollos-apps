@@ -37,8 +37,8 @@ const StyledH6 = styled(({ tint }) => ({
 }))(H6);
 
 const ChannelLabel = enhance(
-  ({ label, tint, icon, withFlex, isLoading, iconSize }) => (
-    <Wrapper flexed={withFlex}>
+  ({ label, tint, icon, withFlex, isLoading, iconSize, ...wrapperProps }) => (
+    <Wrapper flexed={withFlex} {...wrapperProps}>
       {icon ? (
         <Icon name={icon} size={iconSize} fill={tint} isLoading={isLoading} />
       ) : null}

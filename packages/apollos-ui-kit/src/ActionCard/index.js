@@ -14,6 +14,7 @@ const ActionCardActions = styled(
 
 const StyledChannelLabel = withTheme(({ theme }) => ({
   tint: theme.colors.primary,
+  style: { paddingBottom: theme.sizing.baseUnit },
 }))(ChannelLabel);
 
 const ActionCard = ({ label, icon, children, action, ...otherProps }) => (
