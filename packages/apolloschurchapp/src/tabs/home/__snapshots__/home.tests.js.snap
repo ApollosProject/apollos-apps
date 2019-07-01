@@ -885,7 +885,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         "kind": "OperationDefinition",
                         "name": Object {
                           "kind": "Name",
-                          "value": "getPersonaFeed",
+                          "value": "getFeedFeatures",
                         },
                         "operation": "query",
                         "selectionSet": Object {
@@ -893,37 +893,19 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "selections": Array [
                             Object {
                               "alias": undefined,
-                              "arguments": Array [
-                                Object {
-                                  "kind": "Argument",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "first",
-                                  },
-                                  "value": Object {
-                                    "kind": "IntValue",
-                                    "value": "4",
-                                  },
-                                },
-                              ],
+                              "arguments": Array [],
                               "directives": Array [],
                               "kind": "Field",
                               "name": Object {
                                 "kind": "Name",
-                                "value": "personaFeed",
+                                "value": "userFeedFeatures",
                               },
                               "selectionSet": Object {
                                 "kind": "SelectionSet",
                                 "selections": Array [
                                   Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
                                     "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "edges",
-                                    },
+                                    "kind": "InlineFragment",
                                     "selectionSet": Object {
                                       "kind": "SelectionSet",
                                       "selections": Array [
@@ -934,31 +916,155 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                                           "kind": "Field",
                                           "name": Object {
                                             "kind": "Name",
-                                            "value": "node",
+                                            "value": "id",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "title",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "subtitle",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "actions",
                                           },
                                           "selectionSet": Object {
                                             "kind": "SelectionSet",
                                             "selections": Array [
                                               Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
                                                 "directives": Array [],
-                                                "kind": "FragmentSpread",
+                                                "kind": "Field",
                                                 "name": Object {
                                                   "kind": "Name",
-                                                  "value": "largeCardFragment",
+                                                  "value": "id",
+                                                },
+                                                "selectionSet": undefined,
+                                              },
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "title",
+                                                },
+                                                "selectionSet": undefined,
+                                              },
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "subtitle",
+                                                },
+                                                "selectionSet": undefined,
+                                              },
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "image",
+                                                },
+                                                "selectionSet": Object {
+                                                  "kind": "SelectionSet",
+                                                  "selections": Array [
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "sources",
+                                                      },
+                                                      "selectionSet": Object {
+                                                        "kind": "SelectionSet",
+                                                        "selections": Array [
+                                                          Object {
+                                                            "alias": undefined,
+                                                            "arguments": Array [],
+                                                            "directives": Array [],
+                                                            "kind": "Field",
+                                                            "name": Object {
+                                                              "kind": "Name",
+                                                              "value": "uri",
+                                                            },
+                                                            "selectionSet": undefined,
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                  ],
                                                 },
                                               },
                                               Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
                                                 "directives": Array [],
-                                                "kind": "FragmentSpread",
+                                                "kind": "Field",
                                                 "name": Object {
                                                   "kind": "Name",
-                                                  "value": "contentItemFragment",
+                                                  "value": "relatedNode",
+                                                },
+                                                "selectionSet": Object {
+                                                  "kind": "SelectionSet",
+                                                  "selections": Array [
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "id",
+                                                      },
+                                                      "selectionSet": undefined,
+                                                    },
+                                                  ],
                                                 },
                                               },
                                             ],
                                           },
                                         },
                                       ],
+                                    },
+                                    "typeCondition": Object {
+                                      "kind": "NamedType",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "ActionListFeature",
+                                      },
                                     },
                                   },
                                 ],
@@ -1626,7 +1732,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     ],
                     "kind": "Document",
                     "loc": Object {
-                      "end": 1253,
+                      "end": 1432,
                       "start": 0,
                     },
                   }
@@ -1991,81 +2097,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       </View>
                     </View>
                   </View>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "aspectRatio": undefined,
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#FFFFFF",
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 12,
-                          "marginVertical": 2.6400000000000006,
-                          "width": "50%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomWidth": 0,
-                        "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                        "borderLeftWidth": 0,
-                        "borderRightWidth": 0,
-                        "borderTopWidth": 0,
-                        "marginBottom": 16,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </View>
