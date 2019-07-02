@@ -125,7 +125,6 @@ class Home extends PureComponent {
                         loading: featuresLoading,
                         ...other
                       }) =>
-                        console.log(features, other) ||
                         get(features, 'userFeedFeatures', []).map(
                           ({ title, subtitle, actions, id }) => (
                             <ContentTableCard
