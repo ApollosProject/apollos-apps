@@ -29,8 +29,16 @@ class ContentTableCard extends PureComponent {
     header: PropTypes.element,
   };
 
+  handleOnPress = ({ action, relatedNode: { id } }) => {
+    const { onPress } = this.props;
+
+    if (action === 'READ_CONTENT') {
+      onPress({ id });
+    }
+  };
+
   render() {
-    const { onPress, isLoading, content, header: headerContent } = this.props;
+    const { isLoading, content, header: headerContent } = this.props;
 
     return (
       <Card>
@@ -41,7 +49,7 @@ class ContentTableCard extends PureComponent {
               isLoading={isLoading}
               key={item.id}
               id={item.id}
-              onPress={() => onPress(item)}
+              onPress={() => this.handleOnPress(item)}
               label={item.subtitle || ''}
               title={item.title || ''}
               imageSource={item.image ? item.image.sources : ''}

@@ -50,7 +50,7 @@ class Home extends PureComponent {
 
   handleOnPress = (item) =>
     this.props.navigation.navigate('ContentSingle', {
-      itemId: item.relatedNode.id,
+      itemId: item.id,
       transitionKey: item.transitionKey,
     });
 

@@ -11,6 +11,7 @@ export default gql`
           id
           title
           subtitle
+          action
           image {
             sources {
               uri
