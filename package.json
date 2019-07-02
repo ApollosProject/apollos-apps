@@ -64,7 +64,7 @@
     "prettier": "^1.14.2",
     "react-apollo": "2.5.5",
     "react-native-storybook-loader": "^1.8.0",
-    "react-navigation": "2.18.3",
+    "react-navigation": "3.11.0",
     "chokidar": "^3.0.1"
   }
 }
