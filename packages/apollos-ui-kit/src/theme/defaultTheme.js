@@ -25,7 +25,7 @@ import * as types from './types';
 // elements are colored, go there. The next level of control comes
 // on a per-component basis with "overrides"
 export const colors = {
-  primary: '#00676D',
+  primary: '#00676',
   secondary: '#17B582',
   tertiary: '#6EC5B8',
   screen: '#F8F7F4',
@@ -121,7 +121,7 @@ export const shadows = ({ colors: themeColors }) => ({
 export const buttons = ({ colors: themeColors }) => ({
   default: {
     fill: themeColors.action.default,
-    accent: themeColors.action.secondary,
+    accent: themeColors.text.primary,
   },
   primary: {
     fill: themeColors.action.primary,

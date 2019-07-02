@@ -22,7 +22,7 @@ const light = ({ colors, alpha }) => ({
         .string(),
     },
     action: {
-      default: colors.lightPrimary,
+      default: colors.lightTertiary,
       primary: colors.primary,
       secondary: colors.secondary,
       tertiary: colors.tertiary,
