@@ -120,11 +120,7 @@ class Home extends PureComponent {
                       query={GET_FEED_FEATURES}
                       fetchPolicy="cache-and-network"
                     >
-                      {({
-                        data: features,
-                        loading: featuresLoading,
-                        ...other
-                      }) =>
+                      {({ data: features, loading: featuresLoading }) =>
                         get(features, 'userFeedFeatures', []).map(
                           ({ title, subtitle, actions, id }) => (
                             <ContentTableCard
