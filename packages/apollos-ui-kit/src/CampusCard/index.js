@@ -1,89 +1,63 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { compose, pure } from 'recompose';
-import { Dimensions, View } from 'react-native';
 
 import Card, { CardContent } from '../Card';
 import ConnectedImage from '../ConnectedImage';
 import SideBySideView from '../SideBySideView';
-import { withIsLoading } from '../isLoading';
 import styled from '../styled';
 import { H5, H6 } from '../typography';
 
-const { width } = Dimensions.get('window');
-
-/* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
- * calculation of width minus `CampusCard` margins */
-export const CARD_WIDTH = width - 36;
-
-const enhance = compose(
-  withIsLoading,
-  pure
-);
-
-const HorizontalLayout = styled({
+const HorizontalLayout = styled(({ theme }) => ({
   alignItems: 'center',
-})(SideBySideView);
+  height: theme.sizing.baseUnit * 6,
+}))(SideBySideView);
 
-const HorizontalTextLayout = styled(({ theme }) => ({
+const Header = styled(({ theme }) => ({
   height: theme.helpers.verticalRhythm(0.875),
 }))(SideBySideView);
 
-const RightColumn = styled(({ theme }) => ({
-  paddingVertical: theme.sizing.baseUnit * 0.85,
+const FlexedCardContent = styled({
   flex: 1,
-}))(CardContent);
+})(CardContent);
 
 const CampusImage = styled({
   aspectRatio: 1,
   height: '100%',
-  alignSelf: 'stretch',
-  resizeMode: 'cover', // This is to make sure images smaller than the ProgressiveImage size will cover
+  resizeMode: 'cover',
 })(ConnectedImage);
 
-const CampusImageSizer = styled({
-  aspectRatio: 1,
-  height: '100%',
-  alignSelf: 'stretch',
-})(View);
-
-const StyledCard = styled(({ theme }) => ({
-  width: CARD_WIDTH,
-  height: theme.sizing.baseUnit * 6,
-  marginHorizontal: theme.sizing.baseUnit / 4,
-}))(Card);
-
-const CampusCard = enhance(
-  ({ title, description, distance, images, isLoading, ...otherProps }) => (
-    <StyledCard isLoading={isLoading} inHorizontalList {...otherProps}>
+const CampusCard = memo(
+  ({ title, description, distance, images, ...otherProps }) => (
+    <Card
+      isLoading={otherProps.isLoading || false}
+      inHorizontalList
+      {...otherProps}
+    >
       <HorizontalLayout>
-        {images ? (
-          <CampusImageSizer>
-            <CampusImage source={images} />
-          </CampusImageSizer>
-        ) : null}
-        <RightColumn>
-          <HorizontalTextLayout>
+        {images ? <CampusImage source={images} /> : null}
+        <FlexedCardContent>
+          <Header>
             <H5>{title}</H5>
             <H6>
               {Math.round(distance)}
               mi
             </H6>
-          </HorizontalTextLayout>
+          </Header>
           {description ? <H6>{description}</H6> : null}
-        </RightColumn>
+        </FlexedCardContent>
       </HorizontalLayout>
-    </StyledCard>
+    </Card>
   )
 );
 
-CampusCard.CARD_WIDTH = CARD_WIDTH;
 CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   images: PropTypes.any, // eslint-disable-line
   category: PropTypes.string,
-  isLoading: PropTypes.bool,
+  distance: PropTypes.number,
 };
+
+CampusCard.displayName = 'CampusCard';
 
 export default CampusCard;

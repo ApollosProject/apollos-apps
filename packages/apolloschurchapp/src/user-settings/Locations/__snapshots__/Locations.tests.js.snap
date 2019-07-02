@@ -74,7 +74,6 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "height": 96,
                     "margin": 8,
                     "marginHorizontal": 4,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
@@ -103,60 +102,50 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                         "alignItems": "center",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
+                        "height": 96,
                         "justifyContent": "space-between",
                       }
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "alignSelf": "stretch",
                           "aspectRatio": 1,
-                          "height": "100%",
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da47e8e69-9542-42de-9ed3-ff42fdc82417",
+                            },
+                          ]
+                        }
                         style={
                           Object {
                             "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
-                            "width": "100%",
+                            "height": "100%",
+                            "opacity": 0,
+                            "resizeMode": "cover",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={
-                            Array [
-                              Object {
-                                "cache": "force-cache",
-                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da47e8e69-9542-42de-9ed3-ff42fdc82417",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "height": "100%",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
                           "flex": 1,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 13.6,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -220,7 +209,6 @@ Anderson, SC 29621-3619
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "height": 96,
                     "margin": 8,
                     "marginHorizontal": 4,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
@@ -249,60 +237,50 @@ Anderson, SC 29621-3619
                         "alignItems": "center",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
+                        "height": 96,
                         "justifyContent": "space-between",
                       }
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "alignSelf": "stretch",
                           "aspectRatio": 1,
-                          "height": "100%",
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
+                            },
+                          ]
+                        }
                         style={
                           Object {
                             "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
-                            "width": "100%",
+                            "height": "100%",
+                            "opacity": 0,
+                            "resizeMode": "cover",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={
-                            Array [
-                              Object {
-                                "cache": "force-cache",
-                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "height": "100%",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
                           "flex": 1,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 13.6,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -366,7 +344,6 @@ Richardson, TX 75080-5525
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "height": 96,
                     "margin": 8,
                     "marginHorizontal": 4,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
@@ -395,60 +372,50 @@ Richardson, TX 75080-5525
                         "alignItems": "center",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
+                        "height": 96,
                         "justifyContent": "space-between",
                       }
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "alignSelf": "stretch",
                           "aspectRatio": 1,
-                          "height": "100%",
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dbad9eb54-3e78-44a7-a028-3f2d6e71a36f",
+                            },
+                          ]
+                        }
                         style={
                           Object {
                             "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
-                            "width": "100%",
+                            "height": "100%",
+                            "opacity": 0,
+                            "resizeMode": "cover",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={
-                            Array [
-                              Object {
-                                "cache": "force-cache",
-                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dbad9eb54-3e78-44a7-a028-3f2d6e71a36f",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "height": "100%",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
                           "flex": 1,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 13.6,
+                          "paddingVertical": 16,
                         }
                       }
                     >
@@ -512,7 +479,6 @@ Cincinnati, OH 45202-2118
                   Object {
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
-                    "height": 96,
                     "margin": 8,
                     "marginHorizontal": 4,
                     "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
@@ -541,60 +507,50 @@ Cincinnati, OH 45202-2118
                         "alignItems": "center",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
+                        "height": 96,
                         "justifyContent": "space-between",
                       }
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "alignSelf": "stretch",
                           "aspectRatio": 1,
-                          "height": "100%",
+                          "backgroundColor": "#A5A5A5",
+                          "width": "100%",
                         }
                       }
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
+                            },
+                          ]
+                        }
                         style={
                           Object {
                             "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
-                            "width": "100%",
+                            "height": "100%",
+                            "opacity": 0,
+                            "resizeMode": "cover",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          source={
-                            Array [
-                              Object {
-                                "cache": "force-cache",
-                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "alignSelf": "stretch",
-                              "aspectRatio": 1,
-                              "backgroundColor": "#A5A5A5",
-                              "height": "100%",
-                              "opacity": 0,
-                              "resizeMode": "cover",
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                     <View
                       style={
                         Object {
                           "flex": 1,
                           "paddingHorizontal": 16,
-                          "paddingVertical": 13.6,
+                          "paddingVertical": 16,
                         }
                       }
                     >
