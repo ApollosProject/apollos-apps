@@ -1,4 +1,30 @@
 
+v1.0.0: June 27, 2019
+
+- Adds Today Actions with Persona Feed algorithm (#816) (4ae0646e)
+- Adds Onboarding Test Coverage (#826) (cea568f8)
+- Adds Willow Required Onboarding Changes (#784) (67a6e6a3)
+- Adds Features boilerplate schema/resolvers/datasource (#813) (b4f18cf9)
+- Adds additional android permission back to fix android crash on video play (#794) (cbb54843)
+- Adds Component prop to ConnectedComponents in Onboarding (#775) (5e24467b)
+
+- Sets new phone numbers in SMS Auth as Mobile phone numbers (#825) (b1debf76)
+- Refactors UI Auth package to be more customizable and modular (#788) (d7b36549)
+- Redesigns Android Location Markers (#822) (036a8263)
+- Updates onesignal (#818) (18269c3c)
+- Updates Device Info Package (#799) (0e6f6e9c)
+- Updates all queries to use apollo naming standards (#789) (d2409f72)
+- Corrects the coordinates being sent to LocationFinder query (#762) (75d245e6)
+
+- Fixes logging in a user if their phone number has multiple users (#786) (194979b7)
+- Fixes rock-apollo-datasource null bug (#812) (90fe9b27)
+- Fixed not being able to close the check in screen (#810) (7988de29)
+- Fixes Parent Image Algorithm (#805) (0d526a46)
+- Fixes Save Button to Follow Keyboard (#791) (69c62fe4)
+- Fixes version of PassKit node module (#797) (40b63f21)
+- Remove required flag from certain schema attributes (#787) (50656d95)
+- Fixes Google Maps Issue (#772) (19dcc745)\
+
 v1.0.0-beta.0: June 7, 2019
 
 - Adds GraphQL Schema Diff and Linting (#759) (48ae33d7)

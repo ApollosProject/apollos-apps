@@ -96,33 +96,8 @@ const resolver = {
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: async (
-      { attributeValues, attributes, contentChannelTypeId },
-      { dataSources: { ContentItem } }
-    ) => {
-      // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
-      if (
-        Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
-          ({ ContentChannelTypeId }) =>
-            ContentChannelTypeId &&
-            ContentChannelTypeId.includes(contentChannelTypeId)
-        )
-      ) {
-        return Object.keys(ROCK_MAPPINGS.CONTENT_ITEM).find((key) => {
-          const value = ROCK_MAPPINGS.CONTENT_ITEM[key];
-          return (
-            value.ContentChannelTypeId &&
-            value.ContentChannelTypeId.includes(contentChannelTypeId)
-          );
-        });
-      }
-
-      if (ContentItem.hasMedia({ attributeValues, attributes })) {
-        return 'MediaContentItem';
-      }
-
-      return 'UniversalContentItem';
-    },
+    __resolveType: (root, { dataSources: { ContentItem } }) =>
+      ContentItem.resolveType(root),
   },
   SharableContentItem: {
     url: () => 'https://apollosrock.newspring.cc/', // todo: return a dynamic url that links to the content item

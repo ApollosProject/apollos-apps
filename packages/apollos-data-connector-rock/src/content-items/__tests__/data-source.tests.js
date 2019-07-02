@@ -131,6 +131,34 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('returns a text feature when a contentItem has a TextFeature field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    const result = dataSource.getFeatures({
+      attributeValues: { textFeature: { id: 123, value: 'something' } },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns an empty array when there are no features', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    const result = dataSource.getFeatures({
+      attributeValues: { textFeature: { id: 123, value: '' } },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
   it('returns null when there are no parent content items with images', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.getCursorByChildContentItemId = () => ({

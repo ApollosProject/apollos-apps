@@ -541,8 +541,46 @@ export const featuresSchema = gql`
     order: Int # 0 is the "Main Content". If order is < 0 than this comes before the body content.
   }
 
+  enum ACTION_FEATURE_ACTION {
+    READ_CONTENT
+  }
+
+  type ActionListAction {
+    id: ID!
+
+    title: String
+    subtitle: String
+    image: ImageMedia
+    relatedNode: Node
+    action: ACTION_FEATURE_ACTION
+  }
+
+  type ActionListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    actions: [ActionListAction]
+  }
+
+  type TextFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    body: String
+  }
+
   extend type WeekendContentItem {
     features: [Feature]
+  }
+
+  extend type ContentSeriesContentItem {
+    features: [Feature]
+  }
+
+  extend type Query {
+    userFeedFeatures: [Feature] @cacheControl(maxAge: 0)
   }
 `;
 
