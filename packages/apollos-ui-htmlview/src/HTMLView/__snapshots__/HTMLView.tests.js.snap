@@ -1,5 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`the HTMLView component should not render an image inside an anchor 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      lineNumber={8}
+      onReady={true}
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <View>
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#17B582",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`the HTMLView component should render a block quote 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
