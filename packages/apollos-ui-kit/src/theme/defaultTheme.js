@@ -25,7 +25,7 @@ import * as types from './types';
 // elements are colored, go there. The next level of control comes
 // on a per-component basis with "overrides"
 export const colors = {
-  primary: '#00676',
+  primary: '#00676D',
   secondary: '#17B582',
   tertiary: '#6EC5B8',
   screen: '#F8F7F4',
