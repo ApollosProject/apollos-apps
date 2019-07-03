@@ -28,9 +28,13 @@ const ActionCard = ({ label, icon, children, action, ...otherProps }) => (
 );
 
 ActionCard.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.object, // covers Fragments
+  ]).isRequired,
   label: PropTypes.string,
   icon: PropTypes.string,
-  children: PropTypes.any, // eslint-disable-line
   action: PropTypes.node,
 };
 
