@@ -333,7 +333,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -349,7 +349,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -641,7 +641,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -657,7 +657,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1155,7 +1155,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1171,7 +1171,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1463,7 +1463,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1479,7 +1479,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
