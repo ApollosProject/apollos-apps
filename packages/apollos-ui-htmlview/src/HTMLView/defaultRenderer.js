@@ -19,6 +19,12 @@ import {
 
 const LINE_BREAK = '\n';
 const TEXT_TYPES_THAT_SHOULD_WRAP = [Text, BodyText, ButtonLink];
+const ILLEGAL_TEXT_CHILDREN_TYPES = [ConnectedImage];
+
+export const stripIllegalMarkup = (children) =>
+  Children.toArray(children).filter(
+    (child) => !ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)
+  );
 
 export const wrapTextChildren = (children, Component = BodyText) => {
   const newChildren = [];
@@ -26,7 +32,7 @@ export const wrapTextChildren = (children, Component = BodyText) => {
   Children.toArray(children).forEach((child, i) => {
     if (TEXT_TYPES_THAT_SHOULD_WRAP.includes(child.type)) {
       currentTextChildren.push(child);
-    } else {
+    } else if (!ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)) {
       if (currentTextChildren.length) {
         newChildren.push(
           // eslint-disable-next-line
@@ -44,7 +50,7 @@ export const wrapTextChildren = (children, Component = BodyText) => {
       <Component key="composed-children">{currentTextChildren}</Component>
     );
   }
-  return newChildren;
+  return stripIllegalMarkup(newChildren);
 };
 
 const defaultRenderer = (node, { children }) => {
@@ -98,7 +104,11 @@ const defaultRenderer = (node, { children }) => {
       }
       const onPress = () => Linking.openURL(url);
       if (url) {
-        return <ButtonLink onPress={onPress}>{children}</ButtonLink>;
+        return (
+          <ButtonLink onPress={onPress}>
+            {stripIllegalMarkup(children)}
+          </ButtonLink>
+        );
       }
     }
     /* ignoring fallthrough on the next line because of the conditional return above,
