@@ -10,12 +10,12 @@ import GradientOverlayImage from '../GradientOverlayImage';
 import TouchableScale from '../TouchableScale';
 
 const CardView = styled(
-  ({ theme }) => ({
+  ({ theme, aspectRatio }) => ({
     borderRadius: theme.sizing.baseUnit,
     overflow: 'hidden',
     width: '100%',
     height: '100%',
-    aspectRatio: 1,
+    aspectRatio,
   }),
   'TileImage'
 )(View);
@@ -42,9 +42,9 @@ const enhance = compose(
 );
 
 const TileImage = enhance(
-  ({ image, link, onPressItem, text, theme, isLoading }) => (
+  ({ image, link, onPressItem, text, theme, isLoading, aspectRatio }) => (
     <TouchableScale onPress={() => !isLoading && onPressItem({ ...link })}>
-      <CardView>
+      <CardView aspectRatio={aspectRatio}>
         <SquareGradientOverlayImage
           source={image}
           isLoading={isLoading}
@@ -63,10 +63,12 @@ TileImage.propTypes = {
   onPressItem: PropTypes.func,
   text: PropTypes.string,
   isLoading: PropTypes.bool,
+  aspectRatio: PropTypes.number,
 };
 
 TileImage.defaultProps = {
   text: '',
+  aspectRatio: 1,
 };
 
 export default TileImage;

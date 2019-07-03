@@ -35,4 +35,12 @@ storiesOf('ui-kit/TileImage', module)
         isLoading
       />
     </Square>
+  ))
+  .add('rectangular', () => (
+    <TileImage
+      image={'https://picsum.photos/600/400/?random'}
+      link={'https://github.com'}
+      isLoading
+      aspectRatio={0.75}
+    />
   ));

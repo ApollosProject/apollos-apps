@@ -41,6 +41,18 @@ describe('the TileImage component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a rectangular tile', () => {
+    const tree = renderer.create(
+      <Providers>
+        <TileImage
+          image={'https://picsum.photos/600/400/?random'}
+          link={'https://github.com'}
+          aspectRatio={1.75}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('passes an onPressItem prop', () => {
     const handleOnPressItem = jest.fn;
     const tree = renderer.create(
