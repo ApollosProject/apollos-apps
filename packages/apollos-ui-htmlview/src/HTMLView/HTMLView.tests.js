@@ -148,6 +148,19 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should not render an image inside an anchor', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>
+          {
+            '<a href="http://wwww.google.com"><img src="https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084" /></a>'
+          }
+        </HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a line break (br)', () => {
     const tree = renderer.create(
       <Providers>
