@@ -15,12 +15,24 @@ storiesOf('ui-kit/ActionCard', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('example', () => (
-    <ActionCard
-      label="Key Idea"
-      icon="text"
-      action={<Chip icon="share" title="Share" />}
-    >
+  .add('default', () => (
+    <ActionCard>
+      <BodyText>
+        “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget
+        libero posuere vulputate. Etiam elit elitbibendum.”
+      </BodyText>
+    </ActionCard>
+  ))
+  .add('icon + label', () => (
+    <ActionCard icon={'text'} label={'Key Idea'}>
+      <BodyText>
+        “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget
+        libero posuere vulputate. Etiam elit elitbibendum.”
+      </BodyText>
+    </ActionCard>
+  ))
+  .add('action', () => (
+    <ActionCard action={<Chip icon={'share'} title={'Share'} />}>
       <BodyText>
         “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget
         libero posuere vulputate. Etiam elit elitbibendum.”
