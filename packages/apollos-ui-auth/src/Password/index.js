@@ -33,10 +33,12 @@ class AuthPassword extends PureComponent {
     onFinish: PropTypes.func,
     passwordPromptText: PropTypes.string,
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
+    BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   };
 
   static defaultProps = {
     passwordPromptText: 'Login with your email and password.',
+    BackgroundComponent: BackgroundView,
   };
 
   get flatProps() {
@@ -44,6 +46,7 @@ class AuthPassword extends PureComponent {
   }
 
   render() {
+    const { BackgroundComponent } = this.flatProps;
     return (
       <AuthConsumer>
         {({ closeAuth }) => (
@@ -51,7 +54,7 @@ class AuthPassword extends PureComponent {
             style={StyleSheet.absoluteFill}
             behavior="padding"
           >
-            <BackgroundView>
+            <BackgroundComponent>
               <SafeAreaView style={StyleSheet.absoluteFill}>
                 <PaddedView>
                   <PromptText>{this.flatProps.passwordPromptText}</PromptText>
@@ -65,7 +68,7 @@ class AuthPassword extends PureComponent {
                   })}
                 />
               </SafeAreaView>
-            </BackgroundView>
+            </BackgroundComponent>
           </KeyboardAvoidingView>
         )}
       </AuthConsumer>

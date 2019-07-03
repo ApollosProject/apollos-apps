@@ -104,10 +104,17 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   // eslint-disable-next-line class-methods-use-this
-  getFeatures({ id }) {
-    // todo - implement logic to get features for a content item.
-    console.log(id);
-    return [];
+  getFeatures({ attributeValues }) {
+    const { Features } = this.context.dataSources;
+    const features = [];
+
+    const text = get(attributeValues, 'textFeature.value', '');
+    if (text !== '') {
+      features.push(
+        Features.createTextFeature({ text, id: attributeValues.textFeature.id })
+      );
+    }
+    return features;
   }
 
   createSummary = ({ content, summary }) => {
@@ -249,6 +256,10 @@ export default class ContentItem extends RockApolloDataSource {
       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
     });
 
+    if (getPersonaGuidsForUser.length === 0) {
+      return this.request().empty();
+    }
+
     // Grabs content items based on personas
     return this.request(
       `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
@@ -293,4 +304,29 @@ export default class ContentItem extends RockApolloDataSource {
     this.request()
       .find(id)
       .get();
+
+  resolveType({ attributeValues, attributes, contentChannelTypeId }) {
+    // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
+    if (
+      Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
+        ({ ContentChannelTypeId }) =>
+          ContentChannelTypeId &&
+          ContentChannelTypeId.includes(contentChannelTypeId)
+      )
+    ) {
+      return Object.keys(ROCK_MAPPINGS.CONTENT_ITEM).find((key) => {
+        const value = ROCK_MAPPINGS.CONTENT_ITEM[key];
+        return (
+          value.ContentChannelTypeId &&
+          value.ContentChannelTypeId.includes(contentChannelTypeId)
+        );
+      });
+    }
+
+    if (this.hasMedia({ attributeValues, attributes })) {
+      return 'MediaContentItem';
+    }
+
+    return 'UniversalContentItem';
+  }
 }

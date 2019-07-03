@@ -32,13 +32,16 @@ export default class BinaryFiles extends RockApolloDataSource {
     return response.text();
   }
 
-  async findOrReturnImageUrl({ url, id }) {
+  async findOrReturnImageUrl(image) {
+    if (image == null) return image;
+
+    const { url, id } = image;
     if (url && typeof url === 'string') {
       return url;
     }
     if (id != null && typeof id !== 'object') {
-      const image = await this.getFromId(id);
-      return image.url;
+      const binaryImage = await this.getFromId(id);
+      return binaryImage.url;
     }
     return null;
   }
