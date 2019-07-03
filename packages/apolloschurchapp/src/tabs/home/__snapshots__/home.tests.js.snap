@@ -1378,7 +1378,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -1394,7 +1394,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -1580,7 +1580,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -1596,7 +1596,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -1782,7 +1782,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -1798,7 +1798,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -1984,7 +1984,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -2000,7 +2000,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -2186,7 +2186,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -2202,7 +2202,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -2388,7 +2388,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -2404,7 +2404,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -2590,7 +2590,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -2606,7 +2606,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -2792,7 +2792,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -2808,7 +2808,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -2994,7 +2994,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -3010,7 +3010,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -3196,7 +3196,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -3212,7 +3212,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,
@@ -3398,7 +3398,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "height": 32,
                           "justifyContent": "space-between",
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                         }
                       }
@@ -3414,7 +3414,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "justifyContent": "space-between",
                           "left": 0,
                           "paddingHorizontal": 16,
-                          "paddingTop": 4,
+                          "paddingTop": 0,
                           "paddingVertical": 16,
                           "position": "absolute",
                           "right": 0,

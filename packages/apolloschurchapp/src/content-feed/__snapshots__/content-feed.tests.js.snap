@@ -339,7 +339,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -355,7 +355,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -541,7 +541,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -557,7 +557,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -743,7 +743,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -759,7 +759,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -945,7 +945,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -961,7 +961,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1147,7 +1147,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1163,7 +1163,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1349,7 +1349,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1365,7 +1365,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1551,7 +1551,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1567,7 +1567,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1753,7 +1753,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1769,7 +1769,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -1955,7 +1955,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -1971,7 +1971,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
@@ -2157,7 +2157,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "height": 32,
                         "justifyContent": "space-between",
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                       }
                     }
@@ -2173,7 +2173,7 @@ exports[`content feed query component renders a feedview after successful query 
                         "justifyContent": "space-between",
                         "left": 0,
                         "paddingHorizontal": 16,
-                        "paddingTop": 4,
+                        "paddingTop": 0,
                         "paddingVertical": 16,
                         "position": "absolute",
                         "right": 0,
