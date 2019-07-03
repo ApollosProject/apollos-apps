@@ -84,7 +84,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const items = limit ? await cursor.first(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
-      id: createGlobalId(item.id + i, 'ActionListAction'),
+      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },

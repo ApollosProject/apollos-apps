@@ -1,6 +1,7 @@
 const { exec } = require('child_process');
 const chokidar = require('chokidar');
 
+console.log('Watching for changes');
 chokidar
   .watch('packages/apollos-data-*/**', {
     ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],

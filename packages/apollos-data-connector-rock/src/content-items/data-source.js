@@ -256,6 +256,10 @@ export default class ContentItem extends RockApolloDataSource {
       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
     });
 
+    if (getPersonaGuidsForUser.length === 0) {
+      return this.request().empty();
+    }
+
     // Grabs content items based on personas
     return this.request(
       `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
