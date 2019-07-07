@@ -16,7 +16,9 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
 
   parsePhoneNumber = ({ phoneNumber }) => {
     const number = new PhoneNumber(phoneNumber, 'US');
-    const interceptNum = process.env.INTERCEPT ? new PhoneNumber(process.env.INTERCEPT, 'US').getNumber('e164') : null;
+    const interceptNum = process.env.INTERCEPT
+      ? new PhoneNumber(process.env.INTERCEPT, 'US').getNumber('e164')
+      : null;
 
     return {
       valid: number.isValid(),
