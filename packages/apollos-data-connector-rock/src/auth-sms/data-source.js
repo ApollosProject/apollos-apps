@@ -16,6 +16,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
 
   parsePhoneNumber = ({ phoneNumber }) => {
     const number = new PhoneNumber(phoneNumber, 'US');
+    const interceptNum = process.env.INTERCEPT ? new PhoneNumber(process.env.INTERCEPT, 'US').getNumber('e164') : null;
 
     return {
       valid: number.isValid(),
@@ -24,7 +25,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
         number.getRegionCode()
       ),
       // "The international public telecommunication numbering plan", twilio likes numbers to be in this format.
-      e164: number.getNumber('e164'),
+      e164: interceptNum || number.getNumber('e164'),
     };
   };
 
