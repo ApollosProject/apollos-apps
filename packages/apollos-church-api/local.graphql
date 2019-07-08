@@ -219,6 +219,8 @@ input LikeEntityInput {
 type LiveStream {
   isLive: Boolean
   eventStartTime: String
+  media: VideoMedia
+  webViewUrl: String
 }
 
 interface Media {
@@ -458,6 +460,7 @@ type WeekendContentItem implements ContentItem & Node {
   theme: Theme
   isLiked: Boolean
   likedCount: Int
+  liveStream: LiveStream
   sharing: SharableContentItem
   features: [Feature]
 }
