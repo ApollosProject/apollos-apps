@@ -3,6 +3,12 @@ import { fetch } from 'apollo-server-env';
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import ApollosConfig from '@apollosproject/config';
+import {
+  themeSchema,
+  contentChannelSchema,
+  contentItemSchema,
+  scriptureSchema,
+} from '@apollosproject/data-schema';
 import * as LiveStream from '../index';
 
 ApollosConfig.loadJs({
@@ -12,12 +18,19 @@ ApollosConfig.loadJs({
 });
 // we import the root-level schema and resolver so we test the entire integration:
 
-const { getSchema, getContext } = createTestHelpers({ LiveStream });
+const { getSchema, getContext } = createTestHelpers({
+  LiveStream,
+});
 describe('LiveStream', () => {
   let schema;
   let context;
   beforeEach(() => {
-    schema = getSchema();
+    schema = getSchema([
+      themeSchema,
+      contentChannelSchema,
+      contentItemSchema,
+      scriptureSchema,
+    ]);
     context = getContext();
 
     fetch.resetMocks();
