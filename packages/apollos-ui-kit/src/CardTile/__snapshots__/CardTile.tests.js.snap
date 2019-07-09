@@ -434,7 +434,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
                 "flexWrap": "wrap",
                 "justifyContent": "space-between",
                 "paddingHorizontal": 16,
-                "paddingTop": 4,
+                "paddingTop": 0,
                 "paddingVertical": 16,
               }
             }
@@ -753,7 +753,7 @@ exports[`the CardTile component should render card details 1`] = `
                 "flexWrap": "wrap",
                 "justifyContent": "space-between",
                 "paddingHorizontal": 16,
-                "paddingTop": 4,
+                "paddingTop": 0,
                 "paddingVertical": 16,
               }
             }
@@ -1041,7 +1041,7 @@ exports[`the CardTile component should render card details with date 1`] = `
                 "flexWrap": "wrap",
                 "justifyContent": "space-between",
                 "paddingHorizontal": 16,
-                "paddingTop": 4,
+                "paddingTop": 0,
                 "paddingVertical": 16,
               }
             }

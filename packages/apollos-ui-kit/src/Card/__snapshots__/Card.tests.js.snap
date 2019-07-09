@@ -118,7 +118,7 @@ exports[`the Card component it should render a placeholder 1`] = `
               "flexWrap": "wrap",
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -337,7 +337,7 @@ exports[`the Card component should render 1`] = `
               "flexWrap": "wrap",
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }

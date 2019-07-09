@@ -150,7 +150,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -166,7 +166,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -459,7 +459,7 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -475,7 +475,7 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -689,7 +689,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -705,7 +705,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -997,7 +997,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -1013,7 +1013,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -1338,7 +1338,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -1354,7 +1354,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -1652,7 +1652,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -1668,7 +1668,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -1851,7 +1851,7 @@ exports[`ContentCard renders with No image 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -1866,7 +1866,7 @@ exports[`ContentCard renders with No image 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
@@ -2180,7 +2180,7 @@ exports[`ContentCard renders with an Image only 1`] = `
               "height": 32,
               "justifyContent": "space-between",
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
             }
           }
@@ -2196,7 +2196,7 @@ exports[`ContentCard renders with an Image only 1`] = `
               "justifyContent": "space-between",
               "left": 0,
               "paddingHorizontal": 16,
-              "paddingTop": 4,
+              "paddingTop": 0,
               "paddingVertical": 16,
               "position": "absolute",
               "right": 0,
