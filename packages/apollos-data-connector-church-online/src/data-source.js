@@ -15,7 +15,6 @@ export default class LiveStream extends RESTDataSource {
   }
 
   get webViewUrl() {
-    // return 'tet';
     return ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL;
   }
 
@@ -24,7 +23,7 @@ export default class LiveStream extends RESTDataSource {
     return {
       isLive: get(stream, 'response.item.isLive', false),
       eventStartTime: get(stream, 'response.item.eventStartTime'),
-      streamMedia: () =>
+      media: () =>
         this.mediaUrls.length
           ? {
               sources: this.mediaUrls.map((uri) => ({

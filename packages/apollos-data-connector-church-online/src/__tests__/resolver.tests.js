@@ -44,6 +44,10 @@ describe('LiveStream', () => {
         liveStream {
           isLive
           eventStartTime
+          media {
+            sources { uri }
+          }
+          webViewUrl
         }
       }
     `;
