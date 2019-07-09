@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^1.0.0",
-    "jest": "^23.6.0"
+    "jest": "^24.8.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
