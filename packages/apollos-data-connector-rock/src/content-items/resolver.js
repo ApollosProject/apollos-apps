@@ -99,7 +99,7 @@ const resolver = {
       { dataSources: { ContentItem, LiveStream } }
     ) => ({
       ...(await LiveStream.getLiveStream()), // TODO: Wish there was a better way to inherit these defaults from the LiveStream module.
-      isLive: await ContentItem.isContentActiveSermon(root), // We need to override the global IsLive with an IsLive that is contextual to a ContentItem
+      isLive: await ContentItem.isContentActiveLiveStream(root), // We need to override the global IsLive with an IsLive that is contextual to a ContentItem
     }),
   },
   ContentItem: {

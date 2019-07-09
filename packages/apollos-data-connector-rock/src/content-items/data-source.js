@@ -136,7 +136,7 @@ export default class ContentItem extends RockApolloDataSource {
     return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID);
   }
 
-  async isContentActiveSermon({ id }) {
+  async isContentActiveLiveStream({ id }) {
     const { LiveStream } = this.context.dataSources;
     const { isLive } = await LiveStream.getLiveStream();
     // if there is no live stream, then there is no live content. Easy enough!
