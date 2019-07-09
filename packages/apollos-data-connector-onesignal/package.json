@@ -34,7 +34,7 @@
     "@apollosproject/apollo-server-env-mock": "^1.0.0",
     "@apollosproject/babel-preset-apollos": "^1.0.0",
     "graphql": "^0.13.2",
-    "jest": "^23.6.0"
+    "jest": "^24.8.0"
   },
   "publishConfig": {
     "access": "public"
