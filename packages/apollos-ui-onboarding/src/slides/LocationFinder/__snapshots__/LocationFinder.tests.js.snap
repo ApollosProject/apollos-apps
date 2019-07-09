@@ -403,6 +403,7 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "width": "100%",
               }
             }
           >
@@ -1152,6 +1153,7 @@ exports[`The Onboarding LocationFinder component should render the button disabl
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
+                        "width": "100%",
                       }
                     }
                   >
