@@ -21,8 +21,7 @@ export default class LiveStream extends RESTDataSource {
   async getLiveStream() {
     const stream = await this.get('events/current');
     return {
-      // isLive: get(stream, 'response.item.isLive', false),
-      isLive: true,
+      isLive: get(stream, 'response.item.isLive', false),
       eventStartTime: get(stream, 'response.item.eventStartTime'),
       media: () =>
         this.mediaUrls.length
