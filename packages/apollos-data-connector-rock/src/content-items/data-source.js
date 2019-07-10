@@ -132,6 +132,22 @@ export default class ContentItem extends RockApolloDataSource {
     )[0];
   };
 
+  getSermonFeed() {
+    return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID);
+  }
+
+  async isContentActiveLiveStream({ id }) {
+    const { LiveStream } = this.context.dataSources;
+    const { isLive } = await LiveStream.getLiveStream();
+    // if there is no live stream, then there is no live content. Easy enough!
+    if (!isLive) return false;
+
+    const mostRecentSermon = await this.getSermonFeed().first();
+
+    // If the most recent sermon is the sermon we are checking, this is the live sermon.
+    return mostRecentSermon.id === id;
+  }
+
   async getCoverImage(root) {
     const pickBestImage = (images) => {
       // TODO: there's probably a _much_ more explicit and better way to handle this
@@ -305,7 +321,12 @@ export default class ContentItem extends RockApolloDataSource {
       .find(id)
       .get();
 
-  resolveType({ attributeValues, attributes, contentChannelTypeId }) {
+  resolveType({
+    attributeValues,
+    attributes,
+    contentChannelTypeId,
+    contentChannelId,
+  }) {
     // if we have defined an ContentChannelTypeId based maping in the YML file, use it!
     if (
       Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
@@ -319,6 +340,21 @@ export default class ContentItem extends RockApolloDataSource {
         return (
           value.ContentChannelTypeId &&
           value.ContentChannelTypeId.includes(contentChannelTypeId)
+        );
+      });
+    }
+    // if we have defined a ContentChannelId based maping in the YML file, use it!
+    if (
+      Object.values(ROCK_MAPPINGS.CONTENT_ITEM).some(
+        ({ ContentChannelId }) =>
+          ContentChannelId && ContentChannelId.includes(contentChannelId)
+      )
+    ) {
+      return Object.keys(ROCK_MAPPINGS.CONTENT_ITEM).find((key) => {
+        const value = ROCK_MAPPINGS.CONTENT_ITEM[key];
+        return (
+          value.ContentChannelId &&
+          value.ContentChannelId.includes(contentChannelId)
         );
       });
     }

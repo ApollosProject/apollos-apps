@@ -11,6 +11,9 @@ ApollosConfig.loadJs({
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     TIMEZONE: 'America/New_York',
   },
+  ROCK_MAPPINGS: {
+    SERMON_CHANNEL_ID: 'TEST_ID',
+  },
 });
 
 const RealDate = Date;
@@ -157,6 +160,57 @@ describe('ContentItemsModel', () => {
     });
     expect(result).toMatchSnapshot();
     expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('isContentActiveLiveStream returns false if the livestream is innactive', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: { LiveStream: { getLiveStream: () => ({ isLive: false }) } },
+    };
+    dataSource.getSermonFeed = jest.fn();
+
+    const result = await dataSource.isContentActiveLiveStream({ id: '1' });
+    expect(result).toBe(false);
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
+  it('isContentActiveLiveStream returns false if the livestream is not the most recent sermon', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: { LiveStream: { getLiveStream: () => ({ isLive: true }) } },
+    };
+    dataSource.getSermonFeed = jest.fn(() => ({
+      first: () => Promise.resolve({ id: '2' }),
+    }));
+
+    const result = await dataSource.isContentActiveLiveStream({ id: '1' });
+    expect(result).toBe(false);
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
+  it('isContentActiveLiveStream returns true if the livestream is the most recent sermon', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: { LiveStream: { getLiveStream: () => ({ isLive: true }) } },
+    };
+    dataSource.getSermonFeed = jest.fn(() => ({
+      first: () => Promise.resolve({ id: '1' }),
+    }));
+
+    const result = await dataSource.isContentActiveLiveStream({ id: '1' });
+    expect(result).toBe(true);
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
+  it('getSermonFeed fetches items from a specific content channel', () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.byContentChannelId = jest.fn(
+      () => new Promise((resolve) => resolve)
+    );
+
+    const result = dataSource.getSermonFeed({ id: '1' });
+    expect(dataSource.byContentChannelId.mock.calls).toMatchSnapshot();
+    expect(result).toMatchSnapshot();
   });
 
   it('returns null when there are no parent content items with images', async () => {

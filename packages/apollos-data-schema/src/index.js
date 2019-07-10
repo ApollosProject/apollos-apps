@@ -418,9 +418,15 @@ export const liveSchema = gql`
   type LiveStream {
     isLive: Boolean
     eventStartTime: String
+    media: VideoMedia
+    webViewUrl: String
   }
 
   extend type Query {
+    liveStream: LiveStream
+  }
+
+  extend type WeekendContentItem {
     liveStream: LiveStream
   }
 `;

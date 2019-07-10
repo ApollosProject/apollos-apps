@@ -21,6 +21,16 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel getSermonFeed fetches items from a specific content channel 1`] = `
+Array [
+  Array [
+    "TEST_ID",
+  ],
+]
+`;
+
+exports[`ContentItemsModel getSermonFeed fetches items from a specific content channel 2`] = `Promise {}`;
+
 exports[`ContentItemsModel gets a cursor finding child content items of a provided parent 1`] = `
 Array [
   Array [
@@ -138,6 +148,20 @@ Array [
   Object {
     "id": 2,
   },
+]
+`;
+
+exports[`ContentItemsModel isContentActiveLiveStream returns false if the livestream is innactive 1`] = `Array []`;
+
+exports[`ContentItemsModel isContentActiveLiveStream returns false if the livestream is not the most recent sermon 1`] = `
+Array [
+  Array [],
+]
+`;
+
+exports[`ContentItemsModel isContentActiveLiveStream returns true if the livestream is the most recent sermon 1`] = `
+Array [
+  Array [],
 ]
 `;
 

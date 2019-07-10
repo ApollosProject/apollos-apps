@@ -6,6 +6,14 @@ Object {
     "liveStream": Object {
       "eventStartTime": "2018-08-06T17:00:00Z",
       "isLive": true,
+      "media": Object {
+        "sources": Array [
+          Object {
+            "uri": "https://example.org/video.mp4",
+          },
+        ],
+      },
+      "webViewUrl": null,
     },
   },
 }
