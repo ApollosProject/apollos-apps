@@ -18,7 +18,10 @@ storiesOf('ui-kit/ConnectedImage', module)
     />
   ))
   .add('min+max aspectRatio', () => (
-    <ScrollView style={{ flex: 1 }}>
+    <ScrollView
+      // eslint-disable-next-line react-native/no-inline-styles
+      style={{ flex: 1 }}
+    >
       <ConnectedImage // should render square
         source={{ uri: 'https://picsum.photos/200/200/?random' }}
         maintainAspectRatio
