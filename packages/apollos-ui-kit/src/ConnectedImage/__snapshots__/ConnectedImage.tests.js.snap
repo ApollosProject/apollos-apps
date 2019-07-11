@@ -57,6 +57,65 @@ exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`the ConnectedImage component should render between minAspectRatio and maxAspectRatio 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      maxAspectRatio={1.5}
+      minAspectRatio={0.5}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "height": 200,
+            "uri": "https://picsum.photos/200/200/?random",
+            "width": 200,
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -104,6 +163,122 @@ exports[`the ConnectedImage component should render immediately with a network i
       }
       style={
         Object {
+          "backgroundColor": "#A5A5A5",
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      maxAspectRatio={0.5}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "height": 200,
+            "uri": "https://picsum.photos/200/200/?random",
+            "width": 200,
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 0.5,
+          "backgroundColor": "#A5A5A5",
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`the ConnectedImage component should render with a minAspectRatio 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      minAspectRatio={2}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "height": 200,
+            "uri": "https://picsum.photos/200/200/?random",
+            "width": 200,
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 2,
           "backgroundColor": "#A5A5A5",
           "opacity": 1,
         }
