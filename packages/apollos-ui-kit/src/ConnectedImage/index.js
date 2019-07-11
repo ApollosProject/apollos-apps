@@ -113,27 +113,28 @@ class ConnectedImage extends PureComponent {
 
   get aspectRatio() {
     const style = {};
-    if (this.props.maintainAspectRatio) {
-      const firstSource = this.state.source[0];
-      if (firstSource && firstSource.width && firstSource.height) {
-        style.aspectRatio = firstSource.width / firstSource.height;
-      }
-    }
+
+    // We only need to do this if the image is loading and not cached.
     if (this.props.isLoading && !style.aspectRatio) {
       style.aspectRatio = 1;
-    }
+    } else if (this.props.maintainAspectRatio) {
+      const firstSource = this.state.source[0];
 
-    if (
-      style.aspectRatio &&
-      (this.props.minAspectRatio || this.props.maxAspectRatio)
-    ) {
-      const maxAspectRatio = this.props.maxAspectRatio || style.aspectRatio;
-      const minAspectRatio = this.props.minAspectRatio || 0;
+      // determine the aspect ratio of an image based on its width and height
+      if (firstSource && firstSource.width && firstSource.height) {
+        style.aspectRatio = firstSource.width / firstSource.height;
 
-      style.aspectRatio = Math.max(
-        Math.min(maxAspectRatio, style.aspectRatio), // == smaller of maxAspectRatio and current aspectRatio
-        minAspectRatio
-      ); // == larger of calculated "max" aspect ratio and the minimum aspect ratio
+        // account for possible min/max aspectRatio bounds
+        if (this.props.minAspectRatio || this.props.maxAspectRatio) {
+          const maxAspectRatio = this.props.maxAspectRatio || style.aspectRatio;
+          const minAspectRatio = this.props.minAspectRatio || 0;
+
+          style.aspectRatio = Math.max(
+            Math.min(maxAspectRatio, style.aspectRatio), // == smaller of maxAspectRatio and current aspectRatio
+            minAspectRatio
+          ); // == larger of calculated "max" aspect ratio and the minimum aspect ratio
+        }
+      }
     }
 
     return style;
