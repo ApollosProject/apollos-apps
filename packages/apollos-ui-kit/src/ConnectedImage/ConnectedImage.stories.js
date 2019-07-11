@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import ConnectedImage from '.';
@@ -16,69 +17,41 @@ storiesOf('ui-kit/ConnectedImage', module)
       maintainAspectRatio
     />
   ))
-  .add('minHeight', () => (
-    <ConnectedImage
-      source={{ uri: 'https://picsum.photos/600/400/?random' }}
-      minHeight={600}
-      maintainAspectRatio
-    />
-  ))
-  .add('maxHeight', () => (
-    <ConnectedImage
-      source={{ uri: 'https://picsum.photos/600/400/?random' }}
-      minHeight={200}
-      maintainAspectRatio
-    />
-  ))
-  .add('smoke test min+max height', () => (
-    <React.Fragment>
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/400/?random' }}
-        minHeight={200}
-        style={{ width: 50 }}
-      />
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/400/?random' }}
-        maxHeight={100}
-        style={{ width: 50, height: '100%' }}
-      />
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/100/?random' }}
-        minHeight={200}
-        style={{ width: 250 }}
-      />
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/100/?random' }}
-        maxHeight={100}
-        style={{ width: 250, height: '100%' }}
-      />
-    </React.Fragment>
-  ))
-  .add('smoke test min+max height w/ aspect ratio', () => (
-    <React.Fragment>
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/400/?random' }}
-        minHeight={200}
-        style={{ width: 50 }}
+  .add('min+max aspectRatio', () => (
+    <ScrollView style={{ flex: 1 }}>
+      <ConnectedImage // should render square
+        source={{ uri: 'https://picsum.photos/200/200/?random' }}
         maintainAspectRatio
+        minAspectRatio={0.5}
+        maxAspectRatio={1.5}
       />
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/400/?random' }}
-        maxHeight={100}
-        style={{ width: 50, height: '100%' }}
+      <ConnectedImage // should render as tall
+        source={{ uri: 'https://picsum.photos/200/200/?random' }}
         maintainAspectRatio
+        maxAspectRatio={0.5}
       />
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/100/?random' }}
-        minHeight={200}
-        style={{ width: 250 }}
+      <ConnectedImage // should render as short
+        source={{ uri: 'https://picsum.photos/200/200/?random' }}
         maintainAspectRatio
+        minAspectRatio={2}
       />
-      <ConnectedImage
-        source={{ uri: 'https://picsum.photos/600/100/?random' }}
-        maxHeight={100}
-        style={{ width: 250, height: '100%' }}
+      <ConnectedImage // should render as square
+        source={{ uri: 'https://picsum.photos/200/200/?random' }}
         maintainAspectRatio
+        minAspectRatio={0.75}
+        maxAspectRatio={1.2}
       />
-    </React.Fragment>
+      <ConnectedImage // should render as tall (0.75 aspect ratio) but not super tall
+        source={{ uri: 'https://picsum.photos/200/2000/?random' }} // 200/2000 = 0.1
+        maintainAspectRatio
+        minAspectRatio={0.75}
+        maxAspectRatio={1.2}
+      />
+      <ConnectedImage // should render as short (1.2 aspect ratio) but not super short
+        source={{ uri: 'https://picsum.photos/2000/200/?random' }} // 2000/200 = 10
+        maintainAspectRatio
+        minAspectRatio={0.75}
+        maxAspectRatio={1.2}
+      />
+    </ScrollView>
   ));

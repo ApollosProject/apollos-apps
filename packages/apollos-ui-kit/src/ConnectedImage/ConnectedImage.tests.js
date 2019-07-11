@@ -35,33 +35,50 @@ describe('the ConnectedImage component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a minHeight', () => {
+  it('should render with a minAspectRatio', () => {
     const tree = renderer.create(
       <Providers>
-        <ConnectedImage
+        <ConnectedImage // should render as short
           source={{
-            uri: 'https://placeholdit.co/i/600x400?bg=eeeeee&fc=577084',
-            width: 600,
-            height: 400,
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
           }}
-          minHeight={800}
           maintainAspectRatio
+          minAspectRatio={2}
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a maxHeight', () => {
+  it('should render with a maxAspectRatio', () => {
     const tree = renderer.create(
       <Providers>
-        <ConnectedImage
+        <ConnectedImage // should render as tall
           source={{
-            uri: 'https://placeholdit.co/i/600x400?bg=eeeeee&fc=577084',
-            width: 600,
-            height: 400,
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
           }}
-          maxHeight={200}
           maintainAspectRatio
+          maxAspectRatio={0.5}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render between minAspectRatio and maxAspectRatio', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ConnectedImage // should render square
+          source={{
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
+          }}
+          maintainAspectRatio
+          minAspectRatio={0.5}
+          maxAspectRatio={1.5}
         />
       </Providers>
     );

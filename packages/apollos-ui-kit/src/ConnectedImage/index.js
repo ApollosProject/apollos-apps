@@ -116,20 +116,28 @@ class ConnectedImage extends PureComponent {
     if (this.props.maintainAspectRatio) {
       const firstSource = this.state.source[0];
       if (firstSource && firstSource.width && firstSource.height) {
-        style.aspectRatio =
-          firstSource.width / this.getImageHeight(firstSource.height);
+        style.aspectRatio = firstSource.width / firstSource.height;
       }
     }
     if (this.props.isLoading && !style.aspectRatio) {
       style.aspectRatio = 1;
     }
+
+    if (
+      style.aspectRatio &&
+      (this.props.minAspectRatio || this.props.maxAspectRatio)
+    ) {
+      const maxAspectRatio = this.props.maxAspectRatio || style.aspectRatio;
+      const minAspectRatio = this.props.minAspectRatio || 0;
+
+      style.aspectRatio = Math.max(
+        Math.min(maxAspectRatio, style.aspectRatio), // == smaller of maxAspectRatio and current aspectRatio
+        minAspectRatio
+      ); // == larger of calculated "max" aspect ratio and the minimum aspect ratio
+    }
+
     return style;
   }
-
-  /*
-    - pass min/max height into styles
-    - if
-  */
 
   get isLoading() {
     return (
@@ -151,8 +159,8 @@ class ConnectedImage extends PureComponent {
 
     const wrappedPromise = new Promise((resolve, reject) => {
       promise.then(
-        (val) => (hasCanceled ? reject({ isCanceled: true }) : resolve(val)), // eslint-disable-line
-        (error) => (hasCanceled ? reject({ isCanceled: true }) : reject(error)) // eslint-disable-line
+        (val) => (hasCanceled ? reject({ isCanceled: true }) : resolve(val)), // eslint-disable-line prefer-promise-reject-errors
+        (error) => (hasCanceled ? reject({ isCanceled: true }) : reject(error)) // eslint-disable-line prefer-promise-reject-errors
       );
     });
 
@@ -164,16 +172,16 @@ class ConnectedImage extends PureComponent {
     };
   };
 
-  getImageHeight(imageHeight) {
-    let height = imageHeight;
-    if (this.props.minHeight > imageHeight.height) {
-      height = this.props.minHeight;
-    } else if (this.props.maxHeight < imageHeight.height) {
-      height = this.props.maxHeight;
-    }
+  // getImageHeight(imageHeight) {
+  //   let height = imageHeight;
+  //   if (this.props.minHeight > imageHeight.height) {
+  //     height = this.props.minHeight;
+  //   } else if (this.props.maxHeight < imageHeight.height) {
+  //     height = this.props.maxHeight;
+  //   }
 
-    return height;
-  }
+  //   return height;
+  // }
 
   updateCache(sources) {
     this.cacheUpdater = this.cancleCacheUpdater(updateCache(sources));
