@@ -15,4 +15,18 @@ storiesOf('ui-kit/ConnectedImage', module)
       source={{ uri: 'https://picsum.photos/600/400/?random' }}
       maintainAspectRatio
     />
+  ))
+  .add('minHeight', () => (
+    <ConnectedImage
+      source={{ uri: 'https://picsum.photos/600/400/?random' }}
+      minHeight={600}
+      maintainAspectRatio
+    />
+  ))
+  .add('maxHeight', () => (
+    <ConnectedImage
+      source={{ uri: 'https://picsum.photos/600/400/?random' }}
+      minHeight={200}
+      maintainAspectRatio
+    />
   ));

@@ -80,6 +80,8 @@ class ConnectedImage extends PureComponent {
     isLoading: PropTypes.bool,
     onLoad: PropTypes.func,
     style: PropTypes.any, // eslint-disable-line
+    minHeight: PropTypes.number,
+    maxHeight: PropTypes.number,
   };
 
   static defaultProps = {
@@ -114,7 +116,8 @@ class ConnectedImage extends PureComponent {
     if (this.props.maintainAspectRatio) {
       const firstSource = this.state.source[0];
       if (firstSource && firstSource.width && firstSource.height) {
-        style.aspectRatio = firstSource.width / firstSource.height;
+        style.aspectRatio =
+          firstSource.width / this.getImageHeight(firstSource.height);
       }
     }
     if (this.props.isLoading && !style.aspectRatio) {
@@ -122,6 +125,11 @@ class ConnectedImage extends PureComponent {
     }
     return style;
   }
+
+  /*
+    - pass min/max height into styles
+    - if
+  */
 
   get isLoading() {
     return (
@@ -155,6 +163,17 @@ class ConnectedImage extends PureComponent {
       },
     };
   };
+
+  getImageHeight(imageHeight) {
+    let height = imageHeight;
+    if (this.props.minHeight > imageHeight.height) {
+      height = this.props.minHeight;
+    } else if (this.props.maxHeight < imageHeight.height) {
+      height = this.props.maxHeight;
+    }
+
+    return height;
+  }
 
   updateCache(sources) {
     this.cacheUpdater = this.cancleCacheUpdater(updateCache(sources));

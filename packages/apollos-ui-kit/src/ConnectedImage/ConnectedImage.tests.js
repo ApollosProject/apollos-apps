@@ -35,6 +35,38 @@ describe('the ConnectedImage component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with a minHeight', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ConnectedImage
+          source={{
+            uri: 'https://placeholdit.co/i/600x400?bg=eeeeee&fc=577084',
+            width: 600,
+            height: 400,
+          }}
+          minHeight={800}
+          maintainAspectRatio
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a maxHeight', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ConnectedImage
+          source={{
+            uri: 'https://placeholdit.co/i/600x400?bg=eeeeee&fc=577084',
+            width: 600,
+            height: 400,
+          }}
+          maxHeight={200}
+          maintainAspectRatio
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   describe('updateCache', () => {
     it('updates cache with image uri and sizes', async () => {
       const source = {
