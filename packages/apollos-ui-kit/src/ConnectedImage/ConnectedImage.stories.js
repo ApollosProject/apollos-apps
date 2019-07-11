@@ -29,4 +29,32 @@ storiesOf('ui-kit/ConnectedImage', module)
       minHeight={200}
       maintainAspectRatio
     />
+  ))
+  .add('smoke test min+max height', () => (
+    <React.Fragment>
+      <ConnectedImage
+        source={{ uri: 'https://picsum.photos/600/400/?random' }}
+        minHeight={200}
+        style={{ width: 50 }}
+        maintainAspectRatio
+      />
+      <ConnectedImage
+        source={{ uri: 'https://picsum.photos/600/400/?random' }}
+        maxHeight={100}
+        style={{ width: 50 }}
+        maintainAspectRatio
+      />
+      <ConnectedImage
+        source={{ uri: 'https://picsum.photos/600/400/?random' }}
+        minHeight={200}
+        style={{ width: 500 }}
+        maintainAspectRatio
+      />
+      <ConnectedImage
+        source={{ uri: 'https://picsum.photos/600/400/?random' }}
+        maxHeight={100}
+        style={{ width: 500 }}
+        maintainAspectRatio
+      />
+    </React.Fragment>
   ));
