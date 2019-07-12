@@ -47,7 +47,7 @@
     "prop-types": "15.6.1",
     "react": "16.8.6",
     "react-native": "0.60.3",
-    "react-test-renderer": "16.6.3"
+    "react-test-renderer": "16.8.6"
   },
   "publishConfig": {
     "access": "public"
