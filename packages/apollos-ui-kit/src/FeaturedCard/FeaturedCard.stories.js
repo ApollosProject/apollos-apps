@@ -13,6 +13,22 @@ storiesOf('ui-kit/FeaturedCard', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
+  .add('example', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      description={
+        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+      }
+      onPressAction={() => {}}
+    />
+  ))
   .add('default', () => (
     <FeaturedCard
       title={
@@ -23,6 +39,20 @@ storiesOf('ui-kit/FeaturedCard', module)
           uri: 'https://picsum.photos/800/1600/?random',
         },
       ]}
+    />
+  ))
+  .add('actionIcon', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      actionIcon={'umbrella'}
+      onPressAction={() => {}}
     />
   ))
   .add('description', () => (
@@ -38,5 +68,18 @@ storiesOf('ui-kit/FeaturedCard', module)
       description={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
+    />
+  ))
+  .add('onPressAction', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      onPressAction={() => {}}
     />
   ));
