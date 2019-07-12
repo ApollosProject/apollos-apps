@@ -69,6 +69,26 @@ const withBackgroundColor = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.inactive,
 }));
 
+const aspectRatioPropValidator = (props, propName, componentName) => {
+  if (props[propName] === undefined) return;
+
+  let errorMessage = '';
+
+  if (typeof props[propName] !== 'number') {
+    errorMessage = `Invalid prop \`${propName}\` of value \`${typeof props[
+      propName
+    ]}\` supplied to \`${componentName}\` expected type of number`;
+  }
+
+  if (!props.maintainAspectRatio) {
+    errorMessage += ` Prop maintainAspectRatio is required for use with ${propName}`;
+  }
+
+  if (typeof props[propName] !== 'number' || !props.maintainAspectRatio) {
+    return new Error(errorMessage); // eslint-disable-line consistent-return
+  }
+};
+
 class ConnectedImage extends PureComponent {
   static propTypes = {
     source: PropTypes.oneOfType([
@@ -80,8 +100,8 @@ class ConnectedImage extends PureComponent {
     isLoading: PropTypes.bool,
     onLoad: PropTypes.func,
     style: PropTypes.any, // eslint-disable-line
-    minAspectRatio: PropTypes.number,
-    maxAspectRatio: PropTypes.number,
+    minAspectRatio: aspectRatioPropValidator,
+    maxAspectRatio: aspectRatioPropValidator,
   };
 
   static defaultProps = {
