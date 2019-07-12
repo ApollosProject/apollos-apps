@@ -82,12 +82,14 @@ exports[`FeaturedCard should render 1`] = `
         <View
           style={
             Object {
+              "paddingBottom": 32,
               "paddingHorizontal": 16,
               "paddingVertical": 16,
             }
           }
         >
           <Text
+            numberOfLines={4}
             style={
               Object {
                 "color": "#303030",
