@@ -52,7 +52,6 @@
     "graphql-tag": "2.9.2",
     "lodash": "4.17.11",
     "moment": "2.22.2",
-    "react": "16.8.6",
     "react-is": "^16.8.6",
     "react-native-swiper": "^1.5.14",
     "yup": "0.26.6"
@@ -63,8 +62,9 @@
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
+    "react": "16.8.6",
     "react-apollo": "2.5.5",
-    "react-native": "0.59.8",
+    "react-native": "0.60.3",
     "react-test-renderer": "16.6.1",
     "waait": "1.0.2"
   },

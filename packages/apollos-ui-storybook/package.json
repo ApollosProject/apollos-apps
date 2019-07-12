@@ -20,12 +20,12 @@
     "@storybook/addon-actions": "5.2.0-alpha.3",
     "@storybook/addon-links": "5.2.0-alpha.3",
     "@storybook/addons": "5.2.0-alpha.3",
-    "@storybook/react-native": "5.2.0-alpha.3",
-    "react": "16.8.6"
+    "@storybook/react-native": "5.2.0-alpha.3"
   },
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.53.1",
-    "react-native": "0.59.8"
+    "react": "16.8.6",
+    "react-native": "0.60.3"
   },
   "publishConfig": {
     "access": "public"

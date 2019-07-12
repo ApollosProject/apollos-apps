@@ -50,8 +50,7 @@
     "react-navigation": "*"
   },
   "dependencies": {
-    "graphql-tag": "^2.10.1",
-    "react": "16.8.6"
+    "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
     "@storybook/react-native": "^4.0.7",
@@ -59,8 +58,9 @@
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
+    "react": "16.8.6",
     "react-apollo": "2.5.5",
-    "react-native": "0.59.8",
+    "react-native": "0.60.3",
     "react-native-airplay-btn": "^1.0.6",
     "react-native-linear-gradient": "2.5.3",
     "react-native-music-control": "0.7.3",

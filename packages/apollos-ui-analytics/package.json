@@ -43,7 +43,6 @@
   },
   "dependencies": {
     "graphql-tag": "2.9.2",
-    "react": "16.8.6",
     "react-native-device-info": "^2.1.2"
   },
   "devDependencies": {
@@ -54,8 +53,9 @@
     "jest-fetch-mock": "^2.1.2",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
+    "react": "16.8.6",
     "react-apollo": "2.5.5",
-    "react-native": "0.59.8",
+    "react-native": "0.60.3",
     "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
