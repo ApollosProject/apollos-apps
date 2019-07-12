@@ -77,9 +77,7 @@ export default class RockRequestBuilder {
     const key = '$filter';
     if (this.query[key]) {
       this.query[key] = `(${this.query[key]}) ${operator} (${filter})`;
-    } else {
-      this.query[key] = filter;
-    }
+    } else if (filter !== '') this.query[key] = filter;
     return this;
   };
 
