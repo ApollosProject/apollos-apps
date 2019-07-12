@@ -116,12 +116,13 @@ class MediaControls extends PureComponent {
     const hasLiveStreamContent = !!(
       get(liveStream, 'webViewUrl') || get(liveStream, 'media.sources[0]')
     );
+
     const videoSource = get(videos, '[0].sources[0]', null);
     const shouldRender = (isLive && hasLiveStreamContent) || videoSource;
 
-    const coverImageSources = (coverImage && coverImage.sources) || [];
-
     if (!shouldRender) return null;
+
+    const coverImageSources = (coverImage && coverImage.sources) || [];
 
     // Content is live, and we have a livestream media
     if (isLive && get(liveStream, 'media.sources[0].uri')) {
