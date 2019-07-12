@@ -57,6 +57,65 @@ exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`the ConnectedImage component should render between minAspectRatio and maxAspectRatio 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      maxAspectRatio={1.5}
+      minAspectRatio={0.5}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "height": 200,
+            "uri": "https://picsum.photos/200/200/?random",
+            "width": 200,
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -111,4 +170,172 @@ exports[`the ConnectedImage component should render immediately with a network i
     />
   </View>
 </RCTSafeAreaView>
+`;
+
+exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      maxAspectRatio={0.5}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "height": 200,
+            "uri": "https://picsum.photos/200/200/?random",
+            "width": 200,
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 0.5,
+          "backgroundColor": "#A5A5A5",
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`the ConnectedImage component should render with a minAspectRatio 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      minAspectRatio={2}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "height": 200,
+            "uri": "https://picsum.photos/200/200/?random",
+            "width": 200,
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 2,
+          "backgroundColor": "#A5A5A5",
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`the ConnectedImage component should throw an error if maxAspectRatio is used without maintainAspectRatio 1`] = `
+Array [
+  Array [
+    "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with maxAspectRatio
+    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))",
+  ],
+  Array [
+    "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with maxAspectRatio
+    in ConnectedImage (created by mapProps(ConnectedImage))
+    in mapProps(ConnectedImage) (created by withPropsOnChange(mapProps(ConnectedImage)))
+    in withPropsOnChange(mapProps(ConnectedImage)) (created by mapProps(withPropsOnChange(mapProps(ConnectedImage))))
+    in mapProps(withPropsOnChange(mapProps(ConnectedImage))) (created by getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))) (created by mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage))))))
+    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in View
+    in View
+    in RCTSafeAreaView
+    in _class
+    in SafeAreaView
+    in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
+    in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
+    in nest(ThemeProvider, LayoutProvider)",
+  ],
+]
+`;
+
+exports[`the ConnectedImage component should throw an error if minAspectRatio is used without maintainAspectRatio 1`] = `
+Array [
+  Array [
+    "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with minAspectRatio
+    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))",
+  ],
+  Array [
+    "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with minAspectRatio
+    in ConnectedImage (created by mapProps(ConnectedImage))
+    in mapProps(ConnectedImage) (created by withPropsOnChange(mapProps(ConnectedImage)))
+    in withPropsOnChange(mapProps(ConnectedImage)) (created by mapProps(withPropsOnChange(mapProps(ConnectedImage))))
+    in mapProps(withPropsOnChange(mapProps(ConnectedImage))) (created by getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))) (created by mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage))))))
+    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in View
+    in View
+    in RCTSafeAreaView
+    in _class
+    in SafeAreaView
+    in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
+    in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
+    in nest(ThemeProvider, LayoutProvider)",
+  ],
+]
 `;
