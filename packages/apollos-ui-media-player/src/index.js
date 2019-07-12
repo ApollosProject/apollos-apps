@@ -5,6 +5,8 @@ export { MINI_PLAYER_HEIGHT } from './MediaPlayer/MiniControls';
 export MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
 export withTabBarMediaSpacer from './tabBarWithMediaSpacer';
 
+export { GET_VIDEO_STATE } from './MediaPlayer/queries';
+
 export {
   PAUSE_AND_RESTART,
   PLAY_VIDEO,

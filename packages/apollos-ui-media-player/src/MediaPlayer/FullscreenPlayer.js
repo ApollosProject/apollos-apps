@@ -49,6 +49,12 @@ const FullscreenMediaPlayerSafeLayout = styled(({ isFullscreen, theme }) => ({
 class FullscreenPlayer extends PureComponent {
   static propTypes = {
     client: PropTypes.shape({ mutate: PropTypes.func }),
+    VideoWindowComponent: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.func,
+    ]),
+    showAudioToggleControl: PropTypes.bool,
+    showVideoToggleControl: PropTypes.bool,
   };
 
   // Tracks the fullscreen animation
@@ -190,11 +196,19 @@ class FullscreenPlayer extends PureComponent {
           isVideo={get(mediaPlayer, 'currentTrack.isVideo')}
         >
           <ControlsConsumer>
-            {(controlHandlers) => <VideoWindow {...controlHandlers} />}
+            {(controlHandlers) => (
+              <VideoWindow
+                VideoComponent={this.props.VideoWindowComponent}
+                {...controlHandlers}
+              />
+            )}
           </ControlsConsumer>
         </VideoSizer>
         <Animated.View style={this.fullscreenControlsAnimation}>
-          <FullscreenControls />
+          <FullscreenControls
+            showAudioToggleControl={this.props.showAudioToggleControl}
+            showVideoToggleControl={this.props.showVideoToggleControl}
+          />
         </Animated.View>
       </Animated.View>,
       <MusicControls key="music-controls" />,
