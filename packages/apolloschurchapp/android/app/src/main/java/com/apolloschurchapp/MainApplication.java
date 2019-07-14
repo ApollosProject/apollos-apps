@@ -1,6 +1,10 @@
 package com.apolloschurchapp;
 
 import android.app.Application;
+import android.util.Log;
+import com.facebook.react.PackageList;
+import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
+import com.facebook.react.bridge.JavaScriptExecutorFactory;
 
 import com.facebook.react.ReactApplication;
 import com.airbnb.android.react.maps.MapsPackage;
@@ -18,10 +22,8 @@ import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
-import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -34,22 +36,24 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new MapsPackage(),
-            new RNFetchBlobPackage(),
-            new RNCWebViewPackage(),
-            new ReactVideoPackage(),
-            new SvgPackage(),
-            new SplashScreenReactPackage(),
-            new RNScreensPackage(),
-            new ReactNativeOneSignalPackage(),
-            new MusicControl(),
-            new LinearGradientPackage(),
-            new ImagePickerPackage(),
-            new RNDeviceInfo(),
-            new ReactNativeConfigPackage()
-      );
+      @SuppressWarnings("UnnecessaryLocalVariable")
+      List<ReactPackage> packages = new PackageList(this).getPackages();
+      // Packages that cannot be autolinked yet can be added manually here, for example:
+      // packages.add(new MyReactNativePackage());
+      packages.add(new MapsPackage());
+      packages.add(new RNFetchBlobPackage());
+      packages.add(new RNCWebViewPackage());
+      packages.add(new ReactVideoPackage());
+      packages.add(new SvgPackage());
+      packages.add(new SplashScreenReactPackage());
+      packages.add(new RNScreensPackage());
+      packages.add(new ReactNativeOneSignalPackage());
+      packages.add(new MusicControl());
+      packages.add(new LinearGradientPackage());
+      packages.add(new ImagePickerPackage());
+      packages.add(new RNDeviceInfo());
+      packages.add(new ReactNativeConfigPackage());
+      return packages;
     }
 
     @Override

@@ -1,7 +1,9 @@
 module.exports = {
+  root: true,
   extends: [
     'airbnb',
     'plugin:react/recommended',
+    '@react-native-community', // would love to audit these, this may suffice
     'plugin:prettier/recommended',
     'prettier/react',
   ],
