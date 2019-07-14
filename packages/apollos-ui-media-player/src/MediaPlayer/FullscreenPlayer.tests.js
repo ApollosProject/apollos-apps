@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { View } from 'react-native';
+
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { Providers, renderWithApolloData } from '../testUtils';
 
@@ -64,6 +66,43 @@ describe('the FullscreenPlayer component', () => {
         resolvers={{ Query: { mediaPlayer: Promise.resolve(mediaPlayer) } }}
       >
         <FullscreenPlayer />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should hide disabled controls', async () => {
+    const mediaPlayer = {
+      currentTrack: {
+        isVideo: true,
+      },
+      isVisible: true,
+      isFullscreen: true,
+    };
+    const tree = await renderWithApolloData(
+      <Providers
+        resolvers={{ Query: { mediaPlayer: Promise.resolve(mediaPlayer) } }}
+      >
+        <FullscreenPlayer
+          showAudioToggleControl={false}
+          showVideoToggleControl={false}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a custom VideoWindow component', async () => {
+    const mediaPlayer = {
+      currentTrack: {
+        isVideo: true,
+      },
+      isVisible: true,
+      isFullscreen: true,
+    };
+    const tree = await renderWithApolloData(
+      <Providers
+        resolvers={{ Query: { mediaPlayer: Promise.resolve(mediaPlayer) } }}
+      >
+        <FullscreenPlayer VideoWindowComponent={View} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
