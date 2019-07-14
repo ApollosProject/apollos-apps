@@ -1,24 +1,27 @@
 import React from 'react';
-import { View } from 'react-native';
+// import { View } from 'react-native';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
+import { withTheme, ThemeMixin } from '../theme';
 import styled from '../styled';
 import Card, { CardImage, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
 import { H2, BodyText } from '../typography';
-import { withTheme } from '../theme';
 import { ButtonIcon } from '../Button';
 import { ImageSourceType } from '../ConnectedImage';
 
-const Image = styled({
-  aspectRatio: 1,
-})(CardImage);
+const Image = withTheme(({ theme }) => ({
+  overlayColor: theme.colors.primary,
+  style: { aspectRatio: 1 },
+}))(CardImage);
 
 const Content = styled(({ theme }) => ({
   flexDirection: 'row',
   alignItems: 'flex-end',
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2,
+  backgroundColor: theme.colors.primary,
 }))(CardContent);
 
 const Description = styled(({ theme }) => ({
@@ -40,22 +43,30 @@ const MediaCard = ({
   actionIcon,
   description,
   onPressAction,
+  theme,
 }) => (
-  <Card>
-    <Image source={image} />
+  <ThemeMixin
+    mixin={{
+      // type: get(theme, 'theme.type', 'light').toLowerCase(),
+      colors: get(theme, 'colors', {}),
+    }}
+  >
+    <Card>
+      <Image source={image} />
 
-    <Content>
-      <FlexedView>
-        <H2 numberOfLines={description ? 3 : 4}>{title}</H2>
-        {description ? (
-          <Description numberOfLines={2}>{description}</Description>
+      <Content>
+        <FlexedView>
+          <H2 numberOfLines={description ? 3 : 4}>{title}</H2>
+          {description ? (
+            <Description numberOfLines={2}>{description}</Description>
+          ) : null}
+        </FlexedView>
+        {onPressAction ? (
+          <ActionButton name={actionIcon} onPress={onPressAction} />
         ) : null}
-      </FlexedView>
-      {onPressAction ? (
-        <ActionButton name={actionIcon} onPress={onPressAction} />
-      ) : null}
-    </Content>
-  </Card>
+      </Content>
+    </Card>
+  </ThemeMixin>
 );
 
 MediaCard.propTypes = {
@@ -67,6 +78,9 @@ MediaCard.propTypes = {
   actionIcon: PropTypes.string,
   description: PropTypes.string,
   onPressAction: PropTypes.func,
+  theme: PropTypes.shape({
+    colors: PropTypes.shape({}),
+  }),
 };
 
 MediaCard.defaultProps = {

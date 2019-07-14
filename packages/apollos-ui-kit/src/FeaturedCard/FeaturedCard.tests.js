@@ -79,4 +79,26 @@ describe('FeaturedCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with a custom theme', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          theme={{
+            colors: {
+              primary: 'salmon',
+            },
+          }}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

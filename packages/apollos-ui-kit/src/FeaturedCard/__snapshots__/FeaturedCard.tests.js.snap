@@ -101,11 +101,47 @@ exports[`FeaturedCard should render 1`] = `
               }
             />
           </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
         </View>
         <View
           style={
             Object {
               "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
               "flexDirection": "row",
               "paddingBottom": 32,
               "paddingHorizontal": 24,
@@ -242,11 +278,47 @@ exports[`FeaturedCard should render a default actionIcon ("play") with onPressAc
               }
             />
           </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
         </View>
         <View
           style={
             Object {
               "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
               "flexDirection": "row",
               "paddingBottom": 32,
               "paddingHorizontal": 24,
@@ -534,11 +606,47 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
               }
             />
           </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
         </View>
         <View
           style={
             Object {
               "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
               "flexDirection": "row",
               "paddingBottom": 32,
               "paddingHorizontal": 24,
@@ -725,6 +833,183 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
 </RCTSafeAreaView>
 `;
 
+exports[`FeaturedCard should render with a custom theme 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": undefined,
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                16416882,
+                4294606962,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "backgroundColor": "salmon",
+              "flexDirection": "row",
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
 exports[`FeaturedCard should render with a description 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
@@ -826,11 +1111,47 @@ exports[`FeaturedCard should render with a description 1`] = `
               }
             />
           </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
         </View>
         <View
           style={
             Object {
               "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
               "flexDirection": "row",
               "paddingBottom": 32,
               "paddingHorizontal": 24,
