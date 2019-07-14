@@ -47,7 +47,7 @@ const MediaCard = ({
 }) => (
   <ThemeMixin
     mixin={{
-      // type: get(theme, 'theme.type', 'light').toLowerCase(),
+      type: get(theme, 'type', 'dark').toLowerCase(),
       colors: get(theme, 'colors', {}),
     }}
   >
@@ -79,6 +79,7 @@ MediaCard.propTypes = {
   description: PropTypes.string,
   onPressAction: PropTypes.func,
   theme: PropTypes.shape({
+    type: PropTypes.string,
     colors: PropTypes.shape({}),
   }),
 };
