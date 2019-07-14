@@ -23,12 +23,25 @@ const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
-SplashScreen.hide();
-const ProtectedRouteWithSplashScreen = (props) => {
-  const handleOnRouteChange = () => SplashScreen.hide();
 
-  return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
-};
+class ProtectedRouteWithSplashScreen extends React.Component {
+  componentDidMount() {
+    // do stuff while splash screen is shown
+    // After having done stuff hide the splash screen
+    SplashScreen.hide();
+  }
+
+  handleOnRouteChange = () => SplashScreen.hide();
+
+  render() {
+    return (
+      <ProtectedRoute
+        {...this.props}
+        onRouteChange={this.handleOnRouteChange}
+      />
+    );
+  }
+}
 
 const AppNavigator = createStackNavigator(
   {
