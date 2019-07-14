@@ -1,0 +1,25 @@
+{
+  "name": "RNAirplay",
+  "version": "1.0.0",
+  "summary": "RNAirplay",
+  "description": "RNAirplay",
+  "homepage": "https://github.com/disjfa/react-native-airplay-btn",
+  "license": "MIT",
+  "authors": {
+    "author": "author@domain.cn"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/author/RNAirplay.git",
+    "tag": "master"
+  },
+  "source_files": "RNAirplay/**/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}
