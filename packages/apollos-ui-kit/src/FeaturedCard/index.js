@@ -16,12 +16,15 @@ const Image = withTheme(({ theme }) => ({
   style: { aspectRatio: 1 },
 }))(CardImage);
 
+const StyledCard = withTheme(({ theme }) => ({
+  cardColor: theme.colors.primary,
+}))(Card);
+
 const Content = styled(({ theme }) => ({
   flexDirection: 'row',
   alignItems: 'flex-end',
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2,
-  backgroundColor: theme.colors.primary,
 }))(CardContent);
 
 const Description = styled(({ theme }) => ({
@@ -52,7 +55,7 @@ const FeaturedCard = ({
       colors: get(theme, 'colors', {}),
     }}
   >
-    <Card>
+    <StyledCard>
       <Image source={image} />
 
       <Content>
@@ -66,7 +69,7 @@ const FeaturedCard = ({
           <ActionButton name={actionIcon} onPress={onPressAction} />
         ) : null}
       </Content>
-    </Card>
+    </StyledCard>
   </ThemeMixin>
 );
 
