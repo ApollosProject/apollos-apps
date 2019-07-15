@@ -83,7 +83,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       onPressAction={() => {}}
     />
   ))
-  .add('theme.colors.primary', () => (
+  .add('theme.colors', () => (
     <FeaturedCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
@@ -96,11 +96,12 @@ storiesOf('ui-kit/FeaturedCard', module)
       theme={{
         colors: {
           primary: 'salmon',
+          secondary: 'salmon',
         },
       }}
     />
   ))
-  .add('theme.type.light', () => (
+  .add('theme.type', () => (
     <FeaturedCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'

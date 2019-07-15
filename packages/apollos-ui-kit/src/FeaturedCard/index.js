@@ -23,18 +23,35 @@ const StyledCard = withTheme(({ theme }) => ({
 
 const Content = styled(({ theme }) => ({
   alignItems: 'flex-start',
+  marginTop: '-40%',
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
 
-const TextLayout = styled({
-  flexDirection: 'row',
-  alignItems: 'flex-end',
-})(View);
+const StyledChip = styled(({ theme }) => ({
+  marginBottom: theme.sizing.baseUnit,
+}))(Chip);
 
-const Description = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit,
-}))(BodyText);
+// eslint-disable-next-line react/prop-types
+const Label = ({ theme, ...props }) => (
+  <ThemeMixin
+    mixin={{
+      type: 'light',
+      colors: get(theme, 'colors', {}),
+    }}
+  >
+    <StyledChip type={'secondary'} {...props} />
+  </ThemeMixin>
+);
+
+const ActionLayout = styled(({ theme, hasDescription }) => ({
+  flexDirection: 'row',
+  /* - `center` works in all situations including 1 line descriptions
+   * - `flex-end` is needed only for when we have no description
+   */
+  alignItems: hasDescription ? 'center' : 'flex-end',
+  paddingTop: theme.sizing.baseUnit,
+}))(View);
 
 const ActionButton = withTheme(({ theme }) => ({
   fill: theme.colors.primary,
@@ -64,18 +81,22 @@ const FeaturedCard = ({
       <Image source={image} />
 
       <Content>
-        <Chip title={'Boom'} />
-        <TextLayout>
+        <Label theme={theme} title={'Live'} icon={'play-solid'} iconSize={10} />
+        {// only if we have a `description` render a shorter full width `H2` `title`
+        description ? <H2 numberOfLines={3}>{title}</H2> : null}
+        <ActionLayout hasDescription={description}>
           <FlexedView>
-            <H2 numberOfLines={description ? 3 : 4}>{title}</H2>
-            {description ? (
-              <Description numberOfLines={2}>{description}</Description>
-            ) : null}
+            {// if we have a `description` render it otherwise render a longer but narrower `H2` `title`
+            description ? (
+              <BodyText numberOfLines={2}>{description}</BodyText>
+            ) : (
+              <H2 numberOfLines={4}>{title}</H2>
+            )}
           </FlexedView>
           {onPressAction ? (
             <ActionButton name={actionIcon} onPress={onPressAction} />
           ) : null}
-        </TextLayout>
+        </ActionLayout>
       </Content>
     </StyledCard>
   </ThemeMixin>
