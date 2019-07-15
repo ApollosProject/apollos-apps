@@ -9,6 +9,7 @@ import Card, { CardImage, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
 import { H2, BodyText } from '../typography';
 import { ButtonIcon } from '../Button';
+import Chip from '../Chip';
 import { ImageSourceType } from '../ConnectedImage';
 
 const Image = withTheme(({ theme }) => ({
@@ -63,6 +64,7 @@ const FeaturedCard = ({
       <Image source={image} />
 
       <Content>
+        <Chip title={'Boom'} />
         <TextLayout>
           <FlexedView>
             <H2 numberOfLines={description ? 3 : 4}>{title}</H2>
