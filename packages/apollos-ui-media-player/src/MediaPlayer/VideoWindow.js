@@ -34,7 +34,12 @@ class VideoWindow extends PureComponent {
     onProgress: PropTypes.func,
     onLoad: PropTypes.func,
     onLoadStart: PropTypes.func,
+    VideoComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     // onBuffer: PropTypes.func,
+  };
+
+  static defaultProps = {
+    VideoComponent: Video,
   };
 
   loadingOverlay = new Animated.Value(1);
@@ -101,8 +106,10 @@ class VideoWindow extends PureComponent {
 
     this.lastCurrentTime = currentTime;
 
+    const { VideoComponent } = this.props;
+
     return [
-      <Video
+      <VideoComponent
         ref={this.setVideoRef}
         source={mediaPlayer.currentTrack.mediaSource}
         paused={!mediaPlayer.isPlaying}
