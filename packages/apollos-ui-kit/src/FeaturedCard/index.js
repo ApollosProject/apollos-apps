@@ -30,7 +30,8 @@ const Description = styled(({ theme }) => ({
 
 const ActionButton = withTheme(({ theme }) => ({
   fill: theme.colors.primary,
-  iconPadding: 10,
+  size: theme.sizing.baseUnit * 1.5,
+  iconPadding: theme.sizing.baseUnit * 0.75,
   style: {
     marginLeft: theme.sizing.baseUnit,
     backgroundColor: theme.colors.text.primary,
