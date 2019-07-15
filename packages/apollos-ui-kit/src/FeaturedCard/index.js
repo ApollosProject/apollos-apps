@@ -29,11 +29,11 @@ const Description = styled(({ theme }) => ({
 }))(BodyText);
 
 const ActionButton = withTheme(({ theme }) => ({
-  fill: theme.colors.text.primary,
+  fill: theme.colors.primary,
   iconPadding: 10,
   style: {
     marginLeft: theme.sizing.baseUnit,
-    backgroundColor: 'salmon',
+    backgroundColor: theme.colors.text.primary,
   },
 }))(ButtonIcon);
 
@@ -47,7 +47,7 @@ const MediaCard = ({
 }) => (
   <ThemeMixin
     mixin={{
-      type: get(theme, 'type', 'dark').toLowerCase(),
+      type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
       colors: get(theme, 'colors', {}),
     }}
   >
@@ -85,7 +85,7 @@ MediaCard.propTypes = {
 };
 
 MediaCard.defaultProps = {
-  actionIcon: 'play',
+  actionIcon: 'play-solid',
 };
 
 MediaCard.displayName = 'MediaCard';
