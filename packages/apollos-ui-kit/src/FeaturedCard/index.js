@@ -1,5 +1,5 @@
 import React from 'react';
-// import { View } from 'react-native';
+import { View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -21,11 +21,15 @@ const StyledCard = withTheme(({ theme }) => ({
 }))(Card);
 
 const Content = styled(({ theme }) => ({
+  alignItems: 'flex-start',
+  paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
+  paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
+}))(CardContent);
+
+const TextLayout = styled({
   flexDirection: 'row',
   alignItems: 'flex-end',
-  paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-  paddingBottom: theme.sizing.baseUnit * 2,
-}))(CardContent);
+})(View);
 
 const Description = styled(({ theme }) => ({
   marginTop: theme.sizing.baseUnit,
@@ -59,15 +63,17 @@ const FeaturedCard = ({
       <Image source={image} />
 
       <Content>
-        <FlexedView>
-          <H2 numberOfLines={description ? 3 : 4}>{title}</H2>
-          {description ? (
-            <Description numberOfLines={2}>{description}</Description>
+        <TextLayout>
+          <FlexedView>
+            <H2 numberOfLines={description ? 3 : 4}>{title}</H2>
+            {description ? (
+              <Description numberOfLines={2}>{description}</Description>
+            ) : null}
+          </FlexedView>
+          {onPressAction ? (
+            <ActionButton name={actionIcon} onPress={onPressAction} />
           ) : null}
-        </FlexedView>
-        {onPressAction ? (
-          <ActionButton name={actionIcon} onPress={onPressAction} />
-        ) : null}
+        </TextLayout>
       </Content>
     </StyledCard>
   </ThemeMixin>
