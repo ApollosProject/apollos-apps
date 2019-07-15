@@ -1,10 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import {
-  Providers,
-  BackgroundView,
-  CenteredView,
-} from '@apollosproject/ui-kit';
+import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
 
 import PassView from '.';
 
