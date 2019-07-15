@@ -37,7 +37,7 @@ const ActionButton = withTheme(({ theme }) => ({
   },
 }))(ButtonIcon);
 
-const MediaCard = ({
+const FeaturedCard = ({
   image,
   title,
   actionIcon,
@@ -69,7 +69,7 @@ const MediaCard = ({
   </ThemeMixin>
 );
 
-MediaCard.propTypes = {
+FeaturedCard.propTypes = {
   image: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -84,10 +84,10 @@ MediaCard.propTypes = {
   }),
 };
 
-MediaCard.defaultProps = {
+FeaturedCard.defaultProps = {
   actionIcon: 'play-solid',
 };
 
-MediaCard.displayName = 'MediaCard';
+FeaturedCard.displayName = 'MediaCard';
 
-export default MediaCard;
+export default FeaturedCard;
