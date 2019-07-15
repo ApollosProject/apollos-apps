@@ -101,6 +101,13 @@ class FullscreenControls extends PureComponent {
     client: PropTypes.shape({
       mutate: PropTypes.func,
     }),
+    showAudioToggleControl: PropTypes.bool,
+    showVideoToggleControl: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    showAudioToggleControl: true,
+    showVideoToggleControl: true,
   };
 
   state = {};
@@ -204,11 +211,15 @@ class FullscreenControls extends PureComponent {
 
   renderPlayerControls = ({ isLoading, skip }) => (
     <PlayControls>
-      <IconSm
-        onPress={this.isMuted ? this.handleUnMute : this.handleMute}
-        name={this.isMuted ? 'mute' : 'volume'}
-        disabled={isLoading}
-      />
+      {this.props.showAudioToggleControl ? (
+        <IconSm
+          onPress={this.isMuted ? this.handleUnMute : this.handleMute}
+          name={this.isMuted ? 'mute' : 'volume'}
+          disabled={isLoading}
+        />
+      ) : (
+        <IconSm name="empty" />
+      )}
       <IconMd
         onPress={() => skip(-30)}
         name={'skip-back-thirty'}
@@ -224,11 +235,15 @@ class FullscreenControls extends PureComponent {
         name={'skip-forward-thirty'}
         disabled={isLoading}
       />
-      <IconSm
-        onPress={this.isVideo ? this.handleHideVideo : this.handleShowVideo}
-        name={this.isVideo ? 'video' : 'video-off'}
-        disabled={isLoading}
-      />
+      {this.props.showVideoToggleControl ? (
+        <IconSm
+          onPress={this.isVideo ? this.handleHideVideo : this.handleShowVideo}
+          name={this.isVideo ? 'video' : 'video-off'}
+          disabled={isLoading}
+        />
+      ) : (
+        <IconSm name="empty" />
+      )}
     </PlayControls>
   );
 
