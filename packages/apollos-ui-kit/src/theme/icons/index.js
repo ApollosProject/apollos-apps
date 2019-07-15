@@ -34,6 +34,7 @@ export Mute from './Mute';
 export Pause from './Pause';
 export Pin from './Pin';
 export Play from './Play';
+export PlaySolid from './PlaySolid';
 export Pray from './Pray';
 export Print from './Print';
 export Profile from './Profile';

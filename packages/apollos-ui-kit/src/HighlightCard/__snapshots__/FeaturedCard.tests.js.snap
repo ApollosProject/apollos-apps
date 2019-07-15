@@ -1,0 +1,1204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedCard should render 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": undefined,
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
+              "flexDirection": "row",
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`FeaturedCard should render a default actionIcon ("play") with onPressAction 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": undefined,
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
+              "flexDirection": "row",
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              additionalStyles={
+                Object {
+                  "backgroundColor": "salmon",
+                  "marginLeft": 16,
+                }
+              }
+              borderRadius={42}
+              iconPadding={10}
+              style={
+                Object {
+                  "backgroundColor": "salmon",
+                  "marginLeft": 16,
+                  "padding": 10,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={32}
+                bbWidth={32}
+                height={32}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    Object {
+                      "opacity": 1,
+                    },
+                    Object {
+                      "flex": 0,
+                      "height": 32,
+                      "width": 32,
+                    },
+                  ]
+                }
+                vbHeight={24}
+                vbWidth={24}
+                width={32}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M7.63 3.34v17.5c-.04-.12-.17-.25-.35-.33-.18-.06-.37-.1-.5-.04l.14-.1 11.13-8.4c.22-.17.22-.2 0-.36L7 3.65l-.14-.1c.1.03.28.02.45-.07.2-.1.3-.2.36-.3v.13zM6 3.34c0-1.3.88-1.73 1.97-.95l11.05 7.9c1.1.8 1.1 2.06.04 2.86l-11.13 8.4C6.86 22.4 6 22 6 20.7V3.34z"
+                    fill={
+                      Array [
+                        0,
+                        4281348144,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`FeaturedCard should render with a custom actionIcon 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": undefined,
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
+              "flexDirection": "row",
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              additionalStyles={
+                Object {
+                  "backgroundColor": "salmon",
+                  "marginLeft": 16,
+                }
+              }
+              borderRadius={42}
+              iconPadding={10}
+              style={
+                Object {
+                  "backgroundColor": "salmon",
+                  "marginLeft": 16,
+                  "padding": 10,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={32}
+                bbWidth={32}
+                height={32}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    Object {
+                      "opacity": 1,
+                    },
+                    Object {
+                      "flex": 0,
+                      "height": 32,
+                      "width": 32,
+                    },
+                  ]
+                }
+                vbHeight={32}
+                vbWidth={32}
+                width={32}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+                    fill={
+                      Array [
+                        0,
+                        4281348144,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`FeaturedCard should render with a custom theme 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": undefined,
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                16416882,
+                4294606962,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "backgroundColor": "salmon",
+              "flexDirection": "row",
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={4}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`FeaturedCard should render with a description 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "aspectRatio": undefined,
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                26477,
+                4278216557,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0.5,
+                1,
+              ]
+            }
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "backgroundColor": "#00676D",
+              "flexDirection": "row",
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={3}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Are you telling me that you built a time machine out of a DeLorean?
+            </Text>
+            <Text
+              bold={false}
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
+                  "marginTop": 16,
+                }
+              }
+            >
+              The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
