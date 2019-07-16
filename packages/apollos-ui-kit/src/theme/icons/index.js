@@ -28,6 +28,7 @@ export Home from './Home';
 export Information from './Information';
 export Like from './Like';
 export LikeSolid from './LikeSolid';
+export LiveDot from './LiveDot';
 export Locate from './Locate';
 export Lock from './Lock';
 export Mute from './Mute';
