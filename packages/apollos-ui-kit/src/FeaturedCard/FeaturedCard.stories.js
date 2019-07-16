@@ -27,6 +27,7 @@ storiesOf('ui-kit/FeaturedCard', module)
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
       onPressAction={() => {}}
+      labelText={'Live'}
     />
   ))
   .add('default', () => (
@@ -68,6 +69,32 @@ storiesOf('ui-kit/FeaturedCard', module)
       description={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
+    />
+  ))
+  .add('labelText', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      labelText={'Quote'}
+    />
+  ))
+  .add('labelText = "Live"', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      labelText={'Live'}
     />
   ))
   .add('onPressAction', () => (

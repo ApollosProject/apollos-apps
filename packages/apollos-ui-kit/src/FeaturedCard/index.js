@@ -1,15 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
+import { withProps } from 'recompose';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { withTheme, ThemeMixin } from '../theme';
 import styled from '../styled';
-import Card, { CardImage, CardContent } from '../Card';
+import Card, { CardImage, CardLabel, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
 import { H2, BodyText } from '../typography';
 import { ButtonIcon } from '../Button';
-import Chip from '../Chip';
 import { ImageSourceType } from '../ConnectedImage';
 
 const Image = withTheme(({ theme }) => ({
@@ -27,22 +27,6 @@ const Content = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
-
-const StyledChip = styled(({ theme }) => ({
-  marginBottom: theme.sizing.baseUnit,
-}))(Chip);
-
-// eslint-disable-next-line react/prop-types
-const Label = ({ theme, ...props }) => (
-  <ThemeMixin
-    mixin={{
-      type: 'light',
-      colors: get(theme, 'colors', {}),
-    }}
-  >
-    <StyledChip type={'secondary'} {...props} />
-  </ThemeMixin>
-);
 
 const ActionLayout = styled(({ theme, hasDescription }) => ({
   flexDirection: 'row',
@@ -63,11 +47,26 @@ const ActionButton = withTheme(({ theme }) => ({
   },
 }))(ButtonIcon);
 
+const Label = withTheme(
+  ({ customTheme, hasDescription, labelText, theme }) => ({
+    type: labelText.toLowerCase() === 'live' ? 'secondary' : 'overlay',
+    icon: labelText.toLowerCase() === 'live' ? 'live-dot' : '',
+    theme: { colors: get(customTheme, 'colors', {}) },
+    title: labelText,
+    iconSize: 7,
+    style: {
+      ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
+    },
+  })
+)(CardLabel);
+
 const FeaturedCard = ({
   image,
   title,
   actionIcon,
+  labelText,
   description,
+  LabelComponent,
   onPressAction,
   theme,
 }) => (
@@ -81,7 +80,16 @@ const FeaturedCard = ({
       <Image source={image} />
 
       <Content>
-        <Label theme={theme} title={'Live'} icon={'play-solid'} iconSize={10} />
+        {labelText // only render a label if we have `labelText`
+          ? // if we have a custom `LabelComponent` render it
+            LabelComponent || ( // otherwise default to `Label`
+              <Label
+                customTheme={theme}
+                labelText={labelText}
+                hasDescription={description}
+              />
+            )
+          : null}
         {// only if we have a `description` render a shorter full width `H2` `title`
         description ? <H2 numberOfLines={3}>{title}</H2> : null}
         <ActionLayout hasDescription={description}>
@@ -110,6 +118,8 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   description: PropTypes.string,
+  LabelComponent: PropTypes.element,
+  labelText: PropTypes.string,
   onPressAction: PropTypes.func,
   theme: PropTypes.shape({
     type: PropTypes.string,
