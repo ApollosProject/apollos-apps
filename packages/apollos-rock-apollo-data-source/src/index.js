@@ -8,7 +8,7 @@ import { createCursor, parseCursor } from './cursor';
 
 import RequestBuilder from './request-builder';
 
-export { RockLoggingExtension } from './utils';
+export { RockLoggingExtension, parseKeyValueAttribute } from './utils';
 
 const { ROCK } = ApollosConfig;
 
