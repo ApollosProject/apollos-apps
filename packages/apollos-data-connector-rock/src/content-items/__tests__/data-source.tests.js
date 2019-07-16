@@ -148,6 +148,48 @@ describe('ContentItemsModel', () => {
     expect(createTextFeature.mock.calls).toMatchSnapshot();
   });
 
+  it('returns text features when a contentItem has a TextFeatures field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        textFeatures: {
+          id: 123,
+          value: 'something^something else|another thing^that thing is cool',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns text features and when a contentItem has a TextFeatures and a TextFeature field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        textFeatures: {
+          id: 123,
+          value: 'something^something else|another thing^that thing is cool',
+        },
+        textFeature: {
+          id: 456,
+          value: 'wow this is neat!',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
   it('returns an empty array when there are no features', async () => {
     const dataSource = new ContentItemsDataSource();
     const createTextFeature = jest.fn(() => ({

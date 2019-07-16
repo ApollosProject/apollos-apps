@@ -208,3 +208,73 @@ Array [
   ],
 ]
 `;
+
+exports[`ContentItemsModel returns text features and when a contentItem has a TextFeatures and a TextFeature field 1`] = `
+Array [
+  Object {
+    "body": "something",
+    "id": "TextFeature:123",
+  },
+  Object {
+    "body": "something",
+    "id": "TextFeature:123",
+  },
+  Object {
+    "body": "something",
+    "id": "TextFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns text features and when a contentItem has a TextFeatures and a TextFeature field 2`] = `
+Array [
+  Array [
+    Object {
+      "id": 456,
+      "text": "wow this is neat!",
+    },
+  ],
+  Array [
+    Object {
+      "id": "123-0",
+      "text": "something else",
+    },
+  ],
+  Array [
+    Object {
+      "id": "123-1",
+      "text": "that thing is cool",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns text features when a contentItem has a TextFeatures field 1`] = `
+Array [
+  Object {
+    "body": "something",
+    "id": "TextFeature:123",
+  },
+  Object {
+    "body": "something",
+    "id": "TextFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns text features when a contentItem has a TextFeatures field 2`] = `
+Array [
+  Array [
+    Object {
+      "id": "123-0",
+      "text": "something else",
+    },
+  ],
+  Array [
+    Object {
+      "id": "123-1",
+      "text": "that thing is cool",
+    },
+  ],
+]
+`;
