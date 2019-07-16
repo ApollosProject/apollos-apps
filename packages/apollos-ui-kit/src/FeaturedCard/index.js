@@ -121,6 +121,6 @@ FeaturedCard.defaultProps = {
   actionIcon: 'play-solid',
 };
 
-FeaturedCard.displayName = 'MediaCard';
+FeaturedCard.displayName = 'FeaturedCard';
 
 export default FeaturedCard;
