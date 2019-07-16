@@ -8,8 +8,7 @@ import Chip from '../Chip';
 import Icon from '../Icon';
 
 const StyledChip = styled(
-  ({ theme, type }) => ({
-    marginBottom: theme.sizing.baseUnit,
+  ({ type }) => ({
     // the overlay type is transparent and borders look funny. TODO: consider moving this change to `Chip` or `Button`
     ...(type === 'overlay' ? { borderWidth: 0 } : {}),
   }),
