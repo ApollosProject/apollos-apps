@@ -7,13 +7,14 @@ import {
   PaddedView,
   H6,
   H3,
+  FlexedView,
   styled,
   ThemeMixin,
+  ConnectedImage,
 } from '@apollosproject/ui-kit';
 
 import FieldList, { FieldSet, fieldProps } from './Fields';
 import Barcode from './Barcode';
-import Thumbnail from './Thumbnail';
 
 const PassViewFlex = styled({
   minHeight: Dimensions.get('window').height * 0.55,
@@ -24,6 +25,12 @@ const PassViewFlex = styled({
 const Description = styled({
   textAlign: 'center',
 })(H6);
+
+const Thumbnail = styled(({ theme }) => ({
+  resizeMode: 'contain',
+  flex: 1,
+  backgroundColor: theme.colors.transparent,
+}))(ConnectedImage);
 
 const PassView = ({
   description = null,
@@ -67,7 +74,9 @@ const PassView = ({
             />
 
             {thumbnail ? (
-              <Thumbnail source={thumbnail} isLoading={isLoading} />
+              <FlexedView>
+                <Thumbnail source={thumbnail} isLoading={isLoading} />
+              </FlexedView>
             ) : null}
           </FieldSet>
 
