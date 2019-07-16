@@ -12,7 +12,7 @@ const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
 
 const ThemedOverlay = withTheme(
   ({ theme: { overlays }, overlayColor, overlayType }) =>
-    overlays[overlayType](overlayColor)
+    overlays[overlayType]({ overlayColor })
 )(Overlay);
 
 const Container = styled(({ theme }) => ({
@@ -43,7 +43,6 @@ const GradientOverlayImage = pure(
     imageStyle,
     resizeMode,
     forceRatio,
-    overlay,
     ...otherProps
   }) => {
     const Component = ComponentProp || DefaultImageComponent;
