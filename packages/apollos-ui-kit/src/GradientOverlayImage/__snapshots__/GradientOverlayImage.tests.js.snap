@@ -152,6 +152,8 @@ exports[`the GradientOverlayImage component should render with an overlayColor 1
             1,
           ]
         }
+        overlayColor="salmon"
+        overlayType="default"
         startPoint={
           Object {
             "x": 0,
