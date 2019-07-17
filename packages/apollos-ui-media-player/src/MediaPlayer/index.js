@@ -15,7 +15,7 @@ class MediaPlayer extends Component {
 
   renderPlayer = ({ data = {} }) => {
     if (!data.mediaPlayer || !data.mediaPlayer.isVisible) return null;
-    return <FullscreenPlayer />;
+    return <FullscreenPlayer {...this.props} />;
   };
 
   render() {

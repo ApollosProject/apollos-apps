@@ -1,4 +1,31 @@
 
+v1.1.0-beta.0: July 16, 2019
+
+- Adds ability for Text Feature to use KeyValue attribute in Rock (#871) (9a47953e)
+- Adds utility to handle rock key/value attribute (#870) (48499d51)
+- Adds Safety Checks to Request Filters (#866) (932fac9b)
+- Adds support for custom VideoWindow component and disabling of toggle controls on MediaPlayer (#865) (a4088041)
+- Adds `minAspectRatio` and `maxAspectRatio` support to ConnectedImage (#862) (d056ff53)
+- Adds "Open Livestream" Capability to the MediaControls (#857) (c6a7b4ee)
+- Adds support for 64-bit Android build (#864) (abcc4d4c)
+- Adds text feature (#847) (fe8c3cb2)
+- Adds API support for content items to have livestreams (#848) (5e15830f)
+- Adds <ActionCard /> component (#834) (2ffe6e2c)
+- Adds support for stripping illegal markup from htmlview (#842) (cde3b60b)
+- Adds ActionList on the Home feed driven by a Rock content channel. (#830) (f295ff95)
+- Adds TextFeature resolver/schema/dataSource (#833) (afbdb850)
+- Adds ActionList algorithm driven by a content channel (#828) (62b9f9e2)
+
+- Bumps lodash from 4.17.11 to 4.17.13 (#868) (93c721fa)
+- Bumps lodash.mergewith from 4.6.1 to 4.6.2 (#860) (e31adfeb)
+- Bumps lodash.template from 4.4.0 to 4.5.0 (#861) (5409b010)
+
+- Fixes Android Campus Card Shadow (#835) (1ee755ba)
+- Fixes publish of packages that had 0 changes in 1.0 (#832) (75dd28ba)
+
+- Deletes unused schema.graphql file (#836) (7a6431cb)
+
+
 v1.0.0: June 27, 2019
 
 - Adds Today Actions with Persona Feed algorithm (#816) (4ae0646e)
