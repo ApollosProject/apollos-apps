@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { withProps } from 'recompose';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 

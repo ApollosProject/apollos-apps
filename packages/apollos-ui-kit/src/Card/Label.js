@@ -9,13 +9,13 @@ import Icon from '../Icon';
 
 const StyledChip = styled(
   ({ type }) => ({
-    // the overlay type is transparent and borders look funny. TODO: consider moving this change to `Chip` or `Button`
+    /* when the overlay type is transparent the borders look funny. TODO: Button refactor - consider
+     * moving this change to `Chip` or `Button` */
     ...(type === 'overlay' ? { borderWidth: 0 } : {}),
   }),
   'ui-kit.CardLabel'
 )(Chip);
 
-// eslint-disable-next-line react/prop-types
 const Label = ({ title, icon, type, theme, ...props }) => (
   <ThemeMixin
     mixin={{
