@@ -70,6 +70,23 @@ const Label = withTheme(
   })
 )(CardLabel);
 
+const renderOnlyTitle = (description, title) =>
+  description ? <H2 numberOfLines={3}>{title}</H2> : null;
+
+const renderWithDescription = (actionIcon, description, hasAction, title) => (
+  <ActionLayout hasDescription={description}>
+    <FlexedView>
+      {// if we have a `description` render it otherwise render a longer but narrower `H2` `title`
+      description ? (
+        <BodyText numberOfLines={2}>{description}</BodyText>
+      ) : (
+        <H2 numberOfLines={4}>{title}</H2>
+      )}
+    </FlexedView>
+    {hasAction ? <ActionIcon name={actionIcon} /> : null}
+  </ActionLayout>
+);
+
 const FeaturedCard = ({
   image,
   title,
@@ -102,21 +119,8 @@ const FeaturedCard = ({
               />
             )
           : null}
-        {// only if we have a `description` render a shorter full width `H2` `title`
-        description ? <H2 numberOfLines={3}>{title}</H2> : null}
-        <ActionLayout hasDescription={description}>
-          <FlexedView>
-            {// if we have a `description` render it otherwise render a longer but narrower `H2` `title`
-            description ? (
-              <BodyText numberOfLines={2}>{description}</BodyText>
-            ) : (
-              <H2 numberOfLines={4}>{title}</H2>
-            )}
-          </FlexedView>
-          {onPressAction ? (
-            <ActionButton name={actionIcon} onPress={onPressAction} />
-          ) : null}
-        </ActionLayout>
+        {renderOnlyTitle(description, title)}
+        {renderWithDescription(actionIcon, description, hasAction, title)}
       </Content>
       <LikeButtonWrapper>
         <LikeButton
