@@ -28,6 +28,9 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         if (request.url.includes('and')) {
           return resolveWith(apolloDatasourceMocks.Scripture()[1], request.url);
         }
+        if (request.url.includes('passages')) {
+          return resolveWith(apolloDatasourceMocks.Scripture()[2], request.url);
+        }
         return resolveWith(apolloDatasourceMocks.Scripture()[0], request.url);
       }
       return Promise.reject();

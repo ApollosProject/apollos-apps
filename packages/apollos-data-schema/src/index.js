@@ -157,8 +157,9 @@ export const themeSchema = gql`
 `;
 
 export const scriptureSchema = gql`
-  type Scripture {
-    id: String
+  type Scripture implements Node {
+    id: ID!
+
     html: String
     reference: String
     copyright: String

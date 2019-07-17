@@ -1,6 +1,7 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { createGlobalId } from '@apollosproject/server-core';
 import * as Scripture from '../index';
 
 const { getContext, getSchema } = createTestHelpers({ Scripture });
@@ -41,6 +42,25 @@ describe('Scripture', () => {
           html
           reference
           copyright
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('returns a verse as by node', async () => {
+    const query = `
+      query {
+        node (id: "${createGlobalId('SNG.1.1', 'Scripture')}") {
+          id
+          ... on Scripture {
+            html
+            reference
+            copyright
+          }
         }
       }
     `;
