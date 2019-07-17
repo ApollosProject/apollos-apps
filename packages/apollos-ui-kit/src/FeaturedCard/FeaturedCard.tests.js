@@ -61,6 +61,42 @@ describe('FeaturedCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with custom labelText', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          labelText={'Quote'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render correctly with "Live" labelText', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          labelText={'Live'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a default actionIcon ("play") with onPressAction', () => {
     const tree = renderer.create(
       <Providers>
