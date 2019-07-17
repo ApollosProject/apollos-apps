@@ -61,7 +61,7 @@ export default class Features extends RockApolloDataSource {
 
     // Map them into specific actions.
     return items.map((item, i) => ({
-      id: createGlobalId(item.id + i, 'ActionListAction'),
+      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
