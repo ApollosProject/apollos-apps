@@ -9,22 +9,23 @@ import Card, { CardImage, CardLabel, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
 import { H2, BodyText } from '../typography';
 import { ButtonIcon } from '../Button';
+import Icon from '../Icon';
 import { ImageSourceType } from '../ConnectedImage';
 
 const StyledCard = withTheme(({ theme }) => ({
   cardColor: theme.colors.primary,
 }))(Card);
 
-const LikeButtonWrapper = styled({
-  position: 'absolute',
-  top: 0,
-  right: 0,
-})(View);
-
-const LikeButton = withTheme(({ theme }) => ({
+const LikeIcon = withTheme(({ theme, isLiked }) => ({
+  name: isLiked ? 'like-solid' : 'like',
   size: theme.sizing.baseUnit * 1.5,
   iconPadding: theme.sizing.baseUnit * 1.5,
-}))(ButtonIcon);
+  style: {
+    position: 'absolute',
+    top: theme.sizing.baseUnit * 1.5,
+    right: theme.sizing.baseUnit * 1.5,
+  },
+}))(Icon);
 
 const Image = withTheme(({ theme }) => ({
   overlayColor: theme.colors.primary,
@@ -96,7 +97,6 @@ const FeaturedCard = ({
   LabelComponent,
   labelText,
   onPressAction,
-  onPressLike,
   theme,
 }) => (
   <ThemeMixin
@@ -122,12 +122,7 @@ const FeaturedCard = ({
         {renderOnlyTitle(description, title)}
         {renderWithDescription(actionIcon, description, hasAction, title)}
       </Content>
-      <LikeButtonWrapper>
-        <LikeButton
-          name={isLiked ? 'like-solid' : 'like'}
-          onPress={onPressLike}
-        />
-      </LikeButtonWrapper>
+      <LikeIcon isLiked={isLiked} />
     </StyledCard>
   </ThemeMixin>
 );
@@ -144,7 +139,6 @@ FeaturedCard.propTypes = {
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   onPressAction: PropTypes.func,
-  onPressLike: PropTypes.func,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
