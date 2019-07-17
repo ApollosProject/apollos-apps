@@ -30,4 +30,12 @@ describe('The Chip component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render positioned for a chipList', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Chip title="chipList" chipList />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
