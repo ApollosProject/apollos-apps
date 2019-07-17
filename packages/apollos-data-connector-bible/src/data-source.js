@@ -15,6 +15,12 @@ export default class Scripture extends RESTDataSource {
     request.headers.set('api-key', `${this.token}`);
   }
 
+  async getFromId(id) {
+    const bibleId = BIBLE_API.BIBLE_ID;
+    const { data } = await this.get(`${bibleId}/passages/${id}`);
+    return data;
+  }
+
   async getScripture(query) {
     const scriptures = await this.getScriptures(query);
     if (scriptures[0]) {
