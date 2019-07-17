@@ -246,9 +246,9 @@ describe('ContentItemsModel', () => {
 
   it('getSermonFeed fetches items from a specific content channel', () => {
     const dataSource = new ContentItemsDataSource();
-    dataSource.byContentChannelId = jest.fn(
-      () => new Promise((resolve) => resolve)
-    );
+    dataSource.byContentChannelId = jest.fn(() => ({
+      andFilter: async () => Promise.resolve(),
+    }));
 
     const result = dataSource.getSermonFeed({ id: '1' });
     expect(dataSource.byContentChannelId.mock.calls).toMatchSnapshot();
