@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 export const parseKeyValueAttribute = (text = '') => {
+  // Rock transports { foo: 'bar', baz: 'bat' } as 'foo^bar|baz^bat`
   if (text === '') return [];
 
   const entries = text.split('|');
