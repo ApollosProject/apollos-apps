@@ -451,7 +451,7 @@ exports[`features dataSource should throw an error when creating a ActionListFea
 Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
 `;
 
-exports[`features resolver must return a personaFeed and a contentChannelFeed for the userFeedFeatures 1`] = `
+exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `
 Array [
   Object {
     "__typename": "ActionListFeature",
