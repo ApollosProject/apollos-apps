@@ -32,7 +32,7 @@ const Image = withTheme(({ theme }) => ({
 }))(CardImage);
 
 const Content = styled(({ theme }) => ({
-  alignItems: 'flex-start',
+  alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
   marginTop: '-40%',
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
