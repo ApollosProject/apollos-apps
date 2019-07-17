@@ -8,7 +8,6 @@ import styled from '../styled';
 import Card, { CardImage, CardLabel, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
 import { H2, BodyText } from '../typography';
-import { ButtonIcon } from '../Button';
 import Icon from '../Icon';
 import { ImageSourceType } from '../ConnectedImage';
 
@@ -48,15 +47,15 @@ const ActionLayout = styled(({ theme, hasDescription }) => ({
   paddingTop: theme.sizing.baseUnit,
 }))(View);
 
-const ActionButton = withTheme(({ theme }) => ({
+const ActionIcon = withTheme(({ theme }) => ({
   fill: theme.colors.primary,
   size: theme.sizing.baseUnit * 1.5,
-  iconPadding: theme.sizing.baseUnit * 0.75,
   style: {
     marginLeft: theme.sizing.baseUnit,
     backgroundColor: theme.colors.text.primary,
+    padding: theme.sizing.baseUnit * 0.75,
   },
-}))(ButtonIcon);
+}))(Icon);
 
 const Label = withTheme(
   ({ customTheme, hasDescription, labelText, theme }) => ({
@@ -93,10 +92,10 @@ const FeaturedCard = ({
   title,
   actionIcon,
   description,
+  hasAction,
   isLiked,
   LabelComponent,
   labelText,
-  onPressAction,
   theme,
 }) => (
   <ThemeMixin
@@ -135,10 +134,10 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   description: PropTypes.string,
+  hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
-  onPressAction: PropTypes.func,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
