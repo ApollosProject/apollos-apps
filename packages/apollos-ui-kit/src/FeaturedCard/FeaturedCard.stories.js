@@ -71,6 +71,19 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
     />
   ))
+  .add('isLiked', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLiked
+    />
+  ))
   .add('labelText', () => (
     <FeaturedCard
       title={

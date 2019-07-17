@@ -11,14 +11,25 @@ import { H2, BodyText } from '../typography';
 import { ButtonIcon } from '../Button';
 import { ImageSourceType } from '../ConnectedImage';
 
+const StyledCard = withTheme(({ theme }) => ({
+  cardColor: theme.colors.primary,
+}))(Card);
+
+const LikeButtonWrapper = styled({
+  position: 'absolute',
+  top: 0,
+  right: 0,
+})(View);
+
+const LikeButton = withTheme(({ theme }) => ({
+  size: theme.sizing.baseUnit * 1.5,
+  iconPadding: theme.sizing.baseUnit * 1.5,
+}))(ButtonIcon);
+
 const Image = withTheme(({ theme }) => ({
   overlayColor: theme.colors.primary,
   style: { aspectRatio: 1 },
 }))(CardImage);
-
-const StyledCard = withTheme(({ theme }) => ({
-  cardColor: theme.colors.primary,
-}))(Card);
 
 const Content = styled(({ theme }) => ({
   alignItems: 'flex-start',
@@ -63,10 +74,12 @@ const FeaturedCard = ({
   image,
   title,
   actionIcon,
-  labelText,
   description,
+  isLiked,
   LabelComponent,
+  labelText,
   onPressAction,
+  onPressLike,
   theme,
 }) => (
   <ThemeMixin
@@ -105,6 +118,12 @@ const FeaturedCard = ({
           ) : null}
         </ActionLayout>
       </Content>
+      <LikeButtonWrapper>
+        <LikeButton
+          name={isLiked ? 'like-solid' : 'like'}
+          onPress={onPressLike}
+        />
+      </LikeButtonWrapper>
     </StyledCard>
   </ThemeMixin>
 );
@@ -117,9 +136,11 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   description: PropTypes.string,
+  isLiked: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   onPressAction: PropTypes.func,
+  onPressLike: PropTypes.func,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
