@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import Color from 'color';
@@ -12,8 +12,19 @@ import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import FlexedView from '../FlexedView';
 import { H3, BodyText } from '../typography';
 import { ButtonIcon } from '../Button';
+import { ImageSourceType } from '../ConnectedImage';
 
 const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
+
+const StyledCard = withTheme(({ theme }) => ({
+  cardColor: theme.colors.primary,
+}))(Card);
+
+const LikeButtonWrapper = styled({
+  position: 'absolute',
+  top: 0,
+  right: 0,
+})(View);
 
 const Image = withTheme(({ theme }) => ({
   overlayColor: theme.colors.primary,
@@ -26,24 +37,46 @@ const Content = styled(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
   flexDirection: 'row',
-  alignItems: 'flex-end',
+  alignItems: 'flex-start',
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2,
 }))(CardContent);
 
+const ActionLayout = styled(({ theme, hasDescription }) => ({
+  flexDirection: 'row',
+  /* - `center` works in all situations including 1 line descriptions
+   * - `flex-end` is needed only for when we have no description
+   */
+  alignItems: hasDescription ? 'center' : 'flex-end',
+  paddingTop: theme.sizing.baseUnit,
+}))(View);
+
+const ActionButton = withTheme(({ theme }) => ({
+  fill: theme.colors.primary,
+  size: theme.sizing.baseUnit * 1.5,
+  iconPadding: theme.sizing.baseUnit * 0.75,
+  style: {
+    marginLeft: theme.sizing.baseUnit,
+    backgroundColor: theme.colors.text.primary,
+  },
+}))(ButtonIcon);
+
+const Label = withTheme(
+  ({ customTheme, hasDescription, labelText, theme }) => ({
+    type: labelText.toLowerCase() === 'live' ? 'secondary' : 'overlay',
+    icon: labelText.toLowerCase() === 'live' ? 'live-dot' : '',
+    theme: { colors: get(customTheme, 'colors', {}) },
+    title: labelText,
+    iconSize: 7,
+    style: {
+      ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
+    },
+  })
+)(CardLabel);
+
 const Description = styled(({ theme }) => ({
   marginTop: theme.sizing.baseUnit,
 }))(BodyText);
-
-const ActionButton = withTheme(({ theme }) => ({
-  fill: theme.colors.text.primary,
-  iconPadding: theme.sizing.baseUnit * 0.75,
-  size: theme.sizing.baseUnit * 1.5,
-  style: {
-    marginLeft: theme.sizing.baseUnit,
-    backgroundColor: Color(theme.colors.text.primary).alpha(0.1),
-  },
-}))(ButtonIcon);
 
 const CardOverlay = withTheme(
   ({
@@ -77,25 +110,47 @@ const HighlightCard = ({
       colors: get(theme, 'colors', {}),
     }}
   >
-    <Card>
+    <StyledCard>
       <Image source={image} />
       <CardOverlay />
       <Content>
-        <FlexedView>
-          <H3 numberOfLines={description ? 3 : 4}>{title}</H3>
-          {description ? (
-            <Description numberOfLines={2}>{description}</Description>
+        {labelText
+          ? // if we have a custom `LabelComponent` render it
+            LabelComponent || ( // otherwise default to `Label`
+              <Label
+                customTheme={theme}
+                labelText={labelText}
+                hasDescription={description}
+              />
+            )
+          : null}
+          {// only if we have a `description` render a shorter full width `H2` `title`
+        description ? <H2 numberOfLines={3}>{title}</H2> : null}
+        <ActionLayout hasDescription={description}>
+          <FlexedView>
+            {// if we have a `description` render it otherwise render a longer but narrower `H2` `title`
+            description ? (
+              <BodyText numberOfLines={2}>{description}</BodyText>
+            ) : (
+              <H2 numberOfLines={4}>{title}</H2>
+            )}
+          </FlexedView>
+          {onPressAction ? (
+            <ActionButton name={actionIcon} onPress={onPressAction} />
           ) : null}
-        </FlexedView>
-        {onPressAction ? (
-          <ActionButton name={actionIcon} onPress={onPressAction} />
-        ) : null}
+        </ActionLayout>
       </Content>
-    </Card>
+      <LikeButtonWrapper>
+        <LikeButton
+          name={isLiked ? 'like-solid' : 'like'}
+          onPress={onPressLike}
+        />
+      </LikeButtonWrapper>
+    </StyledCard>
   </ThemeMixin>
 );
 
-HighlightCard.propTypes = {
+FeaturedCard.propTypes = {
   image: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -103,12 +158,17 @@ HighlightCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   description: PropTypes.string,
+  isLiked: PropTypes.bool,
+  LabelComponent: PropTypes.element,
+  labelText: PropTypes.string,
   onPressAction: PropTypes.func,
+  onPressLike: PropTypes.func,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
   }),
 };
+
 
 HighlightCard.defaultProps = {
   actionIcon: 'play-solid',
