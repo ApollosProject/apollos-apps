@@ -94,21 +94,25 @@ const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
   return ComponentToRender;
 };
 
-const renderOnlyTitle = (description, title) =>
-  description ? <H2 numberOfLines={3}>{title}</H2> : null;
-
-const renderWithDescription = (actionIcon, description, hasAction, title) => (
-  <ActionLayout hasDescription={description}>
+const renderOnlyTitle = (title, actionIcon, hasAction) => (
+  <ActionLayout hasDescription={false}>
     <FlexedView>
-      {// if we have a `description` render it otherwise render a longer but narrower `H2` `title`
-      description ? (
-        <BodyText numberOfLines={2}>{description}</BodyText>
-      ) : (
-        <H2 numberOfLines={4}>{title}</H2>
-      )}
+      <H2 numberOfLines={4}>{title}</H2>
     </FlexedView>
     {hasAction ? <ActionIcon name={actionIcon} /> : null}
   </ActionLayout>
+);
+
+const renderWithDescription = (title, actionIcon, description, hasAction) => (
+  <>
+    <H2 numberOfLines={3}>{title}</H2>
+    <ActionLayout hasDescription>
+      <FlexedView>
+        <BodyText numberOfLines={2}>{description}</BodyText>
+      </FlexedView>
+      {hasAction ? <ActionIcon name={actionIcon} /> : null}
+    </ActionLayout>
+  </>
 );
 
 const FeaturedCard = ({
@@ -134,8 +138,9 @@ const FeaturedCard = ({
 
       <Content>
         {renderLabel(description, LabelComponent, labelText, isLive, theme)}
-        {renderOnlyTitle(description, title)}
-        {renderWithDescription(actionIcon, description, hasAction, title)}
+        {description
+          ? renderWithDescription(title, actionIcon, description, hasAction)
+          : renderOnlyTitle(title, actionIcon, hasAction)}
       </Content>
       <LikeIcon isLiked={isLiked} />
     </StyledCard>
