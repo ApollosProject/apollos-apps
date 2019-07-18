@@ -2,11 +2,19 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
+import Permissions from 'react-native-permissions';
 import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
 class LocationFinderConnected extends PureComponent {
-  state = { selectedCampus: false };
+  state = { selectedCampus: false, locationPermission: false };
+
+  componentDidMount() {
+    Permissions.check('location').then((response) => {
+      // Response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
+      this.setState({ locationPermission: response === 'authorized' });
+    });
+  }
 
   render() {
     return (
@@ -23,19 +31,27 @@ class LocationFinderConnected extends PureComponent {
           <AnalyticsConsumer>
             {({ track }) => (
               <this.props.Component
-                onPressButton={async () => {
+                onPressButton={() => {
                   this.setState({ selectedCampus: true });
                   this.props.onNavigate();
                   track({ eventName: 'LocationFinder Opened MapView' });
                 }}
                 // Next button
-                onPressPrimary={campus ? this.props.onPressPrimary : null}
+                onPressPrimary={
+                  campus && this.state.locationPermisson
+                    ? this.props.onPressPrimary
+                    : null
+                }
                 // Skip button
-                onPressSecondary={!campus ? this.props.onPressPrimary : null}
+                onPressSecondary={
+                  !campus || !this.state.locationPermission
+                    ? this.props.onPressPrimary
+                    : null
+                }
                 pressPrimaryEventName={'Ask Location Completed'}
                 pressSecondaryEventName={'Ask Location Skipped'}
                 buttonText={'Yes, find my local campus'}
-                campus={this.state.selectedCampus ? campus : null}
+                campus={campus && this.state.locationPermission ? campus : null}
                 {...this.props}
               />
             )}
