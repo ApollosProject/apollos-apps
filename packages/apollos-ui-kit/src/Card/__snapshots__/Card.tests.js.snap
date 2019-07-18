@@ -34,6 +34,7 @@ exports[`the Card component it should render a placeholder 1`] = `
     }
   >
     <View
+      isLoading={true}
       style={
         Object {
           "backgroundColor": "#FFFFFF",
@@ -67,25 +68,28 @@ exports[`the Card component it should render a placeholder 1`] = `
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 24,
-                "lineHeight": 27.6,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 24,
+                "marginVertical": 1.8000000000000007,
+                "width": "100%",
               }
             }
           />
-          <Text
-            padded={true}
+          <View
             style={
               Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
-                "paddingBottom": 8.64,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginBottom": 8.64,
+                "marginVertical": 2.6400000000000006,
+                "width": "50%",
               }
             }
           />
@@ -96,15 +100,39 @@ exports[`the Card component it should render a placeholder 1`] = `
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 16,
-                  "lineHeight": 26,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 16,
+                  "marginVertical": 5,
+                  "width": "85%",
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 16,
+                  "marginVertical": 5,
+                  "width": "100%",
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 16,
+                  "marginVertical": 5,
+                  "width": "75%",
                 }
               }
             />
@@ -124,39 +152,16 @@ exports[`the Card component it should render a placeholder 1`] = `
           }
         >
           <View
-            bordered={false}
-            disabled={false}
-            pill={false}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
+                "height": 32,
+                "width": 64,
               }
             }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 23.04,
-                }
-              }
-            >
-              
-            </Text>
-          </View>
+          />
           <Text
             style={
               Object {
