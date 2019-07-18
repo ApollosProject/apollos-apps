@@ -16,7 +16,7 @@ const StyledCard = withTheme(({ theme }) => ({
   cardColor: theme.colors.primary,
 }))(Card);
 
-// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly.
+// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(({ theme }) => ({
   position: 'absolute',
   top: theme.sizing.baseUnit * 1.5,
