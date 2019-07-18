@@ -37,7 +37,7 @@ describe('FeaturedCard', () => {
             },
           ]}
           actionIcon={'umbrella'}
-          onPressAction={jest.fn()}
+          hasAction
         />
       </Providers>
     );

@@ -54,7 +54,7 @@ storiesOf('ui-kit/FeaturedCard', module)
         },
       ]}
       actionIcon={'umbrella'}
-      onPressAction={() => {}}
+      hasAction
     />
   ))
   .add('description', () => (

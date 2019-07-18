@@ -150,6 +150,7 @@ exports[`FeaturedCard should render 1`] = `
           }
         >
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -457,6 +458,7 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
           }
         >
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -486,6 +488,123 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
                 Are you telling me that you built a time machine out of a DeLorean?
               </Text>
             </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {
+                    "marginLeft": 16,
+                  },
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={32}
+              vbWidth={32}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+                  fill={
+                    Array [
+                      0,
+                      4294506484,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
           </View>
         </View>
         <RNSVGSvgView
@@ -764,6 +883,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
           }
         >
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -1084,7 +1204,7 @@ exports[`FeaturedCard should render with a description 1`] = `
             Are you telling me that you built a time machine out of a DeLorean?
           </Text>
           <View
-            hasDescription="The way I see it, if you’re going to build a time machine into a car, why not do it with some style?"
+            hasDescription={true}
             style={
               Object {
                 "alignItems": "center",
@@ -1448,6 +1568,7 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
             </Text>
           </View>
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -1809,6 +1930,7 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
             </Text>
           </View>
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -2116,6 +2238,7 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
           }
         >
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -2580,6 +2703,7 @@ exports[`FeaturedCard should should render as isLive 1`] = `
             </Text>
           </View>
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -2887,6 +3011,7 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
           }
         >
           <View
+            hasDescription={false}
             style={
               Object {
                 "alignItems": "flex-end",
