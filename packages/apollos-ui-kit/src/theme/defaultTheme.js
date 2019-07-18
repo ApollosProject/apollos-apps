@@ -151,6 +151,106 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   },
 });
 
+export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
+  // these are a function because we can't assume colors of an overlay based on a theme (varies on usage + context)
+  default: ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .fade(1)
+        .string()}`,
+      overlayColor,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0.5, 1],
+  }),
+  high: ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .alpha(themeAlpha.high)
+        .string()}`,
+      `${Color(overlayColor)
+        .alpha(themeAlpha.high)
+        .string()}`,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
+  }),
+  medium: ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .alpha(themeAlpha.medium)
+        .string()}`,
+      `${Color(overlayColor)
+        .alpha(themeAlpha.medium)
+        .string()}`,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
+  }),
+  low: ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .alpha(themeAlpha.low)
+        .string()}`,
+      `${Color(overlayColor)
+        .alpha(themeAlpha.low)
+        .string()}`,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
+  }),
+  'gradient-bottom': ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .alpha(themeAlpha.low)
+        .string()}`,
+      `${Color(overlayColor)
+        .alpha(themeAlpha.medium)
+        .string()}`,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
+  }),
+  'gradient-top': ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .alpha(themeAlpha.medium)
+        .string()}`,
+      themeColors.transparent,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
+  }),
+  featured: ({ overlayColor }) => ({
+    colors: [
+      `${Color(overlayColor)
+        .alpha(themeAlpha.low)
+        .string()}`,
+      overlayColor,
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 0.8],
+  }),
+  // Overriding this property changes all BackgroundViews
+  'background-gradient': ({ colors: customColors }) => ({
+    colors: customColors || [
+      themeColors.background.paper,
+      themeColors.background.screen,
+    ],
+    // default props from `react-native-linear-gradient`
+    start: { x: 0.5, y: 0.0 },
+    end: { x: 0.5, y: 1.0 },
+    locations: null,
+  }),
+});
+
 /*
  * Helpers make it easy to expose simple utils in your theme that rely on the current theme to
  * compute its value. They should be a function that takes a single argument - the current theme,
