@@ -21,9 +21,12 @@ export default class AuthDataSource extends RockApolloDataSource {
     }
 
     if (userCookie) {
+      // We set this magic "userRequest" property to ensure that the request isn't made on behalf of the Apollos API.
+      this.userRequest = true;
       const request = await this.request('People/GetCurrentPerson').get({
         options: { headers: { cookie: userCookie } },
       });
+      this.userRequest = false;
       this.context.currentPerson = request;
       return request;
     }

@@ -22,7 +22,14 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   baseURL = ROCK.API_URL;
 
-  rockToken = ROCK.API_TOKEN;
+  userRequest = false;
+
+  get rockToken() {
+    if (!this.userRequest) {
+      return ROCK.API_TOKEN;
+    }
+    return null;
+  }
 
   nodeFetch = fetch;
 
