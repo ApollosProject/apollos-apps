@@ -22,14 +22,7 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   baseURL = ROCK.API_URL;
 
-  userRequest = false;
-
-  get rockToken() {
-    if (!this.userRequest) {
-      return ROCK.API_TOKEN;
-    }
-    return null;
-  }
+  rockToken = ROCK.API_TOKEN;
 
   nodeFetch = fetch;
 
@@ -47,7 +40,9 @@ export default class RockApolloDataSource extends RESTDataSource {
     }
     this.calls[request.path] = this.calls[request.path] + 1;
 
-    request.headers.set('Authorization-Token', this.rockToken);
+    if (!request.headers.has('Authorization-Token')) {
+      request.headers.set('Authorization-Token', this.rockToken);
+    }
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
   }
