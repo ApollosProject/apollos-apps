@@ -34,6 +34,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
     }
   >
     <View
+      isLoading={true}
       style={
         Object {
           "backgroundColor": "#FFFFFF",
