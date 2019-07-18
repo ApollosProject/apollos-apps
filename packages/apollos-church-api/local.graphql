@@ -359,6 +359,12 @@ type Scripture implements Node {
   copyright: String
 }
 
+type ScriptureFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  scriptures: [Scripture]
+}
+
 interface Sharable {
   url: String
   message: String
