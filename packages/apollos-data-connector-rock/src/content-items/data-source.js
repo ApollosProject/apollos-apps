@@ -107,7 +107,6 @@ export default class ContentItem extends RockApolloDataSource {
 
   // eslint-disable-next-line class-methods-use-this
   getFeatures({ attributeValues }) {
-    console.log(parseKeyValueAttribute);
     const { Features } = this.context.dataSources;
     const features = [];
 
@@ -151,7 +150,9 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   getSermonFeed() {
-    return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID);
+    return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID).andFilter(
+      this.LIVE_CONTENT()
+    );
   }
 
   async isContentActiveLiveStream({ id }) {

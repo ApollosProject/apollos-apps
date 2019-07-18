@@ -10,6 +10,7 @@ export default class Features extends RockApolloDataSource {
     // We need to make sure `this` refers to the class, not the `ACTION_ALGORITHIMS` object.
     PERSONA_FEED: this.personaFeedAlgorithm.bind(this),
     CONTENT_CHANNEL: this.contentChannelAlgorithm.bind(this),
+    SERMON_CHILDREN: this.sermonChildrenAlgorithm.bind(this),
   };
 
   async createActionListFeature({ algorithms = [], title, subtitle }) {
@@ -81,6 +82,27 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const { ContentItem } = this.context.dataSources;
     const cursor = ContentItem.byContentChannelId(contentChannelId);
 
+    const items = limit ? await cursor.top(limit).get() : await cursor.get();
+
+    return items.map((item, i) => ({
+      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      title: item.title,
+      subtitle: get(item, 'contentChannel.name'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+    }));
+  }
+
+  async sermonChildrenAlgorithm({ limit = null } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    const sermon = await ContentItem.getSermonFeed().first();
+    if (!sermon) {
+      return [];
+    }
+
+    const cursor = await ContentItem.getCursorByParentContentItemId(sermon.id);
     const items = limit ? await cursor.first(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
