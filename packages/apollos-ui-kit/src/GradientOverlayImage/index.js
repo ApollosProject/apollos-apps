@@ -3,28 +3,17 @@ import { StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
 import { pure } from 'recompose';
-import Color from 'color';
 
 import styled from '../styled';
+import withTheme from '../theme/withTheme';
 import ConnectedImage from '../ConnectedImage';
 
 const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
 
-const getGradientValues = (overlayColor) => {
-  const values = {
-    colors: [
-      `${Color(overlayColor)
-        .fade(1)
-        .string()}`,
-      overlayColor,
-    ],
-    start: { x: 0, y: 0 },
-    end: { x: 0, y: 1 },
-    locations: [0.5, 1],
-  };
-
-  return values;
-};
+const ThemedOverlay = withTheme(
+  ({ theme: { overlays }, overlayColor, overlayType }) =>
+    overlays[overlayType]({ overlayColor })
+)(Overlay);
 
 const Container = styled(({ theme }) => ({
   width: '100%',
@@ -47,6 +36,7 @@ const GradientOverlayImage = pure(
   ({
     source: imageSource,
     overlayColor,
+    overlayType,
     ImageComponent: ComponentProp,
     isLoading,
     style,
@@ -71,11 +61,9 @@ const GradientOverlayImage = pure(
           <NoImagePlaceholder style={imageStyle} />
         )}
         {overlayColor ? (
-          <Overlay
-            colors={getGradientValues(overlayColor).colors}
-            start={getGradientValues(overlayColor).start}
-            end={getGradientValues(overlayColor).end}
-            locations={getGradientValues(overlayColor).locations}
+          <ThemedOverlay
+            overlayType={overlayType}
+            overlayColor={overlayColor}
           />
         ) : null}
       </Container>
@@ -104,6 +92,7 @@ GradientOverlayImage.propTypes = {
 
 GradientOverlayImage.defaultProps = {
   maintainAspectRatio: true,
+  overlayType: 'default',
 };
 
 export default GradientOverlayImage;
