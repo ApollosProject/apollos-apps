@@ -9,21 +9,24 @@ import Card, { CardImage, CardLabel, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
 import { H2, BodyText } from '../typography';
 import Icon from '../Icon';
+import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
 const StyledCard = withTheme(({ theme }) => ({
   cardColor: theme.colors.primary,
 }))(Card);
 
+// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly.
+const LikeIconPositioning = styled(({ theme }) => ({
+  position: 'absolute',
+  top: theme.sizing.baseUnit * 1.5,
+  right: theme.sizing.baseUnit * 1.5,
+}))(View);
+
 const LikeIcon = withTheme(({ theme, isLiked }) => ({
   name: isLiked ? 'like-solid' : 'like',
   size: theme.sizing.baseUnit * 1.5,
   iconPadding: theme.sizing.baseUnit * 1.5,
-  style: {
-    position: 'absolute',
-    top: theme.sizing.baseUnit * 1.5,
-    right: theme.sizing.baseUnit * 1.5,
-  },
 }))(Icon);
 
 const Image = withTheme(({ theme }) => ({
@@ -47,12 +50,13 @@ const ActionLayout = styled(({ theme, hasDescription }) => ({
   paddingTop: theme.sizing.baseUnit,
 }))(View);
 
+const FlexedActionLayoutText = styled(({ theme }) => ({
+  marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+}))(FlexedView);
+
 const ActionIcon = withTheme(({ theme }) => ({
   fill: theme.colors.text.primary,
   size: theme.sizing.baseUnit * 3,
-  style: {
-    marginLeft: theme.sizing.baseUnit,
-  },
 }))(Icon);
 
 const Label = withTheme(
@@ -96,9 +100,9 @@ const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
 
 const renderOnlyTitle = (title, actionIcon, hasAction) => (
   <ActionLayout hasDescription={false}>
-    <FlexedView>
+    <FlexedActionLayoutText>
       <H2 numberOfLines={4}>{title}</H2>
-    </FlexedView>
+    </FlexedActionLayoutText>
     {hasAction ? <ActionIcon name={actionIcon} /> : null}
   </ActionLayout>
 );
@@ -107,44 +111,49 @@ const renderWithDescription = (title, actionIcon, description, hasAction) => (
   <>
     <H2 numberOfLines={3}>{title}</H2>
     <ActionLayout hasDescription>
-      <FlexedView>
+      <FlexedActionLayoutText>
         <BodyText numberOfLines={2}>{description}</BodyText>
-      </FlexedView>
+      </FlexedActionLayoutText>
       {hasAction ? <ActionIcon name={actionIcon} /> : null}
     </ActionLayout>
   </>
 );
 
-const FeaturedCard = ({
-  image,
-  title,
-  actionIcon,
-  description,
-  hasAction,
-  isLiked,
-  isLive,
-  LabelComponent,
-  labelText,
-  theme,
-}) => (
-  <ThemeMixin
-    mixin={{
-      type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
-      colors: get(theme, 'colors', {}),
-    }}
-  >
-    <StyledCard>
-      <Image source={image} />
+const FeaturedCard = withIsLoading(
+  ({
+    image,
+    title,
+    actionIcon,
+    description,
+    hasAction,
+    isLiked,
+    isLive,
+    isLoading,
+    LabelComponent,
+    labelText,
+    theme,
+  }) => (
+    <ThemeMixin
+      mixin={{
+        type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
+        colors: get(theme, 'colors', {}),
+      }}
+    >
+      <StyledCard isLoading={isLoading}>
+        <Image source={image} overlayType={'featured'} />
 
-      <Content>
-        {renderLabel(description, LabelComponent, labelText, isLive, theme)}
-        {description
-          ? renderWithDescription(title, actionIcon, description, hasAction)
-          : renderOnlyTitle(title, actionIcon, hasAction)}
-      </Content>
-      <LikeIcon isLiked={isLiked} />
-    </StyledCard>
-  </ThemeMixin>
+        <Content>
+          {renderLabel(description, LabelComponent, labelText, isLive, theme)}
+          {description
+            ? renderWithDescription(title, actionIcon, description, hasAction)
+            : renderOnlyTitle(title, actionIcon, hasAction)}
+        </Content>
+        <LikeIconPositioning>
+          <LikeIcon isLiked={isLiked} />
+        </LikeIconPositioning>
+      </StyledCard>
+    </ThemeMixin>
+  )
 );
 
 FeaturedCard.propTypes = {

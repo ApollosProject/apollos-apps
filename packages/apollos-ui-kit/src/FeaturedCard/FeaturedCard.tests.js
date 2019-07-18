@@ -117,6 +117,29 @@ describe('FeaturedCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state with isLoading', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          description={
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+          }
+          hasAction
+          isLive
+          isLoading
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render with custom LabelComponent', () => {
     const tree = renderer.create(
       <Providers>
