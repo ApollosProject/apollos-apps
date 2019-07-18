@@ -1,18 +1,23 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import { H3, H6, BodyText, Paragraph } from '../typography';
+import { H3, BodyText, Paragraph } from '../typography';
 import Button, { ButtonLink } from '../Button';
 
-import Card, { CardActions, CardContent, CardImage } from '.';
+import Card, { CardActions, CardContent, CardImage, CardLabel } from '.';
 
 storiesOf('ui-kit/Card', module)
   .add('simple', () => (
     <Card>
       <CardImage source={'https://picsum.photos/600/400/?image=63'} />
       <CardContent>
-        <H3>Coffee</H3>
-        <H6 padded>noun</H6>
+        <H3 padded>Coffee</H3>
+        <CardLabel
+          title={'noun'}
+          style={{ alignSelf: 'flex-start' }} // eslint-disable-line react-native/no-inline-styles
+          icon={'filter'}
+        />
+
         <Paragraph>
           <BodyText>
             {
@@ -31,8 +36,11 @@ storiesOf('ui-kit/Card', module)
     <Card isLoading>
       <CardImage />
       <CardContent>
-        <H3 />
-        <H6 padded />
+        <H3 padded />
+        <CardLabel
+          icon={'filter'}
+          style={{ alignSelf: 'flex-start' }} // eslint-disable-line react-native/no-inline-styles
+        />
         <Paragraph>
           <BodyText />
         </Paragraph>
