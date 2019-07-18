@@ -7,7 +7,7 @@ import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
 class LocationFinderConnected extends PureComponent {
-  state = { selectedCampus: false, locationPermission: false };
+  state = { locationPermission: false };
 
   componentDidMount() {
     Permissions.check('location').then((response) => {
@@ -32,7 +32,6 @@ class LocationFinderConnected extends PureComponent {
             {({ track }) => (
               <this.props.Component
                 onPressButton={() => {
-                  this.setState({ selectedCampus: true });
                   this.props.onNavigate();
                   track({ eventName: 'LocationFinder Opened MapView' });
                 }}
