@@ -114,7 +114,7 @@ exports[`Auth registers an auth token and passes the cookie on requests to rock 
 Headers {
   Symbol(map): Object {
     "Authorization-Token": Array [
-      "some-rock-token",
+      "null",
     ],
     "Content-Type": Array [
       "application/json",
