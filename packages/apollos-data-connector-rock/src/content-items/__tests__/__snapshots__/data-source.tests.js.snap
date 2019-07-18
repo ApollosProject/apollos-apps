@@ -209,6 +209,36 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns scripture features when a contentItem has a ScriptureFeatures field 1`] = `
+Array [
+  Object {
+    "body": "something",
+    "id": "ScriptureFeature:123",
+  },
+  Object {
+    "body": "something",
+    "id": "ScriptureFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns scripture features when a contentItem has a ScriptureFeatures field 2`] = `
+Array [
+  Array [
+    Object {
+      "id": "123-0",
+      "reference": "John 3:16",
+    },
+  ],
+  Array [
+    Object {
+      "id": "123-1",
+      "reference": "Mark 1:1",
+    },
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns text features and when a contentItem has a TextFeatures and a TextFeature field 1`] = `
 Array [
   Object {

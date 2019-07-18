@@ -227,6 +227,20 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot();
     });
+
+    it('createScriptureFeature should create a Scriptre feature', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createScriptureFeature({
+        reference: 'John 3:16',
+        id: 123,
+      });
+
+      expect(result).toMatchSnapshot();
+    });
   });
 
   describe('resolver', () => {
