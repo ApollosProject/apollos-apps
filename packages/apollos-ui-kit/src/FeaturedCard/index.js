@@ -48,27 +48,51 @@ const ActionLayout = styled(({ theme, hasDescription }) => ({
 }))(View);
 
 const ActionIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.primary,
-  size: theme.sizing.baseUnit * 1.5,
+  fill: theme.colors.text.primary,
+  size: theme.sizing.baseUnit * 3,
   style: {
     marginLeft: theme.sizing.baseUnit,
-    backgroundColor: theme.colors.text.primary,
-    padding: theme.sizing.baseUnit * 0.75,
   },
 }))(Icon);
 
 const Label = withTheme(
-  ({ customTheme, hasDescription, labelText, theme }) => ({
-    type: labelText.toLowerCase() === 'live' ? 'secondary' : 'overlay',
-    icon: labelText.toLowerCase() === 'live' ? 'live-dot' : '',
-    theme: { colors: get(customTheme, 'colors', {}) },
-    title: labelText,
-    iconSize: 7,
+  ({ customTheme, hasDescription, isLive, labelText, theme }) => ({
+    ...(isLive
+      ? {
+          title: labelText || 'Live',
+          type: 'secondary',
+          icon: 'live-dot',
+          iconSize: 7,
+        }
+      : {
+          title: labelText,
+          theme: { colors: get(customTheme, 'colors', {}) },
+          type: 'overlay',
+        }),
     style: {
       ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
     },
   })
 )(CardLabel);
+
+const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
+  let ComponentToRender = null;
+
+  if (LabelComponent) {
+    ComponentToRender = LabelComponent;
+  } else if (labelText || isLive) {
+    ComponentToRender = (
+      <Label
+        customTheme={theme}
+        hasDescription={description}
+        isLive={isLive}
+        labelText={labelText}
+      />
+    );
+  }
+
+  return ComponentToRender;
+};
 
 const renderOnlyTitle = (description, title) =>
   description ? <H2 numberOfLines={3}>{title}</H2> : null;
@@ -94,6 +118,7 @@ const FeaturedCard = ({
   description,
   hasAction,
   isLiked,
+  isLive,
   LabelComponent,
   labelText,
   theme,
@@ -108,16 +133,7 @@ const FeaturedCard = ({
       <Image source={image} />
 
       <Content>
-        {labelText // only render a label if we have `labelText`
-          ? // if we have a custom `LabelComponent` render it
-            LabelComponent || ( // otherwise default to `Label`
-              <Label
-                customTheme={theme}
-                labelText={labelText}
-                hasDescription={description}
-              />
-            )
-          : null}
+        {renderLabel(description, LabelComponent, labelText, isLive, theme)}
         {renderOnlyTitle(description, title)}
         {renderWithDescription(actionIcon, description, hasAction, title)}
       </Content>
@@ -136,6 +152,7 @@ FeaturedCard.propTypes = {
   description: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
+  isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   theme: PropTypes.shape({

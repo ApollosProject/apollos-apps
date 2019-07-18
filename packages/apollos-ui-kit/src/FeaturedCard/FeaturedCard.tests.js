@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import Providers from '../Providers';
+import { CardLabel } from '../Card';
 
 import FeaturedCard from '.';
 
@@ -61,6 +63,24 @@ describe('FeaturedCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should should render with an action "button"', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          hasAction
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>
@@ -79,6 +99,42 @@ describe('FeaturedCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should should render as isLive', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          isLive
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with custom LabelComponent', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeaturedCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          image={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          LabelComponent={<CardLabel title={'Custom LabelComponent'} />}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render with custom labelText', () => {
     const tree = renderer.create(
       <Providers>
@@ -92,42 +148,6 @@ describe('FeaturedCard', () => {
             },
           ]}
           labelText={'Quote'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render correctly with "Live" labelText', () => {
-    const tree = renderer.create(
-      <Providers>
-        <FeaturedCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          image={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          labelText={'Live'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render a default actionIcon ("play") with onPressAction', () => {
-    const tree = renderer.create(
-      <Providers>
-        <FeaturedCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          image={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          onPressAction={jest.fn()}
         />
       </Providers>
     );
