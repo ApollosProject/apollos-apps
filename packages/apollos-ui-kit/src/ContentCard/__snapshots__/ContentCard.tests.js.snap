@@ -665,6 +665,8 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                 1,
               ]
             }
+            overlayColor="#00676D"
+            overlayType="default"
             startPoint={
               Object {
                 "x": 0,
@@ -2158,6 +2160,8 @@ exports[`ContentCard renders with an Image only 1`] = `
                 1,
               ]
             }
+            overlayColor="#00676D"
+            overlayType="default"
             startPoint={
               Object {
                 "x": 0,

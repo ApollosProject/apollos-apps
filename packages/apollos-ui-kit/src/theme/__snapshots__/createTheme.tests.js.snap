@@ -82,6 +82,16 @@ Object {
     "rem": [Function],
     "verticalRhythm": [Function],
   },
+  "overlays": Object {
+    "background-gradient": [Function],
+    "default": [Function],
+    "featured": [Function],
+    "gradient-bottom": [Function],
+    "gradient-top": [Function],
+    "high": [Function],
+    "low": [Function],
+    "medium": [Function],
+  },
   "overrides": Object {
     "MyComponent": Object {
       "some": "style",
@@ -365,6 +375,16 @@ Object {
   "helpers": Object {
     "rem": [Function],
     "verticalRhythm": [Function],
+  },
+  "overlays": Object {
+    "background-gradient": [Function],
+    "default": [Function],
+    "featured": [Function],
+    "gradient-bottom": [Function],
+    "gradient-top": [Function],
+    "high": [Function],
+    "low": [Function],
+    "medium": [Function],
   },
   "overrides": Object {},
   "shadows": Object {

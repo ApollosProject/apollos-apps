@@ -253,6 +253,8 @@ exports[`the TileImage component should render 1`] = `
                 1,
               ]
             }
+            overlayColor="#000000"
+            overlayType="default"
             startPoint={
               Object {
                 "x": 0,
