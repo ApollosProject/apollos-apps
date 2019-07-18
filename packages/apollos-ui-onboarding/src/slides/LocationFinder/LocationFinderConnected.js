@@ -28,16 +28,10 @@ class LocationFinderConnected extends PureComponent {
                   this.props.onNavigate();
                   track({ eventName: 'LocationFinder Opened MapView' });
                 }}
-                onPressPrimary={
-                  campus /* show the primary action button (next) if we have a campus */
-                    ? this.props.onPressPrimary
-                    : null
-                }
-                onPressSecondary={
-                  !campus /* show the secondary action button (skip) if we don't have a campus */
-                    ? this.props.onPressPrimary
-                    : null
-                }
+                // Next button
+                onPressPrimary={campus ? this.props.onPressPrimary : null}
+                // Skip button
+                onPressSecondary={!campus ? this.props.onPressPrimary : null}
                 pressPrimaryEventName={'Ask Location Completed'}
                 pressSecondaryEventName={'Ask Location Skipped'}
                 buttonText={'Yes, find my local campus'}
