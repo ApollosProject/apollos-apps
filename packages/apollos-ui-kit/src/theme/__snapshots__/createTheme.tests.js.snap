@@ -26,6 +26,18 @@ Object {
       "accent": "#303030",
       "fill": "#303030",
     },
+    "overlay": Object {
+      "accent": "#FFFFFF",
+      "fill": Object {
+        "color": Array [
+          255,
+          255,
+          255,
+        ],
+        "model": "rgb",
+        "valpha": 0.4,
+      },
+    },
     "primary": Object {
       "accent": "#FFFFFF",
       "fill": "#00676D",
@@ -319,6 +331,18 @@ Object {
     "ghost": Object {
       "accent": "#F8F7F4",
       "fill": "#F8F7F4",
+    },
+    "overlay": Object {
+      "accent": "#FFFFFF",
+      "fill": Object {
+        "color": Array [
+          255,
+          255,
+          255,
+        ],
+        "model": "rgb",
+        "valpha": 0.4,
+      },
     },
     "primary": Object {
       "accent": "#FFFFFF",

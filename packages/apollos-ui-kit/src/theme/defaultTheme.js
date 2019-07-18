@@ -1,4 +1,5 @@
 import Color from 'color';
+
 import fontStack from './fontStack';
 import * as types from './types';
 
@@ -119,7 +120,7 @@ export const shadows = ({ colors: themeColors }) => ({
   },
 });
 
-export const buttons = ({ colors: themeColors }) => ({
+export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   default: {
     fill: themeColors.action.default,
     accent: themeColors.text.primary,
@@ -139,6 +140,10 @@ export const buttons = ({ colors: themeColors }) => ({
   ghost: {
     fill: themeColors.text.primary,
     accent: themeColors.text.primary,
+  },
+  overlay: {
+    fill: Color(themeColors.white).alpha(themeAlpha.low),
+    accent: themeColors.white,
   },
   alert: {
     fill: themeColors.alert,

@@ -3,3 +3,4 @@ export CardImage from './Image';
 export CardContent from './Content';
 export CardActions from './Actions';
 export ErrorCard from './ErrorCard';
+export CardLabel from './Label';

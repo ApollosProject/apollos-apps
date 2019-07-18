@@ -147,6 +147,7 @@ Button.propTypes = {
     'secondary',
     'tertiary',
     'ghost',
+    'overlay',
     'alert',
   ]), // keys in theme.colors.action
   ...Touchable.propTypes,
