@@ -6,7 +6,20 @@ Object {
     "scripture": Object {
       "copyright": "PUBLIC DOMAIN",
       "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>The Song of songs, which is Solomon’s.</p>",
-      "id": "SNG.1.1",
+      "id": "Scripture:dc6662c4910f2c94a54681816b86a0af",
+      "reference": "Song of Solomon 1:1",
+    },
+  },
+}
+`;
+
+exports[`Scripture returns a verse as by node 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "copyright": "PUBLIC DOMAIN",
+      "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>The Song of songs, which is Solomon’s.</p>",
+      "id": "Scripture:dc6662c4910f2c94a54681816b86a0af",
       "reference": "Song of Solomon 1:1",
     },
   },
@@ -20,13 +33,13 @@ Object {
       Object {
         "copyright": "PUBLIC DOMAIN",
         "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>Peter, an apostle of Jesus Christ, to the chosen ones who are living as foreigners in the Dispersion in Pontus, Galatia, Cappadocia, Asia, and Bithynia, </p>",
-        "id": "1PE.1.1",
+        "id": "Scripture:d94dcd4f2d29377b3606bc7be5f8de91",
         "reference": "1 Peter 1:1",
       },
       Object {
         "copyright": "PUBLIC DOMAIN",
         "html": "<p class=\\"p\\"><span data-number=\\"16\\" class=\\"v\\">16</span><span class=\\"wj\\">For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life. </span></p>",
-        "id": "JHN.3.16",
+        "id": "Scripture:7100b2cb9e9e4bb1317eab885193013a",
         "reference": "John 3:16",
       },
     ],
