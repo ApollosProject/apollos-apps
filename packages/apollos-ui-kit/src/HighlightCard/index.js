@@ -1,45 +1,48 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
-import Color from 'color';
-import LinearGradient from 'react-native-linear-gradient';
 
 import { withTheme, ThemeMixin } from '../theme';
 import styled from '../styled';
-import Card, { CardContent } from '../Card';
-import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
+import Card, { CardContent, CardLabel, CardImage } from '../Card';
 import FlexedView from '../FlexedView';
 import { H3, BodyText } from '../typography';
-import { ButtonIcon } from '../Button';
+import Icon from '../Icon';
+import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
-
-const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
 
 const StyledCard = withTheme(({ theme }) => ({
   cardColor: theme.colors.primary,
 }))(Card);
 
-const LikeButtonWrapper = styled({
+// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
+const LikeIconPositioning = styled(({ theme }) => ({
   position: 'absolute',
-  top: 0,
-  right: 0,
-})(View);
+  top: theme.sizing.baseUnit * 1.5,
+  right: theme.sizing.baseUnit * 1.5,
+}))(View);
+
+const LikeIcon = withTheme(({ theme, isLiked }) => ({
+  name: isLiked ? 'like-solid' : 'like',
+  size: theme.sizing.baseUnit * 1.5,
+  iconPadding: theme.sizing.baseUnit * 1.5,
+}))(Icon);
 
 const Image = withTheme(({ theme }) => ({
-  overlayColor: theme.colors.primary,
   maxAspectRatio: 1.2,
   minAspectRatio: 0.75,
   maintainAspectRatio: true,
-}))(ConnectedImage);
+  overlayColor: theme.colors.primary,
+}))(CardImage);
 
 const Content = styled(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
-  flexDirection: 'row',
-  alignItems: 'flex-start',
+  width: '100%',
+  alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-  paddingBottom: theme.sizing.baseUnit * 2,
+  paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
 
 const ActionLayout = styled(({ theme, hasDescription }) => ({
@@ -51,106 +54,112 @@ const ActionLayout = styled(({ theme, hasDescription }) => ({
   paddingTop: theme.sizing.baseUnit,
 }))(View);
 
-const ActionButton = withTheme(({ theme }) => ({
-  fill: theme.colors.primary,
-  size: theme.sizing.baseUnit * 1.5,
-  iconPadding: theme.sizing.baseUnit * 0.75,
-  style: {
-    marginLeft: theme.sizing.baseUnit,
-    backgroundColor: theme.colors.text.primary,
-  },
-}))(ButtonIcon);
+const FlexedActionLayoutText = styled(({ theme }) => ({
+  marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+}))(FlexedView);
+
+const ActionIcon = withTheme(({ theme }) => ({
+  fill: theme.colors.text.primary,
+  size: theme.sizing.baseUnit * 3,
+}))(Icon);
 
 const Label = withTheme(
-  ({ customTheme, hasDescription, labelText, theme }) => ({
-    type: labelText.toLowerCase() === 'live' ? 'secondary' : 'overlay',
-    icon: labelText.toLowerCase() === 'live' ? 'live-dot' : '',
-    theme: { colors: get(customTheme, 'colors', {}) },
-    title: labelText,
-    iconSize: 7,
+  ({ customTheme, hasDescription, isLive, labelText, theme }) => ({
+    ...(isLive
+      ? {
+          title: labelText || 'Live',
+          type: 'secondary',
+          icon: 'live-dot',
+          iconSize: 7,
+        }
+      : {
+          title: labelText,
+          theme: { colors: get(customTheme, 'colors', {}) },
+          type: 'overlay',
+        }),
     style: {
       ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
     },
   })
 )(CardLabel);
 
-const Description = styled(({ theme }) => ({
-  marginTop: theme.sizing.baseUnit,
-}))(BodyText);
+const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
+  let ComponentToRender = null;
 
-const CardOverlay = withTheme(
-  ({
-    theme: {
-      type,
-      colors: { white, black },
-      alpha: { low, medium },
-    },
-  }) => ({
-    colors: [
-      Color(type === 'light' ? white : black).fade(medium),
-      Color(type === 'light' ? white : black).fade(low),
-    ],
-    start: { x: 0, y: 0 },
-    end: { x: 0, y: 1 },
-    locations: [0, 1],
-  })
-)(Overlay);
+  if (LabelComponent) {
+    ComponentToRender = LabelComponent;
+  } else if (labelText || isLive) {
+    ComponentToRender = (
+      <Label
+        customTheme={theme}
+        hasDescription={description}
+        isLive={isLive}
+        labelText={labelText}
+      />
+    );
+  }
 
-const HighlightCard = ({
-  image,
-  title,
-  actionIcon,
-  description,
-  onPressAction,
-  theme,
-}) => (
-  <ThemeMixin
-    mixin={{
-      type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
-      colors: get(theme, 'colors', {}),
-    }}
-  >
-    <StyledCard>
-      <Image source={image} />
-      <CardOverlay />
-      <Content>
-        {labelText
-          ? // if we have a custom `LabelComponent` render it
-            LabelComponent || ( // otherwise default to `Label`
-              <Label
-                customTheme={theme}
-                labelText={labelText}
-                hasDescription={description}
-              />
-            )
-          : null}
-          {// only if we have a `description` render a shorter full width `H2` `title`
-        description ? <H2 numberOfLines={3}>{title}</H2> : null}
-        <ActionLayout hasDescription={description}>
-          <FlexedView>
-            {// if we have a `description` render it otherwise render a longer but narrower `H2` `title`
-            description ? (
-              <BodyText numberOfLines={2}>{description}</BodyText>
-            ) : (
-              <H2 numberOfLines={4}>{title}</H2>
-            )}
-          </FlexedView>
-          {onPressAction ? (
-            <ActionButton name={actionIcon} onPress={onPressAction} />
-          ) : null}
-        </ActionLayout>
-      </Content>
-      <LikeButtonWrapper>
-        <LikeButton
-          name={isLiked ? 'like-solid' : 'like'}
-          onPress={onPressLike}
-        />
-      </LikeButtonWrapper>
-    </StyledCard>
-  </ThemeMixin>
+  return ComponentToRender;
+};
+
+const renderOnlyTitle = (title, actionIcon, hasAction) => (
+  <ActionLayout hasDescription={false}>
+    <FlexedActionLayoutText>
+      <H3 numberOfLines={4}>{title}</H3>
+    </FlexedActionLayoutText>
+    {hasAction ? <ActionIcon name={actionIcon} /> : null}
+  </ActionLayout>
 );
 
-FeaturedCard.propTypes = {
+const renderWithDescription = (title, actionIcon, description, hasAction) => (
+  <>
+    <H3 numberOfLines={3}>{title}</H3>
+    <ActionLayout hasDescription>
+      <FlexedActionLayoutText>
+        <BodyText numberOfLines={2}>{description}</BodyText>
+      </FlexedActionLayoutText>
+      {hasAction ? <ActionIcon name={actionIcon} /> : null}
+    </ActionLayout>
+  </>
+);
+
+const HighlightCard = withIsLoading(
+  ({
+    image,
+    title,
+    actionIcon,
+    description,
+    hasAction,
+    isLiked,
+    isLive,
+    isLoading,
+    LabelComponent,
+    labelText,
+    theme,
+  }) => (
+    <ThemeMixin
+      mixin={{
+        type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
+        colors: get(theme, 'colors', {}),
+      }}
+    >
+      <StyledCard isLoading={isLoading}>
+        <Image overlayType={'highlight-card'} source={image} />
+        <Content>
+          {renderLabel(description, LabelComponent, labelText, isLive, theme)}
+          {description
+            ? renderWithDescription(title, actionIcon, description, hasAction)
+            : renderOnlyTitle(title, actionIcon, hasAction)}
+        </Content>
+        <LikeIconPositioning>
+          <LikeIcon isLiked={isLiked} />
+        </LikeIconPositioning>
+      </StyledCard>
+    </ThemeMixin>
+  )
+);
+
+HighlightCard.propTypes = {
   image: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -158,22 +167,19 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   description: PropTypes.string,
+  hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
+  isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
-  onPressAction: PropTypes.func,
-  onPressLike: PropTypes.func,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
   }),
 };
 
-
 HighlightCard.defaultProps = {
   actionIcon: 'play-solid',
 };
-
-HighlightCard.displayName = 'HighlightCard';
 
 export default HighlightCard;

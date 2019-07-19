@@ -151,7 +151,7 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   },
 });
 
-export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
+export const overlays = ({ alpha: themeAlpha, colors: themeColors, type }) => ({
   // these are a function because we can't assume colors of an overlay based on a theme (varies on usage + context)
   default: ({ overlayColor }) => ({
     colors: [
@@ -248,6 +248,19 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
     start: { x: 0.5, y: 0.0 },
     end: { x: 0.5, y: 1.0 },
     locations: null,
+  }),
+  'highlight-card': () => ({
+    colors: [
+      Color(type === 'light' ? themeColors.white : themeColors.black).fade(
+        themeAlpha.medium
+      ),
+      Color(type === 'light' ? themeColors.white : themeColors.black).fade(
+        themeAlpha.low
+      ),
+    ],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
   }),
 });
 

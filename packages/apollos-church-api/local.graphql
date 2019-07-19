@@ -352,8 +352,8 @@ type Query {
   userFeedFeatures: [Feature]
 }
 
-type Scripture implements Node {
-  id: ID!
+type Scripture {
+  id: String
   html: String
   reference: String
   copyright: String

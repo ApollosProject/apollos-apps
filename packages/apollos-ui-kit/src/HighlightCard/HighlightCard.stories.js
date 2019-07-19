@@ -3,6 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
+import { CardLabel } from '../Card';
 
 import HighlightCard from '.';
 
@@ -26,7 +27,8 @@ storiesOf('ui-kit/HighlightCard', module)
       description={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
-      onPressAction={() => {}}
+      hasAction
+      isLive
     />
   ))
   .add('exampleWideImage', () => (
@@ -42,7 +44,8 @@ storiesOf('ui-kit/HighlightCard', module)
       description={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
-      onPressAction={() => {}}
+      hasAction
+      isLive
     />
   ))
   .add('exampleSquareImage', () => (
@@ -58,7 +61,8 @@ storiesOf('ui-kit/HighlightCard', module)
       description={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
-      onPressAction={() => {}}
+      hasAction
+      isLive
     />
   ))
   .add('default', () => (
@@ -84,7 +88,7 @@ storiesOf('ui-kit/HighlightCard', module)
         },
       ]}
       actionIcon={'umbrella'}
-      onPressAction={() => {}}
+      hasAction
     />
   ))
   .add('description', () => (
@@ -102,7 +106,7 @@ storiesOf('ui-kit/HighlightCard', module)
       }
     />
   ))
-  .add('onPressAction', () => (
+  .add('hasIcon', () => (
     <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
@@ -112,7 +116,64 @@ storiesOf('ui-kit/HighlightCard', module)
           uri: 'https://picsum.photos/800/1600/?random',
         },
       ]}
-      onPressAction={() => {}}
+      hasAction
+    />
+  ))
+  .add('isLive', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLive
+    />
+  ))
+  .add('isLoading', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      description={
+        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+      }
+      hasAction
+      isLive
+      isLoading
+    />
+  ))
+  .add('LabelComponent', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      LabelComponent={<CardLabel title={'Custom LabelComponent'} />}
+    />
+  ))
+  .add('labelText', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      labelText={'Quote'}
     />
   ))
   .add('theme.colors.primary', () => (
