@@ -5,9 +5,9 @@ import Svg, { Path } from 'react-native-svg';
 import makeIcon from '../../Icon/makeIcon';
 
 const Icon = makeIcon(({ size = 32, fill, ...otherProps } = {}) => (
-  <Svg width={size} height={size} viewBox="0 0 24 24" {...otherProps}>
+  <Svg width={size} height={size} viewBox="0 0 48 48" {...otherProps}>
     <Path
-      d="m6,3.34c0,-1.3 0.88,-1.73 1.97,-0.95l11.05,7.9c1.1,0.8 1.1,2.06 0.04,2.86l-11.13,8.4c-1.07,0.85 -1.93,0.45 -1.93,-0.85l0,-17.36z"
+      d="M24 0a24 24 0 1 1 0 48 24 24 0 0 1 0-48zm9.2 25.5c.5-.4.8-.9.8-1.4 0-.7-.3-1.2-.8-1.5l-12-8.3c-.5-.2-1.1-.2-1.7 0-.5.3-.8.9-.8 1.5v16.4a1.7 1.7 0 0 0 1.7 1.7c.3 0 .6 0 1-.2l11.8-8.2z"
       fill={fill}
     />
   </Svg>

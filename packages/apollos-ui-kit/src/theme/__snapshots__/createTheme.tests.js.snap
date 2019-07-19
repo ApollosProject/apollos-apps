@@ -26,6 +26,18 @@ Object {
       "accent": "#303030",
       "fill": "#303030",
     },
+    "overlay": Object {
+      "accent": "#FFFFFF",
+      "fill": Object {
+        "color": Array [
+          255,
+          255,
+          255,
+        ],
+        "model": "rgb",
+        "valpha": 0.4,
+      },
+    },
     "primary": Object {
       "accent": "#FFFFFF",
       "fill": "#00676D",
@@ -81,6 +93,16 @@ Object {
   "helpers": Object {
     "rem": [Function],
     "verticalRhythm": [Function],
+  },
+  "overlays": Object {
+    "background-gradient": [Function],
+    "default": [Function],
+    "featured": [Function],
+    "gradient-bottom": [Function],
+    "gradient-top": [Function],
+    "high": [Function],
+    "low": [Function],
+    "medium": [Function],
   },
   "overrides": Object {
     "MyComponent": Object {
@@ -310,6 +332,18 @@ Object {
       "accent": "#F8F7F4",
       "fill": "#F8F7F4",
     },
+    "overlay": Object {
+      "accent": "#FFFFFF",
+      "fill": Object {
+        "color": Array [
+          255,
+          255,
+          255,
+        ],
+        "model": "rgb",
+        "valpha": 0.4,
+      },
+    },
     "primary": Object {
       "accent": "#FFFFFF",
       "fill": "#00676D",
@@ -365,6 +399,16 @@ Object {
   "helpers": Object {
     "rem": [Function],
     "verticalRhythm": [Function],
+  },
+  "overlays": Object {
+    "background-gradient": [Function],
+    "default": [Function],
+    "featured": [Function],
+    "gradient-bottom": [Function],
+    "gradient-top": [Function],
+    "high": [Function],
+    "low": [Function],
+    "medium": [Function],
   },
   "overrides": Object {},
   "shadows": Object {

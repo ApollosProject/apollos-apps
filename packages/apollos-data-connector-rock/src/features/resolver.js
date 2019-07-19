@@ -19,7 +19,7 @@ export default {
       const { Features } = context.dataSources;
       // Generate a feature to show the user on the home screen.
       const personaFeature = await Features.createActionListFeature({
-        algorithms: ['PERSONA_FEED'],
+        algorithms: ['SERMON_CHILDREN', 'PERSONA_FEED'],
         title: 'FOR YOU',
         subtitle: 'Explore what God calls you to today',
       });
