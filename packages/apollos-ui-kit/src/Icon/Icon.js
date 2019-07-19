@@ -3,6 +3,7 @@ import React from 'react';
 import { compose, pure, getContext } from 'recompose';
 import { flow, camelCase, upperFirst, kebabCase } from 'lodash';
 
+import { getIsLoading } from '../isLoading';
 import Placeholder from '../Placeholder';
 
 import * as uikitIcons from '../theme/icons';
@@ -22,6 +23,7 @@ const pascalCase = (string) =>
 
 const enhance = compose(
   pure,
+  getIsLoading,
   getContext({
     iconInput: PropTypes.objectOf(PropTypes.func),
   })
