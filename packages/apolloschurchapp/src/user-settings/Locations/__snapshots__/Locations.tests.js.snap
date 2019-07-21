@@ -70,6 +70,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
             <View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -205,6 +206,7 @@ Anderson, SC 29621-3619
               </View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -340,6 +342,7 @@ Richardson, TX 75080-5525
               </View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -475,6 +478,7 @@ Cincinnati, OH 45202-2118
               </View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",

@@ -1109,6 +1109,7 @@ exports[`The Onboarding LocationFinder component should render the button disabl
           >
             <View
               inHorizontalList={true}
+              isLoading={false}
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
