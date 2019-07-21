@@ -28,7 +28,7 @@ class LocationFinderConnected extends PureComponent {
             } = {},
           } = {},
         }) => {
-          const nextBtn = campus && this.state.locationPermisson;
+          const nextBtn = campus && this.state.locationPermission;
           return (
             <AnalyticsConsumer>
               {({ track }) => (
