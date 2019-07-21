@@ -20,49 +20,40 @@ class LocationFinderConnected extends PureComponent {
     return (
       <Query query={GET_USER_CAMPUS} fetchPolicy="cache-and-network">
         {({
-          data: {
-            currentUser: {
-              profile: { campus } = {
-                campus: {},
-              },
-            } = {},
-          } = {},
-        }) => {
-          const nextBtn = campus && this.state.locationPermission;
-          return (
-            <AnalyticsConsumer>
-              {({ track }) => (
+          data: { currentUser: { profile: { campus } = {} } = {} } = {},
+        }) => (
+          <AnalyticsConsumer>
+            {({ track }) => {
+              const { onPressPrimary, ...otherProps } = this.props;
+              const showNextBtn = !!(campus && this.state.locationPermission);
+
+              return (
                 <this.props.Component
                   onPressButton={() => {
                     this.props.onNavigate();
                     track({ eventName: 'LocationFinder Opened MapView' });
                   }}
                   // next button
-                  onPressPrimary={nextBtn ? this.props.onPressPrimary : null}
+                  onPressPrimary={showNextBtn ? onPressPrimary : null}
                   // skip button
-                  onPressSecondary={!nextBtn ? this.props.onPressPrimary : null}
+                  onPressSecondary={!showNextBtn ? onPressPrimary : null}
                   pressPrimaryEventName={'Ask Location Completed'}
                   pressSecondaryEventName={'Ask Location Skipped'}
                   buttonText={'Yes, find my local campus'}
-                  campus={nextBtn ? campus : null}
-                  {...this.props}
+                  campus={showNextBtn ? campus : null}
+                  {...otherProps}
                 />
-              )}
-            </AnalyticsConsumer>
-          );
-        }}
+              );
+            }}
+          </AnalyticsConsumer>
+        )}
       </Query>
     );
   }
 }
 
 LocationFinderConnected.propTypes = {
-  // Custom component to be rendered. Defaults to LocationFinder
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.object,
-  ]),
+  Component: PropTypes.element,
   onPressPrimary: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
 };
