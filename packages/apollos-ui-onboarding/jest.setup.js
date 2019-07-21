@@ -18,5 +18,5 @@ jest.mock('react-navigation', () => {
 jest.mock('DatePickerIOS', () => 'DatePicker');
 
 jest.mock('react-native-permissions', () => ({
-  check: jest.fn(),
+  check: () => new Promise(() => ''),
 }));
