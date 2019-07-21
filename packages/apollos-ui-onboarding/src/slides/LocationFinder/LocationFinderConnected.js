@@ -27,35 +27,30 @@ class LocationFinderConnected extends PureComponent {
               },
             } = {},
           } = {},
-        }) => (
-          <AnalyticsConsumer>
-            {({ track }) => (
-              <this.props.Component
-                onPressButton={() => {
-                  this.props.onNavigate();
-                  track({ eventName: 'LocationFinder Opened MapView' });
-                }}
-                // Next button
-                onPressPrimary={
-                  campus && this.state.locationPermisson
-                    ? this.props.onPressPrimary
-                    : null
-                }
-                // Skip button
-                onPressSecondary={
-                  !campus || !this.state.locationPermission
-                    ? this.props.onPressPrimary
-                    : null
-                }
-                pressPrimaryEventName={'Ask Location Completed'}
-                pressSecondaryEventName={'Ask Location Skipped'}
-                buttonText={'Yes, find my local campus'}
-                campus={campus && this.state.locationPermission ? campus : null}
-                {...this.props}
-              />
-            )}
-          </AnalyticsConsumer>
-        )}
+        }) => {
+          const nextBtn = campus && this.state.locationPermisson;
+          return (
+            <AnalyticsConsumer>
+              {({ track }) => (
+                <this.props.Component
+                  onPressButton={() => {
+                    this.props.onNavigate();
+                    track({ eventName: 'LocationFinder Opened MapView' });
+                  }}
+                  // next button
+                  onPressPrimary={nextBtn ? this.props.onPressPrimary : null}
+                  // skip button
+                  onPressSecondary={!nextBtn ? this.props.onPressPrimary : null}
+                  pressPrimaryEventName={'Ask Location Completed'}
+                  pressSecondaryEventName={'Ask Location Skipped'}
+                  buttonText={'Yes, find my local campus'}
+                  campus={nextBtn ? campus : null}
+                  {...this.props}
+                />
+              )}
+            </AnalyticsConsumer>
+          );
+        }}
       </Query>
     );
   }
