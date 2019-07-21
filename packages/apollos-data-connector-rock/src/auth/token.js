@@ -15,6 +15,9 @@ export const registerToken = (token) => {
       sessionId,
     };
   } catch (e) {
+    if (e instanceof jwt.TokenExpiredError) {
+      return {};
+    }
     throw new AuthenticationError('Invalid token');
   }
 };
