@@ -14,6 +14,10 @@ export default {
     // Implementors must attach __typename to root.
     __resolveType: ({ __typename }) => __typename,
   },
+  ScriptureFeature: {
+    scriptures: ({ reference }, args, { dataSources: { Scripture } }) =>
+      Scripture.getScriptures(reference),
+  },
   Query: {
     userFeedFeatures: async (root, args, context) => {
       const { Features } = context.dataSources;

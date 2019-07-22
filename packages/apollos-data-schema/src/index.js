@@ -578,6 +578,13 @@ export const featuresSchema = gql`
     body: String
   }
 
+  type ScriptureFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    scriptures: [Scripture]
+  }
+
   extend type WeekendContentItem {
     features: [Feature]
   }

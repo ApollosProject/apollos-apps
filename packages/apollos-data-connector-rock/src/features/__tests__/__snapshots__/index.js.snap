@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`features dataSource createScriptureFeature should create a Scriptre feature 1`] = `
+Object {
+  "__typename": "ScriptureFeature",
+  "id": "ScriptureFeature:2cc8f539e345e8f479a55e2fdc9743c0",
+  "reference": "John 3:16",
+}
+`;
+
 exports[`features dataSource createTextFeature should create a Text feature 1`] = `
 Object {
   "__typename": "TextFeature",
