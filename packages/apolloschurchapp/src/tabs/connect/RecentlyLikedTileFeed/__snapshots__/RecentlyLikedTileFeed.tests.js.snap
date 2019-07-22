@@ -241,6 +241,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
               <View
                 forceRatio={1}
                 inHorizontalList={true}
+                isLoading={true}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -279,14 +280,31 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -549,6 +567,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
               <View
                 forceRatio={1}
                 inHorizontalList={true}
+                isLoading={true}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -587,14 +606,31 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1063,6 +1099,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
               <View
                 forceRatio={1}
                 inHorizontalList={true}
+                isLoading={true}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -1101,14 +1138,31 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1371,6 +1425,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
               <View
                 forceRatio={1}
                 inHorizontalList={true}
+                isLoading={true}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -1409,14 +1464,31 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     }
                   >
                     <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
