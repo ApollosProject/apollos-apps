@@ -13,6 +13,7 @@ export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
 export ContentCard from './ContentCard';
+export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
