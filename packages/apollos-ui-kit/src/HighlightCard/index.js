@@ -70,7 +70,7 @@ const Label = withTheme(
           title: labelText || 'Live',
           type: 'secondary',
           icon: 'live-dot',
-          iconSize: 7,
+          iconSize: theme.helpers.rem(0.4375), // using our typographic size unit based on fontSize so that the icon scales correctly with font size changes.
         }
       : {
           title: labelText,
