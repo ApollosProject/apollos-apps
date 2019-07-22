@@ -29,11 +29,11 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
   iconPadding: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ theme }) => ({
+const Image = withTheme(({ theme, customTheme }) => ({
   maxAspectRatio: 1.2,
   minAspectRatio: 0.75,
   maintainAspectRatio: true,
-  overlayColor: theme.colors.primary,
+  overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
 }))(CardImage);
 
 const Content = styled(({ theme }) => ({
@@ -133,7 +133,11 @@ const HighlightCard = withIsLoading(
       }}
     >
       <StyledCard isLoading={isLoading}>
-        <Image overlayType={'highlight-card'} source={image} />
+        <Image
+          overlayType={'gradient-bottom'}
+          customTheme={theme}
+          source={image}
+        />
         <Content>
           {renderLabel(description, LabelComponent, labelText, theme)}
           {description

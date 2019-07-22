@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import { ScrollView } from 'react-native';
 
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
@@ -155,36 +156,58 @@ storiesOf('ui-kit/FeaturedCard', module)
       labelText={'Quote'}
     />
   ))
-  .add('theme.colors', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      theme={{
-        colors: {
-          primary: 'salmon',
-          secondary: 'salmon',
-        },
-      }}
-    />
-  ))
-  .add('theme.type', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      theme={{
-        type: 'light',
-      }}
-    />
+  .add('theme', () => (
+    <ScrollView>
+      <FeaturedCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        theme={{
+          colors: {
+            primary: 'salmon',
+            secondary: 'salmon',
+          },
+        }}
+      />
+      <FeaturedCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        theme={{
+          type: 'light',
+        }}
+      />
+      <FeaturedCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        isLive
+        isLiked
+        theme={{
+          type: 'light',
+          colors: {
+            primary: 'yellow',
+            secondary: 'dodgerblue',
+            text: {
+              primary: 'dodgerblue',
+            },
+          },
+        }}
+      />
+    </ScrollView>
   ));

@@ -162,7 +162,7 @@ storiesOf('ui-kit/HighlightCard', module)
       labelText={'Quote'}
     />
   ))
-  .add('theme.colors.primary', () => (
+  .add('theme', () => (
     <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
@@ -179,18 +179,40 @@ storiesOf('ui-kit/HighlightCard', module)
       }}
     />
   ))
-  .add('theme.type.light', () => (
-    <HighlightCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      theme={{
-        type: 'light',
-      }}
-    />
+  .add('theme', () => (
+    <ScrollView>
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        theme={{
+          colors: {
+            primary: 'salmon',
+          },
+        }}
+      />
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        labelText={'Quote'}
+        isLiked
+        theme={{
+          type: 'light',
+          colors: {
+            primary: 'yellow',
+          },
+        }}
+      />
+    </ScrollView>
   ));
