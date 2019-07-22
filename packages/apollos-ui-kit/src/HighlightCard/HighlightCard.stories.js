@@ -211,6 +211,10 @@ storiesOf('ui-kit/HighlightCard', module)
           type: 'light',
           colors: {
             primary: 'yellow',
+            white: 'dodgerblue',
+            text: {
+              primary: 'dodgerblue',
+            },
           },
         }}
       />
