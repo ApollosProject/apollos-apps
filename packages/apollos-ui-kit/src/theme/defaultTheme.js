@@ -151,7 +151,7 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   },
 });
 
-export const overlays = ({ alpha: themeAlpha, colors: themeColors, type }) => ({
+export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   // these are a function because we can't assume colors of an overlay based on a theme (varies on usage + context)
   default: ({ overlayColor }) => ({
     colors: [
