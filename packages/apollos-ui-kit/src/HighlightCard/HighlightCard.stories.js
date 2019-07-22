@@ -106,7 +106,7 @@ storiesOf('ui-kit/HighlightCard', module)
       }
     />
   ))
-  .add('hasIcon', () => (
+  .add('hasAction', () => (
     <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
