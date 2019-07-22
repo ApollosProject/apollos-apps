@@ -35,7 +35,7 @@ const OverflowFix = styled(({ theme, forceRatio }) => ({
   aspectRatio: forceRatio,
 }))(View);
 
-const Card = pure(({ children, isLoading, forceRatio, ...otherProps }) => (
+const Card = pure(({ children, forceRatio, ...otherProps }) => (
   <StyledCard forceRatio={forceRatio} {...otherProps}>
     <OverflowFix forceRatio={forceRatio}>{children}</OverflowFix>
   </StyledCard>

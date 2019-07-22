@@ -167,6 +167,27 @@ describe('ContentItemsModel', () => {
     expect(createTextFeature.mock.calls).toMatchSnapshot();
   });
 
+  it('returns scripture features when a contentItem has a ScriptureFeatures field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createScriptureFeature = jest.fn(() => ({
+      id: 'ScriptureFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = {
+      dataSources: { Features: { createScriptureFeature } },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        scriptureFeatures: {
+          id: 123,
+          value: 'something^John 3:16|another thing^Mark 1:1',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+  });
+
   it('returns text features and when a contentItem has a TextFeatures and a TextFeature field', async () => {
     const dataSource = new ContentItemsDataSource();
     const createTextFeature = jest.fn(() => ({
