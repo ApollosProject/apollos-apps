@@ -131,6 +131,20 @@ export default class ContentItem extends RockApolloDataSource {
         );
       });
     }
+
+    const scriptures = get(attributeValues, 'scriptureFeatures.value', '');
+    if (scriptures !== '') {
+      const keyValueTextFeatures = parseKeyValueAttribute(scriptures);
+      keyValueTextFeatures.forEach(({ value }, i) => {
+        features.push(
+          Features.createScriptureFeature({
+            reference: value,
+            id: `${attributeValues.scriptureFeatures.id}-${i}`,
+          })
+        );
+      });
+    }
+
     return features;
   }
 
