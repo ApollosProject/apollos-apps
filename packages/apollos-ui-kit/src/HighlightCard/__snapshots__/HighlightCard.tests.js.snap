@@ -108,8 +108,8 @@ exports[`HighlightCard should render a loading state with isLoading 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -124,8 +124,8 @@ exports[`HighlightCard should render a loading state with isLoading 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -343,8 +343,8 @@ exports[`HighlightCard should render in a "tall" aspect ratio (maxAspectRatio) 1
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -359,8 +359,8 @@ exports[`HighlightCard should render in a "tall" aspect ratio (maxAspectRatio) 1
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -663,8 +663,8 @@ exports[`HighlightCard should render in a "wide" aspect ratio 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -679,8 +679,8 @@ exports[`HighlightCard should render in a "wide" aspect ratio 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -983,8 +983,8 @@ exports[`HighlightCard should render with a custom actionIcon 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -999,8 +999,8 @@ exports[`HighlightCard should render with a custom actionIcon 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -1394,6 +1394,13 @@ exports[`HighlightCard should render with a custom theme 1`] = `
             }
           >
             <Image
+              customTheme={
+                Object {
+                  "colors": Object {
+                    "primary": "salmon",
+                  },
+                }
+              }
               maxAspectRatio={1.2}
               minAspectRatio={0.75}
               onLoad={[Function]}
@@ -1418,8 +1425,8 @@ exports[`HighlightCard should render with a custom theme 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1727692914,
+                3019538546,
               ]
             }
             endPoint={
@@ -1435,7 +1442,7 @@ exports[`HighlightCard should render with a custom theme 1`] = `
               ]
             }
             overlayColor="salmon"
-            overlayType="highlight-card"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -1738,8 +1745,8 @@ exports[`HighlightCard should render with a description 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -1754,8 +1761,8 @@ exports[`HighlightCard should render with a description 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -2073,8 +2080,8 @@ exports[`HighlightCard should render with custom LabelComponent 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -2089,8 +2096,8 @@ exports[`HighlightCard should render with custom LabelComponent 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -2447,8 +2454,8 @@ exports[`HighlightCard should render with custom labelText 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -2463,8 +2470,8 @@ exports[`HighlightCard should render with custom labelText 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -2821,8 +2828,8 @@ exports[`HighlightCard should should render as isLiked 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -2837,8 +2844,8 @@ exports[`HighlightCard should should render as isLiked 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -3142,8 +3149,8 @@ exports[`HighlightCard should should render as isLive 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -3158,8 +3165,8 @@ exports[`HighlightCard should should render as isLive 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -3462,8 +3469,8 @@ exports[`HighlightCard should should render with an action "button" 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1291845632,
-                2566914048,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -3478,8 +3485,8 @@ exports[`HighlightCard should should render with an action "button" 1`] = `
                 1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="highlight-card"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,

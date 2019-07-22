@@ -249,19 +249,6 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors, type }) => ({
     end: { x: 0.5, y: 1.0 },
     locations: null,
   }),
-  'highlight-card': () => ({
-    colors: [
-      Color(type === 'light' ? themeColors.white : themeColors.black).fade(
-        themeAlpha.medium
-      ),
-      Color(type === 'light' ? themeColors.white : themeColors.black).fade(
-        themeAlpha.low
-      ),
-    ],
-    start: { x: 0, y: 0 },
-    end: { x: 0, y: 1 },
-    locations: [0, 1],
-  }),
 });
 
 /*
