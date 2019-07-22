@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import { ScrollView } from 'react-native';
 
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
@@ -14,56 +15,54 @@ storiesOf('ui-kit/HighlightCard', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('example', () => (
-    <HighlightCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      description={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-      hasAction
-      isLive
-    />
-  ))
-  .add('exampleWideImage', () => (
-    <HighlightCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/1600/800/?random',
-        },
-      ]}
-      description={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-      hasAction
-      isLive
-    />
-  ))
-  .add('exampleSquareImage', () => (
-    <HighlightCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/800/?random',
-        },
-      ]}
-      description={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-      hasAction
-      isLive
-    />
+  .add('examples', () => (
+    <ScrollView>
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        description={
+          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+        }
+        hasAction
+        labelText={'Custom Label'}
+      />
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/1600/800/?random',
+          },
+        ]}
+        description={
+          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+        }
+        hasAction
+        labelText={'Custom Label'}
+      />
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/800/?random',
+          },
+        ]}
+        description={
+          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+        }
+        hasAction
+        labelText={'Custom Label'}
+      />
+    </ScrollView>
   ))
   .add('default', () => (
     <HighlightCard
@@ -119,19 +118,6 @@ storiesOf('ui-kit/HighlightCard', module)
       hasAction
     />
   ))
-  .add('isLive', () => (
-    <HighlightCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      isLive
-    />
-  ))
   .add('isLoading', () => (
     <HighlightCard
       title={
@@ -146,7 +132,7 @@ storiesOf('ui-kit/HighlightCard', module)
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
       hasAction
-      isLive
+      labelText={'Custom Label'}
       isLoading
     />
   ))

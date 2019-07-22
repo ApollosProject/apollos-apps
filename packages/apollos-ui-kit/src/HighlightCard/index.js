@@ -64,36 +64,26 @@ const ActionIcon = withTheme(({ theme }) => ({
 }))(Icon);
 
 const Label = withTheme(
-  ({ customTheme, hasDescription, isLive, labelText, theme }) => ({
-    ...(isLive
-      ? {
-          title: labelText || 'Live',
-          type: 'secondary',
-          icon: 'live-dot',
-          iconSize: theme.helpers.rem(0.4375), // using our typographic size unit based on fontSize so that the icon scales correctly with font size changes.
-        }
-      : {
-          title: labelText,
-          theme: { colors: get(customTheme, 'colors', {}) },
-          type: 'overlay',
-        }),
+  ({ customTheme, hasDescription, labelText, theme }) => ({
+    title: labelText,
+    theme: { colors: get(customTheme, 'colors', {}) },
+    type: 'overlay',
     style: {
       ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
     },
   })
 )(CardLabel);
 
-const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
+const renderLabel = (description, LabelComponent, labelText, theme) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
     ComponentToRender = LabelComponent;
-  } else if (labelText || isLive) {
+  } else if (labelText) {
     ComponentToRender = (
       <Label
         customTheme={theme}
         hasDescription={description}
-        isLive={isLive}
         labelText={labelText}
       />
     );
@@ -131,7 +121,6 @@ const HighlightCard = withIsLoading(
     description,
     hasAction,
     isLiked,
-    isLive,
     isLoading,
     LabelComponent,
     labelText,
@@ -146,7 +135,7 @@ const HighlightCard = withIsLoading(
       <StyledCard isLoading={isLoading}>
         <Image overlayType={'highlight-card'} source={image} />
         <Content>
-          {renderLabel(description, LabelComponent, labelText, isLive, theme)}
+          {renderLabel(description, LabelComponent, labelText, theme)}
           {description
             ? renderWithDescription(title, actionIcon, description, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}
@@ -169,7 +158,6 @@ HighlightCard.propTypes = {
   description: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
-  isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   theme: PropTypes.shape({
