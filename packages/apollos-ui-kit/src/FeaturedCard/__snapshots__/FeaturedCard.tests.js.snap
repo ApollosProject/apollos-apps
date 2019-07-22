@@ -63,7 +63,6 @@ exports[`FeaturedCard should render 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -83,6 +82,8 @@ exports[`FeaturedCard should render 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -381,7 +382,6 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -401,6 +401,8 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -628,7 +630,6 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -648,6 +649,8 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -1060,7 +1063,6 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -1080,6 +1082,8 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -1377,7 +1381,6 @@ exports[`FeaturedCard should render with a description 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -1397,6 +1400,8 @@ exports[`FeaturedCard should render with a description 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -1709,7 +1714,6 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -1729,6 +1733,8 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -2080,7 +2086,6 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -2100,6 +2105,8 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -2451,7 +2458,6 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -2471,6 +2477,8 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -2769,7 +2777,6 @@ exports[`FeaturedCard should should render as isLive 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -2789,6 +2796,8 @@ exports[`FeaturedCard should should render as isLive 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [
@@ -3242,7 +3251,6 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
         <View
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "overflow": "hidden",
               "width": "100%",
@@ -3262,6 +3270,8 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
             }
           >
             <Image
+              maxAspectRatio={1}
+              minAspectRatio={1}
               onLoad={[Function]}
               source={
                 Array [

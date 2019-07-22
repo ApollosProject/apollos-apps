@@ -31,7 +31,8 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
 
 const Image = withTheme(({ theme }) => ({
   overlayColor: theme.colors.primary,
-  style: { aspectRatio: 1 },
+  minAspectRatio: 1,
+  maxAspectRatio: 1,
 }))(CardImage);
 
 const Content = styled(({ theme }) => ({
@@ -66,7 +67,7 @@ const Label = withTheme(
           title: labelText || 'Live',
           type: 'secondary',
           icon: 'live-dot',
-          iconSize: 7,
+          iconSize: theme.helpers.rem(0.4375), // using our typographic size unit based on fontSize so that the icon scales correctly with font size changes.
         }
       : {
           title: labelText,
