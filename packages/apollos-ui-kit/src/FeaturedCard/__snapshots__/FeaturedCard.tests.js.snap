@@ -54,7 +54,6 @@ exports[`FeaturedCard should render 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -372,7 +371,6 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -619,7 +617,6 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -1051,7 +1048,6 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -1368,7 +1364,6 @@ exports[`FeaturedCard should render with a description 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -1700,7 +1695,6 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -2071,7 +2065,6 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -2442,7 +2435,6 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -2760,7 +2752,6 @@ exports[`FeaturedCard should should render as isLive 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -3233,7 +3224,6 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
