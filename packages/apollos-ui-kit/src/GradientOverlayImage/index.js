@@ -47,7 +47,7 @@ const GradientOverlayImage = pure(
   }) => {
     const Component = ComponentProp || DefaultImageComponent;
     return (
-      <Container style={style} forceRatio={forceRatio}>
+      <Container style={style}>
         {imageSource || isLoading ? (
           <Component
             source={imageSource}
