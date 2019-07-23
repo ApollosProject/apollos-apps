@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, View, Dimensions } from 'react-native';
 
-import { GradientOverlayImage, styled } from '@apollosproject/ui-kit';
+import {
+  GradientOverlayImage,
+  styled,
+  withTheme,
+} from '@apollosproject/ui-kit';
 
 const DeviceWindow = Dimensions.get('window');
 
-const Image = styled(StyleSheet.absoluteFillObject)(GradientOverlayImage);
+const StyledGradientOverlayImage = styled({
+  backgroundColor: 'red',
+  ...StyleSheet.absoluteFillObject,
+})(GradientOverlayImage);
+
+const Image = withTheme(({ theme, ...ownProps }) => ({
+  overlayColor: theme.colors.primary,
+  overlayType: 'featured',
+  ...ownProps, // allown ownProps to override defaults above
+}))(StyledGradientOverlayImage);
 
 const ImageContainer = styled({
   position: 'absolute',
@@ -37,24 +51,34 @@ const SizingContainer = styled({
   aspectRatio: 1,
 })(View);
 
-const OverlayBackgroundImage = ({ rounded = true, style, ...props }) => {
-  const [layoutState, setLayout] = useState({
-    width: DeviceWindow.width,
-    height: DeviceWindow.width,
-  });
+class OverlayBackgroundImage extends Component {
+  static propTypes = {
+    rounded: PropTypes.bool,
+    style: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+  };
 
-  return (
-    <SizingContainer
-      style={style}
-      onLayout={({ nativeEvent: { layout } = {} }) => setLayout(layout)}
-    >
-      <ClippingMask rounded={rounded} containerWidth={layoutState.width}>
-        <ImageContainer>
-          <Image {...props} />
-        </ImageContainer>
-      </ClippingMask>
-    </SizingContainer>
-  );
-};
+  static defaultProps = {
+    rounded: true,
+  };
+
+  state = {
+    width: DeviceWindow.width,
+  };
+
+  handleLayout = ({ nativeEvent: { layout } = {} }) => this.setState(layout);
+
+  render() {
+    const { style, rounded, ...props } = this.props;
+    return (
+      <SizingContainer style={style} onLayout={this.handleLayout}>
+        <ClippingMask rounded={rounded} containerWidth={this.state.width}>
+          <ImageContainer>
+            <Image imageStyle={StyleSheet.absoluteFill} {...props} />
+          </ImageContainer>
+        </ClippingMask>
+      </SizingContainer>
+    );
+  }
+}
 
 export default OverlayBackgroundImage;
