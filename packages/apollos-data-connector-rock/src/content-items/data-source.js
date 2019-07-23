@@ -155,12 +155,6 @@ export default class ContentItem extends RockApolloDataSource {
     if (content.split(' ').length === 1) return '';
 
     const tokenizer = new natural.SentenceTokenizer();
-    console.log(
-      sanitizeHtmlNode(content, {
-        allowedTags: [],
-        allowedAttributes: [],
-      })
-    );
     const tokens = tokenizer.tokenize(
       sanitizeHtmlNode(content, {
         allowedTags: [],
