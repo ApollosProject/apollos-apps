@@ -5,21 +5,20 @@ import styled from '../styled';
 
 const Item = styled(({ top, left, bottom, right, centered, theme }) => ({
   position: 'absolute',
+  top: top ? theme.sizing.baseUnit / 2 : undefined,
+  right: right ? theme.sizing.baseUnit / 2 : undefined,
+  bottom: bottom ? theme.sizing.baseUnit / 2 : undefined,
+  left: left ? theme.sizing.baseUnit / 2 : undefined,
   ...(centered
     ? {
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        top: !bottom ? 0 : undefined,
+        left: !right ? 0 : undefined,
+        right: !left ? 0 : undefined,
+        bottom: !top ? 0 : undefined,
         alignItems: 'center',
         justifyContent: 'center',
       }
-    : {
-        top: top ? theme.sizing.baseUnit / 2 : undefined,
-        right: right ? theme.sizing.baseUnit / 2 : undefined,
-        bottom: bottom ? theme.sizing.baseUnit / 2 : undefined,
-        left: left ? theme.sizing.baseUnit / 2 : undefined,
-      }),
+    : {}),
 }))(View);
 
 Item.propTypes = {

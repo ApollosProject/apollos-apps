@@ -33,13 +33,13 @@ const UniversalContentItem = ({ content, loading }) => {
               </Stretchy>
             ) : null}
             <MediaControls contentId={content.id} />
-            <PaddedView>
+            <PaddedView vertical={false}>
               <H2 padded isLoading={!content.title && loading}>
                 {content.title}
               </H2>
               <HTMLContent contentId={content.id} />
-              <Features contentId={content.id} />
             </PaddedView>
+            <Features contentId={content.id} />
             <HorizontalContentFeed contentId={content.id} />
           </FlexedScrollView>
         )}

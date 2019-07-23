@@ -20,6 +20,7 @@ import ContentCardConnected from '../../ui/ContentCardConnected';
 import { LiveButton } from '../../live';
 
 import ContentTableCard from '../../ui/ContentTableCard';
+import FeaturedCardConnected from '../../ui/FeaturedCardConnected';
 import GET_USER_FEED from './getUserFeed';
 import GET_FEED_FEATURES from './getFeedFeatures';
 import GET_CAMPAIGN_CONTENT_ITEM from './getCampaignContentItem';
@@ -108,7 +109,7 @@ class Home extends PureComponent {
                               this.handleOnPress({ id: featuredItem.id })
                             }
                           >
-                            <ContentCardConnected
+                            <FeaturedCardConnected
                               contentId={featuredItem.id}
                               isLoading={isFeaturedLoading}
                             />
