@@ -1,6 +1,242 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FeaturedCard should render 1`] = `
+exports[`HighlightCard should render a loading state with isLoading 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      cardColor="#00676D"
+      isLoading={true}
+      style={
+        Object {
+          "backgroundColor": "#00676D",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                1711276032,
+                3003121664,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0,
+                1,
+              ]
+            }
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "bottom": 0,
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 24,
+                "marginVertical": 1.8000000000000007,
+                "width": "100%",
+              }
+            }
+          />
+          <View
+            hasDescription={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginRight": 16,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 16,
+                    "height": 16,
+                    "marginVertical": 5,
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 48,
+                  "width": 48,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "position": "absolute",
+              "right": 24,
+              "top": 24,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 24,
+                "width": 24,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`HighlightCard should render in a "tall" aspect ratio (maxAspectRatio) 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -81,8 +317,8 @@ exports[`FeaturedCard should render 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -105,8 +341,8 @@ exports[`FeaturedCard should render 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -118,11 +354,11 @@ exports[`FeaturedCard should render 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -144,10 +380,12 @@ exports[`FeaturedCard should render 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -175,8 +413,8 @@ exports[`FeaturedCard should render 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -317,7 +555,7 @@ exports[`FeaturedCard should render 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should render a loading state with isLoading 1`] = `
+exports[`HighlightCard should render in a "wide" aspect ratio 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -352,7 +590,6 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
   >
     <View
       cardColor="#00676D"
-      isLoading={true}
       style={
         Object {
           "backgroundColor": "#00676D",
@@ -399,20 +636,19 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
                   Object {
                     "cache": "force-cache",
-                    "uri": "https://picsum.photos/800/1600/?random",
+                    "uri": "https://picsum.photos/1600/800/?random",
                   },
                 ]
               }
               style={
                 Object {
-                  "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
                   "opacity": 0,
                   "resizeMode": "cover",
@@ -424,8 +660,8 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -437,11 +673,11 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -463,256 +699,12 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 32,
-                "marginBottom": 16,
-                "paddingHorizontal": 12,
-                "width": 64,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 36,
-                "marginVertical": 2.6999999999999993,
-                "width": "100%",
-              }
-            }
-          />
-          <View
-            hasDescription={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "paddingTop": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                  "marginRight": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 16,
-                    "marginVertical": 5,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 48,
-                  "width": 48,
-                }
-              }
-            />
-          </View>
-        </View>
-        <View
-          style={
-            Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 24,
-                "width": 24,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>
-</RCTSafeAreaView>
-`;
-
-exports[`FeaturedCard should render with a custom actionIcon 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  onLayout={[Function]}
-  style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      cardColor="#00676D"
-      style={
-        Object {
-          "backgroundColor": "#00676D",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-          "shadowOffset": Object {
-            "height": 1,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 6,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "borderRadius": 16,
-            "overflow": "hidden",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "overflow": "hidden",
               "width": "100%",
-            }
-          }
-        >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
-            style={
-              Object {
-                "aspectRatio": 1,
-                "backgroundColor": "#A5A5A5",
-                "width": "100%",
-              }
-            }
-          >
-            <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/800/1600/?random",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "opacity": 0,
-                  "resizeMode": "cover",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
-          <BVLinearGradient
-            colors={
-              Array [
-                1711302509,
-                4278216557,
-              ]
-            }
-            endPoint={
-              Object {
-                "x": 0,
-                "y": 1,
-              }
-            }
-            locations={
-              Array [
-                0,
-                0.8,
-              ]
-            }
-            overlayColor="#00676D"
-            overlayType="featured"
-            startPoint={
-              Object {
-                "x": 0,
-                "y": 0,
-              }
-            }
-            style={
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "marginTop": "-40%",
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
-              "paddingVertical": 16,
             }
           }
         >
@@ -740,8 +732,327 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
+                  }
+                }
+              >
+                Are you telling me that you built a time machine out of a DeLorean?
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "position": "absolute",
+              "right": 24,
+              "top": 24,
+            }
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={24}
+            bbWidth={24}
+            height={24}
+            iconPadding={24}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                undefined,
+                null,
+                Object {
+                  "flex": 0,
+                  "height": 24,
+                  "width": 24,
+                },
+              ]
+            }
+            vbHeight={24}
+            vbWidth={24}
+            width={24}
+          >
+            <RNSVGGroup
+              fill={
+                Array [
+                  0,
+                  4278190080,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              font={Object {}}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={Array []}
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            >
+              <RNSVGPath
+                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                fill={
+                  Array [
+                    0,
+                    4294506484,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`HighlightCard should render with a custom actionIcon 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      cardColor="#00676D"
+      style={
+        Object {
+          "backgroundColor": "#00676D",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/800/1600/?random",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                1711276032,
+                3003121664,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0,
+                1,
+              ]
+            }
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "bottom": 0,
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            hasDescription={false}
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flexDirection": "row",
+                "paddingTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginRight": 16,
+                }
+              }
+            >
+              <Text
+                numberOfLines={4}
+                style={
+                  Object {
+                    "color": "#F8F7F4",
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -997,7 +1308,7 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should render with a custom theme 1`] = `
+exports[`HighlightCard should render with a custom theme 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1078,8 +1389,15 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              customTheme={
+                Object {
+                  "colors": Object {
+                    "primary": "salmon",
+                  },
+                }
+              }
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -1103,7 +1421,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
             colors={
               Array [
                 1727692914,
-                4294606962,
+                3019538546,
               ]
             }
             endPoint={
@@ -1115,11 +1433,11 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
             overlayColor="salmon"
-            overlayType="featured"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -1141,10 +1459,12 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -1172,8 +1492,8 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -1314,7 +1634,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should render with a description 1`] = `
+exports[`HighlightCard should render with a description 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1395,8 +1715,8 @@ exports[`FeaturedCard should render with a description 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -1419,8 +1739,8 @@ exports[`FeaturedCard should render with a description 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -1432,11 +1752,11 @@ exports[`FeaturedCard should render with a description 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -1458,10 +1778,12 @@ exports[`FeaturedCard should render with a description 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -1471,8 +1793,8 @@ exports[`FeaturedCard should render with a description 1`] = `
               Object {
                 "color": "#F8F7F4",
                 "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "fontSize": 24,
+                "lineHeight": 27.6,
               }
             }
           >
@@ -1646,7 +1968,7 @@ exports[`FeaturedCard should render with a description 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should render with custom LabelComponent 1`] = `
+exports[`HighlightCard should render with custom LabelComponent 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1727,8 +2049,8 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -1751,8 +2073,8 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -1764,11 +2086,11 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -1790,10 +2112,12 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -1875,8 +2199,8 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -2017,7 +2341,7 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should render with custom labelText 1`] = `
+exports[`HighlightCard should render with custom labelText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2098,8 +2422,8 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -2122,8 +2446,8 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -2135,11 +2459,11 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -2161,10 +2485,12 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -2246,8 +2572,8 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -2388,7 +2714,7 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should should render as isLiked 1`] = `
+exports[`HighlightCard should should render as isLiked 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2469,8 +2795,8 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -2493,8 +2819,8 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -2506,11 +2832,11 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -2532,10 +2858,12 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -2563,8 +2891,8 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -2706,7 +3034,7 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should should render as isLive 1`] = `
+exports[`HighlightCard should should render as isLive 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2787,8 +3115,8 @@ exports[`FeaturedCard should should render as isLive 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -2811,8 +3139,8 @@ exports[`FeaturedCard should should render as isLive 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -2824,11 +3152,11 @@ exports[`FeaturedCard should should render as isLive 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -2850,169 +3178,15 @@ exports[`FeaturedCard should should render as isLive 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
-          <View
-            bordered={false}
-            disabled={false}
-            pill={false}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#17B582",
-                "borderColor": "#17B582",
-                "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 32,
-                "justifyContent": "center",
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 12,
-              }
-            }
-          >
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={7}
-              bbWidth={7}
-              height={7}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  Object {},
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 7,
-                    "width": 7,
-                  },
-                ]
-              }
-              vbHeight={24}
-              vbWidth={24}
-              width={7}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGCircle
-                  cx="12"
-                  cy="12"
-                  fill={
-                    Array [
-                      0,
-                      4294967295,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  r="12"
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
-            <Text
-              style={
-                Object {
-                  "alignItems": "center",
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "justifyContent": "center",
-                  "lineHeight": 17.28,
-                  "paddingLeft": 8,
-                  "textAlign": "center",
-                }
-              }
-              withIcon="live-dot"
-            >
-              Live
-            </Text>
-          </View>
           <View
             hasDescription={false}
             style={
@@ -3037,8 +3211,8 @@ exports[`FeaturedCard should should render as isLive 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >
@@ -3179,7 +3353,7 @@ exports[`FeaturedCard should should render as isLive 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should should render with an action "button" 1`] = `
+exports[`HighlightCard should should render with an action "button" 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -3260,8 +3434,8 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
             }
           >
             <Image
-              maxAspectRatio={1}
-              minAspectRatio={1}
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
               onLoad={[Function]}
               source={
                 Array [
@@ -3284,8 +3458,8 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
           <BVLinearGradient
             colors={
               Array [
-                1711302509,
-                4278216557,
+                1711276032,
+                3003121664,
               ]
             }
             endPoint={
@@ -3297,11 +3471,11 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
             locations={
               Array [
                 0,
-                0.8,
+                1,
               ]
             }
-            overlayColor="#00676D"
-            overlayType="featured"
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
             startPoint={
               Object {
                 "x": 0,
@@ -3323,10 +3497,12 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "marginTop": "-40%",
+              "bottom": 0,
               "paddingBottom": 32,
               "paddingHorizontal": 24,
               "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
             }
           }
         >
@@ -3354,8 +3530,8 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
                   Object {
                     "color": "#F8F7F4",
                     "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
                   }
                 }
               >

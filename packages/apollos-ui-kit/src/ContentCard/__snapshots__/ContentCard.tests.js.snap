@@ -53,7 +53,6 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -391,7 +390,6 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -595,6 +593,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
       forceRatio={1}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -934,6 +933,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
       forceRatio={1}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -1242,6 +1242,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
       forceRatio={1}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -1585,6 +1586,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
       isLoading={true}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -1826,7 +1828,6 @@ exports[`ContentCard renders with No image 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -2130,7 +2131,6 @@ exports[`ContentCard renders with an Image only 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
