@@ -91,7 +91,6 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -227,7 +226,6 @@ Anderson, SC 29621-3619
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -363,7 +361,6 @@ Richardson, TX 75080-5525
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -499,7 +496,6 @@ Cincinnati, OH 45202-2118
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
