@@ -8,7 +8,7 @@ import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-const Browser = ({ url, cookie = '', modal, navigation }) => {
+const Browser = ({ url, cookie, modal, navigation }) => {
   console.warn(cookie);
   if (modal) {
     return (
