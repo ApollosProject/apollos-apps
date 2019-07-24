@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { PaddedView } from '@apollosproject/ui-kit';
+import { PaddedView, ActionCard } from '@apollosproject/ui-kit';
 
 import ScriptureItem from './ScriptureItem';
 
@@ -207,4 +207,16 @@ storiesOf('ui-scripture/Scripture', module)
         />
       </PaddedView>
     </ScrollView>
+  ))
+  .add('Example Usage in ActionCard', () => (
+    <PaddedView>
+      <ActionCard icon={'text'} label={'Featured Scripture'}>
+        <ScriptureItem
+          reference={john1.scripture.reference}
+          html={john1.scripture.html}
+          isLoading={john1.scripture.isLoading}
+          copyright={john1.scripture.copyright}
+        />
+      </ActionCard>
+    </PaddedView>
   ));
