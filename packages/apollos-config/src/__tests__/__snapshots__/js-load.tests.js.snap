@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`the yaml loader must load empty config 1`] = `
+Object {
+  "ANALYTICS": Object {},
+  "BIBLE_API": Object {
+    "API_TOKEN": "foobar",
+  },
+  "CLOUDINARY": Object {},
+  "ROCK": Object {
+    "API_URL": "https://some-url.com",
+  },
+  "ROCK_CONSTANTS": Object {},
+  "ROCK_MAPPINGS": Object {
+    "CONTENT_ITEM": Object {},
+  },
+  "VALUE_NOT_IN_DEFAULT_CONFIG": Object {
+    "FOO": "bar",
+  },
+}
+`;
+
+exports[`the yaml loader must load empty config with no arguments 1`] = `
+Object {
+  "ANALYTICS": Object {},
+  "BIBLE_API": Object {
+    "API_TOKEN": "foobar",
+  },
+  "CLOUDINARY": Object {},
+  "ROCK": Object {
+    "API_URL": "https://some-url.com",
+  },
+  "ROCK_CONSTANTS": Object {},
+  "ROCK_MAPPINGS": Object {
+    "CONTENT_ITEM": Object {},
+  },
+  "VALUE_NOT_IN_DEFAULT_CONFIG": Object {
+    "FOO": "bar",
+  },
+}
+`;
+
 exports[`the yaml loader must load variables from a js object 1`] = `
 Object {
   "ANALYTICS": Object {},
