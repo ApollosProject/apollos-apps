@@ -1,5 +1,7 @@
+import React from 'react';
+import { Text } from 'react-native';
 import fetchMoreResolver from '../fetchMoreResolver';
-import testUtils from '../testUtils';
+import { renderWithApolloData } from '../testUtils';
 
 describe('the fetchMoreResolver function', () => {
   const args = {
@@ -28,4 +30,10 @@ describe('the fetchMoreResolver function', () => {
       })()
     ).toBeUndefined();
   });
+  // TODO test fetchMore functionality
+});
+
+test('renderWithApolloData renders the component', async () => {
+  const tree = await renderWithApolloData(<Text>hello, world!</Text>);
+  expect(tree).toMatchSnapshot();
 });
