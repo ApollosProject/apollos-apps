@@ -62,7 +62,7 @@ describe('the BodySmall component', () => {
       <Providers>
         <BodySmall accessible={false}>
           {
-            '"True faith means holding nothing back. It means putting every hope in God\'s fidelity to His Promises." ― Francis Chan'
+            '"He who lays up treasures on earth spends his life backing away from his treasures. To him, death is loss. He who lays up treasures in heaven looks forward to eternity; he’s moving daily toward his treasures. To him, death is gain." ― Randy Alcorn'
           }
         </BodySmall>
       </Providers>
