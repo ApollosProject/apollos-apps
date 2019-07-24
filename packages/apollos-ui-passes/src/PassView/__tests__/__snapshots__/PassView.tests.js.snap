@@ -54,7 +54,6 @@ exports[`the PassView component should display loading placeholders 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -240,7 +239,6 @@ exports[`the PassView component should render 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }

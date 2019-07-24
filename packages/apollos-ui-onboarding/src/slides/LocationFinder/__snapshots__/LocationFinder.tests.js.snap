@@ -1129,7 +1129,6 @@ exports[`The Onboarding LocationFinder component should render the button disabl
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }

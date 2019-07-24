@@ -266,7 +266,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -482,7 +481,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -698,7 +696,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -914,7 +911,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1130,7 +1126,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1346,7 +1341,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1562,7 +1556,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1778,7 +1771,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1994,7 +1986,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -2210,7 +2201,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }

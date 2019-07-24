@@ -54,7 +54,6 @@ exports[`the Card component it should render a placeholder 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -230,7 +229,6 @@ exports[`the Card component should render 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
