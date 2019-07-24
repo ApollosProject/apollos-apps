@@ -118,7 +118,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
             <View
               style={
                 Object {
-                  "aspectRatio": undefined,
                   "borderRadius": 16,
                   "overflow": "hidden",
                 }
@@ -422,7 +421,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -639,7 +637,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -856,7 +853,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1073,7 +1069,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1290,7 +1285,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1507,7 +1501,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1724,7 +1717,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1941,7 +1933,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2158,7 +2149,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2375,7 +2365,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2710,7 +2699,6 @@ exports[`The FeedView component renders correctly 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2802,7 +2790,6 @@ exports[`The FeedView component renders correctly 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3071,7 +3058,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3288,7 +3274,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3505,7 +3490,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3722,7 +3706,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3939,7 +3922,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4156,7 +4138,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4373,7 +4354,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4590,7 +4570,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4807,7 +4786,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -5024,7 +5002,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
