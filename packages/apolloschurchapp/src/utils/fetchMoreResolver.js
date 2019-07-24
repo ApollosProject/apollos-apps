@@ -7,6 +7,10 @@ export default function fetchMoreResolver({
   fetchMore,
   data,
 } = {}) {
+  console.log('collectionName', collectionName);
+  console.log('variables', variables);
+  console.log('fetchMore', fetchMore);
+  console.log('data', data);
   return () => {
     const pageInfoPath = `${collectionName}.pageInfo`;
     const edgePath = `${collectionName}.edges`;
