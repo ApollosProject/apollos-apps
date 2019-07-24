@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 import { withTheme, ThemeMixin } from '../theme';
 import styled from '../styled';
-import Card, { CardImage, CardLabel, CardContent } from '../Card';
+import Card, { CardContent, CardLabel, CardImage } from '../Card';
 import FlexedView from '../FlexedView';
-import { H2, BodyText } from '../typography';
+import { H3, BodyText } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
@@ -29,15 +29,18 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
   iconPadding: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ theme }) => ({
-  overlayColor: theme.colors.primary,
-  minAspectRatio: 1,
-  maxAspectRatio: 1,
+const Image = withTheme(({ theme, customTheme }) => ({
+  maxAspectRatio: 1.2,
+  minAspectRatio: 0.75,
+  maintainAspectRatio: true,
+  overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
 }))(CardImage);
 
 const Content = styled(({ theme }) => ({
+  position: 'absolute',
+  bottom: 0,
+  width: '100%',
   alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-  marginTop: '-40%',
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
@@ -61,36 +64,26 @@ const ActionIcon = withTheme(({ theme }) => ({
 }))(Icon);
 
 const Label = withTheme(
-  ({ customTheme, hasDescription, isLive, labelText, theme }) => ({
-    ...(isLive
-      ? {
-          title: labelText || 'Live',
-          type: 'secondary',
-          icon: 'live-dot',
-          iconSize: theme.helpers.rem(0.4375), // using our typographic size unit based on fontSize so that the icon scales correctly with font size changes.
-        }
-      : {
-          title: labelText,
-          theme: { colors: get(customTheme, 'colors', {}) },
-          type: 'overlay',
-        }),
+  ({ customTheme, hasDescription, labelText, theme }) => ({
+    title: labelText,
+    theme: { colors: get(customTheme, 'colors', {}) },
+    type: 'overlay',
     style: {
       ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
     },
   })
 )(CardLabel);
 
-const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
+const renderLabel = (description, LabelComponent, labelText, theme) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
     ComponentToRender = LabelComponent;
-  } else if (labelText || isLive) {
+  } else if (labelText) {
     ComponentToRender = (
       <Label
         customTheme={theme}
         hasDescription={description}
-        isLive={isLive}
         labelText={labelText}
       />
     );
@@ -102,7 +95,7 @@ const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
 const renderOnlyTitle = (title, actionIcon, hasAction) => (
   <ActionLayout hasDescription={false}>
     <FlexedActionLayoutText>
-      <H2 numberOfLines={4}>{title}</H2>
+      <H3 numberOfLines={4}>{title}</H3>
     </FlexedActionLayoutText>
     {hasAction ? <ActionIcon name={actionIcon} /> : null}
   </ActionLayout>
@@ -110,7 +103,7 @@ const renderOnlyTitle = (title, actionIcon, hasAction) => (
 
 const renderWithDescription = (title, actionIcon, description, hasAction) => (
   <>
-    <H2 numberOfLines={3}>{title}</H2>
+    <H3 numberOfLines={3}>{title}</H3>
     <ActionLayout hasDescription>
       <FlexedActionLayoutText>
         <BodyText numberOfLines={2}>{description}</BodyText>
@@ -120,7 +113,7 @@ const renderWithDescription = (title, actionIcon, description, hasAction) => (
   </>
 );
 
-const FeaturedCard = withIsLoading(
+const HighlightCard = withIsLoading(
   ({
     image,
     title,
@@ -128,7 +121,6 @@ const FeaturedCard = withIsLoading(
     description,
     hasAction,
     isLiked,
-    isLive,
     isLoading,
     LabelComponent,
     labelText,
@@ -141,10 +133,13 @@ const FeaturedCard = withIsLoading(
       }}
     >
       <StyledCard isLoading={isLoading}>
-        <Image source={image} overlayType={'featured'} />
-
+        <Image
+          overlayType={'gradient-bottom'}
+          customTheme={theme}
+          source={image}
+        />
         <Content>
-          {renderLabel(description, LabelComponent, labelText, isLive, theme)}
+          {renderLabel(description, LabelComponent, labelText, theme)}
           {description
             ? renderWithDescription(title, actionIcon, description, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}
@@ -157,7 +152,7 @@ const FeaturedCard = withIsLoading(
   )
 );
 
-FeaturedCard.propTypes = {
+HighlightCard.propTypes = {
   image: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -167,7 +162,6 @@ FeaturedCard.propTypes = {
   description: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
-  isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   theme: PropTypes.shape({
@@ -176,10 +170,8 @@ FeaturedCard.propTypes = {
   }),
 };
 
-FeaturedCard.defaultProps = {
+HighlightCard.defaultProps = {
   actionIcon: 'play-solid',
 };
 
-FeaturedCard.displayName = 'FeaturedCard';
-
-export default FeaturedCard;
+export default HighlightCard;

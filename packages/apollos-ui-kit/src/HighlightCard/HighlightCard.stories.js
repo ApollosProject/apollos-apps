@@ -6,34 +6,66 @@ import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import { CardLabel } from '../Card';
 
-import FeaturedCard from '.';
+import HighlightCard from '.';
 
-storiesOf('ui-kit/FeaturedCard', module)
+storiesOf('ui-kit/HighlightCard', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('example', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      description={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-      hasAction
-      isLive
-    />
+  .add('examples', () => (
+    <ScrollView>
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/1600/?random',
+          },
+        ]}
+        description={
+          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+        }
+        hasAction
+        labelText={'Custom Label'}
+      />
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/1600/800/?random',
+          },
+        ]}
+        description={
+          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+        }
+        hasAction
+        labelText={'Custom Label'}
+      />
+      <HighlightCard
+        title={
+          'Are you telling me that you built a time machine out of a DeLorean?'
+        }
+        image={[
+          {
+            uri: 'https://picsum.photos/800/800/?random',
+          },
+        ]}
+        description={
+          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+        }
+        hasAction
+        labelText={'Custom Label'}
+      />
+    </ScrollView>
   ))
   .add('default', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -45,7 +77,7 @@ storiesOf('ui-kit/FeaturedCard', module)
     />
   ))
   .add('actionIcon', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -59,7 +91,7 @@ storiesOf('ui-kit/FeaturedCard', module)
     />
   ))
   .add('description', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -74,7 +106,7 @@ storiesOf('ui-kit/FeaturedCard', module)
     />
   ))
   .add('hasAction', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -86,34 +118,8 @@ storiesOf('ui-kit/FeaturedCard', module)
       hasAction
     />
   ))
-  .add('isLiked', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      isLiked
-    />
-  ))
-  .add('isLive', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      image={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      isLive
-    />
-  ))
   .add('isLoading', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -126,12 +132,12 @@ storiesOf('ui-kit/FeaturedCard', module)
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
       hasAction
-      isLive
+      labelText={'Custom Label'}
       isLoading
     />
   ))
   .add('LabelComponent', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -144,7 +150,7 @@ storiesOf('ui-kit/FeaturedCard', module)
     />
   ))
   .add('labelText', () => (
-    <FeaturedCard
+    <HighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -157,8 +163,25 @@ storiesOf('ui-kit/FeaturedCard', module)
     />
   ))
   .add('theme', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      image={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      theme={{
+        colors: {
+          primary: 'salmon',
+        },
+      }}
+    />
+  ))
+  .add('theme', () => (
     <ScrollView>
-      <FeaturedCard
+      <HighlightCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -170,11 +193,10 @@ storiesOf('ui-kit/FeaturedCard', module)
         theme={{
           colors: {
             primary: 'salmon',
-            secondary: 'salmon',
           },
         }}
       />
-      <FeaturedCard
+      <HighlightCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -183,26 +205,13 @@ storiesOf('ui-kit/FeaturedCard', module)
             uri: 'https://picsum.photos/800/1600/?random',
           },
         ]}
-        theme={{
-          type: 'light',
-        }}
-      />
-      <FeaturedCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        image={[
-          {
-            uri: 'https://picsum.photos/800/1600/?random',
-          },
-        ]}
-        isLive
+        labelText={'Quote'}
         isLiked
         theme={{
           type: 'light',
           colors: {
             primary: 'yellow',
-            secondary: 'dodgerblue',
+            white: 'dodgerblue',
             text: {
               primary: 'dodgerblue',
             },
