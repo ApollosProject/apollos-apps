@@ -30,7 +30,7 @@ describe('the fetchMoreResolver function', () => {
       })()
     ).toBeUndefined();
   });
-  // TODO test fetchMore functionality
+  // TODO is it possible fetchMore functionality???
 });
 
 test('renderWithApolloData renders the component', async () => {
