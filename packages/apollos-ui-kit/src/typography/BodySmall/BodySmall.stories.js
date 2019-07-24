@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
-import FlexedView from '../../FlexedView';
 
 import BodySmall from '.';
 
