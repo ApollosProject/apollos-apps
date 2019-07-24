@@ -26,7 +26,7 @@ Browser.propTypes = {
   modal: PropTypes.bool.isRequired,
 };
 
-const WITH_USER_COOKIE = gql`
+export const WITH_USER_COOKIE = gql`
   query currentUserCookie {
     currentUser {
       id
