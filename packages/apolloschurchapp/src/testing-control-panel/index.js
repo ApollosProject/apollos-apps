@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import gql from 'graphql-tag';
+import { Mutation } from 'react-apollo';
 import { TableView, Divider } from '@apollosproject/ui-kit';
 import { UserWebBrowserConsumer } from 'apolloschurchapp/src/user-web-browser';
 import ChangeLivestream from './ChangeLivestream';
@@ -33,6 +35,21 @@ export default class TestingControlPanel extends PureComponent {
           iconName="Avatar"
           cellText={`Launch Onboarding`}
         />
+        <Mutation
+          mutation={gql`
+            mutation {
+              authenticationError
+            }
+          `}
+        >
+          {(throwError) => (
+            <TouchableCell
+              handlePress={() => throwError()}
+              iconName="Avatar"
+              cellText={'Throw Authentication Error'}
+            />
+          )}
+        </Mutation>
       </TableView>
     );
   }

@@ -4,12 +4,12 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
 
-import { authLink } from '@apollosproject/ui-auth';
+import { authLink, errorLink } from '@apollosproject/ui-auth';
 import { resolvers, schema, defaults } from '../store';
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
-const link = ApolloLink.from([authLink, httpLink]);
+const link = ApolloLink.from([authLink, errorLink, httpLink]);
 
 export const client = new ApolloClient({
   link,

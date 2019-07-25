@@ -267,6 +267,7 @@ type Mutation {
   authenticate(identity: String!, password: String!): Authentication
   changePassword(password: String!): Authentication
   registerPerson(email: String!, password: String!): Authentication
+  authenticationError: String
   requestSmsLoginPin(phoneNumber: String!): SmsPinResult
   authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
   identifySelf(input: AnalyticsIdentifyInput!): AnalyticsResult

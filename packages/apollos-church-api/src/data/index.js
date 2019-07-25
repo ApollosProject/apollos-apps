@@ -31,12 +31,19 @@ import * as Theme from './theme';
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
 import * as OneSignalWithRock from './oneSignalWithRock';
 
+// This gives us a way to throw an Auth Error and trigger a login
+import * as AuthError from './authError';
+
+console.log(AuthError);
+console.log(OneSignalWithRock);
+
 const data = {
   Followings,
   ContentChannel,
   ContentItem,
   Person,
   Cloudinary,
+  AuthError,
   Auth,
   AuthSms,
   Sms,
