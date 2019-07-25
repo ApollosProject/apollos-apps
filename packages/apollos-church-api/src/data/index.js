@@ -34,9 +34,6 @@ import * as OneSignalWithRock from './oneSignalWithRock';
 // This gives us a way to throw an Auth Error and trigger a login
 import * as AuthError from './authError';
 
-console.log(AuthError);
-console.log(OneSignalWithRock);
-
 const data = {
   Followings,
   ContentChannel,
