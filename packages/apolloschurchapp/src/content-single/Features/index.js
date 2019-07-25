@@ -27,7 +27,6 @@ const Features = ({ contentId }) => {
         if (loading) return null;
 
         const features = get(node, 'features', []);
-        console.log(node, features);
         return features.map(({ __typename, ...feature }) => {
           const Feature = FEATURE_MAP[__typename];
           return (
