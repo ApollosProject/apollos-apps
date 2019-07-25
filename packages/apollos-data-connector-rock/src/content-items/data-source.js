@@ -162,7 +162,9 @@ export default class ContentItem extends RockApolloDataSource {
       })
     );
     // protects from starting with up to a three digit number and period
-    return tokens[0].length < 5 ? `${tokens[0]} ${tokens[1]}` : tokens[0];
+    return tokens.length > 1 && tokens[0].length < 5
+      ? `${tokens[0]} ${tokens[1]}`
+      : tokens[0];
   };
 
   getSermonFeed() {
