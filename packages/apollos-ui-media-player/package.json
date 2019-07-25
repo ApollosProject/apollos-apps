@@ -60,7 +60,7 @@
     "prop-types": "15.6.1",
     "react": "16.8.3",
     "react-apollo": "2.5.5",
-    "react-native": "0.59.8",
+    "react-native": "0.59.10",
     "react-native-airplay-btn": "^1.0.6",
     "react-native-linear-gradient": "2.5.3",
     "react-native-music-control": "0.7.3",
