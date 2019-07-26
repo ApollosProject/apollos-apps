@@ -40,6 +40,7 @@ export Placeholder, { withPlaceholder } from './Placeholder';
 export ProgressiveImage from './ProgressiveImage';
 export SideBySideView from './SideBySideView';
 export styled from './styled';
+export StretchyView from './StretchyView';
 export TableView, {
   Cell,
   CellText,
