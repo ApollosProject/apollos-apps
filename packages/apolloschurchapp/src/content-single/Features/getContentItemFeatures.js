@@ -18,6 +18,11 @@ export default gql`
           ...FeaturesFragment
         }
       }
+      ... on WeekendContentItem {
+        features {
+          ...FeaturesFragment
+        }
+      }
     }
   }
   ${FEATURES_FRAGMENT}
