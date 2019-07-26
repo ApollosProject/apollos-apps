@@ -8,15 +8,22 @@ import NavigationService from '../../NavigationService';
 const mocks = [
   {
     request: { query: WITH_USER_COOKIE },
-    response: {
-      data: { currentUser: { id: 'User:123', rockToken: 'ABC' } },
+    result: {
+      data: {
+        __typename: 'AuthenticatedUser',
+        currentUser: {
+          __typename: 'Person',
+          id: 'Person:123',
+          rockToken: 'ABC',
+        },
+      },
     },
   },
 ];
 const navigation = { navigate: jest.fn(), getParam: jest.fn() };
 
 describe('the BrowserWithUserCookie component', () => {
-  it('renders', async () => {
+  it('renders with a user', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <BrowserWithUserCookie navigation={navigation} />
@@ -24,7 +31,7 @@ describe('the BrowserWithUserCookie component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders', async () => {
+  it('renders with modal false', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <BrowserWithUserCookie modal={false} navigation={navigation} />

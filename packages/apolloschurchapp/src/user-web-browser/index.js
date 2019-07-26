@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
 const Browser = ({ url, cookie, modal, navigation }) => {
-  console.warn(cookie);
   if (modal) {
     return (
       <ModalView navigation={navigation}>

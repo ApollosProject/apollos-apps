@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the BrowserWithUserCookie component renders 1`] = `
+exports[`the BrowserWithUserCookie component renders with a user 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -82,7 +82,7 @@ exports[`the BrowserWithUserCookie component renders 1`] = `
           source={
             Object {
               "headers": Object {
-                "Cookie": "",
+                "Cookie": "ABC",
               },
               "uri": undefined,
             }
@@ -278,7 +278,7 @@ exports[`the BrowserWithUserCookie component renders 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`the BrowserWithUserCookie component renders 2`] = `
+exports[`the BrowserWithUserCookie component renders with modal false 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -331,7 +331,7 @@ exports[`the BrowserWithUserCookie component renders 2`] = `
         source={
           Object {
             "headers": Object {
-              "Cookie": "",
+              "Cookie": "ABC",
             },
             "uri": undefined,
           }
