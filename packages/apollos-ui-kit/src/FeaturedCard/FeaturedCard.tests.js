@@ -14,7 +14,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -31,7 +31,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -43,19 +43,19 @@ describe('FeaturedCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a description', () => {
+  it('should render with a summary', () => {
     const tree = renderer.create(
       <Providers>
         <FeaturedCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          description={
+          summary={
             'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
           }
         />
@@ -70,7 +70,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -88,7 +88,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -106,7 +106,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -124,12 +124,12 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          description={
+          summary={
             'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
           }
           hasAction
@@ -147,7 +147,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -165,7 +165,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
@@ -183,7 +183,7 @@ describe('FeaturedCard', () => {
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
-          image={[
+          coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
             },
