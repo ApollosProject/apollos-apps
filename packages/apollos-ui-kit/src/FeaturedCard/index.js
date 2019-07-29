@@ -42,12 +42,12 @@ const Content = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
 
-const ActionLayout = styled(({ theme, hasDescription }) => ({
+const ActionLayout = styled(({ theme, hasSummary }) => ({
   flexDirection: 'row',
-  /* - `center` works in all situations including 1 line descriptions
-   * - `flex-end` is needed only for when we have no description
+  /* - `center` works in all situations including 1 line summaries
+   * - `flex-end` is needed only for when we have no summary
    */
-  alignItems: hasDescription ? 'center' : 'flex-end',
+  alignItems: hasSummary ? 'center' : 'flex-end',
   paddingTop: theme.sizing.baseUnit,
 }))(View);
 
@@ -61,7 +61,7 @@ const ActionIcon = withTheme(({ theme }) => ({
 }))(Icon);
 
 const Label = withTheme(
-  ({ customTheme, hasDescription, isLive, labelText, theme }) => ({
+  ({ customTheme, hasSummary, isLive, labelText, theme }) => ({
     ...(isLive
       ? {
           title: labelText || 'Live',
@@ -75,12 +75,12 @@ const Label = withTheme(
           type: 'overlay',
         }),
     style: {
-      ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
+      ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
     },
   })
 )(CardLabel);
 
-const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
+const renderLabel = (summary, LabelComponent, labelText, isLive, theme) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
@@ -89,7 +89,7 @@ const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
     ComponentToRender = (
       <Label
         customTheme={theme}
-        hasDescription={description}
+        hasSummary={summary}
         isLive={isLive}
         labelText={labelText}
       />
@@ -100,7 +100,7 @@ const renderLabel = (description, LabelComponent, labelText, isLive, theme) => {
 };
 
 const renderOnlyTitle = (title, actionIcon, hasAction) => (
-  <ActionLayout hasDescription={false}>
+  <ActionLayout hasSummary={false}>
     <FlexedActionLayoutText>
       <H2 numberOfLines={4}>{title}</H2>
     </FlexedActionLayoutText>
@@ -108,12 +108,12 @@ const renderOnlyTitle = (title, actionIcon, hasAction) => (
   </ActionLayout>
 );
 
-const renderWithDescription = (title, actionIcon, description, hasAction) => (
+const renderWithSummary = (title, actionIcon, summary, hasAction) => (
   <>
     <H2 numberOfLines={3}>{title}</H2>
-    <ActionLayout hasDescription>
+    <ActionLayout hasSummary>
       <FlexedActionLayoutText>
-        <BodyText numberOfLines={2}>{description}</BodyText>
+        <BodyText numberOfLines={2}>{summary}</BodyText>
       </FlexedActionLayoutText>
       {hasAction ? <ActionIcon name={actionIcon} /> : null}
     </ActionLayout>
@@ -122,16 +122,16 @@ const renderWithDescription = (title, actionIcon, description, hasAction) => (
 
 const FeaturedCard = withIsLoading(
   ({
-    image,
+    coverImage,
     title,
     actionIcon,
-    description,
     hasAction,
     isLiked,
     isLive,
     isLoading,
     LabelComponent,
     labelText,
+    summary,
     theme,
   }) => (
     <ThemeMixin
@@ -141,12 +141,12 @@ const FeaturedCard = withIsLoading(
       }}
     >
       <StyledCard isLoading={isLoading}>
-        <Image source={image} overlayType={'featured'} />
+        <Image source={coverImage} overlayType={'featured'} />
 
         <Content>
-          {renderLabel(description, LabelComponent, labelText, isLive, theme)}
-          {description
-            ? renderWithDescription(title, actionIcon, description, hasAction)
+          {renderLabel(summary, LabelComponent, labelText, isLive, theme)}
+          {summary
+            ? renderWithSummary(title, actionIcon, summary, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}
         </Content>
         <LikeIconPositioning>
@@ -158,18 +158,18 @@ const FeaturedCard = withIsLoading(
 );
 
 FeaturedCard.propTypes = {
-  image: PropTypes.oneOfType([
+  coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
-  description: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
   isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
+  summary: PropTypes.string,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
