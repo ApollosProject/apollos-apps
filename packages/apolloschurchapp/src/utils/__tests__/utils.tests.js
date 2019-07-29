@@ -12,13 +12,13 @@ describe('the fetchMoreResolver function', () => {
       userFeed: {
         edges: [
           {
-            0: { node: { id: 'node0' } },
+            0: { node: { id: 'foo' } },
           },
           {
-            1: { node: { id: 'node0' } },
+            1: { node: { id: 'bar' } },
           },
         ],
-        pageInfo: { endCursor: 'node123' },
+        pageInfo: { endCursor: 'abc123' },
       },
     },
   };
@@ -30,7 +30,41 @@ describe('the fetchMoreResolver function', () => {
       })()
     ).toBeUndefined();
   });
-  // TODO is it possible fetchMore functionality???
+  test('it appends data properly', () => {
+    fetchMoreResolver({ ...args })();
+    const previousResult = args.data;
+    const fetchMoreResult = {
+      userFeed: {
+        edges: [{ 0: { node: { id: 'baz' } } }],
+        pageInfo: { endCursor: 'def456' },
+      },
+    };
+    // console.log(
+    // args.fetchMore.mock.calls[1][0].updateQuery(previousResult, {
+    // fetchMoreResult,
+    // }).userFeed.edges
+    // );
+    expect(
+      args.fetchMore.mock.calls[1][0].updateQuery(previousResult, {
+        fetchMoreResult,
+      })
+    ).toEqual({
+      userFeed: {
+        edges: [
+          {
+            0: { node: { id: 'foo' } },
+          },
+          {
+            1: { node: { id: 'bar' } },
+          },
+          {
+            2: { node: { id: 'baz' } },
+          },
+        ],
+        pageInfo: { endCursor: 'def456' },
+      },
+    });
+  });
 });
 
 test('renderWithApolloData renders the component', async () => {
