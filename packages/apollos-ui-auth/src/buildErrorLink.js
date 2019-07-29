@@ -1,6 +1,6 @@
 import { onError } from 'apollo-link-error';
 
-export default (cache, defaults) => () =>
+export default (cache, defaults) =>
   onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors)
       graphQLErrors.map(
