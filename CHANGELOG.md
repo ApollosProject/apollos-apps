@@ -1,4 +1,13 @@
 
+v1.1.0-beta.2: July 29, 2019
+
+- Adds `<OverlayBackgroundImage />` component (#908) (62e032dc)
+- Adds Tests over App Utils Functions (#918) (0ec04720)
+- Adds HorizontalHighlightCard (#930) (128af881)
+- Adds 100% Coverage for User Web Browser (#921) (f4879a25)
+- Adds BodySmall component (#922) (aabfd53c)
+- Standardizes FeaturedCard, HighlightCard, and ContentCard prop naming (#929) (11607f7b)
+
 v1.1.0-beta.1: July 29, 2019
 
 - Adds ScriptureFeature to ContentItem feature (#923) (8e01aa1a)
