@@ -76,6 +76,7 @@ exports[`FeaturedCard should render 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -152,7 +153,7 @@ exports[`FeaturedCard should render 1`] = `
           }
         >
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -394,6 +395,7 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -497,7 +499,7 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             }
           />
           <View
-            hasDescription={true}
+            hasSummary={true}
             style={
               Object {
                 "alignItems": "center",
@@ -641,6 +643,7 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -717,7 +720,7 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
           }
         >
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -1073,6 +1076,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1149,7 +1153,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
           }
         >
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -1314,7 +1318,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`FeaturedCard should render with a description 1`] = `
+exports[`FeaturedCard should render with a summary 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1390,6 +1394,7 @@ exports[`FeaturedCard should render with a description 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1479,7 +1484,7 @@ exports[`FeaturedCard should render with a description 1`] = `
             Are you telling me that you built a time machine out of a DeLorean?
           </Text>
           <View
-            hasDescription={true}
+            hasSummary={true}
             style={
               Object {
                 "alignItems": "center",
@@ -1722,6 +1727,7 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1852,7 +1858,7 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
             </Text>
           </View>
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -2093,6 +2099,7 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -2223,7 +2230,7 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
             </Text>
           </View>
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -2464,6 +2471,7 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -2540,7 +2548,7 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
           }
         >
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -2782,6 +2790,7 @@ exports[`FeaturedCard should should render as isLive 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -3014,7 +3023,7 @@ exports[`FeaturedCard should should render as isLive 1`] = `
             </Text>
           </View>
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
@@ -3255,6 +3264,7 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -3331,7 +3341,7 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
           }
         >
           <View
-            hasDescription={false}
+            hasSummary={false}
             style={
               Object {
                 "alignItems": "flex-end",
