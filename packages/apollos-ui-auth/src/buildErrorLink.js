@@ -1,6 +1,6 @@
 import { onError } from 'apollo-link-error';
 
-export default (cache, defaults) =>
+export default (restore, navigate) =>
   onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors)
       graphQLErrors.map(
@@ -10,8 +10,8 @@ export default (cache, defaults) =>
           );
           // wipe out all data and go to beginning of app
           if (code === 'UNAUTHENTICATED') {
-            // cache.writeData({ data: defaults });
-            // TODO nav to onboarding
+            restore();
+            navigate();
           }
           return null;
         }

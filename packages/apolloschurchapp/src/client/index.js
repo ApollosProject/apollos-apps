@@ -6,10 +6,13 @@ import { ApolloLink } from 'apollo-link';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 import { resolvers, schema, defaults } from '../store';
+import NavigationService from '../NavigationService';
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
-const errorLink = buildErrorLink(cache, defaults);
+const goToAuth = () => NavigationService.navigate('Auth');
+const wipeData = () => cache.writeData({ data: defaults });
+const errorLink = buildErrorLink(wipeData, goToAuth);
 const link = ApolloLink.from([authLink, errorLink, httpLink]);
 
 export const client = new ApolloClient({
@@ -21,9 +24,9 @@ export const client = new ApolloClient({
   typeDefs: schema,
 });
 
-cache.writeData({ data: defaults });
+wipeData();
 // Ensure that media player still works after logout.
-client.onResetStore(() => cache.writeData({ data: defaults }));
+client.onResetStore(() => wipeData());
 
 class ClientProvider extends PureComponent {
   static propTypes = {
