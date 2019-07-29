@@ -12,53 +12,48 @@ describe('the fetchMoreResolver function', () => {
       userFeed: {
         edges: [
           {
-            0: { node: { id: 'foo' } },
+            node: { id: 'foo' },
           },
           {
-            1: { node: { id: 'bar' } },
+            node: { id: 'bar' },
           },
         ],
         pageInfo: { endCursor: 'abc123' },
       },
     },
   };
-  test('it returns undefined when no endCursor', () => {
+  test('no endCursor', () => {
     expect(
       fetchMoreResolver({
-        data: { userFeed: { edges: [], pageInfo: {} } },
         ...args,
+        data: { userFeed: { edges: [], pageInfo: {} } },
       })()
     ).toBeUndefined();
   });
-  test('it appends data properly', () => {
+  test('combines data', () => {
     fetchMoreResolver({ ...args })();
     const previousResult = args.data;
     const fetchMoreResult = {
       userFeed: {
-        edges: [{ 0: { node: { id: 'baz' } } }],
+        edges: [{ node: { id: 'baz' } }],
         pageInfo: { endCursor: 'def456' },
       },
     };
-    // console.log(
-    // args.fetchMore.mock.calls[1][0].updateQuery(previousResult, {
-    // fetchMoreResult,
-    // }).userFeed.edges
-    // );
     expect(
-      args.fetchMore.mock.calls[1][0].updateQuery(previousResult, {
+      args.fetchMore.mock.calls[0][0].updateQuery(previousResult, {
         fetchMoreResult,
       })
     ).toEqual({
       userFeed: {
         edges: [
           {
-            0: { node: { id: 'foo' } },
+            node: { id: 'foo' },
           },
           {
-            1: { node: { id: 'bar' } },
+            node: { id: 'bar' },
           },
           {
-            2: { node: { id: 'baz' } },
+            node: { id: 'baz' },
           },
         ],
         pageInfo: { endCursor: 'def456' },

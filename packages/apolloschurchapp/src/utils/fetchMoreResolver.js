@@ -6,7 +6,7 @@ export default function fetchMoreResolver({
   variables,
   fetchMore,
   data,
-} = {}) {
+}) {
   return () => {
     const pageInfoPath = `${collectionName}.pageInfo`;
     const edgePath = `${collectionName}.edges`;
@@ -17,8 +17,6 @@ export default function fetchMoreResolver({
     fetchMore({
       variables: { ...variables, after },
       updateQuery: (previousResult, { fetchMoreResult }) => {
-        // console.log('previousResult', previousResult);
-        // console.log('fetchMoreResult', fetchMoreResult);
         // combine previous data and fetchMore data
         const newDataWithPageInfo = set(
           pageInfoPath,
@@ -37,7 +35,6 @@ export default function fetchMoreResolver({
           newDataWithPageInfo
         );
 
-        // console.log('newData', newDataWithAdditionalItems);
         return newDataWithAdditionalItems;
       },
     });
