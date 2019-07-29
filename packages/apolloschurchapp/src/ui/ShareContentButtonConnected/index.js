@@ -8,7 +8,7 @@ import ShareContentButton from 'apolloschurchapp/src/ui/ShareContentButton';
 
 import GET_SHARE_CONTENT from './getShareContent';
 
-const ShareButton = ({ itemId, title, url }) => (
+const ShareContentButtonConnected = ({ itemId, title, url }) => (
   <Query query={GET_SHARE_CONTENT} variables={{ itemId }}>
     {({ data }) => {
       const sharing = get(data, 'node.sharing', {});
@@ -22,11 +22,11 @@ const ShareButton = ({ itemId, title, url }) => (
   </Query>
 );
 
-ShareButton.propTypes = {
+ShareContentButtonConnected.propTypes = {
   itemId: PropTypes.string.isRequired,
   // These props are available to override the default sharing data for a node.
   title: PropTypes.string,
   url: PropTypes.string,
 };
 
-export default ShareButton;
+export default ShareContentButtonConnected;

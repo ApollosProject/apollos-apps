@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
 import PropTypes from 'prop-types';
-import ShareButton from 'apolloschurchapp/src/ui/ShareButton';
+import ShareContentButtonConnected from 'apolloschurchapp/src/ui/ShareContentButtonConnected';
 
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import LikeButton from 'apolloschurchapp/src/ui/LikeButton';
@@ -23,7 +23,7 @@ const ActionContainer = ({ itemId }) => (
     <MediaPlayerSpacer>
       <PositioningView>
         <LikeButton itemId={itemId} />
-        <ShareButton itemId={itemId} />
+        <ShareContentButtonConnected itemId={itemId} />
       </PositioningView>
     </MediaPlayerSpacer>
   </Container>

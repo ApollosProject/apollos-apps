@@ -3,18 +3,17 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '@apollosproject/ui-kit';
 
-import Share from '.';
+import ShareContentButton from '.';
 
 describe('the Share component', () => {
   it('should render', () => {
     const shareObject = {
       title: 'Shared Object Title',
       url: 'https://github.com/ApollosProject/apollos-prototype',
-      message: 'Share this with all your friends and family',
     };
     const tree = renderer.create(
       <Providers>
-        <Share content={shareObject} />
+        <ShareContentButton content={shareObject} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
