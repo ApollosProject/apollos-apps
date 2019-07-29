@@ -4,21 +4,20 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
-import Share from 'apolloschurchapp/src/ui/Share';
+import ShareContentButton from 'apolloschurchapp/src/ui/ShareContentButton';
 
 import GET_SHARE_CONTENT from './getShareContent';
 
-const ShareButton = ({ itemId, title, message, url }) => (
+const ShareButton = ({ itemId, title, url }) => (
   <Query query={GET_SHARE_CONTENT} variables={{ itemId }}>
     {({ data }) => {
       const sharing = get(data, 'node.sharing', {});
       const content = {
         id: itemId,
         title: title || sharing.title,
-        messsage: message || sharing.message,
         url: url || sharing.url,
       };
-      return <Share content={content} />;
+      return <ShareContentButton content={content} />;
     }}
   </Query>
 );
@@ -27,7 +26,6 @@ ShareButton.propTypes = {
   itemId: PropTypes.string.isRequired,
   // These props are available to override the default sharing data for a node.
   title: PropTypes.string,
-  message: PropTypes.string,
   url: PropTypes.string,
 };
 
