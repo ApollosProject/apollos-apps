@@ -62,6 +62,7 @@ export {
   H5,
   H6,
   UIText,
+  BodySmall,
   BodyText,
   Paragraph,
   BlockQuote,

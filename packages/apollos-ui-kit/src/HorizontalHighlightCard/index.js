@@ -7,14 +7,10 @@ import { withTheme, ThemeMixin } from '../theme';
 import styled from '../styled';
 import Card, { CardContent, CardLabel, CardImage } from '../Card';
 import FlexedView from '../FlexedView';
-import { H3, BodyText } from '../typography';
+import { H3 } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
-
-const StyledCard = withTheme(({ theme }) => ({
-  cardColor: theme.colors.primary,
-}))(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(
@@ -23,18 +19,17 @@ const LikeIconPositioning = styled(
     top: theme.sizing.baseUnit * 1.5,
     right: theme.sizing.baseUnit * 1.5,
   }),
-  'ui-kit.HighlightCard.LikeIconPositioning'
+  'ui-kit.HorizontalHighlightCard.LikeIconPositioning'
 )(View);
 
 const LikeIcon = withTheme(({ theme, isLiked }) => ({
   name: isLiked ? 'like-solid' : 'like',
   size: theme.sizing.baseUnit * 1.5,
-  iconPadding: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ theme, customTheme }) => ({
-  maxAspectRatio: 1.2,
-  minAspectRatio: 0.75,
+const Image = withTheme(({ customTheme, theme }) => ({
+  minAspectRatio: 1,
+  maxAspectRatio: 1,
   maintainAspectRatio: true,
   overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
 }))(CardImage);
@@ -48,19 +43,16 @@ const Content = styled(
     paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
     paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
   }),
-  'ui-kit.HighlightCard.Content'
+  'ui-kit.HorizontalHighlightCard.Content'
 )(CardContent);
 
 const ActionLayout = styled(
-  ({ theme, hasSummary }) => ({
+  ({ theme }) => ({
     flexDirection: 'row',
-    /* - `center` works in all situations including 1 line summaries
-     * - `flex-end` is needed only for when we have no summary
-     */
-    alignItems: hasSummary ? 'center' : 'flex-end',
+    alignItems: 'flex-end',
     paddingTop: theme.sizing.baseUnit,
   }),
-  'ui-kit.HighlightCard.ActionLayout'
+  'ui-kit.HorizontalHighlightCard.ActionLayout'
 )(View);
 
 const FlexedActionLayoutText = styled(({ theme }) => ({
@@ -69,54 +61,28 @@ const FlexedActionLayoutText = styled(({ theme }) => ({
 
 const ActionIcon = withTheme(({ theme }) => ({
   fill: theme.colors.text.primary,
-  size: theme.sizing.baseUnit * 3,
+  size: theme.sizing.baseUnit * 2,
 }))(Icon);
 
-const Label = withTheme(({ customTheme, hasSummary, labelText, theme }) => ({
+const Label = withTheme(({ customTheme, labelText }) => ({
   title: labelText,
   theme: { colors: get(customTheme, 'colors', {}) },
   type: 'overlay',
-  style: {
-    ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
-  },
 }))(CardLabel);
 
-const renderLabel = (summary, LabelComponent, labelText, theme) => {
+const renderLabel = (LabelComponent, labelText, theme) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
     ComponentToRender = LabelComponent;
   } else if (labelText) {
-    ComponentToRender = (
-      <Label customTheme={theme} hasSummary={summary} labelText={labelText} />
-    );
+    ComponentToRender = <Label customTheme={theme} labelText={labelText} />;
   }
 
   return ComponentToRender;
 };
 
-const renderOnlyTitle = (title, actionIcon, hasAction) => (
-  <ActionLayout hasSummary={false}>
-    <FlexedActionLayoutText>
-      <H3 numberOfLines={4}>{title}</H3>
-    </FlexedActionLayoutText>
-    {hasAction ? <ActionIcon name={actionIcon} /> : null}
-  </ActionLayout>
-);
-
-const renderWithSummary = (title, actionIcon, summary, hasAction) => (
-  <>
-    <H3 numberOfLines={3}>{title}</H3>
-    <ActionLayout hasSummary>
-      <FlexedActionLayoutText>
-        <BodyText numberOfLines={2}>{summary}</BodyText>
-      </FlexedActionLayoutText>
-      {hasAction ? <ActionIcon name={actionIcon} /> : null}
-    </ActionLayout>
-  </>
-);
-
-const HighlightCard = withIsLoading(
+const HorizontalHighlightCard = withIsLoading(
   ({
     coverImage,
     title,
@@ -126,8 +92,8 @@ const HighlightCard = withIsLoading(
     isLoading,
     LabelComponent,
     labelText,
-    summary,
     theme,
+    ...props
   }) => (
     <ThemeMixin
       mixin={{
@@ -135,27 +101,30 @@ const HighlightCard = withIsLoading(
         colors: get(theme, 'colors', {}),
       }}
     >
-      <StyledCard isLoading={isLoading}>
+      <Card isLoading={isLoading} {...props}>
         <Image
           overlayType={'gradient-bottom'}
           customTheme={theme}
           source={coverImage}
         />
         <Content>
-          {renderLabel(summary, LabelComponent, labelText, theme)}
-          {summary
-            ? renderWithSummary(title, actionIcon, summary, hasAction)
-            : renderOnlyTitle(title, actionIcon, hasAction)}
+          {renderLabel(LabelComponent, labelText, theme)}
+          <ActionLayout>
+            <FlexedActionLayoutText>
+              <H3 numberOfLines={4}>{title}</H3>
+            </FlexedActionLayoutText>
+            {hasAction ? <ActionIcon name={actionIcon} /> : null}
+          </ActionLayout>
         </Content>
         <LikeIconPositioning>
           <LikeIcon isLiked={isLiked} />
         </LikeIconPositioning>
-      </StyledCard>
+      </Card>
     </ThemeMixin>
   )
 );
 
-HighlightCard.propTypes = {
+HorizontalHighlightCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -166,15 +135,14 @@ HighlightCard.propTypes = {
   isLiked: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
-  summary: PropTypes.string,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
   }),
 };
 
-HighlightCard.defaultProps = {
-  actionIcon: 'play-opaque',
+HorizontalHighlightCard.defaultProps = {
+  actionIcon: 'play-solid',
 };
 
-export default HighlightCard;
+export default HorizontalHighlightCard;
