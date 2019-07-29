@@ -1467,6 +1467,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
                 Object {
                   "aspectRatio": 1,
                   "backgroundColor": "#A5A5A5",
+                  "resizeMode": "cover",
                   "width": "100%",
                 }
               }

@@ -331,7 +331,9 @@ exports[`the PassView component should render 1`] = `
                   style={
                     Object {
                       "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "transparent",
+                      "flex": 1,
+                      "resizeMode": "contain",
                       "width": "100%",
                     }
                   }

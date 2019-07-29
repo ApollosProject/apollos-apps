@@ -23,6 +23,13 @@ exports[`The Avatar component should render large 1`] = `
       Object {
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
+        "borderRadius": 80,
+        "bottom": 0,
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
         "width": "100%",
       }
     }
@@ -81,6 +88,13 @@ exports[`The Avatar component should render medium 1`] = `
       Object {
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
+        "borderRadius": 40,
+        "bottom": 0,
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
         "width": "100%",
       }
     }
@@ -139,6 +153,13 @@ exports[`The Avatar component should render small 1`] = `
       Object {
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
+        "borderRadius": 20,
+        "bottom": 0,
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
         "width": "100%",
       }
     }

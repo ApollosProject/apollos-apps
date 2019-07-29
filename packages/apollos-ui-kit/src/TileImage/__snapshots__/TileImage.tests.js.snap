@@ -80,6 +80,7 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -209,6 +210,7 @@ exports[`the TileImage component should render 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -375,6 +377,7 @@ exports[`the TileImage component should render a loading state 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -500,6 +503,7 @@ exports[`the TileImage component should render without text 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
