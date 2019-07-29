@@ -4,18 +4,24 @@ import { Query } from 'react-apollo';
 import { ErrorCard } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 import TextFeature from './TextFeature';
+import ScriptureFeature from './ScriptureFeature';
 
 import GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
 
 const FEATURE_MAP = {
   TextFeature,
+  ScriptureFeature,
 };
 
 const Features = ({ contentId }) => {
   if (!contentId) return null;
 
   return (
-    <Query query={GET_CONTENT_ITEM_FEATURES} variables={{ contentId }}>
+    <Query
+      query={GET_CONTENT_ITEM_FEATURES}
+      fetchPolicy="cache-and-network"
+      variables={{ contentId }}
+    >
       {({ data: { node } = {}, loading, error }) => {
         if (error) return <ErrorCard error={error} />;
         if (loading) return null;
