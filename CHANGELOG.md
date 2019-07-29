@@ -1,4 +1,30 @@
 
+v1.1.0-beta.1: July 29, 2019
+
+- Adds ScriptureFeature to ContentItem feature (#923) (8e01aa1a)
+- Adds <StretchyView /> component (#907) (3d40b210)
+- Adds Token Check (#924) (54d91ff6)
+- Adds Check Against Short Content Summaries (#912) (e41ab54b)
+- Adds 100% Coverage to Share Function (#917) (3a400698)
+- Adds scripture story for ActionCard (#896) (bd67a5a4)
+- Adds Highlight Card (#872) (e4054712)
+- Adds 100% Test Coverage to Config Package (#915) (2171230b)
+- Adds algorithm to ActionListCard to view content from the sermon throughout the week. (#886) (92d83e92)
+- Adds ability to customize gradient (#873) (695054b7)
+- Adds support for scripture to function as a 'node' (#883) (d07acdab)
+- Adds FeaturedCard component (#867) (0b9317ee)
+
+- Upgrades to RN 0.59.10 (#925) (4acb5c83)
+- Updates core Chip component styles (#881) (40b3e3b8)
+- Removes Unneccesary Native Code (#902) (eaeed22b)
+
+- Fixes minor bugs in CardWrapper component (#910) (1e4260b8)
+- Fixes Poor Loading Content UI (#903) (c3436ce5)
+- Fixes CardWrapper and Icon loading states (#893) (f0a0728c)
+- Fixes Auth issues (#888) (5bfd3450)
+- Fixes action list features having the same id (#885) (ffc2b452)
+
+
 v1.1.0-beta.0: July 16, 2019
 
 - Adds ability for Text Feature to use KeyValue attribute in Rock (#871) (9a47953e)
