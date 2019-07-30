@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GradientOverlayImage } from '@apollosproject/ui-kit';
+import { GradientOverlayImage, styled } from '@apollosproject/ui-kit';
 import { ApolloConsumer } from 'react-apollo';
 
 import {
@@ -14,6 +14,10 @@ import {
 
 import { requestPushPermissions } from '@apollosproject/ui-notifications';
 
+const StyledGradient = styled({
+  maxHeight: '40%',
+})(GradientOverlayImage);
+
 function Onboarding({ navigation }) {
   return (
     <OnboardingSwiper>
@@ -23,7 +27,7 @@ function Onboarding({ navigation }) {
           <FeaturesConnected
             onPressPrimary={swipeForward}
             BackgroundComponent={
-              <GradientOverlayImage
+              <StyledGradient
                 source={'https://picsum.photos/640/640/?random'}
               />
             }
@@ -31,7 +35,7 @@ function Onboarding({ navigation }) {
           <AboutYouConnected
             onPressPrimary={swipeForward}
             BackgroundComponent={
-              <GradientOverlayImage
+              <StyledGradient
                 source={'https://picsum.photos/640/640/?random'}
               />
             }
@@ -44,7 +48,7 @@ function Onboarding({ navigation }) {
               });
             }}
             BackgroundComponent={
-              <GradientOverlayImage
+              <StyledGradient
                 source={'https://picsum.photos/640/640/?random'}
               />
             }
@@ -58,7 +62,7 @@ function Onboarding({ navigation }) {
                 }
                 primaryNavText={'Finish'}
                 BackgroundComponent={
-                  <GradientOverlayImage
+                  <StyledGradient
                     source={'https://picsum.photos/640/640/?random'}
                   />
                 }

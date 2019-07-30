@@ -268,6 +268,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -603,6 +604,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -895,6 +897,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
