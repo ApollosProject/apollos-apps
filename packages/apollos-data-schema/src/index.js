@@ -32,7 +32,6 @@ export const authSchema = gql`
     authenticate(identity: String!, password: String!): Authentication
     changePassword(password: String!): Authentication
     registerPerson(email: String!, password: String!): Authentication
-    authenticationError: String
   }
 
   extend type Query {

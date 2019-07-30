@@ -35,21 +35,6 @@ export default class TestingControlPanel extends PureComponent {
           iconName="Avatar"
           cellText={`Launch Onboarding`}
         />
-        <Mutation
-          mutation={gql`
-            mutation {
-              authenticationError
-            }
-          `}
-        >
-          {(throwError) => (
-            <TouchableCell
-              handlePress={() => throwError()}
-              iconName="Avatar"
-              cellText={'Throw Authentication Error'}
-            />
-          )}
-        </Mutation>
       </TableView>
     );
   }
