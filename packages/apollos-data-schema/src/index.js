@@ -443,6 +443,24 @@ export const pushSchema = gql`
   }
 `;
 
+export const groupSchema = gql`
+    type Group implements Node {
+        id: ID!
+        leader: Person
+        members: [Person]
+    }
+
+    extends type Query {
+        families(personId: String): [Group]
+        homeGroups(personId: String): [Group]
+        servingGroups(personId: String): [Group]
+    }
+
+    extend type Person {
+        groups: [Group]
+    }
+`;
+
 export const campusSchema = gql`
   type Campus implements Node {
     id: ID!
