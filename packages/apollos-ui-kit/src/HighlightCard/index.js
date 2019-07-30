@@ -17,11 +17,14 @@ const StyledCard = withTheme(({ theme }) => ({
 }))(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
-const LikeIconPositioning = styled(({ theme }) => ({
-  position: 'absolute',
-  top: theme.sizing.baseUnit * 1.5,
-  right: theme.sizing.baseUnit * 1.5,
-}))(View);
+const LikeIconPositioning = styled(
+  ({ theme }) => ({
+    position: 'absolute',
+    top: theme.sizing.baseUnit * 1.5,
+    right: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-kit.HighlightCard.LikeIconPositioning'
+)(View);
 
 const LikeIcon = withTheme(({ theme, isLiked }) => ({
   name: isLiked ? 'like-solid' : 'like',
@@ -36,23 +39,29 @@ const Image = withTheme(({ theme, customTheme }) => ({
   overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
 }))(CardImage);
 
-const Content = styled(({ theme }) => ({
-  position: 'absolute',
-  bottom: 0,
-  width: '100%',
-  alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-  paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-  paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
-}))(CardContent);
+const Content = styled(
+  ({ theme }) => ({
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
+    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
+    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
+  }),
+  'ui-kit.HighlightCard.Content'
+)(CardContent);
 
-const ActionLayout = styled(({ theme, hasDescription }) => ({
-  flexDirection: 'row',
-  /* - `center` works in all situations including 1 line descriptions
-   * - `flex-end` is needed only for when we have no description
-   */
-  alignItems: hasDescription ? 'center' : 'flex-end',
-  paddingTop: theme.sizing.baseUnit,
-}))(View);
+const ActionLayout = styled(
+  ({ theme, hasSummary }) => ({
+    flexDirection: 'row',
+    /* - `center` works in all situations including 1 line summaries
+     * - `flex-end` is needed only for when we have no summary
+     */
+    alignItems: hasSummary ? 'center' : 'flex-end',
+    paddingTop: theme.sizing.baseUnit,
+  }),
+  'ui-kit.HighlightCard.ActionLayout'
+)(View);
 
 const FlexedActionLayoutText = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
@@ -63,29 +72,23 @@ const ActionIcon = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit * 3,
 }))(Icon);
 
-const Label = withTheme(
-  ({ customTheme, hasDescription, labelText, theme }) => ({
-    title: labelText,
-    theme: { colors: get(customTheme, 'colors', {}) },
-    type: 'overlay',
-    style: {
-      ...(hasDescription ? { marginBottom: theme.sizing.baseUnit } : {}),
-    },
-  })
-)(CardLabel);
+const Label = withTheme(({ customTheme, hasSummary, labelText, theme }) => ({
+  title: labelText,
+  theme: { colors: get(customTheme, 'colors', {}) },
+  type: 'overlay',
+  style: {
+    ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
+  },
+}))(CardLabel);
 
-const renderLabel = (description, LabelComponent, labelText, theme) => {
+const renderLabel = (summary, LabelComponent, labelText, theme) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
     ComponentToRender = LabelComponent;
   } else if (labelText) {
     ComponentToRender = (
-      <Label
-        customTheme={theme}
-        hasDescription={description}
-        labelText={labelText}
-      />
+      <Label customTheme={theme} hasSummary={summary} labelText={labelText} />
     );
   }
 
@@ -93,7 +96,7 @@ const renderLabel = (description, LabelComponent, labelText, theme) => {
 };
 
 const renderOnlyTitle = (title, actionIcon, hasAction) => (
-  <ActionLayout hasDescription={false}>
+  <ActionLayout hasSummary={false}>
     <FlexedActionLayoutText>
       <H3 numberOfLines={4}>{title}</H3>
     </FlexedActionLayoutText>
@@ -101,12 +104,12 @@ const renderOnlyTitle = (title, actionIcon, hasAction) => (
   </ActionLayout>
 );
 
-const renderWithDescription = (title, actionIcon, description, hasAction) => (
+const renderWithSummary = (title, actionIcon, summary, hasAction) => (
   <>
     <H3 numberOfLines={3}>{title}</H3>
-    <ActionLayout hasDescription>
+    <ActionLayout hasSummary>
       <FlexedActionLayoutText>
-        <BodyText numberOfLines={2}>{description}</BodyText>
+        <BodyText numberOfLines={2}>{summary}</BodyText>
       </FlexedActionLayoutText>
       {hasAction ? <ActionIcon name={actionIcon} /> : null}
     </ActionLayout>
@@ -115,15 +118,15 @@ const renderWithDescription = (title, actionIcon, description, hasAction) => (
 
 const HighlightCard = withIsLoading(
   ({
-    image,
+    coverImage,
     title,
     actionIcon,
-    description,
     hasAction,
     isLiked,
     isLoading,
     LabelComponent,
     labelText,
+    summary,
     theme,
   }) => (
     <ThemeMixin
@@ -136,12 +139,12 @@ const HighlightCard = withIsLoading(
         <Image
           overlayType={'gradient-bottom'}
           customTheme={theme}
-          source={image}
+          source={coverImage}
         />
         <Content>
-          {renderLabel(description, LabelComponent, labelText, theme)}
-          {description
-            ? renderWithDescription(title, actionIcon, description, hasAction)
+          {renderLabel(summary, LabelComponent, labelText, theme)}
+          {summary
+            ? renderWithSummary(title, actionIcon, summary, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}
         </Content>
         <LikeIconPositioning>
@@ -153,17 +156,17 @@ const HighlightCard = withIsLoading(
 );
 
 HighlightCard.propTypes = {
-  image: PropTypes.oneOfType([
+  coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
-  description: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
+  summary: PropTypes.string,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
@@ -171,7 +174,7 @@ HighlightCard.propTypes = {
 };
 
 HighlightCard.defaultProps = {
-  actionIcon: 'play-solid',
+  actionIcon: 'play-opaque',
 };
 
 export default HighlightCard;

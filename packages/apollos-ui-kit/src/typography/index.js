@@ -5,6 +5,7 @@ export H4 from './H4';
 export H5 from './H5';
 export H6 from './H6';
 export UIText from './UIText';
+export BodySmall from './BodySmall';
 export BodyText from './BodyText';
 export Paragraph from './Paragraph';
 export BlockQuote from './BlockQuote';
