@@ -16,12 +16,24 @@ export default class Group extends RockApolloDataSource {
       .filter('IsActive eq true')
       .get();
 
-  getFamilies = (personId) =>
-    this.request(`/Groups/GetFamilies/${parseGlobalId(personId)}`);
+  getFamilies = (personId) => {
+    const { id } = parseGlobalId(personId);
+    return this.request(`/Groups/GetFamilies/${id}`).get();
+  };
 
+  // TODO
   getHomeGroups = () => null;
 
-  getServingGroups = () => null;
+  getServingGroups = async (personId) => {
+    const allGroups = await this.getForPerson(personId);
+    console.log(allGroups);
+    return allGroups;
+  };
 
-  getForPerson = (personId) => null;
+  getForPerson = async (personId) => {
+    const myGroupAssociations = await this.request('/GroupMembers/')
+      .filter(`PersonId eq ${personId}`)
+      .get();
+    return myGroupAssociations.map(({ groupId }) => this.getFromId(groupId));
+  };
 }

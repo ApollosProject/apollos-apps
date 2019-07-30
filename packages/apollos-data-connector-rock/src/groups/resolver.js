@@ -21,8 +21,9 @@ export default {
       null,
   },
   Person: {
-    groups: enforceCurrentUser(({ id }, args, { dataSources }) =>
-      dataSources.Group.getForPerson(id)
+    groups: enforceCurrentUser(
+      ({ id }, args, { dataSources }) =>
+        console.log('id', id) || dataSources.Group.getForPerson(id)
     ),
   },
 };

@@ -22,6 +22,7 @@ import {
   Template,
   AuthSms,
   Campus,
+  Group,
   BinaryFiles,
   Features,
 } from '@apollosproject/data-connector-rock';
@@ -53,6 +54,7 @@ const data = {
   Pass,
   Template,
   Campus,
+  Group,
   BinaryFiles,
   Features,
 };

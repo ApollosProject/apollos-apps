@@ -196,6 +196,12 @@ enum GENDER {
   Unknown
 }
 
+type Group implements Node {
+  id: ID!
+  leader: Person
+  members: [Person]
+}
+
 type ImageMedia implements Media {
   name: String
   key: String
@@ -328,6 +334,7 @@ type Person implements Node {
   birthDate: String
   photo: ImageMediaSource
   campus: Campus
+  groups: [Group]
 }
 
 input PushSettingsInput {
@@ -349,6 +356,9 @@ type Query {
   scriptures(query: String!): [Scripture]
   userPass: Pass
   campuses(location: CampusLocationInput): [Campus]
+  families(personId: String!): [Group]
+  homeGroups(personId: String!): [Group]
+  servingGroups(personId: String!): [Group]
   userFeedFeatures: [Feature]
 }
 

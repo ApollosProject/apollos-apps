@@ -109,6 +109,8 @@ ROCK_MAPPINGS:
 
   HOME_FEATURE_CHANNEL_ID: 13
 
+  SERVING_GROUP_TYPE_ID: 23
+
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
   TEXT: 1
