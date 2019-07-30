@@ -12,7 +12,15 @@ import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
 const goToAuth = () => NavigationService.navigate('Auth');
 const wipeData = () => cache.writeData({ data: defaults });
-const errorLink = buildErrorLink(wipeData, goToAuth);
+
+let resetStore;
+const onAuthError = () => {
+  resetStore();
+  goToAuth();
+};
+
+const errorLink = buildErrorLink(onAuthError);
+
 const link = ApolloLink.from([authLink, errorLink, httpLink]);
 
 export const client = new ApolloClient({
@@ -23,6 +31,10 @@ export const client = new ApolloClient({
   resolvers,
   typeDefs: schema,
 });
+
+// Hack to give auth link access to method on client;
+// eslint-disable-next-line prefer-destructuring
+resetStore = client.resetStore;
 
 wipeData();
 // Ensure that media player still works after logout.
