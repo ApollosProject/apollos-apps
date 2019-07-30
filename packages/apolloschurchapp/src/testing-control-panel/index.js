@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react';
-import gql from 'graphql-tag';
-import { Mutation } from 'react-apollo';
 import { TableView, Divider } from '@apollosproject/ui-kit';
 import { UserWebBrowserConsumer } from 'apolloschurchapp/src/user-web-browser';
 import ChangeLivestream from './ChangeLivestream';
