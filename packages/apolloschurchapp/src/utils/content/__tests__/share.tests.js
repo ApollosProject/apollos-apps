@@ -17,6 +17,15 @@ describe('the share function', () => {
       url: 'http://url.com',
     });
   });
+  test('use message if provided', () => {
+    Platform.OS = 'ios';
+    share({ title: 'title', message: 'some message', url: 'http://url.com' });
+    expect(Share.share).toBeCalledWith({
+      title: 'title',
+      message: 'some message',
+      url: 'http://url.com',
+    });
+  });
   test('android arguments', () => {
     Platform.OS = 'android';
     share({ title: 'title', url: 'http://url.com' });
