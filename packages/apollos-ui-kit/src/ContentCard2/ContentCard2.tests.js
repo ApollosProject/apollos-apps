@@ -4,13 +4,13 @@ import renderer from 'react-test-renderer';
 import Providers from '../Providers';
 import { CardLabel } from '../Card';
 
-import FeaturedCard from '.';
+import ContentCard2 from '.';
 
-describe('FeaturedCard', () => {
+describe('ContentCard2', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -27,7 +27,7 @@ describe('FeaturedCard', () => {
   it('should render with a custom actionIcon', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -46,7 +46,7 @@ describe('FeaturedCard', () => {
   it('should render with a summary', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -66,7 +66,7 @@ describe('FeaturedCard', () => {
   it('should should render with an action "button"', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -84,7 +84,7 @@ describe('FeaturedCard', () => {
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -102,7 +102,7 @@ describe('FeaturedCard', () => {
   it('should should render as isLive', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -120,7 +120,7 @@ describe('FeaturedCard', () => {
   it('should render a loading state with isLoading', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -143,7 +143,7 @@ describe('FeaturedCard', () => {
   it('should render with custom LabelComponent', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -161,7 +161,7 @@ describe('FeaturedCard', () => {
   it('should render with custom labelText', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -179,7 +179,7 @@ describe('FeaturedCard', () => {
   it('should render with a custom theme', () => {
     const tree = renderer.create(
       <Providers>
-        <FeaturedCard
+        <ContentCard2
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }

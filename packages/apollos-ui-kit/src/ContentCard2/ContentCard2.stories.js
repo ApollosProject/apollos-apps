@@ -6,7 +6,7 @@ import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import { CardLabel } from '../Card';
 
-import FeaturedCard from '.';
+import ContentCard2 from '.';
 
 storiesOf('ui-kit/ContentCard2', module)
   .addDecorator((story) => (
@@ -16,7 +16,7 @@ storiesOf('ui-kit/ContentCard2', module)
     </BackgroundView>
   ))
   .add('example', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -28,12 +28,11 @@ storiesOf('ui-kit/ContentCard2', module)
       summary={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
-      hasAction
-      isLive
+      labelText={'Quote'}
     />
   ))
   .add('default', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -45,7 +44,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('actionIcon', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -54,12 +53,10 @@ storiesOf('ui-kit/ContentCard2', module)
           uri: 'https://picsum.photos/800/1600/?random',
         },
       ]}
-      actionIcon={'umbrella'}
-      hasAction
     />
   ))
   .add('summary', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -73,21 +70,8 @@ storiesOf('ui-kit/ContentCard2', module)
       }
     />
   ))
-  .add('hasAction', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      hasAction
-    />
-  ))
   .add('isLiked', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -99,8 +83,8 @@ storiesOf('ui-kit/ContentCard2', module)
       isLiked
     />
   ))
-  .add('isLive', () => (
-    <FeaturedCard
+  .add('labelText', () => (
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -109,11 +93,11 @@ storiesOf('ui-kit/ContentCard2', module)
           uri: 'https://picsum.photos/800/1600/?random',
         },
       ]}
-      isLive
+      labelText={'Quote'}
     />
   ))
   .add('isLoading', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -125,13 +109,12 @@ storiesOf('ui-kit/ContentCard2', module)
       summary={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
-      hasAction
-      isLive
+      labelText={'Quote'}
       isLoading
     />
   ))
   .add('LabelComponent', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -144,7 +127,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('labelText', () => (
-    <FeaturedCard
+    <ContentCard2
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -158,7 +141,7 @@ storiesOf('ui-kit/ContentCard2', module)
   ))
   .add('theme', () => (
     <ScrollView>
-      <FeaturedCard
+      <ContentCard2
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -167,7 +150,6 @@ storiesOf('ui-kit/ContentCard2', module)
             uri: 'https://picsum.photos/800/1600/?random',
           },
         ]}
-        hasAction
         theme={{
           colors: {
             primary: 'salmon',
@@ -175,7 +157,7 @@ storiesOf('ui-kit/ContentCard2', module)
           },
         }}
       />
-      <FeaturedCard
+      <ContentCard2
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -188,7 +170,7 @@ storiesOf('ui-kit/ContentCard2', module)
           type: 'light',
         }}
       />
-      <FeaturedCard
+      <ContentCard2
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -200,9 +182,8 @@ storiesOf('ui-kit/ContentCard2', module)
         summary={
           'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
         }
-        isLive
+        labelText={'Quote'}
         isLiked
-        hasAction
         theme={{
           type: 'light',
           colors: {
