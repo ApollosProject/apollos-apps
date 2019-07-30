@@ -759,6 +759,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                   style={
                     Object {
                       "backgroundColor": "#A5A5A5",
+                      "maxHeight": "40%",
                       "overflow": "hidden",
                       "width": "100%",
                     }
