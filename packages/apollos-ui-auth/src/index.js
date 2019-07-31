@@ -20,6 +20,7 @@ export ProtectedRoute from './ProtectedRoute';
 export GET_LOGIN_STATE from './getLoginState';
 export LOGOUT from './logout';
 export authLink from './authLink';
+export buildErrorLink from './buildErrorLink';
 
 export {
   AuthSMSPhoneEntry,

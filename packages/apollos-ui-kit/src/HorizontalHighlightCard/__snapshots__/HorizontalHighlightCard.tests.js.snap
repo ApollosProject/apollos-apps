@@ -75,6 +75,7 @@ exports[`HorizontalHighlightCard should render 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -392,6 +393,7 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -627,6 +629,7 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1058,6 +1061,7 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1381,6 +1385,7 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1812,6 +1817,7 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -2182,6 +2188,7 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -2552,6 +2559,7 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }

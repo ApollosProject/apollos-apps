@@ -114,6 +114,13 @@ exports[`user avatar header connect renders user avatar header if logged in 1`] 
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
+                        "borderRadius": 40,
+                        "bottom": 0,
+                        "height": "100%",
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
                         "width": "100%",
                       }
                     }

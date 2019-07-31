@@ -109,8 +109,9 @@ const resolver = {
   },
   SharableContentItem: {
     url: () => 'https://apollosrock.newspring.cc/', // todo: return a dynamic url that links to the content item
-    title: ({ title }) => title,
-    message: () => '',
+    title: () => 'Share via ...',
+    message: async (root, args, { dataSources: { ContentItem } }) =>
+      `${root.title} - ${ContentItem.createSummary(root)}`,
   },
   ContentItemsConnection: {
     pageInfo: withEdgePagination,
