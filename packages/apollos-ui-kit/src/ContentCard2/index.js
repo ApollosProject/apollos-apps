@@ -47,12 +47,12 @@ const LabelPositioning = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
 }))(View);
 
-const renderLabel = (LabelComponent, labelText, summary) => {
+const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
     ComponentToRender = <LabelPositioning>{LabelComponent}</LabelPositioning>;
-  } else if (labelText) {
+  } else if (labelText || isLoading) {
     ComponentToRender = (
       <LabelPositioning>
         <CardLabel hasSummary={summary} title={labelText} type={'secondary'} />
@@ -77,7 +77,7 @@ const ContentCard2 = withIsLoading(
       <Image source={coverImage} />
 
       <Content>
-        {renderLabel(LabelComponent, labelText, summary)}
+        {renderLabel(isLoading, LabelComponent, labelText, summary)}
         {title ? <H3 numberOfLines={2}>{title}</H3> : null}
         {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
       </Content>
