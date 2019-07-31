@@ -5,7 +5,7 @@ const share = ({ title, url, message }) => {
     title,
     message:
       Platform.OS === 'android'
-        ? `${message || title}\n${url}`
+        ? `${message}\n${url}`
         : message || title,
     url,
   });
