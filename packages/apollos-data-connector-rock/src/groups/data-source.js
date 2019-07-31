@@ -8,6 +8,14 @@ export default class Group extends RockApolloDataSource {
 
   expanded = true;
 
+  activeFilter = 'IsActive eq true and IsArchived eq false';
+
+  getAll = () =>
+    this.request()
+      .filter(this.activeFilter)
+      .expand('Members')
+      .get();
+
   getFromId = (id) =>
     this.request()
       .filter(`Id eq ${id}`)
@@ -17,7 +25,7 @@ export default class Group extends RockApolloDataSource {
   getMembers = async (groupId) => {
     const { Person } = this.context.dataSources;
     const members = await this.request('/GroupMembers/')
-      .filter(`GroupId eq ${groupId}`)
+      .andFilter(`GroupId eq ${groupId}`)
       .get();
     return members.map(({ personId }) => Person.getFromId(personId));
   };
@@ -32,17 +40,16 @@ export default class Group extends RockApolloDataSource {
     return leader ? Person.getFromId(leader.personId) : null;
   };
 
-  getAll = () =>
-    this.request()
-      .filter('IsActive eq true')
-      .get();
-
   getByPerson = async (personId) => {
     const myGroupAssociations = await this.request('/GroupMembers/')
       .filter(`PersonId eq ${personId}`)
       .get();
-    return Promise.all(
+    const allGroups = await Promise.all(
       myGroupAssociations.map(({ groupId }) => this.getFromId(groupId))
+    );
+    // only return active and not archived groups
+    return allGroups.filter(
+      ({ isActive, isArchived }) => isActive && !isArchived
     );
   };
 
@@ -58,7 +65,9 @@ export default class Group extends RockApolloDataSource {
 
   getFamilies = (personId) => {
     const { id } = parseGlobalId(personId);
-    return this.request(`/Groups/GetFamilies/${id}`).get();
+    return this.request(`/Groups/GetFamilies/${id}`)
+      .filter(this.activeFilter)
+      .get();
   };
 
   getHomeGroups = async (personId) => {

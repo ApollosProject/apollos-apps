@@ -3,6 +3,7 @@ import { enforceCurrentUser } from '../utils';
 
 export default {
   Query: {
+    groups: (root, args, { dataSources }) => dataSources.Group.getAll(),
     families: (root, { personId }, { dataSources }) =>
       dataSources.Group.getFamilies(personId),
     homeGroups: (root, { personId }, { dataSources }) =>

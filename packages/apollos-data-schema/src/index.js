@@ -446,11 +446,13 @@ export const pushSchema = gql`
 export const groupSchema = gql`
   type Group implements Node {
     id: ID!
+    name: String
     leader: Person
     members: [Person]
   }
 
   extend type Query {
+    groups: [Group]
     families(personId: String!): [Group]
     homeGroups(personId: String!): [Group]
     servingGroups(personId: String!): [Group]
