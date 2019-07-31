@@ -53,6 +53,8 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
 
   if (LabelComponent) {
     ComponentToRender = <LabelPositioning>{LabelComponent}</LabelPositioning>;
+
+    // this always shows a loading state for labels
   } else if (labelText || isLoading) {
     ComponentToRender = (
       <LabelPositioning>
