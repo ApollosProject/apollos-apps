@@ -123,7 +123,9 @@ storiesOf('ui-kit/ContentCard2', module)
           uri: 'https://picsum.photos/800/1600/?random',
         },
       ]}
-      LabelComponent={<CardLabel title={'Custom LabelComponent'} />}
+      LabelComponent={
+        <CardLabel title={'Custom LabelComponent'} type={'primary'} />
+      }
     />
   ))
   .add('labelText', () => (

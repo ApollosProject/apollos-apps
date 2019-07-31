@@ -30,11 +30,6 @@ const Image = withTheme(({ theme }) => ({
   overlayColor: theme.colors.black,
 }))(CardImage);
 
-const withLabelStyles = styled(({ theme, hasSummary }) => ({
-  ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
-  // marginTop: -theme.sizing.baseUnit * 2,
-}));
-
 const Content = styled(({ theme }) => ({
   alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
@@ -45,14 +40,23 @@ const Summary = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit,
 }))(BodyText);
 
+// We have to position `renderLabel/CardLabel/LabelComponent` in a `View` so `Label`s loading state is positioned correctly 💥
+// We also only render this component if we have a label.
+const LabelPositioning = styled(({ theme }) => ({
+  marginTop: -theme.sizing.baseUnit * 2,
+  marginBottom: theme.sizing.baseUnit,
+}))(View);
+
 const renderLabel = (LabelComponent, labelText, summary) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
-    ComponentToRender = LabelComponent;
+    ComponentToRender = <LabelPositioning>{LabelComponent}</LabelPositioning>;
   } else if (labelText) {
     ComponentToRender = (
-      <CardLabel hasSummary={summary} title={labelText} type={'secondary'} />
+      <LabelPositioning>
+        <CardLabel hasSummary={summary} title={labelText} type={'secondary'} />
+      </LabelPositioning>
     );
   }
 
