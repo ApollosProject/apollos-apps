@@ -128,6 +128,9 @@ class ContentCard extends PureComponent {
       ...cardProps
     } = this.props;
 
+    console.warn(
+      'Warning ContentCard has been deprecated in favor of DefaultCard and will be removed in a future release of the Apollos UI-Kit.'
+    );
     return (
       <ThemeMixin
         mixin={{
