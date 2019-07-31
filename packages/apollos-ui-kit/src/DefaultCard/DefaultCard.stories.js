@@ -6,9 +6,9 @@ import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import { CardLabel } from '../Card';
 
-import ContentCard2 from '.';
+import DefaultCard from '.';
 
-storiesOf('ui-kit/ContentCard2', module)
+storiesOf('ui-kit/DefaultCard', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -17,7 +17,7 @@ storiesOf('ui-kit/ContentCard2', module)
   ))
   .add('examples', () => (
     <ScrollView>
-      <ContentCard2
+      <DefaultCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -31,7 +31,7 @@ storiesOf('ui-kit/ContentCard2', module)
         }
         labelText={'Quote'}
       />
-      <ContentCard2
+      <DefaultCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -45,7 +45,7 @@ storiesOf('ui-kit/ContentCard2', module)
         }
         isLiked
       />
-      <ContentCard2
+      <DefaultCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -58,19 +58,7 @@ storiesOf('ui-kit/ContentCard2', module)
     </ScrollView>
   ))
   .add('default', () => (
-    <ContentCard2
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-    />
-  ))
-  .add('actionIcon', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -82,7 +70,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('summary', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -97,7 +85,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('isLiked', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -110,7 +98,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('labelText', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -123,7 +111,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('isLoading', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -140,7 +128,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('LabelComponent', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -155,7 +143,7 @@ storiesOf('ui-kit/ContentCard2', module)
     />
   ))
   .add('labelText', () => (
-    <ContentCard2
+    <DefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -166,62 +154,4 @@ storiesOf('ui-kit/ContentCard2', module)
       ]}
       labelText={'Quote'}
     />
-  ))
-  .add('theme', () => (
-    <ScrollView>
-      <ContentCard2
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/1600/?random',
-          },
-        ]}
-        theme={{
-          colors: {
-            primary: 'salmon',
-            secondary: 'salmon',
-          },
-        }}
-      />
-      <ContentCard2
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/1400/800/?random',
-          },
-        ]}
-        theme={{
-          type: 'light',
-        }}
-      />
-      <ContentCard2
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/800/?random',
-          },
-        ]}
-        summary={
-          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-        }
-        labelText={'Quote'}
-        isLiked
-        theme={{
-          type: 'light',
-          colors: {
-            primary: 'yellow',
-            secondary: 'dodgerblue',
-            text: {
-              primary: 'dodgerblue',
-            },
-          },
-        }}
-      />
-    </ScrollView>
   ));
