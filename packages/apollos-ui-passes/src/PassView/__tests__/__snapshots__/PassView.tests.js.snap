@@ -330,10 +330,11 @@ exports[`the PassView component should render 1`] = `
                   onReady={false}
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "alignSelf": "flex-end",
+                      "aspectRatio": 0.75,
                       "backgroundColor": "transparent",
                       "flex": 1,
-                      "resizeMode": "contain",
+                      "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
@@ -350,10 +351,12 @@ exports[`the PassView component should render 1`] = `
                     }
                     style={
                       Object {
+                        "alignSelf": "flex-end",
+                        "aspectRatio": 0.75,
                         "backgroundColor": "transparent",
                         "flex": 1,
                         "opacity": 0,
-                        "resizeMode": "contain",
+                        "resizeMode": "cover",
                       }
                     }
                   />
