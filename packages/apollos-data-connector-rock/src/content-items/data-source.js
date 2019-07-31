@@ -155,12 +155,16 @@ export default class ContentItem extends RockApolloDataSource {
     if (content.split(' ').length === 1) return '';
 
     const tokenizer = new natural.SentenceTokenizer();
-    return tokenizer.tokenize(
+    const tokens = tokenizer.tokenize(
       sanitizeHtmlNode(content, {
         allowedTags: [],
         allowedAttributes: [],
       })
-    )[0];
+    );
+    // protects from starting with up to a three digit number and period
+    return tokens.length > 1 && tokens[0].length < 5
+      ? `${tokens[0]} ${tokens[1]}`
+      : tokens[0];
   };
 
   getSermonFeed() {

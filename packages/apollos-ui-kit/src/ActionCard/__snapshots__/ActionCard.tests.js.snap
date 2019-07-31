@@ -54,7 +54,6 @@ exports[`the ActionCard component should accept additional Card props 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -142,7 +141,6 @@ exports[`the ActionCard component should render an action 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -547,7 +545,6 @@ exports[`the ActionCard component should render an icon and label 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -784,7 +781,6 @@ exports[`the ActionCard component should render children 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }

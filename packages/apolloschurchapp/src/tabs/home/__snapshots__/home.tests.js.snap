@@ -1309,7 +1309,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1331,8 +1330,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -1525,7 +1525,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1547,8 +1546,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -1741,7 +1741,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1763,8 +1762,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -1957,7 +1957,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -1979,8 +1978,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -2173,7 +2173,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -2195,8 +2194,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -2389,7 +2389,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -2411,8 +2410,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -2605,7 +2605,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -2627,8 +2626,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -2821,7 +2821,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -2843,8 +2842,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -3037,7 +3037,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -3059,8 +3058,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -3253,7 +3253,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -3275,8 +3274,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }
@@ -3469,7 +3469,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <View
                     style={
                       Object {
-                        "aspectRatio": undefined,
                         "borderRadius": 16,
                         "overflow": "hidden",
                       }
@@ -3491,8 +3490,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         onReady={false}
                         style={
                           Object {
-                            "aspectRatio": 1,
+                            "aspectRatio": 2,
                             "backgroundColor": "#A5A5A5",
+                            "resizeMode": "cover",
                             "width": "100%",
                           }
                         }

@@ -244,6 +244,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                 isLoading={true}
                 style={
                   Object {
+                    "aspectRatio": 1,
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
                     "margin": 8,
@@ -285,8 +286,9 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -570,6 +572,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                 isLoading={true}
                 style={
                   Object {
+                    "aspectRatio": 1,
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
                     "margin": 8,
@@ -611,8 +614,9 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1102,6 +1106,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 isLoading={true}
                 style={
                   Object {
+                    "aspectRatio": 1,
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
                     "margin": 8,
@@ -1143,8 +1148,9 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1428,6 +1434,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 isLoading={true}
                 style={
                   Object {
+                    "aspectRatio": 1,
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 16,
                     "margin": 8,
@@ -1469,8 +1476,9 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }

@@ -8,7 +8,7 @@ import styled from '../../styled';
 
 const StyledCard = compose(
   withIsLoading,
-  styled(({ theme, cardColor, inHorizontalList = false }) => ({
+  styled(({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
     // card styles
     backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
     borderRadius: theme.sizing.baseUnit,
@@ -22,6 +22,7 @@ const StyledCard = compose(
           marginVertical: theme.sizing.baseUnit * 0.75,
         }),
     ...Platform.select(theme.shadows.default),
+    ...(forceRatio ? { aspectRatio: forceRatio } : {}),
   }))
 )(View);
 
@@ -32,7 +33,7 @@ const StyledCard = compose(
 const OverflowFix = styled(({ theme, forceRatio }) => ({
   borderRadius: theme.sizing.baseUnit,
   overflow: 'hidden',
-  aspectRatio: forceRatio,
+  ...(forceRatio ? { aspectRatio: forceRatio } : {}),
 }))(View);
 
 const Card = pure(({ children, forceRatio, ...otherProps }) => (
@@ -42,7 +43,7 @@ const Card = pure(({ children, forceRatio, ...otherProps }) => (
 ));
 
 Card.propTypes = {
-  backgroundColor: PropTypes.string,
+  cardColor: PropTypes.string,
   children: PropTypes.node,
   forceRatio: PropTypes.number,
   style: PropTypes.any, // eslint-disable-line

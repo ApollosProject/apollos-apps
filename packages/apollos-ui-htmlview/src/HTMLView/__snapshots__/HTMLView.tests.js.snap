@@ -1067,6 +1067,7 @@ exports[`the HTMLView component should render an image 1`] = `
             Object {
               "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
+              "resizeMode": "contain",
               "width": "100%",
             }
           }
