@@ -335,6 +335,7 @@ type Person implements Node {
   photo: ImageMediaSource
   campus: Campus
   groups: [Group]
+  groupsLead: [Group]
 }
 
 input PushSettingsInput {

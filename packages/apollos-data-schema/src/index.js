@@ -458,6 +458,7 @@ export const groupSchema = gql`
 
   extend type Person {
     groups: [Group]
+    groupsLead: [Group]
   }
 `;
 
