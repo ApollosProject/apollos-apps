@@ -15,7 +15,7 @@ const ShareButton = ({ itemId, title, message, url }) => (
       const content = {
         id: itemId,
         title: title || sharing.title,
-        messsage: message || sharing.message,
+        message: message || sharing.message,
         url: url || sharing.url,
       };
       return <Share content={content} />;
