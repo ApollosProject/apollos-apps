@@ -64,7 +64,7 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
   return ComponentToRender;
 };
 
-const ContentCard2 = withIsLoading(
+const DefaultCard = withIsLoading(
   ({
     coverImage,
     title,
@@ -89,7 +89,7 @@ const ContentCard2 = withIsLoading(
   )
 );
 
-ContentCard2.propTypes = {
+DefaultCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -106,6 +106,6 @@ ContentCard2.propTypes = {
   }),
 };
 
-ContentCard2.displayName = 'ContentCard2';
+DefaultCard.displayName = 'DefaultCard';
 
-export default ContentCard2;
+export default DefaultCard;

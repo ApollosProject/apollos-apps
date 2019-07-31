@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentCard2 should render a loading state with isLoading 1`] = `
+exports[`DefaultCard should render a loading state with isLoading 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -225,7 +225,7 @@ exports[`ContentCard2 should render a loading state with isLoading 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should render at the images natural aspect ratio (between min/max) 1`] = `
+exports[`DefaultCard should render at the images natural aspect ratio (between min/max) 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -519,7 +519,7 @@ exports[`ContentCard2 should render at the images natural aspect ratio (between 
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should render at the maxAspectRatio bound (wider than tall) 1`] = `
+exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall) 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -813,7 +813,7 @@ exports[`ContentCard2 should render at the maxAspectRatio bound (wider than tall
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should render at the minAspectRatio bound (tall-ish) 1`] = `
+exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1107,7 +1107,7 @@ exports[`ContentCard2 should render at the minAspectRatio bound (tall-ish) 1`] =
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should render with a summary 1`] = `
+exports[`DefaultCard should render with a summary 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1417,7 +1417,7 @@ exports[`ContentCard2 should render with a summary 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should render with custom LabelComponent 1`] = `
+exports[`DefaultCard should render with custom LabelComponent 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1758,7 +1758,7 @@ exports[`ContentCard2 should render with custom LabelComponent 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should render with custom labelText 1`] = `
+exports[`DefaultCard should render with custom labelText 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -2099,7 +2099,7 @@ exports[`ContentCard2 should render with custom labelText 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`ContentCard2 should should render as isLiked 1`] = `
+exports[`DefaultCard should should render as isLiked 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
