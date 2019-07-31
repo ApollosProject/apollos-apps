@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
-import Permissions from 'react-native-permissions';
+// import Permissions from 'react-native-permissions';
+import Geolocation from 'react-native-geolocation-service';
 import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
@@ -10,10 +11,16 @@ class LocationFinderConnected extends PureComponent {
   state = { locationPermission: false };
 
   componentDidMount() {
-    Permissions.check('location').then((response) => {
-      // Response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
-      this.setState({ locationPermission: response === 'authorized' });
-    });
+    // Permissions.check('location').then((response) => {
+    // // Response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
+    // this.setState({ locationPermission: response === 'authorized' });
+    // });
+    Geolocation.getCurrentPosition(
+      () => {
+        this.setState({ locationPermission: true });
+      },
+      { showDialogBox: false }
+    );
   }
 
   render() {

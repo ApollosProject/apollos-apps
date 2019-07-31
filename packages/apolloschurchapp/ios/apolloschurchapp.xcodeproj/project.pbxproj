@@ -68,6 +68,7 @@
 		CE33B866C2DE49DEBE1AF23F /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1398ECED9AE14FD19B92232D /* libSplashScreen.a */; };
 		CFE4716D4F6D4ABF9ED485AC /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F155E84A5784CBE8D95A974 /* libRNDeviceInfo.a */; };
 		D2F560374F3341308A1579E7 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FE26CDA2DC4CDBAB580A2F /* libRCTVideo.a */; };
+		DCC7DAB922F237B0001A2EA8 /* libRNCGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC7DAAD22F23799001A2EA8 /* libRNCGeolocation.a */; };
 		DCD3CDE522E101D800DD3F4E /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD3CDE422E101A000DD3F4E /* libReactNativePermissions.a */; };
 		E28D37FEDA0245DBAC6552D3 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9862436C289A498D8B2E6201 /* libAirMaps.a */; };
 		E6525241950445C0929495F2 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4605F404864B4EBBDF09DB /* libRNCAsyncStorage.a */; };
@@ -504,6 +505,13 @@
 			remoteGlobalIDString = 6D42A7D820341E6800A0D1AE;
 			remoteInfo = RNPassKit;
 		};
+		DCC7DAAC22F23799001A2EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCC7DA7622F23799001A2EA8 /* RNCGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNCGeolocation;
+		};
 		DCD3CDDD22E1011100DD3F4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D74E40AB9C7A4D2B80BC5A2D /* RNCAsyncStorage.xcodeproj */;
@@ -593,6 +601,7 @@
 		D5157D807E164356ADE87867 /* Inter-UI-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Bold.otf"; path = "../assets/fonts/Inter-UI-Bold.otf"; sourceTree = "<group>"; };
 		D74E40AB9C7A4D2B80BC5A2D /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCAsyncStorage.xcodeproj; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; };
 		DC74A378C1CC40E4B6192D7F /* Inter-UI-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Medium.otf"; path = "../assets/fonts/Inter-UI-Medium.otf"; sourceTree = "<group>"; };
+		DCC7DA7622F23799001A2EA8 /* RNCGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCGeolocation.xcodeproj; path = "../node_modules/@react-native-community/geolocation/ios/RNCGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		DCD3CDDF22E1019F00DD3F4E /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		E3B8A0AC5A6B4FABB3BDF6CB /* DroidSerif-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Bold.ttf"; path = "../assets/fonts/DroidSerif-Bold.ttf"; sourceTree = "<group>"; };
 		EC21254B449443F99016EBFD /* Inter-UI-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Black.otf"; path = "../assets/fonts/Inter-UI-Black.otf"; sourceTree = "<group>"; };
@@ -617,6 +626,7 @@
 			files = (
 				DCD3CDE522E101D800DD3F4E /* libReactNativePermissions.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
+				DCC7DAB922F237B0001A2EA8 /* libRNCGeolocation.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -993,6 +1003,7 @@
 			isa = PBXGroup;
 			children = (
 				DCD3CDDF22E1019F00DD3F4E /* ReactNativePermissions.xcodeproj */,
+				DCC7DA7622F23799001A2EA8 /* RNCGeolocation.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -1083,6 +1094,14 @@
 			isa = PBXGroup;
 			children = (
 				BF08F5192242B97A00FFB1DC /* libRNPassKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCC7DA7722F23799001A2EA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCC7DAAD22F23799001A2EA8 /* libRNCGeolocation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1302,6 +1321,10 @@
 				{
 					ProductGroup = DCD3CDDA22E1011100DD3F4E /* Products */;
 					ProjectRef = D74E40AB9C7A4D2B80BC5A2D /* RNCAsyncStorage.xcodeproj */;
+				},
+				{
+					ProductGroup = DCC7DA7722F23799001A2EA8 /* Products */;
+					ProjectRef = DCC7DA7622F23799001A2EA8 /* RNCGeolocation.xcodeproj */;
 				},
 				{
 					ProductGroup = 79CEBFC7223011FD00D8F685 /* Products */;
@@ -1762,6 +1785,13 @@
 			fileType = archive.ar;
 			path = libRNPassKit.a;
 			remoteRef = BF08F5182242B97A00FFB1DC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DCC7DAAD22F23799001A2EA8 /* libRNCGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCGeolocation.a;
+			remoteRef = DCC7DAAC22F23799001A2EA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		DCD3CDDE22E1011100DD3F4E /* libRNCAsyncStorage.a */ = {

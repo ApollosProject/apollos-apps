@@ -2,6 +2,7 @@ package com.apolloschurchapp;
 
 import android.app.Application;
 
+import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.airbnb.android.react.maps.MapsPackage;
@@ -37,6 +38,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+              new RNFusedLocationPackage(),
             new AsyncStoragePackage(),
             new MapsPackage(),
             new RNFetchBlobPackage(),
