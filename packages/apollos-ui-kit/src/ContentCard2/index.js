@@ -25,9 +25,10 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
 
 const Image = withTheme(({ theme }) => ({
   minAspectRatio: 1.2,
-  maxAspectRatio: 1.5,
-  overlayType: 'gradient-top',
+  maxAspectRatio: 1.78,
+  maintainAspectRatio: true,
   overlayColor: theme.colors.black,
+  overlayType: 'gradient-top',
 }))(CardImage);
 
 const Content = styled(({ theme }) => ({
