@@ -113,7 +113,7 @@ Object {
       },
       "sharing": Object {
         "__typename": "SharableContentItem",
-        "message": "",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
@@ -251,7 +251,7 @@ Object {
       },
       "sharing": Object {
         "__typename": "SharableContentItem",
-        "message": "",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
@@ -389,7 +389,7 @@ Object {
       },
       "sharing": Object {
         "__typename": "SharableContentItem",
-        "message": "",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
@@ -527,7 +527,7 @@ Object {
       },
       "sharing": Object {
         "__typename": "SharableContentItem",
-        "message": "",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
@@ -668,7 +668,7 @@ Object {
             },
             "sharing": Object {
               "__typename": "SharableContentItem",
-              "message": "",
+              "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "SAMPLE: Easter",
               "url": "https://apollosrock.newspring.cc/",
             },
@@ -844,7 +844,7 @@ Object {
             },
             "sharing": Object {
               "__typename": "SharableContentItem",
-              "message": "",
+              "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "SAMPLE: Easter",
               "url": "https://apollosrock.newspring.cc/",
             },
@@ -988,7 +988,7 @@ Object {
             },
             "sharing": Object {
               "__typename": "SharableContentItem",
-              "message": "",
+              "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "SAMPLE: Easter",
               "url": "https://apollosrock.newspring.cc/",
             },
@@ -1132,7 +1132,7 @@ Object {
             },
             "sharing": Object {
               "__typename": "SharableContentItem",
-              "message": "",
+              "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "SAMPLE: Easter",
               "url": "https://apollosrock.newspring.cc/",
             },
@@ -1205,7 +1205,7 @@ Object {
       },
       "sharing": Object {
         "__typename": "SharableContentItem",
-        "message": "",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "SAMPLE: Easter",
         "url": "https://apollosrock.newspring.cc/",
       },
