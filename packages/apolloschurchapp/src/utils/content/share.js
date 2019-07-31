@@ -5,7 +5,7 @@ const share = ({ title, url, message }) => {
     title,
     message:
       Platform.OS === 'android'
-        ? `${message}\n${url}`
+        ? [message, url].filter((s) => !!s).join('\n')
         : message,
     url,
   });
