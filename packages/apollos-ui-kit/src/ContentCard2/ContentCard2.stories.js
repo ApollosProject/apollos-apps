@@ -76,7 +76,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
     />
@@ -88,7 +88,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
       summary={
@@ -103,7 +103,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
       isLiked
@@ -116,7 +116,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
       labelText={'Quote'}
@@ -129,7 +129,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
       summary={
@@ -146,7 +146,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
       LabelComponent={
@@ -161,7 +161,7 @@ storiesOf('ui-kit/ContentCard2', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
       labelText={'Quote'}
@@ -191,7 +191,7 @@ storiesOf('ui-kit/ContentCard2', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/800/1600/?random',
+            uri: 'https://picsum.photos/1400/800/?random',
           },
         ]}
         theme={{
@@ -204,7 +204,7 @@ storiesOf('ui-kit/ContentCard2', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/800/1600/?random',
+            uri: 'https://picsum.photos/800/800/?random',
           },
         ]}
         summary={

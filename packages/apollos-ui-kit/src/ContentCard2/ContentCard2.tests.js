@@ -7,7 +7,7 @@ import { CardLabel } from '../Card';
 import ContentCard2 from '.';
 
 describe('ContentCard2', () => {
-  it('should render', () => {
+  it('should render at the minAspectRatio bound (tall-ish)', () => {
     const tree = renderer.create(
       <Providers>
         <ContentCard2
@@ -24,7 +24,7 @@ describe('ContentCard2', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a custom actionIcon', () => {
+  it('should render at the images natural aspect ratio (between min/max)', () => {
     const tree = renderer.create(
       <Providers>
         <ContentCard2
@@ -33,11 +33,27 @@ describe('ContentCard2', () => {
           }
           coverImage={[
             {
-              uri: 'https://picsum.photos/800/1600/?random',
+              uri: 'https://picsum.photos/1400/800/?random',
             },
           ]}
-          actionIcon={'umbrella'}
-          hasAction
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render at the maxAspectRatio bound (wider than tall)', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ContentCard2
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/2000/800/?random',
+            },
+          ]}
         />
       </Providers>
     );
@@ -63,24 +79,6 @@ describe('ContentCard2', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should should render with an action "button"', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ContentCard2
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          hasAction
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>
@@ -94,24 +92,6 @@ describe('ContentCard2', () => {
             },
           ]}
           isLiked
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should should render as isLive', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ContentCard2
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          isLive
         />
       </Providers>
     );
@@ -132,8 +112,6 @@ describe('ContentCard2', () => {
           summary={
             'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
           }
-          hasAction
-          isLive
           isLoading
         />
       </Providers>
@@ -152,7 +130,9 @@ describe('ContentCard2', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          LabelComponent={<CardLabel title={'Custom LabelComponent'} />}
+          LabelComponent={
+            <CardLabel title={'Custom LabelComponent'} type={'primary'} />
+          }
         />
       </Providers>
     );
@@ -170,29 +150,7 @@ describe('ContentCard2', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          labelText={'Quote'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render with a custom theme', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ContentCard2
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          theme={{
-            colors: {
-              primary: 'salmon',
-            },
-          }}
+          labelText={'Custom label text'}
         />
       </Providers>
     );
