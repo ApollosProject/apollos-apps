@@ -105,7 +105,6 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  // eslint-disable-next-line class-methods-use-this
   getFeatures({ attributeValues }) {
     const { Features } = this.context.dataSources;
     const features = [];
