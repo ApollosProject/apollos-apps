@@ -7,10 +7,10 @@ import {
   PaddedView,
   H6,
   H3,
-  FlexedView,
   styled,
   ThemeMixin,
   ConnectedImage,
+  FlexedView,
 } from '@apollosproject/ui-kit';
 
 import FieldList, { FieldSet, fieldProps } from './Fields';
@@ -27,8 +27,10 @@ const Description = styled({
 })(H6);
 
 const Thumbnail = styled(({ theme }) => ({
-  resizeMode: 'contain',
+  resizeMode: 'cover',
   flex: 1,
+  aspectRatio: 0.75,
+  alignSelf: 'flex-end',
   backgroundColor: theme.colors.transparent,
 }))(ConnectedImage);
 
