@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { withTheme } from '../theme';
 import styled from '../styled';
 import Card, { CardImage, CardLabel, CardContent } from '../Card';
-import { H3, BodyText } from '../typography';
+import { H3 } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
@@ -24,8 +24,8 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
 }))(Icon);
 
 const Image = withTheme(({ theme }) => ({
-  minAspectRatio: 1.2,
-  maxAspectRatio: 1.78,
+  minAspectRatio: 1,
+  maxAspectRatio: 1,
   maintainAspectRatio: true,
   overlayColor: theme.colors.black,
   overlayType: 'gradient-top',
@@ -37,10 +37,6 @@ const Content = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
 
-const Summary = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit,
-}))(BodyText);
-
 // We have to position `renderLabel/CardLabel/LabelComponent` in a `View` so `Label`s loading state is positioned correctly 💥
 // We also only render this component if we have a label.
 const LabelPositioning = styled(({ theme }) => ({
@@ -48,7 +44,7 @@ const LabelPositioning = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
 }))(View);
 
-const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
+const renderLabel = (isLoading, LabelComponent, labelText) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
@@ -58,7 +54,7 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
   } else if (labelText || isLoading) {
     ComponentToRender = (
       <LabelPositioning>
-        <CardLabel hasSummary={summary} title={labelText} type={'secondary'} />
+        <CardLabel title={labelText} type={'secondary'} />
       </LabelPositioning>
     );
   }
@@ -67,22 +63,13 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
 };
 
 const HorizontalDefaultCard = withIsLoading(
-  ({
-    coverImage,
-    title,
-    isLiked,
-    isLoading,
-    LabelComponent,
-    labelText,
-    summary,
-  }) => (
+  ({ coverImage, title, isLiked, isLoading, LabelComponent, labelText }) => (
     <Card isLoading={isLoading}>
       <Image source={coverImage} />
 
       <Content>
-        {renderLabel(isLoading, LabelComponent, labelText, summary)}
+        {renderLabel(isLoading, LabelComponent, labelText)}
         {title ? <H3 numberOfLines={2}>{title}</H3> : null}
-        {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
       </Content>
       <LikeIconPositioning>
         <LikeIcon isLiked={isLiked} />
@@ -101,7 +88,6 @@ HorizontalDefaultCard.propTypes = {
   isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
-  summary: PropTypes.string,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),

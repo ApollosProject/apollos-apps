@@ -26,9 +26,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
             uri: 'https://picsum.photos/800/1600/?random',
           },
         ]}
-        summary={
-          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-        }
         labelText={'Quote'}
       />
       <HorizontalDefaultCard
@@ -40,9 +37,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
             uri: 'https://picsum.photos/1400/800/?random',
           },
         ]}
-        summary={
-          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-        }
         isLiked
       />
       <HorizontalDefaultCard
@@ -67,21 +61,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
           uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
-    />
-  ))
-  .add('summary', () => (
-    <HorizontalDefaultCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-      summary={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
     />
   ))
   .add('isLiked', () => (
@@ -120,9 +99,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
           uri: 'https://picsum.photos/1400/800/?random',
         },
       ]}
-      summary={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
       labelText={'Quote'}
       isLoading
     />

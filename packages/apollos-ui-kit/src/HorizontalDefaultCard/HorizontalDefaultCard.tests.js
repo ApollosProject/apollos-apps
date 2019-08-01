@@ -59,26 +59,6 @@ describe('HorizontalDefaultCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a summary', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalDefaultCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          summary={
-            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-          }
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>
@@ -109,9 +89,6 @@ describe('HorizontalDefaultCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          summary={
-            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-          }
           isLoading
         />
       </Providers>
