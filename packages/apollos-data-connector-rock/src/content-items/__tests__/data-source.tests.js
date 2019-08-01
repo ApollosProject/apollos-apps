@@ -134,6 +134,32 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('returns features when a contentItem has a Features field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'text feature',
+    }));
+    const createScriptureFeature = jest.fn(() => ({
+      id: 'ScriptureFeature:123',
+      reference: 'john 3',
+    }));
+    dataSource.context = {
+      dataSources: { Features: { createTextFeature, createScriptureFeature } },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        features: {
+          id: 123,
+          value: 'scripture^john 3|text^text feature',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+    expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+  });
+
   it('returns a text feature when a contentItem has a TextFeature field', async () => {
     const dataSource = new ContentItemsDataSource();
     const createTextFeature = jest.fn(() => ({
