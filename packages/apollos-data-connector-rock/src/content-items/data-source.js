@@ -119,7 +119,7 @@ export default class ContentItem extends RockApolloDataSource {
           features.push(
             Features.createScriptureFeature({
               reference: value,
-              id: `${attributeValues.scriptureFeatures.id}-${i}`,
+              id: `${attributeValues.features.id}-${i}`,
             })
           );
           break;
@@ -127,7 +127,7 @@ export default class ContentItem extends RockApolloDataSource {
           features.push(
             Features.createTextFeature({
               text: value,
-              id: `${attributeValues.textFeatures.id}-${i}`,
+              id: `${attributeValues.features.id}-${i}`,
             })
           );
           break;
