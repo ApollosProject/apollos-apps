@@ -442,8 +442,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -658,8 +659,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -874,8 +876,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1090,8 +1093,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1306,8 +1310,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1522,8 +1527,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1738,8 +1744,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -1954,8 +1961,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -2170,8 +2178,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -2386,8 +2395,9 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3079,8 +3089,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3295,8 +3306,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3511,8 +3523,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3727,8 +3740,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -3943,8 +3957,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4159,8 +4174,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4375,8 +4391,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4591,8 +4608,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -4807,8 +4825,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
@@ -5023,8 +5042,9 @@ exports[`The FeedView component renders empty state 1`] = `
                     onReady={false}
                     style={
                       Object {
-                        "aspectRatio": 1,
+                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
                         "width": "100%",
                       }
                     }

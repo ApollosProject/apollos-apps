@@ -287,8 +287,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -502,8 +503,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -717,8 +719,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -932,8 +935,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1147,8 +1151,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1362,8 +1367,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1577,8 +1583,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -1792,8 +1799,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -2007,8 +2015,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -2222,8 +2231,9 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 1,
+                          "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
