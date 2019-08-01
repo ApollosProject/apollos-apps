@@ -1,26 +1,30 @@
 import React, { PureComponent } from 'react';
+import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
-// import Permissions from 'react-native-permissions';
 import Geolocation from 'react-native-geolocation-service';
+import hasLocationPermission from './hasLocationPermission';
 import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
 class LocationFinderConnected extends PureComponent {
   state = { locationPermission: false };
 
-  componentDidMount() {
-    // Permissions.check('location').then((response) => {
-    // // Response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
-    // this.setState({ locationPermission: response === 'authorized' });
-    // });
-    Geolocation.getCurrentPosition(
-      () => {
-        this.setState({ locationPermission: true });
-      },
-      { showDialogBox: false }
-    );
+  async componentDidMount() {
+    // TODO no other way (that I've found) to check for location
+    // permissions without using react-native-permissions
+    // which requires declaring ALL permissions in manifest
+    if (Platform.OS === 'ios') {
+      Geolocation.setRNConfiguration({ skipPermissionRequests: true });
+      Geolocation.getCurrentPosition(
+        () => this.setState({ locationPermission: true }),
+        () => null
+      );
+    } else {
+      const locationPermission = await hasLocationPermission();
+      this.setState({ locationPermission });
+    }
   }
 
   render() {
@@ -60,7 +64,7 @@ class LocationFinderConnected extends PureComponent {
 }
 
 LocationFinderConnected.propTypes = {
-  Component: PropTypes.element,
+  Component: PropTypes.shape({}),
   onPressPrimary: PropTypes.func,
   onNavigate: PropTypes.func.isRequired,
 };
