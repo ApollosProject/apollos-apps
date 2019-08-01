@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-
+import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 
@@ -134,7 +134,22 @@ class UserSettings extends PureComponent {
                           <Touchable
                             onPress={async () => {
                               await handleLogout();
-                              await this.props.navigation.navigate('Connect');
+                              // This resets the navigation stack, and the navigates to the first auth screen.
+                              // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
+                              await this.props.navigation.dispatch(
+                                StackActions.reset({
+                                  index: 0,
+                                  key: null,
+                                  actions: [
+                                    NavigationActions.navigate({
+                                      routeName: 'Auth',
+                                      action: NavigationActions.navigate({
+                                        routeName: 'AuthSMSPhoneEntryConnected',
+                                      }),
+                                    }),
+                                  ],
+                                })
+                              );
                             }}
                           >
                             <Cell>
