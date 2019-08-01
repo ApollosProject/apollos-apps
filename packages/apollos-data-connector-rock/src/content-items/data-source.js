@@ -110,7 +110,8 @@ export default class ContentItem extends RockApolloDataSource {
     const features = [];
 
     // TODO this should replace all other methods
-    const genericFeatures = get(attributeValues, 'features.value', []);
+    const genericFeatures = get(attributeValues, 'features.value', '');
+    console.log(genericFeatures);
     const keyValuePairs = parseKeyValueAttribute(genericFeatures);
     keyValuePairs.forEach(({ key, value }, i) => {
       switch (key) {
