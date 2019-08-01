@@ -189,6 +189,41 @@ exports[`ContentItemsModel returns an empty array when there are no features 1`]
 
 exports[`ContentItemsModel returns an empty array when there are no features 2`] = `Array []`;
 
+exports[`ContentItemsModel returns features when a contentItem has a Features field 1`] = `
+Array [
+  Object {
+    "id": "ScriptureFeature:123",
+    "reference": "john 3",
+  },
+  Object {
+    "body": "text feature",
+    "id": "TextFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns features when a contentItem has a Features field 2`] = `
+Array [
+  Array [
+    Object {
+      "id": "123-1",
+      "text": "text feature",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns features when a contentItem has a Features field 3`] = `
+Array [
+  Array [
+    Object {
+      "id": "123-0",
+      "reference": "john 3",
+    },
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns null when there are no child content items 1`] = `
 Array [
   Array [
