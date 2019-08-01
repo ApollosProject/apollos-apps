@@ -105,10 +105,35 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  // eslint-disable-next-line class-methods-use-this
   getFeatures({ attributeValues }) {
     const { Features } = this.context.dataSources;
     const features = [];
+
+    // TODO this should replace all other methods
+    const genericFeatures = get(attributeValues, 'features.value', '');
+    const keyValuePairs = parseKeyValueAttribute(genericFeatures);
+    keyValuePairs.forEach(({ key, value }, i) => {
+      switch (key) {
+        case 'scripture':
+          features.push(
+            Features.createScriptureFeature({
+              reference: value,
+              id: `${attributeValues.features.id}-${i}`,
+            })
+          );
+          break;
+        case 'text':
+          features.push(
+            Features.createTextFeature({
+              text: value,
+              id: `${attributeValues.features.id}-${i}`,
+            })
+          );
+          break;
+        default:
+          console.warn(`Received invalid feature key: ${key}`);
+      }
+    });
 
     // We pull a single text feature from the TextFeature Text field.
     const text = get(attributeValues, 'textFeature.value', '');
