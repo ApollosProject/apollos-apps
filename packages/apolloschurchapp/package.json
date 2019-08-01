@@ -101,7 +101,6 @@
     "react-native-music-control": "^0.10.2",
     "react-native-onesignal": "3.2.14",
     "react-native-passkit-wallet": "^0.1.4",
-    "react-native-permissions": "^1.2.0",
     "react-native-safari-view": "2.1.0",
     "react-native-safe-area-view": "0.13.1",
     "react-native-screens": "^1.0.0-alpha.11",
