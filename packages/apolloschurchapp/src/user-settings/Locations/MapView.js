@@ -47,7 +47,6 @@ class MapView extends Component {
         longitude: PropTypes.number.isRequired,
       })
     ),
-    isLoading: PropTypes.bool.isRequired,
     onLocationSelect: PropTypes.func.isRequired,
     initialRegion: PropTypes.shape({
       latitude: PropTypes.number.isRequired,
@@ -69,10 +68,6 @@ class MapView extends Component {
     }),
   };
 
-  state = {
-    campus: null,
-  };
-
   animation = new Animated.Value(0);
 
   componentDidMount() {
@@ -83,29 +78,24 @@ class MapView extends Component {
     if (oldProps.userLocation !== this.props.userLocation) {
       this.updateCoordinates({ value: this.previousScrollPosition });
     }
-    if (oldProps.isLoading === true && this.props.isLoading === false) {
-      this.setCurrentCampus();
-    }
   }
 
   get contentContainerStyle() {
     return { paddingHorizontal: this.props.theme.sizing.baseUnit * 0.75 }; // pad cards from edge of screen but account for card margin
   }
 
-  get cardIndex() {
-    return Math.floor(this.previousScrollPosition / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item;
-  }
-
-  setCurrentCampus() {
-    const campus = this.props.campuses[this.cardIndex];
-    this.setState({ campus });
+  get currentCampus() {
+    const cardIndex = Math.floor(
+      this.previousScrollPosition / CARD_WIDTH + 0.3
+    ); // animate 30% away from landing on the next item;
+    const campus = this.props.campuses[cardIndex];
     return campus;
   }
 
   updateCoordinates = ({ value }) => {
     this.previousScrollPosition = value;
 
-    const campus = this.setCurrentCampus();
+    const campus = this.currentCampus;
 
     const { userLocation } = this.props;
     if (!campus) {
@@ -210,7 +200,7 @@ class MapView extends Component {
                 pill={false}
                 type="secondary"
                 onPress={() =>
-                  onLocationSelect(this.state.campus || campuses[0])
+                  onLocationSelect(this.currentCampus || campuses[0])
                 }
               />
             </PaddedView>
