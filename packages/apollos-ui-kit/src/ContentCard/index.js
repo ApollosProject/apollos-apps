@@ -23,27 +23,27 @@ const ContentCardWrapper = styled(({ tile }) => {
 
 class ContentCard extends PureComponent {
   static propTypes = {
-    isLoading: PropTypes.bool,
-    title: PropTypes.string,
-    summary: PropTypes.string,
+    content: PropTypes.element,
     coverImage: PropTypes.oneOfType([
       PropTypes.arrayOf(ImageSourceType),
       ImageSourceType,
     ]),
+    footer: PropTypes.element,
+    header: PropTypes.element,
+    isLoading: PropTypes.bool,
     metrics: PropTypes.arrayOf(
       PropTypes.shape({
         icon: PropTypes.string,
         value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       })
     ),
+    summary: PropTypes.string,
     theme: PropTypes.shape({
       type: PropTypes.string,
       colors: PropTypes.shape({}),
     }),
     tile: PropTypes.bool,
-    header: PropTypes.element,
-    content: PropTypes.element,
-    footer: PropTypes.element,
+    title: PropTypes.string,
   };
 
   renderCardHeader() {
@@ -118,16 +118,19 @@ class ContentCard extends PureComponent {
 
   render() {
     const {
-      isLoading,
-      title,
-      summary,
       coverImage,
+      isLoading,
       metrics,
+      summary,
       theme,
       tile,
+      title,
       ...cardProps
     } = this.props;
 
+    console.warn(
+      'Warning ContentCard has been deprecated in favor of DefaultCard and will be removed in a future release of the Apollos UI-Kit.'
+    );
     return (
       <ThemeMixin
         mixin={{
