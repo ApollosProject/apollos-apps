@@ -66,7 +66,7 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
   return ComponentToRender;
 };
 
-const DefaultCard = withIsLoading(
+const HorizontalDefaultCard = withIsLoading(
   ({
     coverImage,
     title,
@@ -91,7 +91,7 @@ const DefaultCard = withIsLoading(
   )
 );
 
-DefaultCard.propTypes = {
+HorizontalDefaultCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
@@ -108,6 +108,6 @@ DefaultCard.propTypes = {
   }),
 };
 
-DefaultCard.displayName = 'DefaultCard';
+HorizontalDefaultCard.displayName = 'HorizontalDefaultCard';
 
-export default DefaultCard;
+export default HorizontalDefaultCard;

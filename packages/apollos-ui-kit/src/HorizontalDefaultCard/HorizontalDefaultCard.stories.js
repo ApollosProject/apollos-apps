@@ -6,9 +6,9 @@ import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import { CardLabel } from '../Card';
 
-import DefaultCard from '.';
+import HorizontalDefaultCard from '.';
 
-storiesOf('ui-kit/DefaultCard', module)
+storiesOf('ui-kit/HorizontalDefaultCard', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -17,7 +17,7 @@ storiesOf('ui-kit/DefaultCard', module)
   ))
   .add('examples', () => (
     <ScrollView>
-      <DefaultCard
+      <HorizontalDefaultCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -31,7 +31,7 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         labelText={'Quote'}
       />
-      <DefaultCard
+      <HorizontalDefaultCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -45,7 +45,7 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         isLiked
       />
-      <DefaultCard
+      <HorizontalDefaultCard
         title={
           'Are you telling me that you built a time machine out of a DeLorean?'
         }
@@ -58,7 +58,7 @@ storiesOf('ui-kit/DefaultCard', module)
     </ScrollView>
   ))
   .add('default', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -70,7 +70,7 @@ storiesOf('ui-kit/DefaultCard', module)
     />
   ))
   .add('summary', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -85,7 +85,7 @@ storiesOf('ui-kit/DefaultCard', module)
     />
   ))
   .add('isLiked', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -98,7 +98,7 @@ storiesOf('ui-kit/DefaultCard', module)
     />
   ))
   .add('labelText', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -111,7 +111,7 @@ storiesOf('ui-kit/DefaultCard', module)
     />
   ))
   .add('isLoading', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -128,7 +128,7 @@ storiesOf('ui-kit/DefaultCard', module)
     />
   ))
   .add('LabelComponent', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
@@ -143,7 +143,7 @@ storiesOf('ui-kit/DefaultCard', module)
     />
   ))
   .add('labelText', () => (
-    <DefaultCard
+    <HorizontalDefaultCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
       }
