@@ -30,7 +30,8 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
 const Image = withTheme(({ theme }) => ({
   minAspectRatio: 2,
   maxAspectRatio: 2,
-  // maintainAspectRatio: true,
+  forceRatio: 2, // forces the placeholder to use the same ratio.
+  maintainAspectRatio: true,
   overlayColor: theme.colors.black,
   overlayType: 'gradient-top',
 }))(CardImage);
