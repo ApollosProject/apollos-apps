@@ -20,6 +20,7 @@ export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
 export HighlightCard from './HighlightCard';
 export HorizontalHighlightCard from './HorizontalHighlightCard';
+export HorizontalDefaultCard from './HorizontalDefaultCard';
 export HorizontalTileFeed from './HorizontalTileFeed';
 export Icon, { makeIcon } from './Icon';
 export Input, {
