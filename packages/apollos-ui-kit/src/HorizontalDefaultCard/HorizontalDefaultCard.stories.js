@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { ScrollView } from 'react-native';
+import { View, Dimensions } from 'react-native';
 
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
-import { CardLabel } from '../Card';
+import HorizontalTileFeed from '../HorizontalTileFeed';
 
 import HorizontalDefaultCard from '.';
 
@@ -15,48 +15,86 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('examples', () => (
-    <ScrollView>
+  .add('examples', () => {
+    const HorizontalHighlightCardData = [
+      {
+        node: {
+          coverImage: [
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ],
+          id: 'fakeId0',
+          isLiked: true,
+          summary:
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?',
+          title:
+            'Are you telling me that you built a time machine out of a DeLorean?',
+        },
+      },
+      {
+        node: {
+          coverImage: [
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ],
+          id: 'fakeId1',
+          isLiked: false,
+          summary:
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?',
+          title:
+            'Are you telling me that you built a time machine out of a DeLorean?',
+        },
+      },
+      {
+        node: {
+          coverImage: [
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ],
+          id: 'fakeId2',
+          isLiked: false,
+          summary:
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?',
+          title:
+            'Are you telling me that you built a time machine out of a DeLorean?',
+        },
+      },
+    ];
+
+    const loadingStateObject = {
+      node: {
+        id: 'fakeId0',
+        title: '',
+        isLoading: true,
+      },
+    };
+
+    const renderHorizontalHighlightCard = (
+      { item } //eslint-disable-line
+    ) => (
       <HorizontalDefaultCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/1600/?random',
-          },
-        ]}
-        summary={
-          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-        }
-        labelText={'Quote'}
+        coverImage={item.node.coverImage}
+        isLiked={item.node.isLiked}
+        isLoading={item.node.isLoading}
+        title={item.node.title}
+        summary={item.node.summary}
       />
-      <HorizontalDefaultCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/1400/800/?random',
-          },
-        ]}
-        summary={
-          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-        }
-        isLiked
-      />
-      <HorizontalDefaultCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/800/?random',
-          },
-        ]}
-      />
-    </ScrollView>
-  ))
+    );
+
+    return (
+      <View>
+        <HorizontalTileFeed
+          content={HorizontalHighlightCardData}
+          renderItem={renderHorizontalHighlightCard}
+          loadingStateObject={loadingStateObject}
+          style={{ height: Dimensions.get('window').width - 64 }} // kind of a random math to just make this story work
+        />
+      </View>
+    );
+  })
   .add('default', () => (
     <HorizontalDefaultCard
       title={
@@ -97,19 +135,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
       isLiked
     />
   ))
-  .add('labelText', () => (
-    <HorizontalDefaultCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-      labelText={'Quote'}
-    />
-  ))
   .add('isLoading', () => (
     <HorizontalDefaultCard
       title={
@@ -123,35 +148,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
       summary={
         'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
       }
-      labelText={'Quote'}
       isLoading
-    />
-  ))
-  .add('LabelComponent', () => (
-    <HorizontalDefaultCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-      LabelComponent={
-        <CardLabel title={'Custom LabelComponent'} type={'primary'} />
-      }
-    />
-  ))
-  .add('labelText', () => (
-    <HorizontalDefaultCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-      labelText={'Quote'}
     />
   ));

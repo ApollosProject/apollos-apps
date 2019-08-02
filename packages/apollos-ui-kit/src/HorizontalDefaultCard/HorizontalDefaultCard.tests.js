@@ -7,7 +7,7 @@ import { CardLabel } from '../Card';
 import HorizontalDefaultCard from '.';
 
 describe('HorizontalDefaultCard', () => {
-  it('should render at the minAspectRatio bound (tall-ish)', () => {
+  it('should render', () => {
     const tree = renderer.create(
       <Providers>
         <HorizontalDefaultCard
@@ -17,41 +17,6 @@ describe('HorizontalDefaultCard', () => {
           coverImage={[
             {
               uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render at the images natural aspect ratio (between min/max)', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalDefaultCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/1400/800/?random',
-            },
-          ]}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('should render at the maxAspectRatio bound (wider than tall)', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalDefaultCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/2000/800/?random',
             },
           ]}
         />

@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 
 import { withTheme } from '../theme';
 import styled from '../styled';
-import Card, { CardImage, CardLabel, CardContent } from '../Card';
-import { H3, BodyText } from '../typography';
+import Card, { CardImage, CardContent } from '../Card';
+import { H5, H6 } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+
+const SquareCard = styled({
+  aspectRatio: 1,
+})(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(({ theme }) => ({
@@ -24,9 +28,9 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
 }))(Icon);
 
 const Image = withTheme(({ theme }) => ({
-  minAspectRatio: 1.2,
-  maxAspectRatio: 1.78,
-  maintainAspectRatio: true,
+  minAspectRatio: 2,
+  maxAspectRatio: 2,
+  // maintainAspectRatio: true,
   overlayColor: theme.colors.black,
   overlayType: 'gradient-top',
 }))(CardImage);
@@ -38,56 +42,23 @@ const Content = styled(({ theme }) => ({
 }))(CardContent);
 
 const Summary = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit,
-}))(BodyText);
-
-// We have to position `renderLabel/CardLabel/LabelComponent` in a `View` so `Label`s loading state is positioned correctly 💥
-// We also only render this component if we have a label.
-const LabelPositioning = styled(({ theme }) => ({
-  marginTop: -theme.sizing.baseUnit * 2,
-  marginBottom: theme.sizing.baseUnit,
-}))(View);
-
-const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
-  let ComponentToRender = null;
-
-  if (LabelComponent) {
-    ComponentToRender = <LabelPositioning>{LabelComponent}</LabelPositioning>;
-
-    // this always shows a loading state for labels
-  } else if (labelText || isLoading) {
-    ComponentToRender = (
-      <LabelPositioning>
-        <CardLabel hasSummary={summary} title={labelText} type={'secondary'} />
-      </LabelPositioning>
-    );
-  }
-
-  return ComponentToRender;
-};
+  paddingTop: theme.sizing.baseUnit / 2,
+  color: theme.colors.text.tertiary,
+}))(H6);
 
 const HorizontalDefaultCard = withIsLoading(
-  ({
-    coverImage,
-    title,
-    isLiked,
-    isLoading,
-    LabelComponent,
-    labelText,
-    summary,
-  }) => (
-    <Card isLoading={isLoading}>
+  ({ coverImage, title, isLiked, isLoading, summary }) => (
+    <SquareCard isLoading={isLoading}>
       <Image source={coverImage} />
 
       <Content>
-        {renderLabel(isLoading, LabelComponent, labelText, summary)}
-        {title ? <H3 numberOfLines={2}>{title}</H3> : null}
+        {title ? <H5 numberOfLines={2}>{title}</H5> : null}
         {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
       </Content>
       <LikeIconPositioning>
         <LikeIcon isLiked={isLiked} />
       </LikeIconPositioning>
-    </Card>
+    </SquareCard>
   )
 );
 
@@ -98,9 +69,6 @@ HorizontalDefaultCard.propTypes = {
   ]).isRequired,
   title: PropTypes.string.isRequired,
   isLiked: PropTypes.bool,
-  isLive: PropTypes.bool,
-  LabelComponent: PropTypes.element,
-  labelText: PropTypes.string,
   summary: PropTypes.string,
   theme: PropTypes.shape({
     type: PropTypes.string,
