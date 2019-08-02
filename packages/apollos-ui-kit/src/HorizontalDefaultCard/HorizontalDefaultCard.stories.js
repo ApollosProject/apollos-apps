@@ -86,7 +86,7 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
           content={HorizontalHighlightCardData}
           renderItem={renderHorizontalHighlightCard}
           loadingStateObject={loadingStateObject}
-          style={{ height: Dimensions.get('window').width - 64 }} // kind of a random math to just make this story work
+          style={{ height: Dimensions.get('window').width * 0.66 + 32 }} // kind of a random math to just make this story work
         />
       </View>
     );

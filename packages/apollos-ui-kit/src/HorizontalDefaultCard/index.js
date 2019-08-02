@@ -42,9 +42,9 @@ const Content = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
 
-const Summary = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit / 2,
+const Summary = styled(({ theme, hasTitle }) => ({
   color: theme.colors.text.tertiary,
+  ...(hasTitle ? { paddingTop: theme.sizing.baseUnit / 2 } : {}),
 }))(H6);
 
 const HorizontalDefaultCard = withIsLoading(
@@ -54,7 +54,11 @@ const HorizontalDefaultCard = withIsLoading(
 
       <Content>
         {title ? <H5 numberOfLines={2}>{title}</H5> : null}
-        {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
+        {summary ? (
+          <Summary hasTitle={title} numberOfLines={2}>
+            {summary}
+          </Summary>
+        ) : null}
       </Content>
       <LikeIconPositioning>
         <LikeIcon isLiked={isLiked} />
