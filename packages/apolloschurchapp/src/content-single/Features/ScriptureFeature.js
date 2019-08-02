@@ -6,14 +6,14 @@ import { ScriptureItem } from '@apollosproject/ui-scripture';
 import ShareButton from 'apolloschurchapp/src/ui/ShareButton';
 
 const createSharingText = ({ html, reference }) =>
-  `${html.replace(/<[^>]*>?/gm, "")} ${reference}`;
+  `${html.replace(/<[^>]*>?/gm, '')} ${reference}`;
 
 const ScriptureFeature = ({ scriptures, isLoading, contentId }) => (
   <ActionCard
     icon={'text'}
     action={
       <ShareButton
-        message={scriptures.map(createSharingText).join("\n\n")}
+        message={scriptures.map(createSharingText).join('\n\n')}
         itemId={contentId}
       />
     }
