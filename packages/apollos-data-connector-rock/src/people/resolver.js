@@ -1,4 +1,6 @@
+import moment from 'moment-timezone';
 import { createGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
 import { enforceCurrentUser } from '../utils';
 
 export default {
@@ -14,7 +16,11 @@ export default {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     photo: ({ photo: { url } }) => ({ uri: url }),
-    birthDate: enforceCurrentUser(({ birthDate }) => birthDate),
+    birthDate: enforceCurrentUser(({ birthDate }) =>
+      birthDate
+        ? moment.tz(birthDate, ApollosConfig.ROCK.TIMEZONE).toJSON()
+        : null
+    ),
     gender: enforceCurrentUser(({ gender }) => gender),
     email: enforceCurrentUser(({ email }) => email),
   },

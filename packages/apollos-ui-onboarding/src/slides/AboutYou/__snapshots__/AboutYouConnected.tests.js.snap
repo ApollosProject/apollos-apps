@@ -34,7 +34,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
     }
   >
     <RCTScrollView
-      birthDate="1980-02-10T00:00:00"
+      birthDate="1980-02-10T05:00:00.000Z"
       contentContainerStyle={
         Object {
           "minHeight": "100%",
@@ -416,7 +416,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={1980-02-10T00:00:00.000Z}
+                      date={1980-02-10T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -1144,7 +1144,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
