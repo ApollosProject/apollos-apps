@@ -34,7 +34,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
     }
   >
     <RCTScrollView
-      birthDate="1980-02-10T00:00:00"
+      birthDate="1980-02-10T05:00:00.000Z"
       contentContainerStyle={
         Object {
           "minHeight": "100%",
