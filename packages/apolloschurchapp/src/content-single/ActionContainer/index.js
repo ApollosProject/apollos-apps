@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ShareContentButtonConnected from 'apolloschurchapp/src/ui/ShareContentButtonConnected';
 
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
-import LikeButton from 'apolloschurchapp/src/ui/LikeButton';
+import LikeContentButtonConnected from 'apolloschurchapp/src/ui/LikeContentButtonConnected';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 const PositioningView = styled(({ theme }) => ({
@@ -22,7 +22,7 @@ const ActionContainer = ({ itemId }) => (
   <Container>
     <MediaPlayerSpacer>
       <PositioningView>
-        <LikeButton itemId={itemId} />
+        <LikeContentButtonConnected itemId={itemId} />
         <ShareContentButtonConnected itemId={itemId} />
       </PositioningView>
     </MediaPlayerSpacer>

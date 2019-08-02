@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the Like component should render a Like 1`] = `
+exports[`the LikeContentButton component should render a Like 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -154,7 +154,7 @@ exports[`the Like component should render a Like 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`the Like component should render a UnLike 1`] = `
+exports[`the LikeContentButton component should render a UnLike 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}

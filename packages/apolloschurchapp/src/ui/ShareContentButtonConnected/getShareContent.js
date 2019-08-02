@@ -7,6 +7,7 @@ export default gql`
         id
         sharing {
           url
+          message
           title
         }
       }
