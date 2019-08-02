@@ -27,10 +27,10 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
   size: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ theme }) => ({
-  minAspectRatio: 2,
-  maxAspectRatio: 2,
-  forceRatio: 2, // forces the placeholder to use the same ratio.
+const Image = withTheme(({ theme, hasTitleAndSummary }) => ({
+  minAspectRatio: hasTitleAndSummary ? 2 : 1.5, // adjusts `Image` height to fill available `Card` whitespace if there is no `Title` or `Summary`
+  maxAspectRatio: hasTitleAndSummary ? 2 : 1.5, // adjusts `Image` height to fill available `Card` whitespace if there is no `Title` or `Summary`
+  forceRatio: hasTitleAndSummary ? 2 : 1.5, // forces the placeholder to use the same ratio as above.
   maintainAspectRatio: true,
   overlayColor: theme.colors.black,
   overlayType: 'gradient-top',
@@ -48,9 +48,9 @@ const Summary = styled(({ theme }) => ({
 }))(H6);
 
 const HorizontalDefaultCard = withIsLoading(
-  ({ coverImage, title, isLiked, isLoading, summary }) => (
-    <SquareCard isLoading={isLoading}>
-      <Image source={coverImage} />
+  ({ coverImage, isLiked, isLoading, summary, title }) => (
+    <SquareCard isLoading={isLoading} inHorizontalList>
+      <Image source={coverImage} hasTitleAndSummary={!!summary && !!title} />
 
       <Content>
         {title ? <H5 numberOfLines={2}>{title}</H5> : null}
@@ -68,13 +68,9 @@ HorizontalDefaultCard.propTypes = {
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
-  title: PropTypes.string.isRequired,
   isLiked: PropTypes.bool,
   summary: PropTypes.string,
-  theme: PropTypes.shape({
-    type: PropTypes.string,
-    colors: PropTypes.shape({}),
-  }),
+  title: PropTypes.string,
 };
 
 HorizontalDefaultCard.displayName = 'HorizontalDefaultCard';
