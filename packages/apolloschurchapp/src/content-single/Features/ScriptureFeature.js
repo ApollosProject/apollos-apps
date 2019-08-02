@@ -3,9 +3,21 @@ import PropTypes from 'prop-types';
 
 import { ActionCard } from '@apollosproject/ui-kit';
 import { ScriptureItem } from '@apollosproject/ui-scripture';
+import ShareButton from 'apolloschurchapp/src/ui/ShareButton';
 
-const ScriptureFeature = ({ scriptures, isLoading }) => (
-  <ActionCard icon={'text'}>
+const createSharingText = ({ html, reference }) =>
+  `${html.replace(/<[^>]*>?/gm, '')} ${reference}`;
+
+const ScriptureFeature = ({ scriptures, isLoading, contentId }) => (
+  <ActionCard
+    icon={'text'}
+    action={
+      <ShareButton
+        message={scriptures.map(createSharingText).join('\n\n')}
+        itemId={contentId}
+      />
+    }
+  >
     {scriptures.map(({ copyright, reference, html, id }) => (
       <ScriptureItem
         key={id}
@@ -28,6 +40,7 @@ ScriptureFeature.propTypes = {
       copyright: PropTypes.string,
     })
   ),
+  contentId: PropTypes.string.isRequired,
 };
 
 export const SCRIPTURE_FEATURE_FRAGMENT = `
