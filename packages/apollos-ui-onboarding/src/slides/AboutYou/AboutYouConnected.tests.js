@@ -12,7 +12,7 @@ describe('AboutYouConnected component', () => {
       <Providers>
         <AboutYouConnected
           onPressPrimary={jest.fn()}
-          defaultDate={'2019-02-14'}
+          defaultDate={'2019-02-14T05:00:00.000Z'}
         />
       </Providers>
     );
@@ -32,7 +32,7 @@ describe('AboutYouConnected component', () => {
               __typename: 'Person',
               id: 'Person:123',
               gender: 'Male',
-              birthDate: '1980-02-10T00:00:00',
+              birthDate: '1980-02-10T05:00:00.000Z',
             },
           },
         },
@@ -59,7 +59,7 @@ describe('AboutYouConnected component', () => {
               __typename: 'Person',
               id: 'Person:123',
               gender: 'Male',
-              birthDate: '1980-02-10T00:00:00',
+              birthDate: '1980-02-10T05:00:00.000Z',
             },
           },
         },
@@ -73,7 +73,7 @@ describe('AboutYouConnected component', () => {
         <AboutYouConnected
           Component={CustomComponent}
           onPressPrimary={jest.fn()}
-          defaultDate={'2019-02-14'}
+          defaultDate={'2019-02-14T05:00:00.000Z'}
         />
       </Providers>
     );
