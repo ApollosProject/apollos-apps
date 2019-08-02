@@ -74,9 +74,6 @@ describe('HorizontalDefaultCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          summary={
-            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-          }
           isLoading
         />
       </Providers>

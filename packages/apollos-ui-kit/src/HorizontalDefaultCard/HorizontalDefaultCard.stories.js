@@ -107,21 +107,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
       ]}
     />
   ))
-  .add('summary', () => (
-    <HorizontalDefaultCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-      summary={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-    />
-  ))
   .add('isLiked', () => (
     <HorizontalDefaultCard
       title={
