@@ -99,7 +99,6 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^1.0.0",
     "codecov": "3.0.2",
     "get-dev-paths": "^0.1.0",
     "jest": "^24.8.0",
