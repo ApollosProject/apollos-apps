@@ -94,4 +94,4 @@ storyLoader.js
 packages/**/docs/generated/*
 
 # CocoaPods
-/ios/Pods/
+packages/apolloschurchapp/ios/Pods/
