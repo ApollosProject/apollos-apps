@@ -77,9 +77,7 @@ export default class RockRequestBuilder {
     const key = '$filter';
     if (this.query[key]) {
       this.query[key] = `(${this.query[key]}) ${operator} (${filter})`;
-    } else {
-      this.query[key] = filter;
-    }
+    } else if (filter !== '') this.query[key] = filter;
     return this;
   };
 
@@ -88,6 +86,15 @@ export default class RockRequestBuilder {
   orFilter = (filter) => this.filter(filter, { operator: 'or' });
 
   filterOneOf = (filters) => {
+    if (filters.length === 0) {
+      console.warn(`
+You are filtering oneOf 0 filters.
+Normally this has the same effect as filtering with 0 filters.
+It's recommended that rather than passing an empty array with filterOneOf,
+check to make sure you have at least one element to filter by. If you don't,
+you can return request.empty()
+`);
+    }
     const filter = filters.map((f) => `(${f})`).join(' or ');
     return this.filter(filter);
   };

@@ -35,6 +35,9 @@ describe('RequestBuilder', () => {
       request.filter('Something eq SomethingElse').get()
     ).resolves.toMatchSnapshot();
   });
+  it("doesn't filter if filter is blank", () => {
+    expect(request.filter('').get()).resolves.toMatchSnapshot();
+  });
 
   it('combines multiple filters with an and operator', () => {
     expect(
@@ -58,6 +61,9 @@ describe('RequestBuilder', () => {
     expect(
       request.filterOneOf(['Id eq 123', 'Id eq 456', 'Id eq 789']).get()
     ).resolves.toMatchSnapshot();
+  });
+  it("doesn't filterOneOf if array is blank", () => {
+    expect(request.filterOneOf([]).get()).resolves.toMatchSnapshot();
   });
 
   it('chains multiple filters', () => {

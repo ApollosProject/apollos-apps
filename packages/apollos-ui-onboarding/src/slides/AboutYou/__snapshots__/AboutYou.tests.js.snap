@@ -267,13 +267,10 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -286,7 +283,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -405,7 +402,7 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -998,13 +995,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -1017,7 +1011,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -1136,7 +1130,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -1330,6 +1324,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1576,13 +1571,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -1595,7 +1587,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -1714,7 +1706,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -2111,13 +2103,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -2130,7 +2119,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -2249,7 +2238,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -2646,13 +2635,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -2665,7 +2651,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -2784,7 +2770,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -3181,13 +3167,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -3200,7 +3183,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -3319,7 +3302,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -3728,13 +3711,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -3747,7 +3727,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -3866,7 +3846,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -4263,13 +4243,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -4282,7 +4259,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -4401,7 +4378,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={1989-02-14T00:00:00.000Z}
+                      date={1989-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -4820,13 +4797,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -4839,7 +4813,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -4958,7 +4932,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}

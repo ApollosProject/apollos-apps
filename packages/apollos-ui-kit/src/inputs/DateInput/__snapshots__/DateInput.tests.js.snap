@@ -70,13 +70,10 @@ exports[`The DateInput component should render 1`] = `
               "flexDirection": "row",
               "height": 32,
               "justifyContent": "center",
-              "marginBottom": 8,
-              "marginRight": 8,
               "marginTop": 5,
               "opacity": 1,
               "overflow": "hidden",
-              "paddingHorizontal": 4,
-              "paddingVertical": 4,
+              "paddingHorizontal": 12,
             }
           }
         />
@@ -357,13 +354,10 @@ exports[`The DateInput component should render with a displayValue 1`] = `
               "flexDirection": "row",
               "height": 32,
               "justifyContent": "center",
-              "marginBottom": 8,
-              "marginRight": 8,
               "marginTop": 5,
               "opacity": 1,
               "overflow": "hidden",
-              "paddingHorizontal": 4,
-              "paddingVertical": 4,
+              "paddingHorizontal": 12,
             }
           }
         >
@@ -376,7 +370,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
                 "fontSize": 12,
                 "justifyContent": "center",
                 "lineHeight": 17.28,
-                "paddingHorizontal": 6,
+                "paddingLeft": null,
                 "textAlign": "center",
               }
             }
@@ -698,13 +692,10 @@ exports[`The DateInput component should render with a label 1`] = `
               "flexDirection": "row",
               "height": 32,
               "justifyContent": "center",
-              "marginBottom": 8,
-              "marginRight": 8,
               "marginTop": 5,
               "opacity": 1,
               "overflow": "hidden",
-              "paddingHorizontal": 4,
-              "paddingVertical": 4,
+              "paddingHorizontal": 12,
             }
           }
         >
@@ -717,7 +708,7 @@ exports[`The DateInput component should render with a label 1`] = `
                 "fontSize": 12,
                 "justifyContent": "center",
                 "lineHeight": 17.28,
-                "paddingHorizontal": 6,
+                "paddingLeft": null,
                 "textAlign": "center",
               }
             }
@@ -1041,13 +1032,10 @@ exports[`The DateInput component should render with a placeholder 1`] = `
               "flexDirection": "row",
               "height": 32,
               "justifyContent": "center",
-              "marginBottom": 8,
-              "marginRight": 8,
               "marginTop": 5,
               "opacity": 1,
               "overflow": "hidden",
-              "paddingHorizontal": 4,
-              "paddingVertical": 4,
+              "paddingHorizontal": 12,
             }
           }
         >
@@ -1060,7 +1048,7 @@ exports[`The DateInput component should render with a placeholder 1`] = `
                 "fontSize": 12,
                 "justifyContent": "center",
                 "lineHeight": 17.28,
-                "paddingHorizontal": 6,
+                "paddingLeft": null,
                 "textAlign": "center",
               }
             }
@@ -1382,13 +1370,10 @@ exports[`The DateInput component should render with an error 1`] = `
               "flexDirection": "row",
               "height": 32,
               "justifyContent": "center",
-              "marginBottom": 8,
-              "marginRight": 8,
               "marginTop": 5,
               "opacity": 1,
               "overflow": "hidden",
-              "paddingHorizontal": 4,
-              "paddingVertical": 4,
+              "paddingHorizontal": 12,
             }
           }
         />

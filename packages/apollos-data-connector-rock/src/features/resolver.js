@@ -14,12 +14,16 @@ export default {
     // Implementors must attach __typename to root.
     __resolveType: ({ __typename }) => __typename,
   },
+  ScriptureFeature: {
+    scriptures: ({ reference }, args, { dataSources: { Scripture } }) =>
+      Scripture.getScriptures(reference),
+  },
   Query: {
     userFeedFeatures: async (root, args, context) => {
       const { Features } = context.dataSources;
       // Generate a feature to show the user on the home screen.
       const personaFeature = await Features.createActionListFeature({
-        algorithms: ['PERSONA_FEED'],
+        algorithms: ['SERMON_CHILDREN', 'PERSONA_FEED'],
         title: 'FOR YOU',
         subtitle: 'Explore what God calls you to today',
       });

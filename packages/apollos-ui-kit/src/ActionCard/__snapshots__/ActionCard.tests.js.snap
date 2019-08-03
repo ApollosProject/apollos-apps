@@ -54,7 +54,6 @@ exports[`the ActionCard component should accept additional Card props 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -142,7 +141,6 @@ exports[`the ActionCard component should render an action 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -347,34 +345,13 @@ exports[`the ActionCard component should render an action 1`] = `
                 "elevation": 2,
                 "flexDirection": "row",
                 "height": 32,
-                "justifyContent": "flex-end",
-                "marginBottom": 8,
-                "marginRight": 8,
+                "justifyContent": "center",
                 "opacity": 1,
                 "overflow": "hidden",
-                "paddingHorizontal": 4,
-                "paddingVertical": 4,
+                "paddingHorizontal": 12,
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "alignItems": "center",
-                  "color": "#303030",
-                  "flexGrow": 1,
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "justifyContent": "center",
-                  "lineHeight": 17.28,
-                  "paddingHorizontal": 6,
-                  "textAlign": "center",
-                }
-              }
-              withIcon="share"
-            >
-              Share
-            </Text>
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={16}
@@ -490,6 +467,23 @@ exports[`the ActionCard component should render an action 1`] = `
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "justifyContent": "center",
+                  "lineHeight": 17.28,
+                  "paddingLeft": 8,
+                  "textAlign": "center",
+                }
+              }
+              withIcon="share"
+            >
+              Share
+            </Text>
           </View>
         </View>
       </View>
@@ -551,7 +545,6 @@ exports[`the ActionCard component should render an icon and label 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -788,7 +781,6 @@ exports[`the ActionCard component should render children 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }

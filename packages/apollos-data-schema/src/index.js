@@ -157,8 +157,9 @@ export const themeSchema = gql`
 `;
 
 export const scriptureSchema = gql`
-  type Scripture {
-    id: String
+  type Scripture implements Node {
+    id: ID!
+
     html: String
     reference: String
     copyright: String
@@ -575,6 +576,13 @@ export const featuresSchema = gql`
     order: Int
 
     body: String
+  }
+
+  type ScriptureFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    scriptures: [Scripture]
   }
 
   extend type WeekendContentItem {

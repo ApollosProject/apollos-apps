@@ -73,9 +73,9 @@ const AboutYou = memo(
         <StyledDate
           type={'DateInput'}
           placeholder={'Select a date...'}
-          value={moment
-            .utc(get(values, 'birthDate', defaultDate) || defaultDate)
-            .toDate()}
+          value={moment(
+            get(values, 'birthDate', defaultDate) || defaultDate
+          ).toDate()}
           error={get(touched, 'birthDate') && get(errors, 'birthDate')}
           displayValue={
             // only show a birthday if we have one.

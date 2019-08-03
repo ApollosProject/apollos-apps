@@ -35,21 +35,102 @@ describe('the ConnectedImage component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  describe('updateCache', () => {
-    it('updates cache with image uri and sizes', async () => {
-      const source = {
-        url: '//via.placeholder.com/320x240',
-      };
-      await updateCache(source);
+  it('should render with a minAspectRatio', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ConnectedImage // should render as short
+          source={{
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
+          }}
+          maintainAspectRatio
+          minAspectRatio={2}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a maxAspectRatio', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ConnectedImage // should render as tall
+          source={{
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
+          }}
+          maintainAspectRatio
+          maxAspectRatio={0.5}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render between minAspectRatio and maxAspectRatio', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ConnectedImage // should render square
+          source={{
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
+          }}
+          maintainAspectRatio
+          minAspectRatio={0.5}
+          maxAspectRatio={1.5}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should throw an error if minAspectRatio is used without maintainAspectRatio', () => {
+    console.error = jest.fn(); // eslint-disable-line no-console
+    renderer.create(
+      <Providers>
+        <ConnectedImage // should render square
+          source={{
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
+          }}
+          minAspectRatio={1.5}
+        />
+      </Providers>
+    );
 
-      expect(getCachedSources(source)).toContainEqual(
-        expect.objectContaining({
-          uri: 'https://via.placeholder.com/320x240',
-          url: '//via.placeholder.com/320x240',
-          width: 320,
-          height: 240,
-        })
-      );
-    });
+    expect(console.error.mock.calls).toMatchSnapshot(); // eslint-disable-line no-console
+  });
+  it('should throw an error if maxAspectRatio is used without maintainAspectRatio', () => {
+    console.error = jest.fn(); // eslint-disable-line no-console
+    renderer.create(
+      <Providers>
+        <ConnectedImage // should render square
+          source={{
+            uri: 'https://picsum.photos/200/200/?random',
+            width: 200,
+            height: 200,
+          }}
+          maxAspectRatio={1.5}
+        />
+      </Providers>
+    );
+
+    expect(console.error.mock.calls).toMatchSnapshot(); // eslint-disable-line no-console
+  });
+  it('should update the cache with image uri and sizes', async () => {
+    const source = {
+      url: '//via.placeholder.com/320x240',
+    };
+    await updateCache(source);
+
+    expect(getCachedSources(source)).toContainEqual(
+      expect.objectContaining({
+        uri: 'https://via.placeholder.com/320x240',
+        url: '//via.placeholder.com/320x240',
+        width: 320,
+        height: 240,
+      })
+    );
   });
 });

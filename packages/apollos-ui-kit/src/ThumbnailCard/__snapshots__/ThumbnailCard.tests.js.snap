@@ -60,7 +60,6 @@ exports[`the ThumbnailCard component should render 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -142,6 +141,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
     <View
       accessible={true}
       inHorizontalList={true}
+      isLoading={true}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -166,7 +166,6 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -192,18 +191,18 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
               }
             }
           >
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Medium",
-                  "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 14,
+                  "marginVertical": 3.08,
+                  "width": "60%",
                 }
               }
-            >
-              Why Jesus is Timeless
-            </Text>
+            />
             <View
               flexed={false}
               style={
@@ -269,6 +268,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -286,6 +286,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                   }
                   style={
                     Object {
+                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
                       "opacity": 0,
                       "resizeMode": "cover",
@@ -363,7 +364,6 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -501,7 +501,6 @@ exports[`the ThumbnailCard component should render with a category and images 1`
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -605,6 +604,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -699,7 +699,6 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -827,7 +826,6 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -899,6 +897,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }

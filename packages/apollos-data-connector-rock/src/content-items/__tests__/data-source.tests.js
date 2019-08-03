@@ -134,6 +134,32 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('returns features when a contentItem has a Features field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'text feature',
+    }));
+    const createScriptureFeature = jest.fn(() => ({
+      id: 'ScriptureFeature:123',
+      reference: 'john 3',
+    }));
+    dataSource.context = {
+      dataSources: { Features: { createTextFeature, createScriptureFeature } },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        features: {
+          id: 123,
+          value: 'scripture^john 3|text^text feature',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+    expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+  });
+
   it('returns a text feature when a contentItem has a TextFeature field', async () => {
     const dataSource = new ContentItemsDataSource();
     const createTextFeature = jest.fn(() => ({
@@ -143,6 +169,69 @@ describe('ContentItemsModel', () => {
     dataSource.context = { dataSources: { Features: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: 'something' } },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns text features when a contentItem has a TextFeatures field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        textFeatures: {
+          id: 123,
+          value: 'something^something else|another thing^that thing is cool',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createTextFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns scripture features when a contentItem has a ScriptureFeatures field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createScriptureFeature = jest.fn(() => ({
+      id: 'ScriptureFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = {
+      dataSources: { Features: { createScriptureFeature } },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        scriptureFeatures: {
+          id: 123,
+          value: 'something^John 3:16|another thing^Mark 1:1',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot();
+    expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns text features and when a contentItem has a TextFeatures and a TextFeature field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createTextFeature = jest.fn(() => ({
+      id: 'TextFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        textFeatures: {
+          id: 123,
+          value: 'something^something else|another thing^that thing is cool',
+        },
+        textFeature: {
+          id: 456,
+          value: 'wow this is neat!',
+        },
+      },
     });
     expect(result).toMatchSnapshot();
     expect(createTextFeature.mock.calls).toMatchSnapshot();
@@ -204,9 +293,9 @@ describe('ContentItemsModel', () => {
 
   it('getSermonFeed fetches items from a specific content channel', () => {
     const dataSource = new ContentItemsDataSource();
-    dataSource.byContentChannelId = jest.fn(
-      () => new Promise((resolve) => resolve)
-    );
+    dataSource.byContentChannelId = jest.fn(() => ({
+      andFilter: async () => Promise.resolve(),
+    }));
 
     const result = dataSource.getSermonFeed({ id: '1' });
     expect(dataSource.byContentChannelId.mock.calls).toMatchSnapshot();

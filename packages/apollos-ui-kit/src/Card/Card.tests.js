@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Providers from '../Providers';
-import { H3, H6, BodyText, Paragraph } from '../typography';
+import { H3, BodyText, Paragraph } from '../typography';
 import Button, { ButtonLink } from '../Button';
 
-import Card, { CardImage, CardContent, CardActions } from '.';
+import Card, { CardImage, CardContent, CardActions, CardLabel } from '.';
 
 describe('the Card component', () => {
   it('should render', () => {
@@ -15,7 +15,11 @@ describe('the Card component', () => {
           <CardImage source={'https://picsum.photos/600/400/?image=63'} />
           <CardContent>
             <H3>Coffee</H3>
-            <H6 padded>noun</H6>
+            <CardLabel
+              title={'noun'}
+              style={{ alignSelf: 'flex-start' }} // eslint-disable-line react-native/no-inline-styles
+              icon={'filter'}
+            />
             <Paragraph>
               <BodyText>
                 {
@@ -39,7 +43,10 @@ describe('the Card component', () => {
         <Card isLoading>
           <CardContent>
             <H3 />
-            <H6 padded />
+            <CardLabel
+              icon={'filter'}
+              style={{ alignSelf: 'flex-start' }} // eslint-disable-line react-native/no-inline-styles
+            />
             <Paragraph>
               <BodyText />
             </Paragraph>

@@ -70,6 +70,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
             <View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -90,7 +91,6 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -115,6 +115,8 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
+                          "height": "100%",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -205,6 +207,7 @@ Anderson, SC 29621-3619
               </View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -225,7 +228,6 @@ Anderson, SC 29621-3619
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -250,6 +252,8 @@ Anderson, SC 29621-3619
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
+                          "height": "100%",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -340,6 +344,7 @@ Richardson, TX 75080-5525
               </View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -360,7 +365,6 @@ Richardson, TX 75080-5525
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -385,6 +389,8 @@ Richardson, TX 75080-5525
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
+                          "height": "100%",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
@@ -475,6 +481,7 @@ Cincinnati, OH 45202-2118
               </View>
               <View
                 inHorizontalList={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -495,7 +502,6 @@ Cincinnati, OH 45202-2118
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -520,6 +526,8 @@ Cincinnati, OH 45202-2118
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
+                          "height": "100%",
+                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }

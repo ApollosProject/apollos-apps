@@ -34,7 +34,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
     }
   >
     <RCTScrollView
-      birthDate="1980-02-10T00:00:00"
+      birthDate="1980-02-10T05:00:00.000Z"
       contentContainerStyle={
         Object {
           "minHeight": "100%",
@@ -281,13 +281,10 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -300,7 +297,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -419,7 +416,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={1980-02-10T00:00:00.000Z}
+                      date={1980-02-10T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}
@@ -1012,13 +1009,10 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                     "flexDirection": "row",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginBottom": 8,
-                    "marginRight": 8,
                     "marginTop": 5,
                     "opacity": 1,
                     "overflow": "hidden",
-                    "paddingHorizontal": 4,
-                    "paddingVertical": 4,
+                    "paddingHorizontal": 12,
                   }
                 }
               >
@@ -1031,7 +1025,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                       "fontSize": 12,
                       "justifyContent": "center",
                       "lineHeight": 17.28,
-                      "paddingHorizontal": 6,
+                      "paddingLeft": null,
                       "textAlign": "center",
                     }
                   }
@@ -1150,7 +1144,7 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                     onStartShouldSetResponderCapture={[Function]}
                   >
                     <DatePicker
-                      date={2019-02-14T00:00:00.000Z}
+                      date={2019-02-14T05:00:00.000Z}
                       minuteInterval={1}
                       mode="date"
                       onCancel={[Function]}

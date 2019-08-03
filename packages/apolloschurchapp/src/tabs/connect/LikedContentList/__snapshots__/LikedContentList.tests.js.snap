@@ -243,7 +243,6 @@ fragment themeFragment on ContentItem {
             <View
               style={
                 Object {
-                  "aspectRatio": undefined,
                   "borderRadius": 16,
                   "overflow": "hidden",
                 }

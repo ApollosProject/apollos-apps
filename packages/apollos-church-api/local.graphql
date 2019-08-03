@@ -352,11 +352,17 @@ type Query {
   userFeedFeatures: [Feature]
 }
 
-type Scripture {
-  id: String
+type Scripture implements Node {
+  id: ID!
   html: String
   reference: String
   copyright: String
+}
+
+type ScriptureFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  scriptures: [Scripture]
 }
 
 interface Sharable {

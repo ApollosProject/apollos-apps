@@ -58,6 +58,22 @@ Array [
 ]
 `;
 
+exports[`RequestBuilder doesn't filter if filter is blank 1`] = `
+Array [
+  "SomeResource",
+  Object {},
+  Object {},
+]
+`;
+
+exports[`RequestBuilder doesn't filterOneOf if array is blank 1`] = `
+Array [
+  "SomeResource",
+  Object {},
+  Object {},
+]
+`;
+
 exports[`RequestBuilder expands 1`] = `
 Array [
   "SomeResource?%24expand=Puppies",

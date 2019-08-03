@@ -15,4 +15,12 @@ describe('the yaml loader', () => {
     });
     expect(ApollosConfig.config).toMatchSnapshot();
   });
+  it('must load empty config', () => {
+    ApollosConfig.loadJs({});
+    expect(ApollosConfig.config).toMatchSnapshot();
+  });
+  it('must load empty config with no arguments', () => {
+    ApollosConfig.loadJs();
+    expect(ApollosConfig.config).toMatchSnapshot();
+  });
 });

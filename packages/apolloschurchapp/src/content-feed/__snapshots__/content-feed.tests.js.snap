@@ -240,6 +240,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId0"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -265,7 +266,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -281,19 +281,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -442,6 +456,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId1"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -467,7 +482,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -483,19 +497,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -644,6 +672,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId2"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -669,7 +698,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -685,19 +713,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -846,6 +888,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId3"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -871,7 +914,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -887,19 +929,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1048,6 +1104,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId4"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -1073,7 +1130,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1089,19 +1145,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1250,6 +1320,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId5"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -1275,7 +1346,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1291,19 +1361,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1452,6 +1536,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId6"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -1477,7 +1562,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1493,19 +1577,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1654,6 +1752,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId7"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -1679,7 +1778,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1695,19 +1793,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -1856,6 +1968,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId8"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -1881,7 +1994,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -1897,19 +2009,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={
@@ -2058,6 +2184,7 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 channelType=""
                 id="fakeId9"
+                isLoading={true}
                 parentChannel={
                   Object {
                     "id": "",
@@ -2083,7 +2210,6 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": undefined,
                       "borderRadius": 16,
                       "overflow": "hidden",
                     }
@@ -2099,19 +2225,33 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <Image
-                      onLoad={[Function]}
-                      source={Array []}
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 2,
                           "backgroundColor": "#A5A5A5",
-                          "opacity": 1,
                           "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={Array []}
+                        style={
+                          Object {
+                            "aspectRatio": 2,
+                            "backgroundColor": "#A5A5A5",
+                            "opacity": 0,
+                            "resizeMode": "cover",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                   <View
                     style={

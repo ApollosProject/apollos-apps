@@ -13,9 +13,12 @@ export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
 export ContentCard from './ContentCard';
+export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
+export HighlightCard from './HighlightCard';
+export HorizontalDefaultCard from './HorizontalDefaultCard';
 export HorizontalTileFeed from './HorizontalTileFeed';
 export Icon, { makeIcon } from './Icon';
 export Input, {
@@ -60,6 +63,7 @@ export {
   H5,
   H6,
   UIText,
+  BodySmall,
   BodyText,
   Paragraph,
   BlockQuote,

@@ -69,6 +69,26 @@ const withBackgroundColor = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.inactive,
 }));
 
+const aspectRatioPropValidator = (props, propName, componentName) => {
+  if (props[propName] === undefined) return;
+
+  let errorMessage = '';
+
+  if (typeof props[propName] !== 'number') {
+    errorMessage = `Invalid prop \`${propName}\` of value \`${typeof props[
+      propName
+    ]}\` supplied to \`${componentName}\` expected type of number`;
+  }
+
+  if (!props.maintainAspectRatio) {
+    errorMessage += ` Prop maintainAspectRatio is required for use with ${propName}`;
+  }
+
+  if (typeof props[propName] !== 'number' || !props.maintainAspectRatio) {
+    return new Error(errorMessage); // eslint-disable-line consistent-return
+  }
+};
+
 class ConnectedImage extends PureComponent {
   static propTypes = {
     source: PropTypes.oneOfType([
@@ -80,6 +100,8 @@ class ConnectedImage extends PureComponent {
     isLoading: PropTypes.bool,
     onLoad: PropTypes.func,
     style: PropTypes.any, // eslint-disable-line
+    minAspectRatio: aspectRatioPropValidator,
+    maxAspectRatio: aspectRatioPropValidator,
   };
 
   static defaultProps = {
@@ -111,15 +133,30 @@ class ConnectedImage extends PureComponent {
 
   get aspectRatio() {
     const style = {};
-    if (this.props.maintainAspectRatio) {
-      const firstSource = this.state.source[0];
-      if (firstSource && firstSource.width && firstSource.height) {
-        style.aspectRatio = firstSource.width / firstSource.height;
-      }
-    }
+
+    // We only need to do this if the image is loading and not cached.
     if (this.props.isLoading && !style.aspectRatio) {
       style.aspectRatio = 1;
+    } else if (this.props.maintainAspectRatio) {
+      const firstSource = this.state.source[0];
+
+      // determine the aspect ratio of an image based on its width and height
+      if (firstSource && firstSource.width && firstSource.height) {
+        style.aspectRatio = firstSource.width / firstSource.height;
+
+        // account for possible min/max aspectRatio bounds
+        if (this.props.minAspectRatio || this.props.maxAspectRatio) {
+          const maxAspectRatio = this.props.maxAspectRatio || style.aspectRatio;
+          const minAspectRatio = this.props.minAspectRatio || 0;
+
+          style.aspectRatio = Math.max(
+            Math.min(maxAspectRatio, style.aspectRatio), // == smaller of maxAspectRatio and current aspectRatio
+            minAspectRatio
+          ); // == larger of calculated "max" aspect ratio and the minimum aspect ratio
+        }
+      }
     }
+
     return style;
   }
 
@@ -143,8 +180,8 @@ class ConnectedImage extends PureComponent {
 
     const wrappedPromise = new Promise((resolve, reject) => {
       promise.then(
-        (val) => (hasCanceled ? reject({ isCanceled: true }) : resolve(val)), // eslint-disable-line
-        (error) => (hasCanceled ? reject({ isCanceled: true }) : reject(error)) // eslint-disable-line
+        (val) => (hasCanceled ? reject({ isCanceled: true }) : resolve(val)), // eslint-disable-line prefer-promise-reject-errors
+        (error) => (hasCanceled ? reject({ isCanceled: true }) : reject(error)) // eslint-disable-line prefer-promise-reject-errors
       );
     });
 
@@ -201,7 +238,11 @@ class ConnectedImage extends PureComponent {
     } = this.props;
 
     return (
-      <SkeletonImage onReady={!this.isLoading} forceRatio={forceRatio}>
+      <SkeletonImage
+        onReady={!this.isLoading}
+        forceRatio={forceRatio}
+        style={style}
+      >
         <ImageComponent
           {...otherProps}
           source={source}
