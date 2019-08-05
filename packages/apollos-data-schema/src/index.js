@@ -397,21 +397,15 @@ export const contentChannelSchema = gql`
   }
 `;
 
-export const contentSharableSchema = gql`
+export const sharableSchema = gql`
   interface Sharable {
     url: String
     message: String
     title: String
   }
 
-  type SharableContentItem implements Sharable {
-    url: String
-    message: String
-    title: String
-  }
-
   ${extendForEachContentItemType(`
-    sharing: SharableContentItem
+    sharing: Sharable
 `)}
 `;
 
