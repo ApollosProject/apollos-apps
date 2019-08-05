@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 import { ActionCard, BodyText } from '@apollosproject/ui-kit';
 import ShareButton from 'apolloschurchapp/src/ui/ShareButton';
 
-const TextFeature = ({ body, contentId }) => (
-  <ActionCard action={<ShareButton message={body} itemId={contentId} />}>
+const TextFeature = ({ body, sharing: { message } = {}, contentId }) => (
+  <ActionCard action={<ShareButton message={message} itemId={contentId} />}>
     <BodyText>{body}</BodyText>
   </ActionCard>
 );
 
 TextFeature.propTypes = {
   body: PropTypes.string.isRequired,
+  sharing: PropTypes.shape({ message: PropTypes.string }),
   contentId: PropTypes.string.isRequired,
 };
 

@@ -399,14 +399,40 @@ export const contentChannelSchema = gql`
 
 export const sharableSchema = gql`
   interface Sharable {
-    url: String
     message: String
     title: String
   }
 
+  type SharableContentItem implements Sharable {
+    message: String
+    title: String
+    url: String
+  }
+
   ${extendForEachContentItemType(`
-    sharing: Sharable
+    sharing: SharableContentItem
 `)}
+
+  type SharableFeature implements Sharable {
+    message: String
+    title: String
+  }
+
+  extend interface Feature {
+    sharing: SharableFeature
+  }
+
+  extend type TextFeature {
+    sharing: SharableFeature
+  }
+
+  extend type ScriptureFeature {
+    sharing: SharableFeature
+  }
+
+  extend type ActionListFeature {
+    sharing: SharableFeature
+  }
 `;
 
 export const liveSchema = gql`

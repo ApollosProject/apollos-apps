@@ -13,10 +13,20 @@ export default {
   Feature: {
     // Implementors must attach __typename to root.
     __resolveType: ({ __typename }) => __typename,
+    sharing: (root) => ({ __type: 'SharableFeature', ...root }),
+  },
+  TextFeature: {
+    sharing: (root) => ({ __type: 'SharableFeature', ...root }),
   },
   ScriptureFeature: {
     scriptures: ({ reference }, args, { dataSources: { Scripture } }) =>
       Scripture.getScriptures(reference),
+    sharing: (root) => ({ __type: 'SharableFeature', ...root }),
+  },
+  SharableFeature: {
+    message: (feature, args, { dataSources: { Features } }) =>
+      Features.getShareMessage(feature),
+    title: () => 'Share via...',
   },
   Query: {
     userFeedFeatures: async (root, args, context) => {
