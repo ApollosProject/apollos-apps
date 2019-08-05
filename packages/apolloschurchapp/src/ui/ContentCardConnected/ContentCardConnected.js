@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
-import { DefaultCard, ErrorCard } from '@apollosproject/ui-kit';
+import { ErrorCard, DefaultCard, HighlightCard } from '@apollosproject/ui-kit';
 import GET_CONTENT_CARD from './query';
 
 const ContentCardConnected = memo(
@@ -16,6 +16,28 @@ const ContentCardConnected = memo(
         {({ data: { node = {} } = {}, loading, error }) => {
           if (error) return <ErrorCard error={error} />;
 
+          // check if we have a custom Component prop to use or we'll use the default Component prop.
+          let ComponentToRender = Component;
+
+          // map typename to the the card we want to render.
+          switch (get(node, '__typename')) {
+            case 'MediaContentItem':
+              ComponentToRender = HighlightCard;
+              break;
+            case 'WeekendContentItem':
+              ComponentToRender = HighlightCard;
+              break;
+            case 'ContentSeriesContentItem':
+              ComponentToRender = HighlightCard;
+              break;
+            case 'DevotionalContentItem':
+              ComponentToRender = HighlightCard;
+              break;
+            default:
+              ComponentToRender = DefaultCard;
+              break;
+          }
+
           const metrics = [
             {
               icon: node.isLiked ? 'like-solid' : 'like',
@@ -26,7 +48,7 @@ const ContentCardConnected = memo(
           const coverImage = get(node, 'coverImage.sources', undefined);
 
           return (
-            <Component
+            <ComponentToRender
               {...node}
               {...otherProps}
               coverImage={coverImage}
