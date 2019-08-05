@@ -54,4 +54,6 @@ ContentCardConnected.defaultProps = {
   Component: contentCardComponentMapper,
 };
 
+ContentCardConnected.displayName = 'ContentCardConnected';
+
 export default ContentCardConnected;
