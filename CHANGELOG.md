@@ -1,4 +1,23 @@
 
+v1.1.0-beta.3: August 5, 2019
+
+- Adds HorizontalDefaultCard (#965) (6a6778ed)
+- Adds Sharing to the Scripture Feature (#968) (e829ef6b)
+- Adds DefaultCard and deprecates ContentCard (#961) (dbda2f5b)
+- Adds navigation to auth when logging out (#963) (df207128)
+
+- Simplifies Feature Content Sources (#966) (2b8d414a)
+
+- Fixes wrong campus being selected under certain conditions (#962) (76a0eed1)
+- Fixes wrong birthdate showing up in the datepicker. (#969) (0f9d37ca)
+- Fixes Back/Close doing the same thing inside devotionals (#970) (3a653a71)
+- Fixes not being able to reach logout button on small screen sizes (#971) (b5b9e740)
+- Fixes ui-passes image alignment (#960) (4956a8e6)
+- Fixes sharing text feature (#938) (f0de6c9a)
+- Logs User Out on Auth Error (#927) (9aa3c6ab)
+- Changes Image sizes and update snaps (#920) (4fa1eae6)
+
+
 v1.1.0-beta.2: July 29, 2019
 
 - Adds `<OverlayBackgroundImage />` component (#908) (62e032dc)
