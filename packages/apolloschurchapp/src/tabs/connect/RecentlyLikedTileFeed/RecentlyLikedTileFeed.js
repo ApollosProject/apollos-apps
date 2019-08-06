@@ -16,7 +16,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
-import ContentCard from 'apolloschurchapp/src/ui/ContentCardConnected';
+import ContentCard from 'apolloschurchapp/src/ui/HorizontalContentCardConnected';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',

@@ -24,50 +24,17 @@ export const THEME_FRAGMENT = gql`
   }
 `;
 
-export const CONTENT_CARD_METRICS_FRAGMENT = gql`
-  fragment contentCardMetricsFragment on ContentItem {
-    isLiked
-    likedCount
-  }
-`;
-
 export const BASE_CARD_FRAGMENT = gql`
   fragment baseCardFragment on ContentItem {
     id
     __typename
-    ...contentCardMetricsFragment
     ...coverImageFragment
     ...themeFragment
     title
     summary
   }
-  ${CONTENT_CARD_METRICS_FRAGMENT}
   ${COVER_IMAGE_FRAGMENT}
   ${THEME_FRAGMENT}
-`;
-
-export const TILE_CARD_FRAGMENT = gql`
-  fragment tileCardFragment on ContentItem {
-    ... on ContentSeriesContentItem {
-      id
-      ...themeFragment
-      ...coverImageFragment
-      ...contentCardMetricsFragment
-    }
-    ... on UniversalContentItem {
-      ...baseCardFragment
-    }
-    ... on DevotionalContentItem {
-      ...baseCardFragment
-    }
-    ... on MediaContentItem {
-      ...baseCardFragment
-    }
-  }
-  ${BASE_CARD_FRAGMENT}
-  ${THEME_FRAGMENT}
-  ${COVER_IMAGE_FRAGMENT}
-  ${CONTENT_CARD_METRICS_FRAGMENT}
 `;
 
 export const LARGE_CARD_FRAGMENT = gql`
@@ -78,15 +45,13 @@ export const LARGE_CARD_FRAGMENT = gql`
 `;
 
 const GET_CONTENT_CARD = gql`
-  query getContentCard($contentId: ID!, $tile: Boolean!) {
+  query getContentCard($contentId: ID!) {
     node(id: $contentId) {
       id
       __typename
-      ...tileCardFragment @include(if: $tile)
-      ...largeCardFragment @skip(if: $tile)
+      ...largeCardFragment
     }
   }
-  ${TILE_CARD_FRAGMENT}
   ${LARGE_CARD_FRAGMENT}
 `;
 
