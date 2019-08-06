@@ -18,17 +18,11 @@ export default gql`
       id
       ... on ContentSeriesContentItem {
         features {
-          sharing {
-            message
-          }
           ...FeaturesFragment
         }
       }
       ... on WeekendContentItem {
         features {
-          sharing {
-            message
-          }
           ...FeaturesFragment
         }
       }

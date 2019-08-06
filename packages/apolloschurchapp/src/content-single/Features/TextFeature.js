@@ -20,6 +20,9 @@ export const TEXT_FEATURE_FRAGMENT = `
 fragment TextFeatureFragment on TextFeature {
   body
   id
+  sharing {
+    message
+  }
 }
 `;
 
