@@ -12,6 +12,11 @@ import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
+const StyledCard = styled({
+  width: 240,
+  height: 240,
+})(Card);
+
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(
   ({ theme }) => ({
@@ -31,6 +36,7 @@ const Image = withTheme(({ customTheme, theme }) => ({
   minAspectRatio: 1,
   maxAspectRatio: 1,
   maintainAspectRatio: true,
+  forceRatio: 1, // fixes loading state
   overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
 }))(CardImage);
 
@@ -101,7 +107,7 @@ const HorizontalHighlightCard = withIsLoading(
         colors: get(theme, 'colors', {}),
       }}
     >
-      <Card isLoading={isLoading} {...props}>
+      <StyledCard isLoading={isLoading} {...props}>
         <Image
           overlayType={'gradient-bottom'}
           customTheme={theme}
@@ -119,7 +125,7 @@ const HorizontalHighlightCard = withIsLoading(
         <LikeIconPositioning>
           <LikeIcon isLiked={isLiked} />
         </LikeIconPositioning>
-      </Card>
+      </StyledCard>
     </ThemeMixin>
   )
 );
