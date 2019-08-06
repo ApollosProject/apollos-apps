@@ -374,7 +374,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -421,9 +421,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -432,6 +432,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -589,9 +590,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -600,6 +601,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -757,9 +759,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -768,6 +770,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -925,9 +928,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -936,6 +939,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -1093,9 +1097,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -1104,6 +1108,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -1372,7 +1377,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -1419,9 +1424,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -1430,6 +1435,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -1587,9 +1593,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -1598,6 +1604,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -1755,9 +1762,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -1766,6 +1773,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -1923,9 +1931,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -1934,6 +1942,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -2091,9 +2100,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -2102,6 +2111,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -2370,7 +2380,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -2417,9 +2427,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -2428,6 +2438,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -2585,9 +2596,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -2596,6 +2607,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -2753,9 +2765,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -2764,6 +2776,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -2921,9 +2934,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -2932,6 +2945,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -3089,9 +3103,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -3100,6 +3114,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -3368,7 +3383,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -3415,9 +3430,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -3426,6 +3441,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -3583,9 +3599,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -3594,6 +3610,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -3751,9 +3768,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -3762,6 +3779,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -3919,9 +3937,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -3930,6 +3948,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -4087,9 +4106,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -4098,6 +4117,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -4366,7 +4386,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -4413,9 +4433,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -4424,6 +4444,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -4581,9 +4602,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -4592,6 +4613,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -4749,9 +4771,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -4760,6 +4782,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -4917,9 +4940,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -4928,6 +4951,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -5085,9 +5109,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -5096,6 +5120,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -5364,7 +5389,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -5411,9 +5436,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -5422,6 +5447,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -5579,9 +5605,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -5590,6 +5616,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -5747,9 +5774,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -5758,6 +5785,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -5915,9 +5943,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -5926,6 +5954,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -6083,9 +6112,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -6094,6 +6123,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -6362,7 +6392,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -6409,9 +6439,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -6420,6 +6450,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -6577,9 +6608,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -6588,6 +6619,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -6745,9 +6777,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -6756,6 +6788,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -6913,9 +6946,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -6924,6 +6957,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -7081,9 +7115,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -7092,6 +7126,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -7360,7 +7395,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -7407,9 +7442,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -7418,6 +7453,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -7575,9 +7611,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -7586,6 +7622,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -7743,9 +7780,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -7754,6 +7791,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -7911,9 +7949,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -7922,6 +7960,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -8079,9 +8118,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -8090,6 +8129,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -8358,7 +8398,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -8405,9 +8445,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -8416,6 +8456,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -8573,9 +8614,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -8584,6 +8625,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -8741,9 +8783,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -8752,6 +8794,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -8909,9 +8952,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -8920,6 +8963,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -9077,9 +9121,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -9088,6 +9132,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -9356,7 +9401,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                       scrollEventThrottle={50}
                       showsHorizontalScrollIndicator={false}
                       snapToAlignment="start"
-                      snapToInterval={512}
+                      snapToInterval={256}
                       stickyHeaderIndices={Array []}
                       style={
                         Object {
@@ -9403,9 +9448,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -9414,6 +9459,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -9571,9 +9617,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -9582,6 +9628,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -9739,9 +9786,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -9750,6 +9797,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -9907,9 +9955,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -9918,6 +9966,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
@@ -10075,9 +10124,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                               isLoading={true}
                               style={
                                 Object {
-                                  "aspectRatio": 1,
                                   "backgroundColor": "#FFFFFF",
                                   "borderRadius": 16,
+                                  "height": 240,
                                   "margin": 8,
                                   "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
                                   "shadowOffset": Object {
@@ -10086,6 +10135,7 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                   },
                                   "shadowOpacity": 1,
                                   "shadowRadius": 6,
+                                  "width": 240,
                                 }
                               }
                             >
