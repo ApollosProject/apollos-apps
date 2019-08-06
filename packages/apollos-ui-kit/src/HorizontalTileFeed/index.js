@@ -30,10 +30,7 @@ export class HorizontalTileFeed extends PureComponent {
     this.snapToInterval = this.getTileWidth() + this.props.theme.baseUnit;
   }
 
-  getTileWidth = () => {
-    const { width } = Dimensions.get('window');
-    return width * (248 / 375);
-  };
+  getTileWidth = () => 240; // === HorizontalCard width
 
   render() {
     const { content, isLoading, renderItem, theme, ...otherProps } = this.props;
