@@ -16,7 +16,6 @@ export default {
   },
   TextFeature: {
     sharing: ({ body }) => ({
-      __type: 'SharableFeature',
       title: 'Share text via...',
       message: body,
     }),
@@ -25,7 +24,6 @@ export default {
     scriptures: ({ reference }, args, { dataSources: { Scripture } }) =>
       Scripture.getScriptures(reference),
     sharing: ({ reference }, args, { dataSources: { Features } }) => ({
-      __type: 'SharableFeature',
       title: 'Share scripture via...',
       message: Features.getScriptureShareMessage(reference),
     }),
