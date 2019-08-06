@@ -14,16 +14,9 @@ const ContentCardConnected = memo(
       return <Component {...otherProps} isLoading tile={tile} />;
 
     return (
-      <Query query={GET_CONTENT_CARD} variables={{ contentId, tile: !!tile }}>
+      <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
         {({ data: { node = {} } = {}, loading, error }) => {
           if (error) return <ErrorCard error={error} />;
-
-          const metrics = [
-            {
-              icon: node.isLiked ? 'like-solid' : 'like',
-              value: node.likedCount,
-            },
-          ];
 
           const coverImage = get(node, 'coverImage.sources', undefined);
 
@@ -32,8 +25,6 @@ const ContentCardConnected = memo(
               {...node}
               {...otherProps}
               coverImage={coverImage}
-              metrics={metrics}
-              tile={tile}
               isLoading={loading}
             />
           );
