@@ -5,7 +5,7 @@ import Providers from 'apolloschurchapp/src/Providers';
 
 import { LikeIcon } from '.';
 
-describe('the Like component', () => {
+describe('the LikeContentButton component', () => {
   it('should render a Like', () => {
     const tree = renderer.create(
       <Providers>
