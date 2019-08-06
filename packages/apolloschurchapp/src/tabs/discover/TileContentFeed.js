@@ -87,7 +87,6 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
           <HorizontalContentCardConnected
             contentId={item.id}
             isLoading={isLoading}
-            tile
           />
         </TouchableScale>
       )}
