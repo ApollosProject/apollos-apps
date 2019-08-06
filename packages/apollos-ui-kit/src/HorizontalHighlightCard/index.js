@@ -12,7 +12,7 @@ import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
-const StyledCard = styled({
+const SquareCard = styled({
   width: 240,
   height: 240,
 })(Card);
@@ -107,7 +107,7 @@ const HorizontalHighlightCard = withIsLoading(
         colors: get(theme, 'colors', {}),
       }}
     >
-      <StyledCard isLoading={isLoading} {...props}>
+      <SquareCard isLoading={isLoading} inHorizontalList {...props}>
         <Image
           overlayType={'gradient-bottom'}
           customTheme={theme}
@@ -125,7 +125,7 @@ const HorizontalHighlightCard = withIsLoading(
         <LikeIconPositioning>
           <LikeIcon isLiked={isLiked} />
         </LikeIconPositioning>
-      </StyledCard>
+      </SquareCard>
     </ThemeMixin>
   )
 );
