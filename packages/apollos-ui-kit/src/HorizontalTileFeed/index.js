@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
 
