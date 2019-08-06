@@ -112,7 +112,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }
 
     const cursor = await ContentItem.getCursorByParentContentItemId(sermon.id);
-    const items = limit ? await cursor.first(limit).get() : await cursor.get();
+    const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
