@@ -11,7 +11,8 @@ import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
 const SquareCard = styled({
-  aspectRatio: 1,
+  width: 240,
+  height: 240,
 })(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥

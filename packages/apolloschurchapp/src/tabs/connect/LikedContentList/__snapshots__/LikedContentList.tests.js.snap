@@ -140,17 +140,10 @@ fragment largeCardFragment on ContentItem {
 fragment baseCardFragment on ContentItem {
   id
   __typename
-  ...contentCardMetricsFragment
   ...coverImageFragment
   ...themeFragment
   title
   summary
-}
-
-fragment contentCardMetricsFragment on ContentItem {
-  isLiked
-  likedCount
-  __typename
 }
 
 fragment coverImageFragment on ContentItem {
@@ -356,17 +349,10 @@ fragment largeCardFragment on ContentItem {
 fragment baseCardFragment on ContentItem {
   id
   __typename
-  ...contentCardMetricsFragment
   ...coverImageFragment
   ...themeFragment
   title
   summary
-}
-
-fragment contentCardMetricsFragment on ContentItem {
-  isLiked
-  likedCount
-  __typename
 }
 
 fragment coverImageFragment on ContentItem {
