@@ -17,7 +17,6 @@ type ActionListFeature implements Feature & Node {
   title: String
   subtitle: String
   actions: [ActionListAction]
-  sharing: SharableFeature
 }
 
 input AnalyticsDeviceInfo {
@@ -189,7 +188,6 @@ type DevotionalContentItem implements ContentItem & Node {
 interface Feature {
   id: ID!
   order: Int
-  sharing: SharableFeature
 }
 
 enum GENDER {

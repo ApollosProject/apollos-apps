@@ -418,19 +418,11 @@ export const sharableSchema = gql`
     title: String
   }
 
-  extend interface Feature {
-    sharing: SharableFeature
-  }
-
   extend type TextFeature {
     sharing: SharableFeature
   }
 
   extend type ScriptureFeature {
-    sharing: SharableFeature
-  }
-
-  extend type ActionListFeature {
     sharing: SharableFeature
   }
 `;

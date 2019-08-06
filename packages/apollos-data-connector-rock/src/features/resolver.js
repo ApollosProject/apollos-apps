@@ -13,7 +13,6 @@ export default {
   Feature: {
     // Implementors must attach __typename to root.
     __resolveType: ({ __typename }) => __typename,
-    sharing: (root) => ({ __type: 'SharableFeature', ...root }),
   },
   TextFeature: {
     sharing: (root) => ({ __type: 'SharableFeature', ...root }),
