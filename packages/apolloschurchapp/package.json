@@ -3,7 +3,6 @@
   "version": "1.1.0-beta.3",
   "private": true,
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^0.8.6",
     "codecov": "3.0.2",
     "get-dev-paths": "^0.1.0",
     "jest": "^24.8.0",
