@@ -56,7 +56,7 @@ class ButtonIcon extends PureComponent {
           iconPadding={
             this.props.iconPadding >= 0
               ? this.props.iconPadding
-              : this.props.size / 2
+              : this.props.size / 2.5
           }
           style={this.props.style}
           borderRadius={

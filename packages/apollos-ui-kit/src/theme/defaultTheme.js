@@ -76,7 +76,7 @@ export const sizing = {
   avatar: {
     small: 40,
     medium: 80,
-    large: 160,
+    large: 120,
   },
 };
 
@@ -258,7 +258,7 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
  */
 export const helpers = {};
 
-helpers.rem = (theme) => (units) => {
+helpers.rem = theme => units => {
   const value = units * theme.typography.baseFontSize;
   return +value.toFixed(2);
 };
@@ -272,7 +272,7 @@ helpers.rem = (theme) => (units) => {
  * and multiplies it by either a custom ratio or a derrived ratio from the themes `baseLineHeight`
  * devided by the `baseFontSize`.
  */
-helpers.verticalRhythm = (theme) => (units, customRatio) => {
+helpers.verticalRhythm = theme => (units, customRatio) => {
   const verticalRatio =
     customRatio ||
     theme.typography.baseLineHeight / theme.typography.baseFontSize;

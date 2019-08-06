@@ -70,6 +70,7 @@ const Avatar = enhance(
     source,
     isLoading,
     buttonIcon,
+    iconFill,
     onPressIcon,
     ...imageProps
   }) => (
@@ -91,6 +92,7 @@ const Avatar = enhance(
             onPress={onPressIcon}
             name={buttonIcon}
             size={themeSize / 5}
+            fill={iconFill}
             TouchableComponent={TouchableScale}
           />
         </ButtonIconPositioner>
@@ -109,4 +111,5 @@ Avatar.propTypes = {
 
 export default withTheme(({ theme, size }) => ({
   themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+  iconFill: theme.colors.action.primary,
 }))(Avatar);
