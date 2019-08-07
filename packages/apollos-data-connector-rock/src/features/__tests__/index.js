@@ -66,6 +66,7 @@ describe('features', () => {
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
         },
+        Scripture: {},
       },
     };
   });
@@ -238,6 +239,28 @@ describe('features', () => {
         reference: 'John 3:16',
         id: 123,
       });
+
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should generate scripture shares', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const { Scripture } = features.context.dataSources;
+      Scripture.getScriptures = jest.fn(() => [
+        {
+          reference: 'John 3:16',
+          content: '<p>Not the real verse</p>',
+        },
+      ]);
+      const result = await features.getScriptureShareMessage([
+        {
+          reference: 'John 3:16',
+        },
+      ]);
 
       expect(result).toMatchSnapshot();
     });

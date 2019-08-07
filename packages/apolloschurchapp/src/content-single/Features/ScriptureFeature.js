@@ -5,17 +5,16 @@ import { ActionCard } from '@apollosproject/ui-kit';
 import { ScriptureItem } from '@apollosproject/ui-scripture';
 import ShareContentButtonConnected from 'apolloschurchapp/src/ui/ShareContentButtonConnected';
 
-const createSharingText = ({ html, reference }) =>
-  `${html.replace(/<[^>]*>?/gm, '')} ${reference}`;
-
-const ScriptureFeature = ({ scriptures, isLoading, contentId }) => (
+const ScriptureFeature = ({
+  scriptures,
+  sharing: { message } = {},
+  isLoading,
+  contentId,
+}) => (
   <ActionCard
     icon={'text'}
     action={
-      <ShareContentButtonConnected
-        message={scriptures.map(createSharingText).join('\n\n')}
-        itemId={contentId}
-      />
+      <ShareContentButtonConnected message={message} itemId={contentId} />
     }
   >
     {scriptures.map(({ copyright, reference, html, id }) => (
@@ -40,11 +39,15 @@ ScriptureFeature.propTypes = {
       copyright: PropTypes.string,
     })
   ),
+  sharing: PropTypes.shape({ message: PropTypes.string }),
   contentId: PropTypes.string.isRequired,
 };
 
 export const SCRIPTURE_FEATURE_FRAGMENT = `
 fragment ScriptureFeatureFragment on ScriptureFeature {
+  sharing {
+    message
+  }
   scriptures {
     id
     html
