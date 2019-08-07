@@ -45,7 +45,11 @@ export const defaultContentItemResolvers = {
 
   theme: () => null, // todo: integrate themes from Rock
 
-  sharing: (root) => ({ __type: 'SharableContentItem', ...root }),
+  sharing: (root, args, { dataSources: { ContentItem } }) => ({
+    url: 'https://apollosrock.newspring.cc/', // TODO: return a dynamic url that links to the content item
+    title: 'Share via ...',
+    message: `${root.title} - ${ContentItem.createSummary(root)}`,
+  }),
 };
 
 const resolver = {
@@ -106,12 +110,6 @@ const resolver = {
     ...defaultContentItemResolvers,
     __resolveType: (root, { dataSources: { ContentItem } }) =>
       ContentItem.resolveType(root),
-  },
-  SharableContentItem: {
-    url: () => 'https://apollosrock.newspring.cc/', // todo: return a dynamic url that links to the content item
-    title: () => 'Share via ...',
-    message: async (root, args, { dataSources: { ContentItem } }) =>
-      `${root.title} - ${ContentItem.createSummary(root)}`,
   },
   ContentItemsConnection: {
     pageInfo: withEdgePagination,

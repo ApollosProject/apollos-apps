@@ -4,9 +4,9 @@
 // import Providers from 'apolloschurchapp/src/Providers';
 // import gql from 'graphql-tag';
 
-// import LikeButton from '.';
+// import LikeContentButtonConnected from '.';
 
-describe('the LikeButton component', () => {
+describe('the LikeContentButtonConnected component', () => {
   it('should render', () => {
     //     const updateLikeEntity = {
     //       request: {
@@ -56,7 +56,7 @@ describe('the LikeButton component', () => {
     //     };
     //     const tree = renderer.create(
     //       <Providers mocks={[updateLikeEntity, getLikedContentItem]}>
-    //         <LikeButton itemId={'asdf'} />
+    //         <LikeContentButtonConnected itemId={'asdf'} />
     //       </Providers>
     //     );
     //     expect(tree).toMatchSnapshot();
@@ -106,7 +106,7 @@ describe('the LikeButton component', () => {
     //     };
     //     const tree = renderer.create(
     //       <Providers mocks={[updateLikeEntity, getLikedContentItem]}>
-    //         <LikeButton itemId={'asdf'} />
+    //         <LikeContentButtonConnected itemId={'asdf'} />
     //       </Providers>
     //     );
     //     expect(tree).toMatchSnapshot();
