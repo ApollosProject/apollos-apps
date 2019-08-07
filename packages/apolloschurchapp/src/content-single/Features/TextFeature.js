@@ -5,7 +5,11 @@ import { ActionCard, BodyText } from '@apollosproject/ui-kit';
 import ShareContentButtonConnected from 'apolloschurchapp/src/ui/ShareContentButtonConnected';
 
 const TextFeature = ({ body, sharing: { message } = {}, contentId }) => (
-  <ActionCard action={<ShareContentButtonConnected message={message} itemId={contentId} />}>
+  <ActionCard
+    action={
+      <ShareContentButtonConnected message={message} itemId={contentId} />
+    }
+  >
     <BodyText>{body}</BodyText>
   </ActionCard>
 );
