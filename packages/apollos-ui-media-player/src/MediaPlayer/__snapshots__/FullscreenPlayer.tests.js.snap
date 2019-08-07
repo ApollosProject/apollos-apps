@@ -1524,10 +1524,10 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                 >
                   <View
                     borderRadius={40}
-                    iconPadding={10}
+                    iconPadding={8}
                     style={
                       Object {
-                        "padding": 10,
+                        "padding": 8,
                       }
                     }
                   >
@@ -3564,10 +3564,10 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                 >
                   <View
                     borderRadius={40}
-                    iconPadding={10}
+                    iconPadding={8}
                     style={
                       Object {
-                        "padding": 10,
+                        "padding": 8,
                       }
                     }
                   >
@@ -5604,10 +5604,10 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <View
                     borderRadius={40}
-                    iconPadding={10}
+                    iconPadding={8}
                     style={
                       Object {
-                        "padding": 10,
+                        "padding": 8,
                       }
                     }
                   >
@@ -7644,10 +7644,10 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <View
                     borderRadius={40}
-                    iconPadding={10}
+                    iconPadding={8}
                     style={
                       Object {
-                        "padding": 10,
+                        "padding": 8,
                       }
                     }
                   >
@@ -9684,10 +9684,10 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <View
                     borderRadius={40}
-                    iconPadding={10}
+                    iconPadding={8}
                     style={
                       Object {
-                        "padding": 10,
+                        "padding": 8,
                       }
                     }
                   >

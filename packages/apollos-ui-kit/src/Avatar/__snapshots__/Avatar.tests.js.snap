@@ -87,11 +87,11 @@ exports[`The Avatar component should render icon button 1`] = `
     >
       <View
         borderRadius={16}
-        iconPadding={4}
+        iconPadding={3.2}
         style={
           Object {
             "backgroundColor": "#FFFFFF",
-            "padding": 4,
+            "padding": 3.2,
             "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
             "shadowOffset": Object {
               "height": 1,
@@ -177,7 +177,7 @@ exports[`The Avatar component should render icon button 1`] = `
               fill={
                 Array [
                   0,
-                  4281348144,
+                  4278216557,
                 ]
               }
               fillOpacity={1}
@@ -230,12 +230,12 @@ exports[`The Avatar component should render large 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 160,
+      "height": 120,
       "justifyContent": "flex-end",
-      "width": 160,
+      "width": 120,
     }
   }
-  themeSize={160}
+  themeSize={120}
 >
   <View
     animate={null}
@@ -245,7 +245,7 @@ exports[`The Avatar component should render large 1`] = `
       Object {
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 80,
+        "borderRadius": 60,
         "bottom": 0,
         "height": "100%",
         "left": 0,
@@ -270,7 +270,7 @@ exports[`The Avatar component should render large 1`] = `
       style={
         Object {
           "backgroundColor": "#A5A5A5",
-          "borderRadius": 80,
+          "borderRadius": 60,
           "bottom": 0,
           "height": "100%",
           "left": 0,
@@ -281,7 +281,7 @@ exports[`The Avatar component should render large 1`] = `
           "width": "100%",
         }
       }
-      themeSize={160}
+      themeSize={120}
     />
   </View>
 </View>
