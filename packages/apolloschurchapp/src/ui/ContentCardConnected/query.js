@@ -32,6 +32,34 @@ export const BASE_CARD_FRAGMENT = gql`
     ...themeFragment
     title
     summary
+    isLiked
+    ... on MediaContentItem {
+      videos {
+        sources {
+          uri
+        }
+      }
+    }
+    ... on WeekendContentItem {
+      videos {
+        sources {
+          uri
+        }
+      }
+      liveStream {
+        isLive
+      }
+      parentChannel {
+        id
+        name
+      }
+    }
+    ... on DevotionalContentItem {
+      parentChannel {
+        id
+        name
+      }
+    }
   }
   ${COVER_IMAGE_FRAGMENT}
   ${THEME_FRAGMENT}

@@ -129,6 +129,13 @@ fragment contentItemFragment on ContentItem {
     }
     __typename
   }
+  ... on WeekendContentItem {
+    liveStream {
+      isLive
+      __typename
+    }
+    __typename
+  }
   __typename
 }
 
@@ -144,6 +151,44 @@ fragment baseCardFragment on ContentItem {
   ...themeFragment
   title
   summary
+  isLiked
+  ... on MediaContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on WeekendContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    liveStream {
+      isLive
+      __typename
+    }
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
+  ... on DevotionalContentItem {
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
 }
 
 fragment coverImageFragment on ContentItem {
@@ -338,6 +383,13 @@ fragment contentItemFragment on ContentItem {
     }
     __typename
   }
+  ... on WeekendContentItem {
+    liveStream {
+      isLive
+      __typename
+    }
+    __typename
+  }
   __typename
 }
 
@@ -353,6 +405,44 @@ fragment baseCardFragment on ContentItem {
   ...themeFragment
   title
   summary
+  isLiked
+  ... on MediaContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on WeekendContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    liveStream {
+      isLive
+      __typename
+    }
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
+  ... on DevotionalContentItem {
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
 }
 
 fragment coverImageFragment on ContentItem {

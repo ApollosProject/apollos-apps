@@ -12,6 +12,7 @@ import {
   H3,
   H6,
   TouchableScale,
+  FeaturedCard,
 } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../../utils/fetchMoreResolver';
@@ -109,6 +110,7 @@ class Home extends PureComponent {
                             }
                           >
                             <ContentCardConnected
+                              Component={FeaturedCard}
                               contentId={featuredItem.id}
                               isLoading={isFeaturedLoading}
                             />
