@@ -401,6 +401,7 @@ export const sharableSchema = gql`
   interface Sharable {
     message: String
     title: String
+    url: String @deprecated(reason: "Not supported on the interface")
   }
 
   type SharableContentItem implements Sharable {
@@ -416,6 +417,7 @@ export const sharableSchema = gql`
   type SharableFeature implements Sharable {
     message: String
     title: String
+    url: String @deprecated(reason: "Not supported on a feature")
   }
 
   extend type TextFeature {

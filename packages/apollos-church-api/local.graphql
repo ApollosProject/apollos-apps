@@ -369,6 +369,7 @@ type ScriptureFeature implements Feature & Node {
 interface Sharable {
   message: String
   title: String
+  url: String @deprecated(reason: "Not supported on the interface")
 }
 
 type SharableContentItem implements Sharable {
@@ -380,6 +381,7 @@ type SharableContentItem implements Sharable {
 type SharableFeature implements Sharable {
   message: String
   title: String
+  url: String @deprecated(reason: "Not supported on a feature")
 }
 
 type SmsPinResult {
