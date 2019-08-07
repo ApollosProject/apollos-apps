@@ -54,6 +54,12 @@ export const BASE_CARD_FRAGMENT = gql`
         name
       }
     }
+    ... on DevotionalContentItem {
+      parentChannel {
+        id
+        name
+      }
+    }
   }
   ${COVER_IMAGE_FRAGMENT}
   ${THEME_FRAGMENT}

@@ -113,15 +113,6 @@ class Home extends PureComponent {
                               Component={FeaturedCard}
                               contentId={featuredItem.id}
                               isLoading={isFeaturedLoading}
-                              mapProps={({
-                                parentChannel,
-                                videos,
-                                liveStream,
-                              }) => ({
-                                isLive: liveStream && liveStream.isLive,
-                                hasAction: videos && videos.length,
-                                labelText: parentChannel && parentChannel.name,
-                              })}
                             />
                           </TouchableScale>
                         );
