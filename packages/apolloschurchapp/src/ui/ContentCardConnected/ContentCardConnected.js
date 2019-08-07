@@ -8,9 +8,6 @@ import { ErrorCard } from '@apollosproject/ui-kit';
 import contentCardComponentMapper from './contentCardComponentMapper';
 import GET_CONTENT_CARD from './query';
 
-// returns an empty function;
-const defaultMapProps = () => ({});
-
 const ContentCardConnected = memo(
   ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
     if (!contentId || isLoading)
@@ -26,18 +23,15 @@ const ContentCardConnected = memo(
           const isLive = get(node, 'liveStream.isLive', false);
           const labelText = get(node, 'parentChannel.name', null);
 
-          const additionalProps = mapProps(node);
-
           return (
             <Component
               {...node}
-              {...otherProps}
-              {...additionalProps}
-              coverImage={coverImage}
-              isLoading={loading}
               hasAction={hasMedia}
               isLive={isLive}
               labelText={labelText}
+              {...otherProps}
+              coverImage={coverImage}
+              isLoading={loading}
             />
           );
         }}
@@ -56,7 +50,6 @@ ContentCardConnected.propTypes = {
 
 ContentCardConnected.defaultProps = {
   Component: contentCardComponentMapper,
-  mapProps: defaultMapProps,
 };
 
 ContentCardConnected.displayName = 'ContentCardConnected';
