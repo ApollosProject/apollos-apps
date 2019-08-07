@@ -123,4 +123,15 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       action: 'READ_CONTENT',
     }));
   }
+
+  async getScriptureShareMessage(ref) {
+    const { Scripture } = this.context.dataSources;
+    const scriptures = await Scripture.getScriptures(ref);
+    return scriptures
+      .map(
+        ({ content, reference }) =>
+          `${content.replace(/<[^>]*>?/gm, '')} ${reference}`
+      )
+      .join('\n\n');
+  }
 }

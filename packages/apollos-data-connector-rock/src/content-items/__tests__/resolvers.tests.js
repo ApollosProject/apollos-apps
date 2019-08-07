@@ -12,6 +12,7 @@ import {
   themeSchema,
   scriptureSchema,
   liveSchema,
+  featuresSchema,
 } from '@apollosproject/data-schema';
 
 import * as RockConstants from '../../rock-constants';
@@ -170,7 +171,13 @@ describe('UniversalContentItem', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = getSchema([themeSchema, mediaSchema, scriptureSchema, liveSchema]);
+    schema = getSchema([
+      featuresSchema,
+      themeSchema,
+      mediaSchema,
+      scriptureSchema,
+      liveSchema,
+    ]);
 
     const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
     context = getContext({

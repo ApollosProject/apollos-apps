@@ -369,12 +369,14 @@ interface Sharable {
   url: String
   message: String
   title: String
+  url: String @deprecated(reason: "Not supported on the interface")
 }
 
 type SharableContentItem implements Sharable {
   url: String
   message: String
   title: String
+  url: String @deprecated(reason: "Not supported on a feature")
 }
 
 type SmsPinResult {
