@@ -454,6 +454,8 @@ Object {
 }
 `;
 
+exports[`features dataSource should generate scripture shares 1`] = `"Not the real verse John 3:16"`;
+
 exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `
 "contentChannelId is a required argument for the CONTENT_CHANNEL ActionList algorithm.
 Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
