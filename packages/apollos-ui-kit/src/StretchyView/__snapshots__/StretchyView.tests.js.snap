@@ -99,8 +99,8 @@ exports[`the StretchyView component should render as a background 1`] = `
                   "fontFamily": "InterUI-Black",
                   "fontSize": 36,
                   "lineHeight": 41.4,
-                  "paddingBottom": 25.92,
-                  "paddingTop": 38.88,
+                  "paddingBottom": 20,
+                  "paddingTop": 24,
                 }
               }
             >
@@ -261,8 +261,8 @@ exports[`the StretchyView component should render as a header 1`] = `
                   "fontFamily": "InterUI-Black",
                   "fontSize": 36,
                   "lineHeight": 41.4,
-                  "paddingBottom": 25.92,
-                  "paddingTop": 38.88,
+                  "paddingBottom": 20,
+                  "paddingTop": 24,
                 }
               }
             >

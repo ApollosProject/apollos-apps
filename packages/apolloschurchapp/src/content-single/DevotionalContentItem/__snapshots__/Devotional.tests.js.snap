@@ -344,8 +344,8 @@ exports[`the Devotional component renders a devotional 1`] = `
                               "fontFamily": "InterUI-Black",
                               "fontSize": 36,
                               "lineHeight": 41.4,
-                              "paddingBottom": 25.92,
-                              "paddingTop": 38.88,
+                              "paddingBottom": 20,
+                              "paddingTop": 24,
                             }
                           }
                         >
@@ -1245,8 +1245,8 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                               "fontFamily": "InterUI-Black",
                               "fontSize": 36,
                               "lineHeight": 41.4,
-                              "paddingBottom": 25.92,
-                              "paddingTop": 38.88,
+                              "paddingBottom": 20,
+                              "paddingTop": 24,
                             }
                           }
                         >
@@ -1644,8 +1644,8 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                               "fontFamily": "InterUI-Black",
                               "fontSize": 36,
                               "lineHeight": 41.4,
-                              "paddingBottom": 25.92,
-                              "paddingTop": 38.88,
+                              "paddingBottom": 20,
+                              "paddingTop": 24,
                             }
                           }
                         >

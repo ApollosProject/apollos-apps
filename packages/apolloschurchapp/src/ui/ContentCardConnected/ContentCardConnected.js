@@ -9,7 +9,7 @@ import contentCardComponentMapper from './contentCardComponentMapper';
 import GET_CONTENT_CARD from './query';
 
 const ContentCardConnected = memo(
-  ({ Component, contentId, isLoading, tile, ...otherProps }) => {
+  ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
     if (!contentId || isLoading)
       return <Component {...otherProps} isLoading tile={tile} />;
 
@@ -19,10 +19,16 @@ const ContentCardConnected = memo(
           if (error) return <ErrorCard error={error} />;
 
           const coverImage = get(node, 'coverImage.sources', undefined);
+          const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
+          const isLive = get(node, 'liveStream.isLive', false);
+          const labelText = get(node, 'parentChannel.name', null);
 
           return (
             <Component
               {...node}
+              hasAction={hasMedia}
+              isLive={isLive}
+              labelText={labelText}
               {...otherProps}
               coverImage={coverImage}
               isLoading={loading}
@@ -36,6 +42,7 @@ const ContentCardConnected = memo(
 
 ContentCardConnected.propTypes = {
   Component: PropTypes.func,
+  mapProps: PropTypes.func,
   contentId: PropTypes.string,
   isLoading: PropTypes.bool,
   tile: PropTypes.bool,

@@ -14,6 +14,7 @@ class Stretchy extends Component {
     layoutHeight: PropTypes.number,
     children: PropTypes.node,
     stretchOn: PropTypes.oneOf(['top', 'bottom']),
+    style: PropTypes.any, // eslint-disable-line
   };
 
   get stretchyYPosition() {
@@ -111,17 +112,20 @@ class Stretchy extends Component {
         position: 'absolute',
         top: 0,
         left: 0,
+        width: this.props.width,
+        height: this.props.height,
         transform: [
           { translateY: this.stretchyYPosition },
           { scale: this.stretchyScale },
         ],
         opacity: this.stretchyOpacity,
       },
+      this.props.style,
     ];
   }
 
   render() {
-    const { scrollY, ...otherProps } = this.props;
+    const { scrollY, style, ...otherProps } = this.props;
     return <Animated.View {...otherProps} style={this.stretchyStyle} />;
   }
 }

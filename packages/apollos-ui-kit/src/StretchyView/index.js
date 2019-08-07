@@ -49,6 +49,7 @@ class StretchyView extends PureComponent {
           stretchyKey,
           stretchOn,
           children,
+          style,
           ...otherProps,
           ...layout,
         })
