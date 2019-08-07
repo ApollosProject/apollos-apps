@@ -1,4 +1,85 @@
 
+v1.1.0-beta.3: August 5, 2019
+
+- Adds HorizontalDefaultCard (#965) (6a6778ed)
+- Adds Sharing to the Scripture Feature (#968) (e829ef6b)
+- Adds DefaultCard and deprecates ContentCard (#961) (dbda2f5b)
+- Adds navigation to auth when logging out (#963) (df207128)
+
+- Simplifies Feature Content Sources (#966) (2b8d414a)
+
+- Fixes wrong campus being selected under certain conditions (#962) (76a0eed1)
+- Fixes wrong birthdate showing up in the datepicker. (#969) (0f9d37ca)
+- Fixes Back/Close doing the same thing inside devotionals (#970) (3a653a71)
+- Fixes not being able to reach logout button on small screen sizes (#971) (b5b9e740)
+- Fixes ui-passes image alignment (#960) (4956a8e6)
+- Fixes sharing text feature (#938) (f0de6c9a)
+- Logs User Out on Auth Error (#927) (9aa3c6ab)
+- Changes Image sizes and update snaps (#920) (4fa1eae6)
+
+
+v1.1.0-beta.2: July 29, 2019
+
+- Adds `<OverlayBackgroundImage />` component (#908) (62e032dc)
+- Adds Tests over App Utils Functions (#918) (0ec04720)
+- Adds HorizontalHighlightCard (#930) (128af881)
+- Adds 100% Coverage for User Web Browser (#921) (f4879a25)
+- Adds BodySmall component (#922) (aabfd53c)
+- Standardizes FeaturedCard, HighlightCard, and ContentCard prop naming (#929) (11607f7b)
+
+v1.1.0-beta.1: July 29, 2019
+
+- Adds ScriptureFeature to ContentItem feature (#923) (8e01aa1a)
+- Adds <StretchyView /> component (#907) (3d40b210)
+- Adds Token Check (#924) (54d91ff6)
+- Adds Check Against Short Content Summaries (#912) (e41ab54b)
+- Adds 100% Coverage to Share Function (#917) (3a400698)
+- Adds scripture story for ActionCard (#896) (bd67a5a4)
+- Adds Highlight Card (#872) (e4054712)
+- Adds 100% Test Coverage to Config Package (#915) (2171230b)
+- Adds algorithm to ActionListCard to view content from the sermon throughout the week. (#886) (92d83e92)
+- Adds ability to customize gradient (#873) (695054b7)
+- Adds support for scripture to function as a 'node' (#883) (d07acdab)
+- Adds FeaturedCard component (#867) (0b9317ee)
+
+- Upgrades to RN 0.59.10 (#925) (4acb5c83)
+- Updates core Chip component styles (#881) (40b3e3b8)
+- Removes Unneccesary Native Code (#902) (eaeed22b)
+
+- Fixes minor bugs in CardWrapper component (#910) (1e4260b8)
+- Fixes Poor Loading Content UI (#903) (c3436ce5)
+- Fixes CardWrapper and Icon loading states (#893) (f0a0728c)
+- Fixes Auth issues (#888) (5bfd3450)
+- Fixes action list features having the same id (#885) (ffc2b452)
+
+
+v1.1.0-beta.0: July 16, 2019
+
+- Adds ability for Text Feature to use KeyValue attribute in Rock (#871) (9a47953e)
+- Adds utility to handle rock key/value attribute (#870) (48499d51)
+- Adds Safety Checks to Request Filters (#866) (932fac9b)
+- Adds support for custom VideoWindow component and disabling of toggle controls on MediaPlayer (#865) (a4088041)
+- Adds `minAspectRatio` and `maxAspectRatio` support to ConnectedImage (#862) (d056ff53)
+- Adds "Open Livestream" Capability to the MediaControls (#857) (c6a7b4ee)
+- Adds support for 64-bit Android build (#864) (abcc4d4c)
+- Adds text feature (#847) (fe8c3cb2)
+- Adds API support for content items to have livestreams (#848) (5e15830f)
+- Adds <ActionCard /> component (#834) (2ffe6e2c)
+- Adds support for stripping illegal markup from htmlview (#842) (cde3b60b)
+- Adds ActionList on the Home feed driven by a Rock content channel. (#830) (f295ff95)
+- Adds TextFeature resolver/schema/dataSource (#833) (afbdb850)
+- Adds ActionList algorithm driven by a content channel (#828) (62b9f9e2)
+
+- Bumps lodash from 4.17.11 to 4.17.13 (#868) (93c721fa)
+- Bumps lodash.mergewith from 4.6.1 to 4.6.2 (#860) (e31adfeb)
+- Bumps lodash.template from 4.4.0 to 4.5.0 (#861) (5409b010)
+
+- Fixes Android Campus Card Shadow (#835) (1ee755ba)
+- Fixes publish of packages that had 0 changes in 1.0 (#832) (75dd28ba)
+
+- Deletes unused schema.graphql file (#836) (7a6431cb)
+
+
 v1.0.0: June 27, 2019
 
 - Adds Today Actions with Persona Feed algorithm (#816) (4ae0646e)

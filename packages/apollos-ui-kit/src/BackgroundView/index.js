@@ -7,11 +7,8 @@ import { withTheme } from '../theme';
 const BackgroundView = compose(
   // Accepts all props available to View and LinearGradient.
   // https://github.com/react-native-community/react-native-linear-gradient#additional-props
-  withTheme(({ theme, colors, ...props }) => ({
-    colors: colors || [
-      theme.colors.background.paper,
-      theme.colors.background.screen,
-    ],
+  withTheme(({ theme: { overlays }, colors, ...props }) => ({
+    ...overlays['background-gradient']({ colors }),
     ...props,
   })),
   styled({ flex: 1, height: '100%' })

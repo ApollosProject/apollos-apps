@@ -43,9 +43,17 @@ describe('features', () => {
         },
       ],
     }));
-    first = jest.fn(() => ({ get: () => itemMock }));
+    first = jest.fn(() => Promise.resolve(itemMock));
     const byContentChannelId = () => ({
+      get: () => Promise.resolve(itemMock),
+      top: () => ({ get: () => Promise.resolve(itemMock) }),
+      first,
+    });
+    const getCursorByParentContentItemId = () => ({
       get: () => itemMock,
+      first,
+    });
+    const getSermonFeed = () => ({
       first,
     });
     context = {
@@ -53,9 +61,12 @@ describe('features', () => {
         ContentItem: {
           byPersonaFeed,
           byContentChannelId,
+          getCursorByParentContentItemId,
+          getSermonFeed,
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
         },
+        Scripture: {},
       },
     };
   });
@@ -103,6 +114,22 @@ describe('features', () => {
             arguments: { contentChannelId: 13 },
           },
         ],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      expect(result).toMatchSnapshot();
+      expect(first.mock.calls).toMatchSnapshot();
+    });
+
+    it('should create an ActionListFeature from a SERMON_CHILDREN algorithm', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createActionListFeature({
+        algorithms: ['SERMON_CHILDREN'],
         title: 'Test Action List',
         subtitle: "It's great!",
       });
@@ -201,10 +228,46 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot();
     });
+
+    it('createScriptureFeature should create a Scriptre feature', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createScriptureFeature({
+        reference: 'John 3:16',
+        id: 123,
+      });
+
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should generate scripture shares', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const { Scripture } = features.context.dataSources;
+      Scripture.getScriptures = jest.fn(() => [
+        {
+          reference: 'John 3:16',
+          content: '<p>Not the real verse</p>',
+        },
+      ]);
+      const result = await features.getScriptureShareMessage([
+        {
+          reference: 'John 3:16',
+        },
+      ]);
+
+      expect(result).toMatchSnapshot();
+    });
   });
 
   describe('resolver', () => {
-    it('must return a personaFeed and a contentChannelFeed for the userFeedFeatures', async () => {
+    it('must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures', async () => {
       const features = new Features();
       features.initialize({
         context,

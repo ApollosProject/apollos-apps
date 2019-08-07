@@ -14,4 +14,12 @@ describe('the yaml loader', () => {
     expect(ApollosConfig.ROCK.API_TOKEN).toEqual(process.env.ROCK_TOKEN);
     expect(ApollosConfig.config).toMatchSnapshot();
   });
+  it('must fail if no config is present', () => {
+    expect(() => ApollosConfig.loadYaml({})).toThrow(Error);
+  });
+  it('must fail if config path is invalid', () => {
+    expect(() => ApollosConfig.loadYaml({ configPath: './fake.yml' })).toThrow(
+      Error
+    );
+  });
 });

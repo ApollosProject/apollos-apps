@@ -118,7 +118,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
             <View
               style={
                 Object {
-                  "aspectRatio": undefined,
                   "borderRadius": 16,
                   "overflow": "hidden",
                 }
@@ -396,6 +395,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId0"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -421,7 +421,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -437,19 +436,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -599,6 +612,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId1"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -624,7 +638,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -640,19 +653,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -802,6 +829,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId2"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -827,7 +855,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -843,19 +870,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -1005,6 +1046,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId3"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -1030,7 +1072,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1046,19 +1087,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -1208,6 +1263,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId4"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -1233,7 +1289,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1249,19 +1304,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -1411,6 +1480,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId5"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -1436,7 +1506,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1452,19 +1521,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -1614,6 +1697,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId6"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -1639,7 +1723,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1655,19 +1738,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -1817,6 +1914,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId7"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -1842,7 +1940,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -1858,19 +1955,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -2020,6 +2131,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId8"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -2045,7 +2157,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2061,19 +2172,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -2223,6 +2348,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               channelType=""
               contentId={null}
               id="fakeId9"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -2248,7 +2374,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2264,19 +2389,33 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -2570,7 +2709,6 @@ exports[`The FeedView component renders correctly 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2662,7 +2800,6 @@ exports[`The FeedView component renders correctly 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2905,6 +3042,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId0"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -2930,7 +3068,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -2946,19 +3083,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -3108,6 +3259,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId1"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -3133,7 +3285,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3149,19 +3300,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -3311,6 +3476,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId2"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -3336,7 +3502,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3352,19 +3517,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -3514,6 +3693,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId3"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -3539,7 +3719,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3555,19 +3734,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -3717,6 +3910,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId4"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -3742,7 +3936,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3758,19 +3951,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -3920,6 +4127,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId5"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -3945,7 +4153,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -3961,19 +4168,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -4123,6 +4344,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId6"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -4148,7 +4370,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4164,19 +4385,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -4326,6 +4561,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId7"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -4351,7 +4587,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4367,19 +4602,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -4529,6 +4778,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId8"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -4554,7 +4804,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4570,19 +4819,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={
@@ -4732,6 +4995,7 @@ exports[`The FeedView component renders empty state 1`] = `
               channelType=""
               contentId={null}
               id="fakeId9"
+              isLoading={true}
               parentChannel={
                 Object {
                   "id": "",
@@ -4757,7 +5021,6 @@ exports[`The FeedView component renders empty state 1`] = `
               <View
                 style={
                   Object {
-                    "aspectRatio": undefined,
                     "borderRadius": 16,
                     "overflow": "hidden",
                   }
@@ -4773,19 +5036,33 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                   }
                 >
-                  <Image
-                    onLoad={[Function]}
-                    source={Array []}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
                     style={
                       Object {
                         "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
-                        "opacity": 1,
                         "resizeMode": "cover",
                         "width": "100%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 2,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
                 <View
                   style={

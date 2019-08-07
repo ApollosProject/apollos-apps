@@ -1,5 +1,7 @@
 import { get, flatten } from 'lodash';
-import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import RockApolloDataSource, {
+  parseKeyValueAttribute,
+} from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 import moment from 'moment-timezone';
 import natural from 'natural';
@@ -103,17 +105,71 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  // eslint-disable-next-line class-methods-use-this
   getFeatures({ attributeValues }) {
     const { Features } = this.context.dataSources;
     const features = [];
 
+    // TODO this should replace all other methods
+    const genericFeatures = get(attributeValues, 'features.value', '');
+    const keyValuePairs = parseKeyValueAttribute(genericFeatures);
+    keyValuePairs.forEach(({ key, value }, i) => {
+      switch (key) {
+        case 'scripture':
+          features.push(
+            Features.createScriptureFeature({
+              reference: value,
+              id: `${attributeValues.features.id}-${i}`,
+            })
+          );
+          break;
+        case 'text':
+          features.push(
+            Features.createTextFeature({
+              text: value,
+              id: `${attributeValues.features.id}-${i}`,
+            })
+          );
+          break;
+        default:
+          console.warn(`Received invalid feature key: ${key}`);
+      }
+    });
+
+    // We pull a single text feature from the TextFeature Text field.
     const text = get(attributeValues, 'textFeature.value', '');
     if (text !== '') {
       features.push(
         Features.createTextFeature({ text, id: attributeValues.textFeature.id })
       );
     }
+
+    // We can also pull multiple text features from the TextFeatures KeyValue field.
+    const texts = get(attributeValues, 'textFeatures.value', '');
+    if (texts !== '') {
+      const keyValueTextFeatures = parseKeyValueAttribute(texts);
+      keyValueTextFeatures.forEach(({ value }, i) => {
+        features.push(
+          Features.createTextFeature({
+            text: value,
+            id: `${attributeValues.textFeatures.id}-${i}`,
+          })
+        );
+      });
+    }
+
+    const scriptures = get(attributeValues, 'scriptureFeatures.value', '');
+    if (scriptures !== '') {
+      const keyValueTextFeatures = parseKeyValueAttribute(scriptures);
+      keyValueTextFeatures.forEach(({ value }, i) => {
+        features.push(
+          Features.createScriptureFeature({
+            reference: value,
+            id: `${attributeValues.scriptureFeatures.id}-${i}`,
+          })
+        );
+      });
+    }
+
     return features;
   }
 
@@ -124,16 +180,22 @@ export default class ContentItem extends RockApolloDataSource {
     if (content.split(' ').length === 1) return '';
 
     const tokenizer = new natural.SentenceTokenizer();
-    return tokenizer.tokenize(
+    const tokens = tokenizer.tokenize(
       sanitizeHtmlNode(content, {
         allowedTags: [],
         allowedAttributes: [],
       })
-    )[0];
+    );
+    // protects from starting with up to a three digit number and period
+    return tokens.length > 1 && tokens[0].length < 5
+      ? `${tokens[0]} ${tokens[1]}`
+      : tokens[0];
   };
 
   getSermonFeed() {
-    return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID);
+    return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID).andFilter(
+      this.LIVE_CONTENT()
+    );
   }
 
   async isContentActiveLiveStream({ id }) {

@@ -157,8 +157,9 @@ export const themeSchema = gql`
 `;
 
 export const scriptureSchema = gql`
-  type Scripture {
-    id: String
+  type Scripture implements Node {
+    id: ID!
+
     html: String
     reference: String
     copyright: String
@@ -396,22 +397,36 @@ export const contentChannelSchema = gql`
   }
 `;
 
-export const contentSharableSchema = gql`
+export const sharableSchema = gql`
   interface Sharable {
-    url: String
     message: String
     title: String
+    url: String @deprecated(reason: "Not supported on the interface")
   }
 
   type SharableContentItem implements Sharable {
-    url: String
     message: String
     title: String
+    url: String
   }
 
   ${extendForEachContentItemType(`
     sharing: SharableContentItem
 `)}
+
+  type SharableFeature implements Sharable {
+    message: String
+    title: String
+    url: String @deprecated(reason: "Not supported on a feature")
+  }
+
+  extend type TextFeature {
+    sharing: SharableFeature
+  }
+
+  extend type ScriptureFeature {
+    sharing: SharableFeature
+  }
 `;
 
 export const liveSchema = gql`
@@ -575,6 +590,13 @@ export const featuresSchema = gql`
     order: Int
 
     body: String
+  }
+
+  type ScriptureFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    scriptures: [Scripture]
   }
 
   extend type WeekendContentItem {

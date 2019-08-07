@@ -34,6 +34,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
     }
   >
     <View
+      isLoading={true}
       style={
         Object {
           "backgroundColor": "#FFFFFF",
@@ -53,7 +54,6 @@ exports[`the PassView component should display loading placeholders 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -239,7 +239,6 @@ exports[`the PassView component should render 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -319,38 +318,49 @@ exports[`the PassView component should render 1`] = `
                 </Text>
               </View>
               <View
-                animate={null}
-                customAnimate={null}
-                onReady={false}
                 style={
                   Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "width": "100%",
+                    "flex": 1,
                   }
                 }
               >
-                <Image
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Ddd2aa592-80ac-4d7a-8bdc-47aeb25ce158%26format%3Dpng%26height%3D200",
-                      },
-                    ]
-                  }
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
                   style={
                     Object {
+                      "alignSelf": "flex-end",
+                      "aspectRatio": 0.75,
                       "backgroundColor": "transparent",
-                      "flex": 0.25,
-                      "height": "100%",
-                      "minHeight": 64,
-                      "opacity": 0,
-                      "resizeMode": "contain",
+                      "flex": 1,
+                      "resizeMode": "cover",
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Ddd2aa592-80ac-4d7a-8bdc-47aeb25ce158%26format%3Dpng%26height%3D200",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "alignSelf": "flex-end",
+                        "aspectRatio": 0.75,
+                        "backgroundColor": "transparent",
+                        "flex": 1,
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
             <View

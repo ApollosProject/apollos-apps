@@ -23,25 +23,24 @@ const enhance = compose(
   }))
 );
 
-const TitleText = styled(({ withIcon = false }) => ({
-  ...(withIcon ? { flexGrow: 1 } : {}),
+const TitleText = styled(({ withIcon }) => ({
   textAlign: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-  paddingHorizontal: 6,
+  paddingLeft: withIcon ? 8 : null,
 }))(H6);
 
 const StyledButton = styled(
-  ({ theme, withIcon = false }) => ({
-    justifyContent: withIcon ? 'flex-end' : 'center',
-    paddingHorizontal: theme.sizing.baseUnit / 4,
-    paddingVertical: theme.sizing.baseUnit / 4,
-    height: theme.sizing.baseUnit * 2,
-    /* these margins are only used when a chip is in a list.
-     * TODO: consider removing or making conditional for use outside of lists
-     */
-    marginRight: theme.sizing.baseUnit / 2,
-    marginBottom: theme.sizing.baseUnit / 2,
+  ({ theme, chipList }) => ({
+    alignItems: 'center',
+    paddingHorizontal: theme.sizing.baseUnit * 0.75, // 12px
+    height: theme.sizing.baseUnit * 2, // 32px
+    ...(chipList
+      ? {
+          marginRight: theme.sizing.baseUnit / 2,
+          marginBottom: theme.sizing.baseUnit / 2,
+        }
+      : {}),
   }),
   'Chip'
 )(Button);
@@ -54,17 +53,18 @@ const Chip = enhance(
     selected,
     title,
     pill = false,
+    chipList = false,
     ...buttonProps
   }) => (
     <StyledButton
-      withIcon={icon}
       TouchableComponent={TouchableOpacity}
       pill={pill}
+      chipList={chipList}
       {...buttonProps}
     >
       <>
-        {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
         {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
+        {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
       </>
     </StyledButton>
   )

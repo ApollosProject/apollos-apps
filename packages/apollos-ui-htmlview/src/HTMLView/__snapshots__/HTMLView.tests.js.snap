@@ -728,8 +728,8 @@ exports[`the HTMLView component should render an H2 1`] = `
               "fontFamily": "InterUI-Black",
               "fontSize": 36,
               "lineHeight": 41.4,
-              "paddingBottom": 25.92,
-              "paddingTop": 38.88,
+              "paddingBottom": 20,
+              "paddingTop": 24,
             }
           }
         >
@@ -1067,6 +1067,7 @@ exports[`the HTMLView component should render an image 1`] = `
             Object {
               "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
+              "resizeMode": "contain",
               "width": "100%",
             }
           }

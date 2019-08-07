@@ -129,6 +129,13 @@ fragment contentItemFragment on ContentItem {
     }
     __typename
   }
+  ... on WeekendContentItem {
+    liveStream {
+      isLive
+      __typename
+    }
+    __typename
+  }
   __typename
 }
 
@@ -140,17 +147,48 @@ fragment largeCardFragment on ContentItem {
 fragment baseCardFragment on ContentItem {
   id
   __typename
-  ...contentCardMetricsFragment
   ...coverImageFragment
   ...themeFragment
   title
   summary
-}
-
-fragment contentCardMetricsFragment on ContentItem {
   isLiked
-  likedCount
-  __typename
+  ... on MediaContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on WeekendContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    liveStream {
+      isLive
+      __typename
+    }
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
+  ... on DevotionalContentItem {
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
 }
 
 fragment coverImageFragment on ContentItem {
@@ -243,7 +281,6 @@ fragment themeFragment on ContentItem {
             <View
               style={
                 Object {
-                  "aspectRatio": undefined,
                   "borderRadius": 16,
                   "overflow": "hidden",
                 }
@@ -346,6 +383,13 @@ fragment contentItemFragment on ContentItem {
     }
     __typename
   }
+  ... on WeekendContentItem {
+    liveStream {
+      isLive
+      __typename
+    }
+    __typename
+  }
   __typename
 }
 
@@ -357,17 +401,48 @@ fragment largeCardFragment on ContentItem {
 fragment baseCardFragment on ContentItem {
   id
   __typename
-  ...contentCardMetricsFragment
   ...coverImageFragment
   ...themeFragment
   title
   summary
-}
-
-fragment contentCardMetricsFragment on ContentItem {
   isLiked
-  likedCount
-  __typename
+  ... on MediaContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+  ... on WeekendContentItem {
+    videos {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
+    liveStream {
+      isLive
+      __typename
+    }
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
+  ... on DevotionalContentItem {
+    parentChannel {
+      id
+      name
+      __typename
+    }
+    __typename
+  }
 }
 
 fragment coverImageFragment on ContentItem {

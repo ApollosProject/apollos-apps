@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-auth",
-  "version": "1.0.0",
+  "version": "1.1.0-beta.3",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -47,6 +47,7 @@
   "dependencies": {
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-link-context": "1.0.14",
+    "apollo-link-error": "^1.1.11",
     "apollo-link-http": "^1.5.14",
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
@@ -59,8 +60,7 @@
     "prop-types": "15.6.1",
     "react": "^16.8.3",
     "react-apollo": "2.5.5",
-    "react-native": "0.59.8",
-    "react-navigation": "^3.11.0",
+    "react-native": "0.59.10",
     "react-test-renderer": "16.6.1",
     "waait": "^1.0.4"
   },

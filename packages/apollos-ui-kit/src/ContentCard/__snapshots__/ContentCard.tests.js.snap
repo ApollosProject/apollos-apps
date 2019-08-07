@@ -53,7 +53,6 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -76,6 +75,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -371,6 +371,7 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
     }
   >
     <View
+      isLoading={true}
       style={
         Object {
           "backgroundColor": "#FFFFFF",
@@ -390,7 +391,6 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -407,14 +407,32 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
           }
         >
           <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
             style={
               Object {
                 "aspectRatio": 2,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
-          />
+          >
+            <Image
+              onLoad={[Function]}
+              source={Array []}
+              style={
+                Object {
+                  "aspectRatio": 2,
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
         </View>
         <View
           style={
@@ -577,6 +595,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
       forceRatio={1}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -621,6 +640,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -665,6 +685,8 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                 1,
               ]
             }
+            overlayColor="#00676D"
+            overlayType="default"
             startPoint={
               Object {
                 "x": 0,
@@ -914,6 +936,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
       forceRatio={1}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -1222,6 +1245,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
       forceRatio={1}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -1264,8 +1288,9 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
             onReady={false}
             style={
               Object {
-                "aspectRatio": 1,
+                "aspectRatio": 2,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -1562,8 +1587,10 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
   >
     <View
       forceRatio={1}
+      isLoading={true}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
@@ -1601,14 +1628,32 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
           }
         >
           <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
             style={
               Object {
                 "aspectRatio": 2,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
-          />
+          >
+            <Image
+              onLoad={[Function]}
+              source={Array []}
+              style={
+                Object {
+                  "aspectRatio": 2,
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
         </View>
         <View
           style={
@@ -1788,7 +1833,6 @@ exports[`ContentCard renders with No image 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -2092,7 +2136,6 @@ exports[`ContentCard renders with an Image only 1`] = `
       <View
         style={
           Object {
-            "aspectRatio": undefined,
             "borderRadius": 16,
             "overflow": "hidden",
           }
@@ -2115,6 +2158,7 @@ exports[`ContentCard renders with an Image only 1`] = `
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
                 "width": "100%",
               }
             }
@@ -2158,6 +2202,8 @@ exports[`ContentCard renders with an Image only 1`] = `
                 1,
               ]
             }
+            overlayColor="#00676D"
+            overlayType="default"
             startPoint={
               Object {
                 "x": 0,
