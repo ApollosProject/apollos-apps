@@ -188,8 +188,8 @@ exports[`the H2 component should render a loading state with correct positioning
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 36,
-          "marginBottom": 25.92,
-          "marginTop": 38.88,
+          "marginBottom": 20,
+          "marginTop": 24,
           "marginVertical": 2.6999999999999993,
           "width": "100%",
         }
@@ -289,8 +289,8 @@ exports[`the H2 component should render with correct padding 1`] = `
           "fontFamily": "InterUI-Black",
           "fontSize": 36,
           "lineHeight": 41.4,
-          "paddingBottom": 25.92,
-          "paddingTop": 38.88,
+          "paddingBottom": 20,
+          "paddingTop": 24,
         }
       }
     >
