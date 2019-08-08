@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Dimensions } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
@@ -19,6 +20,10 @@ const loadingStateObject = {
     isLoading: true,
   },
 };
+
+// Hardcoded value taken from CardTile. Expect to change this if you change CardTile.
+// TODO: wish we had a better solution for getting widths of things...
+const CARD_WIDTH = Dimensions.get('window').width * 0.66 + 16;
 
 class HorizontalContentFeed extends Component {
   static propTypes = {
@@ -66,12 +71,23 @@ class HorizontalContentFeed extends Component {
     ).map((edge) => edge.node);
 
     const content = siblingContent.length ? siblingContent : childContent;
+    const currentIndex = content.findIndex(
+      ({ id }) => id === this.props.contentId
+    );
+    const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
 
     return content && content.length ? (
       <HorizontalTileFeed
         content={content}
         loadingStateObject={loadingStateObject}
         renderItem={this.renderItem}
+        initialScrollIndex={initialScrollIndex}
+        getItemLayout={(itemData, index) => ({
+          // We need to pass this function so that initialScrollIndex will work.
+          length: CARD_WIDTH,
+          offset: CARD_WIDTH * index,
+          index,
+        })}
       />
     ) : null;
   };
