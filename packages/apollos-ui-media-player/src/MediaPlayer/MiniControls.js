@@ -10,6 +10,7 @@ import {
   H5,
   H6,
   ButtonIcon,
+  FlexedView,
 } from '@apollosproject/ui-kit';
 
 import Seeker from './Seeker';
@@ -27,14 +28,6 @@ const DismissBackground = styled(({ theme }) => ({
   backgroundColor: theme.colors.white,
 }))(View);
 
-const TrackInfoTouchable = styled({
-  flex: 1,
-})(Touchable);
-
-const TrackInfoTouchableBackground = styled(({ theme }) => ({
-  flex: 1,
-}))(View);
-
 const TrackInfo = styled(({ theme }) => ({
   paddingLeft: theme.sizing.baseUnit / 2,
   height: '100%',
@@ -42,16 +35,9 @@ const TrackInfo = styled(({ theme }) => ({
   width: '100%',
 }))(View);
 
-const TrackName = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  overflow: 'hidden',
-}))(H5);
-
 const TrackArtist = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
   marginTop: theme.helpers.rem(-0.15625),
   color: theme.colors.text.tertiary,
-  // overflow: 'hidden',
 }))(H6);
 
 const Container = styled(({ theme }) => ({
@@ -79,7 +65,6 @@ const Controls = styled(({ theme }) => ({
   flexDirection: 'row',
   // justifyContent: 'flex-end',
   alignItems: 'center',
-  backgroundColor: 'salmon',
 }))(View);
 
 const Boom = styled(({ theme }) => ({
@@ -101,9 +86,6 @@ const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
   size: theme.sizing.baseUnit * 1.25,
   iconPadding: theme.sizing.baseUnit * 0.875,
-  style: {
-    backgroundColor: 'blue',
-  },
 }));
 
 const StyledIcon = IconStyles(Icon);
@@ -159,16 +141,14 @@ class MiniControls extends Component {
                 )}
               </Mutation>
               <Boom>
-                <TrackInfoTouchableBackground>
-                  <TrackInfoTouchable onPress={() => goFullscreen()}>
+                <FlexedView>
+                  <Touchable onPress={() => goFullscreen()}>
                     <TrackInfo>
-                      <TrackName
-                        numberOfLines={1}
-                      >{`${title} Boom Boom Boom Boom Boom Boom Boom Boom`}</TrackName>
+                      <H5 numberOfLines={1}>{title}</H5>
                       <TrackArtist numberOfLines={1}>{artist}</TrackArtist>
                     </TrackInfo>
-                  </TrackInfoTouchable>
-                </TrackInfoTouchableBackground>
+                  </Touchable>
+                </FlexedView>
                 <Controls>
                   {isPlaying ? (
                     <Mutation mutation={PAUSE}>
