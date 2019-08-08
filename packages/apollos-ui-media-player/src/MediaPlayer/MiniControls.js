@@ -32,12 +32,11 @@ const TrackInfoTouchable = styled({
 })(Touchable);
 
 const TrackInfoTouchableBackground = styled(({ theme }) => ({
-  backgroundColor: theme.colors.white,
   flex: 1,
 }))(View);
 
 const TrackInfo = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit / 2,
+  paddingLeft: theme.sizing.baseUnit / 2,
   height: '100%',
   justifyContent: 'center',
   width: '100%',
@@ -76,14 +75,19 @@ const ThumbnailSpacer = styled(({ isVideo }) => ({
 }))(View);
 
 const Controls = styled(({ theme }) => ({
-  position: 'absolute',
-  right: 0,
-  bottom: 0,
-  top: -1,
-  paddingHorizontal: theme.sizing.baseUnit / 2,
+  // paddingRight: theme.sizing.baseUnit / 2,
   flexDirection: 'row',
-  justifyContent: 'flex-end',
+  // justifyContent: 'flex-end',
   alignItems: 'center',
+  backgroundColor: 'salmon',
+}))(View);
+
+const Boom = styled(({ theme }) => ({
+  flex: 1,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  backgroundColor: theme.colors.white,
 }))(View);
 
 const MiniSeeker = styled({
@@ -96,6 +100,10 @@ const MiniSeeker = styled({
 const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
   size: theme.sizing.baseUnit * 1.25,
+  iconPadding: theme.sizing.baseUnit * 0.875,
+  style: {
+    backgroundColor: 'blue',
+  },
 }));
 
 const StyledIcon = IconStyles(Icon);
@@ -150,32 +158,39 @@ class MiniControls extends Component {
                   </Touchable>
                 )}
               </Mutation>
-              <TrackInfoTouchableBackground>
-                <TrackInfoTouchable onPress={() => goFullscreen()}>
-                  <TrackInfo>
-                    <TrackName>{title}</TrackName>
-                    <TrackArtist>{artist}</TrackArtist>
-                  </TrackInfo>
-                </TrackInfoTouchable>
-              </TrackInfoTouchableBackground>
-              <Controls>
-                {isPlaying ? (
-                  <Mutation mutation={PAUSE}>
-                    {(pause) => (
-                      <StyledButtonIcon
-                        name={'pause'}
-                        onPress={() => pause()}
-                      />
-                    )}
-                  </Mutation>
-                ) : (
-                  <Mutation mutation={PLAY}>
-                    {(play) => (
-                      <StyledButtonIcon name={'play'} onPress={() => play()} />
-                    )}
-                  </Mutation>
-                )}
-              </Controls>
+              <Boom>
+                <TrackInfoTouchableBackground>
+                  <TrackInfoTouchable onPress={() => goFullscreen()}>
+                    <TrackInfo>
+                      <TrackName
+                        numberOfLines={1}
+                      >{`${title} Boom Boom Boom Boom Boom Boom Boom Boom`}</TrackName>
+                      <TrackArtist numberOfLines={1}>{artist}</TrackArtist>
+                    </TrackInfo>
+                  </TrackInfoTouchable>
+                </TrackInfoTouchableBackground>
+                <Controls>
+                  {isPlaying ? (
+                    <Mutation mutation={PAUSE}>
+                      {(pause) => (
+                        <StyledButtonIcon
+                          name={'pause'}
+                          onPress={() => pause()}
+                        />
+                      )}
+                    </Mutation>
+                  ) : (
+                    <Mutation mutation={PLAY}>
+                      {(play) => (
+                        <StyledButtonIcon
+                          name={'play'}
+                          onPress={() => play()}
+                        />
+                      )}
+                    </Mutation>
+                  )}
+                </Controls>
+              </Boom>
               <MiniSeeker minimal />
             </Container>
           </Shadow>
