@@ -5,6 +5,7 @@ import android.app.Application;
 import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
@@ -40,6 +41,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
               new RNFusedLocationPackage(),
             new AsyncStoragePackage(),
+            new RNGestureHandlerPackage(),
             new MapsPackage(),
             new RNFetchBlobPackage(),
             new RNCWebViewPackage(),
