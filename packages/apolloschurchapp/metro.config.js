@@ -32,6 +32,7 @@ const sharedNativeModules = [
   'react-native-video',
   'react-native-video-controls',
   'react-native-airplay-btn',
+  'react-navigation',
 ];
 
 module.exports = {

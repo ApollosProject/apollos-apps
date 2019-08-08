@@ -1,3 +1,5 @@
+import { NativeModules } from 'react-native';
+
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsProvider: ({ children }) => children,
@@ -11,3 +13,5 @@ jest.mock('react-native-onesignal', () => ({
   addEventListener: jest.fn(),
   configure: jest.fn(),
 }));
+
+NativeModules.RNGestureHandlerModule = {};

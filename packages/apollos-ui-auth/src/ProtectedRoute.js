@@ -61,6 +61,7 @@ class ProtectedRoute extends PureComponent {
     } = this.props;
 
     const shouldNavigate = !isLoading;
+    // console.warn(shouldNavigate, isLoading);
     if (shouldNavigate && onRouteChange) onRouteChange({ isLoggedIn });
     if (shouldNavigate && isLoggedIn) {
       navigation.replace(loggedInRouteName);
