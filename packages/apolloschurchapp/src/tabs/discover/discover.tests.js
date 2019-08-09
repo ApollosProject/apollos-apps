@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
@@ -159,7 +159,8 @@ describe('Test the Discover Component Query', () => {
       },
     };
 
-    const DiscoverWithNavigation = createStackNavigator({ Discover });
+    const DiscoverStack = createStackNavigator({ Discover });
+    const DiscoverWithNavigation = createAppContainer(DiscoverStack);
     const tree = renderer.create(
       <Providers mocks={[mock]}>
         <DiscoverWithNavigation />

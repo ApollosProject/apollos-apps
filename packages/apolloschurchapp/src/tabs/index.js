@@ -16,11 +16,8 @@ const TabNavigator = createBottomTabNavigator(
     tabBarComponent: TabBar,
     lazy: true,
     removeClippedSubviews: true,
+    navigationOptions: { header: null },
   }
 );
-
-TabNavigator.navigationOptions = {
-  header: null,
-};
 
 export default TabNavigator;
