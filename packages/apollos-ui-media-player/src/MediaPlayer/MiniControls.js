@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Platform, View, Animated, StyleSheet } from 'react-native';
 import { Mutation, Query } from 'react-apollo';
+import LinearGradient from 'react-native-linear-gradient';
 
 import {
   withTheme,
-  Icon,
   styled,
   Touchable,
   H5,
-  H6,
   ButtonIcon,
   FlexedView,
 } from '@apollosproject/ui-kit';
@@ -41,26 +40,23 @@ const ThumbnailSpacer = styled(({ isVideo }) => ({
   aspectRatio: isVideo ? 16 / 9 : 1,
 }))(View);
 
-const DismissBackground = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFillObject,
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: theme.colors.white,
-}))(View);
+const DismissBackground = withTheme(({ theme }) => ({
+  style: StyleSheet.absoluteFill,
+  ...theme.overlays.low({ overlayColor: theme.colors.black }),
+}))(LinearGradient);
 
 const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
-  size: theme.sizing.baseUnit * 1.25,
-  iconPadding: theme.sizing.baseUnit * 0.875,
+  size: theme.sizing.baseUnit * 0.75,
 }));
 
-const StyledIcon = IconStyles(Icon);
 const StyledButtonIcon = IconStyles(ButtonIcon);
 
 const Controls = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
+  paddingRight: theme.sizing.baseUnit * 0.75,
   backgroundColor: theme.colors.white,
 }))(FlexedView);
 
@@ -70,11 +66,6 @@ const TrackInfo = styled(({ theme }) => ({
   justifyContent: 'center',
   width: '100%',
 }))(View);
-
-const TrackArtist = styled(({ theme }) => ({
-  marginTop: theme.helpers.rem(-0.15625),
-  color: theme.colors.text.tertiary,
-}))(H6);
 
 const MiniSeeker = styled({
   position: 'absolute',
@@ -97,7 +88,7 @@ class MiniControls extends Component {
   renderMiniControls = ({
     data: {
       mediaPlayer: {
-        currentTrack: { title, artist, isVideo } = {},
+        currentTrack: { title, isVideo } = {},
         isPlaying = false,
       } = {},
     } = {},
@@ -112,32 +103,20 @@ class MiniControls extends Component {
         {(goFullscreen) => (
           <Shadow>
             <Container>
-              <Mutation mutation={DISMISS}>
-                {(dismiss) => (
-                  <Touchable
-                    onPress={() => (isPlaying ? goFullscreen() : dismiss())}
-                  >
-                    <ThumbnailSpacer isVideo={isVideo}>
-                      <Animated.View
-                        style={[
-                          StyleSheet.absoluteFill,
-                          { opacity: this.dismissAnimator },
-                        ]}
-                      >
-                        <DismissBackground>
-                          <StyledIcon name="close" />
-                        </DismissBackground>
-                      </Animated.View>
-                    </ThumbnailSpacer>
-                  </Touchable>
-                )}
-              </Mutation>
+              <Animated.View
+                style={[
+                  StyleSheet.absoluteFill,
+                  { opacity: this.dismissAnimator },
+                ]}
+              >
+                <DismissBackground />
+              </Animated.View>
+              <ThumbnailSpacer isVideo={isVideo} />
               <Controls>
                 <FlexedView>
                   <Touchable onPress={() => goFullscreen()}>
                     <TrackInfo>
                       <H5 numberOfLines={1}>{title}</H5>
-                      <TrackArtist numberOfLines={1}>{artist}</TrackArtist>
                     </TrackInfo>
                   </Touchable>
                 </FlexedView>
@@ -157,6 +136,14 @@ class MiniControls extends Component {
                     )}
                   </Mutation>
                 )}
+                <Mutation mutation={DISMISS}>
+                  {(dismiss) => (
+                    <StyledButtonIcon
+                      name="close"
+                      onPress={() => (isPlaying ? goFullscreen() : dismiss())}
+                    />
+                  )}
+                </Mutation>
               </Controls>
               <MiniSeeker minimal />
             </Container>
