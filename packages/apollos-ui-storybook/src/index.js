@@ -34,6 +34,8 @@ export const loadApollosStories = () => {
 const StorybookUIRoot = getStorybookUI({
   // Fixes keyboard auto-closing itself when using `react-native-tab-bar`
   shouldDisableKeyboardAvoidingView: true,
+  // Default to the UI hidden (what we want in most cases)
+  isUIHidden: true,
 });
 
 export default StorybookUIRoot;
