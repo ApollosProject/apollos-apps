@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Platform, View, Animated, StyleSheet } from 'react-native';
 import { Mutation, Query } from 'react-apollo';
+import LinearGradient from 'react-native-linear-gradient';
 
 import {
   withTheme,
-  Icon,
   styled,
   Touchable,
   H5,
-  H6,
   ButtonIcon,
+  FlexedView,
 } from '@apollosproject/ui-kit';
 
 import Seeker from './Seeker';
@@ -20,40 +20,10 @@ import { GO_FULLSCREEN, DISMISS, PLAY, PAUSE } from './mutations';
 
 const MINI_PLAYER_HEIGHT = 50;
 
-const DismissBackground = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFillObject,
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: theme.colors.white,
+const Shadow = styled(({ theme }) => ({
+  borderRadius: theme.sizing.baseUnit / 2,
+  ...Platform.select(theme.shadows.default),
 }))(View);
-
-const TrackInfoTouchable = styled({
-  flex: 1,
-})(Touchable);
-
-const TrackInfoTouchableBackground = styled(({ theme }) => ({
-  backgroundColor: theme.colors.white,
-  flex: 1,
-}))(View);
-
-const TrackInfo = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit / 2,
-  height: '100%',
-  justifyContent: 'center',
-  width: '100%',
-}))(View);
-
-const TrackName = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  overflow: 'hidden',
-}))(H5);
-
-const TrackArtist = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  marginTop: theme.helpers.rem(-0.15625),
-  color: theme.colors.text.tertiary,
-  // overflow: 'hidden',
-}))(H6);
 
 const Container = styled(({ theme }) => ({
   height: MINI_PLAYER_HEIGHT,
@@ -63,11 +33,6 @@ const Container = styled(({ theme }) => ({
   borderRadius: theme.sizing.baseUnit / 2,
 }))(View);
 
-const Shadow = styled(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit / 2,
-  ...Platform.select(theme.shadows.default),
-}))(View);
-
 // ThumbnailSpacer is used to offset the text in MiniPlayer to make room for the video/music
 // thumbnail in a way that is dynamic to the MINI_PLAYER_HEIGHT
 const ThumbnailSpacer = styled(({ isVideo }) => ({
@@ -75,15 +40,31 @@ const ThumbnailSpacer = styled(({ isVideo }) => ({
   aspectRatio: isVideo ? 16 / 9 : 1,
 }))(View);
 
+const DismissBackground = withTheme(({ theme }) => ({
+  style: StyleSheet.absoluteFill,
+  ...theme.overlays.low({ overlayColor: theme.colors.black }),
+}))(LinearGradient);
+
+const IconStyles = withTheme(({ theme }) => ({
+  fill: theme.colors.darkTertiary,
+  size: theme.sizing.baseUnit * 0.75,
+}));
+
+const StyledButtonIcon = IconStyles(ButtonIcon);
+
 const Controls = styled(({ theme }) => ({
-  position: 'absolute',
-  right: 0,
-  bottom: 0,
-  top: -1,
-  paddingHorizontal: theme.sizing.baseUnit / 2,
   flexDirection: 'row',
-  justifyContent: 'flex-end',
+  justifyContent: 'space-between',
   alignItems: 'center',
+  paddingRight: theme.sizing.baseUnit * 0.75,
+  backgroundColor: theme.colors.white,
+}))(FlexedView);
+
+const TrackInfo = styled(({ theme }) => ({
+  paddingLeft: theme.sizing.baseUnit / 2,
+  height: '100%',
+  justifyContent: 'center',
+  width: '100%',
 }))(View);
 
 const MiniSeeker = styled({
@@ -92,14 +73,6 @@ const MiniSeeker = styled({
   right: 0,
   bottom: 0,
 })(Seeker);
-
-const IconStyles = withTheme(({ theme }) => ({
-  fill: theme.colors.darkTertiary,
-  size: theme.sizing.baseUnit * 1.25,
-}));
-
-const StyledIcon = IconStyles(Icon);
-const StyledButtonIcon = IconStyles(ButtonIcon);
 
 /**
  * The MiniControls renders basic track info and a play/pause button.
@@ -115,7 +88,7 @@ class MiniControls extends Component {
   renderMiniControls = ({
     data: {
       mediaPlayer: {
-        currentTrack: { title, artist, isVideo } = {},
+        currentTrack: { title, isVideo } = {},
         isPlaying = false,
       } = {},
     } = {},
@@ -130,35 +103,23 @@ class MiniControls extends Component {
         {(goFullscreen) => (
           <Shadow>
             <Container>
-              <Mutation mutation={DISMISS}>
-                {(dismiss) => (
-                  <Touchable
-                    onPress={() => (isPlaying ? goFullscreen() : dismiss())}
-                  >
-                    <ThumbnailSpacer isVideo={isVideo}>
-                      <Animated.View
-                        style={[
-                          StyleSheet.absoluteFill,
-                          { opacity: this.dismissAnimator },
-                        ]}
-                      >
-                        <DismissBackground>
-                          <StyledIcon name="close" />
-                        </DismissBackground>
-                      </Animated.View>
-                    </ThumbnailSpacer>
-                  </Touchable>
-                )}
-              </Mutation>
-              <TrackInfoTouchableBackground>
-                <TrackInfoTouchable onPress={() => goFullscreen()}>
-                  <TrackInfo>
-                    <TrackName>{title}</TrackName>
-                    <TrackArtist>{artist}</TrackArtist>
-                  </TrackInfo>
-                </TrackInfoTouchable>
-              </TrackInfoTouchableBackground>
+              <Animated.View
+                style={[
+                  StyleSheet.absoluteFill,
+                  { opacity: this.dismissAnimator },
+                ]}
+              >
+                <DismissBackground />
+              </Animated.View>
+              <ThumbnailSpacer isVideo={isVideo} />
               <Controls>
+                <FlexedView>
+                  <Touchable onPress={() => goFullscreen()}>
+                    <TrackInfo>
+                      <H5 numberOfLines={1}>{title}</H5>
+                    </TrackInfo>
+                  </Touchable>
+                </FlexedView>
                 {isPlaying ? (
                   <Mutation mutation={PAUSE}>
                     {(pause) => (
@@ -175,6 +136,14 @@ class MiniControls extends Component {
                     )}
                   </Mutation>
                 )}
+                <Mutation mutation={DISMISS}>
+                  {(dismiss) => (
+                    <StyledButtonIcon
+                      name="close"
+                      onPress={() => (isPlaying ? goFullscreen() : dismiss())}
+                    />
+                  )}
+                </Mutation>
               </Controls>
               <MiniSeeker minimal />
             </Container>
