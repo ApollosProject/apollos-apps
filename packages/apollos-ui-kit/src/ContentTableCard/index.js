@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import TableView from '../TableView';
 import Card, { CardContent } from '../Card';
@@ -53,7 +54,7 @@ class ContentTableCard extends PureComponent {
               onPress={() => this.handleOnPress(item)}
               label={item.subtitle || ''}
               title={item.title || ''}
-              imageSource={item.image ? item.image.sources : ''}
+              imageSource={get(item, 'image.sources', '')}
             />
           ))}
         </Content>
