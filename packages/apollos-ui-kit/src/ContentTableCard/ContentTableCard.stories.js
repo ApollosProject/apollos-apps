@@ -78,7 +78,7 @@ storiesOf('ContentTableCard', module)
       label={'FOR YOU'}
       onPress={() => {}}
       content={content}
-      DynamicHeader={
+      header={
         <H3 numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
         </H3>
@@ -91,7 +91,7 @@ storiesOf('ContentTableCard', module)
       onPress={() => {}}
       isLoading
       content={content}
-      DynamicHeader={
+      header={
         <H3 isLoading numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
         </H3>
