@@ -2,11 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { H6, H4 } from '../typography';
-import styled from '../styled';
-import TouchableScale from '../TouchableScale';
-import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
-import FlexedView from '../FlexedView';
+import { H6, H4 } from '../../typography';
+import styled from '../../styled';
+import TouchableScale from '../../TouchableScale';
+import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import FlexedView from '../../FlexedView';
 
 const CellImage = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,

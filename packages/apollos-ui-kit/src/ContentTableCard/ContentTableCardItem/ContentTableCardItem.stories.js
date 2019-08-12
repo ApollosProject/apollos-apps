@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import CenteredView from '../CenteredView';
-import PaddedView from '../PaddedView';
-import BackgroundView from '../BackgroundView';
+import CenteredView from '../../CenteredView';
+import PaddedView from '../../PaddedView';
+import BackgroundView from '../../BackgroundView';
 
-import ContentTableCardItem from './ContentTableCardItem';
+import ContentTableCardItem from '.';
 
 storiesOf('ContentTableCardItem', module)
   .addDecorator((story) => (
@@ -16,7 +16,7 @@ storiesOf('ContentTableCardItem', module)
       </CenteredView>
     </BackgroundView>
   ))
-  .add('title', () => (
+  .add('example', () => (
     <ContentTableCardItem
       onPress={() => {}}
       imageSource={'https://picsum.photos/600/400/?random'}
