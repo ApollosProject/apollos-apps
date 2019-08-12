@@ -75,7 +75,6 @@ storiesOf('ContentTableCard', module)
   ))
   .add('example', () => (
     <ContentTableCard
-      label={'FOR YOU'}
       onPress={() => {}}
       content={content}
       header={
@@ -87,7 +86,6 @@ storiesOf('ContentTableCard', module)
   ))
   .add('isLoading', () => (
     <ContentTableCard
-      label={'FOR YOU'}
       onPress={() => {}}
       isLoading
       content={content}
