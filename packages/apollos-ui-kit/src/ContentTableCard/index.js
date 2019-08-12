@@ -20,7 +20,7 @@ const Content = styled(() => ({
 class ContentTableCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
-    isLoading: PropTypes.bool, // eslint-disable-line
+    isLoading: PropTypes.bool,
     content: PropTypes.array, // eslint-disable-line
     header: PropTypes.element,
   };
