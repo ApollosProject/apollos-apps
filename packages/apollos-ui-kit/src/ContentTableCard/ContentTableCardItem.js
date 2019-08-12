@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -37,41 +37,41 @@ const Cell = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
-class ContentTableCardItem extends PureComponent {
-  static propTypes = {
-    imageSource: ImageSourceType.isRequired,
-    title: PropTypes.string.isRequired,
-    id: PropTypes.string,
-    label: PropTypes.string,
-    onPress: PropTypes.func,
-  };
+const ContentTableCardItem = ({
+  imageSource,
+  title,
+  id,
+  label,
+  onPressAction,
+}) => (
+  <TouchableScale
+    onPress={() =>
+      onPressAction({
+        id,
+        transitionKey: 2,
+      })
+    }
+  >
+    <Cell>
+      <CellImage>
+        <ConnectedImage source={imageSource} />
+      </CellImage>
+      <TextContainer>
+        {label ? <StyledH6>{label}</StyledH6> : null}
+        <H4 numberOfLines={2} ellipsizeMode="tail">
+          {title}
+        </H4>
+      </TextContainer>
+    </Cell>
+  </TouchableScale>
+);
 
-  render() {
-    return (
-      <TouchableScale
-        onPress={() =>
-          this.props.onPress({
-            id: this.props.id,
-            transitionKey: 2,
-          })
-        }
-      >
-        <Cell>
-          <CellImage>
-            <ConnectedImage source={this.props.imageSource} />
-          </CellImage>
-          <TextContainer>
-            {this.props.label ? <StyledH6>{this.props.label}</StyledH6> : null}
-            {this.props.title ? (
-              <H4 numberOfLines={2} ellipsizeMode="tail">
-                {this.props.title}
-              </H4>
-            ) : null}
-          </TextContainer>
-        </Cell>
-      </TouchableScale>
-    );
-  }
-}
+ContentTableCardItem.propTypes = {
+  imageSource: ImageSourceType.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  label: PropTypes.string,
+  onPressAction: PropTypes.func,
+};
 
 export default ContentTableCardItem;
