@@ -2,15 +2,12 @@ import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import {
-  H6,
-  H4,
-  styled,
-  TouchableScale,
-  withIsLoading,
-  ConnectedImage,
-  FlexedView,
-} from '@apollosproject/ui-kit';
+import { H6, H4 } from '../typography';
+import styled from '../styled';
+import TouchableScale from '../TouchableScale';
+import { withIsLoading } from '../isLoading';
+import ConnectedImage from '../ConnectedImage';
+import FlexedView from '../FlexedView';
 
 const CellImage = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,

@@ -1,14 +1,10 @@
 import React, { PureComponent } from 'react';
-// import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import {
-  TableView,
-  Card,
-  CardContent,
-  styled,
-  withIsLoading,
-} from '@apollosproject/ui-kit';
+import TableView from '../TableView';
+import Card, { CardContent } from '../Card';
+import styled from '../styled';
+import { withIsLoading } from '../isLoading';
 
 import ContentTableCardItem from './ContentTableCardItem';
 
