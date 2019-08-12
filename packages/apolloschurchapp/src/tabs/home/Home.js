@@ -13,6 +13,7 @@ import {
   H6,
   TouchableScale,
   FeaturedCard,
+  ContentTableCard,
 } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../../utils/fetchMoreResolver';
@@ -20,7 +21,6 @@ import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
 
-import ContentTableCard from '../../ui/ContentTableCard';
 import GET_USER_FEED from './getUserFeed';
 import GET_FEED_FEATURES from './getFeedFeatures';
 import GET_CAMPAIGN_CONTENT_ITEM from './getCampaignContentItem';
