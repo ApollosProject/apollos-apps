@@ -19,6 +19,7 @@ export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
 export ContentCard from './ContentCard';
+export ContentTableCard from './ContentTableCard';
 export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
