@@ -21,10 +21,6 @@ const loadingStateObject = {
   },
 };
 
-// Hardcoded value taken from CardTile. Expect to change this if you change CardTile.
-// TODO: wish we had a better solution for getting widths of things...
-const CARD_WIDTH = Dimensions.get('window').width * 0.66 + 16;
-
 class HorizontalContentFeed extends Component {
   static propTypes = {
     contentId: PropTypes.string,
@@ -84,8 +80,8 @@ class HorizontalContentFeed extends Component {
         initialScrollIndex={initialScrollIndex}
         getItemLayout={(itemData, index) => ({
           // We need to pass this function so that initialScrollIndex will work.
-          length: CARD_WIDTH,
-          offset: CARD_WIDTH * index,
+          length: CardTile.WIDTH,
+          offset: CardTile.WIDTH * index,
           index,
         })}
       />
