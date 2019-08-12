@@ -43,12 +43,11 @@ class ContentTableCard extends PureComponent {
     const { isLoading, content, header: headerContent } = this.props;
 
     return (
-      <Card>
+      <Card isLoading={isLoading}>
         <Header>{headerContent}</Header>
         <Content>
           {content.map((item) => (
             <ContentTableCardItem
-              isLoading={isLoading}
               key={item.id}
               id={item.id}
               onPress={() => this.handleOnPress(item)}

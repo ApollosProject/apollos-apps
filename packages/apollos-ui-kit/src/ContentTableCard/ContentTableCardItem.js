@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { H6, H4 } from '../typography';
 import styled from '../styled';
 import TouchableScale from '../TouchableScale';
-import { withIsLoading } from '../isLoading';
 import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import FlexedView from '../FlexedView';
 
@@ -58,7 +57,7 @@ class ContentTableCardItem extends PureComponent {
       >
         <Cell>
           <CellImage>
-            <ConnectedImage source={this.props.imageSource} isLoading />
+            <ConnectedImage source={this.props.imageSource} />
           </CellImage>
           <TextContainer>
             <StyledH6>{this.props.label}</StyledH6>
@@ -72,4 +71,4 @@ class ContentTableCardItem extends PureComponent {
   }
 }
 
-export default withIsLoading(ContentTableCardItem);
+export default ContentTableCardItem;
