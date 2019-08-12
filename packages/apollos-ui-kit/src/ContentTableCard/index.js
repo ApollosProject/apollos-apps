@@ -21,7 +21,13 @@ class ContentTableCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool,
-    content: PropTypes.array, // eslint-disable-line
+    content: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        title: PropTypes.string,
+        subtitle: PropTypes.string,
+      })
+    ),
     header: PropTypes.element,
   };
 
