@@ -32,6 +32,7 @@ class ContentTableCard extends PureComponent {
     header: PropTypes.element,
   };
 
+  // TODO: move this logic out to the `ConnectedComponent` level
   handleOnPressActionItem = ({ action, relatedNode: { id } }) => {
     const { onPress } = this.props;
 
