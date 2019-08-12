@@ -6,7 +6,7 @@ import { H6, H4 } from '../typography';
 import styled from '../styled';
 import TouchableScale from '../TouchableScale';
 import { withIsLoading } from '../isLoading';
-import ConnectedImage from '../ConnectedImage';
+import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import FlexedView from '../FlexedView';
 
 const CellImage = styled(({ theme }) => ({
@@ -40,7 +40,7 @@ const Cell = styled(({ theme }) => ({
 class ContentTableCardItem extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
-    imageSource: PropTypes.any, // eslint-disable-line
+    imageSource: ImageSourceType,
     label: PropTypes.string,
     title: PropTypes.string,
     id: PropTypes.string,
