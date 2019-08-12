@@ -57,7 +57,7 @@ const ContentTableCardItem = ({
         <ConnectedImage source={imageSource} />
       </CellImage>
       <TextContainer>
-        {label ? <StyledH6>{label}</StyledH6> : null}
+        {label ? <StyledH6 numberOfLines={1}>{label}</StyledH6> : null}
         <H4 numberOfLines={2} ellipsizeMode="tail">
           {title}
         </H4>
