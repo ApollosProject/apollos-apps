@@ -1,6 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { H3 } from '@apollosproject/ui-kit';
+
+import CenteredView from '../CenteredView';
+import BackgroundView from '../BackgroundView';
+import { H3 } from '../typography';
+
 import ContentTableCard from '.';
 
 const content = [
@@ -59,6 +63,12 @@ const content = [
 ];
 
 storiesOf('ContentTableCard', module)
+  .addDecorator((story) => (
+    <BackgroundView>
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
+    </BackgroundView>
+  ))
   .add('simple', () => (
     <ContentTableCard
       label={'FOR YOU'}
