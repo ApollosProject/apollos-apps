@@ -1,28 +1,35 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
+import CenteredView from '../CenteredView';
+import PaddedView from '../PaddedView';
+import BackgroundView from '../BackgroundView';
+
 import ContentTableCardItem from './ContentTableCardItem';
 
-const item = {
-  id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
-  title: 'Hello 1',
-  parentChannel: {
-    id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-    name: 'NewSpring - Articles',
-  },
-  coverImage: {
-    sources: {
-      uri: 'https://picsum.photos/600/400/?image=63',
-    },
-  },
-};
-
-storiesOf('ContentTableCardItem', module).add('simple', () => (
-  <ContentTableCardItem
-    onPress={() => {}}
-    imageSource={item.coverImage.sources}
-    label={item.parentChannel.name}
-    title={item.title}
-    id={item.id}
-  />
-));
+storiesOf('ContentTableCardItem', module)
+  .addDecorator((story) => (
+    <BackgroundView>
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <CenteredView style={{ alignItems: 'stretch' }}>
+        <PaddedView>{story()}</PaddedView>
+      </CenteredView>
+    </BackgroundView>
+  ))
+  .add('title', () => (
+    <ContentTableCardItem
+      onPress={() => {}}
+      imageSource={'https://picsum.photos/600/400/?random'}
+      title={'Hello 1'}
+      id={'fakeID'}
+    />
+  ))
+  .add('label', () => (
+    <ContentTableCardItem
+      onPress={() => {}}
+      imageSource={'https://picsum.photos/600/400/?random'}
+      label={'Boom'}
+      title={'Hello 1'}
+      id={'fakeID'}
+    />
+  ));
