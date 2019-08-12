@@ -11,52 +11,56 @@ const content = [
   {
     id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
     title: 'Hello 1',
+    subtitle: 'Boom',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
     coverImage: {
       sources: {
-        uri: 'https://picsum.photos/600/400/?image=63',
+        uri: 'https://picsum.photos/600/400?random',
       },
     },
   },
   {
     id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
     title: 'Hello 2',
+    subtitle: 'Boom',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
     coverImage: {
       sources: {
-        uri: 'https://picsum.photos/600/400/?image=63',
+        uri: 'https://picsum.photos/600/400?random',
       },
     },
   },
   {
     id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
     title: 'Hello 3',
+    subtitle: 'Boom',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
     coverImage: {
       sources: {
-        uri: 'https://picsum.photos/600/400/?image=63',
+        uri: 'https://picsum.photos/600/400?random',
       },
     },
   },
   {
     id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
     title: 'Hello 4',
+    subtitle: 'Boom',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
     coverImage: {
       sources: {
-        uri: 'https://picsum.photos/600/400/?image=63',
+        uri: 'https://picsum.photos/600/400?random',
       },
     },
   },
@@ -69,7 +73,7 @@ storiesOf('ContentTableCard', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('simple', () => (
+  .add('example', () => (
     <ContentTableCard
       label={'FOR YOU'}
       onPress={() => {}}
