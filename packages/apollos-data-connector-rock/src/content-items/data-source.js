@@ -325,7 +325,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     const parentFilter = parentAssociations.map(
       ({ contentChannelItemId }) =>
-        `(ContentChannelItemId eq ${contentChannelItemId}) and (ChildContentChannelItemId ne ${id})`
+        `(ContentChannelItemId eq ${contentChannelItemId})`
     );
     siblingAssociationsRequest.filterOneOf(parentFilter);
 

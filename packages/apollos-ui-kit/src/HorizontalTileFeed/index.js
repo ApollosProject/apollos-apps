@@ -31,7 +31,6 @@ export class HorizontalTileFeed extends PureComponent {
 
   render() {
     const { content, isLoading, renderItem, theme, ...otherProps } = this.props;
-
     return (
       <TileFeed
         data={content}

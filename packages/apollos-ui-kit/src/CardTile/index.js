@@ -142,6 +142,11 @@ const CardTile = enhance(
   )
 );
 
+// TODO: Hard coding this value to the calculated value for now
+// In the future, this value should live in the theme
+// or maybe somewhere a bit more intuitive
+CardTile.WIDTH = Dimensions.get('window').width * 0.66 + 16;
+
 CardTile.propTypes = {
   title: PropTypes.string,
   number: PropTypes.number,

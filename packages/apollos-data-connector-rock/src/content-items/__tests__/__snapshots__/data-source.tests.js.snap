@@ -91,7 +91,7 @@ Array [
     Object {},
   ],
   Array [
-    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=%28%28ContentChannelItemId%20eq%20101%29%20and%20%28ChildContentChannelItemId%20ne%201%29%29",
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=%28%28ContentChannelItemId%20eq%20101%29%29",
     Object {},
     Object {},
   ],
