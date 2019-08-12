@@ -9,10 +9,6 @@ import { withIsLoading } from '../isLoading';
 
 import ContentTableCardItem from './ContentTableCardItem';
 
-const Header = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
-}))(CardContent);
-
 const Content = styled(() => ({
   borderBottomWidth: 0,
   borderTopWidth: 0,
@@ -46,7 +42,7 @@ class ContentTableCard extends PureComponent {
 
     return (
       <Card isLoading={isLoading}>
-        <Header>{headerContent}</Header>
+        <CardContent>{headerContent}</CardContent>
         <Content>
           {content.map((item) => (
             <ContentTableCardItem
