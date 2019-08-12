@@ -39,11 +39,11 @@ const Cell = styled(({ theme }) => ({
 
 class ContentTableCardItem extends PureComponent {
   static propTypes = {
-    onPress: PropTypes.func,
-    imageSource: ImageSourceType,
-    label: PropTypes.string,
-    title: PropTypes.string,
+    imageSource: ImageSourceType.isRequired,
+    title: PropTypes.string.isRequired,
     id: PropTypes.string,
+    label: PropTypes.string,
+    onPress: PropTypes.func,
   };
 
   render() {
