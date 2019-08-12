@@ -9,7 +9,7 @@ import ContentTableCard from '.';
 
 const content = [
   {
-    id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
+    id: 'fakeId1',
     title: 'Hello 1',
     subtitle: 'Boom',
     parentChannel: {
@@ -23,7 +23,7 @@ const content = [
     },
   },
   {
-    id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
+    id: 'fakeId2',
     title: 'Hello 2',
     subtitle: 'Boom',
     parentChannel: {
@@ -37,7 +37,7 @@ const content = [
     },
   },
   {
-    id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
+    id: 'fakeId3',
     title: 'Hello 3',
     subtitle: 'Boom',
     parentChannel: {
@@ -51,7 +51,7 @@ const content = [
     },
   },
   {
-    id: 'UniversalContentItem:9d06423a8908b7cc1e1f2db6156c1bfb',
+    id: 'fakeId4',
     title: 'Hello 4',
     subtitle: 'Boom',
     parentChannel: {
