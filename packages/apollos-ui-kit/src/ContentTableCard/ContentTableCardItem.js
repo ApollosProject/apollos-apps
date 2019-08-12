@@ -42,11 +42,11 @@ const ContentTableCardItem = ({
   title,
   id,
   label,
-  onPressAction,
+  onPressActionItem,
 }) => (
   <TouchableScale
     onPress={() =>
-      onPressAction({
+      onPressActionItem({
         id,
         transitionKey: 2,
       })
@@ -71,7 +71,7 @@ ContentTableCardItem.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string,
   label: PropTypes.string,
-  onPressAction: PropTypes.func,
+  onPressActionItem: PropTypes.func,
 };
 
 export default ContentTableCardItem;

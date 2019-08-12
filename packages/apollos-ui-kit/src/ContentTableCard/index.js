@@ -32,7 +32,7 @@ class ContentTableCard extends PureComponent {
     header: PropTypes.element,
   };
 
-  handleOnPress = ({ action, relatedNode: { id } }) => {
+  handleOnPressActionItem = ({ action, relatedNode: { id } }) => {
     const { onPress } = this.props;
 
     if (action === 'READ_CONTENT') {
@@ -51,7 +51,7 @@ class ContentTableCard extends PureComponent {
             <ContentTableCardItem
               key={item.id}
               id={item.id}
-              onPress={() => this.handleOnPress(item)}
+              onPressActionItem={() => this.handleOnPressActionItem(item)}
               label={item.subtitle || ''}
               title={item.title || ''}
               imageSource={get(item, 'image.sources', '')}
