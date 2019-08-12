@@ -21,6 +21,7 @@ const StyledH6 = styled(({ theme }) => ({
 }))(H6);
 
 const TextContainer = styled(({ theme }) => ({
+  justifyContent: 'center',
   marginTop: theme.sizing.baseUnit / 2.5,
   borderBottomWidth: 0.5,
   height: theme.sizing.baseUnit * 4.25,
@@ -60,10 +61,12 @@ class ContentTableCardItem extends PureComponent {
             <ConnectedImage source={this.props.imageSource} />
           </CellImage>
           <TextContainer>
-            <StyledH6>{this.props.label}</StyledH6>
-            <H4 numberOfLines={2} ellipsizeMode="tail">
-              {this.props.title}
-            </H4>
+            {this.props.label ? <StyledH6>{this.props.label}</StyledH6> : null}
+            {this.props.title ? (
+              <H4 numberOfLines={2} ellipsizeMode="tail">
+                {this.props.title}
+              </H4>
+            ) : null}
           </TextContainer>
         </Cell>
       </TouchableScale>
