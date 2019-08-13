@@ -337,6 +337,9 @@ type Person implements Node {
   campus: Campus
   groups: [Group]
   groupsLead: [Group]
+  families: [Group]
+  homeGroups: [Group]
+  servingGroups: [Group]
 }
 
 input PushSettingsInput {
@@ -359,9 +362,6 @@ type Query {
   userPass: Pass
   campuses(location: CampusLocationInput): [Campus]
   groups: [Group]
-  families(personId: String!): [Group]
-  homeGroups(personId: String!): [Group]
-  servingGroups(personId: String!): [Group]
   userFeedFeatures: [Feature]
 }
 

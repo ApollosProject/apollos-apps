@@ -1,5 +1,4 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import { parseGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
@@ -63,23 +62,19 @@ export default class Group extends RockApolloDataSource {
     );
   };
 
-  getFamilies = (personId) => {
-    const { id } = parseGlobalId(personId);
-    return this.request(`/Groups/GetFamilies/${id}`)
+  getFamilies = (id) =>
+    this.request(`/Groups/GetFamilies/${id}`)
       .filter(this.activeFilter)
       .get();
-  };
 
-  getHomeGroups = async (personId) => {
-    const { id } = parseGlobalId(personId);
+  getHomeGroups = async (id) => {
     const allGroups = await this.getByPerson(id);
     return allGroups.filter(
       ({ groupTypeId }) => groupTypeId === ROCK_MAPPINGS.HOME_GROUP_TYPE_ID
     );
   };
 
-  getServingGroups = async (personId) => {
-    const { id } = parseGlobalId(personId);
+  getServingGroups = async (id) => {
     const allGroups = await this.getByPerson(id);
     return allGroups.filter(
       ({ groupTypeId }) => groupTypeId === ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID

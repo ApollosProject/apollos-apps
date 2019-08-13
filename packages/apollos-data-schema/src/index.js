@@ -453,14 +453,14 @@ export const groupSchema = gql`
 
   extend type Query {
     groups: [Group]
-    families(personId: String!): [Group]
-    homeGroups(personId: String!): [Group]
-    servingGroups(personId: String!): [Group]
   }
 
   extend type Person {
     groups: [Group]
     groupsLead: [Group]
+    families: [Group]
+    homeGroups: [Group]
+    servingGroups: [Group]
   }
 `;
 

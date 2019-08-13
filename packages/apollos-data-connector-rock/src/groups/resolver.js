@@ -2,15 +2,6 @@ import { createGlobalId } from '@apollosproject/server-core';
 import { enforceCurrentUser } from '../utils';
 
 export default {
-  Query: {
-    groups: (root, args, { dataSources }) => dataSources.Group.getAll(),
-    families: (root, { personId }, { dataSources }) =>
-      dataSources.Group.getFamilies(personId),
-    homeGroups: (root, { personId }, { dataSources }) =>
-      dataSources.Group.getHomeGroups(personId),
-    servingGroups: (root, { personId }, { dataSources }) =>
-      dataSources.Group.getServingGroups(personId),
-  },
   Group: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
@@ -25,5 +16,11 @@ export default {
     groupsLead: enforceCurrentUser(({ id }, args, { dataSources }) =>
       dataSources.Group.getLeadByPerson(id)
     ),
+    families: ({ id }, args, { dataSources }) =>
+      dataSources.Group.getFamilies(id),
+    homeGroups: ({ id }, args, { dataSources }) =>
+      dataSources.Group.getHomeGroups(id),
+    servingGroups: ({ id }, args, { dataSources }) =>
+      dataSources.Group.getServingGroups(id),
   },
 };
