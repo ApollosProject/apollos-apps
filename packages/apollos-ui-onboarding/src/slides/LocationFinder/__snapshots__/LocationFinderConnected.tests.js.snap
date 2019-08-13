@@ -77,8 +77,6 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       Component={
         Object {
           "$$typeof": Symbol(react.memo),
-          "CampusCard": [Function],
-          "SlideContent": [Function],
           "compare": null,
           "defaultProps": Object {
             "buttonDisabled": false,
@@ -93,9 +91,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
             "buttonText": [Function],
             "campus": [Function],
             "description": [Function],
-            "isCurrentCampus": [Function],
             "onPressButton": [Function],
-            "onPressPrimary": [Function],
             "slideTitle": [Function],
           },
           "type": [Function],
@@ -270,8 +266,6 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       Component={
         Object {
           "$$typeof": Symbol(react.memo),
-          "CampusCard": [Function],
-          "SlideContent": [Function],
           "compare": null,
           "defaultProps": Object {
             "buttonDisabled": false,
@@ -286,9 +280,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
             "buttonText": [Function],
             "campus": [Function],
             "description": [Function],
-            "isCurrentCampus": [Function],
             "onPressButton": [Function],
-            "onPressPrimary": [Function],
             "slideTitle": [Function],
           },
           "type": [Function],
@@ -467,8 +459,6 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
       Component={
         Object {
           "$$typeof": Symbol(react.memo),
-          "CampusCard": [Function],
-          "SlideContent": [Function],
           "compare": null,
           "defaultProps": Object {
             "buttonDisabled": false,
@@ -483,9 +473,7 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
             "buttonText": [Function],
             "campus": [Function],
             "description": [Function],
-            "isCurrentCampus": [Function],
             "onPressButton": [Function],
-            "onPressPrimary": [Function],
             "slideTitle": [Function],
           },
           "type": [Function],
