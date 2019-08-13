@@ -55,9 +55,7 @@ function Onboarding({ navigation }) {
             <LocationFinderConnected
               onPressPrimary={swipeForward}
               onNavigate={() => {
-                navigation.navigate('Location', {
-                  onFinished: swipeForward,
-                });
+                navigation.navigate('Location');
               }}
               BackgroundComponent={
                 <StyledGradient
