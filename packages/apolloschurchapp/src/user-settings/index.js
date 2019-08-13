@@ -6,25 +6,18 @@ import { Query, Mutation } from 'react-apollo';
 
 import {
   BackgroundView,
-  PaddedView,
   TableView,
   Cell,
   CellIcon,
   CellText,
   Divider,
   Touchable,
-  styled,
   ActivityIndicator,
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
-import AvatarForm from 'apolloschurchapp/src/ui/UserAvatarView/AvatarForm';
 
 import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
-
-const AvatarView = styled({
-  alignItems: 'center',
-  justifyContent: 'center',
-})(PaddedView);
+import ChangeAvatar from './ChangeAvatar';
 
 class UserSettings extends PureComponent {
   static navigationOptions = () => ({
@@ -47,9 +40,8 @@ class UserSettings extends PureComponent {
           return (
             <BackgroundView>
               <ScrollView>
-                <AvatarView>
-                  <AvatarForm text />
-                </AvatarView>
+                <ChangeAvatar />
+
                 <WebBrowserConsumer>
                   {(openUrl) => (
                     <>

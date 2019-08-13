@@ -71,19 +71,6 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
         }
       >
         <View
-          additionalStyles={
-            Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  48,
-                  48,
-                  48,
-                ],
-                "model": "rgb",
-                "valpha": 0.7,
-              },
-            }
-          }
           borderRadius={24}
           iconPadding={8}
           style={
@@ -444,19 +431,6 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
         }
       >
         <View
-          additionalStyles={
-            Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  48,
-                  48,
-                  48,
-                ],
-                "model": "rgb",
-                "valpha": 0.7,
-              },
-            }
-          }
           borderRadius={24}
           iconPadding={8}
           style={
@@ -669,19 +643,6 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
         }
       >
         <View
-          additionalStyles={
-            Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  48,
-                  48,
-                  48,
-                ],
-                "model": "rgb",
-                "valpha": 0.7,
-              },
-            }
-          }
           borderRadius={24}
           iconPadding={8}
           style={
@@ -969,19 +930,6 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
         }
       >
         <View
-          additionalStyles={
-            Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  48,
-                  48,
-                  48,
-                ],
-                "model": "rgb",
-                "valpha": 0.7,
-              },
-            }
-          }
           borderRadius={24}
           iconPadding={8}
           style={
@@ -1134,19 +1082,6 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
         }
       >
         <View
-          additionalStyles={
-            Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  48,
-                  48,
-                  48,
-                ],
-                "model": "rgb",
-                "valpha": 0.7,
-              },
-            }
-          }
           borderRadius={24}
           iconPadding={8}
           style={
