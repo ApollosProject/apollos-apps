@@ -90,12 +90,12 @@ describe('ContentTableCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  // it('should render a loading state', () => {
-  //   const tree = renderer.create(
-  //     <Providers>
-  //       <ContentTableCard onPress={() => {}} isLoading content={content} />
-  //     </Providers>
-  //   );
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ContentTableCard onPress={() => {}} isLoading content={content} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
