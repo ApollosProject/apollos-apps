@@ -1,11 +1,10 @@
 import React from 'react';
-import { storiesOf } from '@apollosproject/ui-storybook';
+import renderer from 'react-test-renderer';
 
-import CenteredView from '../CenteredView';
-import BackgroundView from '../BackgroundView';
+import Providers from '../Providers';
 import { H3 } from '../typography';
 
-import ContentTableCard from '.';
+import ActionListCard from '.';
 
 const content = [
   {
@@ -66,33 +65,37 @@ const content = [
   },
 ];
 
-storiesOf('ContentTableCard', module)
-  .addDecorator((story) => (
-    <BackgroundView>
-      {/* eslint-disable-next-line react-native/no-inline-styles */}
-      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
-    </BackgroundView>
-  ))
-  .add('example', () => (
-    <ContentTableCard
-      onPress={() => {}}
-      content={content}
-      header={
-        <H3 numberOfLines={3} ellipsizeMode="tail">
-          Some random text that encourages you
-        </H3>
-      }
-    />
-  ))
-  .add('isLoading', () => (
-    <ContentTableCard
-      onPress={() => {}}
-      isLoading
-      content={content}
-      header={
-        <H3 numberOfLines={3} ellipsizeMode="tail">
-          Some random text that encourages you
-        </H3>
-      }
-    />
-  ));
+describe('ActionListCard', () => {
+  it('should render 4 items', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCard onPress={() => {}} content={content} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a header', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCard
+          onPress={() => {}}
+          content={content}
+          header={
+            <H3 numberOfLines={3} ellipsizeMode="tail">
+              Custom Header Element
+            </H3>
+          }
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCard onPress={() => {}} isLoading content={content} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+});

@@ -5,9 +5,9 @@ import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 import BackgroundView from '../../BackgroundView';
 
-import ContentTableCardItem from '.';
+import ActionListItem from '.';
 
-storiesOf('ContentTableCardItem', module)
+storiesOf('ActionListItem', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -17,7 +17,7 @@ storiesOf('ContentTableCardItem', module)
     </BackgroundView>
   ))
   .add('example', () => (
-    <ContentTableCardItem
+    <ActionListItem
       onPress={() => {}}
       imageSource={'https://picsum.photos/600/400/?random'}
       title={'Hello 1'}
@@ -25,7 +25,7 @@ storiesOf('ContentTableCardItem', module)
     />
   ))
   .add('label', () => (
-    <ContentTableCardItem
+    <ActionListItem
       onPress={() => {}}
       imageSource={'https://picsum.photos/600/400/?random'}
       label={'Boom'}

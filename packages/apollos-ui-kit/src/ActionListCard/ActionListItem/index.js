@@ -37,7 +37,7 @@ const Cell = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
-const ContentTableCardItem = ({
+const ActionListItem = ({
   imageSource,
   title,
   id,
@@ -66,7 +66,7 @@ const ContentTableCardItem = ({
   </TouchableScale>
 );
 
-ContentTableCardItem.propTypes = {
+ActionListItem.propTypes = {
   imageSource: ImageSourceType.isRequired,
   title: PropTypes.string.isRequired,
   id: PropTypes.string,
@@ -74,4 +74,4 @@ ContentTableCardItem.propTypes = {
   onPressActionItem: PropTypes.func,
 };
 
-export default ContentTableCardItem;
+export default ActionListItem;

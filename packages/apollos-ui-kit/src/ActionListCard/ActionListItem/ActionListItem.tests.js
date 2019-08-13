@@ -4,13 +4,13 @@ import renderer from 'react-test-renderer';
 import Providers from '../../Providers';
 import { withIsLoading } from '../../isLoading';
 
-import ContentTableCardItem from '.';
+import ActionListItem from '.';
 
-describe('ContentTableCardItem', () => {
+describe('ActionListItem', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <ContentTableCardItem
+        <ActionListItem
           onPress={() => {}}
           imageSource={'https://picsum.photos/600/400/?random'}
           title={'Boom'}
@@ -23,7 +23,7 @@ describe('ContentTableCardItem', () => {
   it('should render with a label', () => {
     const tree = renderer.create(
       <Providers>
-        <ContentTableCardItem
+        <ActionListItem
           onPress={() => {}}
           imageSource={'https://picsum.photos/600/400/?random'}
           title={'Boom'}
@@ -39,7 +39,7 @@ describe('ContentTableCardItem', () => {
     const tree = renderer.create(
       <Providers>
         <SetIsLoading isLoading>
-          <ContentTableCardItem
+          <ActionListItem
             onPress={() => {}}
             imageSource={'https://picsum.photos/600/400/?random'}
             title={'Boom'}

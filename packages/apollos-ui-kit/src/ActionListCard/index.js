@@ -7,14 +7,14 @@ import Card, { CardContent } from '../Card';
 import styled from '../styled';
 import { withIsLoading } from '../isLoading';
 
-import ContentTableCardItem from './ContentTableCardItem';
+import ActionListItem from './ActionListItem';
 
 const Content = styled(() => ({
   borderBottomWidth: 0,
   borderTopWidth: 0,
 }))(TableView);
 
-class ContentTableCard extends PureComponent {
+class ActionListCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool,
@@ -45,7 +45,7 @@ class ContentTableCard extends PureComponent {
         <CardContent>{headerContent}</CardContent>
         <Content>
           {content.map((item) => (
-            <ContentTableCardItem
+            <ActionListItem
               key={item.id}
               id={item.id}
               onPressActionItem={() => this.handleOnPressActionItem(item)}
@@ -60,4 +60,4 @@ class ContentTableCard extends PureComponent {
   }
 }
 
-export default withIsLoading(ContentTableCard);
+export default withIsLoading(ActionListCard);

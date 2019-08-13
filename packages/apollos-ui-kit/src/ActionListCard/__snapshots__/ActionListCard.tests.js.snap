@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentTableCard should render 4 items 1`] = `
+exports[`ActionListCard should render 4 items 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -546,7 +546,7 @@ exports[`ContentTableCard should render 4 items 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`ContentTableCard should render a loading state 1`] = `
+exports[`ActionListCard should render a loading state 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}
@@ -1081,7 +1081,7 @@ exports[`ContentTableCard should render a loading state 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`ContentTableCard should render with a header 1`] = `
+exports[`ActionListCard should render with a header 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   onLayout={[Function]}

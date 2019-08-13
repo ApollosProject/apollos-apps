@@ -1,10 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { storiesOf } from '@apollosproject/ui-storybook';
 
-import Providers from '../Providers';
+import CenteredView from '../CenteredView';
+import BackgroundView from '../BackgroundView';
 import { H3 } from '../typography';
 
-import ContentTableCard from '.';
+import ActionListCard from '.';
 
 const content = [
   {
@@ -65,37 +66,33 @@ const content = [
   },
 ];
 
-describe('ContentTableCard', () => {
-  it('should render 4 items', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ContentTableCard onPress={() => {}} content={content} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render with a header', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ContentTableCard
-          onPress={() => {}}
-          content={content}
-          header={
-            <H3 numberOfLines={3} ellipsizeMode="tail">
-              Custom Header Element
-            </H3>
-          }
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render a loading state', () => {
-    const tree = renderer.create(
-      <Providers>
-        <ContentTableCard onPress={() => {}} isLoading content={content} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-});
+storiesOf('ActionListCard', module)
+  .addDecorator((story) => (
+    <BackgroundView>
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
+    </BackgroundView>
+  ))
+  .add('example', () => (
+    <ActionListCard
+      onPress={() => {}}
+      content={content}
+      header={
+        <H3 numberOfLines={3} ellipsizeMode="tail">
+          Some random text that encourages you
+        </H3>
+      }
+    />
+  ))
+  .add('isLoading', () => (
+    <ActionListCard
+      onPress={() => {}}
+      isLoading
+      content={content}
+      header={
+        <H3 numberOfLines={3} ellipsizeMode="tail">
+          Some random text that encourages you
+        </H3>
+      }
+    />
+  ));
