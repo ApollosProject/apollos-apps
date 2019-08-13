@@ -52,7 +52,11 @@ const WeekendContentItem = ({ content, loading }) => {
                           />
                         </Stretchy>
                       ) : null}
-                      <CardLabel title={content.parentChannel.name} />
+                      <CardLabel
+                        title={
+                          content.parentChannel && content.parentChannel.name
+                        }
+                      />
                       <H2 padded isLoading={!content.title && loading}>
                         {content.title}
                       </H2>
