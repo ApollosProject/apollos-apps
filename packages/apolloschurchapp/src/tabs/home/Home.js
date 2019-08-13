@@ -9,11 +9,8 @@ import {
   styled,
   FeedView,
   BackgroundView,
-  H3,
-  H6,
   TouchableScale,
   FeaturedCard,
-  ActionListCard,
 } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../../utils/fetchMoreResolver';
@@ -21,8 +18,8 @@ import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import { LiveButton } from '../../live';
 
+import Features from './Features';
 import GET_USER_FEED from './getUserFeed';
-import GET_FEED_FEATURES from './getFeedFeatures';
 import GET_CAMPAIGN_CONTENT_ITEM from './getCampaignContentItem';
 
 const LogoTitle = styled(({ theme }) => ({
@@ -31,10 +28,6 @@ const LogoTitle = styled(({ theme }) => ({
   alignSelf: 'center',
   resizeMode: 'contain',
 }))(Image);
-
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(H6);
 
 class Home extends PureComponent {
   static navigationOptions = () => ({
@@ -118,37 +111,7 @@ class Home extends PureComponent {
                         );
                       }}
                     </Query>
-                    <Query
-                      query={GET_FEED_FEATURES}
-                      fetchPolicy="cache-and-network"
-                    >
-                      {({ data: features, loading: featuresLoading }) =>
-                        get(features, 'userFeedFeatures', []).map(
-                          ({ title, subtitle, actions, id }) => (
-                            <ActionListCard
-                              isLoading={featuresLoading}
-                              onPress={this.handleOnPress}
-                              key={id}
-                              header={
-                                <>
-                                  <StyledH6 isLoading={featuresLoading}>
-                                    {title}
-                                  </StyledH6>
-                                  <H3
-                                    isLoading={featuresLoading}
-                                    numberOfLines={3}
-                                    ellipsizeMode="tail"
-                                  >
-                                    {subtitle}
-                                  </H3>
-                                </>
-                              }
-                              actions={actions}
-                            />
-                          )
-                        )
-                      }
-                    </Query>
+                    <Features />
                   </>
                 }
                 onPressItem={this.handleOnPress}
