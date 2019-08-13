@@ -11,7 +11,13 @@ const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
 
-const Features = memo(() => (
+// const handleOnPressActionItem = (id) =>
+//   this.props.navigation.navigate('ContentSingle', {
+//     itemId: id,
+//     transitionKey: 2,
+//   });
+
+const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
       loading ? (
@@ -96,6 +102,20 @@ const Features = memo(() => (
                   </>
                 }
                 actions={actions}
+                onPressActionItem={({ action, relatedNodeId }) => {
+                  if (action === 'READ_CONTENT') {
+                    navigation.navigate('ContentSingle', {
+                      id: relatedNodeId,
+                      transitionKey: 2,
+                    });
+                  }
+                }}
+                onPressCardActionButton={() =>
+                  navigation.navigate('ContentFeed', {
+                    itemId: id,
+                    itemTitle: title,
+                  })
+                }
               />
             ) : null
         )
