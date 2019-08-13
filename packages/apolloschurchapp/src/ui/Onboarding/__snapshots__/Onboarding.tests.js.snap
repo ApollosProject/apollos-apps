@@ -48,7 +48,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
     >
       <RCTScrollView
         activeDot={
-          <SafeAreaView
+          <withOrientation
             forceInset={
               Object {
                 "bottom": "always",
@@ -56,7 +56,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
             }
           >
             <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-          </SafeAreaView>
+          </withOrientation>
         }
         automaticallyAdjustContentInsets={false}
         autoplay={false}
@@ -78,7 +78,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
         }
         disableNextButton={false}
         dot={
-          <SafeAreaView
+          <withOrientation
             forceInset={
               Object {
                 "bottom": "always",
@@ -92,7 +92,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                 }
               }
             />
-          </SafeAreaView>
+          </withOrientation>
         }
         horizontal={true}
         index={0}
@@ -139,27 +139,28 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
-                  forceInset={
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="box-none"
+                  style={
                     Object {
-                      "bottom": "always",
-                      "top": "always",
+                      "paddingBottom": 0,
+                      "paddingLeft": 0,
+                      "paddingRight": 0,
+                      "paddingTop": 20,
                     }
                   }
                 >
-                  <RCTSafeAreaView
-                    emulateUnlessSupported={true}
-                    forceInset={
-                      Object {
-                        "bottom": "always",
-                      }
-                    }
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="box-none"
                     style={
                       Object {
                         "marginBottom": 48,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 16,
+                        "paddingBottom": 0,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "paddingTop": 20,
                       }
                     }
                   >
@@ -637,8 +638,8 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                         </View>
                       </View>
                     </View>
-                  </RCTSafeAreaView>
-                </RCTSafeAreaView>
+                  </View>
+                </View>
               </View>
             </RCTScrollView>
             <View
@@ -658,12 +659,15 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
               vertical={false}
             >
-              <RCTSafeAreaView
-                emulateUnlessSupported={true}
-                forceInset={
+              <View
+                onLayout={[Function]}
+                pointerEvents="box-none"
+                style={
                   Object {
-                    "bottom": "always",
-                    "top": "never",
+                    "paddingBottom": 0,
+                    "paddingLeft": 0,
+                    "paddingRight": 0,
+                    "paddingTop": 0,
                   }
                 }
               >
@@ -725,7 +729,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                 >
                   Skip
                 </Text>
-              </RCTSafeAreaView>
+              </View>
             </View>
           </View>
           <View
@@ -800,18 +804,16 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                     />
                   </View>
                 </View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
-                  forceInset={
-                    Object {
-                      "bottom": "always",
-                    }
-                  }
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="box-none"
                   style={
                     Object {
                       "marginBottom": 48,
-                      "paddingHorizontal": 16,
-                      "paddingTop": 16,
+                      "paddingBottom": 0,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 20,
                     }
                   }
                 >
@@ -849,7 +851,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                       We'd like to help personalize your mobile experience so we can help you with every step on your journey.
                     </Text>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
             <View
@@ -869,12 +871,15 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
               vertical={false}
             >
-              <RCTSafeAreaView
-                emulateUnlessSupported={true}
-                forceInset={
+              <View
+                onLayout={[Function]}
+                pointerEvents="box-none"
+                style={
                   Object {
-                    "bottom": "always",
-                    "top": "never",
+                    "paddingBottom": 0,
+                    "paddingLeft": 0,
+                    "paddingRight": 0,
+                    "paddingTop": 0,
                   }
                 }
               >
@@ -922,7 +927,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                     />
                   </View>
                 </View>
-              </RCTSafeAreaView>
+              </View>
             </View>
           </View>
           <View
@@ -1000,11 +1005,15 @@ exports[`the Onboarding component should render Onboarding 1`] = `
           ]
         }
       >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
             Object {
-              "bottom": "always",
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 20,
             }
           }
         >
@@ -1019,12 +1028,16 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
             }
           />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        </View>
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
             Object {
-              "bottom": "always",
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 20,
             }
           }
         >
@@ -1044,12 +1057,16 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
             }
           />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        </View>
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
             Object {
-              "bottom": "always",
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 20,
             }
           }
         >
@@ -1069,12 +1086,16 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
             }
           />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        </View>
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
             Object {
-              "bottom": "always",
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 20,
             }
           }
         >
@@ -1094,12 +1115,16 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
             }
           />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        </View>
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
             Object {
-              "bottom": "always",
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 20,
             }
           }
         >
@@ -1119,7 +1144,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               }
             }
           />
-        </RCTSafeAreaView>
+        </View>
       </View>
     </View>
   </View>

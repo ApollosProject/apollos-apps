@@ -9,6 +9,7 @@ ApollosConfig.loadJs({
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+    SHARE_URL: 'https://apollosrock.newspring.cc',
     TIMEZONE: 'America/New_York',
   },
   ROCK_MAPPINGS: {
@@ -37,6 +38,25 @@ describe('ContentItemsModel', () => {
   it('constructs', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
+
+  it('creates a sharing URL with channel url and item slug', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: {
+        ContentChannel: {
+          getFromId: jest.fn(() => ({
+            itemUrl: '/news',
+          })),
+        },
+      },
+    };
+    dataSource.get = jest.fn(() => ({ slug: 'cool-article' }));
+    const result = 'https://apollorock.newspring.cc/news/cool-article';
+    expect(
+      dataSource.getShareUrl({ contentId: 'fakeId', channelId: 'fakeChannel' })
+    ).resolves.toEqual(result);
+  });
+
   it('filters by content channel id', () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);

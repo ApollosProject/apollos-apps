@@ -192,6 +192,24 @@ export default class ContentItem extends RockApolloDataSource {
       : tokens[0];
   };
 
+  getShareUrl = async ({ contentId, channelId }) => {
+    const contentChannel = await this.context.dataSources.ContentChannel.getFromId(
+      channelId
+    );
+
+    if (!contentChannel.itemUrl) return ROCK.SHARE_URL;
+
+    const slug = await this.request('ContentChannelItemSlugs')
+      .filter(`ContentChannelItemId eq ${contentId}`)
+      .first();
+
+    return [
+      ROCK.SHARE_URL,
+      contentChannel.itemUrl.replace(/^\//, ''),
+      slug ? slug.slug : '',
+    ].join('/');
+  };
+
   getSermonFeed() {
     return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID).andFilter(
       this.LIVE_CONTENT()
@@ -307,7 +325,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     const parentFilter = parentAssociations.map(
       ({ contentChannelItemId }) =>
-        `(ContentChannelItemId eq ${contentChannelItemId}) and (ChildContentChannelItemId ne ${id})`
+        `(ContentChannelItemId eq ${contentChannelItemId})`
     );
     siblingAssociationsRequest.filterOneOf(parentFilter);
 
