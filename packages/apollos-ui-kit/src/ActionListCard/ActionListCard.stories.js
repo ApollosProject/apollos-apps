@@ -16,10 +16,12 @@ const content = [
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
     },
   },
   {
@@ -30,10 +32,12 @@ const content = [
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
     },
   },
   {
@@ -44,10 +48,12 @@ const content = [
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
     },
   },
   {
@@ -58,10 +64,12 @@ const content = [
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
     },
   },
 ];

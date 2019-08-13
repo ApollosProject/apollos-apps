@@ -8,7 +8,7 @@ import TouchableScale from '../../TouchableScale';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
 
-const CellImage = styled(({ theme }) => ({
+const CellImageWrapper = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,
   height: theme.sizing.baseUnit * 4,
   borderRadius: theme.sizing.baseUnit,
@@ -37,6 +37,8 @@ const Cell = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
+const CellImage = styled({ aspectRatio: 1 })(ConnectedImage);
+
 const ActionListItem = ({
   imageSource,
   title,
@@ -53,9 +55,9 @@ const ActionListItem = ({
     }
   >
     <Cell>
-      <CellImage>
-        <ConnectedImage source={imageSource} />
-      </CellImage>
+      <CellImageWrapper>
+        <CellImage source={imageSource} />
+      </CellImageWrapper>
       <TextContainer>
         {label ? <StyledH6 numberOfLines={1}>{label}</StyledH6> : null}
         <H4 numberOfLines={2} ellipsizeMode="tail">

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
+import { ImageSourceType } from '../ConnectedImage';
 import TableView from '../TableView';
 import Card, { CardContent } from '../Card';
 import styled from '../styled';
@@ -23,6 +24,7 @@ class ActionListCard extends PureComponent {
         id: PropTypes.string,
         title: PropTypes.string,
         subtitle: PropTypes.string,
+        image: ImageSourceType,
       })
     ),
     header: PropTypes.element,
