@@ -302,7 +302,7 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                     }
                   }
                 >
-                  02/09/1980
+                  02/10/1980
                 </Text>
               </View>
             </View>
