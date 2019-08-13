@@ -111,7 +111,7 @@ class Home extends PureComponent {
                         );
                       }}
                     </Query>
-                    <Features />
+                    <Features navigation={this.props.navigation} />
                   </>
                 }
                 onPressItem={this.handleOnPress}
