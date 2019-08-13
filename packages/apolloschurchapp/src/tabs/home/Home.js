@@ -143,7 +143,7 @@ class Home extends PureComponent {
                                   </H3>
                                 </>
                               }
-                              content={actions}
+                              actions={actions}
                             />
                           )
                         )

@@ -18,7 +18,7 @@ class ActionListCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
     isLoading: PropTypes.bool,
-    content: PropTypes.arrayOf(
+    actions: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
         title: PropTypes.string,
@@ -38,13 +38,13 @@ class ActionListCard extends PureComponent {
   };
 
   render() {
-    const { isLoading, content, header: headerContent } = this.props;
+    const { isLoading, actions, header: headerContent } = this.props;
 
     return (
       <Card isLoading={isLoading}>
         <CardContent>{headerContent}</CardContent>
         <Content>
-          {content.map((item) => (
+          {actions.map((item) => (
             <ActionListItem
               key={item.id}
               id={item.id}

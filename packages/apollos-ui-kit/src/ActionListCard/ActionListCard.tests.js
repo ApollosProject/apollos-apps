@@ -6,7 +6,7 @@ import { H3 } from '../typography';
 
 import ActionListCard from '.';
 
-const content = [
+const actions = [
   {
     id: 'fakeId1',
     title: 'Hello 1',
@@ -69,7 +69,7 @@ describe('ActionListCard', () => {
   it('should render 4 items', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard onPress={() => {}} content={content} />
+        <ActionListCard onPress={() => {}} actions={actions} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -79,7 +79,7 @@ describe('ActionListCard', () => {
       <Providers>
         <ActionListCard
           onPress={() => {}}
-          content={content}
+          actions={actions}
           header={
             <H3 numberOfLines={3} ellipsizeMode="tail">
               Custom Header Element
@@ -93,7 +93,7 @@ describe('ActionListCard', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard onPress={() => {}} isLoading content={content} />
+        <ActionListCard onPress={() => {}} isLoading actions={actions} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
