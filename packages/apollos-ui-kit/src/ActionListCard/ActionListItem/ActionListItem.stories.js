@@ -21,7 +21,7 @@ storiesOf('ActionListItem', module)
       onPress={() => {}}
       imageSource={'https://picsum.photos/600/400/?random'}
       title={'Hello 1'}
-      id={'fakeID'}
+      relatedNodeId={'fakeID'}
     />
   ))
   .add('label', () => (
@@ -30,6 +30,6 @@ storiesOf('ActionListItem', module)
       imageSource={'https://picsum.photos/600/400/?random'}
       label={'Boom'}
       title={'Hello 1'}
-      id={'fakeID'}
+      relatedNodeId={'fakeID'}
     />
   ));

@@ -39,18 +39,12 @@ const CellImage = styled(({ theme }) => ({
 const ActionListItem = ({
   imageSource,
   title,
-  id,
+  action,
+  relatedNodeId,
   label,
   onPressActionItem,
 }) => (
-  <TouchableScale
-    onPress={() =>
-      onPressActionItem({
-        id,
-        transitionKey: 2,
-      })
-    }
-  >
+  <TouchableScale onPress={() => onPressActionItem({ action, relatedNodeId })}>
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
@@ -66,7 +60,8 @@ const ActionListItem = ({
 ActionListItem.propTypes = {
   imageSource: ImageSourceType.isRequired,
   title: PropTypes.string.isRequired,
-  id: PropTypes.string,
+  action: PropTypes.string,
+  relatedNodeId: PropTypes.string,
   label: PropTypes.string,
   onPressActionItem: PropTypes.func,
 };

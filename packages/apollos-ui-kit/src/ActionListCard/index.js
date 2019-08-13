@@ -26,6 +26,7 @@ const CardActionButton = styled(
 class ActionListCard extends PureComponent {
   static propTypes = {
     onPress: PropTypes.func,
+    onPressActionItem: PropTypes.func,
     isLoading: PropTypes.bool,
     actions: PropTypes.arrayOf(
       PropTypes.shape({
@@ -38,15 +39,6 @@ class ActionListCard extends PureComponent {
     header: PropTypes.element,
   };
 
-  // TODO: move this logic out to the `ConnectedComponent` level
-  handleOnPressActionItem = ({ action, relatedNode: { id } }) => {
-    const { onPress } = this.props;
-
-    if (action === 'READ_CONTENT') {
-      onPress({ id });
-    }
-  };
-
   render() {
     const { isLoading, actions, header: headerContent } = this.props;
 
@@ -56,9 +48,10 @@ class ActionListCard extends PureComponent {
         <Content>
           {actions.map((item) => (
             <ActionListItem
+              action={item.action || ''}
               key={item.id}
-              id={item.id}
-              onPressActionItem={() => this.handleOnPressActionItem(item)}
+              relatedNodeId={get(item, 'relatedNode.id', '')}
+              onPressActionItem={this.props.onPressActionItem}
               label={item.subtitle || ''}
               title={item.title || ''}
               imageSource={get(item, 'image.sources', '')}

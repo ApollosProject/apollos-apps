@@ -14,7 +14,8 @@ describe('ActionListItem', () => {
           onPress={() => {}}
           imageSource={'https://picsum.photos/600/400/?random'}
           title={'Boom'}
-          id={'fakeID'}
+          relatedNodeId={'fakeID'}
+          action={'fakeAction'}
         />
       </Providers>
     );
@@ -28,7 +29,8 @@ describe('ActionListItem', () => {
           imageSource={'https://picsum.photos/600/400/?random'}
           title={'Boom'}
           label={'What'}
-          id={'fakeID'}
+          relatedNodeId={'fakeID'}
+          action={'fakeAction'}
         />
       </Providers>
     );
@@ -44,7 +46,8 @@ describe('ActionListItem', () => {
             imageSource={'https://picsum.photos/600/400/?random'}
             title={'Boom'}
             label={'What'}
-            id={'fakeID'}
+            relatedNodeId={'fakeID'}
+            action={'fakeAction'}
           />
         </SetIsLoading>
       </Providers>
