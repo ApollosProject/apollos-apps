@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
 import fetchMoreResolver from 'apolloschurchapp/src/utils/fetchMoreResolver';
-import HorizontalContentCardConnected from '../../../ui/HorizontalContentCardConnected';
+import ContentCardConnected from '../../../ui/ContentCardConnected';
 
 import GET_LIKED_CONTENT from '../getLikedContent';
 /** A FeedView wrapped in a query to pull content data. */
@@ -44,7 +44,7 @@ class LikedContentList extends PureComponent {
         >
           {({ loading, error, data, refetch, fetchMore, variables }) => (
             <FeedView
-              ListItemComponent={HorizontalContentCardConnected}
+              ListItemComponent={ContentCardConnected}
               content={get(data, 'likedContent.edges', []).map(
                 (edge) => edge.node
               )}
