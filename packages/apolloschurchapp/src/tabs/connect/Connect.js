@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
-import { BackgroundView, styled } from '@apollosproject/ui-kit';
+import { BackgroundView } from '@apollosproject/ui-kit';
 import ActionTable from './ActionTable';
 import ActionBar from './ActionBar';
 import UserAvatarHeader from './UserAvatarHeader';

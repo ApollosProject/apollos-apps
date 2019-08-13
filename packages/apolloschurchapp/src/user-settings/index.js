@@ -6,14 +6,12 @@ import { Query, Mutation } from 'react-apollo';
 
 import {
   BackgroundView,
-  PaddedView,
   TableView,
   Cell,
   CellIcon,
   CellText,
   Divider,
   Touchable,
-  styled,
   ActivityIndicator,
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';

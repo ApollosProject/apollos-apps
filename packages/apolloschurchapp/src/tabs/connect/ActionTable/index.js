@@ -28,7 +28,7 @@ const Name = styled({
 
 const ActionTable = () => (
   <WebBrowserConsumer>
-    {openUrl => (
+    {(openUrl) => (
       <View>
         <RowHeader>
           <Name>
