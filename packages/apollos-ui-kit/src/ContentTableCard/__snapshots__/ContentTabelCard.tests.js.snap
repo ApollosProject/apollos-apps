@@ -1,0 +1,1108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentTableCard should render 4 items 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderBottomWidth": 0,
+              "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderLeftWidth": 0,
+              "borderRightWidth": 0,
+              "borderTopWidth": 0,
+              "marginBottom": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 1
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 2
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 3
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 4
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`ContentTableCard should render with a header 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  onLayout={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 6,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <Text
+            ellipsizeMode="tail"
+            numberOfLines={3}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Custom Header Element
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderBottomWidth": 0,
+              "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderLeftWidth": 0,
+              "borderRightWidth": 0,
+              "borderTopWidth": 0,
+              "marginBottom": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 1
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 2
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 3
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "height": 64,
+                    "marginRight": 16,
+                    "overflow": "hidden",
+                    "width": 64,
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                          "url": "",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "borderBottomWidth": 0.5,
+                    "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                    "flex": 1,
+                    "height": 68,
+                    "justifyContent": "center",
+                    "marginTop": 6.4,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                    }
+                  }
+                >
+                  Boom
+                </Text>
+                <Text
+                  ellipsizeMode="tail"
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 23.04,
+                    }
+                  }
+                >
+                  Hello 4
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
