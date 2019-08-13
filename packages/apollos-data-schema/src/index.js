@@ -451,10 +451,6 @@ export const groupSchema = gql`
     members: [Person]
   }
 
-  extend type Query {
-    groups: [Group]
-  }
-
   extend type Person {
     groups: [Group]
     groupsLead: [Group]
