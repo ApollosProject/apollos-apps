@@ -78,7 +78,7 @@ describe('ActionListCard', () => {
     const tree = renderer.create(
       <Providers>
         <ActionListCard
-          onPress={() => {}}
+          onPress={jest.fn()}
           actions={actions}
           header={
             <H3 numberOfLines={3} ellipsizeMode="tail">
@@ -90,10 +90,27 @@ describe('ActionListCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with onPressActionListButton', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCard
+          onPress={() => {}}
+          actions={actions}
+          onPressActionListButton={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard onPress={() => {}} isLoading actions={actions} />
+        <ActionListCard
+          onPress={jest.fn()}
+          isLoading
+          actions={actions}
+          onPressActionListButton={jest.fn()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

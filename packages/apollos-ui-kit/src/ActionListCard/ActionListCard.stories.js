@@ -81,9 +81,9 @@ storiesOf('ActionListCard', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('example', () => (
+  .add('default', () => <ActionListCard actions={actions} />)
+  .add('header', () => (
     <ActionListCard
-      onPress={() => {}}
       actions={actions}
       header={
         <H3 numberOfLines={3} ellipsizeMode="tail">
@@ -92,9 +92,19 @@ storiesOf('ActionListCard', module)
       }
     />
   ))
+  .add('onPressActionListButton', () => (
+    <ActionListCard
+      actions={actions}
+      header={
+        <H3 numberOfLines={3} ellipsizeMode="tail">
+          Some random text that encourages you
+        </H3>
+      }
+      onPressActionListButton={() => {}}
+    />
+  ))
   .add('isLoading', () => (
     <ActionListCard
-      onPress={() => {}}
       isLoading
       actions={actions}
       header={
