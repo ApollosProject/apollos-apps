@@ -101,7 +101,9 @@ input CampusLocationInput {
   longitude: Float!
 }
 
-"""A rgb color string"""
+"""
+A rgb color string
+"""
 scalar Color
 
 type ContentChannel implements Node {
@@ -123,7 +125,10 @@ interface ContentItem {
   htmlContent: String
   summary: String
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
-  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(
+    first: Int
+    after: String
+  ): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
   isLiked: Boolean
@@ -156,7 +161,10 @@ type ContentSeriesContentItem implements ContentItem & Node {
   htmlContent: String
   summary: String
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
-  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(
+    first: Int
+    after: String
+  ): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
   scriptures: [Scripture]
@@ -176,7 +184,10 @@ type DevotionalContentItem implements ContentItem & Node {
   htmlContent: String
   summary: String
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
-  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(
+    first: Int
+    after: String
+  ): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
   scriptures: [Scripture]
@@ -239,7 +250,10 @@ type MediaContentItem implements ContentItem & Node {
   htmlContent: String
   summary: String
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
-  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(
+    first: Int
+    after: String
+  ): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
   scriptures: [Scripture]
@@ -363,17 +377,22 @@ type ScriptureFeature implements Feature & Node {
   id: ID!
   order: Int
   scriptures: [Scripture]
+  sharing: SharableFeature
 }
 
 interface Sharable {
-  url: String
   message: String
   title: String
   url: String @deprecated(reason: "Not supported on the interface")
 }
 
 type SharableContentItem implements Sharable {
+  message: String
+  title: String
   url: String
+}
+
+type SharableFeature implements Sharable {
   message: String
   title: String
   url: String @deprecated(reason: "Not supported on a feature")
@@ -387,6 +406,7 @@ type TextFeature implements Feature & Node {
   id: ID!
   order: Int
   body: String
+  sharing: SharableFeature
 }
 
 type Theme {
@@ -417,7 +437,10 @@ type UniversalContentItem implements ContentItem & Node {
   htmlContent: String
   summary: String
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
-  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(
+    first: Int
+    after: String
+  ): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
   isLiked: Boolean
@@ -439,7 +462,9 @@ input UpdateProfileInput {
   value: String!
 }
 
-"""The `Upload` scalar type represents a file upload."""
+"""
+The `Upload` scalar type represents a file upload.
+"""
 scalar Upload
 
 type VideoMedia implements Media {
@@ -463,7 +488,10 @@ type WeekendContentItem implements ContentItem & Node {
   htmlContent: String
   summary: String
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
-  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
+  siblingContentItemsConnection(
+    first: Int
+    after: String
+  ): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
   isLiked: Boolean
@@ -472,4 +500,3 @@ type WeekendContentItem implements ContentItem & Node {
   sharing: SharableContentItem
   features: [Feature]
 }
-
