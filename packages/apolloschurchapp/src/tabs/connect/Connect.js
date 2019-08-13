@@ -1,16 +1,13 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
-import { BackgroundView, styled } from '@apollosproject/ui-kit';
+import { BackgroundView } from '@apollosproject/ui-kit';
 import ActionTable from './ActionTable';
-import Toolbar from './Toolbar';
-import { UserAvatarHeaderConnected } from './UserAvatarHeader';
+import ActionBar from './ActionBar';
+import UserAvatarHeader from './UserAvatarHeader';
 import { RecentlyLikedTileFeedConnected } from './RecentlyLikedTileFeed';
-
-const StyledScrollView = styled(({ theme }) => ({
-  marginVertical: theme.sizing.baseUnit,
-}))(ScrollView);
 
 class Connect extends PureComponent {
   static navigationOptions = () => ({
@@ -29,12 +26,12 @@ class Connect extends PureComponent {
     return (
       <BackgroundView>
         <SafeAreaView>
-          <StyledScrollView>
-            <UserAvatarHeaderConnected key="UserAvatarHeaderConnected" />
-            <RecentlyLikedTileFeedConnected key="RecentlyLikedTileFeedConnected" />
-            <Toolbar />
+          <ScrollView>
+            <UserAvatarHeader />
+            <ActionBar />
+            <RecentlyLikedTileFeedConnected />
             <ActionTable />
-          </StyledScrollView>
+          </ScrollView>
         </SafeAreaView>
       </BackgroundView>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, Platform } from 'react-native';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 
@@ -8,7 +8,9 @@ import ConnectedImage from '../ConnectedImage';
 import styled from '../styled';
 import { withTheme } from '../theme';
 import ActivityIndicator from '../ActivityIndicator';
+import { ButtonIcon } from '../Button';
 import Icon from '../Icon';
+import TouchableScale from '../TouchableScale';
 
 export { default as AvatarList } from './List';
 
@@ -17,14 +19,11 @@ const enhance = withTheme(({ theme, size }) => ({
 }));
 
 const Container = styled(
-  ({ theme, themeSize }) => ({
+  ({ themeSize }) => ({
     width: themeSize,
     height: themeSize,
-    backgroundColor: theme.colors.white,
-    borderRadius: themeSize / 2,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    overflow: 'hidden',
   }),
   'Avatar'
 )(View);
@@ -53,8 +52,28 @@ const Image = styled(({ themeSize }) => ({
   borderRadius: themeSize / 2,
 }))(ConnectedImage);
 
+const StyledButtonIcon = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.paper,
+  ...Platform.select(theme.shadows.default),
+}))(ButtonIcon);
+
+const ButtonIconPositioner = styled({
+  position: 'absolute',
+  bottom: 0,
+  right: 0,
+})(View);
+
 const Avatar = enhance(
-  ({ themeSize, containerStyle, source, isLoading, ...imageProps }) => (
+  ({
+    themeSize,
+    containerStyle,
+    source,
+    isLoading,
+    buttonIcon,
+    iconFill,
+    onPressIcon,
+    ...imageProps
+  }) => (
     <Container style={containerStyle} themeSize={themeSize}>
       {isLoading ? <LoadingIcon /> : null}
       {source && source.uri ? (
@@ -67,6 +86,17 @@ const Avatar = enhance(
       ) : (
         <PlaceholderIcon name="avatar" size={themeSize} />
       )}
+      {buttonIcon ? (
+        <ButtonIconPositioner>
+          <StyledButtonIcon
+            onPress={onPressIcon}
+            name={buttonIcon}
+            size={themeSize / 5}
+            fill={iconFill}
+            TouchableComponent={TouchableScale}
+          />
+        </ButtonIconPositioner>
+      ) : null}
     </Container>
   )
 );
@@ -74,9 +104,12 @@ const Avatar = enhance(
 Avatar.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   containerStyle: PropTypes.any, // eslint-disable-line
+  buttonIcon: PropTypes.string,
+  onPressIcon: PropTypes.func,
   ...ConnectedImage.propTypes,
 };
 
 export default withTheme(({ theme, size }) => ({
   themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+  iconFill: theme.colors.action.primary,
 }))(Avatar);

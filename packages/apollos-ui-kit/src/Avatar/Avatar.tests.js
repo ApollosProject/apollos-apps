@@ -35,4 +35,16 @@ describe('The Avatar component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render icon button', () => {
+    const tree = renderer.create(
+      <ThemeProvider>
+        <Avatar
+          source={source}
+          buttonIcon="settings"
+          onPressIcon={() => null}
+        />
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

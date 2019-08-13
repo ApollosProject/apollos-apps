@@ -127,7 +127,7 @@ Object {
   },
   "sizing": Object {
     "avatar": Object {
-      "large": 160,
+      "large": 120,
       "medium": 80,
       "small": 40,
     },
@@ -429,7 +429,7 @@ Object {
   },
   "sizing": Object {
     "avatar": Object {
-      "large": 160,
+      "large": 120,
       "medium": 80,
       "small": 40,
     },

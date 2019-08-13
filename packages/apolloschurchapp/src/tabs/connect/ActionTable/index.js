@@ -40,8 +40,8 @@ const ActionTable = () => (
             onPress={() => openUrl('https://apollosrock.newspring.cc/page/235')}
           >
             <Cell>
-              <CellIcon name="check" />
               <CellText>Find a serving opportunity</CellText>
+              <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
           <Divider />
@@ -49,8 +49,8 @@ const ActionTable = () => (
             onPress={() => openUrl('https://apollosrock.newspring.cc/page/236')}
           >
             <Cell>
-              <CellIcon name="groups" />
               <CellText>Join a small group</CellText>
+              <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
           <Divider />
@@ -58,8 +58,8 @@ const ActionTable = () => (
             onPress={() => openUrl('https://apollosrock.newspring.cc/page/233')}
           >
             <Cell>
-              <CellIcon name="share" />
               <CellText>I need prayer</CellText>
+              <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
           <Divider />
@@ -67,8 +67,8 @@ const ActionTable = () => (
             onPress={() => openUrl('https://apollosrock.newspring.cc/page/186')}
           >
             <Cell>
-              <CellIcon name="download" />
               <CellText>I would like to give</CellText>
+              <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
         </TableView>
@@ -79,6 +79,7 @@ const ActionTable = () => (
             <Cell>
               <CellIcon name="settings" />
               <CellText>Open Testing Panel</CellText>
+              <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
         </TableView>

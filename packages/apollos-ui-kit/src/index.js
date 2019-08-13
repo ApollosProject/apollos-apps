@@ -1,6 +1,7 @@
 export ActivityIndicator, {
   InlineActivityIndicator,
 } from './ActivityIndicator';
+export ActionBar, { ActionBarItem } from './ActionBar';
 export Avatar, { AvatarList } from './Avatar';
 export BackgroundView from './BackgroundView';
 export Button, { ButtonLink, ButtonIcon } from './Button';
