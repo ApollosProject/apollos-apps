@@ -7,7 +7,7 @@ import { H3 } from '../typography';
 
 import ActionListCard from '.';
 
-const content = [
+const actions = [
   {
     id: 'fakeId1',
     title: 'Hello 1',
@@ -84,7 +84,7 @@ storiesOf('ActionListCard', module)
   .add('example', () => (
     <ActionListCard
       onPress={() => {}}
-      content={content}
+      actions={actions}
       header={
         <H3 numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
@@ -96,7 +96,7 @@ storiesOf('ActionListCard', module)
     <ActionListCard
       onPress={() => {}}
       isLoading
-      content={content}
+      actions={actions}
       header={
         <H3 numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
