@@ -361,7 +361,6 @@ type Query {
   scriptures(query: String!): [Scripture]
   userPass: Pass
   campuses(location: CampusLocationInput): [Campus]
-  groups: [Group]
   userFeedFeatures: [Feature]
 }
 
