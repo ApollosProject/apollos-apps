@@ -16,17 +16,16 @@ const Content = styled(() => ({
   borderTopWidth: 0,
 }))(TableView);
 
-const CardActionButton = styled(
+const CardAction = styled(
   {
-    width: '100%',
+    alignItems: 'stretch',
+    flexDirection: 'column',
   },
-  'ui-kit.ActionListCard.CardActionButton'
-)(Button);
+  'ui-kit.ActionListCard.CardAction'
+)(CardActions);
 
 class ActionListCard extends PureComponent {
   static propTypes = {
-    onPress: PropTypes.func,
-    onPressActionItem: PropTypes.func,
     isLoading: PropTypes.bool,
     actions: PropTypes.arrayOf(
       PropTypes.shape({
@@ -37,10 +36,18 @@ class ActionListCard extends PureComponent {
       })
     ),
     header: PropTypes.element,
+    onPressActionItem: PropTypes.func,
+    onPressActionListButton: PropTypes.func,
   };
 
   render() {
-    const { isLoading, actions, header: headerContent } = this.props;
+    const {
+      onPressActionListButton,
+      onPressActionItem,
+      isLoading,
+      actions,
+      header: headerContent,
+    } = this.props;
 
     return (
       <Card isLoading={isLoading}>
@@ -51,21 +58,24 @@ class ActionListCard extends PureComponent {
               action={item.action || ''}
               key={item.id}
               relatedNodeId={get(item, 'relatedNode.id', '')}
-              onPressActionItem={this.props.onPressActionItem}
+              onPressActionItem={onPressActionItem}
               label={item.subtitle || ''}
               title={item.title || ''}
               imageSource={get(item, 'image.sources', '')}
             />
           ))}
         </Content>
-        <CardActions>
-          <CardActionButton
-            title={'View More'}
-            type={'default'}
-            pill={false}
-            bordered
-          />
-        </CardActions>
+        {onPressActionListButton ? (
+          <CardAction>
+            <Button
+              title={'View More'}
+              type={'default'}
+              pill={false}
+              bordered
+              onPress={onPressActionListButton}
+            />
+          </CardAction>
+        ) : null}
       </Card>
     );
   }
