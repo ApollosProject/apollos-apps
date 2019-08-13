@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-import { styled, ContentTableCard, H3, H6 } from '@apollosproject/ui-kit';
+import { styled, ActionListCard, H3, H6 } from '@apollosproject/ui-kit';
 
-import GET_FEED_FEATURES from '../getFeedFeatures';
+import GET_FEED_FEATURES from './getFeedFeatures';
 
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
@@ -13,27 +13,91 @@ const StyledH6 = styled(({ theme }) => ({
 
 const Features = memo(() => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
-    {({ data: features, loading: featuresLoading }) =>
-      get(features, 'userFeedFeatures', []).map(
-        ({ title, subtitle, actions, id }) => (
-          <ContentTableCard
-            isLoading={featuresLoading}
-            onPress={this.handleOnPress}
-            key={id}
-            header={
-              <>
-                <StyledH6 isLoading={featuresLoading}>{title}</StyledH6>
-                <H3
-                  isLoading={featuresLoading}
-                  numberOfLines={3}
-                  ellipsizeMode="tail"
-                >
-                  {subtitle}
-                </H3>
-              </>
-            }
-            content={actions}
-          />
+    {({ data: features, loading }) =>
+      loading ? (
+        <ActionListCard
+          isLoading
+          header={
+            <>
+              <StyledH6 isLoading />
+              <H3 isLoading />
+            </>
+          }
+          actions={[
+            {
+              id: 'fakeId1',
+              title: '',
+              subtitle: '',
+              parentChannel: {
+                id: '',
+                name: '',
+              },
+              coverImage: {
+                sources: {
+                  uri: '',
+                },
+              },
+            },
+            {
+              id: 'fakeId2',
+              title: '',
+              subtitle: '',
+              parentChannel: {
+                id: '',
+                name: '',
+              },
+              coverImage: {
+                sources: {
+                  uri: '',
+                },
+              },
+            },
+            {
+              id: 'fakeId3',
+              title: '',
+              subtitle: '',
+              parentChannel: {
+                id: '',
+                name: '',
+              },
+              coverImage: {
+                sources: {
+                  uri: '',
+                },
+              },
+            },
+            {
+              id: 'fakeId4',
+              title: '',
+              subtitle: '',
+              parentChannel: {
+                id: '',
+                name: '',
+              },
+              coverImage: {
+                sources: {
+                  uri: '',
+                },
+              },
+            },
+          ]}
+        />
+      ) : (
+        get(features, 'userFeedFeatures', []).map(
+          ({ title, subtitle, actions, id }) =>
+            actions.length ? (
+              <ActionListCard
+                isLoading={loading}
+                key={id}
+                header={
+                  <>
+                    <StyledH6 numberOfLines={1}>{title}</StyledH6>
+                    <H3 numberOfLines={3}>{subtitle}</H3>
+                  </>
+                }
+                actions={actions}
+              />
+            ) : null
         )
       )
     }
