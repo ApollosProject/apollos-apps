@@ -13,7 +13,7 @@ import {
   H6,
   TouchableScale,
   FeaturedCard,
-  ContentTableCard,
+  ActionListCard,
 } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../../utils/fetchMoreResolver';
@@ -125,7 +125,7 @@ class Home extends PureComponent {
                       {({ data: features, loading: featuresLoading }) =>
                         get(features, 'userFeedFeatures', []).map(
                           ({ title, subtitle, actions, id }) => (
-                            <ContentTableCard
+                            <ActionListCard
                               isLoading={featuresLoading}
                               onPress={this.handleOnPress}
                               key={id}
