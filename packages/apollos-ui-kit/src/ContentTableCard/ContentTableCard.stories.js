@@ -90,7 +90,7 @@ storiesOf('ContentTableCard', module)
       isLoading
       content={content}
       header={
-        <H3 isLoading numberOfLines={3} ellipsizeMode="tail">
+        <H3 numberOfLines={3} ellipsizeMode="tail">
           Some random text that encourages you
         </H3>
       }
