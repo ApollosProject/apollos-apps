@@ -2,11 +2,12 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { ImageSourceType } from '../ConnectedImage';
-import TableView from '../TableView';
-import Card, { CardContent } from '../Card';
 import styled from '../styled';
+import TableView from '../TableView';
+import { ImageSourceType } from '../ConnectedImage';
+import Card, { CardContent, CardActions } from '../Card';
 import { withIsLoading } from '../isLoading';
+import Button from '../Button';
 
 import ActionListItem from './ActionListItem';
 
@@ -14,6 +15,13 @@ const Content = styled(() => ({
   borderBottomWidth: 0,
   borderTopWidth: 0,
 }))(TableView);
+
+const CardActionButton = styled(
+  {
+    width: '100%',
+  },
+  'ui-kit.ActionListCard.CardActionButton'
+)(Button);
 
 class ActionListCard extends PureComponent {
   static propTypes = {
@@ -57,6 +65,14 @@ class ActionListCard extends PureComponent {
             />
           ))}
         </Content>
+        <CardActions>
+          <CardActionButton
+            title={'View More'}
+            type={'default'}
+            pill={false}
+            bordered
+          />
+        </CardActions>
       </Card>
     );
   }
