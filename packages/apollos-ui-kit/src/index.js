@@ -1,3 +1,5 @@
+export ActionCard from './ActionCard';
+export ActionListCard from './ActionListCard';
 export ActivityIndicator, {
   InlineActivityIndicator,
 } from './ActivityIndicator';
@@ -12,14 +14,12 @@ export Card, {
   ErrorCard,
   CardLabel,
 } from './Card';
-export ActionCard from './ActionCard';
 export CardTile from './CardTile';
 export CenteredView from './CenteredView';
 export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
 export ContentCard from './ContentCard';
-export ContentTableCard from './ContentTableCard';
 export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
