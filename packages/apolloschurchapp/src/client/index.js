@@ -10,7 +10,7 @@ import NavigationService from '../NavigationService';
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
-const goToAuth = () => NavigationService.navigate('Auth');
+const goToAuth = () => NavigationService.navigateToAuth();
 const wipeData = () => cache.writeData({ data: defaults });
 
 let resetStore;

@@ -8,62 +8,74 @@ import handleLogin from '../../handleLogin';
 import AUTHENTICATE from './authenticate';
 import LoginForm from './Form';
 
-const Login = ({ onLogin }) => (
-  <ApolloConsumer>
-    {(client) => (
-      <Mutation
-        mutation={AUTHENTICATE}
-        update={(cache, { data: { authenticate } }) => {
-          client.mutate({
-            mutation: handleLogin,
-            variables: {
-              authToken: authenticate.token,
-            },
-          });
-        }}
-      >
-        {(authenticate) => (
-          <Formik
-            validationSchema={Yup.object().shape({
-              email: Yup.string()
-                .email('Invalid email address')
-                .required('Email is required!'),
-              password: Yup.string().required('Password is required!'),
-            })}
-            onSubmit={async (variables, { setSubmitting, setFieldError }) => {
-              try {
-                await authenticate({ variables });
-                if (onLogin) onLogin();
-              } catch (e) {
-                const { graphQLErrors } = e;
-                if (
-                  graphQLErrors.length &&
-                  graphQLErrors.find(
-                    ({ extensions }) => extensions.code === 'UNAUTHENTICATED'
-                  )
-                ) {
-                  setFieldError('email', true);
-                  setFieldError(
-                    'password',
-                    'Your email or password is incorrect.'
-                  );
-                } else {
-                  setFieldError(
-                    'password',
-                    'Unknown error. Please try again later.'
-                  );
-                }
-              }
-              setSubmitting(false);
-            }}
-          >
-            {(formikBag) => <LoginForm {...formikBag} />}
-          </Formik>
-        )}
-      </Mutation>
-    )}
-  </ApolloConsumer>
-);
+const Login = ({ onLogin, navigation }) => {
+  const emailRequired = navigation.getParam('emailRequired', false);
+  return (
+    <ApolloConsumer>
+      {(client) => (
+        <Mutation
+          mutation={AUTHENTICATE}
+          update={(cache, { data: { authenticate } }) => {
+            client.mutate({
+              mutation: handleLogin,
+              variables: {
+                authToken: authenticate.token,
+              },
+            });
+          }}
+        >
+          {(authenticate) => {
+            const emailSchema = emailRequired
+              ? Yup.string()
+                  .email('Invalid email address')
+                  .required('Email is required!')
+              : Yup.string().required('Email is required!');
+            return (
+              <Formik
+                validationSchema={Yup.object().shape({
+                  email: emailSchema,
+                  password: Yup.string().required('Password is required!'),
+                })}
+                onSubmit={async (
+                  variables,
+                  { setSubmitting, setFieldError }
+                ) => {
+                  try {
+                    await authenticate({ variables });
+                    if (onLogin) onLogin();
+                  } catch (e) {
+                    const { graphQLErrors } = e;
+                    if (
+                      graphQLErrors.length &&
+                      graphQLErrors.find(
+                        ({ extensions }) =>
+                          extensions.code === 'UNAUTHENTICATED'
+                      )
+                    ) {
+                      setFieldError('email', true);
+                      setFieldError(
+                        'password',
+                        'Your email or password is incorrect.'
+                      );
+                    } else {
+                      setFieldError(
+                        'password',
+                        'Unknown error. Please try again later.'
+                      );
+                    }
+                  }
+                  setSubmitting(false);
+                }}
+              >
+                {(formikBag) => <LoginForm {...formikBag} />}
+              </Formik>
+            );
+          }}
+        </Mutation>
+      )}
+    </ApolloConsumer>
+  );
+};
 
 Login.propTypes = {
   onLogin: PropTypes.func,
