@@ -25,7 +25,7 @@ const goBack = (from) => {
 };
 
 const navigateToAuth = () => {
-  navigate('Auth', { emailRequired: false });
+  navigate('Auth', { emailRequired: true });
 };
 
 export default {
