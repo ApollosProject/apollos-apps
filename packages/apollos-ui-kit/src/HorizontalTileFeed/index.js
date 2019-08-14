@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
 
@@ -27,17 +26,11 @@ export class HorizontalTileFeed extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.snapToInterval = this.getTileWidth() + this.props.theme.baseUnit;
+    this.snapToInterval = 240 + this.props.theme.baseUnit; // === HorizontalCard width + margins
   }
-
-  getTileWidth = () => {
-    const { width } = Dimensions.get('window');
-    return width * (248 / 375);
-  };
 
   render() {
     const { content, isLoading, renderItem, theme, ...otherProps } = this.props;
-
     return (
       <TileFeed
         data={content}

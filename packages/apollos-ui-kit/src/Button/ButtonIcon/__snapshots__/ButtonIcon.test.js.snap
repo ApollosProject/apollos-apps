@@ -50,10 +50,10 @@ exports[`The ButtonIcon component should render 1`] = `
     >
       <View
         borderRadius={64}
-        iconPadding={32}
+        iconPadding={12.8}
         style={
           Object {
-            "padding": 32,
+            "padding": 12.8,
           }
         }
       >
@@ -229,17 +229,12 @@ exports[`The ButtonIcon component should render additional styles 1`] = `
       }
     >
       <View
-        additionalStyles={
-          Object {
-            "backgroundColor": "salmon",
-          }
-        }
         borderRadius={64}
-        iconPadding={32}
+        iconPadding={12.8}
         style={
           Object {
             "backgroundColor": "salmon",
-            "padding": 32,
+            "padding": 12.8,
           }
         }
       >
@@ -416,10 +411,10 @@ exports[`The ButtonIcon component should render disabled 1`] = `
     >
       <View
         borderRadius={64}
-        iconPadding={32}
+        iconPadding={12.8}
         style={
           Object {
-            "padding": 32,
+            "padding": 12.8,
           }
         }
       >
