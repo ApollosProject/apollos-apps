@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-htmlview",
-  "version": "1.1.0-beta.3",
+  "version": "1.1.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -36,8 +36,8 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.1.0-beta.3",
-    "@apollosproject/ui-storybook": "^1.1.0-beta.3",
+    "@apollosproject/ui-kit": "^1.1.0",
+    "@apollosproject/ui-storybook": "^1.1.0",
     "entities": "^1.1.2",
     "htmlparser2": "3.9.2"
   },

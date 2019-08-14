@@ -1,4 +1,28 @@
 
+v1.1.0: August 14, 2019
+
+- Adds Android VerticalOffset (#916) (bfe41919)
+- Adds `<HorizontalContentCard />` on Content Item children+siblings (#993) (8c2da0e9)
+- Adds New Connect tab styles (#979) (62f63a4b)
+- Adds BackgroundView back to onboarding (#988) (776c1c36)
+- Adds Sharable Features (#976) (0a7868b7)
+- Adds HorizontalContentCardConnected and Component prop to ContentCardConnected (#967) (19c82601)
+
+- Moves configuration of bulletin list into config.yml (#987) (0a2092e6)
+- Refactors code into a Features component for the home feed (#990) (aa05d922)
+- Refactors Share Buttons (#935) (ba0dd2e8)
+- Updates React Navigation to v3 (#820) (df4669f6)
+- Updates Content single styles (#928) (f0c17b2f)
+- Updates package.json (#977) (88f6b35a)
+
+- Fixes ios build (#991) (1413d400)
+- Fixes Location Finder Buttons (#891) (e1b01c08)
+- Fixes PassKit label color (#989) (92011c31)
+- Fixes play button spacing and title overflow on miniplayer (#982) (49a73ef2)
+- Fixes liked content feed rendering the wrong cards (#992) (cae538b1)
+- Fixes using first instead of top in sermon children algorithm (#978) (edee17be)
+
+
 v1.1.0-beta.3: August 5, 2019
 
 - Adds HorizontalDefaultCard (#965) (6a6778ed)

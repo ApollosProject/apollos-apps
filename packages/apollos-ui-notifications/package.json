@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-notifications",
-  "version": "1.1.0-beta.3",
+  "version": "1.1.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -59,8 +59,8 @@
     "react-apollo": "2.5.5",
     "react-native": "0.59.10",
     "react-native-onesignal": "3.2.7",
-    "react-test-renderer": "16.6.1",
     "react-navigation": "^3.11.0",
+    "react-test-renderer": "16.6.1",
     "waait": "^1.0.4"
   },
   "publishConfig": {
