@@ -57,7 +57,14 @@ AuthNavigator.propTypes = {
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-const Auth = (props) => <AuthNavigator {...props} screenProps={props} />;
+AuthNavigator.defaultProps = {
+  emailRequired: true,
+};
+
+const Auth = (props) => {
+  const emailRequired = props.navigation.getParam('emailRequired', true);
+  return <AuthNavigator {...props} screenProps={{ emailRequired, ...props }} />;
+};
 hoistNonReactStatic(Auth, AuthNavigator);
 
 export default Auth;

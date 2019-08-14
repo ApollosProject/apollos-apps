@@ -51,11 +51,7 @@ class PhoneEntryConnected extends Component {
   };
 
   handleOnPressAlternateLogin = () => {
-    const emailRequired = this.props.navigation.getParam(
-      'emailRequired',
-      false
-    );
-    this.props.navigation.navigate('AuthPassword', { emailRequired });
+    this.props.navigation.navigate('AuthPassword');
   };
 
   render() {

@@ -8,8 +8,12 @@ import handleLogin from '../../handleLogin';
 import AUTHENTICATE from './authenticate';
 import LoginForm from './Form';
 
-const Login = ({ onLogin, navigation }) => {
-  const emailRequired = navigation.getParam('emailRequired', false);
+const Login = ({ onLogin, emailRequired }) => {
+  const emailSchema = emailRequired
+    ? Yup.string()
+        .email('Invalid email address')
+        .required('Email is required!')
+    : Yup.string().required('Email is required!');
   return (
     <ApolloConsumer>
       {(client) => (
@@ -24,53 +28,42 @@ const Login = ({ onLogin, navigation }) => {
             });
           }}
         >
-          {(authenticate) => {
-            const emailSchema = emailRequired
-              ? Yup.string()
-                  .email('Invalid email address')
-                  .required('Email is required!')
-              : Yup.string().required('Email is required!');
-            return (
-              <Formik
-                validationSchema={Yup.object().shape({
-                  email: emailSchema,
-                  password: Yup.string().required('Password is required!'),
-                })}
-                onSubmit={async (
-                  variables,
-                  { setSubmitting, setFieldError }
-                ) => {
-                  try {
-                    await authenticate({ variables });
-                    if (onLogin) onLogin();
-                  } catch (e) {
-                    const { graphQLErrors } = e;
-                    if (
-                      graphQLErrors.length &&
-                      graphQLErrors.find(
-                        ({ extensions }) =>
-                          extensions.code === 'UNAUTHENTICATED'
-                      )
-                    ) {
-                      setFieldError('email', true);
-                      setFieldError(
-                        'password',
-                        'Your email or password is incorrect.'
-                      );
-                    } else {
-                      setFieldError(
-                        'password',
-                        'Unknown error. Please try again later.'
-                      );
-                    }
+          {(authenticate) => (
+            <Formik
+              validationSchema={Yup.object().shape({
+                email: emailSchema,
+                password: Yup.string().required('Password is required!'),
+              })}
+              onSubmit={async (variables, { setSubmitting, setFieldError }) => {
+                try {
+                  await authenticate({ variables });
+                  if (onLogin) onLogin();
+                } catch (e) {
+                  const { graphQLErrors } = e;
+                  if (
+                    graphQLErrors.length &&
+                    graphQLErrors.find(
+                      ({ extensions }) => extensions.code === 'UNAUTHENTICATED'
+                    )
+                  ) {
+                    setFieldError('email', true);
+                    setFieldError(
+                      'password',
+                      'Your email or password is incorrect.'
+                    );
+                  } else {
+                    setFieldError(
+                      'password',
+                      'Unknown error. Please try again later.'
+                    );
                   }
-                  setSubmitting(false);
-                }}
-              >
-                {(formikBag) => <LoginForm {...formikBag} />}
-              </Formik>
-            );
-          }}
+                }
+                setSubmitting(false);
+              }}
+            >
+              {(formikBag) => <LoginForm {...formikBag} />}
+            </Formik>
+          )}
         </Mutation>
       )}
     </ApolloConsumer>
@@ -79,6 +72,11 @@ const Login = ({ onLogin, navigation }) => {
 
 Login.propTypes = {
   onLogin: PropTypes.func,
+  emailRequired: PropTypes.bool,
+};
+
+Login.defaultProps = {
+  emailRequired: true,
 };
 
 export default Login;
