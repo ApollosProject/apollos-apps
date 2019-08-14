@@ -18,8 +18,8 @@ const SquareCard = styled({
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(({ theme }) => ({
   position: 'absolute',
-  top: theme.sizing.baseUnit * 1.5,
-  right: theme.sizing.baseUnit * 1.5,
+  top: theme.sizing.baseUnit,
+  right: theme.sizing.baseUnit,
 }))(View);
 
 const LikeIcon = withTheme(({ theme, isLiked }) => ({

@@ -21,8 +21,8 @@ const SquareCard = styled({
 const LikeIconPositioning = styled(
   ({ theme }) => ({
     position: 'absolute',
-    top: theme.sizing.baseUnit * 1.5,
-    right: theme.sizing.baseUnit * 1.5,
+    top: theme.sizing.baseUnit,
+    right: theme.sizing.baseUnit,
   }),
   'ui-kit.HorizontalHighlightCard.LikeIconPositioning'
 )(View);
