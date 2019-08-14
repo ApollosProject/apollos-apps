@@ -33,6 +33,25 @@ ApolloServer.loadJs({
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
   },
+  HOME_FEATURES: [
+    {
+      algorithms: ['SERMON_CHILDREN', 'PERSONA_FEED'],
+      subtitle: 'Explore what God calls you to today',
+      title: 'FOR YOU',
+    },
+    {
+      subtitle: "What's happening at apollos?",
+      algorithms: [
+        {
+          type: 'CONTENT_CHANNEL',
+          arguments: {
+            contentChannelId: 13,
+          },
+        },
+      ],
+      title: 'BULLETIN',
+    },
+  ],
 });
 
 export default ApolloServer;
