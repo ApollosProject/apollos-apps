@@ -57,10 +57,6 @@ AuthNavigator.propTypes = {
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-AuthNavigator.defaultProps = {
-  emailRequired: true,
-};
-
 const Auth = (props) => {
   const emailRequired = props.navigation.getParam('emailRequired', true);
   return <AuthNavigator {...props} screenProps={{ emailRequired, ...props }} />;
