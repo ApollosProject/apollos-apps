@@ -102,10 +102,10 @@ const Features = memo(({ navigation }) => (
                   </>
                 }
                 actions={actions}
-                onPressActionItem={({ action, relatedNodeId }) => {
+                onPressActionItem={({ action, relatedNode }) => {
                   if (action === 'READ_CONTENT') {
                     navigation.navigate('ContentSingle', {
-                      id: relatedNodeId,
+                      itemId: relatedNode.id,
                       transitionKey: 2,
                     });
                   }

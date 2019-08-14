@@ -57,7 +57,7 @@ class ActionListCard extends PureComponent {
             <ActionListItem
               action={item.action || ''}
               key={item.id}
-              relatedNodeId={get(item, 'relatedNode.id', '')}
+              relatedNode={get(item, 'relatedNode')}
               onPressActionItem={onPressActionItem}
               label={item.subtitle || ''}
               title={item.title || ''}

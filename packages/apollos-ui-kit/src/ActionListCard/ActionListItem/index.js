@@ -40,11 +40,11 @@ const ActionListItem = ({
   imageSource,
   title,
   action,
-  relatedNodeId,
+  relatedNode,
   label,
   onPressActionItem,
 }) => (
-  <TouchableScale onPress={() => onPressActionItem({ action, relatedNodeId })}>
+  <TouchableScale onPress={() => onPressActionItem({ action, relatedNode })}>
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
@@ -61,7 +61,7 @@ ActionListItem.propTypes = {
   imageSource: ImageSourceType.isRequired,
   title: PropTypes.string.isRequired,
   action: PropTypes.string,
-  relatedNodeId: PropTypes.string,
+  relatedNode: PropTypes.any, // eslint-disable-line
   label: PropTypes.string,
   onPressActionItem: PropTypes.func,
 };
