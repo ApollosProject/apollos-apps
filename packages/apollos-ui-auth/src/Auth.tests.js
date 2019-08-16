@@ -1,12 +1,12 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+// import React from 'react';
+// import renderer from 'react-test-renderer';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createHttpLink } from 'apollo-link-http';
 
 import { resolvers } from './Provider';
 
-import Auth from '.';
+// import Auth from '.';
 
 const cache = new InMemoryCache();
 
