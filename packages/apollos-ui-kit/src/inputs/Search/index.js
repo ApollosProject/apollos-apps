@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { View, Animated, TextInput } from 'react-native';
 // import Color from 'color';
 import PropTypes from 'prop-types';
@@ -34,54 +34,76 @@ const InputWrapper = styled(
   'InputWrapper'
 )(View);
 
-const LoopIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.text.tertiary,
+const LoopIcon = withTheme(({ theme, isFocused }) => ({
+  fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
   size: theme.sizing.baseUnit,
 }))(Icon);
 
 const Input = withTheme(({ theme }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
-}));
+  selectionColor: theme.colors.action.secondary,
+}))(TextInput);
 
-const Search = ({
-  label,
-  suffix,
-  value,
-  wrapperStyle,
-  error,
-  disabled = false,
-  theme,
-  inputRef,
-  underline,
-  ...textInputProps
-}) => {
-  const focusAnimation = new Animated.Value(1);
+class Search extends PureComponent {
+  constructor() {
+    super();
 
-  const animatedStyle = { opacity: focusAnimation, flex: 1 };
+    this.state = {
+      isFocused: false,
+    };
+  }
 
-  return (
-    <InputWrapper style={wrapperStyle} disabled={disabled}>
-      <View>
-        <AddonRow>
-          <InputAddon>
-            <LoopIcon name={'search'} />
-          </InputAddon>
-          <Animated.View style={animatedStyle}>
-            <Input
-              // style={textStyle({ theme })}
-              ref={inputRef}
-              editable={!disabled}
-              value={value}
-            />
-          </Animated.View>
-          <InputAddon>{suffix}</InputAddon>
-        </AddonRow>
-      </View>
+  handleOnFocus = () => {
+    this.setState((state) => ({
+      isFocused: !state.isFocused,
+    }));
+  };
 
-      {error && typeof error === 'string' ? (
-        <ErrorText>{error}</ErrorText>
-      ) : null}
-    </InputWrapper>
-  );
-};
+  render() {
+    const {
+      label,
+      suffix,
+      value,
+      wrapperStyle,
+      error,
+      disabled = false,
+      theme,
+      inputRef,
+      underline,
+      ...textInputProps
+    } = this.props;
+
+    const focusAnimation = new Animated.Value(1);
+
+    const animatedStyle = { opacity: focusAnimation, flex: 1 };
+
+    return (
+      <InputWrapper style={wrapperStyle} disabled={disabled}>
+        <View>
+          <AddonRow>
+            <InputAddon>
+              <LoopIcon name={'search'} isFocused={this.state.isFocused} />
+            </InputAddon>
+            <Animated.View style={animatedStyle}>
+              <Input
+                // style={textStyle({ theme })}
+                ref={inputRef}
+                editable={!disabled}
+                value={value}
+                onFocus={this.handleOnFocus}
+                onBlur={this.handleOnFocus}
+              />
+            </Animated.View>
+            <InputAddon>{suffix}</InputAddon>
+          </AddonRow>
+        </View>
+
+        {error && typeof error === 'string' ? (
+          <ErrorText>{error}</ErrorText>
+        ) : null}
+      </InputWrapper>
+    );
+  }
+}
+
 export default Search;
