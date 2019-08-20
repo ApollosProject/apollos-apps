@@ -6,7 +6,7 @@ import Providers from '../../Providers';
 import Search from '.';
 
 describe('The Search Input component', () => {
-  it('should render correctly', () => {
+  it('should render', () => {
     const tree = renderer.create(
       <Providers>
         <Search />
