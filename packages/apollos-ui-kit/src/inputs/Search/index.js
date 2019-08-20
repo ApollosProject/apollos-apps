@@ -55,7 +55,6 @@ class Search extends PureComponent {
     disabled: PropTypes.bool,
     inputRef: PropTypes.func,
     placeholder: PropTypes.string,
-    underline: PropTypes.bool,
     value: PropTypes.any, // eslint-disable-line
     wrapperStyle: PropTypes.any, // eslint-disable-line
   };
@@ -84,7 +83,6 @@ class Search extends PureComponent {
       disabled,
       inputRef,
       placeholder,
-      underline,
       value,
       wrapperStyle,
       ...textInputProps
