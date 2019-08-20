@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styled from '../../styled';
 import { withTheme } from '../../theme';
 import Icon from '../../Icon';
-import { ButtonIcon } from '../../Button';
+import { ButtonIcon, ButtonLink } from '../../Button';
 
 // import InputWrapper from '../InputWrapper';
 // import TextInput from '../Text';
@@ -24,22 +24,38 @@ import InputAddon, { AddonRow } from '../InputAddon';
  * - onSubmit prop
  */
 
-const InputWrapper = styled(
+const TextInputWrapper = styled(
   ({ theme, disabled }) => ({
-    paddingHorizontal: theme.sizing.baseUnit,
-    borderRadius: theme.sizing.baseUnit,
-    backgroundColor: theme.colors.background.screen,
+    flexDirection: 'row',
+    flexGrow: 1,
+    alignItems: 'center',
+    borderTopLeftRadius: theme.sizing.baseUnit,
+    borderBottomLeftRadius: theme.sizing.baseUnit,
+    // backgroundColor: theme.colors.background.screen,
+    backgroundColor: 'salmon',
     ...(disabled ? { opacity: 0.5 } : {}),
   }),
   'InputWrapper'
 )(View);
 
-const IconStyles = withTheme(({ theme, isFocused }) => ({
+const LoopIcon = withTheme(({ theme, isFocused }) => ({
   fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
-}));
-const LoopIcon = IconStyles(Icon);
-const ClearIcon = IconStyles(ButtonIcon);
+  style: {
+    marginLeft: theme.sizing.baseUnit,
+  },
+}))(Icon);
+
+const ClearIconBackground = styled(({ theme }) => ({
+  // backgroundColor: theme.colors.background.screen,
+  backgroundColor: 'salmon',
+}))(View);
+
+const ClearIcon = withTheme(({ theme, isFocused }) => ({
+  fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
+  size: theme.helpers.rem(1),
+  iconPadding: theme.helpers.rem(1),
+}))(ButtonIcon);
 
 const Input = withTheme(({ theme }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
@@ -51,6 +67,16 @@ const Input = withTheme(({ theme }) => ({
     fontFamily: theme.typography.sans.medium.default,
   },
 }))(TextInput);
+
+const Boom = styled(({ theme }) => ({
+  width: 16,
+  height: 48,
+  borderTopRightRadius: theme.sizing.baseUnit,
+  borderBottomRightRadius: theme.sizing.baseUnit,
+  // backgroundColor: theme.colors.background.screen,
+  backgroundColor: 'blue',
+  marginRight: theme.sizing.baseUnit,
+}))(View);
 
 class Search extends PureComponent {
   static propTypes = {
@@ -72,6 +98,14 @@ class Search extends PureComponent {
     this.state = {
       isFocused: false,
     };
+
+    // this.focusAnimation = new Animated.Value(1);
+    // const animatedStyle = { opacity: focusAnimation };
+
+    this.animatedStyle = {
+      flexDirection: 'row',
+      alignItems: 'center',
+    };
   }
 
   handleOnFocus = () => {
@@ -90,32 +124,31 @@ class Search extends PureComponent {
       ...textInputProps
     } = this.props;
 
-    const focusAnimation = new Animated.Value(1);
-
-    const animatedStyle = { opacity: focusAnimation, flex: 1 };
-
     return (
-      <InputWrapper style={wrapperStyle} disabled={disabled}>
-        <AddonRow>
-          <InputAddon>
-            <LoopIcon name={'search'} isFocused={this.state.isFocused} />
-          </InputAddon>
-          <Animated.View style={animatedStyle}>
-            <Input
-              ref={inputRef}
-              editable={!disabled}
-              value={value}
-              onFocus={this.handleOnFocus}
-              onBlur={this.handleOnFocus}
-              placeholder={placeholder}
-              {...textInputProps}
-            />
-          </Animated.View>
-          <InputAddon>
-            <ClearIcon name={'close'} />
-          </InputAddon>
-        </AddonRow>
-      </InputWrapper>
+      <AddonRow>
+        <TextInputWrapper style={wrapperStyle} disabled={disabled}>
+          <LoopIcon name={'search'} isFocused={this.state.isFocused} />
+          <Input
+            ref={inputRef}
+            editable={!disabled}
+            value={value}
+            onFocus={this.handleOnFocus}
+            onBlur={this.handleOnFocus}
+            placeholder={placeholder}
+            {...textInputProps}
+          />
+        </TextInputWrapper>
+
+        <Animated.View style={this.animatedStyle}>
+          {this.state.isFocused ? (
+            <ClearIconBackground>
+              <ClearIcon name={'close'} />
+            </ClearIconBackground>
+          ) : null}
+          <Boom />
+          {this.state.isFocused ? <ButtonLink>Cancel</ButtonLink> : null}
+        </Animated.View>
+      </AddonRow>
     );
   }
 }
