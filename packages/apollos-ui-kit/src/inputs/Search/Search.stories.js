@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import PaddedView from '../../PaddedView';
 import CenteredView from '../../CenteredView';
+import PaddedView from '../../PaddedView';
 
 import Search from '.';
 

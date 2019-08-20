@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 import styled from '../../styled';
 import { withTheme } from '../../theme';
 import Icon from '../../Icon';
+import { ButtonIcon } from '../../Button';
 
 // import InputWrapper from '../InputWrapper';
 // import TextInput from '../Text';
-import ErrorText from '../ErrorText';
 import InputAddon, { AddonRow } from '../InputAddon';
 // import { textStyle } from '../withInputControlStyles';
 
@@ -34,10 +34,12 @@ const InputWrapper = styled(
   'InputWrapper'
 )(View);
 
-const LoopIcon = withTheme(({ theme, isFocused }) => ({
+const IconStyles = withTheme(({ theme, isFocused }) => ({
   fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
-}))(Icon);
+}));
+const LoopIcon = IconStyles(Icon);
+const ClearIcon = IconStyles(ButtonIcon);
 
 const Input = withTheme(({ theme }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
@@ -94,24 +96,25 @@ class Search extends PureComponent {
 
     return (
       <InputWrapper style={wrapperStyle} disabled={disabled}>
-        <View>
-          <AddonRow>
-            <InputAddon>
-              <LoopIcon name={'search'} isFocused={this.state.isFocused} />
-            </InputAddon>
-            <Animated.View style={animatedStyle}>
-              <Input
-                ref={inputRef}
-                editable={!disabled}
-                value={value}
-                onFocus={this.handleOnFocus}
-                onBlur={this.handleOnFocus}
-                placeholder={placeholder}
-                {...textInputProps}
-              />
-            </Animated.View>
-          </AddonRow>
-        </View>
+        <AddonRow>
+          <InputAddon>
+            <LoopIcon name={'search'} isFocused={this.state.isFocused} />
+          </InputAddon>
+          <Animated.View style={animatedStyle}>
+            <Input
+              ref={inputRef}
+              editable={!disabled}
+              value={value}
+              onFocus={this.handleOnFocus}
+              onBlur={this.handleOnFocus}
+              placeholder={placeholder}
+              {...textInputProps}
+            />
+          </Animated.View>
+          <InputAddon>
+            <ClearIcon name={'close'} />
+          </InputAddon>
+        </AddonRow>
       </InputWrapper>
     );
   }
