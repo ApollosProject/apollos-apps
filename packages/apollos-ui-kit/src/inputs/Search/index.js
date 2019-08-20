@@ -36,7 +36,7 @@ const InputWrapper = styled(
 
 const LoopIcon = withTheme(({ theme, isFocused }) => ({
   fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
-  size: theme.sizing.baseUnit,
+  size: theme.helpers.rem(1),
 }))(Icon);
 
 const Input = withTheme(({ theme }) => ({
