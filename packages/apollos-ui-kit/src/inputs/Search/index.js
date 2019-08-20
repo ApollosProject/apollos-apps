@@ -14,14 +14,14 @@ import InputAddon, { AddonRow } from '../InputAddon';
 // import { textStyle } from '../withInputControlStyles';
 
 /*
- * search loop icon
- * clear text icon
- * cancel buttontext
- *   text prop
- *   onPress prop
- *   animate cancel text in
- * label text prop
- * onSubmit prop
+ * + search loop icon
+ * - clear text icon
+ * - cancel buttontext
+ *   - text prop
+ *   - onPress prop
+ *   - animate cancel text in
+ * + placeholder text prop
+ * - onSubmit prop
  */
 
 const InputWrapper = styled(
@@ -52,17 +52,18 @@ const Input = withTheme(({ theme }) => ({
 
 class Search extends PureComponent {
   static propTypes = {
-    label: PropTypes.string,
+    disabled: PropTypes.bool,
+    error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+    inputRef: PropTypes.func,
+    placeholder: PropTypes.string,
+    underline: PropTypes.bool,
     value: PropTypes.any, // eslint-disable-line
     wrapperStyle: PropTypes.any, // eslint-disable-line
-    error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    disabled: PropTypes.bool,
-    inputRef: PropTypes.func,
-    underline: PropTypes.bool,
   };
 
   static defaultProps = {
     disabled: false,
+    placeholder: 'Search',
   };
 
   constructor() {
@@ -81,13 +82,13 @@ class Search extends PureComponent {
 
   render() {
     const {
-      label,
+      disabled,
+      error,
+      inputRef,
+      placeholder,
+      underline,
       value,
       wrapperStyle,
-      error,
-      disabled = false,
-      inputRef,
-      underline,
       ...textInputProps
     } = this.props;
 
@@ -109,6 +110,7 @@ class Search extends PureComponent {
                 value={value}
                 onFocus={this.handleOnFocus}
                 onBlur={this.handleOnFocus}
+                placeholder={placeholder}
                 {...textInputProps}
               />
             </Animated.View>
