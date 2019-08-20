@@ -14,4 +14,7 @@ storiesOf('ui-kit/Inputs/Search', module)
     </CenteredView>
   ))
   .add('default', () => <Search />)
-  .add('disabled', () => <Search disabled />);
+  .add('disabled', () => <Search disabled />)
+  .add('placeholder', () => (
+    <Search placeholder={'💥Custom Placeholder text💥'} />
+  ));

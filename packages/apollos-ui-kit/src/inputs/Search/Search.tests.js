@@ -22,4 +22,12 @@ describe('The Search Input component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with a custom placeholder', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Search placeholder={'💥Custom Placeholder text💥'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
