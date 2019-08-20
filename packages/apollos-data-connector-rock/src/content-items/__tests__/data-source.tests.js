@@ -146,6 +146,14 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('returns an empty array when there are no sibling content items', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([], dataSource);
+    const cursor = await dataSource.getCursorBySiblingContentItemId(1);
+    expect(await cursor.get()).toEqual([]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
   it('returns an empty array when there are no parent content items', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock([], dataSource);

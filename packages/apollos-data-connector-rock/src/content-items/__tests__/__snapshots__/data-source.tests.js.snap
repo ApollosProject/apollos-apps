@@ -209,6 +209,16 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns an empty array when there are no sibling content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns features when a contentItem has a Features field 1`] = `
 Array [
   Object {
