@@ -26,7 +26,7 @@ import InputAddon, { AddonRow } from '../InputAddon';
 
 const InputWrapper = styled(
   ({ theme, disabled }) => ({
-    // marginVertical: theme.sizing.baseUnit,
+    paddingHorizontal: theme.sizing.baseUnit,
     borderRadius: theme.sizing.baseUnit,
     backgroundColor: theme.colors.background.screen,
     ...(disabled ? { opacity: 0.5 } : {}),
@@ -42,9 +42,29 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
 const Input = withTheme(({ theme }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
   selectionColor: theme.colors.action.secondary,
+  style: {
+    paddingVertical: theme.sizing.baseUnit * 0.625,
+    paddingLeft: theme.sizing.baseUnit * 0.5,
+    fontSize: theme.helpers.rem(0.875),
+    fontFamily: theme.typography.sans.medium.default,
+  },
 }))(TextInput);
 
 class Search extends PureComponent {
+  static propTypes = {
+    label: PropTypes.string,
+    value: PropTypes.any, // eslint-disable-line
+    wrapperStyle: PropTypes.any, // eslint-disable-line
+    error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+    disabled: PropTypes.bool,
+    inputRef: PropTypes.func,
+    underline: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    disabled: false,
+  };
+
   constructor() {
     super();
 
@@ -62,12 +82,10 @@ class Search extends PureComponent {
   render() {
     const {
       label,
-      suffix,
       value,
       wrapperStyle,
       error,
       disabled = false,
-      theme,
       inputRef,
       underline,
       ...textInputProps
@@ -86,15 +104,14 @@ class Search extends PureComponent {
             </InputAddon>
             <Animated.View style={animatedStyle}>
               <Input
-                // style={textStyle({ theme })}
                 ref={inputRef}
                 editable={!disabled}
                 value={value}
                 onFocus={this.handleOnFocus}
                 onBlur={this.handleOnFocus}
+                {...textInputProps}
               />
             </Animated.View>
-            <InputAddon>{suffix}</InputAddon>
           </AddonRow>
         </View>
 
