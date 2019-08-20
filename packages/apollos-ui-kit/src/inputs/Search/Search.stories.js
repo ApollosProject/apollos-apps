@@ -6,11 +6,12 @@ import CenteredView from '../../CenteredView';
 
 import Search from '.';
 
-storiesOf('ui-kit/Inputs', module)
+storiesOf('ui-kit/Inputs/Search', module)
   .addDecorator((story) => (
     <CenteredView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
       <PaddedView style={{ alignSelf: 'stretch' }}>{story()}</PaddedView>
     </CenteredView>
   ))
-  .add('Search', () => <Search />);
+  .add('default', () => <Search />)
+  .add('disabled', () => <Search disabled />);
