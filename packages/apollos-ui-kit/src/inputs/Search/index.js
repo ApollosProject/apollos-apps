@@ -53,7 +53,6 @@ const Input = withTheme(({ theme }) => ({
 class Search extends PureComponent {
   static propTypes = {
     disabled: PropTypes.bool,
-    error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     inputRef: PropTypes.func,
     placeholder: PropTypes.string,
     underline: PropTypes.bool,
@@ -83,7 +82,6 @@ class Search extends PureComponent {
   render() {
     const {
       disabled,
-      error,
       inputRef,
       placeholder,
       underline,
@@ -116,10 +114,6 @@ class Search extends PureComponent {
             </Animated.View>
           </AddonRow>
         </View>
-
-        {error && typeof error === 'string' ? (
-          <ErrorText>{error}</ErrorText>
-        ) : null}
       </InputWrapper>
     );
   }
