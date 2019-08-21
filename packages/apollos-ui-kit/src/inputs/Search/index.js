@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, Animated, TextInput } from 'react-native';
+import { View, Animated, TextInput, Dimensions } from 'react-native';
 // import Color from 'color';
 import PropTypes from 'prop-types';
 
@@ -34,6 +34,8 @@ const TextInputWrapper = styled(
     // backgroundColor: theme.colors.background.screen,
     backgroundColor: 'salmon',
     ...(disabled ? { opacity: 0.5 } : {}),
+    overflow: 'hidden',
+    width: Dimensions.get('window').width - theme.sizing.baseUnit * 3, // screen width - PaddedView - Boom
   }),
   'InputWrapper'
 )(View);
@@ -46,12 +48,17 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(Icon);
 
-const ClearIconBackground = styled(({ theme }) => ({
-  // backgroundColor: theme.colors.background.screen,
+const ClearSearchIconBackground = styled(({ theme }) => ({
+  marginRight: -theme.sizing.baseUnit,
+  zIndex: 1,
+  overflow: 'hidden', // fixes ios border radius bug
+  borderTopRightRadius: theme.sizing.baseUnit,
+  borderBottomRightRadius: theme.sizing.baseUnit,
   backgroundColor: 'salmon',
+  // backgroundColor: theme.colors.background.screen,
 }))(View);
 
-const ClearIcon = withTheme(({ theme, isFocused }) => ({
+const ClearSearchIcon = withTheme(({ theme, isFocused }) => ({
   fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
   iconPadding: theme.helpers.rem(1),
@@ -68,14 +75,15 @@ const Input = withTheme(({ theme }) => ({
   },
 }))(TextInput);
 
-const Boom = styled(({ theme }) => ({
+const Boom = styled(({ theme, isFocused }) => ({
   width: 16,
   height: 48,
+  overflow: 'hidden', // fixes ios border radius bug
   borderTopRightRadius: theme.sizing.baseUnit,
   borderBottomRightRadius: theme.sizing.baseUnit,
   // backgroundColor: theme.colors.background.screen,
   backgroundColor: 'blue',
-  marginRight: theme.sizing.baseUnit,
+  ...(isFocused ? { marginRight: theme.sizing.baseUnit } : {}),
 }))(View);
 
 class Search extends PureComponent {
@@ -135,17 +143,18 @@ class Search extends PureComponent {
             onFocus={this.handleOnFocus}
             onBlur={this.handleOnFocus}
             placeholder={placeholder}
+            // clearButtonMode={'while-editing'}
             {...textInputProps}
           />
         </TextInputWrapper>
 
         <Animated.View style={this.animatedStyle}>
           {this.state.isFocused ? (
-            <ClearIconBackground>
-              <ClearIcon name={'close'} />
-            </ClearIconBackground>
+            <ClearSearchIconBackground>
+              <ClearSearchIcon name={'close'} />
+            </ClearSearchIconBackground>
           ) : null}
-          <Boom />
+          <Boom isFocused={this.state.isFocused} />
           {this.state.isFocused ? <ButtonLink>Cancel</ButtonLink> : null}
         </Animated.View>
       </AddonRow>
