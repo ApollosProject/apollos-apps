@@ -29,13 +29,13 @@ const TextInputWrapper = styled(
     flexDirection: 'row',
     flexGrow: 1,
     alignItems: 'center',
-    borderTopLeftRadius: theme.sizing.baseUnit,
-    borderBottomLeftRadius: theme.sizing.baseUnit,
+    // borderTopLeftRadius: theme.sizing.baseUnit,
+    borderRadius: theme.sizing.baseUnit,
     // backgroundColor: theme.colors.background.screen,
     backgroundColor: 'salmon',
     ...(disabled ? { opacity: 0.5 } : {}),
     overflow: 'hidden',
-    width: Dimensions.get('window').width - theme.sizing.baseUnit * 3, // screen width - PaddedView - Boom
+    width: '100%', // Dimensions.get('window').width - theme.sizing.baseUnit * 3, // screen width - PaddedView - Boom
   }),
   'InputWrapper'
 )(View);
@@ -49,42 +49,45 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
 }))(Icon);
 
 const ClearSearchIconBackground = styled(({ theme }) => ({
-  marginRight: -theme.sizing.baseUnit,
+  marginRight: theme.sizing.baseUnit,
   zIndex: 1,
   overflow: 'hidden', // fixes ios border radius bug
   borderTopRightRadius: theme.sizing.baseUnit,
   borderBottomRightRadius: theme.sizing.baseUnit,
-  backgroundColor: 'salmon',
+  backgroundColor: 'red',
   // backgroundColor: theme.colors.background.screen,
 }))(View);
 
 const ClearSearchIcon = withTheme(({ theme, isFocused }) => ({
-  fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
+  fill: theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
-  iconPadding: theme.helpers.rem(1),
+  iconPadding: theme.helpers.rem(0.625),
+  style: {
+    opacity: isFocused ? 1 : 0,
+  },
 }))(ButtonIcon);
 
 const Input = withTheme(({ theme }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
   selectionColor: theme.colors.action.secondary,
   style: {
-    paddingVertical: theme.sizing.baseUnit * 0.625,
+    // paddingVertical: theme.sizing.baseUnit * 0.625,
     paddingLeft: theme.sizing.baseUnit * 0.5,
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
   },
 }))(TextInput);
 
-const Boom = styled(({ theme, isFocused }) => ({
-  width: 16,
-  height: 48,
-  overflow: 'hidden', // fixes ios border radius bug
-  borderTopRightRadius: theme.sizing.baseUnit,
-  borderBottomRightRadius: theme.sizing.baseUnit,
-  // backgroundColor: theme.colors.background.screen,
-  backgroundColor: 'blue',
-  ...(isFocused ? { marginRight: theme.sizing.baseUnit } : {}),
-}))(View);
+// const Boom = styled(({ theme, isFocused }) => ({
+//   width: 16,
+//   height: 40,
+//   overflow: 'hidden', // fixes ios border radius bug
+//   borderTopRightRadius: theme.sizing.baseUnit,
+//   borderBottomRightRadius: theme.sizing.baseUnit,
+//   backgroundColor: theme.colors.background.screen,
+//   // backgroundColor: 'blue',
+//   // marginRight: theme.sizing.baseUnit,
+// }))(View);
 
 class Search extends PureComponent {
   static propTypes = {
@@ -107,13 +110,34 @@ class Search extends PureComponent {
       isFocused: false,
     };
 
-    // this.focusAnimation = new Animated.Value(1);
-    // const animatedStyle = { opacity: focusAnimation };
+    this.animatedValue = new Animated.Value(59); // 75
 
     this.animatedStyle = {
+      position: 'absolute',
+      height: '100%',
+      right: 0,
+      transform: [{ translateX: this.animatedValue }],
       flexDirection: 'row',
       alignItems: 'center',
+      backgroundColor: 'white',
     };
+  }
+
+  componentDidUpdate() {
+    if (this.state.isFocused) {
+      Animated.timing(this.animatedValue, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }).start();
+    }
+    if (!this.state.isFocused) {
+      Animated.timing(this.animatedValue, {
+        toValue: 59,
+        duration: 300,
+        useNativeDriver: true,
+      }).start();
+    }
   }
 
   handleOnFocus = () => {
@@ -133,7 +157,7 @@ class Search extends PureComponent {
     } = this.props;
 
     return (
-      <AddonRow>
+      <View>
         <TextInputWrapper style={wrapperStyle} disabled={disabled}>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
@@ -149,15 +173,13 @@ class Search extends PureComponent {
         </TextInputWrapper>
 
         <Animated.View style={this.animatedStyle}>
-          {this.state.isFocused ? (
-            <ClearSearchIconBackground>
-              <ClearSearchIcon name={'close'} />
-            </ClearSearchIconBackground>
-          ) : null}
-          <Boom isFocused={this.state.isFocused} />
-          {this.state.isFocused ? <ButtonLink>Cancel</ButtonLink> : null}
+          <ClearSearchIconBackground>
+            <ClearSearchIcon name={'close'} isFocused={this.state.isFocused} />
+          </ClearSearchIconBackground>
+
+          <ButtonLink>Cancel</ButtonLink>
         </Animated.View>
-      </AddonRow>
+      </View>
     );
   }
 }
