@@ -50,7 +50,7 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(Icon);
 
-const Input = withTheme(({ theme, isFocused }) => ({
+const Input = withTheme(({ theme }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
   selectionColor: theme.colors.action.secondary,
   style: {
@@ -58,9 +58,7 @@ const Input = withTheme(({ theme, isFocused }) => ({
     height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
     paddingVertical: 0, // removes weird "default" padding
     paddingLeft: theme.sizing.baseUnit * 0.5,
-    paddingRight: isFocused
-      ? theme.sizing.baseUnit * 7.6875 // magic number 🧙 = the padding below + clear button + "Cancel"
-      : theme.sizing.baseUnit * 2.5,
+    paddingRight: theme.sizing.baseUnit * 2.5,
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
   },
@@ -104,8 +102,6 @@ class Search extends PureComponent {
       isFocused: false,
       showClearSearchIcon: false,
     };
-
-    this.value = '';
 
     this.animatedValue = new Animated.Value(59); // 75
 
@@ -160,10 +156,13 @@ class Search extends PureComponent {
   };
 
   handleOnChangeText = (changedText) => {
-    this.value = changedText;
-
+    /* `onChangeText` triggers `handleOnChangeText` on EVERY text change. the logic that follows
+     * optizies for rerenders.
+     *
+     * Only show the `ClearSearchIcon` if we have an input value */
     const shouldShowClearSearchIcon = changedText !== '';
 
+    // check previous value (state) against current value (above)
     if (this.state.showClearSearchIcon !== shouldShowClearSearchIcon) {
       this.setState({
         showClearSearchIcon: shouldShowClearSearchIcon,
@@ -193,7 +192,6 @@ class Search extends PureComponent {
             onBlur={this.handleOnFocus}
             onChangeText={this.handleOnChangeText}
             placeholder={placeholder}
-            isFocused={this.state.isFocused}
             {...textInputProps}
           />
         </TextInputWrapper>
