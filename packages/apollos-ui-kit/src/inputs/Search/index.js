@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, Animated, TextInput } from 'react-native';
+import { View, TextInput, Animated, Keyboard } from 'react-native';
 // import Color from 'color';
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
@@ -62,7 +62,7 @@ const Input = withTheme(({ theme }) => ({
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
   },
-}))(TextInput);
+}))(React.forwardRef((props, ref) => <TextInput ref={ref} {...props} />));
 
 const ClearSearchButtonBackground = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
@@ -97,6 +97,8 @@ class Search extends PureComponent {
 
   constructor() {
     super();
+
+    this.boom = React.createRef();
 
     this.state = {
       isFocused: false,
@@ -146,16 +148,6 @@ class Search extends PureComponent {
   };
 
   handleOnChangeText = (changedText) => {
-    this.value = changedText;
-
-    if (this.value !== '') {
-      this.setState({
-        showClearSearchButton: true,
-      });
-    }
-  };
-
-  handleOnChangeText = (changedText) => {
     /* `onChangeText` triggers `handleOnChangeText` on EVERY text change. the logic that follows
      * optizies for rerenders.
      *
@@ -170,6 +162,8 @@ class Search extends PureComponent {
     }
   };
 
+  handleOnPressClearSearchButton = () => this.boom.current.clear();
+
   render() {
     const {
       disabled,
@@ -180,12 +174,13 @@ class Search extends PureComponent {
       ...textInputProps
     } = this.props;
 
+    console.log('Boom', this.boom);
     return (
       <SearchWrapper style={wrapperStyle} disabled={disabled}>
         <TextInputWrapper>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
-            ref={this.ref}
+            ref={this.boom}
             editable={!disabled}
             defaultValue={value}
             onFocus={this.handleOnFocus}
@@ -199,12 +194,13 @@ class Search extends PureComponent {
         <Animated.View style={this.animatedStyle}>
           <ClearSearchButtonBackground isFocused={this.state.isFocused}>
             <ClearSearchButton
+              onPress={this.handleOnPressClearSearchButton}
               name={'close'}
               isVisible={this.state.showClearSearchButton}
             />
           </ClearSearchButtonBackground>
 
-          <ButtonLink>Cancel</ButtonLink>
+          <ButtonLink onPress={() => Keyboard.dismiss()}>Cancel</ButtonLink>
         </Animated.View>
       </SearchWrapper>
     );
