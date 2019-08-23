@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import { View, Animated, Easing, TextInput, Dimensions } from 'react-native';
+import { View, Animated, TextInput } from 'react-native';
 // import Color from 'color';
 import PropTypes from 'prop-types';
+import { debounce } from 'lodash';
 
 import styled from '../../styled';
 import { withTheme } from '../../theme';
@@ -34,13 +35,9 @@ const TextInputWrapper = styled(
     flexDirection: 'row',
     flexGrow: 1,
     alignItems: 'center',
-    // borderTopLeftRadius: theme.sizing.baseUnit,
     borderRadius: theme.sizing.baseUnit,
     backgroundColor: theme.colors.background.screen,
-    // backgroundColor: 'salmon',
     overflow: 'hidden',
-    paddingRight: theme.sizing.baseUnit * 7.6875, // magic number 🧙‍
-    // width: '100%', // Dimensions.get('window').width - theme.sizing.baseUnit * 3, // screen width - PaddedView - Boom
   }),
   'InputWrapper'
 )(View);
@@ -53,13 +50,17 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(Icon);
 
-const Input = withTheme(({ theme }) => ({
+const Input = withTheme(({ theme, isFocused }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
   selectionColor: theme.colors.action.secondary,
   style: {
-    height: theme.helpers.rem(2.5),
-    paddingVertical: 0, // theme.helpers.rem(2.5),
+    flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
+    height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
+    paddingVertical: 0, // removes weird "default" padding
     paddingLeft: theme.sizing.baseUnit * 0.5,
+    paddingRight: isFocused
+      ? theme.sizing.baseUnit * 7.6875 // magic number 🧙 = the padding below + clear button + "Cancel"
+      : theme.sizing.baseUnit * 2.5,
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
   },
@@ -67,20 +68,18 @@ const Input = withTheme(({ theme }) => ({
 
 const ClearSearchIconBackground = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
-  zIndex: 1,
-  overflow: 'hidden', // fixes ios border radius bug
   borderTopRightRadius: theme.sizing.baseUnit,
   borderBottomRightRadius: theme.sizing.baseUnit,
-  // backgroundColor: 'red',
   backgroundColor: theme.colors.background.screen,
+  overflow: 'hidden', // fixes ios border radius bug
 }))(View);
 
-const ClearSearchIcon = withTheme(({ theme, isFocused }) => ({
+const ClearSearchIcon = withTheme(({ theme, isVisible }) => ({
   fill: theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
   iconPadding: theme.helpers.rem(0.75),
   style: {
-    opacity: isFocused ? 1 : 0,
+    opacity: isVisible ? 1 : 0,
   },
 }))(ButtonIcon);
 
@@ -103,7 +102,10 @@ class Search extends PureComponent {
 
     this.state = {
       isFocused: false,
+      showClearSearchIcon: false,
     };
+
+    this.value = '';
 
     this.animatedValue = new Animated.Value(59); // 75
 
@@ -147,6 +149,28 @@ class Search extends PureComponent {
     }));
   };
 
+  handleOnChangeText = (changedText) => {
+    this.value = changedText;
+
+    if (this.value !== '') {
+      this.setState({
+        showClearSearchIcon: true,
+      });
+    }
+  };
+
+  handleOnChangeText = (changedText) => {
+    this.value = changedText;
+
+    const shouldShowClearSearchIcon = changedText !== '';
+
+    if (this.state.showClearSearchIcon !== shouldShowClearSearchIcon) {
+      this.setState({
+        showClearSearchIcon: shouldShowClearSearchIcon,
+      });
+    }
+  };
+
   render() {
     const {
       disabled,
@@ -164,18 +188,22 @@ class Search extends PureComponent {
           <Input
             ref={inputRef}
             editable={!disabled}
-            value={value}
+            defaultValue={value}
             onFocus={this.handleOnFocus}
             onBlur={this.handleOnFocus}
+            onChangeText={this.handleOnChangeText}
             placeholder={placeholder}
-            // clearButtonMode={'while-editing'}
+            isFocused={this.state.isFocused}
             {...textInputProps}
           />
         </TextInputWrapper>
 
         <Animated.View style={this.animatedStyle}>
-          <ClearSearchIconBackground>
-            <ClearSearchIcon name={'close'} isFocused={this.state.isFocused} />
+          <ClearSearchIconBackground isFocused={this.state.isFocused}>
+            <ClearSearchIcon
+              name={'close'}
+              isVisible={this.state.showClearSearchIcon}
+            />
           </ClearSearchIconBackground>
 
           <ButtonLink>Cancel</ButtonLink>
