@@ -84,17 +84,6 @@ const ClearSearchIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(ButtonIcon);
 
-// const Boom = styled(({ theme, isFocused }) => ({
-//   width: 16,
-//   height: 40,
-//   overflow: 'hidden', // fixes ios border radius bug
-//   borderTopRightRadius: theme.sizing.baseUnit,
-//   borderBottomRightRadius: theme.sizing.baseUnit,
-//   backgroundColor: theme.colors.background.screen,
-//   // backgroundColor: 'blue',
-//   // marginRight: theme.sizing.baseUnit,
-// }))(View);
-
 class Search extends PureComponent {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -131,18 +120,22 @@ class Search extends PureComponent {
 
   componentDidUpdate() {
     if (this.state.isFocused) {
-      Animated.timing(this.animatedValue, {
+      Animated.spring(this.animatedValue, {
         toValue: 0,
-        duration: 250,
-        easing: Easing.in(Easing.bezier(0.42, 0, 0.58, 1)),
+        duration: 500,
+        damping: 500,
+        stiffness: 1000,
+        mass: 3,
         useNativeDriver: true,
       }).start();
     }
     if (!this.state.isFocused) {
-      Animated.timing(this.animatedValue, {
+      Animated.spring(this.animatedValue, {
         toValue: 59,
-        duration: 250,
-        easing: Easing.in(Easing.bezier(0.42, 0, 0.58, 1)),
+        duration: 300,
+        damping: 500,
+        stiffness: 1000,
+        mass: 3,
         useNativeDriver: true,
       }).start();
     }
