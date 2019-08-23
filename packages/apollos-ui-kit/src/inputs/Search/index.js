@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, Animated, TextInput, Dimensions } from 'react-native';
+import { View, Animated, Easing, TextInput, Dimensions } from 'react-native';
 // import Color from 'color';
 import PropTypes from 'prop-types';
 
@@ -15,11 +15,11 @@ import InputAddon, { AddonRow } from '../InputAddon';
 
 /*
  * + search loop icon
- * - clear text icon
- * - cancel buttontext
+ * + clear text icon
+ * + cancel buttontext
  *   - text prop
  *   - onPress prop
- *   - animate cancel text in
+ *   + animate cancel text in
  * + placeholder text prop
  * - onSubmit prop
  */
@@ -133,14 +133,16 @@ class Search extends PureComponent {
     if (this.state.isFocused) {
       Animated.timing(this.animatedValue, {
         toValue: 0,
-        duration: 150,
+        duration: 250,
+        easing: Easing.in(Easing.bezier(0.42, 0, 0.58, 1)),
         useNativeDriver: true,
       }).start();
     }
     if (!this.state.isFocused) {
       Animated.timing(this.animatedValue, {
         toValue: 59,
-        duration: 150,
+        duration: 250,
+        easing: Easing.in(Easing.bezier(0.42, 0, 0.58, 1)),
         useNativeDriver: true,
       }).start();
     }
