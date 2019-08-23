@@ -64,7 +64,7 @@ const Input = withTheme(({ theme }) => ({
   },
 }))(TextInput);
 
-const ClearSearchIconBackground = styled(({ theme }) => ({
+const ClearSearchButtonBackground = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
   borderTopRightRadius: theme.sizing.baseUnit,
   borderBottomRightRadius: theme.sizing.baseUnit,
@@ -72,7 +72,7 @@ const ClearSearchIconBackground = styled(({ theme }) => ({
   overflow: 'hidden', // fixes ios border radius bug
 }))(View);
 
-const ClearSearchIcon = withTheme(({ theme, isVisible }) => ({
+const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
   fill: theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
   iconPadding: theme.helpers.rem(0.75),
@@ -100,7 +100,7 @@ class Search extends PureComponent {
 
     this.state = {
       isFocused: false,
-      showClearSearchIcon: false,
+      showClearSearchButton: false,
     };
 
     this.animatedValue = new Animated.Value(59); // 75
@@ -150,7 +150,7 @@ class Search extends PureComponent {
 
     if (this.value !== '') {
       this.setState({
-        showClearSearchIcon: true,
+        showClearSearchButton: true,
       });
     }
   };
@@ -159,13 +159,13 @@ class Search extends PureComponent {
     /* `onChangeText` triggers `handleOnChangeText` on EVERY text change. the logic that follows
      * optizies for rerenders.
      *
-     * Only show the `ClearSearchIcon` if we have an input value */
-    const shouldShowClearSearchIcon = changedText !== '';
+     * Only show the `ClearSearchButton` if we have an input value */
+    const shouldShowClearSearchButton = changedText !== '';
 
     // check previous value (state) against current value (above)
-    if (this.state.showClearSearchIcon !== shouldShowClearSearchIcon) {
+    if (this.state.showClearSearchButton !== shouldShowClearSearchButton) {
       this.setState({
-        showClearSearchIcon: shouldShowClearSearchIcon,
+        showClearSearchButton: shouldShowClearSearchButton,
       });
     }
   };
@@ -185,7 +185,7 @@ class Search extends PureComponent {
         <TextInputWrapper>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
-            ref={inputRef}
+            ref={this.ref}
             editable={!disabled}
             defaultValue={value}
             onFocus={this.handleOnFocus}
@@ -197,12 +197,12 @@ class Search extends PureComponent {
         </TextInputWrapper>
 
         <Animated.View style={this.animatedStyle}>
-          <ClearSearchIconBackground isFocused={this.state.isFocused}>
-            <ClearSearchIcon
+          <ClearSearchButtonBackground isFocused={this.state.isFocused}>
+            <ClearSearchButton
               name={'close'}
-              isVisible={this.state.showClearSearchIcon}
+              isVisible={this.state.showClearSearchButton}
             />
-          </ClearSearchIconBackground>
+          </ClearSearchButtonBackground>
 
           <ButtonLink>Cancel</ButtonLink>
         </Animated.View>
