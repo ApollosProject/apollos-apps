@@ -189,6 +189,7 @@ class Search extends PureComponent {
             onBlur={this.handleOnFocus}
             onChangeText={this.handleOnChangeText}
             placeholder={placeholder}
+            returnKeyType={'search'}
             {...textInputProps}
           />
         </TextInputWrapper>
