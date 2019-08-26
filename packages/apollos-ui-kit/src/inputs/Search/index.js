@@ -99,7 +99,7 @@ class Search extends PureComponent {
   constructor() {
     super();
 
-    this.boom = React.createRef();
+    this.inputRef = React.createRef();
 
     this.state = {
       isFocused: false,
@@ -143,9 +143,9 @@ class Search extends PureComponent {
   }
 
   handleOnFocus = () => {
-    this.setState((state) => ({
-      isFocused: !state.isFocused,
-    }));
+    this.setState({
+      isFocused: this.inputRef.current.isFocused(),
+    });
   };
 
   handleOnChangeText = (changedText) => {
@@ -164,7 +164,7 @@ class Search extends PureComponent {
   };
 
   handleOnPressClearSearchButton = () => {
-    this.boom.current.clear();
+    this.inputRef.current.clear();
     this.setState({
       showClearSearchButton: false,
     });
@@ -185,7 +185,7 @@ class Search extends PureComponent {
         <TextInputWrapper>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
-            forwardedRef={this.boom}
+            forwardedRef={this.inputRef}
             editable={!disabled}
             defaultValue={value}
             onFocus={this.handleOnFocus}
