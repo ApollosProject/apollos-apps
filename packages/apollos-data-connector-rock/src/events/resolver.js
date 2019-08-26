@@ -7,6 +7,7 @@ export default {
     name: ({ eventItemId: id }, args, { dataSources }) =>
       dataSources.Events.getName(id),
     start: async ({ scheduleId: id }, args, { dataSources }) => {
+      console.log('hello');
       const times = await dataSources.Events.getDateTime(id);
       return times.start;
     },

@@ -47,18 +47,18 @@ describe('Events resolver', () => {
       ),
       getName: jest.fn(() => Promise.resolve('Cookout')),
       // for testing the getDateTime datasource function...
-      // first: jest.fn(() =>
-      // Promise.resolve({
-      // iCalendarContent:
-      // 'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
-      // })
-      // ),
-      getDateTime: jest.fn(() =>
+      first: jest.fn(() =>
         Promise.resolve({
-          start: '2019-08-26T17:00:00',
-          end: '2019-08-26T19:00:00',
+          iCalendarContent:
+            'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
         })
       ),
+      // getDateTime: jest.fn(() =>
+      // Promise.resolve({
+      // start: '2019-08-26T17:00:00',
+      // end: '2019-08-26T19:00:00',
+      // })
+      // ),
     };
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
