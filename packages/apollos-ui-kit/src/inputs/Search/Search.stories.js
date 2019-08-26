@@ -25,4 +25,5 @@ storiesOf('ui-kit/Inputs/Search', module)
   .add('screenBackgroundColor', () => (
     // you only need this if you are rendering `Search` on a color other than theme.colors.background.paper.
     <Search screenBackgroundColor={'salmon'} />
-  ));
+  ))
+  .add('cancelButtonText', () => <Search cancelButtonText={'Boom'} />);

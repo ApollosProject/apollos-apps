@@ -18,7 +18,7 @@ import {
  * + search loop icon
  * + clear text icon
  * + cancel buttontext
- *   - text prop
+ *   + text prop
  *   - onPress prop
  *   + animate cancel text in
  * + placeholder text prop
@@ -27,6 +27,7 @@ import {
 
 class Search extends PureComponent {
   static propTypes = {
+    cancelButtonText: PropTypes.string,
     disabled: PropTypes.bool,
     inputRef: PropTypes.node, // Need access to the search input? pass in your ref here!
     placeholder: PropTypes.string,
@@ -37,6 +38,7 @@ class Search extends PureComponent {
   };
 
   static defaultProps = {
+    cancelButtonText: 'Cancel',
     disabled: false,
     placeholder: 'Search',
   };
@@ -128,6 +130,7 @@ class Search extends PureComponent {
 
   render() {
     const {
+      cancelButtonText,
       disabled,
       inputRef,
       placeholder,
@@ -166,7 +169,7 @@ class Search extends PureComponent {
 
             <UIText onLayout={this.handleOnLayout}>
               <CancelButton onPress={this.handleOnPressCancel}>
-                Cancel
+                {cancelButtonText}
               </CancelButton>
             </UIText>
           </SmokeAndMirrorsWrapper>

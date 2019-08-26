@@ -31,10 +31,17 @@ describe('The Search Input component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render with a custom screenBackgroundColor', () => {
-    // you only need this if you are rendering `Search` on a color other than theme.colors.background.paper.
     const tree = renderer.create(
       <Providers>
         <Search screenBackgroundColor={'salmon'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a custom cancelButtonText', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Search cancelButtonText={'Boom'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
