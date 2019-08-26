@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, TextInput, Animated, Keyboard } from 'react-native';
-// import Color from 'color';
+import { Animated, Keyboard } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { UIText } from '../../typography';
