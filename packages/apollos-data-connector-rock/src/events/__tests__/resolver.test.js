@@ -10,7 +10,7 @@ const { getSchema, getContext } = createTestHelpers({
   Campus,
 });
 
-describe('PrayerRequest resolver', () => {
+describe('Events resolver', () => {
   let schema;
   let context;
   let rootValue;
@@ -20,7 +20,7 @@ describe('PrayerRequest resolver', () => {
     rootValue = {};
   });
 
-  it('gets all public prayer requests', async () => {
+  it('gets events by campus', async () => {
     const query = `
       query {
         campuses {
@@ -39,13 +39,20 @@ describe('PrayerRequest resolver', () => {
       Promise.resolve([{ id: 1 }])
     );
     context.dataSources.Events = {
+      ...context.dataSources.Events,
       getByCampus: jest.fn(() =>
         Promise.resolve([
-          { id: 1, campusId: 1, location: '123 Main St' },
-          { id: 2, campusId: 1, location: '456 Hwy 789' },
+          { id: 1, campusId: 1, scheduleId: 1, location: '123 Main St' },
         ])
       ),
       getName: jest.fn(() => Promise.resolve('Cookout')),
+      // for testing the getDateTime datasource function...
+      // first: jest.fn(() =>
+      // Promise.resolve({
+      // iCalendarContent:
+      // 'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+      // })
+      // ),
       getDateTime: jest.fn(() =>
         Promise.resolve({
           start: '2019-08-26T17:00:00',
