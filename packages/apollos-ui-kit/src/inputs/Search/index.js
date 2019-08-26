@@ -50,9 +50,10 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(Icon);
 
-const Input = withTheme(({ theme }) => ({
+const Input = withTheme(({ theme, forwardedRef }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
   selectionColor: theme.colors.action.secondary,
+  ref: forwardedRef,
   style: {
     flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
     height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
@@ -62,7 +63,7 @@ const Input = withTheme(({ theme }) => ({
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
   },
-}))(React.forwardRef((props, ref) => <TextInput ref={ref} {...props} />));
+}))(TextInput);
 
 const ClearSearchButtonBackground = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
@@ -162,7 +163,12 @@ class Search extends PureComponent {
     }
   };
 
-  handleOnPressClearSearchButton = () => this.boom.current.clear();
+  handleOnPressClearSearchButton = () => {
+    this.boom.current.clear();
+    this.setState({
+      showClearSearchButton: false,
+    });
+  };
 
   render() {
     const {
@@ -174,13 +180,12 @@ class Search extends PureComponent {
       ...textInputProps
     } = this.props;
 
-    console.log('Boom', this.boom);
     return (
       <SearchWrapper style={wrapperStyle} disabled={disabled}>
         <TextInputWrapper>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
-            ref={this.boom}
+            forwardedRef={this.boom}
             editable={!disabled}
             defaultValue={value}
             onFocus={this.handleOnFocus}
