@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrayerRequest resolver gets all public prayer requests 1`] = `
+Object {
+  "data": Object {
+    "campuses": Array [
+      Object {
+        "events": Array [
+          Object {
+            "end": "2019-08-26T19:00:00",
+            "id": "Event:559b23fd0aa90e81b1c023e72e230fa1",
+            "location": "123 Main St",
+            "name": "Cookout",
+            "start": "2019-08-26T17:00:00",
+          },
+          Object {
+            "end": "2019-08-26T19:00:00",
+            "id": "Event:965b6e6d7046a885bea4e300b5c0400d",
+            "location": "456 Hwy 789",
+            "name": "Cookout",
+            "start": "2019-08-26T17:00:00",
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
