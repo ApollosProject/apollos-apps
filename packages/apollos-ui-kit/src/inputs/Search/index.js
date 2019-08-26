@@ -2,17 +2,11 @@ import React, { PureComponent } from 'react';
 import { View, TextInput, Animated, Keyboard } from 'react-native';
 // import Color from 'color';
 import PropTypes from 'prop-types';
-import { debounce } from 'lodash';
 
 import styled from '../../styled';
 import { withTheme } from '../../theme';
 import Icon from '../../Icon';
 import { ButtonIcon, ButtonLink } from '../../Button';
-
-// import InputWrapper from '../InputWrapper';
-// import TextInput from '../Text';
-import InputAddon, { AddonRow } from '../InputAddon';
-// import { textStyle } from '../withInputControlStyles';
 
 /*
  * + search loop icon
@@ -87,7 +81,6 @@ class Search extends PureComponent {
     disabled: PropTypes.bool,
     inputRef: PropTypes.func,
     placeholder: PropTypes.string,
-    value: PropTypes.any, // eslint-disable-line
     wrapperStyle: PropTypes.any, // eslint-disable-line
   };
 
@@ -175,7 +168,6 @@ class Search extends PureComponent {
       disabled,
       inputRef,
       placeholder,
-      value,
       wrapperStyle,
       ...textInputProps
     } = this.props;
@@ -187,7 +179,6 @@ class Search extends PureComponent {
           <Input
             forwardedRef={this.inputRef}
             editable={!disabled}
-            defaultValue={value}
             onFocus={this.handleOnFocus}
             onBlur={this.handleOnFocus}
             onChangeText={this.handleOnChangeText}
