@@ -45,20 +45,25 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(Icon);
 
-const Input = withTheme(({ theme, forwardedRef }) => ({
-  placeholderTextColor: theme.colors.text.tertiary,
-  selectionColor: theme.colors.action.secondary,
-  ref: forwardedRef,
-  style: {
-    flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
-    height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
-    paddingVertical: 0, // removes weird "default" padding
-    paddingLeft: theme.sizing.baseUnit * 0.5,
-    paddingRight: theme.sizing.baseUnit * 2.5,
-    fontSize: theme.helpers.rem(0.875),
-    fontFamily: theme.typography.sans.medium.default,
-  },
-}))(TextInput);
+const Input = withTheme(
+  ({ theme, forwardedRef, showClearSearchButton, cancelButtonOffset }) => ({
+    placeholderTextColor: theme.colors.text.tertiary,
+    selectionColor: theme.colors.action.secondary,
+    ref: forwardedRef,
+    style: {
+      flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
+      height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
+      paddingVertical: 0, // removes weird "default" padding
+      paddingLeft: theme.sizing.baseUnit * 0.5,
+      paddingRight: showClearSearchButton // we have to dynamically adjust the padding otherwise it causes the placeholder text to disappear
+        ? cancelButtonOffset + theme.sizing.baseUnit * 5
+        : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
+      // marginRight: theme.sizing.baseUnit * 2.5,
+      fontSize: theme.helpers.rem(0.875),
+      fontFamily: theme.typography.sans.medium.default,
+    },
+  })
+)(TextInput);
 
 // the main reason this component lives here is because we need access to theme colors
 const SmokeAndMirrorsWrapper = styled(({ theme, screenBackgroundColor }) => ({
@@ -208,6 +213,8 @@ class Search extends PureComponent {
             onChangeText={this.handleOnChangeText}
             placeholder={placeholder}
             returnKeyType={'search'}
+            showClearSearchButton={this.state.showClearSearchButton}
+            cancelButtonOffset={this.cancelButtonWidth}
             {...textInputProps}
           />
         </TextInputWrapper>
