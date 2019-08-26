@@ -7,6 +7,7 @@ import styled from '../../styled';
 import { withTheme } from '../../theme';
 import Icon from '../../Icon';
 import { ButtonIcon, ButtonLink } from '../../Button';
+import { UIText } from '../../typography';
 
 /*
  * + search loop icon
@@ -83,6 +84,10 @@ const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
   },
 }))(ButtonIcon);
 
+const CancelButton = styled(({ theme }) => ({
+  paddingRight: theme.sizing.baseUnit, // padding for the edge of the screen.
+}))(ButtonLink);
+
 class Search extends PureComponent {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -101,13 +106,8 @@ class Search extends PureComponent {
     super();
 
     this.inputRef = props.inputRef || React.createRef();
-
-    this.state = {
-      isFocused: false,
-      showClearSearchButton: false,
-    };
-
-    this.animatedValue = new Animated.Value(59); // 75
+    this.cancelButtonWidth = 1000; // 🧙‍magic number ≈ arbiraty large number that makes it `CancelButton` render off screen.
+    this.animatedValue = new Animated.Value(this.cancelButtonWidth); // 75
 
     this.animatedStyle = {
       // these styles are required to live here and are required for the animation to function
@@ -116,12 +116,18 @@ class Search extends PureComponent {
       right: 0,
       transform: [{ translateX: this.animatedValue }],
     };
+
+    this.state = {
+      isFocused: false,
+      showClearSearchButton: false,
+    };
   }
 
   componentDidUpdate() {
     if (this.state.isFocused) {
       Animated.spring(this.animatedValue, {
         toValue: 0,
+        // these values match the ios spring effect
         duration: 500,
         damping: 500,
         stiffness: 1000,
@@ -131,7 +137,8 @@ class Search extends PureComponent {
     }
     if (!this.state.isFocused) {
       Animated.spring(this.animatedValue, {
-        toValue: 59,
+        toValue: this.cancelButtonWidth,
+        // these values match the ios spring effect
         duration: 300,
         damping: 500,
         stiffness: 1000,
@@ -169,6 +176,17 @@ class Search extends PureComponent {
     });
   };
 
+  handleOnPressCancel = () => Keyboard.dismiss();
+
+  handleOnLayout = ({
+    nativeEvent: {
+      layout: { width },
+    },
+  }) => {
+    // we dynamically set this value after render so we can be sure to always animate to the write place.
+    this.cancelButtonWidth = width;
+  };
+
   render() {
     const {
       disabled,
@@ -204,7 +222,11 @@ class Search extends PureComponent {
               />
             </ClearSearchButtonBackground>
 
-            <ButtonLink onPress={() => Keyboard.dismiss()}>Cancel</ButtonLink>
+            <UIText onLayout={this.handleOnLayout}>
+              <CancelButton onPress={this.handleOnPressCancel}>
+                Cancel
+              </CancelButton>
+            </UIText>
           </SmokeAndMirrorsWrapper>
         </Animated.View>
       </SearchWrapper>
