@@ -21,4 +21,8 @@ storiesOf('ui-kit/Inputs/Search', module)
   .add('disabled', () => <Search disabled />)
   .add('placeholder', () => (
     <Search placeholder={'💥Custom Placeholder text💥'} />
+  ))
+  .add('screenBackgroundColor', () => (
+    // you only need this if you are rendering `Search` on a color other than theme.colors.background.paper.
+    <Search screenBackgroundColor={'salmon'} />
   ));
