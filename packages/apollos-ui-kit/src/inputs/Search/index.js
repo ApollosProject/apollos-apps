@@ -28,10 +28,12 @@ import {
 class Search extends PureComponent {
   static propTypes = {
     disabled: PropTypes.bool,
-    inputRef: PropTypes.node, // need access to the search input? pass in your ref here!
+    inputRef: PropTypes.node, // Need access to the search input? pass in your ref here!
     placeholder: PropTypes.string,
-    screenBackgroundColor: PropTypes.string, // in order for this components animation to work correctly you need match this value to this components surroundings.
-    wrapperStyle: PropTypes.any, // eslint-disable-line
+    /* In order for this components animation to work correctly you need match this value to this
+     * components surroundings. You only need this if you are rendering `Search` on a color other
+     * than theme.colors.background.paper. */
+    screenBackgroundColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -130,12 +132,11 @@ class Search extends PureComponent {
       inputRef,
       placeholder,
       screenBackgroundColor,
-      wrapperStyle,
       ...textInputProps
     } = this.props;
 
     return (
-      <SearchWrapper style={wrapperStyle} disabled={disabled}>
+      <SearchWrapper disabled={disabled}>
         <TextInputWrapper>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
