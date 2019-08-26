@@ -64,9 +64,9 @@ PODS:
     - React
   - react-native-image-picker (0.28.0):
     - React
-  - react-native-maps (0.24.2):
+  - react-native-maps (0.25.0):
     - React
-  - react-native-music-control (0.10.4):
+  - react-native-music-control (0.10.5):
     - React
   - react-native-passkit-wallet (0.1.4):
     - React
@@ -74,10 +74,10 @@ PODS:
     - React
   - react-native-splash-screen (3.2.0):
     - React
-  - react-native-video (4.4.1):
+  - react-native-video (5.0.0):
     - React
-    - react-native-video/Video (= 4.4.1)
-  - react-native-video/Video (4.4.1):
+    - react-native-video/Video (= 5.0.0)
+  - react-native-video/Video (5.0.0):
     - React
   - react-native-webview (5.10.0):
     - React
@@ -114,7 +114,7 @@ PODS:
     - React
   - RNGestureHandler (1.3.0):
     - React
-  - RNScreens (1.0.0-alpha.22):
+  - RNScreens (1.0.0-alpha.23):
     - React
   - RNSVG (9.4.0):
     - React
@@ -261,12 +261,12 @@ SPEC CHECKSUMS:
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
-  react-native-maps: 0316ed017dbb64b33b227751fa810e2454fcfa39
-  react-native-music-control: e6f63ac3e49865105342d2e689f9bcce8c0bff13
+  react-native-maps: 190c02ca533fddac5bb49cf17bdece3644612107
+  react-native-music-control: 700e53dc9b2ec7342f69705243609c1cd644fa44
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-video: 9aecbfc4628128838187df9d9c9f630670cfb1d1
+  react-native-video: 6555881252c8ca039760e1cd6df28ac28ffb2baf
   react-native-webview: 3c79685b61a68d1fe99136f98f2f34b04dce2e02
   React-RCTActionSheet: b0f1ea83f4bf75fb966eae9bfc47b78c8d3efd90
   React-RCTAnimation: 359ba1b5690b1e87cc173558a78e82d35919333e
@@ -283,7 +283,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: b63d6e83fc629b01df6b624688f17944cea5637f
   RNDeviceInfo: 75dac2d7cd6b638b512cc9266ce48a39661fed0e
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
-  RNScreens: 720a9e6968beb73e8196239801e887d8401f86ed
+  RNScreens: f28b48b8345f2f5f39ed6195518291515032a788
   RNSVG: 9cb6e958c4b6a1f58185ac72a350b148947d6fed
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
 
