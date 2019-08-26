@@ -54,7 +54,7 @@ const Input = withTheme(
 const SmokeAndMirrorsWrapper = styled(({ theme, screenBackgroundColor }) => ({
   flexDirection: 'row',
   alignItems: 'center',
-  backgroundColor: screenBackgroundColor || theme.colors.paper,
+  backgroundColor: screenBackgroundColor || theme.colors.background.paper,
 }))(View);
 
 const ClearSearchButtonBackground = styled(({ theme }) => ({
