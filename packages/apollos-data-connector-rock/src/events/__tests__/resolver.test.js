@@ -47,7 +47,10 @@ describe('PrayerRequest resolver', () => {
       ),
       getName: jest.fn(() => Promise.resolve('Cookout')),
       getDateTime: jest.fn(() =>
-        Promise.resolve(['2019-08-26T17:00:00', '2019-08-26T19:00:00'])
+        Promise.resolve({
+          start: '2019-08-26T17:00:00',
+          end: '2019-08-26T19:00:00',
+        })
       ),
     };
     const result = await graphql(schema, query, rootValue, context);

@@ -8,11 +8,11 @@ export default {
       dataSources.Events.getName(id),
     start: async ({ scheduleId: id }, args, { dataSources }) => {
       const times = await dataSources.Events.getDateTime(id);
-      return times[0];
+      return times.start;
     },
     end: async ({ scheduleId: id }, args, { dataSources }) => {
       const times = await dataSources.Events.getDateTime(id);
-      return times[1];
+      return times.end;
     },
   },
   Campus: {
