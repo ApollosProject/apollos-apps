@@ -185,9 +185,39 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns an empty array when there are no child content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns an empty array when there are no features 1`] = `Array []`;
 
 exports[`ContentItemsModel returns an empty array when there are no features 2`] = `Array []`;
+
+exports[`ContentItemsModel returns an empty array when there are no parent content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns an empty array when there are no sibling content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
 
 exports[`ContentItemsModel returns features when a contentItem has a Features field 1`] = `
 Array [
@@ -220,26 +250,6 @@ Array [
       "id": "123-0",
       "reference": "john 3",
     },
-  ],
-]
-`;
-
-exports[`ContentItemsModel returns null when there are no child content items 1`] = `
-Array [
-  Array [
-    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`ContentItemsModel returns null when there are no parent content items 1`] = `
-Array [
-  Array [
-    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
-    Object {},
-    Object {},
   ],
 ]
 `;
