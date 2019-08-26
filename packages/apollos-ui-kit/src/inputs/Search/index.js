@@ -59,6 +59,13 @@ const Input = withTheme(({ theme, forwardedRef }) => ({
   },
 }))(TextInput);
 
+// the main reason this component lives here is because we need access to theme colors
+const SmokeAndMirrorsWrapper = styled(({ theme, screenBackgroundColor }) => ({
+  flexDirection: 'row',
+  alignItems: 'center',
+  backgroundColor: screenBackgroundColor || theme.colors.paper,
+}))(View);
+
 const ClearSearchButtonBackground = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
   borderTopRightRadius: theme.sizing.baseUnit,
@@ -81,6 +88,7 @@ class Search extends PureComponent {
     disabled: PropTypes.bool,
     inputRef: PropTypes.func,
     placeholder: PropTypes.string,
+    screenBackgroundColor: PropTypes.string, // in order for this components animation to work correctly you need match this value to this components surroundings.
     wrapperStyle: PropTypes.any, // eslint-disable-line
   };
 
@@ -102,13 +110,11 @@ class Search extends PureComponent {
     this.animatedValue = new Animated.Value(59); // 75
 
     this.animatedStyle = {
+      // these styles are required to live here and are required for the animation to function
       position: 'absolute',
       height: '100%',
       right: 0,
       transform: [{ translateX: this.animatedValue }],
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: 'white',
     };
   }
 
@@ -188,15 +194,17 @@ class Search extends PureComponent {
         </TextInputWrapper>
 
         <Animated.View style={this.animatedStyle}>
-          <ClearSearchButtonBackground isFocused={this.state.isFocused}>
-            <ClearSearchButton
-              onPress={this.handleOnPressClearSearchButton}
-              name={'close'}
-              isVisible={this.state.showClearSearchButton}
-            />
-          </ClearSearchButtonBackground>
+          <SmokeAndMirrorsWrapper>
+            <ClearSearchButtonBackground isFocused={this.state.isFocused}>
+              <ClearSearchButton
+                onPress={this.handleOnPressClearSearchButton}
+                name={'close'}
+                isVisible={this.state.showClearSearchButton}
+              />
+            </ClearSearchButtonBackground>
 
-          <ButtonLink onPress={() => Keyboard.dismiss()}>Cancel</ButtonLink>
+            <ButtonLink onPress={() => Keyboard.dismiss()}>Cancel</ButtonLink>
+          </SmokeAndMirrorsWrapper>
         </Animated.View>
       </SearchWrapper>
     );
