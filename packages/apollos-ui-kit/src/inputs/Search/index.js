@@ -86,7 +86,7 @@ const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
 class Search extends PureComponent {
   static propTypes = {
     disabled: PropTypes.bool,
-    inputRef: PropTypes.func,
+    inputRef: PropTypes.node, // need access to the search input? pass in your ref here!
     placeholder: PropTypes.string,
     screenBackgroundColor: PropTypes.string, // in order for this components animation to work correctly you need match this value to this components surroundings.
     wrapperStyle: PropTypes.any, // eslint-disable-line
@@ -97,10 +97,10 @@ class Search extends PureComponent {
     placeholder: 'Search',
   };
 
-  constructor() {
+  constructor(props) {
     super();
 
-    this.inputRef = React.createRef();
+    this.inputRef = props.inputRef || React.createRef();
 
     this.state = {
       isFocused: false,
