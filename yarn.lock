@@ -16305,11 +16305,6 @@ react-native-music-control@0.10.5:
   resolved "https://registry.yarnpkg.com/react-native-music-control/-/react-native-music-control-0.10.5.tgz#b1adf71d656bbca8f75b179f6a94a390bd200a10"
   integrity sha512-rG4xSc5LZf9cgwmUX1gLgVbQaNqtAepAvaZ8ZvwDEMlZU+jK/+2pqLbElEARyNFEt8+jjSHG2TULbQPaPA7Vhw==
 
-react-native-music-control@0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/react-native-music-control/-/react-native-music-control-0.7.3.tgz#6ba41e7339ea4e7afedb8ec4659bebfd66d556d9"
-  integrity sha512-Z4tpcZ90N5ruEzYw4l6OPvgxdYfZeehaDwkhI7R38U0dQLKyDnDOYA1aBmgSXFgNTGXsFilATKf/y3/THb50bA==
-
 react-native-onesignal@3.2.14:
   version "3.2.14"
   resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.2.14.tgz#421a3b34c226e5b6ea9e801b7b3f914d8e3c0abb"
@@ -16433,16 +16428,7 @@ react-native-video-controls@2.2.3:
   dependencies:
     lodash "^4.16.4"
 
-react-native-video@4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-4.4.1.tgz#12c6a8bfbabfa7641338a52db3d857ac3073a4fd"
-  integrity sha512-gTZKRqa4NkEBx6t6iAzTFlgxDY23IZW/8YClR0hMzhOD0/9I/AzOBBaOXDyFeKj4EQF+uZ/LUS3r+oDnz1ks5w==
-  dependencies:
-    keymirror "^0.1.1"
-    prop-types "^15.5.10"
-    shaka-player "^2.4.4"
-
-react-native-video@^5.0.0:
+react-native-video@5.0.0, react-native-video@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-5.0.0.tgz#30b58e31f0776bfa8dc71109c25114d4e50d9209"
   integrity sha512-nSG7Zkc0SE2Pa/sKWvMEPUc9Zlo0iVOFTac0GcXd/U5vTsm4L28leQzJ8K/s+Yc5xfCYaeb9bIWROqw2oiB9Ig==

@@ -221,6 +221,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -402,6 +404,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -583,6 +587,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -764,6 +770,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -945,6 +953,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1126,6 +1136,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1307,6 +1319,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1488,6 +1502,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1669,6 +1685,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1850,6 +1868,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}

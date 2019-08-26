@@ -702,7 +702,9 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               >
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -914,7 +916,9 @@ exports[`the Onboarding component should render Onboarding 1`] = `
               >
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
