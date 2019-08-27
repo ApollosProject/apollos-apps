@@ -4,7 +4,8 @@ import { View, TextInput } from 'react-native';
 import styled from '../../styled';
 import { withTheme } from '../../theme';
 import Icon from '../../Icon';
-import { ButtonIcon, ButtonLink } from '../../Button';
+import { ButtonIcon } from '../../Button';
+import { UIText } from '../../typography';
 
 const SearchWrapper = styled(
   ({ theme, disabled }) => ({
@@ -68,7 +69,8 @@ const ClearSearchButtonBackground = styled(
     marginRight: theme.sizing.baseUnit,
     borderTopRightRadius: theme.sizing.baseUnit,
     borderBottomRightRadius: theme.sizing.baseUnit,
-    backgroundColor: theme.colors.background.screen,
+    // backgroundColor: theme.colors.background.screen,
+    backgroundColor: 'salmon',
     overflow: 'hidden', // fixes ios border radius bug
   }),
   'ui-kit.inputs.Search.ClearSearchButtonBackground'
@@ -86,9 +88,10 @@ const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
 const CancelButton = styled(
   ({ theme }) => ({
     paddingRight: theme.sizing.baseUnit, // padding for the edge of the screen.
+    color: theme.colors.text.link, // we use UIText here instead of `ButtonLink` becuase onLayout has issues with nested text on Android
   }),
   'ui-kit.inputs.Search.CancelButton'
-)(ButtonLink);
+)(UIText);
 
 export {
   SearchWrapper,

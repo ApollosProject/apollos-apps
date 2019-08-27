@@ -39,7 +39,7 @@ class Search extends PureComponent {
 
     this.inputRef = props.inputRef || React.createRef();
     this.cancelButtonWidth = 1000; // 🧙‍magic number ≈ arbiraty large number that forces `CancelButton` render off screen.
-    this.animatedValue = new Animated.Value(this.cancelButtonWidth); // 75
+    this.animatedValue = new Animated.Value(this.cancelButtonWidth);
 
     this.animatedStyle = {
       // these styles are required to live here and are required for the animation to function
@@ -81,9 +81,9 @@ class Search extends PureComponent {
   }
 
   handleOnFocus = () => {
-    this.setState({
-      isFocused: this.inputRef.current.isFocused(),
-    });
+    this.setState((state) => ({
+      isFocused: !state.isFocused,
+    }));
   };
 
   handleOnChangeText = (changedText) => {
@@ -160,11 +160,12 @@ class Search extends PureComponent {
               />
             </ClearSearchButtonBackground>
 
-            <UIText onLayout={this.handleOnLayout}>
-              <CancelButton onPress={this.handleOnPressCancel}>
-                {cancelButtonText}
-              </CancelButton>
-            </UIText>
+            <CancelButton
+              onPress={this.handleOnPressCancel}
+              onLayout={this.handleOnLayout}
+            >
+              {cancelButtonText}
+            </CancelButton>
           </SmokeAndMirrorsWrapper>
         </Animated.View>
       </SearchWrapper>
