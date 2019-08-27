@@ -21,6 +21,58 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel getPersonaFeed doesn't fetch if there aren't any persona ids 1`] = `
+Array [
+  Array [
+    Object {
+      "categoryId": 123,
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel getPersonaFeed doesn't fetch if there aren't any persona ids 2`] = `Array []`;
+
+exports[`ContentItemsModel getPersonaFeed fetches items from the Apollos plugin 1`] = `
+Array [
+  Array [
+    Object {
+      "categoryId": 123,
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel getPersonaFeed fetches items from the Apollos plugin 2`] = `
+Array [
+  Array [
+    "Apollos/ContentChannelItemsByDataViewGuids?guids=%2C&loadAttributes=expanded&%24filter=%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20&%24orderby=StartDateTime%20desc",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`ContentItemsModel getPersonaFeed fetches items from the custom rock endpoint 1`] = `
+Array [
+  Array [
+    Object {
+      "categoryId": 123,
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel getPersonaFeed fetches items from the custom rock endpoint 2`] = `
+Array [
+  Array [
+    "ContentChannelItems/GetFromPersonDataView?guids=%2C&loadAttributes=expanded&%24filter=%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20&%24orderby=StartDateTime%20desc",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
 exports[`ContentItemsModel getSermonFeed fetches items from a specific content channel 1`] = `
 Array [
   Array [
@@ -185,9 +237,39 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns an empty array when there are no child content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns an empty array when there are no features 1`] = `Array []`;
 
 exports[`ContentItemsModel returns an empty array when there are no features 2`] = `Array []`;
+
+exports[`ContentItemsModel returns an empty array when there are no parent content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns an empty array when there are no sibling content items 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
 
 exports[`ContentItemsModel returns features when a contentItem has a Features field 1`] = `
 Array [
@@ -220,26 +302,6 @@ Array [
       "id": "123-0",
       "reference": "john 3",
     },
-  ],
-]
-`;
-
-exports[`ContentItemsModel returns null when there are no child content items 1`] = `
-Array [
-  Array [
-    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`ContentItemsModel returns null when there are no parent content items 1`] = `
-Array [
-  Array [
-    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
-    Object {},
-    Object {},
   ],
 ]
 `;
