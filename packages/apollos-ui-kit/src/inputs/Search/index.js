@@ -14,22 +14,13 @@ import {
   ClearSearchButton,
   CancelButton,
 } from './styles';
-/*
- * + search loop icon
- * + clear text icon
- * + cancel buttontext
- *   + text prop
- *   - onPress prop
- *   + animate cancel text in
- * + placeholder text prop
- * - onSubmit prop
- */
 
 class Search extends PureComponent {
   static propTypes = {
     cancelButtonText: PropTypes.string,
     disabled: PropTypes.bool,
     inputRef: PropTypes.node, // Need access to the search input? pass in your ref here!
+    onSubmit: PropTypes.func,
     placeholder: PropTypes.string,
     /* In order for this components animation to work correctly you need match this value to this
      * components surroundings. You only need this if you are rendering `Search` on a color other
@@ -47,7 +38,7 @@ class Search extends PureComponent {
     super();
 
     this.inputRef = props.inputRef || React.createRef();
-    this.cancelButtonWidth = 1000; // 🧙‍magic number ≈ arbiraty large number that makes it `CancelButton` render off screen.
+    this.cancelButtonWidth = 1000; // 🧙‍magic number ≈ arbiraty large number that forces `CancelButton` render off screen.
     this.animatedValue = new Animated.Value(this.cancelButtonWidth); // 75
 
     this.animatedStyle = {
@@ -133,6 +124,7 @@ class Search extends PureComponent {
       cancelButtonText,
       disabled,
       inputRef,
+      onSubmit,
       placeholder,
       screenBackgroundColor,
       ...textInputProps
@@ -148,6 +140,7 @@ class Search extends PureComponent {
             onFocus={this.handleOnFocus}
             onBlur={this.handleOnFocus}
             onChangeText={this.handleOnChangeText}
+            onSubmitEditing={onSubmit}
             placeholder={placeholder}
             returnKeyType={'search'}
             // thesse are used for styles
