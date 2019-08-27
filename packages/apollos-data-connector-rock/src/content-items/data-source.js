@@ -280,7 +280,7 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ContentChannelItemId eq ${id}`)
       .get();
 
-    if (!associations || !associations.length) return null;
+    if (!associations || !associations.length) return this.request().empty();
 
     const request = this.request();
 
@@ -297,7 +297,7 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ChildContentChannelItemId eq ${id}`)
       .get();
 
-    if (!associations || !associations.length) return null;
+    if (!associations || !associations.length) return this.request().empty();
     const request = this.request();
     const associationsFilter = associations.map(
       ({ contentChannelItemId }) => `Id eq ${contentChannelItemId}`
@@ -316,7 +316,8 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ChildContentChannelItemId eq ${id}`)
       .get();
 
-    if (!parentAssociations || !parentAssociations.length) return null;
+    if (!parentAssociations || !parentAssociations.length)
+      return this.request().empty();
 
     // Now, fetch all children relations for those parents (excluding the original item)
     const siblingAssociationsRequest = await this.request(
@@ -356,9 +357,16 @@ export default class ContentItem extends RockApolloDataSource {
       return this.request().empty();
     }
 
+    // Rely on custom code without the plugin.
+    // Use plugin, if the user has set USE_PLUGIN to true.
+    // In general, you should ALWAYS use the plugin if possible.
+    const endpoint = get(ApollosConfig, 'ROCK.USE_PLUGIN', false)
+      ? 'Apollos/ContentChannelItemsByDataViewGuids'
+      : 'ContentChannelItems/GetFromPersonDataView';
+
     // Grabs content items based on personas
     return this.request(
-      `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
+      `${endpoint}?guids=${getPersonaGuidsForUser
         .map((obj) => obj.guid)
         .join()}`
     )
