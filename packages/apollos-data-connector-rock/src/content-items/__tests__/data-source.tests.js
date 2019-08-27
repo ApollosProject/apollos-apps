@@ -330,6 +330,80 @@ describe('ContentItemsModel', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('getPersonaFeed fetches items from the custom rock endpoint', async () => {
+    const dataSource = new ContentItemsDataSource();
+
+    const personaMock = jest.fn(() => Promise.resolve(['123', '456']));
+    dataSource.context = {
+      dataSources: {
+        Person: {
+          getPersonas: personaMock,
+        },
+      },
+    };
+
+    dataSource.get = jest.fn(() => Promise.resolve());
+
+    const query = await dataSource.byPersonaFeed();
+    await query.get();
+
+    expect(personaMock.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it("getPersonaFeed doesn't fetch if there aren't any persona ids", async () => {
+    const dataSource = new ContentItemsDataSource();
+
+    const personaMock = jest.fn(() => Promise.resolve([]));
+    dataSource.context = {
+      dataSources: {
+        Person: {
+          getPersonas: personaMock,
+        },
+      },
+    };
+
+    dataSource.get = jest.fn(() => Promise.resolve());
+
+    const query = await dataSource.byPersonaFeed();
+    await query.get();
+
+    expect(personaMock.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('getPersonaFeed fetches items from the Apollos plugin', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: true,
+      },
+    });
+    const dataSource = new ContentItemsDataSource();
+
+    const personaMock = jest.fn(() => Promise.resolve(['123', '456']));
+    dataSource.context = {
+      dataSources: {
+        Person: {
+          getPersonas: personaMock,
+        },
+      },
+    };
+
+    dataSource.get = jest.fn(() => Promise.resolve());
+
+    const query = await dataSource.byPersonaFeed();
+    await query.get();
+
+    expect(personaMock.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: false,
+      },
+    });
+  });
+
   it('returns null when there are no parent content items with images', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.getCursorByChildContentItemId = () => ({
