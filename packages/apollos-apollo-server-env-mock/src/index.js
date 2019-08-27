@@ -256,6 +256,16 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         return resolveWith(rockMocks.campuses());
       }
 
+      if (url.match('api/Schedules')) {
+        return resolveWith([
+          {
+            id: 1,
+            iCalendarContent:
+              'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+          },
+        ]);
+      }
+
       console.log(`No route matching ${url}`);
       return Promise.reject(`No route matching ${url}`);
     });

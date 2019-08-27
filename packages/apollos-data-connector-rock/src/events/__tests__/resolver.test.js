@@ -1,9 +1,18 @@
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { fetch } from 'apollo-server-env';
+import ApollosConfig from '@apollosproject/config';
 
 import { campusSchema, peopleSchema } from '@apollosproject/data-schema';
 import * as Events from '../index';
 import { Campus } from '../../index';
+
+ApollosConfig.loadJs({
+  ROCK: {
+    API_URL: 'https://apollosrock.newspring.cc/api',
+    API_TOKEN: 'some-rock-token',
+  },
+});
 
 const { getSchema, getContext } = createTestHelpers({
   Events,
@@ -15,6 +24,8 @@ describe('Events resolver', () => {
   let context;
   let rootValue;
   beforeEach(() => {
+    fetch.resetMocks();
+    fetch.mockRockDataSourceAPI();
     schema = getSchema([campusSchema, peopleSchema]);
     context = getContext();
     rootValue = {};
@@ -47,12 +58,12 @@ describe('Events resolver', () => {
       ),
       getName: jest.fn(() => Promise.resolve('Cookout')),
       // for testing the getDateTime datasource function...
-      first: jest.fn(() =>
-        Promise.resolve({
-          iCalendarContent:
-            'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
-        })
-      ),
+      // first: jest.fn(() =>
+      // Promise.resolve({
+      // iCalendarContent:
+      // 'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+      // })
+      // ),
       // getDateTime: jest.fn(() =>
       // Promise.resolve({
       // start: '2019-08-26T17:00:00',
