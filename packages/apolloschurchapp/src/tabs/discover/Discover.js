@@ -47,6 +47,7 @@ class Discover extends PureComponent {
               refetch={refetch}
               renderItem={this.renderItem}
               loadingStateObject={feedItemLoadingState}
+              numColumns={1}
             />
           )}
         </Query>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NativeModules } from 'react-native';
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
@@ -16,3 +17,5 @@ jest.mock('react-navigation', () => {
 });
 
 jest.mock('DatePickerIOS', () => 'DatePicker');
+
+NativeModules.RNGestureHandlerModule = {};

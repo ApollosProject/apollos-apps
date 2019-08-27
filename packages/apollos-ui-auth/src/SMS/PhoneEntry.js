@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, StyleSheet, ScrollView } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  ScrollView,
+  Platform,
+  StatusBar,
+} from 'react-native';
 import { get } from 'lodash';
 import {
   styled,
@@ -41,7 +47,13 @@ const PhoneEntry = ({
   values,
   BackgroundComponent,
 }) => (
-  <KeyboardAvoidingView style={StyleSheet.absoluteFill} behavior={'padding'}>
+  <KeyboardAvoidingView
+    style={StyleSheet.absoluteFill}
+    behavior={'padding'}
+    keyboardVerticalOffset={
+      Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    }
+  >
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>

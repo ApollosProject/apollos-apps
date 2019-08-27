@@ -105,10 +105,35 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  // eslint-disable-next-line class-methods-use-this
   getFeatures({ attributeValues }) {
     const { Features } = this.context.dataSources;
     const features = [];
+
+    // TODO this should replace all other methods
+    const genericFeatures = get(attributeValues, 'features.value', '');
+    const keyValuePairs = parseKeyValueAttribute(genericFeatures);
+    keyValuePairs.forEach(({ key, value }, i) => {
+      switch (key) {
+        case 'scripture':
+          features.push(
+            Features.createScriptureFeature({
+              reference: value,
+              id: `${attributeValues.features.id}-${i}`,
+            })
+          );
+          break;
+        case 'text':
+          features.push(
+            Features.createTextFeature({
+              text: value,
+              id: `${attributeValues.features.id}-${i}`,
+            })
+          );
+          break;
+        default:
+          console.warn(`Received invalid feature key: ${key}`);
+      }
+    });
 
     // We pull a single text feature from the TextFeature Text field.
     const text = get(attributeValues, 'textFeature.value', '');
@@ -165,6 +190,24 @@ export default class ContentItem extends RockApolloDataSource {
     return tokens.length > 1 && tokens[0].length < 5
       ? `${tokens[0]} ${tokens[1]}`
       : tokens[0];
+  };
+
+  getShareUrl = async ({ contentId, channelId }) => {
+    const contentChannel = await this.context.dataSources.ContentChannel.getFromId(
+      channelId
+    );
+
+    if (!contentChannel.itemUrl) return ROCK.SHARE_URL;
+
+    const slug = await this.request('ContentChannelItemSlugs')
+      .filter(`ContentChannelItemId eq ${contentId}`)
+      .first();
+
+    return [
+      ROCK.SHARE_URL,
+      contentChannel.itemUrl.replace(/^\//, ''),
+      slug ? slug.slug : '',
+    ].join('/');
   };
 
   getSermonFeed() {
@@ -237,7 +280,7 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ContentChannelItemId eq ${id}`)
       .get();
 
-    if (!associations || !associations.length) return null;
+    if (!associations || !associations.length) return this.request().empty();
 
     const request = this.request();
 
@@ -254,7 +297,7 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ChildContentChannelItemId eq ${id}`)
       .get();
 
-    if (!associations || !associations.length) return null;
+    if (!associations || !associations.length) return this.request().empty();
     const request = this.request();
     const associationsFilter = associations.map(
       ({ contentChannelItemId }) => `Id eq ${contentChannelItemId}`
@@ -273,7 +316,8 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(`ChildContentChannelItemId eq ${id}`)
       .get();
 
-    if (!parentAssociations || !parentAssociations.length) return null;
+    if (!parentAssociations || !parentAssociations.length)
+      return this.request().empty();
 
     // Now, fetch all children relations for those parents (excluding the original item)
     const siblingAssociationsRequest = await this.request(
@@ -282,7 +326,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     const parentFilter = parentAssociations.map(
       ({ contentChannelItemId }) =>
-        `(ContentChannelItemId eq ${contentChannelItemId}) and (ChildContentChannelItemId ne ${id})`
+        `(ContentChannelItemId eq ${contentChannelItemId})`
     );
     siblingAssociationsRequest.filterOneOf(parentFilter);
 
@@ -313,9 +357,16 @@ export default class ContentItem extends RockApolloDataSource {
       return this.request().empty();
     }
 
+    // Rely on custom code without the plugin.
+    // Use plugin, if the user has set USE_PLUGIN to true.
+    // In general, you should ALWAYS use the plugin if possible.
+    const endpoint = get(ApollosConfig, 'ROCK.USE_PLUGIN', false)
+      ? 'Apollos/ContentChannelItemsByDataViewGuids'
+      : 'ContentChannelItems/GetFromPersonDataView';
+
     // Grabs content items based on personas
     return this.request(
-      `ContentChannelItems/GetFromPersonDataView?guids=${getPersonaGuidsForUser
+      `${endpoint}?guids=${getPersonaGuidsForUser
         .map((obj) => obj.guid)
         .join()}`
     )

@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 
-import {
-  CardTile,
-  HorizontalTileFeed,
-  TouchableScale,
-} from '@apollosproject/ui-kit';
+import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
+
+import HorizontalContentCardConnected from '../../ui/HorizontalContentCardConnected';
 
 import GET_HORIZONTAL_CONTENT from './getHorizontalContent';
 
@@ -34,18 +32,9 @@ class HorizontalContentFeed extends Component {
     });
   };
 
-  renderItem = ({ item, index }) => (
+  renderItem = ({ item }) => (
     <TouchableScale onPress={() => this.handleOnPressItem(item)}>
-      <CardTile
-        number={index + 1}
-        title={get(item, 'title', '')}
-        /*
-         * These are props that are not yet being passed in the data.
-         * We will need to make sure they get added back when that data is available.
-         * byLine={item.content.speaker}
-         * date={item.meta.date}
-         */
-      />
+      <HorizontalContentCardConnected contentId={get(item, 'id', '')} />
     </TouchableScale>
   );
 
@@ -66,12 +55,23 @@ class HorizontalContentFeed extends Component {
     ).map((edge) => edge.node);
 
     const content = siblingContent.length ? siblingContent : childContent;
+    const currentIndex = content.findIndex(
+      ({ id }) => id === this.props.contentId
+    );
+    const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
 
     return content && content.length ? (
       <HorizontalTileFeed
         content={content}
         loadingStateObject={loadingStateObject}
         renderItem={this.renderItem}
+        initialScrollIndex={initialScrollIndex}
+        getItemLayout={(itemData, index) => ({
+          // We need to pass this function so that initialScrollIndex will work.
+          length: 240,
+          offset: 240 * index,
+          index,
+        })}
       />
     ) : null;
   };

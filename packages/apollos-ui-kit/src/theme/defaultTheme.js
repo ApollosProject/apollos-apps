@@ -76,7 +76,7 @@ export const sizing = {
   avatar: {
     small: 40,
     medium: 80,
-    large: 160,
+    large: 120,
   },
 };
 

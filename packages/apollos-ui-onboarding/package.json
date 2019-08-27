@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-onboarding",
-  "version": "1.1.0-beta.2",
+  "version": "1.1.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-navigation|@apollosproject|@apollosproject/ui-*))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -48,11 +48,13 @@
     "react-navigation": "*"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.5.1",
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.13",
     "moment": "2.22.2",
     "react-is": "^16.8.6",
+    "react-native-geolocation-service": "^3.0.0",
     "react-native-swiper": "^1.5.14",
     "yup": "0.26.6"
   },
@@ -65,6 +67,7 @@
     "react": "16.8.3",
     "react-apollo": "2.5.5",
     "react-native": "0.59.10",
+    "react-navigation": "^3.11.0",
     "react-test-renderer": "16.6.1",
     "waait": "1.0.2"
   },

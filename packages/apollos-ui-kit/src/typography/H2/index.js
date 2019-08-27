@@ -13,8 +13,8 @@ const styles = styled(
     color: theme.colors.text.primary,
     ...(padded
       ? {
-          paddingTop: theme.helpers.verticalRhythm(1.6875),
-          paddingBottom: theme.helpers.verticalRhythm(1.125),
+          paddingTop: theme.sizing.baseUnit * 1.5,
+          paddingBottom: theme.sizing.baseUnit * 1.25,
         }
       : {}),
   }),

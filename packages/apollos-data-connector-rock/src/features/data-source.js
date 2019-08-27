@@ -1,6 +1,7 @@
 import { flatten, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { createGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
 
 export default class Features extends RockApolloDataSource {
   resource = '';
@@ -112,7 +113,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }
 
     const cursor = await ContentItem.getCursorByParentContentItemId(sermon.id);
-    const items = limit ? await cursor.first(limit).get() : await cursor.get();
+    const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
@@ -122,5 +123,24 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',
     }));
+  }
+
+  async getScriptureShareMessage(ref) {
+    const { Scripture } = this.context.dataSources;
+    const scriptures = await Scripture.getScriptures(ref);
+    return scriptures
+      .map(
+        ({ content, reference }) =>
+          `${content.replace(/<[^>]*>?/gm, '')} ${reference}`
+      )
+      .join('\n\n');
+  }
+
+  getHomeFeedFeatures() {
+    return Promise.all(
+      get(ApollosConfig, 'HOME_FEATURES', []).map((featureConfig) =>
+        this.createActionListFeature(featureConfig)
+      )
+    );
   }
 }
