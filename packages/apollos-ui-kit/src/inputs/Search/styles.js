@@ -5,10 +5,13 @@ import { withTheme } from '../../theme';
 import Icon from '../../Icon';
 import { ButtonIcon, ButtonLink } from '../../Button';
 
-const SearchWrapper = styled(({ theme, disabled }) => ({
-  overflow: 'hidden',
-  ...(disabled ? { opacity: theme.alpha.medium } : {}),
-}))(View);
+const SearchWrapper = styled(
+  ({ theme, disabled }) => ({
+    overflow: 'hidden',
+    ...(disabled ? { opacity: theme.alpha.medium } : {}),
+  }),
+  'ui-kit.inputs.Search.SearchWrapper'
+)(View);
 
 const TextInputWrapper = styled(
   ({ theme }) => ({
@@ -19,7 +22,7 @@ const TextInputWrapper = styled(
     backgroundColor: theme.colors.background.screen,
     overflow: 'hidden',
   }),
-  'InputWrapper'
+  'ui-kit.inputs.Search.InputWrapper'
 )(View);
 
 const LoopIcon = withTheme(({ theme, isFocused }) => ({
@@ -51,19 +54,25 @@ const Input = withTheme(
 )(TextInput);
 
 // the main reason this component lives here is because we need access to theme colors
-const SmokeAndMirrorsWrapper = styled(({ theme, screenBackgroundColor }) => ({
-  flexDirection: 'row',
-  alignItems: 'center',
-  backgroundColor: screenBackgroundColor || theme.colors.background.paper,
-}))(View);
+const SmokeAndMirrorsWrapper = styled(
+  ({ theme, screenBackgroundColor }) => ({
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: screenBackgroundColor || theme.colors.background.paper,
+  }),
+  'ui-kit.inputs.Search.SmokeAndMirrorsWrapper'
+)(View);
 
-const ClearSearchButtonBackground = styled(({ theme }) => ({
-  marginRight: theme.sizing.baseUnit,
-  borderTopRightRadius: theme.sizing.baseUnit,
-  borderBottomRightRadius: theme.sizing.baseUnit,
-  backgroundColor: theme.colors.background.screen,
-  overflow: 'hidden', // fixes ios border radius bug
-}))(View);
+const ClearSearchButtonBackground = styled(
+  ({ theme }) => ({
+    marginRight: theme.sizing.baseUnit,
+    borderTopRightRadius: theme.sizing.baseUnit,
+    borderBottomRightRadius: theme.sizing.baseUnit,
+    backgroundColor: theme.colors.background.screen,
+    overflow: 'hidden', // fixes ios border radius bug
+  }),
+  'ui-kit.inputs.Search.ClearSearchButtonBackground'
+)(View);
 
 const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
   fill: theme.colors.text.tertiary,
@@ -74,9 +83,12 @@ const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
   },
 }))(ButtonIcon);
 
-const CancelButton = styled(({ theme }) => ({
-  paddingRight: theme.sizing.baseUnit, // padding for the edge of the screen.
-}))(ButtonLink);
+const CancelButton = styled(
+  ({ theme }) => ({
+    paddingRight: theme.sizing.baseUnit, // padding for the edge of the screen.
+  }),
+  'ui-kit.inputs.Search.CancelButton'
+)(ButtonLink);
 
 export {
   SearchWrapper,
