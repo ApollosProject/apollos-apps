@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, TextInput } from 'react-native';
 
 import styled from '../../styled';
@@ -34,10 +35,9 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
 }))(Icon);
 
 const Input = withTheme(
-  ({ theme, forwardedRef, showClearSearchButton, cancelButtonOffset }) => ({
+  ({ theme, showClearSearchButton, cancelButtonOffset }) => ({
     placeholderTextColor: theme.colors.text.tertiary,
     selectionColor: theme.colors.action.secondary,
-    ref: forwardedRef,
     style: {
       flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
       height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
@@ -51,7 +51,7 @@ const Input = withTheme(
       fontFamily: theme.typography.sans.medium.default,
     },
   })
-)(TextInput);
+)(({ forwardedRef, ...props }) => <TextInput ref={forwardedRef} {...props} />);
 
 // the main reason this component lives here is because we need access to theme colors
 const SmokeAndMirrorsWrapper = styled(
