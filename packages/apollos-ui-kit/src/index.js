@@ -32,11 +32,12 @@ export HorizontalDefaultCard from './HorizontalDefaultCard';
 export HorizontalTileFeed from './HorizontalTileFeed';
 export Icon, { makeIcon } from './Icon';
 export Input, {
+  DateInput,
   Picker,
   PickerItem,
+  Search as SearchInput,
   Switch,
   Text as TextInput,
-  DateInput,
   Radio,
   RadioButton,
 } from './inputs';
