@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events should return start and end based on a schedule 1`] = `
+Object {
+  "end": "2013-05-01T23:00:00Z",
+  "start": "2013-05-01T22:00:00Z",
+}
+`;
+
+exports[`Events should return start and end based on a schedule 2`] = `
+Array [
+  Array [
+    "Schedules?loadAttributes=expanded&%24filter=Id%20eq%20123&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
