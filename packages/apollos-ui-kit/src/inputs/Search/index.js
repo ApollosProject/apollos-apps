@@ -49,7 +49,7 @@ class Search extends PureComponent {
     };
 
     // this animation shows and hides the `ClearSearchButton`
-    this.showClearSearchButton = false;
+    this.clearSearchButtonVisibility = false;
     this.animatedClearSearchButton = new Animated.Value(0);
     this.animatedClearSearchButtonStyle = {
       opacity: this.animatedClearSearchButton,
@@ -87,8 +87,7 @@ class Search extends PureComponent {
     }
   }
 
-  animateClearSearchButton = (isVisible) => {
-    console.count('What');
+  showClearSearchButton = (isVisible) => {
     Animated.timing(this.animatedClearSearchButton, {
       toValue: isVisible ? 1 : 0,
       duration: 0,
@@ -103,23 +102,23 @@ class Search extends PureComponent {
 
   handleOnChangeText = (changedText) => {
     /* `onChangeText` triggers `handleOnChangeText` on EVERY text change. the logic that follows
-     * optizies for rerenders. To do this we have to keep track of `showClearSearchButton` so that
-     * we don't call `animateClearSearchButton` on every time.
+     * optizies for rerenders. To do this we have to keep track of `clearSearchButtonVisibility` so that
+     * we don't call `showClearSearchButton` on every time.
      *
      * Only show the `ClearSearchButton` if we have an input value */
     const shouldShowClearSearchButton = changedText !== '';
 
     // check previous value against current value (above)
-    if (this.showClearSearchButton !== shouldShowClearSearchButton) {
-      this.animateClearSearchButton(shouldShowClearSearchButton);
-      this.showClearSearchButton = shouldShowClearSearchButton;
+    if (this.clearSearchButtonVisibility !== shouldShowClearSearchButton) {
+      this.showClearSearchButton(shouldShowClearSearchButton);
+      this.clearSearchButtonVisibility = shouldShowClearSearchButton;
     }
   };
 
   handleOnPressClearSearchButton = () => {
     this.inputRef.current.clear();
-    this.animateClearSearchButton(false);
-    this.showClearSearchButton = false;
+    this.showClearSearchButton(false);
+    this.clearSearchButtonVisibility = false;
   };
 
   handleOnPressCancel = () => Keyboard.dismiss();
