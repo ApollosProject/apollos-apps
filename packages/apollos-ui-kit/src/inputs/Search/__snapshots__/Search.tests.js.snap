@@ -228,7 +228,6 @@ exports[`The Search Input component should render 1`] = `
                 "backgroundColor": "#F8F7F4",
                 "borderBottomRightRadius": 16,
                 "borderTopRightRadius": 16,
-                "marginRight": 16,
                 "overflow": "hidden",
               }
             }
@@ -380,28 +379,20 @@ exports[`The Search Input component should render 1`] = `
           </View>
           <Text
             onLayout={[Function]}
+            onPress={[Function]}
             style={
               Object {
-                "color": "#303030",
+                "color": "#17B582",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
                 "lineHeight": 20.16,
+                "paddingLeft": 16,
               }
             }
           >
-            <Text
-              onPress={[Function]}
-              style={
-                Object {
-                  "color": "#17B582",
-                  "paddingRight": 16,
-                }
-              }
-            >
-              Cancel
-            </Text>
+            Cancel
           </Text>
         </View>
       </View>
@@ -639,7 +630,6 @@ exports[`The Search Input component should render as disabled 1`] = `
                 "backgroundColor": "#F8F7F4",
                 "borderBottomRightRadius": 16,
                 "borderTopRightRadius": 16,
-                "marginRight": 16,
                 "overflow": "hidden",
               }
             }
@@ -791,28 +781,20 @@ exports[`The Search Input component should render as disabled 1`] = `
           </View>
           <Text
             onLayout={[Function]}
+            onPress={[Function]}
             style={
               Object {
-                "color": "#303030",
+                "color": "#17B582",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
                 "lineHeight": 20.16,
+                "paddingLeft": 16,
               }
             }
           >
-            <Text
-              onPress={[Function]}
-              style={
-                Object {
-                  "color": "#17B582",
-                  "paddingRight": 16,
-                }
-              }
-            >
-              Cancel
-            </Text>
+            Cancel
           </Text>
         </View>
       </View>
@@ -1049,7 +1031,6 @@ exports[`The Search Input component should render with a custom cancelButtonText
                 "backgroundColor": "#F8F7F4",
                 "borderBottomRightRadius": 16,
                 "borderTopRightRadius": 16,
-                "marginRight": 16,
                 "overflow": "hidden",
               }
             }
@@ -1201,28 +1182,20 @@ exports[`The Search Input component should render with a custom cancelButtonText
           </View>
           <Text
             onLayout={[Function]}
+            onPress={[Function]}
             style={
               Object {
-                "color": "#303030",
+                "color": "#17B582",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
                 "lineHeight": 20.16,
+                "paddingLeft": 16,
               }
             }
           >
-            <Text
-              onPress={[Function]}
-              style={
-                Object {
-                  "color": "#17B582",
-                  "paddingRight": 16,
-                }
-              }
-            >
-              Boom
-            </Text>
+            Boom
           </Text>
         </View>
       </View>
@@ -1459,7 +1432,6 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
                 "backgroundColor": "#F8F7F4",
                 "borderBottomRightRadius": 16,
                 "borderTopRightRadius": 16,
-                "marginRight": 16,
                 "overflow": "hidden",
               }
             }
@@ -1611,28 +1583,20 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
           </View>
           <Text
             onLayout={[Function]}
+            onPress={[Function]}
             style={
               Object {
-                "color": "#303030",
+                "color": "#17B582",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
                 "lineHeight": 20.16,
+                "paddingLeft": 16,
               }
             }
           >
-            <Text
-              onPress={[Function]}
-              style={
-                Object {
-                  "color": "#17B582",
-                  "paddingRight": 16,
-                }
-              }
-            >
-              Cancel
-            </Text>
+            Cancel
           </Text>
         </View>
       </View>
@@ -1870,7 +1834,6 @@ exports[`The Search Input component should render with a custom screenBackground
                 "backgroundColor": "#F8F7F4",
                 "borderBottomRightRadius": 16,
                 "borderTopRightRadius": 16,
-                "marginRight": 16,
                 "overflow": "hidden",
               }
             }
@@ -2022,28 +1985,20 @@ exports[`The Search Input component should render with a custom screenBackground
           </View>
           <Text
             onLayout={[Function]}
+            onPress={[Function]}
             style={
               Object {
-                "color": "#303030",
+                "color": "#17B582",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
                 "lineHeight": 20.16,
+                "paddingLeft": 16,
               }
             }
           >
-            <Text
-              onPress={[Function]}
-              style={
-                Object {
-                  "color": "#17B582",
-                  "paddingRight": 16,
-                }
-              }
-            >
-              Cancel
-            </Text>
+            Cancel
           </Text>
         </View>
       </View>
