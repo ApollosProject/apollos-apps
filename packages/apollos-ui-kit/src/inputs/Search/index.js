@@ -2,8 +2,6 @@ import React, { PureComponent } from 'react';
 import { Animated, Keyboard } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { UIText } from '../../typography';
-
 import {
   SearchWrapper,
   TextInputWrapper,
