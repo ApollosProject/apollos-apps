@@ -1,5 +1,6 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import moment from 'moment';
+import moment from 'moment-timezone';
+import ApollosConfig from '@apollosproject/config';
 
 export default class Event extends RockApolloDataSource {
   resource = 'EventItemOccurrences';
@@ -30,10 +31,12 @@ export default class Event extends RockApolloDataSource {
     const iCal = schedule.iCalendarContent;
     const dateTimes = iCal.match(/DTEND:(\w+).*DTSTART:(\w+)/s);
     return {
-      start: moment(dateTimes[2])
+      start: moment
+        .tz(dateTimes[2], ApollosConfig.ROCK.TIMEZONE)
         .utc()
         .format(),
-      end: moment(dateTimes[1])
+      end: moment
+        .tz(dateTimes[1], ApollosConfig.ROCK.TIMEZONE)
         .utc()
         .format(),
     };
