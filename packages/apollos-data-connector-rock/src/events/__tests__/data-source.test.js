@@ -20,15 +20,59 @@ describe('Events', () => {
     const Events = new EventsDataSource();
 
     Events.get = jest.fn(() =>
+      Promise.resolve({
+        iCalendarContent:
+          'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+      })
+    );
+
+    const result = await Events.getDateTime(123);
+    expect(result).toMatchSnapshot();
+    expect(Events.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should return a name based on an EventItem', async () => {
+    const Events = new EventsDataSource();
+
+    Events.get = jest.fn(() =>
+      Promise.resolve({
+        name: 'some event',
+      })
+    );
+
+    const result = await Events.getName(123);
+    expect(result).toEqual('some event');
+    expect(Events.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should get by Campus', async () => {
+    const Events = new EventsDataSource();
+
+    Events.get = jest.fn(() =>
       Promise.resolve([
         {
-          iCalendarContent:
-            'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+          id: 123,
+          name: 'some event',
         },
       ])
     );
 
-    const result = await Events.getDateTime(123);
+    const result = await Events.getByCampus(456);
+    expect(result).toMatchSnapshot();
+    expect(Events.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should get by id', async () => {
+    const Events = new EventsDataSource();
+
+    Events.get = jest.fn(() =>
+      Promise.resolve({
+        id: 123,
+        name: 'some event',
+      })
+    );
+
+    const result = await Events.getById(123);
     expect(result).toMatchSnapshot();
     expect(Events.get.mock.calls).toMatchSnapshot();
   });

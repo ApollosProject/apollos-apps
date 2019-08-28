@@ -7,15 +7,19 @@ Object {
       Object {
         "events": Array [
           Object {
-            "end": "2013-05-01T23:00:00Z",
+            "end": null,
             "id": "Event:559b23fd0aa90e81b1c023e72e230fa1",
             "location": "123 Main St",
             "name": "Cookout",
-            "start": "2013-05-01T22:00:00Z",
+            "start": null,
           },
         ],
       },
     ],
   },
+  "errors": Array [
+    [GraphQLError: this.request(...).find is not a function],
+    [GraphQLError: this.request(...).find is not a function],
+  ],
 }
 `;

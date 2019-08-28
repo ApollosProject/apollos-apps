@@ -18,15 +18,15 @@ export default class Event extends RockApolloDataSource {
 
   getName = async (id) => {
     const event = await this.request('EventItems')
-      .filter(`Id eq ${id}`)
-      .first();
+      .find(id)
+      .get();
     return event.name;
   };
 
   getDateTime = async (id) => {
     const schedule = await this.request('Schedules')
-      .filter(`Id eq ${id}`)
-      .first();
+      .find(id)
+      .get();
     const iCal = schedule.iCalendarContent;
     const dateTimes = iCal.match(/DTEND:(\w+).*DTSTART:(\w+)/s);
     return {
