@@ -175,6 +175,7 @@ exports[`The Search Input component should render 1`] = `
           allowFontScaling={true}
           cancelButtonOffset={1000}
           editable={true}
+          isFocused={false}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
@@ -183,7 +184,6 @@ exports[`The Search Input component should render 1`] = `
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
-          showClearSearchButton={false}
           style={
             Object {
               "flexGrow": 1,
@@ -233,110 +233,75 @@ exports[`The Search Input component should render 1`] = `
             }
           >
             <View
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "opacity": 1,
+                  "opacity": 0,
                 }
               }
             >
               <View
-                borderRadius={28}
-                iconPadding={12}
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "opacity": 0,
-                    "padding": 12,
+                    "opacity": 1,
                   }
                 }
               >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={16}
-                  bbWidth={16}
-                  height={16}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
+                <View
+                  borderRadius={28}
+                  iconPadding={12}
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      Object {
-                        "opacity": 1,
-                      },
-                      Object {
-                        "flex": 0,
-                        "height": 16,
-                        "width": 16,
-                      },
-                    ]
+                    Object {
+                      "padding": 12,
+                    }
                   }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={16}
                 >
-                  <RNSVGGroup
-                    fill={
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    height={16}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
                       Array [
-                        0,
-                        4278190080,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
                       ]
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
+                    vbHeight={24}
+                    vbWidth={24}
+                    width={16}
                   >
-                    <RNSVGPath
-                      d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    <RNSVGGroup
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          4278190080,
                         ]
                       }
                       fillOpacity={1}
                       fillRule={1}
+                      font={Object {}}
                       matrix={
                         Array [
                           1,
@@ -350,11 +315,7 @@ exports[`The Search Input component should render 1`] = `
                       opacity={1}
                       originX={0}
                       originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
+                      propList={Array []}
                       rotation={0}
                       scaleX={1}
                       scaleY={1}
@@ -371,9 +332,55 @@ exports[`The Search Input component should render 1`] = `
                       vectorEffect={0}
                       x={0}
                       y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    >
+                      <RNSVGPath
+                        d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                        fill={
+                          Array [
+                            0,
+                            4289045925,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
               </View>
             </View>
           </View>
@@ -577,6 +584,7 @@ exports[`The Search Input component should render as disabled 1`] = `
           allowFontScaling={true}
           cancelButtonOffset={1000}
           editable={false}
+          isFocused={false}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
@@ -585,7 +593,6 @@ exports[`The Search Input component should render as disabled 1`] = `
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
-          showClearSearchButton={false}
           style={
             Object {
               "flexGrow": 1,
@@ -635,110 +642,75 @@ exports[`The Search Input component should render as disabled 1`] = `
             }
           >
             <View
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "opacity": 1,
+                  "opacity": 0,
                 }
               }
             >
               <View
-                borderRadius={28}
-                iconPadding={12}
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "opacity": 0,
-                    "padding": 12,
+                    "opacity": 1,
                   }
                 }
               >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={16}
-                  bbWidth={16}
-                  height={16}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
+                <View
+                  borderRadius={28}
+                  iconPadding={12}
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      Object {
-                        "opacity": 1,
-                      },
-                      Object {
-                        "flex": 0,
-                        "height": 16,
-                        "width": 16,
-                      },
-                    ]
+                    Object {
+                      "padding": 12,
+                    }
                   }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={16}
                 >
-                  <RNSVGGroup
-                    fill={
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    height={16}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
                       Array [
-                        0,
-                        4278190080,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
                       ]
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
+                    vbHeight={24}
+                    vbWidth={24}
+                    width={16}
                   >
-                    <RNSVGPath
-                      d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    <RNSVGGroup
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          4278190080,
                         ]
                       }
                       fillOpacity={1}
                       fillRule={1}
+                      font={Object {}}
                       matrix={
                         Array [
                           1,
@@ -752,11 +724,7 @@ exports[`The Search Input component should render as disabled 1`] = `
                       opacity={1}
                       originX={0}
                       originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
+                      propList={Array []}
                       rotation={0}
                       scaleX={1}
                       scaleY={1}
@@ -773,9 +741,55 @@ exports[`The Search Input component should render as disabled 1`] = `
                       vectorEffect={0}
                       x={0}
                       y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    >
+                      <RNSVGPath
+                        d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                        fill={
+                          Array [
+                            0,
+                            4289045925,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
               </View>
             </View>
           </View>
@@ -978,6 +992,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
           allowFontScaling={true}
           cancelButtonOffset={1000}
           editable={true}
+          isFocused={false}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
@@ -986,7 +1001,6 @@ exports[`The Search Input component should render with a custom cancelButtonText
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
-          showClearSearchButton={false}
           style={
             Object {
               "flexGrow": 1,
@@ -1036,110 +1050,75 @@ exports[`The Search Input component should render with a custom cancelButtonText
             }
           >
             <View
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "opacity": 1,
+                  "opacity": 0,
                 }
               }
             >
               <View
-                borderRadius={28}
-                iconPadding={12}
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "opacity": 0,
-                    "padding": 12,
+                    "opacity": 1,
                   }
                 }
               >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={16}
-                  bbWidth={16}
-                  height={16}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
+                <View
+                  borderRadius={28}
+                  iconPadding={12}
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      Object {
-                        "opacity": 1,
-                      },
-                      Object {
-                        "flex": 0,
-                        "height": 16,
-                        "width": 16,
-                      },
-                    ]
+                    Object {
+                      "padding": 12,
+                    }
                   }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={16}
                 >
-                  <RNSVGGroup
-                    fill={
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    height={16}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
                       Array [
-                        0,
-                        4278190080,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
                       ]
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
+                    vbHeight={24}
+                    vbWidth={24}
+                    width={16}
                   >
-                    <RNSVGPath
-                      d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    <RNSVGGroup
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          4278190080,
                         ]
                       }
                       fillOpacity={1}
                       fillRule={1}
+                      font={Object {}}
                       matrix={
                         Array [
                           1,
@@ -1153,11 +1132,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
                       opacity={1}
                       originX={0}
                       originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
+                      propList={Array []}
                       rotation={0}
                       scaleX={1}
                       scaleY={1}
@@ -1174,9 +1149,55 @@ exports[`The Search Input component should render with a custom cancelButtonText
                       vectorEffect={0}
                       x={0}
                       y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    >
+                      <RNSVGPath
+                        d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                        fill={
+                          Array [
+                            0,
+                            4289045925,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
               </View>
             </View>
           </View>
@@ -1379,6 +1400,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
           allowFontScaling={true}
           cancelButtonOffset={1000}
           editable={true}
+          isFocused={false}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
@@ -1387,7 +1409,6 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
-          showClearSearchButton={false}
           style={
             Object {
               "flexGrow": 1,
@@ -1437,110 +1458,75 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
             }
           >
             <View
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "opacity": 1,
+                  "opacity": 0,
                 }
               }
             >
               <View
-                borderRadius={28}
-                iconPadding={12}
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "opacity": 0,
-                    "padding": 12,
+                    "opacity": 1,
                   }
                 }
               >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={16}
-                  bbWidth={16}
-                  height={16}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
+                <View
+                  borderRadius={28}
+                  iconPadding={12}
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      Object {
-                        "opacity": 1,
-                      },
-                      Object {
-                        "flex": 0,
-                        "height": 16,
-                        "width": 16,
-                      },
-                    ]
+                    Object {
+                      "padding": 12,
+                    }
                   }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={16}
                 >
-                  <RNSVGGroup
-                    fill={
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    height={16}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
                       Array [
-                        0,
-                        4278190080,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
                       ]
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
+                    vbHeight={24}
+                    vbWidth={24}
+                    width={16}
                   >
-                    <RNSVGPath
-                      d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    <RNSVGGroup
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          4278190080,
                         ]
                       }
                       fillOpacity={1}
                       fillRule={1}
+                      font={Object {}}
                       matrix={
                         Array [
                           1,
@@ -1554,11 +1540,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
                       opacity={1}
                       originX={0}
                       originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
+                      propList={Array []}
                       rotation={0}
                       scaleX={1}
                       scaleY={1}
@@ -1575,9 +1557,55 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
                       vectorEffect={0}
                       x={0}
                       y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    >
+                      <RNSVGPath
+                        d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                        fill={
+                          Array [
+                            0,
+                            4289045925,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
               </View>
             </View>
           </View>
@@ -1780,6 +1808,7 @@ exports[`The Search Input component should render with a custom screenBackground
           allowFontScaling={true}
           cancelButtonOffset={1000}
           editable={true}
+          isFocused={false}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
@@ -1788,7 +1817,6 @@ exports[`The Search Input component should render with a custom screenBackground
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
-          showClearSearchButton={false}
           style={
             Object {
               "flexGrow": 1,
@@ -1839,110 +1867,75 @@ exports[`The Search Input component should render with a custom screenBackground
             }
           >
             <View
-              accessible={true}
-              isTVSelectable={true}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "opacity": 1,
+                  "opacity": 0,
                 }
               }
             >
               <View
-                borderRadius={28}
-                iconPadding={12}
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "opacity": 0,
-                    "padding": 12,
+                    "opacity": 1,
                   }
                 }
               >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={16}
-                  bbWidth={16}
-                  height={16}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
+                <View
+                  borderRadius={28}
+                  iconPadding={12}
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      Object {
-                        "opacity": 1,
-                      },
-                      Object {
-                        "flex": 0,
-                        "height": 16,
-                        "width": 16,
-                      },
-                    ]
+                    Object {
+                      "padding": 12,
+                    }
                   }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={16}
                 >
-                  <RNSVGGroup
-                    fill={
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    height={16}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
                       Array [
-                        0,
-                        4278190080,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
                       ]
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
+                    vbHeight={24}
+                    vbWidth={24}
+                    width={16}
                   >
-                    <RNSVGPath
-                      d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                    <RNSVGGroup
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          4278190080,
                         ]
                       }
                       fillOpacity={1}
                       fillRule={1}
+                      font={Object {}}
                       matrix={
                         Array [
                           1,
@@ -1956,11 +1949,7 @@ exports[`The Search Input component should render with a custom screenBackground
                       opacity={1}
                       originX={0}
                       originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
+                      propList={Array []}
                       rotation={0}
                       scaleX={1}
                       scaleY={1}
@@ -1977,9 +1966,55 @@ exports[`The Search Input component should render with a custom screenBackground
                       vectorEffect={0}
                       x={0}
                       y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    >
+                      <RNSVGPath
+                        d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+                        fill={
+                          Array [
+                            0,
+                            4289045925,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
               </View>
             </View>
           </View>
