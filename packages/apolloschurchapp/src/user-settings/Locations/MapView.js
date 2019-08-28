@@ -16,6 +16,9 @@ import {
 
 import Marker from './Marker';
 
+const getCampusAddress = (campus) =>
+  `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
+
 /* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
  * calculation of width minus `CampusCard` margins */
 const CARD_WIDTH = Dimensions.get('window').width - 36;
@@ -87,7 +90,9 @@ class MapView extends Component {
   updateCoordinates = ({ value }) => {
     this.previousScrollPosition = value;
 
-    const { userLocation } = this.props;
+    const { userLocation, campuses } = this.props;
+    // campus card height + some padding
+
     const bottomPadding = 100 + this.props.theme.sizing.baseUnit * 12;
     const edgePadding = {
       top: 100,
@@ -100,21 +105,19 @@ class MapView extends Component {
             PixelRatio.getPixelSizeForLayoutSize(bottomPadding)
           : bottomPadding,
     };
-    const campuses = [...this.props.campuses];
-    this.map.fitToCoordinates(
-      [userLocation].concat(
-        this.currentCampus ? [this.currentCampus] : campuses
-      ),
-      {
-        edgePadding,
-      }
-    );
+
+    const visibleCampuses = [
+      userLocation,
+      ...(this.currentCampus ? [this.currentCampus] : campuses),
+    ];
+
+    this.map.fitToCoordinates(visibleCampuses, {
+      edgePadding,
+    });
   };
 
   render() {
     const { campuses = [], onLocationSelect } = this.props;
-    const getCampusAddress = (campus) =>
-      `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
     const interpolations = campuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * CARD_WIDTH,
