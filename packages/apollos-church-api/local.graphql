@@ -94,6 +94,7 @@ type Campus implements Node {
   longitude: Float
   image: ImageMediaSource
   distanceFromLocation(location: CampusLocationInput): Float
+  events: [Event]
 }
 
 input CampusLocationInput {
@@ -183,6 +184,14 @@ type DevotionalContentItem implements ContentItem & Node {
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
+}
+
+type Event implements Node {
+  id: ID!
+  name: String
+  location: String
+  start: String
+  end: String
 }
 
 interface Feature {

@@ -612,4 +612,18 @@ export const featuresSchema = gql`
   }
 `;
 
+export const eventSchema = gql`
+  type Event implements Node {
+    id: ID!
+    name: String
+    location: String
+    start: String
+    end: String
+  }
+
+  extend type Campus {
+    events: [Event]
+  }
+`;
+
 export { extendForEachContentItemType };
