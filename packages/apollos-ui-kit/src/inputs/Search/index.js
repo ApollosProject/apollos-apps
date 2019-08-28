@@ -117,6 +117,7 @@ class Search extends PureComponent {
   }) => {
     // we dynamically set this value after render so we can be sure to always animate to the write place.
     this.cancelButtonWidth = width;
+    this.animatedValue.setValue(this.cancelButtonWidth);
   };
 
   render() {

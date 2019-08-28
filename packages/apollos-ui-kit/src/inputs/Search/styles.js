@@ -47,7 +47,6 @@ const Input = withTheme(
       paddingRight: showClearSearchButton // we have to dynamically adjust the padding otherwise it causes the placeholder text to disappear
         ? cancelButtonOffset + theme.sizing.baseUnit * 5
         : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
-      // marginRight: theme.sizing.baseUnit * 2.5,
       fontSize: theme.helpers.rem(0.875),
       fontFamily: theme.typography.sans.medium.default,
     },
@@ -66,11 +65,9 @@ const SmokeAndMirrorsWrapper = styled(
 
 const ClearSearchButtonBackground = styled(
   ({ theme }) => ({
-    marginRight: theme.sizing.baseUnit,
     borderTopRightRadius: theme.sizing.baseUnit,
     borderBottomRightRadius: theme.sizing.baseUnit,
-    // backgroundColor: theme.colors.background.screen,
-    backgroundColor: 'salmon',
+    backgroundColor: theme.colors.background.screen,
     overflow: 'hidden', // fixes ios border radius bug
   }),
   'ui-kit.inputs.Search.ClearSearchButtonBackground'
@@ -87,7 +84,7 @@ const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
 
 const CancelButton = styled(
   ({ theme }) => ({
-    paddingRight: theme.sizing.baseUnit, // padding for the edge of the screen.
+    paddingLeft: theme.sizing.baseUnit, // padding away from end of search field
     color: theme.colors.text.link, // we use UIText here instead of `ButtonLink` becuase onLayout has issues with nested text on Android
   }),
   'ui-kit.inputs.Search.CancelButton'
