@@ -30,8 +30,12 @@ export default class Event extends RockApolloDataSource {
     const iCal = schedule.iCalendarContent;
     const dateTimes = iCal.match(/DTEND:(\w+).*DTSTART:(\w+)/s);
     return {
-      start: moment(dateTimes[2]).format(),
-      end: moment(dateTimes[1]).format(),
+      start: moment(dateTimes[2])
+        .utc()
+        .format(),
+      end: moment(dateTimes[1])
+        .utc()
+        .format(),
     };
   };
 }

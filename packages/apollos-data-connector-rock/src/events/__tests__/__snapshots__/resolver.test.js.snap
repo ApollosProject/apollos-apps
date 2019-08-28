@@ -7,11 +7,11 @@ Object {
       Object {
         "events": Array [
           Object {
-            "end": "2013-05-01T19:00:00-04:00",
+            "end": "2013-05-01T23:00:00Z",
             "id": "Event:559b23fd0aa90e81b1c023e72e230fa1",
             "location": "123 Main St",
             "name": "Cookout",
-            "start": "2013-05-01T18:00:00-04:00",
+            "start": "2013-05-01T22:00:00Z",
           },
         ],
       },
