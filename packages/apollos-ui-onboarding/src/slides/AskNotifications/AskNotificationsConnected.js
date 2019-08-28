@@ -39,7 +39,7 @@ const AskNotificationsConnected = memo(
 );
 
 AskNotificationsConnected.propTypes = {
-  Component: PropTypes.node, // Custom component to be rendered. Defaults to AskNotifications
+  Component: PropTypes.shape({}),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   onRequestPushPermissions: PropTypes.func.isRequired,
