@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Animated, Keyboard } from 'react-native';
 import PropTypes from 'prop-types';
+import { Animated, Keyboard } from 'react-native';
 
 import {
   SearchWrapper,
@@ -37,19 +37,26 @@ class Search extends PureComponent {
 
     this.inputRef = props.inputRef || React.createRef();
     this.cancelButtonWidth = 1000; // 🧙‍magic number ≈ arbiraty large number that forces `CancelButton` render off screen.
-    this.animatedValue = new Animated.Value(this.cancelButtonWidth);
 
-    this.animatedStyle = {
+    // this animation shows and hides the `CancelButton`
+    this.animatedSmokeAndMirrors = new Animated.Value(this.cancelButtonWidth);
+    this.animatedSmokeAndMirrorsStyle = {
       // these styles are required to live here and are required for the animation to function
       position: 'absolute',
       height: '100%',
       right: 0,
-      transform: [{ translateX: this.animatedValue }],
+      transform: [{ translateX: this.animatedSmokeAndMirrors }],
+    };
+
+    // this animation shows and hides the `ClearSearchButton`
+    this.showClearSearchButton = false;
+    this.animatedClearSearchButton = new Animated.Value(0);
+    this.animatedClearSearchButtonStyle = {
+      opacity: this.animatedClearSearchButton,
     };
 
     this.state = {
       isFocused: false,
-      showClearSearchButton: false,
     };
   }
 
@@ -57,7 +64,7 @@ class Search extends PureComponent {
     /* React Docs explicitly say these conditions should be here even though I never saw additonal rerenders
      * See 👉 https://reactjs.org/docs/react-component.html#componentdidupdate */
     if (this.state.isFocused && this.state.isFocused !== prevState.isFocused) {
-      Animated.spring(this.animatedValue, {
+      Animated.spring(this.animatedSmokeAndMirrors, {
         toValue: 0,
         // these values match the ios spring effect
         duration: 500,
@@ -68,7 +75,7 @@ class Search extends PureComponent {
       }).start();
     }
     if (!this.state.isFocused && this.state.isFocused !== prevState.isFocused) {
-      Animated.spring(this.animatedValue, {
+      Animated.spring(this.animatedSmokeAndMirrors, {
         toValue: this.cancelButtonWidth,
         // these values match the ios spring effect
         duration: 300,
@@ -80,6 +87,14 @@ class Search extends PureComponent {
     }
   }
 
+  animateClearSearchButton = (isVisible) => {
+    console.count('What');
+    Animated.timing(this.animatedClearSearchButton, {
+      toValue: isVisible ? 1 : 0,
+      duration: 0,
+    }).start();
+  };
+
   handleOnFocus = () => {
     this.setState((state) => ({
       isFocused: !state.isFocused,
@@ -88,24 +103,23 @@ class Search extends PureComponent {
 
   handleOnChangeText = (changedText) => {
     /* `onChangeText` triggers `handleOnChangeText` on EVERY text change. the logic that follows
-     * optizies for rerenders.
+     * optizies for rerenders. To do this we have to keep track of `showClearSearchButton` so that
+     * we don't call `animateClearSearchButton` on every time.
      *
      * Only show the `ClearSearchButton` if we have an input value */
     const shouldShowClearSearchButton = changedText !== '';
 
-    // check previous value (state) against current value (above)
-    if (this.state.showClearSearchButton !== shouldShowClearSearchButton) {
-      this.setState({
-        showClearSearchButton: shouldShowClearSearchButton,
-      });
+    // check previous value against current value (above)
+    if (this.showClearSearchButton !== shouldShowClearSearchButton) {
+      this.animateClearSearchButton(shouldShowClearSearchButton);
+      this.showClearSearchButton = shouldShowClearSearchButton;
     }
   };
 
   handleOnPressClearSearchButton = () => {
     this.inputRef.current.clear();
-    this.setState({
-      showClearSearchButton: false,
-    });
+    this.animateClearSearchButton(false);
+    this.showClearSearchButton = false;
   };
 
   handleOnPressCancel = () => Keyboard.dismiss();
@@ -117,7 +131,7 @@ class Search extends PureComponent {
   }) => {
     // we dynamically set this value after render so we can be sure to always animate to the write place.
     this.cancelButtonWidth = width;
-    this.animatedValue.setValue(this.cancelButtonWidth);
+    this.animatedSmokeAndMirrors.setValue(this.cancelButtonWidth);
   };
 
   render() {
@@ -136,29 +150,29 @@ class Search extends PureComponent {
         <TextInputWrapper>
           <LoopIcon name={'search'} isFocused={this.state.isFocused} />
           <Input
+            cancelButtonOffset={this.cancelButtonWidth} // used for styling
             forwardedRef={this.inputRef}
             editable={!disabled}
+            isFocused={this.state.isFocused} // used for styling
             onFocus={this.handleOnFocus}
             onBlur={this.handleOnFocus}
             onChangeText={this.handleOnChangeText}
             onSubmitEditing={onSubmit}
             placeholder={placeholder}
             returnKeyType={'search'}
-            // thesse are used for styles
-            showClearSearchButton={this.state.showClearSearchButton}
-            cancelButtonOffset={this.cancelButtonWidth}
             {...textInputProps}
           />
         </TextInputWrapper>
 
-        <Animated.View style={this.animatedStyle}>
+        <Animated.View style={this.animatedSmokeAndMirrorsStyle}>
           <SmokeAndMirrorsWrapper screenBackgroundColor={screenBackgroundColor}>
             <ClearSearchButtonBackground isFocused={this.state.isFocused}>
-              <ClearSearchButton
-                onPress={this.handleOnPressClearSearchButton}
-                name={'close'}
-                isVisible={this.state.showClearSearchButton}
-              />
+              <Animated.View style={this.animatedClearSearchButtonStyle}>
+                <ClearSearchButton
+                  onPress={this.handleOnPressClearSearchButton}
+                  name={'close'}
+                />
+              </Animated.View>
             </ClearSearchButtonBackground>
 
             <CancelButton

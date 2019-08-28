@@ -35,23 +35,23 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
   },
 }))(Icon);
 
-const Input = withTheme(
-  ({ theme, showClearSearchButton, cancelButtonOffset }) => ({
-    placeholderTextColor: theme.colors.text.tertiary,
-    selectionColor: theme.colors.action.secondary,
-    style: {
-      flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
-      height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
-      paddingVertical: 0, // removes weird "default" padding
-      paddingLeft: theme.sizing.baseUnit * 0.5,
-      paddingRight: showClearSearchButton // we have to dynamically adjust the padding otherwise it causes the placeholder text to disappear
-        ? cancelButtonOffset + theme.sizing.baseUnit * 5
-        : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
-      fontSize: theme.helpers.rem(0.875),
-      fontFamily: theme.typography.sans.medium.default,
-    },
-  })
-)(({ forwardedRef, ...props }) => <TextInput ref={forwardedRef} {...props} />);
+const Input = withTheme(({ theme, isFocused, cancelButtonOffset }) => ({
+  placeholderTextColor: theme.colors.text.tertiary,
+  selectionColor: theme.colors.action.secondary,
+  style: {
+    flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
+    height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
+    paddingVertical: 0, // removes weird "default" padding
+    paddingLeft: theme.sizing.baseUnit * 0.5,
+    paddingRight: isFocused // we have to dynamically adjust the padding otherwise it causes the placeholder text to disappear
+      ? cancelButtonOffset + theme.sizing.baseUnit * 5
+      : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
+    fontSize: theme.helpers.rem(0.875),
+    fontFamily: theme.typography.sans.medium.default,
+  },
+}))(({ forwardedRef, ...props }) => (
+  <TextInput ref={forwardedRef} {...props} />
+));
 
 // the main reason this component lives here is because we need access to theme colors
 const SmokeAndMirrorsWrapper = styled(
@@ -73,13 +73,10 @@ const ClearSearchButtonBackground = styled(
   'ui-kit.inputs.Search.ClearSearchButtonBackground'
 )(View);
 
-const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
+const ClearSearchButton = withTheme(({ theme }) => ({
   fill: theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
   iconPadding: theme.helpers.rem(0.75),
-  style: {
-    opacity: isVisible ? 1 : 0,
-  },
 }))(ButtonIcon);
 
 const CancelButton = styled(
