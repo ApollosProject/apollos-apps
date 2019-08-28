@@ -53,8 +53,10 @@ class Search extends PureComponent {
     };
   }
 
-  componentDidUpdate() {
-    if (this.state.isFocused) {
+  componentDidUpdate(prevProps, prevState) {
+    /* React Docs explicitly say these conditions should be here even though I never saw additonal rerenders
+     * See 👉 https://reactjs.org/docs/react-component.html#componentdidupdate */
+    if (this.state.isFocused && this.state.isFocused !== prevState.isFocused) {
       Animated.spring(this.animatedValue, {
         toValue: 0,
         // these values match the ios spring effect
@@ -65,7 +67,7 @@ class Search extends PureComponent {
         useNativeDriver: true,
       }).start();
     }
-    if (!this.state.isFocused) {
+    if (!this.state.isFocused && this.state.isFocused !== prevState.isFocused) {
       Animated.spring(this.animatedValue, {
         toValue: this.cancelButtonWidth,
         // these values match the ios spring effect
