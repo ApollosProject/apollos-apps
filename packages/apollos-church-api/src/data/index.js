@@ -25,6 +25,7 @@ import {
   Group,
   BinaryFiles,
   Features,
+  Events,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -57,6 +58,7 @@ const data = {
   Group,
   BinaryFiles,
   Features,
+  Events,
 };
 
 const {
