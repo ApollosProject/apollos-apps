@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events should get by Campus 1`] = `
+Array [
+  Object {
+    "id": 123,
+    "name": "some event",
+  },
+]
+`;
+
+exports[`Events should get by Campus 2`] = `
+Array [
+  Array [
+    "EventItemOccurrences?loadAttributes=expanded&%24filter=CampusId%20eq%20456",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Events should get by id 1`] = `
+Object {
+  "id": 123,
+  "name": "some event",
+}
+`;
+
+exports[`Events should get by id 2`] = `
+Array [
+  Array [
+    "EventItemOccurrences/123?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Events should return a name based on an EventItem 1`] = `
+Array [
+  Array [
+    "EventItems/123?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Events should return start and end based on a schedule 1`] = `
+Object {
+  "end": "2013-05-01T23:00:00Z",
+  "start": "2013-05-01T22:00:00Z",
+}
+`;
+
+exports[`Events should return start and end based on a schedule 2`] = `
+Array [
+  Array [
+    "Schedules/123?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;

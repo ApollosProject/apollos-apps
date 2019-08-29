@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events resolver gets events by campus 1`] = `
+Object {
+  "data": Object {
+    "campuses": Array [
+      Object {
+        "events": Array [
+          Object {
+            "end": null,
+            "id": "Event:559b23fd0aa90e81b1c023e72e230fa1",
+            "location": "123 Main St",
+            "name": "Cookout",
+            "start": null,
+          },
+        ],
+      },
+    ],
+  },
+  "errors": Array [
+    [GraphQLError: this.request(...).find is not a function],
+    [GraphQLError: this.request(...).find is not a function],
+  ],
+}
+`;
