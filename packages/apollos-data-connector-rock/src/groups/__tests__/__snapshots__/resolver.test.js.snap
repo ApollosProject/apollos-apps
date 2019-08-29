@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Groups resolver gets user groups 1`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "profile": Object {
+        "families": Array [
+          Object {
+            "id": "Group:965b6e6d7046a885bea4e300b5c0400d",
+            "name": "shartsis family",
+          },
+        ],
+        "groups": Array [
+          Object {
+            "id": "Group:559b23fd0aa90e81b1c023e72e230fa1",
+            "leader": Object {
+              "firstName": "Frank",
+              "id": "1",
+            },
+            "members": Array [
+              Object {
+                "firstName": "Caleb",
+                "id": "2",
+              },
+              Object {
+                "firstName": "Burke",
+                "id": "3",
+              },
+            ],
+            "name": "franks beer group",
+          },
+        ],
+        "homeGroups": Array [
+          Object {
+            "id": "Group:559b23fd0aa90e81b1c023e72e230fa1",
+            "name": "franks beer group",
+          },
+        ],
+        "servingGroups": Array [
+          Object {
+            "id": "Group:4f68015ba18662a7409d1219a4ce013e",
+            "name": "cincinatti campus prayer team",
+          },
+        ],
+      },
+    },
+  },
+}
+`;

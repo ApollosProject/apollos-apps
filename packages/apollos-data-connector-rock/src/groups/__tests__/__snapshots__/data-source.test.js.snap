@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Groups should get all groups 1`] = `
+Array [
+  Object {
+    "id": 1,
+    "name": "franks beer group",
+  },
+]
+`;
+
+exports[`Groups should get all groups 2`] = `
+Array [
+  Array [
+    "Groups?loadAttributes=expanded&%24filter=IsActive%20eq%20true%20and%20IsArchived%20eq%20false&%24expand=Members",
+    Object {},
+    Object {},
+  ],
+]
+`;
