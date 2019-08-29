@@ -24,13 +24,8 @@ const goBack = (from) => {
   _navigator.dispatch(NavigationActions.back({ key }));
 };
 
-const navigateToAuth = () => {
-  navigate('Auth', { emailRequired: true });
-};
-
 export default {
   setTopLevelNavigator,
   navigate,
-  navigateToAuth,
   goBack,
 };
