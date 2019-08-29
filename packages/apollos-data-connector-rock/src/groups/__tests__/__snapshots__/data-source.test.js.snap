@@ -119,6 +119,21 @@ Array [
 ]
 `;
 
+exports[`Groups should get groups lead by person 1`] = `
+Array [
+  Object {
+    "groupTypeId": 25,
+    "id": 1,
+    "name": "franks beer group",
+  },
+  Object {
+    "groupTypeId": 23,
+    "id": 2,
+    "name": "prayer team",
+  },
+]
+`;
+
 exports[`Groups should get home groups 1`] = `Array []`;
 
 exports[`Groups should get home groups 2`] = `

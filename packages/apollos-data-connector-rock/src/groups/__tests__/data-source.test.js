@@ -79,6 +79,14 @@ describe('Groups', () => {
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });
 
+  it('should get groups lead by person', async () => {
+    Groups.getByPerson = jest.fn(() => groupArrayMock);
+    Groups.getLeader = jest.fn(() => personMock);
+
+    const result = await Groups.getLeadByPerson(1);
+    expect(result).toMatchSnapshot();
+  });
+
   it('should get families', async () => {
     Groups.get = jest.fn(() => groupArrayMock);
 
