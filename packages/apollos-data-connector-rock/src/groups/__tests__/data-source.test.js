@@ -9,7 +9,12 @@ describe('Groups', () => {
   const groupArrayMock = Promise.resolve([
     { id: 1, name: 'franks beer group' },
   ]);
-  const groupMock = Promise.resolve({ id: 1, name: 'franks beer group' });
+  const groupMock = Promise.resolve({
+    id: 1,
+    name: 'franks beer group',
+    isActive: true,
+    isArchived: false,
+  });
 
   class GroupsWithContext extends GroupsDataSource {
     context = {
@@ -45,6 +50,30 @@ describe('Groups', () => {
     Groups.get = jest.fn(() => personArrayMock);
 
     const result = await Groups.getMembers(1);
+    expect(result).toMatchSnapshot();
+    expect(Groups.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should get the leader', async () => {
+    Groups.request = () => ({
+      filter: () => ({
+        andFilter: () => ({
+          expand: () => ({
+            first: jest.fn(() => personMock),
+          }),
+        }),
+      }),
+    });
+
+    const result = await Groups.getLeader(1);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should get groups by person', async () => {
+    Groups.get = jest.fn(() => personArrayMock);
+    Groups.getFromId = jest.fn(() => groupMock);
+
+    const result = await Groups.getByPerson(1);
     expect(result).toMatchSnapshot();
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });

@@ -3,6 +3,8 @@
 exports[`Groups should get a group by id 1`] = `
 Object {
   "id": 1,
+  "isActive": true,
+  "isArchived": false,
   "name": "franks beer group",
 }
 `;
@@ -76,4 +78,38 @@ Array [
     Object {},
   ],
 ]
+`;
+
+exports[`Groups should get groups by person 1`] = `
+Array [
+  Object {
+    "id": 1,
+    "isActive": true,
+    "isArchived": false,
+    "name": "franks beer group",
+  },
+  Object {
+    "id": 1,
+    "isActive": true,
+    "isArchived": false,
+    "name": "franks beer group",
+  },
+]
+`;
+
+exports[`Groups should get groups by person 2`] = `
+Array [
+  Array [
+    "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Groups should get the leader 1`] = `
+Object {
+  "firstName": "Frank",
+  "id": 1,
+}
 `;
