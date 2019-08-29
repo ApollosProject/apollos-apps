@@ -31,6 +31,12 @@ Object {
             "name": "franks beer group",
           },
         ],
+        "groupsLead": Array [
+          Object {
+            "id": "Group:559b23fd0aa90e81b1c023e72e230fa1",
+            "name": "franks beer group",
+          },
+        ],
         "homeGroups": Array [
           Object {
             "id": "Group:559b23fd0aa90e81b1c023e72e230fa1",

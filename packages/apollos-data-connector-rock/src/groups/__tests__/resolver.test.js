@@ -37,6 +37,10 @@ describe('Groups resolver', () => {
                 firstName
               }
             }
+            groupsLead {
+              id
+              name
+            }
             families {
               id
               name
@@ -58,6 +62,9 @@ describe('Groups resolver', () => {
       Promise.resolve({ id: 3 })
     );
     context.dataSources.Group.getByPerson = jest.fn(() =>
+      Promise.resolve([{ id: 1, name: 'franks beer group' }])
+    );
+    context.dataSources.Group.getLeadByPerson = jest.fn(() =>
       Promise.resolve([{ id: 1, name: 'franks beer group' }])
     );
     context.dataSources.Group.getHomeGroups = jest.fn(() =>
