@@ -73,10 +73,13 @@ const ClearSearchButtonBackground = styled(
   'ui-kit.inputs.Search.ClearSearchButtonBackground'
 )(View);
 
-const ClearSearchButton = withTheme(({ theme }) => ({
+const ClearSearchButton = withTheme(({ theme, isVisible }) => ({
   fill: theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
   iconPadding: theme.helpers.rem(0.75),
+  style: {
+    opacity: isVisible ? 1 : 0,
+  },
 }))(ButtonIcon);
 
 const CancelButton = styled(

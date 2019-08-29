@@ -24,12 +24,14 @@ class Search extends PureComponent {
      * components surroundings. You only need this if you are rendering `Search` on a color other
      * than theme.colors.background.paper. */
     screenBackgroundColor: PropTypes.string,
+    value: PropTypes.string,
   };
 
   static defaultProps = {
     cancelButtonText: 'Cancel',
     disabled: false,
     placeholder: 'Search',
+    value: '',
   };
 
   constructor(props) {
@@ -48,15 +50,9 @@ class Search extends PureComponent {
       transform: [{ translateX: this.animatedSmokeAndMirrors }],
     };
 
-    // this animation shows and hides the `ClearSearchButton`
-    this.clearSearchButtonVisibility = false;
-    this.animatedClearSearchButton = new Animated.Value(0);
-    this.animatedClearSearchButtonStyle = {
-      opacity: this.animatedClearSearchButton,
-    };
-
     this.state = {
       isFocused: false,
+      value: props.value,
     };
   }
 
@@ -87,38 +83,20 @@ class Search extends PureComponent {
     }
   }
 
-  showClearSearchButton = (isVisible) => {
-    Animated.timing(this.animatedClearSearchButton, {
-      toValue: isVisible ? 1 : 0,
-      duration: 0,
-    }).start();
-  };
-
   handleOnFocus = () => {
     this.setState((state) => ({
       isFocused: !state.isFocused,
     }));
   };
 
-  handleOnChangeText = (changedText) => {
-    /* `onChangeText` triggers `handleOnChangeText` on EVERY text change. the logic that follows
-     * optizies for rerenders. To do this we have to keep track of `clearSearchButtonVisibility` so that
-     * we don't call `showClearSearchButton` on every time.
-     *
-     * Only show the `ClearSearchButton` if we have an input value */
-    const shouldShowClearSearchButton = changedText !== '';
-
-    // check previous value against current value (above)
-    if (this.clearSearchButtonVisibility !== shouldShowClearSearchButton) {
-      this.showClearSearchButton(shouldShowClearSearchButton);
-      this.clearSearchButtonVisibility = shouldShowClearSearchButton;
-    }
+  handleOnChangeText = (value) => {
+    this.setState({ value });
   };
 
   handleOnPressClearSearchButton = () => {
-    this.inputRef.current.clear();
-    this.showClearSearchButton(false);
-    this.clearSearchButtonVisibility = false;
+    this.setState({
+      value: '',
+    });
   };
 
   handleOnPressCancel = () => Keyboard.dismiss();
@@ -141,9 +119,10 @@ class Search extends PureComponent {
       onSubmit,
       placeholder,
       screenBackgroundColor,
+      value,
       ...textInputProps
     } = this.props;
-
+    console.count();
     return (
       <SearchWrapper disabled={disabled}>
         <TextInputWrapper>
@@ -159,19 +138,19 @@ class Search extends PureComponent {
             onSubmitEditing={onSubmit}
             placeholder={placeholder}
             returnKeyType={'search'}
+            value={this.state.value}
             {...textInputProps}
           />
         </TextInputWrapper>
 
         <Animated.View style={this.animatedSmokeAndMirrorsStyle}>
           <SmokeAndMirrorsWrapper screenBackgroundColor={screenBackgroundColor}>
-            <ClearSearchButtonBackground isFocused={this.state.isFocused}>
-              <Animated.View style={this.animatedClearSearchButtonStyle}>
-                <ClearSearchButton
-                  onPress={this.handleOnPressClearSearchButton}
-                  name={'close'}
-                />
-              </Animated.View>
+            <ClearSearchButtonBackground>
+              <ClearSearchButton
+                onPress={this.handleOnPressClearSearchButton}
+                name={'close'}
+                isVisible={this.state.value !== ''}
+              />
             </ClearSearchButtonBackground>
 
             <CancelButton
