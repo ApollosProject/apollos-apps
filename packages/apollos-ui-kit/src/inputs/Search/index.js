@@ -2,16 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, Keyboard } from 'react-native';
 
-import {
-  SearchWrapper,
-  TextInputWrapper,
-  LoopIcon,
-  Input,
-  SmokeAndMirrorsWrapper,
-  ClearSearchButtonBackground,
-  ClearSearchButton,
-  CancelButton,
-} from './styles';
+import { SearchWrapper, TextInputWrapper, LoopIcon, Input } from './styles';
+import SearchActions from './SearchActions';
 
 class Search extends PureComponent {
   static propTypes = {
@@ -52,7 +44,7 @@ class Search extends PureComponent {
 
     this.state = {
       isFocused: false,
-      value: props.value,
+      value: '',
     };
   }
 
@@ -122,7 +114,7 @@ class Search extends PureComponent {
       value,
       ...textInputProps
     } = this.props;
-    console.count();
+
     return (
       <SearchWrapper disabled={disabled}>
         <TextInputWrapper>
@@ -144,22 +136,14 @@ class Search extends PureComponent {
         </TextInputWrapper>
 
         <Animated.View style={this.animatedSmokeAndMirrorsStyle}>
-          <SmokeAndMirrorsWrapper screenBackgroundColor={screenBackgroundColor}>
-            <ClearSearchButtonBackground>
-              <ClearSearchButton
-                onPress={this.handleOnPressClearSearchButton}
-                name={'close'}
-                isVisible={this.state.value !== ''}
-              />
-            </ClearSearchButtonBackground>
-
-            <CancelButton
-              onPress={this.handleOnPressCancel}
-              onLayout={this.handleOnLayout}
-            >
-              {cancelButtonText}
-            </CancelButton>
-          </SmokeAndMirrorsWrapper>
+          <SearchActions
+            cancelButtonText={cancelButtonText}
+            isFocused={this.state.isFocused}
+            onPressCancel={this.handleOnPressCancel}
+            onLayout={this.handleOnLayout}
+            onPressClearSearchButton={this.handleOnPressClearSearchButton}
+            showClearSearchButton={this.state.value !== ''}
+          />
         </Animated.View>
       </SearchWrapper>
     );

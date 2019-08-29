@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { View, TextInput } from 'react-native';
 
 import styled from '../../styled';
@@ -27,13 +27,14 @@ const TextInputWrapper = styled(
   'ui-kit.inputs.Search.InputWrapper'
 )(View);
 
+// We do some memo gymnastics here so that this icon isn't effected by rerenders caused by input state
 const LoopIcon = withTheme(({ theme, isFocused }) => ({
   fill: isFocused ? theme.colors.action.secondary : theme.colors.text.tertiary,
   size: theme.helpers.rem(1),
   style: {
     marginLeft: theme.sizing.baseUnit,
   },
-}))(Icon);
+}))(memo((props) => <Icon {...props} />)); // eslint-disable-line react/display-name
 
 const Input = withTheme(({ theme, isFocused, cancelButtonOffset }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
@@ -48,6 +49,7 @@ const Input = withTheme(({ theme, isFocused, cancelButtonOffset }) => ({
       : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
+    // backgroundColor: 'teal',
   },
 }))(({ forwardedRef, ...props }) => (
   <TextInput ref={forwardedRef} {...props} />
@@ -58,6 +60,7 @@ const SmokeAndMirrorsWrapper = styled(
   ({ theme, screenBackgroundColor }) => ({
     flexDirection: 'row',
     alignItems: 'center',
+    // backgroundColor: 'salmon',
     backgroundColor: screenBackgroundColor || theme.colors.background.paper,
   }),
   'ui-kit.inputs.Search.SmokeAndMirrorsWrapper'
