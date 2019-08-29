@@ -22,8 +22,14 @@ Array [
 exports[`Groups should get all groups 1`] = `
 Array [
   Object {
+    "groupTypeId": 25,
     "id": 1,
     "name": "franks beer group",
+  },
+  Object {
+    "groupTypeId": 23,
+    "id": 2,
+    "name": "prayer team",
   },
 ]
 `;
@@ -41,8 +47,14 @@ Array [
 exports[`Groups should get families 1`] = `
 Array [
   Object {
+    "groupTypeId": 25,
     "id": 1,
     "name": "franks beer group",
+  },
+  Object {
+    "groupTypeId": 23,
+    "id": 2,
+    "name": "prayer team",
   },
 ]
 `;
@@ -101,6 +113,50 @@ exports[`Groups should get groups by person 2`] = `
 Array [
   Array [
     "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Groups should get home groups 1`] = `Array []`;
+
+exports[`Groups should get home groups 2`] = `
+Array [
+  Array [
+    "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "Groups?loadAttributes=expanded&%24expand=Members",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "Groups?loadAttributes=expanded&%24expand=Members",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Groups should get serving groups 1`] = `Array []`;
+
+exports[`Groups should get serving groups 2`] = `
+Array [
+  Array [
+    "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "Groups?loadAttributes=expanded&%24expand=Members",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "Groups?loadAttributes=expanded&%24expand=Members",
     Object {},
     Object {},
   ],

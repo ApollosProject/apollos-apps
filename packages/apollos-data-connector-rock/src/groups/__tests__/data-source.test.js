@@ -7,7 +7,8 @@ describe('Groups', () => {
   ]);
   const personMock = Promise.resolve({ id: 1, firstName: 'Frank' });
   const groupArrayMock = Promise.resolve([
-    { id: 1, name: 'franks beer group' },
+    { id: 1, name: 'franks beer group', groupTypeId: 25 },
+    { id: 2, name: 'prayer team', groupTypeId: 23 },
   ]);
   const groupMock = Promise.resolve({
     id: 1,
@@ -82,6 +83,22 @@ describe('Groups', () => {
     Groups.get = jest.fn(() => groupArrayMock);
 
     const result = await Groups.getFamilies(1);
+    expect(result).toMatchSnapshot();
+    expect(Groups.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should get home groups', async () => {
+    Groups.get = jest.fn(() => groupArrayMock);
+
+    const result = await Groups.getHomeGroups(1);
+    expect(result).toMatchSnapshot();
+    expect(Groups.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should get serving groups', async () => {
+    Groups.get = jest.fn(() => groupArrayMock);
+
+    const result = await Groups.getServingGroups(1);
     expect(result).toMatchSnapshot();
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });
