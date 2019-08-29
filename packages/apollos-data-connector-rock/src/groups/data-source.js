@@ -17,13 +17,13 @@ export default class Group extends RockApolloDataSource {
 
   getFromId = (id) =>
     this.request()
-      .filter(`Id eq ${id}`)
+      .find(id)
       .expand('Members')
-      .first();
+      .get();
 
   getMembers = async (groupId) => {
     const { Person } = this.context.dataSources;
-    const members = await this.request('/GroupMembers/')
+    const members = await this.request('GroupMembers')
       .andFilter(`GroupId eq ${groupId}`)
       .get();
     return members.map(({ personId }) => Person.getFromId(personId));
@@ -31,7 +31,7 @@ export default class Group extends RockApolloDataSource {
 
   getLeader = async (groupId) => {
     const { Person } = this.context.dataSources;
-    const leader = await this.request('/GroupMembers/')
+    const leader = await this.request('GroupMembers')
       .filter(`GroupId eq ${groupId}`)
       .andFilter('GroupRole/IsLeader eq true')
       .expand('GroupRole')
@@ -40,7 +40,7 @@ export default class Group extends RockApolloDataSource {
   };
 
   getByPerson = async (personId) => {
-    const myGroupAssociations = await this.request('/GroupMembers/')
+    const myGroupAssociations = await this.request('GroupMembers')
       .filter(`PersonId eq ${personId}`)
       .get();
     const allGroups = await Promise.all(
