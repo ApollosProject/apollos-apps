@@ -49,7 +49,6 @@ const Input = withTheme(({ theme, isFocused, cancelButtonOffset }) => ({
       : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
     fontSize: theme.helpers.rem(0.875),
     fontFamily: theme.typography.sans.medium.default,
-    // backgroundColor: 'teal',
   },
 }))(({ forwardedRef, ...props }) => (
   <TextInput ref={forwardedRef} {...props} />
@@ -60,7 +59,6 @@ const SmokeAndMirrorsWrapper = styled(
   ({ theme, screenBackgroundColor }) => ({
     flexDirection: 'row',
     alignItems: 'center',
-    // backgroundColor: 'salmon',
     backgroundColor: screenBackgroundColor || theme.colors.background.paper,
   }),
   'ui-kit.inputs.Search.SmokeAndMirrorsWrapper'
