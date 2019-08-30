@@ -148,8 +148,8 @@ exports[`HorizontalHighlightCard should render 1`] = `
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -193,8 +193,8 @@ exports[`HorizontalHighlightCard should render 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -470,8 +470,8 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -538,8 +538,8 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -708,8 +708,8 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -868,8 +868,8 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -1150,8 +1150,8 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -1195,8 +1195,8 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -1470,8 +1470,8 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -1630,8 +1630,8 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -1905,8 +1905,8 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -2004,8 +2004,8 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -2279,8 +2279,8 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -2378,8 +2378,8 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -2653,8 +2653,8 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
             Object {
               "alignItems": "flex-start",
               "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
               "position": "absolute",
               "width": "100%",
@@ -2698,8 +2698,8 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
