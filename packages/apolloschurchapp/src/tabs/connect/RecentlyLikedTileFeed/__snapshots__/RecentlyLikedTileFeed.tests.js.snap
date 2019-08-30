@@ -352,8 +352,8 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
+                        "paddingBottom": 24,
+                        "paddingHorizontal": 16,
                         "paddingVertical": 16,
                       }
                     }
@@ -362,8 +362,8 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     style={
                       Object {
                         "position": "absolute",
-                        "right": 24,
-                        "top": 24,
+                        "right": 16,
+                        "top": 16,
                       }
                     }
                   >
@@ -523,8 +523,8 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
+                        "paddingBottom": 24,
+                        "paddingHorizontal": 16,
                         "paddingVertical": 16,
                       }
                     }
@@ -533,8 +533,8 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                     style={
                       Object {
                         "position": "absolute",
-                        "right": 24,
-                        "top": 24,
+                        "right": 16,
+                        "top": 16,
                       }
                     }
                   >
@@ -902,8 +902,8 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
+                        "paddingBottom": 24,
+                        "paddingHorizontal": 16,
                         "paddingVertical": 16,
                       }
                     }
@@ -912,8 +912,8 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     style={
                       Object {
                         "position": "absolute",
-                        "right": 24,
-                        "top": 24,
+                        "right": 16,
+                        "top": 16,
                       }
                     }
                   >
@@ -1073,8 +1073,8 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
+                        "paddingBottom": 24,
+                        "paddingHorizontal": 16,
                         "paddingVertical": 16,
                       }
                     }
@@ -1083,8 +1083,8 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                     style={
                       Object {
                         "position": "absolute",
-                        "right": 24,
-                        "top": 24,
+                        "right": 16,
+                        "top": 16,
                       }
                     }
                   >

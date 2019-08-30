@@ -30,7 +30,6 @@ class AuthPassword extends PureComponent {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
-    onFinish: PropTypes.func,
     passwordPromptText: PropTypes.string,
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
     BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
@@ -46,7 +45,7 @@ class AuthPassword extends PureComponent {
   }
 
   render() {
-    const { BackgroundComponent } = this.flatProps;
+    const { BackgroundComponent, emailRequired } = this.flatProps;
     return (
       <AuthConsumer>
         {({ closeAuth }) => (
@@ -63,8 +62,18 @@ class AuthPassword extends PureComponent {
                 <TabView
                   routes={this.tabRoutes}
                   renderScene={SceneMap({
-                    login: () => <LoginForm onLogin={closeAuth} />,
-                    signup: () => <SignUpForm onSignup={closeAuth} />,
+                    login: () => (
+                      <LoginForm
+                        onLogin={closeAuth}
+                        emailRequired={emailRequired}
+                      />
+                    ),
+                    signup: () => (
+                      <SignUpForm
+                        onSignup={closeAuth}
+                        emailRequired={emailRequired}
+                      />
+                    ),
                   })}
                 />
               </SafeAreaView>
