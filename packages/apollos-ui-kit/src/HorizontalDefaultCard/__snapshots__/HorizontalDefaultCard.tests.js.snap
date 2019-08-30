@@ -148,8 +148,8 @@ exports[`HorizontalDefaultCard should render 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
             }
           }
@@ -158,8 +158,8 @@ exports[`HorizontalDefaultCard should render 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -435,8 +435,8 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
           style={
             Object {
               "alignItems": "flex-start",
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
             }
           }
@@ -471,8 +471,8 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -641,8 +641,8 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
             }
           }
@@ -680,8 +680,8 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -957,8 +957,8 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
             }
           }
@@ -980,8 +980,8 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
@@ -1150,8 +1150,8 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
           style={
             Object {
               "alignItems": "flex-start",
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingBottom": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
             }
           }
@@ -1174,8 +1174,8 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
           style={
             Object {
               "position": "absolute",
-              "right": 24,
-              "top": 24,
+              "right": 16,
+              "top": 16,
             }
           }
         >
