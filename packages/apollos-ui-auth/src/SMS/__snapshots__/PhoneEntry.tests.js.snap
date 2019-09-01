@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Auth PhoneEntry component should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -415,17 +419,21 @@ exports[`The Auth PhoneEntry component should render 1`] = `
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -833,17 +841,21 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render as disabled 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1311,17 +1323,21 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1783,17 +1799,21 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render in a next button 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -2261,17 +2281,21 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render in an error state 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -2692,17 +2716,21 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render with a custom alternateLoginText 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3140,17 +3168,21 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render with a custom authTitleText 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3558,17 +3590,21 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render with a custom smsPromptText 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3976,17 +4012,21 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render with a value 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -4395,17 +4435,21 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Auth PhoneEntry component should render with an alternate login option with default text 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -4843,5 +4887,5 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
       </BVLinearGradient>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
