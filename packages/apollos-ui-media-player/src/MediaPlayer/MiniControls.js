@@ -45,9 +45,10 @@ const DismissBackground = withTheme(({ theme }) => ({
   ...theme.overlays.low({ overlayColor: theme.colors.black }),
 }))(LinearGradient);
 
-const IconStyles = withTheme(({ theme }) => ({
+const IconStyles = withTheme(({ theme, play }) => ({
   fill: theme.colors.darkTertiary,
-  size: theme.sizing.baseUnit * 0.75,
+  size: theme.sizing.baseUnit * (play ? 0.75 : 1),
+  paddingHorizontal: theme.sizing.baseUnit * 1.5,
 }));
 
 const StyledButtonIcon = IconStyles(ButtonIcon);
@@ -61,7 +62,7 @@ const Controls = styled(({ theme }) => ({
 }))(FlexedView);
 
 const TrackInfo = styled(({ theme }) => ({
-  paddingLeft: theme.sizing.baseUnit / 2,
+  paddingLeft: theme.sizing.baseUnit,
   height: '100%',
   justifyContent: 'center',
   width: '100%',
@@ -132,7 +133,11 @@ class MiniControls extends Component {
                 ) : (
                   <Mutation mutation={PLAY}>
                     {(play) => (
-                      <StyledButtonIcon name={'play'} onPress={() => play()} />
+                      <StyledButtonIcon
+                        name={'play'}
+                        onPress={() => play()}
+                        play
+                      />
                     )}
                   </Mutation>
                 )}
