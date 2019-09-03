@@ -266,7 +266,7 @@ exports[`The ModalView component should render 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -508,7 +508,7 @@ exports[`The ModalView component should render a custom back action 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -660,7 +660,7 @@ exports[`The ModalView component should render a custom back action 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -976,7 +976,7 @@ exports[`The ModalView component should render a custom close action 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -1295,7 +1295,7 @@ exports[`The ModalView component should render with children 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
