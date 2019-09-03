@@ -120,11 +120,6 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                 }
               >
                 <RCTScrollView
-                  contentContainerStyle={
-                    Object {
-                      "paddingVertical": 7.2,
-                    }
-                  }
                   data={
                     Array [
                       Object {
