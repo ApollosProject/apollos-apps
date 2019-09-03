@@ -397,6 +397,32 @@ export const contentChannelSchema = gql`
   }
 `;
 
+export const searchSchema = gql`
+  extend type Query {
+    search(query: String!, first: Int, after: String) {
+      edges: [SearchHitsConnectionEdge]
+      pageInfo: PaginationInfo
+    }
+  }
+
+  input ContentItemsConnectionInput {
+    first: Int
+    after: String
+  }
+
+  type SearchHitsConnectionEdge {
+    node: Searchable
+    cursor: String
+  }
+
+  interface Searchable {
+    id: ID!
+    title: String
+    summary: String
+    coverImage: ImageMedia
+  }
+`;
+
 export const sharableSchema = gql`
   interface Sharable {
     message: String
