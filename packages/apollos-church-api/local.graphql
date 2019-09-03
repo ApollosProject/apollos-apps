@@ -367,15 +367,8 @@ type ScriptureFeature implements Feature & Node {
   sharing: SharableFeature
 }
 
-interface Searchable {
-  id: ID!
-  title: String
-  summary: String
-  coverImage: ImageMedia
-}
-
 type SearchHitsConnectionEdge {
-  node: Searchable
+  node: Node
   cursor: String
 }
 

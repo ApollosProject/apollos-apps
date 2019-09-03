@@ -1,13 +1,13 @@
+import { withEdgePagination } from '@apollosproject/server-core';
+
 const resolver = {
   Query: {
-    search: async (root, { query, first, after }, { dataSources }) => {
-      const hits = await dataSources.Search.search({ query, first, after });
-      return {
-        edges: hits.map((hit) => ({
-          node: hit,
-        })),
-      };
-    },
+    search: async (root, input, { dataSources }) =>
+      dataSources.Search.byPaginatedQuery(input),
+  },
+  SearchResults: {
+    edges: (edges) => edges,
+    pageInfo: (edges) => withEdgePagination({ edges }),
   },
 };
 
