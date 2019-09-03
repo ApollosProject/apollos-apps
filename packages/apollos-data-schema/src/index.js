@@ -399,15 +399,12 @@ export const contentChannelSchema = gql`
 
 export const searchSchema = gql`
   extend type Query {
-    search(query: String!, first: Int, after: String) {
-      edges: [SearchHitsConnectionEdge]
-      pageInfo: PaginationInfo
-    }
+    search(query: String!, first: Int, after: String): SearchResults
   }
 
-  input ContentItemsConnectionInput {
-    first: Int
-    after: String
+  type SearchResults {
+    edges: [SearchHitsConnectionEdge]
+    pageInfo: PaginationInfo
   }
 
   type SearchHitsConnectionEdge {
