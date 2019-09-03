@@ -48,18 +48,25 @@ const DismissBackground = withTheme(({ theme }) => ({
 const IconStyles = withTheme(({ theme, play }) => ({
   fill: theme.colors.darkTertiary,
   size: theme.sizing.baseUnit * (play ? 0.75 : 1),
-  paddingHorizontal: theme.sizing.baseUnit * 1.5,
 }));
 
 const StyledButtonIcon = IconStyles(ButtonIcon);
 
 const Controls = styled(({ theme }) => ({
   flexDirection: 'row',
-  justifyContent: 'space-between',
   alignItems: 'center',
-  paddingRight: theme.sizing.baseUnit * 0.75,
   backgroundColor: theme.colors.white,
 }))(FlexedView);
+
+const TitleWrapper = styled({
+  flex: 2,
+})(FlexedView);
+
+const IconsWrapper = styled({
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
+})(FlexedView);
 
 const TrackInfo = styled(({ theme }) => ({
   paddingLeft: theme.sizing.baseUnit,
@@ -114,41 +121,43 @@ class MiniControls extends Component {
               </Animated.View>
               <ThumbnailSpacer isVideo={isVideo} />
               <Controls>
-                <FlexedView>
+                <TitleWrapper>
                   <Touchable onPress={() => goFullscreen()}>
                     <TrackInfo>
                       <H5 numberOfLines={1}>{title}</H5>
                     </TrackInfo>
                   </Touchable>
-                </FlexedView>
-                {isPlaying ? (
-                  <Mutation mutation={PAUSE}>
-                    {(pause) => (
-                      <StyledButtonIcon
-                        name={'pause'}
-                        onPress={() => pause()}
-                      />
-                    )}
-                  </Mutation>
-                ) : (
-                  <Mutation mutation={PLAY}>
-                    {(play) => (
-                      <StyledButtonIcon
-                        name={'play'}
-                        onPress={() => play()}
-                        play
-                      />
-                    )}
-                  </Mutation>
-                )}
-                <Mutation mutation={DISMISS}>
-                  {(dismiss) => (
-                    <StyledButtonIcon
-                      name="close"
-                      onPress={() => (isPlaying ? goFullscreen() : dismiss())}
-                    />
+                </TitleWrapper>
+                <IconsWrapper>
+                  {isPlaying ? (
+                    <Mutation mutation={PAUSE}>
+                      {(pause) => (
+                        <StyledButtonIcon
+                          name={'pause'}
+                          onPress={() => pause()}
+                        />
+                      )}
+                    </Mutation>
+                  ) : (
+                    <Mutation mutation={PLAY}>
+                      {(play) => (
+                        <StyledButtonIcon
+                          name={'play'}
+                          onPress={() => play()}
+                          play
+                        />
+                      )}
+                    </Mutation>
                   )}
-                </Mutation>
+                  <Mutation mutation={DISMISS}>
+                    {(dismiss) => (
+                      <StyledButtonIcon
+                        name="close"
+                        onPress={() => (isPlaying ? goFullscreen() : dismiss())}
+                      />
+                    )}
+                  </Mutation>
+                </IconsWrapper>
               </Controls>
               <MiniSeeker minimal />
             </Container>
