@@ -408,15 +408,16 @@ export const searchSchema = gql`
   }
 
   type SearchHitsConnectionEdge {
-    node: Searchable
+    node: SearchResult
     cursor: String
   }
 
-  interface Searchable {
+  type SearchResult {
     id: ID!
     title: String
     summary: String
     coverImage: ImageMedia
+    relatedNode: Node
   }
 `;
 
