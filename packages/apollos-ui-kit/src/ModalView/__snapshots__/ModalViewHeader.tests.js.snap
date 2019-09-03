@@ -165,7 +165,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4294967295,
                   ]
                 }
                 fillOpacity={1}
@@ -527,7 +527,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4294967295,
                   ]
                 }
                 fillOpacity={1}
@@ -741,7 +741,7 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4294967295,
                   ]
                 }
                 fillOpacity={1}
@@ -1030,7 +1030,7 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4294967295,
                   ]
                 }
                 fillOpacity={1}
@@ -1184,7 +1184,7 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4294967295,
                   ]
                 }
                 fillOpacity={1}
