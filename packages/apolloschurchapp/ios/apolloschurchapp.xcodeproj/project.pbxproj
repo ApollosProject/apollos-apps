@@ -36,7 +36,6 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		FCB3069DB5DD4170B2CAEFC4 /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */; };
-		3510BB0329A145DE8F714A05 /* libRNInAppBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6270666F864E07A28F2FCB /* libRNInAppBrowser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
