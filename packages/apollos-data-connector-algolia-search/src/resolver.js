@@ -1,4 +1,7 @@
-import { withEdgePagination } from '@apollosproject/server-core';
+import {
+  createGlobalId,
+  withEdgePagination,
+} from '@apollosproject/server-core';
 
 const resolver = {
   Query: {
@@ -8,6 +11,12 @@ const resolver = {
   SearchResults: {
     edges: (edges) => edges,
     pageInfo: (edges) => withEdgePagination({ edges }),
+  },
+  SearchResult: {
+    id: ({ id }, args, context, { parentType }) =>
+      createGlobalId(id, parentType.name),
+    relatedNode: ({ id }, _, { models, dataSources }, { schema }) =>
+      models.Node.get(id, dataSources, schema),
   },
 };
 

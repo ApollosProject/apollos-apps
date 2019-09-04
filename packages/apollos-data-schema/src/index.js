@@ -408,8 +408,16 @@ export const searchSchema = gql`
   }
 
   type SearchHitsConnectionEdge {
-    node: Node
+    node: SearchResult
     cursor: String
+  }
+
+  type SearchResult {
+    id: ID!
+    title: String
+    summary: String
+    coverImage: ImageMedia
+    relatedNode: Node
   }
 `;
 
