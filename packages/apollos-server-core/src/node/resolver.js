@@ -1,7 +1,6 @@
 export default {
   Query: {
-    node: (root, { id }, { models, dataSources }, { schema }) =>
-      models.Node.get(id, dataSources, schema),
+    node: (root, { id }, { dataSources }) => dataSources.Node.get(id),
   },
   Node: {
     __resolveType: ({ __typename, __type }, args, { schema }) =>

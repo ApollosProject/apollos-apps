@@ -1,5 +1,5 @@
 import schema from './schema';
 import resolver from './resolver';
-import model, { createGlobalId, parseGlobalId } from './model';
+import dataSource, { createGlobalId, parseGlobalId } from './dataSource';
 
-export { schema, resolver, model, createGlobalId, parseGlobalId };
+export { schema, resolver, dataSource, createGlobalId, parseGlobalId };

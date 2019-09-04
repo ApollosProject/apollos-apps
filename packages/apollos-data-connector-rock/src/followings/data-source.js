@@ -6,16 +6,13 @@ export default class Followings extends RockApolloDataSource {
   resource = 'Followings';
 
   async updateLikeContentItem({ nodeId, operation, schema }) {
-    const {
-      dataSources,
-      models: { Node },
-    } = this.context;
+    const { dataSources } = this.context;
     if (operation === 'Like') {
       await this.followNode({ nodeId });
     } else {
       await this.unFollowNode({ nodeId });
     }
-    const item = await Node.get(nodeId, dataSources, schema);
+    const item = await dataSources.Node.get(nodeId, dataSources, schema);
     return { ...item, isLiked: operation === 'Like' };
   }
 
@@ -60,7 +57,7 @@ export default class Followings extends RockApolloDataSource {
     return (await this.request('Followings')
       .filter(
         // eslint-disable-next-line prettier/prettier
-          `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id})`
+        `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id})`
       )
       .select('Id') // $count not supported, next best thing to make efficient
       .cache({ ttl: 1800 }) // TODO: whats the right way to do this?
@@ -79,7 +76,9 @@ export default class Followings extends RockApolloDataSource {
       return this.request('Followings')
         .filter(
           // eslint-disable-next-line prettier/prettier
-          `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${currentUser.primaryAliasId})`
+          `(EntityId eq ${id}) and (EntityTypeId eq ${
+            nodeType.id
+          }) and (PersonAliasId eq ${currentUser.primaryAliasId})`
         )
         .get();
     } catch (e) {
