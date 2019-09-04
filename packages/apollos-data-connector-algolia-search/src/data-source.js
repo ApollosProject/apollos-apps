@@ -10,7 +10,30 @@ export default class Search {
 
   index = this.client.initIndex(ALGOLIA.SEARCH_INDEX);
 
+  initialize({ context }) {
+    this.context = context;
+  }
+
+  // TODO: abstract to a separate utility function
+  proxyLoader = (node) => {
+    let didLoad = false;
+    let loadedObject = {};
+
+    return new Proxy(node, {
+      get: async (target, path) => {
+        if (didLoad) return loadedObject[path] || target[path];
+        if (Object.hasOwnProperty.call(node, path)) return node[path];
+
+        loadedObject = await this.context.dataSources.Node.get(node.id);
+        didLoad = true;
+
+        return loadedObject[path];
+      },
+    });
+  };
+
   async byPaginatedQuery({ query, after, first = 20 }) {
+    console.log('context', this.context);
     const length = first;
     let offset = 0;
     if (after) {
@@ -23,7 +46,7 @@ export default class Search {
     }
     const { hits } = await this.index.search({ query, length, offset });
     return hits.map((node, i) => ({
-      node,
+      node: this.proxyLoader(node),
       cursor: createCursor({ position: i + offset }),
     }));
   }
