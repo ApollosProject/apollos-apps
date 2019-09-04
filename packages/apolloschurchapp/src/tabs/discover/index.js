@@ -1,5 +1,3 @@
-import React from 'react';
-import hoistNonReactStatic from 'hoist-non-react-statics';
 import { createStackNavigator } from 'react-navigation';
 import { withTheme } from '@apollosproject/ui-kit';
 
@@ -9,7 +7,7 @@ import tabBarIcon from '../tabBarIcon';
 
 import Discover from './Discover';
 
-export const DiscoverNavigator = createStackNavigator(
+const DiscoverNavigator = createStackNavigator(
   {
     Discover,
     ContentFeed,
@@ -19,23 +17,13 @@ export const DiscoverNavigator = createStackNavigator(
     defaultNavigationOptions: ({ screenProps }) => ({
       headerTintColor: screenProps.headerTintColor,
     }),
+    navigationOptions: { tabBarIcon: tabBarIcon('sections') },
   }
 );
 
-// const EnhanchedDiscoverNavigator = withTheme(({ theme, ...others }) => ({
-// screenProps: { headerTintColor: theme.colors.text.secondary },
-// ...others,
-// }))(DiscoverNavigator);
-const EnhanchedDiscoverNavigator = withTheme(({ theme, ...props }) => (
-  <DiscoverNavigator
-    {...props}
-    screenProps={{ headerTintColor: theme.colors.text.secondary }}
-  />
-));
-hoistNonReactStatic(EnhanchedDiscoverNavigator, DiscoverNavigator);
+const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
+  ...props,
+  screenProps: { headerTintColor: theme.colors.text.secondary },
+}))(DiscoverNavigator);
 
-DiscoverNavigator.navigationOptions = {
-  tabBarIcon: tabBarIcon('sections'),
-};
-
-export default EnhanchedDiscoverNavigator;
+export default EnhancedDiscover;
