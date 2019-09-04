@@ -19,6 +19,7 @@ All the following functions consume the same object as their only data structure
 
 `createSchema(data)` returns merged schema array to pass into `new ApolloServer...`
 
-`createContext(data, ?middleware)` constructs a context object. Takes an optional middleware argument with the args `({ req, context })` that can be used to modify the context before it's passed into `new ApolloServer...`
+`createContext(data, ?middleware)` constructs a context object, adding the `models` from `data` onto the context. Takes an optional middleware argument with the args `({ req, context })` that can be used to modify the context before it's passed into `new ApolloServer...`
 
 `createDataSources(data)` returns instantiated data sources to pass into  `new ApolloServer...`
+

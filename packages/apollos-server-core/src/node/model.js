@@ -47,25 +47,18 @@ const getPossibleDataModels = ({ schema, __type }) => {
 };
 
 export default class Node {
-  initialize({ context }) {
-    this.context = context;
-  }
-
   // eslint-disable-next-line class-methods-use-this
-  async get(encodedId) {
+  async get(encodedId, dataSources, schema) {
     const { __type, id } = parseGlobalId(encodedId);
     // returns a list of types that could possibly be dataModels
-    const possibleModels = getPossibleDataModels({
-      __type,
-      schema: this.context.schema,
-    });
+    const possibleModels = getPossibleDataModels({ __type, schema });
     // check to see if any of those models have a dataSource wtih a getFromId method and return's it's name
     // (if it exists)
     const modelName = possibleModels.find((type) =>
-      get(this.context.dataSources, `${type}.getFromId`, false)
+      get(dataSources, `${type}.getFromId`, false)
     );
 
-    if (!modelName && this.context.dataSources[__type] != null) {
+    if (!modelName && dataSources[__type] != null) {
       throw new Error(
         `You have a dataSource for ${__type} but it does not implement  \`getFromId\``
       );
@@ -73,10 +66,7 @@ export default class Node {
       throw new Error(`No dataSource found using ${__type}`);
     }
 
-    const data = await this.context.dataSources[modelName].getFromId(
-      id,
-      encodedId
-    );
+    const data = await dataSources[modelName].getFromId(id, encodedId);
     if (data) data.__type = __type;
     return data;
   }

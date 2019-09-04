@@ -1,5 +1,5 @@
 import casual from 'casual';
-import Node, { createGlobalId, parseGlobalId } from '../dataSource';
+import Node, { createGlobalId, parseGlobalId } from '../model';
 
 const schema = { getTypeMap: () => ({}) };
 
@@ -52,10 +52,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    node.initialize({
-      context: { dataSources, schema },
-    });
-    await node.get(globalId);
+    await node.get(globalId, dataSources, schema);
   });
 
   it("Node class should throw error if it can't find a matching model", async () => {
@@ -63,11 +60,10 @@ describe('Node', () => {
     const __type = 'NoModel';
     const globalId = createGlobalId(id, __type);
 
-    const node = new Node();
-    node.initialize({
-      context: { dataSources: {}, schema },
-    });
-    expect(node.get(globalId)).rejects.toThrowErrorMatchingSnapshot();
+    const node = new Node({});
+    expect(
+      node.get(globalId, {}, schema)
+    ).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it('Node class should throw error if model does not have getFromId', async () => {
@@ -80,11 +76,10 @@ describe('Node', () => {
     };
 
     const node = new Node(dataSources);
-    node.initialize({
-      context: { dataSources, schema },
-    });
 
-    expect(node.get(globalId)).rejects.toThrowErrorMatchingSnapshot();
+    expect(
+      node.get(globalId, dataSources, schema)
+    ).rejects.toThrowErrorMatchingSnapshot();
   });
 
   it("Node class doesn't assign __type if model returns falsey", async () => {
@@ -100,11 +95,8 @@ describe('Node', () => {
       },
     };
 
-    const node = new Node();
-    node.initialize({
-      context: { dataSources, schema },
-    });
-    const record = await node.get(globalId);
+    const node = new Node(dataSources);
+    const record = await node.get(globalId, dataSources, schema);
     expect(record).not.toHaveProperty('__type');
   });
 
@@ -139,10 +131,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    node.initialize({
-      context: { dataSources, schema: schemaWithInterfaces },
-    });
-    const result = await node.get(globalId);
+    const result = await node.get(globalId, dataSources, schemaWithInterfaces);
 
     expect(result.test).toEqual(data.test);
   });
@@ -164,10 +153,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    node.initialize({
-      context: { dataSources, schema },
-    });
-    const result = await node.get(globalId);
+    const result = await node.get(globalId, dataSources, schema);
 
     expect(result.test).toEqual(data.test);
   });
@@ -189,10 +175,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    node.initialize({
-      context: { dataSources, schema },
-    });
-    const result = await node.get(globalId);
+    const result = await node.get(globalId, dataSources, schema);
 
     expect(result.__type).toEqual(__type);
   });

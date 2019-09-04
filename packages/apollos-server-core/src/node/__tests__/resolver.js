@@ -34,7 +34,7 @@ it('Query node should return the data via the `Node` class', () => {
   const { Query } = Resolver;
 
   const fakeId = casual.word;
-  const dataSources = {
+  const models = {
     Node: {
       get(id) {
         expect(id).toEqual(fakeId);
@@ -55,7 +55,7 @@ it('Query node should return the data via the `Node` class', () => {
       id: fakeId,
     },
     {
-      dataSources,
+      models,
     },
     {
       schema,
