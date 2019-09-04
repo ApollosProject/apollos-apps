@@ -14,4 +14,21 @@ describe('The Onboarding LandingScreen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should be stylable', () => {
+    const style = { backgroundColor: 'salmon' };
+    const tree = renderer.create(
+      <Providers>
+        <SearchInputHeader style={style} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render pass props to SearchInput', () => {
+    const tree = renderer.create(
+      <Providers>
+        <SearchInputHeader cancelButtonText={'Boom'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

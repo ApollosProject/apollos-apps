@@ -42,19 +42,23 @@ const AndroidClipElevationFix = styled(
   'SearchInputHeader.AndroidClipElevationFix'
 )(View);
 
-const SearchInputHeader = () => (
-  <AndroidClipElevationFix>
-    <HeaderBorder vertical={false}>
-      <SearchInput />
-    </HeaderBorder>
-  </AndroidClipElevationFix>
-);
-
 const ReactNavigationStyleReset = StyleSheet.create({
   header: {
     borderBottomWidth: 0,
     elevation: 0,
   },
 });
+
+const SearchInputHeader = ({ style, ...props }) => (
+  <AndroidClipElevationFix style={style}>
+    <HeaderBorder vertical={false}>
+      <SearchInput {...props} />
+    </HeaderBorder>
+  </AndroidClipElevationFix>
+);
+
+SearchInputHeader.propTypes = {
+  ...SearchInput.propTypes,
+};
 
 export { SearchInputHeader as default, ReactNavigationStyleReset };
