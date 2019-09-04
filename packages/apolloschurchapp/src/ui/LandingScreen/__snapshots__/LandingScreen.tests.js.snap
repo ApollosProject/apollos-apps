@@ -261,7 +261,9 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
         >
           <View
             accessible={true}
+            clickable={true}
             isTVSelectable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
