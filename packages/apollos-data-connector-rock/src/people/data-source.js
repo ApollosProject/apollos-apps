@@ -1,7 +1,8 @@
 import { AuthenticationError, UserInputError } from 'apollo-server';
-import { camelCase, mapKeys } from 'lodash';
+import { camelCase, mapKeys, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import moment from 'moment';
+import ApollosConfig from '@apollosproject/config';
 
 const RockGenderMap = {
   Unknown: 0,
@@ -46,8 +47,15 @@ export default class Person extends RockApolloDataSource {
     // Get the entity type ID of the Person model
     const personEntityTypeId = await RockConstants.modelType('Person');
 
+    // Rely on custom code without the plugin.
+    // Use plugin, if the user has set USE_PLUGIN to true.
+    // In general, you should ALWAYS use the plugin if possible.
+    const endpoint = get(ApollosConfig, 'ROCK.USE_PLUGIN', false)
+      ? 'Apollos/GetPersistedDataViewsForEntity'
+      : 'DataViews/GetPersistedDataViewsForEntity';
+
     // Return a list of all dataviews by GUID a user is a memeber
-    return this.request('DataViews/GetPersistedDataViewsForEntity')
+    return this.request(endpoint)
       .find(`${personEntityTypeId.id}/${id}?categoryId=${categoryId}`)
       .select('Guid')
       .get();

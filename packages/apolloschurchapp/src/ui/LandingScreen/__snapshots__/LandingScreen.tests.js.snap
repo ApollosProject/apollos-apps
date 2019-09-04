@@ -247,18 +247,23 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
         }
         vertical={false}
       >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
             Object {
-              "bottom": "always",
-              "top": "never",
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 0,
             }
           }
         >
           <View
             accessible={true}
+            clickable={true}
             isTVSelectable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -424,7 +429,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
               </RNSVGSvgView>
             </View>
           </View>
-        </RCTSafeAreaView>
+        </View>
       </View>
     </BVLinearGradient>
   </View>

@@ -9,6 +9,7 @@ ApollosConfig.loadJs({
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+    SHARE_URL: 'https://apollosrock.newspring.cc',
     TIMEZONE: 'America/New_York',
   },
   ROCK_MAPPINGS: {
@@ -37,6 +38,25 @@ describe('ContentItemsModel', () => {
   it('constructs', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
+
+  it('creates a sharing URL with channel url and item slug', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: {
+        ContentChannel: {
+          getFromId: jest.fn(() => ({
+            itemUrl: '/news',
+          })),
+        },
+      },
+    };
+    dataSource.get = jest.fn(() => ({ slug: 'cool-article' }));
+    const result = 'https://apollorock.newspring.cc/news/cool-article';
+    expect(
+      dataSource.getShareUrl({ contentId: 'fakeId', channelId: 'fakeChannel' })
+    ).resolves.toEqual(result);
+  });
+
   it('filters by content channel id', () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
@@ -86,11 +106,11 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
-  it('returns null when there are no child content items', async () => {
+  it('returns an empty array when there are no child content items', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock([], dataSource);
     const cursor = await dataSource.getCursorByParentContentItemId(1);
-    expect(cursor).toBe(null);
+    expect(await cursor.get()).toEqual([]);
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
@@ -126,11 +146,19 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
-  it('returns null when there are no parent content items', async () => {
+  it('returns an empty array when there are no sibling content items', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([], dataSource);
+    const cursor = await dataSource.getCursorBySiblingContentItemId(1);
+    expect(await cursor.get()).toEqual([]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns an empty array when there are no parent content items', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock([], dataSource);
     const cursor = await dataSource.getCursorByChildContentItemId(1);
-    expect(cursor).toBe(null);
+    expect(await cursor.get()).toEqual([]);
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
@@ -300,6 +328,80 @@ describe('ContentItemsModel', () => {
     const result = dataSource.getSermonFeed({ id: '1' });
     expect(dataSource.byContentChannelId.mock.calls).toMatchSnapshot();
     expect(result).toMatchSnapshot();
+  });
+
+  it('getPersonaFeed fetches items from the custom rock endpoint', async () => {
+    const dataSource = new ContentItemsDataSource();
+
+    const personaMock = jest.fn(() => Promise.resolve(['123', '456']));
+    dataSource.context = {
+      dataSources: {
+        Person: {
+          getPersonas: personaMock,
+        },
+      },
+    };
+
+    dataSource.get = jest.fn(() => Promise.resolve());
+
+    const query = await dataSource.byPersonaFeed();
+    await query.get();
+
+    expect(personaMock.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it("getPersonaFeed doesn't fetch if there aren't any persona ids", async () => {
+    const dataSource = new ContentItemsDataSource();
+
+    const personaMock = jest.fn(() => Promise.resolve([]));
+    dataSource.context = {
+      dataSources: {
+        Person: {
+          getPersonas: personaMock,
+        },
+      },
+    };
+
+    dataSource.get = jest.fn(() => Promise.resolve());
+
+    const query = await dataSource.byPersonaFeed();
+    await query.get();
+
+    expect(personaMock.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('getPersonaFeed fetches items from the Apollos plugin', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: true,
+      },
+    });
+    const dataSource = new ContentItemsDataSource();
+
+    const personaMock = jest.fn(() => Promise.resolve(['123', '456']));
+    dataSource.context = {
+      dataSources: {
+        Person: {
+          getPersonas: personaMock,
+        },
+      },
+    };
+
+    dataSource.get = jest.fn(() => Promise.resolve());
+
+    const query = await dataSource.byPersonaFeed();
+    await query.get();
+
+    expect(personaMock.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: false,
+      },
+    });
   });
 
   it('returns null when there are no parent content items with images', async () => {

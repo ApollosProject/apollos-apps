@@ -221,6 +221,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -238,15 +240,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId0"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -274,7 +268,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -287,7 +280,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -295,11 +288,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -308,13 +303,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -322,110 +354,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -437,6 +404,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -454,15 +423,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId1"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -490,7 +451,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -503,7 +463,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -511,11 +471,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -524,13 +486,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -538,110 +537,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -653,6 +587,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -670,15 +606,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId2"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -706,7 +634,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -719,7 +646,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -727,11 +654,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -740,13 +669,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -754,110 +720,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -869,6 +770,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -886,15 +789,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId3"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -922,7 +817,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -935,7 +829,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -943,11 +837,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -956,13 +852,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -970,110 +903,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -1085,6 +953,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1102,15 +972,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId4"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -1138,7 +1000,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -1151,7 +1012,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -1159,11 +1020,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -1172,13 +1035,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -1186,110 +1086,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -1301,6 +1136,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1318,15 +1155,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId5"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -1354,7 +1183,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -1367,7 +1195,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -1375,11 +1203,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -1388,13 +1218,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -1402,110 +1269,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -1517,6 +1319,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1534,15 +1338,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId6"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -1570,7 +1366,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -1583,7 +1378,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -1591,11 +1386,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -1604,13 +1401,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -1618,110 +1452,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -1733,6 +1502,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1750,15 +1521,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId7"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -1786,7 +1549,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -1799,7 +1561,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -1807,11 +1569,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -1820,13 +1584,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -1834,110 +1635,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -1949,6 +1685,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1966,15 +1704,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId8"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -2002,7 +1732,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -2015,7 +1744,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -2023,11 +1752,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -2036,13 +1767,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -2050,110 +1818,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>
@@ -2165,6 +1868,8 @@ exports[`content feed query component renders a feedview after successful query 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2182,15 +1887,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                channelType=""
-                id="fakeId9"
                 isLoading={true}
-                parentChannel={
-                  Object {
-                    "id": "",
-                    "name": "",
-                  }
-                }
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -2218,7 +1915,6 @@ exports[`content feed query component renders a feedview after successful query 
                   <View
                     style={
                       Object {
-                        "aspectRatio": 2,
                         "backgroundColor": "#A5A5A5",
                         "overflow": "hidden",
                         "width": "100%",
@@ -2231,7 +1927,7 @@ exports[`content feed query component renders a feedview after successful query 
                       onReady={false}
                       style={
                         Object {
-                          "aspectRatio": 2,
+                          "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "resizeMode": "cover",
                           "width": "100%",
@@ -2239,11 +1935,13 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     >
                       <Image
+                        maxAspectRatio={1.78}
+                        minAspectRatio={1.2}
                         onLoad={[Function]}
                         source={Array []}
                         style={
                           Object {
-                            "aspectRatio": 2,
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "opacity": 0,
                             "resizeMode": "cover",
@@ -2252,13 +1950,50 @@ exports[`content feed query component renders a feedview after successful query 
                         }
                       />
                     </View>
+                    <BVLinearGradient
+                      colors={
+                        Array [
+                          3003121664,
+                          0,
+                        ]
+                      }
+                      endPoint={
+                        Object {
+                          "x": 0,
+                          "y": 1,
+                        }
+                      }
+                      locations={
+                        Array [
+                          0,
+                          1,
+                        ]
+                      }
+                      overlayColor="#000000"
+                      overlayType="gradient-top"
+                      startPoint={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "absolute",
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                    />
                   </View>
                   <View
                     style={
                       Object {
-                        "paddingBottom": 12,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 24,
+                        "alignItems": "flex-start",
+                        "paddingBottom": 32,
+                        "paddingHorizontal": 24,
                         "paddingVertical": 16,
                       }
                     }
@@ -2266,110 +2001,45 @@ exports[`content feed query component renders a feedview after successful query 
                     <View
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "height": 32,
-                        "justifyContent": "space-between",
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  />
-                  <View
-                    floating={false}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "flexWrap": "wrap",
-                        "justifyContent": "space-between",
-                        "left": 0,
-                        "paddingHorizontal": 16,
-                        "paddingTop": 0,
-                        "paddingVertical": 16,
-                        "position": "absolute",
-                        "right": 0,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "column",
+                          "marginBottom": 16,
+                          "marginTop": -32,
                         }
                       }
                     >
                       <View
-                        flexed={false}
                         style={
                           Object {
                             "alignItems": "center",
-                            "flex": null,
-                            "flexDirection": "row",
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 32,
+                            "paddingHorizontal": 12,
+                            "width": 64,
                           }
                         }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 16,
-                              "height": 19.2,
-                              "width": 19.2,
-                            }
-                          }
-                        />
-                        <View
-                          style={
-                            Object {
-                              "paddingHorizontal": 4,
-                            }
-                          }
-                          withIcon="empty"
-                        >
-                          <View
-                            style={
-                              Object {
-                                "alignSelf": "stretch",
-                                "backgroundColor": "#A5A5A5",
-                                "borderRadius": 16,
-                                "height": 12,
-                                "marginVertical": 2.6400000000000006,
-                                "width": "50%",
-                              }
-                            }
-                          />
-                        </View>
-                      </View>
+                      />
                     </View>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": 24,
+                        "top": 24,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "width": 24,
+                        }
+                      }
+                    />
                   </View>
                 </View>
               </View>

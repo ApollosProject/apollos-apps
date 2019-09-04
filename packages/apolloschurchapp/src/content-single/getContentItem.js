@@ -36,6 +36,11 @@ export const CONTENT_ITEM_FRAGMENT = gql`
         uri
       }
     }
+    ... on WeekendContentItem {
+      liveStream {
+        isLive
+      }
+    }
   }
 `;
 

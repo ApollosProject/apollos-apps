@@ -1,4 +1,47 @@
 
+v1.1.0: August 14, 2019
+
+- Adds Android VerticalOffset (#916) (bfe41919)
+- Adds `<HorizontalContentCard />` on Content Item children+siblings (#993) (8c2da0e9)
+- Adds New Connect tab styles (#979) (62f63a4b)
+- Adds BackgroundView back to onboarding (#988) (776c1c36)
+- Adds Sharable Features (#976) (0a7868b7)
+- Adds HorizontalContentCardConnected and Component prop to ContentCardConnected (#967) (19c82601)
+
+- Moves configuration of bulletin list into config.yml (#987) (0a2092e6)
+- Refactors code into a Features component for the home feed (#990) (aa05d922)
+- Refactors Share Buttons (#935) (ba0dd2e8)
+- Updates React Navigation to v3 (#820) (df4669f6)
+- Updates Content single styles (#928) (f0c17b2f)
+- Updates package.json (#977) (88f6b35a)
+
+- Fixes ios build (#991) (1413d400)
+- Fixes Location Finder Buttons (#891) (e1b01c08)
+- Fixes PassKit label color (#989) (92011c31)
+- Fixes play button spacing and title overflow on miniplayer (#982) (49a73ef2)
+- Fixes liked content feed rendering the wrong cards (#992) (cae538b1)
+- Fixes using first instead of top in sermon children algorithm (#978) (edee17be)
+
+
+v1.1.0-beta.3: August 5, 2019
+
+- Adds HorizontalDefaultCard (#965) (6a6778ed)
+- Adds Sharing to the Scripture Feature (#968) (e829ef6b)
+- Adds DefaultCard and deprecates ContentCard (#961) (dbda2f5b)
+- Adds navigation to auth when logging out (#963) (df207128)
+
+- Simplifies Feature Content Sources (#966) (2b8d414a)
+
+- Fixes wrong campus being selected under certain conditions (#962) (76a0eed1)
+- Fixes wrong birthdate showing up in the datepicker. (#969) (0f9d37ca)
+- Fixes Back/Close doing the same thing inside devotionals (#970) (3a653a71)
+- Fixes not being able to reach logout button on small screen sizes (#971) (b5b9e740)
+- Fixes ui-passes image alignment (#960) (4956a8e6)
+- Fixes sharing text feature (#938) (f0de6c9a)
+- Logs User Out on Auth Error (#927) (9aa3c6ab)
+- Changes Image sizes and update snaps (#920) (4fa1eae6)
+
+
 v1.1.0-beta.2: July 29, 2019
 
 - Adds `<OverlayBackgroundImage />` component (#908) (62e032dc)

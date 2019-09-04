@@ -39,12 +39,9 @@ const AuthNavigator = createStackNavigator(
   {
     initialRouteName: 'AuthSMSPhoneEntryConnected',
     headerMode: 'none',
+    navigationOptions: { header: null },
   }
 );
-
-AuthNavigator.navigationOptions = {
-  header: null,
-};
 
 AuthNavigator.propTypes = {
   screenProps: PropTypes.shape({
@@ -58,6 +55,7 @@ AuthNavigator.propTypes = {
     smsPromptText: PropTypes.string,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  emailRequired: PropTypes.bool,
 };
 
 const Auth = (props) => <AuthNavigator {...props} screenProps={props} />;

@@ -26,14 +26,12 @@ const StyledSlideContent = styled({
 // memo = sfc PureComponent 💥
 const LocationFinder = memo(
   ({
-    onPressPrimary,
     BackgroundComponent,
     slideTitle,
     description,
     buttonText,
     buttonDisabled,
     onPressButton,
-    isCurrentCampus,
     campus,
     ...props
   }) => (
@@ -65,14 +63,10 @@ const LocationFinder = memo(
   )
 );
 
-LocationFinder.CampusCard = StyledCampusCard;
-LocationFinder.SlideContent = StyledSlideContent;
-
 LocationFinder.propTypes = {
   /* The `Swiper` component used in `<Onboarding>` looks for and hijacks the title prop of it's
    * children. Thus we have to use a more unique name.
    */
-  onPressPrimary: PropTypes.func,
   BackgroundComponent: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -90,7 +84,6 @@ LocationFinder.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
   }),
-  isCurrentCampus: PropTypes.bool,
 };
 
 LocationFinder.displayName = 'LocationFinder';

@@ -397,22 +397,36 @@ export const contentChannelSchema = gql`
   }
 `;
 
-export const contentSharableSchema = gql`
+export const sharableSchema = gql`
   interface Sharable {
-    url: String
     message: String
     title: String
+    url: String @deprecated(reason: "Not supported on the interface")
   }
 
   type SharableContentItem implements Sharable {
-    url: String
     message: String
     title: String
+    url: String
   }
 
   ${extendForEachContentItemType(`
     sharing: SharableContentItem
 `)}
+
+  type SharableFeature implements Sharable {
+    message: String
+    title: String
+    url: String @deprecated(reason: "Not supported on a feature")
+  }
+
+  extend type TextFeature {
+    sharing: SharableFeature
+  }
+
+  extend type ScriptureFeature {
+    sharing: SharableFeature
+  }
 `;
 
 export const liveSchema = gql`
@@ -595,6 +609,20 @@ export const featuresSchema = gql`
 
   extend type Query {
     userFeedFeatures: [Feature] @cacheControl(maxAge: 0)
+  }
+`;
+
+export const eventSchema = gql`
+  type Event implements Node {
+    id: ID!
+    name: String
+    location: String
+    start: String
+    end: String
+  }
+
+  extend type Campus {
+    events: [Event]
   }
 `;
 

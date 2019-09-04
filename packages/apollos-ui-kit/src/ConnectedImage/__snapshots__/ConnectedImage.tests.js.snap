@@ -306,7 +306,6 @@ Array [
     in View
     in RCTSafeAreaView
     in _class
-    in SafeAreaView
     in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
     in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
     in nest(ThemeProvider, LayoutProvider)",
@@ -332,7 +331,6 @@ Array [
     in View
     in RCTSafeAreaView
     in _class
-    in SafeAreaView
     in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
     in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
     in nest(ThemeProvider, LayoutProvider)",

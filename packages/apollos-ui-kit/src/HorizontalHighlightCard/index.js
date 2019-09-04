@@ -12,12 +12,17 @@ import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
+const SquareCard = styled({
+  width: 240,
+  height: 240,
+})(Card);
+
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(
   ({ theme }) => ({
     position: 'absolute',
-    top: theme.sizing.baseUnit * 1.5,
-    right: theme.sizing.baseUnit * 1.5,
+    top: theme.sizing.baseUnit,
+    right: theme.sizing.baseUnit,
   }),
   'ui-kit.HorizontalHighlightCard.LikeIconPositioning'
 )(View);
@@ -31,6 +36,7 @@ const Image = withTheme(({ customTheme, theme }) => ({
   minAspectRatio: 1,
   maxAspectRatio: 1,
   maintainAspectRatio: true,
+  forceRatio: 1, // fixes loading state
   overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
 }))(CardImage);
 
@@ -40,8 +46,8 @@ const Content = styled(
     bottom: 0,
     width: '100%',
     alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
+    paddingHorizontal: theme.sizing.baseUnit, // TODO: refactor CardContent to have this be the default
+    paddingBottom: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
   }),
   'ui-kit.HorizontalHighlightCard.Content'
 )(CardContent);
@@ -101,7 +107,7 @@ const HorizontalHighlightCard = withIsLoading(
         colors: get(theme, 'colors', {}),
       }}
     >
-      <Card isLoading={isLoading} {...props}>
+      <SquareCard isLoading={isLoading} inHorizontalList {...props}>
         <Image
           overlayType={'gradient-bottom'}
           customTheme={theme}
@@ -119,7 +125,7 @@ const HorizontalHighlightCard = withIsLoading(
         <LikeIconPositioning>
           <LikeIcon isLiked={isLiked} />
         </LikeIconPositioning>
-      </Card>
+      </SquareCard>
     </ThemeMixin>
   )
 );
@@ -142,7 +148,7 @@ HorizontalHighlightCard.propTypes = {
 };
 
 HorizontalHighlightCard.defaultProps = {
-  actionIcon: 'play-solid',
+  actionIcon: 'play-opaque',
 };
 
 export default HorizontalHighlightCard;

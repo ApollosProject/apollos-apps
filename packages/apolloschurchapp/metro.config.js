@@ -31,7 +31,8 @@ const sharedNativeModules = [
   'react-native-music-control',
   'react-native-video',
   'react-native-video-controls',
-  'react-native-airplay-btn',
+  '@apollosproject/react-native-airplay-btn',
+  'react-navigation',
 ];
 
 module.exports = {
