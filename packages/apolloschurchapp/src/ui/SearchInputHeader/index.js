@@ -5,7 +5,7 @@ import { styled, PaddedView, SearchInput } from '@apollosproject/ui-kit';
 
 const HeaderBorder = styled(
   ({ theme }) => ({
-    paddingBottom: 8,
+    paddingBottom: theme.sizing.baseUnit / 2,
     /* It's unclear why this is necessary but without it the layout breaks on both platforms. Limited
      * research suggest that without a background color the shadows don't know what to blend with so
      * the view collapses. */
@@ -30,7 +30,7 @@ const HeaderBorder = styled(
 )(PaddedView);
 
 // This element is used to clip the Android shadow in every directection except the bottom.
-const ClipAndroidElevationFix = styled(
+const AndroidClipElevationFix = styled(
   {
     ...Platform.select({
       android: {
@@ -39,15 +39,15 @@ const ClipAndroidElevationFix = styled(
       },
     }),
   },
-  'SearchInputHeader.ClipAndroidElevationFix'
+  'SearchInputHeader.AndroidClipElevationFix'
 )(View);
 
 const SearchInputHeader = () => (
-  <ClipAndroidElevationFix>
+  <AndroidClipElevationFix>
     <HeaderBorder vertical={false}>
       <SearchInput />
     </HeaderBorder>
-  </ClipAndroidElevationFix>
+  </AndroidClipElevationFix>
 );
 
 const ReactNavigationStyleReset = StyleSheet.create({
