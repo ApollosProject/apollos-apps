@@ -92,7 +92,9 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={false}
             id="1"
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -375,6 +377,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -592,6 +596,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -809,6 +815,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1026,6 +1034,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1243,6 +1253,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1460,6 +1472,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1677,6 +1691,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1894,6 +1910,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2111,6 +2129,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2328,6 +2348,8 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2655,6 +2677,8 @@ exports[`The FeedView component renders correctly 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2746,6 +2770,8 @@ exports[`The FeedView component renders correctly 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3022,6 +3048,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3239,6 +3267,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3456,6 +3486,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3673,6 +3705,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3890,6 +3924,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4107,6 +4143,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4324,6 +4362,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4541,6 +4581,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4758,6 +4800,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4975,6 +5019,8 @@ exports[`The FeedView component renders empty state 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}

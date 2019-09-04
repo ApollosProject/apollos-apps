@@ -124,6 +124,8 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -171,6 +173,8 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -239,7 +243,9 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -313,6 +319,8 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -413,7 +421,9 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -450,7 +460,9 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -556,7 +568,9 @@ exports[`The Onboarding AboutYou component should pass additional props to Slide
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -852,6 +866,8 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -899,6 +915,8 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -967,7 +985,9 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1041,6 +1061,8 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -1141,7 +1163,9 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1178,7 +1202,9 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1428,6 +1454,8 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1475,6 +1503,8 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1543,7 +1573,9 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1617,6 +1649,8 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -1717,7 +1751,9 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1754,7 +1790,9 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1960,6 +1998,8 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2007,6 +2047,8 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2075,7 +2117,9 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2149,6 +2193,8 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2249,7 +2295,9 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -2286,7 +2334,9 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -2492,6 +2542,8 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2539,6 +2591,8 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2607,7 +2661,9 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2681,6 +2737,8 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2781,7 +2839,9 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -2818,7 +2878,9 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3024,6 +3086,8 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3071,6 +3135,8 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3139,7 +3205,9 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3213,6 +3281,8 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3313,7 +3383,9 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3350,7 +3422,9 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3556,6 +3630,8 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3615,6 +3691,8 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3683,7 +3761,9 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3757,6 +3837,8 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3857,7 +3939,9 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3894,7 +3978,9 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -4100,6 +4186,8 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4147,6 +4235,8 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4215,7 +4305,9 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4289,6 +4381,8 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -4389,7 +4483,9 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4426,7 +4522,9 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -4632,6 +4730,8 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4679,6 +4779,8 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4769,7 +4871,9 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4843,6 +4947,8 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -4943,7 +5049,9 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4980,7 +5088,9 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}

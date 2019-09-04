@@ -127,7 +127,9 @@ exports[`The Onboarding Features component should pass additional props to Slide
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}

@@ -57,7 +57,9 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
       />
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -417,7 +419,9 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
       </RNSVGSvgView>
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -629,7 +633,9 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
       />
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -916,7 +922,9 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
       />
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1068,7 +1076,9 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
       </View>
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}

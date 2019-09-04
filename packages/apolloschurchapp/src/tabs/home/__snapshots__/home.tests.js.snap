@@ -1293,6 +1293,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
               />
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -1553,6 +1555,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   >
                     <View
                       accessible={true}
+                      clickable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -1648,6 +1652,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -1743,6 +1749,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -1838,6 +1846,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -1941,6 +1951,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2122,6 +2134,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2303,6 +2317,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2484,6 +2500,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2665,6 +2683,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2846,6 +2866,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3027,6 +3049,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3208,6 +3232,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3389,6 +3415,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3570,6 +3598,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}

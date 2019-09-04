@@ -126,6 +126,8 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -185,6 +187,8 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -253,7 +257,9 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -327,6 +333,8 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -427,7 +435,9 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -464,7 +474,9 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -570,7 +582,9 @@ exports[`AboutYouConnected component renders Gender and BirthDate when logged in
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -866,6 +880,8 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -913,6 +929,8 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
             </View>
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -981,7 +999,9 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1055,6 +1075,8 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -1155,7 +1177,9 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                   </View>
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1192,7 +1216,9 @@ exports[`AboutYouConnected component renders in a default state 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}

@@ -35,6 +35,8 @@ exports[`ActionListItem should render 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -169,6 +171,8 @@ exports[`ActionListItem should render a loading state 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -313,6 +317,8 @@ exports[`ActionListItem should render with a label 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}

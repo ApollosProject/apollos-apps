@@ -42,7 +42,9 @@ exports[`The Picker Input component focuses and blurs 1`] = `
     >
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -427,7 +429,9 @@ exports[`The Picker Input component focuses and blurs 2`] = `
     >
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -812,7 +816,9 @@ exports[`The Picker Input component focuses and blurs 3`] = `
     >
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1197,7 +1203,9 @@ exports[`The Picker Input component should render correctly 1`] = `
     >
       <View
         accessible={true}
+        clickable={true}
         isTVSelectable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}

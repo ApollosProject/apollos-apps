@@ -35,7 +35,9 @@ exports[`the ThumbnailCard component should render 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
       inHorizontalList={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -140,8 +142,10 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
       inHorizontalList={true}
       isLoading={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -339,7 +343,9 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
       inHorizontalList={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -476,7 +482,9 @@ exports[`the ThumbnailCard component should render with a category and images 1`
   >
     <View
       accessible={true}
+      clickable={true}
       inHorizontalList={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -674,7 +682,9 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
       inHorizontalList={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -801,7 +811,9 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
       inHorizontalList={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}

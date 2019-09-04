@@ -169,7 +169,9 @@ exports[`the Devotional component renders a devotional 1`] = `
                   <View
                     accessibilityLabel="DEVOTIONAL"
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -223,7 +225,9 @@ exports[`the Devotional component renders a devotional 1`] = `
                   <View
                     accessibilityLabel="SCRIPTURE"
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1070,7 +1074,9 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                   <View
                     accessibilityLabel="DEVOTIONAL"
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1124,7 +1130,9 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                   <View
                     accessibilityLabel="SCRIPTURE"
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1469,7 +1477,9 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                   <View
                     accessibilityLabel="DEVOTIONAL"
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1523,7 +1533,9 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                   <View
                     accessibilityLabel="SCRIPTURE"
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
