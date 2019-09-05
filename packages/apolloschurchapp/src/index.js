@@ -17,7 +17,6 @@ import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
 import Location from './user-settings/Locations';
 import LandingScreen from './LandingScreen';
-import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
@@ -46,7 +45,6 @@ const AppNavigator = createStackNavigator(
     ChangePassword,
     Location,
     Passes,
-    UserWebBrowser,
     Onboarding,
     LandingScreen,
   },
