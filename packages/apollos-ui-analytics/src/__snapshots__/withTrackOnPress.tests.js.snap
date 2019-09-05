@@ -39,7 +39,9 @@ exports[`withOnPressTrack renders with a tracking object that excludes eventName
   >
     <View
       accessible={true}
+      clickable={true}
       isTVSelectable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -95,7 +97,9 @@ exports[`withOnPressTrack renders with a tracking object that includes trackEven
   >
     <View
       accessible={true}
+      clickable={true}
       isTVSelectable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -151,7 +155,9 @@ exports[`withOnPressTrack renders with a tracking object that includes trackProp
   >
     <View
       accessible={true}
+      clickable={true}
       isTVSelectable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}

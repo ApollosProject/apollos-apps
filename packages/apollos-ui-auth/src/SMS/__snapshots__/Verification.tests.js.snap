@@ -826,7 +826,9 @@ Stand by…
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1297,7 +1299,9 @@ Stand by…
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1762,7 +1766,9 @@ Stand by…
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}

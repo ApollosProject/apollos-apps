@@ -164,7 +164,9 @@ exports[`The ModalView component should render 1`] = `
         </RNSVGSvgView>
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -270,7 +272,7 @@ exports[`The ModalView component should render 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -410,7 +412,9 @@ exports[`The ModalView component should render a custom back action 1`] = `
         />
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -516,7 +520,7 @@ exports[`The ModalView component should render a custom back action 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -562,7 +566,9 @@ exports[`The ModalView component should render a custom back action 1`] = `
         </View>
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -668,7 +674,7 @@ exports[`The ModalView component should render a custom back action 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -882,7 +888,9 @@ exports[`The ModalView component should render a custom close action 1`] = `
         </RNSVGSvgView>
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -988,7 +996,7 @@ exports[`The ModalView component should render a custom close action 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}
@@ -1205,7 +1213,9 @@ exports[`The ModalView component should render with children 1`] = `
         </RNSVGSvgView>
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1311,7 +1321,7 @@ exports[`The ModalView component should render with children 1`] = `
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      4294967295,
                     ]
                   }
                   fillOpacity={1}

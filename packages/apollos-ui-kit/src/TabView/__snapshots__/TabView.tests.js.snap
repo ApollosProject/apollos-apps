@@ -133,7 +133,9 @@ exports[`TabView Component renders 1`] = `
               <View
                 accessibilityLabel="FIRST"
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -187,7 +189,9 @@ exports[`TabView Component renders 1`] = `
               <View
                 accessibilityLabel="SECOND"
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}

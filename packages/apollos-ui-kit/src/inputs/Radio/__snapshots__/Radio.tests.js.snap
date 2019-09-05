@@ -40,6 +40,8 @@ exports[`The Radio component should render correctly 1`] = `
     <View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -86,6 +88,8 @@ exports[`The Radio component should render correctly 1`] = `
       </View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -181,6 +185,8 @@ exports[`The Radio component should render horizontally 1`] = `
     >
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -227,6 +233,8 @@ exports[`The Radio component should render horizontally 1`] = `
       </View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -316,6 +324,8 @@ exports[`The Radio component should render with an error 1`] = `
     <View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -362,6 +372,8 @@ exports[`The Radio component should render with an error 1`] = `
       </View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -473,6 +485,8 @@ exports[`The Radio component should render without an underline 1`] = `
     <View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -519,6 +533,8 @@ exports[`The Radio component should render without an underline 1`] = `
       </View>
       <View
         accessible={true}
+        clickable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}

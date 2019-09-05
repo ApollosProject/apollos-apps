@@ -72,7 +72,9 @@ exports[`the ActionBar component should render children 1`] = `
         >
           <View
             accessible={true}
+            clickable={true}
             isTVSelectable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -227,7 +229,9 @@ exports[`the ActionBar component should render children 1`] = `
           </View>
           <View
             accessible={true}
+            clickable={true}
             isTVSelectable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -382,7 +386,9 @@ exports[`the ActionBar component should render children 1`] = `
           </View>
           <View
             accessible={true}
+            clickable={true}
             isTVSelectable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}

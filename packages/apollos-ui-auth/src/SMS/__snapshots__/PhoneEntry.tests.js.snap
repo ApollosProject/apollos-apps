@@ -1270,7 +1270,9 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1752,7 +1754,9 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2228,7 +2232,9 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}

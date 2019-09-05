@@ -45,8 +45,8 @@
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.3",
-    "react-native": "0.59.10",
+    "react": "16.8.6",
+    "react-native": "0.60.5",
     "react-test-renderer": "16.6.3"
   },
   "publishConfig": {

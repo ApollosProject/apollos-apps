@@ -10,7 +10,7 @@ import PaddedView from '../PaddedView';
 import Icon from '../Icon';
 
 const StyledButtonIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.text.tertiary,
+  fill: theme.colors.white,
   size: theme.sizing.baseUnit,
   iconPadding: theme.sizing.baseUnit * 0.5, // TODO: decreases button tappability but gives us the desired "smaller button" look
   style: {
