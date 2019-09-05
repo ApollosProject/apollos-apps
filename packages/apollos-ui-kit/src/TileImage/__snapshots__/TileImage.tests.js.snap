@@ -35,6 +35,8 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -165,6 +167,8 @@ exports[`the TileImage component should render 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -332,6 +336,8 @@ exports[`the TileImage component should render a loading state 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -458,6 +464,8 @@ exports[`the TileImage component should render without text 1`] = `
   >
     <View
       accessible={true}
+      clickable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}

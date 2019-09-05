@@ -257,7 +257,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -387,6 +389,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -513,8 +517,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -523,8 +527,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -556,6 +560,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -682,8 +688,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -692,8 +698,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -725,6 +731,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -851,8 +859,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -861,8 +869,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -894,6 +902,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1020,8 +1030,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -1030,8 +1040,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -1063,6 +1073,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1189,8 +1201,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -1199,8 +1211,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -1260,7 +1272,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1390,6 +1404,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1516,8 +1532,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -1526,8 +1542,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -1559,6 +1575,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1685,8 +1703,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -1695,8 +1713,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -1728,6 +1746,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1854,8 +1874,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -1864,8 +1884,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -1897,6 +1917,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2023,8 +2045,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -2033,8 +2055,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -2066,6 +2088,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2192,8 +2216,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -2202,8 +2226,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -2263,7 +2287,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -2393,6 +2419,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2519,8 +2547,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -2529,8 +2557,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -2562,6 +2590,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2688,8 +2718,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -2698,8 +2728,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -2731,6 +2761,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2857,8 +2889,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -2867,8 +2899,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -2900,6 +2932,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3026,8 +3060,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -3036,8 +3070,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -3069,6 +3103,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3195,8 +3231,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -3205,8 +3241,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -3266,7 +3302,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -3396,6 +3434,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3522,8 +3562,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -3532,8 +3572,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -3565,6 +3605,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3691,8 +3733,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -3701,8 +3743,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -3734,6 +3776,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3860,8 +3904,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -3870,8 +3914,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -3903,6 +3947,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4029,8 +4075,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -4039,8 +4085,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -4072,6 +4118,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4198,8 +4246,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -4208,8 +4256,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -4269,7 +4317,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -4399,6 +4449,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4525,8 +4577,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -4535,8 +4587,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -4568,6 +4620,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4694,8 +4748,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -4704,8 +4758,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -4737,6 +4791,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4863,8 +4919,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -4873,8 +4929,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -4906,6 +4962,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5032,8 +5090,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -5042,8 +5100,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -5075,6 +5133,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5201,8 +5261,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -5211,8 +5271,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -5272,7 +5332,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -5402,6 +5464,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5528,8 +5592,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -5538,8 +5602,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -5571,6 +5635,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5697,8 +5763,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -5707,8 +5773,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -5740,6 +5806,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5866,8 +5934,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -5876,8 +5944,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -5909,6 +5977,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6035,8 +6105,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -6045,8 +6115,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -6078,6 +6148,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6204,8 +6276,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -6214,8 +6286,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -6275,7 +6347,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -6405,6 +6479,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6531,8 +6607,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -6541,8 +6617,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -6574,6 +6650,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6700,8 +6778,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -6710,8 +6788,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -6743,6 +6821,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6869,8 +6949,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -6879,8 +6959,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -6912,6 +6992,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7038,8 +7120,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -7048,8 +7130,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -7081,6 +7163,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7207,8 +7291,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -7217,8 +7301,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -7278,7 +7362,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -7408,6 +7494,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7534,8 +7622,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -7544,8 +7632,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -7577,6 +7665,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7703,8 +7793,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -7713,8 +7803,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -7746,6 +7836,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7872,8 +7964,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -7882,8 +7974,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -7915,6 +8007,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8041,8 +8135,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -8051,8 +8145,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -8084,6 +8178,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8210,8 +8306,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -8220,8 +8316,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -8281,7 +8377,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -8411,6 +8509,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8537,8 +8637,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -8547,8 +8647,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -8580,6 +8680,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8706,8 +8808,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -8716,8 +8818,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -8749,6 +8851,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8875,8 +8979,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -8885,8 +8989,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -8918,6 +9022,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9044,8 +9150,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -9054,8 +9160,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -9087,6 +9193,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9213,8 +9321,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -9223,8 +9331,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -9284,7 +9392,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -9414,6 +9524,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9540,8 +9652,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -9550,8 +9662,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -9583,6 +9695,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9709,8 +9823,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -9719,8 +9833,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -9752,6 +9866,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9878,8 +9994,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -9888,8 +10004,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -9921,6 +10037,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -10047,8 +10165,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -10057,8 +10175,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
@@ -10090,6 +10208,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -10216,8 +10336,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "alignItems": "flex-start",
-                                        "paddingBottom": 32,
-                                        "paddingHorizontal": 24,
+                                        "paddingBottom": 24,
+                                        "paddingHorizontal": 16,
                                         "paddingVertical": 16,
                                       }
                                     }
@@ -10226,8 +10346,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                                     style={
                                       Object {
                                         "position": "absolute",
-                                        "right": 24,
-                                        "top": 24,
+                                        "right": 16,
+                                        "top": 16,
                                       }
                                     }
                                   >
