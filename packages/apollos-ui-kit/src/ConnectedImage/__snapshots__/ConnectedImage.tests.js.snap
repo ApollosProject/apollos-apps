@@ -294,6 +294,22 @@ Array [
     "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with maxAspectRatio
     in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))",
   ],
+  Array [
+    "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with maxAspectRatio
+    in ConnectedImage (created by mapProps(ConnectedImage))
+    in mapProps(ConnectedImage) (created by withPropsOnChange(mapProps(ConnectedImage)))
+    in withPropsOnChange(mapProps(ConnectedImage)) (created by mapProps(withPropsOnChange(mapProps(ConnectedImage))))
+    in mapProps(withPropsOnChange(mapProps(ConnectedImage))) (created by getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))) (created by mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage))))))
+    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in View
+    in View
+    in RCTSafeAreaView
+    in _class
+    in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
+    in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
+    in nest(ThemeProvider, LayoutProvider)",
+  ],
 ]
 `;
 
@@ -302,6 +318,22 @@ Array [
   Array [
     "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with minAspectRatio
     in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))",
+  ],
+  Array [
+    "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with minAspectRatio
+    in ConnectedImage (created by mapProps(ConnectedImage))
+    in mapProps(ConnectedImage) (created by withPropsOnChange(mapProps(ConnectedImage)))
+    in withPropsOnChange(mapProps(ConnectedImage)) (created by mapProps(withPropsOnChange(mapProps(ConnectedImage))))
+    in mapProps(withPropsOnChange(mapProps(ConnectedImage))) (created by getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))) (created by mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage))))))
+    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+    in View
+    in View
+    in RCTSafeAreaView
+    in _class
+    in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
+    in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
+    in nest(ThemeProvider, LayoutProvider)",
   ],
 ]
 `;

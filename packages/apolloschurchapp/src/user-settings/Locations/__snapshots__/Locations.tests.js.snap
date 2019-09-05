@@ -626,7 +626,9 @@ South Barrington, IL 60010-6143
         >
           <View
             accessible={true}
+            clickable={true}
             isTVSelectable={true}
+            onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}

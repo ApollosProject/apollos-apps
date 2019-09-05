@@ -148,7 +148,7 @@ HorizontalHighlightCard.propTypes = {
 };
 
 HorizontalHighlightCard.defaultProps = {
-  actionIcon: 'play-solid',
+  actionIcon: 'play-opaque',
 };
 
 export default HorizontalHighlightCard;
