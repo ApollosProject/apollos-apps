@@ -27,7 +27,7 @@ export default class Search {
     }
     const { hits } = await this.index.search({ query, length, offset });
     return hits.map((node, i) => ({
-      node,
+      ...node,
       cursor: createCursor({ position: i + offset }),
     }));
   }

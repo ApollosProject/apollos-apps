@@ -399,25 +399,20 @@ export const contentChannelSchema = gql`
 
 export const searchSchema = gql`
   extend type Query {
-    search(query: String!, first: Int, after: String): SearchResults
+    search(query: String!, first: Int, after: String): SearchResultsConnection
   }
 
-  type SearchResults {
-    edges: [SearchHitsConnectionEdge]
+  type SearchResultsConnection {
+    edges: [SearchResult]
     pageInfo: PaginationInfo
   }
 
-  type SearchHitsConnectionEdge {
-    node: SearchResult
-    cursor: String
-  }
-
   type SearchResult {
-    id: ID!
+    cursor: String
     title: String
     summary: String
     coverImage: ImageMedia
-    relatedNode: Node
+    node: Node
   }
 `;
 

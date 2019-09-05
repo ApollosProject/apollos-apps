@@ -348,7 +348,7 @@ type Query {
   scripture(query: String!): Scripture
   scriptures(query: String!): [Scripture]
   userPass: Pass
-  search(query: String!, first: Int, after: String): SearchResults
+  search(query: String!, first: Int, after: String): SearchResultsConnection
   campuses(location: CampusLocationInput): [Campus]
   userFeedFeatures: [Feature]
 }
@@ -367,21 +367,16 @@ type ScriptureFeature implements Feature & Node {
   sharing: SharableFeature
 }
 
-type SearchHitsConnectionEdge {
-  node: SearchResult
-  cursor: String
-}
-
 type SearchResult {
-  id: ID!
+  cursor: String
   title: String
   summary: String
   coverImage: ImageMedia
-  relatedNode: Node
+  node: Node
 }
 
-type SearchResults {
-  edges: [SearchHitsConnectionEdge]
+type SearchResultsConnection {
+  edges: [SearchResult]
   pageInfo: PaginationInfo
 }
 
