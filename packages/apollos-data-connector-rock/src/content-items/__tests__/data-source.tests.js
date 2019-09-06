@@ -34,6 +34,11 @@ describe('ContentItemsModel', () => {
   });
   afterEach(() => {
     global.Date = RealDate;
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: false,
+      },
+    });
   });
   it('constructs', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
@@ -81,6 +86,19 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('gets by ids using Apollos Plugin', () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: true,
+      },
+    });
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
+    const result = dataSource.getFromIds([1, 2]).get();
+    expect(result).resolves.toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
   it('returns an empty array when calling getByIds with no ids', () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn();
@@ -90,6 +108,28 @@ describe('ContentItemsModel', () => {
   });
 
   it('gets a cursor finding child content items of a provided parent', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock(
+      [
+        [
+          { ChildContentChannelItemId: 101 },
+          { ChildContentChannelItemId: 201 },
+        ],
+        [{ Id: 1 }, { Id: 2 }],
+      ],
+      dataSource
+    );
+    const cursor = await dataSource.getCursorByParentContentItemId(1);
+    expect(cursor.get()).resolves.toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('gets a cursor finding child content items of a provided parent when using Apollos Plugin', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: true,
+      },
+    });
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock(
       [
@@ -129,6 +169,29 @@ describe('ContentItemsModel', () => {
   });
 
   it('gets a cursor finding sibling content items of a provided item', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock(
+      [
+        [{ ContentChannelItemId: 101 }],
+        [
+          { ContentChannelId: 201, ChildContentChannelItemId: 1 },
+          { ContentChannelId: 202, ChildContentChannelItemId: 2 },
+        ],
+        [{ Id: 1 }, { Id: 2 }],
+      ],
+      dataSource
+    );
+    const cursor = await dataSource.getCursorBySiblingContentItemId(1);
+    expect(cursor.get()).resolves.toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('gets a cursor finding sibling content items of a provided item when using apollos plugin', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        USE_PLUGIN: true,
+      },
+    });
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock(
       [
@@ -396,12 +459,6 @@ describe('ContentItemsModel', () => {
 
     expect(personaMock.mock.calls).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
-
-    ApollosConfig.loadJs({
-      ROCK: {
-        USE_PLUGIN: false,
-      },
-    });
   });
 
   it('returns null when there are no parent content items with images', async () => {
