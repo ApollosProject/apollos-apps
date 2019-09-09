@@ -509,7 +509,9 @@ exports[`The Onboarding AskNotifications component should render a button with c
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -884,7 +886,9 @@ exports[`The Onboarding AskNotifications component should render the button disa
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1049,7 +1053,9 @@ exports[`The Onboarding AskNotifications component should render with a button 1
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}

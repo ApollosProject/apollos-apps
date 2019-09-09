@@ -153,6 +153,8 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -235,7 +237,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                   >
                     <View
                       accessible={true}
+                      clickable={true}
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -593,7 +597,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                     >
                       <View
                         accessible={true}
+                        clickable={false}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -695,7 +701,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -838,7 +846,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -981,7 +991,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -1124,7 +1136,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={false}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -1341,7 +1355,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                 >
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -1380,7 +1396,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1523,7 +1541,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1911,6 +1931,8 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1993,7 +2015,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                   >
                     <View
                       accessible={true}
+                      clickable={true}
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -2351,7 +2375,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                     >
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -2663,7 +2689,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -2806,7 +2834,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -2949,7 +2979,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -3092,7 +3124,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -3395,7 +3429,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                 >
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3434,7 +3470,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3577,7 +3615,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3965,6 +4005,8 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4047,7 +4089,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                   >
                     <View
                       accessible={true}
+                      clickable={true}
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -4405,7 +4449,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                     >
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -4717,7 +4763,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -4860,7 +4908,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -5003,7 +5053,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -5146,7 +5198,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -5449,7 +5503,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 >
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -5488,7 +5544,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -5631,7 +5689,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -6019,6 +6079,8 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -6101,7 +6163,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                   >
                     <View
                       accessible={true}
+                      clickable={true}
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -6459,7 +6523,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                     >
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -6771,7 +6837,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -6914,7 +6982,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -7057,7 +7127,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -7200,7 +7272,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -7503,7 +7577,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 >
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -7542,7 +7618,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -7685,7 +7763,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -8073,6 +8153,8 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8155,7 +8237,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                   >
                     <View
                       accessible={true}
+                      clickable={true}
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -8513,7 +8597,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                     >
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -8825,7 +8911,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -8968,7 +9056,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -9111,7 +9201,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -9254,7 +9346,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       </View>
                       <View
                         accessible={true}
+                        clickable={true}
                         isTVSelectable={true}
+                        onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
                         onResponderRelease={[Function]}
@@ -9557,7 +9651,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 >
                   <View
                     accessible={true}
+                    clickable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -9596,7 +9692,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -9739,7 +9837,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}

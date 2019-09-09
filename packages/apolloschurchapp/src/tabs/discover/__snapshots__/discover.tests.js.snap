@@ -643,7 +643,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -774,6 +776,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -943,6 +947,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1112,6 +1118,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1281,6 +1289,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1450,6 +1460,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1646,7 +1658,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -1777,6 +1791,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -1946,6 +1962,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2115,6 +2133,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2284,6 +2304,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2453,6 +2475,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2649,7 +2673,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -2780,6 +2806,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -2949,6 +2977,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3118,6 +3148,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3287,6 +3319,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3456,6 +3490,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3652,7 +3688,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -3783,6 +3821,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -3952,6 +3992,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4121,6 +4163,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4290,6 +4334,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4459,6 +4505,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4655,7 +4703,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -4786,6 +4836,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -4955,6 +5007,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5124,6 +5178,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5293,6 +5349,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5462,6 +5520,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5658,7 +5718,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -5789,6 +5851,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -5958,6 +6022,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6127,6 +6193,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6296,6 +6364,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6465,6 +6535,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6661,7 +6733,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -6792,6 +6866,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -6961,6 +7037,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7130,6 +7208,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7299,6 +7379,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7468,6 +7550,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7664,7 +7748,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -7795,6 +7881,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -7964,6 +8052,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8133,6 +8223,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8302,6 +8394,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8471,6 +8565,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8667,7 +8763,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -8798,6 +8896,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -8967,6 +9067,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9136,6 +9238,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9305,6 +9409,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9474,6 +9580,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9670,7 +9778,9 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                         </View>
                         <View
                           accessible={true}
+                          clickable={true}
                           isTVSelectable={true}
+                          onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
                           onResponderRelease={[Function]}
@@ -9801,6 +9911,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -9970,6 +10082,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -10139,6 +10253,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -10308,6 +10424,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}
@@ -10477,6 +10595,8 @@ exports[`Test the Discover Component Query Should retrieve the Content Channel F
                           >
                             <View
                               accessible={true}
+                              clickable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}

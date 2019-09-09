@@ -7,7 +7,7 @@ Provides a media player to render Video and Audio content in the app. Both fulls
 1. Install library and peer dependencies from `npm`:
 
 ```
-yarn add @apollosproject/apollos-ui-media-player react-native-video react-native-music-control react-native-video-controls react-native-airplay-btn
+yarn add @apollosproject/apollos-ui-media-player react-native-video react-native-music-control react-native-video-controls @apollosproject/react-native-airplay-btn
 ```
 
 2. Link native dependencies
