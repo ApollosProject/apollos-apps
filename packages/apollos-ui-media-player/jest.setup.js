@@ -3,7 +3,7 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   AnalyticsProvider: ({ children }) => children,
 }));
 
-jest.mock('react-native-airplay-btn', () => ({
+jest.mock('@apollosproject/react-native-airplay-btn', () => ({
   AirPlayButton: () => 'AirPlayButton',
 }));
 
