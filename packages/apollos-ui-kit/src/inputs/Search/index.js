@@ -87,15 +87,19 @@ class Search extends PureComponent {
   };
 
   handleOnChangeText = (value) => {
-    this.setState({ value });
-    if (this.props.onChangeText) this.props.onChangeText(value);
+    this.setState(
+      { value },
+      () => this.props.onChangeText && this.props.onChangeText(value)
+    );
   };
 
   handleOnPressClearSearchButton = () => {
-    this.setState({
-      value: '',
-    });
-    if (this.props.onChangeText) this.props.onChangeText('');
+    this.setState(
+      {
+        value: '',
+      },
+      () => this.props.onChangeText && this.props.onChangeText(this.state.value)
+    );
   };
 
   handleOnPressCancel = () => Keyboard.dismiss();
