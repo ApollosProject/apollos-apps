@@ -3,12 +3,13 @@ import algoliasearch from 'algoliasearch';
 
 import { parseCursor, createCursor } from '@apollosproject/server-core';
 
-const { ALGOLIA } = ApollosConfig;
-
 export default class Search {
-  client = algoliasearch(ALGOLIA.APPLICATION_ID, ALGOLIA.API_KEY);
+  client = algoliasearch(
+    ApollosConfig.ALGOLIA.APPLICATION_ID,
+    ApollosConfig.ALGOLIA.API_KEY
+  );
 
-  index = this.client.initIndex(ALGOLIA.SEARCH_INDEX);
+  index = this.client.initIndex(ApollosConfig.ALGOLIA.SEARCH_INDEX);
 
   initialize({ context }) {
     this.context = context;
