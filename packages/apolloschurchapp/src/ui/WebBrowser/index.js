@@ -31,7 +31,7 @@ const Provider = withTheme(({ theme }) => ({
           forceCloseOnRedirection: false,
         },
       }),
-      ...headers,
+      headers: { ...headers },
       ...options,
     }),
 }))(BaseProvider);

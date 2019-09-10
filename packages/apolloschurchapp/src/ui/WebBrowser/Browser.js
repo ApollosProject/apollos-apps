@@ -22,14 +22,15 @@ export const getCookie = async () => {
 };
 
 const Browser = {
-  open: async (url, headersAndOptions) => {
+  open: async (url, options) => {
     const cookie = await getCookie();
-    console.log('cookie', cookie);
+    const headers = { Cookie: cookie };
+    console.log('headers', headers);
     try {
       if (await InAppBrowser.isAvailable()) {
         const result = await InAppBrowser.open(url, {
-          Cookie: cookie,
-          ...headersAndOptions,
+          headers,
+          ...options,
         });
         console.log(result);
       } else Linking.openURL(url);
