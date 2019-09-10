@@ -22,6 +22,22 @@ const feedItemLoadingState = {
 };
 
 class Discover extends PureComponent {
+  state = {
+    searchValue: '',
+  };
+
+  handleOnChangeText = (value) => {
+    this.setState({
+      searchValue: value,
+    });
+  };
+
+  handleOnFocus = () => {
+    this.setState({
+      isFocused: true,
+    });
+  };
+
   renderItem = ({ item }) => (
     <TileContentFeed
       id={item.id}
@@ -37,25 +53,50 @@ class Discover extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <SearchInputHeader />
-        <Query query={GET_CONTENT_CHANNELS} fetchPolicy="cache-and-network">
-          {({
-            error,
-            loading,
-            data: { contentChannels = [] } = {},
-            refetch,
-          }) => (
-            <FeedView
-              error={error}
-              content={contentChannels}
-              isLoading={loading}
-              refetch={refetch}
-              renderItem={this.renderItem}
-              loadingStateObject={feedItemLoadingState}
-              numColumns={1}
-            />
-          )}
-        </Query>
+        <SearchInputHeader onChagneText={this.handleOnChangeText} />
+        {this.state.isFocused || this.state.searchValue ? (
+          <Query
+            query={GET_SEARCH_RESULTS}
+            variables={{ searchQuery: this.state.searchValue }}
+            fetchPolicy="cache-and-network"
+          >
+            {({
+              error,
+              loading,
+              data: { contentChannels = [] } = {},
+              refetch,
+            }) => (
+              <FeedView
+                error={error}
+                content={contentChannels}
+                isLoading={loading}
+                refetch={refetch}
+                renderItem={this.renderItem}
+                loadingStateObject={feedItemLoadingState}
+                numColumns={1}
+              />
+            )}
+          </Query>
+        ) : (
+          <Query query={GET_CONTENT_CHANNELS} fetchPolicy="cache-and-network">
+            {({
+              error,
+              loading,
+              data: { contentChannels = [] } = {},
+              refetch,
+            }) => (
+              <FeedView
+                error={error}
+                content={contentChannels}
+                isLoading={loading}
+                refetch={refetch}
+                renderItem={this.renderItem}
+                loadingStateObject={feedItemLoadingState}
+                numColumns={1}
+              />
+            )}
+          </Query>
+        )}
       </BackgroundView>
     );
   }
