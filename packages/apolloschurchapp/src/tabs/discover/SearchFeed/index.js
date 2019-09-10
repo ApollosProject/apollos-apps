@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import { FeedView } from '@apollosproject/ui-kit';
 
 import ContentCardConnected from '../../../ui/ContentCardConnected';
-import fetchMoreResolver from '../../../utils/fetchMoreResolver';
 
 import GET_SEARCH_RESULTS from './getSearchResults';
 
@@ -23,16 +22,10 @@ const SearchFeed = withNavigation(({ navigation, searchText }) => (
     variables={{ searchText }}
     fetchPolicy="network-only"
   >
-    {({ loading, error, data, refetch, fetchMore, variables }) => (
+    {({ loading, error, data, refetch }) => (
       <FeedView
         ListItemComponent={ContentCardConnected}
         content={get(data, 'search.edges', []).map((edge) => edge.node)}
-        fetchMore={fetchMoreResolver({
-          collectionName: 'userFeed', // TODO
-          fetchMore,
-          variables,
-          data,
-        })}
         isLoading={loading}
         error={error}
         refetch={refetch}

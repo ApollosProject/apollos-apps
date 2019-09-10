@@ -78,9 +78,12 @@ class Search extends PureComponent {
   }
 
   handleOnFocus = () => {
-    this.setState((state) => ({
-      isFocused: !state.isFocused,
-    }));
+    this.setState(
+      (state) => ({
+        isFocused: !state.isFocused,
+      }),
+      () => this.props.onFocus && this.props.onFocus(this.state.isFocused)
+    );
   };
 
   handleOnChangeText = (value) => {
@@ -92,6 +95,7 @@ class Search extends PureComponent {
     this.setState({
       value: '',
     });
+    if (this.props.onChangeText) this.props.onChangeText('');
   };
 
   handleOnPressCancel = () => Keyboard.dismiss();
@@ -112,6 +116,7 @@ class Search extends PureComponent {
       disabled,
       inputRef,
       onChangeText,
+      onFocus,
       onSubmit,
       placeholder,
       screenBackgroundColor,
