@@ -80,7 +80,9 @@ exports[`The Onboarding Slide component should render a loading indicator 1`] = 
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -208,7 +210,9 @@ exports[`The Onboarding Slide component should render both slide navigation butt
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -529,7 +533,9 @@ exports[`The Onboarding Slide component should render onboarding next button nav
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -975,7 +981,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1227,7 +1235,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1479,7 +1489,9 @@ exports[`The Onboarding Slide component should render primary navigation button 
       >
         <View
           accessible={true}
+          clickable={true}
           isTVSelectable={true}
+          onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}

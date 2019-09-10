@@ -18,8 +18,8 @@ const SquareCard = styled({
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(({ theme }) => ({
   position: 'absolute',
-  top: theme.sizing.baseUnit * 1.5,
-  right: theme.sizing.baseUnit * 1.5,
+  top: theme.sizing.baseUnit,
+  right: theme.sizing.baseUnit,
 }))(View);
 
 const LikeIcon = withTheme(({ theme, isLiked }) => ({
@@ -39,8 +39,8 @@ const Image = withTheme(({ theme, hasTitleAndSummary }) => ({
 
 const Content = styled(({ theme }) => ({
   alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-  paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-  paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
+  paddingHorizontal: theme.sizing.baseUnit, // TODO: refactor CardContent to have this be the default
+  paddingBottom: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
 }))(CardContent);
 
 const Summary = styled(({ theme, hasTitle }) => ({

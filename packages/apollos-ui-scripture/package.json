@@ -44,10 +44,10 @@
     "@storybook/react-native": "^4.0.7",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
-    "metro-react-native-babel-preset": "^0.54.1",
+    "metro-react-native-babel-preset": "^0.56.0",
     "prop-types": "15.6.1",
     "react": "^16.8.3",
-    "react-native": "0.59.10",
+    "react-native": "0.60.5",
     "react-test-renderer": "16.6.1"
   },
   "publishConfig": {
