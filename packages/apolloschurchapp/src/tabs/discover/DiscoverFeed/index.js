@@ -17,7 +17,9 @@ const feedItemLoadingState = {
   isLoading: true,
 };
 
-const renderItem = ({ item }) => (
+const renderItem = (
+  { item } // eslint-disable-line react/prop-types
+) => (
   <TileContentFeed
     id={item.id}
     name={item.name}
