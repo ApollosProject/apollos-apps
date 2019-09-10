@@ -38,7 +38,7 @@ class HorizontalContentFeed extends Component {
     </TouchableScale>
   );
 
-  renderFeed = ({ data, loading, error }) => {
+  renderFeed = ({ data, loading, error, fetchMore }) => {
     if (error) return null;
     if (loading) return null;
 
@@ -55,6 +55,9 @@ class HorizontalContentFeed extends Component {
     ).map((edge) => edge.node);
 
     const content = siblingContent.length ? siblingContent : childContent;
+    const cursor = siblingContent.length
+      ? get(data, 'node.siblingContentItemsConnection.cursor', '')
+      : get(data, 'node.childContentItemsConnection.cursor', '');
     const currentIndex = content.findIndex(
       ({ id }) => id === this.props.contentId
     );
@@ -72,6 +75,30 @@ class HorizontalContentFeed extends Component {
           offset: 240 * index,
           index,
         })}
+        onLoadMore={() =>
+          fetchMore({
+            query: GET_HORIZONTAL_CONTENT,
+            variables: { cursor, itemId: this.props.contentId },
+            updateQuery: (previousResult, { fetchMoreResult }) => {
+              console.log('previousResult', previousResult);
+              console.log('fetchMoreResult', fetchMoreResult);
+              console.log('cursor', cursor);
+              const oldContent = get(previousResult, 'edges', []);
+              const newContent = get(fetchMoreResult, 'edges', []);
+              const newCursor = newContent[newContent.length - 1].cursor;
+              console.log('oldContent', oldContent);
+              console.log('newContent', newContent);
+              console.log('newCursor', newCursor);
+
+              return {
+                cursor: newCursor,
+                edges: {
+                  comments: [...oldContent, ...newContent],
+                },
+              };
+            },
+          })
+        }
       />
     ) : null;
   };
