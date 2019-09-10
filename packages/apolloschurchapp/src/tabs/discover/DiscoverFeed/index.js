@@ -37,7 +37,7 @@ const DiscoverFeed = memo(() => (
       <FeedView
         error={error}
         content={contentChannels}
-        isLoading={loading}
+        isLoading={loading && !contentChannels.length}
         refetch={refetch}
         renderItem={renderItem}
         loadingStateObject={feedItemLoadingState}
