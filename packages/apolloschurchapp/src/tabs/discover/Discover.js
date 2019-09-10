@@ -12,17 +12,16 @@ import DiscoverFeed from './DiscoverFeed';
 
 class Discover extends PureComponent {
   state = {
-    searchValue: '',
+    searchText: '',
   };
 
-  handleOnChangeText = (value) => {
-    throttle(
+  handleOnChangeText = throttle(
+    (value) =>
       this.setState({
-        searchValue: value,
+        searchText: value,
       }),
-      300
-    );
-  };
+    300
+  );
 
   handleOnFocus = () => {
     this.setState({
@@ -33,8 +32,12 @@ class Discover extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <SearchInputHeader onChagneText={this.handleOnChangeText} />
-        <DiscoverFeed />
+        <SearchInputHeader onChangeText={this.handleOnChangeText} />
+        {this.state.isFocused || this.state.searchText ? (
+          <SearchFeed searchText={this.state.searchText} />
+        ) : (
+          <DiscoverFeed />
+        )}
       </BackgroundView>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -16,16 +17,16 @@ const handleOnPress = ({ navigation, item }) =>
     transitionKey: item.transitionKey,
   });
 
-const SearchFeed = ({ navigation, searchValue }) => (
+const SearchFeed = withNavigation(({ navigation, searchText }) => (
   <Query
     query={GET_SEARCH_RESULTS}
-    variables={{ searchQuery: searchValue }}
-    fetchPolicy="cache-and-network"
+    variables={{ searchText }}
+    fetchPolicy="network-only"
   >
     {({ loading, error, data, refetch, fetchMore, variables }) => (
       <FeedView
         ListItemComponent={ContentCardConnected}
-        content={get(data, 'userFeed.edges', []).map((edge) => edge.node)}
+        content={get(data, 'search.edges', []).map((edge) => edge.node)}
         fetchMore={fetchMoreResolver({
           collectionName: 'userFeed', // TODO
           fetchMore,
@@ -35,11 +36,11 @@ const SearchFeed = ({ navigation, searchValue }) => (
         isLoading={loading}
         error={error}
         refetch={refetch}
-        onPressItem={handleOnPress({ navigation })}
+        onPressItem={(item) => handleOnPress({ navigation, item })}
       />
     )}
   </Query>
-);
+));
 
 SearchFeed.propTypes = {
   searchValue: PropTypes.string,
