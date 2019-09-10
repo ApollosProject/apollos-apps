@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Algolia Search paginates 1`] = `
+Object {
+  "data": Object {
+    "search": Object {
+      "edges": Array [
+        Object {
+          "coverImage": Object {
+            "sources": Array [
+              Object {
+                "uri": "#",
+              },
+            ],
+          },
+          "cursor": "659a26257a49fb2bf1446bb747bf7dd3",
+          "node": Object {
+            "id": "test",
+          },
+          "summary": "test summary",
+          "title": "test result",
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "659a26257a49fb2bf1446bb747bf7dd3",
+        "startCursor": "659a26257a49fb2bf1446bb747bf7dd3",
+      },
+    },
+  },
+}
+`;
+
+exports[`Algolia Search returns 1`] = `
+Object {
+  "data": Object {
+    "search": Object {
+      "edges": Array [
+        Object {
+          "coverImage": Object {
+            "sources": Array [
+              Object {
+                "uri": "#",
+              },
+            ],
+          },
+          "cursor": "b487224762b030f470967f45d7205823",
+          "node": Object {
+            "id": "test",
+          },
+          "summary": "test summary",
+          "title": "test result",
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "b487224762b030f470967f45d7205823",
+        "startCursor": "b487224762b030f470967f45d7205823",
+      },
+    },
+  },
+}
+`;
+
+exports[`Algolia Search throws error on invalid cursor 1`] = `
+Object {
+  "data": Object {
+    "search": null,
+  },
+  "errors": Array [
+    [GraphQLError: An invalid 'after' cursor was provided: ec9f0f95538fcb14b88ddfba3ff14171],
+  ],
+}
+`;

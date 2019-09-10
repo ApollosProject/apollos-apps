@@ -4,6 +4,7 @@ export default {
       models.Node.get(id, dataSources, schema),
   },
   Node: {
-    __resolveType: ({ __type }, args, { schema }) => schema.getType(__type),
+    __resolveType: ({ __typename, __type }, args, { schema }) =>
+      __typename || schema.getType(__type),
   },
 };

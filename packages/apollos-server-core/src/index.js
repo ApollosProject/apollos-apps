@@ -7,7 +7,11 @@ import * as Pagination from './pagination';
 import * as Media from './media';
 
 export { createGlobalId, parseGlobalId } from './node';
-export { withEdgePagination } from './pagination/utils';
+export {
+  createCursor,
+  parseCursor,
+  withEdgePagination,
+} from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
 
 // Types that all apollos-church servers will use.
