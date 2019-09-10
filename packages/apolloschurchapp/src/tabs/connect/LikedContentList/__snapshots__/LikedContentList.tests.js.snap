@@ -220,11 +220,6 @@ fragment themeFragment on ContentItem {
             }
           />
         }
-        contentContainerStyle={
-          Object {
-            "paddingVertical": 7.2,
-          }
-        }
         data={Array []}
         disableVirtualization={false}
         getItem={[Function]}

@@ -1119,11 +1119,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
               />
             </React.Fragment>
           }
-          contentContainerStyle={
-            Object {
-              "paddingVertical": 7.2,
-            }
-          }
           data={
             Array [
               Object {

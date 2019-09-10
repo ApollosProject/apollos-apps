@@ -6,17 +6,8 @@ import { get } from 'lodash';
 
 import ContentCard from '../ContentCard';
 import { enhancer as mediaQuery } from '../MediaQuery';
-import { withTheme } from '../theme';
 import { ErrorCard } from '../Card';
 import TouchableScale from '../TouchableScale';
-
-const StyledFlatList = compose(
-  withTheme(({ theme: { helpers: { verticalRhythm } } } = {}) => ({
-    contentContainerStyle: {
-      paddingVertical: verticalRhythm(0.3125),
-    }, // Android padding fix 😩
-  }))
-)(FlatList);
 
 class FeedView extends Component {
   static propTypes = {
@@ -91,7 +82,7 @@ class FeedView extends Component {
       ...otherProps
     } = this.props;
     return (
-      <StyledFlatList
+      <FlatList
         {...otherProps}
         data={content}
         keyExtractor={keyExtractor}
