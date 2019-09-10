@@ -5,7 +5,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Providers from 'apolloschurchapp/src/Providers';
 
 import Discover from './Discover';
-import GET_CONTENT_CHANNELS from './getContentChannels';
+import GET_CONTENT_CHANNELS from './DiscoverFeed/getContentChannels';
 
 describe('Test the Discover Component Query', () => {
   it('Should retrieve the Content Channel Feeds', () => {
