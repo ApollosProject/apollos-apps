@@ -27,6 +27,11 @@ CHURCH_ONLINE:
   URL: https://apollos.churchonline.org/api/v1/
   MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.churchonline.org/
+ALGOLIA:
+  APPLICATION_ID: ${ALGOLIA_APP_ID}
+  API_KEY: ${ALGOLIA_API_KEY}
+  # TODO: should we support multiple indices? how?
+  SEARCH_INDEX: test_ContentItems
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
@@ -110,16 +115,13 @@ ROCK_MAPPINGS:
   SERMON_CHANNEL_ID: 5
 
 HOME_FEATURES:
-  -
-    title: FOR YOU
+  - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
-  -
-    title: BULLETIN
+  - title: BULLETIN
     subtitle: What's happening at apollos?
     algorithms:
-      -
-        type: CONTENT_CHANNEL
+      - type: CONTENT_CHANNEL
         arguments:
           contentChannelId: 13
 
