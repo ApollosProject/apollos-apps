@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
-import { get } from 'lodash';
+import { throttle, get } from 'lodash';
 
 import { FeedView, BackgroundView } from '@apollosproject/ui-kit';
 
@@ -8,6 +8,7 @@ import SearchInputHeader, {
   ReactNavigationStyleReset,
 } from '../../ui/SearchInputHeader';
 
+import SearchFeed from './SearchFeed';
 import TileContentFeed from './TileContentFeed';
 import GET_CONTENT_CHANNELS from './getContentChannels';
 
@@ -27,9 +28,12 @@ class Discover extends PureComponent {
   };
 
   handleOnChangeText = (value) => {
-    this.setState({
-      searchValue: value,
-    });
+    throttle(
+      this.setState({
+        searchValue: value,
+      }),
+      300
+    );
   };
 
   handleOnFocus = () => {
@@ -55,28 +59,7 @@ class Discover extends PureComponent {
       <BackgroundView>
         <SearchInputHeader onChagneText={this.handleOnChangeText} />
         {this.state.isFocused || this.state.searchValue ? (
-          <Query
-            query={GET_SEARCH_RESULTS}
-            variables={{ searchQuery: this.state.searchValue }}
-            fetchPolicy="cache-and-network"
-          >
-            {({
-              error,
-              loading,
-              data: { contentChannels = [] } = {},
-              refetch,
-            }) => (
-              <FeedView
-                error={error}
-                content={contentChannels}
-                isLoading={loading}
-                refetch={refetch}
-                renderItem={this.renderItem}
-                loadingStateObject={feedItemLoadingState}
-                numColumns={1}
-              />
-            )}
-          </Query>
+          <SearchFeed searchValue={this.state.SearchValue} />
         ) : (
           <Query query={GET_CONTENT_CHANNELS} fetchPolicy="cache-and-network">
             {({
