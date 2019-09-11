@@ -42,22 +42,13 @@ class HorizontalContentFeed extends Component {
     if (error) return null;
     if (loading) return null;
 
-    const childContent = get(
-      data,
-      'node.childContentItemsConnection.edges',
-      []
-    ).map((edge) => edge.node);
+    const children = get(data, 'node.childContentItemsConnection.edges', []);
+    const siblings = get(data, 'node.siblingContentItemsConnection.edges', []);
+    const isParent = children.length > 0;
 
-    const siblingContent = get(
-      data,
-      'node.siblingContentItemsConnection.edges',
-      []
-    ).map((edge) => edge.node);
-
-    const content = siblingContent.length ? siblingContent : childContent;
-    const cursor = siblingContent.length
-      ? get(data, 'node.siblingContentItemsConnection.cursor', '')
-      : get(data, 'node.childContentItemsConnection.cursor', '');
+    const edges = isParent ? children : siblings;
+    const content = edges.map((edge) => edge.node);
+    const { cursor } = edges[edges.length - 1];
     const currentIndex = content.findIndex(
       ({ id }) => id === this.props.contentId
     );
@@ -75,25 +66,23 @@ class HorizontalContentFeed extends Component {
           offset: 240 * index,
           index,
         })}
-        onLoadMore={() =>
+        onEndReached={() =>
           fetchMore({
             query: GET_HORIZONTAL_CONTENT,
             variables: { cursor, itemId: this.props.contentId },
             updateQuery: (previousResult, { fetchMoreResult }) => {
-              console.log('previousResult', previousResult);
-              console.log('fetchMoreResult', fetchMoreResult);
-              console.log('cursor', cursor);
-              const oldContent = get(previousResult, 'edges', []);
-              const newContent = get(fetchMoreResult, 'edges', []);
-              const newCursor = newContent[newContent.length - 1].cursor;
-              console.log('oldContent', oldContent);
-              console.log('newContent', newContent);
-              console.log('newCursor', newCursor);
+              const connection = isParent
+                ? 'childContentItemsConnection'
+                : 'siblingContentItemsConnection';
+              const newEdges = get(fetchMoreResult.node, connection, []).edges;
 
               return {
-                cursor: newCursor,
-                edges: {
-                  comments: [...oldContent, ...newContent],
+                node: {
+                  ...previousResult.node,
+                  [connection]: {
+                    ...previousResult.node[connection],
+                    edges: [...edges, ...newEdges],
+                  },
                 },
               };
             },
