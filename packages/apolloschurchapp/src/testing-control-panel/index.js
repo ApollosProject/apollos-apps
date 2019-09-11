@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { TableView, Divider } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from '../ui/WebBrowser';
+import { UserWebBrowserConsumer } from 'apolloschurchapp/src/user-web-browser';
 import ChangeLivestream from './ChangeLivestream';
 import TouchableCell from './TouchableCell';
 
@@ -14,19 +14,20 @@ export default class TestingControlPanel extends PureComponent {
       <TableView>
         <ChangeLivestream />
         <Divider />
-        <WebBrowserConsumer>
-          {(openUrl) => (
+        <UserWebBrowserConsumer>
+          {(openUserWebView) => (
             <TouchableCell
               handlePress={() =>
-                openUrl(
-                  'https://www.whatismybrowser.com/detect/what-http-headers-is-my-browser-sending'
-                )
+                openUserWebView({
+                  url:
+                    'https://www.whatismybrowser.com/detect/what-http-headers-is-my-browser-sending',
+                })
               }
               iconName="share"
               cellText={`Open Web Browser With User Cookie`}
             />
           )}
-        </WebBrowserConsumer>
+        </UserWebBrowserConsumer>
         <TouchableCell
           handlePress={() => this.props.navigation.navigate('Onboarding')}
           iconName="Avatar"
