@@ -78,10 +78,10 @@ PODS:
     - React
   - react-native-splash-screen (3.2.0):
     - React
-  - react-native-video (5.0.0):
+  - react-native-video (5.0.2):
     - React
-    - react-native-video/Video (= 5.0.0)
-  - react-native-video/Video (5.0.0):
+    - react-native-video/Video (= 5.0.2)
+  - react-native-video/Video (5.0.2):
     - React
   - react-native-webview (5.12.1):
     - React
@@ -122,7 +122,7 @@ PODS:
     - React
   - RNScreens (1.0.0-alpha.23):
     - React
-  - RNSVG (9.8.4):
+  - RNSVG (9.9.3):
     - React
   - yoga (0.60.5.React)
 
@@ -281,7 +281,7 @@ SPEC CHECKSUMS:
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-video: 6555881252c8ca039760e1cd6df28ac28ffb2baf
+  react-native-video: d01ed7ff1e38fa7dcc6c15c94cf505e661b7bfd0
   react-native-webview: 5036ed4a973ad1deeeff118262d2df7b60b3419d
   React-RCTActionSheet: b0f1ea83f4bf75fb966eae9bfc47b78c8d3efd90
   React-RCTAnimation: 359ba1b5690b1e87cc173558a78e82d35919333e
@@ -300,7 +300,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa
   RNInAppBrowser: 9d1ffb9db0d0cbdf03f528f1f0624b2c533b93fd
   RNScreens: f28b48b8345f2f5f39ed6195518291515032a788
-  RNSVG: a78b4c581e33a1bb72968997d167afabf72b05dc
+  RNSVG: 2a15d0d14d171ba610db927190604d1ab223f413
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
 
 PODFILE CHECKSUM: d235853c2d054909a0114df39a2529360918990d
