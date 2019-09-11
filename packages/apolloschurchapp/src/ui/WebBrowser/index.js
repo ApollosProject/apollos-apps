@@ -8,7 +8,8 @@ import Browser from './Browser';
 
 const { Provider: BaseProvider, Consumer } = createContext(Browser.open);
 
-const Provider = withTheme(({ theme }) => ({
+ // NOTE: don't think this is working...
+ const Provider = withTheme(({ theme }) => ({
   value: (url, headers = {}, options = {}) =>
     Browser.open(url, {
       ...Platform.select({
