@@ -48,7 +48,7 @@ class HorizontalContentFeed extends Component {
 
     const edges = isParent ? children : siblings;
     const content = edges.map((edge) => edge.node);
-    const { cursor } = edges[edges.length - 1];
+    const { cursor } = edges.length && edges[edges.length - 1];
     const currentIndex = content.findIndex(
       ({ id }) => id === this.props.contentId
     );
