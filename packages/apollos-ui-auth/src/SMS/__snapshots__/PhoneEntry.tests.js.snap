@@ -279,7 +279,6 @@ exports[`The Auth PhoneEntry component should render 1`] = `
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -697,7 +696,6 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -1115,7 +1113,6 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -1595,7 +1592,6 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -2069,7 +2065,6 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -2549,7 +2544,6 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -2980,7 +2974,6 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -3428,7 +3421,6 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -3846,7 +3838,6 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -4264,7 +4255,6 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
@@ -4683,7 +4673,6 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                         <TextInput
                           allowFontScaling={true}
                           autoComplete="tel"
-                          autoFocus={true}
                           editable={true}
                           enablesReturnKeyAutomatically={true}
                           keyboardType="phone-pad"
