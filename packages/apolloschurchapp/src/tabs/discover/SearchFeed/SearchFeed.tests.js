@@ -1,4 +1,5 @@
 import React from 'react';
+import { flatMap } from 'lodash';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Providers from '../../../Providers';
@@ -260,7 +261,8 @@ describe('The SearchFeed component', () => {
       },
     };
 
-    const mockSearchResultsCardData = mockFeedData.result.data.search.edges.flatMap(
+    const mockSearchResultsCardData = flatMap(
+      mockFeedData.result.data.search.edges,
       (node) => ({
         request: {
           query: GET_CONTENT_CARD,

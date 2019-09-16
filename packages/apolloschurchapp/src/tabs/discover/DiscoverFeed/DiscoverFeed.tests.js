@@ -1,4 +1,5 @@
 import React from 'react';
+import { flatMap } from 'lodash';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Providers from '../../../Providers';
@@ -525,7 +526,8 @@ describe('The DiscoverFeed component', () => {
         },
       },
     };
-    const mockChannelCardData = mockFeedData.result.data.contentChannels.flatMap(
+    const mockChannelCardData = flatMap(
+      mockFeedData.result.data.contentChannels,
       (contentChannel) =>
         contentChannel.childContentItemsConnection.edges.map((edge) => ({
           request: {
