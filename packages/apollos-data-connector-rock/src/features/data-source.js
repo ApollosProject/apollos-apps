@@ -13,7 +13,7 @@ export default class Features extends RockApolloDataSource {
     PERSONA_FEED: this.personaFeedAlgorithm.bind(this),
     CONTENT_CHANNEL: this.contentChannelAlgorithm.bind(this),
     SERMON_CHILDREN: this.sermonChildrenAlgorithm.bind(this),
-    UPCOMING_EVENTS: this.upcomingEventsAlgorithm.bind(this)
+    UPCOMING_EVENTS: this.upcomingEventsAlgorithm.bind(this),
   };
 
   async createActionListFeature({ algorithms = [], title, subtitle }) {
@@ -69,7 +69,9 @@ export default class Features extends RockApolloDataSource {
     const { Events } = this.context.dataSources;
 
     // Get the first three persona items.
-    const events = await Events.findRecent().top(3).get();
+    const events = await Events.findRecent()
+      .top(3)
+      .get();
     // Map them into specific actions.
     return events.map((event, i) => ({
       id: createGlobalId(`${event.id}${i}`, 'ActionListAction'),
