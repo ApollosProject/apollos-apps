@@ -53,6 +53,13 @@ describe('RestDataSource', () => {
       expect(getFn.mock.calls[0][0]).toBe('TestResource?%24top=20&%24skip=0');
     });
 
+    it('paginates an empty cursor', () => {
+      const cursor = dataSource.request('TestResource').empty();
+      const result = dataSource.paginate({ cursor });
+      expect(result).toBeTruthy();
+      expect(getFn.mock.calls.length).toBe(0);
+    });
+
     it('skips pages', () => {
       const cursor = dataSource.request('TestResource');
       const after = createCursor({ position: 25 });

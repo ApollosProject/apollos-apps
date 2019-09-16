@@ -1,4 +1,5 @@
 import { createStackNavigator } from 'react-navigation';
+import { withTheme } from '@apollosproject/ui-kit';
 
 import ContentFeed from 'apolloschurchapp/src/content-feed';
 
@@ -13,11 +14,16 @@ const DiscoverNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Discover',
+    defaultNavigationOptions: ({ screenProps }) => ({
+      headerTintColor: screenProps.headerTintColor,
+    }),
+    navigationOptions: { tabBarIcon: tabBarIcon('sections') },
   }
 );
 
-DiscoverNavigator.navigationOptions = {
-  tabBarIcon: tabBarIcon('sections'),
-};
+const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
+  ...props,
+  screenProps: { headerTintColor: theme.colors.text.secondary },
+}))(DiscoverNavigator);
 
-export default DiscoverNavigator;
+export default EnhancedDiscover;
