@@ -469,7 +469,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -586,7 +586,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -1777,7 +1777,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -1894,7 +1894,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
