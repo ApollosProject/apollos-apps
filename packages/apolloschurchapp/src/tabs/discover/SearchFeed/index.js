@@ -36,7 +36,7 @@ const SearchFeed = withNavigation(({ navigation, searchText }) => (
 ));
 
 SearchFeed.propTypes = {
-  searchValue: PropTypes.string,
+  searchText: PropTypes.string,
 };
 
 export default SearchFeed;

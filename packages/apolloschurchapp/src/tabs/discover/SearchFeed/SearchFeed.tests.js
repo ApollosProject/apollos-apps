@@ -8,13 +8,14 @@ import cache from '../../../client/cache';
 import GET_CONTENT_CARD from '../../../ui/ContentCardConnected/query';
 
 import GET_SEARCH_RESULTS from './getSearchResults';
-import DiscoverFeed from '.';
+import SearchFeed from '.';
 
 describe('The SearchFeed component', () => {
   it('should render', async () => {
     const mockFeedData = {
       request: {
         query: GET_SEARCH_RESULTS,
+        variables: { searchText: 'Love' },
       },
       result: {
         data: {
@@ -276,14 +277,16 @@ describe('The SearchFeed component', () => {
       })
     );
 
-    const DiscoverStack = createStackNavigator({ DiscoverFeed });
-    const DiscoverFeedWithNavigation = createAppContainer(DiscoverStack);
+    const DiscoverStack = createStackNavigator({
+      SearchFeed: (props) => <SearchFeed searchText={'Love'} {...props} />, // eslint-disable-line react/display-name
+    });
+    const SearchFeedWithNavigation = createAppContainer(DiscoverStack);
     const tree = await renderWithApolloData(
       <Providers
         mocks={[mockFeedData, ...mockSearchResultsCardData]}
         cache={cache}
       >
-        <DiscoverFeedWithNavigation />
+        <SearchFeedWithNavigation searchText={'Love'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
