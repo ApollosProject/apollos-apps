@@ -1,6 +1,7 @@
 import React from 'react';
 import { flatMap } from 'lodash';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import renderer from 'react-test-renderer';
 
 import Providers from '../../../Providers';
 import { renderWithApolloData } from '../../../utils/testUtils';
@@ -276,12 +277,22 @@ describe('The SearchFeed component', () => {
       })
     );
 
-    const DiscoverStack = createStackNavigator({
+    const SearchStack = createStackNavigator({
       SearchFeed: (props) => <SearchFeed searchText={'Love'} {...props} />, // eslint-disable-line react/display-name
     });
-    const SearchFeedWithNavigation = createAppContainer(DiscoverStack);
+    const SearchFeedWithNavigation = createAppContainer(SearchStack);
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockSearchResultsCardData]}>
+        <SearchFeedWithNavigation searchText={'Love'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state', () => {
+    const SearchStack = createStackNavigator({ SearchFeed });
+    const SearchFeedWithNavigation = createAppContainer(SearchStack);
+    const tree = renderer.create(
+      <Providers cache={null}>
         <SearchFeedWithNavigation searchText={'Love'} />
       </Providers>
     );
