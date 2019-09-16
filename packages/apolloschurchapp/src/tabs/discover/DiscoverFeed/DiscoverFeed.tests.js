@@ -1,6 +1,7 @@
 import React from 'react';
 import { flatMap } from 'lodash';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import renderer from 'react-test-renderer';
 
 import Providers from '../../../Providers';
 import { renderWithApolloData } from '../../../utils/testUtils';
@@ -545,6 +546,16 @@ describe('The DiscoverFeed component', () => {
     const DiscoverFeedWithNavigation = createAppContainer(DiscoverStack);
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockChannelCardData]}>
+        <DiscoverFeedWithNavigation />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state', () => {
+    const DiscoverStack = createStackNavigator({ DiscoverFeed });
+    const DiscoverFeedWithNavigation = createAppContainer(DiscoverStack);
+    const tree = renderer.create(
+      <Providers cache={null}>
         <DiscoverFeedWithNavigation />
       </Providers>
     );
