@@ -5,6 +5,7 @@
   "devDependencies": {
     "codecov": "3.0.2",
     "get-dev-paths": "^0.1.0",
+    "graphql-import": "^0.7.1",
     "jest": "^24.8.0",
     "jest-react-native": "18.0.0",
     "jetifier": "^1.6.4",
