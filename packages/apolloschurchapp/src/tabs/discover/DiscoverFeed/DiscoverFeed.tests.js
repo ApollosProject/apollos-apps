@@ -4,7 +4,6 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Providers from '../../../Providers';
 import { renderWithApolloData } from '../../../utils/testUtils';
-import cache from '../../../client/cache';
 import GET_CONTENT_CARD from '../../../ui/ContentCardConnected/query';
 
 import GET_CONTENT_CHANNELS from './getContentChannels';
@@ -545,7 +544,7 @@ describe('The DiscoverFeed component', () => {
     const DiscoverStack = createStackNavigator({ DiscoverFeed });
     const DiscoverFeedWithNavigation = createAppContainer(DiscoverStack);
     const tree = await renderWithApolloData(
-      <Providers mocks={[mockFeedData, ...mockChannelCardData]} cache={cache}>
+      <Providers mocks={[mockFeedData, ...mockChannelCardData]}>
         <DiscoverFeedWithNavigation />
       </Providers>
     );

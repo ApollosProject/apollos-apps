@@ -4,7 +4,6 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Providers from '../../../Providers';
 import { renderWithApolloData } from '../../../utils/testUtils';
-import cache from '../../../client/cache';
 import GET_CONTENT_CARD from '../../../ui/ContentCardConnected/query';
 
 import GET_SEARCH_RESULTS from './getSearchResults';
@@ -282,10 +281,7 @@ describe('The SearchFeed component', () => {
     });
     const SearchFeedWithNavigation = createAppContainer(DiscoverStack);
     const tree = await renderWithApolloData(
-      <Providers
-        mocks={[mockFeedData, ...mockSearchResultsCardData]}
-        cache={cache}
-      >
+      <Providers mocks={[mockFeedData, ...mockSearchResultsCardData]}>
         <SearchFeedWithNavigation searchText={'Love'} />
       </Providers>
     );
