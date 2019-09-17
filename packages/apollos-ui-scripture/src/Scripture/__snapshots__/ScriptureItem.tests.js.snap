@@ -87,7 +87,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -176,7 +176,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -298,20 +298,6 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           </View>
         </View>
       </View>
-      <Text
-        bold={false}
-        italic={false}
-        style={
-          Object {
-            "color": "#505050",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 9.6,
-            "lineHeight": 10.37,
-          }
-        }
-      >
-        
-      </Text>
     </View>
   </View>
 </View>
@@ -404,7 +390,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -586,7 +572,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -641,7 +627,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -799,7 +785,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3217,7 +3203,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3283,7 +3269,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3320,7 +3306,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3478,7 +3464,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
