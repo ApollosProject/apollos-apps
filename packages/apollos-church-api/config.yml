@@ -32,6 +32,10 @@ ALGOLIA:
   API_KEY: ${ALGOLIA_API_KEY}
   # TODO: should we support multiple indices? how?
   SEARCH_INDEX: test_ContentItems
+  # Used to trigger indexing w/ the Apollos API.
+  # You can make this whatever you want!
+  # Anyone with access to this secret will be able to trigger an indexing job.
+  INDEX_SECRET: 5OfJAvh+G8tmk+Gpl4AEYw1bTtoreAz+rCJSe4VT8vo=
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}

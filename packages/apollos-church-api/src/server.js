@@ -9,6 +9,7 @@ import {
   context,
   dataSources,
   applyServerMiddleware,
+  setupJobs
 } from './data';
 
 export { resolvers, schema, testSchema };
@@ -46,5 +47,7 @@ const app = express();
 applyServerMiddleware({ app, dataSources, context });
 apolloServer.applyMiddleware({ app });
 apolloServer.applyMiddleware({ app, path: '/' });
+
+setupJobs({ app, dataSources, context });
 
 export default app;

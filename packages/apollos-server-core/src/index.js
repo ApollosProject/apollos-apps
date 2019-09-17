@@ -111,11 +111,29 @@ export const createMiddleware = (data) => ({ app, context, dataSources }) => {
   return middlewares.forEach((middleware) => middleware({ app, getContext }));
 };
 
+export const createJobs = (data) => ({ app, context, dataSources }) => {
+  const jobs = compact(
+    values({ ...builtInData, ...data }).map((datum) => datum.jobs)
+  );
+
+  const getContext = createContextGetter({ context, dataSources });
+
+  return jobs.forEach((createJobs) => createJobs({ app, getContext }));
+};
+
 export const createApolloServerConfig = (data) => {
   const context = createContext(data);
   const dataSources = createDataSources(data);
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
   const applyServerMiddleware = createMiddleware(data);
-  return { context, dataSources, schema, resolvers, applyServerMiddleware };
+  const setupJobs = createJobs(data);
+  return {
+    context,
+    dataSources,
+    schema,
+    resolvers,
+    applyServerMiddleware,
+    setupJobs,
+  };
 };
