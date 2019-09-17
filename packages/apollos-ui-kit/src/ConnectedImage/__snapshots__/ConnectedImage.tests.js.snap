@@ -324,8 +324,11 @@ Array [
     in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
     in View
     in View
-    in RCTSafeAreaView
-    in _class
+    in View
+    in View
+    in AnimatedComponent
+    in SafeView
+    in withOrientation
     in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
     in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
     in nest(ThemeProvider, LayoutProvider)",
@@ -349,8 +352,11 @@ Array [
     in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
     in View
     in View
-    in RCTSafeAreaView
-    in _class
+    in View
+    in View
+    in AnimatedComponent
+    in SafeView
+    in withOrientation
     in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
     in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
     in nest(ThemeProvider, LayoutProvider)",
