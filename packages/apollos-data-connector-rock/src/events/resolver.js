@@ -5,12 +5,12 @@ export default {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     name: (root, args, { dataSources }) => dataSources.Events.getName(root),
-    start: async ({ scheduleId: id }, args, { dataSources }) => {
-      const times = await dataSources.Events.getDateTime(id);
+    start: ({ schedule }, args, { dataSources }) => {
+      const times = dataSources.Events.getDateTime(schedule);
       return times.start;
     },
-    end: async ({ scheduleId: id }, args, { dataSources }) => {
-      const times = await dataSources.Events.getDateTime(id);
+    end: ({ schedule }, args, { dataSources }) => {
+      const times = dataSources.Events.getDateTime(schedule);
       return times.end;
     },
   },

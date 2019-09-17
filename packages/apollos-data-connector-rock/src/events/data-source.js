@@ -14,7 +14,7 @@ export default class Event extends RockApolloDataSource {
       .get();
 
   getByCampus = (id) =>
-    this.request()
+    this.findRecent()
       .filter(`CampusId eq ${id}`)
       .get();
 
@@ -57,10 +57,7 @@ export default class Event extends RockApolloDataSource {
     return null;
   };
 
-  getDateTime = async (id) => {
-    const schedule = await this.request('Schedules')
-      .find(id)
-      .get();
+  getDateTime = (schedule) => {
     const iCal = schedule.iCalendarContent;
     const dateTimes = iCal.match(/DTEND:(\w+).*DTSTART:(\w+)/s);
     return {

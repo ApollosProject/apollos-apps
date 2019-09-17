@@ -76,9 +76,7 @@ export default class Features extends RockApolloDataSource {
     return events.map((event, i) => ({
       id: createGlobalId(`${event.id}${i}`, 'ActionListAction'),
       title: Events.getName(event),
-      subtitle: moment(event.schedule.effectiveStartDate)
-        .tz(ApollosConfig.ROCK.TIMEZONE)
-        .format('LLLL'),
+      subtitle: Events.getDateTime(event.schedule).start,
       relatedNode: { ...event, __type: 'Event' },
       image: Events.getImage(event),
       action: 'READ_EVENT',
