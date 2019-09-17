@@ -2,7 +2,7 @@ import { flatten, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 export default class Features extends RockApolloDataSource {
   resource = '';
@@ -76,7 +76,9 @@ export default class Features extends RockApolloDataSource {
     return events.map((event, i) => ({
       id: createGlobalId(`${event.id}${i}`, 'ActionListAction'),
       title: Events.getName(event),
-      subtitle: moment(event.schedule.effectiveStartDate).format('LLLL'),
+      subtitle: moment(event.schedule.effectiveStartDate)
+        .tz(ApollosConfig.ROCK.TIMEZONE)
+        .format('LLLL'),
       relatedNode: { ...event, __type: 'Event' },
       image: Events.getImage(event),
       action: 'READ_EVENT',
