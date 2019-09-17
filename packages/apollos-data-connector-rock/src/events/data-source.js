@@ -21,12 +21,19 @@ export default class Event extends RockApolloDataSource {
   findRecent = () => {
     let request = this.request();
     if (!get(ApollosConfig, 'ROCK.USE_PLUGIN', false)) {
-      console.warn('Fetching public campuses is not possible without the Apollos Plugin\n\nReturning all campuses.')
+      console.warn(
+        'Fetching public campuses is not possible without the Apollos Plugin\n\nReturning all campuses.'
+      );
     } else {
-      request = this.request(`Apollos/GetEventItemOccurencesByCalendarId?id=${1}`)
+      request = this.request(
+        `Apollos/GetEventItemOccurencesByCalendarId?id=${1}`
+      );
     }
-    return request.expand('Schedule').orderBy('Schedule/EffectiveStartDate').filter('Schedule/EffectiveStartDate ne null');
-  }
+    return request
+      .expand('Schedule')
+      .orderBy('Schedule/EffectiveStartDate')
+      .filter('Schedule/EffectiveStartDate ne null');
+  };
 
   getName = async ({ eventItemId }) => {
     const event = await this.request('EventItems')
@@ -39,12 +46,14 @@ export default class Event extends RockApolloDataSource {
     const event = await this.request('EventItems')
       .find(eventItemId)
       .get();
-   const imageUrl = await this.context.dataSources.BinaryFiles.findOrReturnImageUrl({ id: event.photoId });
-   if (imageUrl){
+    const imageUrl = await this.context.dataSources.BinaryFiles.findOrReturnImageUrl(
+      { id: event.photoId }
+    );
+    if (imageUrl) {
       return {
         sources: [{ uri: imageUrl }],
       };
-   }
+    }
   };
 
   getDateTime = async (id) => {
