@@ -32,7 +32,6 @@ const Browser = {
           headers,
           ...options,
         });
-        console.log(result);
       } else Linking.openURL(url);
     } catch (e) {
       console.error(e);
