@@ -54,6 +54,7 @@ export default class Event extends RockApolloDataSource {
         sources: [{ uri: imageUrl }],
       };
     }
+    return null;
   };
 
   getDateTime = async (id) => {
