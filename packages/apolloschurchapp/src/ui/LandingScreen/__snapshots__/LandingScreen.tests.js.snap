@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding LandingScreen component should pass additional props to Slide 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -433,17 +437,21 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
       </View>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding LandingScreen component should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -668,17 +676,21 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding LandingScreen component should render a custom description 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -903,17 +915,21 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding LandingScreen component should render a custom title 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1138,17 +1154,21 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding LandingScreen component should render with a custom text color 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1377,17 +1397,21 @@ exports[`The Onboarding LandingScreen component should render with a custom text
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding LandingScreen component should render with an ImageComponent 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1656,5 +1680,5 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

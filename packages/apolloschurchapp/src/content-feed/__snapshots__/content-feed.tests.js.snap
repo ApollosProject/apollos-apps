@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`content feed query component renders a feedview after successful query 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -64,114 +68,38 @@ exports[`content feed query component renders a feedview after successful query 
         data={
           Array [
             Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId0",
-              "isLoading": true,
+              "__typename": "UniversalContentItem",
+              "audios": Array [],
+              "coverImage": null,
+              "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
+              "isLiked": false,
+              "likedCount": 0,
               "parentChannel": Object {
-                "id": "",
-                "name": "",
+                "__typename": "ContentChannel",
+                "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
+                "name": "Editorial",
               },
-              "title": "",
+              "summary": "Bla bla bla",
+              "theme": null,
+              "title": "Mea Animal Aperiam Ornatus Eu",
+              "videos": Array [],
             },
             Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId1",
-              "isLoading": true,
+              "__typename": "UniversalContentItem",
+              "audios": Array [],
+              "coverImage": null,
+              "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
+              "isLiked": false,
+              "likedCount": 0,
               "parentChannel": Object {
-                "id": "",
-                "name": "",
+                "__typename": "ContentChannel",
+                "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
+                "name": "Editorial",
               },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId2",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId3",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId4",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId5",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId6",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId7",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId8",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
-            },
-            Object {
-              "channelType": "",
-              "coverImage": Array [],
-              "id": "fakeId9",
-              "isLoading": true,
-              "parentChannel": Object {
-                "id": "",
-                "name": "",
-              },
-              "title": "",
+              "summary": "Bla bla bla",
+              "theme": null,
+              "title": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
+              "videos": Array [],
             },
           ]
         }
@@ -196,10 +124,10 @@ exports[`content feed query component renders a feedview after successful query 
         refreshControl={
           <RefreshControlMock
             onRefresh={[Function]}
-            refreshing={true}
+            refreshing={false}
           />
         }
-        refreshing={true}
+        refreshing={false}
         removeClippedSubviews={false}
         renderItem={[Function]}
         scrollEventThrottle={50}
@@ -235,7 +163,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                isLoading={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -270,34 +198,14 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   >
                     <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
+                    />
                     <BVLinearGradient
                       colors={
                         Array [
@@ -346,28 +254,35 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Text
+                      numberOfLines={2}
                       style={
                         Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
                         }
                       }
                     >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
+                      Mea Animal Aperiam Ornatus Eu
+                    </Text>
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
+                          "paddingTop": 16,
                         }
-                      />
-                    </View>
+                      }
+                    >
+                      Bla bla bla
+                    </Text>
                   </View>
                   <View
                     style={
@@ -378,16 +293,122 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <RNSVGSvgView
+                      align="xMidYMid"
+                      bbHeight={24}
+                      bbWidth={24}
+                      height={24}
+                      isLiked={false}
+                      meetOrSlice={0}
+                      minX={0}
+                      minY={0}
                       style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                            "borderWidth": 0,
+                          },
+                          undefined,
+                          null,
+                          Object {
+                            "flex": 0,
+                            "height": 24,
+                            "width": 24,
+                          },
+                        ]
                       }
-                    />
+                      vbHeight={24}
+                      vbWidth={24}
+                      width={24}
+                    >
+                      <RNSVGGroup
+                        fill={
+                          Array [
+                            0,
+                            4278190080,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        font={Object {}}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={Array []}
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      >
+                        <RNSVGPath
+                          d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                          fill={
+                            Array [
+                              0,
+                              4294967295,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          originX={0}
+                          originY={0}
+                          propList={
+                            Array [
+                              "fill",
+                            ]
+                          }
+                          rotation={0}
+                          scaleX={1}
+                          scaleY={1}
+                          skewX={0}
+                          skewY={0}
+                          stroke={null}
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                          vectorEffect={0}
+                          x={0}
+                          y={0}
+                        />
+                      </RNSVGGroup>
+                    </RNSVGSvgView>
                   </View>
                 </View>
               </View>
@@ -418,7 +439,7 @@ exports[`content feed query component renders a feedview after successful query 
               }
             >
               <View
-                isLoading={true}
+                isLoading={false}
                 style={
                   Object {
                     "backgroundColor": "#FFFFFF",
@@ -453,34 +474,14 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   >
                     <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
                       style={
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
                           "width": "100%",
                         }
                       }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
+                    />
                     <BVLinearGradient
                       colors={
                         Array [
@@ -529,28 +530,35 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <Text
+                      numberOfLines={2}
                       style={
                         Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
                         }
                       }
                     >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
+                      Probo Senserit Id Mea, Ut Sed Malis Postea,
+                    </Text>
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
+                          "paddingTop": 16,
                         }
-                      />
-                    </View>
+                      }
+                    >
+                      Bla bla bla
+                    </Text>
                   </View>
                   <View
                     style={
@@ -561,1480 +569,122 @@ exports[`content feed query component renders a feedview after successful query 
                       }
                     }
                   >
-                    <View
+                    <RNSVGSvgView
+                      align="xMidYMid"
+                      bbHeight={24}
+                      bbWidth={24}
+                      height={24}
+                      isLiked={false}
+                      meetOrSlice={0}
+                      minX={0}
+                      minY={0}
                       style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
                         Array [
-                          3003121664,
-                          0,
+                          Object {
+                            "backgroundColor": "transparent",
+                            "borderWidth": 0,
+                          },
+                          undefined,
+                          null,
+                          Object {
+                            "flex": 0,
+                            "height": 24,
+                            "width": 24,
+                          },
                         ]
                       }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
+                      vbHeight={24}
+                      vbWidth={24}
+                      width={24}
                     >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
+                      <RNSVGGroup
+                        fill={
+                          Array [
+                            0,
+                            4278190080,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        font={Object {}}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={Array []}
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      >
+                        <RNSVGPath
+                          d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                          fill={
+                            Array [
+                              0,
+                              4294967295,
+                            ]
                           }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
                           }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
+                          opacity={1}
+                          originX={0}
+                          originY={0}
+                          propList={
+                            Array [
+                              "fill",
+                            ]
                           }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View
-            onLayout={[Function]}
-            style={null}
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                  ],
-                }
-              }
-            >
-              <View
-                isLoading={true}
-                style={
-                  Object {
-                    "backgroundColor": "#FFFFFF",
-                    "borderRadius": 16,
-                    "marginHorizontal": 16,
-                    "marginVertical": 12,
-                    "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                    "shadowOffset": Object {
-                      "height": 1,
-                      "width": 0,
-                    },
-                    "shadowOpacity": 1,
-                    "shadowRadius": 6,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderRadius": 16,
-                      "overflow": "hidden",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "overflow": "hidden",
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "resizeMode": "cover",
-                          "width": "100%",
-                        }
-                      }
-                    >
-                      <Image
-                        maxAspectRatio={1.78}
-                        minAspectRatio={1.2}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                            "width": "100%",
-                          }
-                        }
-                      />
-                    </View>
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          3003121664,
-                          0,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0,
-                          "y": 1,
-                        }
-                      }
-                      locations={
-                        Array [
-                          0,
-                          1,
-                        ]
-                      }
-                      overlayColor="#000000"
-                      overlayType="gradient-top"
-                      startPoint={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "flex-start",
-                        "paddingBottom": 32,
-                        "paddingHorizontal": 24,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "marginBottom": 16,
-                          "marginTop": -32,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 32,
-                            "paddingHorizontal": 12,
-                            "width": 64,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "position": "absolute",
-                        "right": 24,
-                        "top": 24,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "width": 24,
-                        }
-                      }
-                    />
+                          rotation={0}
+                          scaleX={1}
+                          scaleY={1}
+                          skewX={0}
+                          skewY={0}
+                          stroke={null}
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                          vectorEffect={0}
+                          x={0}
+                          y={0}
+                        />
+                      </RNSVGGroup>
+                    </RNSVGSvgView>
                   </View>
                 </View>
               </View>
@@ -2044,5 +694,5 @@ exports[`content feed query component renders a feedview after successful query 
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

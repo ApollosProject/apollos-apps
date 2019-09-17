@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalHighlightCard should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -317,17 +321,21 @@ exports[`HorizontalHighlightCard should render 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render a loading state with isLoading 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -557,17 +565,21 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -992,17 +1004,21 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1319,17 +1335,21 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1800,17 +1820,21 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -2174,17 +2198,21 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -2548,17 +2576,21 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -2869,5 +2901,5 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

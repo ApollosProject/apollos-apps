@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The DateInput component should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -289,17 +293,21 @@ exports[`The DateInput component should render 1`] = `
       </Modal>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The DateInput component should render with a displayValue 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -635,17 +643,21 @@ exports[`The DateInput component should render with a displayValue 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The DateInput component should render with a label 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -983,17 +995,21 @@ exports[`The DateInput component should render with a label 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The DateInput component should render with a placeholder 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1329,17 +1345,21 @@ exports[`The DateInput component should render with a placeholder 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The DateInput component should render with an error 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1634,5 +1654,5 @@ exports[`The DateInput component should render with an error 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

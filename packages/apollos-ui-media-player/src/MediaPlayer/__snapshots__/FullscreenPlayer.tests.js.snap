@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1775,17 +1779,21 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the FullscreenPlayer component should render a custom VideoWindow component 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3849,17 +3857,21 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the FullscreenPlayer component should render fullscreen 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -5923,17 +5935,21 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the FullscreenPlayer component should render miniplayer with audio 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -7997,17 +8013,21 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the FullscreenPlayer component should render miniplayer with video 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -10071,5 +10091,5 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
