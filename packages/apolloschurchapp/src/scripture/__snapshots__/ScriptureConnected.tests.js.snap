@@ -83,7 +83,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -137,20 +137,6 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           </View>
         </View>
       </View>
-      <Text
-        bold={false}
-        italic={false}
-        style={
-          Object {
-            "color": "#505050",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 9.6,
-            "lineHeight": 10.37,
-          }
-        }
-      >
-        
-      </Text>
     </View>
   </View>
 </RCTSafeAreaView>
