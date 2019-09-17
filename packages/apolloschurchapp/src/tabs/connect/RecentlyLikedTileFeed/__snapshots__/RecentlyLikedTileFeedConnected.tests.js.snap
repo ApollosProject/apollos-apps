@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -785,17 +789,21 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
       </RCTScrollView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1573,5 +1581,5 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
       </RCTScrollView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

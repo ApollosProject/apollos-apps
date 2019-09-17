@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the GradientOverlayImage component should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -66,17 +70,21 @@ exports[`the GradientOverlayImage component should render 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with an overlayColor 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -172,17 +180,21 @@ exports[`the GradientOverlayImage component should render with an overlayColor 1
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.featured 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -278,17 +290,21 @@ exports[`the GradientOverlayImage component should render with overlayType.featu
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.gradient-bottom 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -384,17 +400,21 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.gradient-top 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -490,17 +510,21 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.high 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -596,17 +620,21 @@ exports[`the GradientOverlayImage component should render with overlayType.high 
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.low 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -702,17 +730,21 @@ exports[`the GradientOverlayImage component should render with overlayType.low 1
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.medium 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -808,5 +840,5 @@ exports[`the GradientOverlayImage component should render with overlayType.mediu
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

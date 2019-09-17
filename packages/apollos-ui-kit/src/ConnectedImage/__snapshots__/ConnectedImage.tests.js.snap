@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -54,17 +58,21 @@ exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ConnectedImage component should render between minAspectRatio and maxAspectRatio 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -113,17 +121,21 @@ exports[`the ConnectedImage component should render between minAspectRatio and m
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -169,17 +181,21 @@ exports[`the ConnectedImage component should render immediately with a network i
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -227,17 +243,21 @@ exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = 
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ConnectedImage component should render with a minAspectRatio 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -285,7 +305,7 @@ exports[`the ConnectedImage component should render with a minAspectRatio 1`] = 
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ConnectedImage component should throw an error if maxAspectRatio is used without maintainAspectRatio 1`] = `
@@ -304,8 +324,11 @@ Array [
     in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
     in View
     in View
-    in RCTSafeAreaView
-    in _class
+    in View
+    in View
+    in AnimatedComponent
+    in SafeView
+    in withOrientation
     in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
     in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
     in nest(ThemeProvider, LayoutProvider)",
@@ -329,8 +352,11 @@ Array [
     in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
     in View
     in View
-    in RCTSafeAreaView
-    in _class
+    in View
+    in View
+    in AnimatedComponent
+    in SafeView
+    in withOrientation
     in LayoutProvider (created by nest(ThemeProvider, LayoutProvider))
     in ThemeProvider (created by nest(ThemeProvider, LayoutProvider))
     in nest(ThemeProvider, LayoutProvider)",

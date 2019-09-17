@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the BodySmall component should accept additional props 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -49,17 +53,21 @@ exports[`the BodySmall component should accept additional props 1`] = `
       "He who lays up treasures on earth spends his life backing away from his treasures. To him, death is loss. He who lays up treasures in heaven looks forward to eternity; he’s moving daily toward his treasures. To him, death is gain." ― Randy Alcorn
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the BodySmall component should accept and render passed in styles 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -100,17 +108,21 @@ exports[`the BodySmall component should accept and render passed in styles 1`] =
       Smaller salmon text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the BodySmall component should render a loading state 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -149,17 +161,21 @@ exports[`the BodySmall component should render a loading state 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the BodySmall component should render as bold 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -200,17 +216,21 @@ exports[`the BodySmall component should render as bold 1`] = `
       Bold BodySmall text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the BodySmall component should render as bold italic 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -251,17 +271,21 @@ exports[`the BodySmall component should render as bold italic 1`] = `
       Bold italic BodySmall text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the BodySmall component should render as italic 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -302,17 +326,21 @@ exports[`the BodySmall component should render as italic 1`] = `
       Italic BodySmall text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the BodySmall component should render correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -353,5 +381,5 @@ exports[`the BodySmall component should render correctly 1`] = `
       Default BodySmall text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

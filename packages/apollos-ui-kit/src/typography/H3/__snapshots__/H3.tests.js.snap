@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the H3 component should accept additional props 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -47,17 +51,21 @@ exports[`the H3 component should accept additional props 1`] = `
       "The Christian shoemaker does his duty not by putting little crosses on the shoes, but by making good shoes, because God is interested in good craftsmanship." ― Martin Luther
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the H3 component should accept and render passed in styles 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -96,17 +104,21 @@ exports[`the H3 component should accept and render passed in styles 1`] = `
       Salmon text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the H3 component should render a loading state 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -145,17 +157,21 @@ exports[`the H3 component should render a loading state 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the H3 component should render a loading state with correct positioning (margins) 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -196,17 +212,21 @@ exports[`the H3 component should render a loading state with correct positioning
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the H3 component should render correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -245,17 +265,21 @@ exports[`the H3 component should render correctly 1`] = `
       Default H3 text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the H3 component should render with correct padding 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -297,5 +321,5 @@ exports[`the H3 component should render with correct padding 1`] = `
       Padded H3 text
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
