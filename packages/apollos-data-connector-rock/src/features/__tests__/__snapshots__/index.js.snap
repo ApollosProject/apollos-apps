@@ -260,7 +260,7 @@ Object {
           "effectiveStartDate": "2019-09-16T21:41:45.686Z",
         },
       },
-      "subtitle": "Monday, September 16, 2019 5:41 PM",
+      "subtitle": undefined,
       "title": Promise {},
     },
   ],

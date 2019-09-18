@@ -50,7 +50,7 @@ Array [
 exports[`Events should get by Campus 2`] = `
 Array [
   Array [
-    "EventItemOccurrences?loadAttributes=expanded&%24filter=CampusId%20eq%20456",
+    "EventItemOccurrences?loadAttributes=expanded&%24expand=Schedule&%24orderby=Schedule%2FEffectiveStartDate%20asc&%24filter=%28Schedule%2FEffectiveStartDate%20ne%20null%29%20or%20%28CampusId%20eq%20456%29",
     Object {},
     Object {},
   ],
@@ -129,14 +129,4 @@ Object {
   "end": "2013-05-01T23:00:00Z",
   "start": "2013-05-01T22:00:00Z",
 }
-`;
-
-exports[`Events should return start and end based on a schedule 2`] = `
-Array [
-  Array [
-    "Schedules/123?loadAttributes=expanded",
-    Object {},
-    Object {},
-  ],
-]
 `;

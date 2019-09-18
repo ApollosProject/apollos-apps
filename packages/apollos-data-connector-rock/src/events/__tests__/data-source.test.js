@@ -18,16 +18,11 @@ describe('Events', () => {
   it('should return start and end based on a schedule', async () => {
     const Events = new EventsDataSource();
 
-    Events.get = jest.fn(() =>
-      Promise.resolve({
-        iCalendarContent:
-          'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
-      })
-    );
-
-    const result = await Events.getDateTime(123);
+    const result = await Events.getDateTime({
+      iCalendarContent:
+        'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+    });
     expect(result).toMatchSnapshot();
-    expect(Events.get.mock.calls).toMatchSnapshot();
   });
 
   it('should return a name based on an EventItem', async () => {

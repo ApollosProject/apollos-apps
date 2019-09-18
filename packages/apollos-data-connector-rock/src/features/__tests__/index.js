@@ -84,6 +84,11 @@ describe('features', () => {
           }),
           getName: () => Promise.resolve('Some Event'),
           getImage: () => Promise.resolve([{ uri: 'http://url.com' }]),
+          getDateTime: () =>
+            Promise.resolve({
+              start: '2019-09-16T21:41:45.686Z',
+              end: '2019-09-16T21:41:45.686Z',
+            }),
         },
       },
     };
