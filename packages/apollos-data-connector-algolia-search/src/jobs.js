@@ -1,12 +1,14 @@
-import Bull from 'bull';
+const createJobs = ({ getContext, queues }) => {
+  const FullIndexQueue = queues.add('algolia-full-index-queue');
 
-const createJobs = ({ getContext }) => {
-  const FullIndexQueue = new Bull('algolia-full-index-queue');
-
-  FullIndexQueue.process(async (job, data) => {
+  FullIndexQueue.process(async () => {
     const context = getContext();
-    dataSources.Search.indexAll();
+    return context.dataSources.Search.indexAll();
   });
+
+  FullIndexQueue.add(null, { repeat: { cron: '15 3 * * *' } });
+  // Uncomment this to trigger an index right now.
+  // FullIndexQueue.add(null);
 };
 
 export default createJobs;

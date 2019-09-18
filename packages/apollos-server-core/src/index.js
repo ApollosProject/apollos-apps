@@ -1,6 +1,7 @@
 import { compact, mapValues, merge, values } from 'lodash';
 import gql from 'graphql-tag';
 import { InMemoryLRUCache } from 'apollo-server-caching';
+import { createQueues, UI } from 'bull-board';
 
 import * as Node from './node';
 import * as Pagination from './pagination';
@@ -118,7 +119,11 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 
   const getContext = createContextGetter({ context, dataSources });
 
-  return jobs.forEach((createJobs) => createJobs({ app, getContext }));
+  const queues = createQueues();
+
+  app.use('/admin/queues', UI);
+
+  return jobs.forEach((createJobs) => createJobs({ app, getContext, queues }));
 };
 
 export const createApolloServerConfig = (data) => {
