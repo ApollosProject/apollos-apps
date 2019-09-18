@@ -24,15 +24,17 @@ export const getCookie = async () => {
 const Browser = {
   open: async (url, options) => {
     const cookie = await getCookie();
-    // NOTE: iOS doesn't support headers, you may want to use src/user-web-view
+    if (cookie)
+      console.warn(
+        "iOS doesn't support headers, you may want to use src/user-web-view"
+      );
     const headers = { Cookie: cookie };
     try {
       if (await InAppBrowser.isAvailable()) {
-        const result = await InAppBrowser.open(url, {
+        InAppBrowser.open(url, {
           headers,
           ...options,
         });
-        console.log(result);
       } else Linking.openURL(url);
     } catch (e) {
       console.error(e);
