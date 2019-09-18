@@ -244,6 +244,32 @@ Array [
 ]
 `;
 
+exports[`features dataSource should create an ActionListFeature from a UPCOMING_EVENTS 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_EVENT",
+      "id": "ActionListAction:00d497873ba581975969adcdf7940325",
+      "image": Promise {},
+      "relatedNode": Object {
+        "__type": "Event",
+        "eventItemId": "456",
+        "id": "123",
+        "schedule": Object {
+          "effectiveStartDate": "2019-09-16T21:41:45.686Z",
+        },
+      },
+      "subtitle": undefined,
+      "title": Promise {},
+    },
+  ],
+  "id": "ActionListFeature:f8fb1b8cbc6cf6322049961109dec2ce",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
 exports[`features dataSource should create an ActionListFeature from multiple PERSONA_FEED algorithms 1`] = `
 Object {
   "__typename": "ActionListFeature",

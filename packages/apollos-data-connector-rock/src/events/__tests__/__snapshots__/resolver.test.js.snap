@@ -18,8 +18,8 @@ Object {
     ],
   },
   "errors": Array [
-    [GraphQLError: this.request(...).find is not a function],
-    [GraphQLError: this.request(...).find is not a function],
+    [GraphQLError: Cannot read property 'iCalendarContent' of undefined],
+    [GraphQLError: Cannot read property 'iCalendarContent' of undefined],
   ],
 }
 `;

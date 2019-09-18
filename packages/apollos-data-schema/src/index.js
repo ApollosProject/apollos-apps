@@ -583,6 +583,7 @@ export const featuresSchema = gql`
 
   enum ACTION_FEATURE_ACTION {
     READ_CONTENT
+    READ_EVENT
   }
 
   type ActionListAction {
