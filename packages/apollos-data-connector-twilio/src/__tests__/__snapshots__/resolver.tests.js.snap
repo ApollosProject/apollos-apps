@@ -8,7 +8,6 @@ TwilioSms {
     "_authy": undefined,
     "_autopilot": undefined,
     "_chat": undefined,
-    "_conversations": undefined,
     "_fax": undefined,
     "_flexApi": undefined,
     "_insights": undefined,
