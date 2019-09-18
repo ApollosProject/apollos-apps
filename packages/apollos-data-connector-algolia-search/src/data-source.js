@@ -1,4 +1,5 @@
 /* eslint-disable no-await-in-loop */
+import { graphql } from 'graphql';
 import ApollosConfig from '@apollosproject/config';
 import algoliasearch from 'algoliasearch';
 import {
@@ -33,13 +34,21 @@ export default class Search {
   async mapItemToAlgolia(item) {
     const { ContentItem } = this.context.dataSources;
     const type = await ContentItem.resolveType(item);
-    return {
-      title: item.title,
-      summary: await ContentItem.createSummary(item),
-      objectID: createGlobalId(item.id, type),
-      __typename: type,
-      coverImage: await ContentItem.getCoverImage(item),
-    };
+
+    const { data } = await graphql(this.context.schema, `
+query getItem {
+  node(id: "${createGlobalId(item.id, type)}") {
+    ... on ContentItem {
+      id
+      title
+      summary
+      objectID: id
+      __typename
+      coverImage { sources { uri } }
+    }
+  }
+}`, {}, this.context);
+    return data.node;
   }
 
   async indexAll() {

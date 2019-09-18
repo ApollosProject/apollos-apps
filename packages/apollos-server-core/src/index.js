@@ -1,6 +1,7 @@
 import { compact, mapValues, merge, values } from 'lodash';
 import gql from 'graphql-tag';
 import { InMemoryLRUCache } from 'apollo-server-caching';
+import { makeExecutableSchema } from 'apollo-server';
 import { createQueues, UI } from 'bull-board';
 
 import * as Node from './node';
@@ -81,6 +82,14 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   contextMiddleware.forEach((middleware) => {
     context = middleware({ req, context });
   });
+
+  // Used to execute graphql queries from within the schema itself. #meta
+  const schema = makeExecutableSchema({
+    typeDefs: [...createSchema(data), `scalar Upload`],
+    resolvers: createResolvers(data),
+  });
+  context.schema = schema;
+
   return context;
 };
 
@@ -127,10 +136,10 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 };
 
 export const createApolloServerConfig = (data) => {
-  const context = createContext(data);
   const dataSources = createDataSources(data);
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
+  const context = createContext(data);
   const applyServerMiddleware = createMiddleware(data);
   const setupJobs = createJobs(data);
   return {
