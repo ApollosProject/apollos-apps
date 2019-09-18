@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalDefaultCard should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -282,17 +286,21 @@ exports[`HorizontalDefaultCard should render 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -490,17 +498,21 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should render with a summary 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -804,17 +816,21 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should render with a title 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -999,17 +1015,21 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1299,5 +1319,5 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

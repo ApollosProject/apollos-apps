@@ -2,7 +2,7 @@ import React from 'react';
 import { withProps } from 'recompose';
 import { Platform } from 'react-native';
 
-import { Paragraph, H4 } from '@apollosproject/ui-kit';
+import { Paragraph, H4, styled } from '@apollosproject/ui-kit';
 import HTMLView, {
   defaultRenderer,
   wrapTextChildren,
@@ -14,6 +14,10 @@ import {
   RedLetters,
   PoeticPause,
 } from './typography';
+
+const StyledParagraph = styled({
+  paddingBottom: 0,
+})(Paragraph);
 
 const renderer = (node, { children, ...other }) => {
   // the defaultRenderer support several basic elements out of the box,
@@ -120,11 +124,11 @@ const renderer = (node, { children, ...other }) => {
 
   if (node.name === 'p') {
     return (
-      <Paragraph>
+      <StyledParagraph>
         <ScriptureText>
           {wrapTextChildren(children, ScriptureText)}
         </ScriptureText>
-      </Paragraph>
+      </StyledParagraph>
     );
   }
 
