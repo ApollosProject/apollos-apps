@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -83,7 +87,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -172,7 +176,7 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -294,33 +298,23 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           </View>
         </View>
       </View>
-      <Text
-        bold={false}
-        italic={false}
-        style={
-          Object {
-            "color": "#505050",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 9.6,
-            "lineHeight": 10.37,
-          }
-        }
-      >
-        
-      </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders John 3:16-17 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -396,7 +390,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -488,17 +482,21 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -574,7 +572,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -629,7 +627,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -787,7 +785,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -855,17 +853,21 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Psalm 23 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1353,17 +1355,21 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Psalm 32 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -2138,17 +2144,21 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3103,17 +3113,21 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3189,7 +3203,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3255,7 +3269,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3292,7 +3306,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3360,17 +3374,21 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3446,7 +3464,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 0,
               }
             }
           >
@@ -3806,17 +3824,21 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the ScriptureItem component renders a loading state 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -3905,5 +3927,5 @@ exports[`the ScriptureItem component renders a loading state 1`] = `
       />
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

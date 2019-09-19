@@ -19,7 +19,9 @@ const ScriptureItem = ({ reference, html, copyright, isLoading }) => (
         <H4>{reference}</H4> <H6>WEB</H6>
       </H4>
       <ScriptureHTMLView>{html}</ScriptureHTMLView>
-      <LegalText>{copyright === 'PUBLIC DOMAIN' ? '' : copyright}</LegalText>
+      {copyright === 'PUBLIC DOMAIN' ? null : (
+        <LegalText>{copyright}</LegalText>
+      )}
     </View>
   </Placeholder.Paragraph>
 );

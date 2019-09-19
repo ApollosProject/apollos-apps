@@ -67,6 +67,29 @@ describe('features', () => {
           resolveType: () => 'UniversalContentItem',
         },
         Scripture: {},
+        Events: {
+          findRecent: () => ({
+            top: () => ({
+              get: () =>
+                Promise.resolve([
+                  {
+                    id: '123',
+                    eventItemId: '456',
+                    schedule: {
+                      effectiveStartDate: '2019-09-16T21:41:45.686Z',
+                    },
+                  },
+                ]),
+            }),
+          }),
+          getName: () => Promise.resolve('Some Event'),
+          getImage: () => Promise.resolve([{ uri: 'http://url.com' }]),
+          getDateTime: () =>
+            Promise.resolve({
+              start: '2019-09-16T21:41:45.686Z',
+              end: '2019-09-16T21:41:45.686Z',
+            }),
+        },
       },
     };
   });
@@ -94,6 +117,21 @@ describe('features', () => {
 
       const result = await features.createActionListFeature({
         algorithms: ['PERSONA_FEED', 'PERSONA_FEED'],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should create an ActionListFeature from a UPCOMING_EVENTS', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createActionListFeature({
+        algorithms: ['UPCOMING_EVENTS'],
         title: 'Test Action List',
         subtitle: "It's great!",
       });

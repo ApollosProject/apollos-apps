@@ -191,7 +191,6 @@ android {
 }
 
 dependencies {
-    // added this and the two google play packages below when upgraded rn-maps to 0.24.2
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
