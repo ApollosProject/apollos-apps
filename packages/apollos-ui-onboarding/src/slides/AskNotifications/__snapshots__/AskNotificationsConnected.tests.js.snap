@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding AskNotificationsConnected component should render a custom Component 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -37,17 +41,21 @@ exports[`The Onboarding AskNotificationsConnected component should render a cust
       Skyline is better than Goldstar === true
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding AskNotificationsConnected component should render as if a user had granted push notifications permissions 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -402,17 +410,21 @@ exports[`The Onboarding AskNotificationsConnected component should render as if 
       </RCTSafeAreaView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding AskNotificationsConnected component should render with a user not having granted push notifications permissions 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -611,17 +623,21 @@ exports[`The Onboarding AskNotificationsConnected component should render with a
       </RCTSafeAreaView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding AskNotificationsConnected component should render with no data in the cache 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -778,5 +794,5 @@ exports[`The Onboarding AskNotificationsConnected component should render with n
       </View>
     </RCTScrollView>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

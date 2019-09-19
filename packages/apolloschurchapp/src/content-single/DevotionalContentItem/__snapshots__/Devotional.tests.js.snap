@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Devotional component renders a devotional 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -469,7 +473,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -586,7 +590,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -902,17 +906,21 @@ exports[`the Devotional component renders a devotional 1`] = `
       </RCTSafeAreaView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the Devotional component renders a loading state of null 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1260,16 +1268,45 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                         >
                           God is Our Banner
                         </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#00676D",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 16,
+                              "lineHeight": 23.04,
+                              "paddingBottom": 24,
+                              "textAlign": "center",
+                              "textDecorationLine": "underline",
+                            }
+                          }
+                        >
+                          <Text
+                            onPress={[Function]}
+                            padded={true}
+                            style={
+                              Object {
+                                "color": "#17B582",
+                              }
+                            }
+                          >
+                            1 Corinthians 15:57, Exodus 17:8-15
+                          </Text>
+                        </Text>
                         <View
                           lineNumber={8}
-                          onReady={false}
+                          onReady={true}
                           style={
                             Object {
                               "paddingBottom": 17.28,
                             }
                           }
                         >
-                          <View />
+                          <View>
+                            <Text>
+                              Some content!
+                            </Text>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -1294,7 +1331,132 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                             "paddingVertical": 16,
                           }
                         }
-                      />
+                      >
+                        <View>
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "40%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "60%",
+                              }
+                            }
+                          />
+                        </View>
+                        <View>
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "40%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "100%",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
+                                "borderRadius": 16,
+                                "height": 16,
+                                "marginVertical": 5,
+                                "width": "60%",
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
                     </View>
                   </RCTScrollView>
                 </View>
@@ -1305,17 +1467,21 @@ exports[`the Devotional component renders a loading state of null 1`] = `
       </RCTSafeAreaView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`the Devotional component renders even with empty scripture array 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1777,7 +1943,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -1894,7 +2060,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                               <View
                                 style={
                                   Object {
-                                    "paddingBottom": 17.28,
+                                    "paddingBottom": 0,
                                   }
                                 }
                               >
@@ -2210,5 +2376,5 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
       </RCTSafeAreaView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

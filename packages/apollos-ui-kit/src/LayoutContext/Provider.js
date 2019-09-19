@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Dimensions, StyleSheet, SafeAreaView, View } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
+import { Dimensions, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { isEqual } from 'lodash';
 
