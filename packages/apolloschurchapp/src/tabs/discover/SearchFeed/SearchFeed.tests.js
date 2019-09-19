@@ -288,6 +288,52 @@ describe('The SearchFeed component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render an empty state', async () => {
+    const mockEmptyFeedData = {
+      request: {
+        query: GET_SEARCH_RESULTS,
+        variables: { searchText: 'No results here' },
+      },
+      result: {
+        data: {
+          search: {
+            edges: [],
+            __typename: 'SearchResultsConnection',
+          },
+        },
+      },
+    };
+
+    const mockEmptySearchResultsCardData = [
+      {
+        request: {
+          query: GET_CONTENT_CARD,
+          variables: { contentId: 'fake-id' },
+        },
+        result: {
+          data: {},
+        },
+      },
+    ];
+
+    const SearchStack = createStackNavigator({
+      // eslint-disable-next-line react/display-name
+      SearchFeed: (props) => (
+        <SearchFeed searchText={'No results here'} {...props} />
+      ),
+    });
+
+    const SearchFeedWithNavigation = createAppContainer(SearchStack);
+    const tree = await renderWithApolloData(
+      <Providers
+        mocks={[mockEmptyFeedData, ...mockEmptySearchResultsCardData]}
+        cache={null}
+      >
+        <SearchFeedWithNavigation searchText={'No results here'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a loading state', () => {
     const SearchStack = createStackNavigator({ SearchFeed });
     const SearchFeedWithNavigation = createAppContainer(SearchStack);
