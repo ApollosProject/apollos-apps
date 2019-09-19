@@ -9,7 +9,7 @@ import {
   context,
   dataSources,
   applyServerMiddleware,
-  setupJobs
+  setupJobs,
 } from './data';
 
 export { resolvers, schema, testSchema };

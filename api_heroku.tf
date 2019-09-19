@@ -140,10 +140,10 @@ resource "heroku_addon" "fastly-production" {
 
 resource "heroku_addon" "redis-staging" {
   app  = "${heroku_app.staging.name}"
-  plan = "heroku-redis:hobby-devi"
+  plan = "heroku-redis:hobby-dev"
 }
 
 resource "heroku_addon" "redis-production" {
   app  = "${heroku_app.staging.name}"
-  plan = "heroku-redis:hobby-devi"
+  plan = "heroku-redis:hobby-dev"
 }

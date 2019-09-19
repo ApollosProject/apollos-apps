@@ -35,7 +35,9 @@ export default class Search {
     const { ContentItem } = this.context.dataSources;
     const type = await ContentItem.resolveType(item);
 
-    const { data } = await graphql(this.context.schema, `
+    const { data } = await graphql(
+      this.context.schema,
+      `
 query getItem {
   node(id: "${createGlobalId(item.id, type)}") {
     ... on ContentItem {
@@ -47,7 +49,10 @@ query getItem {
       coverImage { sources { uri } }
     }
   }
-}`, {}, this.context);
+}`,
+      {},
+      this.context
+    );
     return data.node;
   }
 

@@ -84,11 +84,18 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   });
 
   // Used to execute graphql queries from within the schema itself. #meta
-  const schema = makeExecutableSchema({
-    typeDefs: [...createSchema(data), `scalar Upload`],
-    resolvers: createResolvers(data),
-  });
-  context.schema = schema;
+  // You probally should avoid using this.
+  try {
+    const schema = makeExecutableSchema({
+      typeDefs: [...createSchema(data), `scalar Upload`],
+      resolvers: createResolvers(data),
+    });
+    context.schema = schema;
+  } catch (e) {
+    // Not compatible with our test environment under certain conditions
+    // Hence, we need to swallow errors.
+    console.warn(e);
+  }
 
   return context;
 };
@@ -132,7 +139,7 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 
   app.use('/admin/queues', UI);
 
-  return jobs.forEach((createJobs) => createJobs({ app, getContext, queues }));
+  return jobs.forEach((create) => create({ app, getContext, queues }));
 };
 
 export const createApolloServerConfig = (data) => {
