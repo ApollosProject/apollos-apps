@@ -13,6 +13,9 @@ import {
 
 const StyledIcon = withTheme(({ theme }) => ({
   fill: theme.colors.text.tertiary,
+  style: {
+    marginRight: theme.sizing.baseUnit / 2,
+  },
 }))(Icon);
 
 const Title = styled({
@@ -34,8 +37,8 @@ const StyledBodySmall = NoResultsText(BodySmall);
 const NoResults = ({ searchText }) => (
   <CenteredView>
     <Title vertical={false}>
-      <StyledIcon name={'search'} />
-      <StyledH4>Uh Oh!</StyledH4>
+      <StyledIcon name={'umbrella'} />
+      <StyledH4 padded>Uh Oh!</StyledH4>
     </Title>
     <PaddedView vertical={false}>
       <StyledBodySmall>
