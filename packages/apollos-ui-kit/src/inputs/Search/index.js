@@ -10,6 +10,8 @@ class Search extends PureComponent {
     cancelButtonText: PropTypes.string,
     disabled: PropTypes.bool,
     inputRef: PropTypes.node, // Need access to the search input? pass in your ref here!
+    onChangeText: PropTypes.func, // Need access to the search text (input)? Here you go!
+    onFocus: PropTypes.func, // Need to know if `Search` is in focus? 💥
     onSubmit: PropTypes.func,
     placeholder: PropTypes.string,
     /* In order for this components animation to work correctly you need match this value to this
@@ -76,19 +78,28 @@ class Search extends PureComponent {
   }
 
   handleOnFocus = () => {
-    this.setState((state) => ({
-      isFocused: !state.isFocused,
-    }));
+    this.setState(
+      (state) => ({
+        isFocused: !state.isFocused,
+      }),
+      () => this.props.onFocus && this.props.onFocus(this.state.isFocused)
+    );
   };
 
   handleOnChangeText = (value) => {
-    this.setState({ value });
+    this.setState(
+      { value },
+      () => this.props.onChangeText && this.props.onChangeText(value)
+    );
   };
 
   handleOnPressClearSearchButton = () => {
-    this.setState({
-      value: '',
-    });
+    this.setState(
+      {
+        value: '',
+      },
+      () => this.props.onChangeText && this.props.onChangeText(this.state.value)
+    );
   };
 
   handleOnPressCancel = () => Keyboard.dismiss();
@@ -108,6 +119,8 @@ class Search extends PureComponent {
       cancelButtonText,
       disabled,
       inputRef,
+      onChangeText,
+      onFocus,
       onSubmit,
       placeholder,
       screenBackgroundColor,
