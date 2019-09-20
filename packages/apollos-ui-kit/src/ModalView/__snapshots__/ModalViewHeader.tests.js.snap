@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The ModalView/ModalViewHeader component should accept an onBack function 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -285,17 +289,21 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
       </RNSVGSvgView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The ModalView/ModalViewHeader component should accept an onClose function 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -573,17 +581,21 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The ModalView/ModalViewHeader component should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -861,17 +873,21 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
       </RNSVGSvgView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The ModalView/ModalViewHeader component should render as a navigationHeader 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1230,5 +1246,5 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
       </View>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
