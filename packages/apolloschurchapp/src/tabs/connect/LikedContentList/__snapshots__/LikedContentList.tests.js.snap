@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LikedContentList component renders LikedContentList 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -219,11 +223,6 @@ fragment themeFragment on ContentItem {
 , variables: {"first":20}]
             }
           />
-        }
-        contentContainerStyle={
-          Object {
-            "paddingVertical": 7.2,
-          }
         }
         data={Array []}
         disableVirtualization={false}
@@ -479,5 +478,5 @@ fragment themeFragment on ContentItem {
       </RCTScrollView>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

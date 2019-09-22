@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The ModalView component should render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -315,17 +319,21 @@ exports[`The ModalView component should render 1`] = `
       </View>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The ModalView component should render a custom back action 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -713,17 +721,21 @@ exports[`The ModalView component should render a custom back action 1`] = `
       </View>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The ModalView component should render a custom close action 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1031,17 +1043,21 @@ exports[`The ModalView component should render a custom close action 1`] = `
       </View>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The ModalView component should render with children 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -1352,5 +1368,5 @@ exports[`The ModalView component should render with children 1`] = `
       </View>
     </BVLinearGradient>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

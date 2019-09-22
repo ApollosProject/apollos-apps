@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Display Native Map with Locations Render a native map view 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   onLayout={[Function]}
+  pointerEvents="box-none"
   style={
     Object {
       "bottom": 0,
       "left": 0,
+      "paddingBottom": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 20,
       "position": "absolute",
       "right": 0,
       "top": 0,
@@ -124,6 +128,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da47e8e69-9542-42de-9ed3-ff42fdc82417",
                           },
@@ -261,6 +266,7 @@ Anderson, SC 29621-3619
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
                           },
@@ -398,6 +404,7 @@ Richardson, TX 75080-5525
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dbad9eb54-3e78-44a7-a028-3f2d6e71a36f",
                           },
@@ -535,6 +542,7 @@ Cincinnati, OH 45202-2118
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
                           },
@@ -680,5 +688,5 @@ South Barrington, IL 60010-6143
       </RCTSafeAreaView>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
