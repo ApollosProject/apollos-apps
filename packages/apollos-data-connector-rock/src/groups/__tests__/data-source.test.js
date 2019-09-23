@@ -6,10 +6,6 @@ describe('Groups', () => {
     { id: 2, firstName: 'Michael' },
   ]);
   const personMock = Promise.resolve({ id: 1, firstName: 'Frank' });
-  const groupArrayMock = Promise.resolve([
-    { id: 1, name: 'franks beer group', groupTypeId: 25 },
-    { id: 2, name: 'prayer team', groupTypeId: 23 },
-  ]);
   const groupMock = Promise.resolve({
     id: 1,
     name: 'franks beer group',
@@ -29,14 +25,6 @@ describe('Groups', () => {
   let Groups;
   beforeEach(() => {
     Groups = new GroupsWithContext();
-  });
-
-  it('should get all groups', async () => {
-    Groups.get = jest.fn(() => groupArrayMock);
-
-    const result = await Groups.getAll();
-    expect(result).toMatchSnapshot();
-    expect(Groups.get.mock.calls).toMatchSnapshot();
   });
 
   it('should get a group by id', async () => {
@@ -75,38 +63,6 @@ describe('Groups', () => {
     Groups.getFromId = jest.fn(() => groupMock);
 
     const result = await Groups.getByPerson(1);
-    expect(result).toMatchSnapshot();
-    expect(Groups.get.mock.calls).toMatchSnapshot();
-  });
-
-  it('should get groups lead by person', async () => {
-    Groups.getByPerson = jest.fn(() => groupArrayMock);
-    Groups.getLeader = jest.fn(() => personMock);
-
-    const result = await Groups.getLeadByPerson(1);
-    expect(result).toMatchSnapshot();
-  });
-
-  it('should get families', async () => {
-    Groups.get = jest.fn(() => groupArrayMock);
-
-    const result = await Groups.getFamilies(1);
-    expect(result).toMatchSnapshot();
-    expect(Groups.get.mock.calls).toMatchSnapshot();
-  });
-
-  it('should get home groups', async () => {
-    Groups.get = jest.fn(() => groupArrayMock);
-
-    const result = await Groups.getHomeGroups(1);
-    expect(result).toMatchSnapshot();
-    expect(Groups.get.mock.calls).toMatchSnapshot();
-  });
-
-  it('should get serving groups', async () => {
-    Groups.get = jest.fn(() => groupArrayMock);
-
-    const result = await Groups.getServingGroups(1);
     expect(result).toMatchSnapshot();
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });

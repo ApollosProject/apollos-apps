@@ -19,56 +19,6 @@ Array [
 ]
 `;
 
-exports[`Groups should get all groups 1`] = `
-Array [
-  Object {
-    "groupTypeId": 25,
-    "id": 1,
-    "name": "franks beer group",
-  },
-  Object {
-    "groupTypeId": 23,
-    "id": 2,
-    "name": "prayer team",
-  },
-]
-`;
-
-exports[`Groups should get all groups 2`] = `
-Array [
-  Array [
-    "Groups?loadAttributes=expanded&%24filter=IsActive%20eq%20true%20and%20IsArchived%20eq%20false&%24expand=Members",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`Groups should get families 1`] = `
-Array [
-  Object {
-    "groupTypeId": 25,
-    "id": 1,
-    "name": "franks beer group",
-  },
-  Object {
-    "groupTypeId": 23,
-    "id": 2,
-    "name": "prayer team",
-  },
-]
-`;
-
-exports[`Groups should get families 2`] = `
-Array [
-  Array [
-    "/Groups/GetFamilies/1?loadAttributes=expanded&%24filter=IsActive%20eq%20true%20and%20IsArchived%20eq%20false",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
 exports[`Groups should get group members 1`] = `
 Array [
   Object {
@@ -112,66 +62,7 @@ Array [
 exports[`Groups should get groups by person 2`] = `
 Array [
   Array [
-    "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`Groups should get groups lead by person 1`] = `
-Array [
-  Object {
-    "groupTypeId": 25,
-    "id": 1,
-    "name": "franks beer group",
-  },
-  Object {
-    "groupTypeId": 23,
-    "id": 2,
-    "name": "prayer team",
-  },
-]
-`;
-
-exports[`Groups should get home groups 1`] = `Array []`;
-
-exports[`Groups should get home groups 2`] = `
-Array [
-  Array [
-    "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
-    Object {},
-    Object {},
-  ],
-  Array [
-    "Groups?loadAttributes=expanded&%24expand=Members",
-    Object {},
-    Object {},
-  ],
-  Array [
-    "Groups?loadAttributes=expanded&%24expand=Members",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`Groups should get serving groups 1`] = `Array []`;
-
-exports[`Groups should get serving groups 2`] = `
-Array [
-  Array [
-    "GroupMembers?loadAttributes=expanded&%24filter=PersonId%20eq%201",
-    Object {},
-    Object {},
-  ],
-  Array [
-    "Groups?loadAttributes=expanded&%24expand=Members",
-    Object {},
-    Object {},
-  ],
-  Array [
-    "Groups?loadAttributes=expanded&%24expand=Members",
+    "GroupMembers?loadAttributes=expanded&%24expand=GroupRole&%24filter=PersonId%20eq%201%20",
     Object {},
     Object {},
   ],

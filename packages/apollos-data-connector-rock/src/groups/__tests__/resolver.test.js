@@ -37,22 +37,6 @@ describe('Groups resolver', () => {
                 firstName
               }
             }
-            groupsLead {
-              id
-              name
-            }
-            families {
-              id
-              name
-            }
-            homeGroups {
-              id
-              name
-            }
-            servingGroups {
-              id
-              name
-            }
           }
         }
       }
@@ -63,18 +47,6 @@ describe('Groups resolver', () => {
     );
     context.dataSources.Group.getByPerson = jest.fn(() =>
       Promise.resolve([{ id: 1, name: 'franks beer group' }])
-    );
-    context.dataSources.Group.getLeadByPerson = jest.fn(() =>
-      Promise.resolve([{ id: 1, name: 'franks beer group' }])
-    );
-    context.dataSources.Group.getHomeGroups = jest.fn(() =>
-      Promise.resolve([{ id: 1, name: 'franks beer group' }])
-    );
-    context.dataSources.Group.getFamilies = jest.fn(() =>
-      Promise.resolve([{ id: 2, name: 'shartsis family' }])
-    );
-    context.dataSources.Group.getServingGroups = jest.fn(() =>
-      Promise.resolve([{ id: 3, name: 'cincinatti campus prayer team' }])
     );
     context.dataSources.Group.getLeader = jest.fn(() =>
       Promise.resolve({ id: 1, firstName: 'Frank' })

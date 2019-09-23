@@ -31,9 +31,9 @@ export default class Group extends RockApolloDataSource {
   getLeader = async (groupId) => {
     const { Person } = this.context.dataSources;
     const leader = await this.request('GroupMembers')
-      .expand('GroupRole')
       .filter(`GroupId eq ${groupId}`)
       .andFilter('GroupRole/IsLeader eq true')
+      .expand('GroupRole')
       .first(); // assuming one leader
     return leader ? Person.getFromId(leader.personId) : null;
   };
