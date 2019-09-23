@@ -34,7 +34,8 @@
     "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn cache clean && yarn",
     "nuke:cache": "watchman watch-del-all && ./node_modules/.bin/lerna run start --scope apolloschurchapp --stream -- --reset-cache",
     "postinstall": "lerna run build --parallel",
-    "generate-docs": "lerna run generate-docs"
+    "generate-docs": "lerna run generate-docs",
+    "pods": "lerna run pods --stream --scope apolloschurchapp"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
