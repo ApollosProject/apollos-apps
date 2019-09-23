@@ -30,7 +30,7 @@ describe('Groups', () => {
   it('should get a group by id', async () => {
     Groups.get = jest.fn(() => groupMock);
 
-    const result = await Groups.getFromId(1);
+    const result = await Groups.getFromId({ id: 1 });
     expect(result).toMatchSnapshot();
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });
@@ -62,7 +62,7 @@ describe('Groups', () => {
     Groups.get = jest.fn(() => personArrayMock);
     Groups.getFromId = jest.fn(() => groupMock);
 
-    const result = await Groups.getByPerson(1);
+    const result = await Groups.getByPerson({ personId: 1 });
     expect(result).toMatchSnapshot();
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });

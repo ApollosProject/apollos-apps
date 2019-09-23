@@ -11,7 +11,7 @@ export default {
   },
   Person: {
     groups: enforceCurrentUser(({ id }, { type, asLeader }, { dataSources }) =>
-      dataSources.Group.getByPerson(id, type, asLeader)
+      dataSources.Group.getByPerson({ personId: id, type, asLeader })
     ),
   },
 };

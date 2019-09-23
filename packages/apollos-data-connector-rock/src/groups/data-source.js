@@ -13,7 +13,7 @@ export default class Group extends RockApolloDataSource {
     Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID,
   };
 
-  getFromId = (id, activeOnly = false) =>
+  getFromId = ({ id, activeOnly = false }) =>
     this.request()
       .find(id)
       .expand('Members')
@@ -38,7 +38,7 @@ export default class Group extends RockApolloDataSource {
     return leader ? Person.getFromId(leader.personId) : null;
   };
 
-  getByPerson = async (personId, type = null, asLeader = false) => {
+  getByPerson = async ({ personId, type = null, asLeader = false }) => {
     const groupAssociations = await this.request('GroupMembers')
       .expand('GroupRole')
       .filter(
@@ -48,7 +48,7 @@ export default class Group extends RockApolloDataSource {
       )
       .get();
     const groups = await Promise.all(
-      groupAssociations.map(({ groupId }) => this.getFromId(groupId, true))
+      groupAssociations.map(({ groupId }) => this.getFromId({id: groupId, activeOnly: true}))
     );
     return groups.filter(({ groupTypeId }) =>
       type
