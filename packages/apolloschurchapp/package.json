@@ -38,6 +38,7 @@
     "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
     "prestart": "lerna run generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify",
+    "pods": "./scripts/install_pods.sh",
     "start": "react-native start",
     "test": "jest"
   },
