@@ -144,6 +144,6 @@ resource "heroku_addon" "redis-staging" {
 }
 
 resource "heroku_addon" "redis-production" {
-  app  = "${heroku_app.staging.name}"
+  app  = "${heroku_app.production.name}"
   plan = "heroku-redis:hobby-dev"
 }
