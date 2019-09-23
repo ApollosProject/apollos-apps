@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alolia search jobs must create a job and add it to the queue 1`] = `
+Array [
+  Array [
+    [Function],
+  ],
+]
+`;
+
+exports[`Alolia search jobs must create a job and add it to the queue 2`] = `
+Array [
+  Array [
+    null,
+    Object {
+      "repeat": Object {
+        "cron": "15 3 * * *",
+      },
+    },
+  ],
+]
+`;
+
+exports[`Alolia search jobs must create a job and add it to the queue 3`] = `
+Array [
+  Array [
+    "algolia-full-index-queue",
+  ],
+]
+`;
+
+exports[`Alolia search jobs process must call a Search datasource method 1`] = `
+Array [
+  Array [],
+]
+`;

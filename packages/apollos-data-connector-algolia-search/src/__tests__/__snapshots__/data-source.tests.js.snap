@@ -1,0 +1,788 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The algolia search dataSource must be able to perform a full index of data from the ContentItem dataSource 1`] = `
+Array [
+  Array [],
+  Array [],
+]
+`;
+
+exports[`The algolia search dataSource must be able to perform a full index of data from the ContentItem dataSource 2`] = `
+Array [
+  Array [
+    Object {
+      "args": Object {
+        "after": "99-cursor",
+        "first": 100,
+      },
+      "cursor": "by-active-cursor",
+    },
+  ],
+  Array [
+    Object {
+      "args": Object {
+        "after": "99-cursor",
+        "first": 100,
+      },
+      "cursor": "by-active-cursor",
+    },
+  ],
+]
+`;
+
+exports[`The algolia search dataSource must be able to perform a full index of data from the ContentItem dataSource 3`] = `
+Array [
+  Array [
+    Object {
+      "id": 0,
+    },
+  ],
+  Array [
+    Object {
+      "id": 1,
+    },
+  ],
+  Array [
+    Object {
+      "id": 2,
+    },
+  ],
+  Array [
+    Object {
+      "id": 3,
+    },
+  ],
+  Array [
+    Object {
+      "id": 4,
+    },
+  ],
+  Array [
+    Object {
+      "id": 5,
+    },
+  ],
+  Array [
+    Object {
+      "id": 6,
+    },
+  ],
+  Array [
+    Object {
+      "id": 7,
+    },
+  ],
+  Array [
+    Object {
+      "id": 8,
+    },
+  ],
+  Array [
+    Object {
+      "id": 9,
+    },
+  ],
+  Array [
+    Object {
+      "id": 10,
+    },
+  ],
+  Array [
+    Object {
+      "id": 11,
+    },
+  ],
+  Array [
+    Object {
+      "id": 12,
+    },
+  ],
+  Array [
+    Object {
+      "id": 13,
+    },
+  ],
+  Array [
+    Object {
+      "id": 14,
+    },
+  ],
+  Array [
+    Object {
+      "id": 15,
+    },
+  ],
+  Array [
+    Object {
+      "id": 16,
+    },
+  ],
+  Array [
+    Object {
+      "id": 17,
+    },
+  ],
+  Array [
+    Object {
+      "id": 18,
+    },
+  ],
+  Array [
+    Object {
+      "id": 19,
+    },
+  ],
+  Array [
+    Object {
+      "id": 20,
+    },
+  ],
+  Array [
+    Object {
+      "id": 21,
+    },
+  ],
+  Array [
+    Object {
+      "id": 22,
+    },
+  ],
+  Array [
+    Object {
+      "id": 23,
+    },
+  ],
+  Array [
+    Object {
+      "id": 24,
+    },
+  ],
+  Array [
+    Object {
+      "id": 25,
+    },
+  ],
+  Array [
+    Object {
+      "id": 26,
+    },
+  ],
+  Array [
+    Object {
+      "id": 27,
+    },
+  ],
+  Array [
+    Object {
+      "id": 28,
+    },
+  ],
+  Array [
+    Object {
+      "id": 29,
+    },
+  ],
+  Array [
+    Object {
+      "id": 30,
+    },
+  ],
+  Array [
+    Object {
+      "id": 31,
+    },
+  ],
+  Array [
+    Object {
+      "id": 32,
+    },
+  ],
+  Array [
+    Object {
+      "id": 33,
+    },
+  ],
+  Array [
+    Object {
+      "id": 34,
+    },
+  ],
+  Array [
+    Object {
+      "id": 35,
+    },
+  ],
+  Array [
+    Object {
+      "id": 36,
+    },
+  ],
+  Array [
+    Object {
+      "id": 37,
+    },
+  ],
+  Array [
+    Object {
+      "id": 38,
+    },
+  ],
+  Array [
+    Object {
+      "id": 39,
+    },
+  ],
+  Array [
+    Object {
+      "id": 40,
+    },
+  ],
+  Array [
+    Object {
+      "id": 41,
+    },
+  ],
+  Array [
+    Object {
+      "id": 42,
+    },
+  ],
+  Array [
+    Object {
+      "id": 43,
+    },
+  ],
+  Array [
+    Object {
+      "id": 44,
+    },
+  ],
+  Array [
+    Object {
+      "id": 45,
+    },
+  ],
+  Array [
+    Object {
+      "id": 46,
+    },
+  ],
+  Array [
+    Object {
+      "id": 47,
+    },
+  ],
+  Array [
+    Object {
+      "id": 48,
+    },
+  ],
+  Array [
+    Object {
+      "id": 49,
+    },
+  ],
+  Array [
+    Object {
+      "id": 50,
+    },
+  ],
+  Array [
+    Object {
+      "id": 51,
+    },
+  ],
+  Array [
+    Object {
+      "id": 52,
+    },
+  ],
+  Array [
+    Object {
+      "id": 53,
+    },
+  ],
+  Array [
+    Object {
+      "id": 54,
+    },
+  ],
+  Array [
+    Object {
+      "id": 55,
+    },
+  ],
+  Array [
+    Object {
+      "id": 56,
+    },
+  ],
+  Array [
+    Object {
+      "id": 57,
+    },
+  ],
+  Array [
+    Object {
+      "id": 58,
+    },
+  ],
+  Array [
+    Object {
+      "id": 59,
+    },
+  ],
+  Array [
+    Object {
+      "id": 60,
+    },
+  ],
+  Array [
+    Object {
+      "id": 61,
+    },
+  ],
+  Array [
+    Object {
+      "id": 62,
+    },
+  ],
+  Array [
+    Object {
+      "id": 63,
+    },
+  ],
+  Array [
+    Object {
+      "id": 64,
+    },
+  ],
+  Array [
+    Object {
+      "id": 65,
+    },
+  ],
+  Array [
+    Object {
+      "id": 66,
+    },
+  ],
+  Array [
+    Object {
+      "id": 67,
+    },
+  ],
+  Array [
+    Object {
+      "id": 68,
+    },
+  ],
+  Array [
+    Object {
+      "id": 69,
+    },
+  ],
+  Array [
+    Object {
+      "id": 70,
+    },
+  ],
+  Array [
+    Object {
+      "id": 71,
+    },
+  ],
+  Array [
+    Object {
+      "id": 72,
+    },
+  ],
+  Array [
+    Object {
+      "id": 73,
+    },
+  ],
+  Array [
+    Object {
+      "id": 74,
+    },
+  ],
+  Array [
+    Object {
+      "id": 75,
+    },
+  ],
+  Array [
+    Object {
+      "id": 76,
+    },
+  ],
+  Array [
+    Object {
+      "id": 77,
+    },
+  ],
+  Array [
+    Object {
+      "id": 78,
+    },
+  ],
+  Array [
+    Object {
+      "id": 79,
+    },
+  ],
+  Array [
+    Object {
+      "id": 80,
+    },
+  ],
+  Array [
+    Object {
+      "id": 81,
+    },
+  ],
+  Array [
+    Object {
+      "id": 82,
+    },
+  ],
+  Array [
+    Object {
+      "id": 83,
+    },
+  ],
+  Array [
+    Object {
+      "id": 84,
+    },
+  ],
+  Array [
+    Object {
+      "id": 85,
+    },
+  ],
+  Array [
+    Object {
+      "id": 86,
+    },
+  ],
+  Array [
+    Object {
+      "id": 87,
+    },
+  ],
+  Array [
+    Object {
+      "id": 88,
+    },
+  ],
+  Array [
+    Object {
+      "id": 89,
+    },
+  ],
+  Array [
+    Object {
+      "id": 90,
+    },
+  ],
+  Array [
+    Object {
+      "id": 91,
+    },
+  ],
+  Array [
+    Object {
+      "id": 92,
+    },
+  ],
+  Array [
+    Object {
+      "id": 93,
+    },
+  ],
+  Array [
+    Object {
+      "id": 94,
+    },
+  ],
+  Array [
+    Object {
+      "id": 95,
+    },
+  ],
+  Array [
+    Object {
+      "id": 96,
+    },
+  ],
+  Array [
+    Object {
+      "id": 97,
+    },
+  ],
+  Array [
+    Object {
+      "id": 98,
+    },
+  ],
+  Array [
+    Object {
+      "id": 99,
+    },
+  ],
+  Array [
+    Object {
+      "id": 0,
+    },
+  ],
+  Array [
+    Object {
+      "id": 1,
+    },
+  ],
+  Array [
+    Object {
+      "id": 2,
+    },
+  ],
+  Array [
+    Object {
+      "id": 3,
+    },
+  ],
+  Array [
+    Object {
+      "id": 4,
+    },
+  ],
+  Array [
+    Object {
+      "id": 5,
+    },
+  ],
+  Array [
+    Object {
+      "id": 6,
+    },
+  ],
+  Array [
+    Object {
+      "id": 7,
+    },
+  ],
+  Array [
+    Object {
+      "id": 8,
+    },
+  ],
+  Array [
+    Object {
+      "id": 9,
+    },
+  ],
+  Array [
+    Object {
+      "id": 10,
+    },
+  ],
+  Array [
+    Object {
+      "id": 11,
+    },
+  ],
+  Array [
+    Object {
+      "id": 12,
+    },
+  ],
+  Array [
+    Object {
+      "id": 13,
+    },
+  ],
+  Array [
+    Object {
+      "id": 14,
+    },
+  ],
+  Array [
+    Object {
+      "id": 15,
+    },
+  ],
+  Array [
+    Object {
+      "id": 16,
+    },
+  ],
+  Array [
+    Object {
+      "id": 17,
+    },
+  ],
+  Array [
+    Object {
+      "id": 18,
+    },
+  ],
+  Array [
+    Object {
+      "id": 19,
+    },
+  ],
+  Array [
+    Object {
+      "id": 20,
+    },
+  ],
+  Array [
+    Object {
+      "id": 21,
+    },
+  ],
+  Array [
+    Object {
+      "id": 22,
+    },
+  ],
+  Array [
+    Object {
+      "id": 23,
+    },
+  ],
+  Array [
+    Object {
+      "id": 24,
+    },
+  ],
+  Array [
+    Object {
+      "id": 25,
+    },
+  ],
+  Array [
+    Object {
+      "id": 26,
+    },
+  ],
+  Array [
+    Object {
+      "id": 27,
+    },
+  ],
+  Array [
+    Object {
+      "id": 28,
+    },
+  ],
+  Array [
+    Object {
+      "id": 29,
+    },
+  ],
+  Array [
+    Object {
+      "id": 30,
+    },
+  ],
+  Array [
+    Object {
+      "id": 31,
+    },
+  ],
+  Array [
+    Object {
+      "id": 32,
+    },
+  ],
+  Array [
+    Object {
+      "id": 33,
+    },
+  ],
+  Array [
+    Object {
+      "id": 34,
+    },
+  ],
+  Array [
+    Object {
+      "id": 35,
+    },
+  ],
+  Array [
+    Object {
+      "id": 36,
+    },
+  ],
+  Array [
+    Object {
+      "id": 37,
+    },
+  ],
+  Array [
+    Object {
+      "id": 38,
+    },
+  ],
+  Array [
+    Object {
+      "id": 39,
+    },
+  ],
+  Array [
+    Object {
+      "id": 40,
+    },
+  ],
+  Array [
+    Object {
+      "id": 41,
+    },
+  ],
+  Array [
+    Object {
+      "id": 42,
+    },
+  ],
+  Array [
+    Object {
+      "id": 43,
+    },
+  ],
+  Array [
+    Object {
+      "id": 44,
+    },
+  ],
+  Array [
+    Object {
+      "id": 45,
+    },
+  ],
+  Array [
+    Object {
+      "id": 46,
+    },
+  ],
+  Array [
+    Object {
+      "id": 47,
+    },
+  ],
+  Array [
+    Object {
+      "id": 48,
+    },
+  ],
+  Array [
+    Object {
+      "id": 49,
+    },
+  ],
+]
+`;
+
+exports[`The algolia search dataSource must raise an error if the indexing fails 1`] = `[Error: Indexing error]`;
