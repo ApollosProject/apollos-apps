@@ -29,7 +29,7 @@
     "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.apolloschurch.app",
     "codecov": "cat ./coverage/lcov.info | codecov",
     "fixlint": "eslint ./src --fix",
-    "ios": "react-native run-ios --simulator=\"iPhone X\"",
+    "ios": "react-native run-ios --simulator=\"iPhone 11\"",
     "storybook:enable": "sed -i '' 's/STORYBOOK=false/STORYBOOK=true/g' .env",
     "storybook:disable": "sed -i '' 's/STORYBOOK=true/STORYBOOK=false/g' .env",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
