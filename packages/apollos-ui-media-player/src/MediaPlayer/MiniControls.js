@@ -48,6 +48,7 @@ const DismissBackground = withTheme(({ theme }) => ({
 const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
   size: theme.sizing.baseUnit * 0.75,
+  iconPadding: theme.sizing.baseUnit * 0.75,
 }));
 
 const StyledButtonIcon = IconStyles(ButtonIcon);
