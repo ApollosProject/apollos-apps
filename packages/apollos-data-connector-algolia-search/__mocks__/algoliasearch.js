@@ -15,6 +15,11 @@ function initIndex(indexName, props) {
     console.debug(`created index ${indexName} with props`, _props);
     indexes[indexName] = {
       _props,
+      addObjects: (records, cb) => {
+        _props.exists = true;
+        records.forEach((record) => (_props.records[record.objectID] = record));
+        cb();
+      },
       search: jest.fn(() =>
         Promise.resolve({
           hits: [

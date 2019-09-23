@@ -67,9 +67,17 @@ const {
   schema,
   context,
   applyServerMiddleware,
+  setupJobs,
 } = createApolloServerConfig(data);
 
-export { dataSources, resolvers, schema, context, applyServerMiddleware };
+export {
+  dataSources,
+  resolvers,
+  schema,
+  context,
+  applyServerMiddleware,
+  setupJobs,
+};
 
 // the upload Scalar is added
 export const testSchema = [

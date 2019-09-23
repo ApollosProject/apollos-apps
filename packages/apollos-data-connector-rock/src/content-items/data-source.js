@@ -371,15 +371,16 @@ export default class ContentItem extends RockApolloDataSource {
       .orderBy('StartDateTime', 'desc');
   };
 
-  byUserFeed = () =>
+  byUserFeed = () => this.byActive().orderBy('StartDateTime', 'desc');
+
+  byActive = () =>
     this.request()
       .filterOneOf(
         ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
           (id) => `ContentChannelId eq ${id}`
         )
       )
-      .andFilter(this.LIVE_CONTENT())
-      .orderBy('StartDateTime', 'desc');
+      .andFilter(this.LIVE_CONTENT());
 
   byContentChannelId = (id) =>
     this.request()

@@ -100,6 +100,7 @@ ROCK_MAPPINGS:
     - 8
   # Apollos will pull content items from these channels and expose them on the user feed
   # However, it will not expose the channel itself.
+  # These channels are also pulled when indexing searchable content.
   FEED_CONTENT_CHANNEL_IDS:
     - 1
     - 2
