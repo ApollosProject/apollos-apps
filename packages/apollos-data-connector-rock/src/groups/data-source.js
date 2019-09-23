@@ -48,7 +48,9 @@ export default class Group extends RockApolloDataSource {
       )
       .get();
     const groups = await Promise.all(
-      groupAssociations.map(({ groupId }) => this.getFromId({id: groupId, activeOnly: true}))
+      groupAssociations.map(({ groupId }) =>
+        this.getFromId({ id: groupId, activeOnly: true })
+      )
     );
     return groups.filter(({ groupTypeId }) =>
       type
