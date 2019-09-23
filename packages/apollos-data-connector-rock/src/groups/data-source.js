@@ -7,18 +7,17 @@ export default class Group extends RockApolloDataSource {
 
   expanded = true;
 
-  activeFilter = 'IsActive eq true and IsArchived eq false';
+  groupTypeMap = {
+    Serving: ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID,
+    Community: ROCK_MAPPINGS.COMMUNITY_GROUP_TYPE_ID,
+    Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID,
+  };
 
-  getAll = () =>
-    this.request()
-      .filter(this.activeFilter)
-      .expand('Members')
-      .get();
-
-  getFromId = (id) =>
+  getFromId = (id, activeOnly = false) =>
     this.request()
       .find(id)
       .expand('Members')
+      .filter(`${activeOnly ? 'IsActive eq true and IsArchived eq false' : ''}`)
       .get();
 
   getMembers = async (groupId) => {
@@ -32,52 +31,29 @@ export default class Group extends RockApolloDataSource {
   getLeader = async (groupId) => {
     const { Person } = this.context.dataSources;
     const leader = await this.request('GroupMembers')
+      .expand('GroupRole')
       .filter(`GroupId eq ${groupId}`)
       .andFilter('GroupRole/IsLeader eq true')
-      .expand('GroupRole')
-      .first(); // should only be one leader
+      .first(); // assuming one leader
     return leader ? Person.getFromId(leader.personId) : null;
   };
 
-  getByPerson = async (personId) => {
-    const myGroupAssociations = await this.request('GroupMembers')
-      .filter(`PersonId eq ${personId}`)
+  getByPerson = async (personId, type = null, asLeader = false) => {
+    const groupAssociations = await this.request('GroupMembers')
+      .expand('GroupRole')
+      .filter(
+        `PersonId eq ${personId} ${
+          asLeader ? ' and GroupRole/IsLeader eq true' : ''
+        }`
+      )
       .get();
-    const allGroups = await Promise.all(
-      myGroupAssociations.map(({ groupId }) => this.getFromId(groupId))
+    const groups = await Promise.all(
+      groupAssociations.map(({ groupId }) => this.getFromId(groupId, true))
     );
-    // only return active and not archived groups
-    return allGroups.filter(
-      ({ isActive, isArchived }) => isActive && !isArchived
-    );
-  };
-
-  getLeadByPerson = async (personId) => {
-    const allGroups = await this.getByPerson(personId);
-    const leaders = await Promise.all(
-      allGroups.map(({ id }) => this.getLeader(id))
-    );
-    return allGroups.filter((group, index) =>
-      leaders[index] ? leaders[index].id === personId : false
-    );
-  };
-
-  getFamilies = (id) =>
-    this.request(`/Groups/GetFamilies/${id}`)
-      .filter(this.activeFilter)
-      .get();
-
-  getHomeGroups = async (id) => {
-    const allGroups = await this.getByPerson(id);
-    return allGroups.filter(
-      ({ groupTypeId }) => groupTypeId === ROCK_MAPPINGS.HOME_GROUP_TYPE_ID
-    );
-  };
-
-  getServingGroups = async (id) => {
-    const allGroups = await this.getByPerson(id);
-    return allGroups.filter(
-      ({ groupTypeId }) => groupTypeId === ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID
+    return groups.filter(({ groupTypeId }) =>
+      type
+        ? groupTypeId === this.groupTypeMap[type]
+        : Object.values(this.groupTypeMap).includes(groupTypeId)
     );
   };
 }

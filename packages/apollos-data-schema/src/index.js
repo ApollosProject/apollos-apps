@@ -477,6 +477,12 @@ export const pushSchema = gql`
 `;
 
 export const groupSchema = gql`
+  enum GROUP_TYPE {
+    Serving
+    Community
+    Family
+  }
+
   type Group implements Node {
     id: ID!
     name: String
@@ -485,11 +491,7 @@ export const groupSchema = gql`
   }
 
   extend type Person {
-    groups: [Group]
-    groupsLead: [Group]
-    families: [Group]
-    homeGroups: [Group]
-    servingGroups: [Group]
+    groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
   }
 `;
 

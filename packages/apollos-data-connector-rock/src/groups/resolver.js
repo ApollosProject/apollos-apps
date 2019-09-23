@@ -10,17 +10,8 @@ export default {
       dataSources.Group.getMembers(id),
   },
   Person: {
-    groups: enforceCurrentUser(({ id }, args, { dataSources }) =>
-      dataSources.Group.getByPerson(id)
+    groups: enforceCurrentUser(({ id }, { type, asLeader }, { dataSources }) =>
+      dataSources.Group.getByPerson(id, type, asLeader)
     ),
-    groupsLead: enforceCurrentUser(({ id }, args, { dataSources }) =>
-      dataSources.Group.getLeadByPerson(id)
-    ),
-    families: ({ id }, args, { dataSources }) =>
-      dataSources.Group.getFamilies(id),
-    homeGroups: ({ id }, args, { dataSources }) =>
-      dataSources.Group.getHomeGroups(id),
-    servingGroups: ({ id }, args, { dataSources }) =>
-      dataSources.Group.getServingGroups(id),
   },
 };
