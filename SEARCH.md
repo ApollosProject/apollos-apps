@@ -4,7 +4,7 @@
 
 The Apollos Project is setup to index and search Content Items via Algolia. By default, all items will be re-indexed every 24 hours using a background job service powered by Redis (using bull)
 
-##
+## Setup
 
 Two additional components are needed in order to enable the search API in your apollos app, assuming you are using the latest version of the Apollos packages are are up to date with the `apollos-church-api` project. 
 
