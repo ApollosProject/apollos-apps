@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Groups should get a group by id 1`] = `
+Object {
+  "id": 1,
+  "isActive": true,
+  "isArchived": false,
+  "name": "franks beer group",
+}
+`;
+
+exports[`Groups should get a group by id 2`] = `
+Array [
+  Array [
+    "Groups/1?loadAttributes=expanded&%24expand=Members",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Groups should get group members 1`] = `
+Array [
+  Object {
+    "firstName": "Frank",
+    "id": 1,
+  },
+  Object {
+    "firstName": "Frank",
+    "id": 1,
+  },
+]
+`;
+
+exports[`Groups should get group members 2`] = `
+Array [
+  Array [
+    "GroupMembers?loadAttributes=expanded&%24filter=GroupId%20eq%201",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Groups should get groups by person 1`] = `
+Array [
+  Object {
+    "id": 1,
+    "isActive": true,
+    "isArchived": false,
+    "name": "franks beer group",
+  },
+  Object {
+    "id": 1,
+    "isActive": true,
+    "isArchived": false,
+    "name": "franks beer group",
+  },
+]
+`;
+
+exports[`Groups should get groups by person 2`] = `
+Array [
+  Array [
+    "GroupMembers?loadAttributes=expanded&%24expand=GroupRole&%24filter=PersonId%20eq%201%20",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Groups should get the leader 1`] = `
+Object {
+  "firstName": "Frank",
+  "id": 1,
+}
+`;

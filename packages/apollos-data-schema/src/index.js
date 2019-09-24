@@ -476,6 +476,25 @@ export const pushSchema = gql`
   }
 `;
 
+export const groupSchema = gql`
+  enum GROUP_TYPE {
+    Serving
+    Community
+    Family
+  }
+
+  type Group implements Node {
+    id: ID!
+    name: String
+    leader: Person
+    members: [Person]
+  }
+
+  extend type Person {
+    groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
+  }
+`;
+
 export const campusSchema = gql`
   type Campus implements Node {
     id: ID!

@@ -206,6 +206,19 @@ enum GENDER {
   Unknown
 }
 
+type Group implements Node {
+  id: ID!
+  name: String
+  leader: Person
+  members: [Person]
+}
+
+enum GROUP_TYPE {
+  Serving
+  Community
+  Family
+}
+
 type ImageMedia implements Media {
   name: String
   key: String
@@ -338,6 +351,7 @@ type Person implements Node {
   birthDate: String
   photo: ImageMediaSource
   campus: Campus
+  groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
 }
 
 input PushSettingsInput {
