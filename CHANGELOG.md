@@ -1,4 +1,45 @@
 
+v1.2.0-beta.0: September 25, 2019
+
+- Adds Groups Functionality to API (#939) (b0913abd)
+- Adds Search indexing and Job Queue (#1062) (7218ad9f)
+- Adds spacing to miniplayer controls (#1036) (7b11760a)
+- Adds search to Discover tab (#1044) (58b7f823)
+- Adds action list feed feature for upcoming events (#1059) (80f11156)
+- Uses apollos plugin to fix max node issues (#1049) (da61db16)
+- Adds Algolia Search (#1037) (eccd30b5)
+- Adds Search input component (#1017) (c8e1590f)
+- Adds Apollos Plugin Integration (#1021) (00e0fe05)
+- Allows Username Login (#997) (68718e8e)
+- Adds Events to API (#1015) (a4323d7a)
+- Adds numColumns={1} prop to fix ipad. fixes #846 (#1000) (d8308b6b)
+
+- Updates Development to iPhone 11 Sim (#1066) (7348511b)
+- Installs Pods Automatically (#1051) (1a97ca2a)
+- Improves In App Browser and Chrome Custom Tabs (#972) (0761d53a)
+- Adjusts Scripture Padding and Legal Text Logic (#1058) (1a4f40a6)
+- Improves testing coverage and performance. (#1057) (67064f79)
+- Updates Tab Header Colors (#1043) (8baf7686)
+- Bumps lodash-es from 4.17.11 to 4.17.15 (#1050) (4d7b1b8c)
+- Removes unneeded FeedView padding (#1042) (10540ced)
+- Moves Xcode schemas into workspace (#1048) (27a739ab)
+- Updates Cocoapods to 1.7.5 (#1047) (ac855c14)
+- Upgrades to React Native 60 (#1020) (410abe40)
+- Configures tests to only run story generation when actually publishing (#1039) (58106855)
+- Improves Header Contrast (#1035) (be58bab9)
+- Bumps mixin-deep from 1.3.1 to 1.3.2 (#1027) (748c0acd)
+
+- Fixes MiniPlayer Safe View (#1034) (c959524e)
+- Fixes Lint Error (#1056) (c3258ea0)
+- Fixes 20+ Content Children Issue (#1054) (7a5ca1fa)
+- Fixes phone entry keyboard covering link (#1055) (64709289)
+- Fixes onesignal pod not installing (#1046) (3834a1da)
+- Fixes Highlight Play Icon (#1038) (b3c9cff3)
+- Fixes calling removed function (#1040) (ad0faf0b)
+- Fixes like icon positioning for horizontal cards (#998) (7f5d141e)
+- Fixes User Location View (#1001) (da064f4c)
+- Fixes bug where sermon algorithm would return an error if current sermon had no children (#1016) (50e5e7fa)
+
 v1.1.0: August 14, 2019
 
 - Adds Android VerticalOffset (#916) (bfe41919)

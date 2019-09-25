@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-media-player",
-  "version": "1.1.0",
+  "version": "1.2.0-beta.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -38,11 +38,11 @@
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
+    "@apollosproject/react-native-airplay-btn": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
     "react-native": "*",
-    "@apollosproject/react-native-airplay-btn": "*",
     "react-native-linear-gradient": "*",
     "react-native-music-control": "*",
     "react-native-video": "*",
@@ -53,6 +53,7 @@
     "graphql-tag": "^2.10.1"
   },
   "devDependencies": {
+    "@apollosproject/react-native-airplay-btn": "^0.2.0",
     "@storybook/react-native": "^4.0.7",
     "apollo-client": "2.5.1",
     "jest": "24.8.0",
@@ -61,7 +62,6 @@
     "react": "16.8.6",
     "react-apollo": "2.5.5",
     "react-native": "0.60.5",
-    "@apollosproject/react-native-airplay-btn": "^0.2.0",
     "react-native-linear-gradient": "2.5.3",
     "react-native-music-control": "0.10.5",
     "react-native-svg": "9.4.0",
