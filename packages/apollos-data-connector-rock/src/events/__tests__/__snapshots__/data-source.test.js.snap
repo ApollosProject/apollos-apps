@@ -57,17 +57,12 @@ Array [
 ]
 `;
 
-exports[`Events should get by id 1`] = `
-Object {
-  "id": 123,
-  "name": "some event",
-}
-`;
+exports[`Events should get from id 1`] = `null`;
 
-exports[`Events should get by id 2`] = `
+exports[`Events should get from id 2`] = `
 Array [
   Array [
-    "EventItemOccurrences/123?loadAttributes=expanded",
+    "EventItemOccurrences?loadAttributes=expanded&%24filter=Id%20eq%20123&%24expand=Schedule&%24top=1",
     Object {},
     Object {},
   ],
