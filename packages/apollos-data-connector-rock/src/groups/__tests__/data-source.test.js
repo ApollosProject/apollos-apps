@@ -5,7 +5,8 @@ describe('Groups', () => {
     { id: 1, firstName: 'Frank' },
     { id: 2, firstName: 'Michael' },
   ]);
-  const personMock = Promise.resolve({ id: 1, firstName: 'Frank' });
+  // May need later
+  // const personMock = Promise.resolve({ id: 1, firstName: 'Frank' });
   const groupMock = Promise.resolve({
     id: 1,
     name: 'franks beer group',
