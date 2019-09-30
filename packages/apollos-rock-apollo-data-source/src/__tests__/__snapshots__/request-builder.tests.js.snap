@@ -13,7 +13,9 @@ Array [
   "SomeResource",
   Object {},
   Object {
-    "ttl": 20,
+    "cacheOptions": Object {
+      "ttl": 20,
+    },
   },
 ]
 `;
