@@ -67,7 +67,7 @@ describe('features', () => {
           resolveType: () => 'UniversalContentItem',
         },
         Scripture: {},
-        Events: {
+        Event: {
           findRecent: () => ({
             top: () => ({
               get: () =>

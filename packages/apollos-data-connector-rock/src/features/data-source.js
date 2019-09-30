@@ -65,19 +65,19 @@ export default class Features extends RockApolloDataSource {
   }
 
   async upcomingEventsAlgorithm() {
-    const { Events } = this.context.dataSources;
+    const { Event } = this.context.dataSources;
 
     // Get the first three persona items.
-    const events = await Events.findRecent()
+    const events = await Event.findRecent()
       .top(3)
       .get();
     // Map them into specific actions.
     return events.map((event, i) => ({
       id: createGlobalId(`${event.id}${i}`, 'ActionListAction'),
-      title: Events.getName(event),
-      subtitle: Events.getDateTime(event.schedule).start,
+      title: Event.getName(event),
+      subtitle: Event.getDateTime(event.schedule).start,
       relatedNode: { ...event, __type: 'Event' },
-      image: Events.getImage(event),
+      image: Event.getImage(event),
       action: 'READ_EVENT',
     }));
   }

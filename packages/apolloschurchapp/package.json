@@ -40,7 +40,7 @@
     "postinstall": "jetify",
     "pods": "./scripts/install_pods.sh",
     "start": "react-native start",
-    "test": "jest"
+    "test": "TZ=UTC jest"
   },
   "jest": {
     "preset": "react-native",
