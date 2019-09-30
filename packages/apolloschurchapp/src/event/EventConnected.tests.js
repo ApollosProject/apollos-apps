@@ -2,6 +2,7 @@ import React from 'react';
 
 import Providers from 'apolloschurchapp/src/Providers';
 
+import moment from 'moment';
 import { renderWithApolloData } from '../utils/testUtils';
 import getEvent from './getEvent';
 import EventConnected from './EventConnected';
@@ -16,8 +17,12 @@ const mocks = {
       node: {
         __typename: 'Event',
         id: 'Event:123',
-        start: '2019-09-26T15:10:51.200Z',
-        end: '2019-09-26T17:10:51.200Z',
+        start: moment('2019-09-26T15:10:51.200Z')
+          .utc()
+          .toJSON(),
+        end: moment('2019-09-26T17:10:51.200Z')
+          .utc()
+          .toJSON(),
         location: 'Willow Creek, Chicago',
         name: 'Cookout',
         image: {
