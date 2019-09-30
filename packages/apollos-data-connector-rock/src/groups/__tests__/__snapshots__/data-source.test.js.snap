@@ -69,9 +69,15 @@ Array [
 ]
 `;
 
-exports[`Groups should get the leader 1`] = `
-Object {
-  "firstName": "Frank",
-  "id": 1,
-}
+exports[`Groups should get the leaders 1`] = `
+Array [
+  Object {
+    "firstName": "Frank",
+    "id": 1,
+  },
+  Object {
+    "firstName": "Frank",
+    "id": 1,
+  },
+]
 `;

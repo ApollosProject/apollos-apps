@@ -28,14 +28,17 @@ export default class Group extends RockApolloDataSource {
     return members.map(({ personId }) => Person.getFromId(personId));
   };
 
-  getLeader = async (groupId) => {
+  getLeaders = async (groupId) => {
     const { Person } = this.context.dataSources;
-    const leader = await this.request('GroupMembers')
+    const members = await this.request('GroupMembers')
       .filter(`GroupId eq ${groupId}`)
       .andFilter('GroupRole/IsLeader eq true')
       .expand('GroupRole')
-      .first(); // assuming one leader
-    return leader ? Person.getFromId(leader.personId) : null;
+      .get();
+    const leaders = await Promise.all(
+      members.map(({ personId }) => Person.getFromId(personId))
+    );
+    return leaders.length ? leaders : null;
   };
 
   getByPerson = async ({ personId, type = null, asLeader = false }) => {

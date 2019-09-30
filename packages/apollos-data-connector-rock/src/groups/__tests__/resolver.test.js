@@ -28,7 +28,7 @@ describe('Groups resolver', () => {
             groups {
               id
               name
-              leader {
+              leaders {
                 id
                 firstName
               }
@@ -48,8 +48,11 @@ describe('Groups resolver', () => {
     context.dataSources.Group.getByPerson = jest.fn(() =>
       Promise.resolve([{ id: 1, name: 'franks beer group' }])
     );
-    context.dataSources.Group.getLeader = jest.fn(() =>
-      Promise.resolve({ id: 1, firstName: 'Frank' })
+    context.dataSources.Group.getLeaders = jest.fn(() =>
+      Promise.resolve([
+        { id: 1, firstName: 'Frank' },
+        { id: 2, firstName: 'Michael' },
+      ])
     );
     context.dataSources.Group.getMembers = jest.fn(() =>
       Promise.resolve([

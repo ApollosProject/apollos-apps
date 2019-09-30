@@ -5,7 +5,8 @@ export default {
   Group: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    leader: ({ id }, args, { dataSources }) => dataSources.Group.getLeader(id),
+    leaders: ({ id }, args, { dataSources }) =>
+      dataSources.Group.getLeaders(id),
     members: ({ id }, args, { dataSources }) =>
       dataSources.Group.getMembers(id),
   },

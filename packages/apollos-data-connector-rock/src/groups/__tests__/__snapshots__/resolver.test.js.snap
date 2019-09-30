@@ -8,10 +8,16 @@ Object {
         "groups": Array [
           Object {
             "id": "Group:559b23fd0aa90e81b1c023e72e230fa1",
-            "leader": Object {
-              "firstName": "Frank",
-              "id": "1",
-            },
+            "leaders": Array [
+              Object {
+                "firstName": "Frank",
+                "id": "1",
+              },
+              Object {
+                "firstName": "Michael",
+                "id": "2",
+              },
+            ],
             "members": Array [
               Object {
                 "firstName": "Caleb",
