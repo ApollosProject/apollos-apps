@@ -193,6 +193,7 @@ type Event implements Node {
   location: String
   start: String
   end: String
+  image: ImageMedia
 }
 
 interface Feature {

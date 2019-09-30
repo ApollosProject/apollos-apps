@@ -2,11 +2,11 @@ import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 
 import { campusSchema, peopleSchema } from '@apollosproject/data-schema';
-import * as Events from '../index';
+import * as Event from '../index';
 import { Campus } from '../../index';
 
 const { getSchema, getContext } = createTestHelpers({
-  Events,
+  Event,
   Campus,
 });
 
@@ -38,16 +38,16 @@ describe('Events resolver', () => {
     context.dataSources.Campus.getByLocation = jest.fn(() =>
       Promise.resolve([{ id: 1 }])
     );
-    context.dataSources.Events.getByCampus = jest.fn(() =>
+    context.dataSources.Event.getByCampus = jest.fn(() =>
       Promise.resolve([
         { id: 1, campusId: 1, scheduleId: 1, location: '123 Main St' },
       ])
     );
-    context.dataSources.Events.getName = jest.fn(() =>
+    context.dataSources.Event.getName = jest.fn(() =>
       Promise.resolve('Cookout')
     );
     // for testing the getDateTime datasource function...
-    context.dataSources.Events.request = () => ({
+    context.dataSources.Event.request = () => ({
       filter: () => ({
         first: () =>
           Promise.resolve({
