@@ -43,18 +43,18 @@ describe('Groups', () => {
     expect(Groups.get.mock.calls).toMatchSnapshot();
   });
 
-  it('should get the leader', async () => {
+  it('should get the leaders', async () => {
     Groups.request = () => ({
       filter: () => ({
         andFilter: () => ({
           expand: () => ({
-            first: jest.fn(() => personMock),
+            get: jest.fn(() => personArrayMock),
           }),
         }),
       }),
     });
 
-    const result = await Groups.getLeader(1);
+    const result = await Groups.getLeaders(1);
     expect(result).toMatchSnapshot();
   });
 
