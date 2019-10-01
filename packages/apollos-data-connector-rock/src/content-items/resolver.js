@@ -29,7 +29,6 @@ export const defaultContentItemResolvers = {
     }),
 
   summary: (root, args, { dataSources: { ContentItem } }) =>
-    console.log(root.title, root.summary, root, '\n') ||
     ContentItem.createSummary(root),
 
   images: (root, args, { dataSources: { ContentItem } }) =>
