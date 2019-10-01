@@ -14,7 +14,7 @@ import * as Group from './groups';
 import * as Utils from './utils';
 import * as BinaryFiles from './binary-files';
 import * as Features from './features';
-import * as Events from './events';
+import * as Event from './events';
 
 export {
   Followings,
@@ -33,5 +33,5 @@ export {
   Utils,
   BinaryFiles,
   Features,
-  Events,
+  Event,
 };
