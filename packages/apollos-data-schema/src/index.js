@@ -62,7 +62,7 @@ export const peopleSchema = gql`
   type Person implements Node @cacheControl(maxAge: 0) {
     id: ID!
     firstName: String
-    lastName: String!
+    lastName: String
     nickName: String
     email: String
     gender: GENDER

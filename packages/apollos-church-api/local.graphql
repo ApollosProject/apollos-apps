@@ -346,7 +346,7 @@ enum PassType {
 type Person implements Node {
   id: ID!
   firstName: String
-  lastName: String!
+  lastName: String
   nickName: String
   email: String
   gender: GENDER
