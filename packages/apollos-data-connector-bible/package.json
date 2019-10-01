@@ -25,7 +25,7 @@
   "dependencies": {
     "@apollosproject/data-schema": "^1.2.0-beta.0",
     "@apollosproject/server-core": "^1.2.0-beta.0",
-    "apollo-datasource-rest": "^0.2.0",
+    "apollo-datasource-rest": "^0.6.4",
     "lodash": "^4.17.11"
   },
   "peerDependencies": {

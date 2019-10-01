@@ -26,7 +26,7 @@
     "@apollosproject/data-schema": "^1.2.0-beta.0",
     "@apollosproject/server-core": "^1.2.0-beta.0",
     "algoliasearch": "^3.34.0",
-    "apollo-datasource-rest": "^0.2.0"
+    "apollo-datasource-rest": "^0.6.4"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
