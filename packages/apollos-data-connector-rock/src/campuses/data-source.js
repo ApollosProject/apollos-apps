@@ -19,6 +19,7 @@ export default class Campus extends RockApolloDataSource {
       .filter('IsActive eq true')
       .expand('Location')
       .expand('Location/Image')
+      .cache({ ttl: 600 }) // ten minutes
       .get();
 
   getByLocation = async ({ latitude, longitude } = {}) => {
