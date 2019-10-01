@@ -177,6 +177,36 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel gets a cursor finding parent content items of a provided child using the apollos plugin 1`] = `
+Array [
+  Array [
+    "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
+    Object {},
+    Object {
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
+    },
+  ],
+  Array [
+    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20&%24orderby=Order%20asc",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`ContentItemsModel gets a cursor finding parent content items of a provided child using the apollos plugin 2`] = `
+Array [
+  Object {
+    "id": 1,
+  },
+  Object {
+    "id": 2,
+  },
+]
+`;
+
 exports[`ContentItemsModel gets a cursor finding sibling content items of a provided item 1`] = `
 Array [
   Array [
