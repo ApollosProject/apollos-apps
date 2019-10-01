@@ -26,7 +26,7 @@
     "@apollosproject/config": "*"
   },
   "dependencies": {
-    "apollo-datasource-rest": "^0.1.5",
+    "apollo-datasource-rest": "^0.6.4",
     "apollo-server-env": "^2.3.0",
     "lodash": "^4.17.11",
     "with-query": "^1.1.2"

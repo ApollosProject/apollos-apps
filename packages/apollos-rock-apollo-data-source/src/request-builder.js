@@ -103,7 +103,7 @@ you can return request.empty()
   };
 
   cache = ({ ttl }) => {
-    this.options.ttl = ttl;
+    this.options.cacheOptions = { ttl };
     return this;
   };
 
