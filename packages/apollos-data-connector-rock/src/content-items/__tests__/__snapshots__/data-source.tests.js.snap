@@ -6,7 +6,9 @@ Array [
     "ContentChannelItems?loadAttributes=expanded&%24filter=%28ContentChannelId%20eq%201%29%20and%20%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%20%29&%24orderby=StartDateTime%20desc",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -91,7 +93,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
   Array [
@@ -119,7 +123,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
   Array [
@@ -147,7 +153,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
   Array [
@@ -175,7 +183,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
   Array [
@@ -203,7 +213,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
   Array [
@@ -236,7 +248,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
   Array [
@@ -361,7 +375,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -377,7 +393,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -389,7 +407,9 @@ Array [
     "ContentChannelItemAssociations?loadAttributes=expanded&%24filter=ChildContentChannelItemId%20eq%201",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]

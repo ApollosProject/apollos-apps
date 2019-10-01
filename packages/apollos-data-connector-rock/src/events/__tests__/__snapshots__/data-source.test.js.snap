@@ -15,7 +15,9 @@ Array [
     "EventItemOccurrences?loadAttributes=expanded&%24expand=Schedule&%24orderby=Schedule%2FEffectiveStartDate%20asc&%24filter=Schedule%2FEffectiveStartDate%20ne%20null",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -36,7 +38,9 @@ Array [
     "Apollos/GetEventItemOccurencesByCalendarId?id=1&loadAttributes=expanded&%24expand=Schedule&%24orderby=Schedule%2FEffectiveStartDate%20asc&%24filter=Schedule%2FEffectiveStartDate%20ne%20null",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -57,7 +61,9 @@ Array [
     "EventItemOccurrences?loadAttributes=expanded&%24expand=Schedule&%24orderby=Schedule%2FEffectiveStartDate%20asc&%24filter=%28Schedule%2FEffectiveStartDate%20ne%20null%29%20or%20%28CampusId%20eq%20456%29",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -81,7 +87,9 @@ Array [
     "EventItems/123?loadAttributes=expanded",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -93,7 +101,9 @@ Array [
     "EventItems/123?loadAttributes=expanded",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
@@ -115,7 +125,9 @@ Array [
     "EventItems/123?loadAttributes=expanded",
     Object {},
     Object {
-      "ttl": 60,
+      "cacheOptions": Object {
+        "ttl": 60,
+      },
     },
   ],
 ]
