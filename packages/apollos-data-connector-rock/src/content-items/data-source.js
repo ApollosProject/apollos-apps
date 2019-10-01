@@ -298,14 +298,10 @@ export default class ContentItem extends RockApolloDataSource {
       .get();
 
     if (!associations || !associations.length) return this.request().empty();
-    const request = this.request();
-    const associationsFilter = associations.map(
-      ({ contentChannelItemId }) => `Id eq ${contentChannelItemId}`
-    );
 
-    request.filterOneOf(associationsFilter).andFilter(this.LIVE_CONTENT());
-
-    return request.orderBy('Order');
+    return this.getFromIds(
+      associations.map(({ contentChannelItemId }) => contentChannelItemId)
+    ).orderBy('Order');
   };
 
   getCursorBySiblingContentItemId = async (id) => {
