@@ -174,7 +174,7 @@ export default class ContentItem extends RockApolloDataSource {
   }
 
   createSummary = ({ content, attributeValues: { summary } = {} }) => {
-    if (summary) return summary.value;
+    if (summary && summary.value !== '') return summary.value;
     if (!content || typeof content !== 'string') return '';
     // Protect against 0 length sentences (tokenizer will throw an error)
     if (content.split(' ').length === 1) return '';
