@@ -42,7 +42,6 @@ const LocationFinder = memo(
           <Touchable onPress={onPressButton}>
             <StyledCampusCard
               key={campus.id}
-              distance={campus.distanceFromLocation}
               title={campus.name}
               description={getCampusAddress(campus)}
               images={[campus.image]}
