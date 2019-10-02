@@ -1,4 +1,17 @@
 
+v1.2.0-beta.1: October 2, 2019
+
+- Adds Apollos Plugin support to `getCursorByChildContentItemId` (#1072) (43c1b5fb)
+- Adds TTLs throughout the app to speed up repeat Rock requests (#1077) (71a08e9f)
+- Adds Multiple Group Leader Support (#1073) (8b1e29c2)
+- Adds ability to view events in app (#1068) (eda59ff6)
+
+- Removes last name as a required attribute (#1081) (0586bc0f)
+
+- Fixes Summary Field (#1084) (5c302a17)
+- Fixes apple email warnings (#1080) (954cff66)
+
+
 v1.2.0-beta.0: September 25, 2019
 
 - Adds Groups Functionality to API (#939) (b0913abd)
