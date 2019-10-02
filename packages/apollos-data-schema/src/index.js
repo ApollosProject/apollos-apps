@@ -450,7 +450,7 @@ export const sharableSchema = gql`
 
 export const liveSchema = gql`
   type LiveStream {
-    isLive: Boolean
+    isLive: Boolean @cacheControl(maxAge: 10)
     eventStartTime: String
     media: VideoMedia
     webViewUrl: String
