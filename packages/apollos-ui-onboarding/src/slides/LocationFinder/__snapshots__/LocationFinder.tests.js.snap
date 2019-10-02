@@ -1245,19 +1245,6 @@ exports[`The Onboarding LocationFinder component should render the button disabl
                       >
                         Chicago Campus
                       </Text>
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                          }
-                        }
-                      >
-                        0
-                        mi
-                      </Text>
                     </View>
                     <Text
                       style={
