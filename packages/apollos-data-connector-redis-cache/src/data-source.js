@@ -29,6 +29,7 @@ export default class Cache extends DataSource {
       );
     } catch (e) {
       console.error(e);
+      return null;
     }
   }
 
@@ -38,6 +39,7 @@ export default class Cache extends DataSource {
       return JSON.parse(data);
     } catch (e) {
       console.error(e);
+      return null;
     }
   }
 
@@ -46,6 +48,7 @@ export default class Cache extends DataSource {
       return this.redis.incr({ key: parseKey(key) });
     } catch (e) {
       console.error(e);
+      return null;
     }
   }
 
@@ -54,6 +57,7 @@ export default class Cache extends DataSource {
       return this.redis.decr({ key: parseKey(key) });
     } catch (e) {
       console.error(e);
+      return null;
     }
   }
 }
