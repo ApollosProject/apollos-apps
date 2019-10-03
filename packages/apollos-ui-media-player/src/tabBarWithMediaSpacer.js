@@ -20,7 +20,7 @@ const withMediaSpacer = (TabBar) => (props) => (
     {({ data = {} }) => (
       <TabBarWrapper mediaPlayerIsVisible={get(data, 'mediaPlayer.isVisible')}>
         <MediaPlayerSpacer>
-          <TabBar {...props} />
+          <TabBar {...props} safeAreaInset={{ bottom: 0, top: 0 }} />
         </MediaPlayerSpacer>
       </TabBarWrapper>
     )}
