@@ -44,6 +44,7 @@
     "@apollosproject/data-connector-passes": "^1.2.0-beta.1",
     "@apollosproject/data-connector-rock": "^1.2.0-beta.1",
     "@apollosproject/data-connector-twilio": "^1.2.0-beta.1",
+    "@apollosproject/data-connector-redis-cache": "^1.2.0-beta.1",
     "@apollosproject/rock-apollo-data-source": "^1.2.0-beta.1",
     "@apollosproject/server-core": "^1.2.0-beta.1",
     "apollo-server": "^2.0.5",
