@@ -1,0 +1,39 @@
+{
+  "name": "@apollosproject/data-connector-redis-cache",
+  "version": "1.2.0-beta.1",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "lint": "eslint ./src --ext .js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ]
+  },
+  "dependencies": {
+    "apollo-datasource": "^0.2.0",
+    "ioredis": "4.14.1"
+  },
+  "peerDependencies": {
+    "@apollosproject/config": "*"
+  },
+  "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^1.2.0-beta.1",
+    "jest": "^23.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

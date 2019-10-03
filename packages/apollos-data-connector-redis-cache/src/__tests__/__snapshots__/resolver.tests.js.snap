@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneSignal constructs with Twilio 1`] = `
+TwilioSms {
+  "twilio": Twilio {
+    "_accounts": undefined,
+    "_api": undefined,
+    "_authy": undefined,
+    "_autopilot": undefined,
+    "_chat": undefined,
+    "_fax": undefined,
+    "_flexApi": undefined,
+    "_insights": undefined,
+    "_ipMessaging": undefined,
+    "_lookups": undefined,
+    "_messaging": undefined,
+    "_monitor": undefined,
+    "_notify": undefined,
+    "_preview": undefined,
+    "_pricing": undefined,
+    "_proxy": undefined,
+    "_serverless": undefined,
+    "_studio": undefined,
+    "_sync": undefined,
+    "_taskrouter": undefined,
+    "_trunking": undefined,
+    "_verify": undefined,
+    "_video": undefined,
+    "_voice": undefined,
+    "_wireless": undefined,
+    "accountSid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "httpClient": RequestClient {},
+    "password": "SOME_AUTH_TOKEN",
+    "region": undefined,
+    "username": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  },
+}
+`;
+
+exports[`OneSignal sends an sms passing along args 1`] = `
+Array [
+  Array [
+    Object {
+      "additionalData": "something else",
+      "body": "Here's a cool body",
+      "from": "+15133112113",
+      "to": "5133061126",
+    },
+  ],
+]
+`;
