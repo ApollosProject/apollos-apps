@@ -152,7 +152,7 @@ export default class Followings extends RockApolloDataSource {
 
     if (cachedIsFollowing != null) return cachedIsFollowing;
 
-    const followings = this.getFollowingsForCurrentUserAndNode({
+    const followings = await this.getFollowingsForCurrentUserAndNode({
       nodeId,
     });
 

@@ -56,6 +56,20 @@ const ContentItem = {
   },
 };
 
+class Cache {
+  initialize({ context }) {
+    this.context = context;
+  }
+
+  get = jest.fn(() => Promise.resolve(null));
+
+  set = jest.fn(() => Promise.resolve(null));
+
+  increment = jest.fn(() => Promise.resolve(null));
+
+  decrement = jest.fn(() => Promise.resolve(null));
+}
+
 const Auth = {
   dataSource: AuthDataSource,
   contextMiddleware: ({ req, context }) => {
@@ -75,6 +89,7 @@ const { getSchema, getContext } = createTestHelpers({
   ContentItem,
   UniversalContentItem: ContentItem,
   Auth,
+  Cache: { dataSource: Cache },
 });
 
 ApollosConfig.loadJs({
@@ -153,7 +168,7 @@ describe('Following', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
-  it('uses following table to track if a user liked content', async () => {
+  it.only('uses following table to track if a user liked content', async () => {
     const query = `
       query getContent {
         node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
