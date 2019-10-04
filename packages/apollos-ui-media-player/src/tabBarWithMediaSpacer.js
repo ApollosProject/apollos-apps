@@ -2,7 +2,6 @@ import React from 'react';
 import { Platform, View } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-import PropTypes from 'prop-types';
 
 import { styled } from '@apollosproject/ui-kit';
 import MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
