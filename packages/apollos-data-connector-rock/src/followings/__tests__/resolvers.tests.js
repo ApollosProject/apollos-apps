@@ -168,7 +168,7 @@ describe('Following', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
-  it.only('uses following table to track if a user liked content', async () => {
+  it('uses following table to track if a user liked content', async () => {
     const query = `
       query getContent {
         node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
@@ -182,6 +182,28 @@ describe('Following', () => {
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+    expect(context.dataSources.Cache.set.mock.calls).toMatchSnapshot();
+  });
+
+  it('uses following cache to track if a user liked content, if present', async () => {
+    const query = `
+      query getContent {
+        node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+          id
+          ... on ContentItem {
+            isLiked
+          }
+        }
+      }
+    `;
+    context.dataSources.Cache.get = jest.fn(() => Promise.resolve(false));
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
+
+    // Reset mock.
+    context.dataSources.Cache.get = jest.fn(() => Promise.resolve());
   });
 
   it('returns isLiked false if a user is logged out', async () => {
