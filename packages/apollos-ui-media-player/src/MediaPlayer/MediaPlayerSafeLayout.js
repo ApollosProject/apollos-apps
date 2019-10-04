@@ -7,7 +7,7 @@ const InnerView = styled(
       marginBottom: isFullscreen
         ? 0
         : Math.max(theme.sizing.baseUnit, safeAreaInsets.bottom * 0.75),
-    }
+    })
 )(View);
 
 const MediaPlayerSafeLayout = (props) => (
