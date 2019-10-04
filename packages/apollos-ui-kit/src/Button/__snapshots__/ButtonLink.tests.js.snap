@@ -1,116 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Button component should render 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  onPress={[Function]}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#17B582",
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      onPress={[Function]}
-      style={
-        Object {
-          "color": "#17B582",
-        }
-      }
-    >
-      Boom
-    </Text>
-  </View>
-</View>
+  Boom
+</Text>
 `;
 
 exports[`The Button component should render inherit typographic styles 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "InterUI-Regular",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Text
+    onPress={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "color": "#17B582",
       }
     }
   >
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      <Text
-        onPress={[Function]}
-        style={
-          Object {
-            "color": "#17B582",
-          }
-        }
-      >
-        Boom
-      </Text>
-    </Text>
-  </View>
-</View>
+    Boom
+  </Text>
+</Text>
 `;
