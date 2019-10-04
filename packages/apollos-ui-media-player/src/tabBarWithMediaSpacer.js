@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform, View } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+import PropTypes from 'prop-types';
 
 import { styled } from '@apollosproject/ui-kit';
 import MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
@@ -20,7 +21,11 @@ const withMediaSpacer = (TabBar) => (props) => (
     {({ data = {} }) => (
       <TabBarWrapper mediaPlayerIsVisible={get(data, 'mediaPlayer.isVisible')}>
         <MediaPlayerSpacer>
-          <TabBar {...props} safeAreaInset={{ bottom: 0, top: 0 }} />
+          <TabBar
+            {...props}
+            // eslint-disable-next-line
+            safeAreaInset={{ ...props.safeAreaInset, top: 0 }}
+          />
         </MediaPlayerSpacer>
       </TabBarWrapper>
     )}
