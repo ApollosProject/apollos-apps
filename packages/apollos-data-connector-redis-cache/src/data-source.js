@@ -8,6 +8,17 @@ const parseKey = (key) => {
   return key;
 };
 
+const safely = async (func) => {
+  try {
+    // Redundent assignment because it makes sure the error is captured.
+    const result = await func();
+    return result;
+  } catch (e) {
+    console.error(e);
+    return null;
+  }
+};
+
 export default class Cache extends DataSource {
   constructor(...args) {
     super(...args);
@@ -20,44 +31,23 @@ export default class Cache extends DataSource {
   DEFAULT_TIMEOUT = 86400;
 
   async set({ key, data, expiresIn = this.DEFAULT_TIMEOUT }) {
-    try {
-      return this.redis.set(
-        parseKey(key),
-        JSON.stringify(data),
-        'EX',
-        expiresIn
-      );
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    return safely(() =>
+      this.redis.set(parseKey(key), JSON.stringify(data), 'EX', expiresIn)
+    );
   }
 
   async get({ key }) {
-    try {
+    return safely(async () => {
       const data = await this.redis.get(parseKey(key));
       return JSON.parse(data);
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    });
   }
 
   async increment({ key }) {
-    try {
-      return this.redis.incr({ key: parseKey(key) });
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    return safely(() => this.redis.incr({ key: parseKey(key) }));
   }
 
   async decrement({ key }) {
-    try {
-      return this.redis.decr({ key: parseKey(key) });
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    return safely(() => this.redis.decr({ key: parseKey(key) }));
   }
 }
