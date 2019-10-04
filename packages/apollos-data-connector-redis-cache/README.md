@@ -1,28 +1,26 @@
-# `@apollosproject/data-connector-twilio`
+# `@apollosproject/data-connector-redis-cache`
 
-Provides a connector to Twilio for sending SMS messages.
+Provides a connector to Redis for storing data to improve performance.
 
 ## Dependants / Dependencies
 
 Required by
-- `AuthSms` in `@apollosproject/data-connector-rock`
+- `Following` in `@apollosproject/data-connector-rock`
 
 ## Usage
 
-In your `src/data/index`,
+The Cache dataSource implements the following methods:
 
 ```
-import * as Sms from '@apollosproject/data-connector-twilio'
-
-...
-
-const data = {
-  ...
-  Sms,
-  ...
-}
+// Gets a value, if it exists.
+Cache.get({ key: String|Array })
+// Sets a value
+Cache.set({ key: String|Array, data: (Any JSON serializable data), expiresIn: (Seconds, optionally)  })
+// Increments a value by 1
+Cache.increment({ key: String|Array  })
+// Decrements a value by 1
+Cache.decrement({ key: String|Array  })
 ```
 
-## Overriding
+The key can be either a string like this: "some-key" or it can be an array of strings. Passing an array of strings is convenient, because you will often need to construct a key like: `isFollowing-${userId}-${nodeId}`, which can be simplified by passing `['isFollowing', userId, nodeId]`
 
-Any package that seeks to replace this functionality can do so by defining a single method inside an Sms datasource. The method name is `sendSms` and the argument signature is `{ String: to, String: from (default should be provided), String: body }`.
