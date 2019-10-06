@@ -138,7 +138,6 @@ export default class ContentItem extends RockApolloDataSource {
 
     // We pull a single text feature from the TextFeature Text field.
     const text = get(attributeValues, 'textFeature.value', '');
-    console.log('text', text);
     if (text !== '') {
       features.push(
         Features.createTextFeature({ text, id: attributeValues.textFeature.id })
