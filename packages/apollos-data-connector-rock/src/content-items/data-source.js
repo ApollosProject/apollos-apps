@@ -270,8 +270,9 @@ export default class ContentItem extends RockApolloDataSource {
     return null;
   }
 
-  buildStatusFilter = ({ allowedStatus }) => {
-    const filters = allowedStatus.map((s) => `Status eq ${STATUS_MAP[s]}`);
+  buildStatusFilter = () => {
+    const status = ROCK.INCLUDE_CONTENT_TYPES || ['APPROVED'];
+    const filters = status.map((s) => `Status eq ${STATUS_MAP[s]}`);
     return `(${filters.join(' or ')})`;
   };
 
@@ -283,9 +284,7 @@ export default class ContentItem extends RockApolloDataSource {
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
-    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and ${this.buildStatusFilter(
-      { allowedStatus: ROCK.INCLUDE_CONTENT_TYPES }
-    )}`;
+    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and ${this.buildStatusFilter()}`;
   };
 
   expanded = true;
