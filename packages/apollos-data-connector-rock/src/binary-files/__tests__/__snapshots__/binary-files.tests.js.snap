@@ -43,13 +43,12 @@ Array [
         "_boundary": "--------------------------",
         "_currentStream": null,
         "_insideLoop": false,
-        "_overheadLength": 155,
+        "_overheadLength": 103,
         "_pendingNext": false,
         "_released": false,
         "_streams": Array [
           "----------------------------
-Content-Disposition: form-data; name=\\"file\\"; filename=\\"something.jpg\\"
-Content-Type: image/jpeg
+Content-Disposition: form-data; name=\\"file\\"
 
 ",
           "123",

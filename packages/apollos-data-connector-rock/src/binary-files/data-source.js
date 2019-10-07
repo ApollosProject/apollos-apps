@@ -11,12 +11,11 @@ export default class BinaryFiles extends RockApolloDataSource {
       .get();
   }
 
-  async uploadFile({ filename, stream, length }) {
+  async uploadFile({ stream }) {
     const data = new FormData();
-    data.append('file', stream, {
-      filename,
-      knownLength: length,
-    });
+
+    data.append('file', stream);
+
     const response = await this.nodeFetch(
       `${this.baseURL}/BinaryFiles/Upload?binaryFileTypeId=5`,
       {

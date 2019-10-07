@@ -123,9 +123,12 @@ export default class Person extends RockApolloDataSource {
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
-    const { stream, filename } = await file;
+    const { createReadStream, filename } = await file;
+
+    const stream = createReadStream();
 
     const photoId = await BinaryFiles.uploadFile({ filename, stream, length });
+
     const person = await this.updateProfile([
       { field: 'PhotoId', value: photoId },
     ]);
