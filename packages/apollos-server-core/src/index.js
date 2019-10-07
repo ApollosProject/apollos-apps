@@ -135,7 +135,7 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 
   const getContext = createContextGetter({ context, dataSources });
 
-  const queues = createQueues();
+  const queues = createQueues(process.env.REDIS_URL);
 
   app.use('/admin/queues', UI);
 
