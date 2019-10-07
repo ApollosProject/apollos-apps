@@ -224,7 +224,7 @@ describe('Person', () => {
     dataSource.get = buildGetMock([], dataSource);
 
     const result = await dataSource.uploadProfileImage(
-      { stream: '123', filename: 'img.jpg' },
+      { createReadStream: () => '123', filename: 'img.jpg' },
       456
     );
     expect(result).toMatchSnapshot('Upload result');
