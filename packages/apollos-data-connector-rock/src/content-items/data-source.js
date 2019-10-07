@@ -1,4 +1,4 @@
-import { get, flatten } from 'lodash';
+import { get, flatten, isEmpty } from 'lodash';
 import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
@@ -271,9 +271,13 @@ export default class ContentItem extends RockApolloDataSource {
   }
 
   buildStatusFilter = () => {
-    const status = ROCK.INCLUDE_CONTENT_TYPES || ['APPROVED'];
-    const filters = status.map((s) => `Status eq ${STATUS_MAP[s]}`);
-    return `(${filters.join(' or ')})`;
+    const status = ROCK.INCLUDE_CONTENT_TYPES || [];
+    let validKeys = status.filter((s) => Object.keys(STATUS_MAP).includes(s));
+    if (isEmpty(validKeys)) {
+      validKeys = ['APPROVED'];
+    }
+    const filters = validKeys.map((s) => `Status eq ${STATUS_MAP[s]}`);
+    return ` and (${filters.join(' or ')})`;
   };
 
   LIVE_CONTENT = () => {
@@ -284,7 +288,7 @@ export default class ContentItem extends RockApolloDataSource {
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
-    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and ${this.buildStatusFilter()}`;
+    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)))${this.buildStatusFilter()}`;
   };
 
   expanded = true;
