@@ -10,6 +10,11 @@ import sanitizeHtmlNode from 'sanitize-html';
 import { createImageUrlFromGuid } from '../utils';
 
 const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
+const STATUS_MAP = {
+  NOT_YET_APPROVED: '1',
+  APPROVED: '2',
+  DENIED: '3',
+};
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
@@ -266,7 +271,7 @@ export default class ContentItem extends RockApolloDataSource {
   }
 
   buildStatusFilter = ({ allowedStatus }) => {
-    const filters = allowedStatus.map((s) => `Status eq ${s}`);
+    const filters = allowedStatus.map((s) => `Status eq ${STATUS_MAP[s]}`);
     return `(${filters.join(' or ')})`;
   };
 
