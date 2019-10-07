@@ -12,18 +12,18 @@ function deepObjectMap(object) {
 
 function handleValue(value) {
   if (typeof value === 'string' && envVariableRegex.test(value)) {
+    const envVariable = value.replace(
+      envVariableRegex,
+      (match, p1) => process.env[p1]
+    );
     try {
-      const envVariable = value.replace(
-        envVariableRegex,
-        (match, p1) => process.env[p1]
-      );
       // eslint-disable-next-line
       if (!isNaN(Number(envVariable))) {
         return envVariable;
       }
       return JSON.parse(envVariable);
     } catch (e) {
-      return value.replace(envVariableRegex, (match, p1) => process.env[p1]);
+      return envVariable;
     }
   }
   if (Array.isArray(value)) {
