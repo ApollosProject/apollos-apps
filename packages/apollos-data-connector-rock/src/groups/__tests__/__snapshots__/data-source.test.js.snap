@@ -62,7 +62,7 @@ Array [
 exports[`Groups should get groups by person 2`] = `
 Array [
   Array [
-    "GroupMembers?loadAttributes=expanded&%24expand=GroupRole&%24filter=PersonId%20eq%201%20",
+    "GroupMembers?loadAttributes=expanded&%24expand=GroupRole&%24filter=%28PersonId%20eq%201%20%29%20and%20%28GroupMemberStatus%20ne%20%27Inactive%27%29",
     Object {},
     Object {},
   ],

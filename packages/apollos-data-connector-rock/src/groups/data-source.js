@@ -49,6 +49,7 @@ export default class Group extends RockApolloDataSource {
           asLeader ? ' and GroupRole/IsLeader eq true' : ''
         }`
       )
+      .andFilter(`GroupMemberStatus ne 'Inactive'`)
       .get();
     const groups = await Promise.all(
       groupAssociations.map(({ groupId }) =>
