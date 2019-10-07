@@ -51,7 +51,7 @@ class LocationFinderConnected extends PureComponent {
                   pressPrimaryEventName={'Ask Location Completed'}
                   pressSecondaryEventName={'Ask Location Skipped'}
                   buttonText={'Yes, find my local campus'}
-                  campus={showNextBtn ? campus : null}
+                  campus={campus}
                   {...otherProps}
                 />
               );
