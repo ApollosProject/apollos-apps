@@ -71,6 +71,32 @@ Object {
 }
 `;
 
+exports[`Following uses following cache to track if a user liked content, if present 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "isLiked": false,
+    },
+  },
+}
+`;
+
+exports[`Following uses following cache to track if a user liked content, if present 2`] = `
+Array [
+  Array [
+    Object {
+      "key": Array [
+        "userLiked",
+        "someId",
+        201,
+        "1",
+      ],
+    },
+  ],
+]
+`;
+
 exports[`Following uses following table to track if a user liked content 1`] = `
 Object {
   "data": Object {
@@ -80,4 +106,20 @@ Object {
     },
   },
 }
+`;
+
+exports[`Following uses following table to track if a user liked content 2`] = `
+Array [
+  Array [
+    Object {
+      "data": true,
+      "key": Array [
+        "userLiked",
+        "someId",
+        201,
+        "1",
+      ],
+    },
+  ],
+]
 `;

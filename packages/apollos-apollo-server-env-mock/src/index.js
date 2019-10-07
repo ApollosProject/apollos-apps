@@ -195,7 +195,6 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
           return Promise.resolve(response);
         }
         if (request.method === 'DELETE') {
-          console.log('Deleting following');
           const response = new Response(null, {
             status: 204,
             headers: new apolloServerEnv.Headers({
