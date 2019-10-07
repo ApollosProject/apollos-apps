@@ -172,11 +172,18 @@ export default class AuthDataSource extends RockApolloDataSource {
       return token;
     } catch (e) {
       console.warn(
-        'Using deprecated Rock endpoint, upgrade to v10 when available.'
+        'Using deprecated Rock endpoint, upgrade Rock to v10 when available.'
       );
       const { id } = await this.getCurrentPerson();
+      console.log(
+        moment()
+          .add(1, 'weeks')
+          .toISOString()
+      );
       const param = await this.request(
-        `People/GetImpersonationParameter?personId=${id}`
+        `People/GetImpersonationParameter?personId=${id}&expireDateTime=${moment()
+          .add(1, 'weeks')
+          .toISOString()}`
       ).get();
       return param.split('=')[1];
     }
