@@ -264,6 +264,11 @@ export default class ContentItem extends RockApolloDataSource {
     return null;
   }
 
+  buildStatusFilter = ({ allowedStatus }) => {
+    const filters = allowedStatus.map((s) => `Status eq ${s}`);
+    return `(${filters.join(' or ')})`;
+  };
+
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
     // will create a timezone formatted string and then strip off the offset
@@ -272,9 +277,9 @@ export default class ContentItem extends RockApolloDataSource {
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
-    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and Status eq ${
-      ROCK.ALLOWED_CONTENT_PUBLISH_STATUS
-    } `;
+    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and ${this.buildStatusFilter(
+      { allowedStatus: ROCK.INCLUDE_CONTENT_TYPES }
+    )}`;
   };
 
   expanded = true;
