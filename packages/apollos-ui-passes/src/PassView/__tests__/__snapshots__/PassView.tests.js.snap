@@ -2,186 +2,148 @@
 
 exports[`the PassView component should display loading placeholders 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+  isLoading={true}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 12,
+      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 6,
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "borderRadius": 16,
+        "overflow": "hidden",
       }
     }
   >
     <View
-      isLoading={true}
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-          "shadowOffset": Object {
-            "height": 1,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 6,
+          "flexDirection": "column",
+          "justifyContent": "space-between",
+          "minHeight": 733.7,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "borderRadius": 16,
-            "overflow": "hidden",
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
-              "flexDirection": "column",
-              "justifyContent": "space-between",
-              "minHeight": 733.7,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <View>
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 2.6400000000000006,
+                "width": "50%",
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 2.6400000000000006,
+                  "width": "50%",
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 12,
-                    "marginVertical": 2.6400000000000006,
-                    "width": "50%",
-                  }
-                }
-              />
-            </View>
+            />
             <View
               style={
                 Object {
-                  "alignItems": "flex-start",
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 24,
+                  "marginVertical": 1.8000000000000007,
+                  "width": "100%",
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 12,
-                      "marginVertical": 2.6400000000000006,
-                      "width": "50%",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 24,
-                      "marginVertical": 1.8000000000000007,
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-            </View>
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
             <View
               style={
                 Object {
-                  "alignItems": "flex-start",
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 2.6400000000000006,
+                  "width": "50%",
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
+            />
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 14,
+                  "marginVertical": 3.08,
+                  "width": "60%",
                 }
-              >
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 12,
-                      "marginVertical": 2.6400000000000006,
-                      "width": "50%",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 14,
-                      "marginVertical": 3.08,
-                      "width": "60%",
-                    }
-                  }
-                />
-              </View>
-            </View>
+              }
+            />
           </View>
         </View>
       </View>
@@ -192,318 +154,280 @@ exports[`the PassView component should display loading placeholders 1`] = `
 
 exports[`the PassView component should render 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "salmon",
+      "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 12,
+      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 6,
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "borderRadius": 16,
+        "overflow": "hidden",
       }
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "salmon",
-          "borderRadius": 16,
-          "marginHorizontal": 16,
-          "marginVertical": 12,
-          "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-          "shadowOffset": Object {
-            "height": 1,
-            "width": 0,
-          },
-          "shadowOpacity": 1,
-          "shadowRadius": 6,
+          "flexDirection": "column",
+          "justifyContent": "space-between",
+          "minHeight": 733.7,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "borderRadius": 16,
-            "overflow": "hidden",
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
-              "flexDirection": "column",
-              "justifyContent": "space-between",
-              "minHeight": 733.7,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <View>
-            <View
+          <Text
+            color="rgb(248, 247, 244)"
+            style={
+              Object {
+                "color": null,
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "textAlign": "center",
+              }
+            }
+          >
+            Apollos Church
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
+                  "textAlign": "left",
+                }
+              }
+              textAlignment="LEFT"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "rgb(248, 247, 244)",
+                    "fontFamily": "InterUI-Black",
+                    "fontSize": 24,
+                    "lineHeight": 27.6,
+                  }
+                }
+              >
+                Conrad VanLandingham
+              </Text>
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              animate={null}
+              customAnimate={null}
+              onReady={false}
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                  "aspectRatio": 0.75,
+                  "backgroundColor": "transparent",
+                  "flex": 1,
+                  "resizeMode": "cover",
+                  "width": "100%",
                 }
               }
             >
+              <Image
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Ddd2aa592-80ac-4d7a-8bdc-47aeb25ce158%26format%3Dpng%26height%3D200",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "alignSelf": "flex-end",
+                    "aspectRatio": 0.75,
+                    "backgroundColor": "transparent",
+                    "flex": 1,
+                    "opacity": 0,
+                    "resizeMode": "cover",
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "textAlign": "left",
+                }
+              }
+              textAlignment="LEFT"
+            >
               <Text
-                color="rgb(248, 247, 244)"
                 style={
                   Object {
                     "color": null,
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 17.28,
-                    "textAlign": "center",
                   }
                 }
               >
-                Apollos Church
+                home
               </Text>
-            </View>
-            <View
+            </Text>
+            <Text
               style={
                 Object {
-                  "alignItems": "flex-start",
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
+                  "textAlign": "left",
                 }
               }
+              textAlignment="LEFT"
             >
-              <View
+              <Text
                 style={
                   Object {
-                    "flex": 1,
+                    "color": "rgb(248, 247, 244)",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 20.16,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "textAlign": "left",
-                    }
-                  }
-                  textAlignment="LEFT"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(248, 247, 244)",
-                        "fontFamily": "InterUI-Black",
-                        "fontSize": 24,
-                        "lineHeight": 27.6,
-                      }
-                    }
-                  >
-                    Conrad VanLandingham
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
-                  style={
-                    Object {
-                      "alignSelf": "flex-end",
-                      "aspectRatio": 0.75,
-                      "backgroundColor": "transparent",
-                      "flex": 1,
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                >
-                  <Image
-                    onLoad={[Function]}
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Ddd2aa592-80ac-4d7a-8bdc-47aeb25ce158%26format%3Dpng%26height%3D200",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "alignSelf": "flex-end",
-                        "aspectRatio": 0.75,
-                        "backgroundColor": "transparent",
-                        "flex": 1,
-                        "opacity": 0,
-                        "resizeMode": "cover",
-                      }
-                    }
-                  />
-                </View>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "flex-start",
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "textAlign": "left",
-                    }
-                  }
-                  textAlignment="LEFT"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": null,
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                      }
-                    }
-                  >
-                    home
-                  </Text>
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "textAlign": "left",
-                    }
-                  }
-                  textAlignment="LEFT"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(248, 247, 244)",
-                        "fontFamily": "InterUI-Medium",
-                        "fontSize": 14,
-                        "lineHeight": 20.16,
-                      }
-                    }
-                  >
-                    Richardson, TX
-                  </Text>
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "textAlign": "right",
-                    }
-                  }
-                  textAlignment="RIGHT"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": null,
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                      }
-                    }
-                  >
-                    campus
-                  </Text>
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "textAlign": "right",
-                    }
-                  }
-                  textAlignment="RIGHT"
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgb(248, 247, 244)",
-                        "fontFamily": "InterUI-Medium",
-                        "fontSize": 14,
-                        "lineHeight": 20.16,
-                      }
-                    }
-                  >
-                    Main Campus
-                  </Text>
-                </Text>
-              </View>
-            </View>
+                Richardson, TX
+              </Text>
+            </Text>
           </View>
-          <Image
-            source={
-              Object {
-                "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAAAklEQVR4AewaftIAAAN6SURBVO3BS45jRwADwWRB979yuhdecFXAg6QefxgRfzDzt8NMOcyUw0w5zJTDTDnMlMNMOcyUw0w5zJTDTDnMlMNMOcyUw0x58aYk/CaVmyQ0lSeS8ITKTRJ+k8o7DjPlMFMOM+XFh6l8UhKeULlJwicloancqHxSEj7pMFMOM+UwU158WRKeUHkiCTcqTaUl4UalJaGpvCMJT6h802GmHGbKYaa8+I9LQlO5UWlJ+D85zJTDTDnMlBf/MSotCS0JTeVGpSWhJaGp/JsdZsphphxmyosvU/lNSXgiCU3lRuWTVP5JDjPlMFMOM+XFhyXhT1JpSWgqLQk3SWgqLQlN5SYJ/2SHmXKYKYeZ8uJNKv9kKi0JTeWbVP5NDjPlMFMOMyX+4A1JaCotCZ+kcpOEG5XflIRPUvmmw0w5zJTDTIk/+KAkNJWbJDSVmyQ0lZskfJNKS0JTeSIJTeU3HWbKYaYcZkr8wRcl4UblJgk3Kk8k4ZtUWhKeULlJwo3KOw4z5TBTDjPlxYcl4R1JaCotCTdJuFG5SUJTuUnCjconqXzTYaYcZsphpsQf/KIk3Ki0JDSVT0pCU2lJeEKlJeE3qbzjMFMOM+UwU+IP3pCEd6i8IwlN5U9KQlN5IglN5TcdZsphphxmyosPU3lHEm5UmkpLwjtUbpLQVG6ScKPSVG6ScKPyjsNMOcyUw0x58WVJeIfKO1RaEprKTRJukvCOJDSVG5WWhE86zJTDTDnMlBdfptKS8EQSmkpLwjeptCR8UxJuVL7pMFMOM+UwU168SeUJlW9SaUloKi0JT6i0JDSVJ5LQVG6S0FQ+6TBTDjPlMFNevCkJv0mlqbQkNJUblZaET0pCU7lJQlNpKi0JTeUdh5lymCmHmfLiw1Q+KQk3SWgqLQlNpSXhRqUl4QmVT0pCU/mkw0w5zJTDTHnxZUl4QuWTVJ5QaUl4IgnvUGlJ+E2HmXKYKYeZ8uJ/TuVGpSXhRqUloam0JLQkNJWbJDSVdxxmymGmHGbKi/+4JDyhcqNyk4SmcqPSktCS0FS+6TBTDjPlMFNefJnKN6ncqLQkNJWbJDyh8kQSmsqfdJgph5lymCkvPiwJvykJ36TyjiTcqLQk/EmHmXKYKYeZEn8w87fDTDnMlMNMOcyUw0w5zJTDTDnMlMNMOcyUw0w5zJTDTDnMlMNM+QvFao35BOHtSwAAAABJRU5ErkJggg==",
-              }
-            }
+          <View
             style={
               Object {
-                "alignSelf": "center",
-                "aspectRatio": 1,
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 8,
-                "marginBottom": 16,
-                "resizeMode": "contain",
-                "width": "50%",
+                "flex": 1,
               }
             }
-          />
+          >
+            <Text
+              style={
+                Object {
+                  "textAlign": "right",
+                }
+              }
+              textAlignment="RIGHT"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": null,
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 17.28,
+                  }
+                }
+              >
+                campus
+              </Text>
+            </Text>
+            <Text
+              style={
+                Object {
+                  "textAlign": "right",
+                }
+              }
+              textAlignment="RIGHT"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "rgb(248, 247, 244)",
+                    "fontFamily": "InterUI-Medium",
+                    "fontSize": 14,
+                    "lineHeight": 20.16,
+                  }
+                }
+              >
+                Main Campus
+              </Text>
+            </Text>
+          </View>
         </View>
       </View>
+      <Image
+        source={
+          Object {
+            "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAAAklEQVR4AewaftIAAAN6SURBVO3BS45jRwADwWRB979yuhdecFXAg6QefxgRfzDzt8NMOcyUw0w5zJTDTDnMlMNMOcyUw0w5zJTDTDnMlMNMOcyUw0x58aYk/CaVmyQ0lSeS8ITKTRJ+k8o7DjPlMFMOM+XFh6l8UhKeULlJwicloancqHxSEj7pMFMOM+UwU158WRKeUHkiCTcqTaUl4UalJaGpvCMJT6h802GmHGbKYaa8+I9LQlO5UWlJ+D85zJTDTDnMlBf/MSotCS0JTeVGpSWhJaGp/JsdZsphphxmyosvU/lNSXgiCU3lRuWTVP5JDjPlMFMOM+XFhyXhT1JpSWgqLQk3SWgqLQlN5SYJ/2SHmXKYKYeZ8uJNKv9kKi0JTeWbVP5NDjPlMFMOMyX+4A1JaCotCZ+kcpOEG5XflIRPUvmmw0w5zJTDTIk/+KAkNJWbJDSVmyQ0lZskfJNKS0JTeSIJTeU3HWbKYaYcZkr8wRcl4UblJgk3Kk8k4ZtUWhKeULlJwo3KOw4z5TBTDjPlxYcl4R1JaCotCTdJuFG5SUJTuUnCjconqXzTYaYcZsphpsQf/KIk3Ki0JDSVT0pCU2lJeEKlJeE3qbzjMFMOM+UwU+IP3pCEd6i8IwlN5U9KQlN5IglN5TcdZsphphxmyosPU3lHEm5UmkpLwjtUbpLQVG6ScKPSVG6ScKPyjsNMOcyUw0x58WVJeIfKO1RaEprKTRJukvCOJDSVG5WWhE86zJTDTDnMlBdfptKS8EQSmkpLwjeptCR8UxJuVL7pMFMOM+UwU168SeUJlW9SaUloKi0JT6i0JDSVJ5LQVG6S0FQ+6TBTDjPlMFNevCkJv0mlqbQkNJUblZaET0pCU7lJQlNpKi0JTeUdh5lymCmHmfLiw1Q+KQk3SWgqLQlNpSXhRqUl4QmVT0pCU/mkw0w5zJTDTHnxZUl4QuWTVJ5QaUl4IgnvUGlJ+E2HmXKYKYeZ8uJ/TuVGpSXhRqUloam0JLQkNJWbJDSVdxxmymGmHGbKi/+4JDyhcqNyk4SmcqPSktCS0FS+6TBTDjPlMFNefJnKN6ncqLQkNJWbJDyh8kQSmsqfdJgph5lymCkvPiwJvykJ36TyjiTcqLQk/EmHmXKYKYeZEn8w87fDTDnMlMNMOcyUw0w5zJTDTDnMlMNMOcyUw0w5zJTDTDnMlMNM+QvFao35BOHtSwAAAABJRU5ErkJggg==",
+          }
+        }
+        style={
+          Object {
+            "alignSelf": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 8,
+            "marginBottom": 16,
+            "resizeMode": "contain",
+            "width": "50%",
+          }
+        }
+      />
     </View>
   </View>
 </View>

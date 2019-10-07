@@ -26,6 +26,7 @@ const localDeps = [
 
 const sharedNativeModules = [
   'react-native-linear-gradient',
+  'react-native-safe-area-context',
   'react-native-svg',
   'react-native-onesignal',
   'react-native-music-control',

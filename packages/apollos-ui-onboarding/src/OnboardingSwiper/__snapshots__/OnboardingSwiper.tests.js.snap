@@ -3,300 +3,262 @@
 exports[`The onboarding swiper should render with a fragment as a child 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "position": "relative",
+      },
+      undefined,
+    ]
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      onLayout={[Function]}
-      style={
-        Array [
+  <RCTScrollView
+    activeDot={
+      <ForwardRef(_SafeAreaView)
+        forceInset={
           Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "position": "relative",
-          },
-          undefined,
-        ]
-      }
-    >
-      <RCTScrollView
-        activeDot={
-          <ForwardRef(_SafeAreaView)
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          >
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-          </ForwardRef(_SafeAreaView)>
-        }
-        automaticallyAdjustContentInsets={false}
-        autoplay={false}
-        autoplayDirection={true}
-        autoplayTimeout={2.5}
-        bounces={false}
-        contentContainerStyle={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-            },
-            undefined,
-          ]
-        }
-        contentOffset={
-          Object {
-            "x": 0,
+            "bottom": "always",
           }
         }
-        disableNextButton={false}
-        dot={
-          <ForwardRef(_SafeAreaView)
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          >
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-              forceInset={
-                Object {
-                  "bottom": "always",
-                }
-              }
-            />
-          </ForwardRef(_SafeAreaView)>
-        }
-        horizontal={true}
-        index={0}
-        loadMinimal={true}
-        loadMinimalSize={1}
-        loop={false}
-        onIndexChanged={[Function]}
-        onMomentumScrollEnd={[Function]}
-        onScrollBeginDrag={[Function]}
-        onScrollEndDrag={[Function]}
-        pagingEnabled={true}
-        removeClippedSubviews={true}
-        scrollsToTop={false}
-        showsButtons={false}
-        showsHorizontalScrollIndicator={false}
-        showsPagination={true}
-        showsVerticalScrollIndicator={false}
       >
-        <View>
-          <View
-            style={
-              Array [
-                Object {
-                  "height": 1334,
-                  "width": 750,
-                },
-                Object {
-                  "backgroundColor": "transparent",
-                },
-              ]
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+      </ForwardRef(_SafeAreaView)>
+    }
+    automaticallyAdjustContentInsets={false}
+    autoplay={false}
+    autoplayDirection={true}
+    autoplayTimeout={2.5}
+    bounces={false}
+    contentContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+    contentOffset={
+      Object {
+        "x": 0,
+      }
+    }
+    disableNextButton={false}
+    dot={
+      <ForwardRef(_SafeAreaView)
+        forceInset={
+          Object {
+            "bottom": "always",
+          }
+        }
+      >
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
+          forceInset={
+            Object {
+              "bottom": "always",
             }
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <Text>
-                1
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "height": 1334,
-                  "width": 750,
-                },
-                Object {
-                  "backgroundColor": "transparent",
-                },
-              ]
-            }
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <Text>
-                2
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "height": 1334,
-                "justifyContent": "center",
-                "width": 750,
-              }
-            }
-          >
-            <ActivityIndicator
-              animating={true}
-              color="#999999"
-              hidesWhenStopped={true}
-              size="small"
-            />
-          </View>
-        </View>
-      </RCTScrollView>
+          }
+        />
+      </ForwardRef(_SafeAreaView)>
+    }
+    horizontal={true}
+    index={0}
+    loadMinimal={true}
+    loadMinimalSize={1}
+    loop={false}
+    onIndexChanged={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    pagingEnabled={true}
+    removeClippedSubviews={true}
+    scrollsToTop={false}
+    showsButtons={false}
+    showsHorizontalScrollIndicator={false}
+    showsPagination={true}
+    showsVerticalScrollIndicator={false}
+  >
+    <View>
       <View
-        pointerEvents="none"
         style={
           Array [
             Object {
-              "alignItems": "center",
-              "backgroundColor": "transparent",
-              "bottom": 25,
-              "flex": 1,
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
+              "height": 1334,
+              "width": 750,
             },
-            undefined,
+            Object {
+              "backgroundColor": "transparent",
+            },
           ]
         }
       >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
             Object {
-              "bottom": "always",
+              "opacity": 1,
             }
           }
         >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#00676D",
-                "borderRadius": 4,
-                "height": 8,
-                "margin": 4,
-                "width": 8,
-              }
-            }
-          />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+          <Text>
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
             Object {
-              "bottom": "always",
+              "height": 1334,
+              "width": 750,
+            },
+            Object {
+              "backgroundColor": "transparent",
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
             }
           }
         >
-          <View
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 4,
-                "height": 8,
-                "margin": 4,
-                "width": 8,
-              }
-            }
-          />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
+          <Text>
+            2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "height": 1334,
+            "justifyContent": "center",
+            "width": 750,
           }
-        >
-          <View
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 4,
-                "height": 8,
-                "margin": 4,
-                "width": 8,
-              }
-            }
-          />
-        </RCTSafeAreaView>
+        }
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#999999"
+          hidesWhenStopped={true}
+          size="small"
+        />
       </View>
     </View>
+  </RCTScrollView>
+  <View
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "bottom": 25,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
+        Object {
+          "bottom": "always",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#00676D",
+            "borderRadius": 4,
+            "height": 8,
+            "margin": 4,
+            "width": 8,
+          }
+        }
+      />
+    </RCTSafeAreaView>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
+        Object {
+          "bottom": "always",
+        }
+      }
+    >
+      <View
+        forceInset={
+          Object {
+            "bottom": "always",
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 4,
+            "height": 8,
+            "margin": 4,
+            "width": 8,
+          }
+        }
+      />
+    </RCTSafeAreaView>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
+        Object {
+          "bottom": "always",
+        }
+      }
+    >
+      <View
+        forceInset={
+          Object {
+            "bottom": "always",
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 4,
+            "height": 8,
+            "margin": 4,
+            "width": 8,
+          }
+        }
+      />
+    </RCTSafeAreaView>
   </View>
 </View>
 `;
@@ -304,300 +266,262 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
 exports[`The onboarding swiper should render with an array as a child 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "position": "relative",
+      },
+      undefined,
+    ]
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      onLayout={[Function]}
-      style={
-        Array [
+  <RCTScrollView
+    activeDot={
+      <ForwardRef(_SafeAreaView)
+        forceInset={
           Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "position": "relative",
-          },
-          undefined,
-        ]
-      }
-    >
-      <RCTScrollView
-        activeDot={
-          <ForwardRef(_SafeAreaView)
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          >
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-          </ForwardRef(_SafeAreaView)>
-        }
-        automaticallyAdjustContentInsets={false}
-        autoplay={false}
-        autoplayDirection={true}
-        autoplayTimeout={2.5}
-        bounces={false}
-        contentContainerStyle={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-            },
-            undefined,
-          ]
-        }
-        contentOffset={
-          Object {
-            "x": 0,
+            "bottom": "always",
           }
         }
-        disableNextButton={false}
-        dot={
-          <ForwardRef(_SafeAreaView)
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          >
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-              forceInset={
-                Object {
-                  "bottom": "always",
-                }
-              }
-            />
-          </ForwardRef(_SafeAreaView)>
-        }
-        horizontal={true}
-        index={0}
-        loadMinimal={true}
-        loadMinimalSize={1}
-        loop={false}
-        onIndexChanged={[Function]}
-        onMomentumScrollEnd={[Function]}
-        onScrollBeginDrag={[Function]}
-        onScrollEndDrag={[Function]}
-        pagingEnabled={true}
-        removeClippedSubviews={true}
-        scrollsToTop={false}
-        showsButtons={false}
-        showsHorizontalScrollIndicator={false}
-        showsPagination={true}
-        showsVerticalScrollIndicator={false}
       >
-        <View>
-          <View
-            style={
-              Array [
-                Object {
-                  "height": 1334,
-                  "width": 750,
-                },
-                Object {
-                  "backgroundColor": "transparent",
-                },
-              ]
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+      </ForwardRef(_SafeAreaView)>
+    }
+    automaticallyAdjustContentInsets={false}
+    autoplay={false}
+    autoplayDirection={true}
+    autoplayTimeout={2.5}
+    bounces={false}
+    contentContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+    contentOffset={
+      Object {
+        "x": 0,
+      }
+    }
+    disableNextButton={false}
+    dot={
+      <ForwardRef(_SafeAreaView)
+        forceInset={
+          Object {
+            "bottom": "always",
+          }
+        }
+      >
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
+          forceInset={
+            Object {
+              "bottom": "always",
             }
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <Text>
-                1
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "height": 1334,
-                  "width": 750,
-                },
-                Object {
-                  "backgroundColor": "transparent",
-                },
-              ]
-            }
-          >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <Text>
-                2
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "height": 1334,
-                "justifyContent": "center",
-                "width": 750,
-              }
-            }
-          >
-            <ActivityIndicator
-              animating={true}
-              color="#999999"
-              hidesWhenStopped={true}
-              size="small"
-            />
-          </View>
-        </View>
-      </RCTScrollView>
+          }
+        />
+      </ForwardRef(_SafeAreaView)>
+    }
+    horizontal={true}
+    index={0}
+    loadMinimal={true}
+    loadMinimalSize={1}
+    loop={false}
+    onIndexChanged={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    pagingEnabled={true}
+    removeClippedSubviews={true}
+    scrollsToTop={false}
+    showsButtons={false}
+    showsHorizontalScrollIndicator={false}
+    showsPagination={true}
+    showsVerticalScrollIndicator={false}
+  >
+    <View>
       <View
-        pointerEvents="none"
         style={
           Array [
             Object {
-              "alignItems": "center",
-              "backgroundColor": "transparent",
-              "bottom": 25,
-              "flex": 1,
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
+              "height": 1334,
+              "width": 750,
             },
-            undefined,
+            Object {
+              "backgroundColor": "transparent",
+            },
           ]
         }
       >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
             Object {
-              "bottom": "always",
+              "opacity": 1,
             }
           }
         >
-          <View
-            style={
-              Object {
-                "backgroundColor": "#00676D",
-                "borderRadius": 4,
-                "height": 8,
-                "margin": 4,
-                "width": 8,
-              }
-            }
-          />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
+          <Text>
+            1
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
             Object {
-              "bottom": "always",
+              "height": 1334,
+              "width": 750,
+            },
+            Object {
+              "backgroundColor": "transparent",
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
             }
           }
         >
-          <View
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 4,
-                "height": 8,
-                "margin": 4,
-                "width": 8,
-              }
-            }
-          />
-        </RCTSafeAreaView>
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
+          <Text>
+            2
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "height": 1334,
+            "justifyContent": "center",
+            "width": 750,
           }
-        >
-          <View
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 4,
-                "height": 8,
-                "margin": 4,
-                "width": 8,
-              }
-            }
-          />
-        </RCTSafeAreaView>
+        }
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#999999"
+          hidesWhenStopped={true}
+          size="small"
+        />
       </View>
     </View>
+  </RCTScrollView>
+  <View
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "bottom": 25,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
+        Object {
+          "bottom": "always",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#00676D",
+            "borderRadius": 4,
+            "height": 8,
+            "margin": 4,
+            "width": 8,
+          }
+        }
+      />
+    </RCTSafeAreaView>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
+        Object {
+          "bottom": "always",
+        }
+      }
+    >
+      <View
+        forceInset={
+          Object {
+            "bottom": "always",
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 4,
+            "height": 8,
+            "margin": 4,
+            "width": 8,
+          }
+        }
+      />
+    </RCTSafeAreaView>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
+        Object {
+          "bottom": "always",
+        }
+      }
+    >
+      <View
+        forceInset={
+          Object {
+            "bottom": "always",
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 4,
+            "height": 8,
+            "margin": 4,
+            "width": 8,
+          }
+        }
+      />
+    </RCTSafeAreaView>
   </View>
 </View>
 `;

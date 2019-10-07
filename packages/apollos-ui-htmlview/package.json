@@ -28,7 +28,11 @@
     ],
     "modulePaths": [
       "<rootDir>/src/"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
     ]
+
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",

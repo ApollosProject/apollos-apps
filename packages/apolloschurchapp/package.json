@@ -108,6 +108,7 @@
     "react-native-onesignal": "3.3.2",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-safari-view": "2.1.0",
+    "react-native-safe-area-context": "^0.3.6",
     "react-native-safe-area-view": "0.13.1",
     "react-native-screens": "^1.0.0-alpha.23",
     "react-native-splash-screen": "3.2.0",

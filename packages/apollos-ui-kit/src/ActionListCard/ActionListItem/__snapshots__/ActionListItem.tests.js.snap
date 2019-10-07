@@ -2,139 +2,101 @@
 
 exports[`ActionListItem should render 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+  accessible={true}
+  clickable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "transform": Array [
+        Object {
+          "scale": 1,
+        },
+      ],
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingHorizontal": 16,
+        "paddingVertical": 4,
       }
     }
   >
     <View
-      accessible={true}
-      clickable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      animate={null}
+      customAnimate={null}
+      onReady={false}
       style={
         Object {
-          "transform": Array [
-            Object {
-              "scale": 1,
-            },
-          ],
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+              "url": "https://picsum.photos/600/400/?random",
+            },
+          ]
+        }
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "flexDirection": "row",
-            "justifyContent": "flex-start",
-            "paddingHorizontal": 16,
-            "paddingVertical": 4,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "opacity": 0,
+            "width": 64,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 0.5,
+          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "flex": 1,
+          "height": 68,
+          "justifyContent": "center",
+          "marginTop": 6.4,
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 23.04,
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "width": 64,
-            }
-          }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "url": "https://picsum.photos/600/400/?random",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "borderBottomWidth": 0.5,
-              "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "flex": 1,
-              "height": 68,
-              "justifyContent": "center",
-              "marginTop": 6.4,
-            }
-          }
-        >
-          <Text
-            ellipsizeMode="tail"
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 23.04,
-              }
-            }
-          >
-            Boom
-          </Text>
-        </View>
-      </View>
+        Boom
+      </Text>
     </View>
   </View>
 </View>
@@ -142,149 +104,111 @@ exports[`ActionListItem should render 1`] = `
 
 exports[`ActionListItem should render a loading state 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+  accessible={true}
+  clickable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "transform": Array [
+        Object {
+          "scale": 1,
+        },
+      ],
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingHorizontal": 16,
+        "paddingVertical": 4,
       }
     }
   >
     <View
-      accessible={true}
-      clickable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      animate={null}
+      customAnimate={null}
+      onReady={false}
       style={
         Object {
-          "transform": Array [
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
             Object {
-              "scale": 1,
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+              "url": "https://picsum.photos/600/400/?random",
             },
-          ],
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "opacity": 0,
+            "width": 64,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 0.5,
+          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "flex": 1,
+          "height": 68,
+          "justifyContent": "center",
+          "marginTop": 6.4,
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "flexDirection": "row",
-            "justifyContent": "flex-start",
-            "paddingHorizontal": 16,
-            "paddingVertical": 4,
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 12,
+            "marginVertical": 2.6400000000000006,
+            "width": "50%",
           }
         }
-      >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "width": 64,
-            }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 16,
+            "marginVertical": 3.5199999999999996,
+            "width": "80%",
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "url": "https://picsum.photos/600/400/?random",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "borderBottomWidth": 0.5,
-              "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "flex": 1,
-              "height": 68,
-              "justifyContent": "center",
-              "marginTop": 6.4,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 12,
-                "marginVertical": 2.6400000000000006,
-                "width": "50%",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 16,
-                "marginVertical": 3.5199999999999996,
-                "width": "80%",
-              }
-            }
-          />
-        </View>
-      </View>
+        }
+      />
     </View>
   </View>
 </View>
@@ -292,152 +216,114 @@ exports[`ActionListItem should render a loading state 1`] = `
 
 exports[`ActionListItem should render with a label 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+  accessible={true}
+  clickable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "transform": Array [
+        Object {
+          "scale": 1,
+        },
+      ],
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingHorizontal": 16,
+        "paddingVertical": 4,
       }
     }
   >
     <View
-      accessible={true}
-      clickable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      animate={null}
+      customAnimate={null}
+      onReady={false}
       style={
         Object {
-          "transform": Array [
-            Object {
-              "scale": 1,
-            },
-          ],
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
         }
       }
     >
-      <View
+      <Image
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+              "url": "https://picsum.photos/600/400/?random",
+            },
+          ]
+        }
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "flexDirection": "row",
-            "justifyContent": "flex-start",
-            "paddingHorizontal": 16,
-            "paddingVertical": 4,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "opacity": 0,
+            "width": 64,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 0.5,
+          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "flex": 1,
+          "height": 68,
+          "justifyContent": "center",
+          "marginTop": 6.4,
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#A5A5A5",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 12,
+            "lineHeight": 17.28,
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "width": 64,
-            }
+        What
+      </Text>
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 23.04,
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/600/400/?random",
-                  "url": "https://picsum.photos/600/400/?random",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "borderBottomWidth": 0.5,
-              "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
-              "flex": 1,
-              "height": 68,
-              "justifyContent": "center",
-              "marginTop": 6.4,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "color": "#A5A5A5",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
-              }
-            }
-          >
-            What
-          </Text>
-          <Text
-            ellipsizeMode="tail"
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 23.04,
-              }
-            }
-          >
-            Boom
-          </Text>
-        </View>
-      </View>
+        }
+      >
+        Boom
+      </Text>
     </View>
   </View>
 </View>

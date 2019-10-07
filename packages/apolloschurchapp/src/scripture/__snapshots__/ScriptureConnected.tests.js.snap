@@ -1,145 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScriptureConnected component renders without errors 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
-  style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
+<View>
+  <Text
     style={
       Object {
-        "flex": 1,
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 23.04,
       }
     }
-  />
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 23.04,
+        }
+      }
+    >
+      Genesis 1:1
+    </Text>
+     
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 17.28,
+        }
+      }
+    >
+      WEB
+    </Text>
+  </Text>
   <View
+    lineNumber={8}
+    onReady={true}
     style={
       Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "paddingBottom": 17.28,
       }
     }
   >
     <View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 16,
-            "lineHeight": 23.04,
+            "paddingBottom": 0,
           }
         }
       >
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
               "color": "#303030",
-              "fontFamily": "InterUI-Bold",
+              "fontFamily": "DroidSerif",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 26,
             }
           }
         >
-          Genesis 1:1
-        </Text>
-         
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 17.28,
-            }
-          }
-        >
-          WEB
-        </Text>
-      </Text>
-      <View
-        lineNumber={8}
-        onReady={true}
-        style={
-          Object {
-            "paddingBottom": 17.28,
-          }
-        }
-      >
-        <View>
-          <View
+          <Text
+            bold={false}
+            italic={false}
             style={
               Object {
-                "paddingBottom": 0,
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
               }
             }
           >
-            <Text
-              bold={false}
-              italic={false}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "DroidSerif",
-                  "fontSize": 16,
-                  "lineHeight": 26,
-                }
-              }
-            >
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#505050",
-                    "fontFamily": "DroidSerif",
-                    "fontSize": 9.6,
-                    "lineHeight": 26,
-                  }
-                }
-              >
-                 
-                <Text>
-                  1
-                </Text>
-                 
-              </Text>
-              <Text
-                bold={false}
-                italic={false}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "DroidSerif",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
-                }
-              >
-                <Text>
-                  In the beginning, God created the heavens and the earth. 
-                </Text>
-              </Text>
+             
+            <Text>
+              1
             </Text>
-          </View>
-        </View>
+             
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              In the beginning, God created the heavens and the earth. 
+            </Text>
+          </Text>
+        </Text>
       </View>
     </View>
   </View>

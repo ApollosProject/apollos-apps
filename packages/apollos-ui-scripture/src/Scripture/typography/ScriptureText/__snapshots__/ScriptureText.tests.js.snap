@@ -1,385 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ScriptureText component should accept additional props 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  accessible={false}
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "DroidSerif",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      accessible={false}
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "DroidSerif",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      "True faith means holding nothing back. It means putting every hope in God's fidelity to His Promises." ― Francis Chan
-    </Text>
-  </View>
-</View>
+  "True faith means holding nothing back. It means putting every hope in God's fidelity to His Promises." ― Francis Chan
+</Text>
 `;
 
 exports[`the ScriptureText component should accept and render passed in styles 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "salmon",
+      "fontFamily": "DroidSerif",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "salmon",
-          "fontFamily": "DroidSerif",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      Salmon text
-    </Text>
-  </View>
-</View>
+  Salmon text
+</Text>
 `;
 
 exports[`the ScriptureText component should render a loading state 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 16,
+      "marginVertical": 5,
+      "width": "100%",
     }
   }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 16,
-          "marginVertical": 5,
-          "width": "100%",
-        }
-      }
-    />
-  </View>
-</View>
+/>
 `;
 
 exports[`the ScriptureText component should render as bold 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={true}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "DroidSerif-Bold",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={true}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "DroidSerif-Bold",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      Bold ScriptureText text
-    </Text>
-  </View>
-</View>
+  Bold ScriptureText text
+</Text>
 `;
 
 exports[`the ScriptureText component should render as bold italic 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={true}
+  italic={true}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "DroidSerif-BoldItalic",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={true}
-      italic={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "DroidSerif-BoldItalic",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      Bold italic ScriptureText text
-    </Text>
-  </View>
-</View>
+  Bold italic ScriptureText text
+</Text>
 `;
 
 exports[`the ScriptureText component should render as italic 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={true}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "DroidSerif-Italic",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={false}
-      italic={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "DroidSerif-Italic",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      Italic ScriptureText text
-    </Text>
-  </View>
-</View>
+  Italic ScriptureText text
+</Text>
 `;
 
 exports[`the ScriptureText component should render correctly 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "DroidSerif",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "DroidSerif",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      Default ScriptureText text
-    </Text>
-  </View>
-</View>
+  Default ScriptureText text
+</Text>
 `;

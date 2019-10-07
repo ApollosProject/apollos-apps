@@ -2,145 +2,107 @@
 
 exports[`The Picker Input component should render correctly 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "marginVertical": 16,
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "height": 38,
+        "paddingVertical": 4,
       }
     }
   >
     <View
       style={
         Object {
-          "marginVertical": 16,
+          "flexDirection": "row",
+          "justifyContent": "center",
         }
       }
     >
       <View
         style={
           Object {
-            "height": 38,
-            "paddingVertical": 4,
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
           }
         }
       >
         <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "center",
+              "opacity": 1,
             }
           }
         >
-          <View
+          <Text
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "flex": 1,
-                "justifyContent": "center",
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
               }
             }
           >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Some label text
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
-          >
-            <RCTSwitch
-              accessibilityRole="button"
-              onChange={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              onTintColor="#00676D"
-              style={
-                Array [
-                  Object {
-                    "height": 31,
-                    "width": 51,
-                  },
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                  },
-                ]
-              }
-              thumbTintColor="#FFFFFF"
-              tintColor="#A5A5A5"
-              value={false}
-            />
-          </View>
+            Some label text
+          </Text>
         </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RCTSwitch
+          accessibilityRole="button"
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onTintColor="#00676D"
+          style={
+            Array [
+              Object {
+                "height": 31,
+                "width": 51,
+              },
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+              },
+            ]
+          }
+          thumbTintColor="#FFFFFF"
+          tintColor="#A5A5A5"
+          value={false}
+        />
       </View>
     </View>
   </View>

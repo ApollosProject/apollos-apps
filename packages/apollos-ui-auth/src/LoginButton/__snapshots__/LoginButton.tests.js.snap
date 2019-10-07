@@ -2,220 +2,106 @@
 
 exports[`LoginButton component renders a LoginButton that is loading 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+  accessible={true}
+  clickable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "opacity": 1,
     }
   }
 >
   <View
-    onLayout={[Function]}
+    bordered={false}
+    disabled={false}
+    pill={true}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 48,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 16,
       }
     }
   >
-    <View
-      accessible={true}
-      clickable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#00676D",
-            "borderColor": "#00676D",
-            "borderRadius": 48,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
-          }
-        }
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#FFFFFF"
-          hidesWhenStopped={true}
-          size="small"
-        />
-      </View>
-    </View>
+    <ActivityIndicator
+      animating={true}
+      color="#FFFFFF"
+      hidesWhenStopped={true}
+      size="small"
+    />
   </View>
 </View>
 `;
 
 exports[`LoginButton component renders a LoginButton when logged out 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+  accessible={true}
+  clickable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "opacity": 1,
     }
   }
 >
   <View
-    onLayout={[Function]}
+    bordered={false}
+    disabled={false}
+    pill={true}
     style={
       Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 48,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 16,
       }
     }
   >
-    <View
-      accessible={true}
-      clickable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <Text
       style={
         Object {
-          "opacity": 1,
+          "color": "#FFFFFF",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 23.04,
         }
       }
     >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#00676D",
-            "borderColor": "#00676D",
-            "borderRadius": 48,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#FFFFFF",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 23.04,
-            }
-          }
-        >
-          Get Connected
-        </Text>
-      </View>
-    </View>
+      Get Connected
+    </Text>
   </View>
 </View>
 `;
 
-exports[`LoginButton component renders nothing when logged in 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
-  style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  />
-</View>
-`;
+exports[`LoginButton component renders nothing when logged in 1`] = `null`;

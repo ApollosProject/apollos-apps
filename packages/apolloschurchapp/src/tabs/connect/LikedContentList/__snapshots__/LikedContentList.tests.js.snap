@@ -1,74 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LikedContentList component renders LikedContentList 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<BVLinearGradient
+  colors={
+    Array [
+      4294967295,
+      4294506484,
+    ]
+  }
+  endPoint={
+    Object {
+      "x": 0.5,
+      "y": 1,
+    }
+  }
+  locations={null}
+  startPoint={
+    Object {
+      "x": 0.5,
+      "y": 0,
+    }
+  }
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "flex": 1,
+      "height": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <BVLinearGradient
-      colors={
-        Array [
-          4294967295,
-          4294506484,
-        ]
-      }
-      endPoint={
-        Object {
-          "x": 0.5,
-          "y": 1,
-        }
-      }
-      locations={null}
-      startPoint={
-        Object {
-          "x": 0.5,
-          "y": 0,
-        }
-      }
-      style={
-        Object {
-          "flex": 1,
-          "height": "100%",
-        }
-      }
-    >
-      <RCTScrollView
-        ListEmptyComponent={
-          <Err
-            error={
-              [Error: Network error: No more mocked responses for the query: query getAllLikedContent($first: Int, $after: String) {
+  <RCTScrollView
+    ListEmptyComponent={
+      <Err
+        error={
+          [Error: Network error: No more mocked responses for the query: query getAllLikedContent($first: Int, $after: String) {
   likedContent(first: $first, after: $after) {
     pageInfo {
       endCursor
@@ -221,103 +185,103 @@ fragment themeFragment on ContentItem {
   __typename
 }
 , variables: {"first":20}]
-            }
-          />
         }
-        data={Array []}
-        disableVirtualization={false}
-        getItem={[Function]}
-        getItemCount={[Function]}
-        horizontal={false}
-        initialNumToRender={10}
-        keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onContentSizeChange={[Function]}
-        onEndReached={[Function]}
-        onEndReachedThreshold={0.7}
-        onLayout={[Function]}
-        onMomentumScrollEnd={[Function]}
-        onPressItem={[Function]}
+      />
+    }
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onPressItem={[Function]}
+    onRefresh={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshControl={
+      <RefreshControlMock
         onRefresh={[Function]}
-        onScroll={[Function]}
-        onScrollBeginDrag={[Function]}
-        onScrollEndDrag={[Function]}
-        refreshControl={
-          <RefreshControlMock
-            onRefresh={[Function]}
-            refreshing={false}
-          />
-        }
         refreshing={false}
-        removeClippedSubviews={false}
-        renderItem={[Function]}
-        scrollEventThrottle={50}
-        stickyHeaderIndices={Array []}
-        updateCellsBatchingPeriod={50}
-        viewabilityConfigCallbackPairs={Array []}
-        windowSize={21}
+      />
+    }
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 6,
+          }
+        }
       >
-        <RCTRefreshControl />
-        <View>
+        <View
+          style={
+            Object {
+              "borderRadius": 16,
+              "overflow": "hidden",
+            }
+          }
+        >
           <View
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "marginHorizontal": 16,
-                "marginVertical": 12,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
-            <View
+            <Text
               style={
                 Object {
-                  "borderRadius": 16,
-                  "overflow": "hidden",
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 23.04,
+                  "textAlign": "center",
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                  }
+              Uh oh!
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
+                  "textAlign": "center",
                 }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 23.04,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Uh oh!
-                </Text>
-                <Text
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Network error: No more mocked responses for the query: query getAllLikedContent($first: Int, $after: String) {
+              }
+            >
+              Network error: No more mocked responses for the query: query getAllLikedContent($first: Int, $after: String) {
   likedContent(first: $first, after: $after) {
     pageInfo {
       endCursor
@@ -470,13 +434,11 @@ fragment themeFragment on ContentItem {
   __typename
 }
 , variables: {"first":20}
-                </Text>
-              </View>
-            </View>
+            </Text>
           </View>
         </View>
-      </RCTScrollView>
-    </BVLinearGradient>
-  </View>
-</View>
+      </View>
+    </View>
+  </RCTScrollView>
+</BVLinearGradient>
 `;
