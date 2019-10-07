@@ -272,7 +272,9 @@ export default class ContentItem extends RockApolloDataSource {
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
-    return `((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)) `;
+    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and Status eq ${
+      ROCK.ALLOWED_CONTENT_PUBLISH_STATUS
+    } `;
   };
 
   expanded = true;
