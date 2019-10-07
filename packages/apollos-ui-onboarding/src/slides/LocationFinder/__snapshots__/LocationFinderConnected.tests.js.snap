@@ -13,7 +13,6 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       "$$typeof": Symbol(react.memo),
       "compare": null,
       "defaultProps": Object {
-        "buttonDisabled": false,
         "buttonText": "Yes, find my local campus",
         "description": "We'll use your location to connect you with your nearby campus and community",
         "slideTitle": "Let's select your local campus",
@@ -21,11 +20,11 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       "displayName": "LocationFinder",
       "propTypes": Object {
         "BackgroundComponent": [Function],
-        "buttonDisabled": [Function],
         "buttonText": [Function],
         "campus": [Function],
         "description": [Function],
         "onPressButton": [Function],
+        "onPressPrimary": [Function],
         "slideTitle": [Function],
       },
       "type": [Function],
@@ -170,7 +169,6 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       "$$typeof": Symbol(react.memo),
       "compare": null,
       "defaultProps": Object {
-        "buttonDisabled": false,
         "buttonText": "Yes, find my local campus",
         "description": "We'll use your location to connect you with your nearby campus and community",
         "slideTitle": "Let's select your local campus",
@@ -178,11 +176,11 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       "displayName": "LocationFinder",
       "propTypes": Object {
         "BackgroundComponent": [Function],
-        "buttonDisabled": [Function],
         "buttonText": [Function],
         "campus": [Function],
         "description": [Function],
         "onPressButton": [Function],
+        "onPressPrimary": [Function],
         "slideTitle": [Function],
       },
       "type": [Function],
@@ -331,7 +329,6 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
       "$$typeof": Symbol(react.memo),
       "compare": null,
       "defaultProps": Object {
-        "buttonDisabled": false,
         "buttonText": "Yes, find my local campus",
         "description": "We'll use your location to connect you with your nearby campus and community",
         "slideTitle": "Let's select your local campus",
@@ -339,11 +336,11 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
       "displayName": "LocationFinder",
       "propTypes": Object {
         "BackgroundComponent": [Function],
-        "buttonDisabled": [Function],
         "buttonText": [Function],
         "campus": [Function],
         "description": [Function],
         "onPressButton": [Function],
+        "onPressPrimary": [Function],
         "slideTitle": [Function],
       },
       "type": [Function],
