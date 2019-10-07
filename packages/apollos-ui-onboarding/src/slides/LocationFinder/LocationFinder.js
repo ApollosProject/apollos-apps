@@ -30,15 +30,15 @@ const LocationFinder = memo(
     slideTitle,
     description,
     buttonText,
-    buttonDisabled,
     onPressButton,
     campus,
+    onPressPrimary,
     ...props
   }) => (
-    <Slide {...props}>
+    <Slide onPressPrimary={onPressPrimary} {...props}>
       {BackgroundComponent}
       <StyledSlideContent title={slideTitle} description={description}>
-        {campus ? (
+        {campus && onPressPrimary ? (
           <Touchable onPress={onPressButton}>
             <StyledCampusCard
               key={campus.id}
@@ -49,12 +49,7 @@ const LocationFinder = memo(
           </Touchable>
         ) : (
           <PaddedView horizontal={false}>
-            <Button
-              title={buttonText}
-              onPress={onPressButton}
-              disabled={buttonDisabled}
-              pill={false}
-            />
+            <Button title={buttonText} onPress={onPressButton} pill={false} />
           </PaddedView>
         )}
       </StyledSlideContent>
@@ -73,8 +68,8 @@ LocationFinder.propTypes = {
   slideTitle: PropTypes.string,
   description: PropTypes.string,
   buttonText: PropTypes.string,
-  buttonDisabled: PropTypes.bool,
   onPressButton: PropTypes.func,
+  onPressPrimary: PropTypes.func,
   campus: PropTypes.shape({
     image: PropTypes.shape({
       uri: PropTypes.string,
@@ -92,7 +87,6 @@ LocationFinder.defaultProps = {
   description:
     "We'll use your location to connect you with your nearby campus and community",
   buttonText: 'Yes, find my local campus',
-  buttonDisabled: false,
 };
 
 export default LocationFinder;

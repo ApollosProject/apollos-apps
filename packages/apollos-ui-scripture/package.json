@@ -31,6 +31,9 @@
     ],
     "modulePathIgnorePatterns": [
       "node_modules/@storybook/"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
     ]
   },
   "peerDependencies": {
