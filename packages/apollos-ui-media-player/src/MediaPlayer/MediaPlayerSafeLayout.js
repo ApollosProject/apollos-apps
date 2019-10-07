@@ -10,9 +10,7 @@ const InnerView = styled(({ isFullscreen = false, theme, safeAreaInsets }) => ({
 
 const MediaPlayerSafeLayout = (props) => (
   <LayoutConsumer>
-    {({ safeAreaInsets }) => (
-      <InnerView safeAreaInsets={safeAreaInsets} {...props} />
-    )}
+    {(insets) => <InnerView safeAreaInsets={insets} {...props} />}
   </LayoutConsumer>
 );
 

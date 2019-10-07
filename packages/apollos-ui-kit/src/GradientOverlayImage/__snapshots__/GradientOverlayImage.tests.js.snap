@@ -2,104 +2,98 @@
 
 exports[`the GradientOverlayImage component should render 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-  </View>
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with an overlayColor 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        16416882,
+        4294606962,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0.5,
+        1,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="default"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -109,107 +103,69 @@ exports[`the GradientOverlayImage component should render with an overlayColor 1
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            16416882,
-            4294606962,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0.5,
-            1,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="default"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.featured 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        1727692914,
+        4294606962,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        0.8,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="featured"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -219,107 +175,69 @@ exports[`the GradientOverlayImage component should render with overlayType.featu
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            1727692914,
-            4294606962,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            0.8,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="featured"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.gradient-bottom 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        1727692914,
+        3019538546,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        1,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="gradient-bottom"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -329,107 +247,69 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            1727692914,
-            3019538546,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="gradient-bottom"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.gradient-top 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        3019538546,
+        0,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        1,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="gradient-top"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -439,107 +319,69 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            3019538546,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.high 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        3875176562,
+        3875176562,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        1,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="high"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -549,107 +391,69 @@ exports[`the GradientOverlayImage component should render with overlayType.high 
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            3875176562,
-            3875176562,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="high"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.low 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        1727692914,
+        1727692914,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        1,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="low"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -659,107 +463,69 @@ exports[`the GradientOverlayImage component should render with overlayType.low 1
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            1727692914,
-            1727692914,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="low"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
 
 exports[`the GradientOverlayImage component should render with overlayType.medium 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "overflow": "hidden",
+      "width": "100%",
     }
   }
 >
-  <View
-    onLayout={[Function]}
+  <Image
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 400,
+          "uri": "https://picsum.photos/600/400/?random",
+          "width": 600,
+        },
+      ]
+    }
     style={
       Object {
-        "flex": 1,
+        "aspectRatio": 1.5,
+        "backgroundColor": "#A5A5A5",
+        "opacity": 1,
+        "resizeMode": "cover",
+        "width": "100%",
       }
     }
   />
-  <View
+  <BVLinearGradient
+    colors={
+      Array [
+        3019538546,
+        3019538546,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        1,
+      ]
+    }
+    overlayColor="salmon"
+    overlayType="medium"
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
     style={
       Object {
         "bottom": 0,
@@ -769,76 +535,6 @@ exports[`the GradientOverlayImage component should render with overlayType.mediu
         "top": 0,
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "height": 400,
-              "uri": "https://picsum.photos/600/400/?random",
-              "width": 600,
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1.5,
-            "backgroundColor": "#A5A5A5",
-            "opacity": 1,
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            3019538546,
-            3019538546,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="salmon"
-        overlayType="medium"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;
