@@ -1,4 +1,17 @@
 
+v1.2.0-beta.2: October 7, 2019
+
+- Adds ability for server to pick up REDIS_URL (#1092) (bfb972ad)
+- Adds Explicit Apollo Engine Config (#1089) (fd47bc13)
+- Adds Publishing of Schema to Engine (#1090) (0d2ae1f0)
+
+- Refactors Locations in Onboarding (#1098) (5f23ed9e)
+- Removes Campus Distance from Onboarding Screen (#1078) (6efa7f3d)
+
+- Fixes safe area layout provider, which fixes tab bar height issue (#1095) (566b20ec)
+- Fixes decoding Feature Text (#1097) (3cba43ea)
+- Fixes maxage of livestream cache (#1087) (29d12cd1)
+
 v1.2.0-beta.1: October 2, 2019
 
 - Adds Apollos Plugin support to `getCursorByChildContentItemId` (#1072) (43c1b5fb)

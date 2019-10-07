@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-htmlview",
-  "version": "1.2.0-beta.1",
+  "version": "1.2.0-beta.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -32,7 +32,6 @@
     "setupFiles": [
       "./jest.setup.js"
     ]
-
   },
   "peerDependencies": {
     "@apollos-project/ui-kit": "*",
@@ -40,8 +39,8 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.2.0-beta.1",
-    "@apollosproject/ui-storybook": "^1.2.0-beta.1",
+    "@apollosproject/ui-kit": "^1.2.0-beta.2",
+    "@apollosproject/ui-storybook": "^1.2.0-beta.2",
     "entities": "^1.1.2",
     "htmlparser2": "3.9.2"
   },
