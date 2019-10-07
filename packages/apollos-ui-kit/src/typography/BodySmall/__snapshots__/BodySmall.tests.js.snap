@@ -1,385 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the BodySmall component should accept additional props 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  accessible={false}
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "InterUI-Regular",
+      "fontSize": 14,
+      "lineHeight": 20,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      accessible={false}
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 14,
-          "lineHeight": 20,
-        }
-      }
-    >
-      "He who lays up treasures on earth spends his life backing away from his treasures. To him, death is loss. He who lays up treasures in heaven looks forward to eternity; he’s moving daily toward his treasures. To him, death is gain." ― Randy Alcorn
-    </Text>
-  </View>
-</View>
+  "He who lays up treasures on earth spends his life backing away from his treasures. To him, death is loss. He who lays up treasures in heaven looks forward to eternity; he’s moving daily toward his treasures. To him, death is gain." ― Randy Alcorn
+</Text>
 `;
 
 exports[`the BodySmall component should accept and render passed in styles 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "salmon",
+      "fontFamily": "InterUI-Regular",
+      "fontSize": 14,
+      "lineHeight": 20,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "salmon",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 14,
-          "lineHeight": 20,
-        }
-      }
-    >
-      Smaller salmon text
-    </Text>
-  </View>
-</View>
+  Smaller salmon text
+</Text>
 `;
 
 exports[`the BodySmall component should render a loading state 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 14,
+      "marginVertical": 3,
+      "width": "100%",
     }
   }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 14,
-          "marginVertical": 3,
-          "width": "100%",
-        }
-      }
-    />
-  </View>
-</View>
+/>
 `;
 
 exports[`the BodySmall component should render as bold 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={true}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "InterUI-Bold",
+      "fontSize": 14,
+      "lineHeight": 20,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={true}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 14,
-          "lineHeight": 20,
-        }
-      }
-    >
-      Bold BodySmall text
-    </Text>
-  </View>
-</View>
+  Bold BodySmall text
+</Text>
 `;
 
 exports[`the BodySmall component should render as bold italic 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={true}
+  italic={true}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "InterUI-BoldItalic",
+      "fontSize": 14,
+      "lineHeight": 20,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={true}
-      italic={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-BoldItalic",
-          "fontSize": 14,
-          "lineHeight": 20,
-        }
-      }
-    >
-      Bold italic BodySmall text
-    </Text>
-  </View>
-</View>
+  Bold italic BodySmall text
+</Text>
 `;
 
 exports[`the BodySmall component should render as italic 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={true}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "InterUI-Italic",
+      "fontSize": 14,
+      "lineHeight": 20,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={false}
-      italic={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Italic",
-          "fontSize": 14,
-          "lineHeight": 20,
-        }
-      }
-    >
-      Italic BodySmall text
-    </Text>
-  </View>
-</View>
+  Italic BodySmall text
+</Text>
 `;
 
 exports[`the BodySmall component should render correctly 1`] = `
-<View
-  onLayout={[Function]}
-  pointerEvents="box-none"
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "color": "#303030",
+      "fontFamily": "InterUI-Regular",
+      "fontSize": 14,
+      "lineHeight": 20,
     }
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 14,
-          "lineHeight": 20,
-        }
-      }
-    >
-      Default BodySmall text
-    </Text>
-  </View>
-</View>
+  Default BodySmall text
+</Text>
 `;
