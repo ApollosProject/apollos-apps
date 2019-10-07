@@ -7,7 +7,7 @@ export const parseKeyValueAttribute = (text = '') => {
   const entries = text.split('|');
   return entries.map((e) => {
     const [key, value] = e.split('^');
-    return { key, value };
+    return { key, value: decodeURIComponent(value) };
   });
 };
 
