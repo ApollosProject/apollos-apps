@@ -1,6 +1,9 @@
-import LayoutProvider from './Provider';
-import Context from './context';
+import {
+  SafeAreaConsumer,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context';
 
-const LayoutConsumer = Context.Consumer;
-
-export { LayoutProvider, LayoutConsumer };
+export {
+  SafeAreaProvider as LayoutProvider,
+  SafeAreaConsumer as LayoutConsumer,
+};

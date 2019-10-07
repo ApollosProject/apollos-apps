@@ -69,14 +69,10 @@ describe('The Onboarding LocationFinder component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render the button disabled', () => {
+  it('should render the campus card', () => {
     const tree = renderer.create(
       <Providers>
-        <LocationFinder
-          onPressButton={jest.fn()}
-          buttonDisabled
-          campus={campus}
-        />
+        <LocationFinder campus={campus} onPressPrimary={() => jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

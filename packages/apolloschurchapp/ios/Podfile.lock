@@ -76,6 +76,8 @@ PODS:
     - React
   - react-native-safari-view (1.0.0):
     - React
+  - react-native-safe-area-context (0.3.6):
+    - React
   - react-native-splash-screen (3.2.0):
     - React
   - react-native-video (5.0.0):
@@ -146,6 +148,7 @@ DEPENDENCIES:
   - react-native-onesignal (from `../node_modules/react-native-onesignal`)
   - react-native-passkit-wallet (from `../node_modules/react-native-passkit-wallet`)
   - react-native-safari-view (from `../node_modules/react-native-safari-view`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-video (from `../node_modules/react-native-video`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -164,6 +167,7 @@ DEPENDENCIES:
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -212,6 +216,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-passkit-wallet"
   react-native-safari-view:
     :path: "../node_modules/react-native-safari-view"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   react-native-splash-screen:
     :path: "../node_modules/react-native-splash-screen"
   react-native-video:
@@ -248,6 +254,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-device-info"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNInAppBrowser:
+    :path: "../node_modules/react-native-inappbrowser-reborn"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNSVG:
@@ -277,6 +285,7 @@ SPEC CHECKSUMS:
   react-native-onesignal: 8958311abbd9125f26e600914e48833b57321cbf
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
+  react-native-safe-area-context: e380a6f783ccaec848e2f3cc8eb205a62362950d
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-video: 6555881252c8ca039760e1cd6df28ac28ffb2baf
   react-native-webview: 3c79685b61a68d1fe99136f98f2f34b04dce2e02
