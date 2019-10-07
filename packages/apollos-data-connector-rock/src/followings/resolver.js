@@ -6,17 +6,11 @@ const defaultContentItemResolvers = {
       nodeId: createGlobalId(id, 'ContentItem'),
     }),
 
-  isLiked: async ({ id, isLiked }, args, { dataSources }) => {
-    if (isLiked != null) return isLiked;
-
-    const followings = await dataSources.Followings.getFollowingsForCurrentUserAndNode(
-      {
-        nodeId: createGlobalId(id, 'ContentItem'),
-      }
-    );
-
-    return followings.length > 0;
-  },
+  isLiked: async ({ id, isLiked }, args, { dataSources }) =>
+    dataSources.Followings.getIsLikedForCurrentUserAndNode({
+      nodeId: createGlobalId(id, 'ContentItem'),
+      isLiked,
+    }),
 };
 
 const resolvers = {

@@ -56,6 +56,20 @@ const ContentItem = {
   },
 };
 
+class Cache {
+  initialize({ context }) {
+    this.context = context;
+  }
+
+  get = jest.fn(() => Promise.resolve(null));
+
+  set = jest.fn(() => Promise.resolve(null));
+
+  increment = jest.fn(() => Promise.resolve(null));
+
+  decrement = jest.fn(() => Promise.resolve(null));
+}
+
 const Auth = {
   dataSource: AuthDataSource,
   contextMiddleware: ({ req, context }) => {
@@ -75,6 +89,7 @@ const { getSchema, getContext } = createTestHelpers({
   ContentItem,
   UniversalContentItem: ContentItem,
   Auth,
+  Cache: { dataSource: Cache },
 });
 
 ApollosConfig.loadJs({
@@ -167,6 +182,28 @@ describe('Following', () => {
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+    expect(context.dataSources.Cache.set.mock.calls).toMatchSnapshot();
+  });
+
+  it('uses following cache to track if a user liked content, if present', async () => {
+    const query = `
+      query getContent {
+        node(id: "${createGlobalId(1, 'UniversalContentItem')}") {
+          id
+          ... on ContentItem {
+            isLiked
+          }
+        }
+      }
+    `;
+    context.dataSources.Cache.get = jest.fn(() => Promise.resolve(false));
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
+
+    // Reset mock.
+    context.dataSources.Cache.get = jest.fn(() => Promise.resolve());
   });
 
   it('returns isLiked false if a user is logged out', async () => {
