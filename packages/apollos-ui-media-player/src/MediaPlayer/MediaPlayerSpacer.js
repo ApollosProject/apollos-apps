@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
 import { styled } from '@apollosproject/ui-kit';
-// import { SafeAreaView } from 'react-navigation';
+
 import { SafeAreaView } from 'react-native';
 import { MINI_PLAYER_HEIGHT } from './MiniControls';
 
