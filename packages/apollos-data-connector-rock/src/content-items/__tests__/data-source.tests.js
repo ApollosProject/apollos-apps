@@ -37,7 +37,7 @@ describe('ContentItemsModel', () => {
     ApollosConfig.loadJs({
       ROCK: {
         USE_PLUGIN: false,
-        INCLUDE_CONTENT_TYPES: null,
+        SHOW_INACTIVE_CONTENT: null,
       },
     });
   });
@@ -87,17 +87,17 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
-  it('defaults to approved status', async () => {
+  it('defaults to filtering content', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
     await dataSource.getFromIds([1, 2]).get();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
-  it('handles custom single status', async () => {
+  it('filters content when SHOW_INACTIVE_CONTENT is false', async () => {
     ApollosConfig.loadJs({
       ROCK: {
-        INCLUDE_CONTENT_TYPES: ['DENIED'],
+        SHOW_INACTIVE_CONTENT: false,
       },
     });
     const dataSource = new ContentItemsDataSource();
@@ -106,22 +106,10 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
-  it('handles custom multi status', async () => {
+  it(' does not filter content when SHOW_INACTIVE_CONTENT is true', async () => {
     ApollosConfig.loadJs({
       ROCK: {
-        INCLUDE_CONTENT_TYPES: ['DENIED', 'APPROVED'],
-      },
-    });
-    const dataSource = new ContentItemsDataSource();
-    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
-    await dataSource.getFromIds([1, 2]).get();
-    expect(dataSource.get.mock.calls).toMatchSnapshot();
-  });
-
-  it('handles invalid status', async () => {
-    ApollosConfig.loadJs({
-      ROCK: {
-        INCLUDE_CONTENT_TYPES: ['INVALID'],
+        SHOW_INACTIVE_CONTENT: true,
       },
     });
     const dataSource = new ContentItemsDataSource();
