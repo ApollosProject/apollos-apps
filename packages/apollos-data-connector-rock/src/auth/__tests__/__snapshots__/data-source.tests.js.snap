@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth should get a person token 1`] = `"some token"`;
+
+exports[`Auth should get a person token 2`] = `
+Array [
+  Array [
+    "People/GetCurrentPersonImpersonationToken",
+    Object {},
+    Object {
+      "headers": Object {
+        "Authorization-Token": null,
+        "cookie": "some cookie",
+      },
+    },
+  ],
+]
+`;
