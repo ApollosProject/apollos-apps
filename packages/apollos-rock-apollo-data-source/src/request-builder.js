@@ -84,9 +84,11 @@ export default class RockRequestBuilder {
     return this;
   };
 
-  andFilter = (filter) => this.filter(filter, { operator: 'and' });
+  andFilter = (filter) =>
+    filter ? this.filter(filter, { operator: 'and' }) : this;
 
-  orFilter = (filter) => this.filter(filter, { operator: 'or' });
+  orFilter = (filter) =>
+    filter ? this.filter(filter, { operator: 'or' }) : this;
 
   filterOneOf = (filters) => {
     if (filters.length === 0) {
