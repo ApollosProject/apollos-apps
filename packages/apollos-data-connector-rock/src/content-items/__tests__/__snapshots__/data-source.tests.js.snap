@@ -3,7 +3,7 @@
 exports[`ContentItemsModel  does not filter content when SHOW_INACTIVE_CONTENT is true 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%202%7D%29",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%29",
     Object {},
     Object {},
   ],
@@ -48,7 +48,7 @@ Array [
 exports[`ContentItemsModel filters content when SHOW_INACTIVE_CONTENT is false 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%29",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%202%7D%29",
     Object {},
     Object {},
   ],
