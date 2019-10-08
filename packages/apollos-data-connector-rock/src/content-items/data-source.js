@@ -11,9 +11,9 @@ import { createImageUrlFromGuid } from '../utils';
 
 const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 const STATUS_MAP = {
-  NOT_YET_APPROVED: '1',
-  APPROVED: '2',
-  DENIED: '3',
+  PENDING_APPROVAL: 'PendingApproval',
+  APPROVED: 'Approved',
+  DENIED: 'Denied',
 };
 
 export default class ContentItem extends RockApolloDataSource {
@@ -276,7 +276,7 @@ export default class ContentItem extends RockApolloDataSource {
     if (isEmpty(validKeys)) {
       validKeys = ['APPROVED'];
     }
-    const filters = validKeys.map((s) => `Status eq ${STATUS_MAP[s]}`);
+    const filters = validKeys.map((s) => `Status eq '${STATUS_MAP[s]}'`);
     return ` and (${filters.join(' or ')})`;
   };
 
