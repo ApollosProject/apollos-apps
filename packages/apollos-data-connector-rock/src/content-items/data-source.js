@@ -1,4 +1,4 @@
-import { get, flatten, isEmpty } from 'lodash';
+import { get, flatten } from 'lodash';
 import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
@@ -10,11 +10,6 @@ import sanitizeHtmlNode from 'sanitize-html';
 import { createImageUrlFromGuid } from '../utils';
 
 const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
-const STATUS_MAP = {
-  PENDING_APPROVAL: 'PendingApproval',
-  APPROVED: 'Approved',
-  DENIED: 'Denied',
-};
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
@@ -270,16 +265,6 @@ export default class ContentItem extends RockApolloDataSource {
     return null;
   }
 
-  buildStatusFilter = () => {
-    const status = ROCK.INCLUDE_CONTENT_TYPES || [];
-    let validKeys = status.filter((s) => Object.keys(STATUS_MAP).includes(s));
-    if (isEmpty(validKeys)) {
-      validKeys = ['APPROVED'];
-    }
-    const filters = validKeys.map((s) => `Status eq '${STATUS_MAP[s]}'`);
-    return ` and (${filters.join(' or ')})`;
-  };
-
   LIVE_CONTENT = () => {
     // get a date in the local timezone of the rock instance.
     // will create a timezone formatted string and then strip off the offset
@@ -288,7 +273,8 @@ export default class ContentItem extends RockApolloDataSource {
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
-    return `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)))${this.buildStatusFilter()}`;
+    const filter = `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and Status eq 2}`;
+    return ROCK.SHOW_INACTIVE_CONTENT ? '' : filter;
   };
 
   expanded = true;
