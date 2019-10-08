@@ -3,7 +3,7 @@
 exports[`ContentItemsModel  does not filter content when SHOW_INACTIVE_CONTENT is true 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%29",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28Id%20eq%201%29%20or%20%28Id%20eq%202%29",
     Object {},
     Object {},
   ],
