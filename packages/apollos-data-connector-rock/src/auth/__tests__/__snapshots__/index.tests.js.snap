@@ -103,6 +103,9 @@ Object {
         "profile": Object {
           "email": "isaac.hardy@newspring.cc",
         },
+        "rock": Object {
+          "authCookie": "some cookie",
+        },
         "rockToken": "some cookie",
       },
     },

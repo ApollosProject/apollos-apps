@@ -36,6 +36,9 @@ describe('Auth', () => {
               email
             }
             rockToken
+            rock {
+              authCookie
+            }
           }
         }
       }
