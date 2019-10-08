@@ -38,6 +38,7 @@ describe('Auth', () => {
             rockToken
             rock {
               authCookie
+              authToken
             }
           }
         }
@@ -45,6 +46,7 @@ describe('Auth', () => {
     `;
     const rootValue = {};
 
+    context.dataSources.Auth.getAuthToken = jest.fn(() => 'some token');
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });

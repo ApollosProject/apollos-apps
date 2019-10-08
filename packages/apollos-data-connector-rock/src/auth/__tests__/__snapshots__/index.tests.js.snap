@@ -105,6 +105,7 @@ Object {
         },
         "rock": Object {
           "authCookie": "some cookie",
+          "authToken": "some token",
         },
         "rockToken": "some cookie",
       },
