@@ -14,6 +14,10 @@ Object {
   "ROCK": Object {
     "API_TOKEN": "some-rock-token",
     "API_URI": "https://apollosrock.newspring.cc/api",
+    "INCLUDE_CONTENT_TYPES": Array [
+      "APPROVED",
+      "DENIED",
+    ],
     "NULL_VALUE": null,
   },
   "ROCK_CONSTANTS": Object {},
