@@ -3,6 +3,7 @@ ROCK:
   API_URI: 'https://apollosrock.newspring.cc/api'
   API_TOKEN: ${ROCK_TOKEN}
   NULL_VALUE:
+  INCLUDE_CONTENT_TYPES: ${AN_ARRAY_OF_STRINGS}
 CONTENT_IDS:
   - 1
   - 5
