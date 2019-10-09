@@ -7,6 +7,7 @@ describe('the yaml loader', () => {
     process.env.SOME_VALUE = 'this is a value';
     process.env.ANOTHER_VALUE = 'this is another value';
     process.env.CONTENT_ID_FROM_ENV = 10;
+    process.env.AN_ARRAY_OF_STRINGS = '["APPROVED", "DENIED"]';
 
     ApollosConfig.loadYaml({
       configPath: path.join(__dirname, 'test.yml'),

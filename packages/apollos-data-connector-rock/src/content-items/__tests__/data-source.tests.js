@@ -37,6 +37,7 @@ describe('ContentItemsModel', () => {
     ApollosConfig.loadJs({
       ROCK: {
         USE_PLUGIN: false,
+        SHOW_INACTIVE_CONTENT: null,
       },
     });
   });
@@ -83,6 +84,37 @@ describe('ContentItemsModel', () => {
     dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
     const result = dataSource.getFromIds([1, 2]).get();
     expect(result).resolves.toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('defaults to filtering content', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
+    await dataSource.getFromIds([1, 2]).get();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('filters content when SHOW_INACTIVE_CONTENT is false', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        SHOW_INACTIVE_CONTENT: false,
+      },
+    });
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
+    await dataSource.getFromIds([1, 2]).get();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+
+  it(' does not filter content when SHOW_INACTIVE_CONTENT is true', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        SHOW_INACTIVE_CONTENT: true,
+      },
+    });
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = buildGetMock([{ Id: 1 }, { Id: 2 }], dataSource);
+    await dataSource.getFromIds([1, 2]).get();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 

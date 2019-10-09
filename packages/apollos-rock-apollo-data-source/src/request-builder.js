@@ -77,6 +77,9 @@ export default class RockRequestBuilder {
    * Filter resources by an odata string
    */
   filter = (filter, { operator } = { operator: 'or' }) => {
+    if (!filter) {
+      return this;
+    }
     const key = '$filter';
     if (this.query[key]) {
       this.query[key] = `(${this.query[key]}) ${operator} (${filter})`;
