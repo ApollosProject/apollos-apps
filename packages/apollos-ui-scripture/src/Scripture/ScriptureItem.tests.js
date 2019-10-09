@@ -183,6 +183,19 @@ describe('the ScriptureItem component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('renders a custom translation name', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ScriptureItem
+          reference={revelation22.scripture.reference}
+          html={revelation22.scripture.html}
+          isLoading={false}
+          translation={'Custom Translation Name'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('renders a loading state', () => {
     const tree = renderer.create(
       <Providers>
