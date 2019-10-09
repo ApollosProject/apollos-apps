@@ -5,7 +5,7 @@ exports[`Auth should get a person token 1`] = `"some token"`;
 exports[`Auth should get a person token 2`] = `
 Array [
   Array [
-    "People/GetCurrentPersonImpersonationToken?expireDateTime=2019-10-16T20:02:48.037Z",
+    "People/GetCurrentPersonImpersonationToken?expireDateTime=2016-12-28T23:36:07.071Z",
     Object {},
     Object {
       "headers": Object {
