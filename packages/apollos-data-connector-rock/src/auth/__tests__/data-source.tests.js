@@ -5,11 +5,6 @@ describe('Auth', () => {
 
   Date.now = jest.fn(() => 1482363367071);
 
-  // Return a fixed timestamp when moment().format() is called
-  // jest.mock('moment', () => () => ({
-  // add: () => ({ toISOString: () => '2018–01–30T12:34:56+00:00' }),
-  // }));
-
   class AuthWithContext extends AuthDataSource {
     context = {
       rockCookie: 'some cookie',
