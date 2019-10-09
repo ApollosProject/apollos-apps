@@ -163,7 +163,9 @@ export default class AuthDataSource extends RockApolloDataSource {
     // once core Rock has the GetCurrentPersonImpersonationToken endpoint
     try {
       const token = await this.request(
-        'People/GetCurrentPersonImpersonationToken'
+        `People/GetCurrentPersonImpersonationToken?expireDateTime=${moment()
+          .add(1, 'weeks')
+          .toISOString()}`
       ).get({
         options: {
           headers: { cookie: rockCookie, 'Authorization-Token': null },
