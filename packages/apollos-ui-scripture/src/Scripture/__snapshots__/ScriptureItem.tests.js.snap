@@ -3523,6 +3523,229 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
 </View>
 `;
 
+exports[`the ScriptureItem component renders a custom translation name 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 23.04,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 23.04,
+        }
+      }
+    >
+      Revelation 22:20-21
+    </Text>
+     
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 17.28,
+        }
+      }
+    >
+      Custom Translation Name
+    </Text>
+  </Text>
+  <View
+    lineNumber={8}
+    onReady={true}
+    style={
+      Object {
+        "paddingBottom": 17.28,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              20
+            </Text>
+             
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              He who testifies these things says, 
+            </Text>
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#8b0000",
+              }
+            }
+          >
+            <Text>
+              “Yes, I come quickly.” 
+            </Text>
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              Amen! Yes, come, Lord Jesus.
+            </Text>
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              21
+            </Text>
+             
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              The grace of the Lord Jesus Christ be with all the saints. Amen.
+            </Text>
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+  <Text
+    bold={false}
+    italic={false}
+    style={
+      Object {
+        "color": "#505050",
+        "fontFamily": "InterUI-Regular",
+        "fontSize": 9.6,
+        "lineHeight": 10.37,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`the ScriptureItem component renders a loading state 1`] = `
 <View>
   <View
