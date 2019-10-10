@@ -154,4 +154,35 @@ export default class AuthDataSource extends RockApolloDataSource {
     const token = await this.authenticate({ identity: email, password });
     return token;
   };
+
+  getAuthToken = async () => {
+    const { rockCookie } = this.context;
+    if (!rockCookie) throw new AuthenticationError('Must be logged in');
+
+    // TODO remove this safety check and less secure implementation
+    // once core Rock has the GetCurrentPersonImpersonationToken endpoint
+    try {
+      const token = await this.request(
+        `People/GetCurrentPersonImpersonationToken?expireDateTime=${moment()
+          .add(1, 'weeks')
+          .toISOString()}`
+      ).get({
+        options: {
+          headers: { cookie: rockCookie, 'Authorization-Token': null },
+        },
+      });
+      return token;
+    } catch (e) {
+      console.warn(
+        'Using deprecated Rock endpoint, upgrade Rock to v10 when available.'
+      );
+      const { id } = await this.getCurrentPerson();
+      const param = await this.request(
+        `People/GetImpersonationParameter?personId=${id}&expireDateTime=${moment()
+          .add(1, 'weeks')
+          .toISOString()}`
+      ).get();
+      return param.split('=')[1];
+    }
+  };
 }
