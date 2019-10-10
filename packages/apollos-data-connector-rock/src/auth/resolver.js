@@ -9,7 +9,12 @@ const resolver = {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     profile: (authUser) => authUser,
+    rock: (rockDetails) => rockDetails,
     rockToken: (root, args, context) => context.rockCookie,
+  },
+  RockPersonDetails: {
+    authToken: (root, args, { dataSources }) => dataSources.Auth.getAuthToken(),
+    authCookie: (root, args, { rockCookie }) => rockCookie,
   },
   Authentication: {
     user: (root, args, { dataSources }) => dataSources.Auth.getCurrentPerson(),
