@@ -3523,7 +3523,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
 </View>
 `;
 
-exports[`the ScriptureItem component renders a custom translation name 1`] = `
+exports[`the ScriptureItem component renders a custom version name 1`] = `
 <View>
   <Text
     style={
@@ -3558,7 +3558,7 @@ exports[`the ScriptureItem component renders a custom translation name 1`] = `
         }
       }
     >
-      Custom Translation Name
+      Custom Version Name
     </Text>
   </Text>
   <View

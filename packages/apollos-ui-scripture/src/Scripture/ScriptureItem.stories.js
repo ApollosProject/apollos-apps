@@ -176,11 +176,11 @@ storiesOf('ui-scripture/Scripture', module)
       isLoading={revelation22Loading.scripture.isLoading}
     />
   ))
-  .add('translation', () => (
+  .add('version', () => (
     <ScriptureItem
       reference={revelation22Loading.scripture.reference}
       html={revelation22Loading.scripture.html}
-      translation={'Boom'}
+      version={'Boom'}
     />
   ))
   .add('Example Usage in ActionCard', () => (

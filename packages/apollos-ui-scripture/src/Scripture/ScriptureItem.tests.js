@@ -183,14 +183,14 @@ describe('the ScriptureItem component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders a custom translation name', () => {
+  it('renders a custom version name', () => {
     const tree = renderer.create(
       <Providers>
         <ScriptureItem
           reference={revelation22.scripture.reference}
           html={revelation22.scripture.html}
           isLoading={false}
-          translation={'Custom Translation Name'}
+          version={'Custom Version Name'}
         />
       </Providers>
     );

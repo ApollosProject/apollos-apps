@@ -12,7 +12,7 @@ const ScriptureItem = ({
   html,
   copyright,
   isLoading,
-  translation = 'WEB',
+  version = 'WEB',
 }) => (
   <Placeholder.Paragraph
     lineNumber={5}
@@ -22,7 +22,7 @@ const ScriptureItem = ({
   >
     <View>
       <H4>
-        <H4>{reference}</H4> <H6>{translation}</H6>
+        <H4>{reference}</H4> <H6>{version}</H6>
       </H4>
       <ScriptureHTMLView>{html}</ScriptureHTMLView>
       {copyright === 'PUBLIC DOMAIN' ? null : (
@@ -35,7 +35,7 @@ const ScriptureItem = ({
 ScriptureItem.propTypes = {
   reference: PropTypes.string,
   html: PropTypes.string,
-  translation: PropTypes.string,
+  version: PropTypes.string,
   copyright: PropTypes.string,
   isLoading: PropTypes.bool,
 };
