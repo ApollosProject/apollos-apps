@@ -28,8 +28,6 @@ const Footer = styled({
   justifyContent: 'flex-end',
 })(SafeAreaView);
 
-console.warn(`${StatusBar.currentHeight}`);
-
 class ChangePassword extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: 'Change Password',
