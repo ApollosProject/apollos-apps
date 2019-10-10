@@ -1,3 +1,16 @@
+v1.2.0-beta.3: October 10, 2019
+
+- Adds Rock Token to API (#1103) (dfba44c0)
+- Adds Redis Cache and stores isLiked / likeCount in RedisCache. (#1093) (977b2fbf)
+- Adds Filtering for only Active Group Members (#1099) (1fdc94a2)
+- Adds Filter control for Unpublished Content (#1102) (d3b08409)
+
+- Removes Redis warnings and fixes cache keys for like counts (#1110) (aae10c9e)
+
+- Fixes profile image uploading (#1101) (43e6d492)
+- Fixes occasional expansion of the TabBar (hopefully final fix) (#1105) (f694e426)
+- Fixes location finder connected not updating after location permission is granted (android) (#1104) (f76b0be6)
+
 
 v1.2.0-beta.2: October 7, 2019
 
