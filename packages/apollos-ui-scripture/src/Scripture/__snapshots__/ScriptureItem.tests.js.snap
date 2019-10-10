@@ -24,19 +24,6 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
     >
       Genesis 1:1-5
     </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
-    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -289,19 +276,6 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
     >
       John 3:16-17
     </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
-    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -432,19 +406,6 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       }
     >
       Mark 1:1-4
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -765,19 +726,6 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       }
     >
       Psalm 23
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -1229,19 +1177,6 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       }
     >
       Psalm 32
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -1980,19 +1915,6 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       }
     >
       Psalm 119:129 - 144
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -2912,19 +2834,6 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
     >
       Revelation 22:20-21
     </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
-    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -3134,19 +3043,6 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       }
     >
       Song of Solomon 1:1-4
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -3506,6 +3402,228 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           They are right to love you.
         </Text>
       </Text>
+    </View>
+  </View>
+  <Text
+    bold={false}
+    italic={false}
+    style={
+      Object {
+        "color": "#505050",
+        "fontFamily": "InterUI-Regular",
+        "fontSize": 9.6,
+        "lineHeight": 10.37,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`the ScriptureItem component renders a custom version name 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 23.04,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 23.04,
+        }
+      }
+    >
+      Revelation 22:20-21
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 17.28,
+        }
+      }
+    >
+      Custom Version Name
+    </Text>
+  </Text>
+  <View
+    lineNumber={8}
+    onReady={true}
+    style={
+      Object {
+        "paddingBottom": 17.28,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              20
+            </Text>
+             
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              He who testifies these things says, 
+            </Text>
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#8b0000",
+              }
+            }
+          >
+            <Text>
+              “Yes, I come quickly.” 
+            </Text>
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              Amen! Yes, come, Lord Jesus.
+            </Text>
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              21
+            </Text>
+             
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              The grace of the Lord Jesus Christ be with all the saints. Amen.
+            </Text>
+          </Text>
+        </Text>
+      </View>
     </View>
   </View>
   <Text
