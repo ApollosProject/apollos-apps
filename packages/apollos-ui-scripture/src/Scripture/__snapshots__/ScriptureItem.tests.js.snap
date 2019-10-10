@@ -24,19 +24,6 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
     >
       Genesis 1:1-5
     </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
-    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -289,19 +276,6 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
     >
       John 3:16-17
     </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
-    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -432,19 +406,6 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
       }
     >
       Mark 1:1-4
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -765,19 +726,6 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       }
     >
       Psalm 23
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -1229,19 +1177,6 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
       }
     >
       Psalm 32
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -1980,19 +1915,6 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
       }
     >
       Psalm 119:129 - 144
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -2912,19 +2834,6 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
     >
       Revelation 22:20-21
     </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
-    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -3134,19 +3043,6 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
       }
     >
       Song of Solomon 1:1-4
-    </Text>
-     
-    <Text
-      style={
-        Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 17.28,
-        }
-      }
-    >
-      WEB
     </Text>
   </Text>
   <View
@@ -3547,7 +3443,6 @@ exports[`the ScriptureItem component renders a custom version name 1`] = `
     >
       Revelation 22:20-21
     </Text>
-     
     <Text
       style={
         Object {
