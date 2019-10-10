@@ -1,5 +1,5 @@
 import { AuthenticationError } from 'apollo-server';
-import { parseGlobalId, createGlobalId } from '@apollosproject/server-core';
+import { parseGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 
 export default class Followings extends RockApolloDataSource {
@@ -40,7 +40,7 @@ export default class Followings extends RockApolloDataSource {
     });
 
     await Cache.increment({
-      key: ['likedCount', currentUser.id, nodeType.id, id],
+      key: ['likedCount', nodeType.id, id],
     });
 
     return this.get(`/Followings/${followingsId}`);
@@ -62,7 +62,7 @@ export default class Followings extends RockApolloDataSource {
     });
 
     await Cache.decrement({
-      key: ['likedCount', currentUser.id, nodeType.id, id],
+      key: ['likedCount', nodeType.id, id],
     });
 
     return this.delete(`/Followings/${nodeType.id}/${id}/${currentUser.id}`);
@@ -92,7 +92,7 @@ export default class Followings extends RockApolloDataSource {
       .get()).length;
 
     await Cache.set({
-      key: ['likedCount', createGlobalId(id, nodeType)],
+      key: ['likedCount', nodeType.id, id],
       data: count,
     });
 
