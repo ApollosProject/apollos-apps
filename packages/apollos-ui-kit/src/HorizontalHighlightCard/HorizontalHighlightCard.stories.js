@@ -31,6 +31,7 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
           isLiked: true,
           label: 'Custom Label',
           hasAction: true, // may not match actual schema
+          isActive: false, // may not match actual schema
         },
       },
       {
@@ -46,6 +47,7 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
           isLiked: false,
           label: 'Custom Label',
           hasAction: false, // may not match actual schema
+          isActive: true, // may not match actual schema
         },
       },
       {
@@ -61,6 +63,7 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
           isLiked: true,
           label: 'Custom Label',
           hasAction: false, // may not match actual schema
+          isActive: false, // may not match actual schema
         },
       },
     ];
@@ -91,6 +94,7 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
           labelText={item.node.labelText}
           isLoading={item.node.isLoading}
           theme={item.node.theme}
+          isActive={item.node.isActive}
         />
       </View>
     );
@@ -145,6 +149,19 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
       hasAction
     />
   ))
+  .add('isActive', () => (
+    <HorizontalHighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isActive
+    />
+  ))
   .add('isLoading', () => (
     <HorizontalHighlightCard
       title={
@@ -186,7 +203,7 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
       labelText={'Quote'}
     />
   ))
-  .add('theme', () => (
+  .add('boom', () => (
     <HorizontalHighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'
