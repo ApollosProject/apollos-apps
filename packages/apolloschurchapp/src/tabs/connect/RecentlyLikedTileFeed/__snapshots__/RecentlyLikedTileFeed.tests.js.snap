@@ -219,7 +219,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
                   "height": 1,
                   "width": 0,
@@ -390,7 +390,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
                   "height": 1,
                   "width": 0,
@@ -735,7 +735,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
                   "height": 1,
                   "width": 0,
@@ -906,7 +906,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
                   "height": 1,
                   "width": 0,

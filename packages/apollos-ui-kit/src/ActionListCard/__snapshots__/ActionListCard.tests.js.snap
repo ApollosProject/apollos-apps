@@ -8,7 +8,7 @@ exports[`ActionListCard should render 4 items 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -39,7 +39,7 @@ exports[`ActionListCard should render 4 items 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -121,7 +121,7 @@ exports[`ActionListCard should render 4 items 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -233,7 +233,7 @@ exports[`ActionListCard should render 4 items 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -345,7 +345,7 @@ exports[`ActionListCard should render 4 items 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -457,7 +457,7 @@ exports[`ActionListCard should render 4 items 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -509,7 +509,7 @@ exports[`ActionListCard should render a loading state 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -540,7 +540,7 @@ exports[`ActionListCard should render a loading state 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -622,7 +622,7 @@ exports[`ActionListCard should render a loading state 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -731,7 +731,7 @@ exports[`ActionListCard should render a loading state 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -840,7 +840,7 @@ exports[`ActionListCard should render a loading state 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -949,7 +949,7 @@ exports[`ActionListCard should render a loading state 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1022,7 +1022,7 @@ exports[`ActionListCard should render with a header 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1068,7 +1068,7 @@ exports[`ActionListCard should render with a header 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -1150,7 +1150,7 @@ exports[`ActionListCard should render with a header 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1262,7 +1262,7 @@ exports[`ActionListCard should render with a header 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1374,7 +1374,7 @@ exports[`ActionListCard should render with a header 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1486,7 +1486,7 @@ exports[`ActionListCard should render with a header 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1537,7 +1537,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1568,7 +1568,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -1650,7 +1650,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1762,7 +1762,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1874,7 +1874,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1986,7 +1986,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderColor": "rgba(165, 165, 165, 0.6)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
