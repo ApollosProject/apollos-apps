@@ -81,7 +81,7 @@ Array [
 ]
 `;
 
-exports[`Events should return a name based on an EventItem 1`] = `
+exports[`Events should return a description based on an EventItem 1`] = `
 Array [
   Array [
     "EventItems/123?loadAttributes=expanded",
@@ -95,7 +95,7 @@ Array [
 ]
 `;
 
-exports[`Events should return a name based on an EventItem 2`] = `
+exports[`Events should return a name based on an EventItem 1`] = `
 Array [
   Array [
     "EventItems/123?loadAttributes=expanded",
