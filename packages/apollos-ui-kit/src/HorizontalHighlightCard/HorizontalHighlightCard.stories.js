@@ -203,23 +203,6 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
       labelText={'Quote'}
     />
   ))
-  .add('boom', () => (
-    <HorizontalHighlightCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      theme={{
-        colors: {
-          primary: 'salmon',
-        },
-      }}
-    />
-  ))
   .add('theme', () => {
     const HorizontalHighlightCardData = [
       {
