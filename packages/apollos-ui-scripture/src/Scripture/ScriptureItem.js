@@ -7,7 +7,7 @@ import { Placeholder, H4, H6 } from '@apollosproject/ui-kit';
 import { LegalText } from './typography';
 import ScriptureHTMLView from './ScriptureHTMLView';
 
-const ScriptureItem = ({ reference, html, copyright, isLoading }) => (
+const ScriptureItem = ({ reference, html, copyright, isLoading, version }) => (
   <Placeholder.Paragraph
     lineNumber={5}
     onReady={!isLoading}
@@ -16,7 +16,8 @@ const ScriptureItem = ({ reference, html, copyright, isLoading }) => (
   >
     <View>
       <H4>
-        <H4>{reference}</H4> <H6>WEB</H6>
+        <H4>{reference}</H4>
+        {version ? <H6>{version}</H6> : null}
       </H4>
       <ScriptureHTMLView>{html}</ScriptureHTMLView>
       {copyright === 'PUBLIC DOMAIN' ? null : (
@@ -29,6 +30,7 @@ const ScriptureItem = ({ reference, html, copyright, isLoading }) => (
 ScriptureItem.propTypes = {
   reference: PropTypes.string,
   html: PropTypes.string,
+  version: PropTypes.string,
   copyright: PropTypes.string,
   isLoading: PropTypes.bool,
 };

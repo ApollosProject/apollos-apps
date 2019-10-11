@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Redis Cache constructs with Redis 1`] = `
+exports[`Redis Cache constructs with Redis env url 1`] = `
 Cache {
   "DEFAULT_TIMEOUT": 86400,
   "redis": Redis {
@@ -107,6 +107,7 @@ Cache {
     "scriptsSet": Object {},
     "status": "connecting",
   },
+  "safely": [Function],
 }
 `;
 
@@ -120,6 +121,14 @@ Array [
     },
   ],
 ]
+`;
+
+exports[`Redis Cache doesn't constructs with Redis env url 1`] = `
+Cache {
+  "DEFAULT_TIMEOUT": 86400,
+  "redis": undefined,
+  "safely": [Function],
+}
 `;
 
 exports[`Redis Cache gets data from redis 1`] = `
@@ -151,6 +160,16 @@ Array [
 exports[`Redis Cache safely handle thrown errors in get 1`] = `null`;
 
 exports[`Redis Cache safely handle thrown errors in set 1`] = `null`;
+
+exports[`Redis Cache safely handles no redis instance 1`] = `null`;
+
+exports[`Redis Cache safely handles no redis instance 2`] = `
+Array [
+  Array [
+    "Redis is not running. Cache dataSource methods will only return null",
+  ],
+]
+`;
 
 exports[`Redis Cache safely swallows errors when decrementing 1`] = `null`;
 
