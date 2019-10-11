@@ -410,19 +410,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                         >
                           1 Corinthians 15:57
                         </Text>
-                         
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                          WEB
-                        </Text>
                       </Text>
                       <View
                         lineNumber={8}
@@ -526,19 +513,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                           }
                         >
                           Exodus 17:8-15
-                        </Text>
-                         
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                          WEB
                         </Text>
                       </Text>
                       <View
@@ -1804,19 +1778,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                         >
                           1 Corinthians 15:57
                         </Text>
-                         
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                          WEB
-                        </Text>
                       </Text>
                       <View
                         lineNumber={8}
@@ -1920,19 +1881,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                           }
                         >
                           Exodus 17:8-15
-                        </Text>
-                         
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                          WEB
                         </Text>
                       </Text>
                       <View
