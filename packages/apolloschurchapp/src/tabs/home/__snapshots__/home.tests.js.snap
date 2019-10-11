@@ -1999,7 +1999,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -2182,7 +2182,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -2365,7 +2365,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -2548,7 +2548,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -2731,7 +2731,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -2914,7 +2914,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -3097,7 +3097,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -3280,7 +3280,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -3463,7 +3463,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }
@@ -3646,7 +3646,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        3003121664,
+                        2147483648,
                         0,
                       ]
                     }

@@ -215,7 +215,7 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
     colors={
       Array [
         1727692914,
-        3019538546,
+        2163900530,
       ]
     }
     endPoint={
@@ -286,7 +286,7 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
   <BVLinearGradient
     colors={
       Array [
-        3019538546,
+        2163900530,
         0,
       ]
     }
@@ -502,8 +502,8 @@ exports[`the GradientOverlayImage component should render with overlayType.mediu
   <BVLinearGradient
     colors={
       Array [
-        3019538546,
-        3019538546,
+        2163900530,
+        2163900530,
       ]
     }
     endPoint={

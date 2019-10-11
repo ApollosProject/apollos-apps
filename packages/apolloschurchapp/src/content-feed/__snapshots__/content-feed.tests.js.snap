@@ -173,7 +173,7 @@ exports[`content feed query component renders a feedview after successful query 
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }
@@ -449,7 +449,7 @@ exports[`content feed query component renders a feedview after successful query 
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }

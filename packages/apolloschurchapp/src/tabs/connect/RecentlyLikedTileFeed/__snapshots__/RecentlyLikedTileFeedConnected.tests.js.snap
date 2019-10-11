@@ -260,7 +260,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }
@@ -545,7 +545,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }
@@ -1014,7 +1014,7 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }
@@ -1299,7 +1299,7 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }
