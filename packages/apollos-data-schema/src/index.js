@@ -108,6 +108,11 @@ export const mediaSchema = gql`
     embedHtml: String
   }
 
+  enum VideoFormat {
+    HLS
+    MP4
+  }
+
   type AudioMedia implements Media {
     name: String
     key: String
@@ -229,7 +234,7 @@ export const contentItemSchema = gql`
     title: String
     coverImage: ImageMedia
     images: [ImageMedia]
-    videos: [VideoMedia]
+    videos(format: VideoFormat): [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
     summary: String
@@ -251,7 +256,7 @@ export const contentItemSchema = gql`
     title: String
     coverImage: ImageMedia
     images: [ImageMedia]
-    videos: [VideoMedia]
+    videos(format: VideoFormat): [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
     summary: String
@@ -272,7 +277,7 @@ export const contentItemSchema = gql`
     title: String
     coverImage: ImageMedia
     images: [ImageMedia]
-    videos: [VideoMedia]
+    videos(format: VideoFormat): [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
     summary: String
@@ -295,7 +300,7 @@ export const contentItemSchema = gql`
     title: String
     coverImage: ImageMedia
     images: [ImageMedia]
-    videos: [VideoMedia]
+    videos(format: VideoFormat): [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
     summary: String
@@ -318,7 +323,7 @@ export const contentItemSchema = gql`
     title: String
     coverImage: ImageMedia
     images: [ImageMedia]
-    videos: [VideoMedia]
+    videos(format: VideoFormat): [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
     summary: String
@@ -341,7 +346,7 @@ export const contentItemSchema = gql`
     title: String
     coverImage: ImageMedia
     images: [ImageMedia]
-    videos: [VideoMedia]
+    videos(format: VideoFormat): [VideoMedia]
     audios: [AudioMedia]
     htmlContent: String
     summary: String
