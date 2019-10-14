@@ -451,6 +451,17 @@ exports[`The Event component should render 1`] = `
               </View>
             </View>
           </View>
+          <View
+            lineNumber={8}
+            onReady={true}
+            style={
+              Object {
+                "paddingBottom": 17.28,
+              }
+            }
+          >
+            <View />
+          </View>
         </View>
       </View>
     </RCTScrollView>

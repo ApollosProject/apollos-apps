@@ -431,6 +431,40 @@ exports[`EventConnected component renders without errors 1`] = `
               </View>
             </View>
           </View>
+          <View
+            lineNumber={8}
+            onReady={true}
+            style={
+              Object {
+                "paddingBottom": 17.28,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "paddingBottom": 17.28,
+                  }
+                }
+              >
+                <Text
+                  bold={false}
+                  italic={false}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  Some detailed description
+                </Text>
+              </View>
+            </View>
+          </View>
         </View>
       </View>
     </RCTScrollView>
