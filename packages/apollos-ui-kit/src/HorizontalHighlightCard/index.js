@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -12,10 +12,22 @@ import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
-const SquareCard = styled({
-  width: 240,
-  height: 240,
-})(Card);
+const SquareCard = styled(
+  ({ disabled }) => ({
+    width: 240,
+    height: 240,
+    // This hides/removes the built in shadow from `Card` if this component `disabled`.
+    ...Platform.select({
+      ios: {
+        ...(disabled ? { shadowOpacity: 0 } : {}),
+      },
+      android: {
+        ...(disabled ? { elevation: 0 } : {}),
+      },
+    }),
+  }),
+  'ui-kit.HorizontalHighlightCard.SquareCard'
+)(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(
@@ -32,12 +44,15 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
   size: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ customTheme, theme }) => ({
+const Image = withTheme(({ customTheme, theme, disabled }) => ({
   minAspectRatio: 1,
   maxAspectRatio: 1,
   maintainAspectRatio: true,
   forceRatio: 1, // fixes loading state
-  overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
+  overlayColor: disabled // There are effectively 3 conditions here for `overlayColor`.
+    ? theme.colors.white // if `disabled` use white
+    : get(customTheme, 'colors.primary', theme.colors.black), // else check for a custom theme (prop) or default to black.
+  overlayType: disabled ? 'medium' : 'gradient-bottom',
 }))(CardImage);
 
 const Content = styled(
@@ -94,6 +109,7 @@ const HorizontalHighlightCard = withIsLoading(
     title,
     actionIcon,
     hasAction,
+    disabled,
     isLiked,
     isLoading,
     LabelComponent,
@@ -107,12 +123,13 @@ const HorizontalHighlightCard = withIsLoading(
         colors: get(theme, 'colors', {}),
       }}
     >
-      <SquareCard isLoading={isLoading} inHorizontalList {...props}>
-        <Image
-          overlayType={'gradient-bottom'}
-          customTheme={theme}
-          source={coverImage}
-        />
+      <SquareCard
+        isLoading={isLoading}
+        inHorizontalList
+        disabled={disabled}
+        {...props}
+      >
+        <Image customTheme={theme} source={coverImage} disabled={disabled} />
         <Content>
           {renderLabel(LabelComponent, labelText, theme)}
           <ActionLayout>
@@ -138,6 +155,7 @@ HorizontalHighlightCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
+  disabled: PropTypes.bool, // "Disabled state". Alternatively use this to highlight/differentiate the "active" card in a list.
   isLiked: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
