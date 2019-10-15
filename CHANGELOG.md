@@ -1,3 +1,11 @@
+
+v1.2.0-beta.4: October 14, 2019
+
+- Adds event descriptions (#1121) (44e5f5b3)
+- Adds Back Navigation to Auth Screens (#1113) (2f266bf1)
+- Adds Rock Token to In App Browser (#1120) (fd2bc47a)
+- Adds translation prop to ScriptureItem component (#1111) (36d4307d)
+
 v1.2.0-beta.3: October 10, 2019
 
 - Adds Rock Token to API (#1103) (dfba44c0)
