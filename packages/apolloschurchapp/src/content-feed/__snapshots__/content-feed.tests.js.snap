@@ -134,7 +134,7 @@ exports[`content feed query component renders a feedview after successful query 
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
                   "height": 1,
                   "width": 0,
@@ -173,7 +173,7 @@ exports[`content feed query component renders a feedview after successful query 
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }
@@ -410,7 +410,7 @@ exports[`content feed query component renders a feedview after successful query 
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
                   "height": 1,
                   "width": 0,
@@ -449,7 +449,7 @@ exports[`content feed query component renders a feedview after successful query 
                 <BVLinearGradient
                   colors={
                     Array [
-                      3003121664,
+                      2147483648,
                       0,
                     ]
                   }

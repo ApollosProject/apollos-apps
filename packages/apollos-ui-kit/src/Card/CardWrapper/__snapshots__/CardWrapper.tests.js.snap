@@ -9,7 +9,7 @@ exports[`the CardWrapper component should accept a backgroundColor 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -43,7 +43,7 @@ exports[`the CardWrapper component should accept additional props 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -73,7 +73,7 @@ exports[`the CardWrapper component should accept and render passed in styles 1`]
       "height": 400,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -103,7 +103,7 @@ exports[`the CardWrapper component should render 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -132,7 +132,7 @@ exports[`the CardWrapper component should render children 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,

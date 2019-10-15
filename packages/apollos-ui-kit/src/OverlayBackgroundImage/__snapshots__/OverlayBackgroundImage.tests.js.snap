@@ -234,8 +234,8 @@ exports[`the OverlayBackgroundImage component should render with custom overlay 
         <BVLinearGradient
           colors={
             Array [
-              3019833344,
-              3019833344,
+              2164195328,
+              2164195328,
             ]
           }
           endPoint={

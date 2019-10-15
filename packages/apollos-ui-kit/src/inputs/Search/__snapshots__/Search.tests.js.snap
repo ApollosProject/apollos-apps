@@ -374,7 +374,7 @@ exports[`The Search Input component should render as disabled 1`] = `
   disabled={true}
   style={
     Object {
-      "opacity": 0.7,
+      "opacity": 0.5,
       "overflow": "hidden",
     }
   }

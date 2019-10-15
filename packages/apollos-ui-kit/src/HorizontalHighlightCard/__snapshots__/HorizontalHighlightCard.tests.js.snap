@@ -9,7 +9,7 @@ exports[`HorizontalHighlightCard should render 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -77,7 +77,7 @@ exports[`HorizontalHighlightCard should render 1`] = `
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={
@@ -296,7 +296,7 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -365,7 +365,7 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={
@@ -501,7 +501,7 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -569,7 +569,7 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={
@@ -902,7 +902,7 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -977,7 +977,7 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
         colors={
           Array [
             1727692914,
-            3019538546,
+            2163900530,
           ]
         }
         endPoint={
@@ -1195,7 +1195,7 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1263,7 +1263,7 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={
@@ -1642,7 +1642,7 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1710,7 +1710,7 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={
@@ -1982,7 +1982,7 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -2050,7 +2050,7 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={
@@ -2322,7 +2322,7 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -2390,7 +2390,7 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
         colors={
           Array [
             1711276032,
-            3003121664,
+            2147483648,
           ]
         }
         endPoint={

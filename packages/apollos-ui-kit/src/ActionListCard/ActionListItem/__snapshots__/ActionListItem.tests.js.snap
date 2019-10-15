@@ -75,7 +75,7 @@ exports[`ActionListItem should render 1`] = `
       style={
         Object {
           "borderBottomWidth": 0.5,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "flex": 1,
           "height": 68,
           "justifyContent": "center",
@@ -177,7 +177,7 @@ exports[`ActionListItem should render a loading state 1`] = `
       style={
         Object {
           "borderBottomWidth": 0.5,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "flex": 1,
           "height": 68,
           "justifyContent": "center",
@@ -289,7 +289,7 @@ exports[`ActionListItem should render with a label 1`] = `
       style={
         Object {
           "borderBottomWidth": 0.5,
-          "borderColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderColor": "rgba(165, 165, 165, 0.6)",
           "flex": 1,
           "height": 68,
           "justifyContent": "center",

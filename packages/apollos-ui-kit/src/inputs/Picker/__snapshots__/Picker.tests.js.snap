@@ -214,7 +214,7 @@ exports[`The Picker Input component focuses and blurs 1`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderTopColor": "rgba(165, 165, 165, 0.6)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -227,7 +227,7 @@ exports[`The Picker Input component focuses and blurs 1`] = `
         style={
           Object {
             "alignItems": "flex-end",
-            "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "backgroundColor": "rgba(165, 165, 165, 0.5)",
             "padding": 8,
           }
         }
@@ -567,7 +567,7 @@ exports[`The Picker Input component focuses and blurs 2`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderTopColor": "rgba(165, 165, 165, 0.6)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -580,7 +580,7 @@ exports[`The Picker Input component focuses and blurs 2`] = `
         style={
           Object {
             "alignItems": "flex-end",
-            "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "backgroundColor": "rgba(165, 165, 165, 0.5)",
             "padding": 8,
           }
         }
@@ -920,7 +920,7 @@ exports[`The Picker Input component focuses and blurs 3`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderTopColor": "rgba(165, 165, 165, 0.6)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -933,7 +933,7 @@ exports[`The Picker Input component focuses and blurs 3`] = `
         style={
           Object {
             "alignItems": "flex-end",
-            "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "backgroundColor": "rgba(165, 165, 165, 0.5)",
             "padding": 8,
           }
         }
@@ -1264,7 +1264,7 @@ exports[`The Picker Input component should render correctly 1`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.30000000000000004)",
+          "borderTopColor": "rgba(165, 165, 165, 0.6)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -1277,7 +1277,7 @@ exports[`The Picker Input component should render correctly 1`] = `
         style={
           Object {
             "alignItems": "flex-end",
-            "backgroundColor": "rgba(165, 165, 165, 0.30000000000000004)",
+            "backgroundColor": "rgba(165, 165, 165, 0.5)",
             "padding": 8,
           }
         }
