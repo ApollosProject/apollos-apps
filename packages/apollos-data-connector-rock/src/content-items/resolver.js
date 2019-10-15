@@ -1,4 +1,6 @@
 import { get } from 'lodash';
+import Hypher from 'hypher';
+import english from 'hyphenation.en-us';
 import {
   createGlobalId,
   withEdgePagination,
@@ -8,6 +10,7 @@ import ApollosConfig from '@apollosproject/config';
 import sanitizeHtml from '../sanitize-html';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
+const hypher = new Hypher(english);
 
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
@@ -18,6 +21,8 @@ export const defaultContentItemResolvers = {
       cursor: await dataSources.ContentItem.getCursorByParentContentItemId(id),
       args,
     }),
+
+  title: ({ title }) => hypher.hyphenateText(title),
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
     dataSources.ContentChannel.getFromId(contentChannelId),
