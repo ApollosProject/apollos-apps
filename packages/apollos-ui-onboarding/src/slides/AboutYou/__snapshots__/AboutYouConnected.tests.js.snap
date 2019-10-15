@@ -106,7 +106,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -167,7 +167,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -828,7 +828,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -877,7 +877,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",

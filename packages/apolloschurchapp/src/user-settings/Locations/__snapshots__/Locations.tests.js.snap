@@ -43,7 +43,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
               "borderRadius": 16,
               "margin": 8,
               "marginHorizontal": 4,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "shadowColor": "rgba(165, 165, 165, 0.6)",
               "shadowOffset": Object {
                 "height": 1,
                 "width": 0,
@@ -181,7 +181,7 @@ Anderson, SC 29621-3619
               "borderRadius": 16,
               "margin": 8,
               "marginHorizontal": 4,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "shadowColor": "rgba(165, 165, 165, 0.6)",
               "shadowOffset": Object {
                 "height": 1,
                 "width": 0,
@@ -319,7 +319,7 @@ Richardson, TX 75080-5525
               "borderRadius": 16,
               "margin": 8,
               "marginHorizontal": 4,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "shadowColor": "rgba(165, 165, 165, 0.6)",
               "shadowOffset": Object {
                 "height": 1,
                 "width": 0,
@@ -457,7 +457,7 @@ Cincinnati, OH 45202-2118
               "borderRadius": 16,
               "margin": 8,
               "marginHorizontal": 4,
-              "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "shadowColor": "rgba(165, 165, 165, 0.6)",
               "shadowOffset": Object {
                 "height": 1,
                 "width": 0,
