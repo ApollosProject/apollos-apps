@@ -662,6 +662,7 @@ export const eventSchema = gql`
   type Event implements Node {
     id: ID!
     name: String
+    description: String
     location: String
     start: String
     end: String
