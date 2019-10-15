@@ -95,7 +95,7 @@ DefaultCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
-  ]).isRequired,
+  ]),
   title: PropTypes.string.isRequired,
   isLiked: PropTypes.bool,
   isLive: PropTypes.bool,
