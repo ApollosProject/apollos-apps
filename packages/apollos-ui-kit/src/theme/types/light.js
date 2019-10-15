@@ -18,7 +18,7 @@ const light = ({ colors, alpha }) => ({
     },
     shadows: {
       default: Color(colors.darkTertiary)
-        .fade(alpha.medium)
+        .fade(alpha.low)
         .string(),
     },
     action: {
