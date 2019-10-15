@@ -2323,7 +2323,7 @@ exports[`HorizontalHighlightCard should should render as isActive 1`] = `
       "borderRadius": 16,
       "height": 240,
       "margin": 8,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -2391,8 +2391,8 @@ exports[`HorizontalHighlightCard should should render as isActive 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            3019898879,
-            3019898879,
+            2164260863,
+            2164260863,
           ]
         }
         endPoint={
