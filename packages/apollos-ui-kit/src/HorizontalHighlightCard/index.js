@@ -13,16 +13,16 @@ import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
 const SquareCard = styled(
-  ({ isActive }) => ({
+  ({ disabled }) => ({
     width: 240,
     height: 240,
-    // This hides/removes the built in shadow from `Card` if this component `isActive`.
+    // This hides/removes the built in shadow from `Card` if this component `disabled`.
     ...Platform.select({
       ios: {
-        ...(isActive ? { shadowOpacity: 0 } : {}),
+        ...(disabled ? { shadowOpacity: 0 } : {}),
       },
       android: {
-        ...(isActive ? { elevation: 0 } : {}),
+        ...(disabled ? { elevation: 0 } : {}),
       },
     }),
   }),
@@ -44,15 +44,15 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
   size: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ customTheme, theme, isActive }) => ({
+const Image = withTheme(({ customTheme, theme, disabled }) => ({
   minAspectRatio: 1,
   maxAspectRatio: 1,
   maintainAspectRatio: true,
   forceRatio: 1, // fixes loading state
-  overlayColor: isActive // There are effectively 3 conditions here for `overlayColor`.
-    ? theme.colors.white // if `isActive` use white
+  overlayColor: disabled // There are effectively 3 conditions here for `overlayColor`.
+    ? theme.colors.white // if `disabled` use white
     : get(customTheme, 'colors.primary', theme.colors.black), // else check for a custom theme (prop) or default to black.
-  overlayType: isActive ? 'medium' : 'gradient-bottom',
+  overlayType: disabled ? 'medium' : 'gradient-bottom',
 }))(CardImage);
 
 const Content = styled(
@@ -109,7 +109,7 @@ const HorizontalHighlightCard = withIsLoading(
     title,
     actionIcon,
     hasAction,
-    isActive,
+    disabled,
     isLiked,
     isLoading,
     LabelComponent,
@@ -126,10 +126,10 @@ const HorizontalHighlightCard = withIsLoading(
       <SquareCard
         isLoading={isLoading}
         inHorizontalList
-        isActive={isActive}
+        disabled={disabled}
         {...props}
       >
-        <Image customTheme={theme} source={coverImage} isActive={isActive} />
+        <Image customTheme={theme} source={coverImage} disabled={disabled} />
         <Content>
           {renderLabel(LabelComponent, labelText, theme)}
           <ActionLayout>
@@ -155,7 +155,7 @@ HorizontalHighlightCard.propTypes = {
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
-  isActive: PropTypes.bool, // use this if your displaying the card in a list and it's the "active" card. Alternatively you could consider this a "disabled" style as well.
+  disabled: PropTypes.bool, // "Disabled state". Alternatively use this to highlight/differentiate the "active" card in a list.
   isLiked: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,

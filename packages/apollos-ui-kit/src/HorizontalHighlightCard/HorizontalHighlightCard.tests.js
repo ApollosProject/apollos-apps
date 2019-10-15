@@ -61,7 +61,7 @@ describe('HorizontalHighlightCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should should render as isActive', () => {
+  it('should should render as disabled', () => {
     const tree = renderer.create(
       <Providers>
         <HorizontalHighlightCard
@@ -73,7 +73,7 @@ describe('HorizontalHighlightCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          isActive
+          disabled
         />
       </Providers>
     );
