@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable react/no-unused-prop-types, react/jsx-handler-names */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
@@ -89,6 +89,7 @@ class VerificationConnected extends Component {
                         disabled={isSubmitting || !isValid}
                         isLoading={isSubmitting}
                         onPressNext={handleSubmit}
+                        onPressBack={this.props.navigation.goBack}
                         setFieldValue={setFieldValue}
                         touched={touched}
                         values={values}
