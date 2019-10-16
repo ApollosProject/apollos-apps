@@ -59,7 +59,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@storybook/react-native": "^4.0.7",
+    "@storybook/react-native": "5.2.4",
     "apollo-client": "2.5.1",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
