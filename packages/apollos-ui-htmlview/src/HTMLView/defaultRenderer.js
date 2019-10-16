@@ -57,11 +57,7 @@ const defaultRenderer = (node, { children }) => {
   if (node.type === 'text' && node.data && node.data.trim()) {
     const text = decodeHTML(node.data);
     if (!node.parent) {
-      return (
-        <Paragraph>
-          <BodyText>{text}</BodyText>
-        </Paragraph>
-      );
+      return <BodyText>{text}</BodyText>;
     }
     return <Text>{text}</Text>;
   }

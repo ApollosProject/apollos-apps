@@ -1,6 +1,6 @@
 import React, { PureComponent, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
 
 import { Paragraph as ParagraphPlaceholder } from '@apollosproject/ui-kit';
@@ -25,7 +25,7 @@ class HTMLView extends PureComponent {
     this.parser = new Parser(
       new DomHandler(
         (err, dom) => {
-          this.parsed = this.renderDom(dom);
+          this.parsed = wrapTextChildren(this.renderDom(dom));
         },
         { normalizeWhitespace: true }
       )
