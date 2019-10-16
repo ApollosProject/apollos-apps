@@ -30,7 +30,48 @@ export const BASE_CARD_FRAGMENT = gql`
     __typename
     ...coverImageFragment
     ...themeFragment
-    title(hyphenated: $hyphenated)
+    title
+    summary
+    isLiked
+    ... on MediaContentItem {
+      videos {
+        sources {
+          uri
+        }
+      }
+    }
+    ... on WeekendContentItem {
+      videos {
+        sources {
+          uri
+        }
+      }
+      liveStream {
+        isLive
+      }
+      parentChannel {
+        id
+        name
+      }
+    }
+    ... on DevotionalContentItem {
+      parentChannel {
+        id
+        name
+      }
+    }
+  }
+  ${COVER_IMAGE_FRAGMENT}
+  ${THEME_FRAGMENT}
+`;
+
+const BASE_CARD_FRAGMENT_WITH_HYPHENATION = gql`
+  fragment baseCardFragmentWithHyphenation on ContentItem {
+    id
+    __typename
+    ...coverImageFragment
+    ...themeFragment
+    title
     summary
     isLiked
     ... on MediaContentItem {
@@ -72,15 +113,22 @@ export const LARGE_CARD_FRAGMENT = gql`
   ${BASE_CARD_FRAGMENT}
 `;
 
+const LARGE_CARD_FRAGMENT_WITH_HYPHENATION = gql`
+  fragment largeCardFragmentWithHyphenation on ContentItem {
+    ...baseCardFragmentWithHyphenation
+  }
+  ${BASE_CARD_FRAGMENT_WITH_HYPHENATION}
+`;
+
 const GET_CONTENT_CARD = gql`
-  query getContentCard($contentId: ID!, $hyphenated: Boolean = false) {
+  query getContentCard($contentId: ID!) {
     node(id: $contentId) {
       id
       __typename
-      ...largeCardFragment
+      ...largeCardFragmentWithHyphenation
     }
   }
-  ${LARGE_CARD_FRAGMENT}
+  ${LARGE_CARD_FRAGMENT_WITH_HYPHENATION}
 `;
 
 export default GET_CONTENT_CARD;
