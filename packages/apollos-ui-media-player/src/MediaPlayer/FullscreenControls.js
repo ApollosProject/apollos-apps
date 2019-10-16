@@ -6,6 +6,7 @@ import {
   Animated,
   TouchableWithoutFeedback,
   View,
+  Platform,
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
@@ -278,7 +279,11 @@ class FullscreenControls extends PureComponent {
                   <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                   <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                 </Titles>
-                <AirPlayButton />
+                {Platform.OS === 'ios' ? (
+                  <AirPlayButton />
+                ) : (
+                  <IconSm name="empty" disabled />
+                )}
               </UpperControls>
               <LowerControls horizontal={false}>
                 <PlayHead>
