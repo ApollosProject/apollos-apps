@@ -82,7 +82,7 @@ export const sizing = {
 
 export const alpha = {
   high: 0.9,
-  medium: 0.7,
+  medium: 0.5,
   low: 0.4,
 };
 
