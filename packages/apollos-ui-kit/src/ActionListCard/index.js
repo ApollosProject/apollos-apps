@@ -61,7 +61,7 @@ class ActionListCard extends PureComponent {
               onPressActionItem={onPressActionItem}
               label={item.subtitle || ''}
               title={item.title || ''}
-              imageSource={get(item, 'image.sources', '')}
+              imageSource={get(item, 'image.sources[0]', '')}
             />
           ))}
         </Content>

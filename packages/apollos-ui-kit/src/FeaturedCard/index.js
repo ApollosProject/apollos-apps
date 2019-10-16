@@ -157,12 +157,37 @@ const FeaturedCard = withIsLoading(
   )
 );
 
-FeaturedCard.propTypes = {
+const loadingPropsTypes = {
+  coverImage: PropTypes.oneOfType([
+    PropTypes.arrayOf(ImageSourceType),
+    ImageSourceType,
+  ]),
+  title: PropTypes.string,
+};
+
+const completedPropTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
   title: PropTypes.string.isRequired,
+};
+
+FeaturedCard.propTypes = {
+  coverImage: (props, propName, componentName) =>
+    PropTypes.checkPropTypes(
+      props.isLoading ? loadingPropsTypes : completedPropTypes,
+      props,
+      propName,
+      componentName
+    ),
+  title: (props, propName, componentName) =>
+    PropTypes.checkPropTypes(
+      props.isLoading ? loadingPropsTypes : completedPropTypes,
+      props,
+      propName,
+      componentName
+    ),
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,

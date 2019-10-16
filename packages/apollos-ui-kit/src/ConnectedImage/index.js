@@ -119,12 +119,12 @@ class ConnectedImage extends PureComponent {
     this.imageOpacity = new Animated.Value(this.isLoading ? 0 : 1);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.updateCache(this.props.source);
   }
 
-  componentWillReceiveProps(newProps) {
-    this.updateCache(newProps.source);
+  componentDidUpdate() {
+    this.updateCache(this.props.source);
   }
 
   componentWillUnmount() {
