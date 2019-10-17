@@ -13,7 +13,7 @@ import {
   IDENTIFY as IDENTIFY_CLIENT,
 } from './clientMutations';
 
-const anonymousId = DeviceInfo.getUniqueID();
+const anonymousId = DeviceInfo.getUniqueId();
 
 const deviceInfo = {
   platform: Platform.OS === 'ios' ? 'iOS' : 'Android',
