@@ -12,13 +12,26 @@ exports[`the HTMLView component should not render an image inside an anchor 1`] 
 >
   <View>
     <Text
-      onPress={[Function]}
+      bold={false}
+      italic={false}
       style={
         Object {
-          "color": "#17B582",
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
         }
       }
-    />
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#17B582",
+          }
+        }
+      />
+    </Text>
   </View>
 </View>
 `;
@@ -116,21 +129,6 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
         </Text>
       </Text>
     </View>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
   </View>
 </View>
 `;
@@ -177,7 +175,9 @@ exports[`the HTMLView component should render a link 1`] = `
           }
         >
           <Text>
-            Google
+            <Text>
+              Google
+            </Text>
           </Text>
         </Text>
       </Text>
@@ -717,7 +717,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            Fuse Group
+            <Text>
+              Fuse Group
+            </Text>
           </Text>
         </Text>
         <Text>
@@ -910,7 +912,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            community
+            <Text>
+              community
+            </Text>
           </Text>
         </Text>
         <Text>
@@ -1297,7 +1301,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            This holiday season
+            <Text>
+              This holiday season
+            </Text>
           </Text>
         </Text>
         <Text>
@@ -1619,7 +1625,9 @@ exports[`the HTMLView component should render handle relative links 1`] = `
           }
         >
           <Text>
-            Google
+            <Text>
+              Google
+            </Text>
           </Text>
         </Text>
       </Text>
