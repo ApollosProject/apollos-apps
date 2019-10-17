@@ -30,13 +30,13 @@ const Handle = styled({
   // helps in swipe-to-close gesture
   position: 'absolute',
   width: '100%',
-  height: 75,
+  height: 48,
 })(View);
 
 const ModalViewHeader = ({ onClose, onBack, navigationHeader }) => (
-  <HeaderWrapper navigationHeader={navigationHeader}>
+  <HeaderWrapper pointerEvents={'box-none'} navigationHeader={navigationHeader}>
     <StatusBar hidden />
-    <Handle />
+    <Handle pointerEvents={'box-none'} />
     {onBack ? (
       <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
     ) : (
