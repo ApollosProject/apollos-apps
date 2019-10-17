@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 export const CONTENT_ITEM_FRAGMENT = gql`
   fragment contentItemFragment on ContentItem {
     id
-    title
+    title(hyphenated: $hyphenated)
     isLiked
     likedCount
     summary
@@ -45,7 +45,7 @@ export const CONTENT_ITEM_FRAGMENT = gql`
 `;
 
 export default gql`
-  query getContentItem($itemId: ID!) {
+  query getContentItem($itemId: ID!, $hyphenated: Boolean = false) {
     node(id: $itemId) {
       __typename
       ... on ContentItem {

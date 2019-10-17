@@ -4,7 +4,7 @@ import { CONTENT_ITEM_FRAGMENT } from 'apolloschurchapp/src/content-single/getCo
 import { LARGE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 export default gql`
-  query getContentChannels {
+  query getContentChannel($hyphenated: Boolean = false) {
     contentChannels {
       id
       name

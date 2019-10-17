@@ -22,7 +22,15 @@ export const defaultContentItemResolvers = {
       args,
     }),
 
-  title: ({ title }) => hypher.hyphenateText(title),
+  title: ({ title }, { hyphenated }) => {
+    if (!hyphenated) {
+      return title;
+    }
+    const words = title.split(' ');
+    return words
+      .map((w) => (w.length > 8 ? hypher.hyphenate(w).join('\u00AD') : w))
+      .join(' ');
+  },
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
     dataSources.ContentChannel.getFromId(contentChannelId),

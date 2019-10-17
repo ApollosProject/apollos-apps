@@ -4,7 +4,12 @@ import { LARGE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnecte
 import { CONTENT_ITEM_FRAGMENT } from '../content-single/getContentItem';
 
 export default gql`
-  query getContentFeed($itemId: ID!, $after: String, $first: Int) {
+  query getContentFeed(
+    $itemId: ID!
+    $after: String
+    $first: Int
+    $hyphenated: Boolean = false
+  ) {
     node(id: $itemId) {
       ... on ContentChannel {
         childContentItemsConnection(after: $after, first: $first) {

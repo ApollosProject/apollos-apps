@@ -4,7 +4,11 @@ import { LARGE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnecte
 import { CONTENT_ITEM_FRAGMENT } from 'apolloschurchapp/src/content-single/getContentItem';
 
 export default gql`
-  query getAllLikedContent($first: Int, $after: String) {
+  query getAllLikedContent(
+    $first: Int
+    $after: String
+    $hyphenated: Boolean = false
+  ) {
     likedContent(first: $first, after: $after) {
       pageInfo {
         endCursor

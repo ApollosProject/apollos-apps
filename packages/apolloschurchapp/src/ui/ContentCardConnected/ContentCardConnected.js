@@ -9,20 +9,15 @@ import contentCardComponentMapper from './contentCardComponentMapper';
 import GET_CONTENT_CARD from './query';
 
 const ContentCardConnected = memo(
-  ({
-    Component,
-    contentId,
-    isLoading,
-    tile,
-    mapProps,
-    hyphenated,
-    ...otherProps
-  }) => {
+  ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
     if (!contentId || isLoading)
       return <Component {...otherProps} isLoading tile={tile} />;
 
     return (
-      <Query query={GET_CONTENT_CARD} variables={{ contentId, hyphenated }}>
+      <Query
+        query={GET_CONTENT_CARD}
+        variables={{ contentId, hyphenated: true }}
+      >
         {({ data: { node = {} } = {}, loading, error }) => {
           if (error) return <ErrorCard error={error} />;
 
@@ -54,7 +49,6 @@ ContentCardConnected.propTypes = {
   contentId: PropTypes.string,
   isLoading: PropTypes.bool,
   tile: PropTypes.bool,
-  hyphenated: PropTypes.bool,
 };
 
 ContentCardConnected.defaultProps = {

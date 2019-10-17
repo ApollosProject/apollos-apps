@@ -3,7 +3,7 @@ import { CONTENT_ITEM_FRAGMENT } from 'apolloschurchapp/src/content-single/getCo
 import { LARGE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 export default gql`
-  query searchResults($searchText: String!) {
+  query searchResults($searchText: String!, $hyphenated: Boolean = false) {
     search(query: $searchText) {
       edges {
         title
