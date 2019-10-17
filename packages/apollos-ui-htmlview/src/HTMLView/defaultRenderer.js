@@ -21,9 +21,9 @@ const LINE_BREAK = '\n';
 const TEXT_TYPES_THAT_SHOULD_WRAP = [Text, BodyText, ButtonLink];
 const ILLEGAL_TEXT_CHILDREN_TYPES = [ConnectedImage, View];
 
-export const stripIllegalMarkup = children =>
+export const stripIllegalMarkup = (children) =>
   Children.toArray(children).filter(
-    child => !ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)
+    (child) => !ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)
   );
 
 export const wrapTextChildren = ({
