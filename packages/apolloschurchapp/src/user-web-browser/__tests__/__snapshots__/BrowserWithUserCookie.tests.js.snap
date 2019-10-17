@@ -71,6 +71,7 @@ exports[`the BrowserWithUserCookie component renders with a user 1`] = `
     />
   </View>
   <View
+    pointerEvents="box-none"
     style={
       Object {
         "flexDirection": "row",
@@ -84,9 +85,10 @@ exports[`the BrowserWithUserCookie component renders with a user 1`] = `
     }
   >
     <View
+      pointerEvents="box-none"
       style={
         Object {
-          "height": 75,
+          "height": 48,
           "position": "absolute",
           "width": "100%",
         }
