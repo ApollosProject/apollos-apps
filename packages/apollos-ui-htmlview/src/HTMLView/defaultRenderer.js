@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import { Text, Linking } from 'react-native';
+import { Text, Linking, View } from 'react-native';
 import { decodeHTML } from 'entities';
 
 import {
@@ -63,6 +63,8 @@ const defaultRenderer = (node, { children }) => {
   }
 
   switch (node.name) {
+    case 'div':
+      return <View>{wrapTextChildren(children)}</View>;
     case 'p':
       return <Paragraph>{wrapTextChildren(children)}</Paragraph>;
     case 'strong':
@@ -125,7 +127,15 @@ const defaultRenderer = (node, { children }) => {
       );
     }
     case 'br':
-      return <BodyText>{LINE_BREAK}</BodyText>;
+      // this mimics HTML's white-space collapsing
+      if ((node.next && node.prev) || (!node.next && !node.prev)) {
+        return (
+          <View>
+            <BodyText />
+          </View>
+        );
+      }
+      return null;
     default:
       return children;
   }
