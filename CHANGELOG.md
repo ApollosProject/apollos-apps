@@ -1,3 +1,19 @@
+v1.2.0-beta.5: October 18, 2019
+
+- Adds LOAD_TESTING documentation (#1133) (7e247438)
+- Adds an active/disabled state to HorizontalHighlightCard (#1122) (65f8dca4)
+
+- Reduces Warnings (#1117) (0ca02fb8)
+- Removes Caching of Auth Tokens (#1129) (561081a8)
+
+- Updates some of theme alpha values to match new Apollos style guide (#1124) (8debd3cf)
+- Upgrades react native device info (#1136) (9e846854)
+- Highlights the active card in HorizontalContentFeeds (#1135) (40a93ad6)
+
+- Fixes Group members function (#1134) (dee54131)
+- Fixes media player titles on android not being centered. (#1130) (cc9a47c7)
+- Fix close button play state issue. (#1128) (e0f824c6)
+
 
 v1.2.0-beta.4: October 14, 2019
 
