@@ -35,7 +35,7 @@
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "version": "node ../../scripts/update-apollos-version.js && git add apollos.json",
-    "postversion": "react-native-version --never-amend --android android/app/build.gradle --ios ios/",
+    "postversion": "react-native-version --never-amend --never-increment-build --android android/app/build.gradle --ios ios/",
     "prestart": "lerna run generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify",
     "pods": "./scripts/install_pods.sh",
