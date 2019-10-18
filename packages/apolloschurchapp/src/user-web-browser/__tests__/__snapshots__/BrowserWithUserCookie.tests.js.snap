@@ -84,16 +84,6 @@ exports[`the BrowserWithUserCookie component renders with a user 1`] = `
       }
     }
   >
-    <View
-      pointerEvents="box-none"
-      style={
-        Object {
-          "height": 48,
-          "position": "absolute",
-          "width": "100%",
-        }
-      }
-    />
     <RNSVGSvgView
       align="xMidYMid"
       bbHeight={32}
