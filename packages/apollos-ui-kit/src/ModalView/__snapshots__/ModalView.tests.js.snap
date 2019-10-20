@@ -31,6 +31,7 @@ exports[`The ModalView component should render 1`] = `
   }
 >
   <View
+    pointerEvents="box-none"
     style={
       Object {
         "flexDirection": "row",
@@ -43,15 +44,6 @@ exports[`The ModalView component should render 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "height": 75,
-          "position": "absolute",
-          "width": "100%",
-        }
-      }
-    />
     <RNSVGSvgView
       align="xMidYMid"
       bbHeight={32}
@@ -315,6 +307,7 @@ exports[`The ModalView component should render a custom back action 1`] = `
   }
 >
   <View
+    pointerEvents="box-none"
     style={
       Object {
         "flexDirection": "row",
@@ -327,15 +320,6 @@ exports[`The ModalView component should render a custom back action 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "height": 75,
-          "position": "absolute",
-          "width": "100%",
-        }
-      }
-    />
     <View
       accessible={true}
       clickable={true}
@@ -679,6 +663,7 @@ exports[`The ModalView component should render a custom close action 1`] = `
   }
 >
   <View
+    pointerEvents="box-none"
     style={
       Object {
         "flexDirection": "row",
@@ -691,15 +676,6 @@ exports[`The ModalView component should render a custom close action 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "height": 75,
-          "position": "absolute",
-          "width": "100%",
-        }
-      }
-    />
     <RNSVGSvgView
       align="xMidYMid"
       bbHeight={32}
@@ -966,6 +942,7 @@ exports[`The ModalView component should render with children 1`] = `
     "Roads? Where we going we don’t need roads." – Doc
   </Text>
   <View
+    pointerEvents="box-none"
     style={
       Object {
         "flexDirection": "row",
@@ -978,15 +955,6 @@ exports[`The ModalView component should render with children 1`] = `
       }
     }
   >
-    <View
-      style={
-        Object {
-          "height": 75,
-          "position": "absolute",
-          "width": "100%",
-        }
-      }
-    />
     <RNSVGSvgView
       align="xMidYMid"
       bbHeight={32}

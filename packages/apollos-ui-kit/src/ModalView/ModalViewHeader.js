@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import Color from 'color';
 import PropTypes from 'prop-types';
 
@@ -26,17 +26,9 @@ const HeaderWrapper = styled(({ navigationHeader }) => ({
   justifyContent: 'space-between',
 }))(PaddedView);
 
-const Handle = styled({
-  // helps in swipe-to-close gesture
-  position: 'absolute',
-  width: '100%',
-  height: 75,
-})(View);
-
 const ModalViewHeader = ({ onClose, onBack, navigationHeader }) => (
-  <HeaderWrapper navigationHeader={navigationHeader}>
+  <HeaderWrapper pointerEvents={'box-none'} navigationHeader={navigationHeader}>
     <StatusBar hidden />
-    <Handle />
     {onBack ? (
       <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
     ) : (

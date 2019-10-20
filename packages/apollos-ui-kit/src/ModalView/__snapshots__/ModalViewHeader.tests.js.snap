@@ -2,6 +2,7 @@
 
 exports[`The ModalView/ModalViewHeader component should accept an onBack function 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Object {
       "flexDirection": "row",
@@ -14,15 +15,6 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
     }
   }
 >
-  <View
-    style={
-      Object {
-        "height": 75,
-        "position": "absolute",
-        "width": "100%",
-      }
-    }
-  />
   <View
     accessible={true}
     clickable={true}
@@ -256,6 +248,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
 
 exports[`The ModalView/ModalViewHeader component should accept an onClose function 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Object {
       "flexDirection": "row",
@@ -268,15 +261,6 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
     }
   }
 >
-  <View
-    style={
-      Object {
-        "height": 75,
-        "position": "absolute",
-        "width": "100%",
-      }
-    }
-  />
   <RNSVGSvgView
     align="xMidYMid"
     bbHeight={32}
@@ -510,6 +494,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
 
 exports[`The ModalView/ModalViewHeader component should render 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Object {
       "flexDirection": "row",
@@ -522,15 +507,6 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "height": 75,
-        "position": "absolute",
-        "width": "100%",
-      }
-    }
-  />
   <View
     accessible={true}
     clickable={true}
@@ -765,6 +741,7 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
 exports[`The ModalView/ModalViewHeader component should render as a navigationHeader 1`] = `
 <View
   navigationHeader={true}
+  pointerEvents="box-none"
   style={
     Object {
       "flexDirection": "row",
@@ -777,15 +754,6 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
     }
   }
 >
-  <View
-    style={
-      Object {
-        "height": 75,
-        "position": "absolute",
-        "width": "100%",
-      }
-    }
-  />
   <View
     accessible={true}
     clickable={true}
