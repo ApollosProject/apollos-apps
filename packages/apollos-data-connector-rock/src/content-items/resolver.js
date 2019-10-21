@@ -26,10 +26,7 @@ export const defaultContentItemResolvers = {
     if (!hyphenated) {
       return title;
     }
-    const words = title.split(' ');
-    return words
-      .map((w) => (w.length > 8 ? hypher.hyphenate(w).join('\u00AD') : w))
-      .join(' ');
+    return hypher.hyphenateText(title, 9);
   },
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
