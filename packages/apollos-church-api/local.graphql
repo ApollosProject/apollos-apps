@@ -70,7 +70,8 @@ type AudioMediaSource implements MediaSource {
 type AuthenticatedUser {
   id: ID!
   profile: Person
-  rockToken: String
+  rock: RockPersonDetails
+  rockToken: String @deprecated(reason: "Use rock.authCookie instead")
 }
 
 type Authentication {
@@ -190,6 +191,7 @@ type DevotionalContentItem implements ContentItem & Node {
 type Event implements Node {
   id: ID!
   name: String
+  description: String
   location: String
   start: String
   end: String
@@ -377,6 +379,11 @@ type Query {
   search(query: String!, first: Int, after: String): SearchResultsConnection
   campuses(location: CampusLocationInput): [Campus]
   userFeedFeatures: [Feature]
+}
+
+type RockPersonDetails {
+  authToken: String
+  authCookie: String
 }
 
 type Scripture implements Node {

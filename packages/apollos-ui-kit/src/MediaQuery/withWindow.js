@@ -10,7 +10,7 @@ export default function withWindow(ComponentToWrap) {
       },
     };
 
-    componentWillMount() {
+    componentDidMount() {
       Dimensions.addEventListener('change', this.handler);
     }
 

@@ -10,6 +10,7 @@ import {
   Paragraph,
   StretchyView,
 } from '@apollosproject/ui-kit';
+import HTMLView from '@apollosproject/ui-htmlview';
 
 import { FlexedScrollView, EventInfoItem } from './components';
 
@@ -42,6 +43,7 @@ const Event = ({ event, loading }) => {
                 />
                 <EventInfoItem icon={'pin'} title={event.location} />
               </Paragraph>
+              <HTMLView isLoading={loading}>{event.description}</HTMLView>
             </PaddedView>
           </FlexedScrollView>
         )}
@@ -55,6 +57,7 @@ Event.propTypes = {
     __typename: PropTypes.string,
     id: PropTypes.string,
     name: PropTypes.string,
+    description: PropTypes.string,
     start: PropTypes.string,
     end: PropTypes.string,
     location: PropTypes.string,

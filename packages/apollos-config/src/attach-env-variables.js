@@ -12,7 +12,19 @@ function deepObjectMap(object) {
 
 function handleValue(value) {
   if (typeof value === 'string' && envVariableRegex.test(value)) {
-    return value.replace(envVariableRegex, (match, p1) => process.env[p1]);
+    const envVariable = value.replace(
+      envVariableRegex,
+      (match, p1) => process.env[p1]
+    );
+    try {
+      // eslint-disable-next-line
+      if (!isNaN(Number(envVariable))) {
+        return envVariable;
+      }
+      return JSON.parse(envVariable);
+    } catch (e) {
+      return envVariable;
+    }
   }
   if (Array.isArray(value)) {
     return value.map(handleValue);

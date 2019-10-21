@@ -7,6 +7,9 @@ import {
   TabView,
   PaddedView,
   TabSceneMap as SceneMap,
+  ButtonIcon,
+  styled,
+  withTheme,
 } from '@apollosproject/ui-kit';
 import { SafeAreaView } from 'react-navigation';
 
@@ -15,6 +18,22 @@ import { AuthConsumer } from '../Provider';
 import LoginForm from './Login';
 
 import SignUpForm from './Signup';
+
+const StyledPaddedView = styled(
+  {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  'ui-auth.Password.PaddedView'
+)(PaddedView);
+
+const BackButton = withTheme(({ theme }) => ({
+  fill: theme.colors.primary,
+  size: theme.sizing.baseUnit * 1.5,
+  style: {
+    paddingLeft: 0,
+  },
+}))(ButtonIcon);
 
 class AuthPassword extends PureComponent {
   static navigationOptions = {
@@ -55,9 +74,13 @@ class AuthPassword extends PureComponent {
           >
             <BackgroundComponent>
               <SafeAreaView style={StyleSheet.absoluteFill}>
-                <PaddedView>
+                <StyledPaddedView>
+                  <BackButton
+                    name="arrow-back"
+                    onPress={() => this.props.navigation.goBack()}
+                  />
                   <PromptText>{this.flatProps.passwordPromptText}</PromptText>
-                </PaddedView>
+                </StyledPaddedView>
 
                 <TabView
                   routes={this.tabRoutes}

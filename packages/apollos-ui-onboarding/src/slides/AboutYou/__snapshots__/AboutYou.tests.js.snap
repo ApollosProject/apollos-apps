@@ -104,7 +104,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -153,7 +153,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -813,7 +813,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -862,7 +862,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -1367,7 +1367,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -1416,7 +1416,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -1877,7 +1877,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -1926,7 +1926,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -2387,7 +2387,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -2436,7 +2436,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -2897,7 +2897,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -2946,7 +2946,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -3407,7 +3407,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -3468,7 +3468,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -3929,7 +3929,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -3978,7 +3978,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -4439,7 +4439,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -4488,7 +4488,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
               "borderBottomWidth": 0,
               "flexDirection": "row",
               "justifyContent": "space-between",

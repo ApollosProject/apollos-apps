@@ -1,3 +1,40 @@
+v1.2.0-beta.5: October 18, 2019
+
+- Adds LOAD_TESTING documentation (#1133) (7e247438)
+- Adds an active/disabled state to HorizontalHighlightCard (#1122) (65f8dca4)
+
+- Reduces Warnings (#1117) (0ca02fb8)
+- Removes Caching of Auth Tokens (#1129) (561081a8)
+
+- Updates some of theme alpha values to match new Apollos style guide (#1124) (8debd3cf)
+- Upgrades react native device info (#1136) (9e846854)
+- Highlights the active card in HorizontalContentFeeds (#1135) (40a93ad6)
+
+- Fixes Group members function (#1134) (dee54131)
+- Fixes media player titles on android not being centered. (#1130) (cc9a47c7)
+- Fix close button play state issue. (#1128) (e0f824c6)
+
+
+v1.2.0-beta.4: October 14, 2019
+
+- Adds event descriptions (#1121) (44e5f5b3)
+- Adds Back Navigation to Auth Screens (#1113) (2f266bf1)
+- Adds Rock Token to In App Browser (#1120) (fd2bc47a)
+- Adds translation prop to ScriptureItem component (#1111) (36d4307d)
+
+v1.2.0-beta.3: October 10, 2019
+
+- Adds Rock Token to API (#1103) (dfba44c0)
+- Adds Redis Cache and stores isLiked / likeCount in RedisCache. (#1093) (977b2fbf)
+- Adds Filtering for only Active Group Members (#1099) (1fdc94a2)
+- Adds Filter control for Unpublished Content (#1102) (d3b08409)
+
+- Removes Redis warnings and fixes cache keys for like counts (#1110) (aae10c9e)
+
+- Fixes profile image uploading (#1101) (43e6d492)
+- Fixes occasional expansion of the TabBar (hopefully final fix) (#1105) (f694e426)
+- Fixes location finder connected not updating after location permission is granted (android) (#1104) (f76b0be6)
+
 
 v1.2.0-beta.2: October 7, 2019
 

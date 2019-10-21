@@ -17,10 +17,16 @@ export const authSmsSchema = gql`
 `;
 
 export const authSchema = gql`
+  type RockPersonDetails {
+    authToken: String
+    authCookie: String
+  }
+
   type AuthenticatedUser @cacheControl(maxAge: 0) {
     id: ID!
     profile: Person
-    rockToken: String
+    rock: RockPersonDetails
+    rockToken: String @deprecated(reason: "Use rock.authCookie instead")
   }
 
   type Authentication {
@@ -656,6 +662,7 @@ export const eventSchema = gql`
   type Event implements Node {
     id: ID!
     name: String
+    description: String
     location: String
     start: String
     end: String

@@ -8,7 +8,13 @@ import {
   StatusBar,
 } from 'react-native';
 import { get } from 'lodash';
-import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
+import {
+  PaddedView,
+  TextInput,
+  BackgroundView,
+  ButtonIcon,
+  withTheme,
+} from '@apollosproject/ui-kit';
 
 import {
   FlexedSafeAreaView,
@@ -18,6 +24,14 @@ import {
   BrandIcon,
 } from '../styles';
 
+const BackButton = withTheme(({ theme }) => ({
+  fill: theme.colors.primary,
+  size: theme.sizing.baseUnit * 1.5,
+  style: {
+    paddingLeft: 0,
+  },
+}))(ButtonIcon);
+
 const Verification = ({
   confirmationTitleText,
   confirmationPromptText,
@@ -25,6 +39,7 @@ const Verification = ({
   errors,
   isLoading,
   onPressNext,
+  onPressBack,
   setFieldValue,
   values,
   BackgroundComponent,
@@ -40,6 +55,7 @@ const Verification = ({
       <FlexedSafeAreaView>
         <ScrollView>
           <PaddedView>
+            <BackButton name="arrow-back" onPress={() => onPressBack()} />
             <BrandIcon />
             <TitleText>{confirmationTitleText}</TitleText>
             <PromptText padded>{confirmationPromptText}</PromptText>
@@ -83,6 +99,7 @@ Verification.propTypes = {
   }),
   isLoading: PropTypes.bool,
   onPressNext: PropTypes.func,
+  onPressBack: PropTypes.func,
   setFieldValue: PropTypes.func.isRequired,
   values: PropTypes.shape({
     code: PropTypes.string,
