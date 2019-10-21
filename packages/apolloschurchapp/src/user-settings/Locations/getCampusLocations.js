@@ -6,6 +6,13 @@ export default gql`
     campuses(location: { latitude: $latitude, longitude: $longitude }) {
       ...CampusParts
     }
+    currentUser {
+      profile {
+        campus {
+          ...CampusParts
+        }
+      }
+    }
   }
   ${CampusFragment}
 `;
