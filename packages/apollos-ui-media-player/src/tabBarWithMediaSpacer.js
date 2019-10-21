@@ -20,7 +20,11 @@ const withMediaSpacer = (TabBar) => (props) => (
     {({ data = {} }) => (
       <TabBarWrapper mediaPlayerIsVisible={get(data, 'mediaPlayer.isVisible')}>
         <MediaPlayerSpacer>
-          <TabBar {...props} />
+          <TabBar
+            {...props}
+            // eslint-disable-next-line
+            safeAreaInset={{ ...props.safeAreaInset, top: 0 }}
+          />
         </MediaPlayerSpacer>
       </TabBarWrapper>
     )}

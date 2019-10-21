@@ -1,10 +1,9 @@
 import React from 'react';
+import { SafeAreaView } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
 import { styled } from '@apollosproject/ui-kit';
-
-import { SafeAreaView } from 'react-native';
 import { MINI_PLAYER_HEIGHT } from './MiniControls';
 
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
