@@ -1,3 +1,5 @@
+/* eslint-disable prefer-template */
+
 import { get } from 'lodash';
 import Hypher from 'hypher';
 import english from 'hyphenation.en-us';
@@ -26,7 +28,20 @@ export const defaultContentItemResolvers = {
     if (!hyphenated) {
       return title;
     }
-    return hypher.hyphenateText(title, 9);
+    const words = title.split(' ');
+    return words
+      .map((w) =>
+        w.length > 7
+          ? hypher
+              .hyphenate(w)
+              .reduce((concat, currentVal) =>
+                concat.length > 7
+                  ? concat + '\u00AD' + currentVal
+                  : concat + currentVal
+              )
+          : w
+      )
+      .join(' ');
   },
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
