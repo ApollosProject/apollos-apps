@@ -29,19 +29,17 @@ export const defaultContentItemResolvers = {
       return title;
     }
     const words = title.split(' ');
-    return words
-      .map((w) =>
-        w.length > 7
-          ? hypher
-              .hyphenate(w)
-              .reduce((concat, currentVal) =>
-                concat.length > 7
-                  ? concat + '\u00AD' + currentVal
-                  : concat + currentVal
-              )
-          : w
+    const hyphenateEndOfWord = (word, segment) =>
+      word.length > 7 ? word + '\u00AD' + segment : word + segment;
+
+    const hyphenateLongWords = (word, hyphenateFunction) =>
+      word.length > 7 ? hyphenateFunction(word) : word;
+
+    return words.map((w) =>
+      hyphenateLongWords(w, () =>
+        hypher.hyphenate(w).reduce(hyphenateEndOfWord)
       )
-      .join(' ');
+    );
   },
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
