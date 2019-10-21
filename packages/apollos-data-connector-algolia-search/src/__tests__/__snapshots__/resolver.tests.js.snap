@@ -60,6 +60,34 @@ Object {
 }
 `;
 
+exports[`Algolia Search safely captures invalid node 1`] = `
+Object {
+  "data": Object {
+    "search": Object {
+      "edges": Array [
+        Object {
+          "coverImage": Object {
+            "sources": Array [
+              Object {
+                "uri": "#",
+              },
+            ],
+          },
+          "cursor": "659a26257a49fb2bf1446bb747bf7dd3",
+          "node": null,
+          "summary": "test summary",
+          "title": "test result",
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "659a26257a49fb2bf1446bb747bf7dd3",
+        "startCursor": "659a26257a49fb2bf1446bb747bf7dd3",
+      },
+    },
+  },
+}
+`;
+
 exports[`Algolia Search throws error on invalid cursor 1`] = `
 Object {
   "data": Object {

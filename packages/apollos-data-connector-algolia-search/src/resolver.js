@@ -10,8 +10,16 @@ const resolver = {
     pageInfo: (edges) => withEdgePagination({ edges }),
   },
   SearchResult: {
-    node: ({ id }, _, { models, dataSources }, { schema }) =>
-      models.Node.get(id, dataSources, schema),
+    node: async ({ id }, _, { models, dataSources }, { schema }) => {
+      try {
+        return await models.Node.get(id, dataSources, schema);
+      } catch (e) {
+        // Right now we don't have a good mechanism to flush deleted items from the search index.
+        // This helps make sure we don't return something unresolvable.
+        console.log(`Error fetching search result ${id}`, e);
+        return null;
+      }
+    },
   },
 };
 

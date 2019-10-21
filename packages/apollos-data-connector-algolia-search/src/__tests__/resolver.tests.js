@@ -121,4 +121,34 @@ describe('Algolia Search', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
+
+  it('safely captures invalid node', async () => {
+    const query = `
+      query {
+        search(query: "test", after: "${createCursor({ position: 1 })}") {
+          edges {
+            cursor
+            title
+            summary
+            coverImage { sources { uri } }
+            node {
+              id
+            }
+          }
+          pageInfo {
+            startCursor
+            endCursor
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    context.models.Node.get = jest.fn(() => {
+      throw new Error("Item doesn't exist");
+    });
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
 });
