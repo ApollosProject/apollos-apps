@@ -35,11 +35,13 @@ export const defaultContentItemResolvers = {
     const hyphenateLongWords = (word, hyphenateFunction) =>
       word.length > 7 ? hyphenateFunction(word) : word;
 
-    return words.map((w) =>
-      hyphenateLongWords(w, () =>
-        hypher.hyphenate(w).reduce(hyphenateEndOfWord)
+    return words
+      .map((w) =>
+        hyphenateLongWords(w, () =>
+          hypher.hyphenate(w).reduce(hyphenateEndOfWord)
+        )
       )
-    );
+      .join(' ');
   },
 
   parentChannel: ({ contentChannelId }, args, { dataSources }) =>
