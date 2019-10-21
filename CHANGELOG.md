@@ -1,3 +1,9 @@
+v1.2.0-beta.6: October 21, 2019
+
+- Prevents Extra Space in Tab Bar (#1094) (0e645894)
+- Ensures that invalid nodes don't break search results (#1141) (c0b49a08)
+- Fixes Tappable Areas in Devotional Content Items (#1137) (e9cad8bb)
+
 v1.2.0-beta.5: October 18, 2019
 
 - Adds LOAD_TESTING documentation (#1133) (7e247438)
