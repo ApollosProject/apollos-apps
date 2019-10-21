@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-onesignal",
-  "version": "1.2.0-beta.5",
+  "version": "1.2.0-beta.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,16 +23,16 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.2.0-beta.5",
-    "@apollosproject/server-core": "^1.2.0-beta.5",
+    "@apollosproject/data-schema": "^1.2.0-beta.6",
+    "@apollosproject/server-core": "^1.2.0-beta.6",
     "apollo-datasource-rest": "^0.6.4"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.2.0-beta.5",
-    "@apollosproject/babel-preset-apollos": "^1.2.0-beta.5",
+    "@apollosproject/apollo-server-env-mock": "^1.2.0-beta.6",
+    "@apollosproject/babel-preset-apollos": "^1.2.0-beta.6",
     "graphql": "^0.13.2",
     "jest": "^23.6.0"
   },
