@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, SafeAreaView } from 'react-native';
+
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { PaddedView, ActionCard } from '@apollosproject/ui-kit';
 
@@ -96,127 +97,99 @@ const revelation22Loading = {
 };
 
 storiesOf('ui-scripture/Scripture', module)
-  .add('Genesis 1:1-5', () => (
+  .addDecorator((story) => (
     <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={genesis1.scripture.reference}
-          html={genesis1.scripture.html}
-          isLoading={genesis1.scripture.isLoading}
-          copyright={genesis1.scripture.copyright}
-        />
-      </PaddedView>
+      <SafeAreaView>
+        <PaddedView>{story()}</PaddedView>
+      </SafeAreaView>
     </ScrollView>
+  ))
+  .add('Genesis 1:1-5', () => (
+    <ScriptureItem
+      reference={genesis1.scripture.reference}
+      html={genesis1.scripture.html}
+      isLoading={genesis1.scripture.isLoading}
+      copyright={genesis1.scripture.copyright}
+    />
   ))
   .add('John 1:1', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={john1.scripture.reference}
-          html={john1.scripture.html}
-          isLoading={john1.scripture.isLoading}
-          copyright={john1.scripture.copyright}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={john1.scripture.reference}
+      html={john1.scripture.html}
+      isLoading={john1.scripture.isLoading}
+      copyright={john1.scripture.copyright}
+    />
   ))
   .add('Psalm 23', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={psalm23.scripture.reference}
-          html={psalm23.scripture.html}
-          isLoading={psalm23.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={psalm23.scripture.reference}
+      html={psalm23.scripture.html}
+      isLoading={psalm23.scripture.isLoading}
+    />
   ))
   .add('Psalm 32', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={psalm32.scripture.reference}
-          html={psalm32.scripture.html}
-          isLoading={psalm32.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={psalm32.scripture.reference}
+      html={psalm32.scripture.html}
+      isLoading={psalm32.scripture.isLoading}
+    />
   ))
   .add('Psalm 119:129 - 144', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={psalm119.scripture.reference}
-          html={psalm119.scripture.html}
-          isLoading={psalm119.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={psalm119.scripture.reference}
+      html={psalm119.scripture.html}
+      isLoading={psalm119.scripture.isLoading}
+    />
   ))
   .add('Song of Solomon 1:1-4', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={songOfSolomon1.scripture.reference}
-          html={songOfSolomon1.scripture.html}
-          isLoading={songOfSolomon1.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={songOfSolomon1.scripture.reference}
+      html={songOfSolomon1.scripture.html}
+      isLoading={songOfSolomon1.scripture.isLoading}
+    />
   ))
   .add('Mark 1: 1-4', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={mark1.scripture.reference}
-          html={mark1.scripture.html}
-          isLoading={mark1.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={mark1.scripture.reference}
+      html={mark1.scripture.html}
+      isLoading={mark1.scripture.isLoading}
+    />
   ))
   .add('John 3:16-17', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={john3.scripture.reference}
-          html={john3.scripture.html}
-          isLoading={john3.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={john3.scripture.reference}
+      html={john3.scripture.html}
+      isLoading={john3.scripture.isLoading}
+    />
   ))
   .add('Revelation 22:20-21', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={revelation22.scripture.reference}
-          html={revelation22.scripture.html}
-          isLoading={revelation22.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={revelation22.scripture.reference}
+      html={revelation22.scripture.html}
+      isLoading={revelation22.scripture.isLoading}
+    />
   ))
   .add('Loading State', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={revelation22Loading.scripture.reference}
-          html={revelation22Loading.scripture.html}
-          isLoading={revelation22Loading.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={revelation22Loading.scripture.reference}
+      html={revelation22Loading.scripture.html}
+      isLoading={revelation22Loading.scripture.isLoading}
+    />
+  ))
+  .add('version', () => (
+    <ScriptureItem
+      reference={revelation22Loading.scripture.reference}
+      html={revelation22Loading.scripture.html}
+      version={'Boom'}
+    />
   ))
   .add('Example Usage in ActionCard', () => (
-    <PaddedView>
-      <ActionCard icon={'text'} label={'Featured Scripture'}>
-        <ScriptureItem
-          reference={john1.scripture.reference}
-          html={john1.scripture.html}
-          isLoading={john1.scripture.isLoading}
-          copyright={john1.scripture.copyright}
-        />
-      </ActionCard>
-    </PaddedView>
+    <ActionCard icon={'text'} label={'Featured Scripture'}>
+      <ScriptureItem
+        reference={john1.scripture.reference}
+        html={john1.scripture.html}
+        isLoading={john1.scripture.isLoading}
+        copyright={john1.scripture.copyright}
+      />
+    </ActionCard>
   ));

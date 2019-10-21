@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-scripture",
-  "version": "1.2.0-beta.1",
+  "version": "1.2.0-beta.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -31,6 +31,9 @@
     ],
     "modulePathIgnorePatterns": [
       "node_modules/@storybook/"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
     ]
   },
   "peerDependencies": {
@@ -40,8 +43,8 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^1.2.0-beta.1",
-    "@storybook/react-native": "^4.0.7",
+    "@apollosproject/ui-storybook": "^1.2.0-beta.5",
+    "@storybook/react-native": "5.2.4",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "metro-react-native-babel-preset": "^0.56.0",

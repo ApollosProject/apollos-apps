@@ -39,17 +39,17 @@ describe('Events', () => {
     expect(Event.get.mock.calls).toMatchSnapshot();
   });
 
-  it('should return a name based on an EventItem', async () => {
+  it('should return a description based on an EventItem', async () => {
     const Event = new EventsDataSource();
 
     Event.get = jest.fn(() =>
       Promise.resolve({
-        name: 'some event',
+        description: 'some description',
       })
     );
 
-    const result = await Event.getName({ eventItemId: 123 });
-    expect(result).toEqual('some event');
+    const result = await Event.getDescription({ eventItemId: 123 });
+    expect(result).toEqual('some description');
     expect(Event.get.mock.calls).toMatchSnapshot();
   });
 

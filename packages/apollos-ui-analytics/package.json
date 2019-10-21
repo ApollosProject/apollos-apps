@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-analytics",
-  "version": "1.2.0-beta.1",
+  "version": "1.2.0-beta.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "graphql-tag": "2.9.2",
-    "react-native-device-info": "^2.1.2"
+    "react-native-device-info": "^4.0.1"
   },
   "devDependencies": {
     "apollo-cache-inmemory": "^1.5.1",

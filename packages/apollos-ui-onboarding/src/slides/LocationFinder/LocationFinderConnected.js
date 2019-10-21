@@ -7,11 +7,16 @@ import Geolocation from 'react-native-geolocation-service';
 import hasLocationPermission from './hasLocationPermission';
 import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
+import requestLocation from './requestLocation';
 
 class LocationFinderConnected extends PureComponent {
   state = { locationPermission: false };
 
   async componentDidMount() {
+    this.checkPermission();
+  }
+
+  async checkPermission() {
     // TODO no other way (that I've found) to check for location
     // permissions without using react-native-permissions
     // which requires declaring ALL permissions in manifest
@@ -41,6 +46,9 @@ class LocationFinderConnected extends PureComponent {
               return (
                 <this.props.Component
                   onPressButton={() => {
+                    requestLocation().then(() => {
+                      this.checkPermission();
+                    });
                     this.props.onNavigate();
                     track({ eventName: 'LocationFinder Opened MapView' });
                   }}
@@ -51,7 +59,7 @@ class LocationFinderConnected extends PureComponent {
                   pressPrimaryEventName={'Ask Location Completed'}
                   pressSecondaryEventName={'Ask Location Skipped'}
                   buttonText={'Yes, find my local campus'}
-                  campus={showNextBtn ? campus : null}
+                  campus={campus}
                   {...otherProps}
                 />
               );

@@ -6,7 +6,7 @@ import fetch from 'jest-fetch-mock';
 import { createResolvers } from './Provider';
 
 jest.mock('react-native-device-info', () => ({
-  getUniqueID: () => 'id-123',
+  getUniqueId: () => 'id-123',
   getSystemVersion: () => 'sys-version-123',
   getModel: () => 'ios',
   getVersion: () => 'version-123',

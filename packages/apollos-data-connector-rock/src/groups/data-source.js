@@ -25,7 +25,9 @@ export default class Group extends RockApolloDataSource {
     const members = await this.request('GroupMembers')
       .andFilter(`GroupId eq ${groupId}`)
       .get();
-    return members.map(({ personId }) => Person.getFromId(personId));
+    return Promise.all(
+      members.map(({ personId }) => Person.getFromId(personId))
+    );
   };
 
   getLeaders = async (groupId) => {
@@ -49,6 +51,7 @@ export default class Group extends RockApolloDataSource {
           asLeader ? ' and GroupRole/IsLeader eq true' : ''
         }`
       )
+      .andFilter(`GroupMemberStatus ne 'Inactive'`)
       .get();
     const groups = await Promise.all(
       groupAssociations.map(({ groupId }) =>

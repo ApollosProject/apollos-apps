@@ -110,6 +110,7 @@ export default class ContentItem extends RockApolloDataSource {
     const features = [];
 
     // TODO this should replace all other methods
+    // TODO this should be written in a more extendable way for partners
     const genericFeatures = get(attributeValues, 'features.value', '');
     const keyValuePairs = parseKeyValueAttribute(genericFeatures);
     keyValuePairs.forEach(({ key, value }, i) => {
@@ -272,7 +273,8 @@ export default class ContentItem extends RockApolloDataSource {
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
-    return `((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null)) `;
+    const filter = `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and Status eq 'Approved'`;
+    return get(ROCK, 'SHOW_INACTIVE_CONTENT', false) ? null : filter;
   };
 
   expanded = true;

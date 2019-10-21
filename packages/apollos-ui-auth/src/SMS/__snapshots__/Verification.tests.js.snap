@@ -3,113 +3,103 @@
 exports[`The Auth Verification component should render 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -120,17 +110,19 @@ exports[`The Auth Verification component should render 1`] = `
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -174,7 +166,7 @@ exports[`The Auth Verification component should render 1`] = `
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -220,307 +212,413 @@ exports[`The Auth Verification component should render 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Thanks!
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
 Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
                       style={
                         Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
                         }
                       }
-                    >
-                      <View
-                        style={
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
                           Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
+                            "scaleX": 0.0001,
+                          },
+                        ],
+                      }
+                    }
+                  >
                     <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
+                      hasError={false}
                       style={
                         Object {
+                          "backgroundColor": "#00676D",
                           "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
+                          "height": 0.5,
                         }
                       }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 0.0001,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </RCTScrollView>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render as disabled 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -531,17 +629,19 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -585,7 +685,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -631,369 +731,475 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Thanks!
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
 Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[MockFunction]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
                       style={
                         Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
                         }
                       }
-                    >
-                      <View
-                        style={
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
                           Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          onSubmitEditing={[MockFunction]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
+                            "scaleX": 0.0001,
+                          },
+                        ],
+                      }
+                    }
+                  >
                     <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
+                      hasError={false}
                       style={
                         Object {
+                          "backgroundColor": "#00676D",
                           "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
+                          "height": 0.5,
                         }
                       }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 0.0001,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+          </View>
+        </View>
+      </RCTScrollView>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
           <View
+            bordered={false}
+            disabled={true}
+            pill={false}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 0.5,
+                "overflow": "hidden",
                 "paddingHorizontal": 16,
-                "paddingVertical": 16,
               }
             }
           >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+            <Text
               style={
                 Object {
-                  "opacity": 1,
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 23.04,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={false}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 16,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 23.04,
-                    }
-                  }
-                >
-                  Next
-                </Text>
-              </View>
-            </View>
+              Next
+            </Text>
           </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render in a loading state 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -1004,17 +1210,19 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -1058,7 +1266,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -1104,658 +1312,429 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Thanks!
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
 Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[MockFunction]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
                       style={
                         Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
                         }
                       }
-                    >
-                      <View
-                        style={
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
                           Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          onSubmitEditing={[MockFunction]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
+                            "scaleX": 0.0001,
+                          },
+                        ],
+                      }
+                    }
+                  >
                     <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
+                      hasError={false}
                       style={
                         Object {
+                          "backgroundColor": "#00676D",
                           "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
+                          "height": 0.5,
                         }
                       }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 0.0001,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+          </View>
+        </View>
+      </RCTScrollView>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
           <View
+            bordered={false}
+            disabled={false}
+            pill={false}
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
                 "paddingHorizontal": 16,
-                "paddingVertical": 16,
               }
             }
           >
-            <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <View
-                bordered={false}
-                disabled={false}
-                pill={false}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 16,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
-                  }
-                }
-              >
-                <ActivityIndicator
-                  animating={true}
-                  color="#FFFFFF"
-                  hidesWhenStopped={true}
-                  size="small"
-                />
-              </View>
-            </View>
+            <ActivityIndicator
+              animating={true}
+              color="#FFFFFF"
+              hidesWhenStopped={true}
+              size="small"
+            />
           </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render in a next button 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
-            }
-          }
-        >
-          <RCTScrollView>
-            <View>
-              <View
-                style={
-                  Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      null,
-                      Object {
-                        "flex": 0,
-                        "height": 48,
-                        "width": 48,
-                      },
-                    ]
-                  }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={48}
-                >
-                  <RNSVGGroup
-                    fill={
-                      Array [
-                        0,
-                        4278190080,
-                      ]
-                    }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
-                  >
-                    <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                      fill={
-                        Array [
-                          0,
-                          4278216557,
-                        ]
-                      }
-                      fillOpacity={1}
-                      fillRule={1}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth={1}
-                      vectorEffect={0}
-                      x={0}
-                      y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
-                  }
-                >
-                  Thanks!
-Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
-                <View
-                  disabled={false}
-                  style={
-                    Object {
-                      "marginVertical": 16,
-                    }
-                  }
-                >
-                  <View>
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          onSubmitEditing={[MockFunction]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 0.0001,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </RCTScrollView>
+      <RCTScrollView>
+        <View>
           <View
             style={
               Object {
@@ -1782,158 +1761,601 @@ Stand by…
               }
             >
               <View
-                bordered={false}
-                disabled={false}
-                pill={false}
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 16,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
-                <Text
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      undefined,
+                      Object {
+                        "opacity": 1,
+                      },
+                      Object {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                >
+                  <RNSVGGroup
+                    fill={
+                      Array [
+                        0,
+                        4278190080,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    font={Object {}}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={Array []}
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  >
+                    <RNSVGPath
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
+                      fill={
+                        Array [
+                          0,
+                          4278216557,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      originX={0}
+                      originY={0}
+                      propList={
+                        Array [
+                          "fill",
+                        ]
+                      }
+                      rotation={0}
+                      scaleX={1}
+                      scaleY={1}
+                      skewX={0}
+                      skewY={0}
+                      stroke={null}
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                      vectorEffect={0}
+                      x={0}
+                      y={0}
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
+Stand by…
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
+                <View
                   style={
                     Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 23.04,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  Next
-                </Text>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[MockFunction]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
+                          Object {
+                            "scaleX": 0.0001,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <View
+                      hasError={false}
+                      style={
+                        Object {
+                          "backgroundColor": "#00676D",
+                          "bottom": 0,
+                          "height": 0.5,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
               </View>
             </View>
           </View>
         </View>
-      </BVLinearGradient>
+      </RCTScrollView>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            bordered={false}
+            disabled={false}
+            pill={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 23.04,
+                }
+              }
+            >
+              Next
+            </Text>
+          </View>
+        </View>
+      </View>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render in an error state 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -1944,17 +2366,19 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -1998,7 +2422,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -2044,320 +2468,426 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Thanks!
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
 Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
-                      style={
-                        Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#c64f55",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                  <Text
+                  <View
                     style={
                       Object {
-                        "color": "#c64f55",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingTop": 8,
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
                       }
                     }
                   >
-                    Boom errors.code Boom
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
+                          Object {
+                            "scaleX": 1,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <View
+                      hasError={true}
+                      style={
+                        Object {
+                          "backgroundColor": "#c64f55",
+                          "bottom": 0,
+                          "height": 0.5,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
               </View>
+              <Text
+                style={
+                  Object {
+                    "color": "#c64f55",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 17.28,
+                    "paddingTop": 8,
+                  }
+                }
+              >
+                Boom errors.code Boom
+              </Text>
             </View>
-          </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </RCTScrollView>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render with a custom confirmationPromptText 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -2368,17 +2898,19 @@ exports[`The Auth Verification component should render with a custom confirmatio
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -2422,7 +2954,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -2468,307 +3000,413 @@ exports[`The Auth Verification component should render with a custom confirmatio
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Thanks!
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
 Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  Boom custom prompty text boom
-                </Text>
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              Boom custom prompty text boom
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
                       style={
                         Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
                         }
                       }
-                    >
-                      <View
-                        style={
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
                           Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
+                            "scaleX": 0.0001,
+                          },
+                        ],
+                      }
+                    }
+                  >
                     <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
+                      hasError={false}
                       style={
                         Object {
+                          "backgroundColor": "#00676D",
                           "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
+                          "height": 0.5,
                         }
                       }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 0.0001,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </RCTScrollView>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render with a value 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -2779,17 +3417,19 @@ exports[`The Auth Verification component should render with a value 1`] = `
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -2833,7 +3473,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -2879,308 +3519,414 @@ exports[`The Auth Verification component should render with a value 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Thanks!
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Thanks!
 Stand by…
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
-                  }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
                       style={
                         Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
                         }
                       }
-                    >
-                      <View
-                        style={
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                      value="Boom values.code boom"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 0.8,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 0.8,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
                           Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 1,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                          value="Boom values.code boom"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
+                            "scaleX": 1,
+                          },
+                        ],
+                      }
+                    }
+                  >
                     <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
+                      hasError={false}
                       style={
                         Object {
+                          "backgroundColor": "#00676D",
                           "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 0.8,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 0.8,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
+                          "height": 0.5,
                         }
                       }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </RCTScrollView>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
 
 exports[`The Auth Verification component should render with custom confirmationTitleText 1`] = `
 <View
   onLayout={[Function]}
-  pointerEvents="box-none"
   style={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
+    Array [
       Object {
         "bottom": 0,
         "left": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       onLayout={[Function]}
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "paddingBottom": 0,
-          },
-        ]
+        Object {
+          "flex": 1,
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294967295,
-            4294506484,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "flex": 1,
-            "height": "100%",
-          }
-        }
-      >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
-            Object {
-              "flex": 1,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
             }
-          }
-        >
-          <RCTScrollView>
-            <View>
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
               <View
+                borderRadius={48}
+                iconPadding={9.6}
                 style={
                   Object {
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "padding": 9.6,
+                    "paddingLeft": 0,
                   }
                 }
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={48}
-                  bbWidth={48}
-                  height={48}
-                  marginBottom={16}
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -3191,17 +3937,19 @@ exports[`The Auth Verification component should render with custom confirmationT
                         "borderWidth": 0,
                       },
                       undefined,
-                      null,
+                      Object {
+                        "opacity": 1,
+                      },
                       Object {
                         "flex": 0,
-                        "height": 48,
-                        "width": 48,
+                        "height": 24,
+                        "width": 24,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={48}
+                  width={24}
                 >
                   <RNSVGGroup
                     fill={
@@ -3245,7 +3993,7 @@ exports[`The Auth Verification component should render with custom confirmationT
                     y={0}
                   >
                     <RNSVGPath
-                      d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
                       fill={
                         Array [
                           0,
@@ -3291,192 +4039,308 @@ exports[`The Auth Verification component should render with custom confirmationT
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
-                <Text
-                  style={
-                    Object {
-                      "color": "#00676D",
-                      "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
-                    }
+              </View>
+            </View>
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={48}
+              bbWidth={48}
+              height={48}
+              marginBottom={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 48,
+                    "width": 48,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={48}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
+                  fill={
+                    Array [
+                      0,
+                      4278216557,
+                    ]
                   }
-                >
-                  Custom Title
-                </Text>
-                <Text
-                  padded={true}
-                  style={
-                    Object {
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 20.16,
-                      "paddingBottom": 10.08,
-                      "paddingTop": 13.31,
-                    }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
                   }
-                >
-                  We just sent you a code. Enter it below when it comes.
-                </Text>
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Custom Title
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "paddingBottom": 10.08,
+                  "paddingTop": 13.31,
+                }
+              }
+            >
+              We just sent you a code. Enter it below when it comes.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
+                }
+              }
+            >
+              <View>
                 <View
-                  disabled={false}
                   style={
                     Object {
-                      "marginVertical": 16,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View>
-                    <View
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      autoComplete="password"
+                      autoFocus={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      keyboardType="numeric"
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
                       style={
                         Object {
-                          "flexDirection": "row",
-                          "justifyContent": "center",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
                         }
                       }
-                    >
-                      <View
-                        style={
+                      type="numeric"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  onLayout={[Function]}
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                        Object {
+                          "translateX": 0,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    Verification Code
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0,
+                        "transform": Array [
                           Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "flex": 1,
-                            "opacity": 0,
-                          }
-                        }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          autoComplete="password"
-                          autoFocus={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          keyboardType="numeric"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          type="numeric"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                          }
-                        }
-                      />
-                    </View>
+                            "scaleX": 0.0001,
+                          },
+                        ],
+                      }
+                    }
+                  >
                     <View
-                      onLayout={[Function]}
-                      pointerEvents="none"
+                      hasError={false}
                       style={
                         Object {
+                          "backgroundColor": "#00676D",
                           "bottom": 0,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": Array [
-                            Object {
-                              "scale": 1,
-                            },
-                            Object {
-                              "translateX": 0,
-                            },
-                            Object {
-                              "translateY": 0,
-                            },
-                          ],
+                          "height": 0.5,
                         }
                       }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      >
-                        Verification Code
-                      </Text>
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "bottom": -0.5,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "right": 0,
-                            "transform": Array [
-                              Object {
-                                "scaleX": 0.0001,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          hasError={false}
-                          style={
-                            Object {
-                              "backgroundColor": "#00676D",
-                              "bottom": 0,
-                              "height": 0.5,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
-          </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </RCTScrollView>
     </View>
-  </View>
+  </BVLinearGradient>
 </View>
 `;
