@@ -14,10 +14,7 @@ const ContentCardConnected = memo(
       return <Component {...otherProps} isLoading tile={tile} />;
 
     return (
-      <Query
-        query={GET_CONTENT_CARD}
-        variables={{ contentId, hyphenated: true }}
-      >
+      <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
         {({ data: { node = {} } = {}, loading, error }) => {
           if (error) return <ErrorCard error={error} />;
 

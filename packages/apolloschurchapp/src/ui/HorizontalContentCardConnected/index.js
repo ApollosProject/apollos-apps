@@ -10,7 +10,6 @@ const HorizontalContentCardConnected = memo(
     <ContentCardConnected
       Component={Component}
       isLoading={isLoading}
-      hyphenated
       {...otherProps}
     />
   )

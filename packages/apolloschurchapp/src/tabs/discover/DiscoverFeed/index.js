@@ -32,11 +32,7 @@ const renderItem = (
 );
 
 const DiscoverFeed = memo(() => (
-  <Query
-    query={GET_CONTENT_CHANNELS}
-    variables={{ hyphenated: true }}
-    fetchPolicy="cache-and-network"
-  >
+  <Query query={GET_CONTENT_CHANNELS} fetchPolicy="cache-and-network">
     {({ error, loading, data: { contentChannels = [] } = {}, refetch }) => (
       <FeedView
         error={error}
