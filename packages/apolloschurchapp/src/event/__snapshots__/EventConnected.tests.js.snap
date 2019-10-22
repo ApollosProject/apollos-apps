@@ -69,20 +69,9 @@ exports[`EventConnected component renders without errors 1`] = `
           >
             <Image
               onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "__typename": "ImageMediaSource",
-                    "cache": "force-cache",
-                    "height": 240,
-                    "uri": "https://url.com/image.jpg",
-                    "width": 320,
-                  },
-                ]
-              }
+              source={Array []}
               style={
                 Object {
-                  "aspectRatio": 1.3333333333333333,
                   "backgroundColor": "#A5A5A5",
                   "opacity": 0,
                   "resizeMode": "cover",
@@ -452,10 +441,15 @@ exports[`EventConnected component renders without errors 1`] = `
             }
           >
             <View>
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
@@ -473,7 +467,7 @@ exports[`EventConnected component renders without errors 1`] = `
                 >
                   Some detailed description
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
         </View>
