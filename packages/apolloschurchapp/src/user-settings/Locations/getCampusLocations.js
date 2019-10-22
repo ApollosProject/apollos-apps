@@ -7,7 +7,9 @@ export default gql`
       ...CampusParts
     }
     currentUser {
+      id
       profile {
+        id
         campus {
           ...CampusParts
         }
