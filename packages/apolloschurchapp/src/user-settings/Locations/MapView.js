@@ -193,7 +193,7 @@ class MapView extends Component {
             contentContainerStyle={{
               paddingHorizontal: this.props.theme.sizing.baseUnit * 0.75,
             }}
-            ref={(ref) => (this.scrollView = ref)}
+            ref={(ref) => (this.scrollView = ref)} // eslint-disable-line
             scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
             onScroll={Animated.event(
               [
