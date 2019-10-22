@@ -1,5 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`the HTMLView component should handle wierdly formatted nested line breaks in divs used to create poorly formatted html spacing created by WYSIWYG editors 1`] = `
+<View
+  lineNumber={8}
+  onReady={true}
+  style={
+    Object {
+      "paddingBottom": 17.28,
+    }
+  }
+>
+  <View>
+    <View>
+      <View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`the HTMLView component should not render an image inside an anchor 1`] = `
 <View
   lineNumber={8}
