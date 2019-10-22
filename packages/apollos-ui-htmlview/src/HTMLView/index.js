@@ -36,7 +36,7 @@ class HTMLView extends PureComponent {
     if (this.props.children) this.parse(this.props.children);
   }
 
-  componentWillUpdate(props) {
+  componentDidUpdate(props) {
     this.parse(props.children);
   }
 
@@ -69,6 +69,7 @@ class HTMLView extends PureComponent {
   }
 
   render() {
+    console.count();
     return (
       <ParagraphPlaceholder lineNumber={8} onReady={!this.props.isLoading}>
         <View>{this.parsed}</View>
