@@ -161,6 +161,15 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render a div as a View', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<div>Boom</div>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a line break (br)', () => {
     const tree = renderer.create(
       <Providers>
