@@ -4,7 +4,7 @@ import { CONTENT_ITEM_FRAGMENT } from 'apolloschurchapp/src/content-single/getCo
 import { LARGE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 export default gql`
-  query getUserFeed($first: Int, $after: String, $hyphenated: Boolean = false) {
+  query getUserFeed($first: Int, $after: String) {
     userFeed(first: $first, after: $after) {
       pageInfo {
         endCursor
