@@ -365,7 +365,8 @@ describe('The Discover tab component', () => {
                       id:
                         'ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a',
                       title: 'How To Be A Better Leader: A 7-Day Devotional',
-                      hyphenatedTitle: 'How To Be A Better Leader: A 7-Day Devotional',
+                      hyphenatedTitle:
+                        'How To Be A Better Leader: A 7-Day Devotional',
                       isLiked: false,
                       likedCount: 0,
                       summary: '',
@@ -474,7 +475,8 @@ describe('The Discover tab component', () => {
                       id:
                         'UniversalContentItem:2e17f5a66407d114ab9f2392b03ebccd',
                       title: 'When I lost hope, my church family had my back',
-                      hyphenatedTitle: 'When I lost hope, my church family had my back',
+                      hyphenatedTitle:
+                        'When I lost hope, my church family had my back',
                       isLiked: true,
                       likedCount: 5,
                       summary:
