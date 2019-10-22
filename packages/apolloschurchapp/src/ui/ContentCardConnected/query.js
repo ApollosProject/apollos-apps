@@ -31,7 +31,7 @@ export const BASE_CARD_FRAGMENT = gql`
     ...coverImageFragment
     ...themeFragment
     title
-    hyphenatedTitle: title(hyphenated: $hyphenated)
+    hyphenatedTitle: title(hyphenated: true)
     summary
     isLiked
     ... on MediaContentItem {
@@ -74,7 +74,7 @@ export const LARGE_CARD_FRAGMENT = gql`
 `;
 
 const GET_CONTENT_CARD = gql`
-  query getContentCard($contentId: ID!, $hyphenated: Boolean) {
+  query getContentCard($contentId: ID!) {
     node(id: $contentId) {
       id
       __typename
