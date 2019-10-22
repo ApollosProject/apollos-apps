@@ -107,6 +107,7 @@ const HorizontalHighlightCard = withIsLoading(
   ({
     coverImage,
     title,
+    hyphenatedTitle,
     actionIcon,
     hasAction,
     disabled,
@@ -134,7 +135,7 @@ const HorizontalHighlightCard = withIsLoading(
           {renderLabel(LabelComponent, labelText, theme)}
           <ActionLayout>
             <FlexedActionLayoutText hasAction={hasAction}>
-              <H3 numberOfLines={4}>{title}</H3>
+              <H3 numberOfLines={4}>{hyphenatedTitle || title}</H3>
             </FlexedActionLayoutText>
             {hasAction ? <ActionIcon name={actionIcon} /> : null}
           </ActionLayout>
