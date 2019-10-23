@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import { Text, Linking } from 'react-native';
+import { Text, Linking, View } from 'react-native';
 import { decodeHTML } from 'entities';
 
 import {
@@ -19,20 +19,24 @@ import {
 
 const LINE_BREAK = '\n';
 const TEXT_TYPES_THAT_SHOULD_WRAP = [Text, BodyText, ButtonLink];
-const ILLEGAL_TEXT_CHILDREN_TYPES = [ConnectedImage];
+const ILLEGAL_TEXT_CHILDREN_TYPES = [ConnectedImage, View];
 
 export const stripIllegalMarkup = (children) =>
   Children.toArray(children).filter(
     (child) => !ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)
   );
 
-export const wrapTextChildren = (children, Component = BodyText) => {
+export const wrapTextChildren = ({
+  children,
+  Component = BodyText,
+  strip = true,
+}) => {
   const newChildren = [];
   let currentTextChildren = [];
   Children.toArray(children).forEach((child, i) => {
     if (TEXT_TYPES_THAT_SHOULD_WRAP.includes(child.type)) {
       currentTextChildren.push(child);
-    } else if (!ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)) {
+    } else {
       if (currentTextChildren.length) {
         newChildren.push(
           // eslint-disable-next-line
@@ -50,47 +54,54 @@ export const wrapTextChildren = (children, Component = BodyText) => {
       <Component key="composed-children">{currentTextChildren}</Component>
     );
   }
-  return stripIllegalMarkup(newChildren);
+  if (strip) return stripIllegalMarkup(newChildren);
+  return newChildren;
 };
 
 const defaultRenderer = (node, { children }) => {
   if (node.type === 'text' && node.data && node.data.trim()) {
     const text = decodeHTML(node.data);
     if (!node.parent) {
-      return (
-        <Paragraph>
-          <BodyText>{text}</BodyText>
-        </Paragraph>
-      );
+      return <BodyText>{text}</BodyText>;
     }
     return <Text>{text}</Text>;
   }
 
+  const blockElements = ['p', 'div', 'blockquote'];
+
   switch (node.name) {
+    case 'div':
+      return <View>{wrapTextChildren({ children, strip: false })}</View>;
     case 'p':
-      return <Paragraph>{wrapTextChildren(children)}</Paragraph>;
+      return (
+        <Paragraph>{wrapTextChildren({ children, strip: false })}</Paragraph>
+      );
     case 'strong':
       return <BodyText bold>{children}</BodyText>;
     case 'em':
       return <BodyText italic>{children}</BodyText>;
     case 'blockquote':
-      return <BlockQuote>{wrapTextChildren(children, Text)}</BlockQuote>;
+      return (
+        <BlockQuote>
+          {wrapTextChildren({ children, Component: Text, strip: false })}
+        </BlockQuote>
+      );
     case 'h1':
-      return <H1 padded>{wrapTextChildren(children, Text)}</H1>;
+      return <H1 padded>{wrapTextChildren({ children, Component: Text })}</H1>;
     case 'h2':
-      return <H2 padded>{wrapTextChildren(children, Text)}</H2>;
+      return <H2 padded>{wrapTextChildren({ children, Component: Text })}</H2>;
     case 'h3':
-      return <H3 padded>{wrapTextChildren(children, Text)}</H3>;
+      return <H3 padded>{wrapTextChildren({ children, Component: Text })}</H3>;
     case 'h4':
-      return <H4 padded>{wrapTextChildren(children, Text)}</H4>;
+      return <H4 padded>{wrapTextChildren({ children, Component: Text })}</H4>;
     case 'h5':
-      return <H5 padded>{wrapTextChildren(children, Text)}</H5>;
+      return <H5 padded>{wrapTextChildren({ children, Component: Text })}</H5>;
     case 'h6':
-      return <H6 padded>{wrapTextChildren(children, Text)}</H6>;
+      return <H6 padded>{wrapTextChildren({ children, Component: Text })}</H6>;
     case 'ul':
       return <Paragraph>{children}</Paragraph>;
     case 'li':
-      return <BulletListItem>{wrapTextChildren(children)}</BulletListItem>;
+      return <BulletListItem>{wrapTextChildren({ children })}</BulletListItem>;
     case 'a': {
       let url = node.attribs && node.attribs.href;
       url = decodeHTML(url);
@@ -106,7 +117,7 @@ const defaultRenderer = (node, { children }) => {
       if (url) {
         return (
           <ButtonLink onPress={onPress}>
-            {stripIllegalMarkup(children)}
+            {wrapTextChildren({ children, Component: Text })}
           </ButtonLink>
         );
       }
@@ -129,7 +140,19 @@ const defaultRenderer = (node, { children }) => {
       );
     }
     case 'br':
-      return <BodyText>{LINE_BREAK}</BodyText>;
+      // the conditional logic in this function aims to mimic HTML's white-space collapsing
+      // the only block-level element we currently support
+      if ((node.next && node.prev) || (!node.next && !node.prev)) {
+        if (blockElements.includes(node.parent.name)) {
+          return (
+            <View>
+              <BodyText />
+            </View>
+          );
+        }
+        return <BodyText>{LINE_BREAK}</BodyText>;
+      }
+      return null;
     default:
       return children;
   }
