@@ -4,6 +4,7 @@ import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import VersionNumber from 'react-native-version-number';
+import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {
   BackgroundView,
@@ -155,9 +156,7 @@ class UserSettings extends PureComponent {
                       <TableView>
                         <Cell>
                           <CellText>
-                            {`App Version: ${VersionNumber.appVersion}.${
-                              VersionNumber.buildVersion
-                            }`}
+                            {`App Version: ${getVersion()}.${getBuildNumber()}`}
                           </CellText>
                         </Cell>
                       </TableView>
