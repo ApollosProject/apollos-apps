@@ -113,6 +113,7 @@
     "react-native-screens": "^1.0.0-alpha.23",
     "react-native-splash-screen": "3.2.0",
     "react-native-svg": "^9.4.0",
+    "react-native-version-number": "^0.3.6",
     "react-native-video": "^5.0.0",
     "react-native-video-controls": "2.2.3",
     "react-native-webview": "^5.2.0",

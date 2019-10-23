@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
+import VersionNumber from 'react-native-version-number';
 
 import {
   BackgroundView,
@@ -150,6 +151,15 @@ class UserSettings extends PureComponent {
                             </Touchable>
                           )}
                         </Mutation>
+                      </TableView>
+                      <TableView>
+                        <Cell>
+                          <CellText>
+                            {`App Version: ${VersionNumber.appVersion}.${
+                              VersionNumber.buildVersion
+                            }`}
+                          </CellText>
+                        </Cell>
                       </TableView>
                     </>
                   )}
