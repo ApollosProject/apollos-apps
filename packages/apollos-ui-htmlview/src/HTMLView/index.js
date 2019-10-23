@@ -22,19 +22,33 @@ class HTMLView extends PureComponent {
 
   constructor(...args) {
     super(...args);
+
     this.parser = new Parser(
       new DomHandler(
         (err, dom) => {
-          this.parsed = this.renderDom(dom);
+          this.parsed = wrapTextChildren({
+            children: this.renderDom(dom),
+            strip: false,
+          });
         },
         { normalizeWhitespace: true }
       )
     );
-    if (this.props.children) this.parse(this.props.children);
+
+    if (this.props.children) {
+      this.parse(this.props.children);
+    } else {
+      this.parsed = null;
+    }
+
+    this.state = { parsed: this.parsed };
   }
 
-  componentWillUpdate(props) {
-    this.parse(props.children);
+  componentDidUpdate(lastProps) {
+    if (this.props.children !== lastProps.children) {
+      this.parse(this.props.children);
+      this.setState({ parsed: this.parsed }); // eslint-disable-line react/no-did-update-set-state
+    }
   }
 
   parse(html = '') {
@@ -68,7 +82,7 @@ class HTMLView extends PureComponent {
   render() {
     return (
       <ParagraphPlaceholder lineNumber={8} onReady={!this.props.isLoading}>
-        <View>{this.parsed}</View>
+        <View>{this.state.parsed}</View>
       </ParagraphPlaceholder>
     );
   }

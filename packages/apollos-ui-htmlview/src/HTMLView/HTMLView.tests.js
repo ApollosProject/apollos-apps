@@ -161,10 +161,37 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render a div as a View', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<div>Boom</div>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a line break (br)', () => {
     const tree = renderer.create(
       <Providers>
         <HTMLView>{'<p>Testings</p><br>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should handle wierdly formatted nested line breaks in divs used to create poorly formatted html block spacing created by WYSIWYG editors', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<div><br /></div>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should handle wierdly formatted nested line breaks in divs used to create poorly formatted html inline spacing created by WYSIWYG editors', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<span><br /></span>'}</HTMLView>
       </Providers>
     );
 
