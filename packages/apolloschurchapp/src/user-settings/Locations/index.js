@@ -4,6 +4,7 @@ import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
+import { get } from 'lodash';
 
 import GET_CAMPUSES from './getCampusLocations';
 import CHANGE_CAMPUS from './campusChange';
@@ -78,7 +79,7 @@ class Location extends PureComponent {
         }}
         fetchPolicy="cache-and-network"
       >
-        {({ loading, error, data: { campuses = [] } = {} }) => (
+        {({ loading, error, data: { campuses = [], currentUser } = {} }) => (
           <Mutation mutation={CHANGE_CAMPUS}>
             {(handlePress) => (
               <MapView
@@ -88,6 +89,7 @@ class Location extends PureComponent {
                 campuses={campuses}
                 initialRegion={this.props.initialRegion}
                 userLocation={this.state.userLocation}
+                currentCampus={get(currentUser, 'profile.campus')}
                 onLocationSelect={async ({ id }) => {
                   await handlePress({
                     variables: {
