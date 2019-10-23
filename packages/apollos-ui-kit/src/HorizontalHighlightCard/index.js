@@ -76,8 +76,8 @@ const ActionLayout = styled(
   'ui-kit.HorizontalHighlightCard.ActionLayout'
 )(View);
 
-const FlexedActionLayoutText = styled(({ theme }) => ({
-  marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+const FlexedActionLayoutText = styled(({ theme, hasAction }) => ({
+  ...(hasAction ? { marginRight: theme.sizing.baseUnit } : {}), // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
 }))(FlexedView);
 
 const ActionIcon = withTheme(({ theme }) => ({
@@ -133,7 +133,7 @@ const HorizontalHighlightCard = withIsLoading(
         <Content>
           {renderLabel(LabelComponent, labelText, theme)}
           <ActionLayout>
-            <FlexedActionLayoutText>
+            <FlexedActionLayoutText hasAction={hasAction}>
               <H3 numberOfLines={4}>{title}</H3>
             </FlexedActionLayoutText>
             {hasAction ? <ActionIcon name={actionIcon} /> : null}

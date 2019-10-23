@@ -137,7 +137,6 @@ exports[`HorizontalHighlightCard should render 1`] = `
           style={
             Object {
               "flex": 1,
-              "marginRight": 16,
             }
           }
         >
@@ -436,6 +435,7 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
         }
       >
         <View
+          hasAction={true}
           style={
             Object {
               "flex": 1,
@@ -626,6 +626,7 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
         }
       >
         <View
+          hasAction={true}
           style={
             Object {
               "flex": 1,
@@ -1037,7 +1038,6 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
           style={
             Object {
               "flex": 1,
-              "marginRight": 16,
             }
           }
         >
@@ -1320,6 +1320,7 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
         }
       >
         <View
+          hasAction={true}
           style={
             Object {
               "flex": 1,
@@ -1824,7 +1825,6 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
           style={
             Object {
               "flex": 1,
-              "marginRight": 16,
             }
           }
         >
@@ -2164,7 +2164,6 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
           style={
             Object {
               "flex": 1,
-              "marginRight": 16,
             }
           }
         >
@@ -2452,7 +2451,6 @@ exports[`HorizontalHighlightCard should should render as disabled 1`] = `
           style={
             Object {
               "flex": 1,
-              "marginRight": 16,
             }
           }
         >
@@ -2738,7 +2736,6 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
           style={
             Object {
               "flex": 1,
-              "marginRight": 16,
             }
           }
         >

@@ -638,6 +638,32 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                           "selectionSet": undefined,
                         },
                         Object {
+                          "alias": Object {
+                            "kind": "Name",
+                            "value": "hyphenatedTitle",
+                          },
+                          "arguments": Array [
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "hyphenated",
+                              },
+                              "value": Object {
+                                "kind": "BooleanValue",
+                                "value": true,
+                              },
+                            },
+                          ],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "title",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
                           "alias": undefined,
                           "arguments": Array [],
                           "directives": Array [],
@@ -1068,7 +1094,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                 ],
                 "kind": "Document",
                 "loc": Object {
-                  "end": 1734,
+                  "end": 1779,
                   "start": 0,
                 },
               }
