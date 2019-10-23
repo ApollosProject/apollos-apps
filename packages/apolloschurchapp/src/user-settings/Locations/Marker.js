@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Marker } from 'react-native-maps';
 import Color from 'color';
 
-import { Touchable, styled } from '@apollosproject/ui-kit';
+import { styled } from '@apollosproject/ui-kit';
 
 const MarkerView = styled(({ theme }) => ({
   width: 8,
@@ -27,13 +27,11 @@ const MarkerRingView = styled(({ theme }) => ({
 
 const StyledMarker = memo(({ latitude, longitude, opacityStyle, onPress }) => (
   <Marker onPress={onPress} coordinate={{ latitude, longitude }}>
-    <Touchable>
-      <Animated.View style={opacityStyle}>
-        <MarkerRingView>
-          <MarkerView />
-        </MarkerRingView>
-      </Animated.View>
-    </Touchable>
+    <Animated.View style={opacityStyle}>
+      <MarkerRingView>
+        <MarkerView />
+      </MarkerRingView>
+    </Animated.View>
   </Marker>
 ));
 
