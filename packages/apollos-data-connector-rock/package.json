@@ -27,6 +27,8 @@
     "@apollosproject/server-core": "^1.2.0-beta.6",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
+    "hyphenation.en-us": "^0.2.1",
+    "hypher": "^0.2.5",
     "jest": "^23.6.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
