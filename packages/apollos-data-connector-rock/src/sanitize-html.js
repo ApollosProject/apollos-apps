@@ -20,6 +20,7 @@ const allowedTags = [
   'br',
   'caption',
   'img',
+  'div',
 ];
 
 const allowedAttributes = {

@@ -441,10 +441,15 @@ exports[`EventConnected component renders without errors 1`] = `
             }
           >
             <View>
-              <View
+              <Text
+                bold={false}
+                italic={false}
                 style={
                   Object {
-                    "paddingBottom": 17.28,
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
                   }
                 }
               >
@@ -462,7 +467,7 @@ exports[`EventConnected component renders without errors 1`] = `
                 >
                   Some detailed description
                 </Text>
-              </View>
+              </Text>
             </View>
           </View>
         </View>
