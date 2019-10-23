@@ -30,7 +30,7 @@ export const defaultContentItemResolvers = {
     }
     const words = title.split(' ');
 
-    * We only want to hyphenate the end of words because Hyper uses a language dictionary to add
+    /* We only want to hyphenate the end of words because Hyper uses a language dictionary to add
      * "soft" hyphens at the appropriate places. By only adding "soft" hyphens to the end of we
      * guarantee that words that can fit will and that words that can't fit don't wrap prematurely.
      * Essentially, meaning words will always take up the maximum amount of space they can and only
