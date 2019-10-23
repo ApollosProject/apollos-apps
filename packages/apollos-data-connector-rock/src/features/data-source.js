@@ -87,7 +87,7 @@ export default class Features extends RockApolloDataSource {
 
     // Get the first three persona items.
     const personaFeed = await ContentItem.byPersonaFeed(3);
-    const items = await personaFeed.get();
+    const items = await personaFeed.expand('ContentChannel').get();
 
     // Map them into specific actions.
     return items.map((item, i) => ({
@@ -109,7 +109,9 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }
 
     const { ContentItem } = this.context.dataSources;
-    const cursor = ContentItem.byContentChannelId(contentChannelId);
+    const cursor = ContentItem.byContentChannelId(contentChannelId).expand(
+      'ContentChannel'
+    );
 
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
@@ -131,7 +133,9 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       return [];
     }
 
-    const cursor = await ContentItem.getCursorByParentContentItemId(sermon.id);
+    const cursor = (await ContentItem.getCursorByParentContentItemId(
+      sermon.id
+    )).expand('ContentChannel');
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
