@@ -25,32 +25,38 @@ let context;
 describe('features', () => {
   beforeEach(() => {
     const byPersonaFeed = jest.fn(() => ({
-      get: () => [
-        {
-          id: 1,
-          title: 'first item',
-          contentChannel: { name: 'content channel' },
-        },
-        {
-          id: 2,
-          title: 'second item',
-          contentChannel: { name: 'content channel' },
-        },
-        {
-          id: 3,
-          title: 'third item',
-          contentChannel: { name: 'content channel' },
-        },
-      ],
+      expand: () => ({
+        get: () => [
+          {
+            id: 1,
+            title: 'first item',
+            contentChannel: { name: 'content channel' },
+          },
+          {
+            id: 2,
+            title: 'second item',
+            contentChannel: { name: 'content channel' },
+          },
+          {
+            id: 3,
+            title: 'third item',
+            contentChannel: { name: 'content channel' },
+          },
+        ],
+      }),
     }));
     first = jest.fn(() => Promise.resolve(itemMock));
     const byContentChannelId = () => ({
-      get: () => Promise.resolve(itemMock),
-      top: () => ({ get: () => Promise.resolve(itemMock) }),
+      expand: () => ({
+        get: () => Promise.resolve(itemMock),
+        top: () => ({ get: () => Promise.resolve(itemMock) }),
+      }),
       first,
     });
     const getCursorByParentContentItemId = () => ({
-      get: () => itemMock,
+      expand: () => ({
+        get: () => Promise.resolve(itemMock),
+      }),
       first,
     });
     const getSermonFeed = () => ({
