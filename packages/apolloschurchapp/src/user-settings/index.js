@@ -3,7 +3,6 @@ import { ScrollView } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
-import VersionNumber from 'react-native-version-number';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {
