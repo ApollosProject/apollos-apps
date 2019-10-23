@@ -1,5 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`the HTMLView component should handle wierdly formatted nested line breaks in divs used to create poorly formatted html block spacing created by WYSIWYG editors 1`] = `
+<View
+  lineNumber={8}
+  onReady={true}
+  style={
+    Object {
+      "paddingBottom": 17.28,
+    }
+  }
+>
+  <View>
+    <View>
+      <View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should handle wierdly formatted nested line breaks in divs used to create poorly formatted html inline spacing created by WYSIWYG editors 1`] = `
+<View
+  lineNumber={8}
+  onReady={true}
+  style={
+    Object {
+      "paddingBottom": 17.28,
+    }
+  }
+>
+  <View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        
+
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`the HTMLView component should not render an image inside an anchor 1`] = `
 <View
   lineNumber={8}
@@ -12,13 +86,26 @@ exports[`the HTMLView component should not render an image inside an anchor 1`] 
 >
   <View>
     <Text
-      onPress={[Function]}
+      bold={false}
+      italic={false}
       style={
         Object {
-          "color": "#17B582",
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
         }
       }
-    />
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#17B582",
+          }
+        }
+      />
+    </Text>
   </View>
 </View>
 `;
@@ -81,6 +168,39 @@ exports[`the HTMLView component should render a block quote 1`] = `
 </View>
 `;
 
+exports[`the HTMLView component should render a div as a View 1`] = `
+<View
+  lineNumber={8}
+  onReady={true}
+  style={
+    Object {
+      "paddingBottom": 17.28,
+    }
+  }
+>
+  <View>
+    <View>
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text>
+          Boom
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`the HTMLView component should render a line break (br) 1`] = `
 <View
   lineNumber={8}
@@ -116,21 +236,6 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
         </Text>
       </Text>
     </View>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
-        }
-      }
-    >
-      
-
-    </Text>
   </View>
 </View>
 `;
@@ -177,7 +282,9 @@ exports[`the HTMLView component should render a link 1`] = `
           }
         >
           <Text>
-            Google
+            <Text>
+              Google
+            </Text>
           </Text>
         </Text>
       </Text>
@@ -717,7 +824,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            Fuse Group
+            <Text>
+              Fuse Group
+            </Text>
           </Text>
         </Text>
         <Text>
@@ -910,7 +1019,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            community
+            <Text>
+              community
+            </Text>
           </Text>
         </Text>
         <Text>
@@ -1297,7 +1408,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           }
         >
           <Text>
-            This holiday season
+            <Text>
+              This holiday season
+            </Text>
           </Text>
         </Text>
         <Text>
@@ -1619,7 +1732,9 @@ exports[`the HTMLView component should render handle relative links 1`] = `
           }
         >
           <Text>
-            Google
+            <Text>
+              Google
+            </Text>
           </Text>
         </Text>
       </Text>
