@@ -118,6 +118,7 @@ fragment baseCardFragment on ContentItem {
   ...coverImageFragment
   ...themeFragment
   title
+  hyphenatedTitle: title(hyphenated: true)
   summary
   isLiked
   ... on MediaContentItem {
@@ -367,6 +368,7 @@ fragment baseCardFragment on ContentItem {
   ...coverImageFragment
   ...themeFragment
   title
+  hyphenatedTitle: title(hyphenated: true)
   summary
   isLiked
   ... on MediaContentItem {
