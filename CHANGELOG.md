@@ -1,3 +1,16 @@
+v1.2.0-beta.7: October 23, 2019
+
+- Adds Version Number (#1148) (4cf5f0e8)
+- Adds "Soft" Hyphenation of HorizontalHighlightCard Item Titles (#1132) (6e46b4df)
+
+- Includes items from Channels that don't require approval (#1147) (5be303fb)
+- Makes markers tappable, campuses tappable, and always show current campus first (#1143) (0df5241e)
+- Improves consistency of tab view fix (#1146) (8e7cf7f5)
+
+- Fixes content item feature subtitles vanishing (#1145) (c349ae57)
+- Fixes for 'take image' option not uploading photo (#1144) (9bd4c003)
+- Fixes HTMLView content rendering bugs (#1112) (b3012901)
+
 v1.2.0-beta.6: October 21, 2019
 
 - Prevents Extra Space in Tab Bar (#1094) (0e645894)
