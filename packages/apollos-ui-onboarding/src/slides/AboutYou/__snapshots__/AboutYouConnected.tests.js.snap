@@ -394,6 +394,7 @@ Array [
                 >
                   <DatePicker
                     date={1980-02-10T05:00:00.000Z}
+                    maximumDate={2019-10-25T17:24:28.127Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -1104,6 +1105,7 @@ Array [
                 >
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
+                    maximumDate={2019-10-25T17:24:27.114Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
