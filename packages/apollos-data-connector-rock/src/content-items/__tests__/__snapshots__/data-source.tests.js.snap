@@ -13,7 +13,7 @@ Array [
 exports[`ContentItemsModel defaults to filtering content 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29",
     Object {},
     Object {},
   ],
@@ -23,7 +23,7 @@ Array [
 exports[`ContentItemsModel filters by content channel id 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28ContentChannelId%20eq%201%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29&%24orderby=StartDateTime%20desc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28ContentChannelId%20eq%201%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=StartDateTime%20desc",
     Object {},
     Object {
       "cacheOptions": Object {
@@ -48,7 +48,7 @@ Array [
 exports[`ContentItemsModel filters content when SHOW_INACTIVE_CONTENT is false 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29",
     Object {},
     Object {},
   ],
@@ -80,7 +80,7 @@ Array [
 exports[`ContentItemsModel getPersonaFeed fetches items from the Apollos plugin 2`] = `
 Array [
   Array [
-    "Apollos/ContentChannelItemsByDataViewGuids?guids=%2C&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27&%24orderby=StartDateTime%20desc",
+    "Apollos/ContentChannelItemsByDataViewGuids?guids=%2C&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=StartDateTime%20desc",
     Object {},
     Object {},
   ],
@@ -100,7 +100,7 @@ Array [
 exports[`ContentItemsModel getPersonaFeed fetches items from the custom rock endpoint 2`] = `
 Array [
   Array [
-    "ContentChannelItems/GetFromPersonDataView?guids=%2C&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27&%24orderby=StartDateTime%20desc",
+    "ContentChannelItems/GetFromPersonDataView?guids=%2C&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=StartDateTime%20desc",
     Object {},
     Object {},
   ],
@@ -129,7 +129,7 @@ Array [
     },
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -159,7 +159,7 @@ Array [
     },
   ],
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27&%24orderby=Order%20asc",
+    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -189,7 +189,7 @@ Array [
     },
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -219,7 +219,7 @@ Array [
     },
   ],
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27&%24orderby=Order%20asc",
+    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -254,7 +254,7 @@ Array [
     Object {},
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -289,7 +289,7 @@ Array [
     Object {},
   ],
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=1%2C2&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27&%24orderby=Order%20asc",
+    "Apollos/GetContentChannelItemsByIds?ids=1%2C2&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc",
     Object {},
     Object {},
   ],
@@ -326,7 +326,7 @@ Object {
 exports[`ContentItemsModel gets by ids 1`] = `
 Array [
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27%29",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29",
     Object {},
     Object {},
   ],
@@ -347,7 +347,7 @@ Array [
 exports[`ContentItemsModel gets by ids using Apollos Plugin 1`] = `
 Array [
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=1%2C2&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20Status%20eq%20%27Approved%27",
+    "Apollos/GetContentChannelItemsByIds?ids=1%2C2&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29",
     Object {},
     Object {},
   ],
