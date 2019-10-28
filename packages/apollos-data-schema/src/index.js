@@ -172,9 +172,14 @@ export const scriptureSchema = gql`
     version: String
   }
 
+  enum VERSION {
+    WEB
+    KJV
+  }
+
   extend type Query {
-    scripture(query: String!): Scripture
-    scriptures(query: String!): [Scripture]
+    scripture(query: String!, version: VERSION): Scripture
+    scriptures(query: String!, version: VERSION): [Scripture]
   }
 `;
 

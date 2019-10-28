@@ -15,36 +15,34 @@ export default class Scripture extends RESTDataSource {
     request.headers.set('api-key', `${this.token}`);
   }
 
-  async getFromId(id) {
-    const bibleId = BIBLE_API.BIBLE_ID;
+  async getFromId(id, version = 'WEB') {
+    const bibleId = BIBLE_API.BIBLE_ID[version];
     const { data } = await this.get(`${bibleId}/passages/${id}`);
     return data;
   }
 
-  async getScripture(query) {
-    const scriptures = await this.getScriptures(query);
+  async getScripture(query, version = 'WEB') {
+    const scriptures = await this.getScriptures(query, version);
     if (scriptures[0]) {
       return scriptures[0];
     }
     return null;
   }
 
-  async getScriptures(query) {
-    const bibleId = BIBLE_API.BIBLE_ID;
+  async getScriptures(query, version = 'WEB') {
+    const bibleId = BIBLE_API.BIBLE_ID[version];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    // Bible.api has a history of making unexpected API changes.
-    // At one point scriptures had a sub field, "passages"
-    // At another point, they returned the passage data on the `data` key directly.
-    // We should handle both for the time being.
-    if (get(scriptures, 'data.passages')) {
-      return scriptures.data.passages;
-    }
-    return scriptures.data;
+    return Promise.all(
+      scriptures.data.passages.map((passage) => ({
+        ...passage,
+        version: this.getVersion({ version }),
+      }))
+    );
   }
 
-  async getVersion() {
-    const bibleId = BIBLE_API.BIBLE_ID;
+  async getVersion({ version }) {
+    const bibleId = BIBLE_API.BIBLE_ID[version];
     const bible = await this.get(`${this.baseURL}${bibleId}`);
-    return bible.data.abbreviation;
+    return bible.data.abbreviationLocal;
   }
 }
