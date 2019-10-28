@@ -14,10 +14,11 @@ export default class Scripture extends RESTDataSource {
     request.headers.set('api-key', `${this.token}`);
   }
 
-  async getFromId(id, version = 'WEB') {
+  async getFromId(scriptureData) {
+    const { id, version } = JSON.parse(scriptureData);
     const bibleId = BIBLE_API.BIBLE_ID[version];
     const { data } = await this.get(`${bibleId}/passages/${id}`);
-    return data;
+    return { ...data, version };
   }
 
   async getScripture(query, version = 'WEB') {
@@ -32,9 +33,9 @@ export default class Scripture extends RESTDataSource {
     const bibleId = BIBLE_API.BIBLE_ID[version];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
     return Promise.all(
-      scriptures.data.passages.map((passage) => ({
+      scriptures.data.passages.map(async (passage) => ({
         ...passage,
-        version: this.getVersion(version),
+        version: await this.getVersion(version),
       }))
     );
   }

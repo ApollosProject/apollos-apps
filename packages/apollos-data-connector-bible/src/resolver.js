@@ -8,8 +8,8 @@ export default {
       dataSources.Scripture.getScriptures(query, version),
   },
   Scripture: {
-    id: ({ id }, args, context, { parentType }) =>
-      createGlobalId(id, parentType.name),
+    id: ({ id, version }, args, context, { parentType }) =>
+      createGlobalId(JSON.stringify({ id, version }), parentType.name),
     html: ({ content }) => content,
   },
 };
