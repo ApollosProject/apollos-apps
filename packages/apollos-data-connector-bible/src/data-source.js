@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
@@ -35,12 +34,12 @@ export default class Scripture extends RESTDataSource {
     return Promise.all(
       scriptures.data.passages.map((passage) => ({
         ...passage,
-        version: this.getVersion({ version }),
+        version: this.getVersion(version),
       }))
     );
   }
 
-  async getVersion({ version }) {
+  async getVersion(version) {
     const bibleId = BIBLE_API.BIBLE_ID[version];
     const bible = await this.get(`${this.baseURL}${bibleId}`);
     return bible.data.abbreviationLocal;
