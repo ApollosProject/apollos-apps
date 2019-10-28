@@ -18,10 +18,8 @@ export default class Scripture extends RESTDataSource {
   }
 
   async getFromId(id) {
-    const { id: parsedID, version } = JSON.parse(id);
-    const bibleId = BIBLE_API.BIBLE_ID[version];
-    const { data } = await this.get(`${bibleId}/passages/${parsedID}`);
-    return { ...data, version };
+    const { id: parsedID, bibleId } = JSON.parse(id);
+    return this.get(`${bibleId}/passages/${parsedID}`);
   }
 
   async getScripture(query, version) {
@@ -35,16 +33,10 @@ export default class Scripture extends RESTDataSource {
   async getScriptures(query, version) {
     const bibleId = BIBLE_API.BIBLE_ID[version || this.defaultVersion];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    return Promise.all(
-      scriptures.data.passages.map(async (passage) => ({
-        ...passage,
-        version: await this.getVersion(version),
-      }))
-    );
+    return scriptures.data.passages;
   }
 
-  async getVersion(version) {
-    const bibleId = BIBLE_API.BIBLE_ID[version];
+  async getVersion(bibleId) {
     const bible = await this.get(`${this.baseURL}${bibleId}`);
     return bible.data.abbreviationLocal;
   }

@@ -8,8 +8,10 @@ export default {
       dataSources.Scripture.getScriptures(query, version),
   },
   Scripture: {
-    id: ({ id, version }, args, context, { parentType }) =>
-      createGlobalId(JSON.stringify({ id, version }), parentType.name),
+    id: ({ id, bibleId }, args, context, { parentType }) =>
+      createGlobalId(JSON.stringify({ id, bibleId }), parentType.name),
     html: ({ content }) => content,
+    version: ({ bibleId }, args, { dataSources }) =>
+      dataSources.Scripture.getVersion(bibleId),
   },
 };
