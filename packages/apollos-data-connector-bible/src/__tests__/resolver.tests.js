@@ -57,7 +57,10 @@ describe('Scripture', () => {
   it('returns a verse as by node', async () => {
     const query = `
       query {
-        node (id: "${createGlobalId('SNG.1.1', 'Scripture')}") {
+        node (id: "${createGlobalId(
+          JSON.stringify({ id: 'SNG.1.1', version: 'WEB' }),
+          'Scripture'
+        )}") {
           id
           ... on Scripture {
             html
