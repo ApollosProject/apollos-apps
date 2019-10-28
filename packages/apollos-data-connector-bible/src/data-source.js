@@ -10,6 +10,9 @@ export default class Scripture extends RESTDataSource {
 
   token = BIBLE_API.KEY;
 
+  // default to the first one listed in the config
+  defaultVersion = Object.values(BIBLE_API.BIBLE_ID)[0];
+
   willSendRequest(request) {
     request.headers.set('api-key', `${this.token}`);
   }
@@ -21,7 +24,7 @@ export default class Scripture extends RESTDataSource {
     return { ...data, version };
   }
 
-  async getScripture(query, version = 'WEB') {
+  async getScripture(query, version) {
     const scriptures = await this.getScriptures(query, version);
     if (scriptures[0]) {
       return scriptures[0];
@@ -29,8 +32,8 @@ export default class Scripture extends RESTDataSource {
     return null;
   }
 
-  async getScriptures(query, version = 'WEB') {
-    const bibleId = BIBLE_API.BIBLE_ID[version];
+  async getScriptures(query, version) {
+    const bibleId = BIBLE_API.BIBLE_ID[version || this.defaultVersion];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
     return Promise.all(
       scriptures.data.passages.map(async (passage) => ({
