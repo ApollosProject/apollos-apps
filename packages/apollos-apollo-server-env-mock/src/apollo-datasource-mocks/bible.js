@@ -11,7 +11,6 @@ export default () => [
         content:
           '<p class="p"><span data-number="1" class="v">1</span>The Song of songs, which is Solomon’s.</p>',
         copyright: 'PUBLIC DOMAIN',
-        version: 'WEB',
       },
     ],
   },
@@ -27,7 +26,6 @@ export default () => [
         content:
           '<p class="p"><span data-number="1" class="v">1</span>Peter, an apostle of Jesus Christ, to the chosen ones who are living as foreigners in the Dispersion in Pontus, Galatia, Cappadocia, Asia, and Bithynia, </p>',
         copyright: 'PUBLIC DOMAIN',
-        version: 'WEB',
       },
       {
         id: 'JHN.3.16',
@@ -39,7 +37,6 @@ export default () => [
         content:
           '<p class="p"><span data-number="16" class="v">16</span><span class="wj">For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life. </span></p>',
         copyright: 'PUBLIC DOMAIN',
-        version: 'WEB',
       },
     ],
   },
@@ -54,7 +51,6 @@ export default () => [
       content:
         '<p class="p"><span data-number="1" class="v">1</span>The Song of songs, which is Solomon’s.</p>',
       copyright: 'PUBLIC DOMAIN',
-      version: 'WEB',
     },
   },
 ];

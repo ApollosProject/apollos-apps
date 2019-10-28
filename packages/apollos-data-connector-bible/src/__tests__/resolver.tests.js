@@ -12,6 +12,7 @@ describe('Scripture', () => {
   beforeEach(() => {
     schema = getSchema();
     context = getContext();
+    context.dataSources.Scripture.getVersion = () => 'WEB';
 
     fetch.resetMocks();
     fetch.mockLiveDataSourceApis();
