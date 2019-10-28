@@ -63,7 +63,7 @@ class DateInput extends PureComponent {
           isVisible={this.state.isVisible}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
-          maximumDate={this.props.maximumDate || new Date()}
+          maximumDate={this.props.maximumDate || new Date(Date.now())} // Using Date.now so we have something to mock in the tests
         />
         {this.props.displayValue || this.props.placeholder ? (
           <FloatingLabel animation={new Animated.Value(1)}>
