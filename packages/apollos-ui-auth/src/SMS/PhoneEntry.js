@@ -63,7 +63,7 @@ const PhoneEntry = ({
             <PromptText padded>{smsPromptText}</PromptText>
 
             <TextInput
-              autofocus
+              autoFocus
               autoComplete={'tel'}
               label={'Mobile Number'}
               type={'phone'}
