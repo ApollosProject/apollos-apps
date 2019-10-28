@@ -6,7 +6,17 @@ import { Providers } from '../../testUtils';
 
 import AboutYou from '.';
 
+let realDateNow;
+
 describe('The Onboarding AboutYou component', () => {
+  beforeAll(() => {
+    realDateNow = Date.now.bind(global.Date);
+    const dateNowStub = jest.fn(() => 1530518207007);
+    global.Date.now = dateNowStub;
+  });
+  afterAll(() => {
+    global.Date.now = realDateNow;
+  });
   it('should render', () => {
     /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */

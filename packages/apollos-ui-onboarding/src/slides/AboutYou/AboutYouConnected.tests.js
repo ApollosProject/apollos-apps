@@ -6,7 +6,17 @@ import { renderWithApolloData, Providers } from '../../testUtils';
 import GET_USER_GENDER_AND_BIRTH_DATE from './getUserGenderAndBirthDate';
 import AboutYouConnected from './AboutYouConnected';
 
+let realDateNow;
+
 describe('AboutYouConnected component', () => {
+  beforeAll(() => {
+    realDateNow = Date.now.bind(global.Date);
+    const dateNowStub = jest.fn(() => 1530518207007);
+    global.Date.now = dateNowStub;
+  });
+  afterAll(() => {
+    global.Date.now = realDateNow;
+  });
   it('renders in a default state', () => {
     const tree = renderer.create(
       <Providers>
