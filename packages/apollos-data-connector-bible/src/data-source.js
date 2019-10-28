@@ -17,10 +17,10 @@ export default class Scripture extends RESTDataSource {
     request.headers.set('api-key', `${this.token}`);
   }
 
-  async getFromId(scriptureData) {
-    const { id, version } = JSON.parse(scriptureData);
+  async getFromId(id) {
+    const { id: parsedID, version } = JSON.parse(id);
     const bibleId = BIBLE_API.BIBLE_ID[version];
-    const { data } = await this.get(`${bibleId}/passages/${id}`);
+    const { data } = await this.get(`${bibleId}/passages/${parsedID}`);
     return { ...data, version };
   }
 
