@@ -7,7 +7,6 @@ const { TWILIO } = ApollosConfig;
 export default class TwilioSms extends DataSource {
   constructor(...args) {
     super(...args);
-    console.log(TWILIO.ACCOUNT_SID);
     this.twilio = new Twilio(TWILIO.ACCOUNT_SID, TWILIO.AUTH_TOKEN);
   }
 
