@@ -60,6 +60,16 @@ const Auth = {
   },
 };
 
+class Cache {
+  get = () => Promise.resolve(null);
+
+  set = () => Promise.resolve(null);
+
+  initialize({ context }) {
+    this.context = context;
+  }
+}
+
 const { getSchema, getContext } = createTestHelpers({
   ContentChannel,
   ContentItem,
@@ -76,6 +86,7 @@ const { getSchema, getContext } = createTestHelpers({
   RockConstants,
   Person,
   Auth,
+  Cache: { dataSource: Cache },
 });
 // we import the root-level schema and resolver so we test the entire integration:
 
