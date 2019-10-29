@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
-import { get } from 'lodash';
 
 import { ErrorCard } from '@apollosproject/ui-kit';
 
@@ -9,7 +8,15 @@ import searchCardComponentMapper from './searchCardComponentMapper';
 import GET_CONTENT_CARD from './query';
 
 const SearchCardConnected = memo(
-  ({ Component, contentId, isLoading, ...otherProps }) => {
+  ({
+    Component,
+    contentId,
+    isLoading,
+    title,
+    summary,
+    coverImage,
+    ...otherProps
+  }) => {
     if (!contentId || isLoading) return <Component {...otherProps} isLoading />;
 
     return (
@@ -17,18 +24,18 @@ const SearchCardConnected = memo(
         {({ data: { node = {} } = {}, loading, error }) => {
           if (error) return <ErrorCard error={error} />;
 
-          const coverImage = get(node, 'coverImage.sources', undefined);
-          const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-          const labelText = get(node, 'parentChannel.name', null);
+          // const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
+          // const labelText = get(node, 'parentChannel.name', null);
 
           return (
             <Component
-              {...node}
-              hasAction={hasMedia}
-              labelText={labelText}
-              {...otherProps}
+              title={title}
+              summary={summary}
               coverImage={coverImage}
+              // hasAction={hasMedia}
+              // labelText={labelText}
               isLoading={loading}
+              {...otherProps}
             />
           );
         }}
@@ -40,7 +47,10 @@ const SearchCardConnected = memo(
 SearchCardConnected.propTypes = {
   Component: PropTypes.func,
   contentId: PropTypes.string,
+  coverImage: PropTypes.shape({}),
   isLoading: PropTypes.bool,
+  summary: PropTypes.string,
+  title: PropTypes.string,
 };
 
 SearchCardConnected.defaultProps = {
