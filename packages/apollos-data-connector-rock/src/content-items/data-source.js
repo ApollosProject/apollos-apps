@@ -237,7 +237,6 @@ export default class ContentItem extends RockApolloDataSource {
     const squareImage = images.find((image) =>
       image.key.toLowerCase().includes('square')
     );
-    console.log({ images });
     if (squareImage) return { ...squareImage, __typename: 'ImageMedia' };
     return { ...images[0], __typename: 'ImageMedia' };
   }
@@ -258,8 +257,6 @@ export default class ContentItem extends RockApolloDataSource {
     const ourImages = this.getImages(root).filter(
       ({ sources }) => sources.length
     );
-
-    console.log({ ourImages });
 
     if (ourImages.length) {
       image = this.pickBestImage({ images: ourImages });
@@ -285,8 +282,6 @@ export default class ContentItem extends RockApolloDataSource {
     if (image != null) {
       Cache.set({ key: `contentItem:coverImage:${root.id}`, data: image });
     }
-
-    console.log(image);
 
     return image;
   }
