@@ -9,9 +9,8 @@ import searchCardComponentMapper from './searchCardComponentMapper';
 import GET_CONTENT_CARD from './query';
 
 const SearchCardConnected = memo(
-  ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
-    if (!contentId || isLoading)
-      return <Component {...otherProps} isLoading tile={tile} />;
+  ({ Component, contentId, isLoading, ...otherProps }) => {
+    if (!contentId || isLoading) return <Component {...otherProps} isLoading />;
 
     return (
       <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
@@ -40,10 +39,8 @@ const SearchCardConnected = memo(
 
 SearchCardConnected.propTypes = {
   Component: PropTypes.func,
-  mapProps: PropTypes.func,
   contentId: PropTypes.string,
   isLoading: PropTypes.bool,
-  tile: PropTypes.bool,
 };
 
 SearchCardConnected.defaultProps = {
