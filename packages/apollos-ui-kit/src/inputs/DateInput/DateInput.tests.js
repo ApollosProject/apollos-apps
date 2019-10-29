@@ -10,7 +10,10 @@ describe('The DateInput component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <DateInput value={moment.utc('1/1/2015').toDate()} />
+        <DateInput
+          value={moment.utc('1/1/2015').toDate()}
+          maximumDate={moment.utc('1/1/2015').toDate()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -21,6 +24,7 @@ describe('The DateInput component', () => {
         <DateInput
           value={moment.utc('1/1/2015').toDate()}
           displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')}
+          maximumDate={moment.utc('1/1/2015').toDate()}
         />
       </Providers>
     );
@@ -32,6 +36,7 @@ describe('The DateInput component', () => {
         <DateInput
           placeholder={'mm/dd/yyyy'}
           value={moment.utc('1/1/2015').toDate()}
+          maximumDate={moment.utc('1/1/2015').toDate()}
         />
       </Providers>
     );
@@ -43,6 +48,7 @@ describe('The DateInput component', () => {
         <DateInput
           value={moment.utc('1/1/2015').toDate()}
           displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')}
+          maximumDate={moment.utc('1/1/2015').toDate()}
           label={'Date Label'}
         />
       </Providers>
@@ -54,6 +60,7 @@ describe('The DateInput component', () => {
       <Providers>
         <DateInput
           value={moment.utc('1/1/2015').toDate()}
+          maximumDate={moment.utc('1/1/2015').toDate()}
           error={'Danger Will Robinson'}
         />
       </Providers>
