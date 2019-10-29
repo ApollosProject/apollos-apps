@@ -18,57 +18,65 @@ class LiveUpdater extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    // If there is a difference between the old active content, and the new active content
+    // If there is a difference between the old active content, and the new active conten
     if (
-      uniqBy(prevProps.liveContent, this.props.liveContent, 'id').length !== 0
+      uniqBy(
+        [...prevProps.liveContent, ...this.props.liveContent],
+        (liveStream) => liveStream.contentItem.id
+      ).length !== 0
     ) {
       this.updateLiveCache({
         lastLiveContent: prevProps.liveContent,
+        liveContent: this.props.liveContent,
       });
     }
   }
 
-  updateLiveCache({ lastLiveContent }) {
-    this.props.liveContent.forEach(({ id, liveStream, __typename }) => {
-      this.props.client.writeFragment({
-        id: `${__typename}:${id}`,
-        fragment: gql`
-          fragment LiveItem on WeekendContentItem {
-            liveStream {
-              isLive
-              eventStartTime
-              media {
-                sources {
-                  uri
+  updateLiveCache({ lastLiveContent, liveContent }) {
+    liveContent.forEach(
+      ({ contentItem: { __typename, id }, ...liveStream }) => {
+        this.props.client.writeFragment({
+          id: `${__typename}:${id}`,
+          fragment: gql`
+            fragment LiveItem on WeekendContentItem {
+              liveStream {
+                isLive
+                eventStartTime
+                media {
+                  sources {
+                    uri
+                  }
                 }
+                webViewUrl
               }
-              webViewUrl
             }
-          }
-        `,
-        data: { __typename, liveStream },
-      });
-    });
-    lastLiveContent.forEach(({ id, liveStream, __typename }) => {
-      this.props.client.writeFragment({
-        id: `${__typename}:${id}`,
-        fragment: gql`
-          fragment LiveItem on WeekendContentItem {
-            liveStream {
-              isLive
-              eventStartTime
-              media {
-                sources {
-                  uri
+          `,
+          data: { __typename, liveStream: { ...liveStream, isLive: true } },
+        });
+      }
+    );
+    lastLiveContent.forEach(
+      ({ contentItem: { __typename, id }, ...liveStream }) => {
+        this.props.client.writeFragment({
+          id: `${__typename}:${id}`,
+          fragment: gql`
+            fragment LiveItem on WeekendContentItem {
+              liveStream {
+                isLive
+                eventStartTime
+                media {
+                  sources {
+                    uri
+                  }
                 }
+                webViewUrl
               }
-              webViewUrl
             }
-          }
-        `,
-        data: { __typename, liveStream: { ...liveStream, isLive: false } },
-      });
-    });
+          `,
+          data: { __typename, liveStream: { ...liveStream, isLive: false } },
+        });
+      }
+    );
   }
 
   render() {
@@ -77,9 +85,9 @@ class LiveUpdater extends Component {
 }
 
 const LiveProvider = (props) => (
-  <Query query={getLiveContent} pollInterval={30000}>
-    {({ data: { activeLiveStreamContent = [] } = {}, client }) => (
-      <LiveUpdater client={client} liveContent={activeLiveStreamContent}>
+  <Query query={getLiveContent} pollInterval={300000}>
+    {({ data: { liveStreams = [] } = {}, client }) => (
+      <LiveUpdater client={client} liveContent={liveStreams}>
         {props.children}
       </LiveUpdater>
     )}

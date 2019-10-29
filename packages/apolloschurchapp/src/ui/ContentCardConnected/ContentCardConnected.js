@@ -28,7 +28,7 @@ const ContentCardConnected = memo(
               {...node}
               hasAction={hasMedia}
               isLive={isLive}
-              labelText={labelText}
+              labelText={isLive ? 'Live' : labelText}
               {...otherProps}
               coverImage={coverImage}
               isLoading={loading}

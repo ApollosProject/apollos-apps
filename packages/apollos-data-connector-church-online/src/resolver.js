@@ -2,7 +2,15 @@ export default {
   Query: {
     liveStream: (root, args, { dataSources }) =>
       dataSources.LiveStream.getLiveStream(),
-    activeLiveStreamContent: (root, args, { dataSources }) =>
-      dataSources.ContentItem.getActiveLiveStreamContent(),
+    liveStreams: (root, args, { dataSources }) =>
+      dataSources.LiveStream.getLiveStreams(),
+  },
+  LiveStream: {
+    contentItem: (root, args, { dataSources }) => {
+      if (root.contentItem) {
+        return root.contentItem;
+      }
+      return dataSources.ContentItem.getSermonFeed().first();
+    },
   },
 };

@@ -460,11 +460,12 @@ export const liveSchema = gql`
     eventStartTime: String
     media: VideoMedia
     webViewUrl: String
+    contentItem: ContentItem @cacheControl(maxAge: 10)
   }
 
   extend type Query {
     liveStream: LiveStream
-    activeLiveStreamContent: [ContentItem] @cacheControl(maxAge: 0)
+    liveStreams: [LiveStream]
   }
 
   extend type WeekendContentItem {

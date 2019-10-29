@@ -224,7 +224,9 @@ export default class ContentItem extends RockApolloDataSource {
     return liveContent.map((c) => c.id).includes(id);
   }
 
-  async getActiveLiveStreamContent() {
+  // having this as a method instead of a property will cause issues in the
+  // data-connector-church-online package.
+  getActiveLiveStreamContent = async () => {
     const { LiveStream } = this.context.dataSources;
     const { isLive } = await LiveStream.getLiveStream();
     // if there is no live stream, then there is no live content. Easy enough!
@@ -232,7 +234,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     const mostRecentSermon = await this.getSermonFeed().first();
     return [mostRecentSermon];
-  }
+  };
 
   // eslint-disable-next-line class-methods-use-this
   pickBestImage({ images }) {
