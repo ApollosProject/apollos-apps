@@ -20,14 +20,12 @@ const SearchCardConnected = memo(
 
           const coverImage = get(node, 'coverImage.sources', undefined);
           const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-          const isLive = get(node, 'liveStream.isLive', false);
           const labelText = get(node, 'parentChannel.name', null);
 
           return (
             <Component
               {...node}
               hasAction={hasMedia}
-              isLive={isLive}
               labelText={labelText}
               {...otherProps}
               coverImage={coverImage}
