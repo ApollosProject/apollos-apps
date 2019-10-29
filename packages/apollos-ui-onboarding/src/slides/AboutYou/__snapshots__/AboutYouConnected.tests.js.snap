@@ -106,7 +106,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -167,7 +167,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -394,6 +394,7 @@ Array [
                 >
                   <DatePicker
                     date={1980-02-10T05:00:00.000Z}
+                    maximumDate={2018-07-02T07:56:47.007Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -828,7 +829,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -877,7 +878,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomColor": "rgba(165, 165, 165, 0.30000000000000004)",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
                 "borderBottomWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
@@ -1104,6 +1105,7 @@ Array [
                 >
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
+                    maximumDate={2018-07-02T07:56:47.007Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}

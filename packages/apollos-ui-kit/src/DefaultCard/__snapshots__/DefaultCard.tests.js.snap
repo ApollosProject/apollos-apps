@@ -9,7 +9,7 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -75,7 +75,7 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -200,7 +200,7 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -265,7 +265,7 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -461,7 +461,7 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -526,7 +526,7 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -722,7 +722,7 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -787,7 +787,7 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -983,7 +983,7 @@ exports[`DefaultCard should render with a summary 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1048,7 +1048,7 @@ exports[`DefaultCard should render with a summary 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -1260,7 +1260,7 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1325,7 +1325,7 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -1568,7 +1568,7 @@ exports[`DefaultCard should render with custom labelText 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1633,7 +1633,7 @@ exports[`DefaultCard should render with custom labelText 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }
@@ -1876,7 +1876,7 @@ exports[`DefaultCard should should render as isLiked 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.30000000000000004)",
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
       "shadowOffset": Object {
         "height": 1,
         "width": 0,
@@ -1941,7 +1941,7 @@ exports[`DefaultCard should should render as isLiked 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            3003121664,
+            2147483648,
             0,
           ]
         }

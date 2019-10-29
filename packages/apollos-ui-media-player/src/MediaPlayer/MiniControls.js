@@ -139,10 +139,7 @@ class MiniControls extends Component {
                 )}
                 <Mutation mutation={DISMISS}>
                   {(dismiss) => (
-                    <StyledButtonIcon
-                      name="close"
-                      onPress={() => (isPlaying ? goFullscreen() : dismiss())}
-                    />
+                    <StyledButtonIcon name="close" onPress={() => dismiss()} />
                   )}
                 </Mutation>
               </Controls>

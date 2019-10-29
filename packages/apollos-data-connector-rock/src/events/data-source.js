@@ -46,6 +46,14 @@ export default class Event extends RockApolloDataSource {
     return event.name;
   };
 
+  getDescription = async ({ eventItemId }) => {
+    const event = await this.request('EventItems')
+      .cache({ ttl: 60 })
+      .find(eventItemId)
+      .get();
+    return event.description;
+  };
+
   getImage = async ({ eventItemId }) => {
     const event = await this.request('EventItems')
       .cache({ ttl: 60 })

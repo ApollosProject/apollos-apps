@@ -34,7 +34,11 @@ ESLint and all required packages are built-in so once you `yarn`, you'll have th
     "editor.formatOnSave": false
   },
   "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+    ],
 }
 ```
 
