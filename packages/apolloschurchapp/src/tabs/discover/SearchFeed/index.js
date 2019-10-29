@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 import { FeedView } from '@apollosproject/ui-kit';
 
-import ContentCardConnected from '../../../ui/ContentCardConnected';
+import SearchCardConnected from '../../../ui/SearchCardConnected';
 
 import GET_SEARCH_RESULTS from './getSearchResults';
 import NoResults from './NoResults';
@@ -33,7 +33,7 @@ const SearchFeed = withNavigation(({ navigation, searchText }) => (
   >
     {({ loading, error, data, refetch }) => (
       <StyledFeedView
-        ListItemComponent={ContentCardConnected}
+        ListItemComponent={SearchCardConnected}
         content={get(data, 'search.edges', [])
           .map((edge) => edge.node)
           .filter((node) => !!node)}
