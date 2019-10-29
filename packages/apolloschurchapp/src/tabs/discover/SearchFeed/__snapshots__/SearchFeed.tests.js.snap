@@ -81,7 +81,6 @@ exports[`The SearchFeed component should render 1`] = `
                   "hyphenatedTitle": "-",
                   "id": "DevotionalContentItem:561dfb7dbd8a5c093fd8385c7edaadbc",
                   "isLiked": false,
-                  "likedCount": 0,
                   "parentChannel": Object {
                     "__typename": "ContentChannel",
                     "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
@@ -104,7 +103,6 @@ exports[`The SearchFeed component should render 1`] = `
                   "hyphenatedTitle": "-",
                   "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
                   "isLiked": false,
-                  "likedCount": 1,
                   "parentChannel": Object {
                     "__typename": "ContentChannel",
                     "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
@@ -132,7 +130,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   "hyphenatedTitle": "-",
                   "id": "UniversalContentItem:895738f70482712adb3ab45a08c30456",
                   "isLiked": false,
-                  "likedCount": 0,
                   "parentChannel": Object {
                     "__typename": "ContentChannel",
                     "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
@@ -159,7 +156,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   "hyphenatedTitle": "-",
                   "id": "UniversalContentItem:296373ecb53580855cadffa0375ebe18",
                   "isLiked": false,
-                  "likedCount": 0,
                   "parentChannel": Object {
                     "__typename": "ContentChannel",
                     "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
@@ -177,7 +173,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   "hyphenatedTitle": "-",
                   "id": "UniversalContentItem:c495ff18cd998ed516a798b6218907cd",
                   "isLiked": false,
-                  "likedCount": 2,
                   "parentChannel": Object {
                     "__typename": "ContentChannel",
                     "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
@@ -204,7 +199,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   "hyphenatedTitle": "-",
                   "id": "DevotionalContentItem:4dd74ceca9e09b5276e93cbf53821bd6",
                   "isLiked": false,
-                  "likedCount": 0,
                   "parentChannel": Object {
                     "__typename": "ContentChannel",
                     "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
