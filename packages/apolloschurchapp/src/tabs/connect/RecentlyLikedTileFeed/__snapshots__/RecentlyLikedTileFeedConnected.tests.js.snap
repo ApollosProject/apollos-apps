@@ -107,7 +107,6 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
           "hyphenatedTitle": "Mea Animal Aperiam Ornatus Eu",
           "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
           "isLiked": false,
-          "likedCount": 0,
           "parentChannel": Object {
             "__typename": "ContentChannel",
             "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
@@ -125,7 +124,6 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
           "hyphenatedTitle": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
           "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
           "isLiked": false,
-          "likedCount": 0,
           "parentChannel": Object {
             "__typename": "ContentChannel",
             "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
@@ -863,7 +861,6 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
           "hyphenatedTitle": "Mea Animal Aperiam Ornatus Eu",
           "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
           "isLiked": false,
-          "likedCount": 0,
           "parentChannel": Object {
             "__typename": "ContentChannel",
             "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
@@ -881,7 +878,6 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
           "hyphenatedTitle": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
           "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
           "isLiked": false,
-          "likedCount": 0,
           "parentChannel": Object {
             "__typename": "ContentChannel",
             "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
