@@ -1,56 +1,48 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
-
-import { ErrorCard } from '@apollosproject/ui-kit';
+import { get } from 'lodash';
 
 import searchCardComponentMapper from './searchCardComponentMapper';
-import GET_CONTENT_CARD from './query';
 
 const SearchCardConnected = memo(
-  ({
-    Component,
-    contentId,
-    isLoading,
-    title,
-    summary,
-    coverImage,
-    ...otherProps
-  }) => {
-    if (!contentId || isLoading) return <Component {...otherProps} isLoading />;
+  ({ Component, data, isLoading, ...otherProps }) => {
+    const typename = get(data, 'node.id', '').split(':')[0];
+    const hasMedia = () => {
+      switch (typename) {
+        case 'MediaContentItem':
+        case 'WeekendContentItem':
+          return true;
+        default:
+          return false;
+      }
+    };
+
+    console.log(data);
 
     return (
-      <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
-        {({ data: { node = {} } = {}, loading, error }) => {
-          if (error) return <ErrorCard error={error} />;
-
-          // const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-          // const labelText = get(node, 'parentChannel.name', null);
-
-          return (
-            <Component
-              title={title}
-              summary={summary}
-              coverImage={coverImage}
-              // hasAction={hasMedia}
-              // labelText={labelText}
-              isLoading={loading}
-              {...otherProps}
-            />
-          );
-        }}
-      </Query>
+      <Component
+        title={get(data, 'title', '')}
+        summary={get(data, 'summary', '')}
+        coverImage={get(data, 'coverImage.sources', {})}
+        hasAction={hasMedia}
+        isLoading={isLoading}
+        __typename={typename}
+        id={get(data, 'node.id', null)}
+        {...otherProps}
+      />
     );
   }
 );
 
 SearchCardConnected.propTypes = {
   Component: PropTypes.func,
-  contentId: PropTypes.string,
-  coverImage: PropTypes.shape({}),
+  data: PropTypes.shape({
+    summary: PropTypes.string,
+    title: PropTypes.string,
+    coverImage: PropTypes.shape({}),
+    node: PropTypes.shape({}),
+  }),
   isLoading: PropTypes.bool,
-  summary: PropTypes.string,
-  title: PropTypes.string,
 };
 
 SearchCardConnected.defaultProps = {
