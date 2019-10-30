@@ -1,5 +1,3 @@
-import { fetch } from 'apollo-server-env';
-
 import ApollosConfig from '@apollosproject/config';
 import LiveDataSource from '../data-source';
 
