@@ -19,6 +19,9 @@ const SearchCardConnected = memo(
      * Rock for that either. */
     const typename = get(node, 'id', '').split(':')[0];
 
+    /* We don't have a way to know for certain if a particular card is true for `hasAction` without
+     * hitting Rock. While not 100% perfect we do know that these two types will have almost always
+     * have media associated with them. */
     const hasAction = () => {
       switch (typename) {
         case 'MediaContentItem':
