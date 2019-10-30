@@ -85,7 +85,7 @@ class LiveUpdater extends Component {
 }
 
 const LiveProvider = (props) => (
-  <Query query={getLiveContent} pollInterval={300000}>
+  <Query query={getLiveContent} pollInterval={30000}>
     {({ data: { liveStreams = [] } = {}, client }) => (
       <LiveUpdater client={client} liveContent={liveStreams}>
         {props.children}
