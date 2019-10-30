@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
@@ -19,7 +20,8 @@ export default class Scripture extends RESTDataSource {
 
   async getFromId(id) {
     const { id: parsedID, bibleId } = JSON.parse(id);
-    return this.get(`${bibleId}/passages/${parsedID}`);
+    const { data } = await this.get(`${bibleId}/passages/${parsedID}`);
+    return data;
   }
 
   async getScripture(query, version) {
@@ -34,7 +36,14 @@ export default class Scripture extends RESTDataSource {
     if (query === '') return [];
     const bibleId = BIBLE_API.BIBLE_ID[version || this.defaultVersion];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
-    return scriptures.data.passages;
+    // Bible.api has a history of making unexpected API changes.
+    // At one point scriptures had a sub field, "passages"
+    // At another point, they returned the passage data on the `data` key directly.
+    // We should handle both for the time being.
+    if (get(scriptures, 'data.passages')) {
+      return scriptures.data.passages;
+    }
+    return scriptures.data;
   }
 
   async getVersion(bibleId) {
