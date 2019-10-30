@@ -33,8 +33,8 @@ export default class Scripture extends RESTDataSource {
   }
 
   async getScriptures(query, version) {
-    let safeVersion = version ? version.toUpperCase() : null;
     if (query === '') return [];
+    let safeVersion = version ? version.toUpperCase() : null;
     if (!this.availableVersions.includes(safeVersion)) {
       console.warn(
         `${safeVersion} version not available, using ${
