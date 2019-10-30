@@ -33,7 +33,7 @@ export default class Scripture extends RESTDataSource {
   }
 
   async getScriptures(query, version) {
-    const safeVersion = version ? version.toUpperCase() : null;
+    let safeVersion = version ? version.toUpperCase() : null;
     if (query === '') return [];
     if (!this.availableVersions.includes(safeVersion)) {
       console.warn(
@@ -41,9 +41,9 @@ export default class Scripture extends RESTDataSource {
           this.availableVersions[0]
         }`
       );
+      [safeVersion] = this.availableVersions;
     }
-    const bibleId =
-      BIBLE_API.BIBLE_ID[safeVersion || this.availableVersions[0]];
+    const bibleId = BIBLE_API.BIBLE_ID[safeVersion];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
     // Bible.api has a history of making unexpected API changes.
     // At one point scriptures had a sub field, "passages"
