@@ -19,11 +19,13 @@ const StyledFeedView = withProps(({ hasContent }) => ({
   },
 }))(FeedView);
 
-const handleOnPress = ({ navigation, item }) =>
-  navigation.navigate('ContentSingle', {
-    itemId: item.id,
+const handleOnPress = ({ navigation, item }) => {
+  const id = get(item, 'node.id', null);
+  return navigation.navigate('ContentSingle', {
+    itemId: id,
     transitionKey: item.transitionKey,
   });
+};
 
 const SearchFeed = withNavigation(({ navigation, searchText }) => (
   <Query
