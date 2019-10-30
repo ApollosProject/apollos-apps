@@ -375,8 +375,8 @@ type Query {
   currentUser: AuthenticatedUser
   liveStream: LiveStream
   liveStreams: [LiveStream]
-  scripture(query: String!): Scripture
-  scriptures(query: String!): [Scripture]
+  scripture(query: String!, version: VERSION): Scripture
+  scriptures(query: String!, version: VERSION): [Scripture]
   userPass: Pass
   search(query: String!, first: Int, after: String): SearchResultsConnection
   campuses(location: CampusLocationInput): [Campus]
@@ -393,6 +393,7 @@ type Scripture implements Node {
   html: String
   reference: String
   copyright: String
+  version: String
 }
 
 type ScriptureFeature implements Feature & Node {
@@ -496,6 +497,11 @@ input UpdateProfileInput {
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
+
+enum VERSION {
+  WEB
+  KJV
+}
 
 type VideoMedia implements Media {
   name: String
