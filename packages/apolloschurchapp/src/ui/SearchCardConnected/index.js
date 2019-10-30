@@ -18,6 +18,7 @@ const SearchCardConnected = memo(
      * need the `id for navigation but also use it to grab the `typename` so we don't have to hit
      * Rock for that either. */
     const typename = get(node, 'id', '').split(':')[0];
+
     const hasAction = () => {
       switch (typename) {
         case 'MediaContentItem':
@@ -31,7 +32,7 @@ const SearchCardConnected = memo(
     return (
       <Component
         coverImage={get(coverImage, 'sources', [])}
-        hasAction={hasAction}
+        hasAction={hasAction()}
         isLoading={isLoading}
         summary={summary}
         title={title}
