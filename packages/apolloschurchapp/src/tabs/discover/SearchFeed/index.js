@@ -27,6 +27,8 @@ const handleOnPress = ({ navigation, item }) => {
   });
 };
 
+const keyExtractor = (item) => item && get(item, 'node.id', null);
+
 const SearchFeed = withNavigation(({ navigation, searchText }) => (
   <Query
     query={GET_SEARCH_RESULTS}
@@ -43,6 +45,7 @@ const SearchFeed = withNavigation(({ navigation, searchText }) => (
         error={error}
         refetch={refetch}
         onPressItem={(item) => handleOnPress({ navigation, item })}
+        keyExtractor={keyExtractor}
       />
     )}
   </Query>
