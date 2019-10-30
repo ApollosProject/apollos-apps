@@ -5,9 +5,20 @@ import { get } from 'lodash';
 import searchCardComponentMapper from './searchCardComponentMapper';
 
 const SearchCardConnected = memo(
-  ({ Component, data, isLoading, ...otherProps }) => {
-    const typename = get(data, 'node.id', '').split(':')[0];
-    const hasMedia = () => {
+  ({
+    Component,
+    coverImage,
+    isLoading,
+    node,
+    summary,
+    title,
+    ...otherProps
+  }) => {
+    /* `id` is the only value we pull from the `node` and it is server optimized to not hit Rock. We
+     * need the `id for navigation but also use it to grab the `typename` so we don't have to hit
+     * Rock for that either. */
+    const typename = get(node, 'id', '').split(':')[0];
+    const hasAction = () => {
       switch (typename) {
         case 'MediaContentItem':
         case 'WeekendContentItem':
@@ -17,18 +28,15 @@ const SearchCardConnected = memo(
       }
     };
 
-    console.log(data);
-
     return (
       <Component
-        title={get(data, 'title', '')}
-        summary={get(data, 'summary', '')}
-        coverImage={get(data, 'coverImage.sources', {})}
-        hasAction={hasMedia}
+        coverImage={get(coverImage, 'sources', [])}
+        hasAction={hasAction}
         isLoading={isLoading}
-        __typename={typename}
-        id={get(data, 'node.id', null)}
+        summary={summary}
+        title={title}
         {...otherProps}
+        __typename={typename} // we want to explicitly make sure we override any `typename` that might come from `otherProps`
       />
     );
   }
@@ -36,12 +44,10 @@ const SearchCardConnected = memo(
 
 SearchCardConnected.propTypes = {
   Component: PropTypes.func,
-  data: PropTypes.shape({
-    summary: PropTypes.string,
-    title: PropTypes.string,
-    coverImage: PropTypes.shape({}),
-    node: PropTypes.shape({}),
-  }),
+  coverImage: PropTypes.shape({}),
+  summary: PropTypes.string,
+  title: PropTypes.string,
+  node: PropTypes.shape({}),
   isLoading: PropTypes.bool,
 };
 
