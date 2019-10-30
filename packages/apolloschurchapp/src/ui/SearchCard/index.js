@@ -42,7 +42,9 @@ const SearchCard = memo(
 
 SearchCard.propTypes = {
   Component: PropTypes.func,
-  coverImage: PropTypes.shape({}),
+  coverImage: PropTypes.shape({
+    sources: PropTypes.array,
+  }),
   summary: PropTypes.string,
   title: PropTypes.string,
   node: PropTypes.shape({}),
