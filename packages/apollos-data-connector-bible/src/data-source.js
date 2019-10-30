@@ -12,7 +12,7 @@ export default class Scripture extends RESTDataSource {
   token = BIBLE_API.KEY;
 
   // default to the first one listed in the config
-  defaultVersion = Object.values(BIBLE_API.BIBLE_ID)[0];
+  defaultVersion = Object.keys(BIBLE_API.BIBLE_ID)[0];
 
   willSendRequest(request) {
     request.headers.set('api-key', `${this.token}`);
