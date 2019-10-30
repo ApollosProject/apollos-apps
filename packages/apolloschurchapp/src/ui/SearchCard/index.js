@@ -4,7 +4,7 @@ import { get } from 'lodash';
 
 import { contentCardComponentMapper } from '../ContentCardConnected';
 
-const SearchCardConnected = memo(
+const SearchCard = memo(
   ({
     Component,
     coverImage,
@@ -29,7 +29,7 @@ const SearchCardConnected = memo(
     return (
       <Component
         coverImage={get(coverImage, 'sources', [])}
-        hasAction={hasAction()}
+        hasAction={hasAction}
         isLoading={isLoading}
         summary={summary}
         title={title}
@@ -40,7 +40,7 @@ const SearchCardConnected = memo(
   }
 );
 
-SearchCardConnected.propTypes = {
+SearchCard.propTypes = {
   Component: PropTypes.func,
   coverImage: PropTypes.shape({}),
   summary: PropTypes.string,
@@ -49,10 +49,10 @@ SearchCardConnected.propTypes = {
   isLoading: PropTypes.bool,
 };
 
-SearchCardConnected.defaultProps = {
+SearchCard.defaultProps = {
   Component: contentCardComponentMapper,
 };
 
-SearchCardConnected.displayName = 'SearchCardConnected';
+SearchCard.displayName = 'SearchCard';
 
-export default SearchCardConnected;
+export default SearchCard;
