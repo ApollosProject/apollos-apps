@@ -36,3 +36,31 @@ Object {
   "id": 1,
 }
 `;
+
+exports[`ContentChannelModel gets channels in the given order 1`] = `
+Array [
+  Array [
+    "ContentChannels?%24filter=%28Id%20eq%203%29%20or%20%28Id%20eq%201%29%20or%20%28Id%20eq%208%29",
+    Object {},
+    Object {
+      "cacheOptions": Object {
+        "ttl": 5,
+      },
+    },
+  ],
+]
+`;
+
+exports[`ContentChannelModel gets channels in the given order 2`] = `
+Array [
+  Object {
+    "id": 3,
+  },
+  Object {
+    "id": 1,
+  },
+  Object {
+    "id": 8,
+  },
+]
+`;
