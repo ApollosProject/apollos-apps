@@ -11,26 +11,30 @@ export default class Scripture extends RESTDataSource {
 
   token = BIBLE_API.KEY;
 
+  // default to the first one listed in the config
+  defaultVersion = Object.keys(BIBLE_API.BIBLE_ID)[0];
+
   willSendRequest(request) {
     request.headers.set('api-key', `${this.token}`);
   }
 
   async getFromId(id) {
-    const bibleId = BIBLE_API.BIBLE_ID;
-    const { data } = await this.get(`${bibleId}/passages/${id}`);
+    const { id: parsedID, bibleId } = JSON.parse(id);
+    const { data } = await this.get(`${bibleId}/passages/${parsedID}`);
     return data;
   }
 
-  async getScripture(query) {
-    const scriptures = await this.getScriptures(query);
+  async getScripture(query, version) {
+    const scriptures = await this.getScriptures(query, version);
     if (scriptures[0]) {
       return scriptures[0];
     }
     return null;
   }
 
-  async getScriptures(query) {
-    const bibleId = BIBLE_API.BIBLE_ID;
+  async getScriptures(query, version) {
+    if (query === '') return [];
+    const bibleId = BIBLE_API.BIBLE_ID[version || this.defaultVersion];
     const scriptures = await this.get(`${bibleId}/search?query=${query}`);
     // Bible.api has a history of making unexpected API changes.
     // At one point scriptures had a sub field, "passages"
@@ -40,5 +44,10 @@ export default class Scripture extends RESTDataSource {
       return scriptures.data.passages;
     }
     return scriptures.data;
+  }
+
+  async getVersion(bibleId) {
+    const bible = await this.get(`${this.baseURL}${bibleId}`);
+    return bible.data.abbreviationLocal;
   }
 }
