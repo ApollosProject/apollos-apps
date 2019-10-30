@@ -28,13 +28,6 @@ const Container = styled(
   'Avatar'
 )(View);
 
-const LoadingIcon = compose(
-  withTheme(({ theme: { colors } = {} }) => ({ color: colors.white })),
-  styled({
-    zIndex: 1,
-  })
-)(ActivityIndicator);
-
 const PlaceholderIcon = compose(
   withTheme(({ theme: { colors } = {} }) => ({
     fill: colors.background.inactive,
@@ -63,7 +56,7 @@ const ButtonIconPositioner = styled({
   right: 0,
 })(View);
 
-const LoadingSpinnerContainer = styled({
+const LoadingSpinnerContainer = styled(({ theme }) => ({
   backgroundColor: 'white',
   // The following three measurements are used to match those of the ButtonIcon container
   width: 43,
@@ -72,7 +65,8 @@ const LoadingSpinnerContainer = styled({
   borderRadius: 50,
   justifyContent: 'center',
   alignItems: 'center',
-})(View);
+  ...Platform.select(theme.shadows.default),
+}))(View);
 
 const Avatar = enhance(
   ({
