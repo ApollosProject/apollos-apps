@@ -1,1 +1,1 @@
-export LiveButton from './LiveButton';
+export LiveProvider from './LiveProvider';

@@ -7,7 +7,7 @@ import { MediaPlayerProvider } from '@apollosproject/ui-media-player';
 import { NotificationsProvider } from '@apollosproject/ui-notifications';
 
 import NavigationService from './NavigationService';
-import LiveProvider from './live/LiveProvider';
+import LiveProvider from './live';
 import ClientProvider from './client';
 import customTheme, { customIcons } from './theme';
 
