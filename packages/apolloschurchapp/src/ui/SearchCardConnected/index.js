@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import searchCardComponentMapper from './searchCardComponentMapper';
+import { contentCardComponentMapper } from '../ContentCardConnected';
 
 const SearchCardConnected = memo(
   ({
@@ -50,7 +50,7 @@ SearchCardConnected.propTypes = {
 };
 
 SearchCardConnected.defaultProps = {
-  Component: searchCardComponentMapper,
+  Component: contentCardComponentMapper,
 };
 
 SearchCardConnected.displayName = 'SearchCardConnected';
