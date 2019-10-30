@@ -22,15 +22,9 @@ const SearchCardConnected = memo(
     /* We don't have a way to know for certain if a particular card is true for `hasAction` without
      * hitting Rock. While not 100% perfect we do know that these two types will have almost always
      * have media associated with them. */
-    const hasAction = () => {
-      switch (typename) {
-        case 'MediaContentItem':
-        case 'WeekendContentItem':
-          return true;
-        default:
-          return false;
-      }
-    };
+    const hasAction = ['MediaContentItem', 'WeekendContentItem'].includes(
+      typename
+    );
 
     return (
       <Component
