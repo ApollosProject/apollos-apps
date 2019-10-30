@@ -24,6 +24,19 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
     >
       Genesis 1:1-5
     </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 17.28,
+        }
+      }
+    >
+       
+      WEB
+    </Text>
   </Text>
   <View
     lineNumber={8}
@@ -726,6 +739,19 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
       }
     >
       Psalm 23
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 17.28,
+        }
+      }
+    >
+       
+      WEB
     </Text>
   </Text>
   <View
@@ -3453,6 +3479,7 @@ exports[`the ScriptureItem component renders a custom version name 1`] = `
         }
       }
     >
+       
       Custom Version Name
     </Text>
   </Text>

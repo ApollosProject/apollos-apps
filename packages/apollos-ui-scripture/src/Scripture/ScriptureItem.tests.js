@@ -11,6 +11,7 @@ const genesis1 = {
     html:
       '<p class="p"><span data-number="1" class="v">1</span>In the beginning, God created the heavens and the earth. <span data-number="2" class="v">2</span>The earth was formless and empty. Darkness was on the surface of the deep and God’s Spirit was hovering over the surface of the waters.</p><p class="p"><span data-number="3" class="v">3</span>God said, “Let there be light,” and there was light. <span data-number="4" class="v">4</span>God saw the light, and saw that it was good. God divided the light from the darkness. <span data-number="5" class="v">5</span>God called the light “day”, and the darkness he called “night”. There was evening and there was morning, the first day.</p>',
     copyright: 'PUBLIC DOMAIN',
+    version: 'WEB',
   },
 };
 
@@ -22,6 +23,7 @@ const psalm23 = {
 
     copyright:
       'PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent',
+    version: 'WEB',
   },
 };
 
@@ -92,6 +94,7 @@ describe('the ScriptureItem component', () => {
           reference={genesis1.scripture.reference}
           html={genesis1.scripture.html}
           copyright={genesis1.scripture.copyright}
+          version={genesis1.scripture.version}
           isLoading={false}
         />
       </Providers>
@@ -105,6 +108,7 @@ describe('the ScriptureItem component', () => {
           reference={psalm23.scripture.reference}
           html={psalm23.scripture.html}
           copyright={psalm23.scripture.copyright}
+          version={psalm23.scripture.version}
           isLoading={false}
         />
       </Providers>

@@ -6,8 +6,9 @@ Object {
     "scripture": Object {
       "copyright": "PUBLIC DOMAIN",
       "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>The Song of songs, which is Solomon’s.</p>",
-      "id": "Scripture:dc6662c4910f2c94a54681816b86a0af",
+      "id": "Scripture:27ee1e80fe669dc64351715914e68dab417253a3558db00cd7edbaa6b058176e71ce3edec3df90cb5154ba4f0c0c06d70fcf6b35b9f96d7fe5eb6ebfd8902095",
       "reference": "Song of Solomon 1:1",
+      "version": "WEB",
     },
   },
 }
@@ -19,8 +20,9 @@ Object {
     "node": Object {
       "copyright": "PUBLIC DOMAIN",
       "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>The Song of songs, which is Solomon’s.</p>",
-      "id": "Scripture:dc6662c4910f2c94a54681816b86a0af",
+      "id": "Scripture:27ee1e80fe669dc64351715914e68dab417253a3558db00cd7edbaa6b058176e71ce3edec3df90cb5154ba4f0c0c06d70fcf6b35b9f96d7fe5eb6ebfd8902095",
       "reference": "Song of Solomon 1:1",
+      "version": "WEB",
     },
   },
 }
@@ -33,14 +35,16 @@ Object {
       Object {
         "copyright": "PUBLIC DOMAIN",
         "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>Peter, an apostle of Jesus Christ, to the chosen ones who are living as foreigners in the Dispersion in Pontus, Galatia, Cappadocia, Asia, and Bithynia, </p>",
-        "id": "Scripture:d94dcd4f2d29377b3606bc7be5f8de91",
+        "id": "Scripture:bb057319ad6245ec853592146f88f352484b1194f2c038ea475e5263083f68521b1ce40c31c6d0f8a11db4976ee4d402d75d40d2ff33a598a13b37d9715a56f7",
         "reference": "1 Peter 1:1",
+        "version": "WEB",
       },
       Object {
         "copyright": "PUBLIC DOMAIN",
         "html": "<p class=\\"p\\"><span data-number=\\"16\\" class=\\"v\\">16</span><span class=\\"wj\\">For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life. </span></p>",
-        "id": "Scripture:7100b2cb9e9e4bb1317eab885193013a",
+        "id": "Scripture:64d68f218913cf16a8b4aab91753e7748c6989b388d0a31256790b6b814122da033b13868d59fe5facedf2e3c14bf45c87ec34dc5a657c8d1d3da39ee1bc80d8",
         "reference": "John 3:16",
+        "version": "WEB",
       },
     ],
   },

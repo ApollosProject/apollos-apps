@@ -11,13 +11,13 @@ const ScriptureItem = ({ reference, html, copyright, isLoading, version }) => (
   <Placeholder.Paragraph
     lineNumber={5}
     onReady={!isLoading}
-    lastLineWidth="60%"
-    firstLineWidth="40%"
+    lastLineWidth={'60%'}
+    firstLineWidth={'40%'}
   >
     <View>
       <H4>
         <H4>{reference}</H4>
-        {version ? <H6>{version}</H6> : null}
+        {version ? <H6> {version}</H6> : null}
       </H4>
       <ScriptureHTMLView>{html}</ScriptureHTMLView>
       {copyright === 'PUBLIC DOMAIN' ? null : (
