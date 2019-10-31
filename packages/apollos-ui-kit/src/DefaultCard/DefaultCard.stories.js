@@ -40,10 +40,10 @@ storiesOf('ui-kit/DefaultCard', module)
             uri: 'https://picsum.photos/1400/800/?random',
           },
         ]}
+        isLiked
         summary={
           'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
         }
-        isLiked
       />
       <DefaultCard
         title={
@@ -54,6 +54,7 @@ storiesOf('ui-kit/DefaultCard', module)
             uri: 'https://picsum.photos/800/800/?random',
           },
         ]}
+        isLiked={false}
       />
     </ScrollView>
   ))
