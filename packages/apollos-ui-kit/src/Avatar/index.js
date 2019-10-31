@@ -28,13 +28,6 @@ const Container = styled(
   'Avatar'
 )(View);
 
-const LoadingIcon = compose(
-  withTheme(({ theme: { colors } = {} }) => ({ color: colors.white })),
-  styled({
-    zIndex: 1,
-  })
-)(ActivityIndicator);
-
 const PlaceholderIcon = compose(
   withTheme(({ theme: { colors } = {} }) => ({
     fill: colors.background.inactive,
@@ -63,6 +56,18 @@ const ButtonIconPositioner = styled({
   right: 0,
 })(View);
 
+const LoadingSpinnerContainer = styled(({ theme }) => ({
+  backgroundColor: 'white',
+  // The following three measurements are used to match those of the ButtonIcon container
+  width: 43,
+  height: 43,
+  padding: 9.6,
+  borderRadius: 50,
+  justifyContent: 'center',
+  alignItems: 'center',
+  ...Platform.select(theme.shadows.default),
+}))(View);
+
 const Avatar = enhance(
   ({
     themeSize,
@@ -75,7 +80,6 @@ const Avatar = enhance(
     ...imageProps
   }) => (
     <Container style={containerStyle} themeSize={themeSize}>
-      {isLoading ? <LoadingIcon /> : null}
       {source && source.uri ? (
         <Image
           source={source}
@@ -88,13 +92,19 @@ const Avatar = enhance(
       )}
       {buttonIcon ? (
         <ButtonIconPositioner>
-          <StyledButtonIcon
-            onPress={onPressIcon}
-            name={buttonIcon}
-            size={themeSize / 5}
-            fill={iconFill}
-            TouchableComponent={TouchableScale}
-          />
+          {isLoading ? (
+            <LoadingSpinnerContainer>
+              <ActivityIndicator size={themeSize / 5} />
+            </LoadingSpinnerContainer>
+          ) : (
+            <StyledButtonIcon
+              onPress={onPressIcon}
+              name={buttonIcon}
+              size={themeSize / 5}
+              fill={iconFill}
+              TouchableComponent={TouchableScale}
+            />
+          )}
         </ButtonIconPositioner>
       ) : null}
     </Container>
