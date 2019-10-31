@@ -1,3 +1,24 @@
+
+v1.2.0: October 31, 2019 🎃
+
+- Moves Picture Loading Indicator (#1177) (45aae728)
+- Clears Algolia Index Before Doing a Full Index. (#1172) (5646eb57)
+- Adjusts search feed UI to pull items only from Algolia (#1171) (207440df)
+- Adds Tests node shortcutting functionality (#1173) (ca31ecf2)
+- Updates Scripture (#1149) (bfd2af79)
+- Orders Content Channels based on Config.yml (#1166) (dba9f052)
+- Removes like-count from content tile (#1168) (bc0d260d)
+- Caches coverImages and don't fetch ContentChannels if not needed to reduce home feed query count (#1167) (74720df0)
+- Adds Autofocus back to SMS Login (#1151) (558950e7)
+- Sets maximum date for date picker (#1161) (cb9c40a1)
+- Adds the media player spacer around the selection button that appears on the location select screen. (#1163) (b267b831)
+- Adds additional eslint recommendation to readme (#1162) (3b1e9ed1)
+
+- Fixes twilio sid logged on every request (#1169) (5e38448d)
+- Fixes Trailing Slash Bug (#1165) (267d9a54)
+- Hides content feed item when sections are empty (#1154) (a5b626a9)
+- Fixes text theme colors in navigation headers (#1156) (a57333b0)
+
 v1.2.0-beta.7: October 23, 2019
 
 - Adds Version Number (#1148) (4cf5f0e8)
