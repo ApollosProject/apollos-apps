@@ -1,3 +1,4 @@
+import { set, reset } from 'graphql-parse-resolve-info';
 import casual from 'casual';
 import Node, { createGlobalId, parseGlobalId } from '../model';
 
@@ -52,7 +53,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    await node.get(globalId, dataSources, schema);
+    await node.get(globalId, dataSources, { schema });
   });
 
   it("Node class should throw error if it can't find a matching model", async () => {
@@ -62,7 +63,7 @@ describe('Node', () => {
 
     const node = new Node({});
     expect(
-      node.get(globalId, {}, schema)
+      node.get(globalId, {}, { schema })
     ).rejects.toThrowErrorMatchingSnapshot();
   });
 
@@ -78,7 +79,7 @@ describe('Node', () => {
     const node = new Node(dataSources);
 
     expect(
-      node.get(globalId, dataSources, schema)
+      node.get(globalId, dataSources, { schema })
     ).rejects.toThrowErrorMatchingSnapshot();
   });
 
@@ -96,7 +97,7 @@ describe('Node', () => {
     };
 
     const node = new Node(dataSources);
-    const record = await node.get(globalId, dataSources, schema);
+    const record = await node.get(globalId, dataSources, { schema });
     expect(record).not.toHaveProperty('__type');
   });
 
@@ -131,7 +132,9 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources, schemaWithInterfaces);
+    const result = await node.get(globalId, dataSources, {
+      schema: schemaWithInterfaces,
+    });
 
     expect(result.test).toEqual(data.test);
   });
@@ -153,9 +156,64 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources, schema);
+    const result = await node.get(globalId, dataSources, { schema });
 
     expect(result.test).toEqual(data.test);
+  });
+
+  it('Node class should return just the id if we are only asking for id', async () => {
+    const id = '123';
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+
+    set({
+      fieldsByTypeName: {
+        ContentItem: {
+          id: { name: 'id' },
+        },
+      },
+    });
+
+    const dataSources = {
+      Test: {
+        getFromId: jest.fn(),
+      },
+    };
+
+    const node = new Node();
+    const result = await node.get(globalId, dataSources, { schema });
+
+    expect(result).toMatchSnapshot();
+    expect(dataSources.Test.getFromId.mock.calls).toMatchSnapshot();
+    reset();
+  });
+
+  it('Node class should call getFromId the id if we are asking for more than id', async () => {
+    const id = '456';
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+
+    set({
+      fieldsByTypeName: {
+        ContentItem: {
+          id: { name: 'id' },
+          title: { name: 'title' },
+        },
+      },
+    });
+
+    const dataSources = {
+      Test: {
+        getFromId: jest.fn(),
+      },
+    };
+
+    const node = new Node();
+    const result = await node.get(globalId, dataSources, { schema });
+
+    expect(result).toMatchSnapshot();
+    expect(dataSources.Test.getFromId.mock.calls).toMatchSnapshot();
+    reset();
   });
 
   it('Node class should attach the __type to the resulting data', async () => {
@@ -175,7 +233,7 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources, schema);
+    const result = await node.get(globalId, dataSources, { schema });
 
     expect(result.__type).toEqual(__type);
   });

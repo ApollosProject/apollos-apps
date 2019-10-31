@@ -19,12 +19,12 @@ const resolvers = {
       root,
       { input: { nodeId, operation } },
       { dataSources },
-      { schema }
+      resolveInfo
     ) =>
       dataSources.Followings.updateLikeContentItem({
         nodeId,
         operation,
-        schema,
+        resolveInfo,
       }),
   },
   Query: {
