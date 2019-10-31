@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding LandingScreen component should render 1`] = `
+exports[`The SearchCard component should render 1`] = `
 <View
   cardColor="#00676D"
   style={
@@ -50,15 +50,23 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
         }
       >
         <Image
+          customTheme={null}
           maxAspectRatio={1.2}
           minAspectRatio={0.75}
           onLoad={[Function]}
           source={
             Array [
               Object {
-                "__typename": "ImageMediaSource",
+                "__typename": "ImageMedia",
                 "cache": "force-cache",
-                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
+                "name": "Square Image",
+                "sources": Array [
+                  Object {
+                    "__typename": "ImageMediaSource",
+                    "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
+                  },
+                ],
+                "uri": "",
               },
             ]
           }
@@ -187,6 +195,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
         bbWidth={24}
         height={24}
         iconPadding={24}
+        isLiked={false}
         meetOrSlice={0}
         minX={0}
         minY={0}

@@ -5,7 +5,7 @@ import Providers from 'apolloschurchapp/src/Providers';
 
 import SearchCard from '.';
 
-describe('The Onboarding LandingScreen component', () => {
+describe('The SearchCard component', () => {
   it('should render', () => {
     const data = {
       title: 'How to lead people to Jesus',
