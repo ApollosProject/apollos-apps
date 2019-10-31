@@ -785,4 +785,12 @@ Array [
 ]
 `;
 
+exports[`The algolia search dataSource must be able to perform a full index of data from the ContentItem dataSource 4`] = `
+Array [
+  Array [
+    [Function],
+  ],
+]
+`;
+
 exports[`The algolia search dataSource must raise an error if the indexing fails 1`] = `[Error: Indexing error]`;
