@@ -17,7 +17,7 @@ const SearchCard = memo(
     /* `id` is the only value we pull from the `node` and it is server optimized to not hit Rock. We
      * need the `id for navigation but also use it to grab the `typename` so we don't have to hit
      * Rock for that either. */
-    const typename = get(node, 'id', '').split(':')[0];
+    const typename = get(node, '__typename');
 
     /* We don't have a way to know for certain if a particular card is true for `hasAction` without
      * hitting Rock. While not 100% perfect we do know that these two types will have almost always
@@ -33,8 +33,8 @@ const SearchCard = memo(
         isLoading={isLoading}
         summary={summary}
         title={title}
+        {...node}
         {...otherProps}
-        __typename={typename} // we want to explicitly make sure we override any `typename` that might come from `otherProps`
       />
     );
   }
