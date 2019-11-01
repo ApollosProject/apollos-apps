@@ -230,9 +230,10 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   }
                 >
                   <View
+                    cardColor="#00676D"
                     style={
                       Object {
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "#00676D",
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
@@ -277,8 +278,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
+                            maxAspectRatio={1.2}
+                            minAspectRatio={0.75}
                             onLoad={[Function]}
                             source={
                               Array [
@@ -302,8 +303,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <BVLinearGradient
                           colors={
                             Array [
+                              1711276032,
                               2147483648,
-                              0,
                             ]
                           }
                           endPoint={
@@ -319,7 +320,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                             ]
                           }
                           overlayColor="#000000"
-                          overlayType="gradient-top"
+                          overlayType="gradient-bottom"
                           startPoint={
                             Object {
                               "x": 0,
@@ -341,17 +342,20 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         style={
                           Object {
                             "alignItems": "flex-start",
+                            "bottom": 0,
                             "paddingBottom": 32,
                             "paddingHorizontal": 24,
                             "paddingVertical": 16,
+                            "position": "absolute",
+                            "width": "100%",
                           }
                         }
                       >
                         <Text
-                          numberOfLines={2}
+                          numberOfLines={3}
                           style={
                             Object {
-                              "color": "#303030",
+                              "color": "#F8F7F4",
                               "fontFamily": "InterUI-Black",
                               "fontSize": 24,
                               "lineHeight": 27.6,
@@ -360,22 +364,41 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         >
                           How to lead people to Jesus
                         </Text>
-                        <Text
-                          bold={false}
-                          italic={false}
-                          numberOfLines={2}
+                        <View
+                          hasSummary={true}
                           style={
                             Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
-                              "fontSize": 16,
-                              "lineHeight": 26,
+                              "alignItems": "center",
+                              "flexDirection": "row",
                               "paddingTop": 16,
                             }
                           }
                         >
-                          Love compels a mother to lose all dignity in public as she screams the name of her lost child.
-                        </Text>
+                          <View
+                            style={
+                              Object {
+                                "flex": 1,
+                                "marginRight": 16,
+                              }
+                            }
+                          >
+                            <Text
+                              bold={false}
+                              italic={false}
+                              numberOfLines={2}
+                              style={
+                                Object {
+                                  "color": "#F8F7F4",
+                                  "fontFamily": "InterUI-Regular",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              Love compels a mother to lose all dignity in public as she screams the name of her lost child.
+                            </Text>
+                          </View>
+                        </View>
                       </View>
                     </View>
                   </View>
@@ -1067,9 +1090,10 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   }
                 >
                   <View
+                    cardColor="#00676D"
                     style={
                       Object {
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "#00676D",
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
@@ -1114,8 +1138,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
+                            maxAspectRatio={1.2}
+                            minAspectRatio={0.75}
                             onLoad={[Function]}
                             source={
                               Array [
@@ -1139,8 +1163,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <BVLinearGradient
                           colors={
                             Array [
+                              1711276032,
                               2147483648,
-                              0,
                             ]
                           }
                           endPoint={
@@ -1156,7 +1180,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                             ]
                           }
                           overlayColor="#000000"
-                          overlayType="gradient-top"
+                          overlayType="gradient-bottom"
                           startPoint={
                             Object {
                               "x": 0,
@@ -1178,17 +1202,20 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         style={
                           Object {
                             "alignItems": "flex-start",
+                            "bottom": 0,
                             "paddingBottom": 32,
                             "paddingHorizontal": 24,
                             "paddingVertical": 16,
+                            "position": "absolute",
+                            "width": "100%",
                           }
                         }
                       >
                         <Text
-                          numberOfLines={2}
+                          numberOfLines={3}
                           style={
                             Object {
-                              "color": "#303030",
+                              "color": "#F8F7F4",
                               "fontFamily": "InterUI-Black",
                               "fontSize": 24,
                               "lineHeight": 27.6,
@@ -1197,22 +1224,41 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         >
                           Why leadership isn’t all about the title
                         </Text>
-                        <Text
-                          bold={false}
-                          italic={false}
-                          numberOfLines={2}
+                        <View
+                          hasSummary={true}
                           style={
                             Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
-                              "fontSize": 16,
-                              "lineHeight": 26,
+                              "alignItems": "center",
+                              "flexDirection": "row",
                               "paddingTop": 16,
                             }
                           }
                         >
-                          We all like to know that our boss or the authority over us is pleased, and it means even more when they take the time to share that in front of other people.
-                        </Text>
+                          <View
+                            style={
+                              Object {
+                                "flex": 1,
+                                "marginRight": 16,
+                              }
+                            }
+                          >
+                            <Text
+                              bold={false}
+                              italic={false}
+                              numberOfLines={2}
+                              style={
+                                Object {
+                                  "color": "#F8F7F4",
+                                  "fontFamily": "InterUI-Regular",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              We all like to know that our boss or the authority over us is pleased, and it means even more when they take the time to share that in front of other people.
+                            </Text>
+                          </View>
+                        </View>
                       </View>
                     </View>
                   </View>
