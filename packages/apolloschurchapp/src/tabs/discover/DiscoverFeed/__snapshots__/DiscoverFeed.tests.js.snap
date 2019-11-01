@@ -72,10 +72,8 @@ exports[`The DiscoverFeed component should render 1`] = `
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Landscape Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -85,26 +83,17 @@ exports[`The DiscoverFeed component should render 1`] = `
                           },
                           "hyphenatedTitle": "Anderson Family Cookout!",
                           "id": "UniversalContentItem:00bb7b364911281c97fc50f2a0d17b11",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
-                            "name": "News",
-                          },
                           "summary": "Come join us!",
                           "theme": null,
                           "title": "Anderson Family Cookout!",
-                          "videos": Array [],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -114,26 +103,17 @@ exports[`The DiscoverFeed component should render 1`] = `
                           },
                           "hyphenatedTitle": "Robert Madu is Coming to Christ Fellowship",
                           "id": "UniversalContentItem:7db601b238aa4345a818654300f83dd2",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
-                            "name": "News",
-                          },
                           "summary": "Don't miss a powerful message from preacher and speaker, Robert Madu.",
                           "theme": null,
                           "title": "Robert Madu is Coming to Christ Fellowship",
-                          "videos": Array [],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -143,16 +123,9 @@ exports[`The DiscoverFeed component should render 1`] = `
                           },
                           "hyphenatedTitle": "Guys Night!",
                           "id": "UniversalContentItem:296373ecb53580855cadffa0375ebe18",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
-                            "name": "News",
-                          },
                           "summary": "A time to connect with other guys who live nearby.",
                           "theme": null,
                           "title": "Guys Night!",
-                          "videos": Array [],
                         },
                       },
                     ],
@@ -169,61 +142,37 @@ exports[`The DiscoverFeed component should render 1`] = `
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": null,
                           "hyphenatedTitle": "Test Article",
                           "id": "UniversalContentItem:604a4a763a5fc0edfe386684ca6b3515",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                            "name": "Articles",
-                          },
                           "summary": "Test article...",
                           "theme": null,
                           "title": "Test Article",
-                          "videos": Array [],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": null,
                           "hyphenatedTitle": "10 ways to refresh your spirit every day",
                           "id": "UniversalContentItem:c495ff18cd998ed516a798b6218907cd",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                            "name": "Articles",
-                          },
                           "summary": "1. Be slow What would it look like to live your life at half-speed?",
                           "theme": null,
                           "title": "10 ways to refresh your spirit every day",
-                          "videos": Array [],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": null,
                           "hyphenatedTitle": "Live for Freedom Toolkit",
                           "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                            "name": "Articles",
-                          },
                           "summary": "Get in the Groove
 Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
                           "theme": null,
                           "title": "Live for Freedom Toolkit",
-                          "videos": Array [],
                         },
                       },
                     ],
@@ -240,10 +189,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "ContentSeriesContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Series Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -253,35 +200,17 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "The New Weekend Experience",
                           "id": "ContentSeriesContentItem:6d8dc8e4bad017f815ae0cac8bf692bb",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                            "name": "Sermon Series",
-                          },
                           "summary": "Have you come into relationship with Jesus Christ?",
                           "theme": null,
                           "title": "The New Weekend Experience",
-                          "videos": Array [
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                          ],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "ContentSeriesContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -291,35 +220,17 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "Gathering",
                           "id": "ContentSeriesContentItem:08449058d438ebeaffe9adb7a8e633cc",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                            "name": "Sermon Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "Gathering",
-                          "videos": Array [
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                          ],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "ContentSeriesContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -329,25 +240,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "Gauntlet 2018",
                           "id": "ContentSeriesContentItem:b74c2d295a0cf1340232ffa8be856c00",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                            "name": "Sermon Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "Gauntlet 2018",
-                          "videos": Array [
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                          ],
                         },
                       },
                     ],
@@ -364,10 +259,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "ContentSeriesContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -377,31 +270,17 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "Jeremiah: A 33-Day Devotional",
                           "id": "ContentSeriesContentItem:b085ec27d53006e9e6b95f3ac57da581",
-                          "isLiked": true,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                            "name": "Devotion Series",
-                          },
                           "summary": "Have you ever had to deliver difficult news?",
                           "theme": null,
                           "title": "Jeremiah: A 33-Day Devotional",
-                          "videos": Array [
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                          ],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "ContentSeriesContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -411,31 +290,17 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "How To Be A Better Leader: A 7-Day Devotional",
                           "id": "ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                            "name": "Devotion Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "How To Be A Better Leader: A 7-Day Devotional",
-                          "videos": Array [
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                          ],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "ContentSeriesContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -445,21 +310,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "2 Thessalonians: A 5-Day Devotional",
                           "id": "ContentSeriesContentItem:44fd3b82373ea8f197bd1e1e77c4bed0",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                            "name": "Devotion Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "2 Thessalonians: A 5-Day Devotional",
-                          "videos": Array [
-                            Object {
-                              "__typename": "VideoMedia",
-                              "sources": Array [],
-                            },
-                          ],
                         },
                       },
                     ],
@@ -476,10 +329,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -489,26 +340,17 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "The surprising journey that changed me and my dad",
                           "id": "UniversalContentItem:cf8fa657f23af88a2d63f7e4a2237db8",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:be7381e9c2fea9f41504cd98d4b14321",
-                            "name": "Stories",
-                          },
                           "summary": "My father, Darwin, has always been involved in my life.",
                           "theme": null,
                           "title": "The surprising journey that changed me and my dad",
-                          "videos": Array [],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Square Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -518,26 +360,17 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "When I lost hope, my church family had my back",
                           "id": "UniversalContentItem:2e17f5a66407d114ab9f2392b03ebccd",
-                          "isLiked": true,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:be7381e9c2fea9f41504cd98d4b14321",
-                            "name": "Stories",
-                          },
                           "summary": "Brian Kalwat was just trying to knock something off his honey-do list.",
                           "theme": null,
                           "title": "When I lost hope, my church family had my back",
-                          "videos": Array [],
                         },
                       },
                       Object {
                         "__typename": "ContentItemsConnectionEdge",
                         "node": Object {
                           "__typename": "UniversalContentItem",
-                          "audios": Array [],
                           "coverImage": Object {
                             "__typename": "ImageMedia",
-                            "name": "Portrait Image",
                             "sources": Array [
                               Object {
                                 "__typename": "ImageMediaSource",
@@ -547,17 +380,10 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "A Place to Worship Free of Fear",
                           "id": "UniversalContentItem:ae8ec75906ba7437c49ad2534b5024db",
-                          "isLiked": false,
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:be7381e9c2fea9f41504cd98d4b14321",
-                            "name": "Stories",
-                          },
                           "summary": "Cornelius &amp; Stephanie Mack, proud parents of a Special Friends adult, share about their experience
 Our son Cameron began attending Willow Creek Special Friends in 2015.",
                           "theme": null,
                           "title": "A Place to Worship Free of Fear",
-                          "videos": Array [],
                         },
                       },
                     ],
@@ -701,10 +527,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                     Array [
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Landscape Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -714,23 +538,14 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                         },
                         "hyphenatedTitle": "Anderson Family Cookout!",
                         "id": "UniversalContentItem:00bb7b364911281c97fc50f2a0d17b11",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
-                          "name": "News",
-                        },
                         "summary": "Come join us!",
                         "theme": null,
                         "title": "Anderson Family Cookout!",
-                        "videos": Array [],
                       },
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -740,23 +555,14 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                         },
                         "hyphenatedTitle": "Robert Madu is Coming to Christ Fellowship",
                         "id": "UniversalContentItem:7db601b238aa4345a818654300f83dd2",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
-                          "name": "News",
-                        },
                         "summary": "Don't miss a powerful message from preacher and speaker, Robert Madu.",
                         "theme": null,
                         "title": "Robert Madu is Coming to Christ Fellowship",
-                        "videos": Array [],
                       },
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -766,16 +572,9 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                         },
                         "hyphenatedTitle": "Guys Night!",
                         "id": "UniversalContentItem:296373ecb53580855cadffa0375ebe18",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:965b6e6d7046a885bea4e300b5c0400d",
-                          "name": "News",
-                        },
                         "summary": "A time to connect with other guys who live nearby.",
                         "theme": null,
                         "title": "Guys Night!",
-                        "videos": Array [],
                       },
                     ]
                   }
@@ -1006,132 +805,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                 Come join us!
                               </Text>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -1318,132 +991,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                               >
                                 Don't miss a powerful message from preacher and speaker, Robert Madu.
                               </Text>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
                             </View>
                           </View>
                         </View>
@@ -1632,132 +1179,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                 A time to connect with other guys who live nearby.
                               </Text>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -1860,55 +1281,31 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                     Array [
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": null,
                         "hyphenatedTitle": "Test Article",
                         "id": "UniversalContentItem:604a4a763a5fc0edfe386684ca6b3515",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                          "name": "Articles",
-                        },
                         "summary": "Test article...",
                         "theme": null,
                         "title": "Test Article",
-                        "videos": Array [],
                       },
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": null,
                         "hyphenatedTitle": "10 ways to refresh your spirit every day",
                         "id": "UniversalContentItem:c495ff18cd998ed516a798b6218907cd",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                          "name": "Articles",
-                        },
                         "summary": "1. Be slow What would it look like to live your life at half-speed?",
                         "theme": null,
                         "title": "10 ways to refresh your spirit every day",
-                        "videos": Array [],
                       },
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": null,
                         "hyphenatedTitle": "Live for Freedom Toolkit",
                         "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                          "name": "Articles",
-                        },
                         "summary": "Get in the Groove
 Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
                         "theme": null,
                         "title": "Live for Freedom Toolkit",
-                        "videos": Array [],
                       },
                     ]
                   }
@@ -2111,132 +1508,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 Test article...
                               </Text>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -2395,132 +1666,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               >
                                 1. Be slow What would it look like to live your life at half-speed?
                               </Text>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
                             </View>
                           </View>
                         </View>
@@ -2682,132 +1827,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
 Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
                               </Text>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -2910,10 +1929,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                     Array [
                       Object {
                         "__typename": "ContentSeriesContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Series Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -2923,32 +1940,14 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "The New Weekend Experience",
                         "id": "ContentSeriesContentItem:6d8dc8e4bad017f815ae0cac8bf692bb",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                          "name": "Sermon Series",
-                        },
                         "summary": "Have you come into relationship with Jesus Christ?",
                         "theme": null,
                         "title": "The New Weekend Experience",
-                        "videos": Array [
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                        ],
                       },
                       Object {
                         "__typename": "ContentSeriesContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -2958,32 +1957,14 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "Gathering",
                         "id": "ContentSeriesContentItem:08449058d438ebeaffe9adb7a8e633cc",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                          "name": "Sermon Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "Gathering",
-                        "videos": Array [
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                        ],
                       },
                       Object {
                         "__typename": "ContentSeriesContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -2993,25 +1974,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "Gauntlet 2018",
                         "id": "ContentSeriesContentItem:b74c2d295a0cf1340232ffa8be856c00",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                          "name": "Sermon Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "Gauntlet 2018",
-                        "videos": Array [
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                        ],
                       },
                     ]
                   }
@@ -3253,132 +2218,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 </View>
                               </View>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294506484,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -3576,132 +2415,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   </Text>
                                 </View>
                               </View>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294506484,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
                             </View>
                           </View>
                         </View>
@@ -3901,132 +2614,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 </View>
                               </View>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294506484,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -4129,10 +2716,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                     Array [
                       Object {
                         "__typename": "ContentSeriesContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -4142,28 +2727,14 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "Jeremiah: A 33-Day Devotional",
                         "id": "ContentSeriesContentItem:b085ec27d53006e9e6b95f3ac57da581",
-                        "isLiked": true,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                          "name": "Devotion Series",
-                        },
                         "summary": "Have you ever had to deliver difficult news?",
                         "theme": null,
                         "title": "Jeremiah: A 33-Day Devotional",
-                        "videos": Array [
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                        ],
                       },
                       Object {
                         "__typename": "ContentSeriesContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -4173,28 +2744,14 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "How To Be A Better Leader: A 7-Day Devotional",
                         "id": "ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                          "name": "Devotion Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "How To Be A Better Leader: A 7-Day Devotional",
-                        "videos": Array [
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                        ],
                       },
                       Object {
                         "__typename": "ContentSeriesContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -4204,21 +2761,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "2 Thessalonians: A 5-Day Devotional",
                         "id": "ContentSeriesContentItem:44fd3b82373ea8f197bd1e1e77c4bed0",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                          "name": "Devotion Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "2 Thessalonians: A 5-Day Devotional",
-                        "videos": Array [
-                          Object {
-                            "__typename": "VideoMedia",
-                            "sources": Array [],
-                          },
-                        ],
                       },
                     ]
                   }
@@ -4460,132 +3005,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 </View>
                               </View>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={true}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294506484,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -4783,132 +3202,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   </Text>
                                 </View>
                               </View>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294506484,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
                             </View>
                           </View>
                         </View>
@@ -5108,132 +3401,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 </View>
                               </View>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294506484,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -5336,10 +3503,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                     Array [
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -5349,23 +3514,14 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "The surprising journey that changed me and my dad",
                         "id": "UniversalContentItem:cf8fa657f23af88a2d63f7e4a2237db8",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:be7381e9c2fea9f41504cd98d4b14321",
-                          "name": "Stories",
-                        },
                         "summary": "My father, Darwin, has always been involved in my life.",
                         "theme": null,
                         "title": "The surprising journey that changed me and my dad",
-                        "videos": Array [],
                       },
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Square Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -5375,23 +3531,14 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "When I lost hope, my church family had my back",
                         "id": "UniversalContentItem:2e17f5a66407d114ab9f2392b03ebccd",
-                        "isLiked": true,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:be7381e9c2fea9f41504cd98d4b14321",
-                          "name": "Stories",
-                        },
                         "summary": "Brian Kalwat was just trying to knock something off his honey-do list.",
                         "theme": null,
                         "title": "When I lost hope, my church family had my back",
-                        "videos": Array [],
                       },
                       Object {
                         "__typename": "UniversalContentItem",
-                        "audios": Array [],
                         "coverImage": Object {
                           "__typename": "ImageMedia",
-                          "name": "Portrait Image",
                           "sources": Array [
                             Object {
                               "__typename": "ImageMediaSource",
@@ -5401,17 +3548,10 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "A Place to Worship Free of Fear",
                         "id": "UniversalContentItem:ae8ec75906ba7437c49ad2534b5024db",
-                        "isLiked": false,
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:be7381e9c2fea9f41504cd98d4b14321",
-                          "name": "Stories",
-                        },
                         "summary": "Cornelius &amp; Stephanie Mack, proud parents of a Special Friends adult, share about their experience
 Our son Cameron began attending Willow Creek Special Friends in 2015.",
                         "theme": null,
                         "title": "A Place to Worship Free of Fear",
-                        "videos": Array [],
                       },
                     ]
                   }
@@ -5642,132 +3782,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                 My father, Darwin, has always been involved in my life.
                               </Text>
                             </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
-                            </View>
                           </View>
                         </View>
                       </View>
@@ -5954,132 +3968,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                               >
                                 Brian Kalwat was just trying to knock something off his honey-do list.
                               </Text>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={true}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
                             </View>
                           </View>
                         </View>
@@ -6268,132 +4156,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                 Cornelius &amp; Stephanie Mack, proud parents of a Special Friends adult, share about their experience
 Our son Cameron began attending Willow Creek Special Friends in 2015.
                               </Text>
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "position": "absolute",
-                                  "right": 16,
-                                  "top": 16,
-                                }
-                              }
-                            >
-                              <RNSVGSvgView
-                                align="xMidYMid"
-                                bbHeight={24}
-                                bbWidth={24}
-                                height={24}
-                                isLiked={false}
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                      "borderWidth": 0,
-                                    },
-                                    undefined,
-                                    null,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 24,
-                                      "width": 24,
-                                    },
-                                  ]
-                                }
-                                vbHeight={24}
-                                vbWidth={24}
-                                width={24}
-                              >
-                                <RNSVGGroup
-                                  fill={
-                                    Array [
-                                      0,
-                                      4278190080,
-                                    ]
-                                  }
-                                  fillOpacity={1}
-                                  fillRule={1}
-                                  font={Object {}}
-                                  matrix={
-                                    Array [
-                                      1,
-                                      0,
-                                      0,
-                                      1,
-                                      0,
-                                      0,
-                                    ]
-                                  }
-                                  opacity={1}
-                                  originX={0}
-                                  originY={0}
-                                  propList={Array []}
-                                  rotation={0}
-                                  scaleX={1}
-                                  scaleY={1}
-                                  skewX={0}
-                                  skewY={0}
-                                  stroke={null}
-                                  strokeDasharray={null}
-                                  strokeDashoffset={null}
-                                  strokeLinecap={0}
-                                  strokeLinejoin={0}
-                                  strokeMiterlimit={4}
-                                  strokeOpacity={1}
-                                  strokeWidth={1}
-                                  vectorEffect={0}
-                                  x={0}
-                                  y={0}
-                                >
-                                  <RNSVGPath
-                                    d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                                    fill={
-                                      Array [
-                                        0,
-                                        4294967295,
-                                      ]
-                                    }
-                                    fillOpacity={1}
-                                    fillRule={1}
-                                    matrix={
-                                      Array [
-                                        1,
-                                        0,
-                                        0,
-                                        1,
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    opacity={1}
-                                    originX={0}
-                                    originY={0}
-                                    propList={
-                                      Array [
-                                        "fill",
-                                      ]
-                                    }
-                                    rotation={0}
-                                    scaleX={1}
-                                    scaleY={1}
-                                    skewX={0}
-                                    skewY={0}
-                                    stroke={null}
-                                    strokeDasharray={null}
-                                    strokeDashoffset={null}
-                                    strokeLinecap={0}
-                                    strokeLinejoin={0}
-                                    strokeMiterlimit={4}
-                                    strokeOpacity={1}
-                                    strokeWidth={1}
-                                    vectorEffect={0}
-                                    x={0}
-                                    y={0}
-                                  />
-                                </RNSVGGroup>
-                              </RNSVGSvgView>
                             </View>
                           </View>
                         </View>
