@@ -79,9 +79,9 @@ class Search extends PureComponent {
 
   handleOnFocus = () => {
     this.setState(
-      (state) => ({
-        isFocused: !state.isFocused,
-      }),
+      {
+        isFocused: true,
+      },
       () => this.props.onFocus && this.props.onFocus(this.state.isFocused)
     );
   };
@@ -102,7 +102,17 @@ class Search extends PureComponent {
     );
   };
 
-  handleOnPressCancel = () => Keyboard.dismiss();
+  handleOnPressCancel = () => {
+    this.setState(
+      {
+        isFocused: false,
+      },
+      () => {
+        Keyboard.dismiss();
+        return this.props.onFocus && this.props.onFocus(this.state.isFocused);
+      }
+    );
+  };
 
   handleOnLayout = ({
     nativeEvent: {
@@ -138,7 +148,6 @@ class Search extends PureComponent {
             editable={!disabled}
             isFocused={this.state.isFocused} // used for styling
             onFocus={this.handleOnFocus}
-            onBlur={this.handleOnFocus}
             onChangeText={this.handleOnChangeText}
             onSubmitEditing={onSubmit}
             placeholder={placeholder}
