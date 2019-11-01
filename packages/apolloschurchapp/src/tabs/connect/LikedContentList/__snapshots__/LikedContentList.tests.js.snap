@@ -91,14 +91,6 @@ fragment baseCardFragment on ContentItem {
     }
     __typename
   }
-  ... on ContentSeriesContentItem {
-    parentChannel {
-      id
-      name
-      __typename
-    }
-    __typename
-  }
   ... on DevotionalContentItem {
     parentChannel {
       id
@@ -283,14 +275,6 @@ fragment baseCardFragment on ContentItem {
       }
       __typename
     }
-    parentChannel {
-      id
-      name
-      __typename
-    }
-    __typename
-  }
-  ... on ContentSeriesContentItem {
     parentChannel {
       id
       name

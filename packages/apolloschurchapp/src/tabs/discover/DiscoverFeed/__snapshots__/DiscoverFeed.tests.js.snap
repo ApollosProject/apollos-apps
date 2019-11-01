@@ -200,11 +200,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "The New Weekend Experience",
                           "id": "ContentSeriesContentItem:6d8dc8e4bad017f815ae0cac8bf692bb",
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                            "name": "Sermon Series",
-                          },
                           "summary": "Have you come into relationship with Jesus Christ?",
                           "theme": null,
                           "title": "The New Weekend Experience",
@@ -225,11 +220,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "Gathering",
                           "id": "ContentSeriesContentItem:08449058d438ebeaffe9adb7a8e633cc",
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                            "name": "Sermon Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "Gathering",
@@ -250,11 +240,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "Gauntlet 2018",
                           "id": "ContentSeriesContentItem:b74c2d295a0cf1340232ffa8be856c00",
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                            "name": "Sermon Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "Gauntlet 2018",
@@ -285,11 +270,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "Jeremiah: A 33-Day Devotional",
                           "id": "ContentSeriesContentItem:b085ec27d53006e9e6b95f3ac57da581",
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                            "name": "Devotion Series",
-                          },
                           "summary": "Have you ever had to deliver difficult news?",
                           "theme": null,
                           "title": "Jeremiah: A 33-Day Devotional",
@@ -310,11 +290,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "How To Be A Better Leader: A 7-Day Devotional",
                           "id": "ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a",
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                            "name": "Devotion Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "How To Be A Better Leader: A 7-Day Devotional",
@@ -335,11 +310,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           },
                           "hyphenatedTitle": "2 Thessalonians: A 5-Day Devotional",
                           "id": "ContentSeriesContentItem:44fd3b82373ea8f197bd1e1e77c4bed0",
-                          "parentChannel": Object {
-                            "__typename": "ContentChannel",
-                            "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                            "name": "Devotion Series",
-                          },
                           "summary": "",
                           "theme": null,
                           "title": "2 Thessalonians: A 5-Day Devotional",
@@ -1970,11 +1940,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "The New Weekend Experience",
                         "id": "ContentSeriesContentItem:6d8dc8e4bad017f815ae0cac8bf692bb",
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                          "name": "Sermon Series",
-                        },
                         "summary": "Have you come into relationship with Jesus Christ?",
                         "theme": null,
                         "title": "The New Weekend Experience",
@@ -1992,11 +1957,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "Gathering",
                         "id": "ContentSeriesContentItem:08449058d438ebeaffe9adb7a8e633cc",
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                          "name": "Sermon Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "Gathering",
@@ -2014,11 +1974,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "Gauntlet 2018",
                         "id": "ContentSeriesContentItem:b74c2d295a0cf1340232ffa8be856c00",
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                          "name": "Sermon Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "Gauntlet 2018",
@@ -2106,13 +2061,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           inHorizontalList={true}
                           isLive={false}
                           isLoading={false}
-                          parentChannel={
-                            Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                              "name": "Sermon Series",
-                            }
-                          }
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -2238,60 +2186,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <View
-                                bordered={false}
-                                disabled={false}
-                                pill={false}
-                                style={
-                                  Object {
-                                    "alignItems": "center",
-                                    "backgroundColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderRadius": 16,
-                                    "borderWidth": 0,
-                                    "elevation": 2,
-                                    "flexDirection": "row",
-                                    "height": 32,
-                                    "justifyContent": "center",
-                                    "opacity": 1,
-                                    "overflow": "hidden",
-                                    "paddingHorizontal": 12,
-                                  }
-                                }
-                              >
-                                <Text
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "color": "#FFFFFF",
-                                      "fontFamily": "InterUI-Bold",
-                                      "fontSize": 12,
-                                      "justifyContent": "center",
-                                      "lineHeight": 17.28,
-                                      "paddingLeft": null,
-                                      "textAlign": "center",
-                                    }
-                                  }
-                                >
-                                  Sermon Series
-                                </Text>
-                              </View>
-                              <View
                                 style={
                                   Object {
                                     "alignItems": "flex-end",
@@ -2365,13 +2259,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           inHorizontalList={true}
                           isLive={false}
                           isLoading={false}
-                          parentChannel={
-                            Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                              "name": "Sermon Series",
-                            }
-                          }
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -2497,60 +2384,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <View
-                                bordered={false}
-                                disabled={false}
-                                pill={false}
-                                style={
-                                  Object {
-                                    "alignItems": "center",
-                                    "backgroundColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderRadius": 16,
-                                    "borderWidth": 0,
-                                    "elevation": 2,
-                                    "flexDirection": "row",
-                                    "height": 32,
-                                    "justifyContent": "center",
-                                    "opacity": 1,
-                                    "overflow": "hidden",
-                                    "paddingHorizontal": 12,
-                                  }
-                                }
-                              >
-                                <Text
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "color": "#FFFFFF",
-                                      "fontFamily": "InterUI-Bold",
-                                      "fontSize": 12,
-                                      "justifyContent": "center",
-                                      "lineHeight": 17.28,
-                                      "paddingLeft": null,
-                                      "textAlign": "center",
-                                    }
-                                  }
-                                >
-                                  Sermon Series
-                                </Text>
-                              </View>
-                              <View
                                 style={
                                   Object {
                                     "alignItems": "flex-end",
@@ -2624,13 +2457,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           inHorizontalList={true}
                           isLive={false}
                           isLoading={false}
-                          parentChannel={
-                            Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:a0f64573eabf00a607bec911794d50fb",
-                              "name": "Sermon Series",
-                            }
-                          }
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -2755,60 +2581,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               }
                             >
-                              <View
-                                bordered={false}
-                                disabled={false}
-                                pill={false}
-                                style={
-                                  Object {
-                                    "alignItems": "center",
-                                    "backgroundColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderRadius": 16,
-                                    "borderWidth": 0,
-                                    "elevation": 2,
-                                    "flexDirection": "row",
-                                    "height": 32,
-                                    "justifyContent": "center",
-                                    "opacity": 1,
-                                    "overflow": "hidden",
-                                    "paddingHorizontal": 12,
-                                  }
-                                }
-                              >
-                                <Text
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "color": "#FFFFFF",
-                                      "fontFamily": "InterUI-Bold",
-                                      "fontSize": 12,
-                                      "justifyContent": "center",
-                                      "lineHeight": 17.28,
-                                      "paddingLeft": null,
-                                      "textAlign": "center",
-                                    }
-                                  }
-                                >
-                                  Sermon Series
-                                </Text>
-                              </View>
                               <View
                                 style={
                                   Object {
@@ -2955,11 +2727,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "Jeremiah: A 33-Day Devotional",
                         "id": "ContentSeriesContentItem:b085ec27d53006e9e6b95f3ac57da581",
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                          "name": "Devotion Series",
-                        },
                         "summary": "Have you ever had to deliver difficult news?",
                         "theme": null,
                         "title": "Jeremiah: A 33-Day Devotional",
@@ -2977,11 +2744,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "How To Be A Better Leader: A 7-Day Devotional",
                         "id": "ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a",
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                          "name": "Devotion Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "How To Be A Better Leader: A 7-Day Devotional",
@@ -2999,11 +2761,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         },
                         "hyphenatedTitle": "2 Thessalonians: A 5-Day Devotional",
                         "id": "ContentSeriesContentItem:44fd3b82373ea8f197bd1e1e77c4bed0",
-                        "parentChannel": Object {
-                          "__typename": "ContentChannel",
-                          "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                          "name": "Devotion Series",
-                        },
                         "summary": "",
                         "theme": null,
                         "title": "2 Thessalonians: A 5-Day Devotional",
@@ -3091,13 +2848,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           inHorizontalList={true}
                           isLive={false}
                           isLoading={false}
-                          parentChannel={
-                            Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                              "name": "Devotion Series",
-                            }
-                          }
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -3223,60 +2973,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <View
-                                bordered={false}
-                                disabled={false}
-                                pill={false}
-                                style={
-                                  Object {
-                                    "alignItems": "center",
-                                    "backgroundColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderRadius": 16,
-                                    "borderWidth": 0,
-                                    "elevation": 2,
-                                    "flexDirection": "row",
-                                    "height": 32,
-                                    "justifyContent": "center",
-                                    "opacity": 1,
-                                    "overflow": "hidden",
-                                    "paddingHorizontal": 12,
-                                  }
-                                }
-                              >
-                                <Text
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "color": "#FFFFFF",
-                                      "fontFamily": "InterUI-Bold",
-                                      "fontSize": 12,
-                                      "justifyContent": "center",
-                                      "lineHeight": 17.28,
-                                      "paddingLeft": null,
-                                      "textAlign": "center",
-                                    }
-                                  }
-                                >
-                                  Devotion Series
-                                </Text>
-                              </View>
-                              <View
                                 style={
                                   Object {
                                     "alignItems": "flex-end",
@@ -3350,13 +3046,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           inHorizontalList={true}
                           isLive={false}
                           isLoading={false}
-                          parentChannel={
-                            Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                              "name": "Devotion Series",
-                            }
-                          }
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -3482,60 +3171,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <View
-                                bordered={false}
-                                disabled={false}
-                                pill={false}
-                                style={
-                                  Object {
-                                    "alignItems": "center",
-                                    "backgroundColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderRadius": 16,
-                                    "borderWidth": 0,
-                                    "elevation": 2,
-                                    "flexDirection": "row",
-                                    "height": 32,
-                                    "justifyContent": "center",
-                                    "opacity": 1,
-                                    "overflow": "hidden",
-                                    "paddingHorizontal": 12,
-                                  }
-                                }
-                              >
-                                <Text
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "color": "#FFFFFF",
-                                      "fontFamily": "InterUI-Bold",
-                                      "fontSize": 12,
-                                      "justifyContent": "center",
-                                      "lineHeight": 17.28,
-                                      "paddingLeft": null,
-                                      "textAlign": "center",
-                                    }
-                                  }
-                                >
-                                  Devotion Series
-                                </Text>
-                              </View>
-                              <View
                                 style={
                                   Object {
                                     "alignItems": "flex-end",
@@ -3609,13 +3244,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           inHorizontalList={true}
                           isLive={false}
                           isLoading={false}
-                          parentChannel={
-                            Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:7fba1b1ee253e0fd5f0795b4b8b1175e",
-                              "name": "Devotion Series",
-                            }
-                          }
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -3740,60 +3368,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               }
                             >
-                              <View
-                                bordered={false}
-                                disabled={false}
-                                pill={false}
-                                style={
-                                  Object {
-                                    "alignItems": "center",
-                                    "backgroundColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderColor": Object {
-                                      "color": Array [
-                                        255,
-                                        255,
-                                        255,
-                                      ],
-                                      "model": "rgb",
-                                      "valpha": 0.4,
-                                    },
-                                    "borderRadius": 16,
-                                    "borderWidth": 0,
-                                    "elevation": 2,
-                                    "flexDirection": "row",
-                                    "height": 32,
-                                    "justifyContent": "center",
-                                    "opacity": 1,
-                                    "overflow": "hidden",
-                                    "paddingHorizontal": 12,
-                                  }
-                                }
-                              >
-                                <Text
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "color": "#FFFFFF",
-                                      "fontFamily": "InterUI-Bold",
-                                      "fontSize": 12,
-                                      "justifyContent": "center",
-                                      "lineHeight": 17.28,
-                                      "paddingLeft": null,
-                                      "textAlign": "center",
-                                    }
-                                  }
-                                >
-                                  Devotion Series
-                                </Text>
-                              </View>
                               <View
                                 style={
                                   Object {
