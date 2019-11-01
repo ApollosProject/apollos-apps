@@ -139,9 +139,11 @@ const HorizontalHighlightCard = withIsLoading(
             {hasAction ? <ActionIcon name={actionIcon} /> : null}
           </ActionLayout>
         </Content>
-        <LikeIconPositioning>
-          <LikeIcon isLiked={isLiked} />
-        </LikeIconPositioning>
+        {isLiked != null ? (
+          <LikeIconPositioning>
+            <LikeIcon isLiked={isLiked} />
+          </LikeIconPositioning>
+        ) : null}
       </SquareCard>
     </ThemeMixin>
   )

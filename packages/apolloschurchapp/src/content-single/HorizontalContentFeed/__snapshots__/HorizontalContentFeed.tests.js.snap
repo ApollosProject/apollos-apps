@@ -307,26 +307,6 @@ exports[`the HorizontalContentFeed component renders a horizontal content feed 1
                 }
               }
             />
-            <View
-              style={
-                Object {
-                  "position": "absolute",
-                  "right": 16,
-                  "top": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 24,
-                    "width": 24,
-                  }
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -477,26 +457,6 @@ exports[`the HorizontalContentFeed component renders a horizontal content feed 1
                 }
               }
             />
-            <View
-              style={
-                Object {
-                  "position": "absolute",
-                  "right": 16,
-                  "top": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 24,
-                    "width": 24,
-                  }
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -647,26 +607,6 @@ exports[`the HorizontalContentFeed component renders a horizontal content feed 1
                 }
               }
             />
-            <View
-              style={
-                Object {
-                  "position": "absolute",
-                  "right": 16,
-                  "top": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 24,
-                    "width": 24,
-                  }
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -817,26 +757,6 @@ exports[`the HorizontalContentFeed component renders a horizontal content feed 1
                 }
               }
             />
-            <View
-              style={
-                Object {
-                  "position": "absolute",
-                  "right": 16,
-                  "top": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 24,
-                    "width": 24,
-                  }
-                }
-              />
-            </View>
           </View>
         </View>
       </View>

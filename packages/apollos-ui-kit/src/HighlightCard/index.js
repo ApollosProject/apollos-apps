@@ -147,9 +147,11 @@ const HighlightCard = withIsLoading(
             ? renderWithSummary(title, actionIcon, summary, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}
         </Content>
-        <LikeIconPositioning>
-          <LikeIcon isLiked={isLiked} />
-        </LikeIconPositioning>
+        {isLiked != null ? (
+          <LikeIconPositioning>
+            <LikeIcon isLiked={isLiked} />
+          </LikeIconPositioning>
+        ) : null}
       </StyledCard>
     </ThemeMixin>
   )

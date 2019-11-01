@@ -79,6 +79,24 @@ describe('HorizontalHighlightCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should should render as a like icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HorizontalHighlightCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          isLiked={false}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>

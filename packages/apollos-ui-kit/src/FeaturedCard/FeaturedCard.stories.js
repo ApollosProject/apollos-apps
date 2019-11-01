@@ -30,6 +30,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       hasAction
       isLive
+      isLiked
     />
   ))
   .add('default', () => (
@@ -86,7 +87,20 @@ storiesOf('ui-kit/FeaturedCard', module)
       hasAction
     />
   ))
-  .add('isLiked', () => (
+  .add('isLiked/false', () => (
+    <FeaturedCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLiked={false}
+    />
+  ))
+  .add('isLiked/true', () => (
     <FeaturedCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'

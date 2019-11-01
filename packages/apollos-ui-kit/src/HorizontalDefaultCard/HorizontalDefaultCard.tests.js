@@ -20,6 +20,24 @@ describe('HorizontalDefaultCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should should render a like icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HorizontalDefaultCard
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          isLiked={false}
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>

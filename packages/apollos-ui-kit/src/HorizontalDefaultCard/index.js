@@ -61,9 +61,11 @@ const HorizontalDefaultCard = withIsLoading(
           </Summary>
         ) : null}
       </Content>
-      <LikeIconPositioning>
-        <LikeIcon isLiked={isLiked} />
-      </LikeIconPositioning>
+      {isLiked != null ? (
+        <LikeIconPositioning>
+          <LikeIcon isLiked={isLiked} />
+        </LikeIconPositioning>
+      ) : null}
     </SquareCard>
   )
 );

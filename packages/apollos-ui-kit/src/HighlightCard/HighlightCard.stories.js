@@ -45,6 +45,7 @@ storiesOf('ui-kit/HighlightCard', module)
           'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
         }
         hasAction
+        isLiked={false}
         labelText={'Custom Label'}
       />
       <HighlightCard
@@ -60,6 +61,7 @@ storiesOf('ui-kit/HighlightCard', module)
           'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
         }
         hasAction
+        isLiked
         labelText={'Custom Label'}
       />
     </ScrollView>
@@ -116,6 +118,32 @@ storiesOf('ui-kit/HighlightCard', module)
         },
       ]}
       hasAction
+    />
+  ))
+  .add('isLiked/false', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLiked={false}
+    />
+  ))
+  .add('isLiked/true', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLiked
     />
   ))
   .add('isLoading', () => (
