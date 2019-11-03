@@ -78,6 +78,8 @@ const defaultRenderer = (node, { children }) => {
       );
     case 'strong':
       return <BodyText bold>{children}</BodyText>;
+    case 'b':
+      return <BodyText bold>{children}</BodyText>;
     case 'em':
       return <BodyText italic>{children}</BodyText>;
     case 'blockquote':
