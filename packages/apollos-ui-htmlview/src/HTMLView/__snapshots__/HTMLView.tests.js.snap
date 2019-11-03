@@ -782,6 +782,58 @@ exports[`the HTMLView component should render bold text 1`] = `
 </View>
 `;
 
+exports[`the HTMLView component should render bold text using <b> 1`] = `
+<View
+  lineNumber={8}
+  onReady={true}
+  style={
+    Object {
+      "paddingBottom": 17.28,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 17.28,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text
+          bold={true}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Testings
+          </Text>
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`the HTMLView component should render example HTML 1`] = `
 <View
   lineNumber={8}

@@ -87,6 +87,15 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render bold text using <b>', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<p><b>Testings</b></p>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a block quote', () => {
     const tree = renderer.create(
       <Providers>
