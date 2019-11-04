@@ -64,7 +64,7 @@ class Location extends PureComponent {
           },
         });
       },
-      (e) => console.warn(e),
+      (e) => console.warn('Error getting location!', e),
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
   }
