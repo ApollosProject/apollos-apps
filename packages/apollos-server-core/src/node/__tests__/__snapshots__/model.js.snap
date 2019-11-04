@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Node Node class should call getFromId the id if we are asking for more than id 1`] = `undefined`;
+
+exports[`Node Node class should call getFromId the id if we are asking for more than id 2`] = `
+Array [
+  Array [
+    "456",
+    "Test:fb344cb78f7b3f41416ffcbdc457e30c",
+  ],
+]
+`;
+
+exports[`Node Node class should return just the id if we are only asking for id 1`] = `
+Object {
+  "__type": "Test",
+  "__typename": "Test",
+  "id": "123",
+}
+`;
+
+exports[`Node Node class should return just the id if we are only asking for id 2`] = `Array []`;
+
 exports[`Node Node class should throw error if it can't find a matching model 1`] = `"No dataSource found using NoModel"`;
 
 exports[`Node Node class should throw error if model does not have getFromId 1`] = `"You have a dataSource for Test but it does not implement  \`getFromId\`"`;

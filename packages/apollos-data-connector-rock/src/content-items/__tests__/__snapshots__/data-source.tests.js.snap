@@ -365,6 +365,29 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel gets cover image from the cache, when it exists: Get mock calls 1`] = `
+Array [
+  Array [
+    Object {
+      "key": "contentItem:coverImage:123",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel gets cover image from the cache, when it exists: Image result 1`] = `
+Object {
+  "__typename": "ImageMedia",
+  "key": "image",
+  "name": "Image",
+  "sources": Array [
+    Object {
+      "uri": "https://some-domain.com/some/path/to/image.jpg",
+    },
+  ],
+}
+`;
+
 exports[`ContentItemsModel isContentActiveLiveStream returns false if the livestream is innactive 1`] = `Array []`;
 
 exports[`ContentItemsModel isContentActiveLiveStream returns false if the livestream is not the most recent sermon 1`] = `
@@ -575,6 +598,39 @@ Array [
     Object {
       "id": "123-1",
       "text": "that thing is cool",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel stores cover image in the cache, when it exists 1`] = `
+Object {
+  "__typename": "ImageMedia",
+  "key": "image",
+  "name": "Image",
+  "sources": Array [
+    Object {
+      "uri": "https://some-domain.com/some/path/to/image.jpg",
+    },
+  ],
+}
+`;
+
+exports[`ContentItemsModel stores cover image in the cache, when it exists 2`] = `
+Array [
+  Array [
+    Object {
+      "data": Object {
+        "__typename": "ImageMedia",
+        "key": "image",
+        "name": "Image",
+        "sources": Array [
+          Object {
+            "uri": "https://some-domain.com/some/path/to/image.jpg",
+          },
+        ],
+      },
+      "key": "contentItem:coverImage:123",
     },
   ],
 ]
