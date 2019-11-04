@@ -12,6 +12,8 @@ APP:
   # It should match whatver is in your Info.plist `CFBundleURLTypes`
   DEEP_LINK_HOST: apolloschurchapp
   ROOT_API_URL: ${ROOT_URL}
+  JOBS_USERNAME: ${JOBS_USERNAME}
+  JOBS_PASSWORD: ${JOBS_PASSWORD}
 ROCK:
   API_URL: https://apollosrock.newspring.cc/api
   API_TOKEN: ${ROCK_TOKEN}

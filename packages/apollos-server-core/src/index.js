@@ -3,6 +3,8 @@ import gql from 'graphql-tag';
 import { InMemoryLRUCache } from 'apollo-server-caching';
 import { makeExecutableSchema } from 'apollo-server';
 import { createQueues, UI } from 'bull-board';
+import ApollosConfig from '@apollosproject/config';
+import basicAuth from 'express-basic-auth';
 
 import * as Node from './node';
 import * as Pagination from './pagination';
@@ -137,7 +139,16 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 
   const queues = createQueues(process.env.REDIS_URL);
 
-  app.use('/admin/queues', UI);
+  app.use(
+    '/admin/queues',
+    basicAuth({
+      users: {
+        [ApollosConfig.APP.JOBS_USERNAME]: ApollosConfig.APP.JOBS_PASSWORD,
+      },
+      challenge: true,
+    }),
+    UI
+  );
 
   return jobs.forEach((create) => create({ app, getContext, queues }));
 };
