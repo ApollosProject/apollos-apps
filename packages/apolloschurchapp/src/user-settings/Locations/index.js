@@ -64,7 +64,7 @@ class Location extends PureComponent {
           },
         });
       },
-      () => null,
+      (e) => console.warn(e),
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
   }
@@ -79,29 +79,32 @@ class Location extends PureComponent {
         }}
         fetchPolicy="cache-and-network"
       >
-        {({ loading, error, data: { campuses = [], currentUser } = {} }) => (
-          <Mutation mutation={CHANGE_CAMPUS}>
-            {(handlePress) => (
-              <MapView
-                navigation={this.props.navigation}
-                isLoading={loading}
-                error={error}
-                campuses={campuses}
-                initialRegion={this.props.initialRegion}
-                userLocation={this.state.userLocation}
-                currentCampus={get(currentUser, 'profile.campus')}
-                onLocationSelect={async ({ id }) => {
-                  await handlePress({
-                    variables: {
-                      campusId: id,
-                    },
-                  });
-                  this.props.navigation.goBack();
-                }}
-              />
-            )}
-          </Mutation>
-        )}
+        {({ loading, error, data: { campuses, currentUser } = {} }) => {
+          if (loading) return null;
+          return (
+            <Mutation mutation={CHANGE_CAMPUS}>
+              {(handlePress) => (
+                <MapView
+                  navigation={this.props.navigation}
+                  isLoading={loading}
+                  error={error}
+                  campuses={campuses || []}
+                  initialRegion={this.props.initialRegion}
+                  userLocation={this.state.userLocation}
+                  currentCampus={get(currentUser, 'profile.campus')}
+                  onLocationSelect={async ({ id }) => {
+                    await handlePress({
+                      variables: {
+                        campusId: id,
+                      },
+                    });
+                    this.props.navigation.goBack();
+                  }}
+                />
+              )}
+            </Mutation>
+          );
+        }}
       </Query>
     );
   }
