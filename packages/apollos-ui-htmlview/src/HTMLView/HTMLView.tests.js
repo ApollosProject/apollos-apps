@@ -78,6 +78,15 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render italic text using <i>', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<p><i>Testings</i></p>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render bold text', () => {
     const tree = renderer.create(
       <Providers>
