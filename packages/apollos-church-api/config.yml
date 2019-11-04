@@ -50,6 +50,7 @@ ANALYTICS:
   # on the accompanying service
   SEGMENT_KEY:
   GA_ID:
+  USE_ROCK: true
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
   BIBLE_ID:
