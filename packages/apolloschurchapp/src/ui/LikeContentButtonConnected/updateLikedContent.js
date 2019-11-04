@@ -1,5 +1,5 @@
 import GET_ALL_LIKED_CONTENT from 'apolloschurchapp/src/tabs/connect/getLikedContent';
-import { CONTENT_ITEM_FRAGMENT } from 'apolloschurchapp/src/content-single/getContentItem';
+import { BASE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnected';
 
 const addItemToLikedContentList = ({ cache, item, variables }) => {
   try {
@@ -9,14 +9,18 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
     });
     const fullItem = cache.readFragment({
       id: `${item.__typename}:${item.id}`,
-      fragment: CONTENT_ITEM_FRAGMENT,
+      fragment: BASE_CARD_FRAGMENT,
+      fragmentName: 'baseCardFragment',
     });
     const newEdges = [
       fullItem,
       ...data.likedContent.edges.map(({ node }) => node),
     ].map((node) => ({
       __typename: 'ContentItemsConnectionEdge',
-      node,
+      node: {
+        ...node,
+        isLiked: true,
+      },
     }));
     cache.writeQuery({
       query: GET_ALL_LIKED_CONTENT,
