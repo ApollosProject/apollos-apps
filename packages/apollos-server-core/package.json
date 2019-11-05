@@ -25,6 +25,7 @@
     "apollo-server-caching": "^0.4.0",
     "bull": "^3.11.0",
     "bull-board": "^0.1.1",
+    "express-basic-auth": "^1.2.0",
     "graphql-parse-resolve-info": "^4.4.5",
     "graphql-tag": "^2.10.0",
     "lodash": "^4.17.11"
