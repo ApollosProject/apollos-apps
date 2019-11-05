@@ -42,6 +42,7 @@ export Input, {
   RadioButton,
 } from './inputs';
 export { LayoutProvider, LayoutConsumer } from './LayoutContext';
+export MapView from './MapView';
 export MediaQuery, {
   enhancer as withMediaQuery,
   withWindow,
