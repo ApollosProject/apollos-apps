@@ -234,7 +234,6 @@ class MapView extends Component {
               }
             />
           </PaddedView>
-          \
         </Footer>
       </FlexedView>
     );

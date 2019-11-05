@@ -60,14 +60,12 @@ const navigation = {
 };
 
 storiesOf('ui-kit/MapView', module).add('default', () => (
-  <Providers>
-    <MapView
-      navigation={navigation}
-      campuses={campuses}
-      initialRegion={initialRegion}
-      userLocation={currentCampus}
-      currentCampus={currentCampus}
-      onLocationSelect={async () => {}}
-    />
-  </Providers>
+  <MapView
+    navigation={navigation}
+    campuses={campuses}
+    initialRegion={initialRegion}
+    userLocation={currentCampus}
+    currentCampus={currentCampus}
+    onLocationSelect={async () => {}}
+  />
 ));
