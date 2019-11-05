@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-media-player",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
