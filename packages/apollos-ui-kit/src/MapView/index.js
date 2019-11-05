@@ -5,17 +5,15 @@ import { SafeAreaView } from 'react-navigation';
 import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
 
-import {
-  Button,
-  Touchable,
-  PaddedView,
-  FlexedView,
-  styled,
-  withTheme,
-  CampusCard,
-} from '@apollosproject/ui-kit';
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
+// import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
+import Button from '../Button';
+import Touchable from '../Touchable';
+import PaddedView from '../PaddedView';
+import FlexedView from '../FlexedView';
+import styled from '../styled';
+import { withTheme } from '../theme';
+import CampusCard from '../CampusCard';
 import Marker from './Marker';
 
 const getCampusAddress = (campus) =>
@@ -226,18 +224,17 @@ class MapView extends Component {
               </Touchable>
             ))}
           </Animated.ScrollView>
-          <MediaPlayerSpacer>
-            <PaddedView>
-              <Button
-                title="Select Campus"
-                pill={false}
-                type="secondary"
-                onPress={() =>
-                  onLocationSelect(this.currentCampus || this.sortedCampuses[0])
-                }
-              />
-            </PaddedView>
-          </MediaPlayerSpacer>
+          <PaddedView>
+            <Button
+              title="Select Campus"
+              pill={false}
+              type="secondary"
+              onPress={() =>
+                onLocationSelect(this.currentCampus || this.sortedCampuses[0])
+              }
+            />
+          </PaddedView>
+          \
         </Footer>
       </FlexedView>
     );
