@@ -36,7 +36,6 @@ const EnhancedAuth = (props) => (
   <Auth
     {...props}
     emailRequired
-    handleForgotPassword={() => console.log('hello')}
   />
 );
 hoistNonReactStatic(EnhancedAuth, Auth);
