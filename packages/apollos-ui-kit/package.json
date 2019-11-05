@@ -41,11 +41,12 @@
   },
   "peerDependencies": {
     "@apollosproject/storybook": "*",
+    "@apollosproject/ui-media-player": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*",
-    "react-native-maps": "*"
+    "react-native-maps": "*",
+    "react-native-svg": "*"
   },
   "dependencies": {
     "color": "^3.1.0",
