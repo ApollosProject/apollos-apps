@@ -6,8 +6,13 @@ import { H4, H6 } from '../../typography';
 import Card from '../CardWrapper';
 import CardContent from '../Content';
 
-const Header = styled({ textAlign: 'center' }, 'Error.Header')(H4);
-const ErrorText = styled({ textAlign: 'center' }, 'Error.Text')(H6);
+const Header = styled({ textAlign: 'center' }, 'ui-kit.Card.ErrorCard.Header')(
+  H4
+);
+const ErrorText = styled(
+  { textAlign: 'center' },
+  'ui-kit.Card.ErrorCard.ErrorText'
+)(H6);
 
 const Err = ({ message = 'Uh oh!', error }) => {
   let errorMessage;
