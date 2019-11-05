@@ -370,8 +370,21 @@ exports[`the Devotional component renders a devotional 1`] = `
                             }
                           }
                         >
-                          <Text>
-                            Some content!
+                          <Text
+                            bold={true}
+                            italic={false}
+                            style={
+                              Object {
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 26,
+                              }
+                            }
+                          >
+                            <Text>
+                              Some content!
+                            </Text>
                           </Text>
                         </Text>
                       </View>
@@ -1230,8 +1243,21 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                             }
                           }
                         >
-                          <Text>
-                            Some content!
+                          <Text
+                            bold={true}
+                            italic={false}
+                            style={
+                              Object {
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 26,
+                              }
+                            }
+                          >
+                            <Text>
+                              Some content!
+                            </Text>
                           </Text>
                         </Text>
                       </View>
@@ -1766,8 +1792,21 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                             }
                           }
                         >
-                          <Text>
-                            Some content!
+                          <Text
+                            bold={true}
+                            italic={false}
+                            style={
+                              Object {
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 26,
+                              }
+                            }
+                          >
+                            <Text>
+                              Some content!
+                            </Text>
                           </Text>
                         </Text>
                       </View>
