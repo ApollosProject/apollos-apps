@@ -9,7 +9,7 @@ const Actions = styled(
     justifyContent: 'space-between',
     paddingTop: 0,
   },
-  'Card.Actions'
+  'ui-kit.Card.Actions'
 )(PaddedView);
 
 export default Actions;
