@@ -1,4 +1,19 @@
 
+v1.2.1: November 5, 2019
+
+- Adds gif support on Android 💥 (#1194) (4f59534a)
+- Adds Forgot Password Functionality (#1152) (88132e41)
+- Updates load tests (#1190) (54466809)
+- Adds <b> and <i> tag support to HTMLView (#1185) (eee680e9)
+- Attempts to prefetch the result of getCurrentPerson. (#1186) (28aa0f1b)
+- Defaults to using ROCK for analytics ONLY if enabled in config.yml. (#1187) (fb111b52)
+- Secures Jobs Board (#1188) (c9a41000)
+- Cleans up front-end fragments and removes LikeIcon from FeedView (#1183) (1be5ac59)
+- Makes like icon optional on cards (#1182) (7b3d5798)
+
+- Fixes Map Zoom to Nothing (#1189) (b1f25774)
+- Fixes typename not being pulled from node and removes LikeIcon from feeds (#1180) (0aadebed)
+
 v1.2.0: October 31, 2019 🎃
 
 - Moves Picture Loading Indicator (#1177) (45aae728)
