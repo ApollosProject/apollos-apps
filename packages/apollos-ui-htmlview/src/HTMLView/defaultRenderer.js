@@ -78,7 +78,13 @@ const defaultRenderer = (node, { children }) => {
       );
     case 'strong':
       return <BodyText bold>{children}</BodyText>;
+    // NOTE: remove if Rock decides to stop using <b> in its content GUI
+    case 'b':
+      return <BodyText bold>{children}</BodyText>;
     case 'em':
+      return <BodyText italic>{children}</BodyText>;
+    // NOTE: remove if Rock decides to stop using <i> in its content GUI
+    case 'i':
       return <BodyText italic>{children}</BodyText>;
     case 'blockquote':
       return (
