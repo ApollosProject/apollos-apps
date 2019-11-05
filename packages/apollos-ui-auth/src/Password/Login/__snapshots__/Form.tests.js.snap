@@ -328,6 +328,16 @@ exports[`The LoginForm component should render 1`] = `
           </View>
         </View>
       </View>
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#17B582",
+          }
+        }
+      >
+        Forgot your password?
+      </Text>
     </View>
   </View>
   <View

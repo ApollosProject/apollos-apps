@@ -64,7 +64,11 @@ class AuthPassword extends PureComponent {
   }
 
   render() {
-    const { BackgroundComponent, emailRequired } = this.flatProps;
+    const {
+      BackgroundComponent,
+      emailRequired,
+      handleForgotPassword,
+    } = this.flatProps;
     return (
       <AuthConsumer>
         {({ closeAuth }) => (
@@ -89,6 +93,7 @@ class AuthPassword extends PureComponent {
                       <LoginForm
                         onLogin={closeAuth}
                         emailRequired={emailRequired}
+                        handleForgotPassword={handleForgotPassword}
                       />
                     ),
                     signup: () => (
