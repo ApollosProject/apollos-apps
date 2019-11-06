@@ -1,1 +1,1 @@
-export LiveProvider from './LiveProvider';
+export { LiveProvider, LiveConsumer } from './LiveContext';
