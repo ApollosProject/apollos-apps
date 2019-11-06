@@ -14,7 +14,7 @@ import {
   H6,
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
-import GET_CONTENT_MEDIA from './getContentMedia';
+import GET_LIVE_STREAM from './getLiveStream';
 
 const Container = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -27,7 +27,13 @@ const StyledMediaThumbnail = styled({ marginVertical: 0 })(MediaThumbnail);
 
 class MediaControls extends PureComponent {
   static propTypes = {
-    contentId: PropTypes.string,
+    content: PropTypes.shape({
+      id: PropTypes.string,
+      videos: PropTypes.arrayOf(PropTypes.shape({})),
+      title: PropTypes.string,
+      parentChannel: PropTypes.shape({}),
+      coverImage: PropTypes.shape({}),
+    }),
   };
 
   renderPlayButton = ({ action, coverImageSources }) => (
@@ -84,17 +90,15 @@ class MediaControls extends PureComponent {
   renderControls = ({
     loading,
     error,
-    data: {
-      node: {
-        videos,
-        title,
-        parentChannel = {},
-        coverImage = {},
-        liveStream = {},
-      } = {},
-    } = {},
+    data: { node: { liveStream = {} } = {} } = {},
   }) => {
     if (loading || error) return null;
+    const {
+      videos = [],
+      title = '',
+      parentChannel = {},
+      coverImage = {},
+    } = this.props.content;
 
     const isLive = get(liveStream, 'isLive', false);
     const hasLiveStreamContent = !!(
@@ -137,12 +141,12 @@ class MediaControls extends PureComponent {
   };
 
   render() {
-    if (!this.props.contentId) return null;
+    if (!this.props.content.id) return null;
     return (
       <Query
-        query={GET_CONTENT_MEDIA}
+        query={GET_LIVE_STREAM}
         fetchPolicy="cache-and-network"
-        variables={{ contentId: this.props.contentId }}
+        variables={{ contentId: this.props.content.id }}
       >
         {this.renderControls}
       </Query>
