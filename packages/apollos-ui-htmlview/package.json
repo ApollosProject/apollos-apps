@@ -34,7 +34,7 @@
     ]
   },
   "peerDependencies": {
-    "@apollos-project/ui-kit": "*",
+    "@apollosproject/ui-kit": "*",
     "react": "*",
     "react-native": "*"
   },
