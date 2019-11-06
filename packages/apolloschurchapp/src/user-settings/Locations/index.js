@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
+import { PaddedView, ButtonLink, MapView } from '@apollosproject/ui-kit';
+import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 import { get } from 'lodash';
 
 import GET_CAMPUSES from './getCampusLocations';
 import CHANGE_CAMPUS from './campusChange';
-import MapView from './MapView';
 
 class Location extends PureComponent {
   static propTypes = {
@@ -98,6 +98,7 @@ class Location extends PureComponent {
                   });
                   this.props.navigation.goBack();
                 }}
+                cardWrapper={MediaPlayerSpacer}
               />
             )}
           </Mutation>

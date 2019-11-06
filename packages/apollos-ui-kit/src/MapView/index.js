@@ -5,8 +5,6 @@ import { SafeAreaView } from 'react-navigation';
 import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
 
-// import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
-
 import Button from '../Button';
 import Touchable from '../Touchable';
 import PaddedView from '../PaddedView';
@@ -70,6 +68,7 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
+    cardWrapper: PropTypes.func,
   };
 
   animation = new Animated.Value(0);
@@ -146,7 +145,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect } = this.props;
+    const { onLocationSelect, cardWrapper } = this.props;
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * CARD_WIDTH,
@@ -160,6 +159,8 @@ class MapView extends Component {
       });
       return { opacity };
     });
+
+    const CardWrapper = cardWrapper;
 
     return (
       <FlexedView>
@@ -224,16 +225,18 @@ class MapView extends Component {
               </Touchable>
             ))}
           </Animated.ScrollView>
-          <PaddedView>
-            <Button
-              title="Select Campus"
-              pill={false}
-              type="secondary"
-              onPress={() =>
-                onLocationSelect(this.currentCampus || this.sortedCampuses[0])
-              }
-            />
-          </PaddedView>
+          <CardWrapper>
+            <PaddedView>
+              <Button
+                title="Select Campus"
+                pill={false}
+                type="secondary"
+                onPress={() =>
+                  onLocationSelect(this.currentCampus || this.sortedCampuses[0])
+                }
+              />
+            </PaddedView>
+          </CardWrapper>
         </Footer>
       </FlexedView>
     );

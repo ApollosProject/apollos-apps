@@ -1,8 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-
-import Providers from '../Providers';
+import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 import MapView from '.';
 
@@ -67,5 +66,6 @@ storiesOf('ui-kit/MapView', module).add('default', () => (
     userLocation={currentCampus}
     currentCampus={currentCampus}
     onLocationSelect={async () => {}}
+    cardWrapper={MediaPlayerSpacer}
   />
 ));
