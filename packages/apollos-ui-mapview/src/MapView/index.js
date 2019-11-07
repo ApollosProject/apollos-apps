@@ -68,7 +68,16 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
-    cardWrapper: PropTypes.func,
+    cardWrapper: PropTypes.func.isRequired,
+    mapPin: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
+  };
+
+  static defaultProps = {
+    mapPin: Marker,
   };
 
   animation = new Animated.Value(0);
@@ -145,7 +154,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect, cardWrapper } = this.props;
+    const { onLocationSelect, cardWrapper, mapPin } = this.props;
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * CARD_WIDTH,
@@ -161,6 +170,7 @@ class MapView extends Component {
     });
 
     const CardWrapper = cardWrapper;
+    const MapPin = mapPin;
 
     return (
       <FlexedView>
@@ -176,7 +186,7 @@ class MapView extends Component {
               opacity: interpolations[index].opacity,
             };
             return (
-              <Marker
+              <MapPin
                 onPress={() => this.scrollToIndex(index)}
                 key={campus.id}
                 opacityStyle={campusOpacity}
