@@ -465,6 +465,50 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('returns active livestream content when the LiveStream is live and there is a sermon', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: {
+        LiveStream: {
+          getLiveStream: () => ({
+            isLive: true,
+          }),
+        },
+      },
+    };
+
+    dataSource.getSermonFeed = jest.fn(() => ({
+      first: async () => Promise.resolve([{ id: '1' }]),
+    }));
+
+    const result = await dataSource.getActiveLiveStreamContent();
+
+    expect(result).toMatchSnapshot();
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
+  it("returns an empty array LiveStream isn't live and there is a sermon", async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: {
+        LiveStream: {
+          getLiveStream: () => ({
+            isLive: false,
+          }),
+        },
+      },
+    };
+
+    dataSource.getSermonFeed = jest.fn(() => ({
+      first: async () => Promise.resolve([{ id: '1' }]),
+    }));
+
+    const result = await dataSource.getActiveLiveStreamContent();
+
+    expect(result).toMatchSnapshot();
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
   it("getPersonaFeed doesn't fetch if there aren't any persona ids", async () => {
     const dataSource = new ContentItemsDataSource();
 
