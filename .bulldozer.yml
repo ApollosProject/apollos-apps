@@ -1,0 +1,18 @@
+version: 1
+
+merge:
+  whitelist:
+    labels: ["merge"]
+    comment_substrings: ["==MERGE_WHEN_READY=="]
+  blacklist:
+    labels: ["blocked"]
+    comment_substrings: ["==DO_NOT_MERGE=="]
+  method: squash
+  options:
+    squash:
+      body: summarize_commits
+  delete_after_merge: true
+
+update:
+  whitelist:
+    labels: ["ready for review"]
