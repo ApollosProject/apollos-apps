@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 import MapView from '.';
 
@@ -66,6 +67,7 @@ describe('<MapView>', () => {
         userLocation={currentCampus}
         currentCampus={currentCampus}
         onLocationSelect={jest.fn()}
+        cardWrapper={MediaPlayerSpacer}
       />
     );
     expect(tree).toMatchSnapshot();
