@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Church Online datasource must fetch a list of livestreams 1`] = `
+Array [
+  Object {
+    "contentItem": Object {
+      "id": "123",
+    },
+    "isLive": true,
+  },
+]
+`;
+
+exports[`The Church Online datasource must fetch a list of livestreams 2`] = `
+Array [
+  Array [],
+]
+`;

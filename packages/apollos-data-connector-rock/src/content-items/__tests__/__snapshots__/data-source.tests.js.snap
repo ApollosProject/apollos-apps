@@ -422,6 +422,26 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns active livestream content when the LiveStream is live and there is a sermon 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "1",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns active livestream content when the LiveStream is live and there is a sermon 2`] = `
+Array [
+  Array [],
+]
+`;
+
+exports[`ContentItemsModel returns an empty array LiveStream isn't live and there is a sermon 1`] = `Array []`;
+
+exports[`ContentItemsModel returns an empty array LiveStream isn't live and there is a sermon 2`] = `Array []`;
+
 exports[`ContentItemsModel returns an empty array when there are no child content items 1`] = `
 Array [
   Array [
