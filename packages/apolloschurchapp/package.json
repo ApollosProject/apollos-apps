@@ -66,6 +66,7 @@
     "@apollosproject/ui-analytics": "^1.2.1",
     "@apollosproject/ui-auth": "^1.2.1",
     "@apollosproject/ui-htmlview": "^1.2.1",
+    "@apollosproject/ui-mapview": "^1.2.1",
     "@apollosproject/ui-kit": "^1.2.1",
     "@apollosproject/ui-media-player": "^1.2.1",
     "@apollosproject/ui-notifications": "^1.2.1",

@@ -19,6 +19,13 @@
   resolved "https://registry.yarnpkg.com/@apollosproject/react-native-airplay-btn/-/react-native-airplay-btn-0.2.0.tgz#19c1c7154e6c04fd4d5a5587faf6a69cb34d8a79"
   integrity sha512-yf5TRao2v+jq9LtzqAt4MBZ4OgYR01YsyfbU9TC8/D+M9TWkYTsU8uhWpwYyxN4K1dWBd9jagyDMU0fpcLhkPg==
 
+"@apollosproject/ui-media-player@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-1.2.2.tgz#a31fe0cfc1a9ecbb59684aa5b888e63793b5bae5"
+  integrity sha512-eccMZyYfQmKklwrL4FMhqZwQE+6YE9KN6uy4uVsS1Os1VZ9uKgdSCywx1J42wR8cjOqrAYOSR2dI6Gg3p0S7sA==
+  dependencies:
+    graphql-tag "^2.10.1"
+
 "@babel/cli@7.1.5":
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.1.5.tgz#4ccf0a8cdabeefdd8ce955384530f050935bc4d7"

@@ -5,13 +5,13 @@ import { SafeAreaView } from 'react-navigation';
 import RNMapView from 'react-native-maps';
 import { debounce } from 'lodash';
 
-import Button from '../Button';
-import Touchable from '../Touchable';
-import PaddedView from '../PaddedView';
-import FlexedView from '../FlexedView';
-import styled from '../styled';
-import { withTheme } from '../theme';
-import CampusCard from '../CampusCard';
+import Button from '@apollosproject/ui-kit/src/Button';
+import Touchable from '@apollosproject/ui-kit/src/Touchable';
+import PaddedView from '@apollosproject/ui-kit/src/PaddedView';
+import FlexedView from '@apollosproject/ui-kit/src/FlexedView';
+import styled from '@apollosproject/ui-kit/src/styled';
+import { withTheme } from '@apollosproject/ui-kit/src/theme';
+import CampusCard from '@apollosproject/ui-kit/src/CampusCard';
 import Marker from './Marker';
 
 const getCampusAddress = (campus) =>

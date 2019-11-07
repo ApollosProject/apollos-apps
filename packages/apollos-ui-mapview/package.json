@@ -1,0 +1,67 @@
+{
+  "name": "@apollosproject/ui-mapview",
+  "version": "1.2.1",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "main": "src/index.js",
+  "files": [
+    "src/**",
+    "storybook/**"
+  ],
+  "scripts": {
+    "test": "jest",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "lint": "eslint ./src --ext .js"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native"
+  ],
+  "jest": {
+    "preset": "react-native",
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/react-native-svg",
+      "<rootDir>/node_modules/@storybook/react-native",
+      "<rootDir>/node_modules/react-navigation"
+    ]
+  },
+  "peerDependencies": {
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-media-player": "*",
+    "react": "*",
+    "react-native-maps": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "@apollosproject/ui-kit": "^1.2.1",
+    "@apollosproject/ui-media-player": "^1.2.2",
+    "@apollosproject/ui-storybook": "^1.2.1",
+    "react-native-maps": "0.26.1"
+  },
+  "devDependencies": {
+    "jest": "24.8.0",
+    "jest-react-native": "18.0.0",
+    "prop-types": "15.6.1",
+    "react": "16.8.6",
+    "react-native": "0.60.5",
+    "react-test-renderer": "16.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

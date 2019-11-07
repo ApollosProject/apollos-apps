@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Marker } from 'react-native-maps';
 import Color from 'color';
 
-import styled from '../styled';
+import styled from '@apollosproject/ui-kit/src/styled';
 
 const MarkerView = styled(
   ({ theme }) => ({
