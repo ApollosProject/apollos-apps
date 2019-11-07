@@ -12,7 +12,7 @@ const StyledCard = compose(
     ({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
       // card styles
       backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
-      borderRadius: theme.sizing.baseUnit,
+      borderRadius: theme.sizing.baseUnit, // if you are going to override this value you will need need to do the same to the `Overflowfix` below.
       ...(inHorizontalList
         ? {
             // provides spacing between cards also fixes android shadow needing "space" to render into
