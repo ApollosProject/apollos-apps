@@ -1,11 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import Config from 'react-native-config';
 
 import Providers from '../../Providers';
 
 import ErrorCard from '.';
 
 describe('the Card component', () => {
+  beforeEach(() => {
+    jest.mock('react-native-config');
+    Config.SHOW_ERRORS = 'true';
+  });
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
