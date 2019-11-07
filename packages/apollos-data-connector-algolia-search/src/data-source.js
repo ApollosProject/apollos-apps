@@ -7,6 +7,9 @@ import {
   createCursor,
   createGlobalId,
 } from '@apollosproject/server-core';
+import moment from 'moment';
+
+const { ROCK } = ApollosConfig;
 
 export default class Search {
   client = algoliasearch(
@@ -23,6 +26,17 @@ export default class Search {
   async addObjects(args) {
     return new Promise((resolve, reject) => {
       this.index.addObjects(args, (err, result) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve(result);
+      });
+    });
+  }
+
+  async updateObjects(args) {
+    return new Promise((resolve, reject) => {
+      this.index.saveObjects(args, (err, result) => {
         if (err) {
           return reject(err);
         }
@@ -54,6 +68,53 @@ query getItem {
       this.context
     );
     return data.node;
+  }
+
+  async deltaIndex() {
+    const { ContentItem } = this.context.dataSources;
+    let itemsLeft = true;
+    const args = { after: null, first: 100 };
+
+    while (itemsLeft) {
+      const { edges } = await ContentItem.paginate({
+        cursor: ContentItem.byDateAndActive(),
+        args,
+      });
+
+      const result = await edges;
+      const items = result.map(({ node }) => node);
+      itemsLeft = items.length === 100;
+
+      if (itemsLeft) args.after = result[result.length - 1].cursor;
+
+      const newlyCreated = [];
+      const newlyModified = [];
+
+      // eslint-disable-next-line
+      for (const item of items) {
+        if (
+          moment(item.createdDateTime).isAfter(
+            moment(new Date())
+              .subtract(1, 'week')
+              .tz(ROCK.TIMEZONE)
+          )
+        ) {
+          newlyCreated.push(item);
+        } else {
+          newlyModified.push(item);
+        }
+      }
+
+      const newlyCreatedIndexableItems = await Promise.all(
+        newlyCreated.map((item) => this.mapItemToAlgolia(item))
+      );
+      const newlyModifiedIndexableItems = await Promise.all(
+        newlyModified.map((item) => this.mapItemToAlgolia(item))
+      );
+
+      await this.addObjects(newlyCreatedIndexableItems);
+      await this.updateObjects(newlyModifiedIndexableItems);
+    }
   }
 
   async indexAll() {
