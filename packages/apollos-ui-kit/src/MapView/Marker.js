@@ -6,24 +6,30 @@ import Color from 'color';
 
 import styled from '../styled';
 
-const MarkerView = styled(({ theme }) => ({
-  width: 8,
-  height: 8,
-  borderRadius: 4,
-  backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
-  zIndex: 2,
-}))(View);
+const MarkerView = styled(
+  ({ theme }) => ({
+    width: theme.sizing.baseUnit / 2, // 8
+    height: theme.sizing.baseUnit / 2, // 8
+    borderRadius: theme.sizing.baseUnit / 4, // 4
+    backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
+    zIndex: 2,
+  }),
+  'Marker.view'
+)(View);
 
-const MarkerRingView = styled(({ theme }) => ({
-  width: 24,
-  height: 24,
-  borderRadius: 12,
-  backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low),
-  borderWidth: 1,
-  borderColor: Color(theme.colors.primary).fade(theme.alpha.medium),
-  alignItems: 'center',
-  justifyContent: 'center',
-}))(View);
+const MarkerRingView = styled(
+  ({ theme }) => ({
+    width: theme.sizing.baseUnit / 1.5, // 24
+    height: theme.sizing.baseUnit / 1.5, // 24
+    borderRadius: theme.sizing.baseUnit - 4, // 12
+    backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low),
+    borderWidth: 1,
+    borderColor: Color(theme.colors.primary).fade(theme.alpha.medium),
+    alignItems: 'center',
+    justifyContent: 'center',
+  }),
+  'Marker.ringView'
+)(View);
 
 const StyledMarker = memo(({ latitude, longitude, opacityStyle, onPress }) => (
   <Marker onPress={onPress} coordinate={{ latitude, longitude }}>
