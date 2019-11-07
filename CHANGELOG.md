@@ -1,3 +1,9 @@
+v1.2.2: November 6, 2019
+
+- Ensures user feed is cachables (#1201) (3113ed97)
+- Fixes padding issue with close icon when image is not available (e863d223)
+- Only tries to get the current person if you have a rock cookie (#1199) (e5270df3)
+
 
 v1.2.1: November 5, 2019
 
