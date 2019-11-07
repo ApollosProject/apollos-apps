@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Config from 'react-native-config';
 
 import styled from '../../styled';
 import { H4, H6 } from '../../typography';
@@ -23,14 +24,14 @@ const Err = ({ message = 'Uh oh!', error }) => {
     errorMessage = error;
   }
 
-  return (
+  return Config.SHOW_ERRORS === 'true' ? (
     <Card>
       <CardContent>
         <Header>{message}</Header>
         <ErrorText>{errorMessage}</ErrorText>
       </CardContent>
     </Card>
-  );
+  ) : null;
 };
 
 Err.propTypes = {
