@@ -39,7 +39,6 @@ export const CONTENT_ITEM_FRAGMENT = gql`
 
 export const DETAILED_ITEM_FRAGMENT = gql`
   fragment detailedItemFragment on ContentItem {
-    isLiked
     ... on WeekendContentItem {
       liveStream {
         isLive
