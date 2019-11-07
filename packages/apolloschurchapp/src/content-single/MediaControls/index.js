@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Query, Mutation } from 'react-apollo';
+import { Mutation } from 'react-apollo';
 import { View } from 'react-native';
 import { get } from 'lodash';
 
@@ -14,7 +14,7 @@ import {
   H6,
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
-import GET_LIVE_STREAM from './getLiveStream';
+import { LiveConsumer } from '../../live';
 
 const Container = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -87,12 +87,7 @@ class MediaControls extends PureComponent {
     </WebBrowserConsumer>
   );
 
-  renderControls = ({
-    loading,
-    error,
-    data: { node: { liveStream = {} } = {} } = {},
-  }) => {
-    if (loading || error) return null;
+  renderControls = (liveStream) => {
     const {
       videos = [],
       title = '',
@@ -100,7 +95,7 @@ class MediaControls extends PureComponent {
       coverImage = {},
     } = this.props.content;
 
-    const isLive = get(liveStream, 'isLive', false);
+    const isLive = !!liveStream;
     const hasLiveStreamContent = !!(
       get(liveStream, 'webViewUrl') || get(liveStream, 'media.sources[0]')
     );
@@ -143,13 +138,9 @@ class MediaControls extends PureComponent {
   render() {
     if (!this.props.content.id) return null;
     return (
-      <Query
-        query={GET_LIVE_STREAM}
-        fetchPolicy="cache-and-network"
-        variables={{ contentId: this.props.content.id }}
-      >
+      <LiveConsumer contentId={this.props.content.id}>
         {this.renderControls}
-      </Query>
+      </LiveConsumer>
     );
   }
 }
