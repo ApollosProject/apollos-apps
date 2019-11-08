@@ -423,10 +423,10 @@ export default class ContentItem extends RockApolloDataSource {
           (id) => `ContentChannelId eq ${id}`
         )
       )
-      .andfilter(
+      .cache({ ttl: 60 })
+      .andFilter(
         `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
       )
-      .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
   };
 
