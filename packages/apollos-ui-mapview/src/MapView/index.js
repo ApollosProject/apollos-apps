@@ -76,14 +76,14 @@ class MapView extends Component {
     mapPin: Marker,
   };
 
-  constructor() {
+  constructor(props) {
     super();
     this.cardWidth =
-      Dimensions.get('window').width - this.props.theme.sizing.baseUnit * 2.25;
+      Dimensions.get('window').width - props.theme.sizing.baseUnit * 2.25;
     this.animation = new Animated.Value(0);
     this.scrollView = null;
     this.cardWidthWithPadding =
-      this.cardWidth + this.props.theme.sizing.baseUnit * 0.5;
+      this.cardWidth + props.theme.sizing.baseUnit * 0.5;
   }
 
   componentDidMount() {
@@ -162,6 +162,9 @@ class MapView extends Component {
 
   render() {
     const { onLocationSelect, cardWrapper, mapPin } = this.props;
+    const CardWrapper = cardWrapper;
+    const MapPin = mapPin;
+
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * this.cardWidth,
@@ -175,9 +178,6 @@ class MapView extends Component {
       });
       return { opacity };
     });
-
-    const CardWrapper = cardWrapper;
-    const MapPin = mapPin;
 
     return (
       <FlexedView>
