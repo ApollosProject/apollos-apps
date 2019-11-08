@@ -19,17 +19,6 @@ jest.mock('react-navigation', () => {
   };
 });
 
-jest.mock('NativeModules', () => ({
-  RNGestureHandlerModule: {
-    attachGestureHandler: jest.fn(),
-    createGestureHandler: jest.fn(),
-    dropGestureHandler: jest.fn(),
-    updateGestureHandler: jest.fn(),
-    State: {},
-    Directions: {},
-  },
-}));
-
 jest.mock('react-native-music-control', () => ({
   enableBackgroundMode: jest.fn(),
   enableControl: jest.fn(),
