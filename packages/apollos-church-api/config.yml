@@ -12,6 +12,8 @@ APP:
   # It should match whatver is in your Info.plist `CFBundleURLTypes`
   DEEP_LINK_HOST: apolloschurchapp
   ROOT_API_URL: ${ROOT_URL}
+  JOBS_USERNAME: ${JOBS_USERNAME}
+  JOBS_PASSWORD: ${JOBS_PASSWORD}
 ROCK:
   API_URL: https://apollosrock.newspring.cc/api
   API_TOKEN: ${ROCK_TOKEN}
@@ -50,9 +52,12 @@ ANALYTICS:
   # on the accompanying service
   SEGMENT_KEY:
   GA_ID:
+  USE_ROCK: true
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
-  BIBLE_ID: '9879dbb7cfe39e4d-01'
+  BIBLE_ID:
+    WEB: '9879dbb7cfe39e4d-01'
+    KJV: 'de4e12af7f28f599-02'
 CLOUDINARY:
   # Cloudinary is used to improve image loading
   # value should look something like

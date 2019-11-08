@@ -279,7 +279,6 @@ exports[`the Devotional component renders a devotional 1`] = `
           pagingEnabled={true}
           scrollEnabled={true}
           scrollEventThrottle={1}
-          scrollToOverflowEnabled={true}
           scrollsToTop={false}
           showsHorizontalScrollIndicator={false}
           style={
@@ -359,8 +358,34 @@ exports[`the Devotional component renders a devotional 1`] = `
                       }
                     >
                       <View>
-                        <Text>
-                          Some content!
+                        <Text
+                          bold={false}
+                          italic={false}
+                          style={
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Regular",
+                              "fontSize": 16,
+                              "lineHeight": 26,
+                            }
+                          }
+                        >
+                          <Text
+                            bold={true}
+                            italic={false}
+                            style={
+                              Object {
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 26,
+                              }
+                            }
+                          >
+                            <Text>
+                              Some content!
+                            </Text>
+                          </Text>
                         </Text>
                       </View>
                     </View>
@@ -410,6 +435,19 @@ exports[`the Devotional component renders a devotional 1`] = `
                           }
                         >
                           1 Corinthians 15:57
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 17.28,
+                            }
+                          }
+                        >
+                           
+                          WEB
                         </Text>
                       </Text>
                       <View
@@ -479,18 +517,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                           </View>
                         </View>
                       </View>
-                      <Text
-                        bold={false}
-                        italic={false}
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Regular",
-                            "fontSize": 9.6,
-                            "lineHeight": 10.37,
-                          }
-                        }
-                      />
                     </View>
                     <View>
                       <Text
@@ -514,6 +540,19 @@ exports[`the Devotional component renders a devotional 1`] = `
                           }
                         >
                           Exodus 17:8-15
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 17.28,
+                            }
+                          }
+                        >
+                           
+                          WEB
                         </Text>
                       </Text>
                       <View
@@ -821,18 +860,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                           </View>
                         </View>
                       </View>
-                      <Text
-                        bold={false}
-                        italic={false}
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Regular",
-                            "fontSize": 9.6,
-                            "lineHeight": 10.37,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>
@@ -1125,7 +1152,6 @@ exports[`the Devotional component renders a loading state of null 1`] = `
           pagingEnabled={true}
           scrollEnabled={true}
           scrollEventThrottle={1}
-          scrollToOverflowEnabled={true}
           scrollsToTop={false}
           showsHorizontalScrollIndicator={false}
           style={
@@ -1205,8 +1231,34 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                       }
                     >
                       <View>
-                        <Text>
-                          Some content!
+                        <Text
+                          bold={false}
+                          italic={false}
+                          style={
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Regular",
+                              "fontSize": 16,
+                              "lineHeight": 26,
+                            }
+                          }
+                        >
+                          <Text
+                            bold={true}
+                            italic={false}
+                            style={
+                              Object {
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 26,
+                              }
+                            }
+                          >
+                            <Text>
+                              Some content!
+                            </Text>
+                          </Text>
                         </Text>
                       </View>
                     </View>
@@ -1649,7 +1701,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
           pagingEnabled={true}
           scrollEnabled={true}
           scrollEventThrottle={1}
-          scrollToOverflowEnabled={true}
           scrollsToTop={false}
           showsHorizontalScrollIndicator={false}
           style={
@@ -1729,8 +1780,34 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                       }
                     >
                       <View>
-                        <Text>
-                          Some content!
+                        <Text
+                          bold={false}
+                          italic={false}
+                          style={
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Regular",
+                              "fontSize": 16,
+                              "lineHeight": 26,
+                            }
+                          }
+                        >
+                          <Text
+                            bold={true}
+                            italic={false}
+                            style={
+                              Object {
+                                "color": "#303030",
+                                "fontFamily": "InterUI-Bold",
+                                "fontSize": 16,
+                                "lineHeight": 26,
+                              }
+                            }
+                          >
+                            <Text>
+                              Some content!
+                            </Text>
+                          </Text>
                         </Text>
                       </View>
                     </View>
@@ -1780,6 +1857,19 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                           }
                         >
                           1 Corinthians 15:57
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 17.28,
+                            }
+                          }
+                        >
+                           
+                          WEB
                         </Text>
                       </Text>
                       <View
@@ -1849,18 +1939,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                           </View>
                         </View>
                       </View>
-                      <Text
-                        bold={false}
-                        italic={false}
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Regular",
-                            "fontSize": 9.6,
-                            "lineHeight": 10.37,
-                          }
-                        }
-                      />
                     </View>
                     <View>
                       <Text
@@ -1884,6 +1962,19 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                           }
                         >
                           Exodus 17:8-15
+                        </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 17.28,
+                            }
+                          }
+                        >
+                           
+                          WEB
                         </Text>
                       </Text>
                       <View
@@ -2191,18 +2282,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                           </View>
                         </View>
                       </View>
-                      <Text
-                        bold={false}
-                        italic={false}
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Regular",
-                            "fontSize": 9.6,
-                            "lineHeight": 10.37,
-                          }
-                        }
-                      />
                     </View>
                   </View>
                 </View>

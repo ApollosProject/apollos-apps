@@ -169,11 +169,17 @@ export const scriptureSchema = gql`
     html: String
     reference: String
     copyright: String
+    version: String
+  }
+
+  enum VERSION {
+    WEB
+    KJV
   }
 
   extend type Query {
-    scripture(query: String!): Scripture
-    scriptures(query: String!): [Scripture]
+    scripture(query: String!, version: VERSION): Scripture
+    scriptures(query: String!, version: VERSION): [Scripture]
   }
 `;
 
@@ -226,7 +232,7 @@ export const analyticsSchema = gql`
 export const contentItemSchema = gql`
   interface ContentItem {
     id: ID!
-    title: String
+    title(hyphenated: Boolean): String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -248,7 +254,7 @@ export const contentItemSchema = gql`
 
   type UniversalContentItem implements ContentItem & Node {
     id: ID!
-    title: String
+    title(hyphenated: Boolean): String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -269,7 +275,7 @@ export const contentItemSchema = gql`
 
   type DevotionalContentItem implements ContentItem & Node {
     id: ID!
-    title: String
+    title(hyphenated: Boolean): String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -292,7 +298,7 @@ export const contentItemSchema = gql`
 
   type MediaContentItem implements ContentItem & Node {
     id: ID!
-    title: String
+    title(hyphenated: Boolean): String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -315,7 +321,7 @@ export const contentItemSchema = gql`
 
   type ContentSeriesContentItem implements ContentItem & Node {
     id: ID!
-    title: String
+    title(hyphenated: Boolean): String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -338,7 +344,7 @@ export const contentItemSchema = gql`
 
   type WeekendContentItem implements ContentItem & Node {
     id: ID!
-    title: String
+    title(hyphenated: Boolean): String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -377,7 +383,6 @@ export const contentItemSchema = gql`
   extend type Query {
     campaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
-      @cacheControl(maxAge: 0)
     personaFeed(first: Int, after: String): ContentItemsConnection
       @cacheControl(maxAge: 0)
   }
@@ -460,10 +465,13 @@ export const liveSchema = gql`
     eventStartTime: String
     media: VideoMedia
     webViewUrl: String
+    contentItem: ContentItem @cacheControl(maxAge: 10)
   }
 
   extend type Query {
     liveStream: LiveStream
+      @deprecated(reason: "Use liveStreams, there may be multiple.")
+    liveStreams: [LiveStream]
   }
 
   extend type WeekendContentItem {

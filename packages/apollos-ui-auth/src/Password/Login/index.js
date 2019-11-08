@@ -8,7 +8,7 @@ import handleLogin from '../../handleLogin';
 import AUTHENTICATE from './authenticate';
 import LoginForm from './Form';
 
-const Login = ({ onLogin, emailRequired }) => {
+const Login = ({ onLogin, emailRequired, handleForgotPassword }) => {
   const emailSchema = emailRequired
     ? Yup.string()
         .email('Invalid email address')
@@ -61,7 +61,12 @@ const Login = ({ onLogin, emailRequired }) => {
                 setSubmitting(false);
               }}
             >
-              {(formikBag) => <LoginForm {...formikBag} />}
+              {(formikBag) => (
+                <LoginForm
+                  {...formikBag}
+                  handleForgotPassword={handleForgotPassword}
+                />
+              )}
             </Formik>
           )}
         </Mutation>
@@ -73,6 +78,7 @@ const Login = ({ onLogin, emailRequired }) => {
 Login.propTypes = {
   onLogin: PropTypes.func,
   emailRequired: PropTypes.bool,
+  handleForgotPassword: PropTypes.func,
 };
 
 Login.defaultProps = {

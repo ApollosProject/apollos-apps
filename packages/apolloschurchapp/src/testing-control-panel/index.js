@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
-import { TableView, Divider } from '@apollosproject/ui-kit';
+import { TableView } from '@apollosproject/ui-kit';
 import { UserWebBrowserConsumer } from 'apolloschurchapp/src/user-web-browser';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
-import ChangeLivestream from './ChangeLivestream';
 import TouchableCell from './TouchableCell';
 
 export default class TestingControlPanel extends PureComponent {
@@ -13,8 +12,6 @@ export default class TestingControlPanel extends PureComponent {
   render() {
     return (
       <TableView>
-        <ChangeLivestream />
-        <Divider />
         <UserWebBrowserConsumer>
           {(openUserWebView) => (
             <TouchableCell
