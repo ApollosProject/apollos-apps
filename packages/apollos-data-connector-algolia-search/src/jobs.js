@@ -12,8 +12,8 @@ const createJobs = ({ getContext, queues }) => {
     return context.dataSources.Search.deltaIndex();
   });
 
-  FullIndexQueue.add(null, { repeat: { cron: '15 3 * * *' } });
-  DeltaIndexQueue.add(null, { repeat: { cron: '15 3 * * 1' } });
+  FullIndexQueue.add(null, { repeat: { cron: '15 3 * * 1' } });
+  DeltaIndexQueue.add(null, { repeat: { cron: '15 3 * * *' } });
   // Uncomment this to trigger an index right now.
   // FullIndexQueue.add(null);
   // DeltaIndexQueue.add(null);
