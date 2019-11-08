@@ -29,127 +29,124 @@ exports[`The Text Input component should render as a numeric field 1`] = `
       <View
         style={
           Object {
+            "alignSelf": "flex-end",
             "flex": 1,
-            "opacity": 0,
           }
         }
       >
-        <TextInput
-          allowFontScaling={true}
-          editable={true}
-          keyboardType="numeric"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          placeholder="Some placeholder"
-          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-          rejectResponderTermination={true}
-          returnKeyType="done"
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 14,
-              "height": 38,
-              "paddingVertical": 0,
+              "opacity": 0,
             }
           }
         >
-          <View
+          <TextInput
+            allowFontScaling={true}
+            editable={true}
+            keyboardType="numeric"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Some placeholder"
+            placeholderTextColor="rgba(48, 48, 48, 0.6)"
+            rejectResponderTermination={true}
+            returnKeyType="done"
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 14,
+                "height": 38,
+                "paddingVertical": 0,
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "alignSelf": "flex-end",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "opacity": 0,
-                }
-              }
-            >
-              <TextInput
-                allowFontScaling={true}
-                editable={true}
-                keyboardType="numeric"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Some placeholder"
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="done"
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
-                  }
-                }
-                type="numeric"
-                underlineColorAndroid="transparent"
-              />
-            </View>
-            <View
-              onLayout={[Function]}
-              pointerEvents="none"
-              style={
-                Object {
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "position": "absolute",
-                  "top": 0,
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                    Object {
-                      "translateX": 0,
-                    },
-                    Object {
-                      "translateY": 0,
-                    },
-                  ],
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Numeric
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
+            type="numeric"
+            underlineColorAndroid="transparent"
           />
         </View>
         <View
+          onLayout={[Function]}
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
+              }
+            }
+          >
+            Numeric
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": -0.5,
+            "height": 0.5,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "transform": Array [
+              Object {
+                "scaleX": 0.0001,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          hasError={false}
           style={
             Object {
               "backgroundColor": "#00676D",
@@ -193,35 +190,82 @@ exports[`The Text Input component should render as a password field with an icon
       <View
         style={
           Object {
+            "alignSelf": "flex-end",
             "flex": 1,
-            "opacity": 0,
           }
         }
       >
-        <TextInput
-          allowFontScaling={true}
-          autoCapitalize="none"
-          autoCorrect={false}
-          editable={true}
-          onBlur={[Function]}
-          onFocus={[Function]}
-          placeholder="Some placeholder"
-          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-          rejectResponderTermination={true}
-          returnKeyType="done"
-          secureTextEntry={true}
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 14,
-              "height": 38,
-              "paddingVertical": 0,
+              "opacity": 0,
             }
           }
-          type="password"
-          underlineColorAndroid="transparent"
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            autoCapitalize="none"
+            autoCorrect={false}
+            editable={true}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Some placeholder"
+            placeholderTextColor="rgba(48, 48, 48, 0.6)"
+            rejectResponderTermination={true}
+            returnKeyType="done"
+            secureTextEntry={true}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 14,
+                "height": 38,
+                "paddingVertical": 0,
+              }
+            }
+            type="password"
+            underlineColorAndroid="transparent"
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
+              }
+            }
+          >
+            Password
+          </Text>
+        </View>
       </View>
       <View
         style={
@@ -242,88 +286,82 @@ exports[`The Text Input component should render as a password field with an icon
           style={
             Array [
               Object {
-                "alignSelf": "flex-end",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "opacity": 0,
-                }
-              }
-            >
-              <TextInput
-                allowFontScaling={true}
-                autoCapitalize="none"
-                autoCorrect={false}
-                editable={true}
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Some placeholder"
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="done"
-                secureTextEntry={true}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
-                  }
-                }
-                type="password"
-                underlineColorAndroid="transparent"
-              />
-            </View>
-            <View
-              onLayout={[Function]}
-              pointerEvents="none"
-              style={
-                Object {
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "position": "absolute",
-                  "top": 0,
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                    Object {
-                      "translateX": 0,
-                    },
-                    Object {
-                      "translateY": 0,
-                    },
-                  ],
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Password
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              undefined,
+              null,
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
+                "flex": 0,
+                "height": 18,
+                "width": 18,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={18}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGPath
+              d="M9 11.18h6.4V8.73c0-.9-.3-1.68-.94-2.32-.62-.6-1.38-.9-2.26-.9-.88 0-1.64.3-2.26.97C9.3 7.1 9 7.87 9 8.77v2.45zm10.4 1.23v7.4c0 .37-.12.66-.35.9-.23.24-.52.36-.85.36h-12c-.33 0-.62-.1-.85-.35-.23-.24-.35-.53-.35-.87v-7.4c0-.32.12-.6.35-.85.23-.24.52-.36.85-.36h.4V8.74c0-1.57.55-2.92 1.65-4.04C9.35 3.5 10.67 3 12.2 3c1.53 0 2.85.56 3.95 1.7 1.1 1.1 1.65 2.46 1.65 4.03v2.45h.4c.33 0 .62.12.85.36.23.24.35.53.35.87z"
+              fill={
+                Array [
+                  0,
+                  4281348144,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
               }
               opacity={1}
               originX={0}
@@ -333,101 +371,61 @@ exports[`The Text Input component should render as a password field with an icon
                   "fill",
                 ]
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={18}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M9 11.18h6.4V8.73c0-.9-.3-1.68-.94-2.32-.62-.6-1.38-.9-2.26-.9-.88 0-1.64.3-2.26.97C9.3 7.1 9 7.87 9 8.77v2.45zm10.4 1.23v7.4c0 .37-.12.66-.35.9-.23.24-.52.36-.85.36h-12c-.33 0-.62-.1-.85-.35-.23-.24-.35-.53-.35-.87v-7.4c0-.32.12-.6.35-.85.23-.24.52-.36.85-.36h.4V8.74c0-1.57.55-2.92 1.65-4.04C9.35 3.5 10.67 3 12.2 3c1.53 0 2.85.56 3.95 1.7 1.1 1.1 1.65 2.46 1.65 4.03v2.45h.4c.33 0 .62.12.85.36.23.24.35.53.35.87z"
-                  fill={
-                    Array [
-                      0,
-                      4281348144,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
-          </View>
-        </View>
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": -0.5,
+            "height": 0.5,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "transform": Array [
+              Object {
+                "scaleX": 0.0001,
+              },
+            ],
+          }
+        }
+      >
         <View
+          hasError={false}
           style={
             Object {
               "backgroundColor": "#00676D",
@@ -471,127 +469,124 @@ exports[`The Text Input component should render as a phone number field 1`] = `
       <View
         style={
           Object {
+            "alignSelf": "flex-end",
             "flex": 1,
-            "opacity": 0,
           }
         }
       >
-        <TextInput
-          allowFontScaling={true}
-          editable={true}
-          keyboardType="phone-pad"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          placeholder="Some placeholder"
-          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-          rejectResponderTermination={true}
-          returnKeyType="done"
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 14,
-              "height": 38,
-              "paddingVertical": 0,
+              "opacity": 0,
             }
           }
         >
-          <View
+          <TextInput
+            allowFontScaling={true}
+            editable={true}
+            keyboardType="phone-pad"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Some placeholder"
+            placeholderTextColor="rgba(48, 48, 48, 0.6)"
+            rejectResponderTermination={true}
+            returnKeyType="done"
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 14,
+                "height": 38,
+                "paddingVertical": 0,
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "alignSelf": "flex-end",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "opacity": 0,
-                }
-              }
-            >
-              <TextInput
-                allowFontScaling={true}
-                editable={true}
-                keyboardType="phone-pad"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Some placeholder"
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="done"
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
-                  }
-                }
-                type="phone"
-                underlineColorAndroid="transparent"
-              />
-            </View>
-            <View
-              onLayout={[Function]}
-              pointerEvents="none"
-              style={
-                Object {
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "position": "absolute",
-                  "top": 0,
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                    Object {
-                      "translateX": 0,
-                    },
-                    Object {
-                      "translateY": 0,
-                    },
-                  ],
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Phone Number
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
+            type="phone"
+            underlineColorAndroid="transparent"
           />
         </View>
         <View
+          onLayout={[Function]}
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
+              }
+            }
+          >
+            Phone Number
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": -0.5,
+            "height": 0.5,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "transform": Array [
+              Object {
+                "scaleX": 0.0001,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          hasError={false}
           style={
             Object {
               "backgroundColor": "#00676D",
@@ -635,131 +630,126 @@ exports[`The Text Input component should render as an email field 1`] = `
       <View
         style={
           Object {
+            "alignSelf": "flex-end",
             "flex": 1,
-            "opacity": 0,
           }
         }
       >
-        <TextInput
-          allowFontScaling={true}
-          autoCapitalize="none"
-          autoCorrect={false}
-          editable={true}
-          keyboardType="email-address"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          placeholder="Some placeholder"
-          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-          rejectResponderTermination={true}
-          returnKeyType="done"
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 14,
-              "height": 38,
-              "paddingVertical": 0,
+              "opacity": 0,
             }
           }
         >
-          <View
+          <TextInput
+            allowFontScaling={true}
+            autoCapitalize="none"
+            autoCorrect={false}
+            editable={true}
+            keyboardType="email-address"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Some placeholder"
+            placeholderTextColor="rgba(48, 48, 48, 0.6)"
+            rejectResponderTermination={true}
+            returnKeyType="done"
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 14,
+                "height": 38,
+                "paddingVertical": 0,
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "alignSelf": "flex-end",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "opacity": 0,
-                }
-              }
-            >
-              <TextInput
-                allowFontScaling={true}
-                autoCapitalize="none"
-                autoCorrect={false}
-                editable={true}
-                keyboardType="email-address"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Some placeholder"
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="done"
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
-                  }
-                }
-                type="email"
-                underlineColorAndroid="transparent"
-              />
-            </View>
-            <View
-              onLayout={[Function]}
-              pointerEvents="none"
-              style={
-                Object {
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "position": "absolute",
-                  "top": 0,
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                    Object {
-                      "translateX": 0,
-                    },
-                    Object {
-                      "translateY": 0,
-                    },
-                  ],
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Email
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
+            type="email"
+            underlineColorAndroid="transparent"
           />
         </View>
         <View
+          onLayout={[Function]}
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
+              }
+            }
+          >
+            Email
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": -0.5,
+            "height": 0.5,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "transform": Array [
+              Object {
+                "scaleX": 0.0001,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          hasError={false}
           style={
             Object {
               "backgroundColor": "#00676D",
@@ -803,124 +793,122 @@ exports[`The Text Input component should render correctly 1`] = `
       <View
         style={
           Object {
+            "alignSelf": "flex-end",
             "flex": 1,
-            "opacity": 0,
           }
         }
       >
-        <TextInput
-          allowFontScaling={true}
-          editable={true}
-          onBlur={[Function]}
-          onFocus={[Function]}
-          placeholder="Some placeholder"
-          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-          rejectResponderTermination={true}
-          returnKeyType="done"
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 14,
-              "height": 38,
-              "paddingVertical": 0,
+              "opacity": 0,
             }
           }
         >
-          <View
+          <TextInput
+            allowFontScaling={true}
+            editable={true}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Some placeholder"
+            placeholderTextColor="rgba(48, 48, 48, 0.6)"
+            rejectResponderTermination={true}
+            returnKeyType="done"
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 14,
+                "height": 38,
+                "paddingVertical": 0,
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "alignSelf": "flex-end",
-                "flex": 1,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "opacity": 0,
-                }
-              }
-            >
-              <TextInput
-                allowFontScaling={true}
-                editable={true}
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Some placeholder"
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="done"
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
-                  }
-                }
-                underlineColorAndroid="transparent"
-              />
-            </View>
-            <View
-              onLayout={[Function]}
-              pointerEvents="none"
-              style={
-                Object {
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "position": "absolute",
-                  "top": 0,
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                    Object {
-                      "translateX": 0,
-                    },
-                    Object {
-                      "translateY": 0,
-                    },
-                  ],
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Some label text
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
+            underlineColorAndroid="transparent"
           />
         </View>
         <View
+          onLayout={[Function]}
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
+              }
+            }
+          >
+            Some label text
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": -0.5,
+            "height": 0.5,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "transform": Array [
+              Object {
+                "scaleX": 0.0001,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          hasError={false}
           style={
             Object {
               "backgroundColor": "#00676D",
@@ -959,99 +947,82 @@ exports[`The Text Input component should render with no underline 1`] = `
             "alignItems": "center",
             "justifyContent": "center",
           }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "flex-end",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
         >
-          <View
+          <TextInput
+            allowFontScaling={true}
+            editable={true}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            placeholder="Some placeholder"
+            placeholderTextColor="rgba(48, 48, 48, 0.6)"
+            rejectResponderTermination={true}
+            returnKeyType="done"
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 14,
+                "height": 38,
+                "paddingVertical": 0,
               }
             }
+            underlineColorAndroid="transparent"
           />
-          <View
+        </View>
+        <View
+          onLayout={[Function]}
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "justifyContent": "center",
+              "opacity": 1,
+              "position": "absolute",
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+                Object {
+                  "translateX": 0,
+                },
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
             style={
               Object {
-                "alignSelf": "flex-end",
-                "flex": 1,
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 17.28,
+                "paddingVertical": 4,
               }
             }
           >
-            <View
-              style={
-                Object {
-                  "opacity": 0,
-                }
-              }
-            >
-              <TextInput
-                allowFontScaling={true}
-                editable={true}
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Some placeholder"
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="done"
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
-                  }
-                }
-                underlineColorAndroid="transparent"
-              />
-            </View>
-            <View
-              onLayout={[Function]}
-              pointerEvents="none"
-              style={
-                Object {
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "opacity": 1,
-                  "position": "absolute",
-                  "top": 0,
-                  "transform": Array [
-                    Object {
-                      "scale": 1,
-                    },
-                    Object {
-                      "translateX": 0,
-                    },
-                    Object {
-                      "translateY": 0,
-                    },
-                  ],
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 17.28,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                Text input...
-              </Text>
-            </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
-          />
+            Text input...
+          </Text>
         </View>
       </View>
       <View
@@ -1062,45 +1033,6 @@ exports[`The Text Input component should render with no underline 1`] = `
           }
         }
       />
-    </View>
-    <View
-      onLayout={[Function]}
-      pointerEvents="none"
-      style={
-        Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "opacity": 1,
-          "position": "absolute",
-          "top": 0,
-          "transform": Array [
-            Object {
-              "scale": 1,
-            },
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": 0,
-            },
-          ],
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "color": "#505050",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
-            "paddingVertical": 4,
-          }
-        }
-      >
-        Text input...
-      </Text>
     </View>
   </View>
 </View>
