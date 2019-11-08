@@ -17,10 +17,6 @@ import Marker from './Marker';
 const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
-/* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
- * calculation of width minus `CampusCard` margins */
-const CARD_WIDTH = Dimensions.get('window').width - 36;
-
 const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
@@ -32,8 +28,8 @@ const Footer = styled({
   right: 0,
 })(SafeAreaView);
 
-const StyledCampusCard = styled(({ theme }) => ({
-  width: CARD_WIDTH,
+const StyledCampusCard = styled(({ theme, cardWidth }) => ({
+  width: cardWidth,
   marginHorizontal: theme.sizing.baseUnit / 4,
 }))(CampusCard);
 
@@ -80,9 +76,15 @@ class MapView extends Component {
     mapPin: Marker,
   };
 
-  animation = new Animated.Value(0);
-
-  scrollView = null;
+  constructor() {
+    super();
+    this.cardWidth =
+      Dimensions.get('window').width - this.props.theme.sizing.baseUnit * 2.25;
+    this.animation = new Animated.Value(0);
+    this.scrollView = null;
+    this.cardWidthWithPadding =
+      this.cardWidth + this.props.theme.sizing.baseUnit * 0.5;
+  }
 
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
@@ -99,7 +101,7 @@ class MapView extends Component {
 
   get currentCampus() {
     const cardIndex = Math.floor(
-      this.previousScrollPosition / CARD_WIDTH + 0.3
+      this.previousScrollPosition / this.cardWidth + 0.3
     ); // animate 30% away from landing on the next item;
     return this.sortedCampuses[cardIndex];
   }
@@ -109,6 +111,7 @@ class MapView extends Component {
     if (!this.props.currentCampus) {
       return campuses;
     }
+    // returns your selected current campus to be first in card list if it exists
     return [
       currentCampus,
       ...campuses.filter(({ id }) => id !== currentCampus.id),
@@ -116,12 +119,16 @@ class MapView extends Component {
   }
 
   scrollToIndex = (index) => {
+    const cardScrollPosition = index * this.cardWidthWithPadding;
+
     this.scrollView.getNode().scrollTo({
-      x: index * (CARD_WIDTH + 8),
+      x: cardScrollPosition,
       y: 0,
       animated: true,
     });
-    this.updateCoordinates({ value: index * (CARD_WIDTH + 8) });
+    this.updateCoordinates({
+      value: cardScrollPosition,
+    });
   };
 
   updateCoordinates = ({ value }) => {
@@ -157,9 +164,9 @@ class MapView extends Component {
     const { onLocationSelect, cardWrapper, mapPin } = this.props;
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
-        (index - 1) * CARD_WIDTH,
-        index * CARD_WIDTH,
-        (index + 1) * CARD_WIDTH,
+        (index - 1) * this.cardWidth,
+        index * this.cardWidth,
+        (index + 1) * this.cardWidth,
       ];
       const opacity = this.animation.interpolate({
         inputRange,
@@ -200,7 +207,7 @@ class MapView extends Component {
           <Animated.ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            snapToInterval={CARD_WIDTH + 8} // account for padding
+            snapToInterval={this.cardWidthWithPadding}
             snapToAlignment={'start'}
             decelerationRate={'fast'}
             contentContainerStyle={{
@@ -231,6 +238,7 @@ class MapView extends Component {
                   title={campus.name}
                   description={getCampusAddress(campus)}
                   images={[campus.image]}
+                  cardWidth={this.cardWidth}
                 />
               </Touchable>
             ))}
