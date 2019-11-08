@@ -415,10 +415,21 @@ export default class ContentItem extends RockApolloDataSource {
       .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
 
-  byDateAndActive = () => {
-    const now = new Date();
-    const datetime = moment(now)
-      .subtract(1, 'week')
+  byDateAndActive = async ({ queue }) => {
+    const jobs = await queue.getCompleted();
+    const timestamp = jobs
+      .map((j) => j.opts.timestamp)
+      .sort((a, b) => {
+        if (a > b) {
+          return -1;
+        }
+        if (a < b) {
+          return 1;
+        }
+        return 0;
+      })[0];
+    const date = new Date(timestamp);
+    const datetime = moment(date)
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];

@@ -56,14 +56,14 @@ query getItem {
     return data.node;
   }
 
-  async deltaIndex() {
+  async deltaIndex({ queue }) {
     const { ContentItem } = this.context.dataSources;
     let itemsLeft = true;
     const args = { after: null, first: 100 };
 
     while (itemsLeft) {
       const { edges } = await ContentItem.paginate({
-        cursor: ContentItem.byDateAndActive(),
+        cursor: await ContentItem.byDateAndActive({ queue }),
         args,
       });
 
