@@ -121,9 +121,8 @@ class MapView extends Component {
   scrollToIndex = (index) => {
     const cardScrollPosition = index * this.cardWidthWithPadding;
 
-    this.scrollView.getNode().scrollTo({
-      x: cardScrollPosition,
-      y: 0,
+    this.scrollView.scrollToOffset({
+      offset: cardScrollPosition,
       animated: true,
     });
     this.updateCoordinates({
@@ -204,7 +203,7 @@ class MapView extends Component {
           })}
         </FlexedMapView>
         <Footer>
-          <Animated.ScrollView
+          <Animated.FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
             snapToInterval={this.cardWidthWithPadding}
@@ -213,8 +212,25 @@ class MapView extends Component {
             contentContainerStyle={{
               paddingHorizontal: this.props.theme.sizing.baseUnit * 0.75,
             }}
+            getItemLayout={(data, index) => ({
+              length: this.cardWidthWithPadding,
+              offset: index * this.cardWidthWithPadding,
+              index,
+            })}
             ref={(ref) => (this.scrollView = ref)} // eslint-disable-line
             scrollEventThrottle={16} // roughtly 1000ms/60fps = 16ms
+            data={this.sortedCampuses}
+            renderItem={({ item }) => (
+              <Touchable key={item.id} onPress={() => onLocationSelect(item)}>
+                <StyledCampusCard
+                  distance={item.distanceFromLocation}
+                  title={item.name}
+                  description={getCampusAddress(item)}
+                  images={[item.image]}
+                  cardWidth={this.cardWidth}
+                />
+              </Touchable>
+            )}
             onScroll={Animated.event(
               [
                 {
@@ -227,22 +243,7 @@ class MapView extends Component {
               ],
               { useNativeDriver: true }
             )}
-          >
-            {this.sortedCampuses.map((campus) => (
-              <Touchable
-                key={campus.id}
-                onPress={() => onLocationSelect(campus)}
-              >
-                <StyledCampusCard
-                  distance={campus.distanceFromLocation}
-                  title={campus.name}
-                  description={getCampusAddress(campus)}
-                  images={[campus.image]}
-                  cardWidth={this.cardWidth}
-                />
-              </Touchable>
-            ))}
-          </Animated.ScrollView>
+          />
           <CardWrapper>
             <PaddedView>
               <Button
