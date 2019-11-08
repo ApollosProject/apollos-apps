@@ -16,8 +16,6 @@ import {
 import fetchMoreResolver from '../../utils/fetchMoreResolver';
 import ContentCardConnected from '../../ui/ContentCardConnected';
 
-import { LiveButton } from '../../live';
-
 import Features from './Features';
 import GET_USER_FEED from './getUserFeed';
 import GET_CAMPAIGN_CONTENT_ITEM from './getCampaignContentItem';
@@ -78,7 +76,6 @@ class Home extends PureComponent {
                 ListHeaderComponent={
                   <>
                     <LogoTitle source={require('./wordmark.png')} />
-                    <LiveButton />
                     <Query
                       query={GET_CAMPAIGN_CONTENT_ITEM}
                       fetchPolicy="cache-and-network"
