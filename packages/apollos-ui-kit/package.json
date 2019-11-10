@@ -37,6 +37,9 @@
       "<rootDir>/node_modules/react-native-svg",
       "<rootDir>/node_modules/@storybook/react-native",
       "<rootDir>/node_modules/react-navigation"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
     ]
   },
   "peerDependencies": {
@@ -44,7 +47,8 @@
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "react-native-gesture-handler": "*"
   },
   "dependencies": {
     "color": "^3.1.0",
