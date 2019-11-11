@@ -113,13 +113,11 @@ const resolver = {
         ),
         args,
       }),
-    userFeed: async (root, args, { dataSources }) => {
-      const content = await dataSources.ContentItem.paginate({
+    userFeed: (root, args, { dataSources }) =>
+      dataSources.ContentItem.paginate({
         cursor: dataSources.ContentItem.byUserFeed(),
         args,
-      });
-      return content;
-    },
+      }),
     personaFeed: async (root, args, { dataSources }) => {
       const personaFeed = await dataSources.ContentItem.byPersonaFeed(
         args.first
