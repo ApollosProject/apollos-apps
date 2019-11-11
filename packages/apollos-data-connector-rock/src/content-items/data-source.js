@@ -35,20 +35,22 @@ export default class ContentItem extends RockApolloDataSource {
       attributeValues[key].value.startsWith('http')); // looks like an audio url
 
   hasMedia = ({ attributeValues, attributes }) =>
-    Object.keys(attributes).filter((key) =>
+    attributes &&
+    attributeValues &&
+    (Object.keys(attributes).filter((key) =>
       this.attributeIsVideo({
         key,
         attributeValues,
         attributes,
       })
     ).length ||
-    Object.keys(attributes).filter((key) =>
-      this.attributeIsAudio({
-        key,
-        attributeValues,
-        attributes,
-      })
-    ).length;
+      Object.keys(attributes).filter((key) =>
+        this.attributeIsAudio({
+          key,
+          attributeValues,
+          attributes,
+        })
+      ).length);
 
   getImages = ({ attributeValues, attributes }) => {
     const imageKeys = Object.keys(attributes).filter((key) =>

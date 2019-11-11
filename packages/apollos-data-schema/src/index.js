@@ -371,7 +371,7 @@ export const contentItemSchema = gql`
 
   type ContentItemsConnection {
     edges: [ContentItemsConnectionEdge]
-    # TODO totalCount: Int
+    totalCount: Int
     pageInfo: PaginationInfo
   }
 
