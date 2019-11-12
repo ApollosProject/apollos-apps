@@ -28,7 +28,6 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
           ],
           title:
             'Are you telling me that you built a time machine out of a DeLorean?',
-          isLiked: true,
           label: 'Custom Label',
           hasAction: true, // may not match actual schema
           disabled: false, // may not match actual schema
@@ -162,7 +161,20 @@ storiesOf('ui-kit/HorizontalHighlightCard', module)
       disabled
     />
   ))
-  .add('isLiked', () => (
+  .add('isLiked/false', () => (
+    <HorizontalHighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLiked={false}
+    />
+  ))
+  .add('isLiked/true', () => (
     <HorizontalHighlightCard
       title={
         'Are you telling me that you built a time machine out of a DeLorean?'

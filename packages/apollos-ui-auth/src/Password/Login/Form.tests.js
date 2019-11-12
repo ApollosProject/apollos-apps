@@ -26,6 +26,7 @@ describe('The LoginForm component', () => {
             values={{ email: '', password: '' }}
             touched={{ email: false, password: false }}
             errors={{ email: null, password: null }}
+            handleForgotPassword={() => null}
           />
         </Providers>
       </ApolloProvider>

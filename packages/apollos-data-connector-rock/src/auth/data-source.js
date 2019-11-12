@@ -12,6 +12,16 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   userToken = null;
 
+  initialize(config) {
+    super.initialize(config);
+    if (config.context.rockCookie) {
+      // fetches the current person
+      // this method will try to cache the current person on the context
+      // removing the need to fetch each and every time
+      this.getCurrentPerson();
+    }
+  }
+
   getCurrentPerson = async ({ cookie = null } = { cookie: null }) => {
     const { rockCookie, currentPerson } = this.context;
     const userCookie = cookie || rockCookie;

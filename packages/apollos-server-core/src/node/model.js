@@ -1,5 +1,6 @@
 import Crypto from 'crypto';
-import { get } from 'lodash';
+import { get, uniq, flatMap } from 'lodash';
+import { parseResolveInfo } from 'graphql-parse-resolve-info';
 
 const secret = process.env.SECRET || 'LZEVhlgzFZKClu1r';
 
@@ -48,10 +49,27 @@ const getPossibleDataModels = ({ schema, __type }) => {
 
 export default class Node {
   // eslint-disable-next-line class-methods-use-this
-  async get(encodedId, dataSources, schema) {
+  async get(encodedId, dataSources, resolveInfo) {
     const { __type, id } = parseGlobalId(encodedId);
     // returns a list of types that could possibly be dataModels
-    const possibleModels = getPossibleDataModels({ __type, schema });
+
+    // Get fields nested under `node`
+    const siblingFields = flatMap(
+      Object.values(parseResolveInfo(resolveInfo).fieldsByTypeName),
+      (typeInfo) => Object.values(typeInfo).map(({ name }) => name)
+    );
+
+    // If we only have __typename or/and 'id' in the request
+    // Then we can shortcut the need to fetch the entire document.
+    // This helps us keep a clean schema but also minimize uneeded requests.
+    if (uniq([...siblingFields, '__typename', 'id']).length === 2) {
+      return { id, __typename: __type, __type };
+    }
+
+    const possibleModels = getPossibleDataModels({
+      __type,
+      schema: resolveInfo.schema,
+    });
     // check to see if any of those models have a dataSource wtih a getFromId method and return's it's name
     // (if it exists)
     const modelName = possibleModels.find((type) =>
