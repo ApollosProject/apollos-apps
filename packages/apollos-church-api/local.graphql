@@ -373,7 +373,7 @@ type Query {
   userFeed(first: Int, after: String): ContentItemsConnection
   personaFeed(first: Int, after: String): ContentItemsConnection
   currentUser: AuthenticatedUser
-  liveStream: LiveStream
+  liveStream: LiveStream @deprecated(reason: "Use liveStreams, there may be multiple.")
   liveStreams: [LiveStream]
   scripture(query: String!, version: VERSION): Scripture
   scriptures(query: String!, version: VERSION): [Scripture]
