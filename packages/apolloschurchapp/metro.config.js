@@ -31,6 +31,7 @@ const sharedNativeModules = [
   'react-native-svg',
   'react-native-onesignal',
   'react-native-music-control',
+  'react-native-gesture-handler',
   'react-native-video',
   'react-native-video-controls',
   'react-native-maps',
