@@ -386,36 +386,83 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -425,45 +472,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -905,37 +913,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -945,45 +1000,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1486,37 +1502,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1526,45 +1589,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -2061,37 +2085,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -2101,45 +2172,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -2642,36 +2674,83 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -2681,45 +2760,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3174,36 +3214,83 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3213,45 +3300,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3693,37 +3741,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 1,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 1,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                      value="Boom values.code boom"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                        value="Boom values.code boom"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 0.8,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 0.8,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3733,45 +3828,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 0.8,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 0.8,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -4212,36 +4268,83 @@ exports[`The Auth Verification component should render with custom confirmationT
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -4251,45 +4354,6 @@ exports[`The Auth Verification component should render with custom confirmationT
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
