@@ -239,36 +239,83 @@ exports[`The Auth PhoneEntry component should render 1`] = `
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -278,45 +325,6 @@ exports[`The Auth PhoneEntry component should render 1`] = `
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -623,36 +631,83 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -662,45 +717,6 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1007,37 +1023,84 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1047,45 +1110,6 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1453,37 +1477,84 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1493,45 +1564,6 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1893,37 +1925,84 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1933,45 +2012,6 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -2339,36 +2379,83 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -2378,45 +2465,6 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -2736,36 +2784,83 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -2775,45 +2870,6 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3150,36 +3206,83 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3189,45 +3292,6 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3534,36 +3598,83 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3573,45 +3684,6 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3918,37 +3990,84 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 1,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 1,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                      value="Boom values.phone boom"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                        value="Boom values.phone boom"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 0.8,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 0.8,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3958,45 +4077,6 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 0.8,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 0.8,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={
@@ -4303,36 +4383,83 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="tel"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="phone-pad"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="phone"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="tel"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="phone-pad"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="phone"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Mobile Number
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -4342,45 +4469,6 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Mobile Number
-                  </Text>
                 </View>
                 <View
                   style={

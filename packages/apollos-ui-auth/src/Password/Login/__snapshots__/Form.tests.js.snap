@@ -45,39 +45,86 @@ exports[`The LoginForm component should render 1`] = `
             <View
               style={
                 Object {
+                  "alignSelf": "flex-end",
                   "flex": 1,
-                  "opacity": 0,
                 }
               }
             >
-              <TextInput
-                allowFontScaling={true}
-                autoCapitalize="none"
-                autoCorrect={false}
-                editable={true}
-                enablesReturnKeyAutomatically={true}
-                keyboardType="email-address"
-                onBlur={[Function]}
-                onChangeText={[Function]}
-                onFocus={[Function]}
-                onSubmitEditing={[Function]}
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="next"
+              <View
                 style={
                   Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
+                    "opacity": 0,
                   }
                 }
-                textContentType="username"
-                type="email"
-                underlineColorAndroid="transparent"
-                value=""
-              />
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  editable={true}
+                  enablesReturnKeyAutomatically={true}
+                  keyboardType="email-address"
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  onSubmitEditing={[Function]}
+                  placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                  rejectResponderTermination={true}
+                  returnKeyType="next"
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 14,
+                      "height": 38,
+                      "paddingVertical": 0,
+                    }
+                  }
+                  textContentType="username"
+                  type="email"
+                  underlineColorAndroid="transparent"
+                  value=""
+                />
+              </View>
+              <View
+                onLayout={[Function]}
+                pointerEvents="none"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": Array [
+                      Object {
+                        "scale": 1,
+                      },
+                      Object {
+                        "translateX": 0,
+                      },
+                      Object {
+                        "translateY": 0,
+                      },
+                    ],
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "#505050",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                      "paddingVertical": 4,
+                    }
+                  }
+                >
+                  Email
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -87,45 +134,6 @@ exports[`The LoginForm component should render 1`] = `
                 }
               }
             />
-          </View>
-          <View
-            onLayout={[Function]}
-            pointerEvents="none"
-            style={
-              Object {
-                "bottom": 0,
-                "justifyContent": "center",
-                "opacity": 1,
-                "position": "absolute",
-                "top": 0,
-                "transform": Array [
-                  Object {
-                    "scale": 1,
-                  },
-                  Object {
-                    "translateX": 0,
-                  },
-                  Object {
-                    "translateY": 0,
-                  },
-                ],
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 17.28,
-                  "paddingVertical": 4,
-                }
-              }
-            >
-              Email
-            </Text>
           </View>
           <View
             style={
@@ -201,38 +209,85 @@ exports[`The LoginForm component should render 1`] = `
             <View
               style={
                 Object {
+                  "alignSelf": "flex-end",
                   "flex": 1,
-                  "opacity": 0,
                 }
               }
             >
-              <TextInput
-                allowFontScaling={true}
-                autoCapitalize="none"
-                autoCorrect={false}
-                editable={true}
-                enablesReturnKeyAutomatically={true}
-                onBlur={[Function]}
-                onChangeText={[Function]}
-                onFocus={[Function]}
-                placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                rejectResponderTermination={true}
-                returnKeyType="go"
-                secureTextEntry={true}
+              <View
                 style={
                   Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 14,
-                    "height": 38,
-                    "paddingVertical": 0,
+                    "opacity": 0,
                   }
                 }
-                textContentType="password"
-                type="password"
-                underlineColorAndroid="transparent"
-                value=""
-              />
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  editable={true}
+                  enablesReturnKeyAutomatically={true}
+                  onBlur={[Function]}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                  rejectResponderTermination={true}
+                  returnKeyType="go"
+                  secureTextEntry={true}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 14,
+                      "height": 38,
+                      "paddingVertical": 0,
+                    }
+                  }
+                  textContentType="password"
+                  type="password"
+                  underlineColorAndroid="transparent"
+                  value=""
+                />
+              </View>
+              <View
+                onLayout={[Function]}
+                pointerEvents="none"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "top": 0,
+                    "transform": Array [
+                      Object {
+                        "scale": 1,
+                      },
+                      Object {
+                        "translateX": 0,
+                      },
+                      Object {
+                        "translateY": 0,
+                      },
+                    ],
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "#505050",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
+                      "paddingVertical": 4,
+                    }
+                  }
+                >
+                  Password
+                </Text>
+              </View>
             </View>
             <View
               style={
@@ -242,45 +297,6 @@ exports[`The LoginForm component should render 1`] = `
                 }
               }
             />
-          </View>
-          <View
-            onLayout={[Function]}
-            pointerEvents="none"
-            style={
-              Object {
-                "bottom": 0,
-                "justifyContent": "center",
-                "opacity": 1,
-                "position": "absolute",
-                "top": 0,
-                "transform": Array [
-                  Object {
-                    "scale": 1,
-                  },
-                  Object {
-                    "translateX": 0,
-                  },
-                  Object {
-                    "translateY": 0,
-                  },
-                ],
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 17.28,
-                  "paddingVertical": 4,
-                }
-              }
-            >
-              Password
-            </Text>
           </View>
           <View
             style={
