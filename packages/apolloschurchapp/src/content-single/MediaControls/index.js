@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Mutation } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 import { View } from 'react-native';
 import { get } from 'lodash';
 
@@ -15,6 +15,7 @@ import {
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 import { LiveConsumer } from '../../live';
+import GET_CONTENT_MEDIA from './getContentMedia';
 
 const Container = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -27,13 +28,7 @@ const StyledMediaThumbnail = styled({ marginVertical: 0 })(MediaThumbnail);
 
 class MediaControls extends PureComponent {
   static propTypes = {
-    content: PropTypes.shape({
-      id: PropTypes.string,
-      videos: PropTypes.arrayOf(PropTypes.shape({})),
-      title: PropTypes.string,
-      parentChannel: PropTypes.shape({}),
-      coverImage: PropTypes.shape({}),
-    }),
+    contentId: PropTypes.string,
   };
 
   renderPlayButton = ({ action, coverImageSources }) => (
@@ -87,14 +82,15 @@ class MediaControls extends PureComponent {
     </WebBrowserConsumer>
   );
 
-  renderControls = (liveStream) => {
-    const {
-      videos = [],
-      title = '',
-      parentChannel = {},
-      coverImage = {},
-    } = this.props.content;
-
+  renderControls = ({
+    liveStream,
+    loading,
+    error,
+    data: {
+      node: { videos, title, parentChannel = {}, coverImage = {} } = {},
+    } = {},
+  }) => {
+    if (loading || error) return null;
     const isLive = !!liveStream;
     const hasLiveStreamContent = !!(
       get(liveStream, 'webViewUrl') || get(liveStream, 'media.sources[0]')
@@ -136,10 +132,20 @@ class MediaControls extends PureComponent {
   };
 
   render() {
-    if (!this.props.content.id) return null;
+    if (!this.props.contentId) return null;
     return (
-      <LiveConsumer contentId={this.props.content.id}>
-        {this.renderControls}
+      <LiveConsumer contentId={this.props.contentId}>
+        {(liveStream) => (
+          <Query
+            query={GET_CONTENT_MEDIA}
+            fetchPolicy="cache-and-network"
+            variables={{ contentId: this.props.contentId }}
+          >
+            {({ data, loading, error }) =>
+              this.renderControls({ data, loading, error, liveStream })
+            }
+          </Query>
+        )}
       </LiveConsumer>
     );
   }
