@@ -18,4 +18,12 @@ const AddonRow = styled(
   'InputWrapper.Row'
 )(View);
 
-export { InputAddon as default, AddonRow };
+const TextInputWrapper = styled(
+  {
+    flex: 1,
+    alignSelf: 'flex-end',
+  },
+  'InputWrapper.TextInput'
+)(View);
+
+export { InputAddon as default, AddonRow, TextInputWrapper };
