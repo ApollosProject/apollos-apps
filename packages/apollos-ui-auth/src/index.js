@@ -53,9 +53,10 @@ AuthNavigator.propTypes = {
     passwordPromptText: PropTypes.string,
     smsPolicyInfo: PropTypes.node,
     smsPromptText: PropTypes.string,
+    emailRequired: PropTypes.bool,
+    handleForgotPassword: PropTypes.func,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  emailRequired: PropTypes.bool,
 };
 
 const Auth = (props) => <AuthNavigator {...props} screenProps={props} />;

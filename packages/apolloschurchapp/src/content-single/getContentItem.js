@@ -4,7 +4,6 @@ export const CONTENT_ITEM_FRAGMENT = gql`
   fragment contentItemFragment on ContentItem {
     id
     title
-    isLiked
     summary
     coverImage {
       name
@@ -35,6 +34,11 @@ export const CONTENT_ITEM_FRAGMENT = gql`
         uri
       }
     }
+  }
+`;
+
+export const DETAILED_ITEM_FRAGMENT = gql`
+  fragment detailedItemFragment on ContentItem {
     ... on WeekendContentItem {
       liveStream {
         isLive
@@ -49,8 +53,10 @@ export default gql`
       __typename
       ... on ContentItem {
         ...contentItemFragment
+        ...detailedItemFragment
       }
     }
   }
   ${CONTENT_ITEM_FRAGMENT}
+  ${DETAILED_ITEM_FRAGMENT}
 `;
