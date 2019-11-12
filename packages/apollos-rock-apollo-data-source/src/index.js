@@ -76,7 +76,14 @@ export default class RockApolloDataSource extends RESTDataSource {
     // temporarily store the select parameter to
     // put back after "Id" is selected for the count
     const tempSelect = cursor.query.select;
-    const ids = await cursor.select('Id').get();
+    const getTotalCount = async () => {
+      const ids = await cursor
+        .select('Id')
+        .top(null)
+        .skip(0)
+        .get();
+      return ids.length;
+    };
     const edges = cursor
       ? await cursor
           .select(tempSelect)
@@ -92,7 +99,7 @@ export default class RockApolloDataSource extends RESTDataSource {
       : [];
 
     return {
-      totalCount: ids.length,
+      getTotalCount,
       edges,
     };
   }

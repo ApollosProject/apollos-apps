@@ -140,6 +140,10 @@ you can return request.empty()
    * @param {number} top
    */
   top = (top) => {
+    if (!top) {
+      delete this.query.$top;
+      return this;
+    }
     this.query.$top = top;
     return this;
   };
