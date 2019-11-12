@@ -7,6 +7,7 @@ chokidar
     [
       'packages/apollos-data-*/**',
       'packages/apollos-rock-apollo-data-source/**',
+      'packages/apollos-server-core/**',
     ],
     {
       ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],

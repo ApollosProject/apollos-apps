@@ -47,7 +47,7 @@ const DismissBackground = withTheme(({ theme }) => ({
 
 const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
-  size: theme.sizing.baseUnit * 0.75,
+  size: theme.sizing.baseUnit,
   iconPadding: theme.sizing.baseUnit * 0.75,
 }));
 

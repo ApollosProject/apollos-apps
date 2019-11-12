@@ -383,7 +383,6 @@ export const contentItemSchema = gql`
   extend type Query {
     campaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
-      @cacheControl(maxAge: 0)
     personaFeed(first: Int, after: String): ContentItemsConnection
       @cacheControl(maxAge: 0)
   }
@@ -466,10 +465,13 @@ export const liveSchema = gql`
     eventStartTime: String
     media: VideoMedia
     webViewUrl: String
+    contentItem: ContentItem @cacheControl(maxAge: 10)
   }
 
   extend type Query {
     liveStream: LiveStream
+      @deprecated(reason: "Use liveStreams, there may be multiple.")
+    liveStreams: [LiveStream]
   }
 
   extend type WeekendContentItem {

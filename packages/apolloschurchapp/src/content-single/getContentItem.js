@@ -4,8 +4,8 @@ export const CONTENT_ITEM_FRAGMENT = gql`
   fragment contentItemFragment on ContentItem {
     id
     title
-    isLiked
     summary
+    htmlContent
     coverImage {
       name
       sources {
@@ -33,11 +33,6 @@ export const CONTENT_ITEM_FRAGMENT = gql`
     audios {
       sources {
         uri
-      }
-    }
-    ... on WeekendContentItem {
-      liveStream {
-        isLive
       }
     }
   }
