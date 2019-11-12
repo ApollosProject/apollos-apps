@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -46,9 +46,9 @@
     "@apollosproject/storybook": "*",
     "react": "*",
     "react-native": "*",
+    "react-native-gesture-handler": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*",
-    "react-native-gesture-handler": "*"
+    "react-native-svg": "*"
   },
   "dependencies": {
     "color": "^3.1.0",
