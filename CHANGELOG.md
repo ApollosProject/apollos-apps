@@ -1,3 +1,18 @@
+
+v1.2.3: November 12, 2019
+
+- Adds Client Info in Request Headers (#1214) (a8a4d75e)
+- Adds Mergify (#1209) (90122723)
+- Optimizes Live Stream Query (#1202) (736faabf)
+- Optimizes Content Query (#1203) (a8acc502)
+- Updates Floating Input Label placement (#1019) (978de246)
+- Adds Live item polling (#1086) (ca61e557)
+- Improves Map Bounce (#1206) (bb7f6ef4)
+- Increases Miniplayer Button Size (#1205) (125d45d1)
+
+- Fixes tab view cant scroll devos android (#1212) (034c3783)
+- Fixes Mergify so that it will delete branch (#1211) (3795386b)
+
 v1.2.2: November 6, 2019
 
 - Ensures user feed is cachables (#1201) (3113ed97)
