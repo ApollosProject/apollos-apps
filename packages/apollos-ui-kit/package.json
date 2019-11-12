@@ -45,7 +45,6 @@
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-maps": "*",
     "react-native-svg": "*"
   },
   "dependencies": {
@@ -53,7 +52,6 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
-    "react-native-maps": "0.26.1",
     "react-native-modal-datetime-picker": "6.0.0",
     "react-native-safe-area-context": "^0.3.6",
     "react-native-tab-view": "1.0.2",
