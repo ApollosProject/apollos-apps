@@ -47,9 +47,9 @@
     "react-navigation": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.2.1",
-    "@apollosproject/ui-media-player": "^1.2.2",
-    "@apollosproject/ui-storybook": "^1.2.1",
+    "@apollosproject/ui-kit": "^1.2.3",
+    "@apollosproject/ui-media-player": "^1.2.3",
+    "@apollosproject/ui-storybook": "^1.2.3",
     "react-native-maps": "0.26.1",
     "react-navigation": "^3.11.0"
   },
