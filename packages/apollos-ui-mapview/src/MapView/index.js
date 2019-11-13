@@ -14,9 +14,6 @@ import { withTheme } from '@apollosproject/ui-kit/src/theme';
 import CampusCard from '@apollosproject/ui-kit/src/CampusCard';
 import Marker from './Marker';
 
-const getCampusAddress = (campus) =>
-  `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
-
 const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
@@ -84,8 +81,10 @@ class MapView extends Component {
 
   constructor(props) {
     super();
+
     this.cardWidth =
       Dimensions.get('window').width - props.theme.sizing.baseUnit * 2.25;
+
     this.animation = new Animated.Value(0);
     this.scrollView = null;
     this.cardWidthWithPadding =
@@ -124,6 +123,9 @@ class MapView extends Component {
       ...campuses.filter(({ id }) => id !== currentCampus.id),
     ];
   }
+
+  getCampusAddress = (campus) =>
+    `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
   scrollToIndex = (index) => {
     const cardScrollPosition = index * this.cardWidthWithPadding;
@@ -232,7 +234,7 @@ class MapView extends Component {
                 <StyledCampusCard
                   distance={item.distanceFromLocation}
                   title={item.name}
-                  description={getCampusAddress(item)}
+                  description={this.getCampusAddress(item)}
                   images={[item.image]}
                   cardWidth={this.cardWidth}
                 />
