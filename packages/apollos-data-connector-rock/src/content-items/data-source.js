@@ -415,25 +415,8 @@ export default class ContentItem extends RockApolloDataSource {
       .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
 
-  byDateAndActive = async ({ queue }) => {
-    const jobs = await queue.getCompleted();
-    const timestamp = jobs
-      .map((j) => j.opts.timestamp)
-      .sort((a, b) => {
-        if (a > b) {
-          return -1;
-        }
-        if (a < b) {
-          return 1;
-        }
-        return 0;
-      })[0];
-    const date = new Date(timestamp);
-    const datetime = moment(date)
-      .tz(ROCK.TIMEZONE)
-      .format()
-      .split(/[-+]\d+:\d+/)[0];
-    return this.request()
+  byDateAndActive = async ({ datetime }) =>
+    this.request()
       .filterOneOf(
         ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
           (id) => `ContentChannelId eq ${id}`
@@ -444,7 +427,6 @@ export default class ContentItem extends RockApolloDataSource {
         `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
       )
       .andFilter(this.LIVE_CONTENT());
-  };
 
   byContentChannelId = (id) =>
     this.request()

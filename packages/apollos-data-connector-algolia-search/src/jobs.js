@@ -1,3 +1,8 @@
+import ApollosConfig from '@apollosproject/config';
+import moment from 'moment';
+
+const { ROCK } = ApollosConfig;
+
 const createJobs = ({ getContext, queues }) => {
   const FullIndexQueue = queues.add('algolia-full-index-queue');
   const DeltaIndexQueue = queues.add('algolia-delta-index-queue');
@@ -9,7 +14,24 @@ const createJobs = ({ getContext, queues }) => {
 
   DeltaIndexQueue.process(async () => {
     const context = getContext();
-    return context.dataSources.Search.deltaIndex({ queue: DeltaIndexQueue });
+    const jobs = await DeltaIndexQueue.getCompleted();
+    const timestamp = jobs
+      .map((j) => j.opts.timestamp)
+      .sort((a, b) => {
+        if (a > b) {
+          return -1;
+        }
+        if (a < b) {
+          return 1;
+        }
+        return 0;
+      })[0];
+    const date = new Date(timestamp);
+    const datetime = moment(date)
+      .tz(ROCK.TIMEZONE)
+      .format()
+      .split(/[-+]\d+:\d+/)[0];
+    return context.dataSources.Search.deltaIndex({ datetime });
   });
 
   FullIndexQueue.add(null, { repeat: { cron: '15 3 * * 1' } });
