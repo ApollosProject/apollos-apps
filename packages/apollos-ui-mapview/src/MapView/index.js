@@ -68,7 +68,8 @@ class MapView extends Component {
       goBack: PropTypes.func,
     }),
     cardWrapper: PropTypes.func.isRequired,
-    mapPin: PropTypes.oneOfType([
+    // eslint-disable-next-line react/no-unused-prop-types
+    Marker: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.func,
       PropTypes.object, // type check for React fragments
@@ -76,7 +77,7 @@ class MapView extends Component {
   };
 
   static defaultProps = {
-    mapPin: Marker,
+    Marker,
   };
 
   constructor(props) {
@@ -169,9 +170,8 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect, cardWrapper, mapPin } = this.props;
+    const { onLocationSelect, cardWrapper } = this.props;
     const CardWrapper = cardWrapper;
-    const MapPin = mapPin;
 
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
@@ -201,7 +201,7 @@ class MapView extends Component {
               opacity: interpolations[index].opacity,
             };
             return (
-              <MapPin
+              <this.props.Marker
                 onPress={() => this.scrollToIndex(index)}
                 key={campus.id}
                 opacityStyle={campusOpacity}
