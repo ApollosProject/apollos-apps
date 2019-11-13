@@ -21,17 +21,23 @@ const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
 
-const Footer = styled({
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  right: 0,
-})(SafeAreaView);
+const Footer = styled(
+  {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+  'ui-mapview.MapView.Footer'
+)(SafeAreaView);
 
-const StyledCampusCard = styled(({ theme, cardWidth }) => ({
-  width: cardWidth,
-  marginHorizontal: theme.sizing.baseUnit / 4,
-}))(CampusCard);
+const StyledCampusCard = styled(
+  ({ theme, cardWidth }) => ({
+    width: cardWidth,
+    marginHorizontal: theme.sizing.baseUnit / 4,
+  }),
+  'ui-mapview.MapView.StyledCampusCard'
+)(CampusCard);
 
 class MapView extends Component {
   static propTypes = {

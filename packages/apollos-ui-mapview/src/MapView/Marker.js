@@ -14,7 +14,7 @@ const MarkerView = styled(
     backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
     zIndex: 2,
   }),
-  'Marker.view'
+  'ui-mapview.MarkerView'
 )(View);
 
 const MarkerRingView = styled(
@@ -28,7 +28,7 @@ const MarkerRingView = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'Marker.ringView'
+  'ui-mapview.MarkerRingView'
 )(View);
 
 const StyledMarker = memo(({ latitude, longitude, opacityStyle, onPress }) => (
