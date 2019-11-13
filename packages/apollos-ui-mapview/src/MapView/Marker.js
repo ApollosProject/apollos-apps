@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { View, Animated } from 'react-native';
 import PropTypes from 'prop-types';
-import { Marker } from 'react-native-maps';
+import { Marker as DefaultMarker } from 'react-native-maps';
 import Color from 'color';
 
 import styled from '@apollosproject/ui-kit/src/styled';
@@ -31,23 +31,23 @@ const MarkerRingView = styled(
   'ui-mapview.MarkerRingView'
 )(View);
 
-const StyledMarker = memo(({ latitude, longitude, opacityStyle, onPress }) => (
-  <Marker onPress={onPress} coordinate={{ latitude, longitude }}>
+const Marker = memo(({ latitude, longitude, opacityStyle, onPress }) => (
+  <DefaultMarker onPress={onPress} coordinate={{ latitude, longitude }}>
     <Animated.View style={opacityStyle}>
       <MarkerRingView>
         <MarkerView />
       </MarkerRingView>
     </Animated.View>
-  </Marker>
+  </DefaultMarker>
 ));
 
-StyledMarker.displayName = 'StyledMarker';
+Marker.displayName = 'Marker';
 
-StyledMarker.propTypes = {
+Marker.propTypes = {
   latitude: PropTypes.number.isRequired,
   longitude: PropTypes.number.isRequired,
   onPress: PropTypes.func.isRequired,
   opacityStyle: PropTypes.shape({}),
 };
 
-export default StyledMarker;
+export default Marker;
