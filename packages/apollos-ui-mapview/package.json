@@ -43,13 +43,15 @@
     "@apollosproject/ui-media-player": "*",
     "react": "*",
     "react-native-maps": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-navigation": "*"
   },
   "dependencies": {
     "@apollosproject/ui-kit": "^1.2.1",
     "@apollosproject/ui-media-player": "^1.2.2",
     "@apollosproject/ui-storybook": "^1.2.1",
-    "react-native-maps": "0.26.1"
+    "react-native-maps": "0.26.1",
+    "react-navigation": "^3.11.0"
   },
   "devDependencies": {
     "jest": "24.8.0",
