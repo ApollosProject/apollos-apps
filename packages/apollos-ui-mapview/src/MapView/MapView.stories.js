@@ -58,7 +58,7 @@ const navigation = {
   goBack: () => {},
 };
 
-storiesOf('ui-kit/MapView', module).add('default', () => (
+storiesOf('ui-mapview/MapView', module).add('default', () => (
   <MapView
     navigation={navigation}
     campuses={campuses}
