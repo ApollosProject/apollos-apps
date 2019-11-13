@@ -92,6 +92,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
     </View>
   </View>
   <RCTScrollView
+    collapsable={false}
     contentContainerStyle={
       Object {
         "padding": 8,
@@ -155,6 +156,8 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
     numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
     onLayout={[Function]}
     onMomentumScrollEnd={[Function]}
     onScroll={[Function]}
@@ -163,6 +166,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
     refreshing={false}
     removeClippedSubviews={false}
     renderItem={[Function]}
+    renderScrollComponent={[Function]}
     scrollEventThrottle={50}
     showsHorizontalScrollIndicator={false}
     snapToAlignment="start"
@@ -570,6 +574,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
     </View>
   </View>
   <RCTScrollView
+    collapsable={false}
     contentContainerStyle={
       Object {
         "padding": 8,
@@ -631,6 +636,8 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
     numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
     onLayout={[Function]}
     onMomentumScrollEnd={[Function]}
     onScroll={[Function]}
@@ -639,6 +646,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
     refreshing={true}
     removeClippedSubviews={false}
     renderItem={[Function]}
+    renderScrollComponent={[Function]}
     scrollEventThrottle={50}
     showsHorizontalScrollIndicator={false}
     snapToAlignment="start"
