@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
+import { Providers } from '@apollosproject/ui-kit';
 
 import MapView from '.';
 
@@ -9,7 +11,7 @@ const campuses = [
     city: 'Richardson',
     distanceFromLocation: null,
     id: 'Campus:965b6e6d7046a885bea4e300b5c0400d',
-    image: {},
+    image: 'https://www.placecage.com/c/250/250',
     latitude: 32.95103,
     longitude: -96.74738,
     name: 'Dallas Campus',
@@ -21,7 +23,7 @@ const campuses = [
     city: 'Cincinnati',
     distanceFromLocation: 2037.6461577685534,
     id: 'Campus:4f68015ba18662a7409d1219a4ce013e',
-    image: {},
+    image: 'https://www.placecage.com/c/250/250',
     latitude: 39.10501,
     longitude: -84.51138,
     name: 'Cincinnati Campus',
@@ -35,7 +37,7 @@ const currentCampus = {
   city: 'Richardson',
   distanceFromLocation: null,
   id: 'Campus:965b6e6d7046a885bea4e300b5c0400d',
-  image: {},
+  image: 'https://www.placecage.com/c/250/250',
   latitude: 32.95103,
   longitude: -96.74738,
   name: 'Dallas Campus',
@@ -60,15 +62,17 @@ const navigation = {
 describe('<MapView>', () => {
   it('should render as a MapView', () => {
     const tree = renderer.create(
-      <MapView
-        navigation={navigation}
-        campuses={campuses}
-        initialRegion={initialRegion}
-        userLocation={currentCampus}
-        currentCampus={currentCampus}
-        onLocationSelect={jest.fn()}
-        cardWrapper={MediaPlayerSpacer}
-      />
+      <Providers>
+        <MapView
+          navigation={navigation}
+          campuses={campuses}
+          initialRegion={initialRegion}
+          userLocation={currentCampus}
+          currentCampus={currentCampus}
+          onLocationSelect={jest.fn()}
+          cardWrapper={MediaPlayerSpacer}
+        />
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });

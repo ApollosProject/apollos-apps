@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { View } from 'react-native';
 
 import Card, { CardContent } from '../Card';
-import ConnectedImage from '../ConnectedImage';
+import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import SideBySideView from '../SideBySideView';
 import styled from '../styled';
 import { H5, H6 } from '../typography';
@@ -34,7 +35,7 @@ const CampusCard = memo(
       {...otherProps}
     >
       <HorizontalLayout>
-        {images ? <CampusImage source={images} /> : null}
+        <View>{images ? <CampusImage source={images} /> : null}</View>
         <FlexedCardContent>
           <Header>
             <H5>{title}</H5>
