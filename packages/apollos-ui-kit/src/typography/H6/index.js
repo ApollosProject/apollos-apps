@@ -21,16 +21,22 @@ const styles = styled(
   'H6'
 );
 
+const placeholderSize = ({ placeholderWidth }) => ({
+  width: placeholderWidth || '50%',
+});
+
 const H6 = compose(
   setDisplayName('H6'),
   styles,
-  withPlaceholder(Typography, { width: '50%' }),
+  withPlaceholder(Typography, placeholderSize),
   pure
 )(Text);
 
 H6.propTypes = {
   padded: PropTypes.bool,
-  isLoading: PropTypes.bool, // display loading placeholder
+  placeholderWidth: PropTypes.string,
+  isLoading: PropTypes.bool,
+  // display loading placeholder
   ...Text.propTypes,
 };
 

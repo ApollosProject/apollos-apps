@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
+import isNull from 'lodash/isNull';
 
 import Card, { CardContent } from '../Card';
 import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
@@ -39,8 +40,8 @@ const CampusCard = memo(
         <FlexedCardContent>
           <Header>
             <H5>{title}</H5>
-            {distance != null ? (
-              <H6>
+            {!isNull(distance) ? (
+              <H6 placeholderWidth="15%">
                 {Math.round(distance)}
                 mi
               </H6>
@@ -57,7 +58,6 @@ CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   images: ImageSourceType,
-  category: PropTypes.string,
   distance: PropTypes.number,
 };
 
