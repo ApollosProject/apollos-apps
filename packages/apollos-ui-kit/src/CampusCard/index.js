@@ -56,7 +56,7 @@ const CampusCard = memo(
 CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  images: PropTypes.any, // eslint-disable-line
+  images: ImageSourceType,
   category: PropTypes.string,
   distance: PropTypes.number,
 };
