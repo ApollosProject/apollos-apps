@@ -8,9 +8,9 @@ import styled from '@apollosproject/ui-kit/src/styled';
 
 const MarkerView = styled(
   ({ theme }) => ({
-    width: theme.sizing.baseUnit / 2, // 8
-    height: theme.sizing.baseUnit / 2, // 8
-    borderRadius: theme.sizing.baseUnit / 4, // 4
+    width: theme.sizing.baseUnit * 0.5, // 8
+    height: theme.sizing.baseUnit * 0.5, // 8
+    borderRadius: theme.sizing.baseUnit * 0.25, // 4
     backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
     zIndex: 2,
   }),
@@ -19,9 +19,9 @@ const MarkerView = styled(
 
 const MarkerRingView = styled(
   ({ theme }) => ({
-    width: theme.sizing.baseUnit / 1.5, // 24
-    height: theme.sizing.baseUnit / 1.5, // 24
-    borderRadius: theme.sizing.baseUnit - 4, // 12
+    width: theme.sizing.baseUnit * 1.5, // 24
+    height: theme.sizing.baseUnit * 1.5, // 24
+    borderRadius: theme.sizing.baseUnit * 0.75, // 12
     backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low),
     borderWidth: 1,
     borderColor: Color(theme.colors.primary).fade(theme.alpha.medium),
