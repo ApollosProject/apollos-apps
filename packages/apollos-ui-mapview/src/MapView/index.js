@@ -12,7 +12,7 @@ import FlexedView from '@apollosproject/ui-kit/src/FlexedView';
 import PaddedView from '@apollosproject/ui-kit/src/PaddedView';
 import Touchable from '@apollosproject/ui-kit/src/Touchable';
 import styled from '@apollosproject/ui-kit/src/styled';
-import { withTheme } from '@apollosproject/ui-kit/src/theme';
+import { withTheme, withIsLoading } from '@apollosproject/ui-kit';
 
 import Marker from '../Marker';
 
@@ -76,6 +76,7 @@ class MapView extends Component {
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
+    isLoading: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -172,7 +173,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect, cardWrapper } = this.props;
+    const { onLocationSelect, cardWrapper, isLoading } = this.props;
     const CardWrapper = cardWrapper;
 
     const interpolations = this.sortedCampuses.map((marker, index) => {
@@ -239,6 +240,7 @@ class MapView extends Component {
                   description={this.getCampusAddress(item)}
                   images={[item.image]}
                   cardWidth={this.cardWidth}
+                  isLoading={isLoading}
                 />
               </Touchable>
             )}
@@ -273,4 +275,4 @@ class MapView extends Component {
   }
 }
 
-export default withTheme()(MapView);
+export default withTheme()(withIsLoading(MapView));

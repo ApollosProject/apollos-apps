@@ -10,7 +10,7 @@ const campuses = [
     city: 'Richardson',
     distanceFromLocation: null,
     id: 'Campus:965b6e6d7046a885bea4e300b5c0400d',
-    image: {},
+    image: 'https://www.placecage.com/c/250/250',
     latitude: 32.95103,
     longitude: -96.74738,
     name: 'Dallas Campus',
@@ -58,14 +58,27 @@ const navigation = {
   goBack: () => {},
 };
 
-storiesOf('ui-mapview/MapView', module).add('default', () => (
-  <MapView
-    navigation={navigation}
-    campuses={campuses}
-    initialRegion={initialRegion}
-    userLocation={currentCampus}
-    currentCampus={currentCampus}
-    onLocationSelect={async () => {}}
-    cardWrapper={MediaPlayerSpacer}
-  />
-));
+storiesOf('ui-mapview/MapView', module)
+  .add('default', () => (
+    <MapView
+      navigation={navigation}
+      campuses={campuses}
+      initialRegion={initialRegion}
+      userLocation={currentCampus}
+      currentCampus={currentCampus}
+      onLocationSelect={async () => {}}
+      cardWrapper={MediaPlayerSpacer}
+    />
+  ))
+  .add('isLoading', () => (
+    <MapView
+      navigation={navigation}
+      campuses={campuses}
+      initialRegion={initialRegion}
+      userLocation={currentCampus}
+      currentCampus={currentCampus}
+      onLocationSelect={async () => {}}
+      cardWrapper={MediaPlayerSpacer}
+      isLoading
+    />
+  ));
