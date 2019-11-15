@@ -54,7 +54,11 @@ const createTrack = ({ client }) => ({ eventName, properties }) =>
 
 const createIdentify = ({ client }) => () => identify({ client });
 
-export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
+export const createResolvers = ({
+  trackFunctions,
+  identifyFunctions,
+  useServerAnalytics = true,
+}) => ({
   Mutation: {
     track: async (root, { properties, eventName }, { client }) => {
       trackFunctions.forEach((func) => {
@@ -66,17 +70,19 @@ export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
           func({ eventName, properties: gqlInputToObject(properties) });
         }
       });
-      await client.mutate({
-        mutation: TRACK_SERVER,
-        variables: {
-          input: {
-            anonymousId,
-            deviceInfo,
-            eventName,
-            properties,
+      if (useServerAnalytics) {
+        await client.mutate({
+          mutation: TRACK_SERVER,
+          variables: {
+            input: {
+              anonymousId,
+              deviceInfo,
+              eventName,
+              properties,
+            },
           },
-        },
-      });
+        });
+      }
       return null;
     },
 
@@ -90,15 +96,17 @@ export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
           func();
         }
       });
-      await client.mutate({
-        mutation: IDENTIFY_SERVER,
-        variables: {
-          input: {
-            anonymousId,
-            deviceInfo,
+      if (useServerAnalytics) {
+        await client.mutate({
+          mutation: IDENTIFY_SERVER,
+          variables: {
+            input: {
+              anonymousId,
+              deviceInfo,
+            },
           },
-        },
-      });
+        });
+      }
       return null;
     },
   },
