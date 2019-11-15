@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 import { Providers } from '@apollosproject/ui-kit';
 
 import MapView from '.';
@@ -70,7 +69,6 @@ describe('<MapView>', () => {
           userLocation={currentCampus}
           currentCampus={currentCampus}
           onLocationSelect={jest.fn()}
-          cardWrapper={MediaPlayerSpacer}
         />
       </Providers>
     );

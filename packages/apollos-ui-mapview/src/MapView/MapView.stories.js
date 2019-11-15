@@ -1,7 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 import MapView from '.';
 
@@ -67,7 +66,6 @@ storiesOf('ui-mapview/MapView', module)
       userLocation={currentCampus}
       currentCampus={currentCampus}
       onLocationSelect={async () => {}}
-      cardWrapper={MediaPlayerSpacer}
     />
   ))
   .add('isLoading', () => (
@@ -78,7 +76,6 @@ storiesOf('ui-mapview/MapView', module)
       userLocation={currentCampus}
       currentCampus={currentCampus}
       onLocationSelect={async () => {}}
-      cardWrapper={MediaPlayerSpacer}
       isLoading
     />
   ));

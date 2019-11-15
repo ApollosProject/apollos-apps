@@ -12,6 +12,7 @@ import FlexedView from '@apollosproject/ui-kit/src/FlexedView';
 import PaddedView from '@apollosproject/ui-kit/src/PaddedView';
 import Touchable from '@apollosproject/ui-kit/src/Touchable';
 import styled from '@apollosproject/ui-kit/src/styled';
+import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 import { withTheme, withIsLoading } from '@apollosproject/ui-kit';
 
 import Marker from '../Marker';
@@ -69,7 +70,6 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
-    cardWrapper: PropTypes.func.isRequired,
     // eslint-disable-next-line react/no-unused-prop-types
     Marker: PropTypes.oneOfType([
       PropTypes.node,
@@ -173,8 +173,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect, cardWrapper, isLoading } = this.props;
-    const CardWrapper = cardWrapper;
+    const { onLocationSelect, isLoading } = this.props;
 
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
@@ -257,7 +256,7 @@ class MapView extends Component {
               { useNativeDriver: true }
             )}
           />
-          <CardWrapper>
+          <MediaPlayerSpacer>
             <PaddedView>
               <Button
                 title="Select Campus"
@@ -268,7 +267,7 @@ class MapView extends Component {
                 }
               />
             </PaddedView>
-          </CardWrapper>
+          </MediaPlayerSpacer>
         </Footer>
       </FlexedView>
     );
