@@ -146,11 +146,13 @@ Provider.propTypes = {
   children: PropTypes.node,
   trackFunctions: PropTypes.arrayOf(PropTypes.func),
   identifyFunctions: PropTypes.arrayOf(PropTypes.func),
+  useServerAnalytics: PropTypes.bool,
 };
 
 Provider.defaultProps = {
   trackFunctions: [],
   identifyFunctions: [],
+  useServerAnalytics: true,
 };
 
 export const AnalyticsConsumer = AnalyticsContext.Consumer;
