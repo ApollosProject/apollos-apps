@@ -113,11 +113,20 @@ export const createResolvers = ({
   },
 });
 
-const Provider = ({ children, trackFunctions, identifyFunctions }) => (
+const Provider = ({
+  children,
+  trackFunctions,
+  identifyFunctions,
+  useServerAnalytics,
+}) => (
   <ApolloConsumer>
     {(client) => {
       client.addResolvers(
-        createResolvers({ trackFunctions, identifyFunctions })
+        createResolvers({
+          trackFunctions,
+          identifyFunctions,
+          useServerAnalytics,
+        })
       );
       return (
         <AnalyticsContext.Provider
