@@ -43,13 +43,10 @@ export default class LiveStream extends RESTDataSource {
     // this returns an array of livestreams
     const liveItems = await ContentItem.getActiveLiveStreamContent();
     return Promise.all(
-      liveItems.map(
-        async (item) =>
-          console.log(item) || {
-            contentItem: item,
-            ...(await this.getLiveStream()),
-          }
-      )
+      liveItems.map(async (item) => ({
+        contentItem: item,
+        ...(await this.getLiveStream()),
+      }))
     );
   }
 }
