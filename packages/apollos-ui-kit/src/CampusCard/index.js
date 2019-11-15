@@ -57,7 +57,10 @@ const CampusCard = memo(
 CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  images: ImageSourceType,
+  images: PropTypes.oneOfType([
+    PropTypes.arrayOf(ImageSourceType),
+    ImageSourceType,
+  ]),
   distance: PropTypes.number,
 };
 

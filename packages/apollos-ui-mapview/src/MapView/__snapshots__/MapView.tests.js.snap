@@ -117,7 +117,6 @@ exports[`<MapView> should render as a MapView 1`] = `
             <View
               cardWidth={714}
               inHorizontalList={true}
-              isLoading={false}
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -274,7 +273,6 @@ Richardson, TX 75080-5525
             <View
               cardWidth={714}
               inHorizontalList={true}
-              isLoading={false}
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -382,6 +380,7 @@ Richardson, TX 75080-5525
                         Cincinnati Campus
                       </Text>
                       <Text
+                        placeholderWidth="15%"
                         style={
                           Object {
                             "color": "#505050",
