@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '@apollosproject/ui-kit';
 
-import Marker from './Marker';
+import Marker from '.';
 
 const region = {
   latitude: 39.809734,
