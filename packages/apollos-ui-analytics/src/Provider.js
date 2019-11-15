@@ -47,7 +47,8 @@ export const track = ({ client, eventName, properties }) =>
     },
   });
 
-const identify = ({ client }) => client.mutate({ mutation: IDENTIFY_CLIENT });
+export const identify = ({ client }) =>
+  client.mutate({ mutation: IDENTIFY_CLIENT });
 
 const createTrack = ({ client }) => ({ eventName, properties }) =>
   track({ eventName, properties, client });
