@@ -17,7 +17,7 @@ import { withTheme, withIsLoading } from '@apollosproject/ui-kit';
 
 import Marker from '../Marker';
 
-const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
+export const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
 
