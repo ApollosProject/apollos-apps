@@ -31,13 +31,17 @@ export default class AuthDataSource extends RockApolloDataSource {
     }
 
     if (userCookie) {
-      const request = await this.request('People/GetCurrentPerson').get({
-        options: {
-          headers: { cookie: userCookie, 'Authorization-Token': null },
-        },
-      });
-      this.context.currentPerson = request;
-      return request;
+      try {
+        const request = await this.request('People/GetCurrentPerson').get({
+          options: {
+            headers: { cookie: userCookie, 'Authorization-Token': null },
+          },
+        });
+        this.context.currentPerson = request;
+        return request;
+      } catch (e) {
+        throw new AuthenticationError('Invalid user cookie');
+      }
     }
     throw new AuthenticationError('Must be logged in');
   };
@@ -107,6 +111,7 @@ export default class AuthDataSource extends RockApolloDataSource {
         Email: email,
         IsSystem: false, // Required by Rock
         Gender: 0, // Required by Rock
+        ConnectionStatusValueId: 5679, // "App User" - created by Willow
       });
     } catch (err) {
       throw new Error('Unable to create profile!');
