@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import Marker from './Marker';
+import Marker from '.';
 
 const region = {
   latitude: 39.809734,
