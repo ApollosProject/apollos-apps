@@ -47,11 +47,12 @@ export const track = ({ client, eventName, properties }) =>
     },
   });
 
+const identify = ({ client }) => client.mutate({ mutation: IDENTIFY_CLIENT });
+
 const createTrack = ({ client }) => ({ eventName, properties }) =>
   track({ eventName, properties, client });
 
-const createIdentify = ({ client }) => () =>
-  client.mutate({ mutation: IDENTIFY_CLIENT });
+const createIdentify = ({ client }) => () => identify({ client });
 
 export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
   Mutation: {
