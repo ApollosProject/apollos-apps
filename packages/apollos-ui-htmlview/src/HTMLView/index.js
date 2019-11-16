@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
 
-import { Paragraph as ParagraphPlaceholder } from '@apollosproject/ui-kit';
+import { Paragraph } from '@apollosproject/ui-kit';
 
 import defaultRenderer, { wrapTextChildren } from './defaultRenderer';
 
@@ -81,9 +81,9 @@ class HTMLView extends PureComponent {
 
   render() {
     return (
-      <ParagraphPlaceholder lineNumber={8} onReady={!this.props.isLoading}>
+      <Paragraph lineNumber={8} isLoading={this.props.isLoading}>
         <View>{this.state.parsed}</View>
-      </ParagraphPlaceholder>
+      </Paragraph>
     );
   }
 }
