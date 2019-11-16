@@ -336,8 +336,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                     </Text>
                   </Text>
                   <View
-                    lineNumber={8}
-                    onReady={true}
                     style={
                       Object {
                         "paddingBottom": 17.28,
@@ -437,8 +435,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                       </Text>
                     </Text>
                     <View
-                      lineNumber={8}
-                      onReady={true}
                       style={
                         Object {
                           "paddingBottom": 17.28,
@@ -542,8 +538,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                       </Text>
                     </Text>
                     <View
-                      lineNumber={8}
-                      onReady={true}
                       style={
                         Object {
                           "paddingBottom": 17.28,
@@ -1194,8 +1188,6 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                     </Text>
                   </Text>
                   <View
-                    lineNumber={8}
-                    onReady={true}
                     style={
                       Object {
                         "paddingBottom": 17.28,
@@ -1728,8 +1720,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                     </Text>
                   </Text>
                   <View
-                    lineNumber={8}
-                    onReady={true}
                     style={
                       Object {
                         "paddingBottom": 17.28,
@@ -1829,8 +1819,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                       </Text>
                     </Text>
                     <View
-                      lineNumber={8}
-                      onReady={true}
                       style={
                         Object {
                           "paddingBottom": 17.28,
@@ -1934,8 +1922,6 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                       </Text>
                     </Text>
                     <View
-                      lineNumber={8}
-                      onReady={true}
                       style={
                         Object {
                           "paddingBottom": 17.28,
