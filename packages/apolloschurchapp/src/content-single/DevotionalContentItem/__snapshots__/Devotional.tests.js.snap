@@ -258,94 +258,182 @@ exports[`the Devotional component renders a devotional 1`] = `
           }
         }
       >
-        <RCTScrollView
-          alwaysBounceHorizontal={false}
-          automaticallyAdjustContentInsets={false}
-          bounces={false}
-          contentContainerStyle={null}
-          contentOffset={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          directionalLockEnabled={true}
-          horizontal={true}
-          keyboardDismissMode="on-drag"
-          keyboardShouldPersistTaps="always"
-          onMomentumScrollEnd={[Function]}
-          onScroll={[Function]}
-          overScrollMode="never"
-          pagingEnabled={true}
-          scrollEnabled={true}
-          scrollEventThrottle={1}
-          scrollsToTop={false}
-          showsHorizontalScrollIndicator={false}
+        <View
+          collapsable={false}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
           style={
             Object {
+              "alignItems": "stretch",
               "flex": 1,
+              "flexDirection": "row",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+              "width": 1500,
             }
           }
         >
-          <View>
-            <View
-              accessibilityElementsHidden={false}
-              importantForAccessibility="auto"
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "width": 750,
-                }
+          <View
+            accessibilityElementsHidden={false}
+            importantForAccessibility="auto"
+            style={
+              Object {
+                "width": 750,
               }
-            >
-              <RCTScrollView>
-                <View>
-                  <View
+            }
+          >
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 0,
+                    }
+                  }
+                >
+                  <Text
+                    padded={true}
                     style={
                       Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 0,
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 36,
+                        "lineHeight": 41.4,
+                        "paddingBottom": 20,
+                        "paddingTop": 24,
+                      }
+                    }
+                  >
+                    God is Our Banner
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00676D",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 23.04,
+                        "paddingBottom": 24,
+                        "textAlign": "center",
+                        "textDecorationLine": "underline",
                       }
                     }
                   >
                     <Text
+                      onPress={[Function]}
                       padded={true}
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 36,
-                          "lineHeight": 41.4,
-                          "paddingBottom": 20,
-                          "paddingTop": 24,
+                          "color": "#17B582",
                         }
                       }
                     >
-                      God is Our Banner
+                      1 Corinthians 15:57, Exodus 17:8-15
                     </Text>
+                  </Text>
+                  <View
+                    lineNumber={8}
+                    onReady={true}
+                    style={
+                      Object {
+                        "paddingBottom": 17.28,
+                      }
+                    }
+                  >
+                    <View>
+                      <Text
+                        bold={false}
+                        italic={false}
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Regular",
+                            "fontSize": 16,
+                            "lineHeight": 26,
+                          }
+                        }
+                      >
+                        <Text
+                          bold={true}
+                          italic={false}
+                          style={
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 16,
+                              "lineHeight": 26,
+                            }
+                          }
+                        >
+                          <Text>
+                            Some content!
+                          </Text>
+                        </Text>
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+          <View
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+            style={
+              Object {
+                "width": 750,
+              }
+            }
+          >
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View>
                     <Text
                       style={
                         Object {
-                          "color": "#00676D",
+                          "color": "#303030",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 16,
                           "lineHeight": 23.04,
-                          "paddingBottom": 24,
-                          "textAlign": "center",
-                          "textDecorationLine": "underline",
                         }
                       }
                     >
                       <Text
-                        onPress={[Function]}
-                        padded={true}
                         style={
                           Object {
-                            "color": "#17B582",
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 16,
+                            "lineHeight": 23.04,
                           }
                         }
                       >
-                        1 Corinthians 15:57, Exodus 17:8-15
+                        1 Corinthians 15:57
+                      </Text>
+                      <Text
+                        style={
+                          Object {
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                          }
+                        }
+                      >
+                         
+                        WEB
                       </Text>
                     </Text>
                     <View
@@ -358,62 +446,75 @@ exports[`the Devotional component renders a devotional 1`] = `
                       }
                     >
                       <View>
-                        <Text
-                          bold={false}
-                          italic={false}
+                        <View
                           style={
                             Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
-                              "fontSize": 16,
-                              "lineHeight": 26,
+                              "paddingBottom": 0,
                             }
                           }
                         >
                           <Text
-                            bold={true}
+                            bold={false}
                             italic={false}
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Bold",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
                             }
                           >
-                            <Text>
-                              Some content!
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                57
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
+                              </Text>
                             </Text>
                           </Text>
-                        </Text>
+                        </View>
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "width": 750,
-                }
-              }
-            >
-              <RCTScrollView>
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
+                  <View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 23.04,
+                        }
                       }
-                    }
-                  >
-                    <View>
+                    >
                       <Text
                         style={
                           Object {
@@ -424,49 +525,69 @@ exports[`the Devotional component renders a devotional 1`] = `
                           }
                         }
                       >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 23.04,
-                            }
-                          }
-                        >
-                          1 Corinthians 15:57
-                        </Text>
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                           
-                          WEB
-                        </Text>
+                        Exodus 17:8-15
                       </Text>
-                      <View
-                        lineNumber={8}
-                        onReady={true}
+                      <Text
                         style={
                           Object {
-                            "paddingBottom": 17.28,
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
                           }
                         }
                       >
-                        <View>
-                          <View
+                         
+                        WEB
+                      </Text>
+                    </Text>
+                    <View
+                      lineNumber={8}
+                      onReady={true}
+                      style={
+                        Object {
+                          "paddingBottom": 17.28,
+                        }
+                      }
+                    >
+                      <View>
+                        <View
+                          style={
+                            Object {
+                              "paddingBottom": 0,
+                            }
+                          }
+                        >
+                          <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "paddingBottom": 0,
+                                "color": "#303030",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 16,
+                                "lineHeight": 26,
                               }
                             }
                           >
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                8
+                              </Text>
+                               
+                            </Text>
                             <Text
                               bold={false}
                               italic={false}
@@ -479,99 +600,28 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               }
                             >
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  57
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
-                                </Text>
+                              <Text>
+                                Then Amalek came and fought with Israel in Rephidim. 
                               </Text>
                             </Text>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View>
-                      <Text
-                        style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 16,
-                            "lineHeight": 23.04,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 23.04,
-                            }
-                          }
-                        >
-                          Exodus 17:8-15
-                        </Text>
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                           
-                          WEB
-                        </Text>
-                      </Text>
-                      <View
-                        lineNumber={8}
-                        onReady={true}
-                        style={
-                          Object {
-                            "paddingBottom": 17.28,
-                          }
-                        }
-                      >
-                        <View>
-                          <View
-                            style={
-                              Object {
-                                "paddingBottom": 0,
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
                               }
-                            }
-                          >
+                            >
+                               
+                              <Text>
+                                9
+                              </Text>
+                               
+                            </Text>
                             <Text
                               bold={false}
                               italic={false}
@@ -584,289 +634,224 @@ exports[`the Devotional component renders a devotional 1`] = `
                                 }
                               }
                             >
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  8
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Then Amalek came and fought with Israel in Rephidim. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  9
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  10
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  11
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  12
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  13
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Joshua defeated Amalek and his people with the edge of the sword. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  14
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  15
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Moses built an altar, and called its name “Yahweh our Banner”.
-                                </Text>
+                              <Text>
+                                Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
                               </Text>
                             </Text>
-                          </View>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                10
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                11
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                12
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                13
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                Joshua defeated Amalek and his people with the edge of the sword. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                14
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                15
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                Moses built an altar, and called its name “Yahweh our Banner”.
+                              </Text>
+                            </Text>
+                          </Text>
                         </View>
                       </View>
                     </View>
                   </View>
                 </View>
-              </RCTScrollView>
-            </View>
+              </View>
+            </RCTScrollView>
           </View>
-        </RCTScrollView>
+        </View>
       </View>
     </View>
   </RCTSafeAreaView>
@@ -1131,291 +1116,276 @@ exports[`the Devotional component renders a loading state of null 1`] = `
           }
         }
       >
-        <RCTScrollView
-          alwaysBounceHorizontal={false}
-          automaticallyAdjustContentInsets={false}
-          bounces={false}
-          contentContainerStyle={null}
-          contentOffset={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          directionalLockEnabled={true}
-          horizontal={true}
-          keyboardDismissMode="on-drag"
-          keyboardShouldPersistTaps="always"
-          onMomentumScrollEnd={[Function]}
-          onScroll={[Function]}
-          overScrollMode="never"
-          pagingEnabled={true}
-          scrollEnabled={true}
-          scrollEventThrottle={1}
-          scrollsToTop={false}
-          showsHorizontalScrollIndicator={false}
+        <View
+          collapsable={false}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
           style={
             Object {
+              "alignItems": "stretch",
               "flex": 1,
+              "flexDirection": "row",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+              "width": 1500,
             }
           }
         >
-          <View>
-            <View
-              accessibilityElementsHidden={false}
-              importantForAccessibility="auto"
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "width": 750,
-                }
+          <View
+            accessibilityElementsHidden={false}
+            importantForAccessibility="auto"
+            style={
+              Object {
+                "width": 750,
               }
-            >
-              <RCTScrollView>
-                <View>
-                  <View
+            }
+          >
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 0,
+                    }
+                  }
+                >
+                  <Text
+                    padded={true}
                     style={
                       Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 0,
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 36,
+                        "lineHeight": 41.4,
+                        "paddingBottom": 20,
+                        "paddingTop": 24,
+                      }
+                    }
+                  >
+                    God is Our Banner
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00676D",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 23.04,
+                        "paddingBottom": 24,
+                        "textAlign": "center",
+                        "textDecorationLine": "underline",
                       }
                     }
                   >
                     <Text
+                      onPress={[Function]}
                       padded={true}
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 36,
-                          "lineHeight": 41.4,
-                          "paddingBottom": 20,
-                          "paddingTop": 24,
+                          "color": "#17B582",
                         }
                       }
                     >
-                      God is Our Banner
+                      1 Corinthians 15:57, Exodus 17:8-15
                     </Text>
-                    <Text
-                      style={
-                        Object {
-                          "color": "#00676D",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 16,
-                          "lineHeight": 23.04,
-                          "paddingBottom": 24,
-                          "textAlign": "center",
-                          "textDecorationLine": "underline",
-                        }
+                  </Text>
+                  <View
+                    lineNumber={8}
+                    onReady={true}
+                    style={
+                      Object {
+                        "paddingBottom": 17.28,
                       }
-                    >
+                    }
+                  >
+                    <View>
                       <Text
-                        onPress={[Function]}
-                        padded={true}
+                        bold={false}
+                        italic={false}
                         style={
                           Object {
-                            "color": "#17B582",
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Regular",
+                            "fontSize": 16,
+                            "lineHeight": 26,
                           }
                         }
                       >
-                        1 Corinthians 15:57, Exodus 17:8-15
-                      </Text>
-                    </Text>
-                    <View
-                      lineNumber={8}
-                      onReady={true}
-                      style={
-                        Object {
-                          "paddingBottom": 17.28,
-                        }
-                      }
-                    >
-                      <View>
                         <Text
-                          bold={false}
+                          bold={true}
                           italic={false}
                           style={
                             Object {
                               "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
+                              "fontFamily": "InterUI-Bold",
                               "fontSize": 16,
                               "lineHeight": 26,
                             }
                           }
                         >
-                          <Text
-                            bold={true}
-                            italic={false}
-                            style={
-                              Object {
-                                "color": "#303030",
-                                "fontFamily": "InterUI-Bold",
-                                "fontSize": 16,
-                                "lineHeight": 26,
-                              }
-                            }
-                          >
-                            <Text>
-                              Some content!
-                            </Text>
+                          <Text>
+                            Some content!
                           </Text>
                         </Text>
-                      </View>
+                      </Text>
                     </View>
                   </View>
                 </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "width": 750,
-                }
-              }
-            >
-              <RCTScrollView>
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
-                      }
-                    }
-                  >
-                    <View>
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "40%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "60%",
-                          }
-                        }
-                      />
-                    </View>
-                    <View>
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "40%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "100%",
-                          }
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "stretch",
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 5,
-                            "width": "60%",
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </RCTScrollView>
-            </View>
+              </View>
+            </RCTScrollView>
           </View>
-        </RCTScrollView>
+          <View
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+            style={
+              Object {
+                "width": 750,
+              }
+            }
+          >
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View>
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "40%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "60%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View>
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "40%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 16,
+                          "marginVertical": 5,
+                          "width": "60%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
       </View>
     </View>
   </RCTSafeAreaView>
@@ -1680,94 +1650,182 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
           }
         }
       >
-        <RCTScrollView
-          alwaysBounceHorizontal={false}
-          automaticallyAdjustContentInsets={false}
-          bounces={false}
-          contentContainerStyle={null}
-          contentOffset={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          directionalLockEnabled={true}
-          horizontal={true}
-          keyboardDismissMode="on-drag"
-          keyboardShouldPersistTaps="always"
-          onMomentumScrollEnd={[Function]}
-          onScroll={[Function]}
-          overScrollMode="never"
-          pagingEnabled={true}
-          scrollEnabled={true}
-          scrollEventThrottle={1}
-          scrollsToTop={false}
-          showsHorizontalScrollIndicator={false}
+        <View
+          collapsable={false}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
           style={
             Object {
+              "alignItems": "stretch",
               "flex": 1,
+              "flexDirection": "row",
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+              "width": 1500,
             }
           }
         >
-          <View>
-            <View
-              accessibilityElementsHidden={false}
-              importantForAccessibility="auto"
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "width": 750,
-                }
+          <View
+            accessibilityElementsHidden={false}
+            importantForAccessibility="auto"
+            style={
+              Object {
+                "width": 750,
               }
-            >
-              <RCTScrollView>
-                <View>
-                  <View
+            }
+          >
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 0,
+                    }
+                  }
+                >
+                  <Text
+                    padded={true}
                     style={
                       Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 0,
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Black",
+                        "fontSize": 36,
+                        "lineHeight": 41.4,
+                        "paddingBottom": 20,
+                        "paddingTop": 24,
+                      }
+                    }
+                  >
+                    God is Our Banner
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00676D",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 23.04,
+                        "paddingBottom": 24,
+                        "textAlign": "center",
+                        "textDecorationLine": "underline",
                       }
                     }
                   >
                     <Text
+                      onPress={[Function]}
                       padded={true}
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 36,
-                          "lineHeight": 41.4,
-                          "paddingBottom": 20,
-                          "paddingTop": 24,
+                          "color": "#17B582",
                         }
                       }
                     >
-                      God is Our Banner
+                      1 Corinthians 15:57, Exodus 17:8-15
                     </Text>
+                  </Text>
+                  <View
+                    lineNumber={8}
+                    onReady={true}
+                    style={
+                      Object {
+                        "paddingBottom": 17.28,
+                      }
+                    }
+                  >
+                    <View>
+                      <Text
+                        bold={false}
+                        italic={false}
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Regular",
+                            "fontSize": 16,
+                            "lineHeight": 26,
+                          }
+                        }
+                      >
+                        <Text
+                          bold={true}
+                          italic={false}
+                          style={
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 16,
+                              "lineHeight": 26,
+                            }
+                          }
+                        >
+                          <Text>
+                            Some content!
+                          </Text>
+                        </Text>
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+          <View
+            accessibilityElementsHidden={true}
+            importantForAccessibility="no-hide-descendants"
+            style={
+              Object {
+                "width": 750,
+              }
+            }
+          >
+            <RCTScrollView>
+              <View>
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View>
                     <Text
                       style={
                         Object {
-                          "color": "#00676D",
+                          "color": "#303030",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 16,
                           "lineHeight": 23.04,
-                          "paddingBottom": 24,
-                          "textAlign": "center",
-                          "textDecorationLine": "underline",
                         }
                       }
                     >
                       <Text
-                        onPress={[Function]}
-                        padded={true}
                         style={
                           Object {
-                            "color": "#17B582",
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 16,
+                            "lineHeight": 23.04,
                           }
                         }
                       >
-                        1 Corinthians 15:57, Exodus 17:8-15
+                        1 Corinthians 15:57
+                      </Text>
+                      <Text
+                        style={
+                          Object {
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
+                          }
+                        }
+                      >
+                         
+                        WEB
                       </Text>
                     </Text>
                     <View
@@ -1780,62 +1838,75 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                       }
                     >
                       <View>
-                        <Text
-                          bold={false}
-                          italic={false}
+                        <View
                           style={
                             Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Regular",
-                              "fontSize": 16,
-                              "lineHeight": 26,
+                              "paddingBottom": 0,
                             }
                           }
                         >
                           <Text
-                            bold={true}
+                            bold={false}
                             italic={false}
                             style={
                               Object {
                                 "color": "#303030",
-                                "fontFamily": "InterUI-Bold",
+                                "fontFamily": "DroidSerif",
                                 "fontSize": 16,
                                 "lineHeight": 26,
                               }
                             }
                           >
-                            <Text>
-                              Some content!
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                57
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
+                              </Text>
                             </Text>
                           </Text>
-                        </Text>
+                        </View>
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
-            </View>
-            <View
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "width": 750,
-                }
-              }
-            >
-              <RCTScrollView>
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
+                  <View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 16,
+                          "lineHeight": 23.04,
+                        }
                       }
-                    }
-                  >
-                    <View>
+                    >
                       <Text
                         style={
                           Object {
@@ -1846,49 +1917,69 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                           }
                         }
                       >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 23.04,
-                            }
-                          }
-                        >
-                          1 Corinthians 15:57
-                        </Text>
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                           
-                          WEB
-                        </Text>
+                        Exodus 17:8-15
                       </Text>
-                      <View
-                        lineNumber={8}
-                        onReady={true}
+                      <Text
                         style={
                           Object {
-                            "paddingBottom": 17.28,
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 17.28,
                           }
                         }
                       >
-                        <View>
-                          <View
+                         
+                        WEB
+                      </Text>
+                    </Text>
+                    <View
+                      lineNumber={8}
+                      onReady={true}
+                      style={
+                        Object {
+                          "paddingBottom": 17.28,
+                        }
+                      }
+                    >
+                      <View>
+                        <View
+                          style={
+                            Object {
+                              "paddingBottom": 0,
+                            }
+                          }
+                        >
+                          <Text
+                            bold={false}
+                            italic={false}
                             style={
                               Object {
-                                "paddingBottom": 0,
+                                "color": "#303030",
+                                "fontFamily": "DroidSerif",
+                                "fontSize": 16,
+                                "lineHeight": 26,
                               }
                             }
                           >
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                8
+                              </Text>
+                               
+                            </Text>
                             <Text
                               bold={false}
                               italic={false}
@@ -1901,99 +1992,28 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                                 }
                               }
                             >
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  57
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
-                                </Text>
+                              <Text>
+                                Then Amalek came and fought with Israel in Rephidim. 
                               </Text>
                             </Text>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View>
-                      <Text
-                        style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 16,
-                            "lineHeight": 23.04,
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 23.04,
-                            }
-                          }
-                        >
-                          Exodus 17:8-15
-                        </Text>
-                        <Text
-                          style={
-                            Object {
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 17.28,
-                            }
-                          }
-                        >
-                           
-                          WEB
-                        </Text>
-                      </Text>
-                      <View
-                        lineNumber={8}
-                        onReady={true}
-                        style={
-                          Object {
-                            "paddingBottom": 17.28,
-                          }
-                        }
-                      >
-                        <View>
-                          <View
-                            style={
-                              Object {
-                                "paddingBottom": 0,
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
                               }
-                            }
-                          >
+                            >
+                               
+                              <Text>
+                                9
+                              </Text>
+                               
+                            </Text>
                             <Text
                               bold={false}
                               italic={false}
@@ -2006,289 +2026,224 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                                 }
                               }
                             >
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  8
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Then Amalek came and fought with Israel in Rephidim. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  9
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  10
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  11
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  12
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  13
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Joshua defeated Amalek and his people with the edge of the sword. 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  14
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
-                                </Text>
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#505050",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 9.6,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                 
-                                <Text>
-                                  15
-                                </Text>
-                                 
-                              </Text>
-                              <Text
-                                bold={false}
-                                italic={false}
-                                style={
-                                  Object {
-                                    "color": "#303030",
-                                    "fontFamily": "DroidSerif",
-                                    "fontSize": 16,
-                                    "lineHeight": 26,
-                                  }
-                                }
-                              >
-                                <Text>
-                                  Moses built an altar, and called its name “Yahweh our Banner”.
-                                </Text>
+                              <Text>
+                                Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
                               </Text>
                             </Text>
-                          </View>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                10
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                11
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                12
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                13
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                Joshua defeated Amalek and his people with the edge of the sword. 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                14
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
+                              </Text>
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#505050",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 9.6,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                               
+                              <Text>
+                                15
+                              </Text>
+                               
+                            </Text>
+                            <Text
+                              bold={false}
+                              italic={false}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "DroidSerif",
+                                  "fontSize": 16,
+                                  "lineHeight": 26,
+                                }
+                              }
+                            >
+                              <Text>
+                                Moses built an altar, and called its name “Yahweh our Banner”.
+                              </Text>
+                            </Text>
+                          </Text>
                         </View>
                       </View>
                     </View>
                   </View>
                 </View>
-              </RCTScrollView>
-            </View>
+              </View>
+            </RCTScrollView>
           </View>
-        </RCTScrollView>
+        </View>
       </View>
     </View>
   </RCTSafeAreaView>

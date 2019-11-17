@@ -517,6 +517,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -597,6 +598,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -605,6 +608,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                   refreshing={false}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -1271,6 +1275,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -1328,6 +1333,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -1336,6 +1343,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   refreshing={false}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -1919,6 +1927,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -1999,6 +2008,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -2007,6 +2018,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   refreshing={false}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -2706,6 +2718,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -2786,6 +2799,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -2794,6 +2809,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   refreshing={false}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -3493,6 +3509,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -3574,6 +3591,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -3582,6 +3601,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                   refreshing={false}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -4502,6 +4522,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -4557,6 +4578,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -4565,6 +4588,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -5417,6 +5441,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -5472,6 +5497,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -5480,6 +5507,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -6332,6 +6360,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -6387,6 +6416,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -6395,6 +6426,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -7247,6 +7279,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -7302,6 +7335,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -7310,6 +7345,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -8162,6 +8198,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -8217,6 +8254,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -8225,6 +8264,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -9077,6 +9117,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -9132,6 +9173,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -9140,6 +9183,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -9992,6 +10036,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -10047,6 +10092,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -10055,6 +10102,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -10907,6 +10955,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -10962,6 +11011,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -10970,6 +11021,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -11822,6 +11874,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -11877,6 +11930,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -11885,6 +11940,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
@@ -12737,6 +12793,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   </View>
                 </View>
                 <RCTScrollView
+                  collapsable={false}
                   contentContainerStyle={
                     Object {
                       "padding": 8,
@@ -12792,6 +12849,8 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   numColumns={1}
                   onContentSizeChange={[Function]}
                   onEndReachedThreshold={2}
+                  onGestureHandlerEvent={[Function]}
+                  onGestureHandlerStateChange={[Function]}
                   onLayout={[Function]}
                   onMomentumScrollEnd={[Function]}
                   onScroll={[Function]}
@@ -12800,6 +12859,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                   refreshing={true}
                   removeClippedSubviews={false}
                   renderItem={[Function]}
+                  renderScrollComponent={[Function]}
                   scrollEventThrottle={50}
                   showsHorizontalScrollIndicator={false}
                   snapToAlignment="start"
