@@ -17,7 +17,7 @@ const HTMLContent = ({ contentId }) => {
       fetchPolicy={'cache-and-network'}
     >
       {({ data: { node: { htmlContent } = {} } = {}, loading, error }) => {
-        if (error) return <ErrorCard error={error} />;
+        if (!htmlContent && error) return <ErrorCard error={error} />;
         return (
           <HTMLView isLoading={!htmlContent && loading}>{htmlContent}</HTMLView>
         );
