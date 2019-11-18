@@ -25,7 +25,7 @@ import {
 } from '../styles';
 
 const BackButton = withTheme(({ theme }) => ({
-  fill: theme.colors.primary,
+  fill: theme.colors.action.secondary,
   size: theme.sizing.baseUnit * 1.5,
   style: {
     paddingLeft: 0,
