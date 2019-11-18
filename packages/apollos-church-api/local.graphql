@@ -136,6 +136,7 @@ interface ContentItem {
 
 type ContentItemsConnection {
   edges: [ContentItemsConnectionEdge]
+  totalCount: Int
   pageInfo: PaginationInfo
 }
 
