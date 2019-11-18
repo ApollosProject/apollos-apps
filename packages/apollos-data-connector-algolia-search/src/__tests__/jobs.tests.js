@@ -1,6 +1,10 @@
 import createJobs from '../jobs';
 
-const mockJob = { process: jest.fn(), add: jest.fn() };
+const mockJob = {
+  process: jest.fn(),
+  add: jest.fn(),
+  getCompleted: jest.fn(() => []),
+};
 
 const queues = {
   add: jest.fn(() => mockJob),
@@ -17,20 +21,21 @@ describe('Alolia search jobs', () => {
 
   it('process must call a Search datasource method', async () => {
     const indexAll = jest.fn();
-    let delayedTask;
+    const deltaIndex = jest.fn();
+    const delayedTasks = [];
     mockJob.process = (func) => {
-      delayedTask = func;
+      delayedTasks.push(func);
     };
 
     createJobs({
       queues,
       getContext: jest.fn(() => ({
-        dataSources: { Search: { indexAll } },
+        dataSources: { Search: { indexAll, deltaIndex } },
       })),
     });
 
     // simulate job being called via job runner;
-    await delayedTask();
+    await Promise.all(delayedTasks.map((task) => task()));
 
     expect(indexAll.mock.calls).toMatchSnapshot();
   });

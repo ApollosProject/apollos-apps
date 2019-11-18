@@ -415,6 +415,19 @@ export default class ContentItem extends RockApolloDataSource {
       .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
 
+  byDateAndActive = async ({ datetime }) =>
+    this.request()
+      .filterOneOf(
+        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
+          (id) => `ContentChannelId eq ${id}`
+        )
+      )
+      .cache({ ttl: 60 })
+      .andFilter(
+        `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
+      )
+      .andFilter(this.LIVE_CONTENT());
+
   byContentChannelId = (id) =>
     this.request()
       .filter(`ContentChannelId eq ${id}`)
