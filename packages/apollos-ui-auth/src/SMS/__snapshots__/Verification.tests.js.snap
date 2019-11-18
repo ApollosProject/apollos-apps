@@ -170,7 +170,7 @@ exports[`The Auth Verification component should render 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -697,7 +697,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -1286,7 +1286,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -1869,7 +1869,7 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -2458,7 +2458,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -2998,7 +2998,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -3525,7 +3525,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -4053,7 +4053,7 @@ exports[`The Auth Verification component should render with custom confirmationT
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
