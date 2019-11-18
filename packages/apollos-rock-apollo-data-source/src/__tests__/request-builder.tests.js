@@ -106,6 +106,25 @@ describe('RequestBuilder', () => {
     ).resolves.toMatchSnapshot();
   });
 
+  it('fetches a count', async () => {
+    get = jest.fn(() => new Promise((resolve) => resolve([1, 2, 3])));
+    connector = { get };
+    request = new RequestBuilder({
+      connector,
+      resource: 'SomeResource',
+    });
+
+    const cursor = request
+      .filter('Something')
+      .top(2)
+      .skip(5);
+
+    const result = await cursor.count();
+
+    expect(result).toMatchSnapshot();
+    expect(cursor.query).toMatchSnapshot();
+  });
+
   it('caches', () => {
     expect(request.cache({ ttl: 20 }).get()).resolves.toMatchSnapshot();
   });

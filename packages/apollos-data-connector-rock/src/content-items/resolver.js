@@ -164,6 +164,7 @@ const resolver = {
       ContentItem.resolveType(root),
   },
   ContentItemsConnection: {
+    totalCount: ({ getTotalCount }) => getTotalCount(),
     pageInfo: withEdgePagination,
   },
 };
