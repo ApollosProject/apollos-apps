@@ -20,8 +20,11 @@ export default class Scripture extends RESTDataSource {
 
   async getFromId(id) {
     const { id: parsedID, bibleId } = JSON.parse(id);
+    const version = Object.keys(BIBLE_API.BIBLE_ID).find(
+      (key) => BIBLE_API.BIBLE_ID[key] === bibleId
+    );
     const { data } = await this.get(`${bibleId}/passages/${parsedID}`);
-    return data;
+    return { ...data, version };
   }
 
   // NOTE: deprecated
