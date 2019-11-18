@@ -31,8 +31,7 @@ const createJobs = ({ getContext, queues }) => {
             }
             return 0;
           })[0];
-    const date = new Date(timestamp);
-    const datetime = moment(date)
+    const datetime = moment(timestamp)
       .tz(ROCK.TIMEZONE)
       .format()
       .split(/[-+]\d+:\d+/)[0];
