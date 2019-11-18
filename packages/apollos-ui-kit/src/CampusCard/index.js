@@ -26,6 +26,9 @@ const CampusImage = styled({
   resizeMode: 'cover',
 })(ConnectedImage);
 
+const hasValidImages = (images) =>
+  images && !images.includes(null) && !images.map((o) => o.uri).includes(null);
+
 const CampusCard = memo(
   ({ title, description, distance, images, ...otherProps }) => (
     <Card
@@ -34,7 +37,7 @@ const CampusCard = memo(
       {...otherProps}
     >
       <HorizontalLayout>
-        {images ? <CampusImage source={images} /> : null}
+        {hasValidImages(images) ? <CampusImage source={images} /> : null}
         <FlexedCardContent>
           <Header>
             <H5>{title}</H5>

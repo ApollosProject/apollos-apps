@@ -11,7 +11,5 @@ export default {
     id: ({ id, bibleId }, args, context, { parentType }) =>
       createGlobalId(JSON.stringify({ id, bibleId }), parentType.name),
     html: ({ content }) => content,
-    version: ({ bibleId }, args, { dataSources }) =>
-      dataSources.Scripture.getVersion(bibleId),
   },
 };
