@@ -18,7 +18,7 @@ const createJobs = ({ getContext, queues }) => {
     const jobs = await DeltaIndexQueue.getCompleted();
     const timestamp = isEmpty(jobs)
       ? moment()
-          .subtract(1, 'week')
+          .subtract(1, 'day')
           .toDate()
       : jobs
           .map((j) => j.opts.timestamp)
