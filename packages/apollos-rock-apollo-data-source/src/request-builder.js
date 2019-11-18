@@ -172,7 +172,10 @@ you can return request.empty()
    */
   count = async () => {
     // clone the cursor itself
-    const cursor = Object.assign({}, this);
+    const cursor = new RockRequestBuilder({
+      connector: this.connector,
+      resource: this.resource,
+    });
     // make sure to clone this.query, which gets mutated by top/skip
     cursor.query = Object.assign({}, this.query);
 
