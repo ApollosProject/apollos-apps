@@ -1,6 +1,6 @@
 import ApollosConfig from '@apollosproject/config';
 import { isEmpty } from 'lodash';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 const { ROCK } = ApollosConfig;
 
