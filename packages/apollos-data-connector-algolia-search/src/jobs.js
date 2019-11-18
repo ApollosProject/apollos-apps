@@ -1,4 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
+import { isEmpty } from 'lodash';
 import moment from 'moment';
 
 const { ROCK } = ApollosConfig;
@@ -15,17 +16,21 @@ const createJobs = ({ getContext, queues }) => {
   DeltaIndexQueue.process(async () => {
     const context = getContext();
     const jobs = await DeltaIndexQueue.getCompleted();
-    const timestamp = jobs
-      .map((j) => j.opts.timestamp)
-      .sort((a, b) => {
-        if (a > b) {
-          return -1;
-        }
-        if (a < b) {
-          return 1;
-        }
-        return 0;
-      })[0];
+    const timestamp = isEmpty(jobs)
+      ? moment()
+          .subtract(1, 'week')
+          .toDate()
+      : jobs
+          .map((j) => j.opts.timestamp)
+          .sort((a, b) => {
+            if (a > b) {
+              return -1;
+            }
+            if (a < b) {
+              return 1;
+            }
+            return 0;
+          })[0];
     const date = new Date(timestamp);
     const datetime = moment(date)
       .tz(ROCK.TIMEZONE)
