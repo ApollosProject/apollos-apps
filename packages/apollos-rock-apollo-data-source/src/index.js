@@ -80,6 +80,7 @@ export default class RockApolloDataSource extends RESTDataSource {
           .transform((result) =>
             result.map((node, i) => ({
               node,
+              index: i + skip,
               cursor: createCursor({ position: i + skip }),
             }))
           )

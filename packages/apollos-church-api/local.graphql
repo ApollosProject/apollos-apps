@@ -141,6 +141,7 @@ type ContentItemsConnection {
 
 type ContentItemsConnectionEdge {
   node: ContentItem
+  index: Int
   cursor: String
 }
 

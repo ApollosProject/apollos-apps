@@ -377,6 +377,7 @@ export const contentItemSchema = gql`
 
   type ContentItemsConnectionEdge {
     node: ContentItem
+    index: Int
     cursor: String
   }
 
