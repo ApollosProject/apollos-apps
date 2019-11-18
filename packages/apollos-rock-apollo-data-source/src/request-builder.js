@@ -167,6 +167,25 @@ you can return request.empty()
   };
 
   /**
+   * Fetches a count of all items that would be returned by the current cursor.
+   * Warning: As of right now this could be computationally expensive.
+   */
+  count = async () => {
+    // clone the cursor itself
+    const cursor = Object.assign({}, this);
+    // make sure to clone this.query, which gets mutated by top/skip
+    cursor.query = Object.assign({}, this.query);
+
+    const result = await cursor
+      .select('Id')
+      .top(null)
+      .skip(0)
+      .get();
+
+    return result.length;
+  };
+
+  /**
    * Transform the shape of the results.
    * This is ran _after_ data is requested and not
    * affected by other methods that are chained to the request
