@@ -179,6 +179,7 @@ export const scriptureSchema = gql`
 
   extend type Query {
     scripture(query: String!, version: VERSION): Scripture
+      @deprecated(reason: "Use 'scriptures' instead.")
     scriptures(query: String!, version: VERSION): [Scripture]
   }
 `;
