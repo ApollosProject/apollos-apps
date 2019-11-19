@@ -159,6 +159,10 @@ HorizontalHighlightCard.propTypes = {
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
+  thumbnailImage: PropTypes.oneOfType([
+    PropTypes.arrayOf(ImageSourceType),
+    ImageSourceType,
+  ]),
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
@@ -174,6 +178,7 @@ HorizontalHighlightCard.propTypes = {
 
 HorizontalHighlightCard.defaultProps = {
   actionIcon: 'play-opaque',
+  thumbnailImage: [],
 };
 
 export default HorizontalHighlightCard;
