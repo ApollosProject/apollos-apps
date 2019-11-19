@@ -179,6 +179,7 @@ export const scriptureSchema = gql`
 
   extend type Query {
     scripture(query: String!, version: VERSION): Scripture
+      @deprecated(reason: "Use 'scriptures' instead.")
     scriptures(query: String!, version: VERSION): [Scripture]
   }
 `;
@@ -371,7 +372,7 @@ export const contentItemSchema = gql`
 
   type ContentItemsConnection {
     edges: [ContentItemsConnectionEdge]
-    # TODO totalCount: Int
+    totalCount: Int
     pageInfo: PaginationInfo
   }
 
