@@ -84,6 +84,16 @@ Array [
 ]
 `;
 
+exports[`RequestBuilder fetches a count 1`] = `3`;
+
+exports[`RequestBuilder fetches a count 2`] = `
+Object {
+  "$filter": "Something",
+  "$skip": 5,
+  "$top": 2,
+}
+`;
+
 exports[`RequestBuilder filters 1`] = `
 Array [
   "SomeResource?%24filter=Something%20eq%20SomethingElse",
