@@ -11,9 +11,13 @@ const HTMLContent = ({ contentId }) => {
   if (!contentId) return <HTMLView isLoading />;
 
   return (
-    <Query query={GET_CONTENT_ITEM_CONTENT} variables={{ contentId }}>
+    <Query
+      query={GET_CONTENT_ITEM_CONTENT}
+      variables={{ contentId }}
+      fetchPolicy={'cache-and-network'}
+    >
       {({ data: { node: { htmlContent } = {} } = {}, loading, error }) => {
-        if (error) return <ErrorCard error={error} />;
+        if (!htmlContent && error) return <ErrorCard error={error} />;
         return (
           <HTMLView isLoading={!htmlContent && loading}>{htmlContent}</HTMLView>
         );
