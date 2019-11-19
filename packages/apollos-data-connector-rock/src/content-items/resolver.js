@@ -146,8 +146,6 @@ const resolver = {
   },
   MediaContentItem: {
     ...defaultContentItemResolvers,
-    thumbnailImage: (root, args, { dataSources: { ContentItem } }) =>
-      ContentItem.getThumbnailImage(root),
   },
   WeekendContentItem: {
     ...defaultContentItemResolvers,
@@ -159,8 +157,6 @@ const resolver = {
       ...(await LiveStream.getLiveStream()), // TODO: Wish there was a better way to inherit these defaults from the LiveStream module.
       isLive: await ContentItem.isContentActiveLiveStream(root), // We need to override the global IsLive with an IsLive that is contextual to a ContentItem
     }),
-    thumbnailImage: (root, args, { dataSources: { ContentItem } }) =>
-      ContentItem.getThumbnailImage(root),
   },
   ContentItem: {
     ...defaultContentItemResolvers,

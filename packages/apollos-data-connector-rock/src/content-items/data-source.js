@@ -87,19 +87,6 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getThumbnailImage = ({ attributes, attributeValues }) => ({
-    __typename: 'ImageMedia',
-    key: 'videoThumbnail',
-    name: attributes.videoThumbnail.name,
-    sources: attributeValues.videoThumbnail.value
-      ? [
-          {
-            uri: createImageUrlFromGuid(attributeValues.videoThumbnail.value),
-          },
-        ]
-      : [],
-  });
-
   getAudios = ({ attributeValues, attributes }) => {
     const audioKeys = Object.keys(attributes).filter((key) =>
       this.attributeIsAudio({

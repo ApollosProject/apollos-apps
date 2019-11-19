@@ -318,7 +318,6 @@ export const contentItemSchema = gql`
 
     theme: Theme
     scriptures: [Scripture]
-    thumbnailImage: ImageMedia
   }
 
   type ContentSeriesContentItem implements ContentItem & Node {
@@ -364,7 +363,6 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
 
     theme: Theme
-    thumbnailImage: ImageMedia
   }
 
   input ContentItemsConnectionInput {

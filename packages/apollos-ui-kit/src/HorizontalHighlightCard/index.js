@@ -105,7 +105,6 @@ const renderLabel = (LabelComponent, labelText, theme) => {
 
 const HorizontalHighlightCard = withIsLoading(
   ({
-    thumbnailImage,
     coverImage,
     title,
     actionIcon,
@@ -130,11 +129,7 @@ const HorizontalHighlightCard = withIsLoading(
         disabled={disabled}
         {...props}
       >
-        <Image
-          customTheme={theme}
-          source={thumbnailImage.length ? thumbnailImage : coverImage}
-          disabled={disabled}
-        />
+        <Image customTheme={theme} source={coverImage} disabled={disabled} />
         <Content>
           {renderLabel(LabelComponent, labelText, theme)}
           <ActionLayout>
@@ -159,10 +154,6 @@ HorizontalHighlightCard.propTypes = {
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
-  thumbnailImage: PropTypes.oneOfType([
-    PropTypes.arrayOf(ImageSourceType),
-    ImageSourceType,
-  ]),
   title: PropTypes.string.isRequired,
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
@@ -178,7 +169,6 @@ HorizontalHighlightCard.propTypes = {
 
 HorizontalHighlightCard.defaultProps = {
   actionIcon: 'play-opaque',
-  thumbnailImage: [],
 };
 
 export default HorizontalHighlightCard;
