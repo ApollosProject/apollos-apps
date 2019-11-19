@@ -62,6 +62,13 @@ fragment baseCardFragment on ContentItem {
   hyphenatedTitle: title(hyphenated: true)
   summary
   ... on MediaContentItem {
+    thumbnailImage {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
     videos {
       sources {
         uri
@@ -77,6 +84,13 @@ fragment baseCardFragment on ContentItem {
     __typename
   }
   ... on WeekendContentItem {
+    thumbnailImage {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
     videos {
       sources {
         uri
@@ -253,6 +267,13 @@ fragment baseCardFragment on ContentItem {
   hyphenatedTitle: title(hyphenated: true)
   summary
   ... on MediaContentItem {
+    thumbnailImage {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
     videos {
       sources {
         uri
@@ -268,6 +289,13 @@ fragment baseCardFragment on ContentItem {
     __typename
   }
   ... on WeekendContentItem {
+    thumbnailImage {
+      sources {
+        uri
+        __typename
+      }
+      __typename
+    }
     videos {
       sources {
         uri
