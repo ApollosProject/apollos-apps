@@ -272,6 +272,7 @@ type MediaContentItem implements ContentItem & Node {
   parentChannel: ContentChannel
   theme: Theme
   scriptures: [Scripture]
+  thumbnailImage: ImageMedia
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
@@ -528,6 +529,7 @@ type WeekendContentItem implements ContentItem & Node {
   siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
+  thumbnailImage: ImageMedia
   isLiked: Boolean
   likedCount: Int
   liveStream: LiveStream

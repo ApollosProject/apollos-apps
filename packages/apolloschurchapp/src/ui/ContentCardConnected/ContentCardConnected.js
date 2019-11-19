@@ -22,6 +22,7 @@ const ContentCardConnected = memo(
               if (error) return <ErrorCard error={error} />;
 
               const coverImage = get(node, 'coverImage.sources', undefined);
+              const thumbnailImage = get(node, 'thumbnailImage.sources', []);
               const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
               const isLive = !!liveStream;
               const labelText = get(node, 'parentChannel.name', '');
@@ -34,6 +35,7 @@ const ContentCardConnected = memo(
                   labelText={isLive ? 'Live' : labelText}
                   {...otherProps}
                   coverImage={coverImage}
+                  thumbnailImage={thumbnailImage}
                   isLoading={loading}
                 />
               );

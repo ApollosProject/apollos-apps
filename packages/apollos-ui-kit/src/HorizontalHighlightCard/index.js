@@ -105,6 +105,7 @@ const renderLabel = (LabelComponent, labelText, theme) => {
 
 const HorizontalHighlightCard = withIsLoading(
   ({
+    thumbnailImage,
     coverImage,
     title,
     actionIcon,
@@ -129,7 +130,11 @@ const HorizontalHighlightCard = withIsLoading(
         disabled={disabled}
         {...props}
       >
-        <Image customTheme={theme} source={coverImage} disabled={disabled} />
+        <Image
+          customTheme={theme}
+          source={thumbnailImage.length ? thumbnailImage : coverImage}
+          disabled={disabled}
+        />
         <Content>
           {renderLabel(LabelComponent, labelText, theme)}
           <ActionLayout>

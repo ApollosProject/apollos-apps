@@ -34,6 +34,11 @@ export const BASE_CARD_FRAGMENT = gql`
     hyphenatedTitle: title(hyphenated: true)
     summary
     ... on MediaContentItem {
+      thumbnailImage {
+        sources {
+          uri
+        }
+      }
       videos {
         sources {
           uri
@@ -45,6 +50,11 @@ export const BASE_CARD_FRAGMENT = gql`
       }
     }
     ... on WeekendContentItem {
+      thumbnailImage {
+        sources {
+          uri
+        }
+      }
       videos {
         sources {
           uri
