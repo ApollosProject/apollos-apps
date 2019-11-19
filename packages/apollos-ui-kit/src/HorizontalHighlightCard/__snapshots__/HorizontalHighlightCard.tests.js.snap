@@ -791,6 +791,166 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
 </View>
 `;
 
+exports[`HorizontalHighlightCard should render with a thumbnail 1`] = `
+<View
+  inHorizontalList={true}
+  style={
+    Object {
+      "backgroundColor": "#303030",
+      "borderRadius": 16,
+      "height": 240,
+      "margin": 8,
+      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 6,
+      "width": 240,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": 16,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "overflow": "hidden",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        forceRatio={1}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "resizeMode": "cover",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          maxAspectRatio={1}
+          minAspectRatio={1}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/720/1280/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "opacity": 0,
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <BVLinearGradient
+        colors={
+          Array [
+            1711276032,
+            2147483648,
+          ]
+        }
+        endPoint={
+          Object {
+            "x": 0,
+            "y": 1,
+          }
+        }
+        locations={
+          Array [
+            0,
+            1,
+          ]
+        }
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        startPoint={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "bottom": 0,
+          "paddingBottom": 24,
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flexDirection": "row",
+            "paddingTop": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text
+            numberOfLines={4}
+            style={
+              Object {
+                "color": "#F8F7F4",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
 <View
   inHorizontalList={true}
