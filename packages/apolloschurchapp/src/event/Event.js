@@ -2,6 +2,7 @@ import React from 'react';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import InAppBrowser from 'react-native-inappbrowser-reborn';
 import {
   GradientOverlayImage,
   BackgroundView,
@@ -13,6 +14,10 @@ import {
 import HTMLView from '@apollosproject/ui-htmlview';
 
 import { FlexedScrollView, EventInfoItem } from './components';
+
+const handlePressAnchor = (url) => {
+  InAppBrowser.open(url);
+};
 
 const Event = ({ event, loading }) => {
   const coverImageSources = get(event, 'image.sources', []);
@@ -43,7 +48,9 @@ const Event = ({ event, loading }) => {
                 />
                 <EventInfoItem icon={'pin'} title={event.location} />
               </Paragraph>
-              <HTMLView isLoading={loading}>{event.description}</HTMLView>
+              <HTMLView isLoading={loading} onPressAnchor={handlePressAnchor}>
+                {event.description}
+              </HTMLView>
             </PaddedView>
           </FlexedScrollView>
         )}

@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import { Text, Linking, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { decodeHTML } from 'entities';
 
 import {
@@ -58,7 +58,7 @@ export const wrapTextChildren = ({
   return newChildren;
 };
 
-const defaultRenderer = (node, { children }) => {
+const defaultRenderer = (node, { children }, handlePressAnchor) => {
   if (node.type === 'text' && node.data && node.data.trim()) {
     const text = decodeHTML(node.data);
     if (!node.parent) {
@@ -119,7 +119,7 @@ const defaultRenderer = (node, { children }) => {
         // we can't currently handle non web-links, so just return regular text instead:
         return children;
       }
-      const onPress = () => Linking.openURL(url);
+      const onPress = () => handlePressAnchor(url);
       if (url) {
         return (
           <ButtonLink onPress={onPress}>

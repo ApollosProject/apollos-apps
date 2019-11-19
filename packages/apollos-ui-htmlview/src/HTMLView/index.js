@@ -1,6 +1,6 @@
 import React, { PureComponent, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { Linking, View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
 
 import { Paragraph as ParagraphPlaceholder } from '@apollosproject/ui-kit';
@@ -12,11 +12,13 @@ export { defaultRenderer, wrapTextChildren };
 class HTMLView extends PureComponent {
   static propTypes = {
     children: PropTypes.string,
-    renderer: PropTypes.func,
     isLoading: PropTypes.bool,
+    onPressAnchor: PropTypes.func,
+    renderer: PropTypes.func,
   };
 
   static defaultProps = {
+    onPressAnchor: (url) => Linking.openURL(url),
     renderer: defaultRenderer,
   };
 
@@ -62,13 +64,21 @@ class HTMLView extends PureComponent {
         let children = [];
         if (node.children) children = this.renderDom(node.children);
 
-        let renderedNode = this.props.renderer(node, { children });
+        let renderedNode = this.props.renderer(
+          node,
+          { children },
+          this.props.onPressAnchor
+        );
         if (
           !renderedNode &&
           renderedNode !== null &&
           this.props.renderer !== defaultRenderer
         ) {
-          renderedNode = defaultRenderer(node, { children });
+          renderedNode = defaultRenderer(
+            node,
+            { children },
+            this.props.onPressAnchor
+          );
         }
 
         if (renderedNode && !Array.isArray(renderedNode)) {
