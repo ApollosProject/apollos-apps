@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import { PaddedView } from '@apollosproject/ui-kit';
-import ScriptureItem, { LegalText } from '@apollosproject/ui-scripture';
+import ScriptureItem from '@apollosproject/ui-scripture';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 
 /**
@@ -13,17 +13,19 @@ import HorizontalContentFeed from '../HorizontalContentFeed';
 const ScriptureTab = ({ id, scripture, isLoading, navigation }) => (
   <ScrollView>
     <PaddedView>
-      {scripture.map((ref) => (
+      {scripture.map((ref, i) => (
         <ScriptureItem
           key={ref.id}
           reference={ref.reference}
           html={ref.html}
           isLoading={isLoading}
+          copyright={
+            // only show last copyright
+            scripture.length - 1 === i ? ref.copyright : null
+          }
           version={ref.version}
         />
       ))}
-      {/* will only show copyright from first reference */}
-      <LegalText>{!isLoading ? scripture[0].copyright : null}</LegalText>
     </PaddedView>
     <HorizontalContentFeed contentId={id} navigation={navigation} />
   </ScrollView>

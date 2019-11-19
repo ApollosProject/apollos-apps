@@ -858,33 +858,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                         </View>
                       </View>
                     </View>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#505050",
-                          "fontFamily": "InterUI-Regular",
-                          "fontSize": 9.6,
-                          "lineHeight": 10.37,
-                        }
-                      }
-                    />
                   </View>
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Regular",
-                        "fontSize": 9.6,
-                        "lineHeight": 10.37,
-                      }
-                    }
-                  >
-                    PUBLIC DOMAIN
-                  </Text>
                 </View>
               </View>
             </RCTScrollView>
@@ -1419,18 +1393,6 @@ exports[`the Devotional component renders a loading state of null 1`] = `
                       }
                     />
                   </View>
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Regular",
-                        "fontSize": 9.6,
-                        "lineHeight": 10.37,
-                      }
-                    }
-                  />
                 </View>
               </View>
             </RCTScrollView>
@@ -2300,33 +2262,7 @@ exports[`the Devotional component renders even with empty scripture array 1`] = 
                         </View>
                       </View>
                     </View>
-                    <Text
-                      bold={false}
-                      italic={false}
-                      style={
-                        Object {
-                          "color": "#505050",
-                          "fontFamily": "InterUI-Regular",
-                          "fontSize": 9.6,
-                          "lineHeight": 10.37,
-                        }
-                      }
-                    />
                   </View>
-                  <Text
-                    bold={false}
-                    italic={false}
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Regular",
-                        "fontSize": 9.6,
-                        "lineHeight": 10.37,
-                      }
-                    }
-                  >
-                    PUBLIC DOMAIN
-                  </Text>
                 </View>
               </View>
             </RCTScrollView>
