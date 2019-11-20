@@ -30,367 +30,284 @@ exports[`<MapView> should render as a MapView 1`] = `
           "paddingHorizontal": 12,
         }
       }
-      data={
-        Array [
-          Object {
-            "city": "Richardson",
-            "distanceFromLocation": null,
-            "id": "Campus:965b6e6d7046a885bea4e300b5c0400d",
-            "image": "https://www.placecage.com/c/250/250",
-            "latitude": 32.95103,
-            "longitude": -96.74738,
-            "name": "Dallas Campus",
-            "postalCode": "75080-5525",
-            "state": "TX",
-            "street1": "102 N Weatherred Dr",
-          },
-          Object {
-            "city": "Cincinnati",
-            "distanceFromLocation": 2037.6461577685534,
-            "id": "Campus:4f68015ba18662a7409d1219a4ce013e",
-            "image": "https://www.placecage.com/c/250/250",
-            "latitude": 39.10501,
-            "longitude": -84.51138,
-            "name": "Cincinnati Campus",
-            "postalCode": "45202-2118",
-            "state": "OH",
-            "street1": "120 E 8th St",
-          },
-        ]
-      }
       decelerationRate="fast"
-      disableVirtualization={false}
-      getItem={[Function]}
-      getItemCount={[Function]}
-      getItemLayout={[Function]}
       horizontal={true}
-      initialNumToRender={10}
-      keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
-      numColumns={1}
-      onContentSizeChange={[Function]}
-      onEndReachedThreshold={2}
-      onLayout={[Function]}
-      onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
-      onScrollBeginDrag={[Function]}
-      onScrollEndDrag={[Function]}
-      removeClippedSubviews={false}
-      renderItem={[Function]}
       scrollEventThrottle={16}
       showsHorizontalScrollIndicator={false}
       snapToAlignment="start"
       snapToInterval={722}
-      stickyHeaderIndices={Array []}
-      updateCellsBatchingPeriod={50}
-      viewabilityConfigCallbackPairs={Array []}
-      windowSize={21}
     >
       <View>
         <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "flexDirection": "row",
-              },
-              null,
-            ]
+            Object {
+              "opacity": 1,
+            }
           }
         >
           <View
-            accessible={true}
-            clickable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            cardWidth={714}
+            inHorizontalList={true}
             style={
               Object {
-                "opacity": 1,
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "margin": 8,
+                "marginHorizontal": 4,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 714,
               }
             }
           >
             <View
-              cardWidth={714}
-              inHorizontalList={true}
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 16,
-                  "margin": 8,
-                  "marginHorizontal": 4,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 1,
-                  "shadowRadius": 6,
-                  "width": 714,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "borderRadius": 16,
-                    "overflow": "hidden",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                    "height": 96,
+                    "justifyContent": "space-between",
                   }
                 }
               >
                 <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "flexWrap": "nowrap",
-                      "height": 96,
-                      "justifyContent": "space-between",
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "height": "100%",
+                      "resizeMode": "cover",
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://www.placecage.com/c/250/250",
+                          "url": "https://www.placecage.com/c/250/250",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "height": "100%",
+                        "opacity": 0,
                         "resizeMode": "cover",
-                        "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "cache": "force-cache",
-                            "uri": "https://www.placecage.com/c/250/250",
-                            "url": "https://www.placecage.com/c/250/250",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "height": "100%",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                        }
-                      }
-                    />
-                  </View>
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
                   <View
                     style={
                       Object {
-                        "flex": 1,
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
+                        "alignItems": "stretch",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "height": 20.16,
+                        "justifyContent": "space-between",
                       }
                     }
                   >
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "stretch",
-                          "flexDirection": "row",
-                          "flexWrap": "nowrap",
-                          "height": 20.16,
-                          "justifyContent": "space-between",
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Medium",
-                            "fontSize": 14,
-                            "lineHeight": 20.16,
-                          }
-                        }
-                      >
-                        Dallas Campus
-                      </Text>
-                    </View>
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 20.16,
                         }
                       }
                     >
-                      102 N Weatherred Dr
-Richardson, TX 75080-5525
+                      Dallas Campus
                     </Text>
                   </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                      }
+                    }
+                  >
+                    102 N Weatherred Dr
+Richardson, TX 75080-5525
+                  </Text>
                 </View>
               </View>
             </View>
           </View>
         </View>
         <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "flexDirection": "row",
-              },
-              null,
-            ]
+            Object {
+              "opacity": 1,
+            }
           }
         >
           <View
-            accessible={true}
-            clickable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            cardWidth={714}
+            inHorizontalList={true}
             style={
               Object {
-                "opacity": 1,
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "margin": 8,
+                "marginHorizontal": 4,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 714,
               }
             }
           >
             <View
-              cardWidth={714}
-              inHorizontalList={true}
               style={
                 Object {
-                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 16,
-                  "margin": 8,
-                  "marginHorizontal": 4,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 1,
-                  "shadowRadius": 6,
-                  "width": 714,
+                  "overflow": "hidden",
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "borderRadius": 16,
-                    "overflow": "hidden",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                    "height": 96,
+                    "justifyContent": "space-between",
                   }
                 }
               >
                 <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "flexWrap": "nowrap",
-                      "height": 96,
-                      "justifyContent": "space-between",
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "height": "100%",
+                      "resizeMode": "cover",
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    animate={null}
-                    customAnimate={null}
-                    onReady={false}
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://www.placecage.com/c/250/250",
+                          "url": "https://www.placecage.com/c/250/250",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "height": "100%",
+                        "opacity": 0,
                         "resizeMode": "cover",
-                        "width": "100%",
                       }
                     }
-                  >
-                    <Image
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "cache": "force-cache",
-                            "uri": "https://www.placecage.com/c/250/250",
-                            "url": "https://www.placecage.com/c/250/250",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "height": "100%",
-                          "opacity": 0,
-                          "resizeMode": "cover",
-                        }
-                      }
-                    />
-                  </View>
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
                   <View
                     style={
                       Object {
-                        "flex": 1,
-                        "paddingHorizontal": 16,
-                        "paddingVertical": 16,
+                        "alignItems": "stretch",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "height": 20.16,
+                        "justifyContent": "space-between",
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignItems": "stretch",
-                          "flexDirection": "row",
-                          "flexWrap": "nowrap",
-                          "height": 20.16,
-                          "justifyContent": "space-between",
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 20.16,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Medium",
-                            "fontSize": 14,
-                            "lineHeight": 20.16,
-                          }
-                        }
-                      >
-                        Cincinnati Campus
-                      </Text>
-                      <Text
-                        placeholderWidth="15%"
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 17.28,
-                          }
-                        }
-                      >
-                        2038
-                        mi
-                      </Text>
-                    </View>
+                      Cincinnati Campus
+                    </Text>
                     <Text
+                      placeholderWidth="15%"
                       style={
                         Object {
                           "color": "#505050",
@@ -400,10 +317,23 @@ Richardson, TX 75080-5525
                         }
                       }
                     >
-                      120 E 8th St
-Cincinnati, OH 45202-2118
+                      2038
+                      mi
                     </Text>
                   </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 17.28,
+                      }
+                    }
+                  >
+                    120 E 8th St
+Cincinnati, OH 45202-2118
+                  </Text>
                 </View>
               </View>
             </View>
