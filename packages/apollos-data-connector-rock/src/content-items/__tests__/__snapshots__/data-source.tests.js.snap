@@ -518,6 +518,7 @@ Array [
     Object {
       "id": "123-0",
       "reference": "john 3",
+      "version": undefined,
     },
   ],
 ]
@@ -550,6 +551,38 @@ Array [
       "reference": "Mark 1:1",
     },
   ],
+]
+`;
+
+exports[`ContentItemsModel returns scripture features with translation when a contentItem has a Features field: createScriptureFeature mock 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "123-0",
+      "reference": "John 3:16",
+      "version": "esv",
+    },
+  ],
+  Array [
+    Object {
+      "id": "123-1",
+      "reference": "Mark 1:1",
+      "version": undefined,
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns scripture features with translation when a contentItem has a Features field: result mock 1`] = `
+Array [
+  Object {
+    "body": "something",
+    "id": "ScriptureFeature:123",
+  },
+  Object {
+    "body": "something",
+    "id": "ScriptureFeature:123",
+  },
 ]
 `;
 
