@@ -1,3 +1,26 @@
+v1.2.4: November 20, 2019
+
+- Adds Optimistic Response for Location Selector (#1236) (bd2c2256)
+- Adds Scripture Selection to Content (#1178) (eaeb3824)
+- Adds Total Count to Paginated Queries (#1215) (f9422a1a)
+- Adds Algolia Delta Sync (#1210) (eabc622f)
+- Adds additional server analytics (#1225) (73552f21)
+
+- Renders Devotionals That Have No Scripture (#1242) (2f6982c9)
+- Removes Duplicate Copyright Info (#1230) (44fc2228)
+- Improves the Error Card (#1240) (963279d1)
+- Improves Content Schema Style (#1233) (21f1d6cf)
+- Improves Mergify (#1238) (762ed137)
+- Improves Caching of Content (#1170) (6ead92b4)
+- Improves Default Type (#1220) (1d6237c8)
+- Optimizes Scripture Version (#1219) (97bd8d6c)
+- Handles links using in app browser in the webview. (#1229) (bce16dde)
+- Checks for valid images when rendering campus cards. (#1222) (4d7d116c)
+
+- Fixes HTMLView placeholder/loading state (#1226) (620de3ab)
+- Fixes auth back button color (#1227) (561b54c3)
+- Fixes logging users with bad cookies out of the app (#1221) (c879eb14)
+
 
 v1.2.3: November 12, 2019
 
