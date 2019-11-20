@@ -91,7 +91,10 @@ class HTMLView extends PureComponent {
 
   render() {
     return (
-      <Paragraph lineNumber={8} isLoading={this.props.isLoading && !this.state.parsed}>
+      <Paragraph
+        lineNumber={8}
+        isLoading={this.props.isLoading && !this.state.parsed}
+      >
         <View>{this.state.parsed}</View>
       </Paragraph>
     );
