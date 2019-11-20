@@ -249,7 +249,6 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-
     theme: Theme
   }
 
@@ -292,8 +291,8 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-
     theme: Theme
+
     scriptures: [Scripture]
   }
 
@@ -315,8 +314,8 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-
     theme: Theme
+
     scriptures: [Scripture]
   }
 
@@ -338,8 +337,8 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-
     theme: Theme
+
     scriptures: [Scripture]
   }
 
@@ -361,7 +360,6 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
-
     theme: Theme
   }
 
