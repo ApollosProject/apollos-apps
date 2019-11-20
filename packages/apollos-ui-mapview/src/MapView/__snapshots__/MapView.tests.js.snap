@@ -153,43 +153,41 @@ exports[`<MapView> should render as a MapView 1`] = `
                     }
                   }
                 >
-                  <View>
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={
+                        Array [
+                          Object {
+                            "cache": "force-cache",
+                            "uri": "https://www.placecage.com/c/250/250",
+                            "url": "https://www.placecage.com/c/250/250",
+                          },
+                        ]
+                      }
                       style={
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "height": "100%",
+                          "opacity": 0,
                           "resizeMode": "cover",
-                          "width": "100%",
                         }
                       }
-                    >
-                      <Image
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "cache": "force-cache",
-                              "uri": "https://www.placecage.com/c/250/250",
-                              "url": "https://www.placecage.com/c/250/250",
-                            },
-                          ]
-                        }
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "height": "100%",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                   <View
                     style={
@@ -309,43 +307,41 @@ Richardson, TX 75080-5525
                     }
                   }
                 >
-                  <View>
-                    <View
-                      animate={null}
-                      customAnimate={null}
-                      onReady={false}
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      onLoad={[Function]}
+                      source={
+                        Array [
+                          Object {
+                            "cache": "force-cache",
+                            "uri": "https://www.placecage.com/c/250/250",
+                            "url": "https://www.placecage.com/c/250/250",
+                          },
+                        ]
+                      }
                       style={
                         Object {
                           "aspectRatio": 1,
                           "backgroundColor": "#A5A5A5",
                           "height": "100%",
+                          "opacity": 0,
                           "resizeMode": "cover",
-                          "width": "100%",
                         }
                       }
-                    >
-                      <Image
-                        onLoad={[Function]}
-                        source={
-                          Array [
-                            Object {
-                              "cache": "force-cache",
-                              "uri": "https://www.placecage.com/c/250/250",
-                              "url": "https://www.placecage.com/c/250/250",
-                            },
-                          ]
-                        }
-                        style={
-                          Object {
-                            "aspectRatio": 1,
-                            "backgroundColor": "#A5A5A5",
-                            "height": "100%",
-                            "opacity": 0,
-                            "resizeMode": "cover",
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                   <View
                     style={
