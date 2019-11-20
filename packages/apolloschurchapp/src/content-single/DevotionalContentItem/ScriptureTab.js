@@ -13,13 +13,16 @@ import HorizontalContentFeed from '../HorizontalContentFeed';
 const ScriptureTab = ({ id, scripture, isLoading, navigation }) => (
   <ScrollView>
     <PaddedView>
-      {scripture.map((ref) => (
+      {scripture.map((ref, i) => (
         <ScriptureItem
           key={ref.id}
           reference={ref.reference}
           html={ref.html}
           isLoading={isLoading}
-          copyright={ref.copyright}
+          copyright={
+            // only show last copyright
+            scripture.length - 1 === i ? ref.copyright : null
+          }
           version={ref.version}
         />
       ))}
