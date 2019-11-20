@@ -9,10 +9,25 @@ describe('the Card component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <ErrorCard message={'Boom!'} error={'What?'} />
+        <ErrorCard />
       </Providers>
     );
-
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a custom message', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ErrorCard message={'Boom!'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render and not show the error message', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ErrorCard error={'What?'} />
+      </Providers>
+    );
     expect(tree).toMatchSnapshot();
   });
   it('should render with an error message inside an object', () => {
@@ -21,7 +36,7 @@ describe('the Card component', () => {
     };
     const tree = renderer.create(
       <Providers>
-        <ErrorCard error={errorObject} />
+        <ErrorCard error={errorObject} showErrorMessage />
       </Providers>
     );
 
@@ -33,10 +48,9 @@ describe('the Card component', () => {
     };
     const tree = renderer.create(
       <Providers>
-        <ErrorCard error={errorObject} />
+        <ErrorCard error={errorObject} showErrorMessage />
       </Providers>
     );
-
     expect(tree).toMatchSnapshot();
   });
 });
