@@ -499,6 +499,18 @@ exports[`the Devotional component renders a devotional 1`] = `
                         </View>
                       </View>
                     </View>
+                    <Text
+                      bold={false}
+                      italic={false}
+                      style={
+                        Object {
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 9.6,
+                          "lineHeight": 10.37,
+                        }
+                      }
+                    />
                   </View>
                   <View>
                     <Text
