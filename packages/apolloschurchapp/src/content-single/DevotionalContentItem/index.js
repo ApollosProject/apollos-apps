@@ -80,6 +80,8 @@ class DevotionalContentItem extends PureComponent {
     />
   );
 
+  renderLoading = () => <ContentTab title={''} isLoading />;
+
   renderTabs = ({
     data: { node: { scriptures = [] } = {} } = {},
     error,
@@ -94,15 +96,17 @@ class DevotionalContentItem extends PureComponent {
 
     const hasScripture = loading || validScriptures.length;
     const tabRoutes = [{ title: 'Devotional', key: 'content' }];
-    if (hasScripture) tabRoutes.push({ title: 'Scripture', key: 'scripture' });
-    return (
-      <TabView
-        routes={tabRoutes}
-        renderScene={SceneMap({
-          content: this.contentRoute({ scriptures, loading }),
-          scripture: this.scriptureRoute({ scriptures, loading }),
-        })}
-      />
+    const map = {
+      content: this.contentRoute({ scriptures, loading }),
+    };
+    if (hasScripture) {
+      tabRoutes.push({ title: 'Scripture', key: 'scripture' });
+      map.scripture = this.scriptureRoute({ scriptures, loading });
+    }
+    return tabRoutes.length < 2 ? (
+      map[tabRoutes[0].key]()
+    ) : (
+      <TabView routes={tabRoutes} renderScene={SceneMap(map)} />
     );
   };
 
@@ -111,7 +115,11 @@ class DevotionalContentItem extends PureComponent {
       <BackgroundView>
         <FlexedSafeAreaView forceInset={{ top: 'always' }}>
           <Query query={GET_SCRIPTURE} variables={{ itemId: this.props.id }}>
-            {this.renderTabs}
+            {({ data, loading, error }) =>
+              loading
+                ? this.renderLoading()
+                : this.renderTabs({ data, loading, error })
+            }
           </Query>
         </FlexedSafeAreaView>
       </BackgroundView>
