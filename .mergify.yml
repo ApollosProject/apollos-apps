@@ -13,10 +13,3 @@ pull_request_rules:
       - merged
     actions:
       delete_head_branch: {}
-  - name: automatic update HEAD
-    conditions:
-      - "#approved-reviews-by>=1"
-    actions:
-      merge:
-        method: merge
-        strict: true
