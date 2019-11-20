@@ -336,8 +336,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                     </Text>
                   </Text>
                   <View
-                    lineNumber={8}
-                    onReady={true}
                     style={
                       Object {
                         "paddingBottom": 17.28,
@@ -437,8 +435,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                       </Text>
                     </Text>
                     <View
-                      lineNumber={8}
-                      onReady={true}
                       style={
                         Object {
                           "paddingBottom": 17.28,
@@ -542,8 +538,6 @@ exports[`the Devotional component renders a devotional 1`] = `
                       </Text>
                     </Text>
                     <View
-                      lineNumber={8}
-                      onReady={true}
                       style={
                         Object {
                           "paddingBottom": 17.28,

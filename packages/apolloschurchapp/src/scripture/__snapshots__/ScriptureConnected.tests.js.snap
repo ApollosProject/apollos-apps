@@ -39,8 +39,6 @@ exports[`ScriptureConnected component renders without errors 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
         "paddingBottom": 17.28,
