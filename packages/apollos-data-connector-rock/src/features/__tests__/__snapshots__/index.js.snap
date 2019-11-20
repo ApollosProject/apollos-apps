@@ -5,6 +5,7 @@ Object {
   "__typename": "ScriptureFeature",
   "id": "ScriptureFeature:2cc8f539e345e8f479a55e2fdc9743c0",
   "reference": "John 3:16",
+  "version": undefined,
 }
 `;
 

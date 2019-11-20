@@ -114,11 +114,13 @@ export default class ContentItem extends RockApolloDataSource {
     const genericFeatures = get(attributeValues, 'features.value', '');
     const keyValuePairs = parseKeyValueAttribute(genericFeatures);
     keyValuePairs.forEach(({ key, value }, i) => {
-      switch (key) {
+      const [type, modifier] = key.split('/');
+      switch (type) {
         case 'scripture':
           features.push(
             Features.createScriptureFeature({
               reference: value,
+              version: modifier,
               id: `${attributeValues.features.id}-${i}`,
             })
           );
@@ -413,6 +415,19 @@ export default class ContentItem extends RockApolloDataSource {
         )
       )
       .cache({ ttl: 60 })
+      .andFilter(this.LIVE_CONTENT());
+
+  byDateAndActive = async ({ datetime }) =>
+    this.request()
+      .filterOneOf(
+        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
+          (id) => `ContentChannelId eq ${id}`
+        )
+      )
+      .cache({ ttl: 60 })
+      .andFilter(
+        `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
+      )
       .andFilter(this.LIVE_CONTENT());
 
   byContentChannelId = (id) =>

@@ -140,6 +140,10 @@ you can return request.empty()
    * @param {number} top
    */
   top = (top) => {
+    if (!top) {
+      delete this.query.$top;
+      return this;
+    }
     this.query.$top = top;
     return this;
   };
@@ -160,6 +164,28 @@ you can return request.empty()
   select = (select) => {
     this.query.$select = select;
     return this;
+  };
+
+  /**
+   * Fetches a count of all items that would be returned by the current cursor.
+   * Warning: As of right now this could be computationally expensive.
+   */
+  count = async () => {
+    // clone the cursor itself
+    const cursor = new RockRequestBuilder({
+      connector: this.connector,
+      resource: this.resource,
+    });
+    // make sure to clone this.query, which gets mutated by top/skip
+    cursor.query = Object.assign({}, this.query);
+
+    const result = await cursor
+      .select('Id')
+      .top(null)
+      .skip(0)
+      .get();
+
+    return result.length;
   };
 
   /**
