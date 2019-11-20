@@ -90,10 +90,17 @@ class Location extends PureComponent {
                 initialRegion={this.props.initialRegion}
                 userLocation={this.state.userLocation}
                 currentCampus={get(currentUser, 'profile.campus')}
-                onLocationSelect={async ({ id }) => {
-                  await handlePress({
+                onLocationSelect={async (campus) => {
+                  handlePress({
                     variables: {
-                      campusId: id,
+                      campusId: campus.id,
+                    },
+                    optimisticResponse: {
+                      updateUserCampus: {
+                        __typename: 'Mutation',
+                        id: currentUser.id,
+                        campus,
+                      },
                     },
                   });
                   this.props.navigation.goBack();
