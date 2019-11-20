@@ -15,6 +15,11 @@ ApollosConfig.loadJs({
   ROCK_MAPPINGS: {
     SERMON_CHANNEL_ID: 'TEST_ID',
   },
+  BIBLE_API: {
+    BIBLE_ID: {
+      ESV: 'some-bible-id',
+    },
+  },
 });
 
 const RealDate = Date;
@@ -354,6 +359,29 @@ describe('ContentItemsModel', () => {
     });
     expect(result).toMatchSnapshot();
     expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns scripture features with translation when a contentItem has a Features field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createScriptureFeature = jest.fn(() => ({
+      id: 'ScriptureFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = {
+      dataSources: { Features: { createScriptureFeature } },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        features: {
+          id: 123,
+          value: 'scripture/esv^John 3:16|scripture^Mark 1:1',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot('result mock');
+    expect(createScriptureFeature.mock.calls).toMatchSnapshot(
+      'createScriptureFeature mock'
+    );
   });
 
   it('returns text features and when a contentItem has a TextFeatures and a TextFeature field', async () => {

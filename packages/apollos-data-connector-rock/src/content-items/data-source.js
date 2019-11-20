@@ -114,11 +114,13 @@ export default class ContentItem extends RockApolloDataSource {
     const genericFeatures = get(attributeValues, 'features.value', '');
     const keyValuePairs = parseKeyValueAttribute(genericFeatures);
     keyValuePairs.forEach(({ key, value }, i) => {
-      switch (key) {
+      const [type, modifier] = key.split('/');
+      switch (type) {
         case 'scripture':
           features.push(
             Features.createScriptureFeature({
               reference: value,
+              version: modifier,
               id: `${attributeValues.features.id}-${i}`,
             })
           );
