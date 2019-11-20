@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-navigation';
 import { Query } from 'react-apollo';
+import { get } from 'lodash';
 
 import {
   ErrorCard,
@@ -82,12 +83,10 @@ class DevotionalContentItem extends PureComponent {
 
   renderLoading = () => <ContentTab title={''} isLoading />;
 
-  renderTabs = ({
-    data: { node: { scriptures = [] } = {} } = {},
-    error,
-    loading,
-  }) => {
+  renderTabs = ({ data, error, loading }) => {
     if (error) return <ErrorCard error={error} />;
+
+    const scriptures = get(data, 'node.scriptures', []);
 
     // only include scriptures where the references are not null
     const validScriptures = scriptures
