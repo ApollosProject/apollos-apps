@@ -4,7 +4,6 @@ import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import MapView from '@apollosproject/ui-mapview';
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
@@ -106,7 +105,6 @@ class Location extends PureComponent {
                   });
                   this.props.navigation.goBack();
                 }}
-                cardWrapper={MediaPlayerSpacer}
               />
             )}
           </Mutation>
