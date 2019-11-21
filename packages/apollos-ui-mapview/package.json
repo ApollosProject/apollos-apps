@@ -37,8 +37,8 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",
     "react": "*",
-    "react-native-maps": "*",
     "react-native": "*",
+    "react-native-maps": "*",
     "react-navigation": "*"
   },
   "dependencies": {
