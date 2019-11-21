@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import isNull from 'lodash/isNull';
 
 import Card, { CardContent } from '../Card';
 import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
@@ -42,7 +41,7 @@ const CampusCard = memo(
         <FlexedCardContent>
           <Header>
             <H5>{title}</H5>
-            {!isNull(distance) ? (
+            {distance != null ? (
               <H6 placeholderWidth="15%">
                 {Math.round(distance)}
                 mi
