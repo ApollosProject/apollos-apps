@@ -134,13 +134,12 @@ class MapView extends Component {
   scrollToIndex = (index) => {
     const cardScrollPosition = index * this.cardWidthWithPadding;
 
-    this.scrollView.scrollToOffset({
-      offset: cardScrollPosition,
+    this.scrollView.getNode().scrollTo({
+      x: cardScrollPosition,
+      y: 0,
       animated: true,
     });
-    this.updateCoordinates({
-      value: cardScrollPosition,
-    });
+    this.updateCoordinates({ value: cardScrollPosition });
   };
 
   updateCoordinates = ({ value }) => {
