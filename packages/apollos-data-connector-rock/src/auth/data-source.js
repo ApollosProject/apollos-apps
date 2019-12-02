@@ -113,7 +113,6 @@ export default class AuthDataSource extends RockApolloDataSource {
         Gender: 0, // Required by Rock
       });
     } catch (err) {
-      console.log(err);
       throw new Error('Unable to create profile!');
     }
   };
