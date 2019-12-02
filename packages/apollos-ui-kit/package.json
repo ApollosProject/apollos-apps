@@ -59,7 +59,8 @@
     "react-native-safe-area-context": "^0.3.6",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
-    "rn-placeholder": "1.2.0"
+    "rn-placeholder": "1.2.0",
+    "react-native-modal-datetime-picker": "7.6.0"
   },
   "devDependencies": {
     "jest": "24.8.0",
