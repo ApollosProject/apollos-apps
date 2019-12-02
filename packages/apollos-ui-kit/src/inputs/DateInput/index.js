@@ -45,15 +45,6 @@ class DateInput extends PureComponent {
     this.handleClose();
   };
 
-  getValidateDateValue = (date) => {
-    let validDate = date;
-    if (validDate !== null) {
-      validDate = moment(date).toDate();
-    }
-
-    return validDate;
-  };
-
   render() {
     return (
       <InputWrapper>
