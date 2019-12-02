@@ -6,6 +6,7 @@ import {
   ScrollView,
   Platform,
   StatusBar,
+  View,
 } from 'react-native';
 import { get } from 'lodash';
 import {
@@ -14,6 +15,7 @@ import {
   BackgroundView,
   ButtonIcon,
   withTheme,
+  styled,
 } from '@apollosproject/ui-kit';
 
 import {
@@ -31,6 +33,10 @@ const BackButton = withTheme(({ theme }) => ({
     paddingLeft: 0,
   },
 }))(ButtonIcon);
+
+const SuppressingView = styled(() => ({
+  flexDirection: 'row',
+}))(View);
 
 const Verification = ({
   confirmationTitleText,
@@ -55,7 +61,9 @@ const Verification = ({
       <FlexedSafeAreaView>
         <ScrollView>
           <PaddedView>
-            <BackButton name="arrow-back" onPress={() => onPressBack()} />
+            <SuppressingView>
+              <BackButton name="arrow-back" onPress={() => onPressBack()} />
+            </SuppressingView>
             <BrandIcon />
             <TitleText>{confirmationTitleText}</TitleText>
             <PromptText padded>{confirmationPromptText}</PromptText>
