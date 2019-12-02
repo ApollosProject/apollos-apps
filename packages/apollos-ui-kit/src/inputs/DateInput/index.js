@@ -23,7 +23,7 @@ class DateInput extends PureComponent {
     onChangeText: PropTypes.func,
     onBlur: PropTypes.func,
     error: PropTypes.any, // eslint-disable-line
-    maximumDate: PropTypes.string,
+    maximumDate: PropTypes.any, // eslint-disable-line
   };
 
   state = {
