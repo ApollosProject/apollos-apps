@@ -36,9 +36,15 @@ exports[`Alolia search jobs must create a job and add it to the queue 3`] = `
 Array [
   Array [
     "algolia-full-index-queue",
+    Object {
+      "createClient": [Function],
+    },
   ],
   Array [
     "algolia-delta-index-queue",
+    Object {
+      "createClient": [Function],
+    },
   ],
 ]
 `;
