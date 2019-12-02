@@ -59,11 +59,13 @@ class DateInput extends PureComponent {
           onPress={this.handleOpen}
         />
         <DateTimePicker
-          date={date || new Date()}
-          isVisible={this.state.isVisible}
+          value={date || new Date()}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
+          isVisible={this.state.isVisible}
           maximumDate={this.props.maximumDate || new Date(Date.now())} // Using Date.now so we have something to mock in the tests
+          datePickerModeAndroid="spinner"
+          mode="date"
         />
         {this.props.displayValue || this.props.placeholder ? (
           <FloatingLabel animation={new Animated.Value(1)}>
