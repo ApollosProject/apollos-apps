@@ -45,9 +45,9 @@ class DateInput extends PureComponent {
     this.handleClose();
   };
 
-  getValidateDateValue = (date = new Date()) => {
+  getValidateDateValue = (date) => {
     let validDate = date;
-    if (typeof validDate === 'string') {
+    if (validDate !== null) {
       validDate = moment(date).toDate();
     }
 
@@ -66,12 +66,15 @@ class DateInput extends PureComponent {
           onPress={this.handleOpen}
         />
         <DateTimePicker
-          date={this.getValidateDateValue(this.props.value)}
+          date={
+            this.props.value ? moment(this.props.value).toDate() : Date.now()
+          } // Using Date.now so we have something to mock in the tests
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
           maximumDate={
-            this.getValidateDateValue(this.props.maximumDate) ||
-            new Date(Date.now())
+            this.props.maximumDate
+              ? moment(this.props.maximumDate).toDate()
+              : Date.now()
           } // Using Date.now so we have something to mock in the tests
           mode={'date'}
           onConfirm={this.handleConfirm}
