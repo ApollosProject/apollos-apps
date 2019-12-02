@@ -16,3 +16,33 @@ Array [
   ],
 ]
 `;
+
+exports[`Auth should post when creating a new user 1`] = `undefined`;
+
+exports[`Auth should post when creating a new user 2`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "Email": "bob-jones@example.com",
+      "Gender": 0,
+      "IsSystem": false,
+    },
+  ],
+]
+`;
+
+exports[`Auth should throw an error when creating an invalid user 1`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "Email": "bob-jones@example.com",
+      "Gender": 0,
+      "IsSystem": false,
+    },
+  ],
+]
+`;
+
+exports[`Auth should throw an error when creating an invalid user 2`] = `[Error: Unable to create profile!]`;
