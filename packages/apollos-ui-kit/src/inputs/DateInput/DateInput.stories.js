@@ -18,9 +18,4 @@ storiesOf('ui-kit/Inputs/DateInput', module)
       </CenteredView>
     </View>
   ))
-  .add('default', () => (
-    <DateInput
-      value={moment.utc('1/1/2015').toDate()}
-      maximumDate={moment.utc('1/1/2015').toDate()}
-    />
-  ));
+  .add('default', () => <DateInput />);
