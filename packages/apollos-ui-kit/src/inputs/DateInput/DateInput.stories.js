@@ -18,4 +18,7 @@ storiesOf('ui-kit/Inputs/DateInput', module)
       </CenteredView>
     </View>
   ))
-  .add('default', () => <DateInput />);
+  .add('default', () => <DateInput />)
+  .add('displayValue', () => (
+    <DateInput displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')} />
+  ));
