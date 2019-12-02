@@ -69,10 +69,13 @@ class DateInput extends PureComponent {
           date={this.getValidateDateValue(this.props.value)}
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
+          maximumDate={
+            this.getValidateDateValue(this.props.maximumDate) ||
+            new Date(Date.now())
+          } // Using Date.now so we have something to mock in the tests
           mode={'date'}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
-          maximumDate={this.props.maximumDate || new Date(Date.now())} // Using Date.now so we have something to mock in the tests
         />
         {this.props.displayValue || this.props.placeholder ? (
           <FloatingLabel animation={new Animated.Value(1)}>
