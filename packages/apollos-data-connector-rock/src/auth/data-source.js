@@ -111,7 +111,6 @@ export default class AuthDataSource extends RockApolloDataSource {
         Email: email,
         IsSystem: false, // Required by Rock
         Gender: 0, // Required by Rock
-        ConnectionStatusValueId: 5679, // "App User" - created by Willow
       });
     } catch (err) {
       throw new Error('Unable to create profile!');
