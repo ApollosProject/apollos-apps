@@ -22,3 +22,5 @@ storiesOf('ui-kit/Inputs/DateInput', module)
   .add('displayValue', () => (
     <DateInput displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')} />
   ));
+  ))
+  .add('placeholder', () => <DateInput placeholder={'mm/dd/yyyy'} />)
