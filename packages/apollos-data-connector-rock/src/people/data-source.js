@@ -71,7 +71,7 @@ export default class Person extends RockApolloDataSource {
     const fieldsAsObject = fields.reduce(
       (accum, { field, value }) => ({
         ...accum,
-        [field]: value,
+        [field]: typeof value === 'string' ? value.trim() : value,
       }),
       {}
     );

@@ -123,7 +123,7 @@ describe('Person', () => {
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
       {
-        field: 'FirstName',
+        field: '        FirstName',
         value: 'Nick',
       },
     ]);
