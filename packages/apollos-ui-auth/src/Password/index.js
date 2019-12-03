@@ -7,18 +7,11 @@ import {
   TabView,
   PaddedView,
   TabSceneMap as SceneMap,
-  ButtonLink,
-  UIText,
 } from '@apollosproject/ui-kit';
 import { SafeAreaView } from 'react-navigation';
 
-import {
-  PromptText,
-  SuppressingView,
-  BackButtonTouchable,
-  BackButtonWrapper,
-  BackButton,
-} from '../styles';
+import { PromptText } from '../styles';
+import BackButton from '../BackButton';
 import { AuthConsumer } from '../Provider';
 import LoginForm from './Login';
 
@@ -67,19 +60,8 @@ class AuthPassword extends PureComponent {
           >
             <BackgroundComponent>
               <SafeAreaView style={StyleSheet.absoluteFill}>
-                <PaddedView>
-                  <SuppressingView>
-                    <BackButtonTouchable
-                      onPress={() => this.props.navigation.goBack()}
-                    >
-                      <BackButtonWrapper horizontal={false}>
-                        <BackButton name="arrow-back" />
-                        <UIText>
-                          <ButtonLink>Back</ButtonLink>
-                        </UIText>
-                      </BackButtonWrapper>
-                    </BackButtonTouchable>
-                  </SuppressingView>
+                <BackButton onPress={() => this.props.navigation.goBack()} />
+                <PaddedView vertical={false}>
                   <PromptText>{this.flatProps.passwordPromptText}</PromptText>
                 </PaddedView>
 
