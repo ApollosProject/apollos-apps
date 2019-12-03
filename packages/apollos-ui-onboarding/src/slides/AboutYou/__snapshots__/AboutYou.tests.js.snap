@@ -321,7 +321,10 @@ Array [
             hardwareAccelerated={false}
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             onRequestClose={[Function]}
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -362,7 +365,10 @@ Array [
             <View
               hideModalContentWhileAnimating={false}
               onModalHide={[Function]}
+              onModalWillHide={[Function]}
+              onModalWillShow={[Function]}
               pointerEvents="box-none"
+              scrollHorizontal={false}
               scrollOffset={0}
               scrollOffsetMax={0}
               scrollTo={null}
@@ -390,10 +396,12 @@ Array [
                 style={
                   Array [
                     Object {
-                      "backgroundColor": "white",
                       "borderRadius": 13,
                       "marginBottom": 8,
                       "overflow": "hidden",
+                    },
+                    Object {
+                      "backgroundColor": "white",
                     },
                     undefined,
                   ]
@@ -429,7 +437,8 @@ Array [
                 >
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
-                    maximumDate={2018-07-02T07:56:47.007Z}
+                    datePickerModeAndroid="spinner"
+                    maximumDate={1530518207007}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -489,13 +498,18 @@ Array [
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 13,
-                    "height": 57,
-                    "justifyContent": "center",
-                    "marginBottom": 0,
-                  }
+                  Array [
+                    Object {
+                      "borderRadius": 13,
+                      "height": 57,
+                      "justifyContent": "center",
+                      "marginBottom": 0,
+                    },
+                    Object {
+                      "backgroundColor": "white",
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <Text
@@ -1080,7 +1094,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -1121,7 +1138,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -1149,10 +1169,12 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -1188,7 +1210,8 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -1248,13 +1271,18 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -1684,7 +1712,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -1725,7 +1756,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -1753,10 +1787,12 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -1792,7 +1828,8 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -1852,13 +1889,18 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -2244,7 +2286,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -2285,7 +2330,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -2313,10 +2361,12 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -2352,7 +2402,8 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -2412,13 +2463,18 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -2755,7 +2811,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -2796,7 +2855,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -2824,10 +2886,12 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -2863,7 +2927,8 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -2923,13 +2988,18 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -3315,7 +3385,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -3356,7 +3429,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -3384,10 +3460,12 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -3423,7 +3501,8 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -3483,13 +3562,18 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -3887,7 +3971,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -3928,7 +4015,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -3956,10 +4046,12 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -3995,7 +4087,8 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -4055,13 +4148,18 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -4447,7 +4545,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -4488,7 +4589,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -4516,10 +4620,12 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -4555,7 +4661,8 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               >
                 <DatePicker
                   date={1989-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -4615,13 +4722,18 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -5029,7 +5141,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -5070,7 +5185,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -5098,10 +5216,12 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -5137,7 +5257,8 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
-                  maximumDate={2018-07-02T07:56:47.007Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={1530518207007}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -5197,13 +5318,18 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
