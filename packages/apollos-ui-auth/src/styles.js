@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from 'react-navigation';
 import { compose, withProps } from 'recompose';
+import { View } from 'react-native';
 import {
   styled,
   Button,
@@ -8,6 +9,8 @@ import {
   Icon,
   H2,
   H5,
+  PaddedView,
+  Touchable,
 } from '@apollosproject/ui-kit';
 
 const FlexedSafeAreaView = compose(
@@ -40,4 +43,41 @@ const NextButton = styled({}, 'ui-auth.NextButton')((props) => (
   <Button type={'primary'} pill={false} {...props} />
 ));
 
-export { FlexedSafeAreaView, BrandIcon, TitleText, PromptText, NextButton };
+const SuppressingView = styled(
+  {
+    flexDirection: 'row',
+  },
+  'ui-auth.SuppressingView'
+)(View);
+
+const BackButtonTouchable = withTheme(({ theme }) => ({
+  borderRadius: theme.sizing.baseUnit,
+}))(Touchable);
+
+const BackButtonWrapper = styled(
+  {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  'ui-auth.BackButtonWrapper'
+)(PaddedView);
+
+const BackButtonIcon = withTheme(({ theme }) => ({
+  fill: theme.colors.action.secondary,
+  size: theme.sizing.baseUnit * 1.5,
+  style: {
+    paddingRight: 0,
+  },
+}))(Icon);
+
+export {
+  FlexedSafeAreaView,
+  BrandIcon,
+  TitleText,
+  PromptText,
+  SuppressingView,
+  BackButtonTouchable,
+  BackButtonWrapper,
+  BackButtonIcon,
+  NextButton,
+};
