@@ -23,7 +23,7 @@ class DateInput extends PureComponent {
     onChangeText: PropTypes.func,
     onBlur: PropTypes.func,
     error: PropTypes.any, // eslint-disable-line
-    maximumDate: PropTypes.string,
+    maximumDate: PropTypes.any, // eslint-disable-line
   };
 
   state = {
@@ -46,8 +46,6 @@ class DateInput extends PureComponent {
   };
 
   render() {
-    let date = this.props.value;
-    if (typeof date === 'string') date = moment(date).toDate();
     return (
       <InputWrapper>
         <StyledChip
@@ -59,11 +57,19 @@ class DateInput extends PureComponent {
           onPress={this.handleOpen}
         />
         <DateTimePicker
-          date={date || new Date()}
+          date={
+            this.props.value ? moment(this.props.value).toDate() : Date.now()
+          } // Using Date.now so we have something to mock in the tests
+          datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
+          maximumDate={
+            this.props.maximumDate
+              ? moment(this.props.maximumDate).toDate()
+              : Date.now()
+          } // Using Date.now so we have something to mock in the tests
+          mode={'date'}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
-          maximumDate={this.props.maximumDate || new Date(Date.now())} // Using Date.now so we have something to mock in the tests
         />
         {this.props.displayValue || this.props.placeholder ? (
           <FloatingLabel animation={new Animated.Value(1)}>

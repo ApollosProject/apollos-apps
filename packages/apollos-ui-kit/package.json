@@ -48,18 +48,19 @@
     "react-native": "*",
     "react-native-gesture-handler": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "react-native-modal-datetime-picker": "*"
   },
   "dependencies": {
     "color": "^3.1.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
-    "react-native-modal-datetime-picker": "6.0.0",
     "react-native-safe-area-context": "^0.3.6",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
-    "rn-placeholder": "1.2.0"
+    "rn-placeholder": "1.2.0",
+    "react-native-modal-datetime-picker": "7.6.0"
   },
   "devDependencies": {
     "jest": "24.8.0",

@@ -286,7 +286,10 @@ Array [
             hardwareAccelerated={false}
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             onRequestClose={[Function]}
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -327,7 +330,10 @@ Array [
             <View
               hideModalContentWhileAnimating={false}
               onModalHide={[Function]}
+              onModalWillHide={[Function]}
+              onModalWillShow={[Function]}
               pointerEvents="box-none"
+              scrollHorizontal={false}
               scrollOffset={0}
               scrollOffsetMax={0}
               scrollTo={null}
@@ -355,10 +361,12 @@ Array [
                 style={
                   Array [
                     Object {
-                      "backgroundColor": "white",
                       "borderRadius": 13,
                       "marginBottom": 8,
                       "overflow": "hidden",
+                    },
+                    Object {
+                      "backgroundColor": "white",
                     },
                     undefined,
                   ]
@@ -394,7 +402,8 @@ Array [
                 >
                   <DatePicker
                     date={1980-02-10T05:00:00.000Z}
-                    maximumDate={2018-07-02T07:56:47.007Z}
+                    datePickerModeAndroid="spinner"
+                    maximumDate={1530518207007}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -454,13 +463,18 @@ Array [
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 13,
-                    "height": 57,
-                    "justifyContent": "center",
-                    "marginBottom": 0,
-                  }
+                  Array [
+                    Object {
+                      "borderRadius": 13,
+                      "height": 57,
+                      "justifyContent": "center",
+                      "marginBottom": 0,
+                    },
+                    Object {
+                      "backgroundColor": "white",
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <Text
@@ -997,7 +1011,10 @@ Array [
             hardwareAccelerated={false}
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             onRequestClose={[Function]}
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -1038,7 +1055,10 @@ Array [
             <View
               hideModalContentWhileAnimating={false}
               onModalHide={[Function]}
+              onModalWillHide={[Function]}
+              onModalWillShow={[Function]}
               pointerEvents="box-none"
+              scrollHorizontal={false}
               scrollOffset={0}
               scrollOffsetMax={0}
               scrollTo={null}
@@ -1066,10 +1086,12 @@ Array [
                 style={
                   Array [
                     Object {
-                      "backgroundColor": "white",
                       "borderRadius": 13,
                       "marginBottom": 8,
                       "overflow": "hidden",
+                    },
+                    Object {
+                      "backgroundColor": "white",
                     },
                     undefined,
                   ]
@@ -1105,7 +1127,8 @@ Array [
                 >
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
-                    maximumDate={2018-07-02T07:56:47.007Z}
+                    datePickerModeAndroid="spinner"
+                    maximumDate={1530518207007}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -1165,13 +1188,18 @@ Array [
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 13,
-                    "height": 57,
-                    "justifyContent": "center",
-                    "marginBottom": 0,
-                  }
+                  Array [
+                    Object {
+                      "borderRadius": 13,
+                      "height": 57,
+                      "justifyContent": "center",
+                      "marginBottom": 0,
+                    },
+                    Object {
+                      "backgroundColor": "white",
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <Text

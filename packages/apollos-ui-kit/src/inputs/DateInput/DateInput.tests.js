@@ -6,7 +6,17 @@ import Providers from '../../Providers';
 
 import DateInput from '.';
 
+let realDateNow;
+
 describe('The DateInput component', () => {
+  beforeAll(() => {
+    realDateNow = Date.now.bind(global.Date);
+    const dateNowStub = jest.fn(() => 1530518207007);
+    global.Date.now = dateNowStub;
+  });
+  afterAll(() => {
+    global.Date.now = realDateNow;
+  });
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
