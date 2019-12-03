@@ -47,6 +47,8 @@ const AboutYouConnected = memo(
                     const input = [];
                     if (ROCK_GENDERS.includes(variables.gender)) {
                       input.push({ field: 'Gender', value: variables.gender });
+                    } else if (variables.gender === 'Prefer not to reply') {
+                      input.push({ field: 'Gender', value: 'Unknown' });
                     }
                     if (!isNil(variables.birthDate)) {
                       input.push({
