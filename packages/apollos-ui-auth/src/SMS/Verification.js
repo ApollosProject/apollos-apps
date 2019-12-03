@@ -9,13 +9,7 @@ import {
 } from 'react-native';
 import { get } from 'lodash';
 
-import {
-  PaddedView,
-  TextInput,
-  BackgroundView,
-  UIText,
-  ButtonLink,
-} from '@apollosproject/ui-kit';
+import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
 
 import {
   FlexedSafeAreaView,
@@ -23,11 +17,8 @@ import {
   TitleText,
   PromptText,
   BrandIcon,
-  SuppressingView,
-  BackButtonTouchable,
-  BackButtonWrapper,
-  BackButton,
 } from '../styles';
+import BackButton from '../BackButton';
 
 const Verification = ({
   confirmationTitleText,
@@ -51,16 +42,7 @@ const Verification = ({
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>
-          <SuppressingView>
-            <BackButtonTouchable onPress={() => onPressBack()}>
-              <BackButtonWrapper>
-                <BackButton name="arrow-back" />
-                <UIText>
-                  <ButtonLink>Back</ButtonLink>
-                </UIText>
-              </BackButtonWrapper>
-            </BackButtonTouchable>
-          </SuppressingView>
+          <BackButton onPress={() => onPressBack()} />
           <PaddedView vertical={false}>
             <BrandIcon />
             <TitleText>{confirmationTitleText}</TitleText>
