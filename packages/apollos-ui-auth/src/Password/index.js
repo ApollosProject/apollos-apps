@@ -7,33 +7,22 @@ import {
   TabView,
   PaddedView,
   TabSceneMap as SceneMap,
-  ButtonIcon,
-  styled,
-  withTheme,
+  ButtonLink,
+  UIText,
 } from '@apollosproject/ui-kit';
 import { SafeAreaView } from 'react-navigation';
 
-import { PromptText } from '../styles';
+import {
+  PromptText,
+  SuppressingView,
+  BackButtonTouchable,
+  BackButtonWrapper,
+  BackButton,
+} from '../styles';
 import { AuthConsumer } from '../Provider';
 import LoginForm from './Login';
 
 import SignUpForm from './Signup';
-
-const StyledPaddedView = styled(
-  {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  'ui-auth.Password.PaddedView'
-)(PaddedView);
-
-const BackButton = withTheme(({ theme }) => ({
-  fill: theme.colors.action.secondary,
-  size: theme.sizing.baseUnit * 1.5,
-  style: {
-    paddingLeft: 0,
-  },
-}))(ButtonIcon);
 
 class AuthPassword extends PureComponent {
   static navigationOptions = {
@@ -78,13 +67,21 @@ class AuthPassword extends PureComponent {
           >
             <BackgroundComponent>
               <SafeAreaView style={StyleSheet.absoluteFill}>
-                <StyledPaddedView>
-                  <BackButton
-                    name="arrow-back"
-                    onPress={() => this.props.navigation.goBack()}
-                  />
+                <PaddedView>
+                  <SuppressingView>
+                    <BackButtonTouchable
+                      onPress={() => this.props.navigation.goBack()}
+                    >
+                      <BackButtonWrapper horizontal={false}>
+                        <BackButton name="arrow-back" />
+                        <UIText>
+                          <ButtonLink>Back</ButtonLink>
+                        </UIText>
+                      </BackButtonWrapper>
+                    </BackButtonTouchable>
+                  </SuppressingView>
                   <PromptText>{this.flatProps.passwordPromptText}</PromptText>
-                </StyledPaddedView>
+                </PaddedView>
 
                 <TabView
                   routes={this.tabRoutes}
