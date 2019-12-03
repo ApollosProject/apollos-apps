@@ -62,15 +62,6 @@ const ActionTable = () => (
               <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
-          <Divider />
-          <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/186')}
-          >
-            <Cell>
-              <CellText>I would like to give</CellText>
-              <CellIcon name="arrow-next" />
-            </Cell>
-          </Touchable>
         </TableView>
         <TableView>
           <Touchable
