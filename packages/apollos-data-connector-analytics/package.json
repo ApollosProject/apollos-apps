@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^1.2.4",
-    "analytics-node": "^3.3.0",
+    "analytics-node": "^3.4.0-beta.1",
     "apollo-datasource": "^0.2.0",
     "apollo-server": "^2.1.0",
     "universal-analytics": "^0.4.20"
