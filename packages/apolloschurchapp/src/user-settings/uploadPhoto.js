@@ -1,7 +1,10 @@
+import { Platform } from 'react-native';
+
+import { ReactNativeFile } from 'apollo-upload-client';
 import gql from 'graphql-tag';
 import ImagePicker from 'react-native-image-picker';
-import { ReactNativeFile } from 'apollo-upload-client';
 import { check, PERMISSIONS, request, RESULTS } from 'react-native-permissions';
+
 import GET_USER_PROFILE from './getUserPhoto';
 
 const options = {
@@ -15,15 +18,22 @@ const options = {
   },
 };
 
-async function showImagePicker() {
+async function handleIOSPermissions() {
   let cameraPermissionStatus = await check(PERMISSIONS.IOS.PHOTO_LIBRARY);
   let hasPermission = cameraPermissionStatus === RESULTS.GRANTED;
   if (!hasPermission) {
     cameraPermissionStatus = await request(PERMISSIONS.IOS.PHOTO_LIBRARY);
     hasPermission = cameraPermissionStatus === RESULTS.GRANTED;
     if (!hasPermission) {
-      return null;
+      return false;
     }
+  }
+  return true;
+}
+
+async function showImagePicker() {
+  if (Platform.OS === 'ios' && !(await handleIOSPermissions())) {
+    return null;
   }
   return new Promise((resolve, reject) => {
     ImagePicker.showImagePicker(options, (response) => {
