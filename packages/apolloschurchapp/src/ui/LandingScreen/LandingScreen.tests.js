@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
-import Providers from 'apolloschurchapp/src/Providers';
+import Providers from '../../Providers';
 
 import LandingScreen from '.';
 

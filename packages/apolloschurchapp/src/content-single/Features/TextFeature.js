@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ActionCard, BodyText } from '@apollosproject/ui-kit';
-import ShareContentButtonConnected from 'apolloschurchapp/src/ui/ShareContentButtonConnected';
+import ShareContentButtonConnected from '../../ui/ShareContentButtonConnected';
 
 const TextFeature = ({ body, sharing: { message } = {}, contentId }) => (
   <ActionCard
