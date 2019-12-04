@@ -63,8 +63,7 @@ exports[`The Auth Verification component should render 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -86,12 +85,12 @@ exports[`The Auth Verification component should render 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -109,10 +108,10 @@ exports[`The Auth Verification component should render 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -212,8 +211,40 @@ exports[`The Auth Verification component should render 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -590,8 +621,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -613,12 +643,12 @@ exports[`The Auth Verification component should render as disabled 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -636,10 +666,10 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -739,8 +769,40 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -1179,8 +1241,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -1202,12 +1263,12 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -1225,10 +1286,10 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -1328,8 +1389,40 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -1762,8 +1855,7 @@ exports[`The Auth Verification component should render in a next button 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -1785,12 +1877,12 @@ exports[`The Auth Verification component should render in a next button 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -1808,10 +1900,10 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -1911,8 +2003,40 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -2351,8 +2475,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -2374,12 +2497,12 @@ exports[`The Auth Verification component should render in an error state 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -2397,10 +2520,10 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -2500,8 +2623,40 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -2891,8 +3046,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -2914,12 +3068,12 @@ exports[`The Auth Verification component should render with a custom confirmatio
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -2937,10 +3091,10 @@ exports[`The Auth Verification component should render with a custom confirmatio
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -3040,8 +3194,40 @@ exports[`The Auth Verification component should render with a custom confirmatio
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -3418,8 +3604,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -3441,12 +3626,12 @@ exports[`The Auth Verification component should render with a value 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -3464,10 +3649,10 @@ exports[`The Auth Verification component should render with a value 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -3567,8 +3752,40 @@ exports[`The Auth Verification component should render with a value 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
@@ -3946,8 +4163,7 @@ exports[`The Auth Verification component should render with custom confirmationT
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -3969,12 +4185,12 @@ exports[`The Auth Verification component should render with custom confirmationT
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -3992,10 +4208,10 @@ exports[`The Auth Verification component should render with custom confirmationT
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -4095,8 +4311,40 @@ exports[`The Auth Verification component should render with custom confirmationT
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 20.16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
+          >
             <RNSVGSvgView
               align="xMidYMid"
               bbHeight={48}
