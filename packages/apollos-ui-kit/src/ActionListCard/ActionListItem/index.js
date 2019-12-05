@@ -32,7 +32,7 @@ const Cell = styled(({ theme }) => ({
 const CellImage = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,
   height: theme.sizing.baseUnit * 4,
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
   marginRight: theme.sizing.baseUnit,
 }))(ConnectedImage);
 

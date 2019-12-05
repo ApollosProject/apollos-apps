@@ -59,7 +59,7 @@ class Seeker extends PureComponent {
     style: PropTypes.any, // eslint-disable-line
     onScrubbing: PropTypes.func,
     skip: PropTypes.func,
-    knobSize: PropTypes.number, // defaults to theme.sizing.baseUnit / 1.5  (12px)
+    knobSize: PropTypes.number, // defaults to theme.sizing.baseBorderRadius * 0.75 (12px, see line 210)
   };
 
   isSeeking = false;
@@ -201,9 +201,15 @@ class Seeker extends PureComponent {
   }
 }
 
-const SeekerWithState = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
-  knobSize: Math.floor(baseUnit / 1.33),
-}))((props) => (
+const SeekerWithState = withTheme(
+  ({
+    theme: {
+      sizing: { baseBorderRadius },
+    },
+  }) => ({
+    knobSize: Math.floor(baseBorderRadius * 0.75),
+  })
+)((props) => (
   <ControlsConsumer>
     {(controls) => (
       <PlayheadConsumer>

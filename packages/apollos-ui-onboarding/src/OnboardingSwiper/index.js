@@ -11,7 +11,7 @@ import { SafeAreaView } from 'react-navigation';
 const dotStyles = ({ theme }) => ({
   width: theme.sizing.baseUnit / 2,
   height: theme.sizing.baseUnit / 2,
-  borderRadius: theme.sizing.baseUnit / 4,
+  borderRadius: theme.sizing.baseBorderRadius / 4,
   margin: theme.sizing.baseUnit / 4,
 });
 
