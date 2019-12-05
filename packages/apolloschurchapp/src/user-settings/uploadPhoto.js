@@ -3,7 +3,6 @@ import { Platform } from 'react-native';
 import { ReactNativeFile } from 'apollo-upload-client';
 import gql from 'graphql-tag';
 import ImagePicker from 'react-native-image-picker';
-import { ReactNativeFile } from 'apollo-upload-client';
 import { check, PERMISSIONS, request, RESULTS } from 'react-native-permissions';
 
 import GET_USER_PHOTO from './getUserPhoto';
