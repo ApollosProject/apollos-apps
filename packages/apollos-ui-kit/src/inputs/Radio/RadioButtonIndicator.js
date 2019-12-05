@@ -8,7 +8,7 @@ const OutlinedCircle = styled(
   ({ theme, isSelected }) => ({
     height: theme.sizing.baseUnit * 1.25,
     width: theme.sizing.baseUnit * 1.25,
-    borderRadius: theme.sizing.baseUnit * 1.25,
+    borderRadius: theme.sizing.baseUnit * 0.625,
     borderWidth: 2,
     borderColor: isSelected ? theme.colors.primary : theme.colors.darkTertiary,
     alignItems: 'center',
@@ -21,7 +21,7 @@ const FilledCircle = styled(
   ({ theme }) => ({
     height: theme.sizing.baseUnit * 0.75,
     width: theme.sizing.baseUnit * 0.75,
-    borderRadius: theme.sizing.baseUnit * 0.75,
+    borderRadius: theme.sizing.baseUnit * 0.625,
     backgroundColor: theme.colors.primary,
   }),
   'RadioButton.FilledCircle'
