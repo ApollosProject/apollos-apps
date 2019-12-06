@@ -3,11 +3,14 @@ import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
+import { isNil, isEmpty } from 'lodash';
 
 import GET_USER_GENDER_AND_BIRTH_DATE from './getUserGenderAndBirthDate';
 import AboutYou from './AboutYou';
 
 import UPDATE_USER_DETAILS from './updateUserDetails';
+
+const ROCK_GENDERS = ['Male', 'Female'];
 
 const AboutYouConnected = memo(
   ({ Component, onPressPrimary, onPressSecondary, ...props }) => (
@@ -19,12 +22,23 @@ const AboutYouConnected = memo(
           <Mutation mutation={UPDATE_USER_DETAILS}>
             {(updateDetails) => (
               <Formik
-                initialValues={{ gender, birthDate }}
+                initialValues={{
+                  gender: gender === 'Unknown' ? 'Prefer not to reply' : gender,
+                  birthDate,
+                }}
                 isInitialValid={() =>
-                  !!(['Male', 'Female'].includes(gender) || birthDate)
+                  !!(
+                    ['Male', 'Female', 'Prefer not to reply'].includes(
+                      gender
+                    ) || birthDate
+                  )
                 } // isInitialValid defaults to `false` this correctly checks for user data
                 validationSchema={Yup.object().shape({
-                  gender: Yup.string().oneOf(['Male', 'Female']),
+                  gender: Yup.string().oneOf([
+                    'Male',
+                    'Female',
+                    'Prefer not to reply',
+                  ]),
                   birthDate: Yup.string().nullable(),
                 })}
                 enableReinitialize
@@ -33,7 +47,21 @@ const AboutYouConnected = memo(
                   { setSubmitting, setFieldError }
                 ) => {
                   try {
-                    await updateDetails({ variables });
+                    const input = [];
+                    if (ROCK_GENDERS.includes(variables.gender)) {
+                      input.push({ field: 'Gender', value: variables.gender });
+                    } else if (variables.gender === 'Prefer not to reply') {
+                      input.push({ field: 'Gender', value: 'Unknown' });
+                    }
+                    if (!isNil(variables.birthDate)) {
+                      input.push({
+                        field: 'BirthDate',
+                        value: variables.birthDate,
+                      });
+                    }
+                    if (!isEmpty(input)) {
+                      await updateDetails({ variables: { input } });
+                    }
                     onPressPrimary(); // advance to the next slide after submission
                   } catch (e) {
                     const { graphQLErrors } = e;

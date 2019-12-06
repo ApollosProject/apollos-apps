@@ -203,6 +203,55 @@ Array [
               Female
             </Text>
           </View>
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+                "borderBottomWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 8,
+              }
+            }
+            underline={false}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#A5A5A5",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "justifyContent": "center",
+                  "width": 20,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              Prefer not to reply
+            </Text>
+          </View>
         </View>
         <Text
           style={
@@ -926,6 +975,55 @@ Array [
               }
             >
               Female
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+                "borderBottomWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 8,
+              }
+            }
+            underline={false}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#A5A5A5",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "justifyContent": "center",
+                  "width": 20,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20.16,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              Prefer not to reply
             </Text>
           </View>
         </View>
