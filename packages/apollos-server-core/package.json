@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@apollosproject/data-schema": "^1.2.4",
-    "apollo-server": "^2.5.0",
     "apollo-server-caching": "^0.4.0",
     "bull": "^3.11.0",
     "bull-board": "^0.1.1",
@@ -29,6 +28,9 @@
     "graphql-parse-resolve-info": "^4.4.5",
     "graphql-tag": "^2.10.0",
     "lodash": "^4.17.11"
+  },
+  "peerDependencies": {
+    "apollo-server": "^2.5.0"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^1.2.4",
