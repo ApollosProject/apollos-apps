@@ -216,7 +216,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "borderColor": "#A5A5A5",
-                  "borderRadius": 99,
+                  "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
                   "justifyContent": "center",
@@ -989,7 +989,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -1607,7 +1607,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -2181,7 +2181,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -3280,7 +3280,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -3866,7 +3866,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -4440,7 +4440,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -5014,7 +5014,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",

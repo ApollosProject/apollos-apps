@@ -230,7 +230,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "borderColor": "#A5A5A5",
-                  "borderRadius": 99,
+                  "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
                   "justifyContent": "center",
@@ -1004,7 +1004,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "borderColor": "#A5A5A5",
-                  "borderRadius": 99,
+                  "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
                   "justifyContent": "center",
