@@ -21,4 +21,24 @@ describe('Auth', () => {
     expect(result).toMatchSnapshot();
     expect(Auth.get.mock.calls).toMatchSnapshot();
   });
+
+  it('should post when creating a new user', async () => {
+    Auth.post = jest.fn(() => Promise.resolve());
+    const result = await Auth.createUserProfile({
+      email: 'bob-jones@example.com',
+    });
+    expect(result).toMatchSnapshot();
+    expect(Auth.post.mock.calls).toMatchSnapshot();
+  });
+
+  it('should throw an error when creating an invalid user', async () => {
+    Auth.post = jest.fn(() => {
+      throw new Error('HTTP error');
+    });
+    const result = Auth.createUserProfile({
+      email: 'bob-jones@example.com',
+    });
+    expect(result).rejects.toMatchSnapshot();
+    expect(Auth.post.mock.calls).toMatchSnapshot();
+  });
 });

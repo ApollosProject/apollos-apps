@@ -1,12 +1,33 @@
 import ApollosConfig from '@apollosproject/config';
 import { isEmpty } from 'lodash';
 import moment from 'moment-timezone';
+import Redis from 'ioredis';
 
 const { ROCK } = ApollosConfig;
 
+const { REDIS_URL } = process.env;
+
+const client = new Redis(REDIS_URL);
+const subscriber = new Redis(REDIS_URL);
+
+// Used to ensure that N+3 redis connections are not created per queue.
+// https://github.com/OptimalBits/bull/blob/develop/PATTERNS.md#reusing-redis-connections
+const queueOpts = {
+  createClient(type) {
+    switch (type) {
+      case 'client':
+        return client;
+      case 'subscriber':
+        return subscriber;
+      default:
+        return new Redis(REDIS_URL);
+    }
+  },
+};
+
 const createJobs = ({ getContext, queues }) => {
-  const FullIndexQueue = queues.add('algolia-full-index-queue');
-  const DeltaIndexQueue = queues.add('algolia-delta-index-queue');
+  const FullIndexQueue = queues.add('algolia-full-index-queue', queueOpts);
+  const DeltaIndexQueue = queues.add('algolia-delta-index-queue', queueOpts);
 
   FullIndexQueue.process(async () => {
     const context = getContext();
