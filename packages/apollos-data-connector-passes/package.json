@@ -27,14 +27,14 @@
     "@apollosproject/data-schema": "^1.2.4",
     "@apollosproject/server-core": "^1.2.4",
     "apollo-datasource": "^0.4.0",
-    "apollo-server": "^2.5.0",
     "datauri": "^1.1.0",
     "lodash": "^4.17.11",
     "passkit-generator": "1.5.9",
     "qrcode": "^1.3.3"
   },
   "peerDependencies": {
-    "@apollosproject/config": "*"
+    "@apollosproject/config": "*",
+    "apollo-server": "^2.5.0"
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^1.2.4",
