@@ -15,7 +15,7 @@ const iconSource = {
 };
 
 const AppleWalletButton = styled(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
   marginHorizontal: theme.sizing.baseUnit,
   backgroundColor: theme.colors.black,
   borderColor: theme.colors.black,

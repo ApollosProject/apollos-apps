@@ -20,7 +20,7 @@ const SuppressingView = styled(
 )(View);
 
 const Button = withTheme(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
 }))(Touchable);
 
 const ButtonWrapper = styled(

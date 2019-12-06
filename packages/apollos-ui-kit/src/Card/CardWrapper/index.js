@@ -11,7 +11,7 @@ const StyledCard = compose(
   styled(({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
     // card styles
     backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
-    borderRadius: theme.sizing.baseUnit,
+    borderRadius: theme.sizing.baseBorderRadius,
     ...(inHorizontalList
       ? {
           // provides spacing between cards also fixes android shadow needing "space" to render into
@@ -31,7 +31,7 @@ const StyledCard = compose(
  * live on a child wrapper. https://github.com/facebook/react-native/issues/449
  */
 const OverflowFix = styled(({ theme, forceRatio }) => ({
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
   overflow: 'hidden',
   ...(forceRatio ? { aspectRatio: forceRatio } : {}),
 }))(View);

@@ -73,6 +73,7 @@ export const breakpoints = {
 // space, and size components relatively to one another.
 export const sizing = {
   baseUnit: 16,
+  baseBorderRadius: 16,
   avatar: {
     small: 40,
     medium: 80,

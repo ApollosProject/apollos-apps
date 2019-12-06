@@ -21,7 +21,7 @@ import { GO_FULLSCREEN, DISMISS, PLAY, PAUSE } from './mutations';
 const MINI_PLAYER_HEIGHT = 50;
 
 const Shadow = styled(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit / 2,
+  borderRadius: theme.sizing.baseBorderRadius / 2,
   ...Platform.select(theme.shadows.default),
 }))(View);
 
@@ -30,7 +30,7 @@ const Container = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'flex-start',
   overflow: 'hidden',
-  borderRadius: theme.sizing.baseUnit / 2,
+  borderRadius: theme.sizing.baseBorderRadius / 2,
 }))(View);
 
 // ThumbnailSpacer is used to offset the text in MiniPlayer to make room for the video/music

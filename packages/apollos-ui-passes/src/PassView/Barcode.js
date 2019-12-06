@@ -9,7 +9,7 @@ const Barcode = styled(({ theme }) => ({
   backgroundColor: theme.colors.white,
   alignSelf: 'center',
   marginBottom: theme.sizing.baseUnit,
-  borderRadius: theme.sizing.baseUnit * 0.5,
+  borderRadius: theme.sizing.baseBorderRadius / 2,
 }))(Image);
 
 export default Barcode;

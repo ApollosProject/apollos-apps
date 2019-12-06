@@ -6,9 +6,9 @@ import styled from '../../styled';
 
 const OutlinedCircle = styled(
   ({ theme, isSelected }) => ({
-    height: 20,
-    width: 20,
-    borderRadius: 99,
+    height: theme.sizing.baseUnit * 1.25,
+    width: theme.sizing.baseUnit * 1.25,
+    borderRadius: theme.sizing.baseUnit * 0.625,
     borderWidth: 2,
     borderColor: isSelected ? theme.colors.primary : theme.colors.darkTertiary,
     alignItems: 'center',
@@ -19,9 +19,9 @@ const OutlinedCircle = styled(
 
 const FilledCircle = styled(
   ({ theme }) => ({
-    height: 12,
-    width: 12,
-    borderRadius: 99,
+    height: theme.sizing.baseUnit * 0.75,
+    width: theme.sizing.baseUnit * 0.75,
+    borderRadius: theme.sizing.baseUnit * 0.625,
     backgroundColor: theme.colors.primary,
   }),
   'RadioButton.FilledCircle'

@@ -65,7 +65,8 @@ class OverlayBackgroundImage extends Component {
     width: DeviceWindow.width,
   };
 
-  handleLayout = ({ nativeEvent: { layout } = {} }) => this.setState(layout);
+  handleLayout = ({ nativeEvent: { layout: { width } = {} } = {} }) =>
+    this.setState({ width });
 
   render() {
     const { style, rounded, ...props } = this.props;
