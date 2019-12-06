@@ -135,7 +135,7 @@ AboutYou.defaultProps = {
   slideTitle: "This one's easy.",
   description:
     'Help us understand who you are so we can connect you with the best ministries and events.',
-  genderList: ['Male', 'Female'],
+  genderList: ['Male', 'Female', 'Prefer not to reply'],
   defaultDate: new Date(),
 };
 

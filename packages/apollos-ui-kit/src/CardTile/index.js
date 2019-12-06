@@ -33,14 +33,14 @@ const TileSpacer = styled(({ theme }) => ({
 const Tile = styled(({ theme }) => ({
   width: Dimensions.get('window').width * 0.66,
   aspectRatio: 1,
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
   backgroundColor: theme.colors.lightTertiary,
 }))(View);
 
 const PlaceholderOverflowFix = styled(({ theme }) => ({
   ...StyleSheet.absoluteFillObject,
   justifyContent: 'center',
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
   overflow: 'hidden',
 }))(View);
 
