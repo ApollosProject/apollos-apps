@@ -22,7 +22,10 @@ const AboutYouConnected = memo(
           <Mutation mutation={UPDATE_USER_DETAILS}>
             {(updateDetails) => (
               <Formik
-                initialValues={{ gender, birthDate }}
+                initialValues={{
+                  gender: gender === 'Unknown' ? 'Prefer not to reply' : gender,
+                  birthDate,
+                }}
                 isInitialValid={() =>
                   !!(
                     ['Male', 'Female', 'Prefer not to reply'].includes(
