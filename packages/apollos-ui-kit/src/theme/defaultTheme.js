@@ -57,7 +57,7 @@ export const colors = {
  */
 export const typography = {
   baseFontSize: 16,
-  baseLineHeight: 23.04, // 1.44 ratio
+  baseLineHeight: 24, // 1.5 ratio
   ...fontStack,
 };
 
