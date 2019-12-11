@@ -317,8 +317,8 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
                     Object {
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 20,
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                       "paddingTop": 8,
                     }
                   }
@@ -478,8 +478,8 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
                     Object {
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 20,
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                       "paddingTop": 8,
                     }
                   }
@@ -813,8 +813,8 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
                     Object {
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 20,
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                       "paddingTop": 8,
                     }
                   }
@@ -974,8 +974,8 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
                     Object {
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Regular",
-                      "fontSize": 14,
-                      "lineHeight": 20,
+                      "fontSize": 12,
+                      "lineHeight": 17.28,
                       "paddingTop": 8,
                     }
                   }
