@@ -1,12 +1,16 @@
 import React from 'react';
+import {
+  checkNotifications,
+  openSettings,
+  requestNotifications,
+  RESULTS,
+} from 'react-native-permissions';
 
 import {
   GradientOverlayImage,
   styled,
   BackgroundView,
 } from '@apollosproject/ui-kit';
-import { ApolloConsumer } from 'react-apollo';
-
 import {
   AskNotificationsConnected,
   AskNameConnected,
@@ -15,8 +19,7 @@ import {
   LocationFinderConnected,
   OnboardingSwiper,
 } from '@apollosproject/ui-onboarding';
-
-import { requestPushPermissions } from '@apollosproject/ui-notifications';
+import { PushProvider } from '@apollosproject/ui-notifications';
 
 const FullscreenBackgroundView = styled({
   position: 'absolute',
@@ -63,22 +66,30 @@ function Onboarding({ navigation }) {
                 />
               }
             />
-            <ApolloConsumer>
-              {(client) => (
-                <AskNotificationsConnected
-                  onPressPrimary={() => navigation.replace('Tabs')}
-                  onRequestPushPermissions={() =>
-                    requestPushPermissions({ client })
-                  }
-                  primaryNavText={'Finish'}
-                  BackgroundComponent={
-                    <StyledGradient
-                      source={'https://picsum.photos/640/640/?random'}
-                    />
-                  }
-                />
-              )}
-            </ApolloConsumer>
+            <PushProvider>
+              <AskNotificationsConnected
+                onRequestPushPermissions={(update) => {
+                  checkNotifications().then((checkRes) => {
+                    if (checkRes.status === RESULTS.DENIED) {
+                      requestNotifications(['alert', 'badge', 'sound']).then(
+                        () => {
+                          update();
+                        }
+                      );
+                    } else {
+                      openSettings();
+                    }
+                  });
+                }}
+                onPressPrimary={() => navigation.replace('Tabs')}
+                primaryNavText={'Finish'}
+                BackgroundComponent={
+                  <StyledGradient
+                    source={'https://picsum.photos/640/640/?random'}
+                  />
+                }
+              />
+            </PushProvider>
           </>
         )}
       </OnboardingSwiper>

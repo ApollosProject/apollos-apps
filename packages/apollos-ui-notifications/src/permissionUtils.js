@@ -5,7 +5,14 @@ const getPushPermissions = async () =>
   new Promise((resolve) =>
     OneSignal.getPermissionSubscriptionState((status) =>
       // Ensure the client (notificationsEnabled) && OneSignal (subscriptionEnabled) are boolean values
-      resolve(!!(status.notificationsEnabled && status.subscriptionEnabled))
+      resolve(!!status.notificationsEnabled)
+    )
+  );
+
+const getHasPrompted = async () =>
+  new Promise((resolve) =>
+    OneSignal.getPermissionSubscriptionState((status) =>
+      resolve(status.hasPrompted)
     )
   );
 
@@ -43,8 +50,9 @@ const requestPushPermissions = async ({ client }) => {
 };
 
 export {
-  getPushPermissions,
-  requestPushPermissions,
   GET_NOTIFICATIONS_ENABLED,
   GET_PUSH_ID,
+  getHasPrompted,
+  getPushPermissions,
+  requestPushPermissions,
 };
