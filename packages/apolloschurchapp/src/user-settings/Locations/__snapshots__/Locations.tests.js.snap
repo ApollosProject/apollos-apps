@@ -141,7 +141,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                         "alignItems": "stretch",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
-                        "height": 20.16,
+                        "height": 21,
                         "justifyContent": "space-between",
                       }
                     }
@@ -152,7 +152,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                           "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
-                          "lineHeight": 20.16,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -164,7 +164,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                         }
                       }
                     >
@@ -178,7 +178,7 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
                         "color": "#505050",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                       }
                     }
                   >
@@ -297,7 +297,7 @@ South Barrington, IL 60010-6143
                         "alignItems": "stretch",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
-                        "height": 20.16,
+                        "height": 21,
                         "justifyContent": "space-between",
                       }
                     }
@@ -308,7 +308,7 @@ South Barrington, IL 60010-6143
                           "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
-                          "lineHeight": 20.16,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -320,7 +320,7 @@ South Barrington, IL 60010-6143
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                         }
                       }
                     >
@@ -334,7 +334,7 @@ South Barrington, IL 60010-6143
                         "color": "#505050",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                       }
                     }
                   >
@@ -453,7 +453,7 @@ Anderson, SC 29621-3619
                         "alignItems": "stretch",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
-                        "height": 20.16,
+                        "height": 21,
                         "justifyContent": "space-between",
                       }
                     }
@@ -464,7 +464,7 @@ Anderson, SC 29621-3619
                           "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
-                          "lineHeight": 20.16,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -476,7 +476,7 @@ Anderson, SC 29621-3619
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                         }
                       }
                     >
@@ -490,7 +490,7 @@ Anderson, SC 29621-3619
                         "color": "#505050",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                       }
                     }
                   >
@@ -609,7 +609,7 @@ Richardson, TX 75080-5525
                         "alignItems": "stretch",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
-                        "height": 20.16,
+                        "height": 21,
                         "justifyContent": "space-between",
                       }
                     }
@@ -620,7 +620,7 @@ Richardson, TX 75080-5525
                           "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
-                          "lineHeight": 20.16,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -632,7 +632,7 @@ Richardson, TX 75080-5525
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                         }
                       }
                     >
@@ -646,7 +646,7 @@ Richardson, TX 75080-5525
                         "color": "#505050",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                       }
                     }
                   >
@@ -712,7 +712,7 @@ Cincinnati, OH 45202-2118
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
-                "lineHeight": 23.04,
+                "lineHeight": 24,
               }
             }
           >

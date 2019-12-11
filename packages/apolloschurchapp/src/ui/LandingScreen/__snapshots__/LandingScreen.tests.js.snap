@@ -189,7 +189,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
               "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >
@@ -271,7 +271,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -591,7 +591,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
               "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >
@@ -792,7 +792,7 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
               "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >
@@ -993,7 +993,7 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
               "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >
@@ -1198,7 +1198,7 @@ exports[`The Onboarding LandingScreen component should render with a custom text
               "color": "salmon",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >
@@ -1443,7 +1443,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
               "color": "#303030",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >

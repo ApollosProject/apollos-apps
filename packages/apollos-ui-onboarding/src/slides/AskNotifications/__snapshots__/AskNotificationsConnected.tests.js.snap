@@ -66,7 +66,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -126,7 +126,7 @@ Array [
                     "color": "#FFFFFF",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
-                    "lineHeight": 23.04,
+                    "lineHeight": 24,
                   }
                 }
               >
@@ -208,7 +208,7 @@ Array [
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -399,7 +399,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -459,7 +459,7 @@ Array [
                     "color": "#FFFFFF",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
-                    "lineHeight": 23.04,
+                    "lineHeight": 24,
                   }
                 }
               >
@@ -575,7 +575,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with n
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -635,7 +635,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with n
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >

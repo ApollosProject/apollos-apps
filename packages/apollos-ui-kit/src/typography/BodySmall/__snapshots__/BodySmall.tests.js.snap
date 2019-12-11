@@ -10,7 +10,7 @@ exports[`the BodySmall component should accept additional props 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Regular",
       "fontSize": 12,
-      "lineHeight": 17.28,
+      "lineHeight": 18,
     }
   }
 >
@@ -27,7 +27,7 @@ exports[`the BodySmall component should accept and render passed in styles 1`] =
       "color": "salmon",
       "fontFamily": "InterUI-Regular",
       "fontSize": 12,
-      "lineHeight": 17.28,
+      "lineHeight": 18,
     }
   }
 >
@@ -43,7 +43,7 @@ exports[`the BodySmall component should render a loading state 1`] = `
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 12,
-      "marginVertical": 2.6400000000000006,
+      "marginVertical": 3,
       "width": "100%",
     }
   }
@@ -59,7 +59,7 @@ exports[`the BodySmall component should render as bold 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Bold",
       "fontSize": 12,
-      "lineHeight": 17.28,
+      "lineHeight": 18,
     }
   }
 >
@@ -76,7 +76,7 @@ exports[`the BodySmall component should render as bold italic 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-BoldItalic",
       "fontSize": 12,
-      "lineHeight": 17.28,
+      "lineHeight": 18,
     }
   }
 >
@@ -93,7 +93,7 @@ exports[`the BodySmall component should render as italic 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Italic",
       "fontSize": 12,
-      "lineHeight": 17.28,
+      "lineHeight": 18,
     }
   }
 >
@@ -110,7 +110,7 @@ exports[`the BodySmall component should render correctly 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Regular",
       "fontSize": 12,
-      "lineHeight": 17.28,
+      "lineHeight": 18,
     }
   }
 >

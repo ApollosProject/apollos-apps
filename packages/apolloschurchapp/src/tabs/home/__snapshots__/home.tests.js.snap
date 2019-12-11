@@ -1081,7 +1081,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
                       "height": 12,
-                      "marginVertical": 2.6400000000000006,
+                      "marginVertical": 3,
                       "width": "50%",
                     }
                   }
@@ -1201,7 +1201,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
                             "height": 16,
-                            "marginVertical": 3.5199999999999996,
+                            "marginVertical": 4,
                             "width": "80%",
                           }
                         }
@@ -1298,7 +1298,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
                             "height": 16,
-                            "marginVertical": 3.5199999999999996,
+                            "marginVertical": 4,
                             "width": "80%",
                           }
                         }
@@ -1395,7 +1395,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
                             "height": 16,
-                            "marginVertical": 3.5199999999999996,
+                            "marginVertical": 4,
                             "width": "80%",
                           }
                         }
@@ -1492,7 +1492,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
                             "height": 16,
-                            "marginVertical": 3.5199999999999996,
+                            "marginVertical": 4,
                             "width": "80%",
                           }
                         }

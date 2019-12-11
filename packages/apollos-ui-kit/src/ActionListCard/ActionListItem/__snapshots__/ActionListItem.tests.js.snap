@@ -91,7 +91,7 @@ exports[`ActionListItem should render 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
+            "lineHeight": 24,
           }
         }
       >
@@ -192,7 +192,7 @@ exports[`ActionListItem should render a loading state 1`] = `
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 12,
-            "marginVertical": 2.6400000000000006,
+            "marginVertical": 3,
             "width": "50%",
           }
         }
@@ -204,7 +204,7 @@ exports[`ActionListItem should render a loading state 1`] = `
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 16,
-            "marginVertical": 3.5199999999999996,
+            "marginVertical": 4,
             "width": "80%",
           }
         }
@@ -304,7 +304,7 @@ exports[`ActionListItem should render with a label 1`] = `
             "color": "#A5A5A5",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
           }
         }
       >
@@ -318,7 +318,7 @@ exports[`ActionListItem should render with a label 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
+            "lineHeight": 24,
           }
         }
       >

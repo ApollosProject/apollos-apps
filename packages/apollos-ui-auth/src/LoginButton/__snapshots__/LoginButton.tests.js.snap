@@ -94,7 +94,7 @@ exports[`LoginButton component renders a LoginButton when logged out 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >

@@ -239,7 +239,7 @@ exports[`the LandingScreen should render 1`] = `
               "color": "white",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
-              "lineHeight": 23.04,
+              "lineHeight": 24,
             }
           }
         >
@@ -321,7 +321,7 @@ exports[`the LandingScreen should render 1`] = `
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
