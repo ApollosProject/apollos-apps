@@ -155,11 +155,11 @@ class MapView extends Component {
     const { userLocation } = this.props;
     // campus card height + some padding
 
-    const bottomPadding = 100 + this.props.theme.sizing.baseUnit * 12;
+    const bottomPadding = this.props.theme.sizing.baseUnit * 18.25;
     const edgePadding = {
-      top: 100,
-      left: 100,
-      right: 100,
+      top: this.props.theme.sizing.baseUnit * 6.25,
+      left: this.props.theme.sizing.baseUnit * 6.25,
+      right: this.props.theme.sizing.baseUnit * 6.25,
       bottom:
         Platform.OS === 'android'
           ? // NOTE: android bug
