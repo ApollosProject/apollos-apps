@@ -107,20 +107,29 @@ exports[`CampusCard should render 1`] = `
           >
             Cameron Poe
           </Text>
-          <Text
-            placeholderWidth="15%"
+          <View
             style={
               Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
               }
             }
           >
-            2038
-            mi
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
+                }
+              }
+            >
+              2038
+              mi
+            </Text>
+          </View>
         </View>
         <Text
           style={
@@ -250,15 +259,25 @@ exports[`CampusCard should render a loading 1`] = `
           <View
             style={
               Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 12,
-                "marginVertical": 2.6400000000000006,
-                "width": "15%",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
               }
             }
-          />
+          >
+            <View
+              style={
+                Object {
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 2.6400000000000006,
+                  "width": "50%",
+                }
+              }
+            />
+          </View>
         </View>
         <View
           style={

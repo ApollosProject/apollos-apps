@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Card, { CardContent } from '../Card';
@@ -7,6 +6,7 @@ import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import SideBySideView from '../SideBySideView';
 import styled from '../styled';
 import { H5, H6 } from '../typography';
+import FlexedView from '../FlexedView';
 
 const HorizontalLayout = styled(({ theme }) => ({
   alignItems: 'center',
@@ -27,6 +27,12 @@ const CampusImage = styled({
   resizeMode: 'cover',
 })(ConnectedImage);
 
+// Fixes placeholder
+const DistanceWrapper = styled({
+  flexDirection: 'row',
+  justifyContent: 'flex-end',
+})(FlexedView);
+
 const hasValidImages = (images) =>
   images && !images.includes(null) && !images.map((o) => o.uri).includes(null);
 
@@ -43,12 +49,12 @@ const CampusCard = memo(
           <Header>
             <H5>{title}</H5>
             {distance != null ? (
-              <View>
+              <DistanceWrapper>
                 <H6>
                   {Math.round(distance)}
                   mi
                 </H6>
-              </View>
+              </DistanceWrapper>
             ) : null}
           </Header>
           {description ? <H6>{description}</H6> : null}
