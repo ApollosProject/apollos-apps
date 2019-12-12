@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Card, { CardContent } from '../Card';
@@ -42,10 +43,12 @@ const CampusCard = memo(
           <Header>
             <H5>{title}</H5>
             {distance != null ? (
-              <H6 placeholderWidth="15%">
-                {Math.round(distance)}
-                mi
-              </H6>
+              <View>
+                <H6>
+                  {Math.round(distance)}
+                  mi
+                </H6>
+              </View>
             ) : null}
           </Header>
           {description ? <H6>{description}</H6> : null}
