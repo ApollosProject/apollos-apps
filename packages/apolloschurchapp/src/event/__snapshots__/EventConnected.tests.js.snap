@@ -98,7 +98,7 @@ exports[`EventConnected component renders without errors 1`] = `
                 "fontFamily": "InterUI-Black",
                 "fontSize": 36,
                 "lineHeight": 41.4,
-                "paddingBottom": 20,
+                "paddingBottom": 20.02,
                 "paddingTop": 24,
               }
             }
