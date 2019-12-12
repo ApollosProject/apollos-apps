@@ -86,12 +86,15 @@ class MapView extends Component {
   constructor(props) {
     super();
 
+    // sets width of cards to be full width of the screen minus a bit for spacing
     this.cardWidth =
       Dimensions.get('window').width - props.theme.sizing.baseUnit * 2.25;
 
     this.animation = new Animated.Value(0);
     this.scrollView = null;
-    this.cardWidthWithPadding =
+
+    // added spacing to set the scroll position of the card so other cards in the horizontal list are seen slightly to the left or right.
+    this.cardScrollPositionOffset =
       this.cardWidth + props.theme.sizing.baseUnit * 0.5;
   }
 
@@ -136,7 +139,7 @@ class MapView extends Component {
     `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
   scrollToIndex = (index) => {
-    const cardScrollPosition = index * this.cardWidthWithPadding;
+    const cardScrollPosition = index * this.cardScrollPositionOffset;
 
     this.scrollView.getNode().scrollTo({
       x: cardScrollPosition,
@@ -220,7 +223,7 @@ class MapView extends Component {
           <Animated.ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            snapToInterval={this.cardWidthWithPadding}
+            snapToInterval={this.cardScrollPositionOffset}
             snapToAlignment={'start'}
             decelerationRate={'fast'}
             contentContainerStyle={{
