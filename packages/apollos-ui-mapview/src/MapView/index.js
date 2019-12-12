@@ -109,6 +109,10 @@ class MapView extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.animation.removeEventListener(debounce(this.updateCoordinates));
+  }
+
   get currentCampus() {
     const cardIndex = Math.floor(
       this.previousScrollPosition / this.cardWidth + 0.3
