@@ -24,7 +24,7 @@ const styles = styled(
 const H6 = compose(
   setDisplayName('H6'),
   styles,
-  withPlaceholder(Typography),
+  withPlaceholder(Typography, { width: '50%' }),
   pure
 )(Text);
 
