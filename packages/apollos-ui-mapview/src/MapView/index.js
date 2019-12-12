@@ -113,7 +113,7 @@ class MapView extends Component {
   }
 
   componentWillUnmount() {
-    this.animation.removeEventListener(debounce(this.updateCoordinates));
+    this.animation.removeListener(this.updateCoordinates);
   }
 
   get currentCampus() {
