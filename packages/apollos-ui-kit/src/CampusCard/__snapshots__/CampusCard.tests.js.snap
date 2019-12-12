@@ -456,20 +456,29 @@ exports[`CampusCard should render with a title and distance 1`] = `
           >
             Memphis Raines
           </Text>
-          <Text
-            placeholderWidth="15%"
+          <View
             style={
               Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
               }
             }
           >
-            2038
-            mi
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
+                }
+              }
+            >
+              2038
+              mi
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -774,20 +783,29 @@ exports[`CampusCard should render without a description 1`] = `
           >
             Cris Johnson
           </Text>
-          <Text
-            placeholderWidth="15%"
+          <View
             style={
               Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
               }
             }
           >
-            2038
-            mi
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
+                }
+              }
+            >
+              2038
+              mi
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -992,20 +1010,29 @@ exports[`CampusCard should render without an image 1`] = `
           >
             Benjamin Franklin Gates
           </Text>
-          <Text
-            placeholderWidth="15%"
+          <View
             style={
               Object {
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 17.28,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
               }
             }
           >
-            2038
-            mi
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 17.28,
+                }
+              }
+            >
+              2038
+              mi
+            </Text>
+          </View>
         </View>
         <Text
           style={
