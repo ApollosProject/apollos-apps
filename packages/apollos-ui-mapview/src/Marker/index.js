@@ -6,7 +6,7 @@ import Color from 'color';
 
 import styled from '@apollosproject/ui-kit/src/styled';
 
-const MarkerView = styled(
+const InnerCircle = styled(
   ({ theme }) => ({
     width: theme.sizing.baseUnit * 0.5, // 8
     height: theme.sizing.baseUnit * 0.5, // 8
@@ -14,10 +14,10 @@ const MarkerView = styled(
     backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
     zIndex: 2,
   }),
-  'ui-mapview.Marker.MarkerView'
+  'ui-mapview.Marker.InnerCircle'
 )(View);
 
-const MarkerRingView = styled(
+const OuterCircle = styled(
   ({ theme }) => ({
     width: theme.sizing.baseUnit * 1.5, // 24
     height: theme.sizing.baseUnit * 1.5, // 24
@@ -28,15 +28,15 @@ const MarkerRingView = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'ui-mapview.Marker.MarkerRingView'
+  'ui-mapview.Marker.OuterCircle'
 )(View);
 
 const Marker = memo(({ latitude, longitude, opacityStyle, onPress }) => (
   <DefaultMarker onPress={onPress} coordinate={{ latitude, longitude }}>
     <Animated.View style={opacityStyle}>
-      <MarkerRingView>
-        <MarkerView />
-      </MarkerRingView>
+      <OuterCircle>
+        <InnerCircle />
+      </OuterCircle>
     </Animated.View>
   </DefaultMarker>
 ));
