@@ -16,8 +16,9 @@ import {
   ActivityIndicator,
 } from '@apollosproject/ui-kit';
 import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
-
 import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
+import NavigationService from '../NavigationService';
+
 import ChangeAvatar from './ChangeAvatar';
 
 class UserSettings extends PureComponent {
@@ -127,21 +128,7 @@ class UserSettings extends PureComponent {
                                 await handleLogout();
                                 // This resets the navigation stack, and the navigates to the first auth screen.
                                 // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
-                                await this.props.navigation.dispatch(
-                                  StackActions.reset({
-                                    index: 0,
-                                    key: null,
-                                    actions: [
-                                      NavigationActions.navigate({
-                                        routeName: 'Auth',
-                                        action: NavigationActions.navigate({
-                                          routeName:
-                                            'AuthSMSPhoneEntryConnected',
-                                        }),
-                                      }),
-                                    ],
-                                  })
-                                );
+                                await NavigationService.resetToAuth();
                               }}
                             >
                               <Cell>
