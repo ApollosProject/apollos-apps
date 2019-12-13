@@ -1,3 +1,22 @@
+
+v1.2.5: December 10, 2019
+
+- Adds baseBorderRadius value to the defaultTheme (#1260) (c5a25dda)
+- Adds calendar spinner view on android by default (#1253) (d44ec6ea)
+- Allows During Onboarding the Skipping of Birthdate, Gender, or Both (#1255) (b7a6c952)
+
+- Upgrades Analytics Package (#1250) (356356c6)
+
+- Removes second give link. (#1252) (5433a986)
+- Removes willow specific field when creating new users (#1254) (7055e938)
+
+- Fixes auth android Back Button Width (#1251) (94747b3f)
+- Fixes Photo Permissions asking twice (#1259) (b9548974)
+- Fixes apollo server mismatched versions (#1261) (db32b636)
+- Fixes Campus Parts Error (#1258) (1cf8f0b6)
+- Fixes Profile Fields whitespace (#1256) (d45890da)
+- Fixes n+3 redis connections being created (#1248) (df8f4038)
+
 v1.2.4: November 20, 2019
 
 - Adds Optimistic Response for Location Selector (#1236) (bd2c2256)
