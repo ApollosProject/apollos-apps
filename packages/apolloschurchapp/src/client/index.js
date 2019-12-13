@@ -11,7 +11,7 @@ import NavigationService from '../NavigationService';
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
-const goToAuth = () => NavigationService.navigate('Auth');
+const goToAuth = () => NavigationService.resetToAuth();
 const wipeData = () => cache.writeData({ data: defaults });
 
 let resetStore;
@@ -21,8 +21,8 @@ const onAuthError = async () => {
     storeIsResetting = true;
     await resetStore();
   }
-  goToAuth();
   storeIsResetting = false;
+  goToAuth();
 };
 
 const errorLink = buildErrorLink(onAuthError);
