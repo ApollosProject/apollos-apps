@@ -1,5 +1,5 @@
 
-v1.2.4: December 10, 2019
+v1.2.5: December 10, 2019
 
 - Adds baseBorderRadius value to the defaultTheme (#1260) (c5a25dda)
 - Adds calendar spinner view on android by default (#1253) (d44ec6ea)
