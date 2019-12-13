@@ -84,6 +84,8 @@ jest.mock('@apollosproject/ui-notifications', () => ({
   NotificationsProvider: ({ children }) => children,
 }));
 
+jest.mock('@apollosproject/ui-mapview', () => 'MapView');
+
 jest.mock('@apollosproject/ui-media-player', () => ({
   MediaPlayerSpacer: ({ children }) => children,
   MediaPlayer: () => 'MediaPlayer',
@@ -96,7 +98,6 @@ jest.mock('react-native-video', () => 'Video');
 
 jest.mock('NativeEventEmitter');
 
-jest.mock('react-native-maps');
 jest.mock('DatePickerIOS', () => 'DatePicker');
 jest.mock('./src/client/index');
 

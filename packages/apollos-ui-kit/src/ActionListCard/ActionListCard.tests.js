@@ -63,10 +63,22 @@ const actions = [
       },
     },
   },
+  {
+    id: 'fakeId5',
+    parentChannel: {
+      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
+      name: 'NewSpring - Articles',
+    },
+    coverImage: {
+      sources: {
+        uri: 'https://picsum.photos/600/400?random',
+      },
+    },
+  },
 ];
 
 describe('ActionListCard', () => {
-  it('should render 4 items', () => {
+  it('should render 5 items', () => {
     const tree = renderer.create(
       <Providers>
         <ActionListCard onPress={() => {}} actions={actions} />

@@ -30,7 +30,8 @@ const H6 = compose(
 
 H6.propTypes = {
   padded: PropTypes.bool,
-  isLoading: PropTypes.bool, // display loading placeholder
+  isLoading: PropTypes.bool,
+  // display loading placeholder
   ...Text.propTypes,
 };
 

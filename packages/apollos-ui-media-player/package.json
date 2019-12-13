@@ -37,8 +37,8 @@
     ]
   },
   "peerDependencies": {
-    "@apollos-project/ui-kit": "*",
     "@apollosproject/react-native-airplay-btn": "*",
+    "@apollosproject/ui-kit": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",

@@ -14,6 +14,7 @@ describe('the ActionBar component', () => {
           <ActionBarItem onPress={() => {}} label="Settings" icon="settings" />
           <ActionBarItem onPress={() => {}} label="Groups" icon="groups" />
           <ActionBarItem onPress={() => {}} label="Like" icon="like" />
+          <ActionBarItem onPress={() => {}} />
         </ActionBar>
       </Providers>
     );
