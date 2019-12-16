@@ -57,7 +57,7 @@ exports[`the CardTile component number box should grow elegantly with larger num
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -340,7 +340,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
                   "backgroundColor": "#DBDBD9",
                   "borderRadius": 16,
                   "height": 12,
-                  "marginVertical": 2.6400000000000006,
+                  "marginVertical": 3,
                   "width": "50%",
                 }
               }
@@ -354,7 +354,7 @@ exports[`the CardTile component should render a loading skeleton for all availab
               "backgroundColor": "#DBDBD9",
               "borderRadius": 16,
               "height": 12,
-              "marginVertical": 2.6400000000000006,
+              "marginVertical": 3,
               "width": "50%",
             }
           }
@@ -422,7 +422,7 @@ exports[`the CardTile component should render a number box 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -514,7 +514,7 @@ exports[`the CardTile component should render card details 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -695,7 +695,7 @@ exports[`the CardTile component should render card details 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
               tint="#A5A5A5"
@@ -768,7 +768,7 @@ exports[`the CardTile component should render card details with date 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -949,7 +949,7 @@ exports[`the CardTile component should render card details with date 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
               tint="#A5A5A5"
@@ -964,7 +964,7 @@ exports[`the CardTile component should render card details with date 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
             }
           }
         >

@@ -203,9 +203,9 @@ exports[`The Auth PhoneEntry component should render 1`] = `
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -308,7 +308,7 @@ exports[`The Auth PhoneEntry component should render 1`] = `
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -378,7 +378,7 @@ exports[`The Auth PhoneEntry component should render 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -595,9 +595,9 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -700,7 +700,7 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -770,7 +770,7 @@ exports[`The Auth PhoneEntry component should render a custom smsPolicyInfo text
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -987,9 +987,9 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -1093,7 +1093,7 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -1163,7 +1163,7 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -1224,7 +1224,7 @@ exports[`The Auth PhoneEntry component should render as disabled 1`] = `
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -1441,9 +1441,9 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -1547,7 +1547,7 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -1617,7 +1617,7 @@ exports[`The Auth PhoneEntry component should render in a loading state 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -1889,9 +1889,9 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -1995,7 +1995,7 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -2065,7 +2065,7 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -2126,7 +2126,7 @@ exports[`The Auth PhoneEntry component should render in a next button 1`] = `
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -2343,9 +2343,9 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -2448,7 +2448,7 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -2517,7 +2517,7 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                     "color": "#c64f55",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                     "paddingTop": 8,
                   }
                 }
@@ -2531,7 +2531,7 @@ exports[`The Auth PhoneEntry component should render in an error state 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -2748,9 +2748,9 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -2853,7 +2853,7 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -2923,7 +2923,7 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -2944,7 +2944,7 @@ exports[`The Auth PhoneEntry component should render with a custom alternateLogi
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                 }
               }
             >
@@ -3170,9 +3170,9 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -3275,7 +3275,7 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -3345,7 +3345,7 @@ exports[`The Auth PhoneEntry component should render with a custom authTitleText
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -3562,9 +3562,9 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -3667,7 +3667,7 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -3737,7 +3737,7 @@ exports[`The Auth PhoneEntry component should render with a custom smsPromptText
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -3954,9 +3954,9 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -4060,7 +4060,7 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -4130,7 +4130,7 @@ exports[`The Auth PhoneEntry component should render with a value 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -4347,9 +4347,9 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -4452,7 +4452,7 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -4522,7 +4522,7 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             >
@@ -4543,7 +4543,7 @@ exports[`The Auth PhoneEntry component should render with an alternate login opt
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                 }
               }
             >

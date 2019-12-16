@@ -8,7 +8,8 @@ exports[`ScriptureConnected component renders without errors 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -18,7 +19,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -30,7 +31,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -41,7 +42,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
   <View
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >

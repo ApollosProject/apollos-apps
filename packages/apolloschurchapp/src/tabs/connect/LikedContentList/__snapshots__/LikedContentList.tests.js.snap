@@ -341,7 +341,7 @@ fragment themeFragment on ContentItem {
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                     }
                   }
                   tint="#A5A5A5"
@@ -356,7 +356,7 @@ fragment themeFragment on ContentItem {
                   "color": "#505050",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
             />

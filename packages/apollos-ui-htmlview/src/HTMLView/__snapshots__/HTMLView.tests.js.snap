@@ -4,7 +4,7 @@ exports[`the HTMLView component should handle wierdly formatted nested line brea
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -33,7 +33,7 @@ exports[`the HTMLView component should handle wierdly formatted nested line brea
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -74,7 +74,7 @@ exports[`the HTMLView component should not render an image inside an anchor 1`] 
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -108,7 +108,7 @@ exports[`the HTMLView component should render a block quote 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -116,7 +116,7 @@ exports[`the HTMLView component should render a block quote 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -144,9 +144,9 @@ exports[`the HTMLView component should render a block quote 1`] = `
           "borderBottomWidth": 0.5,
           "borderColor": "#A5A5A5",
           "borderTopWidth": 0.5,
-          "marginVertical": 46.08,
+          "marginVertical": 48,
           "paddingHorizontal": 16,
-          "paddingVertical": 34.56,
+          "paddingVertical": 36,
         }
       }
     >
@@ -164,7 +164,7 @@ exports[`the HTMLView component should render a div as a View 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -195,7 +195,7 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -203,7 +203,7 @@ exports[`the HTMLView component should render a line break (br) 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -232,7 +232,7 @@ exports[`the HTMLView component should render a link 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -240,7 +240,7 @@ exports[`the HTMLView component should render a link 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -283,7 +283,7 @@ exports[`the HTMLView component should render a list 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -291,7 +291,7 @@ exports[`the HTMLView component should render a list 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -299,7 +299,7 @@ exports[`the HTMLView component should render a list 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -354,7 +354,7 @@ exports[`the HTMLView component should render a list 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -414,7 +414,7 @@ exports[`the HTMLView component should render a loading state 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -521,7 +521,7 @@ exports[`the HTMLView component should render a paragraph 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -529,7 +529,7 @@ exports[`the HTMLView component should render a paragraph 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -558,7 +558,7 @@ exports[`the HTMLView component should render an H1 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -571,7 +571,7 @@ exports[`the HTMLView component should render an H1 1`] = `
           "fontFamily": "InterUI-Black",
           "fontSize": 43,
           "lineHeight": 49.45,
-          "paddingVertical": 46.44,
+          "paddingVertical": 48.38,
         }
       }
     >
@@ -589,7 +589,7 @@ exports[`the HTMLView component should render an H2 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -602,7 +602,7 @@ exports[`the HTMLView component should render an H2 1`] = `
           "fontFamily": "InterUI-Black",
           "fontSize": 36,
           "lineHeight": 41.4,
-          "paddingBottom": 20,
+          "paddingBottom": 20.02,
           "paddingTop": 24,
         }
       }
@@ -621,7 +621,7 @@ exports[`the HTMLView component should render an H3 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -634,8 +634,8 @@ exports[`the HTMLView component should render an H3 1`] = `
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
-          "paddingBottom": 17.28,
-          "paddingTop": 25.92,
+          "paddingBottom": 18,
+          "paddingTop": 27,
         }
       }
     >
@@ -653,7 +653,7 @@ exports[`the HTMLView component should render an H4 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -665,9 +665,9 @@ exports[`the HTMLView component should render an H4 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
-          "paddingBottom": 11.52,
-          "paddingTop": 15.21,
+          "lineHeight": 24,
+          "paddingBottom": 12,
+          "paddingTop": 15.84,
         }
       }
     >
@@ -685,7 +685,7 @@ exports[`the HTMLView component should render an H5 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -697,9 +697,9 @@ exports[`the HTMLView component should render an H5 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
-          "paddingBottom": 10.08,
-          "paddingTop": 13.31,
+          "lineHeight": 21,
+          "paddingBottom": 10.5,
+          "paddingTop": 13.86,
         }
       }
     >
@@ -717,7 +717,7 @@ exports[`the HTMLView component should render an H6 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -729,8 +729,8 @@ exports[`the HTMLView component should render an H6 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
-          "paddingBottom": 8.64,
+          "lineHeight": 18,
+          "paddingBottom": 9,
         }
       }
     >
@@ -748,7 +748,7 @@ exports[`the HTMLView component should render an image 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -795,7 +795,7 @@ exports[`the HTMLView component should render bold text 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -803,7 +803,7 @@ exports[`the HTMLView component should render bold text 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -845,7 +845,7 @@ exports[`the HTMLView component should render bold text using <b> 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -853,7 +853,7 @@ exports[`the HTMLView component should render bold text using <b> 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -895,7 +895,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -903,7 +903,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -944,7 +944,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -968,7 +968,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -992,7 +992,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1020,16 +1020,16 @@ exports[`the HTMLView component should render example HTML 1`] = `
           "borderBottomWidth": 0.5,
           "borderColor": "#A5A5A5",
           "borderTopWidth": 0.5,
-          "marginVertical": 46.08,
+          "marginVertical": 48,
           "paddingHorizontal": 16,
-          "paddingVertical": 34.56,
+          "paddingVertical": 36,
         }
       }
     >
       <View
         style={
           Object {
-            "paddingBottom": 17.28,
+            "paddingBottom": 18,
           }
         }
       >
@@ -1055,7 +1055,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1084,8 +1084,8 @@ exports[`the HTMLView component should render example HTML 1`] = `
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
-          "paddingBottom": 17.28,
-          "paddingTop": 25.92,
+          "paddingBottom": 18,
+          "paddingTop": 27,
         }
       }
     >
@@ -1098,7 +1098,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1139,7 +1139,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1163,7 +1163,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1191,16 +1191,16 @@ exports[`the HTMLView component should render example HTML 1`] = `
           "borderBottomWidth": 0.5,
           "borderColor": "#A5A5A5",
           "borderTopWidth": 0.5,
-          "marginVertical": 46.08,
+          "marginVertical": 48,
           "paddingHorizontal": 16,
-          "paddingVertical": 34.56,
+          "paddingVertical": 36,
         }
       }
     >
       <View
         style={
           Object {
-            "paddingBottom": 17.28,
+            "paddingBottom": 18,
           }
         }
       >
@@ -1226,7 +1226,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1250,7 +1250,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1258,7 +1258,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -1313,7 +1313,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -1368,7 +1368,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -1423,7 +1423,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1447,7 +1447,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1476,8 +1476,8 @@ exports[`the HTMLView component should render example HTML 1`] = `
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
-          "paddingBottom": 17.28,
-          "paddingTop": 25.92,
+          "paddingBottom": 18,
+          "paddingTop": 27,
         }
       }
     >
@@ -1490,7 +1490,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1529,7 +1529,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "paddingBottom": 8.64,
+          "paddingBottom": 9,
         }
       }
     >
@@ -1584,7 +1584,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "paddingBottom": 8.64,
+          "paddingBottom": 9,
         }
       }
     >
@@ -1639,7 +1639,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "paddingBottom": 8.64,
+          "paddingBottom": 9,
         }
       }
     >
@@ -1694,7 +1694,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "paddingBottom": 8.64,
+          "paddingBottom": 9,
         }
       }
     >
@@ -1748,7 +1748,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1772,7 +1772,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1801,7 +1801,7 @@ exports[`the HTMLView component should render handle relative links 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -1809,7 +1809,7 @@ exports[`the HTMLView component should render handle relative links 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1852,7 +1852,7 @@ exports[`the HTMLView component should render italic text 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -1860,7 +1860,7 @@ exports[`the HTMLView component should render italic text 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1902,7 +1902,7 @@ exports[`the HTMLView component should render italic text using <i> 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -1910,7 +1910,7 @@ exports[`the HTMLView component should render italic text using <i> 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >
@@ -1952,7 +1952,7 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -1960,7 +1960,7 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 17.28,
+          "paddingBottom": 18,
         }
       }
     >

@@ -52,7 +52,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
                 "height": 12,
-                "marginVertical": 2.6400000000000006,
+                "marginVertical": 3,
                 "width": "50%",
               }
             }
@@ -83,7 +83,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
                   "height": 12,
-                  "marginVertical": 2.6400000000000006,
+                  "marginVertical": 3,
                   "width": "50%",
                 }
               }
@@ -127,7 +127,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
                   "height": 12,
-                  "marginVertical": 2.6400000000000006,
+                  "marginVertical": 3,
                   "width": "50%",
                 }
               }
@@ -139,7 +139,7 @@ exports[`the PassView component should display loading placeholders 1`] = `
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
                   "height": 14,
-                  "marginVertical": 3.08,
+                  "marginVertical": 3.5,
                   "width": "60%",
                 }
               }
@@ -203,7 +203,7 @@ exports[`the PassView component should render 1`] = `
                 "color": null,
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "textAlign": "center",
               }
             }
@@ -329,7 +329,7 @@ exports[`the PassView component should render 1`] = `
                     "color": null,
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                   }
                 }
               >
@@ -350,7 +350,7 @@ exports[`the PassView component should render 1`] = `
                     "color": "rgb(248, 247, 244)",
                     "fontFamily": "InterUI-Medium",
                     "fontSize": 14,
-                    "lineHeight": 20.16,
+                    "lineHeight": 21,
                   }
                 }
               >
@@ -379,7 +379,7 @@ exports[`the PassView component should render 1`] = `
                     "color": null,
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                   }
                 }
               >
@@ -400,7 +400,7 @@ exports[`the PassView component should render 1`] = `
                     "color": "rgb(248, 247, 244)",
                     "fontFamily": "InterUI-Medium",
                     "fontSize": 14,
-                    "lineHeight": 20.16,
+                    "lineHeight": 21,
                   }
                 }
               >

@@ -219,7 +219,7 @@ exports[`The Auth Verification component should render 1`] = `
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -381,9 +381,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -486,7 +486,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -777,7 +777,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -939,9 +939,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -1045,7 +1045,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -1164,7 +1164,7 @@ Stand by…
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -1397,7 +1397,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -1559,9 +1559,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -1665,7 +1665,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -2011,7 +2011,7 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -2173,9 +2173,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -2279,7 +2279,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -2398,7 +2398,7 @@ Stand by…
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -2631,7 +2631,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -2793,9 +2793,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -2898,7 +2898,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -2967,7 +2967,7 @@ Stand by…
                     "color": "#c64f55",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                     "paddingTop": 8,
                   }
                 }
@@ -3202,7 +3202,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -3364,9 +3364,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -3469,7 +3469,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -3760,7 +3760,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -3922,9 +3922,9 @@ Stand by…
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -4028,7 +4028,7 @@ Stand by…
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -4319,7 +4319,7 @@ exports[`The Auth Verification component should render with custom confirmationT
                       "fontSize": 14,
                       "fontStyle": null,
                       "fontWeight": null,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -4480,9 +4480,9 @@ exports[`The Auth Verification component should render with custom confirmationT
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 10.5,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -4585,7 +4585,7 @@ exports[`The Auth Verification component should render with custom confirmationT
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }

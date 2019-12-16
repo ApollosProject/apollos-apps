@@ -190,7 +190,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -303,7 +303,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -462,7 +462,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -723,7 +723,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -835,7 +835,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -995,7 +995,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -1257,7 +1257,7 @@ Array [
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                 }
               }
             >
@@ -1369,7 +1369,7 @@ Array [
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -1529,7 +1529,7 @@ Array [
                             "color": "#505050",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 12,
-                            "lineHeight": 17.28,
+                            "lineHeight": 18,
                             "paddingVertical": 4,
                           }
                         }
@@ -1668,7 +1668,7 @@ Array [
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -1989,7 +1989,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -2101,7 +2101,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -2260,7 +2260,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -2521,7 +2521,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -2633,7 +2633,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -2792,7 +2792,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -3053,7 +3053,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -3165,7 +3165,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -3324,7 +3324,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -3585,7 +3585,7 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -3698,7 +3698,7 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }
@@ -3858,7 +3858,7 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                           "color": "#505050",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "paddingVertical": 4,
                         }
                       }

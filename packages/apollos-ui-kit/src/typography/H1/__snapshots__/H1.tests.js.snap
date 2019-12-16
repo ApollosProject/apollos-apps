@@ -54,7 +54,7 @@ exports[`the H1 component should render a loading state with correct positioning
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 43,
-      "marginVertical": 46.44,
+      "marginVertical": 48.38,
       "width": "100%",
     }
   }
@@ -85,7 +85,7 @@ exports[`the H1 component should render with correct padding 1`] = `
       "fontFamily": "InterUI-Black",
       "fontSize": 43,
       "lineHeight": 49.45,
-      "paddingVertical": 46.44,
+      "paddingVertical": 48.38,
     }
   }
 >

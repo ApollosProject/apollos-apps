@@ -17,8 +17,8 @@ const styles = styled(({ theme, bold, italic }) => {
   }
 
   return {
-    fontSize: theme.helpers.rem(0.875),
-    lineHeight: theme.helpers.verticalRhythm(1, 1.25),
+    fontSize: theme.helpers.rem(0.75),
+    lineHeight: theme.helpers.verticalRhythm(0.75),
     fontFamily: fontStack,
     color: theme.colors.text.primary,
   };

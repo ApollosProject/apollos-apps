@@ -60,7 +60,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -103,7 +103,7 @@ Array [
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -217,7 +217,7 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -260,7 +260,7 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
-                "lineHeight": 23.04,
+                "lineHeight": 24,
               }
             }
           >
@@ -376,7 +376,7 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -419,7 +419,7 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
-                "lineHeight": 23.04,
+                "lineHeight": 24,
               }
             }
           >
@@ -491,7 +491,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -551,7 +551,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -624,7 +624,7 @@ exports[`The Onboarding LocationFinder component should render a custom descript
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -667,7 +667,7 @@ exports[`The Onboarding LocationFinder component should render a custom descript
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
-                "lineHeight": 23.04,
+                "lineHeight": 24,
               }
             }
           >
@@ -739,7 +739,7 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -782,7 +782,7 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
-                "lineHeight": 23.04,
+                "lineHeight": 24,
               }
             }
           >
@@ -855,7 +855,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -967,7 +967,7 @@ Array [
                         "alignItems": "stretch",
                         "flexDirection": "row",
                         "flexWrap": "nowrap",
-                        "height": 20.16,
+                        "height": 21,
                         "justifyContent": "space-between",
                       }
                     }
@@ -978,7 +978,7 @@ Array [
                           "color": "#303030",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
-                          "lineHeight": 20.16,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -991,7 +991,7 @@ Array [
                         "color": "#505050",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                       }
                     }
                   >
@@ -1076,7 +1076,7 @@ South Barrington, IL 60010-6143
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -1266,7 +1266,7 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -1326,7 +1326,7 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >

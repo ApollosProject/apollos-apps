@@ -313,7 +313,7 @@ Array [
                           "color": "#505050",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
-                          "lineHeight": 20.16,
+                          "lineHeight": 21,
                         }
                       }
                     >
@@ -426,7 +426,7 @@ Array [
                                     "color": "#505050",
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 12,
-                                    "lineHeight": 17.28,
+                                    "lineHeight": 18,
                                     "paddingVertical": 4,
                                   }
                                 }
@@ -587,7 +587,7 @@ Array [
                                     "color": "#505050",
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 12,
-                                    "lineHeight": 17.28,
+                                    "lineHeight": 18,
                                     "paddingVertical": 4,
                                   }
                                 }
@@ -860,7 +860,7 @@ Array [
                         "color": "#505050",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   >

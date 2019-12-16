@@ -161,7 +161,7 @@ exports[`the TableView Component should render 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 8,
             "paddingRight": 8,
           }
@@ -320,7 +320,7 @@ exports[`the TableView Component should render 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 8,
             "paddingRight": 8,
           }
@@ -391,7 +391,7 @@ exports[`the TableView Component should render 1`] = `
                       "color": "#505050",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingVertical": 4,
                     }
                   }
@@ -466,7 +466,7 @@ exports[`the TableView Component should render 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 0,
             "paddingRight": 8,
           }
@@ -508,7 +508,7 @@ exports[`the TableView Component should render 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 0,
             "paddingRight": 8,
           }

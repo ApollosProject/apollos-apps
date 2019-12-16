@@ -10,7 +10,7 @@ exports[`the UIText component should accept additional props 1`] = `
       "fontSize": 14,
       "fontStyle": null,
       "fontWeight": null,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -27,7 +27,7 @@ exports[`the UIText component should accept and render passed in styles 1`] = `
       "fontSize": 14,
       "fontStyle": null,
       "fontWeight": null,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -43,7 +43,7 @@ exports[`the UIText component should render a loading state 1`] = `
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 14,
-      "marginVertical": 3.08,
+      "marginVertical": 3.5,
       "width": "40%",
     }
   }
@@ -60,7 +60,7 @@ exports[`the UIText component should render as bold 1`] = `
       "fontSize": 14,
       "fontStyle": null,
       "fontWeight": "700",
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -79,7 +79,7 @@ exports[`the UIText component should render as bold italic 1`] = `
       "fontSize": 14,
       "fontStyle": "italic",
       "fontWeight": "700",
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -97,7 +97,7 @@ exports[`the UIText component should render as italic 1`] = `
       "fontSize": 14,
       "fontStyle": "italic",
       "fontWeight": null,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -114,7 +114,7 @@ exports[`the UIText component should render correctly 1`] = `
       "fontSize": 14,
       "fontStyle": null,
       "fontWeight": null,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >

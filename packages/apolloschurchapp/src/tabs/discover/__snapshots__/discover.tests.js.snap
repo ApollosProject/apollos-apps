@@ -463,7 +463,7 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                             "fontSize": 14,
                             "fontStyle": null,
                             "fontWeight": null,
-                            "lineHeight": 20.16,
+                            "lineHeight": 21,
                             "paddingLeft": 16,
                           }
                         }
@@ -875,7 +875,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                             "color": "#303030",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
-                            "lineHeight": 20.16,
+                            "lineHeight": 21,
                           }
                         }
                       >
@@ -914,7 +914,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                               "color": "#505050",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
-                              "lineHeight": 17.28,
+                              "lineHeight": 18,
                             }
                           }
                         >
@@ -1202,7 +1202,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -1217,8 +1217,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -1391,7 +1391,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -1406,8 +1406,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -1580,7 +1580,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -1595,8 +1595,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -1639,7 +1639,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                             "color": "#303030",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
-                            "lineHeight": 20.16,
+                            "lineHeight": 21,
                           }
                         }
                       >
@@ -1678,7 +1678,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                               "color": "#505050",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
-                              "lineHeight": 17.28,
+                              "lineHeight": 18,
                             }
                           }
                         >
@@ -1915,7 +1915,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -1930,8 +1930,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -2076,7 +2076,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -2091,8 +2091,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -2237,7 +2237,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -2252,8 +2252,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -2297,7 +2297,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                             "color": "#303030",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
-                            "lineHeight": 20.16,
+                            "lineHeight": 21,
                           }
                         }
                       >
@@ -2336,7 +2336,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "color": "#505050",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
-                              "lineHeight": 17.28,
+                              "lineHeight": 18,
                             }
                           }
                         >
@@ -3088,7 +3088,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                             "color": "#303030",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
-                            "lineHeight": 20.16,
+                            "lineHeight": 21,
                           }
                         }
                       >
@@ -3127,7 +3127,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "color": "#505050",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
-                              "lineHeight": 17.28,
+                              "lineHeight": 18,
                             }
                           }
                         >
@@ -3879,7 +3879,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                             "color": "#303030",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
-                            "lineHeight": 20.16,
+                            "lineHeight": 21,
                           }
                         }
                       >
@@ -3918,7 +3918,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "color": "#505050",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
-                              "lineHeight": 17.28,
+                              "lineHeight": 18,
                             }
                           }
                         >
@@ -4207,7 +4207,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -4222,8 +4222,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -4396,7 +4396,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -4411,8 +4411,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }
@@ -4585,7 +4585,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "color": "#303030",
                                       "fontFamily": "InterUI-Medium",
                                       "fontSize": 14,
-                                      "lineHeight": 20.16,
+                                      "lineHeight": 21,
                                     }
                                   }
                                 >
@@ -4600,8 +4600,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     Object {
                                       "color": "#A5A5A5",
                                       "fontFamily": "InterUI-Regular",
-                                      "fontSize": 14,
-                                      "lineHeight": 20,
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
                                       "paddingTop": 8,
                                     }
                                   }

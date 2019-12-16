@@ -228,7 +228,7 @@ exports[`the ActionCard component should render an action 1`] = `
                 "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#00676D"
@@ -409,7 +409,7 @@ exports[`the ActionCard component should render an action 1`] = `
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "paddingLeft": 8,
               "textAlign": "center",
             }
@@ -598,7 +598,7 @@ exports[`the ActionCard component should render an icon and label 1`] = `
                 "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#00676D"

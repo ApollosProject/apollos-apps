@@ -139,9 +139,9 @@ exports[`TabView Component renders 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
-                      "lineHeight": 23.04,
-                      "paddingBottom": 11.52,
-                      "paddingTop": 15.21,
+                      "lineHeight": 24,
+                      "paddingBottom": 12,
+                      "paddingTop": 15.84,
                     }
                   }
                 >
@@ -195,9 +195,9 @@ exports[`TabView Component renders 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
-                      "lineHeight": 23.04,
-                      "paddingBottom": 11.52,
-                      "paddingTop": 15.21,
+                      "lineHeight": 24,
+                      "paddingBottom": 12,
+                      "paddingTop": 15.84,
                     }
                   }
                 >

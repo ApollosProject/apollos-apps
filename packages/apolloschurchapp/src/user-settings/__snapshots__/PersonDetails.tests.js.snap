@@ -126,7 +126,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#505050",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingVertical": 4,
                     }
                   }
@@ -283,7 +283,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#505050",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingVertical": 4,
                     }
                   }
@@ -443,7 +443,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                       "color": "#505050",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingVertical": 4,
                     }
                   }
@@ -569,7 +569,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >

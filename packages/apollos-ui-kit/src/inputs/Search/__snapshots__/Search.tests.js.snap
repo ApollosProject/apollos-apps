@@ -356,7 +356,7 @@ exports[`The Search Input component should render 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -725,7 +725,7 @@ exports[`The Search Input component should render as disabled 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -1093,7 +1093,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -1461,7 +1461,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -1829,7 +1829,7 @@ exports[`The Search Input component should render with a custom screenBackground
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }

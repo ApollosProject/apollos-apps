@@ -174,7 +174,7 @@ exports[`the Card component should render 1`] = `
                 "color": "#A5A5A5",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#A5A5A5"
@@ -189,7 +189,7 @@ exports[`the Card component should render 1`] = `
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
           }
         }
       />
@@ -386,7 +386,7 @@ exports[`the Card component should render and not show the error message 1`] = `
                 "color": "#A5A5A5",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#A5A5A5"
@@ -401,7 +401,7 @@ exports[`the Card component should render and not show the error message 1`] = `
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
           }
         }
       />
@@ -598,7 +598,7 @@ exports[`the Card component should render with a custom message 1`] = `
                 "color": "#A5A5A5",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#A5A5A5"
@@ -613,7 +613,7 @@ exports[`the Card component should render with a custom message 1`] = `
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
           }
         }
       />
@@ -810,7 +810,7 @@ exports[`the Card component should render with an error inside an object 1`] = `
                 "color": "#A5A5A5",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#A5A5A5"
@@ -825,7 +825,7 @@ exports[`the Card component should render with an error inside an object 1`] = `
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
           }
         }
       >
@@ -1024,7 +1024,7 @@ exports[`the Card component should render with an error message inside an object
                 "color": "#A5A5A5",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
               }
             }
             tint="#A5A5A5"
@@ -1039,7 +1039,7 @@ exports[`the Card component should render with an error message inside an object
             "color": "#505050",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
           }
         }
       >

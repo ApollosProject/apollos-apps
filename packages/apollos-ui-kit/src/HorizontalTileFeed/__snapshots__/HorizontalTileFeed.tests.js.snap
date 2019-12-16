@@ -134,7 +134,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -234,7 +234,7 @@ exports[`The HorizontalTileFeed component renders correctly 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >

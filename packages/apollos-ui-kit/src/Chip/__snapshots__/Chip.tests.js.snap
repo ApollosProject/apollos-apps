@@ -30,7 +30,7 @@ exports[`The Chip component should be selected 1`] = `
         "fontFamily": "InterUI-Bold",
         "fontSize": 12,
         "justifyContent": "center",
-        "lineHeight": 17.28,
+        "lineHeight": 18,
         "paddingLeft": null,
         "textAlign": "center",
       }
@@ -186,7 +186,7 @@ exports[`The Chip component should render an icon 1`] = `
         "fontFamily": "InterUI-Bold",
         "fontSize": 12,
         "justifyContent": "center",
-        "lineHeight": 17.28,
+        "lineHeight": 18,
         "paddingLeft": 8,
         "textAlign": "center",
       }
@@ -245,7 +245,7 @@ exports[`The Chip component should render correctly 1`] = `
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "justifyContent": "center",
-          "lineHeight": 17.28,
+          "lineHeight": 18,
           "paddingLeft": null,
           "textAlign": "center",
         }
@@ -289,7 +289,7 @@ exports[`The Chip component should render positioned for a chipList 1`] = `
         "fontFamily": "InterUI-Bold",
         "fontSize": 12,
         "justifyContent": "center",
-        "lineHeight": 17.28,
+        "lineHeight": 18,
         "paddingLeft": null,
         "textAlign": "center",
       }

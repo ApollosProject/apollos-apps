@@ -165,7 +165,7 @@ exports[`The Onboarding Slide component should render a custom icon 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     />
@@ -214,7 +214,7 @@ exports[`The Onboarding Slide component should render a description 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     >
@@ -286,7 +286,7 @@ exports[`The Onboarding Slide component should render a loading state 1`] = `
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 14,
-          "marginVertical": 3.08,
+          "marginVertical": 3.5,
           "width": "60%",
         }
       }
@@ -338,7 +338,7 @@ exports[`The Onboarding Slide component should render a title 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     />
@@ -389,7 +389,7 @@ exports[`The Onboarding Slide component should render accept additionall props 1
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     />
@@ -565,7 +565,7 @@ exports[`The Onboarding Slide component should render an icon 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     />
@@ -614,7 +614,7 @@ exports[`The Onboarding Slide component should render children alone 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     />
@@ -668,7 +668,7 @@ exports[`The Onboarding Slide component should render with children 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
-          "lineHeight": 20.16,
+          "lineHeight": 21,
         }
       }
     >

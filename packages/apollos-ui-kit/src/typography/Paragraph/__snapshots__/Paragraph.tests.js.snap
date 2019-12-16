@@ -4,7 +4,7 @@ exports[`the UIText component should render a loading state 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >
@@ -51,7 +51,7 @@ exports[`the UIText component should render correctly 1`] = `
 <View
   style={
     Object {
-      "paddingBottom": 17.28,
+      "paddingBottom": 18,
     }
   }
 >

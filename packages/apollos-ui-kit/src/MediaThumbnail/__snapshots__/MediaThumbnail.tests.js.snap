@@ -735,7 +735,7 @@ exports[`the MediaThumbnail component should render 1`] = `
             "color": "#F8F7F4",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
