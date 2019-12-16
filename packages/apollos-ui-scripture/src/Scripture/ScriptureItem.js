@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import { Placeholder, H4, H6 } from '@apollosproject/ui-kit';
+import { styled, Placeholder, H4, H6 } from '@apollosproject/ui-kit';
 
 import { LegalText } from './typography';
 import ScriptureHTMLView from './ScriptureHTMLView';
+
+const Reference = styled(({ theme }) => ({
+  paddingBottom: theme.helpers.verticalRhythm(0.5),
+}))(H4);
 
 const ScriptureItem = ({ reference, html, copyright, isLoading, version }) => (
   <Placeholder.Paragraph
@@ -15,10 +19,10 @@ const ScriptureItem = ({ reference, html, copyright, isLoading, version }) => (
     firstLineWidth={'40%'}
   >
     <View>
-      <H4>
+      <Reference>
         <H4>{reference}</H4>
         {version ? <H6> {version}</H6> : null}
-      </H4>
+      </Reference>
       <ScriptureHTMLView>{html}</ScriptureHTMLView>
       {copyright === 'PUBLIC DOMAIN' ? null : (
         <LegalText>{copyright}</LegalText>
