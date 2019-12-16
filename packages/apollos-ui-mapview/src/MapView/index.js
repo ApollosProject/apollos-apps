@@ -1,45 +1,43 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import RNMapView from 'react-native-maps';
 import { Animated, Dimensions, Platform, PixelRatio } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import RNMapView from 'react-native-maps';
+
 import { debounce } from 'lodash';
 
-import {
-  Button,
-  Touchable,
-  PaddedView,
-  FlexedView,
-  styled,
-  withTheme,
-  CampusCard,
-} from '@apollosproject/ui-kit';
+import Button from '@apollosproject/ui-kit/src/Button';
+import CampusCard from '@apollosproject/ui-kit/src/CampusCard';
+import FlexedView from '@apollosproject/ui-kit/src/FlexedView';
+import PaddedView from '@apollosproject/ui-kit/src/PaddedView';
+import Touchable from '@apollosproject/ui-kit/src/Touchable';
+import styled from '@apollosproject/ui-kit/src/styled';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
+import { withTheme, withIsLoading } from '@apollosproject/ui-kit';
 
-import Marker from './Marker';
+import Marker from '../Marker';
 
-const getCampusAddress = (campus) =>
-  `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
-
-/* TODO: remove magic number. `theme.sizing.baseUnit * 2.25` This width value is a brittle
- * calculation of width minus `CampusCard` margins */
-const CARD_WIDTH = Dimensions.get('window').width - 36;
-
-const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
+export const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
   <RNMapView ref={mapRef} {...props} />
 ));
 
-const Footer = styled({
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  right: 0,
-})(SafeAreaView);
+const Footer = styled(
+  {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+  'ui-mapview.MapView.Footer'
+)(SafeAreaView);
 
-const StyledCampusCard = styled(({ theme }) => ({
-  width: CARD_WIDTH,
-  marginHorizontal: theme.sizing.baseUnit / 4,
-}))(CampusCard);
+const StyledCampusCard = styled(
+  ({ theme, cardWidth }) => ({
+    width: cardWidth,
+    marginHorizontal: theme.sizing.baseUnit / 4,
+  }),
+  'ui-mapview.MapView.StyledCampusCard'
+)(CampusCard);
 
 class MapView extends Component {
   static propTypes = {
@@ -72,11 +70,33 @@ class MapView extends Component {
     navigation: PropTypes.shape({
       goBack: PropTypes.func,
     }),
+    // eslint-disable-next-line react/no-unused-prop-types
+    Marker: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
+    isLoading: PropTypes.bool,
   };
 
-  animation = new Animated.Value(0);
+  static defaultProps = {
+    Marker,
+  };
 
-  scrollView = null;
+  constructor(props) {
+    super();
+
+    // sets width of cards to be full width of the screen minus a bit for spacing
+    this.cardWidth =
+      Dimensions.get('window').width - props.theme.sizing.baseUnit * 2.25;
+
+    this.animation = new Animated.Value(0);
+    this.scrollView = null;
+
+    // added spacing to set the scroll position of the card so other cards in the horizontal list are seen slightly to the left or right.
+    this.cardScrollPositionOffset =
+      this.cardWidth + props.theme.sizing.baseUnit * 0.5;
+  }
 
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
@@ -92,9 +112,13 @@ class MapView extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.animation.removeListener(this.updateCoordinates);
+  }
+
   get currentCampus() {
     const cardIndex = Math.floor(
-      this.previousScrollPosition / CARD_WIDTH + 0.3
+      this.previousScrollPosition / this.cardWidth + 0.3
     ); // animate 30% away from landing on the next item;
     return this.sortedCampuses[cardIndex];
   }
@@ -104,19 +128,25 @@ class MapView extends Component {
     if (!this.props.currentCampus) {
       return campuses;
     }
+    // returns your selected current campus to be first in card list if it exists
     return [
       currentCampus,
       ...campuses.filter(({ id }) => id !== currentCampus.id),
     ];
   }
 
+  getCampusAddress = (campus) =>
+    `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
+
   scrollToIndex = (index) => {
+    const cardScrollPosition = index * this.cardScrollPositionOffset;
+
     this.scrollView.getNode().scrollTo({
-      x: index * (CARD_WIDTH + 8),
+      x: cardScrollPosition,
       y: 0,
       animated: true,
     });
-    this.updateCoordinates({ value: index * (CARD_WIDTH + 8) });
+    this.updateCoordinates({ value: cardScrollPosition });
   };
 
   updateCoordinates = ({ value }) => {
@@ -125,11 +155,11 @@ class MapView extends Component {
     const { userLocation } = this.props;
     // campus card height + some padding
 
-    const bottomPadding = 100 + this.props.theme.sizing.baseUnit * 12;
+    const bottomPadding = this.props.theme.sizing.baseUnit * 18.25;
     const edgePadding = {
-      top: 100,
-      left: 100,
-      right: 100,
+      top: this.props.theme.sizing.baseUnit * 6.25,
+      left: this.props.theme.sizing.baseUnit * 6.25,
+      right: this.props.theme.sizing.baseUnit * 6.25,
       bottom:
         Platform.OS === 'android'
           ? // NOTE: android bug
@@ -149,12 +179,13 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect } = this.props;
+    const { onLocationSelect, isLoading } = this.props;
+
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
-        (index - 1) * CARD_WIDTH,
-        index * CARD_WIDTH,
-        (index + 1) * CARD_WIDTH,
+        (index - 1) * this.cardWidth,
+        index * this.cardWidth,
+        (index + 1) * this.cardWidth,
       ];
       const opacity = this.animation.interpolate({
         inputRange,
@@ -178,7 +209,7 @@ class MapView extends Component {
               opacity: interpolations[index].opacity,
             };
             return (
-              <Marker
+              <this.props.Marker
                 onPress={() => this.scrollToIndex(index)}
                 key={campus.id}
                 opacityStyle={campusOpacity}
@@ -192,7 +223,7 @@ class MapView extends Component {
           <Animated.ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            snapToInterval={CARD_WIDTH + 8} // account for padding
+            snapToInterval={this.cardScrollPositionOffset}
             snapToAlignment={'start'}
             decelerationRate={'fast'}
             contentContainerStyle={{
@@ -221,8 +252,10 @@ class MapView extends Component {
                 <StyledCampusCard
                   distance={campus.distanceFromLocation}
                   title={campus.name}
-                  description={getCampusAddress(campus)}
+                  description={this.getCampusAddress(campus)}
                   images={[campus.image]}
+                  cardWidth={this.cardWidth}
+                  isLoading={isLoading}
                 />
               </Touchable>
             ))}
@@ -245,4 +278,4 @@ class MapView extends Component {
   }
 }
 
-export default withTheme()(MapView);
+export default withTheme()(withIsLoading(MapView));
