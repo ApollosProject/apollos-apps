@@ -9,6 +9,7 @@ exports[`ScriptureConnected component renders without errors 1`] = `
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
         "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >

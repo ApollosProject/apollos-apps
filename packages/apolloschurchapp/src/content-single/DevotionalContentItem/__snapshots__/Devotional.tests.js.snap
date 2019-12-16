@@ -530,6 +530,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 16,
                                     "lineHeight": 24,
+                                    "paddingBottom": 12,
                                   }
                                 }
                               >
@@ -645,6 +646,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 16,
                                     "lineHeight": 24,
+                                    "paddingBottom": 12,
                                   }
                                 }
                               >
