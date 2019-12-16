@@ -1,9 +1,9 @@
 import React, { PureComponent, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { Linking, View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
 
-import { Paragraph as ParagraphPlaceholder } from '@apollosproject/ui-kit';
+import { Paragraph } from '@apollosproject/ui-kit';
 
 import defaultRenderer, { wrapTextChildren } from './defaultRenderer';
 
@@ -12,11 +12,13 @@ export { defaultRenderer, wrapTextChildren };
 class HTMLView extends PureComponent {
   static propTypes = {
     children: PropTypes.string,
-    renderer: PropTypes.func,
     isLoading: PropTypes.bool,
+    onPressAnchor: PropTypes.func,
+    renderer: PropTypes.func,
   };
 
   static defaultProps = {
+    onPressAnchor: (url) => Linking.openURL(url),
     renderer: defaultRenderer,
   };
 
@@ -62,13 +64,21 @@ class HTMLView extends PureComponent {
         let children = [];
         if (node.children) children = this.renderDom(node.children);
 
-        let renderedNode = this.props.renderer(node, { children });
+        let renderedNode = this.props.renderer(
+          node,
+          { children },
+          this.props.onPressAnchor
+        );
         if (
           !renderedNode &&
           renderedNode !== null &&
           this.props.renderer !== defaultRenderer
         ) {
-          renderedNode = defaultRenderer(node, { children });
+          renderedNode = defaultRenderer(
+            node,
+            { children },
+            this.props.onPressAnchor
+          );
         }
 
         if (renderedNode && !Array.isArray(renderedNode)) {
@@ -81,9 +91,12 @@ class HTMLView extends PureComponent {
 
   render() {
     return (
-      <ParagraphPlaceholder lineNumber={8} onReady={!this.props.isLoading}>
+      <Paragraph
+        lineNumber={8}
+        isLoading={this.props.isLoading && !this.state.parsed}
+      >
         <View>{this.state.parsed}</View>
-      </ParagraphPlaceholder>
+      </Paragraph>
     );
   }
 }

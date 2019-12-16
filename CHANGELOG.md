@@ -1,3 +1,60 @@
+
+v1.2.5: December 10, 2019
+
+- Adds baseBorderRadius value to the defaultTheme (#1260) (c5a25dda)
+- Adds calendar spinner view on android by default (#1253) (d44ec6ea)
+- Allows During Onboarding the Skipping of Birthdate, Gender, or Both (#1255) (b7a6c952)
+
+- Upgrades Analytics Package (#1250) (356356c6)
+
+- Removes second give link. (#1252) (5433a986)
+- Removes willow specific field when creating new users (#1254) (7055e938)
+
+- Fixes auth android Back Button Width (#1251) (94747b3f)
+- Fixes Photo Permissions asking twice (#1259) (b9548974)
+- Fixes apollo server mismatched versions (#1261) (db32b636)
+- Fixes Campus Parts Error (#1258) (1cf8f0b6)
+- Fixes Profile Fields whitespace (#1256) (d45890da)
+- Fixes n+3 redis connections being created (#1248) (df8f4038)
+
+v1.2.4: November 20, 2019
+
+- Adds Optimistic Response for Location Selector (#1236) (bd2c2256)
+- Adds Scripture Selection to Content (#1178) (eaeb3824)
+- Adds Total Count to Paginated Queries (#1215) (f9422a1a)
+- Adds Algolia Delta Sync (#1210) (eabc622f)
+- Adds additional server analytics (#1225) (73552f21)
+
+- Renders Devotionals That Have No Scripture (#1242) (2f6982c9)
+- Removes Duplicate Copyright Info (#1230) (44fc2228)
+- Improves the Error Card (#1240) (963279d1)
+- Improves Content Schema Style (#1233) (21f1d6cf)
+- Improves Mergify (#1238) (762ed137)
+- Improves Caching of Content (#1170) (6ead92b4)
+- Improves Default Type (#1220) (1d6237c8)
+- Optimizes Scripture Version (#1219) (97bd8d6c)
+- Handles links using in app browser in the webview. (#1229) (bce16dde)
+- Checks for valid images when rendering campus cards. (#1222) (4d7d116c)
+
+- Fixes HTMLView placeholder/loading state (#1226) (620de3ab)
+- Fixes auth back button color (#1227) (561b54c3)
+- Fixes logging users with bad cookies out of the app (#1221) (c879eb14)
+
+
+v1.2.3: November 12, 2019
+
+- Adds Client Info in Request Headers (#1214) (a8a4d75e)
+- Adds Mergify (#1209) (90122723)
+- Optimizes Live Stream Query (#1202) (736faabf)
+- Optimizes Content Query (#1203) (a8acc502)
+- Updates Floating Input Label placement (#1019) (978de246)
+- Adds Live item polling (#1086) (ca61e557)
+- Improves Map Bounce (#1206) (bb7f6ef4)
+- Increases Miniplayer Button Size (#1205) (125d45d1)
+
+- Fixes tab view cant scroll devos android (#1212) (034c3783)
+- Fixes Mergify so that it will delete branch (#1211) (3795386b)
+
 v1.2.2: November 6, 2019
 
 - Ensures user feed is cachables (#1201) (3113ed97)

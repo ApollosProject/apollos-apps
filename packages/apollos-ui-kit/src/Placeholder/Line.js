@@ -6,7 +6,7 @@ import styled from '../styled';
 
 export const Line = styled(
   ({ theme, width = '100%' }) => ({
-    borderRadius: theme.sizing.baseUnit,
+    borderRadius: theme.sizing.baseBorderRadius,
     backgroundColor: theme.colors.background.inactive,
     height: theme.helpers.rem(1),
     width,

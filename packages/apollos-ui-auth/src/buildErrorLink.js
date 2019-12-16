@@ -1,4 +1,5 @@
 import { onError } from 'apollo-link-error';
+import AsyncStorage from '@react-native-community/async-storage';
 
 export default (onAuthError) =>
   onError(({ graphQLErrors, networkError }) => {
@@ -6,6 +7,7 @@ export default (onAuthError) =>
       graphQLErrors.map(({ extensions: { code } }) => {
         // wipe out all data and go somewhere
         if (code === 'UNAUTHENTICATED') {
+          AsyncStorage.removeItem('authToken');
           onAuthError();
         }
         return null;

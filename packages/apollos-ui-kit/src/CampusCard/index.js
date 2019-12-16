@@ -2,10 +2,11 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import Card, { CardContent } from '../Card';
-import ConnectedImage from '../ConnectedImage';
+import ConnectedImage, { ImageSourceType } from '../ConnectedImage';
 import SideBySideView from '../SideBySideView';
 import styled from '../styled';
 import { H5, H6 } from '../typography';
+import FlexedView from '../FlexedView';
 
 const HorizontalLayout = styled(({ theme }) => ({
   alignItems: 'center',
@@ -26,6 +27,15 @@ const CampusImage = styled({
   resizeMode: 'cover',
 })(ConnectedImage);
 
+// Fixes placeholder
+const DistanceWrapper = styled({
+  flexDirection: 'row',
+  justifyContent: 'flex-end',
+})(FlexedView);
+
+const hasValidImages = (images) =>
+  images && !images.includes(null) && !images.map((o) => o.uri).includes(null);
+
 const CampusCard = memo(
   ({ title, description, distance, images, ...otherProps }) => (
     <Card
@@ -34,15 +44,17 @@ const CampusCard = memo(
       {...otherProps}
     >
       <HorizontalLayout>
-        {images ? <CampusImage source={images} /> : null}
+        {hasValidImages(images) ? <CampusImage source={images} /> : null}
         <FlexedCardContent>
           <Header>
             <H5>{title}</H5>
             {distance != null ? (
-              <H6>
-                {Math.round(distance)}
-                mi
-              </H6>
+              <DistanceWrapper>
+                <H6>
+                  {Math.round(distance)}
+                  mi
+                </H6>
+              </DistanceWrapper>
             ) : null}
           </Header>
           {description ? <H6>{description}</H6> : null}
@@ -55,8 +67,10 @@ const CampusCard = memo(
 CampusCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  images: PropTypes.any, // eslint-disable-line
-  category: PropTypes.string,
+  images: PropTypes.oneOfType([
+    PropTypes.arrayOf(ImageSourceType),
+    ImageSourceType,
+  ]),
   distance: PropTypes.number,
 };
 

@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styled from '../../styled';
-import { H4, H6 } from '../../typography';
+import { H6, BodyText } from '../../typography';
+import ChannelLabel from '../../ChannelLabel';
 import Card from '../CardWrapper';
 import CardContent from '../Content';
 
-const Header = styled({ textAlign: 'center' }, 'Error.Header')(H4);
-const ErrorText = styled({ textAlign: 'center' }, 'Error.Text')(H6);
+const StyledChannelLabel = styled(({ theme }) => ({
+  tintColor: theme.colors.tertiary,
+}))(ChannelLabel);
 
-const Err = ({ message = 'Uh oh!', error }) => {
+const Err = ({ message = 'Uh oh!', error, showErrorMessage }) => {
   let errorMessage;
   if (typeof error !== 'string') {
     if (error && error.message) {
@@ -26,8 +28,9 @@ const Err = ({ message = 'Uh oh!', error }) => {
   return (
     <Card>
       <CardContent>
-        <Header>{message}</Header>
-        <ErrorText>{errorMessage}</ErrorText>
+        <StyledChannelLabel label={'Something went wrong'} icon={'warning'} />
+        <H6>{showErrorMessage ? errorMessage : null}</H6>
+        <BodyText>{message}</BodyText>
       </CardContent>
     </Card>
   );
@@ -36,6 +39,13 @@ const Err = ({ message = 'Uh oh!', error }) => {
 Err.propTypes = {
   message: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  showErrorMessage: PropTypes.bool,
+};
+
+Err.defaultProps = {
+  message:
+    "Oh no! We're sorry! We logged your error and notified our team directly. In the mean time, please try again.",
+  showErrorMessage: false,
 };
 
 export default Err;
