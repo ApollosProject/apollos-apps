@@ -133,31 +133,31 @@ exports[`ActionListCard should render 5 items 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 1
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -247,31 +247,31 @@ exports[`ActionListCard should render 5 items 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 2
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -361,31 +361,31 @@ exports[`ActionListCard should render 5 items 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 3
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -475,14 +475,14 @@ exports[`ActionListCard should render 5 items 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              Boom
+              Hello 4
             </Text>
             <Text
               bold={false}
@@ -498,7 +498,7 @@ exports[`ActionListCard should render 5 items 1`] = `
                 }
               }
             >
-              Hello 4
+              Boom
             </Text>
           </View>
         </View>
@@ -745,9 +745,9 @@ exports[`ActionListCard should render a loading state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 14,
+                  "marginVertical": 3.5,
+                  "width": "60%",
                 }
               }
             />
@@ -854,9 +854,9 @@ exports[`ActionListCard should render a loading state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 14,
+                  "marginVertical": 3.5,
+                  "width": "60%",
                 }
               }
             />
@@ -963,9 +963,9 @@ exports[`ActionListCard should render a loading state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 14,
+                  "marginVertical": 3.5,
+                  "width": "60%",
                 }
               }
             />
@@ -1072,9 +1072,9 @@ exports[`ActionListCard should render a loading state 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 14,
+                  "marginVertical": 3.5,
+                  "width": "60%",
                 }
               }
             />
@@ -1368,31 +1368,31 @@ exports[`ActionListCard should render with a header 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 1
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -1482,31 +1482,31 @@ exports[`ActionListCard should render with a header 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 2
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -1596,31 +1596,31 @@ exports[`ActionListCard should render with a header 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 3
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -1710,14 +1710,14 @@ exports[`ActionListCard should render with a header 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              Boom
+              Hello 4
             </Text>
             <Text
               bold={false}
@@ -1733,7 +1733,7 @@ exports[`ActionListCard should render with a header 1`] = `
                 }
               }
             >
-              Hello 4
+              Boom
             </Text>
           </View>
         </View>
@@ -1977,31 +1977,31 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 1
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -2091,31 +2091,31 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 2
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -2205,31 +2205,31 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Boom
-            </Text>
-            <Text
-              bold={false}
-              ellipsizeMode="tail"
-              italic={false}
-              numberOfLines={2}
-              style={
-                Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Regular",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
               Hello 3
             </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -2319,14 +2319,14 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              Boom
+              Hello 4
             </Text>
             <Text
               bold={false}
@@ -2342,7 +2342,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
                 }
               }
             >
-              Hello 4
+              Boom
             </Text>
           </View>
         </View>

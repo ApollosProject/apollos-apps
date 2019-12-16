@@ -84,6 +84,19 @@ exports[`ActionListItem should render 1`] = `
       }
     >
       <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
+          }
+        }
+      >
+        Boom
+      </Text>
+      <Text
         bold={false}
         ellipsizeMode="tail"
         italic={false}
@@ -96,9 +109,7 @@ exports[`ActionListItem should render 1`] = `
             "lineHeight": 18,
           }
         }
-      >
-        Boom
-      </Text>
+      />
     </View>
   </View>
 </View>
@@ -193,9 +204,9 @@ exports[`ActionListItem should render a loading state 1`] = `
             "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "50%",
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
           }
         }
       />
@@ -303,14 +314,14 @@ exports[`ActionListItem should render with a label 1`] = `
         numberOfLines={1}
         style={
           Object {
-            "color": "#505050",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 18,
+            "color": "#303030",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
           }
         }
       >
-        What
+        Boom
       </Text>
       <Text
         bold={false}
@@ -326,7 +337,7 @@ exports[`ActionListItem should render with a label 1`] = `
           }
         }
       >
-        Boom
+        What
       </Text>
     </View>
   </View>
