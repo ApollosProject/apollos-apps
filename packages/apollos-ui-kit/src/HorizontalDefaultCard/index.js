@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { withTheme } from '../theme';
 import styled from '../styled';
 import Card, { CardImage, CardContent } from '../Card';
-import { H5, H6 } from '../typography';
+import { H5, BodySmall } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
@@ -46,7 +46,7 @@ const Content = styled(({ theme }) => ({
 const Summary = styled(({ theme, hasTitle }) => ({
   color: theme.colors.text.tertiary,
   ...(hasTitle ? { paddingTop: theme.sizing.baseUnit / 2 } : {}),
-}))(H6);
+}))(BodySmall);
 
 const HorizontalDefaultCard = withIsLoading(
   ({ coverImage, isLiked, isLoading, summary, title }) => (
