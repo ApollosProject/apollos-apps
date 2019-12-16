@@ -226,7 +226,7 @@ exports[`the LandingScreen should render 1`] = `
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >

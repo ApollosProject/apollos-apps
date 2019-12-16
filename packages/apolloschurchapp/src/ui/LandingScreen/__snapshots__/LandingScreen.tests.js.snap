@@ -177,7 +177,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >
@@ -579,7 +579,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >
@@ -780,7 +780,7 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >
@@ -981,7 +981,7 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >
@@ -1185,7 +1185,7 @@ exports[`The Onboarding LandingScreen component should render with a custom text
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >
@@ -1431,7 +1431,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
               "fontFamily": "InterUI-Black",
               "fontSize": 43,
               "lineHeight": 49.45,
-              "marginBottom": 32,
+              "marginBottom": 16,
             }
           }
         >
