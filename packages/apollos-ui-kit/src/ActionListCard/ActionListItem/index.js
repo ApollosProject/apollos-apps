@@ -48,9 +48,9 @@ const ActionListItem = ({
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
-        {label ? <H5 numberOfLines={1}>{label}</H5> : null}
+        {title ? <H5 numberOfLines={1}>{title}</H5> : null}
         <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">
-          {title}
+          {label}
         </StyledBodySmall>
       </TextContainer>
     </Cell>
