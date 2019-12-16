@@ -1200,9 +1200,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 14,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />
@@ -1297,9 +1297,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 14,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />
@@ -1394,9 +1394,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 14,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />
@@ -1491,9 +1491,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 14,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />

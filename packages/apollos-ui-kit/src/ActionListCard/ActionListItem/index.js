@@ -2,15 +2,15 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { H6, H4 } from '../../typography';
+import { H6, BodySmall } from '../../typography';
 import styled from '../../styled';
 import TouchableScale from '../../TouchableScale';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
 
-const StyledH6 = styled(({ theme }) => ({
+const StyledBodySmall = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
-}))(H6);
+}))(BodySmall);
 
 const TextContainer = styled(({ theme }) => ({
   justifyContent: 'center',
@@ -48,10 +48,10 @@ const ActionListItem = ({
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
-        {label ? <StyledH6 numberOfLines={1}>{label}</StyledH6> : null}
-        <H4 numberOfLines={2} ellipsizeMode="tail">
+        {label ? <H6 numberOfLines={1}>{label}</H6> : null}
+        <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">
           {title}
-        </H4>
+        </StyledBodySmall>
       </TextContainer>
     </Cell>
   </TouchableScale>
