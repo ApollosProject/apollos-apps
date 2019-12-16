@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
-import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
