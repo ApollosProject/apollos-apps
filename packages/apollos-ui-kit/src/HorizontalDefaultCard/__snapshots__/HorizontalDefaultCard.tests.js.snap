@@ -268,10 +268,10 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
             "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": 12,
+            "height": 14,
             "marginTop": 8,
-            "marginVertical": 2.6400000000000006,
-            "width": "50%",
+            "marginVertical": 3,
+            "width": "100%",
           }
         }
       />
@@ -416,14 +416,16 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
         Are you telling me that you built a time machine out of a DeLorean?
       </Text>
       <Text
+        bold={false}
         hasTitle="Are you telling me that you built a time machine out of a DeLorean?"
+        italic={false}
         numberOfLines={2}
         style={
           Object {
             "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 17.28,
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
             "paddingTop": 8,
           }
         }
