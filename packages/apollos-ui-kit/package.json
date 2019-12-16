@@ -44,6 +44,7 @@
   },
   "peerDependencies": {
     "@apollosproject/storybook": "*",
+    "@apollosproject/ui-media-player": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
