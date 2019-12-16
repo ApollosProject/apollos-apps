@@ -189,7 +189,7 @@ Object {
   },
   "typography": Object {
     "baseFontSize": 16,
-    "baseLineHeight": 23.04,
+    "baseLineHeight": 24,
     "sans": Object {
       "black": Object {
         "default": "InterUI-Black",
@@ -271,7 +271,7 @@ Object {
 exports[`createTheme has custom typography 1`] = `
 Object {
   "baseFontSize": "24",
-  "baseLineHeight": 23.04,
+  "baseLineHeight": 24,
   "otherProp": true,
   "sans": Object {
     "black": Object {
@@ -492,7 +492,7 @@ Object {
   },
   "typography": Object {
     "baseFontSize": 16,
-    "baseLineHeight": 23.04,
+    "baseLineHeight": 24,
     "sans": Object {
       "black": Object {
         "default": "InterUI-Black",

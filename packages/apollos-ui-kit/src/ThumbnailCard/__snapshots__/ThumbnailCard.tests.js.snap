@@ -61,7 +61,7 @@ exports[`the ThumbnailCard component should render 1`] = `
               "color": "#303030",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -136,7 +136,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 14,
-              "marginVertical": 3.08,
+              "marginVertical": 3.5,
               "width": "60%",
             }
           }
@@ -165,7 +165,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
                   "height": 12,
-                  "marginVertical": 2.6400000000000006,
+                  "marginVertical": 3,
                   "width": "50%",
                 }
               }
@@ -301,7 +301,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
               "color": "#303030",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -330,7 +330,7 @@ exports[`the ThumbnailCard component should render with a category 1`] = `
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
               tint="#A5A5A5"
@@ -406,7 +406,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
               "color": "#303030",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -435,7 +435,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
                   "color": "#A5A5A5",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                 }
               }
               tint="#A5A5A5"
@@ -572,7 +572,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
               "color": "#303030",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -581,7 +581,7 @@ exports[`the ThumbnailCard component should render with a description 1`] = `
         <View
           style={
             Object {
-              "paddingBottom": 17.28,
+              "paddingBottom": 18,
             }
           }
         >
@@ -667,7 +667,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
               "color": "#303030",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >

@@ -19,6 +19,16 @@ storiesOf('ui-kit/typography', module)
       <H6>Heading 6</H6>
     </View>
   ))
+  .add('padded headings', () => (
+    <View>
+      <H1 padded>Heading 1</H1>
+      <H2 padded>Heading 2</H2>
+      <H3 padded>Heading 3</H3>
+      <H4 padded>Heading 4</H4>
+      <H5 padded>Heading 5</H5>
+      <H6 padded>Heading 6</H6>
+    </View>
+  ))
   .add('placeholders', () => (
     <SetLoading isLoading>
       <H1>Heading 1</H1>

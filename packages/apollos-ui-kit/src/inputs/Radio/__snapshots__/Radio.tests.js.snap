@@ -43,7 +43,7 @@ exports[`The Radio component should render correctly 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -91,7 +91,7 @@ exports[`The Radio component should render correctly 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -150,7 +150,7 @@ exports[`The Radio component should render horizontally 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -198,7 +198,7 @@ exports[`The Radio component should render horizontally 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -251,7 +251,7 @@ exports[`The Radio component should render with an error 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -299,7 +299,7 @@ exports[`The Radio component should render with an error 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -320,7 +320,7 @@ exports[`The Radio component should render with an error 1`] = `
           "color": "#c64f55",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
           "paddingTop": 8,
         }
       }
@@ -374,7 +374,7 @@ exports[`The Radio component should render without an underline 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -422,7 +422,7 @@ exports[`The Radio component should render without an underline 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
