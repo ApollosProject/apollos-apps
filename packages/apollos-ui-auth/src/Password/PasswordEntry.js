@@ -9,9 +9,6 @@ import {
 } from 'react-native';
 import { get } from 'lodash';
 import {
-  styled,
-  H6,
-  H5,
   PaddedView,
   TextInput,
   ButtonLink,
@@ -23,21 +20,18 @@ import {
   NextButton,
   TitleText,
   PromptText,
-  LegalText,
   BrandIcon,
 } from '../styles';
 
-const PhoneEntry = ({
-  alternateLoginText,
-  authTitleText,
+const PasswordEntry = ({
+  passwordTitleText,
+  passwordPromptText,
+  handleForgotPassword,
   disabled,
   errors,
   isLoading,
-  onPressAlternateLogin,
   onPressNext,
   setFieldValue,
-  smsPolicyInfo,
-  smsPromptText,
   values,
   BackgroundComponent,
 }) => (
@@ -53,42 +47,35 @@ const PhoneEntry = ({
         <ScrollView>
           <PaddedView>
             <BrandIcon />
-            <TitleText>{authTitleText}</TitleText>
-            <PromptText padded>{smsPromptText}</PromptText>
-
-            {/* TODO: update to new design */}
-            <H5>Phone</H5>
-
-            {onPressAlternateLogin ? (
-              <PaddedView>
-                <H5>
-                  <ButtonLink onPress={onPressAlternateLogin}>
-                    {alternateLoginText}
-                  </ButtonLink>
-                </H5>
-              </PaddedView>
-            ) : null}
+            <TitleText>{passwordTitleText}</TitleText>
+            <PromptText padded>{passwordPromptText}</PromptText>
 
             <TextInput
               autoFocus
-              autoComplete={'tel'}
-              label={'Mobile Number'}
-              type={'phone'}
+              autoComplete={'password'}
+              label={'Password'}
+              type={'password'}
+              textContentType="password"
               enablesReturnKeyAutomatically
               returnKeyType={'next'}
               onSubmitEditing={onPressNext}
-              error={get(errors, 'phone')}
-              onChangeText={(text) => setFieldValue('phone', text)}
-              value={get(values, 'phone')}
+              error={get(errors, 'password')}
+              onChangeText={(text) => setFieldValue('password', text)}
+              value={get(values, 'password')}
             />
-            <LegalText>{smsPolicyInfo}</LegalText>
+
+            {handleForgotPassword ? (
+              <ButtonLink onPress={handleForgotPassword}>
+                Forgot your password?
+              </ButtonLink>
+            ) : null}
           </PaddedView>
         </ScrollView>
 
         {onPressNext ? (
           <PaddedView>
             <NextButton
-              title={'Next'}
+              title={'Login'}
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
@@ -100,36 +87,29 @@ const PhoneEntry = ({
   </KeyboardAvoidingView>
 );
 
-PhoneEntry.propTypes = {
-  alternateLoginText: PropTypes.node,
-  authTitleText: PropTypes.string,
+PasswordEntry.propTypes = {
+  passwordTitleText: PropTypes.string,
+  passwordPromptText: PropTypes.string,
   disabled: PropTypes.bool,
+  handleForgotPassword: PropTypes.func,
   errors: PropTypes.shape({
-    phone: PropTypes.string,
+    password: PropTypes.string,
   }),
   isLoading: PropTypes.bool,
-  onPressAlternateLogin: PropTypes.func,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
   setFieldValue: PropTypes.func.isRequired,
-  smsPolicyInfo: PropTypes.string,
-  smsPromptText: PropTypes.string,
   values: PropTypes.shape({
-    phone: PropTypes.string,
+    password: PropTypes.string,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-PhoneEntry.defaultProps = {
-  authTitleText: 'Have we met?',
-  alternateLoginText: 'Email',
-  smsPolicyInfo: "We'll text you a code to make login super easy!",
-  smsPromptText:
-    'Sign in for a personalized experience that helps you grow and connect with God.',
+PasswordEntry.defaultProps = {
+  passwordTitleText: 'Now for your password',
+  passwordPromptText: 'Enter your password to continue.',
   BackgroundComponent: BackgroundView,
 };
 
-PhoneEntry.LegalText = LegalText;
+PasswordEntry.displayName = 'PasswordEntry';
 
-PhoneEntry.displayName = 'PhoneEntry';
-
-export default PhoneEntry;
+export default PasswordEntry;

@@ -9,7 +9,16 @@ import {
   SMSVerification as AuthSMSVerification,
   SMSVerificationConnected as AuthSMSVerificationConnected,
 } from './SMS';
-import AuthPassword from './Password';
+import AuthPassword, {
+  EmailEntry as AuthEmailEntry,
+  EmailEntryConnected as AuthEmailEntryConnected,
+  PasswordEntry as AuthPasswordEntry,
+  PasswordEntryConnected as AuthPasswordEntryConnected,
+} from './Password';
+import {
+  ProfileEntry as AuthProfileEntry,
+  ProfileEntryConnected as AuthProfileEntryConnected,
+} from './Profile';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
@@ -28,13 +37,21 @@ export {
   AuthSMSVerification,
   AuthSMSVerificationConnected,
   AuthPassword,
+  AuthEmailEntry,
+  AuthEmailEntryConnected,
+  AuthPasswordEntry,
+  AuthPasswordEntryConnected,
+  AuthProfileEntry,
+  AuthProfileEntryConnected,
 };
 
 const AuthNavigator = createStackNavigator(
   {
     AuthSMSPhoneEntryConnected,
     AuthSMSVerificationConnected,
-    AuthPassword,
+    AuthEmailEntryConnected,
+    AuthPasswordEntryConnected,
+    AuthProfileEntryConnected,
   },
   {
     initialRouteName: 'AuthSMSPhoneEntryConnected',

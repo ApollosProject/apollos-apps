@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView } from 'react-navigation';
+import { SafeAreaView } from 'react-native';
 import { compose, withProps } from 'recompose';
 import {
   styled,
@@ -8,6 +8,7 @@ import {
   Icon,
   H2,
   H5,
+  H6,
 } from '@apollosproject/ui-kit';
 
 const FlexedSafeAreaView = compose(
@@ -36,8 +37,22 @@ const PromptText = styled(
   'ui-auth.PromptText'
 )(H5);
 
+const LegalText = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'ui-auth.EmailEntry.LegalText'
+)(H6);
+
 const NextButton = styled({}, 'ui-auth.NextButton')((props) => (
   <Button type={'primary'} pill={false} {...props} />
 ));
 
-export { FlexedSafeAreaView, BrandIcon, TitleText, PromptText, NextButton };
+export {
+  FlexedSafeAreaView,
+  BrandIcon,
+  TitleText,
+  PromptText,
+  NextButton,
+  LegalText,
+};

@@ -9,8 +9,6 @@ import {
 } from 'react-native';
 import { get } from 'lodash';
 import {
-  styled,
-  H6,
   H5,
   PaddedView,
   TextInput,
@@ -23,11 +21,11 @@ import {
   NextButton,
   TitleText,
   PromptText,
-  LegalText,
   BrandIcon,
+  LegalText,
 } from '../styles';
 
-const PhoneEntry = ({
+const EmailEntry = ({
   alternateLoginText,
   authTitleText,
   disabled,
@@ -36,8 +34,8 @@ const PhoneEntry = ({
   onPressAlternateLogin,
   onPressNext,
   setFieldValue,
-  smsPolicyInfo,
-  smsPromptText,
+  emailPolicyInfo,
+  emailPromptText,
   values,
   BackgroundComponent,
 }) => (
@@ -54,11 +52,9 @@ const PhoneEntry = ({
           <PaddedView>
             <BrandIcon />
             <TitleText>{authTitleText}</TitleText>
-            <PromptText padded>{smsPromptText}</PromptText>
+            <PromptText padded>{emailPromptText}</PromptText>
 
             {/* TODO: update to new design */}
-            <H5>Phone</H5>
-
             {onPressAlternateLogin ? (
               <PaddedView>
                 <H5>
@@ -69,19 +65,21 @@ const PhoneEntry = ({
               </PaddedView>
             ) : null}
 
+            <H5>Email</H5>
+
             <TextInput
               autoFocus
-              autoComplete={'tel'}
-              label={'Mobile Number'}
-              type={'phone'}
+              autoComplete={'email'}
+              label={'Email'}
+              type={'email'}
               enablesReturnKeyAutomatically
               returnKeyType={'next'}
               onSubmitEditing={onPressNext}
-              error={get(errors, 'phone')}
-              onChangeText={(text) => setFieldValue('phone', text)}
-              value={get(values, 'phone')}
+              error={get(errors, 'email')}
+              onChangeText={(text) => setFieldValue('email', text)}
+              value={get(values, 'email')}
             />
-            <LegalText>{smsPolicyInfo}</LegalText>
+            <LegalText>{emailPolicyInfo}</LegalText>
           </PaddedView>
         </ScrollView>
 
@@ -100,7 +98,7 @@ const PhoneEntry = ({
   </KeyboardAvoidingView>
 );
 
-PhoneEntry.propTypes = {
+EmailEntry.propTypes = {
   alternateLoginText: PropTypes.node,
   authTitleText: PropTypes.string,
   disabled: PropTypes.bool,
@@ -111,25 +109,25 @@ PhoneEntry.propTypes = {
   onPressAlternateLogin: PropTypes.func,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
   setFieldValue: PropTypes.func.isRequired,
-  smsPolicyInfo: PropTypes.string,
-  smsPromptText: PropTypes.string,
+  emailPolicyInfo: PropTypes.string,
+  emailPromptText: PropTypes.string,
   values: PropTypes.shape({
     phone: PropTypes.string,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-PhoneEntry.defaultProps = {
+EmailEntry.defaultProps = {
   authTitleText: 'Have we met?',
-  alternateLoginText: 'Email',
-  smsPolicyInfo: "We'll text you a code to make login super easy!",
-  smsPromptText:
+  alternateLoginText: 'Phone',
+  emailPolicyInfo: "You'll enter or create a password to continue.",
+  emailPromptText:
     'Sign in for a personalized experience that helps you grow and connect with God.',
   BackgroundComponent: BackgroundView,
 };
 
-PhoneEntry.LegalText = LegalText;
+EmailEntry.LegalText = LegalText;
 
-PhoneEntry.displayName = 'PhoneEntry';
+EmailEntry.displayName = 'EmailEntry';
 
-export default PhoneEntry;
+export default EmailEntry;

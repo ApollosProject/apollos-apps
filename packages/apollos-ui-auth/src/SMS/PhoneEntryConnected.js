@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Mutation } from 'react-apollo';
+import { withApollo, Mutation } from 'react-apollo';
 
+import GET_USER_EXISTS from '../getUserExists';
 import PhoneEntry from './PhoneEntry';
 import REQUEST_PIN from './requestPin';
 
@@ -16,6 +17,9 @@ class PhoneEntryConnected extends Component {
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
+    client: PropTypes.shape({
+      query: PropTypes.func,
+    }),
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
   };
 
@@ -39,8 +43,24 @@ class PhoneEntryConnected extends Component {
   ) => {
     setSubmitting(true);
     try {
-      await mutate({ variables: { phone } });
-      this.props.navigation.navigate('AuthSMSVerificationConnected', { phone });
+      const {
+        data: { userExists },
+      } = await this.props.client.query({
+        query: GET_USER_EXISTS,
+        variables: { identity: phone },
+        fetchPolicy: 'network-only',
+      });
+
+      if (userExists === 'EXISTING_APP_USER') {
+        await mutate({ variables: { phone } });
+        this.props.navigation.navigate('AuthSMSVerificationConnected', {
+          phone,
+        });
+      } else {
+        this.props.navigation.navigate('AuthProfileEntryConnected', {
+          phone,
+        });
+      }
     } catch (e) {
       setFieldError(
         'phone',
@@ -51,7 +71,7 @@ class PhoneEntryConnected extends Component {
   };
 
   handleOnPressAlternateLogin = () => {
-    this.props.navigation.navigate('AuthPassword');
+    this.props.navigation.replace('AuthEmailEntryConnected');
   };
 
   render() {
@@ -90,4 +110,4 @@ class PhoneEntryConnected extends Component {
   }
 }
 
-export default PhoneEntryConnected;
+export default withApollo(PhoneEntryConnected);
