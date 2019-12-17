@@ -19,7 +19,6 @@ import {
   LocationFinderConnected,
   OnboardingSwiper,
 } from '@apollosproject/ui-onboarding';
-import { PushProvider } from '@apollosproject/ui-notifications';
 
 const FullscreenBackgroundView = styled({
   position: 'absolute',
@@ -66,30 +65,28 @@ function Onboarding({ navigation }) {
                 />
               }
             />
-            <PushProvider>
-              <AskNotificationsConnected
-                onRequestPushPermissions={(update) => {
-                  checkNotifications().then((checkRes) => {
-                    if (checkRes.status === RESULTS.DENIED) {
-                      requestNotifications(['alert', 'badge', 'sound']).then(
-                        () => {
-                          update();
-                        }
-                      );
-                    } else {
-                      openSettings();
-                    }
-                  });
-                }}
-                onPressPrimary={() => navigation.replace('Tabs')}
-                primaryNavText={'Finish'}
-                BackgroundComponent={
-                  <StyledGradient
-                    source={'https://picsum.photos/640/640/?random'}
-                  />
-                }
-              />
-            </PushProvider>
+            <AskNotificationsConnected
+              onRequestPushPermissions={(update) => {
+                checkNotifications().then((checkRes) => {
+                  if (checkRes.status === RESULTS.DENIED) {
+                    requestNotifications(['alert', 'badge', 'sound']).then(
+                      () => {
+                        update();
+                      }
+                    );
+                  } else {
+                    openSettings();
+                  }
+                });
+              }}
+              onPressPrimary={() => navigation.replace('Tabs')}
+              primaryNavText={'Finish'}
+              BackgroundComponent={
+                <StyledGradient
+                  source={'https://picsum.photos/640/640/?random'}
+                />
+              }
+            />
           </>
         )}
       </OnboardingSwiper>

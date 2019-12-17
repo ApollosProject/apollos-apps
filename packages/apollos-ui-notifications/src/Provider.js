@@ -1,6 +1,6 @@
 import URL from 'url';
 import querystring from 'querystring';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Linking } from 'react-native';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
@@ -8,6 +8,7 @@ import { withApollo } from 'react-apollo';
 import { get } from 'lodash';
 import OneSignal from 'react-native-onesignal';
 import { resolvers, defaults } from './store';
+import PushProvider from './pushProvider';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -97,7 +98,7 @@ class NotificationsInit extends Component {
   };
 
   render() {
-    return this.props.children;
+    return <PushProvider>{this.props.children}</PushProvider>;
   }
 }
 

@@ -7,7 +7,7 @@ const PushContext = React.createContext({
   hasPrompted: true,
   hasPushPermission: true,
   loading: false,
-  update: () => {},
+  checkPermissions: () => {},
 });
 
 class Provider extends PureComponent {
@@ -18,32 +18,26 @@ class Provider extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      ready: false,
       loading: false,
+      hasPrompted: null,
+      hasPushPermission: null,
+      checkPermissions: () => {},
     };
   }
 
   componentDidMount() {
     getPushPermissions().then((permissionRes) => {
       getHasPrompted().then((promptRes) => {
-        this.value = {
+        this.setState({
           hasPrompted: promptRes,
           hasPushPermission: permissionRes,
-          loading: this.state.loading,
-          update: this.update,
-        };
-        this.setState({
-          ready: true,
+          checkPermissions: this.update,
         });
       });
     });
   }
 
   update = () => {
-    this.value = {
-      ...this.value,
-      loading: true,
-    };
     this.setState(
       {
         loading: true,
@@ -51,13 +45,9 @@ class Provider extends PureComponent {
       () => {
         getPushPermissions().then((permissionRes) => {
           getHasPrompted().then((promptRes) => {
-            this.value = {
-              ...this.value,
+            this.setState({
               hasPrompted: promptRes,
               hasPushPermission: permissionRes,
-              loading: false,
-            };
-            this.setState({
               loading: false,
             });
           });
@@ -68,8 +58,8 @@ class Provider extends PureComponent {
 
   render() {
     return (
-      <PushContext.Provider value={this.value}>
-        {this.state.ready && this.props.children}
+      <PushContext.Provider value={{ ...this.state }}>
+        {this.props.children}
       </PushContext.Provider>
     );
   }

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { PushConsumer } from '@apollosproject/ui-notifications';
+import { NotificationsConsumer } from '@apollosproject/ui-notifications';
 
 import AskNotifications from './AskNotifications';
 
@@ -23,11 +23,11 @@ const AskNotificationsConnected = memo(
     onRequestPushPermissions,
     ...props
   }) => (
-    <PushConsumer>
+    <NotificationsConsumer>
       {(value) => (
         <Component
           isLoading={value.loading}
-          onPressButton={() => onRequestPushPermissions(value.update)}
+          onPressButton={() => onRequestPushPermissions(value.checkPermissions)}
           buttonDisabled={value.hasPushPermission}
           buttonText={getButtonText({
             hasPrompted: value.hasPrompted,
@@ -43,7 +43,7 @@ const AskNotificationsConnected = memo(
           {...props}
         />
       )}
-    </PushConsumer>
+    </NotificationsConsumer>
   )
 );
 
