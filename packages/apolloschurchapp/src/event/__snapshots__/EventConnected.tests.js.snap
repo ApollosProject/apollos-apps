@@ -98,7 +98,7 @@ exports[`EventConnected component renders without errors 1`] = `
                 "fontFamily": "InterUI-Black",
                 "fontSize": 36,
                 "lineHeight": 41.4,
-                "paddingBottom": 20,
+                "paddingBottom": 20.02,
                 "paddingTop": 24,
               }
             }
@@ -108,7 +108,7 @@ exports[`EventConnected component renders without errors 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 18,
               }
             }
           >
@@ -251,7 +251,7 @@ exports[`EventConnected component renders without errors 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
-                      "lineHeight": 23.04,
+                      "lineHeight": 24,
                     }
                   }
                 >
@@ -263,7 +263,7 @@ exports[`EventConnected component renders without errors 1`] = `
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 14,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "marginTop": 4,
                     }
                   }
@@ -411,7 +411,7 @@ exports[`EventConnected component renders without errors 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
-                      "lineHeight": 23.04,
+                      "lineHeight": 24,
                     }
                   }
                 >
@@ -423,7 +423,7 @@ exports[`EventConnected component renders without errors 1`] = `
                       "color": "#A5A5A5",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 14,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "marginTop": 4,
                     }
                   }
@@ -434,7 +434,7 @@ exports[`EventConnected component renders without errors 1`] = `
           <View
             style={
               Object {
-                "paddingBottom": 17.28,
+                "paddingBottom": 18,
               }
             }
           >

@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { H6, BodySmall } from '../../typography';
+import { H5, BodySmall } from '../../typography';
 import styled from '../../styled';
 import TouchableScale from '../../TouchableScale';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
@@ -48,9 +48,9 @@ const ActionListItem = ({
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
-        {label ? <H6 numberOfLines={1}>{label}</H6> : null}
+        {title ? <H5 numberOfLines={1}>{title}</H5> : null}
         <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">
-          {title}
+          {label}
         </StyledBodySmall>
       </TextContainer>
     </Cell>

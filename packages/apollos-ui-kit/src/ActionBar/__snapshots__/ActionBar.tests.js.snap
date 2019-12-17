@@ -183,7 +183,7 @@ exports[`the ActionBar component should render children 1`] = `
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -340,7 +340,7 @@ exports[`the ActionBar component should render children 1`] = `
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -497,7 +497,7 @@ exports[`the ActionBar component should render children 1`] = `
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -613,7 +613,7 @@ exports[`the ActionBar component should render children 1`] = `
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >

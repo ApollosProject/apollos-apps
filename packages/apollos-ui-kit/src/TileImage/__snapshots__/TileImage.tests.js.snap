@@ -86,7 +86,7 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
           "left": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
           "position": "absolute",
           "right": 16,
         }
@@ -221,7 +221,7 @@ exports[`the TileImage component should render 1`] = `
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
           "left": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
           "position": "absolute",
           "right": 16,
         }
@@ -318,7 +318,7 @@ exports[`the TileImage component should render a loading state 1`] = `
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 16,
-          "marginVertical": 3.5199999999999996,
+          "marginVertical": 4,
           "width": "80%",
         }
       }
@@ -413,7 +413,7 @@ exports[`the TileImage component should render without text 1`] = `
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
           "left": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
           "position": "absolute",
           "right": 16,
         }
