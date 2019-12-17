@@ -9,7 +9,7 @@ import {
   SMSVerification as AuthSMSVerification,
   SMSVerificationConnected as AuthSMSVerificationConnected,
 } from './SMS';
-import AuthPassword, {
+import {
   EmailEntry as AuthEmailEntry,
   EmailEntryConnected as AuthEmailEntryConnected,
   PasswordEntry as AuthPasswordEntry,
@@ -36,7 +36,6 @@ export {
   AuthSMSPhoneEntryConnected,
   AuthSMSVerification,
   AuthSMSVerificationConnected,
-  AuthPassword,
   AuthEmailEntry,
   AuthEmailEntryConnected,
   AuthPasswordEntry,
