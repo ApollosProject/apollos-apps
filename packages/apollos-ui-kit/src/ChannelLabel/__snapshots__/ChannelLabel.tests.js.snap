@@ -24,7 +24,7 @@ exports[`the ChannelLabel component should render 1`] = `
           "color": "#A5A5A5",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
       tint="#A5A5A5"
@@ -60,7 +60,7 @@ exports[`the ChannelLabel component should render a skeleton view 1`] = `
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 12,
-          "marginVertical": 2.6400000000000006,
+          "marginVertical": 3,
           "width": "50%",
         }
       }
@@ -105,7 +105,7 @@ exports[`the ChannelLabel component should render a skeleton view that supports 
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 12,
-          "marginVertical": 2.6400000000000006,
+          "marginVertical": 3,
           "width": "50%",
         }
       }
@@ -138,7 +138,7 @@ exports[`the ChannelLabel component should render flexed 1`] = `
           "color": "#A5A5A5",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
       tint="#A5A5A5"
@@ -289,7 +289,7 @@ exports[`the ChannelLabel component should render with an icon 1`] = `
           "color": "#A5A5A5",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
       tint="#A5A5A5"

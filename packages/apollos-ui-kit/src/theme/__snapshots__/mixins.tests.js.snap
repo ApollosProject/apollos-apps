@@ -33,7 +33,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -79,7 +79,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
           "color": "#DBDBD9",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -125,7 +125,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -182,7 +182,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
@@ -228,7 +228,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
           "color": "#DBDBD9",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
