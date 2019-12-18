@@ -19,6 +19,7 @@ const AskNotifications = memo(
     buttonText,
     buttonDisabled,
     onPressButton,
+    isLoading,
     ...props
   }) => (
     <Slide {...props}>
@@ -29,7 +30,7 @@ const AskNotifications = memo(
             <Button
               title={buttonText}
               onPress={onPressButton}
-              disabled={buttonDisabled}
+              disabled={buttonDisabled || isLoading}
               pill={false}
             />
           </PaddedView>
@@ -54,6 +55,7 @@ AskNotifications.propTypes = {
   buttonText: PropTypes.string,
   buttonDisabled: PropTypes.bool,
   onPressButton: PropTypes.func,
+  isLoading: PropTypes.bool,
 };
 
 AskNotifications.defaultProps = {

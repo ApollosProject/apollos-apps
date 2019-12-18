@@ -1,21 +1,12 @@
 import gql from 'graphql-tag';
-import { Platform } from 'react-native';
 import { GET_LOGIN_STATE } from '@apollosproject/ui-auth';
-import {
-  GET_NOTIFICATIONS_ENABLED,
-  getPushPermissions,
-} from './permissionUtils';
 import updatePushId from './updatePushId';
 
 export const defaults = {
   pushId: null,
-  notificationsEnabled: Platform.OS === 'android',
 };
 
 export const resolvers = {
-  Query: {
-    notificationsEnabled: getPushPermissions,
-  },
   Mutation: {
     updateDevicePushId: async (root, { pushId }, { cache, client }) => {
       const query = gql`
@@ -37,16 +28,6 @@ export const resolvers = {
       if (isLoggedIn) {
         updatePushId({ pushId, client });
       }
-      return null;
-    },
-    updatePushPermissions: (root, { enabled }, { cache }) => {
-      cache.writeQuery({
-        query: GET_NOTIFICATIONS_ENABLED,
-        data: {
-          notificationsEnabled: enabled,
-        },
-      });
-
       return null;
     },
   },
