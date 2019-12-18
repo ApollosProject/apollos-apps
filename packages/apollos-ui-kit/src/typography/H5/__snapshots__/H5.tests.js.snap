@@ -8,7 +8,7 @@ exports[`the H5 component should accept additional props 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Medium",
       "fontSize": 14,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -23,7 +23,7 @@ exports[`the H5 component should accept and render passed in styles 1`] = `
       "color": "salmon",
       "fontFamily": "InterUI-Medium",
       "fontSize": 14,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -39,7 +39,7 @@ exports[`the H5 component should render a loading state 1`] = `
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 14,
-      "marginVertical": 3.08,
+      "marginVertical": 3.5,
       "width": "60%",
     }
   }
@@ -54,9 +54,9 @@ exports[`the H5 component should render a loading state with correct positioning
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 14,
-      "marginBottom": 10.08,
-      "marginTop": 13.31,
-      "marginVertical": 3.08,
+      "marginBottom": 10.5,
+      "marginTop": 13.86,
+      "marginVertical": 3.5,
       "width": "60%",
     }
   }
@@ -70,7 +70,7 @@ exports[`the H5 component should render correctly 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Medium",
       "fontSize": 14,
-      "lineHeight": 20.16,
+      "lineHeight": 21,
     }
   }
 >
@@ -86,9 +86,9 @@ exports[`the H5 component should render with correct padding 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Medium",
       "fontSize": 14,
-      "lineHeight": 20.16,
-      "paddingBottom": 10.08,
-      "paddingTop": 13.31,
+      "lineHeight": 21,
+      "paddingBottom": 10.5,
+      "paddingTop": 13.86,
     }
   }
 >

@@ -20,7 +20,7 @@ const TextInputWrapper = styled(
     flexDirection: 'row',
     flexGrow: 1,
     alignItems: 'center',
-    borderRadius: theme.sizing.baseUnit,
+    borderRadius: theme.sizing.baseBorderRadius,
     backgroundColor: theme.colors.background.screen,
     overflow: 'hidden',
   }),

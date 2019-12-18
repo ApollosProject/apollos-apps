@@ -234,8 +234,8 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
       <BVLinearGradient
         colors={
           Array [
-            1711302509,
-            4278216557,
+            1725684697,
+            4292598745,
           ]
         }
         endPoint={
@@ -250,7 +250,7 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             0.8,
           ]
         }
-        overlayColor="#00676D"
+        overlayColor="#DBDBD9"
         overlayType="featured"
         startPoint={
           Object {
@@ -1122,7 +1122,7 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "paddingLeft": null,
               "textAlign": "center",
             }
@@ -1334,7 +1334,7 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "paddingLeft": null,
               "textAlign": "center",
             }
@@ -2217,7 +2217,7 @@ exports[`FeaturedCard should should render as isLive 1`] = `
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "paddingLeft": 8,
               "textAlign": "center",
             }

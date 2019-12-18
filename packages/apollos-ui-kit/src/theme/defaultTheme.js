@@ -57,7 +57,7 @@ export const colors = {
  */
 export const typography = {
   baseFontSize: 16,
-  baseLineHeight: 23.04, // 1.44 ratio
+  baseLineHeight: 24, // 1.5 ratio
   ...fontStack,
 };
 
@@ -73,6 +73,7 @@ export const breakpoints = {
 // space, and size components relatively to one another.
 export const sizing = {
   baseUnit: 16,
+  baseBorderRadius: 16,
   avatar: {
     small: 40,
     medium: 80,

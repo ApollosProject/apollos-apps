@@ -257,7 +257,7 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 14,
-            "marginVertical": 3.08,
+            "marginVertical": 3.5,
             "width": "60%",
           }
         }
@@ -270,8 +270,8 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
             "borderRadius": 16,
             "height": 12,
             "marginTop": 8,
-            "marginVertical": 2.6400000000000006,
-            "width": "50%",
+            "marginVertical": 3,
+            "width": "100%",
           }
         }
       />
@@ -409,21 +409,23 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
         Are you telling me that you built a time machine out of a DeLorean?
       </Text>
       <Text
+        bold={false}
         hasTitle="Are you telling me that you built a time machine out of a DeLorean?"
+        italic={false}
         numberOfLines={2}
         style={
           Object {
             "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
+            "fontFamily": "InterUI-Regular",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "paddingTop": 8,
           }
         }
@@ -566,7 +568,7 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 14,
-            "marginVertical": 3.08,
+            "marginVertical": 3.5,
             "width": "60%",
           }
         }
@@ -705,7 +707,7 @@ exports[`HorizontalDefaultCard should should render a like icon 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
@@ -971,7 +973,7 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >

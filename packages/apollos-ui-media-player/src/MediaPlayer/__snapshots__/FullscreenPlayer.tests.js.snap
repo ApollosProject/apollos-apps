@@ -364,7 +364,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -375,7 +375,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -432,7 +432,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -541,7 +541,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -1355,7 +1355,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -2108,7 +2108,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -2119,7 +2119,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -2176,7 +2176,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -2285,7 +2285,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -3395,7 +3395,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -4148,7 +4148,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -4159,7 +4159,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -4216,7 +4216,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -4325,7 +4325,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -5435,7 +5435,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -6188,7 +6188,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -6199,7 +6199,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -6256,7 +6256,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -6365,7 +6365,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -7475,7 +7475,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -8228,7 +8228,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -8239,7 +8239,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -8296,7 +8296,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -8405,7 +8405,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -9515,7 +9515,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />

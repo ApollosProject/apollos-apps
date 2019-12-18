@@ -35,7 +35,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
@@ -74,7 +74,7 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
               "color": "#505050",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
             }
           }
         >
@@ -302,21 +302,23 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
                   Mea Animal Aperiam Ornatus Eu
                 </Text>
                 <Text
+                  bold={false}
                   hasTitle="Mea Animal Aperiam Ornatus Eu"
+                  italic={false}
                   numberOfLines={2}
                   style={
                     Object {
                       "color": "#A5A5A5",
-                      "fontFamily": "InterUI-Bold",
+                      "fontFamily": "InterUI-Regular",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingTop": 8,
                     }
                   }
@@ -461,21 +463,23 @@ exports[`RecentlyLikedTileFeedConnected renders a RecentlyLikedTileFeedConnected
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
                   Probo Senserit Id Mea, Ut Sed Malis Postea,
                 </Text>
                 <Text
+                  bold={false}
                   hasTitle="Probo Senserit Id Mea, Ut Sed Malis Postea,"
+                  italic={false}
                   numberOfLines={2}
                   style={
                     Object {
                       "color": "#A5A5A5",
-                      "fontFamily": "InterUI-Bold",
+                      "fontFamily": "InterUI-Regular",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingTop": 8,
                     }
                   }
@@ -527,7 +531,7 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
@@ -566,7 +570,7 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
               "color": "#505050",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
             }
           }
         >
@@ -794,21 +798,23 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
                   Mea Animal Aperiam Ornatus Eu
                 </Text>
                 <Text
+                  bold={false}
                   hasTitle="Mea Animal Aperiam Ornatus Eu"
+                  italic={false}
                   numberOfLines={2}
                   style={
                     Object {
                       "color": "#A5A5A5",
-                      "fontFamily": "InterUI-Bold",
+                      "fontFamily": "InterUI-Regular",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingTop": 8,
                     }
                   }
@@ -953,21 +959,23 @@ exports[`RecentlyLikedTileFeedConnected renders nothing if no liked content 1`] 
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
                   Probo Senserit Id Mea, Ut Sed Malis Postea,
                 </Text>
                 <Text
+                  bold={false}
                   hasTitle="Probo Senserit Id Mea, Ut Sed Malis Postea,"
+                  italic={false}
                   numberOfLines={2}
                   style={
                     Object {
                       "color": "#A5A5A5",
-                      "fontFamily": "InterUI-Bold",
+                      "fontFamily": "InterUI-Regular",
                       "fontSize": 12,
-                      "lineHeight": 17.28,
+                      "lineHeight": 18,
                       "paddingTop": 8,
                     }
                   }

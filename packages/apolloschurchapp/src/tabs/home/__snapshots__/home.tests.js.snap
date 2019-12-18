@@ -958,8 +958,8 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   <BVLinearGradient
                     colors={
                       Array [
-                        1711302509,
-                        4278216557,
+                        1725684697,
+                        4292598745,
                       ]
                     }
                     endPoint={
@@ -974,7 +974,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                         0.8,
                       ]
                     }
-                    overlayColor="#00676D"
+                    overlayColor="#DBDBD9"
                     overlayType="featured"
                     startPoint={
                       Object {
@@ -1081,7 +1081,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
                       "height": 12,
-                      "marginVertical": 2.6400000000000006,
+                      "marginVertical": 3,
                       "width": "50%",
                     }
                   }
@@ -1200,9 +1200,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />
@@ -1297,9 +1297,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />
@@ -1394,9 +1394,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />
@@ -1491,9 +1491,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                             "alignSelf": "stretch",
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 16,
-                            "height": 16,
-                            "marginVertical": 3.5199999999999996,
-                            "width": "80%",
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
                           }
                         }
                       />

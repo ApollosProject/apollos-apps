@@ -95,7 +95,7 @@ exports[`The Text Input component should render as a numeric field 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -258,7 +258,7 @@ exports[`The Text Input component should render as a password field with an icon
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -535,7 +535,7 @@ exports[`The Text Input component should render as a phone number field 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -698,7 +698,7 @@ exports[`The Text Input component should render as an email field 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -857,7 +857,7 @@ exports[`The Text Input component should render correctly 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -1016,7 +1016,7 @@ exports[`The Text Input component should render with no underline 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
