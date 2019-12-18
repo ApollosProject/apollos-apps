@@ -4,7 +4,7 @@ import { NotificationsConsumer } from '@apollosproject/ui-notifications';
 
 import AskNotifications from './AskNotifications';
 
-function getButtonText({ hasPushPermission, hasPrompted }) {
+function defaultGetButtonText({ hasPushPermission, hasPrompted }) {
   if (hasPushPermission) {
     return 'Notifications Enabled!';
   }
@@ -21,6 +21,7 @@ const AskNotificationsConnected = memo(
     onPressPrimary,
     onPressSecondary,
     onRequestPushPermissions,
+    getButtonText,
     ...props
   }) => (
     <NotificationsConsumer>
@@ -52,10 +53,12 @@ AskNotificationsConnected.propTypes = {
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   onRequestPushPermissions: PropTypes.func.isRequired,
+  getButtonText: PropTypes.func,
 };
 
 AskNotificationsConnected.defaultProps = {
   Component: AskNotifications,
+  getButtonText: defaultGetButtonText,
 };
 
 AskNotificationsConnected.displayName = 'AskNotificationsConnected';

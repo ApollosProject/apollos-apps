@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { getHasPrompted, getPushPermissions } from './permissionUtils';
 
-const PushContext = React.createContext({
+export const PushContext = React.createContext({
   hasPrompted: true,
   hasPushPermission: true,
   loading: false,
