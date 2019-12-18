@@ -1,8 +1,9 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { Platform, SafeAreaView, View } from 'react-native';
 import { compose, withProps } from 'recompose';
 import {
   styled,
+  Card,
   Button,
   withTheme,
   Icon,
@@ -19,34 +20,70 @@ const FlexedSafeAreaView = compose(
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
-  fill: theme.colors.primary,
+  fill: theme.colors.white,
   marginBottom: theme.sizing.baseUnit,
 }))(Icon);
 
 const TitleText = styled(
   ({ theme }) => ({
-    color: theme.colors.primary,
+    color: theme.colors.white,
   }),
   'ui-auth.TitleText'
 )(H2);
 
 const PromptText = styled(
   ({ theme }) => ({
-    color: theme.colors.text.secondary,
+    color: theme.colors.white,
   }),
   'ui-auth.PromptText'
 )(H5);
 
 const LegalText = styled(
   ({ theme }) => ({
-    color: theme.colors.text.tertiary,
+    color: theme.colors.white,
   }),
   'ui-auth.EmailEntry.LegalText'
 )(H6);
 
-const NextButton = styled({}, 'ui-auth.NextButton')((props) => (
-  <Button type={'primary'} pill={false} {...props} />
-));
+const NextButton = styled(
+  ({ theme }) => ({
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    color: theme.colors.primary,
+  }),
+  'ui-auth.NextButton'
+)((props) => <Button pill={false} {...props} />);
+
+const TabContainer = styled(
+  {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  'ui-auth.TabContainer'
+)(View);
+
+const TabButton = styled(
+  ({ theme, active }) => ({
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    backgroundColor: active
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(255, 255, 255, 0)',
+    color: theme.colors.white,
+    borderWidth: 0,
+    flex: 0,
+  }),
+  'ui-auth.TabButton'
+)(Button);
+
+const TabCard = styled(
+  ({ theme }) => ({
+    borderTopLeftRadius: 0,
+    paddingTop: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    ...Platform.select(theme.shadows.none),
+  }),
+  'ui-auth.TabCard'
+)(Card);
 
 export {
   FlexedSafeAreaView,
@@ -55,4 +92,7 @@ export {
   PromptText,
   NextButton,
   LegalText,
+  TabCard,
+  TabButton,
+  TabContainer,
 };

@@ -10,12 +10,10 @@ import {
 import { get } from 'lodash';
 import {
   styled,
-  H6,
-  H5,
   PaddedView,
+  GradientOverlayImage,
+  withTheme,
   TextInput,
-  ButtonLink,
-  BackgroundView,
 } from '@apollosproject/ui-kit';
 
 import {
@@ -25,7 +23,15 @@ import {
   PromptText,
   LegalText,
   BrandIcon,
+  TabCard,
+  TabButton,
+  TabContainer,
 } from '../styles';
+
+const FullScreenImage = styled({
+  resizeMode: 'cover',
+  position: 'absolute',
+})(GradientOverlayImage);
 
 const PhoneEntry = ({
   alternateLoginText,
@@ -40,6 +46,7 @@ const PhoneEntry = ({
   smsPromptText,
   values,
   BackgroundComponent,
+  theme,
 }) => (
   <KeyboardAvoidingView
     style={StyleSheet.absoluteFill}
@@ -48,55 +55,63 @@ const PhoneEntry = ({
       Platform.OS === 'android' ? StatusBar.currentHeight : 0
     }
   >
-    <BackgroundComponent>
-      <FlexedSafeAreaView>
-        <ScrollView>
-          <PaddedView>
-            <BrandIcon />
-            <TitleText>{authTitleText}</TitleText>
-            <PromptText padded>{smsPromptText}</PromptText>
+    <BackgroundComponent
+      source={'https://picsum.photos/375/812/?random'}
+      overlayColor={theme.colors.primary}
+      overlayType={'high'}
+    />
+    <FlexedSafeAreaView>
+      <ScrollView>
+        <PaddedView>
+          <BrandIcon />
+          <TitleText>{authTitleText}</TitleText>
+          <PromptText padded>{smsPromptText}</PromptText>
+          <PaddedView paddingBottom={0}>
+            <TabContainer>
+              <TabButton paddingBottom={0} title="Phone" active pill={false} />
 
-            {/* TODO: update to new design */}
-            <H5>Phone</H5>
-
-            {onPressAlternateLogin ? (
-              <PaddedView>
-                <H5>
-                  <ButtonLink onPress={onPressAlternateLogin}>
-                    {alternateLoginText}
-                  </ButtonLink>
-                </H5>
-              </PaddedView>
-            ) : null}
-
-            <TextInput
-              autoFocus
-              autoComplete={'tel'}
-              label={'Mobile Number'}
-              type={'phone'}
-              enablesReturnKeyAutomatically
-              returnKeyType={'next'}
-              onSubmitEditing={onPressNext}
-              error={get(errors, 'phone')}
-              onChangeText={(text) => setFieldValue('phone', text)}
-              value={get(values, 'phone')}
-            />
-            <LegalText>{smsPolicyInfo}</LegalText>
+              {onPressAlternateLogin ? (
+                <TabButton
+                  onPress={onPressAlternateLogin}
+                  title={alternateLoginText}
+                  pill={false}
+                  paddingBottom={0}
+                />
+              ) : null}
+            </TabContainer>
           </PaddedView>
-        </ScrollView>
+          <TabCard>
+            <PaddedView>
+              <TextInput
+                autoFocus
+                autoComplete={'tel'}
+                label={'Phone Number'}
+                type={'phone'}
+                enablesReturnKeyAutomatically
+                returnKeyType={'next'}
+                onSubmitEditing={onPressNext}
+                error={get(errors, 'phone')}
+                onChangeText={(text) => setFieldValue('phone', text)}
+                value={get(values, 'phone')}
+                labelColor={theme.colors.white}
+              />
+              <LegalText>{smsPolicyInfo}</LegalText>
+            </PaddedView>
+          </TabCard>
+        </PaddedView>
+      </ScrollView>
 
-        {onPressNext ? (
-          <PaddedView>
-            <NextButton
-              title={'Next'}
-              onPress={onPressNext}
-              disabled={disabled}
-              loading={isLoading}
-            />
-          </PaddedView>
-        ) : null}
-      </FlexedSafeAreaView>
-    </BackgroundComponent>
+      {onPressNext ? (
+        <PaddedView>
+          <NextButton
+            title={'Next'}
+            onPress={onPressNext}
+            disabled={disabled}
+            loading={isLoading}
+          />
+        </PaddedView>
+      ) : null}
+    </FlexedSafeAreaView>
   </KeyboardAvoidingView>
 );
 
@@ -125,11 +140,11 @@ PhoneEntry.defaultProps = {
   smsPolicyInfo: "We'll text you a code to make login super easy!",
   smsPromptText:
     'Sign in for a personalized experience that helps you grow and connect with God.',
-  BackgroundComponent: BackgroundView,
+  BackgroundComponent: FullScreenImage,
 };
 
 PhoneEntry.LegalText = LegalText;
 
 PhoneEntry.displayName = 'PhoneEntry';
 
-export default PhoneEntry;
+export default withTheme()(PhoneEntry);
