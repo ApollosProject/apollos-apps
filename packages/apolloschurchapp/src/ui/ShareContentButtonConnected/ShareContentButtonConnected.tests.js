@@ -1,6 +1,6 @@
 import React from 'react';
-import Providers from 'apolloschurchapp/src/Providers';
-import { renderWithApolloData } from 'apolloschurchapp/src/utils/testUtils';
+import { renderWithApolloData } from '../../utils/testUtils';
+import Providers from '../../Providers';
 import getShareContent from './getShareContent';
 import ShareContentButtonConnected from '.';
 
