@@ -96,7 +96,6 @@ class EmailEntryConnected extends Component {
           isValid,
           touched,
           errors,
-          alternateLogin,
         }) => (
           <this.props.Component
             disabled={isSubmitting || !isValid}
@@ -106,7 +105,7 @@ class EmailEntryConnected extends Component {
             onPressAlternateLogin={this.handleOnPressAlternateLogin}
             setFieldValue={setFieldValue}
             values={values}
-            alternateLogin={alternateLogin}
+            alternateLogin
             {...this.flatProps}
           />
         )}

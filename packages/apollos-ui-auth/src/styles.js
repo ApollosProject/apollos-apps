@@ -54,10 +54,10 @@ const NextButton = styled(
 )((props) => <Button pill={false} {...props} />);
 
 const TabContainer = styled(
-  {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-  },
+  ({ alternateLogin }) => ({
+    flexDirection: alternateLogin ? 'row-reverse' : 'row',
+    justifyContent: alternateLogin ? 'flex-end' : 'flex-start',
+  }),
   'ui-auth.TabContainer'
 )(View);
 
@@ -76,8 +76,8 @@ const TabButton = styled(
 )(Button);
 
 const TabCard = styled(
-  ({ theme }) => ({
-    borderTopLeftRadius: 0,
+  ({ theme, alternateLogin }) => ({
+    borderTopLeftRadius: alternateLogin ? theme.sizing.baseBorderRadius : 0,
     paddingTop: 0,
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     ...Platform.select(theme.shadows.none),

@@ -72,13 +72,12 @@ const Entry = ({
           <TitleText>{authTitleText}</TitleText>
           <PromptText padded>{promptText}</PromptText>
 
-          <TabContainer>
+          <TabContainer alternateLogin={alternateLogin}>
             <TabButton
               paddingBottom={0}
               title={tabTitle}
               isActive
               pill={false}
-              alternateLogin={alternateLogin}
             />
             {onPressAlternateLogin ? (
               <TabButton
@@ -89,7 +88,7 @@ const Entry = ({
               />
             ) : null}
           </TabContainer>
-          <TabCard>
+          <TabCard alternateLogin={alternateLogin}>
             <PaddedView>
               <TextInput
                 autoFocus
@@ -153,6 +152,7 @@ Entry.defaultProps = {
   promptText:
     'Sign in for a personalized experience that helps you grow and connect with God.',
   BackgroundComponent: FullScreenImage,
+  alternateLogin: false,
 };
 
 Entry.displayName = 'Entry';
