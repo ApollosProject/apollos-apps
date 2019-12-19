@@ -2,51 +2,56 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   KeyboardAvoidingView,
-  StyleSheet,
-  ScrollView,
   Platform,
+  ScrollView,
   StatusBar,
+  StyleSheet,
 } from 'react-native';
 import { get } from 'lodash';
 import {
-  styled,
-  PaddedView,
   GradientOverlayImage,
-  withTheme,
+  PaddedView,
   TextInput,
+  styled,
+  withTheme,
 } from '@apollosproject/ui-kit';
 
 import {
-  FlexedSafeAreaView,
-  NextButton,
-  TitleText,
-  PromptText,
-  LegalText,
   BrandIcon,
-  TabCard,
+  FlexedSafeAreaView,
+  LegalText,
+  NextButton,
+  PromptText,
   TabButton,
+  TabCard,
   TabContainer,
-} from '../styles';
+  TitleText,
+} from './styles';
 
 const FullScreenImage = styled({
   resizeMode: 'cover',
   position: 'absolute',
 })(GradientOverlayImage);
 
-const PhoneEntry = ({
+const Entry = ({
+  BackgroundComponent,
   alternateLoginText,
   authTitleText,
   disabled,
   errors,
+  inputLabel,
+  inputType,
   isLoading,
   onPressAlternateLogin,
   onPressNext,
+  policyInfo,
+  promptText,
   setFieldValue,
-  smsPolicyInfo,
-  smsPromptText,
-  values,
-  BackgroundComponent,
+  tabTitle,
   theme,
+  values,
+  inputAutoComplete,
+  alternateLogin,
 }) => (
   <KeyboardAvoidingView
     style={StyleSheet.absoluteFill}
@@ -65,37 +70,41 @@ const PhoneEntry = ({
         <PaddedView>
           <BrandIcon />
           <TitleText>{authTitleText}</TitleText>
-          <PromptText padded>{smsPromptText}</PromptText>
-          <PaddedView paddingBottom={0}>
-            <TabContainer>
-              <TabButton paddingBottom={0} title="Phone" active pill={false} />
+          <PromptText padded>{promptText}</PromptText>
 
-              {onPressAlternateLogin ? (
-                <TabButton
-                  onPress={onPressAlternateLogin}
-                  title={alternateLoginText}
-                  pill={false}
-                  paddingBottom={0}
-                />
-              ) : null}
-            </TabContainer>
-          </PaddedView>
+          <TabContainer>
+            <TabButton
+              paddingBottom={0}
+              title={tabTitle}
+              isActive
+              pill={false}
+              alternateLogin={alternateLogin}
+            />
+            {onPressAlternateLogin ? (
+              <TabButton
+                onPress={onPressAlternateLogin}
+                title={alternateLoginText}
+                pill={false}
+                paddingBottom={0}
+              />
+            ) : null}
+          </TabContainer>
           <TabCard>
             <PaddedView>
               <TextInput
                 autoFocus
-                autoComplete={'tel'}
-                label={'Phone Number'}
-                type={'phone'}
+                autoComplete={inputAutoComplete}
+                label={inputLabel}
+                type={inputType}
                 enablesReturnKeyAutomatically
                 returnKeyType={'next'}
                 onSubmitEditing={onPressNext}
-                error={get(errors, 'phone')}
-                onChangeText={(text) => setFieldValue('phone', text)}
-                value={get(values, 'phone')}
+                error={get(errors, inputType)}
+                onChangeText={(text) => setFieldValue(inputType, text)}
+                value={get(values, inputType)}
                 labelColor={theme.colors.white}
               />
-              <LegalText>{smsPolicyInfo}</LegalText>
+              <LegalText>{policyInfo}</LegalText>
             </PaddedView>
           </TabCard>
         </PaddedView>
@@ -115,7 +124,8 @@ const PhoneEntry = ({
   </KeyboardAvoidingView>
 );
 
-PhoneEntry.propTypes = {
+Entry.propTypes = {
+  alternateLogin: PropTypes.bool,
   alternateLoginText: PropTypes.node,
   authTitleText: PropTypes.string,
   disabled: PropTypes.bool,
@@ -126,25 +136,25 @@ PhoneEntry.propTypes = {
   onPressAlternateLogin: PropTypes.func,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
   setFieldValue: PropTypes.func.isRequired,
-  smsPolicyInfo: PropTypes.string,
-  smsPromptText: PropTypes.string,
+  policyInfo: PropTypes.string,
+  promptText: PropTypes.string,
   values: PropTypes.shape({
     phone: PropTypes.string,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  tabTitle: PropTypes.string,
+  inputType: PropTypes.string,
+  inputLabel: PropTypes.string,
+  inputAutoComplete: PropTypes.string,
 };
 
-PhoneEntry.defaultProps = {
+Entry.defaultProps = {
   authTitleText: 'Have we met?',
-  alternateLoginText: 'Email',
-  smsPolicyInfo: "We'll text you a code to make login super easy!",
-  smsPromptText:
+  promptText:
     'Sign in for a personalized experience that helps you grow and connect with God.',
   BackgroundComponent: FullScreenImage,
 };
 
-PhoneEntry.LegalText = LegalText;
+Entry.displayName = 'Entry';
 
-PhoneEntry.displayName = 'PhoneEntry';
-
-export default withTheme()(PhoneEntry);
+export default withTheme()(Entry);

@@ -62,10 +62,10 @@ const TabContainer = styled(
 )(View);
 
 const TabButton = styled(
-  ({ theme, active }) => ({
+  ({ theme, isActive }) => ({
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
-    backgroundColor: active
+    backgroundColor: isActive
       ? 'rgba(255, 255, 255, 0.1)'
       : 'rgba(255, 255, 255, 0)',
     color: theme.colors.white,
@@ -81,6 +81,8 @@ const TabCard = styled(
     paddingTop: 0,
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     ...Platform.select(theme.shadows.none),
+    marginHorizontal: 0,
+    marginVertical: 0,
   }),
   'ui-auth.TabCard'
 )(Card);

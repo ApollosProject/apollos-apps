@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { H6 } from '@apollosproject/ui-kit';
 
-import PhoneEntry from './PhoneEntry';
+import PhoneEntry from './Entry';
 
 storiesOf('ui-auth/SMS/PhoneEntry', module)
   .add('default', () => <PhoneEntry setFieldValue={() => {}} />)
