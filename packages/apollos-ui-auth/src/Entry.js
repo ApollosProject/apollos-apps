@@ -17,7 +17,6 @@ import {
 } from '@apollosproject/ui-kit';
 
 import {
-  BrandIcon,
   FlexedSafeAreaView,
   LegalText,
   NextButton,
@@ -62,13 +61,12 @@ const Entry = ({
   >
     <BackgroundComponent
       source={'https://picsum.photos/375/812/?random'}
-      overlayColor={theme.colors.primary}
+      overlayColor={theme.colors.background.screen}
       overlayType={'high'}
     />
     <FlexedSafeAreaView>
       <ScrollView>
         <PaddedView>
-          <BrandIcon />
           <TitleText>{authTitleText}</TitleText>
           <PromptText padded>{promptText}</PromptText>
 
@@ -79,6 +77,7 @@ const Entry = ({
               isActive
               pill={false}
             />
+
             {onPressAlternateLogin ? (
               <TabButton
                 onPress={onPressAlternateLogin}
@@ -88,7 +87,7 @@ const Entry = ({
               />
             ) : null}
           </TabContainer>
-          <TabCard alternateLogin={alternateLogin}>
+          <TabCard>
             <PaddedView>
               <TextInput
                 autoFocus
@@ -101,7 +100,7 @@ const Entry = ({
                 error={get(errors, inputType)}
                 onChangeText={(text) => setFieldValue(inputType, text)}
                 value={get(values, inputType)}
-                labelColor={theme.colors.white}
+                labelColor={theme.colors.text.tertiary}
               />
               <LegalText>{policyInfo}</LegalText>
             </PaddedView>

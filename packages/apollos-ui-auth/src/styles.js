@@ -20,35 +20,36 @@ const FlexedSafeAreaView = compose(
 const BrandIcon = withTheme(({ theme }) => ({
   name: 'brand-icon',
   size: theme.sizing.baseUnit * 3.0,
-  fill: theme.colors.white,
+  fill: theme.colors.text.primary,
   marginBottom: theme.sizing.baseUnit,
 }))(Icon);
 
 const TitleText = styled(
   ({ theme }) => ({
-    color: theme.colors.white,
+    color: theme.colors.action.primary,
   }),
   'ui-auth.TitleText'
 )(H2);
 
 const PromptText = styled(
   ({ theme }) => ({
-    color: theme.colors.white,
+    color: theme.colors.text.primary,
+    paddingBottom: theme.sizing.baseUnit * 1.5,
   }),
   'ui-auth.PromptText'
 )(H5);
 
 const LegalText = styled(
   ({ theme }) => ({
-    color: theme.colors.white,
+    color: theme.colors.text.tertiary,
   }),
   'ui-auth.EmailEntry.LegalText'
 )(H6);
 
 const NextButton = styled(
   ({ theme }) => ({
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    color: theme.colors.primary,
+    backgroundColor: theme.colors.action.primary,
+    color: theme.colors.text.invert,
   }),
   'ui-auth.NextButton'
 )((props) => <Button pill={false} {...props} />);
@@ -57,6 +58,8 @@ const TabContainer = styled(
   ({ alternateLogin }) => ({
     flexDirection: alternateLogin ? 'row-reverse' : 'row',
     justifyContent: alternateLogin ? 'flex-end' : 'flex-start',
+    flex: 1,
+    flexWrap: 'wrap',
   }),
   'ui-auth.TabContainer'
 )(View);
@@ -65,24 +68,25 @@ const TabButton = styled(
   ({ theme, isActive }) => ({
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
-    backgroundColor: isActive
-      ? 'rgba(255, 255, 255, 0.1)'
-      : 'rgba(255, 255, 255, 0)',
-    color: theme.colors.white,
+    borderTopLeftRadius: isActive ? theme.sizing.baseBorderRadius : 0,
+    borderTopRightRadius: isActive ? theme.sizing.baseBorderRadius : 0,
+    fontSize: theme.helpers.rem(0.75),
     borderWidth: 0,
-    flex: 0,
+    fontWeight: 'normal',
+    color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
+    backgroundColor: isActive ? theme.colors.background.paper : 0,
   }),
   'ui-auth.TabButton'
 )(Button);
 
 const TabCard = styled(
-  ({ theme, alternateLogin }) => ({
-    borderTopLeftRadius: alternateLogin ? theme.sizing.baseBorderRadius : 0,
+  ({ theme }) => ({
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
     paddingTop: 0,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    ...Platform.select(theme.shadows.none),
     marginHorizontal: 0,
     marginVertical: 0,
+    ...Platform.select(theme.shadows.none),
   }),
   'ui-auth.TabCard'
 )(Card);
