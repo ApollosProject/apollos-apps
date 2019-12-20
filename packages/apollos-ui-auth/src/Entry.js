@@ -22,8 +22,11 @@ import {
   NextButton,
   PromptText,
   TabButton,
+  TabButtonAlternate,
+  TabButtonWrapper,
   TabCard,
   TabContainer,
+  TabWrapper,
   TitleText,
 } from './styles';
 
@@ -69,42 +72,49 @@ const Entry = ({
         <PaddedView>
           <TitleText>{authTitleText}</TitleText>
           <PromptText padded>{promptText}</PromptText>
+          <TabWrapper>
+            <TabContainer alternateLogin={alternateLogin}>
+              <TabButtonWrapper>
+                <TabButton
+                  alternateLogin={alternateLogin}
+                  isActive
+                  paddingBottom={0}
+                  pill={false}
+                  title={tabTitle}
+                />
+              </TabButtonWrapper>
 
-          <TabContainer alternateLogin={alternateLogin}>
-            <TabButton
-              paddingBottom={0}
-              title={tabTitle}
-              isActive
-              pill={false}
-            />
-
-            {onPressAlternateLogin ? (
-              <TabButton
-                onPress={onPressAlternateLogin}
-                title={alternateLoginText}
-                pill={false}
-                paddingBottom={0}
-              />
-            ) : null}
-          </TabContainer>
-          <TabCard>
-            <PaddedView>
-              <TextInput
-                autoFocus
-                autoComplete={inputAutoComplete}
-                label={inputLabel}
-                type={inputType}
-                enablesReturnKeyAutomatically
-                returnKeyType={'next'}
-                onSubmitEditing={onPressNext}
-                error={get(errors, inputType)}
-                onChangeText={(text) => setFieldValue(inputType, text)}
-                value={get(values, inputType)}
-                labelColor={theme.colors.text.tertiary}
-              />
-              <LegalText>{policyInfo}</LegalText>
-            </PaddedView>
-          </TabCard>
+              {onPressAlternateLogin ? (
+                <TabButtonWrapper>
+                  <TabButtonAlternate
+                    alternateLogin={alternateLogin}
+                    onPress={onPressAlternateLogin}
+                    paddingBottom={0}
+                    pill={false}
+                    title={alternateLoginText}
+                  />
+                </TabButtonWrapper>
+              ) : null}
+            </TabContainer>
+            <TabCard>
+              <PaddedView>
+                <TextInput
+                  autoComplete={inputAutoComplete}
+                  autoFocus
+                  enablesReturnKeyAutomatically
+                  error={get(errors, inputType)}
+                  label={inputLabel}
+                  labelColor={theme.colors.text.tertiary}
+                  onChangeText={(text) => setFieldValue(inputType, text)}
+                  onSubmitEditing={onPressNext}
+                  returnKeyType={'next'}
+                  type={inputType}
+                  value={get(values, inputType)}
+                />
+                <LegalText>{policyInfo}</LegalText>
+              </PaddedView>
+            </TabCard>
+          </TabWrapper>
         </PaddedView>
       </ScrollView>
 
