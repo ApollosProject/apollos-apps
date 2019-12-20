@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { withApollo } from 'react-apollo';
 
-import GET_USER_EXISTS from '../getUserExists';
+import { LoginConsumer } from '../LoginProvider';
 import EmailEntry from './EmailEntry';
 
 class EmailEntryConnected extends Component {
@@ -35,27 +34,13 @@ class EmailEntryConnected extends Component {
 
   flatProps = { ...this.props, ...this.props.screenProps };
 
-  handleOnSubmit = async ({ email }, { setSubmitting, setFieldError }) => {
-    console.log('email.handleOnSubmit', { email });
+  handleOnSubmit = (handleCheckUserExists) => async (
+    { email },
+    { setSubmitting, setFieldError }
+  ) => {
     setSubmitting(true);
     try {
-      const {
-        data: { userExists },
-      } = await this.props.client.query({
-        query: GET_USER_EXISTS,
-        variables: { identity: email },
-        fetchPolicy: 'network-only',
-      });
-
-      if (userExists === 'EXISTING_APP_USER') {
-        this.props.navigation.navigate('AuthPasswordEntryConnected', {
-          email,
-        });
-      } else {
-        this.props.navigation.navigate('AuthProfileEntryConnected', {
-          email,
-        });
-      }
+      handleCheckUserExists({ identity: email, authType: 'email' });
     } catch (e) {
       setFieldError(
         'email',
@@ -71,34 +56,38 @@ class EmailEntryConnected extends Component {
 
   render() {
     return (
-      <Formik
-        initialValues={{ email: '' }}
-        validationSchema={this.validationSchema}
-        onSubmit={this.handleOnSubmit}
-      >
-        {({
-          setFieldValue,
-          handleSubmit,
-          values,
-          isSubmitting,
-          isValid,
-          touched,
-          errors,
-        }) => (
-          <this.props.Component
-            disabled={isSubmitting || !isValid}
-            errors={touched.email && errors}
-            isLoading={isSubmitting}
-            onPressNext={handleSubmit}
-            onPressAlternateLogin={this.handleOnPressAlternateLogin}
-            setFieldValue={setFieldValue}
-            values={values}
-            {...this.flatProps}
-          />
+      <LoginConsumer>
+        {({ handleCheckUserExists }) => (
+          <Formik
+            initialValues={{ email: '' }}
+            validationSchema={this.validationSchema}
+            onSubmit={this.handleOnSubmit(handleCheckUserExists)}
+          >
+            {({
+              setFieldValue,
+              handleSubmit,
+              values,
+              isSubmitting,
+              isValid,
+              touched,
+              errors,
+            }) => (
+              <this.props.Component
+                disabled={isSubmitting || !isValid}
+                errors={touched.email && errors}
+                isLoading={isSubmitting}
+                onPressNext={handleSubmit}
+                onPressAlternateLogin={this.handleOnPressAlternateLogin}
+                setFieldValue={setFieldValue}
+                values={values}
+                {...this.flatProps}
+              />
+            )}
+          </Formik>
         )}
-      </Formik>
+      </LoginConsumer>
     );
   }
 }
 
-export default withApollo(EmailEntryConnected);
+export default EmailEntryConnected;

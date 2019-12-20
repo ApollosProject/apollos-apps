@@ -2,29 +2,34 @@ import React from 'react';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
 
+import { LoginConsumer } from '../LoginProvider';
 import ProfileEntry from './ProfileEntry';
 
 const ProfileEntryConnected = ({ handleForgotPassword, screenProps }) => (
-  <Formik
-    onSubmit={async (
-      { firstName, lastName },
-      { setSubmitting, setFieldError }
-    ) => {
-      setSubmitting(true);
-      // todo..
-    }}
-  >
-    {(formikBag) => (
-      <ProfileEntry
-        {...screenProps}
-        {...formikBag}
-        errors={formikBag.touched.password && formikBag.errors}
-        isLoading={formikBag.isSubmitting}
-        onPressNext={formikBag.handleSubmit}
-        handleForgotPassword={handleForgotPassword}
-      />
+  <LoginConsumer>
+    {({ handleProfileComplete }) => (
+      <Formik
+        onSubmit={async ({ firstName, lastName }, { setSubmitting }) => {
+          setSubmitting(true);
+          handleProfileComplete({
+            userProfile: { FirstName: firstName, LastName: lastName },
+          });
+        }}
+      >
+        {(formikBag) => (
+          <ProfileEntry
+            {...screenProps}
+            {...formikBag}
+            errors={formikBag.touched.password && formikBag.errors}
+            isLoading={formikBag.isSubmitting}
+            onPressNext={formikBag.handleSubmit}
+            handleForgotPassword={handleForgotPassword}
+            passwordType="password"
+          />
+        )}
+      </Formik>
     )}
-  </Formik>
+  </LoginConsumer>
 );
 
 ProfileEntryConnected.propTypes = {

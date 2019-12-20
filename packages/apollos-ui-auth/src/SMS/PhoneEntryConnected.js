@@ -3,11 +3,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { withApollo, Mutation } from 'react-apollo';
 
-import GET_USER_EXISTS from '../getUserExists';
+import { LoginConsumer } from '../LoginProvider';
 import PhoneEntry from './PhoneEntry';
-import REQUEST_PIN from './requestPin';
 
 class PhoneEntryConnected extends Component {
   static propTypes = {
@@ -37,31 +35,15 @@ class PhoneEntryConnected extends Component {
 
   flatProps = { ...this.props, ...this.props.screenProps };
 
-  handleOnSubmit = (mutate) => async (
+  handleOnSubmit = (handleCheckUserExists) => async (
     { phone },
     { setSubmitting, setFieldError }
   ) => {
     setSubmitting(true);
     try {
-      const {
-        data: { userExists },
-      } = await this.props.client.query({
-        query: GET_USER_EXISTS,
-        variables: { identity: phone },
-        fetchPolicy: 'network-only',
-      });
-
-      if (userExists === 'EXISTING_APP_USER') {
-        await mutate({ variables: { phone } });
-        this.props.navigation.navigate('AuthSMSVerificationConnected', {
-          phone,
-        });
-      } else {
-        this.props.navigation.navigate('AuthProfileEntryConnected', {
-          phone,
-        });
-      }
+      await handleCheckUserExists({ authType: 'sms', identity: phone });
     } catch (e) {
+      console.warn(e);
       setFieldError(
         'phone',
         'There was an error. Please double check your number and try again.'
@@ -76,12 +58,12 @@ class PhoneEntryConnected extends Component {
 
   render() {
     return (
-      <Mutation mutation={REQUEST_PIN}>
-        {(mutate) => (
+      <LoginConsumer>
+        {({ handleCheckUserExists }) => (
           <Formik
             initialValues={{ phone: '' }}
             validationSchema={this.validationSchema}
-            onSubmit={this.handleOnSubmit(mutate)}
+            onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
               setFieldValue,
@@ -105,9 +87,9 @@ class PhoneEntryConnected extends Component {
             )}
           </Formik>
         )}
-      </Mutation>
+      </LoginConsumer>
     );
   }
 }
 
-export default withApollo(PhoneEntryConnected);
+export default PhoneEntryConnected;

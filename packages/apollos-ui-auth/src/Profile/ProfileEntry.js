@@ -28,6 +28,7 @@ const ProfileEntry = ({
   onPressNext,
   setFieldValue,
   values,
+  passwordType,
   BackgroundComponent,
 }) => {
   let LastNameInput = null;

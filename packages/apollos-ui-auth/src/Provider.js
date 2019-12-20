@@ -5,7 +5,7 @@ import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 import { GET_PUSH_ID, updatePushId } from '@apollosproject/ui-notifications';
-
+import { LoginProvider } from './LoginProvider';
 import getLoginState from './getLoginState';
 
 const defaultContext = {
@@ -78,12 +78,14 @@ export const resolvers = {
 
 const Provider = ({ children, ...authContext }) => (
   <AuthContext.Provider value={{ ...defaultContext, ...authContext }}>
-    <ApolloConsumer>
-      {(client) => {
-        client.addResolvers(resolvers);
-        return children;
-      }}
-    </ApolloConsumer>
+    <LoginProvider {...defaultContext} {...authContext}>
+      <ApolloConsumer>
+        {(client) => {
+          client.addResolvers(resolvers);
+          return children;
+        }}
+      </ApolloConsumer>
+    </LoginProvider>
   </AuthContext.Provider>
 );
 

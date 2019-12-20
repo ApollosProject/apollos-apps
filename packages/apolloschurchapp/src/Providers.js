@@ -19,6 +19,7 @@ const AppProviders = (props) => (
     >
       <AuthProvider
         navigateToAuth={() => NavigationService.navigate('Auth')}
+        navigate={NavigationService.navigate}
         closeAuth={() => NavigationService.navigate('Onboarding')}
       >
         <MediaPlayerProvider>
