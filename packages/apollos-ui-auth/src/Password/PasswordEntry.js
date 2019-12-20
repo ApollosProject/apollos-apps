@@ -20,7 +20,6 @@ import {
   NextButton,
   TitleText,
   PromptText,
-  BrandIcon,
 } from '../styles';
 
 const PasswordEntry = ({
@@ -46,7 +45,6 @@ const PasswordEntry = ({
       <FlexedSafeAreaView>
         <ScrollView>
           <PaddedView>
-            <BrandIcon />
             <TitleText>{passwordTitleText}</TitleText>
             <PromptText padded>{passwordPromptText}</PromptText>
 
