@@ -3,6 +3,7 @@ import { camelCase, mapKeys, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import moment from 'moment';
 import ApollosConfig from '@apollosproject/config';
+import { fieldsAsObject } from '../utils';
 
 const RockGenderMap = {
   Unknown: 0,
@@ -68,30 +69,25 @@ export default class Person extends RockApolloDataSource {
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
-    const fieldsAsObject = fields.reduce(
-      (accum, { field, value }) => ({
-        ...accum,
-        [field]: typeof value === 'string' ? value.trim() : value,
-      }),
-      {}
-    );
-
     // Because we have a custom enum for Gender, we do this transform prior to creating our "update object"
     // i.e. our schema will send Gender: 1 as Gender: Male
-    if (fieldsAsObject.Gender) {
-      if (!['Unknown', 'Male', 'Female'].includes(fieldsAsObject.Gender)) {
+
+    const profileFields = fieldsAsObject(fields);
+
+    if (profileFields.Gender) {
+      if (!['Unknown', 'Male', 'Female'].includes(profileFields.Gender)) {
         throw new UserInputError(
           'Rock gender must be either Unknown, Male, or Female'
         );
       }
-      fieldsAsObject.Gender = RockGenderMap[fieldsAsObject.Gender];
+      profileFields.Gender = RockGenderMap[profileFields.Gender];
     }
 
-    let rockUpdateFields = { ...fieldsAsObject };
+    let rockUpdateFields = { ...profileFields };
 
-    if (fieldsAsObject.BirthDate) {
+    if (profileFields.BirthDate) {
       delete rockUpdateFields.BirthDate;
-      const birthDate = moment(fieldsAsObject.BirthDate);
+      const birthDate = moment(profileFields.BirthDate);
 
       if (!birthDate.isValid()) {
         throw new UserInputError('BirthDate must be a valid date');
@@ -110,7 +106,7 @@ export default class Person extends RockApolloDataSource {
 
     return {
       ...currentPerson,
-      ...mapKeys(fieldsAsObject, (_, key) => camelCase(key)),
+      ...mapKeys(profileFields, (_, key) => camelCase(key)),
     };
   };
 

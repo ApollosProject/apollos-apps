@@ -8,11 +8,27 @@ export const testSchema = gql`
 export const authSmsSchema = gql`
   type SmsPinResult {
     success: Boolean
+    userAuthStatus: USER_AUTH_STATUS
   }
 
   extend type Mutation {
     requestSmsLoginPin(phoneNumber: String!): SmsPinResult
     authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
+    registerWithSms(
+      phoneNumber: String!
+      pin: String!
+      userProfile: [UpdateProfileInput]
+    ): Authentication
+  }
+
+  enum USER_AUTH_STATUS {
+    NONE
+    NEW_APP_USER
+    EXISTING_APP_USER
+  }
+
+  extend type Query {
+    userExists(identity: String): USER_AUTH_STATUS
   }
 `;
 
@@ -37,7 +53,11 @@ export const authSchema = gql`
   extend type Mutation {
     authenticate(identity: String!, password: String!): Authentication
     changePassword(password: String!): Authentication
-    registerPerson(email: String!, password: String!): Authentication
+    registerPerson(
+      email: String!
+      password: String!
+      userProfile: [UpdateProfileInput]
+    ): Authentication
   }
 
   extend type Query {
