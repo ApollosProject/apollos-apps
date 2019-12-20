@@ -44,7 +44,6 @@ const ProfileEntry = ({
         <FlexedSafeAreaView>
           <ScrollView>
             <PaddedView>
-              <BrandIcon />
               <TitleText>{profileTitleText}</TitleText>
               <PromptText padded>{profilePromptText}</PromptText>
 
