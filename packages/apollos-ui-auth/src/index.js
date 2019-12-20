@@ -4,13 +4,11 @@ import PropTypes from 'prop-types';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
 import {
-  SMSPhoneEntry as AuthSMSPhoneEntry,
   SMSPhoneEntryConnected as AuthSMSPhoneEntryConnected,
   SMSVerification as AuthSMSVerification,
   SMSVerificationConnected as AuthSMSVerificationConnected,
 } from './SMS';
 import {
-  EmailEntry as AuthEmailEntry,
   EmailEntryConnected as AuthEmailEntryConnected,
   PasswordEntry as AuthPasswordEntry,
   PasswordEntryConnected as AuthPasswordEntryConnected,
@@ -30,13 +28,12 @@ export GET_LOGIN_STATE from './getLoginState';
 export LOGOUT from './logout';
 export authLink from './authLink';
 export buildErrorLink from './buildErrorLink';
+export Entry from './Entry';
 
 export {
-  AuthSMSPhoneEntry,
   AuthSMSPhoneEntryConnected,
   AuthSMSVerification,
   AuthSMSVerificationConnected,
-  AuthEmailEntry,
   AuthEmailEntryConnected,
   AuthPasswordEntry,
   AuthPasswordEntryConnected,

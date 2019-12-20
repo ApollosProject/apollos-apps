@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../testUtils';
+import { Providers } from './testUtils';
 
-import PhoneEntry from './PhoneEntry';
+import PhoneEntry from './Entry';
 
 describe('The Auth PhoneEntry component', () => {
   it('should render', () => {

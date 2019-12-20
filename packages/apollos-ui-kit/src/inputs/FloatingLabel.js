@@ -4,10 +4,11 @@ import { Animated, StyleSheet } from 'react-native';
 
 import { H6 } from '../typography';
 import styled from '../styled';
+import { withTheme } from '../theme';
 
 export const LabelText = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.secondary,
+  ({ theme, color }) => ({
+    color: color || theme.colors.text.secondary,
     backgroundColor: 'transparent',
     paddingVertical: theme.sizing.baseUnit / 4,
   }),
@@ -31,6 +32,7 @@ class FloatingLabel extends PureComponent {
     }),
     scaleSize: PropTypes.number, // how much smaller to make label when focused
     floatingOpacity: PropTypes.number,
+    color: PropTypes.string,
   };
 
   static defaultProps = {
@@ -81,10 +83,10 @@ class FloatingLabel extends PureComponent {
         onLayout={this.handleLayout}
         style={[styles.floatLabelView, wrapperStyles]}
       >
-        <LabelText>{this.props.children}</LabelText>
+        <LabelText color={this.props.color}>{this.props.children}</LabelText>
       </Animated.View>
     );
   }
 }
 
-export default FloatingLabel;
+export default withTheme()(FloatingLabel);

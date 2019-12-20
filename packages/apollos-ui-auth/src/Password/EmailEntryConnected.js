@@ -5,11 +5,12 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import { LoginConsumer } from '../LoginProvider';
-import EmailEntry from './EmailEntry';
+import Entry from '../Entry';
 
 class EmailEntryConnected extends Component {
   static propTypes = {
-    // Custom component to be rendered. Defaults to EmailEntry
+    alternateLoginText: PropTypes.string,
+    // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.func,
@@ -19,11 +20,22 @@ class EmailEntryConnected extends Component {
       query: PropTypes.func,
     }),
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
+    inputAutoComplete: PropTypes.string,
+    inputLabel: PropTypes.string,
+    inputType: PropTypes.string,
+    policyInfo: PropTypes.string,
+    tabTitle: PropTypes.string,
   };
 
   static defaultProps = {
-    Component: EmailEntry,
+    Component: Entry,
     screenProps: {},
+    alternateLoginText: 'Phone',
+    inputAutoComplete: 'email',
+    inputLabel: 'Email',
+    inputType: 'email',
+    policyInfo: "You'll enter or create a password to continue.",
+    tabTitle: 'Email',
   };
 
   validationSchema = Yup.object().shape({
@@ -80,6 +92,7 @@ class EmailEntryConnected extends Component {
                 onPressAlternateLogin={this.handleOnPressAlternateLogin}
                 setFieldValue={setFieldValue}
                 values={values}
+                alternateLogin
                 {...this.flatProps}
               />
             )}
