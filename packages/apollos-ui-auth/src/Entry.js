@@ -64,7 +64,7 @@ const Entry = ({
   >
     <BackgroundComponent
       source={'https://picsum.photos/375/812/?random'}
-      overlayColor={theme.colors.background.screen}
+      overlayColor={theme.colors.background.paper}
       overlayType={'high'}
     />
     <FlexedSafeAreaView>

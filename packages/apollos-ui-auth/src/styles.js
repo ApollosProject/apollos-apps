@@ -42,6 +42,7 @@ const PromptText = styled(
 const LegalText = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
+    fontWeight: 'normal',
   }),
   'ui-auth.EmailEntry.LegalText'
 )(H6);
