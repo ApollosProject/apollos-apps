@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { get } from 'lodash';
 import {
-  GradientOverlayImage,
+  BackgroundView,
   PaddedView,
   TextInput,
   styled,
@@ -33,7 +33,7 @@ import {
 const FullScreenImage = styled({
   resizeMode: 'cover',
   position: 'absolute',
-})(GradientOverlayImage);
+})(BackgroundView);
 
 const Entry = ({
   BackgroundComponent,
@@ -62,11 +62,7 @@ const Entry = ({
       Platform.OS === 'android' ? StatusBar.currentHeight : 0
     }
   >
-    <BackgroundComponent
-      source={'https://picsum.photos/375/812/?random'}
-      overlayColor={theme.colors.background.paper}
-      overlayType={'high'}
-    />
+    <BackgroundComponent />
     <FlexedSafeAreaView>
       <ScrollView>
         <PaddedView>
