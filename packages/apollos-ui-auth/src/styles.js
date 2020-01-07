@@ -1,6 +1,7 @@
 import React from 'react';
-import { Platform, SafeAreaView, View } from 'react-native';
+import { Platform, View } from 'react-native';
 import { compose, withProps } from 'recompose';
+import { SafeAreaView } from 'react-navigation';
 import {
   styled,
   Card,
