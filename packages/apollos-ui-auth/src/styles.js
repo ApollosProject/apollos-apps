@@ -14,7 +14,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 const FlexedSafeAreaView = compose(
-  styled({ flex: 1 }, 'ui-auth.FlexedSafeAreaView'),
+  styled({ height: '100%' }, 'ui-auth.FlexedSafeAreaView'),
   withProps({ forceInset: { top: 'always' } })
 )(SafeAreaView);
 
