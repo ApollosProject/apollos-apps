@@ -25,6 +25,7 @@ import {
 const PasswordEntry = ({
   passwordTitleText,
   passwordPromptText,
+  passwordPromptTextNewUser,
   handleForgotPassword,
   disabled,
   errors,
@@ -33,6 +34,7 @@ const PasswordEntry = ({
   setFieldValue,
   values,
   BackgroundComponent,
+  newUser,
 }) => (
   <KeyboardAvoidingView
     style={StyleSheet.absoluteFill}
@@ -46,7 +48,9 @@ const PasswordEntry = ({
         <ScrollView>
           <PaddedView>
             <TitleText>{passwordTitleText}</TitleText>
-            <PromptText padded>{passwordPromptText}</PromptText>
+            <PromptText padded>
+              {newUser ? passwordPromptTextNewUser : passwordPromptText}
+            </PromptText>
 
             <TextInput
               autoFocus
@@ -88,6 +92,7 @@ const PasswordEntry = ({
 PasswordEntry.propTypes = {
   passwordTitleText: PropTypes.string,
   passwordPromptText: PropTypes.string,
+  passwordPromptTextNewUser: PropTypes.string,
   disabled: PropTypes.bool,
   handleForgotPassword: PropTypes.func,
   errors: PropTypes.shape({
@@ -100,11 +105,13 @@ PasswordEntry.propTypes = {
     password: PropTypes.string,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  newUser: PropTypes.bool,
 };
 
 PasswordEntry.defaultProps = {
   passwordTitleText: 'Now for your password',
   passwordPromptText: 'Enter your password to continue.',
+  passwordPromptTextNewUser: 'Create a new password to continue.',
   BackgroundComponent: BackgroundView,
 };
 

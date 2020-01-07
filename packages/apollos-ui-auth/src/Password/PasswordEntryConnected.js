@@ -8,7 +8,7 @@ import PasswordEntry from './PasswordEntry';
 
 const PasswordEntryConnected = ({ handleForgotPassword, screenProps }) => (
   <LoginConsumer>
-    {({ handleSubmitLogin }) => (
+    {({ handleSubmitLogin, newUser }) => (
       <Formik
         validationSchema={Yup.object().shape({
           password: Yup.string().required('Password is required!'),
@@ -45,6 +45,7 @@ const PasswordEntryConnected = ({ handleForgotPassword, screenProps }) => (
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
             handleForgotPassword={handleForgotPassword}
+            newUser={newUser}
           />
         )}
       </Formik>
