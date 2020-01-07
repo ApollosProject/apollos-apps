@@ -1,0 +1,47 @@
+{
+  "name": "@apollosproject/ui-config",
+  "version": "1.2.5",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "main": "src/index.js",
+  "files": [
+    "src/**",
+    "storybook/**"
+  ],
+  "scripts": {
+    "test": "echo 'No tests in this package, yet'",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "lint": "eslint ./src --ext .js"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ]
+  },
+  "peerDependencies": {
+    "react-native-config": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jest": "24.8.0",
+    "react-native-config": "0.11.7",
+    "jest-react-native": "18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}
