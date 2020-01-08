@@ -1,7 +1,8 @@
 import React from 'react';
 import { NativeModules } from 'react-native';
-// We ran into an issue where SafeAreaView would break jest tests.
+import ApollosConfig from '@apollosproject/config';
 
+// We ran into an issue where SafeAreaView would break jest tests.
 jest.mock(
   '../apollos-ui-kit/node_modules/react-native-safe-area-context/',
   () => ({
@@ -28,9 +29,9 @@ jest.mock('react-native-music-control', () => ({
   STATE_PAUSED: true,
 }));
 
-jest.mock('react-native-config', () => ({
+ApollosConfig.loadJs({
   ONE_SIGNAL_KEY: 'doesntmatter',
-}));
+});
 
 jest.mock('Animated', () => {
   const ActualAnimated = require.requireActual('Animated');
