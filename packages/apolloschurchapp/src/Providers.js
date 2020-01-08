@@ -1,5 +1,5 @@
 import React from 'react';
-import ApollosConfig from '@apollosproject/ui-config';
+import ApollosConfig from '@apollosproject/config';
 import { Providers } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';

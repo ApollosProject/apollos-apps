@@ -1,7 +1,7 @@
 import './polyfill'; // this can be removed when we upgrade to react-native 59
 import { AppRegistry, YellowBox } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-import ApollosConfig from '@apollosproject/ui-config';
+import ApollosConfig from '@apollosproject/config';
 import Storybook from './storybook';
 import MainApp from './src';
 

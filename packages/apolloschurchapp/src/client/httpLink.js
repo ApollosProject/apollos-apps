@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 import { createUploadLink } from 'apollo-upload-client';
-import ApollosConfig from '@apollosproject/ui-config';
+import ApollosConfig from '@apollosproject/config';
 import { split } from 'apollo-link';
 import { createHttpLink } from 'apollo-link-http';
 import { getMainDefinition } from 'apollo-utilities';

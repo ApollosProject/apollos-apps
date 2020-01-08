@@ -5,7 +5,7 @@ import {
 import AsyncStorage from '@react-native-community/async-storage';
 import { CachePersistor } from 'apollo-cache-persist';
 import gql from 'graphql-tag';
-import ApollosConfig from '@apollosproject/ui-config';
+import ApollosConfig from '@apollosproject/config';
 import introspectionQueryResultData from './fragmentTypes.json';
 
 export const CACHE_LOADED = gql`
