@@ -74,6 +74,7 @@
     "@apollosproject/ui-passes": "^1.2.5",
     "@apollosproject/ui-scripture": "^1.2.5",
     "@apollosproject/ui-storybook": "^1.2.5",
+    "@apollosproject/config": "^1.2.5",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/geolocation": "^2.0.2",
     "apollo-cache-inmemory": "1.5.1",

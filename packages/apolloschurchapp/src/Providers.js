@@ -1,5 +1,5 @@
 import React from 'react';
-import Config from 'react-native-config';
+import ApollosConfig from '@apollosproject/config';
 import { Providers } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
@@ -14,7 +14,7 @@ import customTheme, { customIcons } from './theme';
 const AppProviders = (props) => (
   <ClientProvider {...props}>
     <NotificationsProvider
-      oneSignalKey={Config.ONE_SIGNAL_KEY}
+      oneSignalKey={ApollosConfig.ONE_SIGNAL_KEY}
       navigate={NavigationService.navigate}
     >
       <AuthProvider
