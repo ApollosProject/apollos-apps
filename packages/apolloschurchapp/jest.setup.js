@@ -1,6 +1,6 @@
 import React from 'react';
 import { NativeModules } from 'react-native';
-import ApollosConfig from '@apollosproject/ui-config';
+import ApollosConfig from '@apollosproject/config';
 
 // We ran into an issue where SafeAreaView would break jest tests.
 jest.mock(
