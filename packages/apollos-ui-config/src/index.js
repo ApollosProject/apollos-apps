@@ -11,7 +11,7 @@ class Config {
 
   loadJs(data = {}) {
     Object.keys(data).forEach((key) => {
-      if (this.config[key]) {
+      if (this.config[key] && typeof this.config[key] === 'object') {
         // Deep merge defaults if they exist.
         this.config[key] = Object.assign(this.config[key], data[key]);
       } else {

@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "echo 'No tests in this package, yet'",
+    "test": "jest",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
@@ -16,12 +16,16 @@
     "react-native"
   ],
   "jest": {
+    "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
     ],
     "modulePaths": [
       "<rootDir>/src/"
@@ -37,7 +41,9 @@
   "devDependencies": {
     "jest": "24.8.0",
     "react-native-config": "0.11.7",
-    "jest-react-native": "18.0.0"
+    "jest-react-native": "18.0.0",
+    "react-native": "0.60.5",
+    "react-test-renderer": "16.6.3"
   },
   "publishConfig": {
     "access": "public"
