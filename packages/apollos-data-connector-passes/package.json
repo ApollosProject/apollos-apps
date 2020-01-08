@@ -42,7 +42,7 @@
     "apollo-server-env": "^2.3.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.10.1",
-    "jest": "^24.8.0"
+    "jest": "24.9.0"
   },
   "publishConfig": {
     "access": "public"

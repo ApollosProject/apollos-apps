@@ -54,21 +54,21 @@
   },
   "devDependencies": {
     "@apollosproject/react-native-airplay-btn": "^0.2.0",
-    "@storybook/react-native": "5.2.4",
+    "@storybook/react-native": "5.2.8",
     "apollo-client": "2.5.1",
-    "jest": "24.8.0",
+    "jest": "24.9.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-apollo": "2.5.5",
-    "react-native": "0.60.5",
+    "react-native": "0.61.5",
     "react-native-linear-gradient": "2.5.3",
     "react-native-music-control": "0.10.5",
     "react-native-svg": "9.4.0",
     "react-native-video": "5.0.0",
     "react-native-video-controls": "2.2.3",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.6.1"
+    "react-test-renderer": "16.9.0"
   },
   "publishConfig": {
     "access": "public"
