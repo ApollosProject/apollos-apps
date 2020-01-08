@@ -1,6 +1,6 @@
 import ApollosConfig from '..';
 
-describe('The ApollosConfig UI Package', () => {
+describe('The ApollosConfig Package', () => {
   it('loads from JS', () => {
     ApollosConfig.loadJs({ A_COOL_VAR: 'some value' });
     expect(ApollosConfig.A_COOL_VAR).toBe('some value');
