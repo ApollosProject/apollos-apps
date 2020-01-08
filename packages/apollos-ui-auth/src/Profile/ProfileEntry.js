@@ -15,7 +15,6 @@ import {
   NextButton,
   TitleText,
   PromptText,
-  BrandIcon,
   LegalText,
 } from '../styles';
 
@@ -28,7 +27,6 @@ const ProfileEntry = ({
   onPressNext,
   setFieldValue,
   values,
-  passwordType,
   BackgroundComponent,
 }) => {
   let LastNameInput = null;

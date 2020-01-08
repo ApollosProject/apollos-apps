@@ -150,6 +150,9 @@ Entry.propTypes = {
   inputType: PropTypes.string,
   inputLabel: PropTypes.string,
   inputAutoComplete: PropTypes.string,
+  theme: PropTypes.shape({
+    colors: PropTypes.shape({}),
+  }),
 };
 
 Entry.defaultProps = {
