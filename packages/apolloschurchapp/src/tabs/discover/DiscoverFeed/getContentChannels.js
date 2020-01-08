@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-import { BASE_CARD_FRAGMENT } from 'apolloschurchapp/src/ui/ContentCardConnected';
+import { BASE_CARD_FRAGMENT } from '../../../ui/ContentCardConnected';
 
 export default gql`
   query getContentChannels {
