@@ -7,7 +7,7 @@ const mapApollosNameToRockName = (name) => {
   if (ROCK_MAPPINGS.CONTENT_ITEM[name]) {
     return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
   }
-  return name;
+  return ROCK_MAPPINGS.ENTITY_TYPES[name] || name;
 };
 
 class RockConstants extends RockApolloDataSource {
