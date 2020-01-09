@@ -381,7 +381,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "paddingLeft": 16,
               }
             }
@@ -772,7 +772,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "paddingLeft": 16,
               }
             }
@@ -1163,7 +1163,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
                 "fontSize": 14,
                 "fontStyle": null,
                 "fontWeight": null,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "paddingLeft": 16,
               }
             }

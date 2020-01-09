@@ -58,7 +58,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -72,10 +72,10 @@ Array [
               "color": "gray",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "marginTop": 16,
               "opacity": 0.7,
-              "paddingBottom": 8.64,
+              "paddingBottom": 9,
             }
           }
         >
@@ -132,7 +132,7 @@ Array [
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                   "marginLeft": 8,
                 }
               }
@@ -181,7 +181,7 @@ Array [
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                   "marginLeft": 8,
                 }
               }
@@ -230,7 +230,7 @@ Array [
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                   "marginLeft": 8,
                 }
               }
@@ -245,7 +245,7 @@ Array [
               "color": "gray",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "opacity": 0.7,
             }
           }
@@ -306,7 +306,7 @@ Array [
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                     "paddingLeft": null,
                     "textAlign": "center",
                   }
@@ -563,7 +563,7 @@ Array [
                   "color": "#505050",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingVertical": 4,
                 }
               }
@@ -643,7 +643,7 @@ Array [
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -831,7 +831,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -845,10 +845,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -905,7 +905,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -954,7 +954,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1003,7 +1003,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1018,7 +1018,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -1079,7 +1079,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -1336,7 +1336,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -1449,7 +1449,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -1463,10 +1463,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -1523,7 +1523,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1572,7 +1572,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1621,7 +1621,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1636,7 +1636,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -1697,7 +1697,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -1954,7 +1954,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -2023,7 +2023,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -2037,10 +2037,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -2097,7 +2097,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2146,7 +2146,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2195,7 +2195,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2210,7 +2210,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -2271,7 +2271,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -2528,7 +2528,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -2597,7 +2597,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -2611,10 +2611,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -2671,7 +2671,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2720,7 +2720,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2735,7 +2735,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -2796,7 +2796,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -3053,7 +3053,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -3122,7 +3122,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -3136,10 +3136,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -3196,7 +3196,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3245,7 +3245,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3294,7 +3294,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3309,7 +3309,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -3370,7 +3370,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -3627,7 +3627,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -3696,7 +3696,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -3710,10 +3710,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -3782,7 +3782,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3831,7 +3831,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3880,7 +3880,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3895,7 +3895,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -3956,7 +3956,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -4213,7 +4213,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -4282,7 +4282,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -4296,10 +4296,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -4356,7 +4356,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -4405,7 +4405,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -4454,7 +4454,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -4469,7 +4469,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -4530,7 +4530,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -4787,7 +4787,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -4856,7 +4856,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -4870,10 +4870,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -4930,7 +4930,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -4979,7 +4979,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -5028,7 +5028,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -5050,7 +5050,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#c64f55",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingTop": 8,
               }
             }
@@ -5065,7 +5065,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -5126,7 +5126,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -5383,7 +5383,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -5395,7 +5395,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               "color": "#c64f55",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "paddingTop": 8,
             }
           }

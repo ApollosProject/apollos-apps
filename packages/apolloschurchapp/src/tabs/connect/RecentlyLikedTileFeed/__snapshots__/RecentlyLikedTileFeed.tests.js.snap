@@ -35,7 +35,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
@@ -74,7 +74,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
             }
           }
         >
@@ -526,7 +526,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 14,
-            "marginVertical": 3.08,
+            "marginVertical": 3.5,
             "width": "60%",
           }
         }
@@ -565,7 +565,7 @@ exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 12,
-              "marginVertical": 2.6400000000000006,
+              "marginVertical": 3,
               "width": "50%",
             }
           }

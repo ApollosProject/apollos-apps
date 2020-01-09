@@ -3,6 +3,7 @@
   "version": "1.2.5",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
+  "react-native": "react-native/index.js",
   "scripts": {
     "test": "jest",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
@@ -11,19 +12,27 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "src/**/*.{js,jsx}",
+      "react-native/**/*.{js,jsx}"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/{src,react-native}/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
     "reporters": [
       "<rootDir>/../../scripts/fingers-crossed-reporter.js"
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.2.5"
+    "@apollosproject/babel-preset-apollos": "^1.2.5",
+    "react-native-config": "0.11.7"
+  },
+  "peerDependencies":{
+    "react-native-config": "*"
   },
   "dependencies": {
     "js-yaml": "^3.12.0"

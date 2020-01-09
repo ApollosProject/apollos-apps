@@ -257,7 +257,7 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 14,
-            "marginVertical": 3.08,
+            "marginVertical": 3.5,
             "width": "60%",
           }
         }
@@ -268,7 +268,7 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
             "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": 14,
+            "height": 12,
             "marginTop": 8,
             "marginVertical": 3,
             "width": "100%",
@@ -409,7 +409,7 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
@@ -424,8 +424,8 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
           Object {
             "color": "#A5A5A5",
             "fontFamily": "InterUI-Regular",
-            "fontSize": 14,
-            "lineHeight": 20,
+            "fontSize": 12,
+            "lineHeight": 18,
             "paddingTop": 8,
           }
         }
@@ -568,7 +568,7 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 14,
-            "marginVertical": 3.08,
+            "marginVertical": 3.5,
             "width": "60%",
           }
         }
@@ -707,7 +707,7 @@ exports[`HorizontalDefaultCard should should render a like icon 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >
@@ -973,7 +973,7 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
           }
         }
       >

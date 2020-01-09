@@ -8,7 +8,7 @@ exports[`the H4 component should accept additional props 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Bold",
       "fontSize": 16,
-      "lineHeight": 23.04,
+      "lineHeight": 24,
     }
   }
 >
@@ -23,7 +23,7 @@ exports[`the H4 component should accept and render passed in styles 1`] = `
       "color": "salmon",
       "fontFamily": "InterUI-Bold",
       "fontSize": 16,
-      "lineHeight": 23.04,
+      "lineHeight": 24,
     }
   }
 >
@@ -39,7 +39,7 @@ exports[`the H4 component should render a loading state 1`] = `
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 16,
-      "marginVertical": 3.5199999999999996,
+      "marginVertical": 4,
       "width": "80%",
     }
   }
@@ -54,9 +54,9 @@ exports[`the H4 component should render a loading state with correct positioning
       "backgroundColor": "#A5A5A5",
       "borderRadius": 16,
       "height": 16,
-      "marginBottom": 11.52,
-      "marginTop": 15.21,
-      "marginVertical": 3.5199999999999996,
+      "marginBottom": 12,
+      "marginTop": 15.84,
+      "marginVertical": 4,
       "width": "80%",
     }
   }
@@ -70,7 +70,7 @@ exports[`the H4 component should render correctly 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Bold",
       "fontSize": 16,
-      "lineHeight": 23.04,
+      "lineHeight": 24,
     }
   }
 >
@@ -86,9 +86,9 @@ exports[`the H4 component should render with correct padding 1`] = `
       "color": "#303030",
       "fontFamily": "InterUI-Bold",
       "fontSize": 16,
-      "lineHeight": 23.04,
-      "paddingBottom": 11.52,
-      "paddingTop": 15.21,
+      "lineHeight": 24,
+      "paddingBottom": 12,
+      "paddingTop": 15.84,
     }
   }
 >
