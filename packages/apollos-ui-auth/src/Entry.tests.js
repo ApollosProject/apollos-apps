@@ -1,9 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { Platform } from 'react-native';
 
 import { Providers } from './testUtils';
 
 import Entry from './Entry';
+
+jest.mock('Platform');
 
 describe('The Auth Entry component', () => {
   it('should render', () => {
@@ -138,6 +141,16 @@ describe('The Auth Entry component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render with a inputAutoComplete as tel', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Entry setFieldValue={jest.fn()} inputLabel={'Phone Number'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with keyboard vertical offset for Android', () => {
+    Platform.OS = 'android';
+
     const tree = renderer.create(
       <Providers>
         <Entry setFieldValue={jest.fn()} inputLabel={'Phone Number'} />

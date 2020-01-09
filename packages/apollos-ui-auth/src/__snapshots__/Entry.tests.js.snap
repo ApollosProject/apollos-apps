@@ -98,17 +98,7 @@ exports[`The Auth Entry component should render 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -186,13 +176,6 @@ exports[`The Auth Entry component should render 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -489,17 +472,7 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -577,13 +550,6 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -882,17 +848,7 @@ exports[`The Auth Entry component should render as disabled 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -970,13 +926,6 @@ exports[`The Auth Entry component should render as disabled 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -1337,17 +1286,7 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -1425,13 +1364,6 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -1785,17 +1717,7 @@ exports[`The Auth Entry component should render in a next button 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -1873,13 +1795,6 @@ exports[`The Auth Entry component should render in a next button 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -2240,17 +2155,7 @@ exports[`The Auth Entry component should render in an error state 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -2328,13 +2233,6 @@ exports[`The Auth Entry component should render in an error state 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -2631,17 +2529,7 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={true}
@@ -2793,13 +2681,6 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -3096,17 +2977,7 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -3184,13 +3055,6 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -3487,17 +3351,7 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
             Boom custom prompty text boom
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -3575,13 +3429,6 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -3878,17 +3725,7 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -3966,13 +3803,6 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -4269,17 +4099,7 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -4357,13 +4177,6 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -4662,17 +4475,7 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -4750,13 +4553,6 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -5055,17 +4851,7 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -5143,13 +4929,6 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -5448,17 +5227,7 @@ exports[`The Auth Entry component should render with a value 1`] = `
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -5536,13 +5305,6 @@ exports[`The Auth Entry component should render with a value 1`] = `
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -5839,17 +5601,7 @@ exports[`The Auth Entry component should render with an alternate login option w
             Sign in for a personalized experience that helps you grow and connect with God.
           </Text>
           <View
-            style={
-              Object {
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
-                "shadowOffset": Object {
-                  "height": 1,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 6,
-              }
-            }
+            style={Object {}}
           >
             <View
               alternateLogin={false}
@@ -6001,13 +5753,6 @@ exports[`The Auth Entry component should render with an alternate login option w
                   "marginHorizontal": 0,
                   "marginVertical": 0,
                   "paddingTop": 0,
-                  "shadowColor": "rgba(165, 165, 165, 0.6)",
-                  "shadowOffset": Object {
-                    "height": 1,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 0,
-                  "shadowRadius": 6,
                 }
               }
             >
@@ -6165,6 +5910,382 @@ exports[`The Auth Entry component should render with an alternate login option w
                               "transform": Array [
                                 Object {
                                   "scaleX": 1,
+                                },
+                              ],
+                            }
+                          }
+                        >
+                          <View
+                            hasError={false}
+                            style={
+                              Object {
+                                "backgroundColor": "#00676D",
+                                "bottom": 0,
+                                "height": 0.5,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#A5A5A5",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "fontWeight": "normal",
+                        "lineHeight": 18,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`The Auth Entry component should render with keyboard vertical offset for Android 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        -1,
+        -460812,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
+        "position": "absolute",
+        "resizeMode": "cover",
+      }
+    }
+  />
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "height": "100%",
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#00676D",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 36,
+                "lineHeight": 41.4,
+              }
+            }
+          >
+            Have we met?
+          </Text>
+          <Text
+            padded={true}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "paddingBottom": 24,
+                "paddingTop": 13.86,
+              }
+            }
+          >
+            Sign in for a personalized experience that helps you grow and connect with God.
+          </Text>
+          <View
+            style={Object {}}
+          >
+            <View
+              alternateLogin={false}
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "width": "50%",
+                  }
+                }
+              >
+                <View
+                  bordered={false}
+                  disabled={false}
+                  pill={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFFFFF",
+                      "borderBottomLeftRadius": 0,
+                      "borderBottomRightRadius": 0,
+                      "borderColor": "#00676D",
+                      "borderRadius": 16,
+                      "borderTopLeftRadius": 16,
+                      "borderTopRightRadius": 0,
+                      "borderWidth": 0,
+                      "color": "#303030",
+                      "elevation": 2,
+                      "flexDirection": "row",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "height": 48,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "overflow": "hidden",
+                      "paddingHorizontal": 16,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "backgroundColor": "#FFFFFF",
+                        "borderBottomLeftRadius": 0,
+                        "borderBottomRightRadius": 0,
+                        "borderTopLeftRadius": 16,
+                        "borderTopRightRadius": 0,
+                        "borderWidth": 0,
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "fontWeight": "normal",
+                        "lineHeight": 24,
+                      }
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "borderTopLeftRadius": 0,
+                  "borderTopRightRadius": 0,
+                  "marginHorizontal": 0,
+                  "marginVertical": 0,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    disabled={false}
+                    style={
+                      Object {
+                        "marginVertical": 16,
+                      }
+                    }
+                  >
+                    <View>
+                      <View
+                        style={
+                          Object {
+                            "flexDirection": "row",
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "flex-end",
+                              "flex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "opacity": 0,
+                              }
+                            }
+                          >
+                            <TextInput
+                              allowFontScaling={true}
+                              autoFocus={true}
+                              editable={true}
+                              enablesReturnKeyAutomatically={true}
+                              onBlur={[Function]}
+                              onChangeText={[Function]}
+                              onFocus={[Function]}
+                              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                              rejectResponderTermination={true}
+                              returnKeyType="next"
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 14,
+                                  "height": 38,
+                                  "paddingVertical": 0,
+                                }
+                              }
+                              underlineColorAndroid="transparent"
+                            />
+                          </View>
+                          <View
+                            onLayout={[Function]}
+                            pointerEvents="none"
+                            style={
+                              Object {
+                                "bottom": 0,
+                                "justifyContent": "center",
+                                "opacity": 1,
+                                "position": "absolute",
+                                "top": 0,
+                                "transform": Array [
+                                  Object {
+                                    "scale": 1,
+                                  },
+                                  Object {
+                                    "translateX": 0,
+                                  },
+                                  Object {
+                                    "translateY": 0,
+                                  },
+                                ],
+                              }
+                            }
+                          >
+                            <Text
+                              color="#A5A5A5"
+                              style={
+                                Object {
+                                  "backgroundColor": "transparent",
+                                  "color": "#A5A5A5",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 12,
+                                  "lineHeight": 18,
+                                  "paddingVertical": 4,
+                                }
+                              }
+                            >
+                              Phone Number
+                            </Text>
+                          </View>
+                        </View>
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                            }
+                          }
+                        />
+                      </View>
+                      <View
+                        style={
+                          Object {
+                            "bottom": 0,
+                            "left": 0,
+                            "right": 0,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "bottom": -0.5,
+                              "height": 0.5,
+                            }
+                          }
+                        />
+                        <View
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 0,
+                              "transform": Array [
+                                Object {
+                                  "scaleX": 0.0001,
                                 },
                               ],
                             }
