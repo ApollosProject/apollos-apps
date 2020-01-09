@@ -2,6 +2,7 @@ import { AuthenticationError } from 'apollo-server';
 import { fetch, Request } from 'apollo-server-env';
 import moment from 'moment';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import { fieldsAsObject } from '../utils';
 
 import { generateToken, registerToken } from './token';
 
@@ -103,11 +104,10 @@ export default class AuthDataSource extends RockApolloDataSource {
     return false;
   };
 
-  createUserProfile = async (props = {}) => {
+  createUserProfile = async ({ email, ...otherFields }) => {
     try {
-      const { email } = props;
-
       return await this.post('/People', {
+        ...otherFields,
         Email: email,
         IsSystem: false, // Required by Rock
         Gender: 0, // Required by Rock
@@ -154,11 +154,13 @@ export default class AuthDataSource extends RockApolloDataSource {
     });
   };
 
-  registerPerson = async ({ email, password }) => {
+  registerPerson = async ({ email, password, userProfile }) => {
     const personExists = await this.personExists({ identity: email });
     if (personExists) throw new Error('User already exists!');
 
-    const personId = await this.createUserProfile({ email });
+    const profileFields = fieldsAsObject(userProfile || []);
+
+    const personId = await this.createUserProfile({ email, ...profileFields });
     await this.createUserLogin({
       email,
       password,
