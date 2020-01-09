@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
+exports[`ui-auth/SMS/VerificationConnected should render 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -63,10 +63,187 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
+          >
+            <View
+              accessible={true}
+              clickable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      Object {
+                        "paddingRight": 0,
+                      },
+                      null,
+                      Object {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                >
+                  <RNSVGGroup
+                    fill={
+                      Array [
+                        0,
+                        4278190080,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    font={Object {}}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={Array []}
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  >
+                    <RNSVGPath
+                      d="M14.35 21L6.2 12.46c-.26-.28-.26-.64 0-.92L14.34 3l1.65.9L8.27 12 16 20.1l-1.65.9z"
+                      fill={
+                        Array [
+                          0,
+                          4279743874,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      originX={0}
+                      originY={0}
+                      propList={
+                        Array [
+                          "fill",
+                        ]
+                      }
+                      rotation={0}
+                      scaleX={1}
+                      scaleY={1}
+                      skewX={0}
+                      skewY={0}
+                      stroke={null}
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                      vectorEffect={0}
+                      x={0}
+                      y={0}
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
+              }
+            }
+            vertical={false}
           >
             <Text
               style={
@@ -78,7 +255,8 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                 }
               }
             >
-              Now for your password
+              Thanks!
+Stand by…
             </Text>
             <Text
               padded={true}
@@ -93,7 +271,7 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                 }
               }
             >
-              Enter your password to continue.
+              We just sent you a code. Enter it below when it comes.
             </Text>
             <View
               disabled={false}
@@ -137,12 +315,11 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                     >
                       <TextInput
                         allowFontScaling={true}
-                        autoCapitalize="none"
                         autoComplete="password"
-                        autoCorrect={false}
                         autoFocus={true}
                         editable={true}
                         enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
                         onBlur={[Function]}
                         onChangeText={[Function]}
                         onFocus={[Function]}
@@ -150,7 +327,6 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                         placeholderTextColor="rgba(48, 48, 48, 0.6)"
                         rejectResponderTermination={true}
                         returnKeyType="next"
-                        secureTextEntry={true}
                         style={
                           Object {
                             "color": "#303030",
@@ -160,9 +336,9 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                             "paddingVertical": 0,
                           }
                         }
-                        textContentType="password"
-                        type="password"
+                        type="numeric"
                         underlineColorAndroid="transparent"
+                        value=""
                       />
                     </View>
                     <View
@@ -201,7 +377,7 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                           }
                         }
                       >
-                        Password
+                        Verification Code
                       </Text>
                     </View>
                   </View>
@@ -260,16 +436,6 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                 </View>
               </View>
             </View>
-            <Text
-              onPress={[MockFunction]}
-              style={
-                Object {
-                  "color": "#17B582",
-                }
-              }
-            >
-              Forgot your password?
-            </Text>
           </View>
         </View>
       </RCTScrollView>
@@ -300,7 +466,7 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
         >
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={false}
             style={
               Object {
@@ -314,7 +480,7 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }
@@ -331,7 +497,7 @@ exports[`ui-auth/Password/PasswordEntryConnected should render 1`] = `
                 }
               }
             >
-              Login
+              Next
             </Text>
           </View>
         </View>

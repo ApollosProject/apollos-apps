@@ -3,13 +3,15 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../testUtils';
 
-import PasswordEntryConnected from './PasswordEntryConnected';
+import VerificationConnected from './VerificationConnected';
 
-describe('ui-auth/Password/PasswordEntryConnected', () => {
+describe('ui-auth/SMS/VerificationConnected', () => {
   it('should render', () => {
+    const navigation = { navigate: jest.fn() };
+
     const tree = renderer.create(
       <Providers>
-        <PasswordEntryConnected handleForgotPassword={jest.fn()} />
+        <VerificationConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
