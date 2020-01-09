@@ -24,6 +24,8 @@ Uncachable fields tend to fall into two camps:
 
 The actual caching is achieved through [Fastly](https://www.fastly.com/). Fastly is _CDN_ that all requests and responses to the GraphQL API pass through. Fastly pays attention to the max-age headers, and if a response includes a max-age header, it caches that request for the length of time in the header. If another identical request is recieved, Fastly returns the request it has stored instead of hitting the server. The Apollos server will actually never see the request.
 
+As a "Master Cacher", this should be your first line of defense. If you can add cache hints to your query, or modify your query so it doesn't include any uncachable fields, do it! This level of caching is the fastest for the end user, has zero cost on the server, and doesn't require any complex code changes.
+
 #### How?
 
 Configuration needs to happen in two places.
