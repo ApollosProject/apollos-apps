@@ -59,9 +59,13 @@ const NextButton = styled(
 // Tab Login
 
 const TabWrapper = styled(
-  ({ theme }) => ({ ...Platform.select(theme.shadows.default) }),
-  'ui-auth.TabButtonWrapper'
-)(View);
+  ({ theme }) => ({
+    marginHorizontal: 0,
+    marginVertical: 0,
+    ...Platform.select(theme.shadows.default),
+  }),
+  'ui-auth.TabWrapper'
+)(Card);
 
 const TabContainer = styled(
   ({ alternateLogin }) => ({
@@ -88,6 +92,7 @@ const TabButton = styled(
     backgroundColor: isActive
       ? theme.colors.background.paper
       : theme.colors.background.screen,
+    ...Platform.select(theme.shadows.none),
   }),
   'ui-auth.TabButton'
 )(Button);
@@ -96,6 +101,7 @@ const TabButtonAlternate = styled(
   ({ theme, alternateLogin }) => ({
     borderTopLeftRadius: alternateLogin ? theme.sizing.baseBorderRadius : 0,
     borderTopRightRadius: alternateLogin ? 0 : theme.sizing.baseBorderRadius,
+    ...Platform.select(theme.shadows.none),
   }),
   'ui-auth.TabButtonAlternate'
 )(TabButton);
