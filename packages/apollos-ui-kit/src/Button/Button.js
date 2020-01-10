@@ -107,7 +107,8 @@ const Button = enhance(
         {loading ? (
           <InlineActivityIndicator color={accent} />
         ) : (
-          children || <H4 style={style}>{title}</H4>
+          // Passing down styles to the H4, but not the background color to fix Android issue.
+          children || <H4 style={{ ...style, backgroundColor: 0 }}>{title}</H4>
         )}
       </ButtonStyles>
     );
