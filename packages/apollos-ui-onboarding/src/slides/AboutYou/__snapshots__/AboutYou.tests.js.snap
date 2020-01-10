@@ -438,7 +438,7 @@ Array [
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
                     datePickerModeAndroid="spinner"
-                    maximumDate={1530518207007}
+                    maximumDate={2018-07-02T07:56:47.007Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -1211,7 +1211,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -1829,7 +1829,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -2403,7 +2403,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -2928,7 +2928,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -3502,7 +3502,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -4088,7 +4088,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -4662,7 +4662,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 <DatePicker
                   date={1989-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -5258,7 +5258,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
                   datePickerModeAndroid="spinner"
-                  maximumDate={1530518207007}
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}

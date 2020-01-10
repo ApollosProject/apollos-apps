@@ -65,6 +65,18 @@ describe('The DateInput component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render without a maximum date', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DateInput
+          value={moment.utc('1/1/2015').toDate()}
+          displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')}
+          label={'Date Label'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render with an error', () => {
     const tree = renderer.create(
       <Providers>
