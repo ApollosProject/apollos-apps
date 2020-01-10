@@ -1592,7 +1592,7 @@ exports[`The DateInput component should render without a maximum date 1`] = `
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "justifyContent": "center",
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "paddingLeft": null,
             "textAlign": "center",
           }
@@ -1854,7 +1854,7 @@ exports[`The DateInput component should render without a maximum date 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
           "paddingVertical": 4,
         }
       }
