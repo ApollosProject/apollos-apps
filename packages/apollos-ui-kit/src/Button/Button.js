@@ -108,6 +108,7 @@ const Button = enhance(
           <InlineActivityIndicator color={accent} />
         ) : (
           // Passing down styles to the H4, but not the background color to fix Android issue.
+          // eslint-disable-next-line react-native/no-inline-styles, react-native/no-color-literals
           children || <H4 style={{ ...style, backgroundColor: 0 }}>{title}</H4>
         )}
       </ButtonStyles>
