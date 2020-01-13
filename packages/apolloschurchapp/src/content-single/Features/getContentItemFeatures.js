@@ -1,6 +1,10 @@
 import gql from 'graphql-tag';
-import { TEXT_FEATURE_FRAGMENT } from './TextFeature';
-import { SCRIPTURE_FEATURE_FRAGMENT } from './ScriptureFeature';
+import ApollosConfig from '@apollosproject/config';
+
+const {
+  TEXT_FEATURE_FRAGMENT,
+  SCRIPTURE_FEATURE_FRAGMENT,
+} = ApollosConfig.FEATURES;
 
 const FEATURES_FRAGMENT = `
   fragment FeaturesFragment on Feature {
