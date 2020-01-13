@@ -65,9 +65,9 @@ class LoginProvider extends React.Component {
       });
       token = data.authenticateWithSms.token; // eslint-disable-line prefer-destructuring
     } else {
-      const { data } = client.mutate({
+      const { data } = await client.mutate({
         mutation: AUTHENTICATE,
-        variables: {},
+        variables: { password, email: identity },
       });
       token = data.authenticate.token; // eslint-disable-line prefer-destructuring
     }
