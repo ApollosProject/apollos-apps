@@ -2,7 +2,7 @@ import React from 'react';
 import { ActionBar, ActionBarItem } from '@apollosproject/ui-kit';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
+import { WebBrowserConsumer } from '../../ui/WebBrowser';
 
 const Toolbar = ({ navigation }) => (
   <WebBrowserConsumer>

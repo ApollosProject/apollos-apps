@@ -14,8 +14,9 @@ import {
   Touchable,
   ActivityIndicator,
 } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
+
 import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
+import { WebBrowserConsumer } from '../ui/WebBrowser';
 import NavigationService from '../NavigationService';
 
 import ChangeAvatar from './ChangeAvatar';
