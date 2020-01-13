@@ -24,8 +24,8 @@ export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
 export ProtectedRoute from './ProtectedRoute';
 
-export GET_LOGIN_STATE from './getLoginState';
-export LOGOUT from './logout';
+export { LOGOUT } from './mutations';
+export { GET_LOGIN_STATE } from './queries';
 export authLink from './authLink';
 export buildErrorLink from './buildErrorLink';
 export Entry from './Entry';

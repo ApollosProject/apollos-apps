@@ -6,7 +6,7 @@ import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 import { GET_PUSH_ID, updatePushId } from '@apollosproject/ui-notifications';
 import { LoginProvider } from './LoginProvider';
-import getLoginState from './getLoginState';
+import { GET_LOGIN_STATE } from './queries';
 
 const defaultContext = {
   navigateToAuth: () => {},
@@ -51,7 +51,7 @@ export const resolvers = {
           data: { authToken },
         });
         await cache.writeQuery({
-          query: getLoginState,
+          query: GET_LOGIN_STATE,
           data: { isLoggedIn: true },
         });
         await cache.writeData({

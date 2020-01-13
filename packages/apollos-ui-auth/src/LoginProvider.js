@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ApolloConsumer } from 'react-apollo';
-import GET_USER_EXISTS from './getUserExists';
-import VERIFY_PIN from './SMS/verifyPin';
-import HANDLE_LOGIN from './handleLogin';
-import AUTHENTICATE from './Password/authenticate';
-import REGISTER_WITH_SMS from './Profile/registerWithSms';
-import REGISTER_WITH_EMAIL from './Profile/registerWithEmail';
-import REQUEST_SMS_PIN from './SMS/requestPin';
+import { GET_USER_EXISTS } from './queries';
+
+import {
+  VERIFY_PIN,
+  HANDLE_LOGIN,
+  AUTHENTICATE,
+  REGISTER_WITH_SMS,
+  REGISTER_WITH_EMAIL,
+  REQUEST_SMS_PIN,
+} from './mutations';
 
 const LoginContext = React.createContext({
   authType: null,
