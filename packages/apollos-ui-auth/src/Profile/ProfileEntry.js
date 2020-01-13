@@ -10,6 +10,7 @@ import {
 import { get } from 'lodash';
 import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
 
+import BackButton from '../BackButton';
 import {
   FlexedSafeAreaView,
   NextButton,
@@ -28,6 +29,7 @@ const ProfileEntry = ({
   setFieldValue,
   values,
   BackgroundComponent,
+  onPressBack,
 }) => {
   let LastNameInput = null;
   return (
@@ -41,6 +43,7 @@ const ProfileEntry = ({
       <BackgroundComponent>
         <FlexedSafeAreaView>
           <ScrollView>
+            <BackButton onPress={() => onPressBack()} />
             <PaddedView>
               <TitleText>{profileTitleText}</TitleText>
               <PromptText padded>{profilePromptText}</PromptText>
@@ -105,6 +108,7 @@ ProfileEntry.propTypes = {
     phone: PropTypes.string,
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  onPressBack: PropTypes.func.isRequired,
 };
 
 ProfileEntry.defaultProps = {
