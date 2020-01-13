@@ -18,6 +18,8 @@ class StretchyView extends PureComponent {
       <View style={StyleSheet.absoluteFill}>
         {this.props.children({
           Stretchy: this.StretchyPortal,
+          scrollEventThrottle: null,
+          onScroll: null,
         })}
       </View>
     );
