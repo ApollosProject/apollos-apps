@@ -72,7 +72,7 @@
     "react-native": "0.61.5",
     "react-native-linear-gradient": "2.5.4",
     "react-native-svg": "9.4.0",
-    "react-navigation": "^3.11.0",
+    "react-navigation": "4.0.10",
     "react-test-renderer": "16.9.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",
