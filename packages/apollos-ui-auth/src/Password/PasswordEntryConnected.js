@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-handler-names */
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -6,7 +7,11 @@ import PropTypes from 'prop-types';
 import { LoginConsumer } from '../LoginProvider';
 import PasswordEntry from './PasswordEntry';
 
-const PasswordEntryConnected = ({ handleForgotPassword, screenProps }) => (
+const PasswordEntryConnected = ({
+  handleForgotPassword,
+  screenProps,
+  navigation,
+}) => (
   <LoginConsumer>
     {({ handleSubmitLogin, newUser }) => (
       <Formik
@@ -44,6 +49,7 @@ const PasswordEntryConnected = ({ handleForgotPassword, screenProps }) => (
             errors={formikBag.touched.password && formikBag.errors}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
+            onPressBack={navigation.goBack}
             handleForgotPassword={handleForgotPassword}
             newUser={newUser}
           />
@@ -54,6 +60,7 @@ const PasswordEntryConnected = ({ handleForgotPassword, screenProps }) => (
 );
 
 PasswordEntryConnected.propTypes = {
+  navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
   handleForgotPassword: PropTypes.func,
   screenProps: PropTypes.shape({}),

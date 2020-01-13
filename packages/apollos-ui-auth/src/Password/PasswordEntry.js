@@ -15,6 +15,7 @@ import {
   BackgroundView,
 } from '@apollosproject/ui-kit';
 
+import BackButton from '../BackButton';
 import {
   FlexedSafeAreaView,
   NextButton,
@@ -35,6 +36,7 @@ const PasswordEntry = ({
   values,
   BackgroundComponent,
   newUser,
+  onPressBack,
 }) => (
   <KeyboardAvoidingView
     style={StyleSheet.absoluteFill}
@@ -46,6 +48,7 @@ const PasswordEntry = ({
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>
+          <BackButton onPress={() => onPressBack()} />
           <PaddedView>
             <TitleText>{passwordTitleText}</TitleText>
             <PromptText padded>
@@ -106,6 +109,7 @@ PasswordEntry.propTypes = {
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   newUser: PropTypes.bool,
+  onPressBack: PropTypes.func.isRequired,
 };
 
 PasswordEntry.defaultProps = {
