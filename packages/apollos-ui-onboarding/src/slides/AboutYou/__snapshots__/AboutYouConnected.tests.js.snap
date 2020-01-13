@@ -452,7 +452,7 @@ Array [
                   <DatePicker
                     date={1980-02-10T05:00:00.000Z}
                     datePickerModeAndroid="spinner"
-                    maximumDate={1530518207007}
+                    maximumDate={2018-07-02T07:56:47.007Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -1226,7 +1226,7 @@ Array [
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
                     datePickerModeAndroid="spinner"
-                    maximumDate={1530518207007}
+                    maximumDate={2018-07-02T07:56:47.007Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
