@@ -416,6 +416,7 @@ exports[`The Onboarding AskNotifications component should render a button with c
             <Text
               style={
                 Object {
+                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -691,6 +692,7 @@ exports[`The Onboarding AskNotifications component should render the button disa
             <Text
               style={
                 Object {
+                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -824,6 +826,7 @@ exports[`The Onboarding AskNotifications component should render with a button 1
             <Text
               style={
                 Object {
+                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,

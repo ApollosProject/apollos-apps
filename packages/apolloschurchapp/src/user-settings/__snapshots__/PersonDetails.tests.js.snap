@@ -566,6 +566,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
             <Text
               style={
                 Object {
+                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,

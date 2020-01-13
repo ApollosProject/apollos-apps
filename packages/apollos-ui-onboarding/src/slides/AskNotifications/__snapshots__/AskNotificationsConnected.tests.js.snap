@@ -123,6 +123,7 @@ Array [
               <Text
                 style={
                   Object {
+                    "backgroundColor": 0,
                     "color": "#FFFFFF",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
@@ -456,6 +457,7 @@ Array [
               <Text
                 style={
                   Object {
+                    "backgroundColor": 0,
                     "color": "#FFFFFF",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
@@ -632,6 +634,7 @@ exports[`The Onboarding AskNotificationsConnected component should render with n
             <Text
               style={
                 Object {
+                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,

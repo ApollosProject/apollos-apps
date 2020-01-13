@@ -7,9 +7,11 @@ import ProfileEntryConnected from './ProfileEntryConnected';
 
 describe('ui-auth/Profile/ProfileEntryConnected', () => {
   it('should render', () => {
+    const navigation = { navigate: jest.fn() };
+
     const tree = renderer.create(
       <Providers>
-        <ProfileEntryConnected />
+        <ProfileEntryConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
