@@ -1,9 +1,15 @@
-export const SCRIPTURE_FRAGMENT = gql`
-  fragment ScriptureFragment on Scripture {
-    id
-    html
-    reference
-    copyright
-    version
-  }
-`;
+import * as content from './content';
+import * as features from './features';
+import * as live from './live';
+import * as profile from './profile';
+import * as scripture from './scripture';
+
+const Fragments = {
+  ...content,
+  ...features,
+  ...live,
+  ...profile,
+  ...scripture,
+};
+
+export default Fragments;

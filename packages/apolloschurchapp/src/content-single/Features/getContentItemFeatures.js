@@ -4,9 +4,9 @@ import ApollosConfig from '@apollosproject/config';
 const {
   TEXT_FEATURE_FRAGMENT,
   SCRIPTURE_FEATURE_FRAGMENT,
-} = ApollosConfig.FEATURES;
+} = ApollosConfig.FRAGMENTS;
 
-const FEATURES_FRAGMENT = `
+const FEATURES_FRAGMENT = gql`
   fragment FeaturesFragment on Feature {
     id
     ...TextFeatureFragment

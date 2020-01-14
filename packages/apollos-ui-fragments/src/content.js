@@ -1,3 +1,5 @@
+import gql from 'graphql-tag';
+
 export const CONTENT_ITEM_FRAGMENT = gql`
   fragment contentItemFragment on ContentItem {
     id

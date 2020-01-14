@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
-export const LiveStreamFragment = gql`
-fragment LiveStreamFragment {
+export const LIVE_STREAM_FRAGMENT = gql`
+  fragment LiveStreamFragment on LiveStream {
     isLive
     eventStartTime
     media {
