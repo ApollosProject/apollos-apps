@@ -139,7 +139,7 @@ Object {
     "authenticate": null,
   },
   "errors": Array [
-    [GraphQLError: Invalid Credentials],
+    [GraphQLError: Username or Password incorrect],
   ],
 }
 `;
