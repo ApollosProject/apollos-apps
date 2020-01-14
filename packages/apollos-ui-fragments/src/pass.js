@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const PASS_FRAGMENT = gql`
+const PASS_FRAGMENT = gql`
   fragment PassFragment on Pass {
     id
     description
@@ -31,3 +31,5 @@ export const PASS_FRAGMENT = gql`
     passkitFileUrl
   }
 `;
+
+export { PASS_FRAGMENT };
