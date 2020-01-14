@@ -36,9 +36,27 @@ Configuration needs to happen in two places.
 
 `Fastly` - We have information on how to setup Fastly [here](https://apollosapp.io/docs/fastly)
 
-### Apollos Cache
+### Apollo DataSource Cache
 
-caches requests we make to rock in memory. Works pretty well, but we don’t use it in a lot of places so far. Hard to get insight into what’s being cached and what isn’t being cached. Configured by using the request builder and .ttl
+#### When and Why?
+
+The Apollos DataSource Cache is a tool provided by the [Apollo Rest DataSource](https://www.apollographql.com/docs/apollo-server/data/data-sources/#rest-data-source) This caching mechanism will cache the results of requests made by our rock data source methods, but only if you specify a `ttl` using the request builder. This cache will also cache the results of requests whose results include standard cache-control/max-age headers.
+
+The results from this caching layer are all stored in server memory by default, but results can also be stored in `redis` or `memcached` with the right setup.
+
+This cache source is useful in a few specific scenarios. It's nice when you know a specific resource will be fetched multiple times in a short span of time; it's useful to add granular caching to data that isn't cacheable through Fastly / GraphQL It's also useful if you are consuming an API that does return caching related headers. However, this isn't a good caching option if you need data cached for a longer length of time, or if you need control over the data in the cache. For that, explore the next cache option.
+
+#### How?
+
+To cache data when using the request builder, add a `.cache()` to the request chain you are building.
+
+Example:
+```
+const slug = await this.request('ContentChannelItemSlugs')
+  .filter(`ContentChannelItemId eq ${contentId}`)
+  .cache({ ttl: 60 })
+  .first();
+```
 
 ### Redis
 
