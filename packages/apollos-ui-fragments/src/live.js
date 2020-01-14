@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const LIVE_STREAM_FRAGMENT = gql`
+const LIVE_STREAM_FRAGMENT = gql`
   fragment LiveStreamFragment on LiveStream {
     isLive
     eventStartTime
@@ -18,3 +18,5 @@ export const LIVE_STREAM_FRAGMENT = gql`
     }
   }
 `;
+
+export { LIVE_STREAM_FRAGMENT };
