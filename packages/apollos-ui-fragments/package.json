@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "echo \"No tests yet!\"",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
@@ -18,7 +18,6 @@
     "react-native"
   ],
   "jest": {
-    "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
