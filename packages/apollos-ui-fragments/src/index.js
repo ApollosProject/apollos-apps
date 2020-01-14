@@ -3,13 +3,15 @@ import * as features from './features';
 import * as live from './live';
 import * as profile from './profile';
 import * as scripture from './scripture';
+import * as pass from './pass';
 
-const Fragments = {
+const FRAGMENTS = {
   ...content,
   ...features,
   ...live,
   ...profile,
   ...scripture,
+  ...pass,
 };
 
-export default Fragments;
+export default FRAGMENTS;
