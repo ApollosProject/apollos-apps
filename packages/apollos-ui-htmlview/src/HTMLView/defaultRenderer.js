@@ -149,7 +149,7 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
       // the conditional logic in this function aims to mimic HTML's white-space collapsing
       // the only block-level element we currently support
       if ((node.next && node.prev) || (!node.next && !node.prev)) {
-        if (blockElements.includes(node.parent.name)) {
+        if (node.parent && blockElements.includes(node.parent.name)) {
           return (
             <View>
               <BodyText />
