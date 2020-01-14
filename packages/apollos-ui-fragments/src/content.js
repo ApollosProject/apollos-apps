@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const CONTENT_ITEM_FRAGMENT = gql`
+const CONTENT_ITEM_FRAGMENT = gql`
   fragment contentItemFragment on ContentItem {
     id
     title
@@ -38,7 +38,7 @@ export const CONTENT_ITEM_FRAGMENT = gql`
   }
 `;
 
-export const CONTENT_CARD_FRAGMENT = gql`
+const CONTENT_CARD_FRAGMENT = gql`
   fragment contentCardFragment on ContentItem {
     id
     __typename
@@ -90,7 +90,7 @@ export const CONTENT_CARD_FRAGMENT = gql`
   }
 `;
 
-export const CONTENT_MEDIA_FRAGMENT = gql`
+const CONTENT_MEDIA_FRAGMENT = gql`
   fragment contentMediaFragment on ContentItem {
     id
     title
@@ -110,3 +110,5 @@ export const CONTENT_MEDIA_FRAGMENT = gql`
     }
   }
 `;
+
+export { CONTENT_ITEM_FRAGMENT, CONTENT_CARD_FRAGMENT, CONTENT_MEDIA_FRAGMENT };
