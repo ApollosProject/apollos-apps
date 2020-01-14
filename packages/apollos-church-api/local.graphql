@@ -439,6 +439,7 @@ type SharableFeature implements Sharable {
 
 type SmsPinResult {
   success: Boolean
+  userAuthStatus: USER_AUTH_STATUS
 }
 
 type TextFeature implements Feature & Node {
