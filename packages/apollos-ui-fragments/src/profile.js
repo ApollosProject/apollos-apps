@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const USER_PROFILE_PARTS_FRAGMENT = gql`
+const USER_PROFILE_PARTS_FRAGMENT = gql`
   fragment UserProfileParts on Person {
     id
     firstName
@@ -15,7 +15,7 @@ export const USER_PROFILE_PARTS_FRAGMENT = gql`
   }
 `;
 
-export const CAMPUS_PARTS_FRAGMENT = gql`
+const CAMPUS_PARTS_FRAGMENT = gql`
   fragment CampusParts on Campus {
     id
     name
@@ -32,3 +32,5 @@ export const CAMPUS_PARTS_FRAGMENT = gql`
     }
   }
 `;
+
+export { USER_PROFILE_PARTS_FRAGMENT, CAMPUS_PARTS_FRAGMENT };
