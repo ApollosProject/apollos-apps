@@ -44,7 +44,7 @@ The Apollos DataSource Cache is a tool provided by the [Apollo Rest DataSource](
 
 The results from this caching layer are all stored in server memory by default, but results can also be stored in `redis` or `memcached` with the right setup.
 
-This cache source is useful in a few specific scenarios. It's nice when you know a specific resource will be fetched multiple times in a short span of time; it's useful to add granular caching to data that isn't cacheable through Fastly / GraphQL It's also useful if you are consuming an API that does return caching related headers. However, this isn't a good caching option if you need data cached for a longer length of time, or if you need control over the data in the cache. For that, explore the next cache option.
+This cache source is useful in a few specific scenarios. It's nice when you know a specific resource will be fetched multiple times in a short span of time; it's useful to add granular caching to data that isn't cacheable through Fastly / GraphQL It's also useful if you are consuming an API that does return caching related headers. It's also a good caching option if you are already using the request builder, because it's a one line change to introduce caching However, this isn't a good caching option if you need data cached for a longer length of time, or if you need control over the data in the cache. For that, explore the next cache option.
 
 #### How?
 
@@ -58,6 +58,30 @@ const slug = await this.request('ContentChannelItemSlugs')
   .first();
 ```
 
-### Redis
+### Custom Cache DataSource
 
-Caches data in Redis. Super manual, requires using the Cache data-source. Very configurable. Also update-able, so if you know a bit of data in the cache has changed, you can update the cache without needing to dump it and recreate it. Good for bits of the cache where you need a lot of control.
+#### When and Why?
+
+For more control, and to fill in the gaps in our caching strategy, we built a custom data source to cache with a high level of granularity. This cache source requires the most code of all the solutions to cache data, but the programmer has full control over the key the data is cached under, the data being cached, and the length that data is cached. This source can almost be considered a database for data that will be accessed frequently. Data is conveniently stored in Redis, so any data cached on one server will be available to all servers.
+
+Use this data source if you know you need to cache data that is difficult to cache, and thus requires a lot of control to cache. You can also use this data source if you want to cache something, and then need to have control over the data potentially stored in the cache down the road (like liking content items).
+
+#### How?
+
+If you are using the Apollos API in a "out of the box" setup, you'll have a `DataSource` called `Cache` included out of the box.
+
+```
+const { Cache } = context.dataSources;
+
+// Gets a value, if it exists.
+Cache.get({ key: String|Array })
+
+// Sets a value
+Cache.set({ key: String|Array, data: (Any JSON serializable data), expiresIn: (Seconds, optionally)  })
+
+// Increments a value by 1
+Cache.increment({ key: String|Array  })
+
+// Decrements a value by 1
+Cache.decrement({ key: String|Array  })
+```
