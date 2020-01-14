@@ -1,3 +1,4 @@
+import * as campus from './campus';
 import * as content from './content';
 import * as features from './features';
 import * as live from './live';
@@ -6,6 +7,7 @@ import * as scripture from './scripture';
 import * as user from './user';
 
 const FRAGMENTS = {
+  ...campus,
   ...content,
   ...features,
   ...live,
