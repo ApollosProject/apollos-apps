@@ -80,31 +80,26 @@ const TabButtonWrapper = styled({ width: '50%' }, 'ui-auth.TabButtonWrapper')(
 );
 
 const TabButton = styled(
-  ({ theme, isActive, alternateLogin }) => ({
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
-    borderTopLeftRadius: alternateLogin ? 0 : theme.sizing.baseBorderRadius,
-    borderTopRightRadius: alternateLogin ? theme.sizing.baseBorderRadius : 0,
-    fontSize: theme.helpers.rem(0.75),
-    borderWidth: 0,
-    fontWeight: 'normal',
-    color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
+  ({ theme, isActive }) => ({
+    alignItems: 'center',
     backgroundColor: isActive
       ? theme.colors.background.paper
       : theme.colors.background.screen,
+    borderRadius: 0,
+    borderWidth: 0,
+    color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
+    flexDirection: 'row',
+    fontSize: theme.helpers.rem(0.75),
+    fontWeight: 'normal',
+    height: theme.sizing.baseUnit * 3,
+    justifyContent: 'center',
+    overflow: 'hidden',
+    paddingHorizontal: theme.sizing.baseUnit,
+
     ...Platform.select(theme.shadows.none),
   }),
   'ui-auth.TabButton'
-)(Button);
-
-const TabButtonAlternate = styled(
-  ({ theme, alternateLogin }) => ({
-    borderTopLeftRadius: alternateLogin ? theme.sizing.baseBorderRadius : 0,
-    borderTopRightRadius: alternateLogin ? 0 : theme.sizing.baseBorderRadius,
-    ...Platform.select(theme.shadows.none),
-  }),
-  'ui-auth.TabButtonAlternate'
-)(TabButton);
+)(View);
 
 const TabCard = styled(
   ({ theme }) => ({
@@ -130,5 +125,4 @@ export {
   TabContainer,
   TabButtonWrapper,
   TabWrapper,
-  TabButtonAlternate,
 };

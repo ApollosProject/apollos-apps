@@ -6,6 +6,7 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
+  Text,
 } from 'react-native';
 import { get } from 'lodash';
 import {
@@ -14,6 +15,7 @@ import {
   TextInput,
   styled,
   withTheme,
+  Touchable,
 } from '@apollosproject/ui-kit';
 
 import {
@@ -22,7 +24,6 @@ import {
   NextButton,
   PromptText,
   TabButton,
-  TabButtonAlternate,
   TabButtonWrapper,
   TabCard,
   TabContainer,
@@ -74,24 +75,20 @@ const Entry = ({
             <TabWrapper>
               <TabContainer alternateLogin={alternateLogin}>
                 <TabButtonWrapper>
-                  <TabButton
-                    alternateLogin={alternateLogin}
-                    isActive
-                    paddingBottom={0}
-                    pill={false}
-                    title={tabTitle}
-                  />
+                  <Touchable>
+                    <TabButton alternateLogin={alternateLogin} isActive>
+                      <Text>{tabTitle}</Text>
+                    </TabButton>
+                  </Touchable>
                 </TabButtonWrapper>
 
                 {onPressAlternateLogin ? (
                   <TabButtonWrapper>
-                    <TabButtonAlternate
-                      alternateLogin={alternateLogin}
-                      onPress={onPressAlternateLogin}
-                      paddingBottom={0}
-                      pill={false}
-                      title={alternateLoginText}
-                    />
+                    <Touchable onPress={onPressAlternateLogin}>
+                      <TabButton alternateLogin={alternateLogin}>
+                        <Text>{alternateLoginText}</Text>
+                      </TabButton>
+                    </Touchable>
                   </TabButtonWrapper>
                 ) : null}
               </TabContainer>
