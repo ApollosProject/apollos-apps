@@ -12,6 +12,7 @@ const flatten = (array) =>
   array.reduce((accum, curr) => curr.concat(accum), []);
 
 const localDeps = [
+  path.resolve('..', 'apollos-ui-connected'),
   path.resolve('..', 'apollos-ui-kit'),
   path.resolve('..', 'apollos-ui-passes'),
   path.resolve('..', 'apollos-ui-auth'),
@@ -23,6 +24,7 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-media-player'),
   path.resolve('..', 'apollos-ui-scripture'),
   path.resolve('..', 'apollos-ui-notifications'),
+  path.resolve('..', 'apollos-config'),
 ];
 
 const sharedNativeModules = [
@@ -35,6 +37,7 @@ const sharedNativeModules = [
   'react-native-video',
   'react-native-video-controls',
   'react-native-maps',
+  'react-native-config',
   'react-native-modal-datetime-picker',
   '@apollosproject/react-native-airplay-btn',
   'react-navigation',

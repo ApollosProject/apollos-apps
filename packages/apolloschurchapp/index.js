@@ -1,12 +1,14 @@
 import './polyfill'; // this can be removed when we upgrade to react-native 59
 import { AppRegistry, YellowBox } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-
-import Config from 'react-native-config';
+import ApollosConfig from '@apollosproject/config';
 import Storybook from './storybook';
 import MainApp from './src';
 
-const useStorybook = Config.STORYBOOK === 'true';
+// Todo: Load fragments
+// ApollosConfig.loadJs({ });
+
+const useStorybook = ApollosConfig.STORYBOOK === 'true';
 
 let App = MainApp;
 if (useStorybook) {
