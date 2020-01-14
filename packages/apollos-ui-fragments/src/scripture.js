@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const SCRIPTURE_FRAGMENT = gql`
+const SCRIPTURE_FRAGMENT = gql`
   fragment ScriptureFragment on Scripture {
     id
     html
@@ -9,3 +9,5 @@ export const SCRIPTURE_FRAGMENT = gql`
     version
   }
 `;
+
+export { SCRIPTURE_FRAGMENT };
