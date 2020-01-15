@@ -38,7 +38,7 @@
     "postversion": "react-native-version --never-amend --never-increment-build --android android/app/build.gradle --ios ios/",
     "prestart": "lerna run generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify",
-    "pods": "./scripts/install_pods.sh",
+    "pods": "(cd ios && bundle install && bundle exec pod install)",
     "start": "react-native start",
     "test": "TZ=UTC jest"
   },
