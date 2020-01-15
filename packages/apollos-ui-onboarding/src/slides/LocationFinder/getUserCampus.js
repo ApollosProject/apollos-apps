@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import ApollosConfig from '@apollosproject/config';
 
 export default gql`
   query getCurrentCampus {
@@ -7,21 +8,10 @@ export default gql`
       profile {
         id
         campus {
-          id
-          name
-          latitude
-          longitude
-          distanceFromLocation
-          street1
-          street2
-          city
-          state
-          postalCode
-          image {
-            uri
-          }
+          ...CampusParts
         }
       }
     }
   }
+  ${ApollosConfig.FRAGMENTS.CAMPUS_PARTS_FRAGMENT}
 `;

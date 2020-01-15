@@ -1,22 +1,11 @@
 import gql from 'graphql-tag';
+import ApollosConfig from '@apollosproject/config';
 
 export default gql`
   query getLiveContent {
     liveStreams {
-      isLive
-      eventStartTime
-      media {
-        sources {
-          uri
-        }
-      }
-      webViewUrl
-
-      contentItem {
-        ... on WeekendContentItem {
-          id
-        }
-      }
+      ...LiveStreamFragment
     }
   }
+  ${ApollosConfig.FRAGMENTS.LIVE_STREAM_FRAGMENT}
 `;

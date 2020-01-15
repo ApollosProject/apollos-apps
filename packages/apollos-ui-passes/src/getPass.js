@@ -1,35 +1,11 @@
 import gql from 'graphql-tag';
+import ApollosConfig from '@apollosproject/config';
 
 export default gql`
   query {
     userPass {
-      id
-      description
-      logo {
-        uri
-      }
-      thumbnail {
-        uri
-      }
-      barcode {
-        uri
-      }
-      primaryFields {
-        key
-        label
-        value
-        textAlignment
-      }
-      secondaryFields {
-        key
-        label
-        value
-        textAlignment
-      }
-      backgroundColor
-      foregroundColor
-      labelColor
-      passkitFileUrl
+      ...PassFragment
     }
   }
+  ${ApollosConfig.FRAGMENTS.PASS_FRAGMENT}
 `;

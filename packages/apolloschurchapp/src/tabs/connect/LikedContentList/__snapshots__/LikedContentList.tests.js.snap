@@ -42,7 +42,7 @@ exports[`LikedContentList component renders LikedContentList 1`] = `
       node {
         ... on ContentItem {
           isLiked
-          ...baseCardFragment
+          ...contentCardFragment
           __typename
         }
         __typename
@@ -53,11 +53,27 @@ exports[`LikedContentList component renders LikedContentList 1`] = `
   }
 }
 
-fragment baseCardFragment on ContentItem {
+fragment contentCardFragment on ContentItem {
   id
   __typename
-  ...coverImageFragment
-  ...themeFragment
+  coverImage {
+    sources {
+      uri
+      __typename
+    }
+    __typename
+  }
+  theme {
+    type
+    colors {
+      primary
+      secondary
+      screen
+      paper
+      __typename
+    }
+    __typename
+  }
   title
   hyphenatedTitle: title(hyphenated: true)
   summary
@@ -99,32 +115,6 @@ fragment baseCardFragment on ContentItem {
     }
     __typename
   }
-}
-
-fragment coverImageFragment on ContentItem {
-  coverImage {
-    sources {
-      uri
-      __typename
-    }
-    __typename
-  }
-  __typename
-}
-
-fragment themeFragment on ContentItem {
-  theme {
-    type
-    colors {
-      primary
-      secondary
-      screen
-      paper
-      __typename
-    }
-    __typename
-  }
-  __typename
 }
 , variables: {"first":20}]
         }

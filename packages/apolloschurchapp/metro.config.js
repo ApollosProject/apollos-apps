@@ -24,6 +24,7 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-media-player'),
   path.resolve('..', 'apollos-ui-scripture'),
   path.resolve('..', 'apollos-ui-notifications'),
+  path.resolve('..', 'apollos-ui-fragments'),
   path.resolve('..', 'apollos-config'),
 ];
 

@@ -20,14 +20,4 @@ TextFeature.propTypes = {
   contentId: PropTypes.string.isRequired,
 };
 
-export const TEXT_FEATURE_FRAGMENT = `
-fragment TextFeatureFragment on TextFeature {
-  body
-  id
-  sharing {
-    message
-  }
-}
-`;
-
 export default TextFeature;

@@ -45,19 +45,4 @@ ScriptureFeature.propTypes = {
   contentId: PropTypes.string.isRequired,
 };
 
-export const SCRIPTURE_FEATURE_FRAGMENT = `
-fragment ScriptureFeatureFragment on ScriptureFeature {
-  sharing {
-    message
-  }
-  scriptures {
-    id
-    html
-    reference
-    copyright
-    version
-  }
-}
-`;
-
 export default ScriptureFeature;

@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export default gql`
+const CAMPUS_PARTS_FRAGMENT = gql`
   fragment CampusParts on Campus {
     id
     name
@@ -17,3 +17,5 @@ export default gql`
     }
   }
 `;
+
+export { CAMPUS_PARTS_FRAGMENT };
