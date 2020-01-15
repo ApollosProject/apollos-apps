@@ -18,7 +18,10 @@ describe('The Onboarding AskNotificationsConnected component', () => {
             hasPrompted: false,
           }}
         >
-          <AskNotificationsConnected onPressPrimary={jest.fn()} />
+          <AskNotificationsConnected
+            onPressPrimary={jest.fn()}
+            onRequestPushPermissions={jest.fn()}
+          />
         </PushContext.Provider>
       </Providers>
     );
@@ -32,7 +35,10 @@ describe('The Onboarding AskNotificationsConnected component', () => {
         <PushContext.Provider
           value={{ loading: false, hasPushPermission: true, hasPrompted: true }}
         >
-          <AskNotificationsConnected onPressPrimary={jest.fn()} />
+          <AskNotificationsConnected
+            onPressPrimary={jest.fn()}
+            onRequestPushPermissions={jest.fn()}
+          />
         </PushContext.Provider>
       </Providers>
     );
@@ -53,6 +59,7 @@ describe('The Onboarding AskNotificationsConnected component', () => {
         <AskNotificationsConnected
           Component={CustomComponent}
           onPressPrimary={jest.fn()}
+          onRequestPushPermissions={jest.fn()}
         />
       </Providers>
     );
@@ -61,7 +68,7 @@ describe('The Onboarding AskNotificationsConnected component', () => {
   it('should render with no data in the cache', () => {
     const tree = renderer.create(
       <Providers>
-        <AskNotificationsConnected />
+        <AskNotificationsConnected onRequestPushPermissions={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

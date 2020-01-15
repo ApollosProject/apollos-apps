@@ -1,4 +1,4 @@
-import { AuthenticationError } from 'apollo-server';
+import { AuthenticationError, UserInputError } from 'apollo-server';
 import { fetch, Request } from 'apollo-server-env';
 import moment from 'moment';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
@@ -89,6 +89,9 @@ export default class AuthDataSource extends RockApolloDataSource {
       this.context.sessionId = sessionId;
       return { token, rockCookie };
     } catch (e) {
+      if (e instanceof AuthenticationError) {
+        throw new UserInputError('Username or Password incorrect');
+      }
       throw e;
     }
   };
