@@ -36,6 +36,7 @@ export class RockLoggingExtension {
       .map((callPath) => `${decodeURI(callPath)}: ${calls[callPath]}`)
       .join('\n');
     if (calls && data) {
+      // eslint-disable-next-line no-console
       console.log(
         `While running query: ${Object.keys(data)[0]}
       Total Network Calls: ${totalNetworkCalls}

@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 
 import { Button } from '@apollosproject/ui-kit';
 
-import GET_LOGIN_STATE from '../getLoginState';
+import { GET_LOGIN_STATE } from '../queries';
 import { AuthConsumer } from '../Provider';
 
 const LoginButton = (props) => (

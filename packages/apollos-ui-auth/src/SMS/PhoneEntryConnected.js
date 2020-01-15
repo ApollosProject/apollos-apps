@@ -3,25 +3,39 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Mutation } from 'react-apollo';
 
-import PhoneEntry from './PhoneEntry';
-import REQUEST_PIN from './requestPin';
+import { LoginConsumer } from '../LoginProvider';
+import Entry from '../Entry';
 
 class PhoneEntryConnected extends Component {
   static propTypes = {
-    // Custom component to be rendered. Defaults to PhoneEntry
+    alternateLoginText: PropTypes.string,
+    // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
+    client: PropTypes.shape({
+      query: PropTypes.func,
+    }),
+    inputAutoComplete: PropTypes.string,
+    inputLabel: PropTypes.string,
+    inputType: PropTypes.string,
+    policyInfo: PropTypes.string,
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
+    tabTitle: PropTypes.string,
   };
 
   static defaultProps = {
-    Component: PhoneEntry,
+    Component: Entry,
+    alternateLoginText: 'Email',
+    inputAutoComplete: 'tel',
+    inputLabel: 'Phone Number',
+    inputType: 'phone',
+    policyInfo: "We'll text you a code to make login super easy!",
     screenProps: {},
+    tabTitle: 'Phone',
   };
 
   validationSchema = Yup.object().shape({
@@ -33,15 +47,15 @@ class PhoneEntryConnected extends Component {
 
   flatProps = { ...this.props, ...this.props.screenProps };
 
-  handleOnSubmit = (mutate) => async (
+  handleOnSubmit = (handleCheckUserExists) => async (
     { phone },
     { setSubmitting, setFieldError }
   ) => {
     setSubmitting(true);
     try {
-      await mutate({ variables: { phone } });
-      this.props.navigation.navigate('AuthSMSVerificationConnected', { phone });
+      await handleCheckUserExists({ authType: 'sms', identity: phone });
     } catch (e) {
+      console.warn(e);
       setFieldError(
         'phone',
         'There was an error. Please double check your number and try again.'
@@ -51,17 +65,17 @@ class PhoneEntryConnected extends Component {
   };
 
   handleOnPressAlternateLogin = () => {
-    this.props.navigation.navigate('AuthPassword');
+    this.props.navigation.replace('AuthEmailEntryConnected');
   };
 
   render() {
     return (
-      <Mutation mutation={REQUEST_PIN}>
-        {(mutate) => (
+      <LoginConsumer>
+        {({ handleCheckUserExists }) => (
           <Formik
             initialValues={{ phone: '' }}
             validationSchema={this.validationSchema}
-            onSubmit={this.handleOnSubmit(mutate)}
+            onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
               setFieldValue,
@@ -85,7 +99,7 @@ class PhoneEntryConnected extends Component {
             )}
           </Formik>
         )}
-      </Mutation>
+      </LoginConsumer>
     );
   }
 }

@@ -196,6 +196,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       "navigate": [MockFunction],
     }
   }
+  onNavigate={[MockFunction]}
   overScrollMode="auto"
   style={
     Object {

@@ -4,12 +4,19 @@ import PropTypes from 'prop-types';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
 import {
-  SMSPhoneEntry as AuthSMSPhoneEntry,
   SMSPhoneEntryConnected as AuthSMSPhoneEntryConnected,
   SMSVerification as AuthSMSVerification,
   SMSVerificationConnected as AuthSMSVerificationConnected,
 } from './SMS';
-import AuthPassword from './Password';
+import {
+  EmailEntryConnected as AuthEmailEntryConnected,
+  PasswordEntry as AuthPasswordEntry,
+  PasswordEntryConnected as AuthPasswordEntryConnected,
+} from './Password';
+import {
+  ProfileEntry as AuthProfileEntry,
+  ProfileEntryConnected as AuthProfileEntryConnected,
+} from './Profile';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
@@ -17,24 +24,30 @@ export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
 export ProtectedRoute from './ProtectedRoute';
 
-export GET_LOGIN_STATE from './getLoginState';
-export LOGOUT from './logout';
+export { LOGOUT } from './mutations';
+export { GET_LOGIN_STATE } from './queries';
 export authLink from './authLink';
 export buildErrorLink from './buildErrorLink';
+export Entry from './Entry';
 
 export {
-  AuthSMSPhoneEntry,
   AuthSMSPhoneEntryConnected,
   AuthSMSVerification,
   AuthSMSVerificationConnected,
-  AuthPassword,
+  AuthEmailEntryConnected,
+  AuthPasswordEntry,
+  AuthPasswordEntryConnected,
+  AuthProfileEntry,
+  AuthProfileEntryConnected,
 };
 
 const AuthNavigator = createStackNavigator(
   {
     AuthSMSPhoneEntryConnected,
     AuthSMSVerificationConnected,
-    AuthPassword,
+    AuthEmailEntryConnected,
+    AuthPasswordEntryConnected,
+    AuthProfileEntryConnected,
   },
   {
     initialRouteName: 'AuthSMSPhoneEntryConnected',

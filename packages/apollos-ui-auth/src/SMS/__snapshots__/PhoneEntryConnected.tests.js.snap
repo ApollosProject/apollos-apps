@@ -1,0 +1,522 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
+        "position": "absolute",
+        "resizeMode": "cover",
+      }
+    }
+  />
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "height": "100%",
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#00676D",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 36,
+                "lineHeight": 41.4,
+              }
+            }
+          >
+            Have we met?
+          </Text>
+          <Text
+            padded={true}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "paddingBottom": 24,
+                "paddingTop": 13.86,
+              }
+            }
+          >
+            Sign in for a personalized experience that helps you grow and connect with God.
+          </Text>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 0,
+                "marginVertical": 0,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                alternateLogin={false}
+                style={
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
+                          "borderWidth": 0,
+                          "color": "#303030",
+                          "flexDirection": "row",
+                          "fontSize": 12,
+                          "fontWeight": "normal",
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
+                          "shadowOpacity": 0,
+                        }
+                      }
+                    >
+                      <Text>
+                        Phone
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    clickable={true}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      alternateLogin={false}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#F8F7F4",
+                          "borderRadius": 0,
+                          "borderWidth": 0,
+                          "color": "#A5A5A5",
+                          "flexDirection": "row",
+                          "fontSize": 12,
+                          "fontWeight": "normal",
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
+                          "shadowOpacity": 0,
+                        }
+                      }
+                    >
+                      <Text>
+                        Email
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 16,
+                    "borderTopLeftRadius": 0,
+                    "borderTopRightRadius": 0,
+                    "marginHorizontal": 0,
+                    "marginVertical": 0,
+                    "paddingTop": 0,
+                    "shadowColor": "rgba(165, 165, 165, 0.6)",
+                    "shadowOffset": Object {
+                      "height": 1,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0,
+                    "shadowRadius": 6,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderRadius": 16,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  >
+                    <View
+                      disabled={false}
+                      style={
+                        Object {
+                          "marginVertical": 16,
+                        }
+                      }
+                    >
+                      <View>
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignItems": "center",
+                                "justifyContent": "center",
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "flex-end",
+                                "flex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "opacity": 0,
+                                }
+                              }
+                            >
+                              <TextInput
+                                allowFontScaling={true}
+                                autoComplete="tel"
+                                autoFocus={true}
+                                editable={true}
+                                enablesReturnKeyAutomatically={true}
+                                keyboardType="phone-pad"
+                                onBlur={[Function]}
+                                onChangeText={[Function]}
+                                onFocus={[Function]}
+                                onSubmitEditing={[Function]}
+                                placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                                rejectResponderTermination={true}
+                                returnKeyType="next"
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 14,
+                                    "height": 38,
+                                    "paddingVertical": 0,
+                                  }
+                                }
+                                type="phone"
+                                underlineColorAndroid="transparent"
+                                value=""
+                              />
+                            </View>
+                            <View
+                              onLayout={[Function]}
+                              pointerEvents="none"
+                              style={
+                                Object {
+                                  "bottom": 0,
+                                  "justifyContent": "center",
+                                  "opacity": 1,
+                                  "position": "absolute",
+                                  "top": 0,
+                                  "transform": Array [
+                                    Object {
+                                      "scale": 1,
+                                    },
+                                    Object {
+                                      "translateX": 0,
+                                    },
+                                    Object {
+                                      "translateY": 0,
+                                    },
+                                  ],
+                                }
+                              }
+                            >
+                              <Text
+                                color="#A5A5A5"
+                                style={
+                                  Object {
+                                    "backgroundColor": "transparent",
+                                    "color": "#A5A5A5",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 12,
+                                    "lineHeight": 18,
+                                    "paddingVertical": 4,
+                                  }
+                                }
+                              >
+                                Phone Number
+                              </Text>
+                            </View>
+                          </View>
+                          <View
+                            style={
+                              Object {
+                                "alignItems": "center",
+                                "justifyContent": "center",
+                              }
+                            }
+                          />
+                        </View>
+                        <View
+                          style={
+                            Object {
+                              "bottom": 0,
+                              "left": 0,
+                              "right": 0,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "backgroundColor": "#A5A5A5",
+                                "bottom": -0.5,
+                                "height": 0.5,
+                              }
+                            }
+                          />
+                          <View
+                            style={
+                              Object {
+                                "bottom": 0,
+                                "left": 0,
+                                "right": 0,
+                                "transform": Array [
+                                  Object {
+                                    "scaleX": 0.0001,
+                                  },
+                                ],
+                              }
+                            }
+                          >
+                            <View
+                              hasError={false}
+                              style={
+                                Object {
+                                  "backgroundColor": "#00676D",
+                                  "bottom": 0,
+                                  "height": 0.5,
+                                }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#A5A5A5",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "fontWeight": "normal",
+                          "lineHeight": 18,
+                        }
+                      }
+                    >
+                      We'll text you a code to make login super easy!
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        clickable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          bordered={false}
+          disabled={true}
+          pill={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00676D",
+              "borderColor": "#00676D",
+              "borderRadius": 16,
+              "borderWidth": 2,
+              "color": "#F8F7F4",
+              "elevation": 2,
+              "flexDirection": "row",
+              "height": 48,
+              "justifyContent": "center",
+              "opacity": 0.5,
+              "overflow": "hidden",
+              "paddingHorizontal": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "backgroundColor": "#00676D",
+                "color": "#F8F7F4",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Next
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

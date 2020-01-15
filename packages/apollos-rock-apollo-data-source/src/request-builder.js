@@ -93,6 +93,7 @@ export default class RockRequestBuilder {
 
   filterOneOf = (filters) => {
     if (filters.length === 0) {
+      // eslint-disable-next-line no-console
       console.warn(`
 You are filtering oneOf 0 filters.
 Normally this has the same effect as filtering with 0 filters.

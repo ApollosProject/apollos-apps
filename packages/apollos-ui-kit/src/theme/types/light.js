@@ -7,6 +7,7 @@ const light = ({ colors, alpha }) => ({
       secondary: colors.darkSecondary,
       tertiary: colors.darkTertiary,
       link: colors.secondary,
+      invert: colors.screen,
     },
     background: {
       screen: colors.screen,

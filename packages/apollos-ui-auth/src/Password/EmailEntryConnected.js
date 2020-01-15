@@ -1,60 +1,79 @@
-/* eslint-disable react/no-unused-prop-types, react/jsx-handler-names */
+/* eslint-disable react/no-unused-prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import { LoginConsumer } from '../LoginProvider';
+import Entry from '../Entry';
 
-import Verification from './Verification';
-
-class VerificationConnected extends Component {
+class EmailEntryConnected extends Component {
   static propTypes = {
-    // Custom component to be rendered. Defaults to Verification
+    alternateLoginText: PropTypes.string,
+    // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
+    client: PropTypes.shape({
+      query: PropTypes.func,
+    }),
     screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
+    inputAutoComplete: PropTypes.string,
+    inputLabel: PropTypes.string,
+    inputType: PropTypes.string,
+    policyInfo: PropTypes.string,
+    tabTitle: PropTypes.string,
   };
 
   static defaultProps = {
-    Component: Verification,
+    Component: Entry,
     screenProps: {},
+    alternateLoginText: 'Phone',
+    inputAutoComplete: 'email',
+    inputLabel: 'Email',
+    inputType: 'email',
+    policyInfo: "You'll enter or create a password to continue.",
+    tabTitle: 'Email',
   };
 
   validationSchema = Yup.object().shape({
-    phone: Yup.string().matches(/^[6-9]\d{9}$/),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Email is required!'),
   });
 
   flatProps = { ...this.props, ...this.props.screenProps };
 
-  handleOnSubmit = (handleSubmitLogin) => async (
-    { code },
+  handleOnSubmit = (handleCheckUserExists) => async (
+    { email },
     { setSubmitting, setFieldError }
   ) => {
     setSubmitting(true);
     try {
-      await handleSubmitLogin({ password: code });
+      handleCheckUserExists({ identity: email, authType: 'email' });
     } catch (e) {
-      console.warn(e);
       setFieldError(
-        'code',
-        'There was an error. Please double check your number and try again.'
+        'email',
+        'There was an error. Please double check your email and try again.'
       );
     }
     setSubmitting(false);
   };
 
+  handleOnPressAlternateLogin = () => {
+    this.props.navigation.replace('AuthSMSPhoneEntryConnected');
+  };
+
   render() {
     return (
       <LoginConsumer>
-        {({ handleSubmitLogin }) => (
+        {({ handleCheckUserExists }) => (
           <Formik
-            initialValues={{ code: '' }}
+            initialValues={{ email: '' }}
             validationSchema={this.validationSchema}
-            onSubmit={this.handleOnSubmit(handleSubmitLogin)}
+            onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
               setFieldValue,
@@ -66,14 +85,14 @@ class VerificationConnected extends Component {
               errors,
             }) => (
               <this.props.Component
-                errors={touched.code && errors}
                 disabled={isSubmitting || !isValid}
+                errors={touched.email && errors}
                 isLoading={isSubmitting}
                 onPressNext={handleSubmit}
-                onPressBack={this.props.navigation.goBack}
+                onPressAlternateLogin={this.handleOnPressAlternateLogin}
                 setFieldValue={setFieldValue}
-                touched={touched}
                 values={values}
+                alternateLogin
                 {...this.flatProps}
               />
             )}
@@ -84,4 +103,4 @@ class VerificationConnected extends Component {
   }
 }
 
-export default VerificationConnected;
+export default EmailEntryConnected;

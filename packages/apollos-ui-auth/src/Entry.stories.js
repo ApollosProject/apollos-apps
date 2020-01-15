@@ -2,12 +2,12 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { H6 } from '@apollosproject/ui-kit';
 
-import PhoneEntry from './PhoneEntry';
+import Entry from './Entry';
 
-storiesOf('ui-auth/SMS/PhoneEntry', module)
-  .add('default', () => <PhoneEntry setFieldValue={() => {}} />)
+storiesOf('ui-auth/Entry', module)
+  .add('default', () => <Entry setFieldValue={() => {}} />)
   .add('alternateLoginText', () => (
-    <PhoneEntry
+    <Entry
       setFieldValue={() => {}}
       onPressAlternateLogin={() => {}}
       alternateLoginText={
@@ -16,28 +16,28 @@ storiesOf('ui-auth/SMS/PhoneEntry', module)
     />
   ))
   .add('authTitleText', () => (
-    <PhoneEntry setFieldValue={() => {}} authTitleText={'Custom Title'} />
+    <Entry setFieldValue={() => {}} authTitleText={'Custom Title'} />
   ))
   .add('disabled', () => (
-    <PhoneEntry setFieldValue={() => {}} onPressNext={() => {}} disabled />
+    <Entry setFieldValue={() => {}} onPressNext={() => {}} disabled />
   ))
   .add('errors', () => (
-    <PhoneEntry
+    <Entry
       setFieldValue={() => {}}
       errors={{ phone: 'Boom errors.phone Boom' }}
     />
   ))
   .add('isLoading', () => (
-    <PhoneEntry setFieldValue={() => {}} onPressNext={() => {}} isLoading />
+    <Entry setFieldValue={() => {}} onPressNext={() => {}} isLoading />
   ))
   .add('onPressAlternateLogin', () => (
-    <PhoneEntry setFieldValue={() => {}} onPressAlternateLogin={() => {}} />
+    <Entry setFieldValue={() => {}} onPressAlternateLogin={() => {}} />
   ))
   .add('onPressNext', () => (
-    <PhoneEntry setFieldValue={() => {}} onPressNext={() => {}} />
+    <Entry setFieldValue={() => {}} onPressNext={() => {}} />
   ))
   .add('smsPolicyInfo', () => (
-    <PhoneEntry
+    <Entry
       setFieldValue={() => {}}
       smsPolicyInfo={
         <H6 style={{ color: 'salmon' }}>Boom custom legalese boom</H6> // eslint-disable-line react-native/no-inline-styles, react-native/no-color-literals
@@ -45,13 +45,13 @@ storiesOf('ui-auth/SMS/PhoneEntry', module)
     />
   ))
   .add('smsPromptText', () => (
-    <PhoneEntry
+    <Entry
       setFieldValue={() => {}}
       smsPromptText={'Boom custom prompty text boom'}
     />
   ))
   .add('values', () => (
-    <PhoneEntry
+    <Entry
       setFieldValue={() => {}}
       values={{ phone: 'Boom values.phone boom' }}
     />
