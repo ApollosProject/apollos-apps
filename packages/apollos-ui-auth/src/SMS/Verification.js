@@ -16,7 +16,6 @@ import {
   NextButton,
   TitleText,
   PromptText,
-  BrandIcon,
 } from '../styles';
 import BackButton from '../BackButton';
 
@@ -44,7 +43,6 @@ const Verification = ({
         <ScrollView>
           <BackButton onPress={() => onPressBack()} />
           <PaddedView vertical={false}>
-            <BrandIcon />
             <TitleText>{confirmationTitleText}</TitleText>
             <PromptText padded>{confirmationPromptText}</PromptText>
 

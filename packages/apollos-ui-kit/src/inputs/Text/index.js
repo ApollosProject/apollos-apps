@@ -61,6 +61,7 @@ const enhance = compose(
 const Text = enhance(
   ({
     label,
+    labelColor,
     prefix,
     suffix,
     value,
@@ -96,7 +97,9 @@ const Text = enhance(
                   value={value}
                 />
               </Animated.View>
-              <FloatingLabel animation={focusAnimation}>{label}</FloatingLabel>
+              <FloatingLabel color={labelColor} animation={focusAnimation}>
+                {label}
+              </FloatingLabel>
             </TextInputWrapper>
             <InputAddon>{suffix}</InputAddon>
           </AddonRow>
@@ -127,6 +130,7 @@ Text.propTypes = {
   prefix: PropTypes.node,
   suffix: PropTypes.node,
   label: PropTypes.string,
+  labelColor: PropTypes.string,
   value: PropTypes.any, // eslint-disable-line
   wrapperStyle: PropTypes.any, // eslint-disable-line
   returnKeyType: PropTypes.string,

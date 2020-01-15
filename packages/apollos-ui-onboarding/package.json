@@ -41,6 +41,7 @@
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-fragments": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
