@@ -139,54 +139,47 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
-                        "shadowOpacity": 0,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                           "shadowOpacity": 0,
                         }
                       }
                     >
-                      Phone
-                    </Text>
+                      <Text>
+                        Phone
+                      </Text>
+                    </View>
                   </View>
                 </View>
                 <View
@@ -214,52 +207,26 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                     }
                   >
                     <View
-                      bordered={false}
-                      disabled={false}
-                      pill={false}
+                      alternateLogin={false}
                       style={
                         Object {
                           "alignItems": "center",
                           "backgroundColor": "#F8F7F4",
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderColor": "#00676D",
-                          "borderRadius": 16,
-                          "borderTopLeftRadius": 0,
-                          "borderTopRightRadius": 16,
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#A5A5A5",
-                          "elevation": 2,
                           "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
                           "height": 48,
                           "justifyContent": "center",
-                          "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
                           "shadowOpacity": 0,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": 0,
-                            "borderBottomLeftRadius": 0,
-                            "borderBottomRightRadius": 0,
-                            "borderTopLeftRadius": 0,
-                            "borderTopRightRadius": 16,
-                            "borderWidth": 0,
-                            "color": "#A5A5A5",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "fontWeight": "normal",
-                            "lineHeight": 24,
-                            "shadowOpacity": 0,
-                          }
-                        }
-                      >
+                      <Text>
                         Email
                       </Text>
                     </View>

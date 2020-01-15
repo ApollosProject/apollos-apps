@@ -132,52 +132,44 @@ exports[`The Auth Entry component should render 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -522,52 +514,44 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -914,52 +898,44 @@ exports[`The Auth Entry component should render as disabled 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -1368,52 +1344,44 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -1815,52 +1783,44 @@ exports[`The Auth Entry component should render in a next button 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -2269,52 +2229,44 @@ exports[`The Auth Entry component should render in an error state 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -2659,52 +2611,44 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 0,
-                        "borderTopRightRadius": 16,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={true}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 0,
-                          "borderTopRightRadius": 16,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
                 <View
@@ -2732,50 +2676,25 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
                     }
                   >
                     <View
-                      bordered={false}
-                      disabled={false}
-                      pill={false}
+                      alternateLogin={true}
                       style={
                         Object {
                           "alignItems": "center",
                           "backgroundColor": "#F8F7F4",
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderColor": "#00676D",
-                          "borderRadius": 16,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#A5A5A5",
-                          "elevation": 2,
                           "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
                           "height": 48,
                           "justifyContent": "center",
-                          "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": 0,
-                            "borderBottomLeftRadius": 0,
-                            "borderBottomRightRadius": 0,
-                            "borderTopLeftRadius": 16,
-                            "borderTopRightRadius": 0,
-                            "borderWidth": 0,
-                            "color": "#A5A5A5",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "fontWeight": "normal",
-                            "lineHeight": 24,
-                          }
-                        }
-                      >
+                      <Text>
                         Custom Text to direct people to an alternate login flow
                       </Text>
                     </View>
@@ -3123,52 +3042,44 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -3513,52 +3424,44 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -3903,52 +3806,46 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      Custom Tab Title
-                    </Text>
+                      <Text>
+                        Custom Tab Title
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </View>
@@ -4293,52 +4190,44 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -4685,52 +4574,44 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -5077,52 +4958,44 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -5469,52 +5342,44 @@ exports[`The Auth Entry component should render with a value 1`] = `
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -5859,52 +5724,44 @@ exports[`The Auth Entry component should render with an alternate login option w
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    accessible={true}
+                    clickable={false}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
                         "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      alternateLogin={false}
+                      isActive={true}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
+                          "alignItems": "center",
+                          "backgroundColor": "#FFFFFF",
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
+                          "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "height": 48,
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <Text />
+                    </View>
                   </View>
                 </View>
                 <View
@@ -5932,52 +5789,25 @@ exports[`The Auth Entry component should render with an alternate login option w
                     }
                   >
                     <View
-                      bordered={false}
-                      disabled={false}
-                      pill={false}
+                      alternateLogin={false}
                       style={
                         Object {
                           "alignItems": "center",
                           "backgroundColor": "#F8F7F4",
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderColor": "#00676D",
-                          "borderRadius": 16,
-                          "borderTopLeftRadius": 0,
-                          "borderTopRightRadius": 16,
+                          "borderRadius": 0,
                           "borderWidth": 0,
                           "color": "#A5A5A5",
-                          "elevation": 2,
                           "flexDirection": "row",
                           "fontSize": 12,
                           "fontWeight": "normal",
                           "height": 48,
                           "justifyContent": "center",
-                          "opacity": 1,
                           "overflow": "hidden",
                           "paddingHorizontal": 16,
                         }
                       }
                     >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": 0,
-                            "borderBottomLeftRadius": 0,
-                            "borderBottomRightRadius": 0,
-                            "borderTopLeftRadius": 0,
-                            "borderTopRightRadius": 16,
-                            "borderWidth": 0,
-                            "color": "#A5A5A5",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "fontWeight": "normal",
-                            "lineHeight": 24,
-                          }
-                        }
-                      >
-                        
-                      </Text>
+                      <Text />
                     </View>
                   </View>
                 </View>
@@ -6323,52 +6153,54 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
                   }
                 >
                   <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                    round={true}
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
-                        "borderBottomLeftRadius": 0,
-                        "borderBottomRightRadius": 0,
-                        "borderColor": "#00676D",
-                        "borderRadius": 16,
-                        "borderTopLeftRadius": 16,
-                        "borderTopRightRadius": 0,
-                        "borderWidth": 0,
-                        "color": "#303030",
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "fontSize": 12,
-                        "fontWeight": "normal",
-                        "height": 48,
-                        "justifyContent": "center",
-                        "opacity": 1,
+                        "borderRadius": undefined,
                         "overflow": "hidden",
-                        "paddingHorizontal": 16,
                       }
                     }
                   >
-                    <Text
+                    <View
+                      accessible={true}
+                      clickable={false}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
                       style={
                         Object {
-                          "backgroundColor": 0,
-                          "borderBottomLeftRadius": 0,
-                          "borderBottomRightRadius": 0,
-                          "borderTopLeftRadius": 16,
-                          "borderTopRightRadius": 0,
-                          "borderWidth": 0,
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
-                          "lineHeight": 24,
+                          "opacity": 1,
                         }
                       }
                     >
-                      
-                    </Text>
+                      <View
+                        alternateLogin={false}
+                        isActive={true}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "#FFFFFF",
+                            "borderRadius": 0,
+                            "borderWidth": 0,
+                            "color": "#303030",
+                            "flexDirection": "row",
+                            "fontSize": 12,
+                            "fontWeight": "normal",
+                            "height": 48,
+                            "justifyContent": "center",
+                            "overflow": "hidden",
+                            "paddingHorizontal": 16,
+                          }
+                        }
+                      >
+                        <Text />
+                      </View>
+                    </View>
                   </View>
                 </View>
               </View>
