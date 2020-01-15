@@ -145,7 +145,6 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
             <Text
               style={
                 Object {
-                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -307,7 +306,6 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
             <Text
               style={
                 Object {
-                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -464,7 +462,6 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
             <Text
               style={
                 Object {
-                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,

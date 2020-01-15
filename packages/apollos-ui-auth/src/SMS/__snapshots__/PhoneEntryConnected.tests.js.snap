@@ -504,7 +504,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
           <Text
             style={
               Object {
-                "backgroundColor": 0,
+                "backgroundColor": "#00676D",
                 "color": "#F8F7F4",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,

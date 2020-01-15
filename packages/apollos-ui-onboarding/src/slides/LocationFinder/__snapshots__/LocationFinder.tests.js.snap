@@ -100,7 +100,6 @@ Array [
             <Text
               style={
                 Object {
-                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -258,7 +257,6 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
           <Text
             style={
               Object {
-                "backgroundColor": 0,
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
@@ -418,7 +416,6 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
           <Text
             style={
               Object {
-                "backgroundColor": 0,
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
@@ -551,7 +548,6 @@ exports[`The Onboarding LocationFinder component should render a button with cus
             <Text
               style={
                 Object {
-                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -668,7 +664,6 @@ exports[`The Onboarding LocationFinder component should render a custom descript
           <Text
             style={
               Object {
-                "backgroundColor": 0,
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
@@ -784,7 +779,6 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
           <Text
             style={
               Object {
-                "backgroundColor": 0,
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
@@ -1329,7 +1323,6 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
             <Text
               style={
                 Object {
-                  "backgroundColor": 0,
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
