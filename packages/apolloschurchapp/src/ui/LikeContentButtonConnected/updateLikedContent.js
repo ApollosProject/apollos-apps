@@ -10,7 +10,7 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
     const fullItem = cache.readFragment({
       id: `${item.__typename}:${item.id}`,
       fragment: ApollosConfig.FRAGMENTS.CONTENT_CARD_FRAGMENT,
-      fragmentName: 'contentItemFragment',
+      fragmentName: 'contentCardFragment',
     });
     const newEdges = [
       fullItem,
