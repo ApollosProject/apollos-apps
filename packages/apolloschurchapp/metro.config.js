@@ -12,6 +12,7 @@ const flatten = (array) =>
   array.reduce((accum, curr) => curr.concat(accum), []);
 
 const localDeps = [
+  path.resolve('..', 'apollos-ui-connected'),
   path.resolve('..', 'apollos-ui-kit'),
   path.resolve('..', 'apollos-ui-passes'),
   path.resolve('..', 'apollos-ui-auth'),
@@ -23,6 +24,7 @@ const localDeps = [
   path.resolve('..', 'apollos-ui-media-player'),
   path.resolve('..', 'apollos-ui-scripture'),
   path.resolve('..', 'apollos-ui-notifications'),
+  path.resolve('..', 'apollos-ui-fragments'),
   path.resolve('..', 'apollos-config'),
 ];
 

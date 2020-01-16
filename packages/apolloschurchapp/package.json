@@ -38,7 +38,7 @@
     "postversion": "react-native-version --never-amend --never-increment-build --android android/app/build.gradle --ios ios/",
     "prestart": "lerna run generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify",
-    "pods": "./scripts/install_pods.sh",
+    "pods": "(cd ios && bundle install && bundle exec pod install)",
     "start": "react-native start",
     "test": "TZ=UTC jest"
   },
@@ -74,6 +74,7 @@
     "@apollosproject/ui-passes": "^1.2.5",
     "@apollosproject/ui-scripture": "^1.2.5",
     "@apollosproject/ui-storybook": "^1.2.5",
+    "@apollosproject/ui-fragments": "^1.2.5",
     "@apollosproject/config": "^1.2.5",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/geolocation": "^2.0.2",

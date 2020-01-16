@@ -119,6 +119,14 @@ export const shadows = ({ colors: themeColors }) => ({
       elevation: 5,
     },
   },
+  none: {
+    ios: {
+      shadowOpacity: 0,
+    },
+    android: {
+      elevation: 0,
+    },
+  },
 });
 
 export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
