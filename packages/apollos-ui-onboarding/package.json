@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-onboarding",
-  "version": "1.2.5",
+  "version": "1.3.0-beta.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -39,9 +39,9 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
-    "@apollosproject/ui-fragments": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
