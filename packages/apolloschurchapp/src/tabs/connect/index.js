@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 import { withTheme } from '@apollosproject/ui-kit';
-import { LikedContentList } from '@apollosproject/ui-connected';
+import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
 
 import UserSettings from '../../user-settings';
 import TestingControlPanel from '../../testing-control-panel';
@@ -13,7 +13,7 @@ const ConnectNavigator = createStackNavigator(
     Connect,
     TestingControlPanel,
     UserSettings,
-    LikedContentList,
+    LikedContentFeedConnected,
   },
   {
     initialRouteName: 'Connect',

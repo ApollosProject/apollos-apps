@@ -1,7 +1,7 @@
 import ApollosConfig from '@apollosproject/config';
 import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
-const addItemToLikedContentList = ({ cache, item, variables }) => {
+const addItemToLikedContentFeed = ({ cache, item, variables }) => {
   try {
     const data = cache.readQuery({
       query: GET_LIKED_CONTENT,
@@ -40,7 +40,7 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
   }
 };
 
-const removeItemFromLikedContentList = ({ cache, item, variables }) => {
+const removeItemFromLikedContentFeed = ({ cache, item, variables }) => {
   try {
     const data = cache.readQuery({
       query: GET_LIKED_CONTENT,
@@ -71,11 +71,11 @@ const removeItemFromLikedContentList = ({ cache, item, variables }) => {
 
 const updateLikedContent = ({ liked, cache, item }) => {
   if (liked) {
-    addItemToLikedContentList({ cache, item, variables: { first: 3 } });
-    addItemToLikedContentList({ cache, item, variables: { first: 20 } });
+    addItemToLikedContentFeed({ cache, item, variables: { first: 3 } });
+    addItemToLikedContentFeed({ cache, item, variables: { first: 20 } });
   } else {
-    removeItemFromLikedContentList({ cache, item, variables: { first: 3 } });
-    removeItemFromLikedContentList({ cache, item, variables: { first: 20 } });
+    removeItemFromLikedContentFeed({ cache, item, variables: { first: 3 } });
+    removeItemFromLikedContentFeed({ cache, item, variables: { first: 20 } });
   }
 };
 

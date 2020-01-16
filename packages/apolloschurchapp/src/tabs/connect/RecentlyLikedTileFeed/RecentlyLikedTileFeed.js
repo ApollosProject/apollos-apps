@@ -93,7 +93,7 @@ class RecentlyLikedTileFeed extends Component {
 
           <AndroidTouchableFix
             onPress={() => {
-              navigation.navigate('LikedContentList');
+              navigation.navigate('LikedContentFeedConnected');
             }}
           >
             <ButtonLinkSpacing>

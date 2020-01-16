@@ -6,7 +6,7 @@ import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../utils/fetchMoreResolver';
 
-import ContentCardConnected from '../ContentCardConnected';
+import ContentCardConnected from '../../../apolloschurchapp/src/ui/ContentCardConnected';
 
 import GET_LIKED_CONTENT from './getLikedContent';
 
