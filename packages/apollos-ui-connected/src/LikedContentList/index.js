@@ -2,12 +2,13 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
+
 import fetchMoreResolver from '../../../utils/fetchMoreResolver';
 import ContentCardConnected from '../../../ui/ContentCardConnected';
 
-import GET_LIKED_CONTENT from '../getLikedContent';
+import GET_LIKED_CONTENT from './getLikedContent';
+
 /** A FeedView wrapped in a query to pull content data. */
 class LikedContentList extends PureComponent {
   /** Function for React Navigation to set information in the header. */
@@ -66,4 +67,4 @@ class LikedContentList extends PureComponent {
   }
 }
 
-export default LikedContentList;
+export { LikedContentList as default, GET_LIKED_CONTENT };

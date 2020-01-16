@@ -1,12 +1,12 @@
 import { createStackNavigator } from 'react-navigation';
 import { withTheme } from '@apollosproject/ui-kit';
+import { LikedContentList } from '@apollosproject/ui-connected';
 
 import UserSettings from '../../user-settings';
-
 import TestingControlPanel from '../../testing-control-panel';
+
 import tabBarIcon from '../tabBarIcon';
 import Connect from './Connect';
-import LikedContentList from './LikedContentList';
 
 const ConnectNavigator = createStackNavigator(
   {

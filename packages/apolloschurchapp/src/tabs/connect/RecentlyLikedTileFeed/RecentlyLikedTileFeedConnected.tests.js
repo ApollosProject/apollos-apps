@@ -1,10 +1,9 @@
 import React from 'react';
+import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
 import Providers from '../../../Providers';
-
 import { renderWithApolloData } from '../../../utils/testUtils';
 
-import GET_LIKED_CONTENT from '../getLikedContent';
 import RecentlyLikedTileFeedConnected from './RecentlyLikedTileFeedConnected';
 
 describe('RecentlyLikedTileFeedConnected', () => {

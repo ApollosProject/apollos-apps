@@ -1,10 +1,10 @@
 import ApollosConfig from '@apollosproject/config';
-import GET_ALL_LIKED_CONTENT from '../../tabs/connect/getLikedContent';
+import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
 const addItemToLikedContentList = ({ cache, item, variables }) => {
   try {
     const data = cache.readQuery({
-      query: GET_ALL_LIKED_CONTENT,
+      query: GET_LIKED_CONTENT,
       variables,
     });
     const fullItem = cache.readFragment({
@@ -23,7 +23,7 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
       },
     }));
     cache.writeQuery({
-      query: GET_ALL_LIKED_CONTENT,
+      query: GET_LIKED_CONTENT,
       variables,
       data: {
         ...data,
@@ -35,7 +35,7 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
     });
   } catch (e) {
     console.log(e);
-    // Most likely we haven't ran the `getAllLikedContent` query yet.
+    // Most likely we haven't ran the `GET_LIKED_CONTENT` query yet.
     // We can safely exit.
   }
 };
@@ -43,7 +43,7 @@ const addItemToLikedContentList = ({ cache, item, variables }) => {
 const removeItemFromLikedContentList = ({ cache, item, variables }) => {
   try {
     const data = cache.readQuery({
-      query: GET_ALL_LIKED_CONTENT,
+      query: GET_LIKED_CONTENT,
       variables,
     });
 
@@ -52,7 +52,7 @@ const removeItemFromLikedContentList = ({ cache, item, variables }) => {
     );
 
     cache.writeQuery({
-      query: GET_ALL_LIKED_CONTENT,
+      query: GET_LIKED_CONTENT,
       variables,
       data: {
         ...data,
@@ -64,7 +64,7 @@ const removeItemFromLikedContentList = ({ cache, item, variables }) => {
     });
   } catch (e) {
     console.log(e);
-    // Most likely we haven't ran the `getAllLikedContent` query yet.
+    // Most likely we haven't ran the `GET_LIKED_CONTENT` query yet.
     // We can safely exit.
   }
 };

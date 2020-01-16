@@ -1,8 +1,8 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
+import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
-import GET_LIKED_CONTENT from '../getLikedContent';
 import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
 
 const RecentlyLikedTileFeedConnected = ({ navigation }) => (
