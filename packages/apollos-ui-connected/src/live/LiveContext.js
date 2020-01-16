@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+
 import getLiveContent from './getLiveContent';
 
 const { Provider, Consumer } = React.createContext([]);
