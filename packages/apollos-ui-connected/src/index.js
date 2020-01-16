@@ -1,0 +1,1 @@
+export LikeContentButtonConnected from './LikeContentButtonConnected';
