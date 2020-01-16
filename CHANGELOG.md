@@ -1,3 +1,29 @@
+v1.3.0-beta.0: January 16, 2020
+
+- Adds Caching to requests made to api.bible (#1284) (21a54110)
+- Adds Fragments Package (#1279) (e38eb925)
+- Adds Auth api frontend (#1273) (84b43ffb)
+- Adds Caching documentation (#1281) (8aa4f95f)
+- Adds scaffolding for the apollos-ui-connected package (#1280) (d5a38ca0)
+- Adds Search field polish (#1272) (e292f910)
+- Adds ui config to apollos config package (#1275) (1f825f6c)
+- Adds New Auth Flow API (#1270) (e5cbc0aa)
+- Adds Push Provider/Consumer/Context (#1266) (9b4580f6)
+- Adds MapView component package (#1217) (556d9e03)
+
+- Upgrades handlebars from 4.1.2 to 4.5.3 (#1274) (76830168)
+- Simplify pod management with Bundler (#1283) (74a0e1a5)
+- Changes Imports to Relative Paths (#1257) (9f360559)
+- Updates typographic styles (#1267) (603bdc17)
+- Updates the design for ActionListItem (#1264) (a3604bea)
+- Changes BodySmall to use HorizontalDefaultCard (#1265) (38021e72)
+
+- Fixes redirecting to landing on auth error (#1282) (59fa276e)
+- Fixed issue causing stray BR's to crash the app (#1271) (7056c4ba)
+- Fixes StretchyView bug on overscroll effect (#1278) (fadf216c)
+- Fixes crash in the date picker input (#1268) (ce6b9dd9)
+- Fixes auth thrashing (#1269) (0730a7b3)
+- Fixes Featured Card Loading State (#1249) (63091c73)
 
 v1.2.5: December 10, 2019
 
