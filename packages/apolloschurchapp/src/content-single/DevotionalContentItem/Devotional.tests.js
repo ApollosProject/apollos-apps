@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import Providers from '../../Providers';
 import { renderWithApolloData } from '../../utils/testUtils';
 import GET_CONTENT_ITEM_CONTENT from '../HTMLContent/getContentItemContent';
