@@ -41,6 +41,7 @@ const sharedNativeModules = [
   'react-native-modal-datetime-picker',
   '@apollosproject/react-native-airplay-btn',
   'react-navigation',
+  '@react-native-community/masked-view',
 ];
 
 module.exports = {
