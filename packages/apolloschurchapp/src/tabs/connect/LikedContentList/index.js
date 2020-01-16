@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
+import ContentCardConnected from '@apollosproject/ui-connected';
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
 import fetchMoreResolver from '../../../utils/fetchMoreResolver';
-import ContentCardConnected from '../../../ui/ContentCardConnected';
 
 import GET_LIKED_CONTENT from '../getLikedContent';
 /** A FeedView wrapped in a query to pull content data. */

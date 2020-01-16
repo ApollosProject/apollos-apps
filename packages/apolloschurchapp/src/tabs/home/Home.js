@@ -13,8 +13,8 @@ import {
   FeaturedCard,
 } from '@apollosproject/ui-kit';
 
+import ContentCardConnected from '@apollosproject/ui-connected';
 import fetchMoreResolver from '../../utils/fetchMoreResolver';
-import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import Features from './Features';
 import GET_USER_FEED from './getUserFeed';
