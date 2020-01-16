@@ -130,7 +130,7 @@ class MapView extends Component {
     }
     // returns your selected current campus to be first in card list if it exists
     return [
-      currentCampus,
+      campuses.find(({ id }) => id === currentCampus.id),
       ...campuses.filter(({ id }) => id !== currentCampus.id),
     ];
   }
