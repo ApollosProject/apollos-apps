@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { fetchMoreResolver } from '@apollosproject/ui-connected';
+import renderWithApolloData from '../renderWithApolloData';
 
-import { renderWithApolloData } from '../testUtils';
+import fetchMoreResolver from '.';
 
-describe('the fetchMoreResolver function', () => {
+describe('the fetchMoreResolver util', () => {
   const args = {
     collectionName: 'userFeed',
     variables: { first: 10, after: null },
