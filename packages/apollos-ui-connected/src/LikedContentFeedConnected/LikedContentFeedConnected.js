@@ -6,12 +6,12 @@ import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../utils/fetchMoreResolver';
 
-import ContentCardConnected from '../../../ui/ContentCardConnected';
+import ContentCardConnected from '../ContentCardConnected';
 
 import GET_LIKED_CONTENT from './getLikedContent';
 
 /** A FeedView wrapped in a query to pull content data. */
-class LikedContentList extends PureComponent {
+class LikedContentFeedConnected extends PureComponent {
   /** Function for React Navigation to set information in the header. */
   static navigationOptions = () => ({
     title: 'Your Likes',
@@ -78,4 +78,4 @@ class LikedContentList extends PureComponent {
   }
 }
 
-export { LikedContentList as default, GET_LIKED_CONTENT };
+export { LikedContentFeedConnected as default, GET_LIKED_CONTENT };
