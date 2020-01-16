@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "echo 'tests to come soon'",
+    "test": "jest",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import renderWithApolloData from '../renderWithApolloData';
+import { renderWithApolloData } from '../testUtils';
 
 import fetchMoreResolver from '.';
 
