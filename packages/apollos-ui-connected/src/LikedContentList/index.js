@@ -4,7 +4,8 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
 
-import fetchMoreResolver from '../../../utils/fetchMoreResolver';
+import fetchMoreResolver from '../utils/fetchMoreResolver';
+
 import ContentCardConnected from '../../../ui/ContentCardConnected';
 
 import GET_LIKED_CONTENT from './getLikedContent';
@@ -17,6 +18,11 @@ class LikedContentList extends PureComponent {
   });
 
   static propTypes = {
+    Component: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
     /** Functions passed down from React Navigation to use in navigating to/from
      * items in the feed.
      */
@@ -24,6 +30,10 @@ class LikedContentList extends PureComponent {
       getParam: PropTypes.func,
       navigate: PropTypes.func,
     }),
+  };
+
+  static defaultProps = {
+    Component: FeedView,
   };
 
   /** Function that is called when a card in the feed is pressed.
@@ -35,6 +45,9 @@ class LikedContentList extends PureComponent {
       sharing: item.sharing,
     });
 
+  getContent = (data) =>
+    get(data, 'likedContent.edges', []).map((edge) => edge.node);
+
   render() {
     return (
       <BackgroundView>
@@ -44,11 +57,9 @@ class LikedContentList extends PureComponent {
           variables={{ first: 20 }}
         >
           {({ loading, error, data, refetch, fetchMore, variables }) => (
-            <FeedView
+            <this.props.Component
               ListItemComponent={ContentCardConnected}
-              content={get(data, 'likedContent.edges', []).map(
-                (edge) => edge.node
-              )}
+              content={this.getContent(data)}
               isLoading={loading}
               error={error}
               refetch={refetch}
