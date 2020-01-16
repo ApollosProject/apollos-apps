@@ -48,7 +48,17 @@ class LikedContentFeedConnected extends PureComponent {
   getContent = (data) =>
     get(data, 'likedContent.edges', []).map((edge) => edge.node);
 
+  fetchMore = (data, fetchMore, variables) =>
+    fetchMoreResolver({
+      collectionName: 'likedContent',
+      fetchMore,
+      variables,
+      data,
+    });
+
   render() {
+    const { Component } = this.props;
+
     return (
       <BackgroundView>
         <Query
@@ -57,19 +67,14 @@ class LikedContentFeedConnected extends PureComponent {
           variables={{ first: 20 }}
         >
           {({ loading, error, data, refetch, fetchMore, variables }) => (
-            <this.props.Component
+            <Component
               ListItemComponent={ContentCardConnected}
               content={this.getContent(data)}
               isLoading={loading}
               error={error}
               refetch={refetch}
               onPressItem={this.handleOnPress}
-              fetchMore={fetchMoreResolver({
-                collectionName: 'likedContent',
-                fetchMore,
-                variables,
-                data,
-              })}
+              fetchMore={this.fetchMore(data, fetchMore, variables)}
             />
           )}
         </Query>
@@ -78,4 +83,4 @@ class LikedContentFeedConnected extends PureComponent {
   }
 }
 
-export { LikedContentFeedConnected as default, GET_LIKED_CONTENT };
+export default LikedContentFeedConnected;
