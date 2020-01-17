@@ -142,10 +142,10 @@ you can return request.empty()
    * Sorts resources by a list of fields
    * @param {string} attributes - array of fields to sort by
    */
-  sort = (attributes = [{ name: 'Id', direction: 'desc' }]) => {
+  sort = (fields = [{ field: 'Id', direction: 'desc' }]) => {
     delete this.query.$orderby;
-    this.query.$orderby = attributes
-      .map(({ name, direction }) => `${name} ${direction}`)
+    this.query.$orderby = fields
+      .map(({ field, direction }) => `${field} ${direction}`)
       .join(', ');
     return this;
   };
