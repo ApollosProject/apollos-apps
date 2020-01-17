@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LikedContentList component renders LikedContentList 1`] = `
+exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1`] = `
 <BVLinearGradient
   colors={
     Array [

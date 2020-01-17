@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
+exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
 <View
   horizontal={false}
   style={
@@ -490,7 +490,7 @@ exports[`RecentlyLikedTileFeed renders a RecentlyLikedTileFeed 1`] = `
 </View>
 `;
 
-exports[`RecentlyLikedTileFeed renders a loading state 1`] = `
+exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
 <View
   horizontal={false}
   style={

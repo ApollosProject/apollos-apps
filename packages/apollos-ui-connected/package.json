@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "echo 'tests to come soon'",
+    "test": "jest",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
@@ -36,9 +36,11 @@
   "peerDependencies": {
     "@apollosproject/config": "*",
     "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-storybook": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-navigation": "*"
   },
   "dependencies": {
     "graphql-tag": "2.9.2",
@@ -51,7 +53,9 @@
     "prop-types": "15.6.1",
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "react-test-renderer": "16.6.3"
+    "react-navigation": "^3.11.0",
+    "react-test-renderer": "16.6.3",
+    "waait": "1.0.2"
   },
   "publishConfig": {
     "access": "public"

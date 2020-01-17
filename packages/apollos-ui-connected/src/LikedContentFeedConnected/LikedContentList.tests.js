@@ -2,13 +2,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 
-import Providers from '../../../Providers';
+import { Providers } from '../utils/testUtils';
+import GET_LIKED_CONTENT from './getLikedContent';
 
-import GET_LIKED_CONTENT from '../getLikedContent';
-import LikedContentList from '.';
+import LikedContentFeedConnected from '.';
 
-describe('LikedContentList component', () => {
-  it('renders LikedContentList', async () => {
+describe('LikedContentFeedConnected component', () => {
+  it('renders LikedContentFeedConnected', async () => {
     const mock = {
       request: {
         query: GET_LIKED_CONTENT,
@@ -59,7 +59,7 @@ describe('LikedContentList component', () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
-        <LikedContentList navigation={navigation} />
+        <LikedContentFeedConnected navigation={navigation} />
       </Providers>
     );
     await wait(0); // wait for response from graphql
