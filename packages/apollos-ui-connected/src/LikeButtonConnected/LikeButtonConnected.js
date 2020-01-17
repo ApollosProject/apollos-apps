@@ -100,12 +100,12 @@ UpdateLikeStatus.propTypes = {
   }),
 };
 
-const LikeButtonConnected = ({ itemId }) => (
+const LikeButtonConnected = ({ Component, itemId }) => (
   <GetLikeData itemId={itemId}>
     {({ isLiked, item }) => (
       <UpdateLikeStatus itemId={itemId} item={item} isLiked={isLiked}>
         {({ toggleLike, isLiked: newLikeValue }) => (
-          <LikeButton
+          <Component
             itemId={itemId}
             isLiked={newLikeValue}
             toggleLike={toggleLike}
@@ -117,7 +117,16 @@ const LikeButtonConnected = ({ itemId }) => (
 );
 
 LikeButtonConnected.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
   itemId: PropTypes.string,
+};
+
+LikeButtonConnected.defaultProps = {
+  Component: LikeButton,
 };
 
 export default LikeButtonConnected;
