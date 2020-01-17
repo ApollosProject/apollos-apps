@@ -48,7 +48,7 @@ const StyledHorizontalTileFeed = styled(({ theme }) => ({
   zIndex: 1,
 }))(HorizontalTileFeed);
 
-class RecentlyLikedTileFeed extends Component {
+class HorizontalLikedContentFeed extends Component {
   static propTypes = {
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
@@ -115,4 +115,4 @@ class RecentlyLikedTileFeed extends Component {
   }
 }
 
-export default withNavigation(withIsLoading(RecentlyLikedTileFeed));
+export default withNavigation(withIsLoading(HorizontalLikedContentFeed));

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import { GET_LIKED_CONTENT } from '../LikedContentFeedConnected';
 
-import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
+import HorizontalLikedContentFeed from './HorizontalLikedContentFeed';
 
-const RecentlyLikedTileFeedConnected = ({ navigation }) => (
+const HorizontalLikedContentFeedConnected = ({ navigation }) => (
   <Query
     query={GET_LIKED_CONTENT}
     fetchPolicy="cache-and-network"
@@ -18,7 +18,7 @@ const RecentlyLikedTileFeedConnected = ({ navigation }) => (
     }) => {
       if (!edges.length) return null;
       return (
-        <RecentlyLikedTileFeed
+        <HorizontalLikedContentFeed
           id={'liked'}
           name={'Recently Liked'}
           content={edges.map((e) => e.node)}
@@ -34,11 +34,11 @@ const RecentlyLikedTileFeedConnected = ({ navigation }) => (
   </Query>
 );
 
-RecentlyLikedTileFeedConnected.propTypes = {
+HorizontalLikedContentFeedConnected.propTypes = {
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     navigate: PropTypes.func,
   }),
 };
 
-export default RecentlyLikedTileFeedConnected;
+export default HorizontalLikedContentFeedConnected;

@@ -3,7 +3,7 @@ export LikedContentFeedConnected, {
 } from './LikedContentFeedConnected';
 export { LiveProvider, LiveConsumer } from './live';
 export {
-  RecentlyLikedTileFeed,
-  RecentlyLikedTileFeedConnected,
-} from './RecentlyLikedTileFeed';
+  HorizontalLikedContentFeed,
+  HorizontalLikedContentFeedConnected,
+} from './HorizontalLikedContentFeedConnected';
 export { fetchMoreResolver } from './utils';

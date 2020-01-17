@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
-import { RecentlyLikedTileFeedConnected } from '@apollosproject/ui-connected';
+import { HorizontalLikedContentFeedConnected } from '@apollosproject/ui-connected';
 import { BackgroundView } from '@apollosproject/ui-kit';
 import ActionTable from './ActionTable';
 import ActionBar from './ActionBar';
@@ -29,7 +29,7 @@ class Connect extends PureComponent {
           <ScrollView>
             <UserAvatarHeader />
             <ActionBar />
-            <RecentlyLikedTileFeedConnected />
+            <HorizontalLikedContentFeedConnected />
             <ActionTable />
           </ScrollView>
         </SafeAreaView>

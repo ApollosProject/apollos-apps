@@ -3,10 +3,10 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../utils/testUtils';
 
-import RecentlyLikedTileFeed from './RecentlyLikedTileFeed';
+import HorizontalLikedContentFeed from './HorizontalLikedContentFeed';
 
-describe('RecentlyLikedTileFeed', () => {
-  it('renders a RecentlyLikedTileFeed', () => {
+describe('HorizontalLikedContentFeed', () => {
+  it('renders a HorizontalLikedContentFeed', () => {
     const props = {
       content: [
         {
@@ -53,7 +53,7 @@ describe('RecentlyLikedTileFeed', () => {
 
     const tree = renderer.create(
       <Providers>
-        <RecentlyLikedTileFeed {...props} />
+        <HorizontalLikedContentFeed {...props} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -104,7 +104,7 @@ describe('RecentlyLikedTileFeed', () => {
 
     const tree = renderer.create(
       <Providers>
-        <RecentlyLikedTileFeed {...props} />
+        <HorizontalLikedContentFeed {...props} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
