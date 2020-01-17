@@ -3,7 +3,7 @@ import { Platform, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
-import { LikeContentButtonConnected } from '@apollosproject/ui-connected';
+import { LikeButtonConnected } from '@apollosproject/ui-connected';
 
 import ShareContentButtonConnected from '../../ui/ShareContentButtonConnected';
 
@@ -22,7 +22,7 @@ const ActionContainer = ({ itemId }) => (
   <Container>
     <MediaPlayerSpacer>
       <PositioningView>
-        <LikeContentButtonConnected itemId={itemId} />
+        <LikeButtonConnected itemId={itemId} />
         <ShareContentButtonConnected itemId={itemId} />
       </PositioningView>
     </MediaPlayerSpacer>

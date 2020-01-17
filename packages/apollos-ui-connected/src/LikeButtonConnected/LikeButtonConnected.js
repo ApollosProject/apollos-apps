@@ -6,7 +6,7 @@ import { Query, Mutation } from 'react-apollo';
 
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
-import LikeContentButton from './LikeContentButton';
+import LikeButton from './LikeButton';
 import UPDATE_LIKE_ENTITY from './updateLikeEntity';
 import GET_LIKED_CONTENT_ITEM from './getLikedContentItem';
 import updateLikedContent from './updateLikedContent';
@@ -100,12 +100,12 @@ UpdateLikeStatus.propTypes = {
   }),
 };
 
-const LikeContentButtonConnected = ({ itemId }) => (
+const LikeButtonConnected = ({ itemId }) => (
   <GetLikeData itemId={itemId}>
     {({ isLiked, item }) => (
       <UpdateLikeStatus itemId={itemId} item={item} isLiked={isLiked}>
         {({ toggleLike, isLiked: newLikeValue }) => (
-          <LikeContentButton
+          <LikeButton
             itemId={itemId}
             isLiked={newLikeValue}
             toggleLike={toggleLike}
@@ -116,8 +116,8 @@ const LikeContentButtonConnected = ({ itemId }) => (
   </GetLikeData>
 );
 
-LikeContentButtonConnected.propTypes = {
+LikeButtonConnected.propTypes = {
   itemId: PropTypes.string,
 };
 
-export default LikeContentButtonConnected;
+export default LikeButtonConnected;

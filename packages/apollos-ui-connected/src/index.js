@@ -1,9 +1,9 @@
-export LikeContentButtonConnected, {
-  LikeContentButton,
+export LikeButtonConnected, {
+  LikeButton,
   getLikedContentItem,
   updateLikedContent,
   updateLikeEntity,
-} from './LikeContentButtonConnected';
+} from './LikeButtonConnected';
 export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
