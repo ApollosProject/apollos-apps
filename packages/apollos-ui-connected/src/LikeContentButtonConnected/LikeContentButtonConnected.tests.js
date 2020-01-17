@@ -1,8 +1,8 @@
 // import React from 'react';
 // import renderer from 'react-test-renderer';
-
-// import Providers from '../Providers';
 // import gql from 'graphql-tag';
+
+// import { Providers } from '../utils/testUtils';
 
 // import LikeContentButtonConnected from '.';
 
