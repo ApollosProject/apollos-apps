@@ -3,7 +3,8 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import ContentCardConnected, {
+import {
+  ContentCardConnected,
   fetchMoreResolver,
 } from '@apollosproject/ui-connected';
 

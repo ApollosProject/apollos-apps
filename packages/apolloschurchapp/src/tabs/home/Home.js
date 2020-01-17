@@ -5,7 +5,8 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import ContentCardConnected, {
+import {
+  ContentCardConnected,
   fetchMoreResolver,
 } from '@apollosproject/ui-connected';
 import {
