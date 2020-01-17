@@ -1,0 +1,1 @@
+export fetchMoreResolver from './fetchMoreResolver';

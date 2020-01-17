@@ -14,11 +14,12 @@ import {
   CardLabel,
   withTheme,
 } from '@apollosproject/ui-kit';
+import { LiveConsumer } from '@apollosproject/ui-connected';
+
 import MediaControls from '../MediaControls';
 import HTMLContent from '../HTMLContent';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 import Features from '../Features';
-import { LiveConsumer } from '../../live';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
