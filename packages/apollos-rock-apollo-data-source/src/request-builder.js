@@ -139,8 +139,13 @@ you can return request.empty()
   };
 
   /**
-   * Sorts resources by a list of fields
+   * Sorts resources by a list of fields with a priority by order
    * @param {string} attributes - array of fields to sort by
+   *
+   * Example:
+   * sort([{field: "Name", direction: "asc"}, {field: "Date", direction: "desc"}])
+   * The above example will first sort by name in ascending order, then
+   * by date in descending order
    */
   sort = (fields = [{ field: 'Id', direction: 'desc' }]) => {
     delete this.query.$orderby;
