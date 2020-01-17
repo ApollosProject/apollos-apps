@@ -1,5 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
-import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
+import { GET_LIKED_CONTENT } from '../LikedContentFeedConnected';
 
 const addItemToLikedContentFeed = ({ cache, item, variables }) => {
   try {
