@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../utils/testUtils';
+import { Providers } from '../../utils/testUtils';
 
-import HorizontalLikedContentFeed from './HorizontalLikedContentFeed';
+import HorizontalLikedContentFeed from '.';
 
 describe('HorizontalLikedContentFeed', () => {
   it('renders a HorizontalLikedContentFeed', () => {

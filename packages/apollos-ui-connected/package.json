@@ -52,7 +52,8 @@
     "prop-types": "15.6.1",
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "react-test-renderer": "16.6.3"
+    "react-test-renderer": "16.6.3",
+    "waait": "1.0.2"
   },
   "publishConfig": {
     "access": "public"
