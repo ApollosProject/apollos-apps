@@ -5,6 +5,9 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
+import ContentCardConnected, {
+  fetchMoreResolver,
+} from '@apollosproject/ui-connected';
 import {
   styled,
   FeedView,
@@ -12,9 +15,6 @@ import {
   TouchableScale,
   FeaturedCard,
 } from '@apollosproject/ui-kit';
-
-import ContentCardConnected from '@apollosproject/ui-connected';
-import fetchMoreResolver from '../../utils/fetchMoreResolver';
 
 import Features from './Features';
 import GET_USER_FEED from './getUserFeed';

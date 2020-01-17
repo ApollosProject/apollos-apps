@@ -1,14 +1,12 @@
 import React from 'react';
+import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
-import Providers from '../../../Providers';
+import { Providers, renderWithApolloData } from '../utils/testUtils';
 
-import { renderWithApolloData } from '../../../utils/testUtils';
+import HorizontalLikedContentFeedConnected from './HorizontalLikedContentFeedConnected';
 
-import GET_LIKED_CONTENT from '../getLikedContent';
-import RecentlyLikedTileFeedConnected from './RecentlyLikedTileFeedConnected';
-
-describe('RecentlyLikedTileFeedConnected', () => {
-  it('renders a RecentlyLikedTileFeedConnected', async () => {
+describe('HorizontalLikedContentFeedConnected', () => {
+  it('renders a HorizontalLikedContentFeedConnected', async () => {
     const mock = {
       request: {
         query: GET_LIKED_CONTENT,
@@ -76,7 +74,7 @@ describe('RecentlyLikedTileFeedConnected', () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <RecentlyLikedTileFeedConnected navigation={navigation} />
+        <HorizontalLikedContentFeedConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -103,7 +101,7 @@ describe('RecentlyLikedTileFeedConnected', () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <RecentlyLikedTileFeedConnected navigation={navigation} />
+        <HorizontalLikedContentFeedConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
