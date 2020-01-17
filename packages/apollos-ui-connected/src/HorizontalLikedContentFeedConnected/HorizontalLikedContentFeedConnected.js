@@ -6,7 +6,7 @@ import { GET_LIKED_CONTENT } from '../LikedContentFeedConnected';
 
 import HorizontalLikedContentFeed from './HorizontalLikedContentFeed';
 
-const HorizontalLikedContentFeedConnected = ({ navigation }) => (
+const HorizontalLikedContentFeedConnected = ({ Component, navigation }) => (
   <Query
     query={GET_LIKED_CONTENT}
     fetchPolicy="cache-and-network"
@@ -18,7 +18,7 @@ const HorizontalLikedContentFeedConnected = ({ navigation }) => (
     }) => {
       if (!edges.length) return null;
       return (
-        <HorizontalLikedContentFeed
+        <Component
           id={'liked'}
           name={'Recently Liked'}
           content={edges.map((e) => e.node)}
@@ -35,10 +35,19 @@ const HorizontalLikedContentFeedConnected = ({ navigation }) => (
 );
 
 HorizontalLikedContentFeedConnected.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     navigate: PropTypes.func,
   }),
+};
+
+HorizontalLikedContentFeedConnected.defaultProps = {
+  Component: HorizontalLikedContentFeed,
 };
 
 export default HorizontalLikedContentFeedConnected;
