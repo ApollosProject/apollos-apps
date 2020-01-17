@@ -38,7 +38,8 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-storybook": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-navigation": "*"
   },
   "dependencies": {
     "graphql-tag": "2.9.2",

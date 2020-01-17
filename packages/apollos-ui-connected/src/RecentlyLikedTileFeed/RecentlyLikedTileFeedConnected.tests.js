@@ -1,8 +1,7 @@
 import React from 'react';
 import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
-import Providers from '../../../Providers';
-import { renderWithApolloData } from '../../../utils/testUtils';
+import { Providers, renderWithApolloData } from '../utils/testUtils';
 
 import RecentlyLikedTileFeedConnected from './RecentlyLikedTileFeedConnected';
 
