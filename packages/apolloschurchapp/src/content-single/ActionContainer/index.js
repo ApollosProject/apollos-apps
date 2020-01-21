@@ -3,7 +3,7 @@ import { Platform, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
-import ShareContentButtonConnected from '../../ui/ShareContentButtonConnected';
+import { ShareContentButtonConnected } from '@apollosproject/ui-connected';
 
 import LikeContentButtonConnected from '../../ui/LikeContentButtonConnected';
 
