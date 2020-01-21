@@ -176,7 +176,8 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   getAuthToken = async () => {
     const { rockCookie } = this.context;
-    if (!rockCookie) throw new AuthenticationError('Must be logged in');
+    if (!rockCookie)
+      throw new AuthenticationError('Cannot get token, no cookie in context');
 
     // TODO remove this safety check and less secure implementation
     // once core Rock has the GetCurrentPersonImpersonationToken endpoint
