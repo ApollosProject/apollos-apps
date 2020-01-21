@@ -1,3 +1,7 @@
+v1.3.0-beta.1: January 16, 2020
+
+- Properly publishes the react-native part of the @apollosproject/config package.
+
 v1.3.0-beta.0: January 16, 2020
 
 - Adds Caching to requests made to api.bible (#1284) (21a54110)
