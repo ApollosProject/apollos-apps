@@ -133,6 +133,17 @@ describe('RequestBuilder', () => {
     expect(request.orderBy('MyField').get()).resolves.toMatchSnapshot();
   });
 
+  it('sorts', () => {
+    expect(
+      request
+        .sort([
+          { field: 'Name', direction: 'asc' },
+          { field: 'Date', direction: 'desc' },
+        ])
+        .get()
+    ).resolves.toMatchSnapshot();
+  });
+
   it('selects', () => {
     expect(request.select('Id').get()).resolves.toMatchSnapshot();
   });
