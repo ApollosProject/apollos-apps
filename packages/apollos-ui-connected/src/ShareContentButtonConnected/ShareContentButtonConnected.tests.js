@@ -1,7 +1,8 @@
 import React from 'react';
-import { renderWithApolloData } from '../../utils/testUtils';
-import Providers from '../../Providers';
+import { Providers, renderWithApolloData } from '../utils/testUtils';
+
 import getShareContent from './getShareContent';
+
 import ShareContentButtonConnected from '.';
 
 const shareMock = {
