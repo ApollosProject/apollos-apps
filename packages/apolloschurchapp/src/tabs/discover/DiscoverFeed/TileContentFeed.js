@@ -16,7 +16,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
-import HorizontalContentCardConnected from '@apollosproject/ui-connected';
+import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
