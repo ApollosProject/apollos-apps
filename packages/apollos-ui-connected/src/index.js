@@ -7,3 +7,4 @@ export {
   HorizontalLikedContentFeedConnected,
 } from './HorizontalLikedContentFeedConnected';
 export { fetchMoreResolver } from './utils';
+export HorizontalContentCardConnected from './HorizontalContentCardConnected';
