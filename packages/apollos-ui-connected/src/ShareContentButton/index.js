@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { compose, pure } from 'recompose';
 import { Touchable, Icon, withTheme } from '@apollosproject/ui-kit';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
-import share from '../../utils/content/share';
+import { share } from '../utils';
 
 const enhance = compose(
   pure,
