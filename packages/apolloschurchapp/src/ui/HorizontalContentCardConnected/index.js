@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import ContentCardConnected from '../ContentCardConnected';
+import { ContentCardConnected } from '@apollosproject/ui-connected';
 
 import horizontalContentCardComponentMapper from './horizontalContentCardComponentMapper';
 
