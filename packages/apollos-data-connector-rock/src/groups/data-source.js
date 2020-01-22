@@ -16,6 +16,7 @@ export default class Group extends RockApolloDataSource {
   getFromId = ({ id }) =>
     this.request()
       .find(id)
+      .expand('Members')
       .get();
 
   getMembers = async (groupId) => {

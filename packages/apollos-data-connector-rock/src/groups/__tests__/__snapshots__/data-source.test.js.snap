@@ -12,7 +12,7 @@ Object {
 exports[`Groups should get a group by id 2`] = `
 Array [
   Array [
-    "Groups/1?loadAttributes=expanded",
+    "Groups/1?loadAttributes=expanded&%24expand=Members",
     Object {},
     Object {},
   ],
