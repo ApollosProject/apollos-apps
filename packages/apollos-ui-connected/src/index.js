@@ -6,4 +6,5 @@ export {
   HorizontalLikedContentFeed,
   HorizontalLikedContentFeedConnected,
 } from './HorizontalLikedContentFeedConnected';
+export ShareContentButtonConnected from './ShareContentButtonConnected';
 export { fetchMoreResolver } from './utils';
