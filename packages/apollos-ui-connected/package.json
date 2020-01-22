@@ -40,6 +40,7 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-storybook": "*",
+    "@react-native-community/async-storage": "*",
     "react": "*",
     "react-native": "*",
     "react-navigation": "*"

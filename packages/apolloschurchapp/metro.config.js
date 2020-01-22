@@ -38,6 +38,7 @@ const sharedNativeModules = [
   'react-native-video',
   'react-native-video-controls',
   'react-native-maps',
+  'react-native-community/async-storage',
   'react-native-config',
   'react-native-modal-datetime-picker',
   '@apollosproject/react-native-airplay-btn',
