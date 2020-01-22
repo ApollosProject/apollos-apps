@@ -5,10 +5,10 @@ import { get } from 'lodash';
 
 import { ErrorCard } from '@apollosproject/ui-kit';
 
-import { LiveConsumer } from '@apollosproject/ui-connected';
+import { LiveConsumer } from '../live';
 
 import contentCardComponentMapper from './contentCardComponentMapper';
-import GET_CONTENT_CARD from './query';
+import GET_CONTENT_CARD from './getContentCard';
 
 const ContentCardConnected = memo(
   ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
