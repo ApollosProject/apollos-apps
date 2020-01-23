@@ -6,16 +6,16 @@ const ShareIcon = withTheme(({ theme }) => ({
   fill: theme.colors.secondary,
 }))(Icon);
 
-const ShareContentButton = memo(({ onPress }) => (
+const ShareButton = memo(({ onPress }) => (
   <Touchable onPress={onPress}>
     <ShareIcon name={'share'} />
   </Touchable>
 ));
 
-ShareContentButton.displayName = 'ShareContentButton';
+ShareButton.displayName = 'ShareButton';
 
-ShareContentButton.propTypes = {
+ShareButton.propTypes = {
   onPress: PropTypes.func,
 };
 
-export default ShareContentButton;
+export default ShareButton;

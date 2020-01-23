@@ -3,13 +3,13 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../../utils/testUtils';
 
-import ShareContentButton from '.';
+import ShareButton from '.';
 
 describe('the Share component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <ShareContentButton onPress={jest.fn()} />
+        <ShareButton onPress={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

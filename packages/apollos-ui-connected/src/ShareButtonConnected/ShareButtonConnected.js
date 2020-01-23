@@ -6,16 +6,10 @@ import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
 import { share } from '../utils';
 
-import ShareContentButton from './ShareContentButton';
+import ShareButton from './ShareButton';
 import GET_SHARE_CONTENT from './getShareContent';
 
-const ShareContentButtonConnected = ({
-  itemId,
-  message,
-  onPress,
-  title,
-  url,
-}) => (
+const ShareButtonConnected = ({ itemId, message, onPress, title, url }) => (
   <AnalyticsConsumer>
     {({ track }) => (
       <Query query={GET_SHARE_CONTENT} variables={{ itemId }}>
@@ -40,14 +34,14 @@ const ShareContentButtonConnected = ({
             });
           };
 
-          return <ShareContentButton onPress={handleOnPress} />;
+          return <ShareButton onPress={handleOnPress} />;
         }}
       </Query>
     )}
   </AnalyticsConsumer>
 );
 
-ShareContentButtonConnected.propTypes = {
+ShareButtonConnected.propTypes = {
   itemId: PropTypes.string.isRequired,
   // These props are available to override the default sharing data for a node.
   title: PropTypes.string,
@@ -57,4 +51,4 @@ ShareContentButtonConnected.propTypes = {
   onPress: PropTypes.func,
 };
 
-export default ShareContentButtonConnected;
+export default ShareButtonConnected;
