@@ -5,12 +5,13 @@ import { Touchable, Icon, withTheme } from '@apollosproject/ui-kit';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 import { share } from '../../utils';
 
-const enhance = compose(
-  pure,
-  withTheme()
-);
+const enhance = compose(pure);
 
-const ShareContentButton = enhance(({ content, theme }) => (
+const ShareIcon = withTheme(({ theme }) => ({
+  fill: theme.colors.secondary,
+}))(Icon);
+
+const ShareContentButton = enhance(({ content }) => (
   <AnalyticsConsumer>
     {({ track }) => {
       const onPress = () => {
@@ -22,7 +23,7 @@ const ShareContentButton = enhance(({ content, theme }) => (
       };
       return (
         <Touchable onPress={onPress}>
-          <Icon name={'share'} fill={theme.colors.secondary} />
+          <ShareIcon name={'share'} />
         </Touchable>
       );
     }}
