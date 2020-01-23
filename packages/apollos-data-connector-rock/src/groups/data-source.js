@@ -13,11 +13,10 @@ export default class Group extends RockApolloDataSource {
     Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID,
   };
 
-  getFromId = ({ id, activeOnly = false }) =>
+  getFromId = ({ id }) =>
     this.request()
       .find(id)
       .expand('Members')
-      .filter(`${activeOnly ? 'IsActive eq true and IsArchived eq false' : ''}`)
       .get();
 
   getMembers = async (groupId) => {
@@ -44,6 +43,9 @@ export default class Group extends RockApolloDataSource {
   };
 
   getByPerson = async ({ personId, type = null, asLeader = false }) => {
+    // Get the active groups that the person is a member of.
+    // Conditionally filter that list of groups on whether or not your
+    // role in that group is that of "Leader".
     const groupAssociations = await this.request('GroupMembers')
       .expand('GroupRole')
       .filter(
@@ -53,12 +55,22 @@ export default class Group extends RockApolloDataSource {
       )
       .andFilter(`GroupMemberStatus ne 'Inactive'`)
       .get();
+
+    // Get the actual group data for the groups above.
     const groups = await Promise.all(
-      groupAssociations.map(({ groupId }) =>
-        this.getFromId({ id: groupId, activeOnly: true })
+      groupAssociations.map(({ groupId }) => this.getFromId({ id: groupId }))
+    );
+
+    // Filter the groups to make sure we only pull those that are
+    // active and NOT archived
+    const filteredGroups = await Promise.all(
+      groups.filter(
+        (group) => group.isActive === true && group.isArchived === false
       )
     );
-    return groups.filter(({ groupTypeId }) =>
+
+    // Remove the groups that aren't of the types we want and return.
+    return filteredGroups.filter(({ groupTypeId }) =>
       type
         ? groupTypeId === this.groupTypeMap[type]
         : Object.values(this.groupTypeMap).includes(groupTypeId)
