@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Providers from '../../Providers';
+import { Providers } from '../../utils/testUtils';
 
 import { LikeIcon } from '.';
 
-describe('the LikeContentButton component', () => {
+describe('the LikeButton component', () => {
   it('should render a Like', () => {
     const tree = renderer.create(
       <Providers>

@@ -152,6 +152,14 @@ Array [
 ]
 `;
 
+exports[`RequestBuilder sorts 1`] = `
+Array [
+  "SomeResource?%24orderby=Name%20asc%2C%20Date%20desc",
+  Object {},
+  Object {},
+]
+`;
+
 exports[`RequestBuilder transforms result shapes 1`] = `
 Object {
   "a": "yo",

@@ -5,8 +5,8 @@ import { get } from 'lodash';
 import { Query, Mutation } from 'react-apollo';
 
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
-import LikeContentButton from '../LikeContentButton';
 
+import LikeButton from './LikeButton';
 import UPDATE_LIKE_ENTITY from './updateLikeEntity';
 import GET_LIKED_CONTENT_ITEM from './getLikedContentItem';
 import updateLikedContent from './updateLikedContent';
@@ -100,12 +100,12 @@ UpdateLikeStatus.propTypes = {
   }),
 };
 
-const LikeContentButtonConnected = ({ itemId }) => (
+const LikeButtonConnected = ({ Component, itemId }) => (
   <GetLikeData itemId={itemId}>
     {({ isLiked, item }) => (
       <UpdateLikeStatus itemId={itemId} item={item} isLiked={isLiked}>
         {({ toggleLike, isLiked: newLikeValue }) => (
-          <LikeContentButton
+          <Component
             itemId={itemId}
             isLiked={newLikeValue}
             toggleLike={toggleLike}
@@ -116,8 +116,17 @@ const LikeContentButtonConnected = ({ itemId }) => (
   </GetLikeData>
 );
 
-LikeContentButtonConnected.propTypes = {
+LikeButtonConnected.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
   itemId: PropTypes.string,
 };
 
-export default LikeContentButtonConnected;
+LikeButtonConnected.defaultProps = {
+  Component: LikeButton,
+};
+
+export default LikeButtonConnected;
