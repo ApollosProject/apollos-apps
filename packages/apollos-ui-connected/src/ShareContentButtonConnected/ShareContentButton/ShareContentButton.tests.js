@@ -7,13 +7,9 @@ import ShareContentButton from '.';
 
 describe('the Share component', () => {
   it('should render', () => {
-    const shareObject = {
-      title: 'Shared Object Title',
-      url: 'https://github.com/ApollosProject/apollos-prototype',
-    };
     const tree = renderer.create(
       <Providers>
-        <ShareContentButton content={shareObject} />
+        <ShareContentButton onPress={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
