@@ -78,7 +78,6 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
     Object {
       "__typename": "Campus",
       "city": "South Barrington",
-      "distanceFromLocation": 5000,
       "id": "Campus:a0f64573eabf00a607bec911794d50fb",
       "image": Object {
         "__typename": "ImageMediaSource",
