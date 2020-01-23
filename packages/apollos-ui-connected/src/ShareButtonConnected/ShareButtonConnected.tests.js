@@ -1,8 +1,9 @@
 import React from 'react';
-import { renderWithApolloData } from '../../utils/testUtils';
-import Providers from '../../Providers';
+import { Providers, renderWithApolloData } from '../utils/testUtils';
+
 import getShareContent from './getShareContent';
-import ShareContentButtonConnected from '.';
+
+import ShareButtonConnected from '.';
 
 const shareMock = {
   request: {
@@ -26,11 +27,11 @@ const shareMock = {
 
 const mocks = [shareMock];
 
-describe('the ShareContentButtonConnected', () => {
+describe('the ShareButtonConnected', () => {
   it('renders a share button', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <ShareContentButtonConnected itemId={'1'} />
+        <ShareButtonConnected itemId={'1'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -38,7 +39,7 @@ describe('the ShareContentButtonConnected', () => {
   it('renders a share button with custom url, and title', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <ShareContentButtonConnected
+        <ShareButtonConnected
           itemId={'1'}
           url={'https://apollosrock.com'}
           title="Some great title"

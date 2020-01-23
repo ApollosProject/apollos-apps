@@ -1,5 +1,5 @@
 import { Platform, Share } from 'react-native';
-import share from '../share';
+import share from '.';
 
 jest.mock('Platform');
 jest.mock('Share');
