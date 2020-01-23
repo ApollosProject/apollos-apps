@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the LikeContentButton component should render a Like 1`] = `
+exports[`the LikeButton component should render a Like 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight={32}
@@ -120,7 +120,7 @@ exports[`the LikeContentButton component should render a Like 1`] = `
 </RNSVGSvgView>
 `;
 
-exports[`the LikeContentButton component should render a UnLike 1`] = `
+exports[`the LikeButton component should render a UnLike 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
   bbHeight={32}

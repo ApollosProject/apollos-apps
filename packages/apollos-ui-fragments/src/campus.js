@@ -6,7 +6,6 @@ const CAMPUS_PARTS_FRAGMENT = gql`
     name
     latitude
     longitude
-    distanceFromLocation
     street1
     street2
     city
