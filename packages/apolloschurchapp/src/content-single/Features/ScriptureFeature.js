@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ActionCard } from '@apollosproject/ui-kit';
 import { ScriptureItem } from '@apollosproject/ui-scripture';
-import { ShareContentButtonConnected } from '@apollosproject/ui-connected';
+import { ShareButtonConnected } from '@apollosproject/ui-connected';
 
 const ScriptureFeature = ({
   scriptures,
@@ -14,7 +14,7 @@ const ScriptureFeature = ({
   <ActionCard
     icon={'text'}
     action={
-      <ShareContentButtonConnected message={message} itemId={contentId} />
+      <ShareButtonConnected message={message} itemId={contentId} />
     }
   >
     {scriptures.map(({ copyright, reference, html, id, version }) => (

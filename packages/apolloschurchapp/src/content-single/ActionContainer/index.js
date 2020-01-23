@@ -5,7 +5,7 @@ import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 import {
   LikeButtonConnected,
-  ShareContentButtonConnected,
+  ShareButtonConnected,
 } from '@apollosproject/ui-connected';
 
 const PositioningView = styled(({ theme }) => ({
@@ -24,7 +24,7 @@ const ActionContainer = ({ itemId }) => (
     <MediaPlayerSpacer>
       <PositioningView>
         <LikeButtonConnected itemId={itemId} />
-        <ShareContentButtonConnected itemId={itemId} />
+        <ShareButtonConnected itemId={itemId} />
       </PositioningView>
     </MediaPlayerSpacer>
   </Container>
