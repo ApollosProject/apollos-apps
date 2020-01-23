@@ -8,18 +8,23 @@ const ShareIcon = withTheme(({ theme }) => ({
   fill: theme.colors.secondary,
 }))(Icon);
 
-const ShareContentButton = memo(({ content }) => (
+const ShareContentButton = memo(({ content, onPress }) => (
   <AnalyticsConsumer>
     {({ track }) => {
-      const onPress = () => {
-        share(content);
-        track({
-          eventName: 'Share',
-          properties: { id: content.id, title: content.title },
-        });
-      };
+      let handleOnPress = onPress;
+
+      if (!onPress) {
+        handleOnPress = () => {
+          share(content);
+          track({
+            eventName: 'Share',
+            properties: { id: content.id, title: content.title },
+          });
+        };
+      }
+
       return (
-        <Touchable onPress={onPress}>
+        <Touchable onPress={handleOnPress}>
           <ShareIcon name={'share'} />
         </Touchable>
       );
@@ -34,7 +39,8 @@ ShareContentButton.propTypes = {
     title: PropTypes.string,
     url: PropTypes.string,
     id: PropTypes.string,
-  }),
+  }).isRequired,
+  onPress: PropTypes.func,
 };
 
 export default ShareContentButton;
