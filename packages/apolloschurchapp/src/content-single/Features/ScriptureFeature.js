@@ -13,9 +13,7 @@ const ScriptureFeature = ({
 }) => (
   <ActionCard
     icon={'text'}
-    action={
-      <ShareButtonConnected message={message} itemId={contentId} />
-    }
+    action={<ShareButtonConnected message={message} itemId={contentId} />}
   >
     {scriptures.map(({ copyright, reference, html, id, version }) => (
       <ScriptureItem
