@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { TableView } from '@apollosproject/ui-kit';
+import { RockAuthedWebBrowserConsumer } from '@apollosproject/ui-connected';
 import { UserWebBrowserConsumer } from '../user-web-browser';
-import { WebBrowserConsumer } from '../ui/WebBrowser';
 import TouchableCell from './TouchableCell';
 
 export default class TestingControlPanel extends PureComponent {
@@ -26,7 +26,7 @@ export default class TestingControlPanel extends PureComponent {
             />
           )}
         </UserWebBrowserConsumer>
-        <WebBrowserConsumer>
+        <RockAuthedWebBrowserConsumer>
           {(openUrl) => (
             <TouchableCell
               handlePress={() =>
@@ -40,7 +40,7 @@ export default class TestingControlPanel extends PureComponent {
               cellText={`Open InAppBrowser With Rock Token`}
             />
           )}
-        </WebBrowserConsumer>
+        </RockAuthedWebBrowserConsumer>
         <TouchableCell
           handlePress={() => this.props.navigation.navigate('Onboarding')}
           iconName="Avatar"

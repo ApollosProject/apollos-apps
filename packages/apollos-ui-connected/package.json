@@ -37,12 +37,13 @@
     "@apollosproject/config": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-auth": "*",
-    "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-fragments": "*",
+    "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-storybook": "*",
     "@react-native-community/async-storage": "*",
     "react": "*",
     "react-native": "*",
+    "react-native-inappbrowser-reborn": "*",
     "react-navigation": "*"
   },
   "dependencies": {
@@ -57,6 +58,7 @@
     "prop-types": "15.6.1",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-inappbrowser-reborn": "3.3.4",
     "react-navigation": "^3.11.0",
     "react-test-renderer": "16.6.3",
     "waait": "1.0.2"

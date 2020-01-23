@@ -4,14 +4,16 @@ import { createContext } from 'react';
 
 import { withTheme } from '@apollosproject/ui-kit';
 
-import Browser from './Browser';
+import RockAuthedWebBrowser from './RockAuthedWebBrowser';
 
-const { Provider: BaseProvider, Consumer } = createContext(Browser.open);
+const { Provider: BaseProvider, Consumer } = createContext(
+  RockAuthedWebBrowser.open
+);
 
 // NOTE: don't think this is working...
 const Provider = withTheme(({ theme }) => ({
   value: (url, headers = {}, options = {}) =>
-    Browser.open(url, {
+    RockAuthedWebBrowser.open(url, {
       ...Platform.select({
         ios: {
           dismissButtonStyle: 'cancel',
@@ -37,5 +39,5 @@ const Provider = withTheme(({ theme }) => ({
     }),
 }))(BaseProvider);
 
-export default Browser;
-export { Provider as WebBrowserProvider, Consumer as WebBrowserConsumer };
+export { Provider as RockAuthedWebBrowserProvider };
+export { Consumer as RockAuthedWebBrowserConsumer };

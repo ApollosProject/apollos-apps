@@ -18,3 +18,7 @@ export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
 export { LiveProvider, LiveConsumer } from './live';
+export RockAuthedWebBrowser, {
+  RockAuthedWebBrowserConsumer,
+  RockAuthedWebBrowserProvider,
+} from './RockAuthedWebBrowser';

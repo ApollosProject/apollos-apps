@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Platform } from 'react-native';
 
-import Providers from '../../Providers';
+import { Providers } from '../utils/testUtils';
 
-import { WebBrowserConsumer } from '.';
+import { RockAuthedWebBrowserConsumer } from '.';
 
 jest.mock('Platform');
 
@@ -12,11 +12,11 @@ describe(`WebBrowser Provider and Consumer`, () => {
   it('passes a function', async () => {
     renderer.create(
       <Providers>
-        <WebBrowserConsumer>
+        <RockAuthedWebBrowserConsumer>
           {(openUrl) => {
             expect(typeof openUrl).toBe('function');
           }}
-        </WebBrowserConsumer>
+        </RockAuthedWebBrowserConsumer>
       </Providers>
     );
   });
@@ -24,11 +24,11 @@ describe(`WebBrowser Provider and Consumer`, () => {
     Platform.OS = 'android';
     renderer.create(
       <Providers>
-        <WebBrowserConsumer>
+        <RockAuthedWebBrowserConsumer>
           {(openUrl) => {
             expect(typeof openUrl).toBe('function');
           }}
-        </WebBrowserConsumer>
+        </RockAuthedWebBrowserConsumer>
       </Providers>
     );
   });
