@@ -17,7 +17,7 @@ LikeIcon.propTypes = {
   isLiked: PropTypes.bool,
 };
 
-const LikeContentButton = withNavigation(({ isLiked, toggleLike, itemId }) => (
+const LikeButton = withNavigation(({ isLiked, toggleLike, itemId }) => (
   <ProtectedTouchable
     onPress={() =>
       toggleLike({ itemId, operation: isLiked ? 'Unlike' : 'Like' })
@@ -27,10 +27,10 @@ const LikeContentButton = withNavigation(({ isLiked, toggleLike, itemId }) => (
   </ProtectedTouchable>
 ));
 
-LikeContentButton.propTypes = {
+LikeButton.propTypes = {
   itemId: PropTypes.string,
   isLiked: PropTypes.bool,
   toggleLike: PropTypes.func,
 };
 
-export { LikeContentButton as default, LikeIcon };
+export { LikeButton as default, LikeIcon };

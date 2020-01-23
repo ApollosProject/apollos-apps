@@ -1,12 +1,12 @@
 // import React from 'react';
 // import renderer from 'react-test-renderer';
-
-// import Providers from '../Providers';
 // import gql from 'graphql-tag';
 
-// import LikeContentButtonConnected from '.';
+// import { Providers } from '../utils/testUtils';
 
-describe('the LikeContentButtonConnected component', () => {
+// import LikeButtonConnected from '.';
+
+describe('the LikeButtonConnected component', () => {
   it('should render', () => {
     //     const updateLikeEntity = {
     //       request: {
@@ -56,7 +56,7 @@ describe('the LikeContentButtonConnected component', () => {
     //     };
     //     const tree = renderer.create(
     //       <Providers mocks={[updateLikeEntity, getLikedContentItem]}>
-    //         <LikeContentButtonConnected itemId={'asdf'} />
+    //         <LikeButtonConnected itemId={'asdf'} />
     //       </Providers>
     //     );
     //     expect(tree).toMatchSnapshot();
@@ -106,7 +106,7 @@ describe('the LikeContentButtonConnected component', () => {
     //     };
     //     const tree = renderer.create(
     //       <Providers mocks={[updateLikeEntity, getLikedContentItem]}>
-    //         <LikeContentButtonConnected itemId={'asdf'} />
+    //         <LikeButtonConnected itemId={'asdf'} />
     //       </Providers>
     //     );
     //     expect(tree).toMatchSnapshot();

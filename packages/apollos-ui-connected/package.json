@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject|@react-navigation|@react-native-community/async-storage))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -35,9 +35,12 @@
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-auth": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-storybook": "*",
+    "@react-native-community/async-storage": "*",
     "react": "*",
     "react-native": "*",
     "react-navigation": "*"
@@ -48,6 +51,7 @@
     "react-apollo": "2.5.5"
   },
   "devDependencies": {
+    "@react-native-community/async-storage": "^1.5.1",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
