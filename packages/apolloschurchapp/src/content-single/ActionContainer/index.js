@@ -3,9 +3,10 @@ import { Platform, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
-import { LikeButtonConnected } from '@apollosproject/ui-connected';
-
-import ShareContentButtonConnected from '../../ui/ShareContentButtonConnected';
+import {
+  LikeButtonConnected,
+  ShareButtonConnected,
+} from '@apollosproject/ui-connected';
 
 const PositioningView = styled(({ theme }) => ({
   justifyContent: 'space-around',
@@ -23,7 +24,7 @@ const ActionContainer = ({ itemId }) => (
     <MediaPlayerSpacer>
       <PositioningView>
         <LikeButtonConnected itemId={itemId} />
-        <ShareContentButtonConnected itemId={itemId} />
+        <ShareButtonConnected itemId={itemId} />
       </PositioningView>
     </MediaPlayerSpacer>
   </Container>

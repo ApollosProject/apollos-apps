@@ -17,4 +17,8 @@ export LikeButtonConnected, {
 export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
-export { LiveProvider, LiveConsumer } from './live';
+export { LiveConsumer, LiveProvider } from './live';
+export ShareButtonConnected, {
+  GET_SHARE_CONTENT,
+  ShareButton,
+} from './ShareButtonConnected';
