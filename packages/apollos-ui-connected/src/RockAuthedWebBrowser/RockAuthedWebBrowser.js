@@ -1,15 +1,16 @@
-import React from 'react';
 import { Linking } from 'react-native';
 import InAppBrowser from 'react-native-inappbrowser-reborn';
-import { Query } from 'react-apollo';
+import { client } from '../../../apolloschurchapp/src/client';
 
 import GET_ROCK_AUTH_DETAILS from './getRockAuthDetails';
 
-const getRockAuthDetails = () => (
-  <Query query={GET_ROCK_AUTH_DETAILS} fetchPolicy="network-only">
-    {({ data: { currentUser: { rock } = {} } = {} }) => rock}
-  </Query>
-);
+export const getRockAuthDetails = async () => {
+  const { data: { currentUser: { rock } = {} } = {} } = await client.query({
+    query: GET_ROCK_AUTH_DETAILS,
+    fetchPolicy: 'network-only',
+  });
+  return rock;
+};
 
 const RockAuthedWebBrowser = {
   open: async (
