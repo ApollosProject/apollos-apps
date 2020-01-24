@@ -83,11 +83,10 @@ export default class AuthDataSource extends RockApolloDataSource {
       const cookie = await this.fetchUserCookie(identity, password);
       const sessionId = await this.createSession({ cookie });
       const token = generateToken({ cookie, sessionId });
-      const { userToken, rockCookie } = registerToken(token);
-      this.context.rockCookie = rockCookie;
-      this.context.userToken = userToken;
+      this.context.rockCookie = cookie;
+      this.context.userToken = token;
       this.context.sessionId = sessionId;
-      return { token, rockCookie };
+      return { token, rockCookie: cookie };
     } catch (e) {
       if (e instanceof AuthenticationError) {
         throw new UserInputError('Username or Password incorrect');
