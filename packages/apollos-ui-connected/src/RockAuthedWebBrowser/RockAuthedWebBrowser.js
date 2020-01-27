@@ -1,21 +1,9 @@
 import { Linking } from 'react-native';
 import InAppBrowser from 'react-native-inappbrowser-reborn';
-import gql from 'graphql-tag';
-import { client } from '../../client';
 
-export const GET_ROCK_AUTH_DETAILS = gql`
-  query RockAuthDetails {
-    currentUser {
-      id
-      rock {
-        authCookie
-        authToken
-      }
-    }
-  }
-`;
+import GET_ROCK_AUTH_DETAILS from './getRockAuthDetails';
 
-export const getRockAuthDetails = async () => {
+export const getRockAuthDetails = async (client) => {
   const { data: { currentUser: { rock } = {} } = {} } = await client.query({
     query: GET_ROCK_AUTH_DETAILS,
     fetchPolicy: 'network-only',
@@ -23,10 +11,10 @@ export const getRockAuthDetails = async () => {
   return rock;
 };
 
-const Browser = {
+const RockAuthedInAppBrowser = {
   open: async (
     baseURL,
-    options,
+    { client, ...options },
     auth = { useRockCookie: false, useRockToken: false }
   ) => {
     const url = new URL(baseURL);
@@ -36,14 +24,16 @@ const Browser = {
       ? url.toString().slice(0, -1)
       : url.toString();
 
-    const { authCookie, authToken } = await getRockAuthDetails();
+    const { authCookie, authToken } = await getRockAuthDetails(client);
     let headers = {};
     if (auth.useRockCookie && authCookie) {
+      // eslint-disable-next-line no-console
       console.warn(
         "iOS doesn't support headers, you may want to use src/user-web-view"
       );
       headers = { Cookie: authCookie };
     }
+
     if (auth.useRockToken && authToken) {
       url.searchParams.append('rckipid', authToken);
     }
@@ -55,9 +45,10 @@ const Browser = {
         });
       } else Linking.openURL(url.toString());
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e);
     }
   },
 };
 
-export default Browser;
+export default RockAuthedInAppBrowser;
