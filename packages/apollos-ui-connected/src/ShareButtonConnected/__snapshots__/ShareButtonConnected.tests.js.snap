@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the ShareContentButtonConnected renders a share button 1`] = `
+exports[`the ShareButtonConnected renders a share button 1`] = `
 <View
   accessible={true}
   clickable={true}
@@ -136,7 +136,7 @@ exports[`the ShareContentButtonConnected renders a share button 1`] = `
 </View>
 `;
 
-exports[`the ShareContentButtonConnected renders a share button with custom url, and title 1`] = `
+exports[`the ShareButtonConnected renders a share button with custom url, and title 1`] = `
 <View
   accessible={true}
   clickable={true}
