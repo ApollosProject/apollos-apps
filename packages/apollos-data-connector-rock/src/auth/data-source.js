@@ -57,6 +57,7 @@ export default class AuthDataSource extends RockApolloDataSource {
           body: JSON.stringify({
             Username,
             Password,
+            Persisted: true,
           }),
           headers: {
             'Content-Type': 'Application/Json',
