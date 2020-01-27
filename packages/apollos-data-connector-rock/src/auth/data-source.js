@@ -4,7 +4,7 @@ import moment from 'moment';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { fieldsAsObject } from '../utils';
 
-import { generateToken, registerToken } from './token';
+import { generateToken } from './token';
 
 export default class AuthDataSource extends RockApolloDataSource {
   resource = 'Auth';
