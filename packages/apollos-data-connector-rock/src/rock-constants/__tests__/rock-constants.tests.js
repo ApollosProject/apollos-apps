@@ -10,6 +10,9 @@ ApollosConfig.loadJs({
       COMPONENT_NAME: 'Apollos Content Item',
       CHANNEL_MEDIUM_TYPE_ID: 512,
     },
+    ENTITY_TYPES: {
+      ApollosGroup: 'Group',
+    },
   },
 });
 
@@ -67,6 +70,13 @@ describe('RockConstants', () => {
     const dataSource = new RockConstants();
     dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
     const result = await dataSource.modelType('ContentItem');
+    expect(result).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('finds a custom entity model ID', async () => {
+    const dataSource = new RockConstants();
+    dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
+    const result = await dataSource.modelType('ApollosGroup');
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });

@@ -137,6 +137,26 @@ Array [
 ]
 `;
 
+exports[`RockConstants finds a custom entity model ID 1`] = `
+Object {
+  "id": 1,
+}
+`;
+
+exports[`RockConstants finds a custom entity model ID 2`] = `
+Array [
+  Array [
+    "EntityTypes?%24filter=Name%20eq%20%27Rock.Model.Group%27",
+    Object {},
+    Object {
+      "cacheOptions": Object {
+        "ttl": 86400,
+      },
+    },
+  ],
+]
+`;
+
 exports[`RockConstants finds a model ID for an item not using ContentChannelItem 1`] = `
 Object {
   "id": 1,

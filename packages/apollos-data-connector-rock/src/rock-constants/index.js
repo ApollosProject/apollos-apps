@@ -1,14 +1,8 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import Config from '@apollosproject/config';
+import { get } from 'lodash';
 
 const { ROCK_MAPPINGS } = Config;
-
-const mapApollosNameToRockName = (name) => {
-  if (ROCK_MAPPINGS.CONTENT_ITEM[name]) {
-    return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
-  }
-  return name;
-};
 
 class RockConstants extends RockApolloDataSource {
   async findOrCreate({ model, objectAttributes }) {
@@ -83,8 +77,15 @@ class RockConstants extends RockApolloDataSource {
     });
   }
 
+  mapApollosNameToRockName = (name) => {
+    if (ROCK_MAPPINGS.CONTENT_ITEM[name]) {
+      return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
+    }
+    return get(ROCK_MAPPINGS, `ENTITY_TYPES.${name}`, name);
+  };
+
   async modelType(nameInput) {
-    const name = mapApollosNameToRockName(nameInput);
+    const name = this.mapApollosNameToRockName(nameInput);
 
     const types = await this.request('EntityTypes')
       .filter(`Name eq 'Rock.Model.${name}'`)
