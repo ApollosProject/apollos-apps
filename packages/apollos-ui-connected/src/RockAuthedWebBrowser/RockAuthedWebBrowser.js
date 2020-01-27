@@ -33,6 +33,7 @@ const RockAuthedInAppBrowser = {
       );
       headers = { Cookie: authCookie };
     }
+
     if (auth.useRockToken && authToken) {
       url.searchParams.append('rckipid', authToken);
     }
