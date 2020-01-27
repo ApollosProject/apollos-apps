@@ -22,3 +22,4 @@ export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
 } from './ShareButtonConnected';
+export RockAuthedWebBrowser from './RockAuthedWebBrowser';
