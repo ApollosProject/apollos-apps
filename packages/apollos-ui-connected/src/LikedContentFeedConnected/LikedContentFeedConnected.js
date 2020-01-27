@@ -2,11 +2,11 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
 
 import fetchMoreResolver from '../utils/fetchMoreResolver';
-
-import ContentCardConnected from '../../../apolloschurchapp/src/ui/ContentCardConnected';
+import ContentCardConnected from '../ContentCardConnected';
 
 import GET_LIKED_CONTENT from './getLikedContent';
 
