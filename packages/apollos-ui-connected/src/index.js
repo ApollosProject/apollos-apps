@@ -23,4 +23,7 @@ export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
 } from './ShareButtonConnected';
-export UserAvatarHeader, { GET_USER_PROFILE } from './UserAvatarHeader';
+export UserAvatarConnected, {
+  UserAvatarHeader,
+  UserAvatarUpdate,
+} from './UserAvatarConnected';
