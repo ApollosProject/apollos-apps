@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 import RNMapView from 'react-native-maps';
 import { Animated, Dimensions, Platform, PixelRatio } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-
 import { debounce } from 'lodash';
 
-import Button from '@apollosproject/ui-kit/src/Button';
-import CampusCard from '@apollosproject/ui-kit/src/CampusCard';
-import FlexedView from '@apollosproject/ui-kit/src/FlexedView';
-import PaddedView from '@apollosproject/ui-kit/src/PaddedView';
-import Touchable from '@apollosproject/ui-kit/src/Touchable';
-import styled from '@apollosproject/ui-kit/src/styled';
+import {
+  Button,
+  Touchable,
+  PaddedView,
+  FlexedView,
+  styled,
+  withTheme,
+  CampusCard,
+  withIsLoading,
+} from '@apollosproject/ui-kit';
 import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
-import { withTheme, withIsLoading } from '@apollosproject/ui-kit';
 
 import Marker from '../Marker';
 
@@ -77,6 +79,7 @@ class MapView extends Component {
       PropTypes.object, // type check for React fragments
     ]),
     isLoading: PropTypes.bool,
+    isLoadingSelectedCampus: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -85,7 +88,6 @@ class MapView extends Component {
 
   constructor(props) {
     super();
-
     // sets width of cards to be full width of the screen minus a bit for spacing
     this.cardWidth =
       Dimensions.get('window').width - props.theme.sizing.baseUnit * 2.25;
@@ -93,7 +95,10 @@ class MapView extends Component {
     this.animation = new Animated.Value(0);
     this.scrollView = null;
 
-    // added spacing to set the scroll position of the card so other cards in the horizontal list are seen slightly to the left or right.
+    // We need to cache this value in state, because otherwise the campus order changes
+    // After selecting a campus, but before the home feed loads.
+    this.state = { currentCampus: null };
+
     this.cardScrollPositionOffset =
       this.cardWidth + props.theme.sizing.baseUnit * 0.5;
   }
@@ -104,6 +109,10 @@ class MapView extends Component {
 
   componentDidUpdate(oldProps) {
     // update mapview if there are campuses and the location changes
+    if (this.props.currentCampus && !this.state.currentCampus) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ currentCampus: this.props.currentCampus });
+    }
     if (
       this.props.campuses.length &&
       oldProps.userLocation !== this.props.userLocation
@@ -124,11 +133,11 @@ class MapView extends Component {
   }
 
   get sortedCampuses() {
-    const { currentCampus = null, campuses = [] } = this.props;
-    if (!this.props.currentCampus) {
+    const { campuses = [] } = this.props;
+    const { currentCampus } = this.state;
+    if (!currentCampus) {
       return campuses;
     }
-    // returns your selected current campus to be first in card list if it exists
     return [
       campuses.find(({ id }) => id === currentCampus.id),
       ...campuses.filter(({ id }) => id !== currentCampus.id),
@@ -179,8 +188,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect, isLoading } = this.props;
-
+    const { onLocationSelect, isLoading, isLoadingSelectedCampus } = this.props;
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * this.cardWidth,
@@ -269,6 +277,7 @@ class MapView extends Component {
                 onPress={() =>
                   onLocationSelect(this.currentCampus || this.sortedCampuses[0])
                 }
+                loading={isLoadingSelectedCampus}
               />
             </PaddedView>
           </MediaPlayerSpacer>
