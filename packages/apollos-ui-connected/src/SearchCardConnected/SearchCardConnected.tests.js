@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers } from '../utils/testUtils';
 
 import SearchCardConnected from '.';
 
