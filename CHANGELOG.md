@@ -1,5 +1,5 @@
 
-v1.3.0-beta.1: January 28, 2020
+v1.3.0-beta.2: January 28, 2020
 
 - Adds Improvements from Willow's MapView (#1298) (9519169c)
 - Adds persisted cookies to core (#1302) (b8315a13)
