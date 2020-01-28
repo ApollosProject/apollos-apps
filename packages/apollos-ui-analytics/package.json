@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "apollo-cache-inmemory": "^1.5.1",
-    "apollo-client": "2.5.1",
+    "apollo-client": "2.6.8",
     "apollo-link-http": "^1.5.14",
     "jest": "24.8.0",
     "jest-fetch-mock": "^2.1.2",
