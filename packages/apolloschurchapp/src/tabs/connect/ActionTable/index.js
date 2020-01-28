@@ -12,7 +12,7 @@ import {
   PaddedView,
   H4,
 } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from '../../../ui/WebBrowser';
+import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
 import NavigationActions from '../../../NavigationService';
 
 const RowHeader = styled(({ theme }) => ({
@@ -27,7 +27,7 @@ const Name = styled({
 })(View);
 
 const ActionTable = () => (
-  <WebBrowserConsumer>
+  <RockAuthedWebBrowser>
     {(openUrl) => (
       <View>
         <RowHeader>
@@ -76,7 +76,7 @@ const ActionTable = () => (
         </TableView>
       </View>
     )}
-  </WebBrowserConsumer>
+  </RockAuthedWebBrowser>
 );
 
 const StyledActionTable = styled(({ theme }) => ({
