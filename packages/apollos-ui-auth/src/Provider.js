@@ -36,8 +36,9 @@ export const resolvers = {
     },
   },
   Mutation: {
-    logout: (_root, _args, { client }) => {
-      client.resetStore();
+    logout: async (_root, _args, { client }) => {
+      client.clearStore();
+      AsyncStorage.removeItem('authToken');
       track({ eventName: 'UserLogout', client });
       return null;
     },

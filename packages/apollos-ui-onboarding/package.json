@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@storybook/react-native": "5.2.4",
-    "apollo-client": "2.5.1",
+    "apollo-client": "2.6.8",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
