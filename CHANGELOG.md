@@ -1,3 +1,8 @@
+v1.3.0-beta.3: January 28, 2020
+
+- Improves android profile image quality (#1303) (b448a3ee)
+- Compresses images from cloudinary using q_auto by default (#1299) (7d38807e)
+
 
 v1.3.0-beta.2: January 28, 2020
 
