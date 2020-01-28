@@ -1,3 +1,27 @@
+
+v1.3.0-beta.2: January 28, 2020
+
+- Adds Improvements from Willow's MapView (#1298) (9519169c)
+- Adds persisted cookies to core (#1302) (b8315a13)
+- Adds Rock Entity Mapper (#1277) (60521331)
+- Adds OrderBy RequestBuilder method (#1289) (3468f347)
+
+- Clears apollo store instead of reseting store (#1304) (e14932a5)
+- Simplifies Auth Function (#1301) (14e99d0b)
+- Removes inactive or archived groups from group list in api (#1297) (c6725634)
+- Changes Auth Error Message (#1294) (edbd7493)
+- Uses default import in root index (#1292) (9be9d4c2)
+
+- Moves WebBrowser into the ui-connected package (#1300) (48b9ca5e)
+- Moves ShareContentButtonConnected into the ui-connected package (#1296) (ea650f75)
+- Moves the `LikeContentButtonConnected` component into ui-connected (#1293) (5d3f3b66)
+- Moves HorizontalContentCardConnected into the ui-connected package (#1295) (484035c1)
+- Moves ContentCardConnected into the ui-connected package (#1291) (cb4f7360)
+- Moves liked content feeds to ui-connected (#1288) (05985765)
+
+- Fixes current campus not showing "distance to location" (#1286) (bb8709fe)
+
+
 v1.3.0-beta.1: January 16, 2020
 
 - Properly publishes the react-native part of the @apollosproject/config package.
