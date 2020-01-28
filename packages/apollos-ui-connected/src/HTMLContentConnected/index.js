@@ -12,7 +12,7 @@ function handlePressAnchor(url) {
   return InAppBrowser.open(url);
 }
 
-const HTMLContentConnected = ({ contentId }) => {
+const HTMLContentConnected = ({ Component, contentId }) => {
   if (!contentId) return <HTMLView isLoading />;
 
   return (
@@ -24,12 +24,12 @@ const HTMLContentConnected = ({ contentId }) => {
       {({ data: { node: { htmlContent } = {} } = {}, loading, error }) => {
         if (!htmlContent && error) return <ErrorCard error={error} />;
         return (
-          <HTMLView
+          <Component
             isLoading={!htmlContent && loading}
             onPressAnchor={handlePressAnchor}
           >
             {htmlContent}
-          </HTMLView>
+          </Component>
         );
       }}
     </Query>
@@ -37,6 +37,7 @@ const HTMLContentConnected = ({ contentId }) => {
 };
 
 HTMLContentConnected.propTypes = {
+  Component: HTMLView,
   contentId: PropTypes.string,
 };
 
