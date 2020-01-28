@@ -18,8 +18,9 @@ export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
+export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
 } from './ShareButtonConnected';
-export RockAuthedWebBrowser from './RockAuthedWebBrowser';
+export UserAvatarHeader, { GET_USER_PROFILE } from './UserAvatarHeader';
