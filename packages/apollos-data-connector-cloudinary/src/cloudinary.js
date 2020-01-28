@@ -30,6 +30,7 @@ export default function withCloudinary(_url = '', options) {
       fetch_format: 'auto',
       width: '1600',
       crop: 'limit',
+      quality: 'auto:eco',
       ...options,
     });
   }
