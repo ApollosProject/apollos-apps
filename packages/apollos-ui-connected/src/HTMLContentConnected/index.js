@@ -12,7 +12,7 @@ function handlePressAnchor(url) {
   return InAppBrowser.open(url);
 }
 
-const HTMLContent = ({ contentId }) => {
+const HTMLContentConnected = ({ contentId }) => {
   if (!contentId) return <HTMLView isLoading />;
 
   return (
@@ -36,8 +36,8 @@ const HTMLContent = ({ contentId }) => {
   );
 };
 
-HTMLContent.propTypes = {
+HTMLContentConnected.propTypes = {
   contentId: PropTypes.string,
 };
 
-export default HTMLContent;
+export default HTMLContentConnected;
