@@ -1195,7 +1195,7 @@ exports[`The Auth Entry component should render as disabled 1`] = `
           <Text
             style={
               Object {
-                "backgroundColor": "#00676D",
+                "backgroundColor": 0,
                 "color": "#F8F7F4",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
@@ -2080,7 +2080,7 @@ exports[`The Auth Entry component should render in a next button 1`] = `
           <Text
             style={
               Object {
-                "backgroundColor": "#00676D",
+                "backgroundColor": 0,
                 "color": "#F8F7F4",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,

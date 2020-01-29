@@ -930,7 +930,7 @@ Stand by…
             <Text
               style={
                 Object {
-                  "backgroundColor": "#00676D",
+                  "backgroundColor": 0,
                   "color": "#F8F7F4",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
@@ -1935,7 +1935,7 @@ Stand by…
             <Text
               style={
                 Object {
-                  "backgroundColor": "#00676D",
+                  "backgroundColor": 0,
                   "color": "#F8F7F4",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,

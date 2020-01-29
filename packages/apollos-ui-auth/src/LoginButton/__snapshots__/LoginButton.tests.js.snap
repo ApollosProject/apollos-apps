@@ -91,6 +91,7 @@ exports[`LoginButton component renders a LoginButton when logged out 1`] = `
     <Text
       style={
         Object {
+          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
