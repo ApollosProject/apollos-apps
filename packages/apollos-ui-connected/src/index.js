@@ -2,7 +2,7 @@ export ContentCardConnected, {
   contentCardComponentMapper,
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
-export { fetchMoreResolver } from './utils';
+export { fetchMoreResolver, share } from './utils';
 export HorizontalContentCardConnected from './HorizontalContentCardConnected';
 export {
   HorizontalLikedContentFeed,
