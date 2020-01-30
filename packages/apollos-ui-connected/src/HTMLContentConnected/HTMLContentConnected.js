@@ -12,6 +12,7 @@ const handleOnPressAnchor = (url) => InAppBrowser.open(url);
 
 const HTMLContentConnected = ({ Component, contentId }) => {
   if (!contentId) return <HTMLView isLoading />;
+
   return (
     <Query
       query={GET_CONTENT_ITEM_CONTENT}
