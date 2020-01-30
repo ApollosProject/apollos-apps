@@ -5,7 +5,7 @@ import { withNavigation } from 'react-navigation';
 import { get } from 'lodash';
 
 import { H3, styled, PaddedView } from '@apollosproject/ui-kit';
-import UserAvatarConnected from '../UserAvatarConnected';
+import { UserAvatarConnected } from '@apollosproject/ui-connected';
 import GET_USER_PROFILE from './getUserProfile';
 
 const GetUserProfile = ({ children }) => (
@@ -26,19 +26,27 @@ const Container = styled({
   justifyContent: 'center',
 })(PaddedView);
 
-const UserAvatarHeader = ({ navigation }) => (
+const UserAvatarHeader = ({
+  buttonIcon,
+  message,
+  navigation,
+  onPressIcon,
+  size,
+  ...props
+}) => (
   <Container>
     <PaddedView horizontal={false}>
       <UserAvatarConnected
-        size="large"
-        buttonIcon="settings"
-        onPressIcon={() => navigation.navigate('UserSettings')}
+        size={size}
+        buttonIcon={buttonIcon}
+        onPressIcon={onPressIcon}
+        {...props}
       />
     </PaddedView>
     <GetUserProfile>
       {({ firstName }) => (
         <H3>
-          Hello
+          {message}
           {firstName ? ` ${firstName}` : ''}!
         </H3>
       )}
@@ -47,10 +55,21 @@ const UserAvatarHeader = ({ navigation }) => (
 );
 
 UserAvatarHeader.propTypes = {
+  buttonIcon: PropTypes.string,
+  message: PropTypes.string,
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     navigate: PropTypes.func,
-  }),
+  }).isRequired,
+  onPressIcon: PropTypes.func,
+  size: PropTypes.string,
+};
+
+UserAvatarHeader.defaultProps = {
+  buttonIcon: 'settings',
+  message: 'Hello',
+  onPressIcon: (navigation) => navigation.navigate('UserSettings'),
+  size: 'large',
 };
 
 export default withNavigation(UserAvatarHeader);

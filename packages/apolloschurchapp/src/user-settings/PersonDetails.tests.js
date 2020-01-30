@@ -1,5 +1,5 @@
 import React from 'react';
-import GET_USER_PROFILE from '@apollosproject/ui-connected';
+import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
 
 import Providers from '../Providers';
 
