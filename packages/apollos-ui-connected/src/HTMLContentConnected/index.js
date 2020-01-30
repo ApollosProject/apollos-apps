@@ -1,5 +1,5 @@
 import HTMLContentConnected from './HTMLContentConnected';
 
-export getContentItemContent from './getContentItemContent';
+export GET_CONTENT_ITEM_CONTENT from './getContentItemContent';
 
 export default HTMLContentConnected;

@@ -9,7 +9,7 @@ export {
   HorizontalLikedContentFeedConnected,
 } from './HorizontalLikedContentFeedConnected';
 export HTMLContentConnected, {
-  getContentItemContent,
+  GET_CONTENT_ITEM_CONTENT,
 } from './HTMLContentConnected';
 export LikeButtonConnected, {
   LikeButton,
