@@ -178,9 +178,13 @@ class MapView extends Component {
     };
 
     const visibleCampuses = [
-      userLocation,
       ...(this.currentCampus ? [this.currentCampus] : this.sortedCampuses),
     ];
+
+    if (userLocation) {
+      // If we have a user location, we should include it in the current window
+      visibleCampuses.unshift(userLocation);
+    }
 
     this.map.fitToCoordinates(visibleCampuses, {
       edgePadding,

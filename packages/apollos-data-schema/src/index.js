@@ -549,8 +549,8 @@ export const campusSchema = gql`
   }
 
   input CampusLocationInput {
-    latitude: Float!
-    longitude: Float!
+    latitude: Float
+    longitude: Float
   }
 
   extend type Person {
