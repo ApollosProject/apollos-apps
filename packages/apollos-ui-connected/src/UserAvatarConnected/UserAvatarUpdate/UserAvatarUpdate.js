@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { ApolloConsumer } from 'react-apollo';
 
@@ -14,6 +15,16 @@ const Wrapper = styled({
 })(View);
 
 export default class UserAvatarUpdate extends PureComponent {
+  static propTypes = {
+    buttonIcon: PropTypes.string,
+    size: PropTypes.string,
+  };
+
+  static defaultProps = {
+    buttonIcon: 'camera',
+    size: 'large',
+  };
+
   state = {
     isUploadingFile: false,
   };
@@ -30,6 +41,7 @@ export default class UserAvatarUpdate extends PureComponent {
       });
       await this.setState({ isUploadingFile: false });
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.warn(e);
       this.setState({ isUploadingFile: false });
     }
@@ -37,6 +49,7 @@ export default class UserAvatarUpdate extends PureComponent {
 
   render() {
     const { isUploadingFile } = this.state;
+    const { buttonIcon, size, ...props } = this.props;
 
     return (
       <ApolloConsumer>
@@ -44,10 +57,11 @@ export default class UserAvatarUpdate extends PureComponent {
           <Wrapper>
             <PaddedView horizontal={false}>
               <UserAvatarConnected
-                size="large"
-                buttonIcon="camera"
+                size={size}
+                buttonIcon={buttonIcon}
                 onPressIcon={() => this.handleUploadPhoto({ client })}
                 isLoading={isUploadingFile}
+                {...props}
               />
             </PaddedView>
           </Wrapper>
