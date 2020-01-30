@@ -10,7 +10,7 @@ import {
   H2,
   StretchyView,
 } from '@apollosproject/ui-kit';
-import MediaControls from '../MediaControls';
+import { MediaControlsConnected } from '@apollosproject/ui-connected';
 import HTMLContent from '../HTMLContent';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 import Features from '../Features';
@@ -32,7 +32,7 @@ const UniversalContentItem = ({ content, loading }) => {
                 />
               </Stretchy>
             ) : null}
-            <MediaControls contentId={content.id} />
+            <MediaControlsConnected contentId={content.id} />
             {/* fixes text/navigation spacing by adding vertical padding if we dont have an image */}
             <PaddedView vertical={!coverImageSources.length}>
               <H2 padded isLoading={!content.title && loading}>

@@ -18,6 +18,7 @@ export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
+export MediaControlsConnected from './MediaControlsConnected';
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
