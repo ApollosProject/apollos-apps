@@ -2,9 +2,9 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { contentCardComponentMapper } from '@apollosproject/ui-connected';
+import { contentCardComponentMapper } from '../ContentCardConnected';
 
-const SearchCard = memo(
+const SearchCardConnected = memo(
   ({
     Component,
     coverImage,
@@ -35,7 +35,7 @@ const SearchCard = memo(
   }
 );
 
-SearchCard.propTypes = {
+SearchCardConnected.propTypes = {
   Component: PropTypes.func,
   coverImage: PropTypes.shape({
     sources: PropTypes.array,
@@ -46,10 +46,10 @@ SearchCard.propTypes = {
   isLoading: PropTypes.bool,
 };
 
-SearchCard.defaultProps = {
+SearchCardConnected.defaultProps = {
   Component: contentCardComponentMapper,
 };
 
-SearchCard.displayName = 'SearchCard';
+SearchCardConnected.displayName = 'SearchCardConnected';
 
-export default SearchCard;
+export default SearchCardConnected;
