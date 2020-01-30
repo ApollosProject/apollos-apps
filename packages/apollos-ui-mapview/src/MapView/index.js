@@ -186,9 +186,12 @@ class MapView extends Component {
       visibleCampuses.unshift(userLocation);
     }
 
-    this.map.fitToCoordinates(visibleCampuses, {
-      edgePadding,
-    });
+    // Android will crash if you try to fit to a list of 0 points.
+    if (visibleCampuses.length) {
+      this.map.fitToCoordinates(visibleCampuses, {
+        edgePadding,
+      });
+    }
   };
 
   render() {
