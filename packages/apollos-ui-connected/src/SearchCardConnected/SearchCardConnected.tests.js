@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Providers from '../../Providers';
+import { Providers } from '../utils/testUtils';
 
-import SearchCard from '.';
+import SearchCardConnected from '.';
 
-describe('The SearchCard component', () => {
+describe('The SearchCardConnected component', () => {
   it('should render', () => {
     const data = {
       title: 'How to lead people to Jesus',
@@ -57,7 +57,7 @@ describe('The SearchCard component', () => {
 
     const tree = renderer.create(
       <Providers>
-        <SearchCard
+        <SearchCardConnected
           coverImage={data.coverImage}
           summary={data.summary}
           title={data.title}
