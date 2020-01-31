@@ -5,7 +5,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { fetchMoreResolver } from '@apollosproject/ui-connected';
+import { fetchMoreResolver, LiveConsumer } from '@apollosproject/ui-connected';
 import {
   styled,
   FeedView,
@@ -97,11 +97,16 @@ class Home extends PureComponent {
                               this.handleOnPress({ id: featuredItem.id })
                             }
                           >
-                            <ContentCard
-                              type={'featured'}
-                              isLoading={isFeaturedLoading}
-                              {...featuredItem}
-                            />
+                            <LiveConsumer contentId={featuredItem.id}>
+                              {(liveStream) => (
+                                <ContentCard
+                                  type={'featured'}
+                                  isLive={!!liveStream}
+                                  isLoading={isFeaturedLoading}
+                                  {...featuredItem}
+                                />
+                              )}
+                            </LiveConsumer>
                           </TouchableScale>
                         );
                       }}
