@@ -8,7 +8,7 @@ import {
   fetchMoreResolver,
 } from '@apollosproject/ui-connected';
 
-import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
+import { BackgroundView, FeedView, ContentCard } from '@apollosproject/ui-kit';
 
 import GET_CONTENT_FEED from './getContentFeed';
 /**
@@ -55,7 +55,7 @@ class ContentFeed extends PureComponent {
         >
           {({ loading, error, data, refetch, fetchMore, variables }) => (
             <FeedView
-              ListItemComponent={ContentCardConnected}
+              ListItemComponent={ContentCard}
               content={get(
                 data,
                 'node.childContentItemsConnection.edges',
