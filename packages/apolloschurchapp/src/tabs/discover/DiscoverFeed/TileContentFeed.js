@@ -17,8 +17,6 @@ import {
   ContentCard,
 } from '@apollosproject/ui-kit';
 
-import { ContentCardConnected } from '@apollosproject/ui-connected';
-
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
