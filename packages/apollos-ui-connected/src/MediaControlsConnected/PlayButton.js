@@ -37,7 +37,7 @@ const PlayButton = ({ action, coverImageSources }) => (
 
 PlayButton.propTypes = {
   action: PropTypes.func,
-  coverImageSources: PropTypes.arrayOf(PropTypes.string),
+  coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 export default PlayButton;

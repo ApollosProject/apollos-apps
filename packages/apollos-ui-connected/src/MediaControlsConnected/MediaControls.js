@@ -66,7 +66,7 @@ MediaControls.propTypes = {
   error: PropTypes.string,
   data: PropTypes.shape({
     node: PropTypes.shape({
-      videos: PropTypes.shape({}),
+      videos: PropTypes.arrayOf(PropTypes.shape({})),
       title: PropTypes.string,
       parentChannel: PropTypes.shape({}),
       coverImage: PropTypes.shape({}),

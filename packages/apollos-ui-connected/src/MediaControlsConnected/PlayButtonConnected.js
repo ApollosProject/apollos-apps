@@ -33,8 +33,8 @@ const PlayButtonConnected = ({
 );
 
 PlayButtonConnected.propTypes = {
-  videoSource: PropTypes.string,
-  coverImageSources: PropTypes.arrayOf(PropTypes.string),
+  videoSource: PropTypes.shape({}),
+  coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),
   title: PropTypes.string,
   parentChannelName: PropTypes.string,
 };

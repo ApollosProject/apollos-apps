@@ -18,7 +18,7 @@ const WebView = ({ webViewUrl, coverImageSources }) => (
 
 WebView.propTypes = {
   webViewUrl: PropTypes.func,
-  coverImageSources: PropTypes.arrayOf(PropTypes.string),
+  coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 export default WebView;
