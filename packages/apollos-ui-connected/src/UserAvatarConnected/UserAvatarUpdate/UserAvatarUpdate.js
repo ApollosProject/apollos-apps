@@ -14,7 +14,7 @@ const Wrapper = styled({
   alignItems: 'center',
 })(View);
 
-export default class UserAvatarUpdate extends PureComponent {
+class UserAvatarUpdate extends PureComponent {
   static propTypes = {
     buttonIcon: PropTypes.string,
     size: PropTypes.string,
@@ -70,3 +70,5 @@ export default class UserAvatarUpdate extends PureComponent {
     );
   }
 }
+
+export default UserAvatarUpdate;
