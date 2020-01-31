@@ -26,6 +26,7 @@ const renderItem = (
     content={get(item, 'childContentItemsConnection.edges', []).map(
       (edge) => edge.node
     )}
+    isLoading={item.isLoading}
     loadingStateObject={childContentItemLoadingState}
   />
 );

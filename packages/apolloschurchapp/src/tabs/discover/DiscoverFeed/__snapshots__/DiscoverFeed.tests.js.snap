@@ -659,7 +659,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -848,7 +847,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -1037,7 +1035,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -1400,7 +1397,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -1561,7 +1557,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -1722,7 +1717,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -2082,7 +2076,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <View
                           id="ContentSeriesContentItem:6d8dc8e4bad017f815ae0cac8bf692bb"
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -2277,7 +2270,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <View
                           id="ContentSeriesContentItem:08449058d438ebeaffe9adb7a8e633cc"
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -2472,7 +2464,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <View
                           id="ContentSeriesContentItem:b74c2d295a0cf1340232ffa8be856c00"
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -2864,7 +2855,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <View
                           id="ContentSeriesContentItem:b085ec27d53006e9e6b95f3ac57da581"
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -3059,7 +3049,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <View
                           id="ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a"
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -3254,7 +3243,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         <View
                           id="ContentSeriesContentItem:44fd3b82373ea8f197bd1e1e77c4bed0"
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#303030",
@@ -3646,7 +3634,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -3835,7 +3822,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
@@ -4024,7 +4010,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                       >
                         <View
                           inHorizontalList={true}
-                          isLoading={false}
                           style={
                             Object {
                               "backgroundColor": "#FFFFFF",
