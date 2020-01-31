@@ -18,7 +18,6 @@ const ContentCardConnected = memo(
           <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
             {({ data: { node = {} } = {}, loading, error }) => {
               if (error) return <ErrorCard error={error} />;
-
               return (
                 <Component
                   {...node}

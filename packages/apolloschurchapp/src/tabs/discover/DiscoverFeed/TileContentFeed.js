@@ -14,6 +14,7 @@ import {
   TouchableScale,
   Touchable,
   withIsLoading,
+  ContentCard,
 } from '@apollosproject/ui-kit';
 
 import { ContentCardConnected } from '@apollosproject/ui-connected';
@@ -86,11 +87,7 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) =>
               });
             }}
           >
-            <ContentCardConnected
-              horizontal
-              contentId={item.id}
-              isLoading={isLoading}
-            />
+            <ContentCard horizontal isLoading={isLoading} {...item} />
           </TouchableScale>
         )}
         loadingStateObject={loadingStateObject}
