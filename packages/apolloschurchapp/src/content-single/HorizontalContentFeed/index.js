@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 
-import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
-
-import { ContentCardConnected } from '@apollosproject/ui-connected';
+import {
+  HorizontalTileFeed,
+  TouchableScale,
+  ContentCard,
+} from '@apollosproject/ui-kit';
 
 import GET_HORIZONTAL_CONTENT from './getHorizontalContent';
 
@@ -27,18 +29,13 @@ class HorizontalContentFeed extends Component {
   };
 
   renderItem = ({ item }) => {
-    const itemId = get(item, 'id', '');
     const disabled = get(item, 'id', '') === this.props.contentId;
     return (
       <TouchableScale
         onPress={() => this.handleOnPressItem(item)}
         disabled={disabled}
       >
-        <ContentCardConnected
-          horizontal
-          contentId={itemId}
-          disabled={disabled}
-        />
+        <ContentCard horizontal disabled={disabled} {...item} />
       </TouchableScale>
     );
   };
