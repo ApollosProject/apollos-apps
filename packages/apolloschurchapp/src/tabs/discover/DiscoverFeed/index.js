@@ -17,16 +17,15 @@ const feedItemLoadingState = {
   isLoading: true,
 };
 
-const renderItem = (
-  { item } // eslint-disable-line react/prop-types
-) => (
+// eslint-disable-next-line
+const renderItem = (isLoading) => ({ item }) => (
   <TileContentFeed
     id={item.id}
     name={item.name}
     content={get(item, 'childContentItemsConnection.edges', []).map(
       (edge) => edge.node
     )}
-    isLoading={item.isLoading}
+    isLoading={isLoading}
     loadingStateObject={childContentItemLoadingState}
   />
 );
@@ -39,7 +38,7 @@ const DiscoverFeed = memo(() => (
         content={contentChannels}
         isLoading={loading && !contentChannels.length}
         refetch={refetch}
-        renderItem={renderItem}
+        renderItem={renderItem(loading)}
         loadingStateObject={feedItemLoadingState}
         numColumns={1}
       />

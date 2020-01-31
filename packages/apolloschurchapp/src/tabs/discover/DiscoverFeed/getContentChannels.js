@@ -9,7 +9,6 @@ export default gql`
       childContentItemsConnection(first: 3) {
         edges {
           node {
-            id
             ...contentCardFragment
           }
         }

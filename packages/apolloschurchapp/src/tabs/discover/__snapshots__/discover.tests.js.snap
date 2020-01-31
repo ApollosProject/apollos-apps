@@ -2498,10 +2498,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            __typename="ContentSeriesContentItem"
                             id="ContentSeriesContentItem:6d8dc8e4bad017f815ae0cac8bf692bb"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
                             style={
                               Object {
@@ -2637,7 +2635,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 >
                                   <View
-                                    hasAction={false}
                                     style={
                                       Object {
                                         "flex": 1,
@@ -2696,10 +2693,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            __typename="ContentSeriesContentItem"
                             id="ContentSeriesContentItem:08449058d438ebeaffe9adb7a8e633cc"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
                             style={
                               Object {
@@ -2835,7 +2830,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 >
                                   <View
-                                    hasAction={false}
                                     style={
                                       Object {
                                         "flex": 1,
@@ -2894,10 +2888,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            __typename="ContentSeriesContentItem"
                             id="ContentSeriesContentItem:b74c2d295a0cf1340232ffa8be856c00"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
                             style={
                               Object {
@@ -3033,7 +3025,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 >
                                   <View
-                                    hasAction={false}
                                     style={
                                       Object {
                                         "flex": 1,
@@ -3289,10 +3280,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            __typename="ContentSeriesContentItem"
                             id="ContentSeriesContentItem:b085ec27d53006e9e6b95f3ac57da581"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
                             style={
                               Object {
@@ -3428,7 +3417,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 >
                                   <View
-                                    hasAction={false}
                                     style={
                                       Object {
                                         "flex": 1,
@@ -3487,10 +3475,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            __typename="ContentSeriesContentItem"
                             id="ContentSeriesContentItem:71bfdac0b98ea1b72a63ff4ea64e3c5a"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
                             style={
                               Object {
@@ -3626,7 +3612,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 >
                                   <View
-                                    hasAction={false}
                                     style={
                                       Object {
                                         "flex": 1,
@@ -3685,10 +3670,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            __typename="ContentSeriesContentItem"
                             id="ContentSeriesContentItem:44fd3b82373ea8f197bd1e1e77c4bed0"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
                             style={
                               Object {
@@ -3824,7 +3807,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 >
                                   <View
-                                    hasAction={false}
                                     style={
                                       Object {
                                         "flex": 1,
