@@ -5,15 +5,7 @@ import { get } from 'lodash';
 import { ContentCard } from '@apollosproject/ui-kit';
 
 const SearchCardConnected = memo(
-  ({
-    Component,
-    coverImage,
-    isLoading,
-    node,
-    summary,
-    title,
-    ...otherProps
-  }) => {
+  ({ Component, isLoading, node, ...otherProps }) => {
     /* We don't have a way to know for certain if a particular card is true for `hasAction` without
      * hitting Rock. While not 100% perfect we do know that these two types will have almost always
      * have media associated with them. */
@@ -23,11 +15,8 @@ const SearchCardConnected = memo(
 
     return (
       <Component
-        coverImage={get(coverImage, 'sources', [])}
         hasAction={hasAction}
         isLoading={isLoading}
-        summary={summary}
-        title={title}
         {...otherProps}
         {...node}
       />
@@ -42,7 +31,7 @@ SearchCardConnected.propTypes = {
   }),
   summary: PropTypes.string,
   title: PropTypes.string,
-  node: PropTypes.shape({}),
+  node: PropTypes.shape({ id: PropTypes.string, __typename: PropTypes.string }),
   isLoading: PropTypes.bool,
 };
 

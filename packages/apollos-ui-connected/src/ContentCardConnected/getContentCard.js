@@ -4,8 +4,6 @@ import ApollosConfig from '@apollosproject/config';
 const GET_CONTENT_CARD = gql`
   query getContentCard($contentId: ID!) {
     node(id: $contentId) {
-      id
-      __typename
       ...contentCardFragment
     }
   }

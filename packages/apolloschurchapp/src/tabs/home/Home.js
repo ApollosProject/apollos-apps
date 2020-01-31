@@ -5,16 +5,13 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import {
-  ContentCardConnected,
-  fetchMoreResolver,
-} from '@apollosproject/ui-connected';
+import { fetchMoreResolver } from '@apollosproject/ui-connected';
 import {
   styled,
   FeedView,
   BackgroundView,
   TouchableScale,
-  FeaturedCard,
+  ContentCard,
 } from '@apollosproject/ui-kit';
 
 import Features from './Features';
@@ -61,7 +58,7 @@ class Home extends PureComponent {
           >
             {({ loading, error, data, refetch, fetchMore, variables }) => (
               <FeedView
-                ListItemComponent={ContentCardConnected}
+                ListItemComponent={ContentCard}
                 content={get(data, 'userFeed.edges', []).map(
                   (edge) => edge.node
                 )}
@@ -100,10 +97,10 @@ class Home extends PureComponent {
                               this.handleOnPress({ id: featuredItem.id })
                             }
                           >
-                            <ContentCardConnected
-                              Component={FeaturedCard}
-                              contentId={featuredItem.id}
+                            <ContentCard
+                              type={'featured'}
                               isLoading={isFeaturedLoading}
+                              {...featuredItem}
                             />
                           </TouchableScale>
                         );

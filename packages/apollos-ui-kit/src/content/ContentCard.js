@@ -34,8 +34,25 @@ const ContentCard = ({
   type,
   horizontal,
   hyphenatedTitle,
+  coverImage,
+  isLive,
+  parentChannel,
+  videos,
   ...props
 }) => {
+  const source = coverImage && coverImage.sources;
+  const hasMedia = videos && videos.length && videos[0].sources[0].uri !== '';
+  const channelName = parentChannel && parentChannel.name;
+  if (type === 'featured')
+    return (
+      <FeaturedCard
+        coverImage={source}
+        isLive={isLive}
+        labelText={isLive ? 'Live' : channelName}
+        hasAction={hasMedia}
+        {...props}
+      />
+    );
   if (
     type === 'highlight' ||
     [
@@ -49,11 +66,20 @@ const ContentCard = ({
       <SmartHighlightCard
         horizontal={horizontal}
         title={hyphenatedTitle}
+        coverImage={source}
+        labelText={channelName}
+        hasAction={hasMedia}
         {...props}
       />
     );
-  if (type === 'featured') return <FeaturedCard {...props} />;
-  return <SmartDefaultCard horizontal={horizontal} {...props} />;
+  return (
+    <SmartDefaultCard
+      horizontal={horizontal}
+      coverImage={source}
+      labelText={channelName}
+      {...props}
+    />
+  );
 };
 
 ContentCard.propTypes = {
@@ -61,8 +87,19 @@ ContentCard.propTypes = {
   __typename: PropTypes.string,
   horizontal: PropTypes.bool,
   hyphenatedTitle: PropTypes.string,
+  coverImage: PropTypes.shape({
+    sources: PropTypes.shape({ uri: PropTypes.string }),
+  }),
+  isLive: PropTypes.bool,
+  parentChannel: PropTypes.shape({ name: PropTypes.string }),
+  videos: PropTypes.arrayOf({
+    sources: PropTypes.arrayOf({ uri: PropTypes.string }),
+  }),
 };
 
-ContentCard.defaultProps = { horizontal: false };
+ContentCard.defaultProps = {
+  horizontal: false,
+  isLive: false,
+};
 
 export default ContentCard;
