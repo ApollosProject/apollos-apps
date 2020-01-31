@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { View, Dimensions } from 'react-native';
 
-import BackgroundView from '../BackgroundView';
-import CenteredView from '../CenteredView';
-import HorizontalTileFeed from '../HorizontalTileFeed';
+import BackgroundView from '../../BackgroundView';
+import CenteredView from '../../CenteredView';
+import HorizontalTileFeed from '../../HorizontalTileFeed';
 
 import HorizontalDefaultCard from '.';
 

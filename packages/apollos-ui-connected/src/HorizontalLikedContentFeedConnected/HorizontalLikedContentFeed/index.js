@@ -16,7 +16,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
-import HorizontalContentCardConnected from '../../HorizontalContentCardConnected';
+import ContentCardConnected from '../../ContentCardConnected';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -74,7 +74,8 @@ class HorizontalLikedContentFeed extends Component {
         });
       }}
     >
-      <HorizontalContentCardConnected
+      <ContentCardConnected
+        horizontal
         isLoading={item.isLoading}
         contentId={item.id}
       />

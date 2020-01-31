@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { ScrollView } from 'react-native';
 
-import BackgroundView from '../BackgroundView';
-import CenteredView from '../CenteredView';
-import { CardLabel } from '../Card';
+import BackgroundView from '../../BackgroundView';
+import CenteredView from '../../CenteredView';
+import { CardLabel } from '../../Card';
 
 import DefaultCard from '.';
 

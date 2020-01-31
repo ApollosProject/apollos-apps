@@ -3,14 +3,14 @@ import { View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { withTheme, ThemeMixin } from '../theme';
-import styled from '../styled';
-import Card, { CardContent, CardLabel, CardImage } from '../Card';
-import FlexedView from '../FlexedView';
-import { H3, BodyText } from '../typography';
-import Icon from '../Icon';
-import { withIsLoading } from '../isLoading';
-import { ImageSourceType } from '../ConnectedImage';
+import { withTheme, ThemeMixin } from '../../theme';
+import styled from '../../styled';
+import Card, { CardContent, CardLabel, CardImage } from '../../Card';
+import FlexedView from '../../FlexedView';
+import { H3, BodyText } from '../../typography';
+import Icon from '../../Icon';
+import { withIsLoading } from '../../isLoading';
+import { ImageSourceType } from '../../ConnectedImage';
 
 const StyledCard = withTheme(({ theme }) => ({
   cardColor: theme.colors.primary,

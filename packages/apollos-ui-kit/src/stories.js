@@ -15,7 +15,6 @@ function loadStories() {
   require('./CenteredView/CenteredView.stories');
   require('./ChannelLabel/ChannelLabel.stories');
   require('./Chip/Chip.stories');
-  require('./ContentCard/ContentCard.stories');
   require('./FeedView/FeedView.stories');
   require('./FlexedView/FlexedView.stories');
   require('./GradientOverlayImage/GradientOverlayImage.stories');
@@ -24,7 +23,6 @@ function loadStories() {
   require('./PaddedView/PaddedView.stories');
   require('./TabView/TabView.stories');
   require('./TableView/TableView.stories');
-  require('./ThumbnailCard/ThumbnailCard.stories');
   require('./TileImage/TileImage.stories');
   require('./inputs/Picker/Picker.stories');
   require('./inputs/Radio/Radio.stories');

@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
-import { ErrorCard } from '@apollosproject/ui-kit';
+import { ErrorCard, ContentCard } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../live';
 
-import contentCardComponentMapper from './contentCardComponentMapper';
 import GET_CONTENT_CARD from './getContentCard';
 
 const ContentCardConnected = memo(
@@ -55,7 +54,7 @@ ContentCardConnected.propTypes = {
 };
 
 ContentCardConnected.defaultProps = {
-  Component: contentCardComponentMapper,
+  Component: ContentCard,
 };
 
 ContentCardConnected.displayName = 'ContentCardConnected';

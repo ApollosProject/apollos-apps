@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { View, Dimensions } from 'react-native';
 
-import BackgroundView from '../BackgroundView';
-import CenteredView from '../CenteredView';
-import HorizontalTileFeed from '../HorizontalTileFeed';
-import { CardLabel } from '../Card';
+import BackgroundView from '../../BackgroundView';
+import CenteredView from '../../CenteredView';
+import HorizontalTileFeed from '../../HorizontalTileFeed';
+import { CardLabel } from '../../Card';
 
 import HorizontalHighlightCard from '.';
 

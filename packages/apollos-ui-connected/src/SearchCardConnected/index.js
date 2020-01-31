@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import { contentCardComponentMapper } from '../ContentCardConnected';
+import { ContentCard } from '@apollosproject/ui-kit';
 
 const SearchCardConnected = memo(
   ({
@@ -47,7 +47,7 @@ SearchCardConnected.propTypes = {
 };
 
 SearchCardConnected.defaultProps = {
-  Component: contentCardComponentMapper,
+  Component: ContentCard,
 };
 
 SearchCardConnected.displayName = 'SearchCardConnected';

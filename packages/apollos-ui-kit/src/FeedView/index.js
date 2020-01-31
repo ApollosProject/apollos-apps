@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
 
-import ContentCard from '../ContentCard';
+import { ContentCard } from '../content';
 import { enhancer as mediaQuery } from '../MediaQuery';
 import { ErrorCard } from '../Card';
 import TouchableScale from '../TouchableScale';

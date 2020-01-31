@@ -1,16 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Providers from '../Providers';
-import { CardLabel } from '../Card';
+import Providers from '../../Providers';
+import { CardLabel } from '../../Card';
 
-import HorizontalHighlightCard from '.';
+import DefaultCard from '.';
 
-describe('HorizontalHighlightCard', () => {
-  it('should render', () => {
+describe('DefaultCard', () => {
+  it('should render at the minAspectRatio bound (tall-ish)', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -24,10 +24,45 @@ describe('HorizontalHighlightCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a custom actionIcon', () => {
+  it('should render at the images natural aspect ratio (between min/max)', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/1400/800/?random',
+            },
+          ]}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render at the maxAspectRatio bound (wider than tall)', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/2000/800/?random',
+            },
+          ]}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a summary', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -36,53 +71,18 @@ describe('HorizontalHighlightCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          actionIcon={'umbrella'}
-          hasAction
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render with an action "button"', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalHighlightCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
+          summary={
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
           }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          hasAction
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should should render as disabled', () => {
+  it('should should render a like icon', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          disabled
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should should render as a like icon', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -100,7 +100,7 @@ describe('HorizontalHighlightCard', () => {
   it('should should render as isLiked', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -118,7 +118,7 @@ describe('HorizontalHighlightCard', () => {
   it('should render a loading state with isLoading', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -127,9 +127,10 @@ describe('HorizontalHighlightCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          hasAction
+          summary={
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+          }
           isLoading
-          labelText={'Loading!'}
         />
       </Providers>
     );
@@ -138,7 +139,7 @@ describe('HorizontalHighlightCard', () => {
   it('should render with custom LabelComponent', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -147,7 +148,9 @@ describe('HorizontalHighlightCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          LabelComponent={<CardLabel title={'Custom LabelComponent'} />}
+          LabelComponent={
+            <CardLabel title={'Custom LabelComponent'} type={'primary'} />
+          }
         />
       </Providers>
     );
@@ -156,7 +159,7 @@ describe('HorizontalHighlightCard', () => {
   it('should render with custom labelText', () => {
     const tree = renderer.create(
       <Providers>
-        <HorizontalHighlightCard
+        <DefaultCard
           title={
             'Are you telling me that you built a time machine out of a DeLorean?'
           }
@@ -165,29 +168,7 @@ describe('HorizontalHighlightCard', () => {
               uri: 'https://picsum.photos/800/1600/?random',
             },
           ]}
-          labelText={'Quote'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render with a custom theme', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalHighlightCard
-          title={
-            'Are you telling me that you built a time machine out of a DeLorean?'
-          }
-          coverImage={[
-            {
-              uri: 'https://picsum.photos/800/1600/?random',
-            },
-          ]}
-          theme={{
-            colors: {
-              primary: 'salmon',
-            },
-          }}
+          labelText={'Custom label text'}
         />
       </Providers>
     );

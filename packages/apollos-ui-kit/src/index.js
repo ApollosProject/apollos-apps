@@ -20,15 +20,17 @@ export CenteredView from './CenteredView';
 export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage from './ConnectedImage';
-export ContentCard from './ContentCard';
-export DefaultCard from './DefaultCard';
-export FeaturedCard from './FeaturedCard';
+export {
+  ContentCard,
+  DefaultCard,
+  HighlightCard,
+  FeaturedCard,
+  HorizontalDefaultCard,
+  HorizontalHighlightCard,
+} from './content';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export GradientOverlayImage from './GradientOverlayImage';
-export HighlightCard from './HighlightCard';
-export HorizontalHighlightCard from './HorizontalHighlightCard';
-export HorizontalDefaultCard from './HorizontalDefaultCard';
 export HorizontalTileFeed from './HorizontalTileFeed';
 export Icon, { makeIcon } from './Icon';
 export Input, {
@@ -72,7 +74,6 @@ export ThemeProvider, {
   withThemeMixin,
   ThemeConsumer,
 } from './theme';
-export ThumbnailCard from './ThumbnailCard';
 export TileImage from './TileImage';
 export Touchable from './Touchable';
 export TouchableScale from './TouchableScale';

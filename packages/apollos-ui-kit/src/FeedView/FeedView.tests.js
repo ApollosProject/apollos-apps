@@ -4,7 +4,7 @@ import { TouchableWithoutFeedback } from 'react-native';
 import { get } from 'lodash';
 
 import Providers from '../Providers';
-import ContentCard from '../ContentCard';
+import { ContentCard } from '../content';
 
 import FeedView from '.';
 

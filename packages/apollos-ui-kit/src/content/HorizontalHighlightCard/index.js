@@ -3,14 +3,14 @@ import { Platform, View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { withTheme, ThemeMixin } from '../theme';
-import styled from '../styled';
-import Card, { CardContent, CardLabel, CardImage } from '../Card';
-import FlexedView from '../FlexedView';
-import { H3 } from '../typography';
-import Icon from '../Icon';
-import { withIsLoading } from '../isLoading';
-import { ImageSourceType } from '../ConnectedImage';
+import { withTheme, ThemeMixin } from '../../theme';
+import styled from '../../styled';
+import Card, { CardContent, CardLabel, CardImage } from '../../Card';
+import FlexedView from '../../FlexedView';
+import { H3 } from '../../typography';
+import Icon from '../../Icon';
+import { withIsLoading } from '../../isLoading';
+import { ImageSourceType } from '../../ConnectedImage';
 
 const SquareCard = styled(
   ({ disabled }) => ({

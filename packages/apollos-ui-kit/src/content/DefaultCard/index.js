@@ -2,13 +2,13 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { withTheme } from '../theme';
-import styled from '../styled';
-import Card, { CardImage, CardLabel, CardContent } from '../Card';
-import { H3, BodyText } from '../typography';
-import Icon from '../Icon';
-import { withIsLoading } from '../isLoading';
-import { ImageSourceType } from '../ConnectedImage';
+import { withTheme } from '../../theme';
+import styled from '../../styled';
+import Card, { CardImage, CardLabel, CardContent } from '../../Card';
+import { H3, BodyText } from '../../typography';
+import Icon from '../../Icon';
+import { withIsLoading } from '../../isLoading';
+import { ImageSourceType } from '../../ConnectedImage';
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(({ theme }) => ({

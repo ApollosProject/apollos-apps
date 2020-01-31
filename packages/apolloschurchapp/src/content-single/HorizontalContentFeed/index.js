@@ -6,7 +6,7 @@ import { Query } from 'react-apollo';
 
 import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
 
-import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
+import { ContentCardConnected } from '@apollosproject/ui-connected';
 
 import GET_HORIZONTAL_CONTENT from './getHorizontalContent';
 
@@ -34,7 +34,8 @@ class HorizontalContentFeed extends Component {
         onPress={() => this.handleOnPressItem(item)}
         disabled={disabled}
       >
-        <HorizontalContentCardConnected
+        <ContentCardConnected
+          horizontal
           contentId={itemId}
           disabled={disabled}
         />

@@ -2,13 +2,13 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { withTheme } from '../theme';
-import styled from '../styled';
-import Card, { CardImage, CardContent } from '../Card';
-import { H5, BodySmall } from '../typography';
-import Icon from '../Icon';
-import { withIsLoading } from '../isLoading';
-import { ImageSourceType } from '../ConnectedImage';
+import { withTheme } from '../../theme';
+import styled from '../../styled';
+import Card, { CardImage, CardContent } from '../../Card';
+import { H5, BodySmall } from '../../typography';
+import Icon from '../../Icon';
+import { withIsLoading } from '../../isLoading';
+import { ImageSourceType } from '../../ConnectedImage';
 
 const SquareCard = styled({
   width: 240,
