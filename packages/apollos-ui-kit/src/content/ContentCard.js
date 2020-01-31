@@ -41,7 +41,7 @@ const ContentCard = ({
   ...props
 }) => {
   const source = coverImage && coverImage.sources;
-  const hasMedia = videos && videos.length && videos[0].sources.length;
+  const hasMedia = videos && videos.length && videos[0].sources.length > 0;
   const channelName = parentChannel && parentChannel.name;
   if (type === 'featured')
     return (
@@ -88,13 +88,15 @@ ContentCard.propTypes = {
   horizontal: PropTypes.bool,
   hyphenatedTitle: PropTypes.string,
   coverImage: PropTypes.shape({
-    sources: PropTypes.shape({ uri: PropTypes.string }),
+    sources: PropTypes.arrayOf(PropTypes.shape({ uri: PropTypes.string })),
   }),
   isLive: PropTypes.bool,
   parentChannel: PropTypes.shape({ name: PropTypes.string }),
-  videos: PropTypes.arrayOf({
-    sources: PropTypes.arrayOf({ uri: PropTypes.string }),
-  }),
+  videos: PropTypes.arrayOf(
+    PropTypes.shape({
+      sources: PropTypes.arrayOf({ uri: PropTypes.string }),
+    })
+  ),
 };
 
 ContentCard.defaultProps = {
