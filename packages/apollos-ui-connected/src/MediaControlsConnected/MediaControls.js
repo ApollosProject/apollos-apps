@@ -61,7 +61,7 @@ const MediaControls = ({
 };
 
 MediaControls.propTypes = {
-  liveStream: PropTypes.string,
+  liveStream: PropTypes.shape({}),
   loading: PropTypes.bool,
   error: PropTypes.string,
   data: PropTypes.shape({
