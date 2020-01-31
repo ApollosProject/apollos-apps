@@ -41,7 +41,7 @@ const ContentCard = ({
   ...props
 }) => {
   const source = coverImage && coverImage.sources;
-  const hasMedia = videos && videos.length && videos[0].sources[0].uri !== '';
+  const hasMedia = videos && videos.length && videos[0].sources.length;
   const channelName = parentChannel && parentChannel.name;
   if (type === 'featured')
     return (
