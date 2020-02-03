@@ -3,6 +3,11 @@ import { Animated, Dimensions } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import {
+  ContentHTMLViewConnected,
+  LiveConsumer,
+  MediaControlsConnected,
+} from '@apollosproject/ui-connected';
+import {
   styled,
   GradientOverlayImage,
   BackgroundView,
@@ -14,12 +19,7 @@ import {
   CardLabel,
   withTheme,
 } from '@apollosproject/ui-kit';
-import {
-  LiveConsumer,
-  MediaControlsConnected,
-} from '@apollosproject/ui-connected';
 
-import HTMLContent from '../HTMLContent';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 import Features from '../Features';
 
@@ -82,7 +82,7 @@ const WeekendContentItem = ({ content, loading }) => {
                     <H2 padded isLoading={!content.title && loading}>
                       {content.title}
                     </H2>
-                    <HTMLContent contentId={content.id} />
+                    <ContentHTMLViewConnected contentId={content.id} />
                   </ThemeMixin>
                 </Header>
                 <MediaControlsConnected contentId={content.id} />
