@@ -38,6 +38,7 @@
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-auth": "*",
     "@apollosproject/ui-fragments": "*",
+    "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-storybook": "*",
     "@react-native-community/async-storage": "*",

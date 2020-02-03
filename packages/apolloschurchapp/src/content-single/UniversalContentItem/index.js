@@ -2,6 +2,7 @@ import React from 'react';
 import { Animated } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
+import { ContentHTMLViewConnected } from '@apollosproject/ui-connected';
 import {
   styled,
   GradientOverlayImage,
@@ -10,8 +11,8 @@ import {
   H2,
   StretchyView,
 } from '@apollosproject/ui-kit';
+
 import MediaControls from '../MediaControls';
-import HTMLContent from '../HTMLContent';
 import HorizontalContentFeed from '../HorizontalContentFeed';
 import Features from '../Features';
 
@@ -38,7 +39,7 @@ const UniversalContentItem = ({ content, loading }) => {
               <H2 padded isLoading={!content.title && loading}>
                 {content.title}
               </H2>
-              <HTMLContent contentId={content.id} />
+              <ContentHTMLViewConnected contentId={content.id} />
             </PaddedView>
             <Features contentId={content.id} />
             <HorizontalContentFeed contentId={content.id} />
