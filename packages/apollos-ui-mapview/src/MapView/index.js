@@ -43,6 +43,7 @@ const StyledCampusCard = styled(
 
 class MapView extends Component {
   static propTypes = {
+    buttonTitle: PropTypes.string,
     campuses: PropTypes.arrayOf(
       PropTypes.shape({
         latitude: PropTypes.number.isRequired,
@@ -84,6 +85,7 @@ class MapView extends Component {
 
   static defaultProps = {
     Marker,
+    buttonTitle: 'Confirm Selection',
   };
 
   constructor(props) {
@@ -271,7 +273,7 @@ class MapView extends Component {
           <MediaPlayerSpacer>
             <PaddedView>
               <Button
-                title="Select Campus"
+                title={this.props.buttonTitle}
                 pill={false}
                 type="secondary"
                 onPress={() =>
