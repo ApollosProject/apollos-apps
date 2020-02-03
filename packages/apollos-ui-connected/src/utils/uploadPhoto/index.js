@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 import ImagePicker from 'react-native-image-picker';
 import { check, PERMISSIONS, request, RESULTS } from 'react-native-permissions';
 
-import GET_USER_PHOTO from './getUserPhoto';
+import GET_USER_PHOTO from '../../UserAvatarConnected/getUserPhoto';
 
 const options = {
   title: 'Select Profile Image',
