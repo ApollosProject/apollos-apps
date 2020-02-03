@@ -7,7 +7,7 @@ import { PaddedView, styled } from '@apollosproject/ui-kit';
 
 import UserAvatarConnected from '../UserAvatarConnected';
 
-import uploadPhoto from './uploadPhoto';
+import uploadPhoto from '../../utils/uploadPhoto';
 
 const Wrapper = styled({
   justifyContent: 'center',
