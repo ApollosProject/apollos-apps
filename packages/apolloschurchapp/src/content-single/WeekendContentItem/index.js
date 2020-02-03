@@ -3,7 +3,7 @@ import { Animated, Dimensions } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import {
-  HTMLContentConnected,
+  ContentHTMLViewConnected,
   LiveConsumer,
 } from '@apollosproject/ui-connected';
 import {
@@ -82,7 +82,7 @@ const WeekendContentItem = ({ content, loading }) => {
                     <H2 padded isLoading={!content.title && loading}>
                       {content.title}
                     </H2>
-                    <HTMLContentConnected contentId={content.id} />
+                    <ContentHTMLViewConnected contentId={content.id} />
                   </ThemeMixin>
                 </Header>
                 <MediaControls contentId={content.id} />

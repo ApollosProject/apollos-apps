@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-import { HTMLContentConnected } from '@apollosproject/ui-connected';
+import { ContentHTMLViewConnected } from '@apollosproject/ui-connected';
 import { PaddedView, H2, styled, withIsLoading } from '@apollosproject/ui-kit';
 import { ScriptureList } from '@apollosproject/ui-scripture';
 import HorizontalContentFeed from '../HorizontalContentFeed';
@@ -33,7 +33,7 @@ const ContentTab = ({
           tabDestination={'scripture'}
         />
       ) : null}
-      <HTMLContentConnected contentId={id} />
+      <ContentHTMLViewConnected contentId={id} />
     </ContentContainer>
     <HorizontalContentFeed contentId={id} navigation={navigation} />
   </ScrollView>
