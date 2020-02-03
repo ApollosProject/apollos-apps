@@ -2,7 +2,7 @@ export ContentCardConnected, {
   contentCardComponentMapper,
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
-export { fetchMoreResolver, share } from './utils';
+export { fetchMoreResolver, share, uploadPhoto } from './utils';
 export HorizontalContentCardConnected from './HorizontalContentCardConnected';
 export {
   HorizontalLikedContentFeed,
@@ -19,9 +19,10 @@ export LikedContentFeedConnected, {
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
 export MediaControlsConnected from './MediaControlsConnected';
+export RockAuthedWebBrowser from './RockAuthedWebBrowser';
+export SearchCardConnected from './SearchCardConnected';
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
 } from './ShareButtonConnected';
-export SearchCardConnected from './SearchCardConnected';
-export RockAuthedWebBrowser from './RockAuthedWebBrowser';
+export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
