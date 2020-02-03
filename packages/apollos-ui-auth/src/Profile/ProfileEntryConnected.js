@@ -2,15 +2,17 @@
 import React from 'react';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
+import * as Yup from 'yup';
 
 import { LoginConsumer } from '../LoginProvider';
 import ProfileEntry from './ProfileEntry';
 
-const ProfileEntryConnected = ({
-  handleForgotPassword,
-  screenProps,
-  navigation,
-}) => (
+const ProfileSchema = Yup.object().shape({
+  firstName: Yup.string().required('Required'),
+  lastName: Yup.string().required('Required'),
+});
+
+const ProfileEntryConnected = ({ screenProps, navigation }) => (
   <LoginConsumer>
     {({ handleProfileComplete }) => (
       <Formik
@@ -21,17 +23,17 @@ const ProfileEntryConnected = ({
           });
           setSubmitting(false);
         }}
+        validationSchema={ProfileSchema}
       >
         {(formikBag) => (
           <ProfileEntry
             {...screenProps}
             {...formikBag}
-            errors={formikBag.touched.password && formikBag.errors}
+            disabled={!formikBag.isValid}
+            errors={formikBag.errors}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
             onPressBack={navigation.goBack}
-            handleForgotPassword={handleForgotPassword}
-            passwordType="password"
           />
         )}
       </Formik>
@@ -42,7 +44,6 @@ const ProfileEntryConnected = ({
 ProfileEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
-  handleForgotPassword: PropTypes.func,
   screenProps: PropTypes.shape({}),
 };
 
