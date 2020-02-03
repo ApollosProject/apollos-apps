@@ -39,7 +39,7 @@ const UserAvatarHeader = ({
       <UserAvatarConnected
         size={size}
         buttonIcon={buttonIcon}
-        onPressIcon={onPressIcon}
+        onPressIcon={() => navigation.navigate('UserSettings')}
         {...props}
       />
     </PaddedView>
@@ -68,7 +68,6 @@ UserAvatarHeader.propTypes = {
 UserAvatarHeader.defaultProps = {
   buttonIcon: 'settings',
   message: 'Hello',
-  onPressIcon: (navigation) => navigation.navigate('UserSettings'),
   size: 'large',
 };
 
