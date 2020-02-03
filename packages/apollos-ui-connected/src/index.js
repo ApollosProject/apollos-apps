@@ -2,6 +2,7 @@ export ContentCardConnected, {
   contentCardComponentMapper,
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
+export { fetchMoreResolver, share, uploadPhoto } from './utils';
 export HorizontalContentCardConnected from './HorizontalContentCardConnected';
 export {
   HorizontalLikedContentFeed,
@@ -24,4 +25,3 @@ export ShareButtonConnected, {
   ShareButton,
 } from './ShareButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
-export { fetchMoreResolver, share, uploadPhoto } from './utils';
