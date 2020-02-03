@@ -12,7 +12,7 @@ const ProfileSchema = Yup.object().shape({
   lastName: Yup.string().required('Required'),
 });
 
-const ProfileEntryConnected = ({ screenProps, navigation }) => (
+const ProfileEntryConnected = ({ screenProps, navigation, profileSchema }) => (
   <LoginConsumer>
     {({ handleProfileComplete }) => (
       <Formik
@@ -23,7 +23,7 @@ const ProfileEntryConnected = ({ screenProps, navigation }) => (
           });
           setSubmitting(false);
         }}
-        validationSchema={ProfileSchema}
+        validationSchema={profileSchema}
       >
         {(formikBag) => (
           <ProfileEntry
@@ -45,10 +45,12 @@ ProfileEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
   screenProps: PropTypes.shape({}),
+  profileSchema: PropTypes.shape({}),
 };
 
 ProfileEntryConnected.defaultProps = {
   emailRequired: true,
+  profileSchema: ProfileSchema,
 };
 
 export default ProfileEntryConnected;
