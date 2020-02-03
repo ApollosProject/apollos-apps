@@ -46,55 +46,52 @@ const LiveAwareLabel = withTheme(({ isLive, title, theme }) => ({
 const WeekendContentItem = ({ content, loading }) => {
   const coverImageSources = get(content, 'coverImage.sources', []);
   return (
-    <ThemeMixin mixin={content.theme || {}}>
-      <ThemeConsumer>
-        {(theme) => (
-          <BackgroundView>
-            <StretchyView>
-              {({ Stretchy, ...scrollViewProps }) => (
-                <FlexedScrollView {...scrollViewProps}>
-                  <Header hasMedia={content.videos && content.videos.sources}>
-                    <ThemeMixin mixin={{ type: 'dark' }}>
-                      {coverImageSources.length || loading ? (
-                        <Stretchy
-                          background
-                          style={{ backgroundColor: theme.colors.primary }}
-                        >
-                          <GradientOverlayImage
-                            isLoading={!coverImageSources.length && loading}
-                            overlayColor={theme.colors.primary}
-                            overlayType="featured"
-                            source={coverImageSources}
-                          />
-                        </Stretchy>
-                      ) : null}
-                      <LiveConsumer contentId={content.id}>
-                        {(liveStream) => (
-                          <LiveAwareLabel
-                            isLive={!!liveStream}
-                            title={
-                              content.parentChannel &&
-                              content.parentChannel.name
-                            }
-                          />
-                        )}
-                      </LiveConsumer>
-                      <H2 padded isLoading={!content.title && loading}>
-                        {content.title}
-                      </H2>
-                      <HTMLContent contentId={content.id} />
-                    </ThemeMixin>
-                  </Header>
-                  <MediaControls contentId={content.id} />
-                  <Features contentId={content.id} />
-                  <HorizontalContentFeed contentId={content.id} />
-                </FlexedScrollView>
-              )}
-            </StretchyView>
-          </BackgroundView>
-        )}
-      </ThemeConsumer>
-    </ThemeMixin>
+    <ThemeConsumer>
+      {(theme) => (
+        <BackgroundView>
+          <StretchyView>
+            {({ Stretchy, ...scrollViewProps }) => (
+              <FlexedScrollView {...scrollViewProps}>
+                <Header hasMedia={content.videos && content.videos.sources}>
+                  <ThemeMixin mixin={{ type: 'dark' }}>
+                    {coverImageSources.length || loading ? (
+                      <Stretchy
+                        background
+                        style={{ backgroundColor: theme.colors.primary }}
+                      >
+                        <GradientOverlayImage
+                          isLoading={!coverImageSources.length && loading}
+                          overlayColor={theme.colors.primary}
+                          overlayType="featured"
+                          source={coverImageSources}
+                        />
+                      </Stretchy>
+                    ) : null}
+                    <LiveConsumer contentId={content.id}>
+                      {(liveStream) => (
+                        <LiveAwareLabel
+                          isLive={!!liveStream}
+                          title={
+                            content.parentChannel && content.parentChannel.name
+                          }
+                        />
+                      )}
+                    </LiveConsumer>
+                    <H2 padded isLoading={!content.title && loading}>
+                      {content.title}
+                    </H2>
+                    <HTMLContent contentId={content.id} />
+                  </ThemeMixin>
+                </Header>
+                <MediaControls contentId={content.id} />
+                <Features contentId={content.id} />
+                <HorizontalContentFeed contentId={content.id} />
+              </FlexedScrollView>
+            )}
+          </StretchyView>
+        </BackgroundView>
+      )}
+    </ThemeConsumer>
   );
 };
 
