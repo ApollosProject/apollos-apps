@@ -10,7 +10,7 @@ import GET_CONTENT_ITEM_CONTENT from './getContentItemContent';
 
 const handleOnPressAnchor = (url) => InAppBrowser.open(url);
 
-const HTMLContentConnected = ({ Component, contentId }) => {
+const ContentHTMLViewConnected = ({ Component, contentId }) => {
   if (!contentId) return <HTMLView isLoading />;
 
   return (
@@ -34,7 +34,7 @@ const HTMLContentConnected = ({ Component, contentId }) => {
   );
 };
 
-HTMLContentConnected.propTypes = {
+ContentHTMLViewConnected.propTypes = {
   contentId: PropTypes.string.isRequired,
   Component: PropTypes.oneOfType([
     PropTypes.node,
@@ -43,8 +43,8 @@ HTMLContentConnected.propTypes = {
   ]),
 };
 
-HTMLContentConnected.defaultProps = {
+ContentHTMLViewConnected.defaultProps = {
   Component: HTMLView,
 };
 
-export default HTMLContentConnected;
+export default ContentHTMLViewConnected;
