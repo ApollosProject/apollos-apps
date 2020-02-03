@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
+import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
 
 import PlayButton from './PlayButton';
 

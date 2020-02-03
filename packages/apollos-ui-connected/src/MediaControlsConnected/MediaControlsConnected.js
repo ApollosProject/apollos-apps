@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
-import { LiveConsumer } from '@apollosproject/ui-connected';
+import { LiveConsumer } from '../live';
 
 import GET_CONTENT_MEDIA from './getContentMedia';
 
