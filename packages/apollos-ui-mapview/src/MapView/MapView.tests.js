@@ -74,4 +74,20 @@ describe('<MapView>', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with a custom buttonTitle', () => {
+    const tree = renderer.create(
+      <Providers>
+        <MapView
+          navigation={navigation}
+          campuses={campuses}
+          initialRegion={initialRegion}
+          userLocation={currentCampus}
+          currentCampus={currentCampus}
+          onLocationSelect={jest.fn()}
+          buttonTitle={'Custtom buttonTitle'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
