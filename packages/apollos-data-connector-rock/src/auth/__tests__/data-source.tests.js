@@ -1,4 +1,5 @@
 import AuthDataSource from '../data-source';
+import * as Person from '../../people';
 
 describe('Auth', () => {
   const tokenMock = Promise.resolve('some token');
@@ -8,6 +9,9 @@ describe('Auth', () => {
   class AuthWithContext extends AuthDataSource {
     context = {
       rockCookie: 'some cookie',
+      dataSources: {
+        Person: new Person.dataSource(),
+      },
     };
   }
   let Auth;

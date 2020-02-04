@@ -162,8 +162,14 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (personExists) throw new Error('User already exists!');
 
     const profileFields = fieldsAsObject(userProfile || []);
+    const rockUpdateFields = this.context.dataSources.Person.mapApollosFieldsToRock(
+      profileFields
+    );
 
-    const personId = await this.createUserProfile({ email, ...profileFields });
+    const personId = await this.createUserProfile({
+      email,
+      ...rockUpdateFields,
+    });
     await this.createUserLogin({
       email,
       password,
