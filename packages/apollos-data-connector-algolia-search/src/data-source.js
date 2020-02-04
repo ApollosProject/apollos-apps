@@ -18,6 +18,7 @@ export default class Search {
 
   initialize({ context }) {
     this.context = context;
+    this.index.setSettings(ApollosConfig.ALGOLIA.CONFIGURATION);
   }
 
   async addObjects(args) {
