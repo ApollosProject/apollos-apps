@@ -8,11 +8,9 @@ import { ErrorCard } from '@apollosproject/ui-kit';
 
 import GET_CONTENT_ITEM_CONTENT from './getContentItemContent';
 
-function handlePressAnchor(url) {
-  return InAppBrowser.open(url);
-}
+const handleOnPressAnchor = (url) => InAppBrowser.open(url);
 
-const HTMLContent = ({ contentId }) => {
+const ContentHTMLViewConnected = ({ Component, contentId }) => {
   if (!contentId) return <HTMLView isLoading />;
 
   return (
@@ -24,20 +22,29 @@ const HTMLContent = ({ contentId }) => {
       {({ data: { node: { htmlContent } = {} } = {}, loading, error }) => {
         if (!htmlContent && error) return <ErrorCard error={error} />;
         return (
-          <HTMLView
+          <Component
             isLoading={!htmlContent && loading}
-            onPressAnchor={handlePressAnchor}
+            onPressAnchor={handleOnPressAnchor}
           >
             {htmlContent}
-          </HTMLView>
+          </Component>
         );
       }}
     </Query>
   );
 };
 
-HTMLContent.propTypes = {
-  contentId: PropTypes.string,
+ContentHTMLViewConnected.propTypes = {
+  contentId: PropTypes.string.isRequired,
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
 };
 
-export default HTMLContent;
+ContentHTMLViewConnected.defaultProps = {
+  Component: HTMLView,
+};
+
+export default ContentHTMLViewConnected;

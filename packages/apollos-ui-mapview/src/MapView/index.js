@@ -43,6 +43,7 @@ const StyledCampusCard = styled(
 
 class MapView extends Component {
   static propTypes = {
+    buttonTitle: PropTypes.string,
     campuses: PropTypes.arrayOf(
       PropTypes.shape({
         latitude: PropTypes.number.isRequired,
@@ -84,6 +85,7 @@ class MapView extends Component {
 
   static defaultProps = {
     Marker,
+    buttonTitle: 'Confirm Selection',
   };
 
   constructor(props) {
@@ -195,7 +197,6 @@ class MapView extends Component {
   };
 
   render() {
-    const { onLocationSelect, isLoading, isLoadingSelectedCampus } = this.props;
     const interpolations = this.sortedCampuses.map((marker, index) => {
       const inputRange = [
         (index - 1) * this.cardWidth,
@@ -262,7 +263,7 @@ class MapView extends Component {
             {this.sortedCampuses.map((campus) => (
               <Touchable
                 key={campus.id}
-                onPress={() => onLocationSelect(campus)}
+                onPress={() => this.props.onLocationSelect(campus)}
               >
                 <StyledCampusCard
                   distance={campus.distanceFromLocation}
@@ -270,7 +271,7 @@ class MapView extends Component {
                   description={this.getCampusAddress(campus)}
                   images={[campus.image]}
                   cardWidth={this.cardWidth}
-                  isLoading={isLoading}
+                  isLoading={this.props.isLoading}
                 />
               </Touchable>
             ))}
@@ -278,13 +279,15 @@ class MapView extends Component {
           <MediaPlayerSpacer>
             <PaddedView>
               <Button
-                title="Select Campus"
+                title={this.props.buttonTitle}
                 pill={false}
-                type="secondary"
+                type={'secondary'}
                 onPress={() =>
-                  onLocationSelect(this.currentCampus || this.sortedCampuses[0])
+                  this.props.onLocationSelect(
+                    this.currentCampus || this.sortedCampuses[0]
+                  )
                 }
-                loading={isLoadingSelectedCampus}
+                loading={this.props.isLoadingSelectedCampus}
               />
             </PaddedView>
           </MediaPlayerSpacer>
