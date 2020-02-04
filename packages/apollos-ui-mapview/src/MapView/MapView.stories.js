@@ -68,6 +68,17 @@ storiesOf('ui-mapview/MapView', module)
       onLocationSelect={async () => {}}
     />
   ))
+  .add('buttonTitle', () => (
+    <MapView
+      navigation={navigation}
+      campuses={campuses}
+      initialRegion={initialRegion}
+      userLocation={currentCampus}
+      currentCampus={currentCampus}
+      onLocationSelect={async () => {}}
+      buttonTitle={'Custom buttonTitle'}
+    />
+  ))
   .add('isLoading', () => (
     <MapView
       navigation={navigation}
