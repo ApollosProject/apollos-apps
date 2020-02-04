@@ -28,7 +28,7 @@ export const authSmsSchema = gql`
   }
 
   extend type Query {
-    userExists(identity: String): USER_AUTH_STATUS
+    userExists(identity: String): USER_AUTH_STATUS @cacheControl(maxAge: 0)
   }
 `;
 
