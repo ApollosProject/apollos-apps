@@ -103,8 +103,8 @@ describe('Display Native Map with Locations', () => {
       request: {
         query: GET_CAMPUS_LOCATIONS,
         variables: {
-          latitude: userLocation.latitude,
-          longitude: userLocation.longitude,
+          latitude: undefined,
+          longitude: undefined,
         },
       },
       result: {
