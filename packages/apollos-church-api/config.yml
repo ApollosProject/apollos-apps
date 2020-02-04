@@ -44,8 +44,9 @@ ALGOLIA:
     customRankings:
       # NOT CURRENTLY INCLUDED
       # This just demonstrates what's possible
-      # To include likedCount (or any other field) add field to configuration above
-      - desc(likedCount)
+      # To include likedCount (or any other field) override search package
+      # and add field to config below
+      #- desc(likedCount)
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
