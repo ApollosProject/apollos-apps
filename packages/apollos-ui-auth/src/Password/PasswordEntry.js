@@ -19,6 +19,7 @@ import BackButton from '../BackButton';
 import {
   FlexedSafeAreaView,
   NextButton,
+  NextButtonText,
   TitleText,
   PromptText,
 } from '../styles';
@@ -80,11 +81,12 @@ const PasswordEntry = ({
         {onPressNext ? (
           <PaddedView>
             <NextButton
-              title={'Login'}
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
-            />
+            >
+              <NextButtonText>Login</NextButtonText>
+            </NextButton>
           </PaddedView>
         ) : null}
       </FlexedSafeAreaView>

@@ -14,6 +14,7 @@ import BackButton from '../BackButton';
 import {
   FlexedSafeAreaView,
   NextButton,
+  NextButtonText,
   TitleText,
   PromptText,
   LegalText,
@@ -81,11 +82,12 @@ const ProfileEntry = ({
           {onPressNext ? (
             <PaddedView>
               <NextButton
-                title={'Next'}
                 onPress={onPressNext}
                 disabled={disabled}
                 loading={isLoading}
-              />
+              >
+                <NextButtonText>Next</NextButtonText>
+              </NextButton>
             </PaddedView>
           ) : null}
         </FlexedSafeAreaView>

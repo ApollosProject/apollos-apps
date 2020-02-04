@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, View } from 'react-native';
+import { Platform, View, Text } from 'react-native';
 import { compose, withProps } from 'recompose';
 import { SafeAreaView } from 'react-navigation';
 import {
@@ -55,6 +55,13 @@ const NextButton = styled(
   }),
   'ui-auth.NextButton'
 )((props) => <Button pill={false} {...props} />);
+
+const NextButtonText = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.invert,
+  }),
+  'ui-auth.NextButtonText'
+)(Text);
 
 // Tab Login
 
@@ -119,6 +126,7 @@ export {
   TitleText,
   PromptText,
   NextButton,
+  NextButtonText,
   LegalText,
   TabCard,
   TabButton,

@@ -14,6 +14,7 @@ import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
 import {
   FlexedSafeAreaView,
   NextButton,
+  NextButtonText,
   TitleText,
   PromptText,
 } from '../styles';
@@ -64,11 +65,12 @@ const Verification = ({
         {onPressNext ? (
           <PaddedView>
             <NextButton
-              title={'Next'}
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
-            />
+            >
+              <NextButtonText>Next</NextButtonText>
+            </NextButton>
           </PaddedView>
         ) : null}
       </FlexedSafeAreaView>
